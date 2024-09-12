@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_JumpScareMobThirdPerson.B_JumpScareMobThirdPerson_C
-// 0x0038 (0x02D0 - 0x0298)
+// 0x0038 (0x02C8 - 0x0290)
 class AB_JumpScareMobThirdPerson_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Idle;                                              // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        JumpScare;                                         // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SK_Luaq;                                           // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Killself;                                          // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Idle;                                              // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        JumpScare;                                         // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SK_Luaq;                                           // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Killself;                                          // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_JumpScareMobThirdPerson(int32 EntryPoint);
@@ -46,14 +46,14 @@ public:
 	}
 };
 static_assert(alignof(AB_JumpScareMobThirdPerson_C) == 0x000008, "Wrong alignment on AB_JumpScareMobThirdPerson_C");
-static_assert(sizeof(AB_JumpScareMobThirdPerson_C) == 0x0002D0, "Wrong size on AB_JumpScareMobThirdPerson_C");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, UberGraphFrame) == 0x000298, "Member 'AB_JumpScareMobThirdPerson_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Idle) == 0x0002A0, "Member 'AB_JumpScareMobThirdPerson_C::Idle' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, JumpScare) == 0x0002A8, "Member 'AB_JumpScareMobThirdPerson_C::JumpScare' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, SK_Luaq) == 0x0002B0, "Member 'AB_JumpScareMobThirdPerson_C::SK_Luaq' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Sphere) == 0x0002B8, "Member 'AB_JumpScareMobThirdPerson_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Scene) == 0x0002C0, "Member 'AB_JumpScareMobThirdPerson_C::Scene' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Killself) == 0x0002C8, "Member 'AB_JumpScareMobThirdPerson_C::Killself' has a wrong offset!");
+static_assert(sizeof(AB_JumpScareMobThirdPerson_C) == 0x0002C8, "Wrong size on AB_JumpScareMobThirdPerson_C");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, UberGraphFrame) == 0x000290, "Member 'AB_JumpScareMobThirdPerson_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Idle) == 0x000298, "Member 'AB_JumpScareMobThirdPerson_C::Idle' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, JumpScare) == 0x0002A0, "Member 'AB_JumpScareMobThirdPerson_C::JumpScare' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, SK_Luaq) == 0x0002A8, "Member 'AB_JumpScareMobThirdPerson_C::SK_Luaq' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Sphere) == 0x0002B0, "Member 'AB_JumpScareMobThirdPerson_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Scene) == 0x0002B8, "Member 'AB_JumpScareMobThirdPerson_C::Scene' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareMobThirdPerson_C, Killself) == 0x0002C0, "Member 'AB_JumpScareMobThirdPerson_C::Killself' has a wrong offset!");
 
 }
 

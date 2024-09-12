@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ConnectionLoss.WB_ConnectionLoss_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0028 (0x0308 - 0x02E0)
 class UWB_ConnectionLoss_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCircularThrobber*                      CircularThrobber_0;                                // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                ConnectionLoss;                                    // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        VerificationTimer;                                 // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCircularThrobber*                      CircularThrobber_0;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                ConnectionLoss;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        VerificationTimer;                                 // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -44,12 +44,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_ConnectionLoss_C) == 0x000008, "Wrong alignment on UWB_ConnectionLoss_C");
-static_assert(sizeof(UWB_ConnectionLoss_C) == 0x0002E8, "Wrong size on UWB_ConnectionLoss_C");
-static_assert(offsetof(UWB_ConnectionLoss_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ConnectionLoss_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ConnectionLoss_C, CircularThrobber_0) == 0x0002C8, "Member 'UWB_ConnectionLoss_C::CircularThrobber_0' has a wrong offset!");
-static_assert(offsetof(UWB_ConnectionLoss_C, ConnectionLoss) == 0x0002D0, "Member 'UWB_ConnectionLoss_C::ConnectionLoss' has a wrong offset!");
-static_assert(offsetof(UWB_ConnectionLoss_C, InvalidationBox_0) == 0x0002D8, "Member 'UWB_ConnectionLoss_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_ConnectionLoss_C, VerificationTimer) == 0x0002E0, "Member 'UWB_ConnectionLoss_C::VerificationTimer' has a wrong offset!");
+static_assert(sizeof(UWB_ConnectionLoss_C) == 0x000308, "Wrong size on UWB_ConnectionLoss_C");
+static_assert(offsetof(UWB_ConnectionLoss_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ConnectionLoss_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ConnectionLoss_C, CircularThrobber_0) == 0x0002E8, "Member 'UWB_ConnectionLoss_C::CircularThrobber_0' has a wrong offset!");
+static_assert(offsetof(UWB_ConnectionLoss_C, ConnectionLoss) == 0x0002F0, "Member 'UWB_ConnectionLoss_C::ConnectionLoss' has a wrong offset!");
+static_assert(offsetof(UWB_ConnectionLoss_C, InvalidationBox_0) == 0x0002F8, "Member 'UWB_ConnectionLoss_C::InvalidationBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_ConnectionLoss_C, VerificationTimer) == 0x000300, "Member 'UWB_ConnectionLoss_C::VerificationTimer' has a wrong offset!");
 
 }
 

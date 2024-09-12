@@ -10,15 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
+// Function WB_PasswordField.WB_PasswordField_C.OnFocusReceived
+// 0x01B0 (0x01B0 - 0x0000)
+struct WB_PasswordField_C_OnFocusReceived final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x00F8(0x00B8)()
+};
+static_assert(alignof(WB_PasswordField_C_OnFocusReceived) == 0x000008, "Wrong alignment on WB_PasswordField_C_OnFocusReceived");
+static_assert(sizeof(WB_PasswordField_C_OnFocusReceived) == 0x0001B0, "Wrong size on WB_PasswordField_C_OnFocusReceived");
+static_assert(offsetof(WB_PasswordField_C_OnFocusReceived, MyGeometry) == 0x000000, "Member 'WB_PasswordField_C_OnFocusReceived::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_OnFocusReceived, InFocusEvent) == 0x000038, "Member 'WB_PasswordField_C_OnFocusReceived::InFocusEvent' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_OnFocusReceived, ReturnValue) == 0x000040, "Member 'WB_PasswordField_C_OnFocusReceived::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_OnFocusReceived, CallFunc_Handled_ReturnValue) == 0x0000F8, "Member 'WB_PasswordField_C_OnFocusReceived::CallFunc_Handled_ReturnValue' has a wrong offset!");
+
 // Function WB_PasswordField.WB_PasswordField_C.Get_ScramblePasswordCheckBox_Visibility_0
-// 0x0005 (0x0005 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0 final
 {
 public:
@@ -26,15 +43,21 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0) == 0x000001, "Wrong alignment on WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0");
-static_assert(sizeof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0) == 0x000005, "Wrong size on WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0");
+static_assert(sizeof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0) == 0x000008, "Wrong size on WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0");
 static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, ReturnValue) == 0x000000, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, Temp_bool_Variable) == 0x000001, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, Temp_byte_Variable) == 0x000002, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, Temp_byte_Variable_1) == 0x000003, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, K2Node_Select_Default) == 0x000004, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, CallFunc_BooleanAND_ReturnValue) == 0x000006, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0, K2Node_Select_Default) == 0x000007, "Member 'WB_PasswordField_C_Get_ScramblePasswordCheckBox_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_PasswordField.WB_PasswordField_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -68,22 +91,22 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_1;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53AA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0018(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53AB[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53AC[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_ShowOverlayWidget_CreatedOverlayWidget;   // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_TextBoxOverlay_C*                   K2Node_DynamicCast_AsWB_Text_Box_Overlay;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53AD[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default;                             // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -108,19 +131,19 @@ static_assert(offsetof(WB_PasswordField_C_ExecuteUbergraph_WB_PasswordField, K2N
 static_assert(offsetof(WB_PasswordField_C_ExecuteUbergraph_WB_PasswordField, CallFunc_Not_PreBool_ReturnValue_1) == 0x000080, "Member 'WB_PasswordField_C_ExecuteUbergraph_WB_PasswordField::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 
 // Function WB_PasswordField.WB_PasswordField_C.GetPassword
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_PasswordField_C_GetPassword final
 {
 public:
 	class FString                                 PasswordNew;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_PasswordField_C_GetPassword) == 0x000008, "Wrong alignment on WB_PasswordField_C_GetPassword");
-static_assert(sizeof(WB_PasswordField_C_GetPassword) == 0x000038, "Wrong size on WB_PasswordField_C_GetPassword");
+static_assert(sizeof(WB_PasswordField_C_GetPassword) == 0x000030, "Wrong size on WB_PasswordField_C_GetPassword");
 static_assert(offsetof(WB_PasswordField_C_GetPassword, PasswordNew) == 0x000000, "Member 'WB_PasswordField_C_GetPassword::PasswordNew' has a wrong offset!");
 static_assert(offsetof(WB_PasswordField_C_GetPassword, CallFunc_GetText_ReturnValue) == 0x000010, "Member 'WB_PasswordField_C_GetPassword::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PasswordField_C_GetPassword, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'WB_PasswordField_C_GetPassword::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PasswordField_C_GetPassword, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'WB_PasswordField_C_GetPassword::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 
 }
 

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Dummy.B_Dummy_C
-// 0x0008 (0x0300 - 0x02F8)
+// 0x0008 (0x02F8 - 0x02F0)
 class AB_Dummy_C : public AB_TaskTargetActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Dummy_C;                          // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Dummy_C;                          // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void UpdateRotation();
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(AB_Dummy_C) == 0x000008, "Wrong alignment on AB_Dummy_C");
-static_assert(sizeof(AB_Dummy_C) == 0x000300, "Wrong size on AB_Dummy_C");
-static_assert(offsetof(AB_Dummy_C, UberGraphFrame_B_Dummy_C) == 0x0002F8, "Member 'AB_Dummy_C::UberGraphFrame_B_Dummy_C' has a wrong offset!");
+static_assert(sizeof(AB_Dummy_C) == 0x0002F8, "Wrong size on AB_Dummy_C");
+static_assert(offsetof(AB_Dummy_C, UberGraphFrame_B_Dummy_C) == 0x0002F0, "Member 'AB_Dummy_C::UberGraphFrame_B_Dummy_C' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "WB_BaseControl_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -21,57 +21,60 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_GridButton.WB_GridButton_C
-// 0x0228 (0x0500 - 0x02D8)
+// 0x0228 (0x0520 - 0x02F8)
 class UWB_GridButton_C final : public UWB_BaseControl_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       SelectedAnimation;                                 // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FocusAnimation;                                    // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                Button;                                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HoverFocusBorder;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon;                                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                IconBorder;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        IconSwitcher;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 InCycleIcon;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NotifyIcon;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay;                                           // 0x0328(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             QuantityText;                                      // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RecipeIcon;                                        // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SelectedBorder;                                    // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SwitchIcon;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UObject*                                IconImage;                                         // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              IconScale;                                         // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FMargin                                IconMargin;                                        // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bIconOverIconBorder;                               // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4683[0x3];                                     // 0x0379(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           IconBorderColor;                                   // 0x037C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           HoverFocusColor;                                   // 0x038C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SelectedColor;                                     // 0x039C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShowRecipeIcon;                                   // 0x03AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShowNotifyIcon;                                   // 0x03AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShowQuantity;                                     // 0x03AE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4684[0x1];                                     // 0x03AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Quantity;                                          // 0x03B0(0x0018)(Edit, BlueprintVisible)
-	bool                                          bSelected;                                         // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bButtonEnabled;                                    // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4685[0x6];                                     // 0x03CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ToolTip_C*                          ToolTip;                                           // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            TooltipContent;                                    // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          TooltipVisible;                                    // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowTooltip;                                       // 0x03E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4686[0x6];                                     // 0x03E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               ShimmerMaterial;                                   // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            IconBorderTexture;                                 // 0x03F0(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bHovered;                                          // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFocused;                                          // 0x04C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4687[0x6];                                     // 0x04C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      GameInstance;                                      // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UObject>                 SoftIconToLoad;                                    // 0x04D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          ShowSwitchIcon;                                    // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       SelectedAnimation;                                 // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UButton*                                Button;                                            // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Danger;                                            // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HoverFocusBorder;                                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                IconBorder;                                        // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        IconSwitcher;                                      // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 InCycleIcon;                                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NotifyIcon;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay;                                           // 0x0350(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             QuantityText;                                      // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RecipeIcon;                                        // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SelectedBorder;                                    // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SwitchIcon;                                        // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UObject*                                IconImage;                                         // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              IconScale;                                         // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FMargin                                IconMargin;                                        // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIconOverIconBorder;                               // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x3];                                      // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           IconBorderColor;                                   // 0x03A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HoverFocusColor;                                   // 0x03B4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SelectedColor;                                     // 0x03C4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowRecipeIcon;                                   // 0x03D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowNotifyIcon;                                   // 0x03D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowQuantity;                                     // 0x03D6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D7[0x1];                                      // 0x03D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Quantity;                                          // 0x03D8(0x0010)(Edit, BlueprintVisible)
+	bool                                          bSelected;                                         // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bButtonEnabled;                                    // 0x03E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3EA[0x6];                                      // 0x03EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_ToolTip_C*                          ToolTip;                                           // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ToolTipContent;                                    // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          TooltipVisible;                                    // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowTooltip;                                       // 0x0401(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_402[0x6];                                      // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               ShimmerMaterial;                                   // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            IconBorderTexture;                                 // 0x0410(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bHovered;                                          // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFocused;                                          // 0x04E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E2[0x6];                                      // 0x04E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      GameInstance;                                      // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UObject>                 SoftIconToLoad;                                    // 0x04F0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          ShowSwitchIcon;                                    // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowDangerIcon;                                    // 0x0519(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class UWB_GridButton_C* GetGridButton();
+	ESlateVisibility Get_Danger_Visibility();
 	ESlateVisibility Get_SwitchIcon_Visibility_0();
 	bool IsFocusedOrHovered();
 	void Focus();
@@ -81,10 +84,10 @@ public:
 	struct FVector2D GetTooltipSize();
 	void GetViewportPosition(struct FVector2D* ViewportPosition);
 	void RemoveTooltip();
-	void IsGamepadMode(bool* Param_IsGamepadMode);
-	void SetInitialValues(TSoftObjectPtr<class UObject> BrushImage, const struct FLinearColor& Param_IconBorderColor, bool Param_bShowRecipeIcon, bool Param_bShowNotifyIcon, bool Param_bShowQuantity, const class FText& Param_QuantityText, bool Param_bSelected, bool Param_bButtonEnabled, class UUserWidget* Param_TooltipContent, bool IsFocused, bool Param_ShowSwitchIcon);
+	void IsGamepadMode(bool* IsGamepadMode_0);
+	void SetInitialValues(TSoftObjectPtr<class UObject> BrushImage, const struct FLinearColor& IconBorderColor_0, bool bShowRecipeIcon_0, bool bShowNotifyIcon_0, bool bShowQuantity_0, const class FText& QuantityText_0, bool bSelected_0, bool bButtonEnabled_0, class UUserWidget* ToolTipContent_0, bool IsFocused, bool ShowSwitchIcon_0, bool ShowDangerIcon_0);
 	void SetIconImage(class UObject* BrushImage);
-	void SetIconAndBorderZOrder(bool Param_bIconOverIconBorder);
+	void SetIconAndBorderZOrder(bool bIconOverIconBorder_0);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	ESlateVisibility Get_SelectedBorder_Visibility_0();
 	class FText Get_Quantity_Text_0();
@@ -119,46 +122,48 @@ public:
 	}
 };
 static_assert(alignof(UWB_GridButton_C) == 0x000010, "Wrong alignment on UWB_GridButton_C");
-static_assert(sizeof(UWB_GridButton_C) == 0x000500, "Wrong size on UWB_GridButton_C");
-static_assert(offsetof(UWB_GridButton_C, UberGraphFrame) == 0x0002D8, "Member 'UWB_GridButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, SelectedAnimation) == 0x0002E0, "Member 'UWB_GridButton_C::SelectedAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, FocusAnimation) == 0x0002E8, "Member 'UWB_GridButton_C::FocusAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, Button) == 0x0002F0, "Member 'UWB_GridButton_C::Button' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, HoverFocusBorder) == 0x0002F8, "Member 'UWB_GridButton_C::HoverFocusBorder' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, Icon) == 0x000300, "Member 'UWB_GridButton_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconBorder) == 0x000308, "Member 'UWB_GridButton_C::IconBorder' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconSwitcher) == 0x000310, "Member 'UWB_GridButton_C::IconSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, InCycleIcon) == 0x000318, "Member 'UWB_GridButton_C::InCycleIcon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, NotifyIcon) == 0x000320, "Member 'UWB_GridButton_C::NotifyIcon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, Overlay) == 0x000328, "Member 'UWB_GridButton_C::Overlay' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, QuantityText) == 0x000330, "Member 'UWB_GridButton_C::QuantityText' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, RecipeIcon) == 0x000338, "Member 'UWB_GridButton_C::RecipeIcon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, SelectedBorder) == 0x000340, "Member 'UWB_GridButton_C::SelectedBorder' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, SwitchIcon) == 0x000348, "Member 'UWB_GridButton_C::SwitchIcon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconImage) == 0x000350, "Member 'UWB_GridButton_C::IconImage' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconScale) == 0x000358, "Member 'UWB_GridButton_C::IconScale' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconMargin) == 0x000368, "Member 'UWB_GridButton_C::IconMargin' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bIconOverIconBorder) == 0x000378, "Member 'UWB_GridButton_C::bIconOverIconBorder' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconBorderColor) == 0x00037C, "Member 'UWB_GridButton_C::IconBorderColor' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, HoverFocusColor) == 0x00038C, "Member 'UWB_GridButton_C::HoverFocusColor' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, SelectedColor) == 0x00039C, "Member 'UWB_GridButton_C::SelectedColor' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bShowRecipeIcon) == 0x0003AC, "Member 'UWB_GridButton_C::bShowRecipeIcon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bShowNotifyIcon) == 0x0003AD, "Member 'UWB_GridButton_C::bShowNotifyIcon' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bShowQuantity) == 0x0003AE, "Member 'UWB_GridButton_C::bShowQuantity' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, Quantity) == 0x0003B0, "Member 'UWB_GridButton_C::Quantity' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bSelected) == 0x0003C8, "Member 'UWB_GridButton_C::bSelected' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bButtonEnabled) == 0x0003C9, "Member 'UWB_GridButton_C::bButtonEnabled' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, ToolTip) == 0x0003D0, "Member 'UWB_GridButton_C::ToolTip' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, TooltipContent) == 0x0003D8, "Member 'UWB_GridButton_C::TooltipContent' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, TooltipVisible) == 0x0003E0, "Member 'UWB_GridButton_C::TooltipVisible' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, ShowTooltip) == 0x0003E1, "Member 'UWB_GridButton_C::ShowTooltip' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, ShimmerMaterial) == 0x0003E8, "Member 'UWB_GridButton_C::ShimmerMaterial' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, IconBorderTexture) == 0x0003F0, "Member 'UWB_GridButton_C::IconBorderTexture' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bHovered) == 0x0004C0, "Member 'UWB_GridButton_C::bHovered' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, bFocused) == 0x0004C1, "Member 'UWB_GridButton_C::bFocused' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, GameInstance) == 0x0004C8, "Member 'UWB_GridButton_C::GameInstance' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, SoftIconToLoad) == 0x0004D0, "Member 'UWB_GridButton_C::SoftIconToLoad' has a wrong offset!");
-static_assert(offsetof(UWB_GridButton_C, ShowSwitchIcon) == 0x0004F8, "Member 'UWB_GridButton_C::ShowSwitchIcon' has a wrong offset!");
+static_assert(sizeof(UWB_GridButton_C) == 0x000520, "Wrong size on UWB_GridButton_C");
+static_assert(offsetof(UWB_GridButton_C, UberGraphFrame) == 0x0002F8, "Member 'UWB_GridButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, SelectedAnimation) == 0x000300, "Member 'UWB_GridButton_C::SelectedAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, FocusAnimation) == 0x000308, "Member 'UWB_GridButton_C::FocusAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, Button) == 0x000310, "Member 'UWB_GridButton_C::Button' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, Danger) == 0x000318, "Member 'UWB_GridButton_C::Danger' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, HoverFocusBorder) == 0x000320, "Member 'UWB_GridButton_C::HoverFocusBorder' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, Icon) == 0x000328, "Member 'UWB_GridButton_C::Icon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconBorder) == 0x000330, "Member 'UWB_GridButton_C::IconBorder' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconSwitcher) == 0x000338, "Member 'UWB_GridButton_C::IconSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, InCycleIcon) == 0x000340, "Member 'UWB_GridButton_C::InCycleIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, NotifyIcon) == 0x000348, "Member 'UWB_GridButton_C::NotifyIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, Overlay) == 0x000350, "Member 'UWB_GridButton_C::Overlay' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, QuantityText) == 0x000358, "Member 'UWB_GridButton_C::QuantityText' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, RecipeIcon) == 0x000360, "Member 'UWB_GridButton_C::RecipeIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, SelectedBorder) == 0x000368, "Member 'UWB_GridButton_C::SelectedBorder' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, SwitchIcon) == 0x000370, "Member 'UWB_GridButton_C::SwitchIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconImage) == 0x000378, "Member 'UWB_GridButton_C::IconImage' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconScale) == 0x000380, "Member 'UWB_GridButton_C::IconScale' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconMargin) == 0x000390, "Member 'UWB_GridButton_C::IconMargin' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bIconOverIconBorder) == 0x0003A0, "Member 'UWB_GridButton_C::bIconOverIconBorder' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconBorderColor) == 0x0003A4, "Member 'UWB_GridButton_C::IconBorderColor' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, HoverFocusColor) == 0x0003B4, "Member 'UWB_GridButton_C::HoverFocusColor' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, SelectedColor) == 0x0003C4, "Member 'UWB_GridButton_C::SelectedColor' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bShowRecipeIcon) == 0x0003D4, "Member 'UWB_GridButton_C::bShowRecipeIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bShowNotifyIcon) == 0x0003D5, "Member 'UWB_GridButton_C::bShowNotifyIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bShowQuantity) == 0x0003D6, "Member 'UWB_GridButton_C::bShowQuantity' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, Quantity) == 0x0003D8, "Member 'UWB_GridButton_C::Quantity' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bSelected) == 0x0003E8, "Member 'UWB_GridButton_C::bSelected' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bButtonEnabled) == 0x0003E9, "Member 'UWB_GridButton_C::bButtonEnabled' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, ToolTip) == 0x0003F0, "Member 'UWB_GridButton_C::ToolTip' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, ToolTipContent) == 0x0003F8, "Member 'UWB_GridButton_C::ToolTipContent' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, TooltipVisible) == 0x000400, "Member 'UWB_GridButton_C::TooltipVisible' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, ShowTooltip) == 0x000401, "Member 'UWB_GridButton_C::ShowTooltip' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, ShimmerMaterial) == 0x000408, "Member 'UWB_GridButton_C::ShimmerMaterial' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, IconBorderTexture) == 0x000410, "Member 'UWB_GridButton_C::IconBorderTexture' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bHovered) == 0x0004E0, "Member 'UWB_GridButton_C::bHovered' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, bFocused) == 0x0004E1, "Member 'UWB_GridButton_C::bFocused' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, GameInstance) == 0x0004E8, "Member 'UWB_GridButton_C::GameInstance' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, SoftIconToLoad) == 0x0004F0, "Member 'UWB_GridButton_C::SoftIconToLoad' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, ShowSwitchIcon) == 0x000518, "Member 'UWB_GridButton_C::ShowSwitchIcon' has a wrong offset!");
+static_assert(offsetof(UWB_GridButton_C, ShowDangerIcon) == 0x000519, "Member 'UWB_GridButton_C::ShowDangerIcon' has a wrong offset!");
 
 }
 

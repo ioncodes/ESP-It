@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ObjectiveCoopTeamLogo.WB_ObjectiveCoopTeamLogo_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_ObjectiveCoopTeamLogo_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Logo;                                              // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_WB_ObjectiveCoopTeamLogo_C;                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	ETeamID                                       Team;                                              // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Logo;                                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	ETeamID                                       Team;                                              // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	struct FSlateBrush Get_Logo_Brush_0();
@@ -41,10 +41,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_ObjectiveCoopTeamLogo_C) == 0x000008, "Wrong alignment on UWB_ObjectiveCoopTeamLogo_C");
-static_assert(sizeof(UWB_ObjectiveCoopTeamLogo_C) == 0x0002D8, "Wrong size on UWB_ObjectiveCoopTeamLogo_C");
-static_assert(offsetof(UWB_ObjectiveCoopTeamLogo_C, Logo) == 0x0002C0, "Member 'UWB_ObjectiveCoopTeamLogo_C::Logo' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveCoopTeamLogo_C, Name_WB_ObjectiveCoopTeamLogo_C) == 0x0002C8, "Member 'UWB_ObjectiveCoopTeamLogo_C::Name_WB_ObjectiveCoopTeamLogo_C' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveCoopTeamLogo_C, Team) == 0x0002D0, "Member 'UWB_ObjectiveCoopTeamLogo_C::Team' has a wrong offset!");
+static_assert(sizeof(UWB_ObjectiveCoopTeamLogo_C) == 0x0002F8, "Wrong size on UWB_ObjectiveCoopTeamLogo_C");
+static_assert(offsetof(UWB_ObjectiveCoopTeamLogo_C, Logo) == 0x0002E0, "Member 'UWB_ObjectiveCoopTeamLogo_C::Logo' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveCoopTeamLogo_C, Name_0) == 0x0002E8, "Member 'UWB_ObjectiveCoopTeamLogo_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveCoopTeamLogo_C, Team) == 0x0002F0, "Member 'UWB_ObjectiveCoopTeamLogo_C::Team' has a wrong offset!");
 
 }
 

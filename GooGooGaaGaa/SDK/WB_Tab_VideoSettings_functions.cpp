@@ -461,9 +461,9 @@ void UWB_Tab_VideoSettings_C::Construct()
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Tab_VideoSettings_C::ConvertFrameRateLimitToIndex(double Value, double* Param_Index)
+void UWB_Tab_VideoSettings_C::ConvertFrameRateLimitToIndex(double Value, double* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -476,18 +476,18 @@ void UWB_Tab_VideoSettings_C::ConvertFrameRateLimitToIndex(double Value, double*
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.ConvertFrameRateLimitToValue
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Tab_VideoSettings_C::ConvertFrameRateLimitToValue(double Param_Index, double* Value)
+void UWB_Tab_VideoSettings_C::ConvertFrameRateLimitToValue(double Index_0, double* Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -496,7 +496,7 @@ void UWB_Tab_VideoSettings_C::ConvertFrameRateLimitToValue(double Param_Index, d
 
 	Params::WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -576,9 +576,9 @@ bool UWB_Tab_VideoSettings_C::Get_ComboBox_Resolution_bIsEnabled_0()
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetAAMethod
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_AAMethod                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   AAMethod_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Tab_VideoSettings_C::GetAAMethod(int32* Param_AAMethod)
+void UWB_Tab_VideoSettings_C::GetAAMethod(int32* AAMethod_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -589,8 +589,8 @@ void UWB_Tab_VideoSettings_C::GetAAMethod(int32* Param_AAMethod)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_AAMethod != nullptr)
-		*Param_AAMethod = Parms.Param_AAMethod;
+	if (AAMethod_0 != nullptr)
+		*AAMethod_0 = Parms.AAMethod_0;
 }
 
 
@@ -598,9 +598,9 @@ void UWB_Tab_VideoSettings_C::GetAAMethod(int32* Param_AAMethod)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FString                           String                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Param_AAMethod                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   AAMethod_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Tab_VideoSettings_C::GetAAMethodFromDisplayString(const class FString& String, int32* Param_AAMethod)
+void UWB_Tab_VideoSettings_C::GetAAMethodFromDisplayString(const class FString& String, int32* AAMethod_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -613,8 +613,8 @@ void UWB_Tab_VideoSettings_C::GetAAMethodFromDisplayString(const class FString& 
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_AAMethod != nullptr)
-		*Param_AAMethod = Parms.Param_AAMethod;
+	if (AAMethod_0 != nullptr)
+		*AAMethod_0 = Parms.AAMethod_0;
 }
 
 
@@ -655,6 +655,27 @@ int32 UWB_Tab_VideoSettings_C::GetAntiAliasingQuality()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetDisplayGamma
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  DisplayGamma                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_Tab_VideoSettings_C::GetDisplayGamma(double* DisplayGamma)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Tab_VideoSettings_C", "GetDisplayGamma");
+
+	Params::WB_Tab_VideoSettings_C_GetDisplayGamma Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DisplayGamma != nullptr)
+		*DisplayGamma = Parms.DisplayGamma;
 }
 
 
@@ -1065,9 +1086,9 @@ void UWB_Tab_VideoSettings_C::Init()
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.IsDirty
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bDirty                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDirty_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Tab_VideoSettings_C::IsDirty(bool* Param_bDirty)
+void UWB_Tab_VideoSettings_C::IsDirty(bool* bDirty_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1078,8 +1099,8 @@ void UWB_Tab_VideoSettings_C::IsDirty(bool* Param_bDirty)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_bDirty != nullptr)
-		*Param_bDirty = Parms.Param_bDirty;
+	if (bDirty_0 != nullptr)
+		*bDirty_0 = Parms.bDirty_0;
 }
 
 
@@ -1174,6 +1195,29 @@ void UWB_Tab_VideoSettings_C::LoadCurrentSettings()
 		Func = Class->GetFunction("WB_Tab_VideoSettings_C", "LoadCurrentSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.NavigateList
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_Tab_VideoSettings_C::NavigateList(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Tab_VideoSettings_C", "NavigateList");
+
+	Params::WB_Tab_VideoSettings_C_NavigateList Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

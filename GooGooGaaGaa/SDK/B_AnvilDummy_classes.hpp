@@ -10,25 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "B_Dummy_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_AnvilDummy.B_AnvilDummy_C
-// 0x00E0 (0x03E0 - 0x0300)
+// 0x00D8 (0x03D0 - 0x02F8)
 class AB_AnvilDummy_C final : public AB_Dummy_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_AnvilDummy_C;                     // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	uint8                                         Pad_3777[0x8];                                     // 0x0308(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             OriginalTransform;                                 // 0x0310(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             OnAnvilTransForm;                                  // 0x0370(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReadyToUpgrade;                                    // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Upgraded;                                          // 0x03D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_AnvilDummy_C;                     // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FTransform                             OriginalTransform;                                 // 0x0300(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             OnAnvilTransForm;                                  // 0x0360(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReadyToUpgrade;                                    // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Upgraded;                                          // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_AnvilDummy(int32 EntryPoint);
@@ -49,12 +48,12 @@ public:
 	}
 };
 static_assert(alignof(AB_AnvilDummy_C) == 0x000010, "Wrong alignment on AB_AnvilDummy_C");
-static_assert(sizeof(AB_AnvilDummy_C) == 0x0003E0, "Wrong size on AB_AnvilDummy_C");
-static_assert(offsetof(AB_AnvilDummy_C, UberGraphFrame_B_AnvilDummy_C) == 0x000300, "Member 'AB_AnvilDummy_C::UberGraphFrame_B_AnvilDummy_C' has a wrong offset!");
-static_assert(offsetof(AB_AnvilDummy_C, OriginalTransform) == 0x000310, "Member 'AB_AnvilDummy_C::OriginalTransform' has a wrong offset!");
-static_assert(offsetof(AB_AnvilDummy_C, OnAnvilTransForm) == 0x000370, "Member 'AB_AnvilDummy_C::OnAnvilTransForm' has a wrong offset!");
-static_assert(offsetof(AB_AnvilDummy_C, ReadyToUpgrade) == 0x0003D0, "Member 'AB_AnvilDummy_C::ReadyToUpgrade' has a wrong offset!");
-static_assert(offsetof(AB_AnvilDummy_C, Upgraded) == 0x0003D1, "Member 'AB_AnvilDummy_C::Upgraded' has a wrong offset!");
+static_assert(sizeof(AB_AnvilDummy_C) == 0x0003D0, "Wrong size on AB_AnvilDummy_C");
+static_assert(offsetof(AB_AnvilDummy_C, UberGraphFrame_B_AnvilDummy_C) == 0x0002F8, "Member 'AB_AnvilDummy_C::UberGraphFrame_B_AnvilDummy_C' has a wrong offset!");
+static_assert(offsetof(AB_AnvilDummy_C, OriginalTransform) == 0x000300, "Member 'AB_AnvilDummy_C::OriginalTransform' has a wrong offset!");
+static_assert(offsetof(AB_AnvilDummy_C, OnAnvilTransForm) == 0x000360, "Member 'AB_AnvilDummy_C::OnAnvilTransForm' has a wrong offset!");
+static_assert(offsetof(AB_AnvilDummy_C, ReadyToUpgrade) == 0x0003C0, "Member 'AB_AnvilDummy_C::ReadyToUpgrade' has a wrong offset!");
+static_assert(offsetof(AB_AnvilDummy_C, Upgraded) == 0x0003C1, "Member 'AB_AnvilDummy_C::Upgraded' has a wrong offset!");
 
 }
 

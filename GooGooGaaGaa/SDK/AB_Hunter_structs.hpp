@@ -17,81 +17,257 @@ namespace SDK
 {
 
 // ScriptStruct AB_Hunter.AB_Hunter_C.AnimBlueprintGeneratedConstantData
-// 0x0177 (0x0178 - 0x0001)
+// 0x11CF (0x11D0 - 0x0001)
 struct AB_Hunter::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
-	uint8                                         Pad_521E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_445;                                // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_446;                                // 0x000C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_447;                                // 0x0014(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_448;                                // 0x001C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_449;                                // 0x0024(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_450;                                // 0x002C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_451;                                // 0x0034(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_452;                                 // 0x003C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_453;                                // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_454;                                 // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_455;                                // 0x004C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_456;                                 // 0x0054(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_457;                                // 0x0058(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_458;                                 // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_459;                                // 0x0064(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_460;                                 // 0x006C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_461;                                // 0x0070(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_521F[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_462;                               // 0x0074(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputScaleBiasClampConstants          __StructProperty_463;                              // 0x0078(0x002C)(BlueprintVisible, NoDestructor)
-	float                                         __FloatProperty_464;                               // 0x00A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_465;                                // 0x00A8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimSyncMethod                               __EnumProperty_466;                                // 0x00A9(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimGroupRole                                __ByteProperty_467;                                // 0x00AA(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5220[0x1];                                     // 0x00AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_468;                                // 0x00AC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_469;                                // 0x00B4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_470;                                 // 0x00BC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNodeFunctionRef                   __StructProperty_471;                              // 0x00C0(0x0020)(BlueprintVisible, NoDestructor)
-	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x00E0(0x0080)()
-	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x0160(0x0018)()
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   __NameProperty_444;                                // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_445;                                // 0x000C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_446;                                // 0x0014(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_447;                                // 0x001C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_448;                                // 0x0024(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_449;                                // 0x002C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_450;                                // 0x0034(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_451;                                 // 0x003C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_452;                                // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_453;                                 // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_454;                                // 0x004C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_455;                                 // 0x0054(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_456;                                // 0x0058(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_457;                                 // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_458;                                // 0x0064(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_459;                                 // 0x006C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_460;                                // 0x0070(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_461;                               // 0x0074(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputScaleBiasClampConstants          __StructProperty_462;                              // 0x0078(0x002C)(BlueprintVisible, NoDestructor)
+	float                                         __FloatProperty_463;                               // 0x00A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_464;                                // 0x00A8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimSyncMethod                               __EnumProperty_465;                                // 0x00A9(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimGroupRole                                __ByteProperty_466;                                // 0x00AA(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AB[0x1];                                       // 0x00AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   __NameProperty_467;                                // 0x00AC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_468;                                // 0x00B4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_469;                                // 0x00BC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_470;                                 // 0x00C4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNodeFunctionRef                   __StructProperty_471;                              // 0x00C8(0x0020)(BlueprintVisible, NoDestructor)
+	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x00E8(0x0080)()
+	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x0168(0x0018)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_2;                     // 0x0180(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                     // 0x01B0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_2;                  // 0x01E0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_3;                              // 0x0210(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_RigidBody_1;                         // 0x0240(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive_1;            // 0x0270(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace_1;             // 0x02A0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendSpacePlayer_1;                  // 0x02D0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose;                      // 0x0300(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_35;                 // 0x0330(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_34;                 // 0x0360(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_33;                 // 0x0390(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_32;                 // 0x03C0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_10;                   // 0x03F0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_11;                      // 0x0420(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_9;                    // 0x0450(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_10;                      // 0x0480(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_8;                    // 0x04B0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_9;                       // 0x04E0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendSpacePlayer;                    // 0x0510(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_8;                       // 0x0540(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateMachine_2;                      // 0x0570(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_RotateRootBone;                      // 0x05A0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;               // 0x05D0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace_1;             // 0x0600(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone;                          // 0x0630(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_1;                  // 0x0660(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive;              // 0x0690(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_31;                 // 0x06C0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_30;                 // 0x06F0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_7;                    // 0x0720(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_7;                       // 0x0750(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_6;                    // 0x0780(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_6;                       // 0x07B0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateMachine_1;                      // 0x07E0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_2;                              // 0x0810(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_1;                              // 0x0840(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone;                            // 0x0870(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;               // 0x08A0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                                // 0x08D0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend;                    // 0x0900(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                       // 0x0930(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_RigidBody;                           // 0x0960(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                                // 0x0990(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_29;                 // 0x09C0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_28;                 // 0x09F0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_27;                 // 0x0A20(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_26;                 // 0x0A50(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_25;                 // 0x0A80(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_24;                 // 0x0AB0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_23;                 // 0x0AE0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_22;                 // 0x0B10(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_21;                 // 0x0B40(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_20;                 // 0x0B70(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_19;                 // 0x0BA0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_18;                 // 0x0BD0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_17;                 // 0x0C00(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_16;                 // 0x0C30(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_15;                 // 0x0C60(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_14;                 // 0x0C90(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_13;                 // 0x0CC0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_12;                 // 0x0CF0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_11;                 // 0x0D20(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_10;                 // 0x0D50(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_9;                  // 0x0D80(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_8;                  // 0x0DB0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_7;                  // 0x0DE0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_6;                  // 0x0E10(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_5;                  // 0x0E40(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_4;                  // 0x0E70(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_3;                  // 0x0EA0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_2;                  // 0x0ED0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_1;                  // 0x0F00(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult;                    // 0x0F30(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_5;                    // 0x0F60(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_5;                       // 0x0F90(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_4;                    // 0x0FC0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_4;                       // 0x0FF0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_3;                    // 0x1020(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_3;                       // 0x1050(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_2;                    // 0x1080(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_2;                       // 0x10B0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_1;                    // 0x10E0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_1;                       // 0x1110(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                      // 0x1140(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult;                         // 0x1170(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateMachine;                        // 0x11A0(0x0030)()
 };
 static_assert(alignof(AB_Hunter::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_Hunter::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_Hunter::FAnimBlueprintGeneratedConstantData) == 0x000178, "Wrong size on AB_Hunter::FAnimBlueprintGeneratedConstantData");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_445) == 0x000004, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_445' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_446) == 0x00000C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_446' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_447) == 0x000014, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_447' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_448) == 0x00001C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_448' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_449) == 0x000024, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_449' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_450) == 0x00002C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_450' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_451) == 0x000034, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_451' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_452) == 0x00003C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_452' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_453) == 0x000040, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_453' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_454) == 0x000048, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_454' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_455) == 0x00004C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_455' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_456) == 0x000054, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_456' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_457) == 0x000058, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_457' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_458) == 0x000060, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_458' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_459) == 0x000064, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_459' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_460) == 0x00006C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_460' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __BoolProperty_461) == 0x000070, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__BoolProperty_461' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __FloatProperty_462) == 0x000074, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__FloatProperty_462' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __StructProperty_463) == 0x000078, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__StructProperty_463' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __FloatProperty_464) == 0x0000A4, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__FloatProperty_464' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __BoolProperty_465) == 0x0000A8, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__BoolProperty_465' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __EnumProperty_466) == 0x0000A9, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__EnumProperty_466' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __ByteProperty_467) == 0x0000AA, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__ByteProperty_467' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_468) == 0x0000AC, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_468' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_469) == 0x0000B4, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_469' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_470) == 0x0000BC, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_470' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __StructProperty_471) == 0x0000C0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__StructProperty_471' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x0000E0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x000160, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(sizeof(AB_Hunter::FAnimBlueprintGeneratedConstantData) == 0x0011D0, "Wrong size on AB_Hunter::FAnimBlueprintGeneratedConstantData");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_444) == 0x000004, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_444' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_445) == 0x00000C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_445' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_446) == 0x000014, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_446' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_447) == 0x00001C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_447' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_448) == 0x000024, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_448' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_449) == 0x00002C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_449' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_450) == 0x000034, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_450' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_451) == 0x00003C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_451' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_452) == 0x000040, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_452' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_453) == 0x000048, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_453' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_454) == 0x00004C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_454' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_455) == 0x000054, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_455' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_456) == 0x000058, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_456' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_457) == 0x000060, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_457' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_458) == 0x000064, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_458' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_459) == 0x00006C, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_459' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __BoolProperty_460) == 0x000070, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__BoolProperty_460' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __FloatProperty_461) == 0x000074, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__FloatProperty_461' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __StructProperty_462) == 0x000078, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__StructProperty_462' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __FloatProperty_463) == 0x0000A4, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__FloatProperty_463' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __BoolProperty_464) == 0x0000A8, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__BoolProperty_464' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __EnumProperty_465) == 0x0000A9, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__EnumProperty_465' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __ByteProperty_466) == 0x0000AA, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__ByteProperty_466' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_467) == 0x0000AC, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_467' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_468) == 0x0000B4, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_468' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __NameProperty_469) == 0x0000BC, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__NameProperty_469' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __IntProperty_470) == 0x0000C4, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__IntProperty_470' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, __StructProperty_471) == 0x0000C8, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::__StructProperty_471' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x0000E8, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x000168, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_2) == 0x000180, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_1) == 0x0001B0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_2) == 0x0001E0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_3) == 0x000210, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_3' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_RigidBody_1) == 0x000240, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_RigidBody_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive_1) == 0x000270, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace_1) == 0x0002A0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendSpacePlayer_1) == 0x0002D0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendSpacePlayer_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose) == 0x000300, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_35) == 0x000330, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_35' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_34) == 0x000360, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_34' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_33) == 0x000390, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_33' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_32) == 0x0003C0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_32' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_10) == 0x0003F0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_10' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_11) == 0x000420, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_11' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_9) == 0x000450, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_9' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_10) == 0x000480, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_10' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_8) == 0x0004B0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_8' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_9) == 0x0004E0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_9' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendSpacePlayer) == 0x000510, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_8) == 0x000540, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_8' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine_2) == 0x000570, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_RotateRootBone) == 0x0005A0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_RotateRootBone' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x0005D0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace_1) == 0x000600, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyBone) == 0x000630, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyBone' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_1) == 0x000660, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive) == 0x000690, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_31) == 0x0006C0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_31' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_30) == 0x0006F0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_30' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_7) == 0x000720, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_7' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_7) == 0x000750, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_7' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_6) == 0x000780, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_6' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_6) == 0x0007B0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_6' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine_1) == 0x0007E0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_2) == 0x000810, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_1) == 0x000840, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone) == 0x000870, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace) == 0x0008A0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0008D0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend) == 0x000900, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose) == 0x000930, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_RigidBody) == 0x000960, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000990, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_29) == 0x0009C0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_29' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_28) == 0x0009F0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_28' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_27) == 0x000A20, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_27' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_26) == 0x000A50, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_26' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_25) == 0x000A80, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_25' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_24) == 0x000AB0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_24' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_23) == 0x000AE0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_23' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_22) == 0x000B10, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_22' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_21) == 0x000B40, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_21' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_20) == 0x000B70, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_20' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_19) == 0x000BA0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_19' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_18) == 0x000BD0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_18' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_17) == 0x000C00, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_17' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_16) == 0x000C30, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_16' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_15) == 0x000C60, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_15' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_14) == 0x000C90, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_14' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_13) == 0x000CC0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_13' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_12) == 0x000CF0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_12' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_11) == 0x000D20, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_11' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_10) == 0x000D50, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_10' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_9) == 0x000D80, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_9' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_8) == 0x000DB0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_8' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_7) == 0x000DE0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_7' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_6) == 0x000E10, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_6' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_5) == 0x000E40, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_5' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_4) == 0x000E70, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_4' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_3) == 0x000EA0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_2) == 0x000ED0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_1) == 0x000F00, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult) == 0x000F30, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_5) == 0x000F60, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_5' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_5) == 0x000F90, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_5' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_4) == 0x000FC0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_4) == 0x000FF0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_4' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_3) == 0x001020, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_3) == 0x001050, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_3' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_2) == 0x001080, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_2) == 0x0010B0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_1) == 0x0010E0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_1) == 0x001110, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x001140, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult) == 0x001170, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(AB_Hunter::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine) == 0x0011A0, "Member 'AB_Hunter::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine' has a wrong offset!");
 
 // ScriptStruct AB_Hunter.AB_Hunter_C.AnimBlueprintGeneratedMutableData
 // 0x0013 (0x0014 - 0x0001)
 struct AB_Hunter::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
 {
 public:
-	uint8                                         Pad_5221[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

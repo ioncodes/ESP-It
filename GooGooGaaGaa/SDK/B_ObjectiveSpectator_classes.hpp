@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ObjectiveSpectator.B_ObjectiveSpectator_C
-// 0x0010 (0x04A0 - 0x0490)
+// 0x0010 (0x0490 - 0x0480)
 class AB_ObjectiveSpectator_C final : public AB_Spectator_C
 {
 public:
-	uint8                                         Pad_3828[0x6];                                     // 0x0482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectiveSpectator_C;             // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          SkillSelectionShown;                               // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_472[0x6];                                      // 0x0472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectiveSpectator_C;             // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          SkillSelectionShown;                               // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_ObjectiveSpectator(int32 EntryPoint);
@@ -44,9 +44,9 @@ public:
 	}
 };
 static_assert(alignof(AB_ObjectiveSpectator_C) == 0x000010, "Wrong alignment on AB_ObjectiveSpectator_C");
-static_assert(sizeof(AB_ObjectiveSpectator_C) == 0x0004A0, "Wrong size on AB_ObjectiveSpectator_C");
-static_assert(offsetof(AB_ObjectiveSpectator_C, UberGraphFrame_B_ObjectiveSpectator_C) == 0x000488, "Member 'AB_ObjectiveSpectator_C::UberGraphFrame_B_ObjectiveSpectator_C' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveSpectator_C, SkillSelectionShown) == 0x000490, "Member 'AB_ObjectiveSpectator_C::SkillSelectionShown' has a wrong offset!");
+static_assert(sizeof(AB_ObjectiveSpectator_C) == 0x000490, "Wrong size on AB_ObjectiveSpectator_C");
+static_assert(offsetof(AB_ObjectiveSpectator_C, UberGraphFrame_B_ObjectiveSpectator_C) == 0x000478, "Member 'AB_ObjectiveSpectator_C::UberGraphFrame_B_ObjectiveSpectator_C' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveSpectator_C, SkillSelectionShown) == 0x000480, "Member 'AB_ObjectiveSpectator_C::SkillSelectionShown' has a wrong offset!");
 
 }
 

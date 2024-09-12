@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystem_structs.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "Engine_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
-// 0x0070 (0x0070 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct AchievementBlueprintLibrary_GetCachedAchievementDescription final
 {
 public:
@@ -27,23 +27,23 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AchievementID;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFoundID;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1965[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Title;                                             // 0x0020(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class FText                                   LockedDescription;                                 // 0x0038(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class FText                                   UnlockedDescription;                               // 0x0050(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          bHidden;                                           // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1966[0x7];                                     // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Title;                                             // 0x0020(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class FText                                   LockedDescription;                                 // 0x0030(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class FText                                   UnlockedDescription;                               // 0x0040(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bHidden;                                           // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AchievementBlueprintLibrary_GetCachedAchievementDescription) == 0x000008, "Wrong alignment on AchievementBlueprintLibrary_GetCachedAchievementDescription");
-static_assert(sizeof(AchievementBlueprintLibrary_GetCachedAchievementDescription) == 0x000070, "Wrong size on AchievementBlueprintLibrary_GetCachedAchievementDescription");
+static_assert(sizeof(AchievementBlueprintLibrary_GetCachedAchievementDescription) == 0x000058, "Wrong size on AchievementBlueprintLibrary_GetCachedAchievementDescription");
 static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, WorldContextObject) == 0x000000, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, PlayerController) == 0x000008, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::PlayerController' has a wrong offset!");
 static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, AchievementID) == 0x000010, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::AchievementID' has a wrong offset!");
 static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, bFoundID) == 0x000018, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::bFoundID' has a wrong offset!");
 static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, Title) == 0x000020, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::Title' has a wrong offset!");
-static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, LockedDescription) == 0x000038, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::LockedDescription' has a wrong offset!");
-static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, UnlockedDescription) == 0x000050, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::UnlockedDescription' has a wrong offset!");
-static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, bHidden) == 0x000068, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::bHidden' has a wrong offset!");
+static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, LockedDescription) == 0x000030, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::LockedDescription' has a wrong offset!");
+static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, UnlockedDescription) == 0x000040, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::UnlockedDescription' has a wrong offset!");
+static_assert(offsetof(AchievementBlueprintLibrary_GetCachedAchievementDescription, bHidden) == 0x000050, "Member 'AchievementBlueprintLibrary_GetCachedAchievementDescription::bHidden' has a wrong offset!");
 
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
 // 0x0020 (0x0020 - 0x0000)
@@ -54,7 +54,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AchievementID;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFoundID;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1967[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Progress;                                          // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AchievementBlueprintLibrary_GetCachedAchievementProgress) == 0x000008, "Wrong alignment on AchievementBlueprintLibrary_GetCachedAchievementProgress");
@@ -140,7 +140,8 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PublicConnections;                                 // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLAN;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_196C[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseLobbiesIfAvailable;                            // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCreateSessionCallbackProxy*            ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CreateSessionCallbackProxy_CreateSession) == 0x000008, "Wrong alignment on CreateSessionCallbackProxy_CreateSession");
@@ -149,6 +150,7 @@ static_assert(offsetof(CreateSessionCallbackProxy_CreateSession, WorldContextObj
 static_assert(offsetof(CreateSessionCallbackProxy_CreateSession, PlayerController) == 0x000008, "Member 'CreateSessionCallbackProxy_CreateSession::PlayerController' has a wrong offset!");
 static_assert(offsetof(CreateSessionCallbackProxy_CreateSession, PublicConnections) == 0x000010, "Member 'CreateSessionCallbackProxy_CreateSession::PublicConnections' has a wrong offset!");
 static_assert(offsetof(CreateSessionCallbackProxy_CreateSession, bUseLAN) == 0x000014, "Member 'CreateSessionCallbackProxy_CreateSession::bUseLAN' has a wrong offset!");
+static_assert(offsetof(CreateSessionCallbackProxy_CreateSession, bUseLobbiesIfAvailable) == 0x000015, "Member 'CreateSessionCallbackProxy_CreateSession::bUseLobbiesIfAvailable' has a wrong offset!");
 static_assert(offsetof(CreateSessionCallbackProxy_CreateSession, ReturnValue) == 0x000018, "Member 'CreateSessionCallbackProxy_CreateSession::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
@@ -177,7 +179,7 @@ public:
 	class FString                                 MatchID;                                           // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMPMatchOutcome                               LocalPlayerOutcome;                                // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMPMatchOutcome                               OtherPlayersOutcome;                               // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_196F[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UEndMatchCallbackProxy*                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(EndMatchCallbackProxy_EndMatch) == 0x000008, "Wrong alignment on EndMatchCallbackProxy_EndMatch");
@@ -218,7 +220,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxResults;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLAN;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1972[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFindSessionsCallbackProxy*             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FindSessionsCallbackProxy_FindSessions) == 0x000008, "Wrong alignment on FindSessionsCallbackProxy_FindSessions");
@@ -236,7 +238,7 @@ struct FindSessionsCallbackProxy_GetCurrentPlayers final
 public:
 	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1973[0x4];                                     // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FindSessionsCallbackProxy_GetCurrentPlayers) == 0x000008, "Wrong alignment on FindSessionsCallbackProxy_GetCurrentPlayers");
 static_assert(sizeof(FindSessionsCallbackProxy_GetCurrentPlayers) == 0x000128, "Wrong size on FindSessionsCallbackProxy_GetCurrentPlayers");
@@ -250,7 +252,7 @@ struct FindSessionsCallbackProxy_GetMaxPlayers final
 public:
 	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1974[0x4];                                     // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FindSessionsCallbackProxy_GetMaxPlayers) == 0x000008, "Wrong alignment on FindSessionsCallbackProxy_GetMaxPlayers");
 static_assert(sizeof(FindSessionsCallbackProxy_GetMaxPlayers) == 0x000128, "Wrong size on FindSessionsCallbackProxy_GetMaxPlayers");
@@ -264,7 +266,7 @@ struct FindSessionsCallbackProxy_GetPingInMs final
 public:
 	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1975[0x4];                                     // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FindSessionsCallbackProxy_GetPingInMs) == 0x000008, "Wrong alignment on FindSessionsCallbackProxy_GetPingInMs");
 static_assert(sizeof(FindSessionsCallbackProxy_GetPingInMs) == 0x000128, "Wrong size on FindSessionsCallbackProxy_GetPingInMs");
@@ -296,7 +298,7 @@ public:
 	int32                                         MaxPlayers;                                        // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerGroup;                                       // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ShowExistingMatches;                               // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1977[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFindTurnBasedMatchCallbackProxy*       ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FindTurnBasedMatchCallbackProxy_FindTurnBasedMatch) == 0x000008, "Wrong alignment on FindTurnBasedMatchCallbackProxy_FindTurnBasedMatch");
@@ -476,7 +478,7 @@ public:
 	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StatValue;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1984[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger) == 0x000008, "Wrong alignment on LeaderboardBlueprintLibrary_WriteLeaderboardInteger");
 static_assert(sizeof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger) == 0x000018, "Wrong size on LeaderboardBlueprintLibrary_WriteLeaderboardInteger");
@@ -635,7 +637,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MatchID;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMPMatchOutcome                               Outcome;                                           // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_199C[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TurnTimeoutInSeconds;                              // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuitMatchCallbackProxy*                ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -729,7 +731,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MatchID;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsMyTurn;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19A5[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TurnBasedBlueprintLibrary_GetIsMyTurn) == 0x000008, "Wrong alignment on TurnBasedBlueprintLibrary_GetIsMyTurn");
 static_assert(sizeof(TurnBasedBlueprintLibrary_GetIsMyTurn) == 0x000028, "Wrong size on TurnBasedBlueprintLibrary_GetIsMyTurn");
@@ -747,7 +749,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MatchID;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerIndex;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19A6[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TurnBasedBlueprintLibrary_GetMyPlayerIndex) == 0x000008, "Wrong alignment on TurnBasedBlueprintLibrary_GetMyPlayerIndex");
 static_assert(sizeof(TurnBasedBlueprintLibrary_GetMyPlayerIndex) == 0x000028, "Wrong size on TurnBasedBlueprintLibrary_GetMyPlayerIndex");
@@ -765,7 +767,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MatchID;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerIndex;                                       // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19A7[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PlayerDisplayName;                                 // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TurnBasedBlueprintLibrary_GetPlayerDisplayName) == 0x000008, "Wrong alignment on TurnBasedBlueprintLibrary_GetPlayerDisplayName");

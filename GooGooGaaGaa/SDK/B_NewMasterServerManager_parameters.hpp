@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "LowEntryJson_structs.hpp"
 #include "ERestCommonError_structs.hpp"
 
@@ -213,7 +213,7 @@ static_assert(offsetof(B_NewMasterServerManager_C_BuildLoginRequest, CallFunc_Bu
 struct B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken final
 {
 public:
-	class FString                                 Param_RefreshToken;                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 RefreshToken_0;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Locale;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 AccountType;                                       // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 AdditionalAuthInformation;                         // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
@@ -226,7 +226,7 @@ public:
 };
 static_assert(alignof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken");
 static_assert(sizeof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken) == 0x0000C0, "Wrong size on B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken, Param_RefreshToken) == 0x000000, "Member 'B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken::Param_RefreshToken' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken, RefreshToken_0) == 0x000000, "Member 'B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken::RefreshToken_0' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken, Locale) == 0x000010, "Member 'B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken::Locale' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken, AccountType) == 0x000020, "Member 'B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken::AccountType' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken, AdditionalAuthInformation) == 0x000030, "Member 'B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken::AdditionalAuthInformation' has a wrong offset!");
@@ -250,18 +250,18 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49E8[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49E9[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49EA[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Map_Find_Value;                           // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49EB[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
@@ -335,7 +335,7 @@ struct B_NewMasterServerManager_C_BuildResetGSStatsCallRequest final
 public:
 	class FString                                 ProductUserId;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          AchievementsToo;                                   // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49EC[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     ResultRequest;                                     // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     TempRequest;                                       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestSubsystem*                       CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -357,7 +357,7 @@ static_assert(offsetof(B_NewMasterServerManager_C_BuildResetGSStatsCallRequest, 
 static_assert(offsetof(B_NewMasterServerManager_C_BuildResetGSStatsCallRequest, CallFunc_BuildRestCallUrl_Url) == 0x000098, "Member 'B_NewMasterServerManager_C_BuildResetGSStatsCallRequest::CallFunc_BuildRestCallUrl_Url' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.BuildRestCallUrl
-// 0x03C0 (0x03C0 - 0x0000)
+// 0x0358 (0x0358 - 0x0000)
 struct B_NewMasterServerManager_C_BuildRestCallUrl final
 {
 public:
@@ -367,32 +367,32 @@ public:
 	class FString                                 URL;                                               // 0x0070(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 ParamString;                                       // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShippingBuild_ReturnValue;                // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49ED[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_BuildParameterString_Out;                 // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetRestCallHostname_ReturnValue;          // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00B8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00D0(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_GetRestCallPort_ReturnValue;              // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49EE[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetRestCallProtocol_ReturnValue;          // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0140(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0158(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x01A8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x01F8(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0210(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0228(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0278(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x02C8(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02E8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0338(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0388(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0398(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x03B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00B8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00C8(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_GetRestCallPort_ReturnValue;              // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetRestCallProtocol_ReturnValue;          // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0130(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0140(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0188(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x01D0(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x01E0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01F0(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0238(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x0280(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0298(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x02E0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0328(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0338(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0348(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_BuildRestCallUrl) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_BuildRestCallUrl");
-static_assert(sizeof(B_NewMasterServerManager_C_BuildRestCallUrl) == 0x0003C0, "Wrong size on B_NewMasterServerManager_C_BuildRestCallUrl");
+static_assert(sizeof(B_NewMasterServerManager_C_BuildRestCallUrl) == 0x000358, "Wrong size on B_NewMasterServerManager_C_BuildRestCallUrl");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, Section) == 0x000000, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::Section' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, Function) == 0x000010, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::Function' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, Parameters) == 0x000020, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::Parameters' has a wrong offset!");
@@ -402,24 +402,24 @@ static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Shi
 static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_BuildParameterString_Out) == 0x000098, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_BuildParameterString_Out' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_GetRestCallHostname_ReturnValue) == 0x0000A8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_GetRestCallHostname_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue) == 0x0000B8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData) == 0x0000D0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_GetRestCallPort_ReturnValue) == 0x000120, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_GetRestCallPort_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_GetRestCallProtocol_ReturnValue) == 0x000128, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_GetRestCallProtocol_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000138, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000140, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_1) == 0x000158, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_2) == 0x0001A8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0001F8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_3) == 0x000210, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_3) == 0x000228, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_4) == 0x000278, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_4) == 0x0002C8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0002E0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002E8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_6) == 0x000338, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeArray_Array) == 0x000388, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Format_ReturnValue) == 0x000398, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_TextToString_ReturnValue) == 0x0003B0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData) == 0x0000C8, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_GetRestCallPort_ReturnValue) == 0x000110, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_GetRestCallPort_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_GetRestCallProtocol_ReturnValue) == 0x000118, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_GetRestCallProtocol_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000128, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000130, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_1) == 0x000140, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_2) == 0x000188, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0001D0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_3) == 0x0001E0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001F0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_4) == 0x000238, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_StringToText_ReturnValue_4) == 0x000280, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_StringToText_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000290, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_5) == 0x000298, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeStruct_FormatArgumentData_6) == 0x0002E0, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, K2Node_MakeArray_Array) == 0x000328, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Format_ReturnValue) == 0x000338, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_BuildRestCallUrl, CallFunc_Conv_TextToString_ReturnValue) == 0x000348, "Member 'B_NewMasterServerManager_C_BuildRestCallUrl::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.BuildSetGSStatCallUrl
 // 0x00A8 (0x00A8 - 0x0000)
@@ -429,7 +429,7 @@ public:
 	class FString                                 ProductUserId;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 StatName;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Value;                                             // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49EF[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 URL;                                               // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TMap<class FString, class FString>            K2Node_MakeMap_Map;                                // 0x0048(0x0050)()
@@ -452,7 +452,7 @@ struct B_NewMasterServerManager_C_BuildSetStatCallUrl final
 public:
 	class FString                                 StatName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Value;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F0[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 URL;                                               // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TMap<class FString, class FString>            K2Node_MakeMap_Map;                                // 0x0038(0x0050)()
@@ -570,7 +570,7 @@ struct B_NewMasterServerManager_C_CheckRefreshAccessToken final
 public:
 	int32                                         MinDelayInSeconds;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasValidRefreshToken_IsValid;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F1[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_MakeTimespan_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_Add_DateTimeTimespan_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -615,56 +615,56 @@ static_assert(offsetof(B_NewMasterServerManager_C_CommonErrorCodeFromString, IsV
 static_assert(offsetof(B_NewMasterServerManager_C_CommonErrorCodeFromString, K2Node_SwitchString_CmpSuccess) == 0x000014, "Member 'B_NewMasterServerManager_C_CommonErrorCodeFromString::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.ConnectUsingWebSocket
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct B_NewMasterServerManager_C_ConnectUsingWebSocket final
 {
 public:
 	bool                                          CallFunc_ShippingBuild_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShippingBuild_ReturnValue_1;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F2[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetRestCallHostname_ReturnValue;          // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetRestCallHostname_ReturnValue_1;        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0018)()
-	bool                                          CallFunc_Connect_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F3[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0050)(HasGetValueTypeHash)
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F4[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00B0(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D0(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0120(0x0050)(HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0178(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0188(0x0018)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
+	bool                                          CallFunc_Connect_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00A0(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0100(0x0048)(HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0150(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0160(0x0010)()
 };
 static_assert(alignof(B_NewMasterServerManager_C_ConnectUsingWebSocket) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_ConnectUsingWebSocket");
-static_assert(sizeof(B_NewMasterServerManager_C_ConnectUsingWebSocket) == 0x0001A0, "Wrong size on B_NewMasterServerManager_C_ConnectUsingWebSocket");
+static_assert(sizeof(B_NewMasterServerManager_C_ConnectUsingWebSocket) == 0x000170, "Wrong size on B_NewMasterServerManager_C_ConnectUsingWebSocket");
 static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_ShippingBuild_ReturnValue) == 0x000000, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_ShippingBuild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_ShippingBuild_ReturnValue_1) == 0x000001, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_ShippingBuild_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_GetRestCallHostname_ReturnValue) == 0x000008, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_GetRestCallHostname_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_GetRestCallHostname_ReturnValue_1) == 0x000018, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_GetRestCallHostname_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Connect_ReturnValue) == 0x000040, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Connect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_MakeLiteralString_ReturnValue) == 0x000098, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_MakeLiteralInt_ReturnValue) == 0x0000A8, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000B0, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000C8, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D0, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeStruct_FormatArgumentData_2) == 0x000120, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000170, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeArray_Array) == 0x000178, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Format_ReturnValue) == 0x000188, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Connect_ReturnValue) == 0x000038, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Connect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_MakeLiteralString_ReturnValue) == 0x000088, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_MakeLiteralInt_ReturnValue) == 0x000098, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000A0, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000B0, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B8, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeStruct_FormatArgumentData_2) == 0x000100, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000148, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, K2Node_MakeArray_Array) == 0x000150, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ConnectUsingWebSocket, CallFunc_Format_ReturnValue) == 0x000160, "Member 'B_NewMasterServerManager_C_ConnectUsingWebSocket::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.ExecuteUbergraph_B_NewMasterServerManager
-// 0x0998 (0x0998 - 0x0000)
+// 0x08D8 (0x08D8 - 0x0000)
 struct B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_DateTime_ToIso8601_String;                // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& Text)>    K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -680,38 +680,38 @@ public:
 	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F6[0x3];                                     // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetResponseCode_ReturnValue;              // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch;                  // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F7[0x5];                                     // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue;             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_DateTimeFromIsoString_Result;             // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DateTimeFromIsoString_ReturnValue;        // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch;                 // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F8[0x1];                                     // 0x00BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BB[0x1];                                       // 0x00BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue;            // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch_1;                // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49F9[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue_1;           // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetBoolean_Branch;                 // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Object_GetBoolean_ReturnValue;            // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49FA[0x3];                                     // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_2;                      // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49FB[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetURL_ReturnValue;                       // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetURL_ReturnValue_1;                     // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsConnected_ReturnValue;                  // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49FC[0x6];                                     // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_RefreshToken;                   // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_locale_1;                       // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_Locale_1;                       // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_CustomEvent_AccountType_1;                  // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetURL_ReturnValue_2;                     // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0158(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -720,126 +720,126 @@ public:
 	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0188(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_1;                      // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetResponseCode_ReturnValue_1;            // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49FD[0x4];                                     // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request;                        // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetResponseContentAsString_ReturnValue_1; // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01C8(0x0050)(HasGetValueTypeHash)
-	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue_1; // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue_1; // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch_1;            // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49FE[0x7];                                     // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0230(0x0010)(ReferenceParm)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_5;                    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49FF[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0248(0x0018)()
-	bool                                          CallFunc_ProcessLoginResponse_Success;             // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A00[0x3];                                     // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_ProcessLoginResponse_Code;                // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_ProcessLoginResponse_Message;             // 0x0268(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetResponseCode_ReturnValue_2;            // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x027C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A01[0x3];                                     // 0x027D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo; // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo_1; // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UVaRestRequestJSON*                     CallFunc_BuildLoginRequestWithRefreshToken_RestRequest; // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdForFirstLocalPC_UniqueNetId; // 0x02A8(0x0030)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x02E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaTime;                            // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasValidAccessToken_IsValid;              // 0x02FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A02[0x3];                                     // 0x02FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              CallFunc_UtcNow_ReturnValue_1;                     // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue; // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A03[0x7];                                     // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              CallFunc_MakeTimespan_ReturnValue;                 // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              CallFunc_Add_DateTimeTimespan_ReturnValue;         // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasValidRefreshToken_IsValid;             // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsRunningOnDedicatedServer;     // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A04[0x6];                                     // 0x032A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_CustomEvent_GameInstance;                   // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_7;         // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_success_1;                            // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A05[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Event_errorMessage;                         // 0x0348(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0358(0x0018)()
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0370(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0388(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x03D8(0x0050)(HasGetValueTypeHash)
-	int32                                         K2Node_Event_StatusCode;                           // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A06[0x4];                                     // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Event_Reason;                               // 0x0430(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bWasClean;                            // 0x0440(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A07[0x7];                                     // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0448(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue_1;            // 0x0458(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0470(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0488(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x04D8(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x04F8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0548(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0598(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x05A8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x05B8(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x05D0(0x0018)()
-	bool                                          CallFunc_HasValidAccessToken_IsValid_1;            // 0x05E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_success;                              // 0x05E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A08[0x2];                                     // 0x05EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Event_accountId;                            // 0x05EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue_2;            // 0x05F8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0610(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0660(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x06B0(0x0010)(ReferenceParm)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_8;         // 0x06C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x06C8(0x0018)()
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A09[0x7];                                     // 0x06E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_9;         // 0x06E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x06F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A0A[0x7];                                     // 0x06F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_username;                       // 0x06F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_password;                       // 0x0708(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_locale;                         // 0x0718(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_AccountType;                    // 0x0728(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_AuthInfo;                       // 0x0738(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_10;        // 0x0748(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0750(0x0018)()
-	class FString                                 CallFunc_CacheLoginData_CachedUsername;            // 0x0768(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_CacheLoginData_CachedPassword;            // 0x0778(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_CacheLoginData_CachedLocale;              // 0x0788(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_CacheLoginData_CachedAccountType;         // 0x0798(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x07A8(0x0050)(HasGetValueTypeHash)
-	class UVaRestRequestJSON*                     CallFunc_BuildLoginRequest_RestRequest;            // 0x07F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0800(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0818(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0868(0x0010)(ReferenceParm)
-	class UServerBrowser*                         CallFunc_GetServerBrowser_ReturnValue;             // 0x0878(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0880(0x0018)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0898(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A0B[0x7];                                     // 0x0899(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_CustomEvent_Text;                           // 0x08A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x08B0(0x0018)()
-	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x08C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x08D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x08E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_Parse_StringToGuid_OutGuid;               // 0x08F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Parse_StringToGuid_Success;               // 0x0908(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A0C[0x7];                                     // 0x0909(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0910(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0920(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0930(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0940(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FDateTime                              CallFunc_UtcNow_ReturnValue_2;                     // 0x0950(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_DateTime_ToIso8601_String_1;              // 0x0958(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0968(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x0978(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x0988(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01C8(0x0048)(HasGetValueTypeHash)
+	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue_1; // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue_1; // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch_1;            // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0228(0x0010)(ReferenceParm)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_5;                    // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0240(0x0010)()
+	bool                                          CallFunc_ProcessLoginResponse_Success;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_ProcessLoginResponse_Code;                // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_ProcessLoginResponse_Message;             // 0x0258(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetResponseCode_ReturnValue_2;            // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26D[0x3];                                      // 0x026D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo; // 0x0270(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo_1; // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UVaRestRequestJSON*                     CallFunc_BuildLoginRequestWithRefreshToken_RestRequest; // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdForFirstLocalPC_UniqueNetId; // 0x0298(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x02C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x02D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTime;                            // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasValidAccessToken_IsValid;              // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2ED[0x3];                                      // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              CallFunc_UtcNow_ReturnValue_1;                     // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue; // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              CallFunc_MakeTimespan_ReturnValue;                 // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              CallFunc_Add_DateTimeTimespan_ReturnValue;         // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasValidRefreshToken_IsValid;             // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsRunningOnDedicatedServer;     // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31A[0x6];                                      // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_CustomEvent_GameInstance;                   // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_7;         // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_success_1;                            // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Event_errorMessage;                         // 0x0338(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0348(0x0010)()
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0358(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0368(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x03B0(0x0048)(HasGetValueTypeHash)
+	int32                                         K2Node_Event_StatusCode;                           // 0x03F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_Event_Reason;                               // 0x0400(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bWasClean;                            // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0418(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue_1;            // 0x0428(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0438(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0448(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0490(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x04A8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x04F0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0538(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0548(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0558(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0568(0x0010)()
+	bool                                          CallFunc_HasValidAccessToken_IsValid_1;            // 0x0578(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_success;                              // 0x0579(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_57A[0x2];                                      // 0x057A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Event_accountId;                            // 0x057C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue_2;            // 0x0588(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0598(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x05E0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0628(0x0010)(ReferenceParm)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_8;         // 0x0638(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0640(0x0010)()
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0650(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_651[0x7];                                      // 0x0651(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_9;         // 0x0658(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_661[0x7];                                      // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_username;                       // 0x0668(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_password;                       // 0x0678(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_Locale;                         // 0x0688(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_AccountType;                    // 0x0698(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_CustomEvent_AuthInfo;                       // 0x06A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_10;        // 0x06B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x06C0(0x0010)()
+	class FString                                 CallFunc_CacheLoginData_CachedUsername;            // 0x06D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_CacheLoginData_CachedPassword;            // 0x06E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_CacheLoginData_CachedLocale;              // 0x06F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_CacheLoginData_CachedAccountType;         // 0x0700(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0710(0x0048)(HasGetValueTypeHash)
+	class UVaRestRequestJSON*                     CallFunc_BuildLoginRequest_RestRequest;            // 0x0758(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0760(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0770(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x07B8(0x0010)(ReferenceParm)
+	class UServerBrowser*                         CallFunc_GetServerBrowser_ReturnValue;             // 0x07C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x07D0(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x07E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E1[0x7];                                      // 0x07E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_Text;                           // 0x07E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x07F8(0x0010)()
+	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x0808(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0818(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0828(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_Parse_StringToGuid_OutGuid;               // 0x0838(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Parse_StringToGuid_Success;               // 0x0848(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_849[0x7];                                      // 0x0849(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0850(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0860(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0870(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0880(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FDateTime                              CallFunc_UtcNow_ReturnValue_2;                     // 0x0890(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_DateTime_ToIso8601_String_1;              // 0x0898(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x08A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_6;              // 0x08B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_7;              // 0x08C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager");
-static_assert(sizeof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager) == 0x000998, "Wrong size on B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager");
+static_assert(sizeof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager) == 0x0008D8, "Wrong size on B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, EntryPoint) == 0x000000, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_DateTime_ToIso8601_String) == 0x000008, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_DateTime_ToIso8601_String' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
@@ -880,7 +880,7 @@ static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterSe
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Not_PreBool_ReturnValue) == 0x000110, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_IsConnected_ReturnValue) == 0x000111, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_IsConnected_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_RefreshToken) == 0x000118, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_RefreshToken' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_locale_1) == 0x000128, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_locale_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_Locale_1) == 0x000128, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_Locale_1' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_AccountType_1) == 0x000138, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_AccountType_1' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetURL_ReturnValue_2) == 0x000148, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetURL_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000158, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
@@ -893,103 +893,103 @@ static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterSe
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0001B0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetResponseContentAsString_ReturnValue_1) == 0x0001B8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetResponseContentAsString_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData) == 0x0001C8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Json_ParseJsonString_ReturnJsonObjectValue_1) == 0x000218, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Json_ParseJsonString_ReturnJsonObjectValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Json_ParseJsonString_ReturnJsonArrayValue_1) == 0x000220, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Json_ParseJsonString_ReturnJsonArrayValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Json_ParseJsonString_Branch_1) == 0x000228, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Json_ParseJsonString_Branch_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array) == 0x000230, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_SwitchEnum_CmpSuccess_5) == 0x000240, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_SwitchEnum_CmpSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue) == 0x000248, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_ProcessLoginResponse_Success) == 0x000260, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_ProcessLoginResponse_Success' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_ProcessLoginResponse_Code) == 0x000264, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_ProcessLoginResponse_Code' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_ProcessLoginResponse_Message) == 0x000268, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_ProcessLoginResponse_Message' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetResponseCode_ReturnValue_2) == 0x000278, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetResponseCode_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x00027C, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo) == 0x000280, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo_1) == 0x000290, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_BuildLoginRequestWithRefreshToken_RestRequest) == 0x0002A0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_BuildLoginRequestWithRefreshToken_RestRequest' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetUniqueNetIdForFirstLocalPC_UniqueNetId) == 0x0002A8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetUniqueNetIdForFirstLocalPC_UniqueNetId' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue) == 0x0002D8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x0002E8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_DeltaTime) == 0x0002F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_HasValidAccessToken_IsValid) == 0x0002FC, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_HasValidAccessToken_IsValid' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_UtcNow_ReturnValue) == 0x000300, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_UtcNow_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_UtcNow_ReturnValue_1) == 0x000308, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_UtcNow_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue) == 0x000310, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_MakeTimespan_ReturnValue) == 0x000318, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_MakeTimespan_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Add_DateTimeTimespan_ReturnValue) == 0x000320, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Add_DateTimeTimespan_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_HasValidRefreshToken_IsValid) == 0x000328, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_HasValidRefreshToken_IsValid' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_IsRunningOnDedicatedServer) == 0x000329, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_IsRunningOnDedicatedServer' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_GameInstance) == 0x000330, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_GameInstance' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_7) == 0x000338, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_success_1) == 0x000340, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_success_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_errorMessage) == 0x000348, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_errorMessage' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue) == 0x000358, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToText_ReturnValue) == 0x000370, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_1) == 0x000388, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_2) == 0x0003D8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_StatusCode) == 0x000428, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_StatusCode' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_Reason) == 0x000430, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_Reason' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_bWasClean) == 0x000440, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_bWasClean' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_1) == 0x000448, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToText_ReturnValue_1) == 0x000458, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_1) == 0x000470, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_3) == 0x000488, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0004D8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0004F0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_4) == 0x0004F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_5) == 0x000548, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_2) == 0x000598, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_3) == 0x0005A8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_2) == 0x0005B8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_3) == 0x0005D0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_HasValidAccessToken_IsValid_1) == 0x0005E8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_HasValidAccessToken_IsValid_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_success) == 0x0005E9, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_success' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_accountId) == 0x0005EC, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_accountId' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x0005F0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToText_ReturnValue_2) == 0x0005F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_6) == 0x000610, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_7) == 0x000660, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_4) == 0x0006B0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_8) == 0x0006C0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_4) == 0x0006C8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x0006E0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_9) == 0x0006E8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_BooleanAND_ReturnValue) == 0x0006F0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_username) == 0x0006F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_username' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_password) == 0x000708, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_password' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_locale) == 0x000718, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_locale' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_AccountType) == 0x000728, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_AccountType' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_AuthInfo) == 0x000738, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_AuthInfo' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_10) == 0x000748, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000750, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedUsername) == 0x000768, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedUsername' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedPassword) == 0x000778, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedPassword' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedLocale) == 0x000788, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedLocale' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedAccountType) == 0x000798, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedAccountType' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_8) == 0x0007A8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_BuildLoginRequest_RestRequest) == 0x0007F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_BuildLoginRequest_RestRequest' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_3) == 0x000800, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_9) == 0x000818, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_5) == 0x000868, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetServerBrowser_ReturnValue) == 0x000878, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetServerBrowser_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_5) == 0x000880, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_IsValid_ReturnValue) == 0x000898, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_Text) == 0x0008A0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_Text' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_4) == 0x0008B0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0008C8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0008D8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0008E8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Parse_StringToGuid_OutGuid) == 0x0008F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Parse_StringToGuid_OutGuid' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Parse_StringToGuid_Success) == 0x000908, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Parse_StringToGuid_Success' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToString_ReturnValue) == 0x000910, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000920, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000930, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000940, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_UtcNow_ReturnValue_2) == 0x000950, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_UtcNow_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_DateTime_ToIso8601_String_1) == 0x000958, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_DateTime_ToIso8601_String_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000968, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_6) == 0x000978, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_7) == 0x000988, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Json_ParseJsonString_ReturnJsonObjectValue_1) == 0x000210, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Json_ParseJsonString_ReturnJsonObjectValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Json_ParseJsonString_ReturnJsonArrayValue_1) == 0x000218, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Json_ParseJsonString_ReturnJsonArrayValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Json_ParseJsonString_Branch_1) == 0x000220, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Json_ParseJsonString_Branch_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array) == 0x000228, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_SwitchEnum_CmpSuccess_5) == 0x000238, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_SwitchEnum_CmpSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue) == 0x000240, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_ProcessLoginResponse_Success) == 0x000250, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_ProcessLoginResponse_Success' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_ProcessLoginResponse_Code) == 0x000254, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_ProcessLoginResponse_Code' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_ProcessLoginResponse_Message) == 0x000258, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_ProcessLoginResponse_Message' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetResponseCode_ReturnValue_2) == 0x000268, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetResponseCode_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x00026C, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo) == 0x000270, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo_1) == 0x000280, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetLoginAuthInfoForFirstLocalPC_AuthInfo_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_BuildLoginRequestWithRefreshToken_RestRequest) == 0x000290, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_BuildLoginRequestWithRefreshToken_RestRequest' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetUniqueNetIdForFirstLocalPC_UniqueNetId) == 0x000298, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetUniqueNetIdForFirstLocalPC_UniqueNetId' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue) == 0x0002C8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x0002D8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_DeltaTime) == 0x0002E8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_DeltaTime' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_HasValidAccessToken_IsValid) == 0x0002EC, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_HasValidAccessToken_IsValid' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_UtcNow_ReturnValue) == 0x0002F0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_UtcNow_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_UtcNow_ReturnValue_1) == 0x0002F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_UtcNow_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue) == 0x000300, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_MakeTimespan_ReturnValue) == 0x000308, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_MakeTimespan_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Add_DateTimeTimespan_ReturnValue) == 0x000310, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Add_DateTimeTimespan_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_HasValidRefreshToken_IsValid) == 0x000318, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_HasValidRefreshToken_IsValid' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_IsRunningOnDedicatedServer) == 0x000319, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_IsRunningOnDedicatedServer' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_GameInstance) == 0x000320, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_GameInstance' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_7) == 0x000328, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_success_1) == 0x000330, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_success_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_errorMessage) == 0x000338, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_errorMessage' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue) == 0x000348, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToText_ReturnValue) == 0x000358, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_1) == 0x000368, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_2) == 0x0003B0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_StatusCode) == 0x0003F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_StatusCode' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_Reason) == 0x000400, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_Reason' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_bWasClean) == 0x000410, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_bWasClean' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_1) == 0x000418, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToText_ReturnValue_1) == 0x000428, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_1) == 0x000438, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_3) == 0x000448, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000490, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0004A0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_4) == 0x0004A8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_5) == 0x0004F0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_2) == 0x000538, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_3) == 0x000548, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_2) == 0x000558, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_3) == 0x000568, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_HasValidAccessToken_IsValid_1) == 0x000578, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_HasValidAccessToken_IsValid_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_success) == 0x000579, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_success' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_Event_accountId) == 0x00057C, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_Event_accountId' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000580, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToText_ReturnValue_2) == 0x000588, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_6) == 0x000598, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_7) == 0x0005E0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_4) == 0x000628, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_8) == 0x000638, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_4) == 0x000640, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000650, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_9) == 0x000658, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_BooleanAND_ReturnValue) == 0x000660, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_username) == 0x000668, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_username' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_password) == 0x000678, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_password' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_Locale) == 0x000688, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_Locale' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_AccountType) == 0x000698, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_AccountType' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_AuthInfo) == 0x0006A8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_AuthInfo' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetEngineSubsystem_ReturnValue_10) == 0x0006B8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetEngineSubsystem_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0006C0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedUsername) == 0x0006D0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedUsername' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedPassword) == 0x0006E0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedPassword' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedLocale) == 0x0006F0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedLocale' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_CacheLoginData_CachedAccountType) == 0x000700, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_CacheLoginData_CachedAccountType' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_8) == 0x000710, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_BuildLoginRequest_RestRequest) == 0x000758, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_BuildLoginRequest_RestRequest' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_3) == 0x000760, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeStruct_FormatArgumentData_9) == 0x000770, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_MakeArray_Array_5) == 0x0007B8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_MakeArray_Array_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_GetServerBrowser_ReturnValue) == 0x0007C8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_GetServerBrowser_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Format_ReturnValue_5) == 0x0007D0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Format_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_IsValid_ReturnValue) == 0x0007E0, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CustomEvent_Text) == 0x0007E8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CustomEvent_Text' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_StringToText_ReturnValue_4) == 0x0007F8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_StringToText_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x000808, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000818, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000828, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Parse_StringToGuid_OutGuid) == 0x000838, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Parse_StringToGuid_OutGuid' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Parse_StringToGuid_Success) == 0x000848, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Parse_StringToGuid_Success' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Conv_BoolToString_ReturnValue) == 0x000850, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000860, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000870, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000880, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_UtcNow_ReturnValue_2) == 0x000890, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_UtcNow_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_DateTime_ToIso8601_String_1) == 0x000898, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_DateTime_ToIso8601_String_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_5) == 0x0008A8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_6) == 0x0008B8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager, CallFunc_Concat_StrStr_ReturnValue_7) == 0x0008C8, "Member 'B_NewMasterServerManager_C_ExecuteUbergraph_B_NewMasterServerManager::CallFunc_Concat_StrStr_ReturnValue_7' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.GetDirectConnectAddress
 // 0x0080 (0x0080 - 0x0000)
@@ -997,16 +997,16 @@ struct B_NewMasterServerManager_C_GetDirectConnectAddress final
 {
 public:
 	bool                                          UseProdServers;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A0D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 HostName;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Port;                                              // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLocalhost;                                       // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A0E[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A0F[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -1033,7 +1033,7 @@ struct B_NewMasterServerManager_C_Initialize final
 {
 public:
 	bool                                          IsRunningOnDedicatedServer;                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A10[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      GameInstance;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_Initialize) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_Initialize");
@@ -1047,7 +1047,7 @@ struct B_NewMasterServerManager_C_InvalidateRefreshToken final
 {
 public:
 	bool                                          bCallLoginFailedEvent;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A11[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ErrorCode;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_MakeDateTime_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -1074,7 +1074,7 @@ struct B_NewMasterServerManager_C_OnConnected final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A12[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorMessage;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_OnConnected) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_OnConnected");
@@ -1088,7 +1088,7 @@ struct B_NewMasterServerManager_C_OnDisconnected final
 {
 public:
 	int32                                         StatusCode;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A13[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Reason;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          bWasClean;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1115,7 +1115,7 @@ struct B_NewMasterServerManager_C_OnLoginResponse final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A14[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AccountId;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_OnLoginResponse) == 0x000004, "Wrong alignment on B_NewMasterServerManager_C_OnLoginResponse");
@@ -1176,7 +1176,7 @@ public:
 	ERestCommonError                              Result;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ResultIsValid;                                     // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LocalResultIsValid;                                // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A15[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetResponseContentAsString_ReturnValue;   // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -1210,7 +1210,7 @@ public:
 	ERestCommonError                              ErrorCodeResult;                                   // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          JsonWasValidResult;                                // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A16[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ERestCommonError                              CallFunc_CommonErrorCodeFromString_ErrorCode;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CommonErrorCodeFromString_IsValid;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1239,7 +1239,7 @@ public:
 	bool                                          ResultIsValid;                                     // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERestCommonError                              ErrorCodeResult;                                   // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          JsonWasValidResult;                                // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A17[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetStringField_ReturnValue;               // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ERestCommonError                              CallFunc_CommonErrorCodeFromString_ErrorCode;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CommonErrorCodeFromString_IsValid;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1270,7 +1270,7 @@ public:
 	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch;                 // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A18[0x1];                                     // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43[0x1];                                       // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERestCommonError                              CallFunc_ParseErrorCodeFromLEJsonObject_Result;    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseErrorCodeFromLEJsonObject_ResultIsValid; // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1310,7 +1310,7 @@ public:
 	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch;                  // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A19[0x5];                                     // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue;             // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ERestCommonError                              CallFunc_ParseErrorCodeFromLEJsonObject_Result;    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseErrorCodeFromLEJsonObject_ResultIsValid; // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1343,7 +1343,7 @@ public:
 	class UVaRestRequestJSON*                     Response;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SuccessResult;                                     // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1A[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetResponseContentAsString_ReturnValue;   // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -1397,7 +1397,7 @@ static_assert(offsetof(B_NewMasterServerManager_C_ParseSuccessFromVaJsonObject, 
 static_assert(offsetof(B_NewMasterServerManager_C_ParseSuccessFromVaJsonObject, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000D, "Member 'B_NewMasterServerManager_C_ParseSuccessFromVaJsonObject::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.ParseVersionNumber
-// 0x03E0 (0x03E0 - 0x0000)
+// 0x0398 (0x0398 - 0x0000)
 struct B_NewMasterServerManager_C_ParseVersionNumber final
 {
 public:
@@ -1416,50 +1416,50 @@ public:
 	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1B[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch;                  // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1C[0x5];                                     // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue;             // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TArray<class FString>                         CallFunc_ParseIntoArray_ReturnValue;               // 0x0090(0x0010)(ReferenceParm)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1D[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0108(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0168(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01B8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0208(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0218(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0238(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0248(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02A8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x02F8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0348(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0358(0x0018)()
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0370(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0380(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1E[0x4];                                     // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0398(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item_2;                         // 0x03A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue_2;           // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item_3;                         // 0x03C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue_3;           // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0100(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0158(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01A0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0220(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0278(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x02C0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0308(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0318(0x0010)()
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0328(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0338(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0350(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item_2;                         // 0x0360(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue_2;           // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item_3;                         // 0x0378(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue_3;           // 0x038C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_ParseVersionNumber) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_ParseVersionNumber");
-static_assert(sizeof(B_NewMasterServerManager_C_ParseVersionNumber) == 0x0003E0, "Wrong size on B_NewMasterServerManager_C_ParseVersionNumber");
+static_assert(sizeof(B_NewMasterServerManager_C_ParseVersionNumber) == 0x000398, "Wrong size on B_NewMasterServerManager_C_ParseVersionNumber");
 static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, VersionJson) == 0x000000, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::VersionJson' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, VersionNumber) == 0x000010, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::VersionNumber' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, Major) == 0x000020, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::Major' has a wrong offset!");
@@ -1485,33 +1485,33 @@ static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_Swi
 static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000A8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0000B0, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData) == 0x0000B8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_1) == 0x000108, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000158, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x000160, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_2) == 0x000168, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001B8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeArray_Array) == 0x000208, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Format_ReturnValue) == 0x000218, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000230, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_TextToString_ReturnValue) == 0x000238, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_4) == 0x000248, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x000298, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_6) == 0x0002A0, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002A8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_6) == 0x0002F8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeArray_Array_1) == 0x000348, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Format_ReturnValue_1) == 0x000358, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item) == 0x000370, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000380, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue) == 0x000390, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item_1) == 0x000398, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item_2) == 0x0003A8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue_1) == 0x0003B8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue_2) == 0x0003BC, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item_3) == 0x0003C0, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Length_ReturnValue_1) == 0x0003D0, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue_3) == 0x0003D4, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0003D8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_1) == 0x000100, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000148, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x000150, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_2) == 0x000158, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001A0, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeArray_Array) == 0x0001E8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000208, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_TextToString_ReturnValue) == 0x000210, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_4) == 0x000220, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x000268, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_IntToInt64_ReturnValue_6) == 0x000270, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_IntToInt64_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_5) == 0x000278, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeStruct_FormatArgumentData_6) == 0x0002C0, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, K2Node_MakeArray_Array_1) == 0x000308, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Format_ReturnValue_1) == 0x000318, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item) == 0x000328, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000338, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue) == 0x000348, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item_1) == 0x000350, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item_2) == 0x000360, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue_1) == 0x000370, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue_2) == 0x000374, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Get_Item_3) == 0x000378, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Array_Length_ReturnValue_1) == 0x000388, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Conv_StringToInt_ReturnValue_3) == 0x00038C, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Conv_StringToInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_ParseVersionNumber, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000390, "Member 'B_NewMasterServerManager_C_ParseVersionNumber::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.PerformLogin
 // 0x0050 (0x0050 - 0x0000)
@@ -1537,13 +1537,13 @@ static_assert(offsetof(B_NewMasterServerManager_C_PerformLogin, AuthInfo) == 0x0
 struct B_NewMasterServerManager_C_PerformLoginUsingRefreshToken final
 {
 public:
-	class FString                                 Param_RefreshToken;                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 RefreshToken_0;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Locale;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 AccountType;                                       // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_PerformLoginUsingRefreshToken) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_PerformLoginUsingRefreshToken");
 static_assert(sizeof(B_NewMasterServerManager_C_PerformLoginUsingRefreshToken) == 0x000030, "Wrong size on B_NewMasterServerManager_C_PerformLoginUsingRefreshToken");
-static_assert(offsetof(B_NewMasterServerManager_C_PerformLoginUsingRefreshToken, Param_RefreshToken) == 0x000000, "Member 'B_NewMasterServerManager_C_PerformLoginUsingRefreshToken::Param_RefreshToken' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_PerformLoginUsingRefreshToken, RefreshToken_0) == 0x000000, "Member 'B_NewMasterServerManager_C_PerformLoginUsingRefreshToken::RefreshToken_0' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_PerformLoginUsingRefreshToken, Locale) == 0x000010, "Member 'B_NewMasterServerManager_C_PerformLoginUsingRefreshToken::Locale' has a wrong offset!");
 static_assert(offsetof(B_NewMasterServerManager_C_PerformLoginUsingRefreshToken, AccountType) == 0x000020, "Member 'B_NewMasterServerManager_C_PerformLoginUsingRefreshToken::AccountType' has a wrong offset!");
 
@@ -1554,7 +1554,7 @@ struct B_NewMasterServerManager_C_ProcessLoginResponse final
 public:
 	class ULowEntryJsonObject*                    JsonObject;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1F[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Code;                                              // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Message;                                           // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 ResponseMessage;                                   // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
@@ -1564,33 +1564,33 @@ public:
 	bool                                          CallFunc_Object_GetBoolean_ReturnValue;            // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch;                 // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A20[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue;            // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A21[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue;             // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_1;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A22[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_1;          // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_2;               // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A23[0x1];                                     // 0x0063(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_63[0x1];                                       // 0x0063(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_2;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_ServerClientConfig_C*                CallFunc_SpawnObject_ReturnValue;                  // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A24[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ServerClientConfig_C*                CallFunc_SpawnObject_ReturnValue_1;                // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetJsonObject_Branch;              // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A25[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObject*                    CallFunc_Object_GetJsonObject_ReturnValue;         // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_5;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch_1;                // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A26[0x6];                                     // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue_1;           // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch_2;                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A27[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue_2;           // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_DateTimeFromIsoString_Result;             // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DateTimeFromIsoString_ReturnValue;        // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1685,11 +1685,11 @@ static_assert(offsetof(B_NewMasterServerManager_C_SetRefreshTokenExpiryDateTime,
 struct B_NewMasterServerManager_C_SetRestApiConnectivityState final
 {
 public:
-	bool                                          Param_IsConnected;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsConnected_0;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_SetRestApiConnectivityState) == 0x000001, "Wrong alignment on B_NewMasterServerManager_C_SetRestApiConnectivityState");
 static_assert(sizeof(B_NewMasterServerManager_C_SetRestApiConnectivityState) == 0x000001, "Wrong size on B_NewMasterServerManager_C_SetRestApiConnectivityState");
-static_assert(offsetof(B_NewMasterServerManager_C_SetRestApiConnectivityState, Param_IsConnected) == 0x000000, "Member 'B_NewMasterServerManager_C_SetRestApiConnectivityState::Param_IsConnected' has a wrong offset!");
+static_assert(offsetof(B_NewMasterServerManager_C_SetRestApiConnectivityState, IsConnected_0) == 0x000000, "Member 'B_NewMasterServerManager_C_SetRestApiConnectivityState::IsConnected_0' has a wrong offset!");
 
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.Can Make Requests
 // 0x0004 (0x0004 - 0x0000)
@@ -1714,11 +1714,11 @@ struct B_NewMasterServerManager_C_GetRestCallHostname final
 {
 public:
 	bool                                          bUseProdServers;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A28[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A29[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_GetRestCallHostname) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_GetRestCallHostname");
@@ -1736,7 +1736,7 @@ struct B_NewMasterServerManager_C_GetRestCallPort final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A2A[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_GetRestCallPort) == 0x000004, "Wrong alignment on B_NewMasterServerManager_C_GetRestCallPort");
@@ -1752,7 +1752,7 @@ struct B_NewMasterServerManager_C_GetRestCallProtocol final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A2B[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_NewMasterServerManager_C_GetRestCallProtocol) == 0x000008, "Wrong alignment on B_NewMasterServerManager_C_GetRestCallProtocol");
@@ -1767,11 +1767,11 @@ struct B_NewMasterServerManager_C_HasValidAccessToken final
 {
 public:
 	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A2C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_Subtract_DateTimeTimespan_ReturnValue;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DateTimeDateTime_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A2D[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  CallFunc_Parse_StringToGuid_OutGuid;               // 0x001C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Parse_StringToGuid_Success;               // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1792,10 +1792,10 @@ struct B_NewMasterServerManager_C_HasValidRefreshToken final
 {
 public:
 	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A2E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DateTimeDateTime_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A2F[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  CallFunc_Parse_StringToGuid_OutGuid;               // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Parse_StringToGuid_Success;               // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

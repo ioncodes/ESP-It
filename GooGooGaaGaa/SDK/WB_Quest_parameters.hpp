@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "ClientQuestType_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,7 +24,7 @@ namespace SDK::Params
 struct WB_Quest_C_CanBeFocused final
 {
 public:
-	bool                                          Param_CanBeFocused;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanBeFocused_0;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EClientQuestType                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +37,7 @@ public:
 };
 static_assert(alignof(WB_Quest_C_CanBeFocused) == 0x000001, "Wrong alignment on WB_Quest_C_CanBeFocused");
 static_assert(sizeof(WB_Quest_C_CanBeFocused) == 0x00000A, "Wrong size on WB_Quest_C_CanBeFocused");
-static_assert(offsetof(WB_Quest_C_CanBeFocused, Param_CanBeFocused) == 0x000000, "Member 'WB_Quest_C_CanBeFocused::Param_CanBeFocused' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_CanBeFocused, CanBeFocused_0) == 0x000000, "Member 'WB_Quest_C_CanBeFocused::CanBeFocused_0' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_CanBeFocused, Temp_byte_Variable) == 0x000001, "Member 'WB_Quest_C_CanBeFocused::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_CanBeFocused, Temp_bool_Variable) == 0x000002, "Member 'WB_Quest_C_CanBeFocused::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_CanBeFocused, Temp_bool_Variable_1) == 0x000003, "Member 'WB_Quest_C_CanBeFocused::Temp_bool_Variable_1' has a wrong offset!");
@@ -57,17 +57,17 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F5[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F6[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F7[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F8[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_StringToDouble_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_StringToDouble_ReturnValue_1;        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -77,21 +77,21 @@ public:
 	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F9[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Split_LeftS;                              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59FA[0x3];                                     // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EClientQuestType                              Temp_byte_Variable;                                // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59FB[0x3];                                     // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_CreatePlayAnimationProxyObject_Result_1;  // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimationPlayCallbackProxy*      CallFunc_CreatePlayAnimationProxyObject_ReturnValue_1; // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Select_Default;                             // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59FC[0x1];                                     // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D3[0x1];                                       // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x00D4(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -134,141 +134,141 @@ static_assert(offsetof(WB_Quest_C_ExecuteUbergraph_WB_Quest, K2Node_Event_InDelt
 static_assert(offsetof(WB_Quest_C_ExecuteUbergraph_WB_Quest, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000110, "Member 'WB_Quest_C_ExecuteUbergraph_WB_Quest::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 // Function WB_Quest.WB_Quest_C.Get_RefreshButton_ToolTipWidget_0
-// 0x0098 (0x0098 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct WB_Quest_C_Get_RefreshButton_ToolTipWidget_0 final
 {
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0050(0x0018)()
-	class UWB_TooltipTextContent_C*               CallFunc_Create_ReturnValue;                       // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_ToolTip_C*                          CallFunc_Create_ReturnValue_1;                     // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EClientQuestType                              Temp_byte_Variable;                                // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59FD[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0080(0x0018)()
+	class FText                                   Temp_text_Variable;                                // 0x0008(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0028(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0038(0x0010)()
+	class UWB_TooltipTextContent_C*               CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_ToolTip_C*                          CallFunc_Create_ReturnValue_1;                     // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EClientQuestType                              Temp_byte_Variable;                                // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0060(0x0010)()
 };
 static_assert(alignof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0) == 0x000008, "Wrong alignment on WB_Quest_C_Get_RefreshButton_ToolTipWidget_0");
-static_assert(sizeof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0) == 0x000098, "Wrong size on WB_Quest_C_Get_RefreshButton_ToolTipWidget_0");
+static_assert(sizeof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0) == 0x000070, "Wrong size on WB_Quest_C_Get_RefreshButton_ToolTipWidget_0");
 static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, ReturnValue) == 0x000000, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable) == 0x000008, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable_1) == 0x000020, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable_2) == 0x000038, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable_3) == 0x000050, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, CallFunc_Create_ReturnValue) == 0x000068, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, CallFunc_Create_ReturnValue_1) == 0x000070, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::CallFunc_Create_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_byte_Variable) == 0x000078, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, K2Node_Select_Default) == 0x000080, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable_1) == 0x000018, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable_2) == 0x000028, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_text_Variable_3) == 0x000038, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, CallFunc_Create_ReturnValue) == 0x000048, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, CallFunc_Create_ReturnValue_1) == 0x000050, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::CallFunc_Create_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, Temp_byte_Variable) == 0x000058, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_Get_RefreshButton_ToolTipWidget_0, K2Node_Select_Default) == 0x000060, "Member 'WB_Quest_C_Get_RefreshButton_ToolTipWidget_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_Quest.WB_Quest_C.GetQuestProgressText
-// 0x0110 (0x0110 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WB_Quest_C_GetQuestProgressText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0030(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0098(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00F8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0020(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0078(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D0(0x0010)()
 };
 static_assert(alignof(WB_Quest_C_GetQuestProgressText) == 0x000008, "Wrong alignment on WB_Quest_C_GetQuestProgressText");
-static_assert(sizeof(WB_Quest_C_GetQuestProgressText) == 0x000110, "Wrong size on WB_Quest_C_GetQuestProgressText");
+static_assert(sizeof(WB_Quest_C_GetQuestProgressText) == 0x0000E0, "Wrong size on WB_Quest_C_GetQuestProgressText");
 static_assert(offsetof(WB_Quest_C_GetQuestProgressText, ReturnValue) == 0x000000, "Member 'WB_Quest_C_GetQuestProgressText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetQuestProgressText, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_Quest_C_GetQuestProgressText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetQuestProgressText, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000030, "Member 'WB_Quest_C_GetQuestProgressText::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetQuestProgressText, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'WB_Quest_C_GetQuestProgressText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetQuestProgressText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000098, "Member 'WB_Quest_C_GetQuestProgressText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetQuestProgressText, K2Node_MakeArray_Array) == 0x0000E8, "Member 'WB_Quest_C_GetQuestProgressText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetQuestProgressText, CallFunc_Format_ReturnValue) == 0x0000F8, "Member 'WB_Quest_C_GetQuestProgressText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetQuestProgressText, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_Quest_C_GetQuestProgressText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetQuestProgressText, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000020, "Member 'WB_Quest_C_GetQuestProgressText::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetQuestProgressText, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_Quest_C_GetQuestProgressText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetQuestProgressText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000078, "Member 'WB_Quest_C_GetQuestProgressText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetQuestProgressText, K2Node_MakeArray_Array) == 0x0000C0, "Member 'WB_Quest_C_GetQuestProgressText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetQuestProgressText, CallFunc_Format_ReturnValue) == 0x0000D0, "Member 'WB_Quest_C_GetQuestProgressText::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_Quest.WB_Quest_C.GetTimeUntilNextQuestText
-// 0x0258 (0x0258 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct WB_Quest_C_GetTimeUntilNextQuestText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59FE[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0020(0x0010)(ReferenceParm)
-	EClientQuestType                              Temp_byte_Variable;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59FF[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A00[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0040(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0050(0x0018)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A01[0x1];                                     // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select_Default;                             // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Milliseconds; // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Seconds; // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Minutes; // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Hours; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetFormattedTime_FormattedTime;           // 0x0088(0x0018)()
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A02[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A8(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0100(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0110(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0160(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0178(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A03[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0190(0x0018)()
-	class FText                                   K2Node_Select_Default_1;                           // 0x01A8(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x01C0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x01D8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0228(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0238(0x0018)()
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	EClientQuestType                              Temp_byte_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0038(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0048(0x0010)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B[0x1];                                       // 0x005B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default;                             // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Milliseconds; // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Seconds; // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Minutes; // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Hours; // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetFormattedTime_FormattedTime;           // 0x0078(0x0010)()
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0090(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x00E0(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00F0(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0138(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0148(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0160(0x0010)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x0170(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0180(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0190(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x01D8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x01E8(0x0010)()
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Quest_C_GetTimeUntilNextQuestText) == 0x000008, "Wrong alignment on WB_Quest_C_GetTimeUntilNextQuestText");
-static_assert(sizeof(WB_Quest_C_GetTimeUntilNextQuestText) == 0x000258, "Wrong size on WB_Quest_C_GetTimeUntilNextQuestText");
+static_assert(sizeof(WB_Quest_C_GetTimeUntilNextQuestText) == 0x000200, "Wrong size on WB_Quest_C_GetTimeUntilNextQuestText");
 static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, ReturnValue) == 0x000000, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_bool_Variable) == 0x000018, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array) == 0x000020, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_byte_Variable) == 0x000030, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_int_Variable) == 0x000034, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_int_Variable_1) == 0x000038, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_1) == 0x000040, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue) == 0x000050, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000068, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000069, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_BooleanOR_ReturnValue) == 0x00006A, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_Select_Default) == 0x00006C, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Milliseconds) == 0x000070, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Milliseconds' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Seconds) == 0x000074, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Seconds' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Minutes) == 0x000078, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Minutes' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Hours) == 0x00007C, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Hours' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_FTrunc_ReturnValue) == 0x000080, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Subtract_IntInt_ReturnValue) == 0x000084, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_GetFormattedTime_FormattedTime) == 0x000088, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_GetFormattedTime_FormattedTime' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Divide_IntInt_ReturnValue) == 0x0000A0, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeStruct_FormatArgumentData) == 0x0000A8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000F8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_2) == 0x000100, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000110, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_1) == 0x000160, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_3) == 0x000178, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Greater_IntInt_ReturnValue) == 0x000188, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_2) == 0x000190, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_Select_Default_1) == 0x0001A8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_3) == 0x0001C0, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeStruct_FormatArgumentData_2) == 0x0001D8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_4) == 0x000228, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_4) == 0x000238, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_FTrunc_A_ImplicitCast) == 0x000250, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_bool_Variable) == 0x000010, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array) == 0x000018, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_byte_Variable) == 0x000028, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_int_Variable) == 0x00002C, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, Temp_int_Variable_1) == 0x000030, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_1) == 0x000038, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue) == 0x000048, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000058, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000059, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_BooleanOR_ReturnValue) == 0x00005A, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_Select_Default) == 0x00005C, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Milliseconds) == 0x000060, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Milliseconds' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Seconds) == 0x000064, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Seconds' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Minutes) == 0x000068, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Minutes' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Hours) == 0x00006C, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_RealWorldTime__GetTimePassedSincePreviousTime_Hours' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_FTrunc_ReturnValue) == 0x000070, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Subtract_IntInt_ReturnValue) == 0x000074, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_GetFormattedTime_FormattedTime) == 0x000078, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_GetFormattedTime_FormattedTime' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Divide_IntInt_ReturnValue) == 0x000088, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeStruct_FormatArgumentData) == 0x000090, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000D8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_2) == 0x0000E0, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000F0, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_1) == 0x000138, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_3) == 0x000148, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Greater_IntInt_ReturnValue) == 0x000158, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_2) == 0x000160, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_Select_Default_1) == 0x000170, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_3) == 0x000180, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000190, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, K2Node_MakeArray_Array_4) == 0x0001D8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_Format_ReturnValue_4) == 0x0001E8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_GetTimeUntilNextQuestText, CallFunc_FTrunc_A_ImplicitCast) == 0x0001F8, "Member 'WB_Quest_C_GetTimeUntilNextQuestText::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
 
 // Function WB_Quest.WB_Quest_C.OnFocusReceived
-// 0x0278 (0x0278 - 0x0000)
+// 0x0280 (0x0280 - 0x0000)
 struct WB_Quest_C_OnFocusReceived final
 {
 public:
@@ -276,19 +276,21 @@ public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x00F8(0x00B8)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x01C0(0x00B8)()
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x01C8(0x00B8)()
 };
 static_assert(alignof(WB_Quest_C_OnFocusReceived) == 0x000008, "Wrong alignment on WB_Quest_C_OnFocusReceived");
-static_assert(sizeof(WB_Quest_C_OnFocusReceived) == 0x000278, "Wrong size on WB_Quest_C_OnFocusReceived");
+static_assert(sizeof(WB_Quest_C_OnFocusReceived) == 0x000280, "Wrong size on WB_Quest_C_OnFocusReceived");
 static_assert(offsetof(WB_Quest_C_OnFocusReceived, MyGeometry) == 0x000000, "Member 'WB_Quest_C_OnFocusReceived::MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_OnFocusReceived, InFocusEvent) == 0x000038, "Member 'WB_Quest_C_OnFocusReceived::InFocusEvent' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_OnFocusReceived, ReturnValue) == 0x000040, "Member 'WB_Quest_C_OnFocusReceived::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_Handled_ReturnValue) == 0x0000F8, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_Handled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_GetOwningPlayer_ReturnValue) == 0x0001B0, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0001B8, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_Handled_ReturnValue_1) == 0x0001C0, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_Handled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_PlayAnimation_ReturnValue) == 0x0001B0, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_GetOwningPlayer_ReturnValue) == 0x0001B8, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0001C0, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Quest_C_OnFocusReceived, CallFunc_Handled_ReturnValue_1) == 0x0001C8, "Member 'WB_Quest_C_OnFocusReceived::CallFunc_Handled_ReturnValue_1' has a wrong offset!");
 
 // Function WB_Quest.WB_Quest_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -304,16 +306,16 @@ static_assert(offsetof(WB_Quest_C_Tick, MyGeometry) == 0x000000, "Member 'WB_Que
 static_assert(offsetof(WB_Quest_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_Quest_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WB_Quest.WB_Quest_C.UpdateQuestText
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_Quest_C_UpdateQuestText final
 {
 public:
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A04[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetQuestName_QuestName;                   // 0x0008(0x0018)()
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetQuestName_QuestName;                   // 0x0008(0x0010)()
 };
 static_assert(alignof(WB_Quest_C_UpdateQuestText) == 0x000008, "Wrong alignment on WB_Quest_C_UpdateQuestText");
-static_assert(sizeof(WB_Quest_C_UpdateQuestText) == 0x000020, "Wrong size on WB_Quest_C_UpdateQuestText");
+static_assert(sizeof(WB_Quest_C_UpdateQuestText) == 0x000018, "Wrong size on WB_Quest_C_UpdateQuestText");
 static_assert(offsetof(WB_Quest_C_UpdateQuestText, CallFunc_Conv_StringToInt_ReturnValue) == 0x000000, "Member 'WB_Quest_C_UpdateQuestText::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Quest_C_UpdateQuestText, CallFunc_GetQuestName_QuestName) == 0x000008, "Member 'WB_Quest_C_UpdateQuestText::CallFunc_GetQuestName_QuestName' has a wrong offset!");
 

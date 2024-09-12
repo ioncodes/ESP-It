@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_CheckBoxWithLabel.WB_CheckBoxWithLabel_C
-// 0x0040 (0x0380 - 0x0340)
+// 0x0040 (0x03A0 - 0x0360)
 class UWB_CheckBoxWithLabel_C final : public UWB_BaseControlWithLabel_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_CheckBoxWithLabel_C;             // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCheckBox*                              CheckBox;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             DescriptiveLabelText;                              // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UGridPanel*                             GridPanel_0;                                       // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnCheckStateChanged;                               // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         Index_WB_CheckBoxWithLabel_C;                      // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_CheckBoxWithLabel_C;             // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCheckBox*                              CheckBox;                                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             DescriptiveLabelText;                              // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UGridPanel*                             GridPanel_0;                                       // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnCheckStateChanged;                               // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         Index_0;                                           // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void GetIsChecked(bool* IsChecked);
@@ -53,14 +53,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_CheckBoxWithLabel_C) == 0x000008, "Wrong alignment on UWB_CheckBoxWithLabel_C");
-static_assert(sizeof(UWB_CheckBoxWithLabel_C) == 0x000380, "Wrong size on UWB_CheckBoxWithLabel_C");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, UberGraphFrame_WB_CheckBoxWithLabel_C) == 0x000340, "Member 'UWB_CheckBoxWithLabel_C::UberGraphFrame_WB_CheckBoxWithLabel_C' has a wrong offset!");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, FocusAnimation) == 0x000348, "Member 'UWB_CheckBoxWithLabel_C::FocusAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, CheckBox) == 0x000350, "Member 'UWB_CheckBoxWithLabel_C::CheckBox' has a wrong offset!");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, DescriptiveLabelText) == 0x000358, "Member 'UWB_CheckBoxWithLabel_C::DescriptiveLabelText' has a wrong offset!");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, GridPanel_0) == 0x000360, "Member 'UWB_CheckBoxWithLabel_C::GridPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, OnCheckStateChanged) == 0x000368, "Member 'UWB_CheckBoxWithLabel_C::OnCheckStateChanged' has a wrong offset!");
-static_assert(offsetof(UWB_CheckBoxWithLabel_C, Index_WB_CheckBoxWithLabel_C) == 0x000378, "Member 'UWB_CheckBoxWithLabel_C::Index_WB_CheckBoxWithLabel_C' has a wrong offset!");
+static_assert(sizeof(UWB_CheckBoxWithLabel_C) == 0x0003A0, "Wrong size on UWB_CheckBoxWithLabel_C");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, UberGraphFrame_WB_CheckBoxWithLabel_C) == 0x000360, "Member 'UWB_CheckBoxWithLabel_C::UberGraphFrame_WB_CheckBoxWithLabel_C' has a wrong offset!");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, FocusAnimation) == 0x000368, "Member 'UWB_CheckBoxWithLabel_C::FocusAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, CheckBox) == 0x000370, "Member 'UWB_CheckBoxWithLabel_C::CheckBox' has a wrong offset!");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, DescriptiveLabelText) == 0x000378, "Member 'UWB_CheckBoxWithLabel_C::DescriptiveLabelText' has a wrong offset!");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, GridPanel_0) == 0x000380, "Member 'UWB_CheckBoxWithLabel_C::GridPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, OnCheckStateChanged) == 0x000388, "Member 'UWB_CheckBoxWithLabel_C::OnCheckStateChanged' has a wrong offset!");
+static_assert(offsetof(UWB_CheckBoxWithLabel_C, Index_0) == 0x000398, "Member 'UWB_CheckBoxWithLabel_C::Index_0' has a wrong offset!");
 
 }
 

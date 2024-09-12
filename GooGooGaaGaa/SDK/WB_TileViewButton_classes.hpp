@@ -18,25 +18,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_TileViewButton.WB_TileViewButton_C
-// 0x0030 (0x02F0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_TileViewButton_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_GridButton_C*                       GridButton;                                        // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UB_TileViewData_C*                      ItemData;                                          // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            ParentWidget;                                      // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInitial;                                         // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4049[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            ToolTip;                                           // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_GridButton_C*                       GridButton;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UB_TileViewData_C*                      ItemData;                                          // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ParentWidget;                                      // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInitial;                                         // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            ToolTip;                                           // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
 	TSoftObjectPtr<class UObject> GetIcon();
 	void GetTileView(class UTileView** TileView);
 	void SetIndividualParameters();
+	void GetDangerIconVisbility(bool* ShowIcon);
 	void GetSwitchIconVisibilty(bool* Show_Switch_Icon);
-	void GetNotifyButtonVisibility(bool* Param_IsVisible);
+	void GetNotifyButtonVisibility(bool* IsVisible_0);
 	void GetRecipeIconVisibility(bool* ShowIcon);
 	void GetQuantityVisibility(bool* ShowQuantity);
 	void GetQuantityText(class FText* Quantity);
@@ -44,8 +45,8 @@ public:
 	void GetIsSelected(bool* Is_Selected);
 	void SetButtonParameters();
 	void Initialize(class UObject* ListItemObject);
-	void GetIsInitial(bool* Param_IsInitial);
-	void GetTooltip(class UUserWidget** Param_ToolTip);
+	void GetIsInitial(bool* IsInitial_0);
+	void GetTooltip(class UUserWidget** ToolTip_0);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	void GetIsButtonEnabled(bool* IsEnabled);
 	void BP_OnEntryReleased();
@@ -66,13 +67,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_TileViewButton_C) == 0x000008, "Wrong alignment on UWB_TileViewButton_C");
-static_assert(sizeof(UWB_TileViewButton_C) == 0x0002F0, "Wrong size on UWB_TileViewButton_C");
-static_assert(offsetof(UWB_TileViewButton_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_TileViewButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_TileViewButton_C, GridButton) == 0x0002C8, "Member 'UWB_TileViewButton_C::GridButton' has a wrong offset!");
-static_assert(offsetof(UWB_TileViewButton_C, ItemData) == 0x0002D0, "Member 'UWB_TileViewButton_C::ItemData' has a wrong offset!");
-static_assert(offsetof(UWB_TileViewButton_C, ParentWidget) == 0x0002D8, "Member 'UWB_TileViewButton_C::ParentWidget' has a wrong offset!");
-static_assert(offsetof(UWB_TileViewButton_C, IsInitial) == 0x0002E0, "Member 'UWB_TileViewButton_C::IsInitial' has a wrong offset!");
-static_assert(offsetof(UWB_TileViewButton_C, ToolTip) == 0x0002E8, "Member 'UWB_TileViewButton_C::ToolTip' has a wrong offset!");
+static_assert(sizeof(UWB_TileViewButton_C) == 0x000310, "Wrong size on UWB_TileViewButton_C");
+static_assert(offsetof(UWB_TileViewButton_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_TileViewButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_TileViewButton_C, GridButton) == 0x0002E8, "Member 'UWB_TileViewButton_C::GridButton' has a wrong offset!");
+static_assert(offsetof(UWB_TileViewButton_C, ItemData) == 0x0002F0, "Member 'UWB_TileViewButton_C::ItemData' has a wrong offset!");
+static_assert(offsetof(UWB_TileViewButton_C, ParentWidget) == 0x0002F8, "Member 'UWB_TileViewButton_C::ParentWidget' has a wrong offset!");
+static_assert(offsetof(UWB_TileViewButton_C, IsInitial) == 0x000300, "Member 'UWB_TileViewButton_C::IsInitial' has a wrong offset!");
+static_assert(offsetof(UWB_TileViewButton_C, ToolTip) == 0x000308, "Member 'UWB_TileViewButton_C::ToolTip' has a wrong offset!");
 
 }
 

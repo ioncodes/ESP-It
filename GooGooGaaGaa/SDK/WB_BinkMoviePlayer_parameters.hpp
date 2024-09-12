@@ -10,103 +10,121 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_BinkMoviePlayer.WB_BinkMoviePlayer_C.ExecuteUbergraph_WB_BinkMoviePlayer
-// 0x02A0 (0x02A0 - 0x0000)
+// 0x0300 (0x0300 - 0x0000)
 struct WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_393E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_393F[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetValue_ReturnValue;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3940[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_Source;                         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0060(0x00D0)()
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Play_ReturnValue;                         // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3941[0x6];                                     // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValue_ReturnValue_1;                   // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3942[0x4];                                     // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              CallFunc_GetDuration_ReturnValue;                  // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              CallFunc_Multiply_TimespanFloat_ReturnValue;       // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              CallFunc_GetDuration_ReturnValue_1;                // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Seek_ReturnValue;                         // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3943[0x3];                                     // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              CallFunc_GetTime_ReturnValue;                      // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTotalSeconds_ReturnValue_1;            // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Pause_ReturnValue;                        // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3944[0x3];                                     // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3945[0x8];                                     // 0x0188(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x0190(0x00D0)()
-	bool                                          CallFunc_Rewind_ReturnValue;                       // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Pause_ReturnValue_1;                      // 0x0261(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPaused_ReturnValue;                     // 0x0262(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Pause_ReturnValue_2;                      // 0x0263(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3946[0x3];                                     // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              CallFunc_GetDuration_ReturnValue_2;                // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimespan                              CallFunc_GetTime_ReturnValue_1;                    // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_TimespanTimespan_ReturnValue; // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x027A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3947[0x5];                                     // 0x027B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetValue_InValue_ImplicitCast;            // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Split_LeftS;                              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Split_RightS;                             // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Split_ReturnValue;                        // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00D0(0x00D0)()
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue;                         // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A2[0x6];                                      // 0x01A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValue_ReturnValue_1;                   // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              CallFunc_GetDuration_ReturnValue;                  // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimespan                              CallFunc_Multiply_TimespanFloat_ReturnValue;       // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimespan                              CallFunc_GetDuration_ReturnValue_1;                // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Seek_ReturnValue;                         // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimespan                              CallFunc_GetTime_ReturnValue;                      // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTotalSeconds_ReturnValue_1;            // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Pause_ReturnValue;                        // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E5[0x3];                                      // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Rewind_ReturnValue;                       // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Pause_ReturnValue_1;                      // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPaused_ReturnValue;                     // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Pause_ReturnValue_2;                      // 0x01F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Play_ReturnValue_1;                       // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F5[0xB];                                      // 0x01F5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x0200(0x00D0)()
+	struct FTimespan                              CallFunc_GetDuration_ReturnValue_2;                // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimespan                              CallFunc_GetTime_ReturnValue_1;                    // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_TimespanTimespan_ReturnValue; // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E3[0x5];                                      // 0x02E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetValue_InValue_ImplicitCast;            // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer) == 0x000010, "Wrong alignment on WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer");
-static_assert(sizeof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer) == 0x0002A0, "Wrong size on WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer");
+static_assert(sizeof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer) == 0x000300, "Wrong size on WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, EntryPoint) == 0x000000, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Not_PreBool_ReturnValue) == 0x000004, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_SwitchPlatform_ReturnValue) == 0x000005, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_Event_MyGeometry) == 0x000008, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_Event_MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_Event_InDeltaTime) == 0x000040, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_Event_InDeltaTime' has a wrong offset!");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Not_PreBool_ReturnValue_1) == 0x000044, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetValue_ReturnValue) == 0x000048, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_CustomEvent_Source) == 0x000050, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_CustomEvent_Source' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_MakeStruct_SlateBrush) == 0x000060, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_PlayAnimation_ReturnValue) == 0x000130, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_IsVisible_ReturnValue) == 0x000138, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Play_ReturnValue) == 0x000139, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Play_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000140, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetValue_ReturnValue_1) == 0x000148, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDuration_ReturnValue) == 0x000150, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDuration_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Multiply_TimespanFloat_ReturnValue) == 0x000158, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Multiply_TimespanFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDuration_ReturnValue_1) == 0x000160, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDuration_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Seek_ReturnValue) == 0x000168, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Seek_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTotalSeconds_ReturnValue) == 0x00016C, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTotalSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTime_ReturnValue) == 0x000170, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTotalSeconds_ReturnValue_1) == 0x000178, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTotalSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Pause_ReturnValue) == 0x00017C, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Pause_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000180, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_MakeStruct_SlateBrush_1) == 0x000190, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Rewind_ReturnValue) == 0x000260, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Rewind_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Pause_ReturnValue_1) == 0x000261, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Pause_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_IsPaused_ReturnValue) == 0x000262, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_IsPaused_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Pause_ReturnValue_2) == 0x000263, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Pause_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Play_ReturnValue_1) == 0x000264, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Play_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDuration_ReturnValue_2) == 0x000268, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDuration_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTime_ReturnValue_1) == 0x000270, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GreaterEqual_TimespanTimespan_ReturnValue) == 0x000278, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GreaterEqual_TimespanTimespan_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_BooleanAND_ReturnValue) == 0x000279, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_OpenUrl_ReturnValue) == 0x00027A, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_OpenUrl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x000280, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000288, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_SetValue_InValue_ImplicitCast) == 0x000290, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, Temp_bool_Variable) == 0x000060, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Split_LeftS) == 0x000068, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Split_LeftS' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Split_RightS) == 0x000078, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Split_RightS' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Split_ReturnValue) == 0x000088, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Split_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Concat_StrStr_ReturnValue) == 0x000090, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000A0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_Select_Default) == 0x0000B0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_PlayAnimation_ReturnValue) == 0x0000C0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_MakeStruct_SlateBrush) == 0x0000D0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_IsVisible_ReturnValue) == 0x0001A0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Play_ReturnValue) == 0x0001A1, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Play_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDynamicMaterial_ReturnValue) == 0x0001A8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetValue_ReturnValue_1) == 0x0001B0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDuration_ReturnValue) == 0x0001B8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDuration_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Multiply_TimespanFloat_ReturnValue) == 0x0001C0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Multiply_TimespanFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDuration_ReturnValue_1) == 0x0001C8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDuration_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Seek_ReturnValue) == 0x0001D0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Seek_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTotalSeconds_ReturnValue) == 0x0001D4, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTotalSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTime_ReturnValue) == 0x0001D8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTotalSeconds_ReturnValue_1) == 0x0001E0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTotalSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Pause_ReturnValue) == 0x0001E4, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Pause_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001E8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Rewind_ReturnValue) == 0x0001F0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Rewind_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Pause_ReturnValue_1) == 0x0001F1, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Pause_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_IsPaused_ReturnValue) == 0x0001F2, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_IsPaused_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Pause_ReturnValue_2) == 0x0001F3, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Pause_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Play_ReturnValue_1) == 0x0001F4, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Play_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, K2Node_MakeStruct_SlateBrush_1) == 0x000200, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetDuration_ReturnValue_2) == 0x0002D0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetDuration_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GetTime_ReturnValue_1) == 0x0002D8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GetTime_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_GreaterEqual_TimespanTimespan_ReturnValue) == 0x0002E0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_GreaterEqual_TimespanTimespan_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_BooleanAND_ReturnValue) == 0x0002E1, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_OpenUrl_ReturnValue) == 0x0002E2, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_OpenUrl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x0002E8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0002F0, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer, CallFunc_SetValue_InValue_ImplicitCast) == 0x0002F8, "Member 'WB_BinkMoviePlayer_C_ExecuteUbergraph_WB_BinkMoviePlayer::CallFunc_SetValue_InValue_ImplicitCast' has a wrong offset!");
 
 // Function WB_BinkMoviePlayer.WB_BinkMoviePlayer_C.PlayMovie
 // 0x0010 (0x0010 - 0x0000)

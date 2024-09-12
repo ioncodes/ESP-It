@@ -19,11 +19,11 @@ namespace SDK::Params
 struct WB_ControllerIconWithLabel_C_Center final
 {
 public:
-	class UHorizontalBoxSlot*                     Param_Slot;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBoxSlot*                     Slot_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ControllerIconWithLabel_C_Center) == 0x000008, "Wrong alignment on WB_ControllerIconWithLabel_C_Center");
 static_assert(sizeof(WB_ControllerIconWithLabel_C_Center) == 0x000008, "Wrong size on WB_ControllerIconWithLabel_C_Center");
-static_assert(offsetof(WB_ControllerIconWithLabel_C_Center, Param_Slot) == 0x000000, "Member 'WB_ControllerIconWithLabel_C_Center::Param_Slot' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIconWithLabel_C_Center, Slot_0) == 0x000000, "Member 'WB_ControllerIconWithLabel_C_Center::Slot_0' has a wrong offset!");
 
 // Function WB_ControllerIconWithLabel.WB_ControllerIconWithLabel_C.AddWidgetsToHorizontalBox
 // 0x0020 (0x0020 - 0x0000)

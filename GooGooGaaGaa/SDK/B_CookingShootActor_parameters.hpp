@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,7 +24,7 @@ struct B_CookingShootActor_C_Act final
 public:
 	class AB_CookingTask_C*                       CookingTask;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C01[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UStaticMesh*                            CallFunc_Array_Get_Item_1;                         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CookingTask_C*                       K2Node_DynamicCast_AsB_Cooking_Task;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -47,7 +47,7 @@ struct B_CookingShootActor_C_ExecuteUbergraph_B_CookingShootActor final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C02[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CookingTask_C*                       K2Node_DynamicCast_AsB_Cooking_Task;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -60,19 +60,19 @@ static_assert(offsetof(B_CookingShootActor_C_ExecuteUbergraph_B_CookingShootActo
 static_assert(offsetof(B_CookingShootActor_C_ExecuteUbergraph_B_CookingShootActor, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_CookingShootActor_C_ExecuteUbergraph_B_CookingShootActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_CookingShootActor.B_CookingShootActor_C.PickMesh
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct B_CookingShootActor_C_PickMesh final
 {
 public:
 	class UStaticMesh*                            Static_Mesh;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_AddWorldRotation_SweepHitResult;       // 0x0008(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_AddWorldRotation_SweepHitResult;       // 0x0008(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_CookingShootActor_C_PickMesh) == 0x000008, "Wrong alignment on B_CookingShootActor_C_PickMesh");
-static_assert(sizeof(B_CookingShootActor_C_PickMesh) == 0x0000F8, "Wrong size on B_CookingShootActor_C_PickMesh");
+static_assert(sizeof(B_CookingShootActor_C_PickMesh) == 0x000108, "Wrong size on B_CookingShootActor_C_PickMesh");
 static_assert(offsetof(B_CookingShootActor_C_PickMesh, Static_Mesh) == 0x000000, "Member 'B_CookingShootActor_C_PickMesh::Static_Mesh' has a wrong offset!");
 static_assert(offsetof(B_CookingShootActor_C_PickMesh, CallFunc_K2_AddWorldRotation_SweepHitResult) == 0x000008, "Member 'B_CookingShootActor_C_PickMesh::CallFunc_K2_AddWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_CookingShootActor_C_PickMesh, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0000F0, "Member 'B_CookingShootActor_C_PickMesh::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CookingShootActor_C_PickMesh, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000100, "Member 'B_CookingShootActor_C_PickMesh::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 // Function B_CookingShootActor.B_CookingShootActor_C.React
 // 0x0180 (0x0180 - 0x0000)
@@ -82,10 +82,10 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CookingTask_C*                       K2Node_DynamicCast_AsB_Cooking_Task;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C03[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CookingField_C*                      K2Node_DynamicCast_AsB_Cooking_Field;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C04[0xF];                                     // 0x0021(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0030(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -127,11 +127,11 @@ public:
 	class UStaticMesh*                            New_Ingredient;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CookingTask_C*                       CookingTask;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C05[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            CallFunc_Array_Get_Item_1;                         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C06[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CookingTask_C*                       K2Node_DynamicCast_AsB_Cooking_Task;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

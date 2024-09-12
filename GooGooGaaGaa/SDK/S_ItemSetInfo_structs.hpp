@@ -15,17 +15,17 @@ namespace SDK
 {
 
 // UserDefinedStruct S_ItemSetInfo.S_ItemSetInfo
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FS_ItemSetInfo final
 {
 public:
-	class FText                                   Name_3_0073A993485BB4B5A5FB029D95E0B4D3;           // 0x0000(0x0018)(Edit, BlueprintVisible)
-	TArray<int32>                                 ItemIds_6_878F880B48AAAF3DB74096B75427463C;        // 0x0018(0x0010)(Edit, BlueprintVisible)
+	class FText                                   Name_3_0073A993485BB4B5A5FB029D95E0B4D3;           // 0x0000(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 ItemIds_6_878F880B48AAAF3DB74096B75427463C;        // 0x0010(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FS_ItemSetInfo) == 0x000008, "Wrong alignment on FS_ItemSetInfo");
-static_assert(sizeof(FS_ItemSetInfo) == 0x000028, "Wrong size on FS_ItemSetInfo");
+static_assert(sizeof(FS_ItemSetInfo) == 0x000020, "Wrong size on FS_ItemSetInfo");
 static_assert(offsetof(FS_ItemSetInfo, Name_3_0073A993485BB4B5A5FB029D95E0B4D3) == 0x000000, "Member 'FS_ItemSetInfo::Name_3_0073A993485BB4B5A5FB029D95E0B4D3' has a wrong offset!");
-static_assert(offsetof(FS_ItemSetInfo, ItemIds_6_878F880B48AAAF3DB74096B75427463C) == 0x000018, "Member 'FS_ItemSetInfo::ItemIds_6_878F880B48AAAF3DB74096B75427463C' has a wrong offset!");
+static_assert(offsetof(FS_ItemSetInfo, ItemIds_6_878F880B48AAAF3DB74096B75427463C) == 0x000010, "Member 'FS_ItemSetInfo::ItemIds_6_878F880B48AAAF3DB74096B75427463C' has a wrong offset!");
 
 }
 

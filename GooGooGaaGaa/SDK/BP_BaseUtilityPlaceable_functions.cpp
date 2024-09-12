@@ -38,19 +38,19 @@ void ABP_BaseUtilityPlaceable_C::GetRealActorSpawnTransform(struct FTransform* S
 }
 
 
-// Function BP_BaseUtilityPlaceable.BP_BaseUtilityPlaceable_C.RespawnonPlayTestStart
+// Function BP_BaseUtilityPlaceable.BP_BaseUtilityPlaceable_C.RespawnOnPlayTestStart
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    HasPlayTestStarted                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_BaseUtilityPlaceable_C::RespawnonPlayTestStart(bool HasPlayTestStarted)
+void ABP_BaseUtilityPlaceable_C::RespawnOnPlayTestStart(bool HasPlayTestStarted)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseUtilityPlaceable_C", "RespawnonPlayTestStart");
+		Func = Class->GetFunction("BP_BaseUtilityPlaceable_C", "RespawnOnPlayTestStart");
 
-	Params::BP_BaseUtilityPlaceable_C_RespawnonPlayTestStart Parms{};
+	Params::BP_BaseUtilityPlaceable_C_RespawnOnPlayTestStart Parms{};
 
 	Parms.HasPlayTestStarted = HasPlayTestStarted;
 
@@ -75,9 +75,9 @@ void ABP_BaseUtilityPlaceable_C::OnRep_SpawnedActor()
 // Function BP_BaseUtilityPlaceable.BP_BaseUtilityPlaceable_C.HandleSpawnedRealActor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_SpawnedActor                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SpawnedActor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_BaseUtilityPlaceable_C::HandleSpawnedRealActor(class AActor* Param_SpawnedActor)
+void ABP_BaseUtilityPlaceable_C::HandleSpawnedRealActor(class AActor* SpawnedActor_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,7 +86,7 @@ void ABP_BaseUtilityPlaceable_C::HandleSpawnedRealActor(class AActor* Param_Spaw
 
 	Params::BP_BaseUtilityPlaceable_C_HandleSpawnedRealActor Parms{};
 
-	Parms.Param_SpawnedActor = Param_SpawnedActor;
+	Parms.SpawnedActor_0 = SpawnedActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

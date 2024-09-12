@@ -28,7 +28,7 @@ public:
 public:
 	void ArrayContainsParentClass(TArray<class UClass*>& Array, TSubclassOf<class UObject> TestClass, bool* Contains);
 	void GetActionBool(class AActor* Test_Actor, bool* Activated);
-	void IsActionActor(class AActor* Actor, bool* Param_IsActionActor);
+	void IsActionActor(class AActor* Actor, bool* IsActionActor_0);
 	void IsActorReadyForActivation(class AActor* ActorToTest, bool* Togglable);
 	bool IsActorSwitchable(class AActor* ActorToTest);
 	void ToggleActionActorReplication(class AActor* TargetActor, bool Replicates, bool Always_Relevant);

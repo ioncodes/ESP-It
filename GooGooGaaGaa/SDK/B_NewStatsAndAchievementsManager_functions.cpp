@@ -169,86 +169,6 @@ void UB_NewStatsAndAchievementsManager_C::OnDidStoreOnlineStats__DelegateSignatu
 }
 
 
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnFailure_2BC42D684AF46CA9AFB4F4B223F507F6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnFailure_2BC42D684AF46CA9AFB4F4B223F507F6(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnFailure_2BC42D684AF46CA9AFB4F4B223F507F6");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnFailure_2BC42D684AF46CA9AFB4F4B223F507F6 Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnFailure_5A98F29D4C9542B605370D8F199CA76E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnFailure_5A98F29D4C9542B605370D8F199CA76E(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnFailure_5A98F29D4C9542B605370D8F199CA76E");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnFailure_5A98F29D4C9542B605370D8F199CA76E Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnFailure_5F60D9EE44EBD752DCA348976E0A898A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnFailure_5F60D9EE44EBD752DCA348976E0A898A(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnFailure_5F60D9EE44EBD752DCA348976E0A898A");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnFailure_5F60D9EE44EBD752DCA348976E0A898A Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnFailure_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnFailure_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnFailure_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnFailure_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7 Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnReceiveGSStatsFailure
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -384,86 +304,6 @@ void UB_NewStatsAndAchievementsManager_C::OnReceiveStoreStatsComplete(class UVaR
 	Params::B_NewStatsAndAchievementsManager_C_OnReceiveStoreStatsComplete Parms{};
 
 	Parms.Response = Response;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnSuccess_2BC42D684AF46CA9AFB4F4B223F507F6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnSuccess_2BC42D684AF46CA9AFB4F4B223F507F6(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnSuccess_2BC42D684AF46CA9AFB4F4B223F507F6");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnSuccess_2BC42D684AF46CA9AFB4F4B223F507F6 Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnSuccess_5A98F29D4C9542B605370D8F199CA76E
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnSuccess_5A98F29D4C9542B605370D8F199CA76E(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnSuccess_5A98F29D4C9542B605370D8F199CA76E");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnSuccess_5A98F29D4C9542B605370D8F199CA76E Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnSuccess_5F60D9EE44EBD752DCA348976E0A898A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnSuccess_5F60D9EE44EBD752DCA348976E0A898A(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnSuccess_5F60D9EE44EBD752DCA348976E0A898A");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnSuccess_5F60D9EE44EBD752DCA348976E0A898A Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.OnSuccess_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           PlayerId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::OnSuccess_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7(const class FString& PlayerId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "OnSuccess_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7");
-
-	Params::B_NewStatsAndAchievementsManager_C_OnSuccess_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7 Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -607,10 +447,10 @@ void UB_NewStatsAndAchievementsManager_C::Reset_All_Online_Stats(bool Achievemen
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerState*                     PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FName                             Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_NewStatsAndAchievementsManager_C::SetGSAchievement(class APlayerState* PlayerState, class FName Param_Name, bool* Result)
+void UB_NewStatsAndAchievementsManager_C::SetGSAchievement(class APlayerState* PlayerState, class FName Name_0, bool* Result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -620,7 +460,7 @@ void UB_NewStatsAndAchievementsManager_C::SetGSAchievement(class APlayerState* P
 	Params::B_NewStatsAndAchievementsManager_C_SetGSAchievement Parms{};
 
 	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
+	Parms.Name_0 = Name_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -755,12 +595,12 @@ void UB_NewStatsAndAchievementsManager_C::GetAchievementStatus(class FName StatN
 // Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.GetGSAchievement
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class FName                             Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class APlayerState*                     PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    HasAchievement                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_NewStatsAndAchievementsManager_C::GetGSAchievement(class FName Param_Name, class APlayerState* PlayerState, bool* HasAchievement, bool* Result) const
+void UB_NewStatsAndAchievementsManager_C::GetGSAchievement(class FName Name_0, class APlayerState* PlayerState, bool* HasAchievement, bool* Result) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -769,7 +609,7 @@ void UB_NewStatsAndAchievementsManager_C::GetGSAchievement(class FName Param_Nam
 
 	Params::B_NewStatsAndAchievementsManager_C_GetGSAchievement Parms{};
 
-	Parms.Param_Name = Param_Name;
+	Parms.Name_0 = Name_0;
 	Parms.PlayerState = PlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -886,30 +726,6 @@ void UB_NewStatsAndAchievementsManager_C::OverrideServerLevel(int64* Value, bool
 
 	if (WasFound != nullptr)
 		*WasFound = Parms.WasFound;
-}
-
-
-// Function B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C.UseBRGStatsSystem
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// class APlayerState*                     PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Out                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UB_NewStatsAndAchievementsManager_C::UseBRGStatsSystem(class APlayerState* PlayerState, bool* Out) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_NewStatsAndAchievementsManager_C", "UseBRGStatsSystem");
-
-	Params::B_NewStatsAndAchievementsManager_C_UseBRGStatsSystem Parms{};
-
-	Parms.PlayerState = PlayerState;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Out != nullptr)
-		*Out = Parms.Out;
 }
 
 }

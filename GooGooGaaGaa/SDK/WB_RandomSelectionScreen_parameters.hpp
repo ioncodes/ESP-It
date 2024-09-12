@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,7 +24,7 @@ struct WB_RandomSelectionScreen_C_ExecuteUbergraph_WB_RandomSelectionScreen fina
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50BE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,50 +37,50 @@ static_assert(offsetof(WB_RandomSelectionScreen_C_ExecuteUbergraph_WB_RandomSele
 static_assert(offsetof(WB_RandomSelectionScreen_C_ExecuteUbergraph_WB_RandomSelectionScreen, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_RandomSelectionScreen_C_ExecuteUbergraph_WB_RandomSelectionScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.Get_GameModeText_Text_0
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_RandomSelectionScreen_C_Get_GameModeText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50BF[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0030(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0028(0x0010)()
 };
 static_assert(alignof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0) == 0x000008, "Wrong alignment on WB_RandomSelectionScreen_C_Get_GameModeText_Text_0");
-static_assert(sizeof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0) == 0x000048, "Wrong size on WB_RandomSelectionScreen_C_Get_GameModeText_Text_0");
+static_assert(sizeof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0) == 0x000038, "Wrong size on WB_RandomSelectionScreen_C_Get_GameModeText_Text_0");
 static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, ReturnValue) == 0x000000, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, K2Node_DynamicCast_AsB_Game_State) == 0x000020, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, CallFunc_Conv_NameToText_ReturnValue) == 0x000030, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, K2Node_DynamicCast_AsB_Game_State) == 0x000018, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameModeText_Text_0, CallFunc_Conv_NameToText_ReturnValue) == 0x000028, "Member 'WB_RandomSelectionScreen_C_Get_GameModeText_Text_0::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
 
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.Get_GameNameText_Text_0
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct WB_RandomSelectionScreen_C_Get_GameNameText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C0[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0010)()
 };
 static_assert(alignof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0) == 0x000008, "Wrong alignment on WB_RandomSelectionScreen_C_Get_GameNameText_Text_0");
-static_assert(sizeof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0) == 0x0000C0, "Wrong size on WB_RandomSelectionScreen_C_Get_GameNameText_Text_0");
+static_assert(sizeof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0) == 0x0000A0, "Wrong size on WB_RandomSelectionScreen_C_Get_GameNameText_Text_0");
 static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, ReturnValue) == 0x000000, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_DynamicCast_AsB_Game_State) == 0x000020, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_MakeArray_Array) == 0x000098, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_DynamicCast_AsB_Game_State) == 0x000018, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_GameNameText_Text_0, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_RandomSelectionScreen_C_Get_GameNameText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.Get_HunterSkillsText_ColorAndOpacity_0
 // 0x0030 (0x0030 - 0x0000)
@@ -88,7 +88,7 @@ struct WB_RandomSelectionScreen_C_Get_HunterSkillsText_ColorAndOpacity_0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
-	uint8                                         Pad_50C1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -124,39 +124,39 @@ static_assert(offsetof(WB_RandomSelectionScreen_C_Get_HunterSkillsText_Visibilit
 static_assert(offsetof(WB_RandomSelectionScreen_C_Get_HunterSkillsText_Visibility, K2Node_Select_Default) == 0x000009, "Member 'WB_RandomSelectionScreen_C_Get_HunterSkillsText_Visibility::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.Get_PlayersText_Text_0
-// 0x0110 (0x0110 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct WB_RandomSelectionScreen_C_Get_PlayersText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C2[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Min_ReturnValue;                          // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C3[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0098(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00F8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Min_ReturnValue;                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0088(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00D0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0010)()
 };
 static_assert(alignof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0) == 0x000008, "Wrong alignment on WB_RandomSelectionScreen_C_Get_PlayersText_Text_0");
-static_assert(sizeof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0) == 0x000110, "Wrong size on WB_RandomSelectionScreen_C_Get_PlayersText_Text_0");
+static_assert(sizeof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0) == 0x0000F0, "Wrong size on WB_RandomSelectionScreen_C_Get_PlayersText_Text_0");
 static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, ReturnValue) == 0x000000, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_DynamicCast_AsB_Game_State) == 0x000020, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000030, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Min_ReturnValue) == 0x000038, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Min_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000090, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000098, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_MakeArray_Array) == 0x0000E8, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Format_ReturnValue) == 0x0000F8, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_DynamicCast_AsB_Game_State) == 0x000018, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000028, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Min_ReturnValue) == 0x000030, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Min_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000080, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000088, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, K2Node_MakeArray_Array) == 0x0000D0, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_Get_PlayersText_Text_0, CallFunc_Format_ReturnValue) == 0x0000E0, "Member 'WB_RandomSelectionScreen_C_Get_PlayersText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.Get_WitchSkillsText_ColorAndOpacity_0
 // 0x0030 (0x0030 - 0x0000)
@@ -164,7 +164,7 @@ struct WB_RandomSelectionScreen_C_Get_WitchSkillsText_ColorAndOpacity_0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
-	uint8                                         Pad_50C4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -186,7 +186,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C5[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -207,11 +207,11 @@ static_assert(offsetof(WB_RandomSelectionScreen_C_Get_WitchSkillsText_Visibility
 struct WB_RandomSelectionScreen_C_GetInitialFocusWidget final
 {
 public:
-	class UUserWidget*                            Param_InitialFocusWidget;                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            InitialFocusWidget_0;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_RandomSelectionScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_RandomSelectionScreen_C_GetInitialFocusWidget");
 static_assert(sizeof(WB_RandomSelectionScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_RandomSelectionScreen_C_GetInitialFocusWidget");
-static_assert(offsetof(WB_RandomSelectionScreen_C_GetInitialFocusWidget, Param_InitialFocusWidget) == 0x000000, "Member 'WB_RandomSelectionScreen_C_GetInitialFocusWidget::Param_InitialFocusWidget' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_GetInitialFocusWidget, InitialFocusWidget_0) == 0x000000, "Member 'WB_RandomSelectionScreen_C_GetInitialFocusWidget::InitialFocusWidget_0' has a wrong offset!");
 
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.GetVisibility_0
 // 0x0030 (0x0030 - 0x0000)
@@ -223,12 +223,12 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C6[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C7[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_ClassDynamicCast_AsB_Game_Mode;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -251,17 +251,17 @@ static_assert(offsetof(WB_RandomSelectionScreen_C_GetVisibility_0, K2Node_ClassD
 struct WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation final
 {
 public:
-	EUINavigation                                 Param_Navigation;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50C9[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation) == 0x000008, "Wrong alignment on WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation");
 static_assert(sizeof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation) == 0x000020, "Wrong size on WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation");
-static_assert(offsetof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation, Param_Navigation) == 0x000000, "Member 'WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation::Param_Navigation' has a wrong offset!");
+static_assert(offsetof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation, Navigation_0) == 0x000000, "Member 'WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation::Navigation_0' has a wrong offset!");
 static_assert(offsetof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation, ReturnValue) == 0x000008, "Member 'WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation, CallFunc_GetChildrenCount_ReturnValue) == 0x000010, "Member 'WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation, CallFunc_Greater_IntInt_ReturnValue) == 0x000014, "Member 'WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
@@ -292,11 +292,11 @@ struct WB_RandomSelectionScreen_C_SetReady final
 {
 public:
 	bool                                          WantsToSpectate;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50CA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50CB[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

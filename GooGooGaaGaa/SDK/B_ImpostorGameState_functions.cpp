@@ -120,10 +120,10 @@ void AB_ImpostorGameState_C::GetHunterSkin(class AB_ImpostorPlayerState_C* Playe
 // Function B_ImpostorGameState.B_ImpostorGameState_C.GetPlayerColor
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FVector AB_ImpostorGameState_C::GetPlayerColor(int32 Param_Index)
+struct FVector AB_ImpostorGameState_C::GetPlayerColor(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -132,7 +132,7 @@ struct FVector AB_ImpostorGameState_C::GetPlayerColor(int32 Param_Index)
 
 	Params::B_ImpostorGameState_C_GetPlayerColor Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

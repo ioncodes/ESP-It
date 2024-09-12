@@ -21,7 +21,7 @@ struct B_Timer_C_ExecuteUbergraph_B_Timer final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35CF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,12 +40,12 @@ struct B_Timer_C_OnSecondElapsed__DelegateSignature final
 {
 public:
 	int32                                         ElapsedSeconds;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_RemainingSeconds;                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RemainingSeconds_0;                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_Timer_C_OnSecondElapsed__DelegateSignature) == 0x000004, "Wrong alignment on B_Timer_C_OnSecondElapsed__DelegateSignature");
 static_assert(sizeof(B_Timer_C_OnSecondElapsed__DelegateSignature) == 0x000008, "Wrong size on B_Timer_C_OnSecondElapsed__DelegateSignature");
 static_assert(offsetof(B_Timer_C_OnSecondElapsed__DelegateSignature, ElapsedSeconds) == 0x000000, "Member 'B_Timer_C_OnSecondElapsed__DelegateSignature::ElapsedSeconds' has a wrong offset!");
-static_assert(offsetof(B_Timer_C_OnSecondElapsed__DelegateSignature, Param_RemainingSeconds) == 0x000004, "Member 'B_Timer_C_OnSecondElapsed__DelegateSignature::Param_RemainingSeconds' has a wrong offset!");
+static_assert(offsetof(B_Timer_C_OnSecondElapsed__DelegateSignature, RemainingSeconds_0) == 0x000004, "Member 'B_Timer_C_OnSecondElapsed__DelegateSignature::RemainingSeconds_0' has a wrong offset!");
 
 // Function B_Timer.B_Timer_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

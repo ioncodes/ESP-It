@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ClothingSystemRuntimeInterface_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ClothingSystemRuntimeInterface_structs.hpp"
 
 
 namespace SDK
@@ -73,7 +73,7 @@ struct FClothConfig_Legacy final
 {
 public:
 	EClothingWindMethod_Legacy                    WindMethod;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_176E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClothConstraintSetup_Legacy           VerticalConstraintConfig;                          // 0x0004(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FClothConstraintSetup_Legacy           HorizontalConstraintConfig;                        // 0x0014(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FClothConstraintSetup_Legacy           BendConstraintConfig;                              // 0x0024(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
@@ -85,7 +85,7 @@ public:
 	float                                         Friction;                                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WindDragCoefficient;                               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WindLiftCoefficient;                               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_176F[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LinearDrag;                                        // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                AngularDrag;                                       // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LinearInertiaScale;                                // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -94,10 +94,10 @@ public:
 	float                                         SolverFrequency;                                   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StiffnessFrequency;                                // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GravityScale;                                      // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1770[0x4];                                     // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                GravityOverride;                                   // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseGravityOverride;                               // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1771[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TetherStiffness;                                   // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TetherLimit;                                       // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionThickness;                                // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -150,13 +150,13 @@ static_assert(offsetof(FPointWeightMap, Values) == 0x000000, "Member 'FPointWeig
 struct alignas(0x08) FClothTetherData final
 {
 public:
-	uint8                                         Pad_1772[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FClothTetherData) == 0x000008, "Wrong alignment on FClothTetherData");
 static_assert(sizeof(FClothTetherData) == 0x000010, "Wrong size on FClothTetherData");
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalMeshData
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct FClothPhysicalMeshData final
 {
 public:
@@ -166,46 +166,48 @@ public:
 	TMap<uint32, struct FPointWeightMap>          WeightMaps;                                        // 0x0030(0x0050)(Edit, NativeAccessSpecifierPublic)
 	TArray<float>                                 InverseMasses;                                     // 0x0080(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FClothVertBoneData>             BoneData;                                          // 0x0090(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<uint32>                                SelfCollisionIndices;                              // 0x00A0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FClothTetherData                       EuclideanTethers;                                  // 0x00B0(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FClothTetherData                       GeodesicTethers;                                   // 0x00C0(0x0010)(Edit, NativeAccessSpecifierPublic)
-	int32                                         MaxBoneWeights;                                    // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumFixedVerts;                                     // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<int32>                                   SelfCollisionVertexSet;                            // 0x00A0(0x0050)(Edit, NativeAccessSpecifierPublic)
+	struct FClothTetherData                       EuclideanTethers;                                  // 0x00F0(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FClothTetherData                       GeodesicTethers;                                   // 0x0100(0x0010)(Edit, NativeAccessSpecifierPublic)
+	int32                                         MaxBoneWeights;                                    // 0x0110(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumFixedVerts;                                     // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint32>                                SelfCollisionIndices;                              // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FClothPhysicalMeshData) == 0x000008, "Wrong alignment on FClothPhysicalMeshData");
-static_assert(sizeof(FClothPhysicalMeshData) == 0x0000D8, "Wrong size on FClothPhysicalMeshData");
+static_assert(sizeof(FClothPhysicalMeshData) == 0x000128, "Wrong size on FClothPhysicalMeshData");
 static_assert(offsetof(FClothPhysicalMeshData, Vertices) == 0x000000, "Member 'FClothPhysicalMeshData::Vertices' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalMeshData, Normals) == 0x000010, "Member 'FClothPhysicalMeshData::Normals' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalMeshData, Indices) == 0x000020, "Member 'FClothPhysicalMeshData::Indices' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalMeshData, WeightMaps) == 0x000030, "Member 'FClothPhysicalMeshData::WeightMaps' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalMeshData, InverseMasses) == 0x000080, "Member 'FClothPhysicalMeshData::InverseMasses' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalMeshData, BoneData) == 0x000090, "Member 'FClothPhysicalMeshData::BoneData' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalMeshData, SelfCollisionIndices) == 0x0000A0, "Member 'FClothPhysicalMeshData::SelfCollisionIndices' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalMeshData, EuclideanTethers) == 0x0000B0, "Member 'FClothPhysicalMeshData::EuclideanTethers' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalMeshData, GeodesicTethers) == 0x0000C0, "Member 'FClothPhysicalMeshData::GeodesicTethers' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalMeshData, MaxBoneWeights) == 0x0000D0, "Member 'FClothPhysicalMeshData::MaxBoneWeights' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalMeshData, NumFixedVerts) == 0x0000D4, "Member 'FClothPhysicalMeshData::NumFixedVerts' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalMeshData, SelfCollisionVertexSet) == 0x0000A0, "Member 'FClothPhysicalMeshData::SelfCollisionVertexSet' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalMeshData, EuclideanTethers) == 0x0000F0, "Member 'FClothPhysicalMeshData::EuclideanTethers' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalMeshData, GeodesicTethers) == 0x000100, "Member 'FClothPhysicalMeshData::GeodesicTethers' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalMeshData, MaxBoneWeights) == 0x000110, "Member 'FClothPhysicalMeshData::MaxBoneWeights' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalMeshData, NumFixedVerts) == 0x000114, "Member 'FClothPhysicalMeshData::NumFixedVerts' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalMeshData, SelfCollisionIndices) == 0x000118, "Member 'FClothPhysicalMeshData::SelfCollisionIndices' has a wrong offset!");
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothLODDataCommon
-// 0x0148 (0x0148 - 0x0000)
+// 0x0198 (0x0198 - 0x0000)
 struct FClothLODDataCommon final
 {
 public:
-	struct FClothPhysicalMeshData                 PhysicalMeshData;                                  // 0x0000(0x00D8)(Edit, NativeAccessSpecifierPublic)
-	struct FClothCollisionData                    CollisionData;                                     // 0x00D8(0x0040)(Edit, NativeAccessSpecifierPublic)
-	bool                                          bUseMultipleInfluences;                            // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1773[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SkinningKernelRadius;                              // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSmoothTransition;                                 // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1774[0x27];                                    // 0x0121(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FClothPhysicalMeshData                 PhysicalMeshData;                                  // 0x0000(0x0128)(Edit, NativeAccessSpecifierPublic)
+	struct FClothCollisionData                    CollisionData;                                     // 0x0128(0x0040)(Edit, NativeAccessSpecifierPublic)
+	bool                                          bUseMultipleInfluences;                            // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SkinningKernelRadius;                              // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSmoothTransition;                                 // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_171[0x27];                                     // 0x0171(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FClothLODDataCommon) == 0x000008, "Wrong alignment on FClothLODDataCommon");
-static_assert(sizeof(FClothLODDataCommon) == 0x000148, "Wrong size on FClothLODDataCommon");
+static_assert(sizeof(FClothLODDataCommon) == 0x000198, "Wrong size on FClothLODDataCommon");
 static_assert(offsetof(FClothLODDataCommon, PhysicalMeshData) == 0x000000, "Member 'FClothLODDataCommon::PhysicalMeshData' has a wrong offset!");
-static_assert(offsetof(FClothLODDataCommon, CollisionData) == 0x0000D8, "Member 'FClothLODDataCommon::CollisionData' has a wrong offset!");
-static_assert(offsetof(FClothLODDataCommon, bUseMultipleInfluences) == 0x000118, "Member 'FClothLODDataCommon::bUseMultipleInfluences' has a wrong offset!");
-static_assert(offsetof(FClothLODDataCommon, SkinningKernelRadius) == 0x00011C, "Member 'FClothLODDataCommon::SkinningKernelRadius' has a wrong offset!");
-static_assert(offsetof(FClothLODDataCommon, bSmoothTransition) == 0x000120, "Member 'FClothLODDataCommon::bSmoothTransition' has a wrong offset!");
+static_assert(offsetof(FClothLODDataCommon, CollisionData) == 0x000128, "Member 'FClothLODDataCommon::CollisionData' has a wrong offset!");
+static_assert(offsetof(FClothLODDataCommon, bUseMultipleInfluences) == 0x000168, "Member 'FClothLODDataCommon::bUseMultipleInfluences' has a wrong offset!");
+static_assert(offsetof(FClothLODDataCommon, SkinningKernelRadius) == 0x00016C, "Member 'FClothLODDataCommon::SkinningKernelRadius' has a wrong offset!");
+static_assert(offsetof(FClothLODDataCommon, bSmoothTransition) == 0x000170, "Member 'FClothLODDataCommon::bSmoothTransition' has a wrong offset!");
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothParameterMask_Legacy
 // 0x0030 (0x0030 - 0x0000)
@@ -214,13 +216,13 @@ struct FClothParameterMask_Legacy final
 public:
 	class FName                                   MaskName;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EWeightMapTargetCommon                        CurrentTarget;                                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1775[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxValue;                                          // 0x000C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinValue;                                          // 0x0010(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1776[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 Values;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEnabled;                                          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1777[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FClothParameterMask_Legacy) == 0x000008, "Wrong alignment on FClothParameterMask_Legacy");
 static_assert(sizeof(FClothParameterMask_Legacy) == 0x000030, "Wrong size on FClothParameterMask_Legacy");

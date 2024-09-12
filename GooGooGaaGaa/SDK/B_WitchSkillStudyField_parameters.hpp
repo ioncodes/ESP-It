@@ -19,14 +19,14 @@ namespace SDK::Params
 struct B_WitchSkillStudyField_C_InitializeTaskField final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FinalTargetAmount;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UStaticMeshComponent*>           CallFunc_GetComponentsByTag_ReturnValue;           // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
 	TArray<class UStaticMeshComponent*>           CallFunc_GetComponentsByTag_ReturnValue_1;         // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(B_WitchSkillStudyField_C_InitializeTaskField) == 0x000008, "Wrong alignment on B_WitchSkillStudyField_C_InitializeTaskField");
 static_assert(sizeof(B_WitchSkillStudyField_C_InitializeTaskField) == 0x000028, "Wrong size on B_WitchSkillStudyField_C_InitializeTaskField");
-static_assert(offsetof(B_WitchSkillStudyField_C_InitializeTaskField, Param_Index) == 0x000000, "Member 'B_WitchSkillStudyField_C_InitializeTaskField::Param_Index' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyField_C_InitializeTaskField, Index_0) == 0x000000, "Member 'B_WitchSkillStudyField_C_InitializeTaskField::Index_0' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyField_C_InitializeTaskField, FinalTargetAmount) == 0x000004, "Member 'B_WitchSkillStudyField_C_InitializeTaskField::FinalTargetAmount' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyField_C_InitializeTaskField, CallFunc_GetComponentsByTag_ReturnValue) == 0x000008, "Member 'B_WitchSkillStudyField_C_InitializeTaskField::CallFunc_GetComponentsByTag_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyField_C_InitializeTaskField, CallFunc_GetComponentsByTag_ReturnValue_1) == 0x000018, "Member 'B_WitchSkillStudyField_C_InitializeTaskField::CallFunc_GetComponentsByTag_ReturnValue_1' has a wrong offset!");

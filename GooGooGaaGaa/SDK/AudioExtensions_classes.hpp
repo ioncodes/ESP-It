@@ -16,6 +16,44 @@
 namespace SDK
 {
 
+// Class AudioExtensions.AudioPropertiesBindings
+// 0x0050 (0x0078 - 0x0028)
+class UAudioPropertiesBindings final : public UObject
+{
+public:
+	TMap<class FName, class FName>                ObjectPropertyToSheetPropertyMap;                  // 0x0028(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AudioPropertiesBindings">();
+	}
+	static class UAudioPropertiesBindings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioPropertiesBindings>();
+	}
+};
+static_assert(alignof(UAudioPropertiesBindings) == 0x000008, "Wrong alignment on UAudioPropertiesBindings");
+static_assert(sizeof(UAudioPropertiesBindings) == 0x000078, "Wrong size on UAudioPropertiesBindings");
+static_assert(offsetof(UAudioPropertiesBindings, ObjectPropertyToSheetPropertyMap) == 0x000028, "Member 'UAudioPropertiesBindings::ObjectPropertyToSheetPropertyMap' has a wrong offset!");
+
+// Class AudioExtensions.AudioPropertiesSheetAssetBase
+// 0x0000 (0x0028 - 0x0028)
+class UAudioPropertiesSheetAssetBase final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AudioPropertiesSheetAssetBase">();
+	}
+	static class UAudioPropertiesSheetAssetBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioPropertiesSheetAssetBase>();
+	}
+};
+static_assert(alignof(UAudioPropertiesSheetAssetBase) == 0x000008, "Wrong alignment on UAudioPropertiesSheetAssetBase");
+static_assert(sizeof(UAudioPropertiesSheetAssetBase) == 0x000028, "Wrong size on UAudioPropertiesSheetAssetBase");
+
 // Class AudioExtensions.SpatializationPluginSourceSettingsBase
 // 0x0000 (0x0028 - 0x0028)
 class USpatializationPluginSourceSettingsBase : public UObject
@@ -84,6 +122,23 @@ public:
 static_assert(alignof(UReverbPluginSourceSettingsBase) == 0x000008, "Wrong alignment on UReverbPluginSourceSettingsBase");
 static_assert(sizeof(UReverbPluginSourceSettingsBase) == 0x000028, "Wrong size on UReverbPluginSourceSettingsBase");
 
+// Class AudioExtensions.AudioPropertySheetBaseAsset
+// 0x0000 (0x0028 - 0x0028)
+class UAudioPropertySheetBaseAsset final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AudioPropertySheetBaseAsset">();
+	}
+	static class UAudioPropertySheetBaseAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioPropertySheetBaseAsset>();
+	}
+};
+static_assert(alignof(UAudioPropertySheetBaseAsset) == 0x000008, "Wrong alignment on UAudioPropertySheetBaseAsset");
+static_assert(sizeof(UAudioPropertySheetBaseAsset) == 0x000028, "Wrong size on UAudioPropertySheetBaseAsset");
+
 // Class AudioExtensions.AudioParameterControllerInterface
 // 0x0000 (0x0028 - 0x0028)
 class IAudioParameterControllerInterface : public IInterface
@@ -115,28 +170,6 @@ public:
 };
 static_assert(alignof(IAudioParameterControllerInterface) == 0x000008, "Wrong alignment on IAudioParameterControllerInterface");
 static_assert(sizeof(IAudioParameterControllerInterface) == 0x000028, "Wrong size on IAudioParameterControllerInterface");
-
-// Class AudioExtensions.AudioCodecEncoderSettings
-// 0x0008 (0x0030 - 0x0028)
-class UAudioCodecEncoderSettings final : public UObject
-{
-public:
-	int32                                         Version;                                           // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_160[0x4];                                      // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AudioCodecEncoderSettings">();
-	}
-	static class UAudioCodecEncoderSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioCodecEncoderSettings>();
-	}
-};
-static_assert(alignof(UAudioCodecEncoderSettings) == 0x000008, "Wrong alignment on UAudioCodecEncoderSettings");
-static_assert(sizeof(UAudioCodecEncoderSettings) == 0x000030, "Wrong size on UAudioCodecEncoderSettings");
-static_assert(offsetof(UAudioCodecEncoderSettings, Version) == 0x000028, "Member 'UAudioCodecEncoderSettings::Version' has a wrong offset!");
 
 // Class AudioExtensions.AudioEndpointSettingsBase
 // 0x0000 (0x0028 - 0x0028)
@@ -177,7 +210,7 @@ static_assert(sizeof(UDummyEndpointSettings) == 0x000028, "Wrong size on UDummyE
 class USoundModulatorBase final : public UObject
 {
 public:
-	uint8                                         Pad_161[0x8];                                      // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

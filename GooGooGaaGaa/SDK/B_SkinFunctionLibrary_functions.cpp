@@ -22,10 +22,10 @@ namespace SDK
 // Parameters:
 // EB_Rarity                               Rarity                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FText                             Param_Name                                             (Parm, OutParm)
+// class FText                             Name_0                                                 (Parm, OutParm)
 // struct FLinearColor                     Color                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_SkinFunctionLibrary_C::GetRarityInfo(EB_Rarity Rarity, class UObject* __WorldContext, class FText* Param_Name, struct FLinearColor* Color)
+void UB_SkinFunctionLibrary_C::GetRarityInfo(EB_Rarity Rarity, class UObject* __WorldContext, class FText* Name_0, struct FLinearColor* Color)
 {
 	static class UFunction* Func = nullptr;
 
@@ -39,8 +39,8 @@ void UB_SkinFunctionLibrary_C::GetRarityInfo(EB_Rarity Rarity, class UObject* __
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 
 	if (Color != nullptr)
 		*Color = std::move(Parms.Color);
@@ -152,9 +152,9 @@ bool UB_SkinFunctionLibrary_C::IsWitchSlot(E_Slot Slot, class UObject* __WorldCo
 // Parameters:
 // int32                                   DefinitionId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FText                             Param_Name                                             (Parm, OutParm)
+// class FText                             Name_0                                                 (Parm, OutParm)
 
-void UB_SkinFunctionLibrary_C::GetSteamItemNameFromID(int32 DefinitionId, class UObject* __WorldContext, class FText* Param_Name)
+void UB_SkinFunctionLibrary_C::GetSteamItemNameFromID(int32 DefinitionId, class UObject* __WorldContext, class FText* Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -168,8 +168,8 @@ void UB_SkinFunctionLibrary_C::GetSteamItemNameFromID(int32 DefinitionId, class 
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 }
 
 

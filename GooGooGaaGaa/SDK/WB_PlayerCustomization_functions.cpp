@@ -282,9 +282,9 @@ struct FSlateColor UWB_PlayerCustomization_C::GetColorAndOpacity_0()
 // Function WB_PlayerCustomization.WB_PlayerCustomization_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Param_InitialFocusWidget                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      InitialFocusWidget_0                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PlayerCustomization_C::GetInitialFocusWidget(class UUserWidget** Param_InitialFocusWidget)
+void UWB_PlayerCustomization_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -295,8 +295,8 @@ void UWB_PlayerCustomization_C::GetInitialFocusWidget(class UUserWidget** Param_
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_InitialFocusWidget != nullptr)
-		*Param_InitialFocusWidget = Parms.Param_InitialFocusWidget;
+	if (InitialFocusWidget_0 != nullptr)
+		*InitialFocusWidget_0 = Parms.InitialFocusWidget_0;
 }
 
 
@@ -478,10 +478,10 @@ void UWB_PlayerCustomization_C::RefreshPlayerCount()
 // Function WB_PlayerCustomization.WB_PlayerCustomization_C.SetTeamAndWardrobe
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ETeamID                                 Param_Team                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Team_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    OpenViaWardrobe                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PlayerCustomization_C::SetTeamAndWardrobe(ETeamID Param_Team, bool OpenViaWardrobe)
+void UWB_PlayerCustomization_C::SetTeamAndWardrobe(ETeamID Team_0, bool OpenViaWardrobe)
 {
 	static class UFunction* Func = nullptr;
 
@@ -490,7 +490,7 @@ void UWB_PlayerCustomization_C::SetTeamAndWardrobe(ETeamID Param_Team, bool Open
 
 	Params::WB_PlayerCustomization_C_SetTeamAndWardrobe Parms{};
 
-	Parms.Param_Team = Param_Team;
+	Parms.Team_0 = Team_0;
 	Parms.OpenViaWardrobe = OpenViaWardrobe;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -500,10 +500,10 @@ void UWB_PlayerCustomization_C::SetTeamAndWardrobe(ETeamID Param_Team, bool Open
 // Function WB_PlayerCustomization.WB_PlayerCustomization_C.SkinConfigLeftNavigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_PlayerCustomization_C::SkinConfigLeftNavigation(EUINavigation Param_Navigation)
+class UWidget* UWB_PlayerCustomization_C::SkinConfigLeftNavigation(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -512,7 +512,7 @@ class UWidget* UWB_PlayerCustomization_C::SkinConfigLeftNavigation(EUINavigation
 
 	Params::WB_PlayerCustomization_C_SkinConfigLeftNavigation Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

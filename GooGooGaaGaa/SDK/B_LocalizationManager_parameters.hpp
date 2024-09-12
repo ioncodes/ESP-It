@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
-#include "SLanguage_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SLanguage_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "SButtonLocalization_structs.hpp"
 
 
@@ -26,7 +26,7 @@ struct B_LocalizationManager_C_ExecuteUbergraph_B_LocalizationManager final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetCurrentCulture_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B8D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLanguageSupported_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,57 +40,57 @@ static_assert(offsetof(B_LocalizationManager_C_ExecuteUbergraph_B_LocalizationMa
 static_assert(offsetof(B_LocalizationManager_C_ExecuteUbergraph_B_LocalizationManager, CallFunc_Not_PreBool_ReturnValue) == 0x000011, "Member 'B_LocalizationManager_C_ExecuteUbergraph_B_LocalizationManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_LocalizationManager.B_LocalizationManager_C.GetButtonLocalization
-// 0x0130 (0x0130 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct B_LocalizationManager_C_GetButtonLocalization final
 {
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	struct FSButtonLocalization                   ReturnValue;                                       // 0x0018(0x0020)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
-	bool                                          bKeyFound;                                         // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_XboxOnePlatform_ReturnValue;              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B8E[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSButtonLocalization                   CallFunc_Map_Find_Value;                           // 0x0040(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B8F[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSButtonLocalization                   CallFunc_Map_Find_Value_1;                         // 0x0068(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B90[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSButtonLocalization                   CallFunc_Map_Find_Value_2;                         // 0x0090(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DesktopPlatform_ReturnValue;              // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B91[0x6];                                     // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSButtonLocalization                   CallFunc_Map_Find_Value_3;                         // 0x00B8(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B92[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSButtonLocalization                   CallFunc_Map_Find_Value_4;                         // 0x00E0(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B93[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSButtonLocalization                   CallFunc_Map_Find_Value_5;                         // 0x0108(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSButtonLocalization                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+	bool                                          bKeyFound;                                         // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_XboxOnePlatform_ReturnValue;              // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSButtonLocalization                   CallFunc_Map_Find_Value;                           // 0x0038(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSButtonLocalization                   CallFunc_Map_Find_Value_1;                         // 0x0058(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSButtonLocalization                   CallFunc_Map_Find_Value_2;                         // 0x0078(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DesktopPlatform_ReturnValue;              // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSButtonLocalization                   CallFunc_Map_Find_Value_3;                         // 0x0098(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSButtonLocalization                   CallFunc_Map_Find_Value_4;                         // 0x00B8(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSButtonLocalization                   CallFunc_Map_Find_Value_5;                         // 0x00D8(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_LocalizationManager_C_GetButtonLocalization) == 0x000008, "Wrong alignment on B_LocalizationManager_C_GetButtonLocalization");
-static_assert(sizeof(B_LocalizationManager_C_GetButtonLocalization) == 0x000130, "Wrong size on B_LocalizationManager_C_GetButtonLocalization");
+static_assert(sizeof(B_LocalizationManager_C_GetButtonLocalization) == 0x0000F8, "Wrong size on B_LocalizationManager_C_GetButtonLocalization");
 static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, Key) == 0x000000, "Member 'B_LocalizationManager_C_GetButtonLocalization::Key' has a wrong offset!");
 static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, ReturnValue) == 0x000018, "Member 'B_LocalizationManager_C_GetButtonLocalization::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, bKeyFound) == 0x000038, "Member 'B_LocalizationManager_C_GetButtonLocalization::bKeyFound' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Ps4Platform_ReturnValue) == 0x000039, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_XboxOnePlatform_ReturnValue) == 0x00003A, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_XboxOnePlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value) == 0x000040, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue) == 0x000060, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_SwitchPlatform_ReturnValue) == 0x000061, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_1) == 0x000068, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_1) == 0x000088, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_2) == 0x000090, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_2) == 0x0000B0, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_DesktopPlatform_ReturnValue) == 0x0000B1, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_DesktopPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_3) == 0x0000B8, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_3) == 0x0000D8, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_4) == 0x0000E0, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_4) == 0x000100, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_5) == 0x000108, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_5' has a wrong offset!");
-static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_5) == 0x000128, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, bKeyFound) == 0x000030, "Member 'B_LocalizationManager_C_GetButtonLocalization::bKeyFound' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Ps4Platform_ReturnValue) == 0x000031, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Ps4Platform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_XboxOnePlatform_ReturnValue) == 0x000032, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_XboxOnePlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value) == 0x000038, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue) == 0x000050, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_SwitchPlatform_ReturnValue) == 0x000051, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_1) == 0x000058, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_1) == 0x000070, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_2) == 0x000078, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_2) == 0x000090, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_DesktopPlatform_ReturnValue) == 0x000091, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_DesktopPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_3) == 0x000098, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_3) == 0x0000B0, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_4) == 0x0000B8, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_4' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_4) == 0x0000D0, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_Value_5) == 0x0000D8, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_Value_5' has a wrong offset!");
+static_assert(offsetof(B_LocalizationManager_C_GetButtonLocalization, CallFunc_Map_Find_ReturnValue_5) == 0x0000F0, "Member 'B_LocalizationManager_C_GetButtonLocalization::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
 
 // Function B_LocalizationManager.B_LocalizationManager_C.GetKeyForAction
 // 0x00B0 (0x00B0 - 0x0000)
@@ -100,7 +100,7 @@ public:
 	class FName                                   ActionName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 	bool                                          bKeyFound;                                         // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B94[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CurrentKey;                                        // 0x0028(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0040(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -108,10 +108,10 @@ public:
 	struct FInputActionKeyMapping                 CallFunc_Array_Get_Item;                           // 0x0058(0x0028)()
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B95[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B96[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_NintendoSwitchSwapAcceptBackButton_FixedKey; // 0x0090(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Key_IsGamepadKey_ReturnValue;             // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -145,7 +145,7 @@ public:
 	double                                        Scale;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKey                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 	bool                                          bKeyFound;                                         // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B97[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CurrentKey;                                        // 0x0030(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TArray<struct FInputAxisKeyMapping>           CallFunc_GetKeyBindingsForAxis_Bindings;           // 0x0048(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -153,12 +153,12 @@ public:
 	struct FInputAxisKeyMapping                   CallFunc_Array_Get_Item;                           // 0x0060(0x0028)()
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B98[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Key_IsGamepadKey_ReturnValue;             // 0x0095(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0096(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B99[0x1];                                     // 0x0097(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_97[0x1];                                       // 0x0097(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetKeyBindingsForAxis_Scale_ImplicitCast; // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_LocalizationManager_C_GetKeyForAxis) == 0x000008, "Wrong alignment on B_LocalizationManager_C_GetKeyForAxis");
@@ -187,7 +187,7 @@ struct B_LocalizationManager_C_GetMenuUIManager final
 public:
 	class UB_MenuUIManager_C*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B9A[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -216,7 +216,7 @@ struct B_LocalizationManager_C_IsLanguageSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bLanguageSupported;                                // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B9B[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

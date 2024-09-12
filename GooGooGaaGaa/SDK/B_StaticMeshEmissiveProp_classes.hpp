@@ -22,14 +22,14 @@ namespace SDK
 class alignas(0x10) AB_StaticMeshEmissiveProp_C : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4E65[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInstanceDynamic*>       Materials;                                         // 0x05D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class AB_VisualIntepolator_C*>         VisualInterpolators;                               // 0x05E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void InitializeActionProp();
 	void UpdateActionProp();
-	void GetVisualInterpolators(TArray<class AB_VisualIntepolator_C*>* Param_VisualInterpolators);
+	void GetVisualInterpolators(TArray<class AB_VisualIntepolator_C*>* VisualInterpolators_0);
 
 public:
 	static class UClass* StaticClass()

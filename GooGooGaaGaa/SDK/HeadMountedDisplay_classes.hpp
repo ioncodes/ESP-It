@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "InputCore_structs.hpp"
 #include "Engine_classes.hpp"
 #include "HeadMountedDisplay_structs.hpp"
-#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -39,32 +39,22 @@ static_assert(alignof(UHandKeypointConversion) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UHandKeypointConversion) == 0x000028, "Wrong size on UHandKeypointConversion");
 
 // Class HeadMountedDisplay.MotionControllerComponent
-// 0x0180 (0x06F0 - 0x0570)
+// 0x0140 (0x0660 - 0x0520)
 class UMotionControllerComponent final : public UPrimitiveComponent
 {
 public:
-	int32                                         PlayerIndex;                                       // 0x0570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   MotionSource;                                      // 0x0574(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bDisableLowLatencyUpdate : 1;                      // 0x057C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1186[0x3];                                     // 0x057D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	ETrackingStatus                               CurrentTrackingStatus;                             // 0x0580(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisplayDeviceModel;                               // 0x0581(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1187[0x2];                                     // 0x0582(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DisplayModelSource;                                // 0x0584(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1188[0x4];                                     // 0x058C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            CustomDisplayMesh;                                 // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             DisplayMeshMaterialOverrides;                      // 0x0598(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    DisplayComponent;                                  // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1189[0x140];                                   // 0x05B0(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         PlayerIndex;                                       // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   MotionSource;                                      // 0x051C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bDisableLowLatencyUpdate : 1;                      // 0x0524(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_525[0x3];                                      // 0x0525(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	ETrackingStatus                               CurrentTrackingStatus;                             // 0x0528(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_529[0x137];                                    // 0x0529(0x0137)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FVector GetHandJointPosition(int32 JointIndex, bool* bValueFound);
 	float GetParameterValue(class FName InName, bool* bValueFound);
 	void OnMotionControllerUpdated();
 	void SetAssociatedPlayerIndex(const int32 NewPlayer);
-	void SetCustomDisplayMesh(class UStaticMesh* NewDisplayMesh);
-	void SetDisplayModelSource(const class FName NewDisplayModelSource);
-	void SetShowDeviceModel(const bool bShowControllerModel);
 	void SetTrackingMotionSource(const class FName NewSource);
 	void SetTrackingSource(const EControllerHand NewSource);
 
@@ -85,15 +75,10 @@ public:
 	}
 };
 static_assert(alignof(UMotionControllerComponent) == 0x000010, "Wrong alignment on UMotionControllerComponent");
-static_assert(sizeof(UMotionControllerComponent) == 0x0006F0, "Wrong size on UMotionControllerComponent");
-static_assert(offsetof(UMotionControllerComponent, PlayerIndex) == 0x000570, "Member 'UMotionControllerComponent::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, MotionSource) == 0x000574, "Member 'UMotionControllerComponent::MotionSource' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, CurrentTrackingStatus) == 0x000580, "Member 'UMotionControllerComponent::CurrentTrackingStatus' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, bDisplayDeviceModel) == 0x000581, "Member 'UMotionControllerComponent::bDisplayDeviceModel' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, DisplayModelSource) == 0x000584, "Member 'UMotionControllerComponent::DisplayModelSource' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, CustomDisplayMesh) == 0x000590, "Member 'UMotionControllerComponent::CustomDisplayMesh' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, DisplayMeshMaterialOverrides) == 0x000598, "Member 'UMotionControllerComponent::DisplayMeshMaterialOverrides' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, DisplayComponent) == 0x0005A8, "Member 'UMotionControllerComponent::DisplayComponent' has a wrong offset!");
+static_assert(sizeof(UMotionControllerComponent) == 0x000660, "Wrong size on UMotionControllerComponent");
+static_assert(offsetof(UMotionControllerComponent, PlayerIndex) == 0x000518, "Member 'UMotionControllerComponent::PlayerIndex' has a wrong offset!");
+static_assert(offsetof(UMotionControllerComponent, MotionSource) == 0x00051C, "Member 'UMotionControllerComponent::MotionSource' has a wrong offset!");
+static_assert(offsetof(UMotionControllerComponent, CurrentTrackingStatus) == 0x000528, "Member 'UMotionControllerComponent::CurrentTrackingStatus' has a wrong offset!");
 
 }
 

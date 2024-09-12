@@ -20,9 +20,9 @@ namespace SDK
 // Function B_PowerBall.B_PowerBall_C.CanTeleport
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_CanTeleport                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanTeleport_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PowerBall_C::CanTeleport(bool* Param_CanTeleport)
+void AB_PowerBall_C::CanTeleport(bool* CanTeleport_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,8 +33,8 @@ void AB_PowerBall_C::CanTeleport(bool* Param_CanTeleport)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanTeleport != nullptr)
-		*Param_CanTeleport = Parms.Param_CanTeleport;
+	if (CanTeleport_0 != nullptr)
+		*CanTeleport_0 = Parms.CanTeleport_0;
 }
 
 

@@ -216,9 +216,9 @@ void AB_PlayerState_C::HandleGrantedExtraItems(TArray<struct FSGrantedItem>& Gra
 // Function B_PlayerState.B_PlayerState_C.IsLocalReady
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsLocalReady                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsLocalReady_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::IsLocalReady(bool* Param_IsLocalReady)
+void AB_PlayerState_C::IsLocalReady(bool* IsLocalReady_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -229,8 +229,8 @@ void AB_PlayerState_C::IsLocalReady(bool* Param_IsLocalReady)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsLocalReady != nullptr)
-		*Param_IsLocalReady = Parms.Param_IsLocalReady;
+	if (IsLocalReady_0 != nullptr)
+		*IsLocalReady_0 = Parms.IsLocalReady_0;
 }
 
 
@@ -271,11 +271,11 @@ bool AB_PlayerState_C::IsObjectiveGameMode()
 // Function B_PlayerState.B_PlayerState_C.GetSelectedSkillForTeam
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ETeamID                                 Param_Team                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Team_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESkillCategory                          SkillCategory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           Skill                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::GetSelectedSkillForTeam(ETeamID Param_Team, ESkillCategory SkillCategory, class UClass** Skill)
+void AB_PlayerState_C::GetSelectedSkillForTeam(ETeamID Team_0, ESkillCategory SkillCategory, class UClass** Skill)
 {
 	static class UFunction* Func = nullptr;
 
@@ -284,7 +284,7 @@ void AB_PlayerState_C::GetSelectedSkillForTeam(ETeamID Param_Team, ESkillCategor
 
 	Params::B_PlayerState_C_GetSelectedSkillForTeam Parms{};
 
-	Parms.Param_Team = Param_Team;
+	Parms.Team_0 = Team_0;
 	Parms.SkillCategory = SkillCategory;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -297,13 +297,13 @@ void AB_PlayerState_C::GetSelectedSkillForTeam(ETeamID Param_Team, ESkillCategor
 // Function B_PlayerState.B_PlayerState_C.HandleGrantXP
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_TotalXP                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TotalXP_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TimeXP                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_WinBonusXP                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_CatchXP                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_LastWitchXP                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WinBonusXP_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CatchXP_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LastWitchXP_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::HandleGrantXP(int32 Param_TotalXP, int32 TimeXP, int32 Param_WinBonusXP, int32 Param_CatchXP, int32 Param_LastWitchXP)
+void AB_PlayerState_C::HandleGrantXP(int32 TotalXP_0, int32 TimeXP, int32 WinBonusXP_0, int32 CatchXP_0, int32 LastWitchXP_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -312,11 +312,11 @@ void AB_PlayerState_C::HandleGrantXP(int32 Param_TotalXP, int32 TimeXP, int32 Pa
 
 	Params::B_PlayerState_C_HandleGrantXP Parms{};
 
-	Parms.Param_TotalXP = Param_TotalXP;
+	Parms.TotalXP_0 = TotalXP_0;
 	Parms.TimeXP = TimeXP;
-	Parms.Param_WinBonusXP = Param_WinBonusXP;
-	Parms.Param_CatchXP = Param_CatchXP;
-	Parms.Param_LastWitchXP = Param_LastWitchXP;
+	Parms.WinBonusXP_0 = WinBonusXP_0;
+	Parms.CatchXP_0 = CatchXP_0;
+	Parms.LastWitchXP_0 = LastWitchXP_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -554,6 +554,50 @@ void AB_PlayerState_C::OnRep_IsReady()
 }
 
 
+// Function B_PlayerState.B_PlayerState_C.OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void AB_PlayerState_C::OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PlayerState_C", "OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034");
+
+	Params::B_PlayerState_C_OnMessageProcessed_703E44154BB0099B9D98CAA5EE6DF034 Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_PlayerState.B_PlayerState_C.OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void AB_PlayerState_C::OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PlayerState_C", "OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034");
+
+	Params::B_PlayerState_C_OnCallFailed_703E44154BB0099B9D98CAA5EE6DF034 Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_PlayerState.B_PlayerState_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -617,11 +661,11 @@ void AB_PlayerState_C::AddPropCheckedOwningClient(class AActor* Actor)
 // Parameters:
 // int32                                   TotalAmount                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TimeExp                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_WinBonusXP                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_CatchXP                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_LastWitchXP                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   WinBonusXP_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CatchXP_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LastWitchXP_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::GrantExp(int32 TotalAmount, int32 TimeExp, int32 Param_WinBonusXP, int32 Param_CatchXP, int32 Param_LastWitchXP)
+void AB_PlayerState_C::GrantExp(int32 TotalAmount, int32 TimeExp, int32 WinBonusXP_0, int32 CatchXP_0, int32 LastWitchXP_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -632,9 +676,9 @@ void AB_PlayerState_C::GrantExp(int32 TotalAmount, int32 TimeExp, int32 Param_Wi
 
 	Parms.TotalAmount = TotalAmount;
 	Parms.TimeExp = TimeExp;
-	Parms.Param_WinBonusXP = Param_WinBonusXP;
-	Parms.Param_CatchXP = Param_CatchXP;
-	Parms.Param_LastWitchXP = Param_LastWitchXP;
+	Parms.WinBonusXP_0 = WinBonusXP_0;
+	Parms.CatchXP_0 = CatchXP_0;
+	Parms.LastWitchXP_0 = LastWitchXP_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -664,12 +708,12 @@ void AB_PlayerState_C::ReceiveTick(float DeltaSeconds)
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Level                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_PrestigeLevel                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PrestigeLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FPrimaryAssetId                  SkinIcon                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FSSelectedSkills                 StandardSkills                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FSSelectedSkills                 ObjectiveSkills                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::ReplicateIconAndLevel(int32 Level, int32 Param_PrestigeLevel, const struct FPrimaryAssetId& SkinIcon, const struct FSSelectedSkills& StandardSkills, const struct FSSelectedSkills& ObjectiveSkills)
+void AB_PlayerState_C::ReplicateIconAndLevel(int32 Level, int32 PrestigeLevel_0, const struct FPrimaryAssetId& SkinIcon, const struct FSSelectedSkills& StandardSkills, const struct FSSelectedSkills& ObjectiveSkills)
 {
 	static class UFunction* Func = nullptr;
 
@@ -679,7 +723,7 @@ void AB_PlayerState_C::ReplicateIconAndLevel(int32 Level, int32 Param_PrestigeLe
 	Params::B_PlayerState_C_ReplicateIconAndLevel Parms{};
 
 	Parms.Level = Level;
-	Parms.Param_PrestigeLevel = Param_PrestigeLevel;
+	Parms.PrestigeLevel_0 = PrestigeLevel_0;
 	Parms.SkinIcon = std::move(SkinIcon);
 	Parms.StandardSkills = std::move(StandardSkills);
 	Parms.ObjectiveSkills = std::move(ObjectiveSkills);
@@ -788,12 +832,12 @@ void AB_PlayerState_C::GrantExtraItems(const TArray<struct FSGrantedItem>& Grant
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Level                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_PrestigeLevel                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PrestigeLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FSSelectedSkills                 StandardSkills                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FSSelectedSkills                 ObjectiveSkills                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::SetPlayerData(int32 Level, int32 Param_PrestigeLevel, class UClass* Icon, const struct FSSelectedSkills& StandardSkills, const struct FSSelectedSkills& ObjectiveSkills)
+void AB_PlayerState_C::SetPlayerData(int32 Level, int32 PrestigeLevel_0, class UClass* Icon, const struct FSSelectedSkills& StandardSkills, const struct FSSelectedSkills& ObjectiveSkills)
 {
 	static class UFunction* Func = nullptr;
 
@@ -803,7 +847,7 @@ void AB_PlayerState_C::SetPlayerData(int32 Level, int32 Param_PrestigeLevel, cla
 	Params::B_PlayerState_C_SetPlayerData Parms{};
 
 	Parms.Level = Level;
-	Parms.Param_PrestigeLevel = Param_PrestigeLevel;
+	Parms.PrestigeLevel_0 = PrestigeLevel_0;
 	Parms.Icon = Icon;
 	Parms.StandardSkills = std::move(StandardSkills);
 	Parms.ObjectiveSkills = std::move(ObjectiveSkills);
@@ -815,9 +859,9 @@ void AB_PlayerState_C::SetPlayerData(int32 Level, int32 Param_PrestigeLevel, cla
 // Function B_PlayerState.B_PlayerState_C.SERVER_SetIsTalking
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bIsTalking                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsTalking_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::SERVER_SetIsTalking(bool Param_bIsTalking)
+void AB_PlayerState_C::SERVER_SetIsTalking(bool bIsTalking_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -826,7 +870,7 @@ void AB_PlayerState_C::SERVER_SetIsTalking(bool Param_bIsTalking)
 
 	Params::B_PlayerState_C_SERVER_SetIsTalking Parms{};
 
-	Parms.Param_bIsTalking = Param_bIsTalking;
+	Parms.bIsTalking_0 = bIsTalking_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -835,10 +879,10 @@ void AB_PlayerState_C::SERVER_SetIsTalking(bool Param_bIsTalking)
 // Function B_PlayerState.B_PlayerState_C.SetPrestigeLevelOwningClient
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_PrestigeLevel                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PrestigeLevel_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   PrestigeExperience                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::SetPrestigeLevelOwningClient(int32 Param_PrestigeLevel, int32 PrestigeExperience)
+void AB_PlayerState_C::SetPrestigeLevelOwningClient(int32 PrestigeLevel_0, int32 PrestigeExperience)
 {
 	static class UFunction* Func = nullptr;
 
@@ -847,7 +891,7 @@ void AB_PlayerState_C::SetPrestigeLevelOwningClient(int32 Param_PrestigeLevel, i
 
 	Params::B_PlayerState_C_SetPrestigeLevelOwningClient Parms{};
 
-	Parms.Param_PrestigeLevel = Param_PrestigeLevel;
+	Parms.PrestigeLevel_0 = PrestigeLevel_0;
 	Parms.PrestigeExperience = PrestigeExperience;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -857,11 +901,11 @@ void AB_PlayerState_C::SetPrestigeLevelOwningClient(int32 Param_PrestigeLevel, i
 // Function B_PlayerState.B_PlayerState_C.RequestUserAccountId
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_ProductUserId                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           ProductUserId_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           AccountType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           NativePlatformId                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::RequestUserAccountId(const class FString& Param_ProductUserId, const class FString& AccountType, const class FString& NativePlatformId)
+void AB_PlayerState_C::RequestUserAccountId(const class FString& ProductUserId_0, const class FString& AccountType, const class FString& NativePlatformId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -870,9 +914,29 @@ void AB_PlayerState_C::RequestUserAccountId(const class FString& Param_ProductUs
 
 	Params::B_PlayerState_C_RequestUserAccountId Parms{};
 
-	Parms.Param_ProductUserId = std::move(Param_ProductUserId);
+	Parms.ProductUserId_0 = std::move(ProductUserId_0);
 	Parms.AccountType = std::move(AccountType);
 	Parms.NativePlatformId = std::move(NativePlatformId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_PlayerState.B_PlayerState_C.PostOnRepPlayerName
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class FString                           NewPlayerName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void AB_PlayerState_C::PostOnRepPlayerName(const class FString& NewPlayerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PlayerState_C", "PostOnRepPlayerName");
+
+	Params::B_PlayerState_C_PostOnRepPlayerName Parms{};
+
+	Parms.NewPlayerName = std::move(NewPlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -927,10 +991,10 @@ void AB_PlayerState_C::ExecuteUbergraph_B_PlayerState(int32 EntryPoint)
 // Function B_PlayerState.B_PlayerState_C.GetProductUserId
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class FString                           Param_ProductUserId                                    (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           Param_PlatformType                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           ProductUserId_0                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           PlatformType_0                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::GetProductUserId(class FString* Param_ProductUserId, class FString* Param_PlatformType) const
+void AB_PlayerState_C::GetProductUserId(class FString* ProductUserId_0, class FString* PlatformType_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -941,11 +1005,11 @@ void AB_PlayerState_C::GetProductUserId(class FString* Param_ProductUserId, clas
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ProductUserId != nullptr)
-		*Param_ProductUserId = std::move(Parms.Param_ProductUserId);
+	if (ProductUserId_0 != nullptr)
+		*ProductUserId_0 = std::move(Parms.ProductUserId_0);
 
-	if (Param_PlatformType != nullptr)
-		*Param_PlatformType = std::move(Parms.Param_PlatformType);
+	if (PlatformType_0 != nullptr)
+		*PlatformType_0 = std::move(Parms.PlatformType_0);
 }
 
 
@@ -954,9 +1018,9 @@ void AB_PlayerState_C::GetProductUserId(class FString* Param_ProductUserId, clas
 // Parameters:
 // bool                                    UseRedpointSystem                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString                           Out                                                    (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           Param_PlatformType                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           PlatformType_0                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void AB_PlayerState_C::GetNativeOnlineSystemName(bool UseRedpointSystem, class FString* Out, class FString* Param_PlatformType) const
+void AB_PlayerState_C::GetNativeOnlineSystemName(bool UseRedpointSystem, class FString* Out, class FString* PlatformType_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -972,8 +1036,8 @@ void AB_PlayerState_C::GetNativeOnlineSystemName(bool UseRedpointSystem, class F
 	if (Out != nullptr)
 		*Out = std::move(Parms.Out);
 
-	if (Param_PlatformType != nullptr)
-		*Param_PlatformType = std::move(Parms.Param_PlatformType);
+	if (PlatformType_0 != nullptr)
+		*PlatformType_0 = std::move(Parms.PlatformType_0);
 }
 
 }

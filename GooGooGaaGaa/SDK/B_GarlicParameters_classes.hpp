@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GarlicParameters.B_GarlicParameters_C
-// 0x0020 (0x0078 - 0x0058)
+// 0x0020 (0x0070 - 0x0050)
 class UB_GarlicParameters_C : public USkillParameters
 {
 public:
-	double                                        Cooldown;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Velocity;                                          // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Radius;                                            // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Duration;                                          // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cooldown;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Velocity;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Radius;                                            // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Duration;                                          // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FText GetFormattedTooltip();
@@ -40,11 +40,11 @@ public:
 	}
 };
 static_assert(alignof(UB_GarlicParameters_C) == 0x000008, "Wrong alignment on UB_GarlicParameters_C");
-static_assert(sizeof(UB_GarlicParameters_C) == 0x000078, "Wrong size on UB_GarlicParameters_C");
-static_assert(offsetof(UB_GarlicParameters_C, Cooldown) == 0x000058, "Member 'UB_GarlicParameters_C::Cooldown' has a wrong offset!");
-static_assert(offsetof(UB_GarlicParameters_C, Velocity) == 0x000060, "Member 'UB_GarlicParameters_C::Velocity' has a wrong offset!");
-static_assert(offsetof(UB_GarlicParameters_C, Radius) == 0x000068, "Member 'UB_GarlicParameters_C::Radius' has a wrong offset!");
-static_assert(offsetof(UB_GarlicParameters_C, Duration) == 0x000070, "Member 'UB_GarlicParameters_C::Duration' has a wrong offset!");
+static_assert(sizeof(UB_GarlicParameters_C) == 0x000070, "Wrong size on UB_GarlicParameters_C");
+static_assert(offsetof(UB_GarlicParameters_C, Cooldown) == 0x000050, "Member 'UB_GarlicParameters_C::Cooldown' has a wrong offset!");
+static_assert(offsetof(UB_GarlicParameters_C, Velocity) == 0x000058, "Member 'UB_GarlicParameters_C::Velocity' has a wrong offset!");
+static_assert(offsetof(UB_GarlicParameters_C, Radius) == 0x000060, "Member 'UB_GarlicParameters_C::Radius' has a wrong offset!");
+static_assert(offsetof(UB_GarlicParameters_C, Duration) == 0x000068, "Member 'UB_GarlicParameters_C::Duration' has a wrong offset!");
 
 }
 

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "SButtonLocalization_structs.hpp"
-#include "Slate_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "Slate_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "SButtonLocalization_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,7 +28,7 @@ struct WB_ControllerIcon_C_Get_ControllerIcon_Visibility final
 {
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4795[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   KeyNone;                                           // 0x0008(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,7 +53,7 @@ struct WB_ControllerIcon_C_IsWideKey final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bWideKey;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4796[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -98,7 +98,7 @@ struct WB_ControllerIcon_C_IsSuperWideKey final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSuperWideKey;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4797[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -120,25 +120,25 @@ static_assert(offsetof(WB_ControllerIcon_C_IsSuperWideKey, CallFunc_EqualEqual_K
 static_assert(offsetof(WB_ControllerIcon_C_IsSuperWideKey, CallFunc_Less_IntInt_ReturnValue) == 0x00002D, "Member 'WB_ControllerIcon_C_IsSuperWideKey::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_ControllerIcon.WB_ControllerIcon_C.CreateTextWidget
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_ControllerIcon_C_CreateTextWidget final
 {
 public:
 	class UWB_Text_C*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_Text_C*                             CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0010(0x0018)()
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UScaleBoxSlot*                          K2Node_DynamicCast_AsScale_Box_Slot;               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0010(0x0010)()
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UScaleBoxSlot*                          K2Node_DynamicCast_AsScale_Box_Slot;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ControllerIcon_C_CreateTextWidget) == 0x000008, "Wrong alignment on WB_ControllerIcon_C_CreateTextWidget");
-static_assert(sizeof(WB_ControllerIcon_C_CreateTextWidget) == 0x000040, "Wrong size on WB_ControllerIcon_C_CreateTextWidget");
+static_assert(sizeof(WB_ControllerIcon_C_CreateTextWidget) == 0x000038, "Wrong size on WB_ControllerIcon_C_CreateTextWidget");
 static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, ReturnValue) == 0x000000, "Member 'WB_ControllerIcon_C_CreateTextWidget::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, CallFunc_Create_ReturnValue) == 0x000008, "Member 'WB_ControllerIcon_C_CreateTextWidget::CallFunc_Create_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, CallFunc_Key_GetDisplayName_ReturnValue) == 0x000010, "Member 'WB_ControllerIcon_C_CreateTextWidget::CallFunc_Key_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, CallFunc_AddChild_ReturnValue) == 0x000028, "Member 'WB_ControllerIcon_C_CreateTextWidget::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, K2Node_DynamicCast_AsScale_Box_Slot) == 0x000030, "Member 'WB_ControllerIcon_C_CreateTextWidget::K2Node_DynamicCast_AsScale_Box_Slot' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WB_ControllerIcon_C_CreateTextWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, CallFunc_AddChild_ReturnValue) == 0x000020, "Member 'WB_ControllerIcon_C_CreateTextWidget::CallFunc_AddChild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, K2Node_DynamicCast_AsScale_Box_Slot) == 0x000028, "Member 'WB_ControllerIcon_C_CreateTextWidget::K2Node_DynamicCast_AsScale_Box_Slot' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_CreateTextWidget, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WB_ControllerIcon_C_CreateTextWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_ControllerIcon.WB_ControllerIcon_C.IsNumKey
 // 0x0030 (0x0030 - 0x0000)
@@ -147,7 +147,7 @@ struct WB_ControllerIcon_C_IsNumKey final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bNumKey;                                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4798[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -202,41 +202,41 @@ static_assert(sizeof(WB_ControllerIcon_C_SetBoundKey) == 0x000018, "Wrong size o
 static_assert(offsetof(WB_ControllerIcon_C_SetBoundKey, Key) == 0x000000, "Member 'WB_ControllerIcon_C_SetBoundKey::Key' has a wrong offset!");
 
 // Function WB_ControllerIcon.WB_ControllerIcon_C.ExecuteUbergraph_WB_ControllerIcon
-// 0x0200 (0x0200 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4799[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479A[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               K2Node_CustomEvent_Image;                          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479B[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0030(0x00D0)()
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479C[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   K2Node_CustomEvent_Key;                            // 0x0108(0x0018)(ConstParm, HasGetValueTypeHash)
-	struct FSButtonLocalization                   CallFunc_GetButtonLocalization_ReturnValue;        // 0x0120(0x0020)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetButtonLocalization_bKeyFound;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Key_IsKeyboardKey_ReturnValue;            // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479D[0x5];                                     // 0x0143(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0148(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0160(0x0050)(HasGetValueTypeHash)
-	class UWB_Text_C*                             CallFunc_CreateTextWidget_ReturnValue;             // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01B8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01C8(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x01E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSuperWideKey_ReturnValue;               // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsNumKey_ReturnValue;                     // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWideKey_ReturnValue;                    // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSButtonLocalization                   CallFunc_GetButtonLocalization_ReturnValue;        // 0x0120(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetButtonLocalization_bKeyFound;          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Key_IsKeyboardKey_ReturnValue;            // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13B[0x5];                                      // 0x013B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0140(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0150(0x0048)(HasGetValueTypeHash)
+	class UWB_Text_C*                             CallFunc_CreateTextWidget_ReturnValue;             // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01A0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01B0(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x01C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSuperWideKey_ReturnValue;               // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsNumKey_ReturnValue;                     // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWideKey_ReturnValue;                    // 0x01D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon) == 0x000010, "Wrong alignment on WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon");
-static_assert(sizeof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon) == 0x000200, "Wrong size on WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon");
+static_assert(sizeof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon) == 0x0001E0, "Wrong size on WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon");
 static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, EntryPoint) == 0x000000, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
@@ -247,19 +247,19 @@ static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K
 static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_Event_IsDesignTime) == 0x000100, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_Event_IsDesignTime' has a wrong offset!");
 static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_CustomEvent_Key) == 0x000108, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_CustomEvent_Key' has a wrong offset!");
 static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_GetButtonLocalization_ReturnValue) == 0x000120, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_GetButtonLocalization_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_GetButtonLocalization_bKeyFound) == 0x000140, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_GetButtonLocalization_bKeyFound' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Not_PreBool_ReturnValue) == 0x000141, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Key_IsKeyboardKey_ReturnValue) == 0x000142, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Key_IsKeyboardKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Key_GetDisplayName_ReturnValue) == 0x000148, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Key_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_MakeStruct_FormatArgumentData) == 0x000160, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_CreateTextWidget_ReturnValue) == 0x0001B0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_CreateTextWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_MakeArray_Array) == 0x0001B8, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Format_ReturnValue) == 0x0001C8, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Conv_TextToString_ReturnValue) == 0x0001E0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsSuperWideKey_ReturnValue) == 0x0001F0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsSuperWideKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsNumKey_ReturnValue) == 0x0001F1, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsNumKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsWideKey_ReturnValue) == 0x0001F2, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsWideKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsValid_ReturnValue_1) == 0x0001F3, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_GetButtonLocalization_bKeyFound) == 0x000138, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_GetButtonLocalization_bKeyFound' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Not_PreBool_ReturnValue) == 0x000139, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Key_IsKeyboardKey_ReturnValue) == 0x00013A, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Key_IsKeyboardKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Key_GetDisplayName_ReturnValue) == 0x000140, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Key_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_MakeStruct_FormatArgumentData) == 0x000150, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_CreateTextWidget_ReturnValue) == 0x000198, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_CreateTextWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, K2Node_MakeArray_Array) == 0x0001A0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Format_ReturnValue) == 0x0001B0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_Conv_TextToString_ReturnValue) == 0x0001C0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsSuperWideKey_ReturnValue) == 0x0001D0, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsSuperWideKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsNumKey_ReturnValue) == 0x0001D1, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsNumKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsWideKey_ReturnValue) == 0x0001D2, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsWideKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon, CallFunc_IsValid_ReturnValue_1) == 0x0001D3, "Member 'WB_ControllerIcon_C_ExecuteUbergraph_WB_ControllerIcon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 }
 

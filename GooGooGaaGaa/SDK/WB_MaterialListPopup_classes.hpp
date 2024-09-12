@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MaterialListPopup.WB_MaterialListPopup_C
-// 0x0040 (0x0320 - 0x02E0)
+// 0x0040 (0x0340 - 0x0300)
 class UWB_MaterialListPopup_C final : public UWB_CategoryMenuScreen_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MaterialListPopup_C;             // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTileView*                              MaterialTileView;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UB_MaterialButtonData_C*                StartMaterialButtonData;                           // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_PlaceableStaticProp_C*              TargetStructureActor;                              // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	class UWB_MaterialButton_C*                   StartMaterialButton;                               // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_PlaceableStaticProp_C*>      TargetStructures;                                  // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MaterialListPopup_C;             // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTileView*                              MaterialTileView;                                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UB_MaterialButtonData_C*                StartMaterialButtonData;                           // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_PlaceableStaticProp_C*              TargetStructureActor;                              // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	class UWB_MaterialButton_C*                   StartMaterialButton;                               // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_PlaceableStaticProp_C*>      TargetStructures;                                  // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:
 	void BndEvt__WB_MaterialListPopup_Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -37,7 +37,7 @@ public:
 	void ExecuteUbergraph_WB_MaterialListPopup(int32 EntryPoint);
 	void GetIndividualItemDataAndFocus(class UUserWidget* CategoryButton, ESalvageCategory SalvageCategory, TArray<class UB_TileViewData_C*>* Data, TArray<bool>* FocusNeeded);
 	void GetTileView(class UTileView** TileView);
-	void UpdateDataByButton(class UWB_MaterialButton_C* Param_StartMaterialButton);
+	void UpdateDataByButton(class UWB_MaterialButton_C* StartMaterialButton_0);
 
 	bool HasInitialSelection(uint8 CurrentIndex, TArray<uint8>& IndexArray) const;
 
@@ -52,14 +52,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_MaterialListPopup_C) == 0x000008, "Wrong alignment on UWB_MaterialListPopup_C");
-static_assert(sizeof(UWB_MaterialListPopup_C) == 0x000320, "Wrong size on UWB_MaterialListPopup_C");
-static_assert(offsetof(UWB_MaterialListPopup_C, UberGraphFrame_WB_MaterialListPopup_C) == 0x0002E0, "Member 'UWB_MaterialListPopup_C::UberGraphFrame_WB_MaterialListPopup_C' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialListPopup_C, Back) == 0x0002E8, "Member 'UWB_MaterialListPopup_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialListPopup_C, MaterialTileView) == 0x0002F0, "Member 'UWB_MaterialListPopup_C::MaterialTileView' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialListPopup_C, StartMaterialButtonData) == 0x0002F8, "Member 'UWB_MaterialListPopup_C::StartMaterialButtonData' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialListPopup_C, TargetStructureActor) == 0x000300, "Member 'UWB_MaterialListPopup_C::TargetStructureActor' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialListPopup_C, StartMaterialButton) == 0x000308, "Member 'UWB_MaterialListPopup_C::StartMaterialButton' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialListPopup_C, TargetStructures) == 0x000310, "Member 'UWB_MaterialListPopup_C::TargetStructures' has a wrong offset!");
+static_assert(sizeof(UWB_MaterialListPopup_C) == 0x000340, "Wrong size on UWB_MaterialListPopup_C");
+static_assert(offsetof(UWB_MaterialListPopup_C, UberGraphFrame_WB_MaterialListPopup_C) == 0x000300, "Member 'UWB_MaterialListPopup_C::UberGraphFrame_WB_MaterialListPopup_C' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialListPopup_C, Back) == 0x000308, "Member 'UWB_MaterialListPopup_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialListPopup_C, MaterialTileView) == 0x000310, "Member 'UWB_MaterialListPopup_C::MaterialTileView' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialListPopup_C, StartMaterialButtonData) == 0x000318, "Member 'UWB_MaterialListPopup_C::StartMaterialButtonData' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialListPopup_C, TargetStructureActor) == 0x000320, "Member 'UWB_MaterialListPopup_C::TargetStructureActor' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialListPopup_C, StartMaterialButton) == 0x000328, "Member 'UWB_MaterialListPopup_C::StartMaterialButton' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialListPopup_C, TargetStructures) == 0x000330, "Member 'UWB_MaterialListPopup_C::TargetStructures' has a wrong offset!");
 
 }
 

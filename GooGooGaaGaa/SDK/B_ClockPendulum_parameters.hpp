@@ -10,37 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_ClockPendulum.B_ClockPendulum_C.ApplyTemplateData
-// 0x0128 (0x0128 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct B_ClockPendulum_C_ApplyTemplateData final
 {
 public:
 	class AActor*                                 Template;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ForcedBoolean;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDB[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ApplyTemplateData_ForcedBoolean;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDC[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_SeekGameState_C*                     K2Node_DynamicCast_AsB_Seek_Game_State;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDD[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ClockPendulum_C*                     K2Node_DynamicCast_AsB_Clock_Pendulum;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDE[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetPlaybackPosition_ReturnValue;          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0040(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0040(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_ClockPendulum_C_ApplyTemplateData) == 0x000008, "Wrong alignment on B_ClockPendulum_C_ApplyTemplateData");
-static_assert(sizeof(B_ClockPendulum_C_ApplyTemplateData) == 0x000128, "Wrong size on B_ClockPendulum_C_ApplyTemplateData");
+static_assert(sizeof(B_ClockPendulum_C_ApplyTemplateData) == 0x000138, "Wrong size on B_ClockPendulum_C_ApplyTemplateData");
 static_assert(offsetof(B_ClockPendulum_C_ApplyTemplateData, Template) == 0x000000, "Member 'B_ClockPendulum_C_ApplyTemplateData::Template' has a wrong offset!");
 static_assert(offsetof(B_ClockPendulum_C_ApplyTemplateData, ForcedBoolean) == 0x000008, "Member 'B_ClockPendulum_C_ApplyTemplateData::ForcedBoolean' has a wrong offset!");
 static_assert(offsetof(B_ClockPendulum_C_ApplyTemplateData, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'B_ClockPendulum_C_ApplyTemplateData::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
@@ -61,7 +61,7 @@ struct B_ClockPendulum_C_ExecuteUbergraph_B_ClockPendulum final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_UpdatePendulumRotation_Roll_ImplicitCast; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClockPendulum_C_ExecuteUbergraph_B_ClockPendulum) == 0x000008, "Wrong alignment on B_ClockPendulum_C_ExecuteUbergraph_B_ClockPendulum");
@@ -90,21 +90,21 @@ static_assert(offsetof(B_ClockPendulum_C_GetVisualInterpolators, CallFunc_Create
 static_assert(offsetof(B_ClockPendulum_C_GetVisualInterpolators, CallFunc_Array_Add_ReturnValue) == 0x000038, "Member 'B_ClockPendulum_C_GetVisualInterpolators::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_ClockPendulum.B_ClockPendulum_C.UpdatePendulumRotation
-// 0x0110 (0x0110 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct B_ClockPendulum_C_UpdatePendulumRotation final
 {
 public:
 	double                                        Roll;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0020(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0020(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClockPendulum_C_UpdatePendulumRotation) == 0x000008, "Wrong alignment on B_ClockPendulum_C_UpdatePendulumRotation");
-static_assert(sizeof(B_ClockPendulum_C_UpdatePendulumRotation) == 0x000110, "Wrong size on B_ClockPendulum_C_UpdatePendulumRotation");
+static_assert(sizeof(B_ClockPendulum_C_UpdatePendulumRotation) == 0x000120, "Wrong size on B_ClockPendulum_C_UpdatePendulumRotation");
 static_assert(offsetof(B_ClockPendulum_C_UpdatePendulumRotation, Roll) == 0x000000, "Member 'B_ClockPendulum_C_UpdatePendulumRotation::Roll' has a wrong offset!");
 static_assert(offsetof(B_ClockPendulum_C_UpdatePendulumRotation, CallFunc_MakeRotator_ReturnValue) == 0x000008, "Member 'B_ClockPendulum_C_UpdatePendulumRotation::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ClockPendulum_C_UpdatePendulumRotation, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000020, "Member 'B_ClockPendulum_C_UpdatePendulumRotation::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_ClockPendulum_C_UpdatePendulumRotation, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000108, "Member 'B_ClockPendulum_C_UpdatePendulumRotation::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ClockPendulum_C_UpdatePendulumRotation, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000118, "Member 'B_ClockPendulum_C_UpdatePendulumRotation::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
 
 }
 

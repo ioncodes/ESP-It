@@ -247,11 +247,11 @@ void UWB_GameRulesTabs_C::GetActiveTab(class UWidget** ActiveTab)
 // Function WB_GameRulesTabs.WB_GameRulesTabs_C.GetButtonDataforClass
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // TArray<class UB_TileViewData_C*>        ButtonData                                             (Parm, OutParm)
 // TArray<bool>                            HasFocus                                               (Parm, OutParm)
 
-void UWB_GameRulesTabs_C::GetButtonDataforClass(class UClass* Param_Class, TArray<class UB_TileViewData_C*>* ButtonData, TArray<bool>* HasFocus)
+void UWB_GameRulesTabs_C::GetButtonDataforClass(class UClass* Class_0, TArray<class UB_TileViewData_C*>* ButtonData, TArray<bool>* HasFocus)
 {
 	static class UFunction* Func = nullptr;
 
@@ -260,7 +260,7 @@ void UWB_GameRulesTabs_C::GetButtonDataforClass(class UClass* Param_Class, TArra
 
 	Params::WB_GameRulesTabs_C_GetButtonDataforClass Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -445,10 +445,10 @@ void UWB_GameRulesTabs_C::HandleRefocus()
 // Function WB_GameRulesTabs.WB_GameRulesTabs_C.HunterPowerupEscapeNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_GameRulesTabs_C::HunterPowerupEscapeNav(EUINavigation Param_Navigation)
+class UWidget* UWB_GameRulesTabs_C::HunterPowerupEscapeNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -457,7 +457,7 @@ class UWidget* UWB_GameRulesTabs_C::HunterPowerupEscapeNav(EUINavigation Param_N
 
 	Params::WB_GameRulesTabs_C_HunterPowerupEscapeNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -468,10 +468,10 @@ class UWidget* UWB_GameRulesTabs_C::HunterPowerupEscapeNav(EUINavigation Param_N
 // Function WB_GameRulesTabs.WB_GameRulesTabs_C.HunterTileViewEscapeNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_GameRulesTabs_C::HunterTileViewEscapeNav(EUINavigation Param_Navigation)
+class UWidget* UWB_GameRulesTabs_C::HunterTileViewEscapeNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -480,7 +480,7 @@ class UWidget* UWB_GameRulesTabs_C::HunterTileViewEscapeNav(EUINavigation Param_
 
 	Params::WB_GameRulesTabs_C_HunterTileViewEscapeNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -758,10 +758,10 @@ void UWB_GameRulesTabs_C::UpdateTabButtonStyles()
 // Function WB_GameRulesTabs.WB_GameRulesTabs_C.WitchPowerupEscapeNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_GameRulesTabs_C::WitchPowerupEscapeNav(EUINavigation Param_Navigation)
+class UWidget* UWB_GameRulesTabs_C::WitchPowerupEscapeNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -770,7 +770,7 @@ class UWidget* UWB_GameRulesTabs_C::WitchPowerupEscapeNav(EUINavigation Param_Na
 
 	Params::WB_GameRulesTabs_C_WitchPowerupEscapeNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -781,10 +781,10 @@ class UWidget* UWB_GameRulesTabs_C::WitchPowerupEscapeNav(EUINavigation Param_Na
 // Function WB_GameRulesTabs.WB_GameRulesTabs_C.WitchTileViewEscapeNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_GameRulesTabs_C::WitchTileViewEscapeNav(EUINavigation Param_Navigation)
+class UWidget* UWB_GameRulesTabs_C::WitchTileViewEscapeNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -793,7 +793,7 @@ class UWidget* UWB_GameRulesTabs_C::WitchTileViewEscapeNav(EUINavigation Param_N
 
 	Params::WB_GameRulesTabs_C_WitchTileViewEscapeNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

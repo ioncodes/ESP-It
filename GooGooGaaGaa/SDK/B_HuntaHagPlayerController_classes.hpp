@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HuntaHagPlayerController.B_HuntaHagPlayerController_C
-// 0x0000 (0x0B28 - 0x0B28)
+// 0x0000 (0x0B18 - 0x0B18)
 class AB_HuntaHagPlayerController_C final : public AB_PlayerController_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(AB_HuntaHagPlayerController_C) == 0x000008, "Wrong alignment on AB_HuntaHagPlayerController_C");
-static_assert(sizeof(AB_HuntaHagPlayerController_C) == 0x000B28, "Wrong size on AB_HuntaHagPlayerController_C");
+static_assert(sizeof(AB_HuntaHagPlayerController_C) == 0x000B18, "Wrong size on AB_HuntaHagPlayerController_C");
 
 }
 

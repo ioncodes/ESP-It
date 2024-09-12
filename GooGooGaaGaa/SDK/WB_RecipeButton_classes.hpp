@@ -11,21 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "B_Rarity_structs.hpp"
 #include "WB_SkinOrRecipeButton_classes.hpp"
+#include "B_Rarity_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_RecipeButton.WB_RecipeButton_C
-// 0x0020 (0x0418 - 0x03F8)
+// 0x0020 (0x0420 - 0x0400)
 class UWB_RecipeButton_C final : public UWB_SkinOrRecipeButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_RecipeButton_C;                  // 0x03F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	FMulticastInlineDelegateProperty_             OnClicked;                                         // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWB_CraftingScreen_C*                   Parent_Crafting_Screen;                            // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_RecipeButton_C;                  // 0x0400(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	FMulticastInlineDelegateProperty_             OnClicked;                                         // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWB_CraftingScreen_C*                   Parent_Crafting_Screen;                            // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
@@ -37,6 +37,7 @@ public:
 	void GetRecipeIconVisibility(bool* ShowIcon);
 	bool HasMaterials();
 	void OnClicked__DelegateSignature();
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	void SetIndividualParameters();
 	void SetSelectedRecipe();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
@@ -52,10 +53,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_RecipeButton_C) == 0x000008, "Wrong alignment on UWB_RecipeButton_C");
-static_assert(sizeof(UWB_RecipeButton_C) == 0x000418, "Wrong size on UWB_RecipeButton_C");
-static_assert(offsetof(UWB_RecipeButton_C, UberGraphFrame_WB_RecipeButton_C) == 0x0003F8, "Member 'UWB_RecipeButton_C::UberGraphFrame_WB_RecipeButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_RecipeButton_C, OnClicked) == 0x000400, "Member 'UWB_RecipeButton_C::OnClicked' has a wrong offset!");
-static_assert(offsetof(UWB_RecipeButton_C, Parent_Crafting_Screen) == 0x000410, "Member 'UWB_RecipeButton_C::Parent_Crafting_Screen' has a wrong offset!");
+static_assert(sizeof(UWB_RecipeButton_C) == 0x000420, "Wrong size on UWB_RecipeButton_C");
+static_assert(offsetof(UWB_RecipeButton_C, UberGraphFrame_WB_RecipeButton_C) == 0x000400, "Member 'UWB_RecipeButton_C::UberGraphFrame_WB_RecipeButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_RecipeButton_C, OnClicked) == 0x000408, "Member 'UWB_RecipeButton_C::OnClicked' has a wrong offset!");
+static_assert(offsetof(UWB_RecipeButton_C, Parent_Crafting_Screen) == 0x000418, "Member 'UWB_RecipeButton_C::Parent_Crafting_Screen' has a wrong offset!");
 
 }
 

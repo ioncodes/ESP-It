@@ -29,13 +29,13 @@ public:
 	void AddActorToPool(class UB_Pool_C* Pool, class AActor* ActorToAdd);
 	void AddPoolIfNewClass(const class UClass*& Pool_Class_To_Add);
 	void EmptyPools();
-	void GetPoolByClass(class UClass* Param_Class, class UB_Pool_C** Pool);
+	void GetPoolByClass(class UClass* Class_0, class UB_Pool_C** Pool);
 	void MoveActorToPoolAndTearDown(class AActor* Actor);
-	void PoolHasActorReady(class UClass* Param_Class, bool* PoolFilled);
+	void PoolHasActorReady(class UClass* Class_0, bool* PoolFilled);
 	bool PoolOfClassExists(const class UClass*& ClassToFind);
 	void RemoveActorFromPool(class UB_Pool_C* Pool, class AActor* ActorToRemove);
-	class AActor* SpawnActorAndTearUp(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator);
-	class AActor* TakeActorFromPoolAndTearUp(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator);
+	class AActor* SpawnActorAndTearUp(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator);
+	class AActor* TakeActorFromPoolAndTearUp(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator);
 
 public:
 	static class UClass* StaticClass()

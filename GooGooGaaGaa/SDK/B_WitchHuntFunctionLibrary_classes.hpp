@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "EHighlightChannel_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ETeamID_structs.hpp"
-#include "EHighlightChannel_structs.hpp"
 
 
 namespace SDK
@@ -38,7 +38,7 @@ public:
 	static void GetPlayerStarts(class UClass* PlayerStartClass, class UObject* __WorldContext, TArray<class AActor*>* PlayerStarts, TArray<class AActor*>* UnoccupiedPlayerStarts, bool* HasPlayerStartsOnMap);
 	static void ObjectiveSpectatorHud(class APawn* SelfRef, class UObject* __WorldContext);
 	static void SpectatorWitchHighlight(class APawn*& SelfRef, class UObject* __WorldContext);
-	static void GetPlayerOrBotName(class APlayerState* PlayerState, class UObject* __WorldContext, class FString* Param_Name);
+	static void GetPlayerOrBotName(class APlayerState* PlayerState, class UObject* __WorldContext, class FString* Name_0);
 	static void AddToSnowList(class AActor* Actor, class UObject* __WorldContext);
 	static bool ShouldShowWitchOutlines(class UObject* __WorldContext);
 	static bool ShouldShowHunterOutlines(class UObject* __WorldContext);

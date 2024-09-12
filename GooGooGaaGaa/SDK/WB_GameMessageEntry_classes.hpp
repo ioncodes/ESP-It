@@ -20,14 +20,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_GameMessageEntry.WB_GameMessageEntry_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0040 (0x0320 - 0x02E0)
 class UWB_GameMessageEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       TextMessageFadeOut;                                // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             MessageText;                                       // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FSGameMessage                          GameMessage;                                       // 0x02D8(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       TextMessageFadeOut;                                // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             MessageText;                                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FSGameMessage                          GameMessage;                                       // 0x02F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WB_GameMessageEntry(int32 EntryPoint);
@@ -46,11 +46,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_GameMessageEntry_C) == 0x000008, "Wrong alignment on UWB_GameMessageEntry_C");
-static_assert(sizeof(UWB_GameMessageEntry_C) == 0x000310, "Wrong size on UWB_GameMessageEntry_C");
-static_assert(offsetof(UWB_GameMessageEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_GameMessageEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_GameMessageEntry_C, TextMessageFadeOut) == 0x0002C8, "Member 'UWB_GameMessageEntry_C::TextMessageFadeOut' has a wrong offset!");
-static_assert(offsetof(UWB_GameMessageEntry_C, MessageText) == 0x0002D0, "Member 'UWB_GameMessageEntry_C::MessageText' has a wrong offset!");
-static_assert(offsetof(UWB_GameMessageEntry_C, GameMessage) == 0x0002D8, "Member 'UWB_GameMessageEntry_C::GameMessage' has a wrong offset!");
+static_assert(sizeof(UWB_GameMessageEntry_C) == 0x000320, "Wrong size on UWB_GameMessageEntry_C");
+static_assert(offsetof(UWB_GameMessageEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_GameMessageEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_GameMessageEntry_C, TextMessageFadeOut) == 0x0002E8, "Member 'UWB_GameMessageEntry_C::TextMessageFadeOut' has a wrong offset!");
+static_assert(offsetof(UWB_GameMessageEntry_C, MessageText) == 0x0002F0, "Member 'UWB_GameMessageEntry_C::MessageText' has a wrong offset!");
+static_assert(offsetof(UWB_GameMessageEntry_C, GameMessage) == 0x0002F8, "Member 'UWB_GameMessageEntry_C::GameMessage' has a wrong offset!");
 
 }
 

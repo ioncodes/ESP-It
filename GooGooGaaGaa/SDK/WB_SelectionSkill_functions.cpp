@@ -183,10 +183,10 @@ struct FLinearColor UWB_SelectionSkill_C::GetTeamColor(ETeamID Team)
 // Function WB_SelectionSkill.WB_SelectionSkill_C.GetSkillTeam
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                           Param_SkillClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// ETeamID                                 Param_SkillTeam                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           SkillClass_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 SkillTeam_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SelectionSkill_C::GetSkillTeam(class UClass* Param_SkillClass, ETeamID* Param_SkillTeam)
+void UWB_SelectionSkill_C::GetSkillTeam(class UClass* SkillClass_0, ETeamID* SkillTeam_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -195,12 +195,12 @@ void UWB_SelectionSkill_C::GetSkillTeam(class UClass* Param_SkillClass, ETeamID*
 
 	Params::WB_SelectionSkill_C_GetSkillTeam Parms{};
 
-	Parms.Param_SkillClass = Param_SkillClass;
+	Parms.SkillClass_0 = SkillClass_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_SkillTeam != nullptr)
-		*Param_SkillTeam = Parms.Param_SkillTeam;
+	if (SkillTeam_0 != nullptr)
+		*SkillTeam_0 = Parms.SkillTeam_0;
 }
 
 

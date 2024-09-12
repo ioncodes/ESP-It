@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PlanStudyInteractionActor.B_PlanStudyInteractionActor_C
-// 0x0020 (0x0358 - 0x0338)
+// 0x0020 (0x0348 - 0x0328)
 class AB_PlanStudyInteractionActor_C final : public AB_WaitInteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_PlanStudyInteractionActor_C;      // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_Timer_C*                             HunterAudioTimer;                                  // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        HunterAudio;                                       // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        WaitTimeInSeconds;                                 // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_PlanStudyInteractionActor_C;      // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_Timer_C*                             HunterAudioTimer;                                  // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        HunterAudio;                                       // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        WaitTimeInSeconds;                                 // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -44,11 +44,11 @@ public:
 	}
 };
 static_assert(alignof(AB_PlanStudyInteractionActor_C) == 0x000008, "Wrong alignment on AB_PlanStudyInteractionActor_C");
-static_assert(sizeof(AB_PlanStudyInteractionActor_C) == 0x000358, "Wrong size on AB_PlanStudyInteractionActor_C");
-static_assert(offsetof(AB_PlanStudyInteractionActor_C, UberGraphFrame_B_PlanStudyInteractionActor_C) == 0x000338, "Member 'AB_PlanStudyInteractionActor_C::UberGraphFrame_B_PlanStudyInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_PlanStudyInteractionActor_C, HunterAudioTimer) == 0x000340, "Member 'AB_PlanStudyInteractionActor_C::HunterAudioTimer' has a wrong offset!");
-static_assert(offsetof(AB_PlanStudyInteractionActor_C, HunterAudio) == 0x000348, "Member 'AB_PlanStudyInteractionActor_C::HunterAudio' has a wrong offset!");
-static_assert(offsetof(AB_PlanStudyInteractionActor_C, WaitTimeInSeconds) == 0x000350, "Member 'AB_PlanStudyInteractionActor_C::WaitTimeInSeconds' has a wrong offset!");
+static_assert(sizeof(AB_PlanStudyInteractionActor_C) == 0x000348, "Wrong size on AB_PlanStudyInteractionActor_C");
+static_assert(offsetof(AB_PlanStudyInteractionActor_C, UberGraphFrame_B_PlanStudyInteractionActor_C) == 0x000328, "Member 'AB_PlanStudyInteractionActor_C::UberGraphFrame_B_PlanStudyInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_PlanStudyInteractionActor_C, HunterAudioTimer) == 0x000330, "Member 'AB_PlanStudyInteractionActor_C::HunterAudioTimer' has a wrong offset!");
+static_assert(offsetof(AB_PlanStudyInteractionActor_C, HunterAudio) == 0x000338, "Member 'AB_PlanStudyInteractionActor_C::HunterAudio' has a wrong offset!");
+static_assert(offsetof(AB_PlanStudyInteractionActor_C, WaitTimeInSeconds) == 0x000340, "Member 'AB_PlanStudyInteractionActor_C::WaitTimeInSeconds' has a wrong offset!");
 
 }
 

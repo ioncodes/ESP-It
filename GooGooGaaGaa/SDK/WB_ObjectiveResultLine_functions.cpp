@@ -100,10 +100,10 @@ struct FLinearColor UWB_ObjectiveResultLine_C::GetColorAndOpacity_1()
 // Function WB_ObjectiveResultLine.WB_ObjectiveResultLine_C.GetTeamColor
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ETeamID                                 Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FLinearColor                     SpecifiedColor                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ObjectiveResultLine_C::GetTeamColor(ETeamID Param_Index, struct FLinearColor* SpecifiedColor)
+void UWB_ObjectiveResultLine_C::GetTeamColor(ETeamID Index_0, struct FLinearColor* SpecifiedColor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -112,7 +112,7 @@ void UWB_ObjectiveResultLine_C::GetTeamColor(ETeamID Param_Index, struct FLinear
 
 	Params::WB_ObjectiveResultLine_C_GetTeamColor Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -124,10 +124,10 @@ void UWB_ObjectiveResultLine_C::GetTeamColor(ETeamID Param_Index, struct FLinear
 // Function WB_ObjectiveResultLine.WB_ObjectiveResultLine_C.GetTeamIcon
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// ETeamID                                 Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FSlateBrush                      SlateBrush                                             (Parm, OutParm)
 
-void UWB_ObjectiveResultLine_C::GetTeamIcon(ETeamID Param_Index, struct FSlateBrush* SlateBrush)
+void UWB_ObjectiveResultLine_C::GetTeamIcon(ETeamID Index_0, struct FSlateBrush* SlateBrush)
 {
 	static class UFunction* Func = nullptr;
 
@@ -136,7 +136,7 @@ void UWB_ObjectiveResultLine_C::GetTeamIcon(ETeamID Param_Index, struct FSlateBr
 
 	Params::WB_ObjectiveResultLine_C_GetTeamIcon Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

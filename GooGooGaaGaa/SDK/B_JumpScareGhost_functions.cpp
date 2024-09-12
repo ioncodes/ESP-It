@@ -50,9 +50,9 @@ void AB_JumpScareGhost_C::BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_C
 // Function B_JumpScareGhost.B_JumpScareGhost_C.CanTeleport
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_CanTeleport                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanTeleport_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_JumpScareGhost_C::CanTeleport(bool* Param_CanTeleport)
+void AB_JumpScareGhost_C::CanTeleport(bool* CanTeleport_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -63,8 +63,8 @@ void AB_JumpScareGhost_C::CanTeleport(bool* Param_CanTeleport)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanTeleport != nullptr)
-		*Param_CanTeleport = Parms.Param_CanTeleport;
+	if (CanTeleport_0 != nullptr)
+		*CanTeleport_0 = Parms.CanTeleport_0;
 }
 
 
@@ -216,10 +216,10 @@ void AB_JumpScareGhost_C::TearDown()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_JumpScareGhost_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_JumpScareGhost_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -229,8 +229,8 @@ void AB_JumpScareGhost_C::TearUp(const struct FTransform& SpawnTransform, class 
 	Params::B_JumpScareGhost_C_TearUp Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

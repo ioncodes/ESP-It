@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_BasicCharacter.B_BasicCharacter_C
-// 0x0040 (0x06C0 - 0x0680)
+// 0x0040 (0x06B0 - 0x0670)
 #pragma pack(push, 0x1)
 class alignas(0x10) AB_BasicCharacter_C : public AWitch
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0680(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       FollowCamera;                                      // 0x0688(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpringArmComponent*                    CameraBoom;                                        // 0x0690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseTurnRate;                                      // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseLookUpRate;                                    // 0x06A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TempAxisValue;                                     // 0x06A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableTurn;                                       // 0x06B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0670(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       FollowCamera;                                      // 0x0678(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpringArmComponent*                    CameraBoom;                                        // 0x0680(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseTurnRate;                                      // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseLookUpRate;                                    // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TempAxisValue;                                     // 0x0698(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableTurn;                                       // 0x06A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void InpActEvt_Jump_K2Node_InputActionEvent_1(const struct FKey& Key);
@@ -54,14 +54,14 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AB_BasicCharacter_C) == 0x000010, "Wrong alignment on AB_BasicCharacter_C");
-static_assert(sizeof(AB_BasicCharacter_C) == 0x0006C0, "Wrong size on AB_BasicCharacter_C");
-static_assert(offsetof(AB_BasicCharacter_C, UberGraphFrame) == 0x000680, "Member 'AB_BasicCharacter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_BasicCharacter_C, FollowCamera) == 0x000688, "Member 'AB_BasicCharacter_C::FollowCamera' has a wrong offset!");
-static_assert(offsetof(AB_BasicCharacter_C, CameraBoom) == 0x000690, "Member 'AB_BasicCharacter_C::CameraBoom' has a wrong offset!");
-static_assert(offsetof(AB_BasicCharacter_C, BaseTurnRate) == 0x000698, "Member 'AB_BasicCharacter_C::BaseTurnRate' has a wrong offset!");
-static_assert(offsetof(AB_BasicCharacter_C, BaseLookUpRate) == 0x0006A0, "Member 'AB_BasicCharacter_C::BaseLookUpRate' has a wrong offset!");
-static_assert(offsetof(AB_BasicCharacter_C, TempAxisValue) == 0x0006A8, "Member 'AB_BasicCharacter_C::TempAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_BasicCharacter_C, DisableTurn) == 0x0006B0, "Member 'AB_BasicCharacter_C::DisableTurn' has a wrong offset!");
+static_assert(sizeof(AB_BasicCharacter_C) == 0x0006B0, "Wrong size on AB_BasicCharacter_C");
+static_assert(offsetof(AB_BasicCharacter_C, UberGraphFrame) == 0x000670, "Member 'AB_BasicCharacter_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_BasicCharacter_C, FollowCamera) == 0x000678, "Member 'AB_BasicCharacter_C::FollowCamera' has a wrong offset!");
+static_assert(offsetof(AB_BasicCharacter_C, CameraBoom) == 0x000680, "Member 'AB_BasicCharacter_C::CameraBoom' has a wrong offset!");
+static_assert(offsetof(AB_BasicCharacter_C, BaseTurnRate) == 0x000688, "Member 'AB_BasicCharacter_C::BaseTurnRate' has a wrong offset!");
+static_assert(offsetof(AB_BasicCharacter_C, BaseLookUpRate) == 0x000690, "Member 'AB_BasicCharacter_C::BaseLookUpRate' has a wrong offset!");
+static_assert(offsetof(AB_BasicCharacter_C, TempAxisValue) == 0x000698, "Member 'AB_BasicCharacter_C::TempAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_BasicCharacter_C, DisableTurn) == 0x0006A0, "Member 'AB_BasicCharacter_C::DisableTurn' has a wrong offset!");
 
 }
 

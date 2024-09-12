@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_TrapSkill.B_TrapSkill_C
-// 0x0000 (0x0160 - 0x0160)
+// 0x0000 (0x0158 - 0x0158)
 class UB_TrapSkill_C final : public UB_ProjectileSkill_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UB_TrapSkill_C) == 0x000008, "Wrong alignment on UB_TrapSkill_C");
-static_assert(sizeof(UB_TrapSkill_C) == 0x000160, "Wrong size on UB_TrapSkill_C");
+static_assert(sizeof(UB_TrapSkill_C) == 0x000158, "Wrong size on UB_TrapSkill_C");
 
 }
 

@@ -22,12 +22,12 @@ namespace SDK
 class AB_Nutcracker_C : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4C6B[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_Nutcracker_C;                     // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   SM_NutLever;                                       // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         CrackNutTimeline_Pitch_2D0A9CDC480181B8437CCBA1DC2DE08D; // 0x05E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            CrackNutTimeline__Direction_2D0A9CDC480181B8437CCBA1DC2DE08D; // 0x05EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C6C[0x3];                                     // 0x05ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5ED[0x3];                                      // 0x05ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     CrackNutTimeline;                                  // 0x05F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:

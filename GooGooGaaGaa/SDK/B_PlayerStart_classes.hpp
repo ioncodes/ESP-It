@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PlayerStart.B_PlayerStart_C
-// 0x0018 (0x02E0 - 0x02C8)
+// 0x0018 (0x02D8 - 0x02C0)
 #pragma pack(push, 0x1)
 class alignas(0x08) AB_PlayerStart_C : public APlayerStart
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                        ColoredArrow;                                      // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Occupied;                                          // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                        ColoredArrow;                                      // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Occupied;                                          // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_PlayerStart(int32 EntryPoint);
-	void GetOccupied(bool* Param_Occupied);
-	void SetOccupied(bool Param_Occupied);
+	void GetOccupied(bool* Occupied_0);
+	void SetOccupied(bool Occupied_0);
 
 public:
 	static class UClass* StaticClass()
@@ -44,10 +44,10 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AB_PlayerStart_C) == 0x000008, "Wrong alignment on AB_PlayerStart_C");
-static_assert(sizeof(AB_PlayerStart_C) == 0x0002E0, "Wrong size on AB_PlayerStart_C");
-static_assert(offsetof(AB_PlayerStart_C, UberGraphFrame) == 0x0002C8, "Member 'AB_PlayerStart_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_PlayerStart_C, ColoredArrow) == 0x0002D0, "Member 'AB_PlayerStart_C::ColoredArrow' has a wrong offset!");
-static_assert(offsetof(AB_PlayerStart_C, Occupied) == 0x0002D8, "Member 'AB_PlayerStart_C::Occupied' has a wrong offset!");
+static_assert(sizeof(AB_PlayerStart_C) == 0x0002D8, "Wrong size on AB_PlayerStart_C");
+static_assert(offsetof(AB_PlayerStart_C, UberGraphFrame) == 0x0002C0, "Member 'AB_PlayerStart_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_PlayerStart_C, ColoredArrow) == 0x0002C8, "Member 'AB_PlayerStart_C::ColoredArrow' has a wrong offset!");
+static_assert(offsetof(AB_PlayerStart_C, Occupied) == 0x0002D0, "Member 'AB_PlayerStart_C::Occupied' has a wrong offset!");
 
 }
 

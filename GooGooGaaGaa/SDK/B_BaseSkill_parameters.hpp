@@ -34,8 +34,8 @@ static_assert(offsetof(B_BaseSkill_C_CanActivate, CallFunc_BooleanAND_ReturnValu
 struct B_BaseSkill_C_HasAuthority final
 {
 public:
-	bool                                          Param_HasAuthority;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3960[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          HasAuthority_0;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -43,7 +43,7 @@ public:
 };
 static_assert(alignof(B_BaseSkill_C_HasAuthority) == 0x000008, "Wrong alignment on B_BaseSkill_C_HasAuthority");
 static_assert(sizeof(B_BaseSkill_C_HasAuthority) == 0x000020, "Wrong size on B_BaseSkill_C_HasAuthority");
-static_assert(offsetof(B_BaseSkill_C_HasAuthority, Param_HasAuthority) == 0x000000, "Member 'B_BaseSkill_C_HasAuthority::Param_HasAuthority' has a wrong offset!");
+static_assert(offsetof(B_BaseSkill_C_HasAuthority, HasAuthority_0) == 0x000000, "Member 'B_BaseSkill_C_HasAuthority::HasAuthority_0' has a wrong offset!");
 static_assert(offsetof(B_BaseSkill_C_HasAuthority, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'B_BaseSkill_C_HasAuthority::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_BaseSkill_C_HasAuthority, K2Node_DynamicCast_AsPawn) == 0x000010, "Member 'B_BaseSkill_C_HasAuthority::K2Node_DynamicCast_AsPawn' has a wrong offset!");
 static_assert(offsetof(B_BaseSkill_C_HasAuthority, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_BaseSkill_C_HasAuthority::K2Node_DynamicCast_bSuccess' has a wrong offset!");
@@ -56,7 +56,7 @@ struct B_BaseSkill_C_ExecuteUbergraph_B_BaseSkill final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3961[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };

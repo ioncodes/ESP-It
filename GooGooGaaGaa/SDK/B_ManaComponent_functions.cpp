@@ -88,9 +88,9 @@ void UB_ManaComponent_C::SetCurrentManaRegenPerSecond(double NewManaRegenPerSeco
 // Function B_ManaComponent.B_ManaComponent_C.SetCurrentMana
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_CurrentMana                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CurrentMana_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ManaComponent_C::SetCurrentMana(double Param_CurrentMana)
+void UB_ManaComponent_C::SetCurrentMana(double CurrentMana_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -99,7 +99,7 @@ void UB_ManaComponent_C::SetCurrentMana(double Param_CurrentMana)
 
 	Params::B_ManaComponent_C_SetCurrentMana Parms{};
 
-	Parms.Param_CurrentMana = Param_CurrentMana;
+	Parms.CurrentMana_0 = CurrentMana_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -108,9 +108,9 @@ void UB_ManaComponent_C::SetCurrentMana(double Param_CurrentMana)
 // Function B_ManaComponent.B_ManaComponent_C.SetMaximumMana
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_MaximumMana                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  MaximumMana_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ManaComponent_C::SetMaximumMana(double Param_MaximumMana)
+void UB_ManaComponent_C::SetMaximumMana(double MaximumMana_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -119,7 +119,7 @@ void UB_ManaComponent_C::SetMaximumMana(double Param_MaximumMana)
 
 	Params::B_ManaComponent_C_SetMaximumMana Parms{};
 
-	Parms.Param_MaximumMana = Param_MaximumMana;
+	Parms.MaximumMana_0 = MaximumMana_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -128,11 +128,11 @@ void UB_ManaComponent_C::SetMaximumMana(double Param_MaximumMana)
 // Function B_ManaComponent.B_ManaComponent_C.GetValues
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Param_MaximumMana                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_CurrentMana                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_CurrentManaRegenPerSecond                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  MaximumMana_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CurrentMana_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CurrentManaRegenPerSecond_0                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ManaComponent_C::GetValues(double* Param_MaximumMana, double* Param_CurrentMana, double* Param_CurrentManaRegenPerSecond)
+void UB_ManaComponent_C::GetValues(double* MaximumMana_0, double* CurrentMana_0, double* CurrentManaRegenPerSecond_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -143,25 +143,25 @@ void UB_ManaComponent_C::GetValues(double* Param_MaximumMana, double* Param_Curr
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_MaximumMana != nullptr)
-		*Param_MaximumMana = Parms.Param_MaximumMana;
+	if (MaximumMana_0 != nullptr)
+		*MaximumMana_0 = Parms.MaximumMana_0;
 
-	if (Param_CurrentMana != nullptr)
-		*Param_CurrentMana = Parms.Param_CurrentMana;
+	if (CurrentMana_0 != nullptr)
+		*CurrentMana_0 = Parms.CurrentMana_0;
 
-	if (Param_CurrentManaRegenPerSecond != nullptr)
-		*Param_CurrentManaRegenPerSecond = Parms.Param_CurrentManaRegenPerSecond;
+	if (CurrentManaRegenPerSecond_0 != nullptr)
+		*CurrentManaRegenPerSecond_0 = Parms.CurrentManaRegenPerSecond_0;
 }
 
 
 // Function B_ManaComponent.B_ManaComponent_C.SetValues
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_MaximumMana                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_CurrentMana                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_CurrentManaRegenPerSecond                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  MaximumMana_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CurrentMana_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CurrentManaRegenPerSecond_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ManaComponent_C::SetValues(double Param_MaximumMana, double Param_CurrentMana, double Param_CurrentManaRegenPerSecond)
+void UB_ManaComponent_C::SetValues(double MaximumMana_0, double CurrentMana_0, double CurrentManaRegenPerSecond_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -170,9 +170,9 @@ void UB_ManaComponent_C::SetValues(double Param_MaximumMana, double Param_Curren
 
 	Params::B_ManaComponent_C_SetValues Parms{};
 
-	Parms.Param_MaximumMana = Param_MaximumMana;
-	Parms.Param_CurrentMana = Param_CurrentMana;
-	Parms.Param_CurrentManaRegenPerSecond = Param_CurrentManaRegenPerSecond;
+	Parms.MaximumMana_0 = MaximumMana_0;
+	Parms.CurrentMana_0 = CurrentMana_0;
+	Parms.CurrentManaRegenPerSecond_0 = CurrentManaRegenPerSecond_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

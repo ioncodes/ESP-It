@@ -62,7 +62,7 @@ public:
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsExpanded;                          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsSelected;                          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_461E[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_TargetActorData_C*                   K2Node_DynamicCast_AsB_Target_Actor_Data;          // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -88,7 +88,7 @@ struct WB_TargetActorDisplay_C_Initialize final
 {
 public:
 	bool                                          CallFunc_CanContentBeInitialized_CanBeInitialized; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_461F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class AActor* AddedOrRemovedActor, bool WasAdded)> K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_TargetActorDisplay_C_Initialize) == 0x000004, "Wrong alignment on WB_TargetActorDisplay_C_Initialize");
@@ -107,7 +107,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECheckBoxState                                Temp_byte_Variable;                                // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECheckBoxState                                Temp_byte_Variable_1;                              // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4620[0x5];                                     // 0x016B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16B[0x5];                                      // 0x016B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0170(0x00B8)()
 	ECheckBoxState                                K2Node_Select_Default;                             // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -139,7 +139,7 @@ struct WB_TargetActorDisplay_C_UpdateContent final
 {
 public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4621[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetMaxDesiredWidth_InMaxDesiredWidth_ImplicitCast; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetMaxDesiredHeight_InMaxDesiredHeight_ImplicitCast; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetMaxDesiredWidth_InMaxDesiredWidth_ImplicitCast_1; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -167,16 +167,16 @@ static_assert(offsetof(WB_TargetActorDisplay_C_UpdateGroupInfo, AddedOrRemovedAc
 static_assert(offsetof(WB_TargetActorDisplay_C_UpdateGroupInfo, WasAdded) == 0x000008, "Member 'WB_TargetActorDisplay_C_UpdateGroupInfo::WasAdded' has a wrong offset!");
 
 // Function WB_TargetActorDisplay.WB_TargetActorDisplay_C.UpdateName
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_TargetActorDisplay_C_UpdateName final
 {
 public:
-	class AActor*                                 Param_TargetActor;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetFullName_FullName;                     // 0x0008(0x0018)()
+	class AActor*                                 TargetActor_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetFullName_FullName;                     // 0x0008(0x0010)()
 };
 static_assert(alignof(WB_TargetActorDisplay_C_UpdateName) == 0x000008, "Wrong alignment on WB_TargetActorDisplay_C_UpdateName");
-static_assert(sizeof(WB_TargetActorDisplay_C_UpdateName) == 0x000020, "Wrong size on WB_TargetActorDisplay_C_UpdateName");
-static_assert(offsetof(WB_TargetActorDisplay_C_UpdateName, Param_TargetActor) == 0x000000, "Member 'WB_TargetActorDisplay_C_UpdateName::Param_TargetActor' has a wrong offset!");
+static_assert(sizeof(WB_TargetActorDisplay_C_UpdateName) == 0x000018, "Wrong size on WB_TargetActorDisplay_C_UpdateName");
+static_assert(offsetof(WB_TargetActorDisplay_C_UpdateName, TargetActor_0) == 0x000000, "Member 'WB_TargetActorDisplay_C_UpdateName::TargetActor_0' has a wrong offset!");
 static_assert(offsetof(WB_TargetActorDisplay_C_UpdateName, CallFunc_GetFullName_FullName) == 0x000008, "Member 'WB_TargetActorDisplay_C_UpdateName::CallFunc_GetFullName_FullName' has a wrong offset!");
 
 // Function WB_TargetActorDisplay.WB_TargetActorDisplay_C.UpdateNeedsToBeRemoved
@@ -204,24 +204,24 @@ static_assert(offsetof(WB_TargetActorDisplay_C_CanContentBeInitialized, CanBeIni
 static_assert(offsetof(WB_TargetActorDisplay_C_CanContentBeInitialized, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'WB_TargetActorDisplay_C_CanContentBeInitialized::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_TargetActorDisplay.WB_TargetActorDisplay_C.GetFullName
-// 0x0050 (0x0050 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct WB_TargetActorDisplay_C_GetFullName final
 {
 public:
-	class AActor*                                 Param_TargetActor;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   FullName;                                          // 0x0008(0x0018)(Parm, OutParm)
-	class FString                                 Param_Name;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4622[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetNameForSingleActorOrGroup_FullName;    // 0x0038(0x0018)()
+	class AActor*                                 TargetActor_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   FullName;                                          // 0x0008(0x0010)(Parm, OutParm)
+	class FString                                 Name_0;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetNameForSingleActorOrGroup_FullName;    // 0x0030(0x0010)()
 };
 static_assert(alignof(WB_TargetActorDisplay_C_GetFullName) == 0x000008, "Wrong alignment on WB_TargetActorDisplay_C_GetFullName");
-static_assert(sizeof(WB_TargetActorDisplay_C_GetFullName) == 0x000050, "Wrong size on WB_TargetActorDisplay_C_GetFullName");
-static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, Param_TargetActor) == 0x000000, "Member 'WB_TargetActorDisplay_C_GetFullName::Param_TargetActor' has a wrong offset!");
+static_assert(sizeof(WB_TargetActorDisplay_C_GetFullName) == 0x000040, "Wrong size on WB_TargetActorDisplay_C_GetFullName");
+static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, TargetActor_0) == 0x000000, "Member 'WB_TargetActorDisplay_C_GetFullName::TargetActor_0' has a wrong offset!");
 static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, FullName) == 0x000008, "Member 'WB_TargetActorDisplay_C_GetFullName::FullName' has a wrong offset!");
-static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, Param_Name) == 0x000020, "Member 'WB_TargetActorDisplay_C_GetFullName::Param_Name' has a wrong offset!");
-static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, CallFunc_BooleanAND_ReturnValue) == 0x000030, "Member 'WB_TargetActorDisplay_C_GetFullName::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, CallFunc_GetNameForSingleActorOrGroup_FullName) == 0x000038, "Member 'WB_TargetActorDisplay_C_GetFullName::CallFunc_GetNameForSingleActorOrGroup_FullName' has a wrong offset!");
+static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, Name_0) == 0x000018, "Member 'WB_TargetActorDisplay_C_GetFullName::Name_0' has a wrong offset!");
+static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, CallFunc_BooleanAND_ReturnValue) == 0x000028, "Member 'WB_TargetActorDisplay_C_GetFullName::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_TargetActorDisplay_C_GetFullName, CallFunc_GetNameForSingleActorOrGroup_FullName) == 0x000030, "Member 'WB_TargetActorDisplay_C_GetFullName::CallFunc_GetNameForSingleActorOrGroup_FullName' has a wrong offset!");
 
 }
 

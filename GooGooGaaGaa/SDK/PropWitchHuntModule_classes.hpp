@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "OnlineSubsystemUtils_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "NetCore_structs.hpp"
-#include "OnlineSubsystemUtils_classes.hpp"
-#include "AdvancedSessions_classes.hpp"
 
 
 namespace SDK
@@ -89,11 +88,11 @@ static_assert(offsetof(UAudioSaving, UserInterfaceVolume) == 0x000038, "Member '
 static_assert(offsetof(UAudioSaving, VoiceChatVolume) == 0x00003C, "Member 'UAudioSaving::VoiceChatVolume' has a wrong offset!");
 
 // Class PropWitchHuntModule.BaseGameMode
-// 0x0008 (0x0388 - 0x0380)
+// 0x0010 (0x0380 - 0x0370)
 class ABaseGameMode : public AGameMode
 {
 public:
-	uint8                                         Pad_1EC5[0x8];                                     // 0x0380(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_370[0x10];                                     // 0x0370(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -106,7 +105,7 @@ public:
 	}
 };
 static_assert(alignof(ABaseGameMode) == 0x000008, "Wrong alignment on ABaseGameMode");
-static_assert(sizeof(ABaseGameMode) == 0x000388, "Wrong size on ABaseGameMode");
+static_assert(sizeof(ABaseGameMode) == 0x000380, "Wrong size on ABaseGameMode");
 
 // Class PropWitchHuntModule.BaseManager
 // 0x0008 (0x0030 - 0x0028)
@@ -146,7 +145,7 @@ public:
 	bool                                          SkillIsHold;                                       // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         WantedClientSkillActivations;                      // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          IgnoreReleaseSinceLastPressFailed;                 // 0x00AE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1EC6[0x1];                                     // 0x00AF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AF[0x1];                                       // 0x00AF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ActivateMulti();
@@ -198,11 +197,11 @@ static_assert(offsetof(UBaseSkill, WantedClientSkillActivations) == 0x0000AD, "M
 static_assert(offsetof(UBaseSkill, IgnoreReleaseSinceLastPressFailed) == 0x0000AE, "Member 'UBaseSkill::IgnoreReleaseSinceLastPressFailed' has a wrong offset!");
 
 // Class PropWitchHuntModule.BeaconHostManagerActor
-// 0x0008 (0x02A0 - 0x0298)
+// 0x0008 (0x0298 - 0x0290)
 class ABeaconHostManagerActor final : public AActor
 {
 public:
-	uint8                                         Pad_1EC7[0x8];                                     // 0x0298(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class AWitchItBeaconHostObject* GetBeaconHost();
@@ -219,7 +218,7 @@ public:
 	}
 };
 static_assert(alignof(ABeaconHostManagerActor) == 0x000008, "Wrong alignment on ABeaconHostManagerActor");
-static_assert(sizeof(ABeaconHostManagerActor) == 0x0002A0, "Wrong size on ABeaconHostManagerActor");
+static_assert(sizeof(ABeaconHostManagerActor) == 0x000298, "Wrong size on ABeaconHostManagerActor");
 
 // Class PropWitchHuntModule.BeaconSubsystem
 // 0x0070 (0x00A0 - 0x0030)
@@ -406,7 +405,7 @@ static_assert(sizeof(UCommandLineFunctionLibrary) == 0x000028, "Wrong size on UC
 class UCustomLogSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_1ED0[0x18];                                    // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddLogTarget(const class FString& Host, int32 Port, const class FString& Tag);
@@ -426,55 +425,31 @@ public:
 static_assert(alignof(UCustomLogSubsystem) == 0x000008, "Wrong alignment on UCustomLogSubsystem");
 static_assert(sizeof(UCustomLogSubsystem) == 0x000048, "Wrong size on UCustomLogSubsystem");
 
-// Class PropWitchHuntModule.DeserializeItemsCallbackProxy
-// 0x0058 (0x0088 - 0x0030)
-class UDeserializeItemsCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED2[0x38];                                    // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UDeserializeItemsCallbackProxy* DeserializeItems(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintItemSerialization& ItemSerialization);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DeserializeItemsCallbackProxy">();
-	}
-	static class UDeserializeItemsCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDeserializeItemsCallbackProxy>();
-	}
-};
-static_assert(alignof(UDeserializeItemsCallbackProxy) == 0x000008, "Wrong alignment on UDeserializeItemsCallbackProxy");
-static_assert(sizeof(UDeserializeItemsCallbackProxy) == 0x000088, "Wrong size on UDeserializeItemsCallbackProxy");
-static_assert(offsetof(UDeserializeItemsCallbackProxy, OnSuccess) == 0x000030, "Member 'UDeserializeItemsCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(UDeserializeItemsCallbackProxy, OnFailure) == 0x000040, "Member 'UDeserializeItemsCallbackProxy::OnFailure' has a wrong offset!");
-
 // Class PropWitchHuntModule.DeveloperModeSubsystem
-// 0x0138 (0x0168 - 0x0030)
+// 0x01A8 (0x01D8 - 0x0030)
 class UDeveloperModeSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_1ED3[0xF0];                                    // 0x0030(0x00F0)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsDevModeEnabled;                                 // 0x0120(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED4[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnDeveloperModeChanged;                            // 0x0128(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnBoolSettingValueChanged;                         // 0x0138(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnStringSettingValueChanged;                       // 0x0148(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnInt32SettingValueChanged;                        // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x150];                                     // 0x0030(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsDevModeEnabled;                                 // 0x0180(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnDeveloperModeChanged;                            // 0x0188(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnBoolSettingValueChanged;                         // 0x0198(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnStringSettingValueChanged;                       // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnInt32SettingValueChanged;                        // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFloatSettingValueChanged;                        // 0x01C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	bool CouldEnableDeveloperMode();
 	void DisableDeveloperMode();
 	bool EnableDeveloperMode();
 	bool GetBoolSetting(class FName SettingName, bool* bHasValue);
+	float GetFloatSetting(class FName SettingName, bool* bHasValue);
 	int32 GetInt32Setting(class FName SettingName, bool* bHasValue);
 	class FString GetStringSetting(class FName SettingName, bool* bHasValue);
 	bool HasAnySetting(class FName SettingName);
 	void SetBoolSetting(class FName SettingName, bool bValue);
+	void SetFloatSetting(class FName SettingName, float Value);
 	void SetInt32Setting(class FName SettingName, int32 Value);
 	void SetStringSetting(class FName SettingName, const class FString& Value);
 
@@ -489,12 +464,13 @@ public:
 	}
 };
 static_assert(alignof(UDeveloperModeSubsystem) == 0x000008, "Wrong alignment on UDeveloperModeSubsystem");
-static_assert(sizeof(UDeveloperModeSubsystem) == 0x000168, "Wrong size on UDeveloperModeSubsystem");
-static_assert(offsetof(UDeveloperModeSubsystem, bIsDevModeEnabled) == 0x000120, "Member 'UDeveloperModeSubsystem::bIsDevModeEnabled' has a wrong offset!");
-static_assert(offsetof(UDeveloperModeSubsystem, OnDeveloperModeChanged) == 0x000128, "Member 'UDeveloperModeSubsystem::OnDeveloperModeChanged' has a wrong offset!");
-static_assert(offsetof(UDeveloperModeSubsystem, OnBoolSettingValueChanged) == 0x000138, "Member 'UDeveloperModeSubsystem::OnBoolSettingValueChanged' has a wrong offset!");
-static_assert(offsetof(UDeveloperModeSubsystem, OnStringSettingValueChanged) == 0x000148, "Member 'UDeveloperModeSubsystem::OnStringSettingValueChanged' has a wrong offset!");
-static_assert(offsetof(UDeveloperModeSubsystem, OnInt32SettingValueChanged) == 0x000158, "Member 'UDeveloperModeSubsystem::OnInt32SettingValueChanged' has a wrong offset!");
+static_assert(sizeof(UDeveloperModeSubsystem) == 0x0001D8, "Wrong size on UDeveloperModeSubsystem");
+static_assert(offsetof(UDeveloperModeSubsystem, bIsDevModeEnabled) == 0x000180, "Member 'UDeveloperModeSubsystem::bIsDevModeEnabled' has a wrong offset!");
+static_assert(offsetof(UDeveloperModeSubsystem, OnDeveloperModeChanged) == 0x000188, "Member 'UDeveloperModeSubsystem::OnDeveloperModeChanged' has a wrong offset!");
+static_assert(offsetof(UDeveloperModeSubsystem, OnBoolSettingValueChanged) == 0x000198, "Member 'UDeveloperModeSubsystem::OnBoolSettingValueChanged' has a wrong offset!");
+static_assert(offsetof(UDeveloperModeSubsystem, OnStringSettingValueChanged) == 0x0001A8, "Member 'UDeveloperModeSubsystem::OnStringSettingValueChanged' has a wrong offset!");
+static_assert(offsetof(UDeveloperModeSubsystem, OnInt32SettingValueChanged) == 0x0001B8, "Member 'UDeveloperModeSubsystem::OnInt32SettingValueChanged' has a wrong offset!");
+static_assert(offsetof(UDeveloperModeSubsystem, OnFloatSettingValueChanged) == 0x0001C8, "Member 'UDeveloperModeSubsystem::OnFloatSettingValueChanged' has a wrong offset!");
 
 // Class PropWitchHuntModule.DownloadStringCallbackProxy
 // 0x0058 (0x0088 - 0x0030)
@@ -503,7 +479,7 @@ class UDownloadStringCallbackProxy final : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EDA[0x38];                                    // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x38];                                      // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UDownloadStringCallbackProxy* DownloadString(class UObject* WorldContextObject, const class FString& URL);
@@ -552,7 +528,7 @@ class UGetAllItemsCallbackProxy final : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EDD[0x80];                                    // 0x0050(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x80];                                      // 0x0050(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UGetAllItemsCallbackProxy* ConsumeItem(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintOnlineItem& ItemToConsume, int32 Quantity);
@@ -565,7 +541,7 @@ public:
 	static int32 GetItemQuantity(const struct FBlueprintOnlineItem& Item);
 	static class UGetAllItemsCallbackProxy* GrantPromoItems(class UObject* WorldContextObject, class APlayerController* PlayerController);
 	static void SetItemDefinitionId(struct FBlueprintOnlineItem& Item, int32 DefinitionId);
-	static void SetItemFlags(struct FBlueprintOnlineItem& Item, int32 Param_Flags);
+	static void SetItemFlags(struct FBlueprintOnlineItem& Item, int32 Flags_0);
 	static void SetItemQuantity(struct FBlueprintOnlineItem& Item, int32 Quantity);
 	static class UGetAllItemsCallbackProxy* TriggerItemDrop(class UObject* WorldContextObject, class APlayerController* PlayerController, int32 ItemDefinitionId);
 
@@ -588,7 +564,7 @@ static_assert(offsetof(UGetAllItemsCallbackProxy, OnSuccess) == 0x000030, "Membe
 static_assert(offsetof(UGetAllItemsCallbackProxy, OnFailure) == 0x000040, "Member 'UGetAllItemsCallbackProxy::OnFailure' has a wrong offset!");
 
 // Class PropWitchHuntModule.Hunter
-// 0x0000 (0x0680 - 0x0680)
+// 0x0000 (0x0670 - 0x0670)
 class AHunter : public ACharacter
 {
 public:
@@ -602,17 +578,17 @@ public:
 	}
 };
 static_assert(alignof(AHunter) == 0x000010, "Wrong alignment on AHunter");
-static_assert(sizeof(AHunter) == 0x000680, "Wrong size on AHunter");
+static_assert(sizeof(AHunter) == 0x000670, "Wrong size on AHunter");
 
 // Class PropWitchHuntModule.ImageLoader
 // 0x0010 (0x0038 - 0x0028)
 class UImageLoader final : public UObject
 {
 public:
-	uint8                                         Pad_1EE6[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UTexture2D* LoadImageFromDisk(class UObject* Param_Outer, const class FString& ImagePath);
+	static class UTexture2D* LoadImageFromDisk(class UObject* Outer_0, const class FString& ImagePath);
 
 public:
 	static class UClass* StaticClass()
@@ -738,16 +714,16 @@ static_assert(alignof(UMatchParametersSubsystem) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UMatchParametersSubsystem) == 0x000030, "Wrong size on UMatchParametersSubsystem");
 
 // Class PropWitchHuntModule.ModParameters
-// 0x0048 (0x0070 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UModParameters : public UObject
 {
 public:
 	bool                                          IsEnabled;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE7[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Name_ModParameters;                                // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   ToolTip;                                           // 0x0048(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Icon;                                              // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             UIParameterData;                                   // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Name_0;                                            // 0x0030(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   ToolTip;                                           // 0x0040(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Icon;                                              // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             UIParameterData;                                   // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -760,12 +736,12 @@ public:
 	}
 };
 static_assert(alignof(UModParameters) == 0x000008, "Wrong alignment on UModParameters");
-static_assert(sizeof(UModParameters) == 0x000070, "Wrong size on UModParameters");
+static_assert(sizeof(UModParameters) == 0x000060, "Wrong size on UModParameters");
 static_assert(offsetof(UModParameters, IsEnabled) == 0x000028, "Member 'UModParameters::IsEnabled' has a wrong offset!");
-static_assert(offsetof(UModParameters, Name_ModParameters) == 0x000030, "Member 'UModParameters::Name_ModParameters' has a wrong offset!");
-static_assert(offsetof(UModParameters, ToolTip) == 0x000048, "Member 'UModParameters::ToolTip' has a wrong offset!");
-static_assert(offsetof(UModParameters, Icon) == 0x000060, "Member 'UModParameters::Icon' has a wrong offset!");
-static_assert(offsetof(UModParameters, UIParameterData) == 0x000068, "Member 'UModParameters::UIParameterData' has a wrong offset!");
+static_assert(offsetof(UModParameters, Name_0) == 0x000030, "Member 'UModParameters::Name_0' has a wrong offset!");
+static_assert(offsetof(UModParameters, ToolTip) == 0x000040, "Member 'UModParameters::ToolTip' has a wrong offset!");
+static_assert(offsetof(UModParameters, Icon) == 0x000050, "Member 'UModParameters::Icon' has a wrong offset!");
+static_assert(offsetof(UModParameters, UIParameterData) == 0x000058, "Member 'UModParameters::UIParameterData' has a wrong offset!");
 
 // Class PropWitchHuntModule.ModParametersSubsystem
 // 0x0000 (0x0030 - 0x0030)
@@ -795,7 +771,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnTimeout;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE8[0x50];                                    // 0x0060(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x50];                                      // 0x0060(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UBeaconPingCallbackProxy* BeaconPingString(class UObject* WorldContextObject, const class FString& TargetAddress, const class FString& SessionId);
@@ -871,7 +847,7 @@ public:
 	double                                        CollisionThresholdVelocity;                        // 0x00C0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	double                                        CollisionSoundCooldown;                            // 0x00C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          IsCollisionSoundOnCooldown;                        // 0x00D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1EEA[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CollisionSoundCooldownTimerHandle;                 // 0x00D8(0x0008)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAudioComponent*                        CurrentSlideSound;                                 // 0x00E0(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundCue*                              CollisionSound;                                    // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -922,7 +898,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnTimeout;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnPending;                                         // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EEE[0x10];                                    // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UCallBackProxyPingServer* PingServer(const class FString& ServerAddress);
@@ -973,18 +949,18 @@ static_assert(offsetof(UPingSubsystem, PendingPingResults) == 0x000080, "Member 
 static_assert(offsetof(UPingSubsystem, QuickMatchPings) == 0x000090, "Member 'UPingSubsystem::QuickMatchPings' has a wrong offset!");
 
 // Class PropWitchHuntModule.PowerupParameters
-// 0x0050 (0x0078 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UPowerupParameters : public UObject
 {
 public:
 	bool                                          IsEnabled;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EEF[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Name_PowerupParameters;                            // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          IsHunterPowerup;                                   // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF0[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ToolTip;                                           // 0x0050(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UTexture2D*                             Icon;                                              // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             UIParameterData;                                   // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Name_0;                                            // 0x0030(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          IsHunterPowerup;                                   // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ToolTip;                                           // 0x0048(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UTexture2D*                             Icon;                                              // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             UIParameterData;                                   // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -997,13 +973,13 @@ public:
 	}
 };
 static_assert(alignof(UPowerupParameters) == 0x000008, "Wrong alignment on UPowerupParameters");
-static_assert(sizeof(UPowerupParameters) == 0x000078, "Wrong size on UPowerupParameters");
+static_assert(sizeof(UPowerupParameters) == 0x000068, "Wrong size on UPowerupParameters");
 static_assert(offsetof(UPowerupParameters, IsEnabled) == 0x000028, "Member 'UPowerupParameters::IsEnabled' has a wrong offset!");
-static_assert(offsetof(UPowerupParameters, Name_PowerupParameters) == 0x000030, "Member 'UPowerupParameters::Name_PowerupParameters' has a wrong offset!");
-static_assert(offsetof(UPowerupParameters, IsHunterPowerup) == 0x000048, "Member 'UPowerupParameters::IsHunterPowerup' has a wrong offset!");
-static_assert(offsetof(UPowerupParameters, ToolTip) == 0x000050, "Member 'UPowerupParameters::ToolTip' has a wrong offset!");
-static_assert(offsetof(UPowerupParameters, Icon) == 0x000068, "Member 'UPowerupParameters::Icon' has a wrong offset!");
-static_assert(offsetof(UPowerupParameters, UIParameterData) == 0x000070, "Member 'UPowerupParameters::UIParameterData' has a wrong offset!");
+static_assert(offsetof(UPowerupParameters, Name_0) == 0x000030, "Member 'UPowerupParameters::Name_0' has a wrong offset!");
+static_assert(offsetof(UPowerupParameters, IsHunterPowerup) == 0x000040, "Member 'UPowerupParameters::IsHunterPowerup' has a wrong offset!");
+static_assert(offsetof(UPowerupParameters, ToolTip) == 0x000048, "Member 'UPowerupParameters::ToolTip' has a wrong offset!");
+static_assert(offsetof(UPowerupParameters, Icon) == 0x000058, "Member 'UPowerupParameters::Icon' has a wrong offset!");
+static_assert(offsetof(UPowerupParameters, UIParameterData) == 0x000060, "Member 'UPowerupParameters::UIParameterData' has a wrong offset!");
 
 // Class PropWitchHuntModule.PowerupParametersSubsystem
 // 0x0000 (0x0030 - 0x0030)
@@ -1032,10 +1008,7 @@ class UProjectVersionBlueprint final : public UBlueprintFunctionLibrary
 public:
 	static class UActorComponent* AddActorComponent(class AActor* OwnerActor, class UClass* ActorComponentClass);
 	static void BanPlayer(class AGameModeBase* GameMode, class APlayerController* BannedPlayer, const class FText& BanReason);
-	static bool ClearAchievement(class UGameInstance* GameInstance, const class FName& Param_Name);
-	static bool ClearGSAchievement(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name);
 	static bool ComponentEncroachesGeometry(class AActor* Actor, class UPrimitiveComponent* PrimitiveComponent, const struct FTransform& Transform, const TArray<class AActor*>& IgnoreActors);
-	static bool GetAchievement(class UGameInstance* GameInstance, const class FName& Param_Name, bool* Achieved);
 	static void GetAllChildBlueprintClasses(TSubclassOf<class UObject> BaseClass, TArray<TSubclassOf<class UObject>>* Subclasses);
 	static class FName GetClassFName(class UClass* blueprintClass);
 	static class FString GetClassObjectPath(class UClass* blueprintClass);
@@ -1045,14 +1018,9 @@ public:
 	static int32 GetEngineCompatibleChangelist();
 	static bool GetFiles(TArray<class FString>* Files, const class FString& RootFolderFullPath, const class FString& Ext);
 	static class APlayerController* GetFirstLocalPlayerController(class UGameInstance* GameInstance);
-	static bool GetGSAchievement(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, bool* Achieved);
-	static bool GetGSOnlineStatFloat(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, float* Value);
-	static bool GetGSOnlineStatInt(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, int32* Value);
 	static class FString GetItemProperty(class UGameInstance* GameInstance, const struct FBlueprintOnlineItem& Item, class FName PropertyName);
 	static class FString GetLaunchPath();
 	static void GetMemoryStats(float* UsedPhysical, float* PeakUsedPhysical, float* UsedVirtual, float* PeakUsedVirtual, float* AvailablePhysical, float* AvailableVirtual, float* TotalPhysical, float* TotalVirtual);
-	static bool GetOnlineStatFloat(class UGameInstance* GameInstance, const class FName& Param_Name, float* Value);
-	static bool GetOnlineStatInt(class UGameInstance* GameInstance, const class FName& Param_Name, int32* Value);
 	static class FString GetProjectVersion();
 	static class FString GetSessionOwnersId(const struct FBlueprintSessionResult& Result);
 	static class FString GetUint64SteamIdAsString(class UGameInstance* GameInstance);
@@ -1071,29 +1039,21 @@ public:
 	static void KickPlayer(class AGameModeBase* GameMode, class APlayerController* KickedPlayer, const class FText& KickReason);
 	static class USaveGame* LoadGameFromFile(const class FString& AbsoluteFileName, const int32 UserIndex);
 	static bool LoadItemDefinitions(class UGameInstance* GameInstance);
-	static bool LoadPropLayoutFromFile(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopId, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad);
-	static bool LoadPropLayoutFromFileCompressed(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopId, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad);
-	static void PlayReplay(class UGameInstance* GameInstance, const class FString& Param_Name);
+	static bool LoadPropLayoutFromFile(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopID, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad);
+	static bool LoadPropLayoutFromFileCompressed(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopID, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad);
+	static void PlayReplay(class UGameInstance* GameInstance, const class FString& Name_0);
 	static bool ReadStringFromFile(class FString* Result, const class FString& FullFilePath);
-	static void RecordReplay(class UGameInstance* GameInstance, const class FString& Param_Name, const class FString& FriendlyName);
-	static bool ResetAllOnlineStats(class UGameInstance* GameInstance, bool AchievementsToo);
+	static void RecordReplay(class UGameInstance* GameInstance, const class FString& Name_0, const class FString& FriendlyName);
 	static void ResetNetDriverSettings();
 	static bool SaveGameToFile(class USaveGame* SaveGameObject, const class FString& AbsoluteFileName, const int32 UserIndex);
-	static bool SavePropLayoutToFile(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopId, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave);
-	static bool SavePropLayoutToFileCompressed(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopId, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave);
-	static void SendItemDropHeartbeat(class UGameInstance* GameInstance);
-	static bool SetAchievement(class UGameInstance* GameInstance, const class FName& Param_Name);
+	static bool SavePropLayoutToFile(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopID, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave);
+	static bool SavePropLayoutToFileCompressed(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopID, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave);
 	static void SetCCDEnabled(class UPrimitiveComponent* PrimitiveComponent, bool Enabled);
-	static bool SetGSAchievement(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name);
-	static bool SetGSOnlineStatFloat(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, float Value);
-	static bool SetGSOnlineStatInt(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, int32 Value);
 	static void SetHiddenShadow(class UPrimitiveComponent* PrimitiveComponent, bool Enabled);
-	static bool SetOnlineStatFloat(class UGameInstance* GameInstance, const class FName& Param_Name, float Value);
-	static bool SetOnlineStatInt(class UGameInstance* GameInstance, const class FName& Param_Name, int32 Value);
 	static void SetSelfShadowOnly(class UPrimitiveComponent* PrimitiveComponent, bool Enabled);
 	static void SetWorldGravity(class UGameInstance* GameInstance, float Gravity);
 	static void Shutdown();
-	static class AActor* SpawnActorByWorldContextObject(class UObject* WorldContextObject, class UClass* Param_Class, const struct FTransform& Transform, ESpawnActorCollisionHandlingMethod CollisionHandling);
+	static class AActor* SpawnActorByWorldContextObject(class UObject* WorldContextObject, class UClass* Class_0, const struct FTransform& Transform, ESpawnActorCollisionHandlingMethod CollisionHandling);
 
 public:
 	static class UClass* StaticClass()
@@ -1109,11 +1069,11 @@ static_assert(alignof(UProjectVersionBlueprint) == 0x000008, "Wrong alignment on
 static_assert(sizeof(UProjectVersionBlueprint) == 0x000028, "Wrong size on UProjectVersionBlueprint");
 
 // Class PropWitchHuntModule.PropPawnPhysics
-// 0x0008 (0x0328 - 0x0320)
+// 0x0008 (0x0320 - 0x0318)
 class APropPawnPhysics : public APawn
 {
 public:
-	uint8                                         Pad_1F15[0x8];                                     // 0x0320(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318[0x8];                                      // 0x0318(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1126,7 +1086,7 @@ public:
 	}
 };
 static_assert(alignof(APropPawnPhysics) == 0x000008, "Wrong alignment on APropPawnPhysics");
-static_assert(sizeof(APropPawnPhysics) == 0x000328, "Wrong size on APropPawnPhysics");
+static_assert(sizeof(APropPawnPhysics) == 0x000320, "Wrong size on APropPawnPhysics");
 
 // Class PropWitchHuntModule.RealTimeClock
 // 0x0000 (0x0028 - 0x0028)
@@ -1157,62 +1117,6 @@ public:
 static_assert(alignof(URealTimeClock) == 0x000008, "Wrong alignment on URealTimeClock");
 static_assert(sizeof(URealTimeClock) == 0x000028, "Wrong size on URealTimeClock");
 
-// Class PropWitchHuntModule.RequestCurrentStatsCallbackProxy
-// 0x0060 (0x0090 - 0x0030)
-class URequestCurrentStatsCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F18[0x40];                                    // 0x0050(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class URequestCurrentStatsCallbackProxy* RequestCurrentOnlineStats(class UObject* WorldContextObject);
-	static class URequestCurrentStatsCallbackProxy* RequestGSOnlineStats(class UObject* WorldContextObject, class APlayerState* PlayerState);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"RequestCurrentStatsCallbackProxy">();
-	}
-	static class URequestCurrentStatsCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URequestCurrentStatsCallbackProxy>();
-	}
-};
-static_assert(alignof(URequestCurrentStatsCallbackProxy) == 0x000008, "Wrong alignment on URequestCurrentStatsCallbackProxy");
-static_assert(sizeof(URequestCurrentStatsCallbackProxy) == 0x000090, "Wrong size on URequestCurrentStatsCallbackProxy");
-static_assert(offsetof(URequestCurrentStatsCallbackProxy, OnSuccess) == 0x000030, "Member 'URequestCurrentStatsCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(URequestCurrentStatsCallbackProxy, OnFailure) == 0x000040, "Member 'URequestCurrentStatsCallbackProxy::OnFailure' has a wrong offset!");
-
-// Class PropWitchHuntModule.SerializeItemsCallbackProxy
-// 0x0058 (0x0088 - 0x0030)
-class USerializeItemsCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F19[0x38];                                    // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static TArray<uint8> GetSerializationBuffer(const struct FBlueprintItemSerialization& ItemSerialization);
-	static class USerializeItemsCallbackProxy* SerializeItems(class UObject* WorldContextObject, class APlayerController* PlayerController, const TArray<struct FBlueprintOnlineItem>& ItemsToSerialize);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SerializeItemsCallbackProxy">();
-	}
-	static class USerializeItemsCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USerializeItemsCallbackProxy>();
-	}
-};
-static_assert(alignof(USerializeItemsCallbackProxy) == 0x000008, "Wrong alignment on USerializeItemsCallbackProxy");
-static_assert(sizeof(USerializeItemsCallbackProxy) == 0x000088, "Wrong size on USerializeItemsCallbackProxy");
-static_assert(offsetof(USerializeItemsCallbackProxy, OnSuccess) == 0x000030, "Member 'USerializeItemsCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(USerializeItemsCallbackProxy, OnFailure) == 0x000040, "Member 'USerializeItemsCallbackProxy::OnFailure' has a wrong offset!");
-
 // Class PropWitchHuntModule.SessionSubsystem
 // 0x0000 (0x0030 - 0x0030)
 class USessionSubsystem final : public UEngineSubsystem
@@ -1234,15 +1138,15 @@ static_assert(alignof(USessionSubsystem) == 0x000008, "Wrong alignment on USessi
 static_assert(sizeof(USessionSubsystem) == 0x000030, "Wrong size on USessionSubsystem");
 
 // Class PropWitchHuntModule.SkillParameters
-// 0x0030 (0x0058 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class USkillParameters : public UObject
 {
 public:
 	bool                                          IsListed;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ToolTip;                                           // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UDataTable*                             UIParameterData;                                   // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 SkillClass;                                        // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ToolTip;                                           // 0x0030(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UDataTable*                             UIParameterData;                                   // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 SkillClass;                                        // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	class FText GetFormattedTooltip();
@@ -1258,18 +1162,18 @@ public:
 	}
 };
 static_assert(alignof(USkillParameters) == 0x000008, "Wrong alignment on USkillParameters");
-static_assert(sizeof(USkillParameters) == 0x000058, "Wrong size on USkillParameters");
+static_assert(sizeof(USkillParameters) == 0x000050, "Wrong size on USkillParameters");
 static_assert(offsetof(USkillParameters, IsListed) == 0x000028, "Member 'USkillParameters::IsListed' has a wrong offset!");
 static_assert(offsetof(USkillParameters, ToolTip) == 0x000030, "Member 'USkillParameters::ToolTip' has a wrong offset!");
-static_assert(offsetof(USkillParameters, UIParameterData) == 0x000048, "Member 'USkillParameters::UIParameterData' has a wrong offset!");
-static_assert(offsetof(USkillParameters, SkillClass) == 0x000050, "Member 'USkillParameters::SkillClass' has a wrong offset!");
+static_assert(offsetof(USkillParameters, UIParameterData) == 0x000040, "Member 'USkillParameters::UIParameterData' has a wrong offset!");
+static_assert(offsetof(USkillParameters, SkillClass) == 0x000048, "Member 'USkillParameters::SkillClass' has a wrong offset!");
 
 // Class PropWitchHuntModule.StartupSubsystem
 // 0x0028 (0x0058 - 0x0030)
 class UStartupSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_1F1B[0x18];                                    // 0x0030(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnStartupPhaseCompleted;                           // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -1292,24 +1196,25 @@ static_assert(sizeof(UStartupSubsystem) == 0x000058, "Wrong size on UStartupSubs
 static_assert(offsetof(UStartupSubsystem, OnStartupPhaseCompleted) == 0x000048, "Member 'UStartupSubsystem::OnStartupPhaseCompleted' has a wrong offset!");
 
 // Class PropWitchHuntModule.StaticMeshProp
-// 0x00E8 (0x0380 - 0x0298)
+// 0x00F0 (0x0380 - 0x0290)
 class AStaticMeshProp : public AActor
 {
 public:
-	bool                                          IsControlledByWitch;                               // 0x0298(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsSleeping;                                        // 0x0299(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1C[0x6];                                     // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        JumpLockOutTime;                                   // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          CanJump;                                           // 0x02A8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SelectedForEditing;                                // 0x02A9(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1D[0x6];                                     // 0x02AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          IsControlledByWitch;                               // 0x0290(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsSleeping;                                        // 0x0291(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_292[0x6];                                      // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        JumpLockOutTime;                                   // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          CanJump;                                           // 0x02A0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SelectedForEditing;                                // 0x02A1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A2[0xE];                                      // 0x02A2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TransformAtStart;                                  // 0x02B0(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             CurrentSleepTransform;                             // 0x0310(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        ResetCanJumpDelay;                                 // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1E[0x8];                                     // 0x0378(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378[0x8];                                      // 0x0378(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CallHandleWake();
+	void CallHit();
 	void CheckClientSleep();
 	void HandleCanJump(const struct FVector& HitNormal, double Slope);
 	void SetActorSubComponentsTickState(bool bTickEnabled);
@@ -1326,42 +1231,14 @@ public:
 };
 static_assert(alignof(AStaticMeshProp) == 0x000010, "Wrong alignment on AStaticMeshProp");
 static_assert(sizeof(AStaticMeshProp) == 0x000380, "Wrong size on AStaticMeshProp");
-static_assert(offsetof(AStaticMeshProp, IsControlledByWitch) == 0x000298, "Member 'AStaticMeshProp::IsControlledByWitch' has a wrong offset!");
-static_assert(offsetof(AStaticMeshProp, IsSleeping) == 0x000299, "Member 'AStaticMeshProp::IsSleeping' has a wrong offset!");
-static_assert(offsetof(AStaticMeshProp, JumpLockOutTime) == 0x0002A0, "Member 'AStaticMeshProp::JumpLockOutTime' has a wrong offset!");
-static_assert(offsetof(AStaticMeshProp, CanJump) == 0x0002A8, "Member 'AStaticMeshProp::CanJump' has a wrong offset!");
-static_assert(offsetof(AStaticMeshProp, SelectedForEditing) == 0x0002A9, "Member 'AStaticMeshProp::SelectedForEditing' has a wrong offset!");
+static_assert(offsetof(AStaticMeshProp, IsControlledByWitch) == 0x000290, "Member 'AStaticMeshProp::IsControlledByWitch' has a wrong offset!");
+static_assert(offsetof(AStaticMeshProp, IsSleeping) == 0x000291, "Member 'AStaticMeshProp::IsSleeping' has a wrong offset!");
+static_assert(offsetof(AStaticMeshProp, JumpLockOutTime) == 0x000298, "Member 'AStaticMeshProp::JumpLockOutTime' has a wrong offset!");
+static_assert(offsetof(AStaticMeshProp, CanJump) == 0x0002A0, "Member 'AStaticMeshProp::CanJump' has a wrong offset!");
+static_assert(offsetof(AStaticMeshProp, SelectedForEditing) == 0x0002A1, "Member 'AStaticMeshProp::SelectedForEditing' has a wrong offset!");
 static_assert(offsetof(AStaticMeshProp, TransformAtStart) == 0x0002B0, "Member 'AStaticMeshProp::TransformAtStart' has a wrong offset!");
 static_assert(offsetof(AStaticMeshProp, CurrentSleepTransform) == 0x000310, "Member 'AStaticMeshProp::CurrentSleepTransform' has a wrong offset!");
 static_assert(offsetof(AStaticMeshProp, ResetCanJumpDelay) == 0x000370, "Member 'AStaticMeshProp::ResetCanJumpDelay' has a wrong offset!");
-
-// Class PropWitchHuntModule.StoreStatsCallbackProxy
-// 0x0058 (0x0088 - 0x0030)
-class UStoreStatsCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F1F[0x38];                                    // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UStoreStatsCallbackProxy* StoreGSOnlineStats(class UObject* WorldContextObject, class APlayerState* PlayerState);
-	static class UStoreStatsCallbackProxy* StoreOnlineStats(class UObject* WorldContextObject);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"StoreStatsCallbackProxy">();
-	}
-	static class UStoreStatsCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStoreStatsCallbackProxy>();
-	}
-};
-static_assert(alignof(UStoreStatsCallbackProxy) == 0x000008, "Wrong alignment on UStoreStatsCallbackProxy");
-static_assert(sizeof(UStoreStatsCallbackProxy) == 0x000088, "Wrong size on UStoreStatsCallbackProxy");
-static_assert(offsetof(UStoreStatsCallbackProxy, OnSuccess) == 0x000030, "Member 'UStoreStatsCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(UStoreStatsCallbackProxy, OnFailure) == 0x000040, "Member 'UStoreStatsCallbackProxy::OnFailure' has a wrong offset!");
 
 // Class PropWitchHuntModule.StructDataLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1391,9 +1268,9 @@ static_assert(sizeof(UStructDataLibrary) == 0x000028, "Wrong size on UStructData
 class UTickableBaseManager final : public UBaseManager
 {
 public:
-	uint8                                         Pad_1F22[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          CallBlueprintTickFunction;                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F23[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BPTick(float DeltaTime);
@@ -1417,7 +1294,7 @@ static_assert(offsetof(UTickableBaseManager, CallBlueprintTickFunction) == 0x000
 class UTljhUserControllerSystem : public UObject
 {
 public:
-	uint8                                         Pad_1F24[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnNewUserEstablished;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnRefreshUser;                                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnShowUserReestablishMessage;                      // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
@@ -1426,15 +1303,15 @@ public:
 	FMulticastInlineDelegateProperty_             OnInputChanged;                                    // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnPushToTalkChanged;                               // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	EUserControllerState                          CurrentState;                                      // 0x00A0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F25[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          GameInstance;                                      // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F26[0x68];                                    // 0x00B0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x68];                                      // 0x00B0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ActiveUserInfoUpdatedSignature__DelegateSignature(const struct FSlateBrush& IconBrush, const class FString& DisplayString);
 	void EstablishInitialUser();
 	void HideUserReestablishMessageSignature__DelegateSignature();
-	void Initialize(class UGameInstance* Param_GameInstance);
+	void Initialize(class UGameInstance* GameInstance_0);
 	void NewUserEstablishedSignature__DelegateSignature();
 	void OnInputChangedSignature__DelegateSignature(bool bIsGamepad);
 	void OnPushToTalkChangedSignature__DelegateSignature(bool bIsTalking);
@@ -1474,7 +1351,7 @@ class UCreateUGCItemCallbackProxy final : public UOnlineBlueprintCallProxyBase
 {
 public:
 	FMulticastInlineDelegateProperty_             OnFinished;                                        // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F28[0x30];                                    // 0x0040(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x30];                                      // 0x0040(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UCreateUGCItemCallbackProxy* CreateWorkshopItem(class UObject* WorldContextObject);
@@ -1499,7 +1376,7 @@ class UUpdateUGCItemCallbackProxy final : public UOnlineBlueprintCallProxyBase
 {
 public:
 	FMulticastInlineDelegateProperty_             OnFinished;                                        // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F29[0x48];                                    // 0x0040(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x48];                                      // 0x0040(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UUpdateUGCItemCallbackProxy* UpdateWorkshopItem(class UObject* WorldContextObject, int64 ItemIdToUpdate, const class FString& ChangeNote, const class FString& Title, const class FString& Description, const class FString& Language, const class FString& MetaData, EUGCItemVisibility Visibility, const TArray<class FString>& Tags, const TMap<class FString, class FString>& KeyValueTags, const class FString& ContentFolder, const class FString& PreviewFile);
@@ -1523,7 +1400,7 @@ static_assert(offsetof(UUpdateUGCItemCallbackProxy, OnFinished) == 0x000030, "Me
 class UWindForceComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_1F2B[0x20];                                    // 0x00A0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0[0x20];                                      // 0x00A0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMeshComponent*                         Mesh;                                              // 0x00C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        WindStrength;                                      // 0x00C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        GravityStrength;                                   // 0x00D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1548,7 +1425,7 @@ static_assert(offsetof(UWindForceComponent, WindStrength) == 0x0000C8, "Member '
 static_assert(offsetof(UWindForceComponent, GravityStrength) == 0x0000D0, "Member 'UWindForceComponent::GravityStrength' has a wrong offset!");
 
 // Class PropWitchHuntModule.Witch
-// 0x0000 (0x0680 - 0x0680)
+// 0x0000 (0x0670 - 0x0670)
 class AWitch : public ACharacter
 {
 public:
@@ -1562,14 +1439,14 @@ public:
 	}
 };
 static_assert(alignof(AWitch) == 0x000010, "Wrong alignment on AWitch");
-static_assert(sizeof(AWitch) == 0x000680, "Wrong size on AWitch");
+static_assert(sizeof(AWitch) == 0x000670, "Wrong size on AWitch");
 
 // Class PropWitchHuntModule.WitchItBeaconClient
-// 0x0040 (0x0368 - 0x0328)
+// 0x0040 (0x0360 - 0x0320)
 class AWitchItBeaconClient final : public AOnlineBeaconClient
 {
 public:
-	uint8                                         Pad_1F2C[0x40];                                    // 0x0328(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_320[0x40];                                     // 0x0320(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientPing();
@@ -1586,10 +1463,10 @@ public:
 	}
 };
 static_assert(alignof(AWitchItBeaconClient) == 0x000008, "Wrong alignment on AWitchItBeaconClient");
-static_assert(sizeof(AWitchItBeaconClient) == 0x000368, "Wrong size on AWitchItBeaconClient");
+static_assert(sizeof(AWitchItBeaconClient) == 0x000360, "Wrong size on AWitchItBeaconClient");
 
 // Class PropWitchHuntModule.WitchItBeaconHostObject
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x02B8 - 0x02B8)
 class AWitchItBeaconHostObject final : public AOnlineBeaconHostObject
 {
 public:
@@ -1603,24 +1480,28 @@ public:
 	}
 };
 static_assert(alignof(AWitchItBeaconHostObject) == 0x000008, "Wrong alignment on AWitchItBeaconHostObject");
-static_assert(sizeof(AWitchItBeaconHostObject) == 0x0002C0, "Wrong size on AWitchItBeaconHostObject");
+static_assert(sizeof(AWitchItBeaconHostObject) == 0x0002B8, "Wrong size on AWitchItBeaconHostObject");
 
 // Class PropWitchHuntModule.WitchItGameInstance
-// 0x00C0 (0x0300 - 0x0240)
-class UWitchItGameInstance : public UAdvancedFriendsGameInstance
+// 0x00D0 (0x0360 - 0x0290)
+class UWitchItGameInstance : public UPlatformGameInstance
 {
 public:
-	TMap<struct FUniqueNetIdRepl, class FString>  NativePlatformIdLookup;                            // 0x0240(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<struct FUniqueNetIdRepl, class FString>  NativePlatformLookup;                              // 0x0290(0x0050)(NativeAccessSpecifierPrivate)
-	bool                                          bIsServerPasswordProtected;                        // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2D[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ServerPassword;                                    // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   CurrentOnlineSessionName;                          // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FUniqueNetIdRepl, class FString>  NativePlatformIdLookup;                            // 0x0290(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<struct FUniqueNetIdRepl, class FString>  NativePlatformLookup;                              // 0x02E0(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_330[0x10];                                     // 0x0330(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsServerPasswordProtected;                        // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ServerPassword;                                    // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   CurrentOnlineSessionName;                          // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	bool AddPlayerLookupEntry(const struct FUniqueNetIdRepl& UniqueNetId, const class FString& NativePlatformId, const class FString& NativePlatform);
+	void BeginLoadingScreen(const class FString& String);
+	void EndLoadingScreen(class UWorld* World);
 	void OnNetworkFailure(ENetworkFailure FailureType, const class FString& ErrorText, bool IsServer);
 	bool RemovePlayerLookupEntry(const struct FUniqueNetIdRepl& UniqueNetId);
+	void SetSuspendInBackground(bool ShouldSuspend);
 
 	bool GetNativePlatformInfo(const struct FUniqueNetIdRepl& UniqueNetId, class FString* NativePlatformId, class FString* NativePlatform) const;
 
@@ -1635,15 +1516,15 @@ public:
 	}
 };
 static_assert(alignof(UWitchItGameInstance) == 0x000008, "Wrong alignment on UWitchItGameInstance");
-static_assert(sizeof(UWitchItGameInstance) == 0x000300, "Wrong size on UWitchItGameInstance");
-static_assert(offsetof(UWitchItGameInstance, NativePlatformIdLookup) == 0x000240, "Member 'UWitchItGameInstance::NativePlatformIdLookup' has a wrong offset!");
-static_assert(offsetof(UWitchItGameInstance, NativePlatformLookup) == 0x000290, "Member 'UWitchItGameInstance::NativePlatformLookup' has a wrong offset!");
-static_assert(offsetof(UWitchItGameInstance, bIsServerPasswordProtected) == 0x0002E0, "Member 'UWitchItGameInstance::bIsServerPasswordProtected' has a wrong offset!");
-static_assert(offsetof(UWitchItGameInstance, ServerPassword) == 0x0002E8, "Member 'UWitchItGameInstance::ServerPassword' has a wrong offset!");
-static_assert(offsetof(UWitchItGameInstance, CurrentOnlineSessionName) == 0x0002F8, "Member 'UWitchItGameInstance::CurrentOnlineSessionName' has a wrong offset!");
+static_assert(sizeof(UWitchItGameInstance) == 0x000360, "Wrong size on UWitchItGameInstance");
+static_assert(offsetof(UWitchItGameInstance, NativePlatformIdLookup) == 0x000290, "Member 'UWitchItGameInstance::NativePlatformIdLookup' has a wrong offset!");
+static_assert(offsetof(UWitchItGameInstance, NativePlatformLookup) == 0x0002E0, "Member 'UWitchItGameInstance::NativePlatformLookup' has a wrong offset!");
+static_assert(offsetof(UWitchItGameInstance, bIsServerPasswordProtected) == 0x000340, "Member 'UWitchItGameInstance::bIsServerPasswordProtected' has a wrong offset!");
+static_assert(offsetof(UWitchItGameInstance, ServerPassword) == 0x000348, "Member 'UWitchItGameInstance::ServerPassword' has a wrong offset!");
+static_assert(offsetof(UWitchItGameInstance, CurrentOnlineSessionName) == 0x000358, "Member 'UWitchItGameInstance::CurrentOnlineSessionName' has a wrong offset!");
 
 // Class PropWitchHuntModule.WitchItGameSession
-// 0x0000 (0x02B0 - 0x02B0)
+// 0x0000 (0x02B8 - 0x02B8)
 class AWitchItGameSession final : public AGameSession
 {
 public:
@@ -1657,7 +1538,45 @@ public:
 	}
 };
 static_assert(alignof(AWitchItGameSession) == 0x000008, "Wrong alignment on AWitchItGameSession");
-static_assert(sizeof(AWitchItGameSession) == 0x0002B0, "Wrong size on AWitchItGameSession");
+static_assert(sizeof(AWitchItGameSession) == 0x0002B8, "Wrong size on AWitchItGameSession");
+
+// Class PropWitchHuntModule.WitchItPlayerController
+// 0x0000 (0x0858 - 0x0858)
+class AWitchItPlayerController : public APlayerController
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"WitchItPlayerController">();
+	}
+	static class AWitchItPlayerController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AWitchItPlayerController>();
+	}
+};
+static_assert(alignof(AWitchItPlayerController) == 0x000008, "Wrong alignment on AWitchItPlayerController");
+static_assert(sizeof(AWitchItPlayerController) == 0x000858, "Wrong size on AWitchItPlayerController");
+
+// Class PropWitchHuntModule.WitchItPlayerState
+// 0x0000 (0x0348 - 0x0348)
+class AWitchItPlayerState : public APlayerState
+{
+public:
+	void PostOnRepPlayerName(const class FString& NewPlayerName);
+	void SetSafePlayerName(const class FString& SafePlayerName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"WitchItPlayerState">();
+	}
+	static class AWitchItPlayerState* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AWitchItPlayerState>();
+	}
+};
+static_assert(alignof(AWitchItPlayerState) == 0x000008, "Wrong alignment on AWitchItPlayerState");
+static_assert(sizeof(AWitchItPlayerState) == 0x000348, "Wrong size on AWitchItPlayerState");
 
 // Class PropWitchHuntModule.CallbackProxyCreateWorkshopItemBRG
 // 0x0100 (0x0130 - 0x0030)
@@ -1667,7 +1586,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSteamInitFailure;                                // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F33[0xD0];                                    // 0x0060(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0xD0];                                      // 0x0060(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UCallbackProxyCreateWorkshopItemBRG* Workshop_CreateItem(const struct FWorkshopUpdateDetails& ItemDetails);
@@ -1696,7 +1615,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnUpdateComplete;                                  // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSteamInitFailure;                                // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F34[0xE8];                                    // 0x0060(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0xE8];                                      // 0x0060(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UCallbackProxyUpdateWorkshopItemBRG* Workshop_UpdateItem(const struct FUGCItemId& ItemId, const struct FWorkshopUpdateDetails& UpdateDetails, const TDelegate<void(const struct FUGCUpdateHandle& UpdateHandle)>& OnUpdateStarted);
@@ -1725,7 +1644,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSteamInitFailure;                                // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F35[0x38];                                    // 0x0060(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x38];                                      // 0x0060(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UCallbackProxyQueryWorkshopForItemDetailsBRG* Workshop_QueryForItemDetails(const struct FUGCQueryParameterDetails& Parameter);

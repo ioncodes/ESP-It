@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SteamGeneral_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SteamWorkshop_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,7 +26,7 @@ public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamAppId                            DependendAppId;                                    // 0x0008(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bAddAppDependency;                                 // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E7A[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCallbackProxyAddRemoveWorkshopItemAppDependency* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CallbackProxyAddRemoveWorkshopItemAppDependency_SteamWorkshop_AddRemoveAppDependency) == 0x000008, "Wrong alignment on CallbackProxyAddRemoveWorkshopItemAppDependency_SteamWorkshop_AddRemoveAppDependency");
@@ -43,7 +43,7 @@ struct CallbackProxyAddRemoveWorkshopItemFavorite_SteamWorkshop_AddRemoveItemFav
 public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bAddToFavourites;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E7C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCallbackProxyAddRemoveWorkshopItemFavorite* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CallbackProxyAddRemoveWorkshopItemFavorite_SteamWorkshop_AddRemoveItemFavorite) == 0x000008, "Wrong alignment on CallbackProxyAddRemoveWorkshopItemFavorite_SteamWorkshop_AddRemoveItemFavorite");
@@ -60,7 +60,7 @@ public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        DependendItemId;                                   // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bAddDependency;                                    // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E7E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCallbackProxyAddRemoveWorkshopItemItemdependency* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CallbackProxyAddRemoveWorkshopItemItemdependency_SteamWorkshop_AddRemoveItemDependency) == 0x000008, "Wrong alignment on CallbackProxyAddRemoveWorkshopItemItemdependency_SteamWorkshop_AddRemoveItemDependency");
@@ -168,7 +168,7 @@ struct CallbackProxySetUserVoteOnWorkshopItem_SteamWorkshop_SetUserVoteOnItem fi
 public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bVoteUp;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E87[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCallbackProxySetUserVoteOnWorkshopItem* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CallbackProxySetUserVoteOnWorkshopItem_SteamWorkshop_SetUserVoteOnItem) == 0x000008, "Wrong alignment on CallbackProxySetUserVoteOnWorkshopItem_SteamWorkshop_SetUserVoteOnItem");
@@ -184,7 +184,7 @@ struct CallbackProxyStartStopWorkshopItemsPlaytimeTracking_SteamWorkshop_StartSt
 public:
 	TArray<struct FSteamUGCItemId>                ItemIds;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bStartPlaytimeTracking;                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E89[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCallbackProxyStartStopWorkshopItemsPlaytimeTracking* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CallbackProxyStartStopWorkshopItemsPlaytimeTracking_SteamWorkshop_StartStopItemsPlaytimeTracking) == 0x000008, "Wrong alignment on CallbackProxyStartStopWorkshopItemsPlaytimeTracking_SteamWorkshop_StartStopItemsPlaytimeTracking");
@@ -211,7 +211,7 @@ struct CallbackProxySubscribeUnsubscribeWorkshopItem_SteamWorkshop_SubscribeUnsu
 public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bSubscribe;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCallbackProxySubscribeUnsubscribeWorkshopItem* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CallbackProxySubscribeUnsubscribeWorkshopItem_SteamWorkshop_SubscribeUnsubscribeItem) == 0x000008, "Wrong alignment on CallbackProxySubscribeUnsubscribeWorkshopItem_SteamWorkshop_SubscribeUnsubscribeItem");
@@ -286,7 +286,7 @@ public:
 	TArray<int32>                                 IndexOfPreviewToRemove;                            // 0x00B0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	ESteamSupportedLanguages                      UpdateLanguage;                                    // 0x00C0(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESteamItemVisibility                          Visibility;                                        // 0x00C1(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8D[0x6];                                     // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamWorkshopUpdateDetails            ReturnValue;                                       // 0x00C8(0x00D0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SteamWorkshopLibrary_MakeSteamWorkshopUpdateDetails) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_MakeSteamWorkshopUpdateDetails");
@@ -317,7 +317,7 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0114(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintToScreen;                                    // 0x0124(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintToLog;                                       // 0x0125(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8E[0x2];                                     // 0x0126(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126[0x2];                                      // 0x0126(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_PrintWorkshopItemDetails) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_PrintWorkshopItemDetails");
 static_assert(sizeof(SteamWorkshopLibrary_PrintWorkshopItemDetails) == 0x000128, "Wrong size on SteamWorkshopLibrary_PrintWorkshopItemDetails");
@@ -334,7 +334,7 @@ struct SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Bind final
 public:
 	TDelegate<void(const struct FDownloadItemResult& Result)> DelegateToCall;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E8F[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Bind) == 0x000004, "Wrong alignment on SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Bind");
 static_assert(sizeof(SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Bind) == 0x000014, "Wrong size on SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Bind");
@@ -348,7 +348,7 @@ struct SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Unbind final
 public:
 	TDelegate<void(const struct FDownloadItemResult& Result)> DelegateToCall;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E90[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Unbind) == 0x000004, "Wrong alignment on SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Unbind");
 static_assert(sizeof(SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Unbind) == 0x000014, "Wrong size on SteamWorkshopLibrary_SteamDelegate_OnWorkshopItemDownloaded_Unbind");
@@ -374,7 +374,7 @@ public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bHighPriority;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EResultBP                                     ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E91[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_DownloadItem) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_DownloadItem");
 static_assert(sizeof(SteamWorkshopLibrary_SteamWorkshop_DownloadItem) == 0x000010, "Wrong size on SteamWorkshopLibrary_SteamWorkshop_DownloadItem");
@@ -390,7 +390,7 @@ public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWorkshopItemDownloadInfo              DownloadInfo;                                      // 0x0008(0x0020)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	EResultBP                                     ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E92[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_GetItemDownloadInfo) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_GetItemDownloadInfo");
 static_assert(sizeof(SteamWorkshopLibrary_SteamWorkshop_GetItemDownloadInfo) == 0x000030, "Wrong size on SteamWorkshopLibrary_SteamWorkshop_GetItemDownloadInfo");
@@ -406,7 +406,7 @@ public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamWorkshopItemInstallInfo          Info;                                              // 0x0008(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EResultBP                                     ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E93[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_GetItemInstallInfo) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_GetItemInstallInfo");
 static_assert(sizeof(SteamWorkshopLibrary_SteamWorkshop_GetItemInstallInfo) == 0x000038, "Wrong size on SteamWorkshopLibrary_SteamWorkshop_GetItemInstallInfo");
@@ -422,10 +422,10 @@ public:
 	struct FSteamUGCQueryHandle                   QueryHandle;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ItemIndex;                                         // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EItemStatisticBP                              StatToRetrieve;                                    // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E94[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUInt64                                StatValue;                                         // 0x0010(0x0008)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E95[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_GetItemQueryStatistic) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_GetItemQueryStatistic");
 static_assert(sizeof(SteamWorkshopLibrary_SteamWorkshop_GetItemQueryStatistic) == 0x000020, "Wrong size on SteamWorkshopLibrary_SteamWorkshop_GetItemQueryStatistic");
@@ -456,7 +456,7 @@ public:
 	struct FSteamUGCItemId                        ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EItemStateBP                                  FlagToQuery;                                       // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E96[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_GetItemStateFlag) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_GetItemStateFlag");
 static_assert(sizeof(SteamWorkshopLibrary_SteamWorkshop_GetItemStateFlag) == 0x000010, "Wrong size on SteamWorkshopLibrary_SteamWorkshop_GetItemStateFlag");
@@ -494,7 +494,7 @@ struct SteamWorkshopLibrary_SteamWorkshop_GetSubscribedItems final
 {
 public:
 	int32                                         MaxNumItemsToReturn;                               // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E97[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSteamUGCItemId>                OutItems;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_GetSubscribedItems) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_GetSubscribedItems");
@@ -508,10 +508,10 @@ struct SteamWorkshopLibrary_SteamWorkshop_SetServerDownloadDirectory final
 {
 public:
 	struct FSteamDepotId                          ServerDepotId;                                     // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E98[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Directory;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EResultBP                                     ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E99[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamWorkshopLibrary_SteamWorkshop_SetServerDownloadDirectory) == 0x000008, "Wrong alignment on SteamWorkshopLibrary_SteamWorkshop_SetServerDownloadDirectory");
 static_assert(sizeof(SteamWorkshopLibrary_SteamWorkshop_SetServerDownloadDirectory) == 0x000020, "Wrong size on SteamWorkshopLibrary_SteamWorkshop_SetServerDownloadDirectory");

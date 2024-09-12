@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "E_WorldSettingstabStates_structs.hpp"
 #include "UMG_structs.hpp"
 
@@ -28,7 +28,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4625[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -43,283 +43,283 @@ static_assert(offsetof(WB_WorldSettingsTab_C_ResetScale, CallFunc_Array_Length_R
 static_assert(offsetof(WB_WorldSettingsTab_C_ResetScale, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'WB_WorldSettingsTab_C_ResetScale::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.UpdateScaleOfAllActors
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01B0 (0x01B0 - 0x0000)
 struct WB_WorldSettingsTab_C_UpdateScaleOfAllActors final
 {
 public:
 	class UEditableTextBox*                       ActiveTextField;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_Index;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4626[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        OriginalActorScales;                               // 0x0010(0x0010)(Edit, BlueprintVisible)
 	struct FVector                                TargetScale;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TargetScaleValue;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   WantedScaleAsText;                                 // 0x0040(0x0018)(Edit, BlueprintVisible)
-	class AActor*                                 CurrentActor;                                      // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4627[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Array_Get_Item;                           // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4628[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4629[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462A[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462B[0x6];                                     // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x00D8(0x0018)()
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462C[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0108(0x0018)()
-	bool                                          Temp_bool_Variable_2;                              // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462D[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462E[0x5];                                     // 0x014B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetClampedScale_ClampedScale;             // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x0165(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462F[0x2];                                     // 0x0166(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorScale3D_ReturnValue_1;            // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default;                             // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_1;                           // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_2;                           // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   WantedScaleAsText;                                 // 0x0040(0x0010)(Edit, BlueprintVisible)
+	class AActor*                                 CurrentActor;                                      // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Array_Get_Item;                           // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x00D0(0x0010)()
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00F8(0x0010)()
+	bool                                          Temp_bool_Variable_2;                              // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10A[0x6];                                      // 0x010A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_133[0x5];                                      // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetClampedScale_ClampedScale;             // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorScale3D_ReturnValue_1;            // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default;                             // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_1;                           // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default_2;                           // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_UpdateScaleOfAllActors");
-static_assert(sizeof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors) == 0x0001C8, "Wrong size on WB_WorldSettingsTab_C_UpdateScaleOfAllActors");
+static_assert(sizeof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors) == 0x0001B0, "Wrong size on WB_WorldSettingsTab_C_UpdateScaleOfAllActors");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, ActiveTextField) == 0x000000, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::ActiveTextField' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Param_Index) == 0x000008, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Index_0) == 0x000008, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, OriginalActorScales) == 0x000010, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::OriginalActorScales' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, TargetScale) == 0x000020, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::TargetScale' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, TargetScaleValue) == 0x000038, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::TargetScaleValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, WantedScaleAsText) == 0x000040, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::WantedScaleAsText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CurrentActor) == 0x000058, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CurrentActor' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Array_Index_Variable) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Loop_Counter_Variable) == 0x000064, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Add_IntInt_ReturnValue) == 0x000068, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Array_Index_Variable_1) == 0x00006C, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_bool_Variable) == 0x000070, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Get_Item) == 0x000078, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Loop_Counter_Variable_1) == 0x000090, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Add_IntInt_ReturnValue_1) == 0x000094, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Not_PreBool_ReturnValue) == 0x000098, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Get_Item_1) == 0x0000A0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Length_ReturnValue) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetActorScale3D_ReturnValue) == 0x0000B0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Less_IntInt_ReturnValue) == 0x0000C8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Add_ReturnValue) == 0x0000CC, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_bool_Variable_1) == 0x0000D0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x0000D1, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetText_ReturnValue) == 0x0000D8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BooleanAND_ReturnValue) == 0x0000F0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Conv_TextToString_ReturnValue) == 0x0000F8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Conv_StringToText_ReturnValue) == 0x000108, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_bool_Variable_2) == 0x000120, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000121, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000128, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000140, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_DynamicCast_bSuccess) == 0x000148, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000149, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x00014A, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Get_Item_2) == 0x000150, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetClampedScale_ClampedScale) == 0x000158, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetClampedScale_ClampedScale' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Length_ReturnValue_1) == 0x000160, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Less_IntInt_ReturnValue_1) == 0x000164, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x000165, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetActorScale3D_ReturnValue_1) == 0x000168, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetActorScale3D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BreakVector_X) == 0x000180, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BreakVector_Y) == 0x000188, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BreakVector_Z) == 0x000190, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_Select_Default) == 0x000198, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_Select_Default_1) == 0x0001A0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_Select_Default_2) == 0x0001A8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_MakeVector_ReturnValue) == 0x0001B0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CurrentActor) == 0x000050, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CurrentActor' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Array_Index_Variable) == 0x000058, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Loop_Counter_Variable) == 0x00005C, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Array_Index_Variable_1) == 0x000064, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_bool_Variable) == 0x000068, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Get_Item) == 0x000070, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_int_Loop_Counter_Variable_1) == 0x000088, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Add_IntInt_ReturnValue_1) == 0x00008C, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Not_PreBool_ReturnValue) == 0x000090, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Get_Item_1) == 0x000098, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Length_ReturnValue) == 0x0000A0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetActorScale3D_ReturnValue) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Less_IntInt_ReturnValue) == 0x0000C0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_bool_Variable_1) == 0x0000C8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x0000C9, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetText_ReturnValue) == 0x0000D0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BooleanAND_ReturnValue) == 0x0000E0, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Conv_TextToString_ReturnValue) == 0x0000E8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Conv_StringToText_ReturnValue) == 0x0000F8, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, Temp_bool_Variable_2) == 0x000108, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000109, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000110, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000128, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000131, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x000132, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Get_Item_2) == 0x000138, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetClampedScale_ClampedScale) == 0x000140, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetClampedScale_ClampedScale' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Array_Length_ReturnValue_1) == 0x000148, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_Less_IntInt_ReturnValue_1) == 0x00014C, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x00014D, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_GetActorScale3D_ReturnValue_1) == 0x000150, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_GetActorScale3D_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BreakVector_X) == 0x000168, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BreakVector_Y) == 0x000170, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_BreakVector_Z) == 0x000178, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_Select_Default) == 0x000180, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_Select_Default_1) == 0x000188, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, K2Node_Select_Default_2) == 0x000190, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleOfAllActors, CallFunc_MakeVector_ReturnValue) == 0x000198, "Member 'WB_WorldSettingsTab_C_UpdateScaleOfAllActors::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.ToggleUniformScaleForStructures
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_WorldSettingsTab_C_ToggleUniformScaleForStructures final
 {
 public:
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0000(0x0018)()
-	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0000(0x0010)()
+	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_ToggleUniformScaleForStructures");
-static_assert(sizeof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures) == 0x000028, "Wrong size on WB_WorldSettingsTab_C_ToggleUniformScaleForStructures");
+static_assert(sizeof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_ToggleUniformScaleForStructures");
 static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, CallFunc_GetText_ReturnValue) == 0x000000, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000018, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, CallFunc_Not_PreBool_ReturnValue) == 0x000021, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000010, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ToggleUniformScaleForStructures, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'WB_WorldSettingsTab_C_ToggleUniformScaleForStructures::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.UpdateTransformByTextField
-// 0x0528 (0x0528 - 0x0000)
+// 0x0548 (0x0548 - 0x0000)
 struct WB_WorldSettingsTab_C_UpdateTransformByTextField final
 {
 public:
 	class UEditableTextBox*                       TextField;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         TargetValue;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4630[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0010(0x0018)()
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0028(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsNumeric_ReturnValue;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4631[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_StringToDouble_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4632[0x2];                                     // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_4;    // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4633[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4634[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue_1;        // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_5;    // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4635[0x3];                                     // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue_1;        // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4636[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue_2;        // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll_2;                      // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_2;                     // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_2;                       // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_6;    // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4637[0x3];                                     // 0x012D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_2;                // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue_2;        // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4638[0x7];                                     // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_1;                          // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_1;                          // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_1;                          // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x01C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x01E0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0010(0x0010)()
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0020(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsNumeric_ReturnValue;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_StringToDouble_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_66[0x2];                                       // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_4;    // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue_1;        // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_5;    // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue_1;        // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue_2;        // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll_2;                      // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_2;                     // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_2;                       // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_6;    // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_2;                // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue_2;        // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_1;                          // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_1;                          // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_1;                          // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x01D0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4639[0x7];                                     // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult_1;     // 0x02D0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue_1;        // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_7;    // 0x03B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_463A[0x6];                                     // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x03C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X_2;                          // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y_2;                          // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z_2;                          // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_8;    // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_463B[0x7];                                     // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x03F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult_2;     // 0x0410(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue_2;        // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_463C[0x7];                                     // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast; // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_TargetValue_ImplicitCast;       // 0x0508(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_463D[0x4];                                     // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_MakeVector_Z_ImplicitCast;                // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x0518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MakeVector_X_ImplicitCast;                // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult_1;     // 0x02D0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue_1;        // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_7;    // 0x03C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CA[0x6];                                      // 0x03CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x03D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X_2;                          // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y_2;                          // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z_2;                          // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_8;    // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0408(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult_2;     // 0x0420(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue_2;        // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_519[0x7];                                      // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast; // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_TargetValue_ImplicitCast;       // 0x0528(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52C[0x4];                                      // 0x052C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_MakeVector_Z_ImplicitCast;                // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MakeVector_X_ImplicitCast;                // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_UpdateTransformByTextField) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_UpdateTransformByTextField");
-static_assert(sizeof(WB_WorldSettingsTab_C_UpdateTransformByTextField) == 0x000528, "Wrong size on WB_WorldSettingsTab_C_UpdateTransformByTextField");
+static_assert(sizeof(WB_WorldSettingsTab_C_UpdateTransformByTextField) == 0x000548, "Wrong size on WB_WorldSettingsTab_C_UpdateTransformByTextField");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, TextField) == 0x000000, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::TextField' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, TargetValue) == 0x000008, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::TargetValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Get2DigitsTextForParameterValue_ValueText) == 0x000010, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Get2DigitsTextForParameterValue_ValueText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_GetText_ReturnValue) == 0x000028, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Conv_TextToString_ReturnValue) == 0x000040, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Replace_ReturnValue) == 0x000050, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Replace_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_IsNumeric_ReturnValue) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_IsNumeric_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Conv_StringToDouble_ReturnValue) == 0x000068, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Conv_StringToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000070, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000071, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x000072, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BooleanOR_ReturnValue) == 0x000073, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x000074, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BooleanOR_ReturnValue_1) == 0x000075, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000078, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Roll) == 0x000090, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Pitch) == 0x000094, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Yaw) == 0x000098, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_4) == 0x00009C, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeRotator_ReturnValue) == 0x0000A0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0000B8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorRotation_ReturnValue_1) == 0x0000C0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Roll_1) == 0x0000D8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Pitch_1) == 0x0000DC, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Yaw_1) == 0x0000E0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_5) == 0x0000E4, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeRotator_ReturnValue_1) == 0x0000E8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorRotation_ReturnValue_1) == 0x000100, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorRotation_ReturnValue_2) == 0x000108, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorRotation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Roll_2) == 0x000120, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Pitch_2) == 0x000124, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Yaw_2) == 0x000128, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_6) == 0x00012C, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeRotator_ReturnValue_2) == 0x000130, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorRotation_ReturnValue_2) == 0x000148, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorRotation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000150, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000168, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_X) == 0x000180, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Y) == 0x000188, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Z) == 0x000190, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_X_1) == 0x000198, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Y_1) == 0x0001A0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Z_1) == 0x0001A8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_ReturnValue) == 0x0001B0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_ReturnValue_1) == 0x0001C8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x0001E0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_GetText_ReturnValue) == 0x000020, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_GetText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Conv_TextToString_ReturnValue) == 0x000030, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Replace_ReturnValue) == 0x000040, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Replace_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_IsNumeric_ReturnValue) == 0x000050, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_IsNumeric_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Conv_StringToDouble_ReturnValue) == 0x000058, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Conv_StringToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000061, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x000062, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BooleanOR_ReturnValue) == 0x000063, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x000064, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BooleanOR_ReturnValue_1) == 0x000065, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000068, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Roll) == 0x000080, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Pitch) == 0x000084, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Yaw) == 0x000088, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_4) == 0x00008C, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeRotator_ReturnValue) == 0x000090, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorRotation_ReturnValue_1) == 0x0000B0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorRotation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Roll_1) == 0x0000C8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Pitch_1) == 0x0000CC, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Yaw_1) == 0x0000D0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_5) == 0x0000D4, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeRotator_ReturnValue_1) == 0x0000D8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorRotation_ReturnValue_1) == 0x0000F0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorRotation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorRotation_ReturnValue_2) == 0x0000F8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorRotation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Roll_2) == 0x000110, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Pitch_2) == 0x000114, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakRotator_Yaw_2) == 0x000118, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_6) == 0x00011C, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeRotator_ReturnValue_2) == 0x000120, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorRotation_ReturnValue_2) == 0x000138, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorRotation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000140, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000158, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_X) == 0x000170, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Y) == 0x000178, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Z) == 0x000180, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_X_1) == 0x000188, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_X_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Y_1) == 0x000190, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Y_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Z_1) == 0x000198, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Z_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_ReturnValue) == 0x0001A0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_ReturnValue_1) == 0x0001B8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x0001D0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0002C8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_SweepHitResult_1) == 0x0002D0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_ReturnValue_1) == 0x0003B8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_7) == 0x0003B9, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x0003C0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_X_2) == 0x0003D8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Y_2) == 0x0003E0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Z_2) == 0x0003E8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_8) == 0x0003F0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_ReturnValue_2) == 0x0003F8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_SweepHitResult_2) == 0x000410, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_SweepHitResult_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_ReturnValue_2) == 0x0004F8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast) == 0x000500, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, K2Node_VariableSet_TargetValue_ImplicitCast) == 0x000508, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::K2Node_VariableSet_TargetValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_Z_ImplicitCast) == 0x000510, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_Z_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_Y_ImplicitCast) == 0x000518, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_Y_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_X_ImplicitCast) == 0x000520, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_X_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_ReturnValue_1) == 0x0003C8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_7) == 0x0003C9, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x0003D0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_X_2) == 0x0003E8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_X_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Y_2) == 0x0003F0, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Y_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_BreakVector_Z_2) == 0x0003F8, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_BreakVector_Z_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_EqualEqual_ObjectObject_ReturnValue_8) == 0x000400, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_EqualEqual_ObjectObject_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_ReturnValue_2) == 0x000408, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_SweepHitResult_2) == 0x000420, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_SweepHitResult_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_K2_SetActorLocation_ReturnValue_2) == 0x000518, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_K2_SetActorLocation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast) == 0x000520, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, K2Node_VariableSet_TargetValue_ImplicitCast) == 0x000528, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::K2Node_VariableSet_TargetValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_Z_ImplicitCast) == 0x000530, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_Z_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_Y_ImplicitCast) == 0x000538, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_Y_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateTransformByTextField, CallFunc_MakeVector_X_ImplicitCast) == 0x000540, "Member 'WB_WorldSettingsTab_C_UpdateTransformByTextField::CallFunc_MakeVector_X_ImplicitCast' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.TogglePopupView
 // 0x0002 (0x0002 - 0x0000)
@@ -335,48 +335,48 @@ static_assert(offsetof(WB_WorldSettingsTab_C_TogglePopupView, TargetMenuState) =
 static_assert(offsetof(WB_WorldSettingsTab_C_TogglePopupView, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000001, "Member 'WB_WorldSettingsTab_C_TogglePopupView::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.UpdateUniformScaleOfAllActors
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors final
 {
 public:
-	class FText                                   WantedScaleAsText;                                 // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class AActor*                                 CurrentActor;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_463E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0040(0x0018)()
-	double                                        CallFunc_GetClampedScale_ClampedScale;             // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0088(0x0018)()
-	double                                        CallFunc_GetClampedScale_ClampedScale_1;           // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   WantedScaleAsText;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class AActor*                                 CurrentActor;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0010)()
+	double                                        CallFunc_GetClampedScale_ClampedScale;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0078(0x0010)()
+	double                                        CallFunc_GetClampedScale_ClampedScale_1;           // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors");
-static_assert(sizeof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors) == 0x0000D0, "Wrong size on WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors");
+static_assert(sizeof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors) == 0x0000B8, "Wrong size on WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, WantedScaleAsText) == 0x000000, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::WantedScaleAsText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CurrentActor) == 0x000018, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CurrentActor' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, Temp_int_Array_Index_Variable) == 0x000020, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Greater_IntInt_ReturnValue) == 0x000028, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Add_IntInt_ReturnValue) == 0x00002C, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_TextToString_ReturnValue) == 0x000030, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_StringToText_ReturnValue) == 0x000040, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_GetClampedScale_ClampedScale) == 0x000058, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_GetClampedScale_ClampedScale' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000070, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000088, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_GetClampedScale_ClampedScale_1) == 0x0000A0, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_GetClampedScale_ClampedScale_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Array_Get_Item) == 0x0000C0, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Array_Length_ReturnValue) == 0x0000C8, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Less_IntInt_ReturnValue) == 0x0000CC, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CurrentActor) == 0x000010, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CurrentActor' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, Temp_int_Array_Index_Variable) == 0x000018, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Greater_IntInt_ReturnValue) == 0x000020, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_StringToText_ReturnValue) == 0x000038, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_GetClampedScale_ClampedScale) == 0x000048, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_GetClampedScale_ClampedScale' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000050, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000078, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_GetClampedScale_ClampedScale_1) == 0x000088, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_GetClampedScale_ClampedScale_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x000090, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Array_Length_ReturnValue) == 0x0000B0, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors, CallFunc_Less_IntInt_ReturnValue) == 0x0000B4, "Member 'WB_WorldSettingsTab_C_UpdateUniformScaleOfAllActors::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.ShowGroupPreviewOnlyIfRelevant
 // 0x0030 (0x0030 - 0x0000)
@@ -386,11 +386,11 @@ public:
 	TArray<class AActor*>                         ActorsOfCategory;                                  // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UWidget*                                GroupPreviewWidget;                                // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_463F[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4640[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -414,10 +414,10 @@ struct WB_WorldSettingsTab_C_AddMaterialStructureIfOverwritesMatchTarget final
 public:
 	class ABP_PlaceableStaticProp_C*              StructureToTest;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4641[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Identical_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4642[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_PlaceAndEditUI_C*                   CallFunc_FindParentWidgetOfType_ReturnValue;       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -439,45 +439,45 @@ struct WB_WorldSettingsTab_C_UpdateWorldsettingsTabContent final
 public:
 	class AActor*                                 Target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsAdded;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4643[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Switch_C*                           CurrentSwitch;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AB_StaticMeshProp_C*                    CurrentProp;                                       // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class ABP_PlaceableStaticProp_C*              CurrentStructure;                                  // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4644[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetAnchorActor_AnchorActor;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4645[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_Switch_C*                           K2Node_DynamicCast_AsBP_Switch;                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4646[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4647[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableLight_C*                   K2Node_DynamicCast_AsBP_Placeable_Light;           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4648[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue_1;           // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4649[0x2];                                     // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_72[0x2];                                       // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddMaterialStructureIfOverwritesMatchTarget_Success; // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue_2;           // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464A[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ActionActorSubsystem_C*              CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue_3;           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue_4;           // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464B[0x2];                                     // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_3;            // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActorSwitchable_ReturnValue;            // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0095(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464C[0x2];                                     // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop_1;         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464D[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableStaticProp_C*              K2Node_DynamicCast_AsBP_Placeable_Static_Prop;     // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -665,10 +665,10 @@ struct WB_WorldSettingsTab_C_UpdateScaleBoxContent final
 public:
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464E[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableLight_C*                   K2Node_DynamicCast_AsBP_Placeable_Light;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464F[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableActor_C*                   K2Node_DynamicCast_AsBP_Placeable_Actor;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -682,29 +682,29 @@ static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleBoxContent, K2Node_Dynam
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleBoxContent, K2Node_DynamicCast_bSuccess_2) == 0x000028, "Member 'WB_WorldSettingsTab_C_UpdateScaleBoxContent::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.UpdateScaleTextFields
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct WB_WorldSettingsTab_C_UpdateScaleTextFields final
 {
 public:
 	double                                        Divisor;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4650[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4651[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0060(0x0018)()
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_1; // 0x0078(0x0018)()
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_2; // 0x0098(0x0018)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0060(0x0010)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_1; // 0x0070(0x0010)()
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_2; // 0x0088(0x0010)()
 };
 static_assert(alignof(WB_WorldSettingsTab_C_UpdateScaleTextFields) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_UpdateScaleTextFields");
-static_assert(sizeof(WB_WorldSettingsTab_C_UpdateScaleTextFields) == 0x0000B0, "Wrong size on WB_WorldSettingsTab_C_UpdateScaleTextFields");
+static_assert(sizeof(WB_WorldSettingsTab_C_UpdateScaleTextFields) == 0x000098, "Wrong size on WB_WorldSettingsTab_C_UpdateScaleTextFields");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, Divisor) == 0x000000, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::Divisor' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000010, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
@@ -716,63 +716,63 @@ static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Bre
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000050, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000058, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_1) == 0x000078, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000090, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_2) == 0x000098, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_1) == 0x000070, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x000080, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateScaleTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_2) == 0x000088, "Member 'WB_WorldSettingsTab_C_UpdateScaleTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_2' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.UpdateRotationTéxtFields
-// 0x0090 (0x0090 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_WorldSettingsTab_C_UpdateRotationT_xtFields final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4652[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4653[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0030(0x0018)()
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_1; // 0x0048(0x0018)()
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_2; // 0x0060(0x0018)()
-	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast; // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_1; // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_2; // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0030(0x0010)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_1; // 0x0040(0x0010)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_2; // 0x0050(0x0010)()
+	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast; // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_1; // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_2; // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_UpdateRotationT_xtFields");
-static_assert(sizeof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields) == 0x000090, "Wrong size on WB_WorldSettingsTab_C_UpdateRotationT_xtFields");
+static_assert(sizeof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields) == 0x000078, "Wrong size on WB_WorldSettingsTab_C_UpdateRotationT_xtFields");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000008, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_BreakRotator_Roll) == 0x000020, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_BreakRotator_Roll' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_BreakRotator_Pitch) == 0x000024, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_BreakRotator_Pitch' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_BreakRotator_Yaw) == 0x000028, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_BreakRotator_Yaw' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_ValueText) == 0x000030, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_ValueText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_1) == 0x000048, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_2) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast) == 0x000078, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_1) == 0x000080, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_2) == 0x000088, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_1) == 0x000040, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_2) == 0x000050, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_1) == 0x000068, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateRotationT_xtFields, CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_2) == 0x000070, "Member 'WB_WorldSettingsTab_C_UpdateRotationT_xtFields::CallFunc_Get2DigitsTextForParameterValue_Value_ImplicitCast_2' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.UpdateLocationTextFields
-// 0x0090 (0x0090 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_WorldSettingsTab_C_UpdateLocationTextFields final
 {
 public:
 	bool                                          ActiveTextField;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4654[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ZeroFloat;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4655[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0048(0x0018)()
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_1; // 0x0060(0x0018)()
-	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_2; // 0x0078(0x0018)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText; // 0x0048(0x0010)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_1; // 0x0058(0x0010)()
+	class FText                                   CallFunc_Get2DigitsTextForParameterValue_ValueText_2; // 0x0068(0x0010)()
 };
 static_assert(alignof(WB_WorldSettingsTab_C_UpdateLocationTextFields) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_UpdateLocationTextFields");
-static_assert(sizeof(WB_WorldSettingsTab_C_UpdateLocationTextFields) == 0x000090, "Wrong size on WB_WorldSettingsTab_C_UpdateLocationTextFields");
+static_assert(sizeof(WB_WorldSettingsTab_C_UpdateLocationTextFields) == 0x000078, "Wrong size on WB_WorldSettingsTab_C_UpdateLocationTextFields");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, ActiveTextField) == 0x000000, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::ActiveTextField' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, ZeroFloat) == 0x000008, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::ZeroFloat' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_IsValid_ReturnValue' has a wrong offset!");
@@ -781,181 +781,181 @@ static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_BreakVector_Y) == 0x000038, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_BreakVector_Y' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_BreakVector_Z) == 0x000040, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_BreakVector_Z' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText) == 0x000048, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_1) == 0x000060, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_2) == 0x000078, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_1) == 0x000058, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_UpdateLocationTextFields, CallFunc_Get2DigitsTextForParameterValue_ValueText_2) == 0x000068, "Member 'WB_WorldSettingsTab_C_UpdateLocationTextFields::CallFunc_Get2DigitsTextForParameterValue_ValueText_2' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationY_K2Node_ComponentBoundEvent_8_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationX_K2Node_ComponentBoundEvent_9_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_LocationZ_K2Node_ComponentBoundEvent_10_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationX_K2Node_ComponentBoundEvent_11_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationY_K2Node_ComponentBoundEvent_12_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_RotationZ_K2Node_ComponentBoundEvent_13_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleX_K2Node_ComponentBoundEvent_14_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleZ_K2Node_ComponentBoundEvent_16_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_WorldSettingsTab_C_BndEvt__WB_WorldSettingsTab_ScaleY_K2Node_ComponentBoundEvent_15_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.ExecuteUbergraph_WB_WorldSettingsTab
-// 0x0128 (0x0128 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4656[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_8;                 // 0x0008(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_8;         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4657[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_7;                 // 0x0028(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_7;         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4658[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_6;                 // 0x0048(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_6;         // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4659[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_5;                 // 0x0068(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_5;         // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465A[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_4;                 // 0x0088(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_4;         // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465B[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_3;                 // 0x00A8(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_3;         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465C[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_2;                 // 0x00C8(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_2;         // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465D[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x00E8(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_1;         // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465E[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0108(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_8;                 // 0x0008(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_8;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_7;                 // 0x0020(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_7;         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_6;                 // 0x0038(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_6;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_5;                 // 0x0050(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_5;         // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_4;                 // 0x0068(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_4;         // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_3;                 // 0x0080(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_3;         // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_2;                 // 0x0098(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_2;         // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x00B0(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod_1;         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x00C8(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab");
-static_assert(sizeof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab) == 0x000128, "Wrong size on WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab");
+static_assert(sizeof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab) == 0x0000E0, "Wrong size on WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab");
 static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, EntryPoint) == 0x000000, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_8) == 0x000008, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_8' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_8) == 0x000020, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_8' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_7) == 0x000028, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_7' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_7) == 0x000040, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_7' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_6) == 0x000048, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_6' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_6) == 0x000060, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_6' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_5) == 0x000068, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_5' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_5) == 0x000080, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_5' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_4) == 0x000088, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_4' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_4) == 0x0000A0, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_4' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_3) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_3' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_3) == 0x0000C0, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_3' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_2) == 0x0000C8, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_2) == 0x0000E0, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_1) == 0x0000E8, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_1) == 0x000100, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text) == 0x000108, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod) == 0x000120, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_8) == 0x000018, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_8' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_7) == 0x000020, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_7' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_7) == 0x000030, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_7' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_6) == 0x000038, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_6' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_6) == 0x000048, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_6' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_5) == 0x000050, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_5' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_5) == 0x000060, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_5' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_4) == 0x000068, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_4' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_4) == 0x000078, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_4' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_3) == 0x000080, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_3' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_3) == 0x000090, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_3' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_2) == 0x000098, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_2) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text_1) == 0x0000B0, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod_1) == 0x0000C0, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_Text) == 0x0000C8, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab, K2Node_ComponentBoundEvent_CommitMethod) == 0x0000D8, "Member 'WB_WorldSettingsTab_C_ExecuteUbergraph_WB_WorldSettingsTab::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.TryGetFocusedTransformInputField
 // 0x0038 (0x0038 - 0x0000)
@@ -965,10 +965,10 @@ public:
 	class UEditableTextBox*                       FocusedField;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UEditableTextBox*                       ActiveField;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465F[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4660[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -993,72 +993,72 @@ static_assert(offsetof(WB_WorldSettingsTab_C_TryGetFocusedTransformInputField, C
 static_assert(offsetof(WB_WorldSettingsTab_C_TryGetFocusedTransformInputField, CallFunc_HasKeyboardFocus_ReturnValue) == 0x000032, "Member 'WB_WorldSettingsTab_C_TryGetFocusedTransformInputField::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.Get2DigitsTextForParameterValue
-// 0x0100 (0x0100 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ValueText;                                         // 0x0008(0x0018)(Parm, OutParm)
-	class FString                                 LeftSideString;                                    // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 RightSideString;                                   // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 FullString;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_RoundDecimals_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0078(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0090(0x0018)()
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x00B8(0x0018)()
-	class FString                                 CallFunc_Split_LeftS;                              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Split_RightS;                             // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Split_ReturnValue;                        // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4661[0x3];                                     // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ValueText;                                         // 0x0008(0x0010)(Parm, OutParm)
+	class FString                                 LeftSideString;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 RightSideString;                                   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 FullString;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	double                                        CallFunc_RoundDecimals_ReturnValue;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0070(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0080(0x0010)()
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x00A0(0x0010)()
+	class FString                                 CallFunc_Split_LeftS;                              // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Split_RightS;                             // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Split_ReturnValue;                        // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Len_ReturnValue;                          // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue");
-static_assert(sizeof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue) == 0x000100, "Wrong size on WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue");
+static_assert(sizeof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue) == 0x0000E0, "Wrong size on WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue");
 static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, Value) == 0x000000, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::Value' has a wrong offset!");
 static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, ValueText) == 0x000008, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::ValueText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, LeftSideString) == 0x000020, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::LeftSideString' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, RightSideString) == 0x000030, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::RightSideString' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, FullString) == 0x000040, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::FullString' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_RoundDecimals_ReturnValue) == 0x000050, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_RoundDecimals_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Concat_StrStr_ReturnValue) == 0x000058, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_DoubleToString_ReturnValue) == 0x000068, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_StringToText_ReturnValue) == 0x000078, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000090, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000A8, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0000B8, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Split_LeftS) == 0x0000D0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Split_LeftS' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Split_RightS) == 0x0000E0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Split_RightS' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Split_ReturnValue) == 0x0000F0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Split_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Len_ReturnValue) == 0x0000F4, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Len_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000F8, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, LeftSideString) == 0x000018, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::LeftSideString' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, RightSideString) == 0x000028, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::RightSideString' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, FullString) == 0x000038, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::FullString' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_RoundDecimals_ReturnValue) == 0x000048, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_RoundDecimals_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Concat_StrStr_ReturnValue) == 0x000050, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_DoubleToString_ReturnValue) == 0x000060, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_StringToText_ReturnValue) == 0x000070, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000080, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000090, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0000A0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Split_LeftS) == 0x0000B0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Split_LeftS' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Split_RightS) == 0x0000C0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Split_RightS' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Split_ReturnValue) == 0x0000D0, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Split_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_Len_ReturnValue) == 0x0000D4, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_Len_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000D8, "Member 'WB_WorldSettingsTab_C_Get2DigitsTextForParameterValue::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_WorldSettingsTab.WB_WorldSettingsTab_C.GetClampedScale
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct WB_WorldSettingsTab_C_GetClampedScale final
 {
 public:
-	class FText                                   WantedScaleAsText;                                 // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class AActor*                                 ActorToClamp;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        ClampedScale;                                      // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        NewScale;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Text_ToFloat_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4662[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_ClampScaleOfTargetOrAnchorActor_ClampedScale; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_ClampScaleOfTargetOrAnchorActor_WantedScale_ImplicitCast; // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   WantedScaleAsText;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class AActor*                                 ActorToClamp;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        ClampedScale;                                      // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NewScale;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Text_ToFloat_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_ClampScaleOfTargetOrAnchorActor_ClampedScale; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_ClampScaleOfTargetOrAnchorActor_WantedScale_ImplicitCast; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WorldSettingsTab_C_GetClampedScale) == 0x000008, "Wrong alignment on WB_WorldSettingsTab_C_GetClampedScale");
-static_assert(sizeof(WB_WorldSettingsTab_C_GetClampedScale) == 0x000048, "Wrong size on WB_WorldSettingsTab_C_GetClampedScale");
+static_assert(sizeof(WB_WorldSettingsTab_C_GetClampedScale) == 0x000040, "Wrong size on WB_WorldSettingsTab_C_GetClampedScale");
 static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, WantedScaleAsText) == 0x000000, "Member 'WB_WorldSettingsTab_C_GetClampedScale::WantedScaleAsText' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, ActorToClamp) == 0x000018, "Member 'WB_WorldSettingsTab_C_GetClampedScale::ActorToClamp' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, ClampedScale) == 0x000020, "Member 'WB_WorldSettingsTab_C_GetClampedScale::ClampedScale' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, NewScale) == 0x000028, "Member 'WB_WorldSettingsTab_C_GetClampedScale::NewScale' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, CallFunc_Text_ToFloat_ReturnValue) == 0x000030, "Member 'WB_WorldSettingsTab_C_GetClampedScale::CallFunc_Text_ToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, CallFunc_ClampScaleOfTargetOrAnchorActor_ClampedScale) == 0x000038, "Member 'WB_WorldSettingsTab_C_GetClampedScale::CallFunc_ClampScaleOfTargetOrAnchorActor_ClampedScale' has a wrong offset!");
-static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, CallFunc_ClampScaleOfTargetOrAnchorActor_WantedScale_ImplicitCast) == 0x000040, "Member 'WB_WorldSettingsTab_C_GetClampedScale::CallFunc_ClampScaleOfTargetOrAnchorActor_WantedScale_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, ActorToClamp) == 0x000010, "Member 'WB_WorldSettingsTab_C_GetClampedScale::ActorToClamp' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, ClampedScale) == 0x000018, "Member 'WB_WorldSettingsTab_C_GetClampedScale::ClampedScale' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, NewScale) == 0x000020, "Member 'WB_WorldSettingsTab_C_GetClampedScale::NewScale' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, CallFunc_Text_ToFloat_ReturnValue) == 0x000028, "Member 'WB_WorldSettingsTab_C_GetClampedScale::CallFunc_Text_ToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, CallFunc_ClampScaleOfTargetOrAnchorActor_ClampedScale) == 0x000030, "Member 'WB_WorldSettingsTab_C_GetClampedScale::CallFunc_ClampScaleOfTargetOrAnchorActor_ClampedScale' has a wrong offset!");
+static_assert(offsetof(WB_WorldSettingsTab_C_GetClampedScale, CallFunc_ClampScaleOfTargetOrAnchorActor_WantedScale_ImplicitCast) == 0x000038, "Member 'WB_WorldSettingsTab_C_GetClampedScale::CallFunc_ClampScaleOfTargetOrAnchorActor_WantedScale_ImplicitCast' has a wrong offset!");
 
 }
 

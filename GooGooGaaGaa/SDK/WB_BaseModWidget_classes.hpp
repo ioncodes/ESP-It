@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_BaseModWidget.WB_BaseModWidget_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x02E0 - 0x02E0)
 class UWB_BaseModWidget_C : public UUserWidget
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_BaseModWidget_C) == 0x000008, "Wrong alignment on UWB_BaseModWidget_C");
-static_assert(sizeof(UWB_BaseModWidget_C) == 0x0002C0, "Wrong size on UWB_BaseModWidget_C");
+static_assert(sizeof(UWB_BaseModWidget_C) == 0x0002E0, "Wrong size on UWB_BaseModWidget_C");
 
 }
 

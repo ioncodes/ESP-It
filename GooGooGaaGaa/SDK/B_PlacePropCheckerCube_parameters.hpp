@@ -10,31 +10,31 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_PlacePropCheckerCube.B_PlacePropCheckerCube_C.SetBounds
-// 0x0138 (0x0138 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct B_PlacePropCheckerCube_C_SetBounds final
 {
 public:
 	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetActorBounds_Origin;                    // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetActorBounds_BoxExtent;                 // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0038(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                CallFunc_Divide_VectorFloat_ReturnValue;           // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0038(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_Divide_VectorFloat_ReturnValue;           // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PlacePropCheckerCube_C_SetBounds) == 0x000008, "Wrong alignment on B_PlacePropCheckerCube_C_SetBounds");
-static_assert(sizeof(B_PlacePropCheckerCube_C_SetBounds) == 0x000138, "Wrong size on B_PlacePropCheckerCube_C_SetBounds");
+static_assert(sizeof(B_PlacePropCheckerCube_C_SetBounds) == 0x000148, "Wrong size on B_PlacePropCheckerCube_C_SetBounds");
 static_assert(offsetof(B_PlacePropCheckerCube_C_SetBounds, OtherActor) == 0x000000, "Member 'B_PlacePropCheckerCube_C_SetBounds::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_PlacePropCheckerCube_C_SetBounds, CallFunc_GetActorBounds_Origin) == 0x000008, "Member 'B_PlacePropCheckerCube_C_SetBounds::CallFunc_GetActorBounds_Origin' has a wrong offset!");
 static_assert(offsetof(B_PlacePropCheckerCube_C_SetBounds, CallFunc_GetActorBounds_BoxExtent) == 0x000020, "Member 'B_PlacePropCheckerCube_C_SetBounds::CallFunc_GetActorBounds_BoxExtent' has a wrong offset!");
 static_assert(offsetof(B_PlacePropCheckerCube_C_SetBounds, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000038, "Member 'B_PlacePropCheckerCube_C_SetBounds::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_PlacePropCheckerCube_C_SetBounds, CallFunc_Divide_VectorFloat_ReturnValue) == 0x000120, "Member 'B_PlacePropCheckerCube_C_SetBounds::CallFunc_Divide_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PlacePropCheckerCube_C_SetBounds, CallFunc_Divide_VectorFloat_ReturnValue) == 0x000130, "Member 'B_PlacePropCheckerCube_C_SetBounds::CallFunc_Divide_VectorFloat_ReturnValue' has a wrong offset!");
 
 }
 

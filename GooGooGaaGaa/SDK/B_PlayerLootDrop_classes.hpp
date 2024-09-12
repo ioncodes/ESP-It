@@ -33,7 +33,7 @@ public:
 	void ClampItemDropExperience();
 	void GrantExp(int32 Exp, int32* AmountOfExpToSubtract, bool* bIsInFaultState);
 	void HandleDropSuccess();
-	void InitializeGS(class UGameInstance* Param_GameInstance, class APlayerState* Param_PlayerState);
+	void InitializeGS(class UGameInstance* GameInstance_0, class APlayerState* PlayerState_0);
 
 	void CalculateAmountOfItemsToGrant(int32* NumberOfItems) const;
 	void GetStatsAndAchievementsManager(class UB_NewStatsAndAchievementsManager_C** Result) const;

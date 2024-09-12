@@ -17,12 +17,69 @@
 namespace SDK
 {
 
+// Function B_FriendManager.B_FriendManager_C.OnHasIncomingTradeRequestsCompleted__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    HasIncomingTradeRequests_0                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::OnHasIncomingTradeRequestsCompleted__DelegateSignature(bool HasIncomingTradeRequests_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnHasIncomingTradeRequestsCompleted__DelegateSignature");
+
+	Params::B_FriendManager_C_OnHasIncomingTradeRequestsCompleted__DelegateSignature Parms{};
+
+	Parms.HasIncomingTradeRequests_0 = HasIncomingTradeRequests_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnFriendListReceived__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UB_FriendManager_C::OnFriendListReceived__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnFriendListReceived__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnUserInfosReceived__DelegateSignature
+// (Public, Delegate, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FUniqueNetIdRepl>         UserIds                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnUserInfosReceived__DelegateSignature(TArray<struct FUniqueNetIdRepl>& UserIds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnUserInfosReceived__DelegateSignature");
+
+	Params::B_FriendManager_C_OnUserInfosReceived__DelegateSignature Parms{};
+
+	Parms.UserIds = std::move(UserIds);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	UserIds = std::move(Parms.UserIds);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.AcceptFriendRequest
-// (BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FUniqueNetIdRepl                 FriendId                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    InitialSuccess                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::AcceptFriendRequest(const struct FUniqueNetIdRepl& FriendId)
+void UB_FriendManager_C::AcceptFriendRequest(const struct FUniqueNetIdRepl& FriendId, bool* InitialSuccess)
 {
 	static class UFunction* Func = nullptr;
 
@@ -34,6 +91,9 @@ void UB_FriendManager_C::AcceptFriendRequest(const struct FUniqueNetIdRepl& Frie
 	Parms.FriendId = std::move(FriendId);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (InitialSuccess != nullptr)
+		*InitialSuccess = Parms.InitialSuccess;
 }
 
 
@@ -69,6 +129,67 @@ void UB_FriendManager_C::AnyPendingFriendOrSessionInvitesExist(bool* ThereArePen
 
 	if (ThereArePendingInvites != nullptr)
 		*ThereArePendingInvites = Parms.ThereArePendingInvites;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.CheckForPendingTradeRequests
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_FriendManager_C::CheckForPendingTradeRequests()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "CheckForPendingTradeRequests");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.CheckForTooManyFriendsAndPending
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    TooManyFriends                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    TooManyPending                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::CheckForTooManyFriendsAndPending(bool* TooManyFriends, bool* TooManyPending)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "CheckForTooManyFriendsAndPending");
+
+	Params::B_FriendManager_C_CheckForTooManyFriendsAndPending Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TooManyFriends != nullptr)
+		*TooManyFriends = Parms.TooManyFriends;
+
+	if (TooManyPending != nullptr)
+		*TooManyPending = Parms.TooManyPending;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.CheckIncomingTradeRequests
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FTradeRequest>            Requests                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::CheckIncomingTradeRequests(TArray<struct FTradeRequest>& Requests)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "CheckIncomingTradeRequests");
+
+	Params::B_FriendManager_C_CheckIncomingTradeRequests Parms{};
+
+	Parms.Requests = std::move(Requests);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Requests = std::move(Parms.Requests);
 }
 
 
@@ -154,12 +275,59 @@ void UB_FriendManager_C::ExecuteUbergraph_B_FriendManager(int32 EntryPoint)
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.GetDisplayNamesFromUsers
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UOnlineUserRef*>           Users                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FString>                   DisplayNames                                           (Parm, OutParm)
+
+void UB_FriendManager_C::GetDisplayNamesFromUsers(TArray<class UOnlineUserRef*>& Users, TArray<class FString>* DisplayNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "GetDisplayNamesFromUsers");
+
+	Params::B_FriendManager_C_GetDisplayNamesFromUsers Parms{};
+
+	Parms.Users = std::move(Users);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Users = std::move(Parms.Users);
+
+	if (DisplayNames != nullptr)
+		*DisplayNames = std::move(Parms.DisplayNames);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.GetHasIncomingTradeRequests
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    HasIncomingTradeRequests_0                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::GetHasIncomingTradeRequests(bool* HasIncomingTradeRequests_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "GetHasIncomingTradeRequests");
+
+	Params::B_FriendManager_C_GetHasIncomingTradeRequests Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HasIncomingTradeRequests_0 != nullptr)
+		*HasIncomingTradeRequests_0 = Parms.HasIncomingTradeRequests_0;
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.GetIsFriendListRetrieved
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_FriendListRetrieved                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FriendListRetrieved_0                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::GetIsFriendListRetrieved(bool* Param_FriendListRetrieved)
+void UB_FriendManager_C::GetIsFriendListRetrieved(bool* FriendListRetrieved_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -170,17 +338,17 @@ void UB_FriendManager_C::GetIsFriendListRetrieved(bool* Param_FriendListRetrieve
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_FriendListRetrieved != nullptr)
-		*Param_FriendListRetrieved = Parms.Param_FriendListRetrieved;
+	if (FriendListRetrieved_0 != nullptr)
+		*FriendListRetrieved_0 = Parms.FriendListRetrieved_0;
 }
 
 
 // Function B_FriendManager.B_FriendManager_C.GetIsRecentPlayersRetrieved
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_RecentPlayersRetrieved                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    RecentPlayersRetrieved_0                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::GetIsRecentPlayersRetrieved(bool* Param_RecentPlayersRetrieved)
+void UB_FriendManager_C::GetIsRecentPlayersRetrieved(bool* RecentPlayersRetrieved_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -191,8 +359,50 @@ void UB_FriendManager_C::GetIsRecentPlayersRetrieved(bool* Param_RecentPlayersRe
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_RecentPlayersRetrieved != nullptr)
-		*Param_RecentPlayersRetrieved = Parms.Param_RecentPlayersRetrieved;
+	if (RecentPlayersRetrieved_0 != nullptr)
+		*RecentPlayersRetrieved_0 = Parms.RecentPlayersRetrieved_0;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.GetMaximumFriendRequests
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   MaximumFriendRequests_0                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::GetMaximumFriendRequests(int32* MaximumFriendRequests_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "GetMaximumFriendRequests");
+
+	Params::B_FriendManager_C_GetMaximumFriendRequests Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MaximumFriendRequests_0 != nullptr)
+		*MaximumFriendRequests_0 = Parms.MaximumFriendRequests_0;
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.GetMaximumFriends
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   MaximumFriends_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::GetMaximumFriends(int32* MaximumFriends_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "GetMaximumFriends");
+
+	Params::B_FriendManager_C_GetMaximumFriends Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MaximumFriends_0 != nullptr)
+		*MaximumFriends_0 = Parms.MaximumFriends_0;
 }
 
 
@@ -384,6 +594,50 @@ void UB_FriendManager_C::OnCallFailed_53851A804A830E61AFB854AB13BB6C79(bool bWas
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.OnCallFailed_58E39F564E6C2711062EE58CCD7FE7CA
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnCallFailed_58E39F564E6C2711062EE58CCD7FE7CA(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnCallFailed_58E39F564E6C2711062EE58CCD7FE7CA");
+
+	Params::B_FriendManager_C_OnCallFailed_58E39F564E6C2711062EE58CCD7FE7CA Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnCallFailed_652B7B3045DC0C028A2E38958D67868C
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnCallFailed_652B7B3045DC0C028A2E38958D67868C(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnCallFailed_652B7B3045DC0C028A2E38958D67868C");
+
+	Params::B_FriendManager_C_OnCallFailed_652B7B3045DC0C028A2E38958D67868C Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.OnCallFailed_9163A3F940C5996E0C84719EFCC9D6CC
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -442,11 +696,11 @@ void UB_FriendManager_C::OnCallFailed_B33D6C834A0A27D7DA8F8F82F18E25A2(int32 Loc
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           Namespace                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           NameSpace                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString                           Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::OnCallFailed_C6AF14174F5F3FA5A72F6B94079D59F1(const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, bool bWasSuccessful, const class FString& Error)
+void UB_FriendManager_C::OnCallFailed_C6AF14174F5F3FA5A72F6B94079D59F1(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
@@ -456,9 +710,31 @@ void UB_FriendManager_C::OnCallFailed_C6AF14174F5F3FA5A72F6B94079D59F1(const str
 	Params::B_FriendManager_C_OnCallFailed_C6AF14174F5F3FA5A72F6B94079D59F1 Parms{};
 
 	Parms.UserId = std::move(UserId);
-	Parms.Namespace = std::move(Namespace);
+	Parms.NameSpace = std::move(NameSpace);
 	Parms.bWasSuccessful = bWasSuccessful;
 	Parms.Error = std::move(Error);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnCallFailed_D598B6AB4EEDD82BCA41F199F4178D65
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnCallFailed_D598B6AB4EEDD82BCA41F199F4178D65(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnCallFailed_D598B6AB4EEDD82BCA41F199F4178D65");
+
+	Params::B_FriendManager_C_OnCallFailed_D598B6AB4EEDD82BCA41F199F4178D65 Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -490,6 +766,26 @@ void UB_FriendManager_C::OnDeleteFriendComplete_3ADB22B24A96F6453AEA11A8FEA28B30
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FTradeRequest>            Requests                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC(const TArray<struct FTradeRequest>& Requests)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC");
+
+	Params::B_FriendManager_C_OnFailure_2BDD73BC4F7A4C29B5381C82D68320BC Parms{};
+
+	Parms.Requests = std::move(Requests);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.OnFriendInviteReceived
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -509,20 +805,6 @@ void UB_FriendManager_C::OnFriendInviteReceived(const struct FUniqueNetIdRepl& U
 	Parms.FriendId = std::move(FriendId);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_FriendManager.B_FriendManager_C.OnFriendListReceived__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UB_FriendManager_C::OnFriendListReceived__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_FriendManager_C", "OnFriendListReceived__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -547,6 +829,72 @@ void UB_FriendManager_C::OnFriendSessionInviteReceived(const struct FUniqueNetId
 	Parms.FromId = std::move(FromId);
 	Parms.AppId = std::move(AppId);
 	Parms.InviteResult = std::move(InviteResult);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnMessageArrayProcessed_58E39F564E6C2711062EE58CCD7FE7CA
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnMessageArrayProcessed_58E39F564E6C2711062EE58CCD7FE7CA(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnMessageArrayProcessed_58E39F564E6C2711062EE58CCD7FE7CA");
+
+	Params::B_FriendManager_C_OnMessageArrayProcessed_58E39F564E6C2711062EE58CCD7FE7CA Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C");
+
+	Params::B_FriendManager_C_OnMessageArrayProcessed_652B7B3045DC0C028A2E38958D67868C Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.OnMessageArrayProcessed_D598B6AB4EEDD82BCA41F199F4178D65
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnMessageArrayProcessed_D598B6AB4EEDD82BCA41F199F4178D65(bool bSuccess, const TArray<class FString>& SanitizedMessages)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnMessageArrayProcessed_D598B6AB4EEDD82BCA41F199F4178D65");
+
+	Params::B_FriendManager_C_OnMessageArrayProcessed_D598B6AB4EEDD82BCA41F199F4178D65 Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -628,11 +976,11 @@ void UB_FriendManager_C::OnPresenceTaskComplete_0905DDA04E51AF50B20F78A1FAAC3F6C
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           Namespace                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           NameSpace                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString                           Error                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::OnQueryRecentPlayersComplete_C6AF14174F5F3FA5A72F6B94079D59F1(const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, bool bWasSuccessful, const class FString& Error)
+void UB_FriendManager_C::OnQueryRecentPlayersComplete_C6AF14174F5F3FA5A72F6B94079D59F1(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, bool bWasSuccessful, const class FString& Error)
 {
 	static class UFunction* Func = nullptr;
 
@@ -642,7 +990,7 @@ void UB_FriendManager_C::OnQueryRecentPlayersComplete_C6AF14174F5F3FA5A72F6B9407
 	Params::B_FriendManager_C_OnQueryRecentPlayersComplete_C6AF14174F5F3FA5A72F6B94079D59F1 Parms{};
 
 	Parms.UserId = std::move(UserId);
-	Parms.Namespace = std::move(Namespace);
+	Parms.NameSpace = std::move(NameSpace);
 	Parms.bWasSuccessful = bWasSuccessful;
 	Parms.Error = std::move(Error);
 
@@ -768,6 +1116,26 @@ void UB_FriendManager_C::OnSendInviteComplete_B33D6C834A0A27D7DA8F8F82F18E25A2(i
 }
 
 
+// Function B_FriendManager.B_FriendManager_C.OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FTradeRequest>            Requests                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC(const TArray<struct FTradeRequest>& Requests)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC");
+
+	Params::B_FriendManager_C_OnSuccess_2BDD73BC4F7A4C29B5381C82D68320BC Parms{};
+
+	Parms.Requests = std::move(Requests);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_FriendManager.B_FriendManager_C.QueryUserInfoQueued
 // (BlueprintCallable, BlueprintEvent)
 
@@ -866,12 +1234,83 @@ void UB_FriendManager_C::RequestRecentPlayersPresence()
 }
 
 
-// Function B_FriendManager.B_FriendManager_C.SendFriendInvite
+// Function B_FriendManager.B_FriendManager_C.RequestUserInfo
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 NetId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UB_FriendManager_C::RequestUserInfo(const struct FUniqueNetIdRepl& NetId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "RequestUserInfo");
+
+	Params::B_FriendManager_C_RequestUserInfo Parms{};
+
+	Parms.NetId = std::move(NetId);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.SanitizeFriendNames
 // (BlueprintCallable, BlueprintEvent)
+
+void UB_FriendManager_C::SanitizeFriendNames()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SanitizeFriendNames");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.SanitizePlayerNames
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UOnlineUserRef*>           Users                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UB_FriendManager_C::SanitizePlayerNames(TArray<class UOnlineUserRef*>& Users)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SanitizePlayerNames");
+
+	Params::B_FriendManager_C_SanitizePlayerNames Parms{};
+
+	Parms.Users = std::move(Users);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Users = std::move(Parms.Users);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.SanitizeRecentPlayerNames
+// (BlueprintCallable, BlueprintEvent)
+
+void UB_FriendManager_C::SanitizeRecentPlayerNames()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SanitizeRecentPlayerNames");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.SendFriendInvite
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FUniqueNetIdRepl                 FriendId                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    InitialSuccess                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_FriendManager_C::SendFriendInvite(const struct FUniqueNetIdRepl& FriendId)
+void UB_FriendManager_C::SendFriendInvite(const struct FUniqueNetIdRepl& FriendId, bool* InitialSuccess)
 {
 	static class UFunction* Func = nullptr;
 
@@ -883,6 +1322,9 @@ void UB_FriendManager_C::SendFriendInvite(const struct FUniqueNetIdRepl& FriendI
 	Parms.FriendId = std::move(FriendId);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (InitialSuccess != nullptr)
+		*InitialSuccess = Parms.InitialSuccess;
 }
 
 
@@ -915,6 +1357,52 @@ void UB_FriendManager_C::SendSessionInvite(const struct FUniqueNetIdRepl& Friend
 	Params::B_FriendManager_C_SendSessionInvite Parms{};
 
 	Parms.Friend = std::move(Friend);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.SetHasIncomingTradeRequests
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    HasIncomingTradeRequests_0                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::SetHasIncomingTradeRequests(bool HasIncomingTradeRequests_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "SetHasIncomingTradeRequests");
+
+	Params::B_FriendManager_C_SetHasIncomingTradeRequests Parms{};
+
+	Parms.HasIncomingTradeRequests_0 = HasIncomingTradeRequests_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_FriendManager.B_FriendManager_C.TradeNotifyReceived
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETradeReason                            Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PendingTradeId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SourcePlayerId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           TargetPlayerId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UB_FriendManager_C::TradeNotifyReceived(ETradeReason Reason, int64 PendingTradeId, const class FString& SourcePlayerId, const class FString& TargetPlayerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_FriendManager_C", "TradeNotifyReceived");
+
+	Params::B_FriendManager_C_TradeNotifyReceived Parms{};
+
+	Parms.Reason = Reason;
+	Parms.PendingTradeId = PendingTradeId;
+	Parms.SourcePlayerId = std::move(SourcePlayerId);
+	Parms.TargetPlayerId = std::move(TargetPlayerId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

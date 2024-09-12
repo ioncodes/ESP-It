@@ -45,7 +45,7 @@ struct SteamBeaconPlayerController_IsPlayerControllerUniqueIdMatch final
 public:
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FB0[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamBeaconPlayerController_IsPlayerControllerUniqueIdMatch) == 0x000008, "Wrong alignment on SteamBeaconPlayerController_IsPlayerControllerUniqueIdMatch");
 static_assert(sizeof(SteamBeaconPlayerController_IsPlayerControllerUniqueIdMatch) == 0x000038, "Wrong size on SteamBeaconPlayerController_IsPlayerControllerUniqueIdMatch");
@@ -59,7 +59,7 @@ struct SteamBeaconPlayerController_IsPlayerVoiceMuted final
 public:
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FB1[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamBeaconPlayerController_IsPlayerVoiceMuted) == 0x000008, "Wrong alignment on SteamBeaconPlayerController_IsPlayerVoiceMuted");
 static_assert(sizeof(SteamBeaconPlayerController_IsPlayerVoiceMuted) == 0x000038, "Wrong size on SteamBeaconPlayerController_IsPlayerVoiceMuted");

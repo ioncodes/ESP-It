@@ -10,37 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "AB_HunterFirstPerson_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_HunterFirstPerson.AB_HunterFirstPerson_C
-// 0x0130 (0x0480 - 0x0350)
+// 0x0130 (0x04A0 - 0x0370)
 class UAB_HunterFirstPerson_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_22AC[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct AB_HunterFirstPerson::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0358(0x0008)(HasGetValueTypeHash)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0360(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0368(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0370(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x0390(0x0070)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0400(0x0048)()
-	struct FRotator                               LastRotation;                                      // 0x0448(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsWalking;                                         // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22AD[0x7];                                     // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Speed;                                             // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_Hunter_C*                            Hunter;                                            // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct AB_HunterFirstPerson::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0378(0x0008)(HasGetValueTypeHash)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0380(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0388(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0390(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x03B0(0x0070)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0420(0x0048)()
+	struct FRotator                               LastRotation;                                      // 0x0468(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsWalking;                                         // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Speed;                                             // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_Hunter_C*                            Hunter;                                            // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void ExecuteUbergraph_AB_HunterFirstPerson(int32 EntryPoint);
 
@@ -55,18 +55,18 @@ public:
 	}
 };
 static_assert(alignof(UAB_HunterFirstPerson_C) == 0x000010, "Wrong alignment on UAB_HunterFirstPerson_C");
-static_assert(sizeof(UAB_HunterFirstPerson_C) == 0x000480, "Wrong size on UAB_HunterFirstPerson_C");
-static_assert(offsetof(UAB_HunterFirstPerson_C, UberGraphFrame) == 0x000350, "Member 'UAB_HunterFirstPerson_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, __AnimBlueprintMutables) == 0x000358, "Member 'UAB_HunterFirstPerson_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, AnimBlueprintExtension_PropertyAccess) == 0x000360, "Member 'UAB_HunterFirstPerson_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, AnimBlueprintExtension_Base) == 0x000368, "Member 'UAB_HunterFirstPerson_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, AnimGraphNode_Root) == 0x000370, "Member 'UAB_HunterFirstPerson_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, AnimGraphNode_BlendSpacePlayer) == 0x000390, "Member 'UAB_HunterFirstPerson_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, AnimGraphNode_Slot) == 0x000400, "Member 'UAB_HunterFirstPerson_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, LastRotation) == 0x000448, "Member 'UAB_HunterFirstPerson_C::LastRotation' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, IsWalking) == 0x000460, "Member 'UAB_HunterFirstPerson_C::IsWalking' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, Speed) == 0x000468, "Member 'UAB_HunterFirstPerson_C::Speed' has a wrong offset!");
-static_assert(offsetof(UAB_HunterFirstPerson_C, Hunter) == 0x000470, "Member 'UAB_HunterFirstPerson_C::Hunter' has a wrong offset!");
+static_assert(sizeof(UAB_HunterFirstPerson_C) == 0x0004A0, "Wrong size on UAB_HunterFirstPerson_C");
+static_assert(offsetof(UAB_HunterFirstPerson_C, UberGraphFrame) == 0x000370, "Member 'UAB_HunterFirstPerson_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, __AnimBlueprintMutables) == 0x000378, "Member 'UAB_HunterFirstPerson_C::__AnimBlueprintMutables' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, AnimBlueprintExtension_PropertyAccess) == 0x000380, "Member 'UAB_HunterFirstPerson_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, AnimBlueprintExtension_Base) == 0x000388, "Member 'UAB_HunterFirstPerson_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, AnimGraphNode_Root) == 0x000390, "Member 'UAB_HunterFirstPerson_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, AnimGraphNode_BlendSpacePlayer) == 0x0003B0, "Member 'UAB_HunterFirstPerson_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, AnimGraphNode_Slot) == 0x000420, "Member 'UAB_HunterFirstPerson_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, LastRotation) == 0x000468, "Member 'UAB_HunterFirstPerson_C::LastRotation' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, IsWalking) == 0x000480, "Member 'UAB_HunterFirstPerson_C::IsWalking' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, Speed) == 0x000488, "Member 'UAB_HunterFirstPerson_C::Speed' has a wrong offset!");
+static_assert(offsetof(UAB_HunterFirstPerson_C, Hunter) == 0x000490, "Member 'UAB_HunterFirstPerson_C::Hunter' has a wrong offset!");
 
 }
 

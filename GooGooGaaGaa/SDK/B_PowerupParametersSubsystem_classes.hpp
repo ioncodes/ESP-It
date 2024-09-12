@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
 
@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0030(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TMap<E_PowerupRuleType, class UPowerupParameters*> PowerupParameters;                                 // 0x0038(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          UsingCustomRules;                                  // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3901[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_HunterCooldownReductionParameters_C* HunterCooldownReduction;                           // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_HunterRapidFireParameters_C*         HunterRapidFire;                                   // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_HunterSpeedboostParameters_C*        HunterSpeedBoost;                                  // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -41,7 +41,8 @@ public:
 	void ApplyPowerupRuleParameters(TArray<struct FS_PowerupRules>& PowerupRules);
 	void ExecuteUbergraph_B_PowerupParametersSubsystem(int32 EntryPoint);
 	void GetDefaultPowerupParameterValue(E_PowerupRuleType PowerupType, const struct FUIParameterData& UIParameter, struct FUIParam* DefaultValue);
-	void GetPowerupParameters(E_PowerupRuleType Powerup, class UPowerupParameters** Param_PowerupParameters);
+	TArray<struct FUIParam> GetDefaultPowerupParameterValues(TArray<struct FUIParameterData>& UIParameters, E_PowerupRuleType PowerupType);
+	void GetPowerupParameters(E_PowerupRuleType Powerup, class UPowerupParameters** PowerupParameters_0);
 	void GetUIParameters(E_PowerupRuleType PowerupType, TArray<struct FUIParameterData>* UIParameters);
 	void InitializeDefaultPowerups();
 	void InitializeSubsystem();

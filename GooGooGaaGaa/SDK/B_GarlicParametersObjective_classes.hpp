@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GarlicParametersObjective.B_GarlicParametersObjective_C
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x0070 - 0x0070)
 class UB_GarlicParametersObjective_C final : public UB_GarlicParameters_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UB_GarlicParametersObjective_C) == 0x000008, "Wrong alignment on UB_GarlicParametersObjective_C");
-static_assert(sizeof(UB_GarlicParametersObjective_C) == 0x000078, "Wrong size on UB_GarlicParametersObjective_C");
+static_assert(sizeof(UB_GarlicParametersObjective_C) == 0x000070, "Wrong size on UB_GarlicParametersObjective_C");
 
 }
 

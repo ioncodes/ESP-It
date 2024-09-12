@@ -74,10 +74,10 @@ ESlateVisibility UWB_PlayerBlock_C::GetTalkingIndicatorVisibility()
 // Function WB_PlayerBlock.WB_PlayerBlock_C.GetPingOrBotText
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APlayerState*                     Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class APlayerState*                     PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText UWB_PlayerBlock_C::GetPingOrBotText(class APlayerState*& Param_PlayerState)
+class FText UWB_PlayerBlock_C::GetPingOrBotText(class APlayerState*& PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,11 +86,11 @@ class FText UWB_PlayerBlock_C::GetPingOrBotText(class APlayerState*& Param_Playe
 
 	Params::WB_PlayerBlock_C_GetPingOrBotText Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_PlayerState = Parms.Param_PlayerState;
+	PlayerState_0 = Parms.PlayerState_0;
 
 	return Parms.ReturnValue;
 }
@@ -99,10 +99,10 @@ class FText UWB_PlayerBlock_C::GetPingOrBotText(class APlayerState*& Param_Playe
 // Function WB_PlayerBlock.WB_PlayerBlock_C.GetKOText
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText UWB_PlayerBlock_C::GetKOText(class AB_PlayerState_C*& Param_PlayerState)
+class FText UWB_PlayerBlock_C::GetKOText(class AB_PlayerState_C*& PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -111,11 +111,11 @@ class FText UWB_PlayerBlock_C::GetKOText(class AB_PlayerState_C*& Param_PlayerSt
 
 	Params::WB_PlayerBlock_C_GetKOText Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_PlayerState = Parms.Param_PlayerState;
+	PlayerState_0 = Parms.PlayerState_0;
 
 	return Parms.ReturnValue;
 }

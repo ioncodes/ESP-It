@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_GridButtonGrid.WB_GridButtonGrid_C
-// 0x0078 (0x0338 - 0x02C0)
+// 0x0078 (0x0358 - 0x02E0)
 class UWB_GridButtonGrid_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UUniformGridPanel*                      Grid;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMap<class UClass*, int32>                    FocusedGridButtonIndices;                          // 0x02D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         GridButtonsPerRow;                                 // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentCol;                                        // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentRow;                                        // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UUniformGridPanel*                      Grid;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMap<class UClass*, int32>                    FocusedGridButtonIndices;                          // 0x02F8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         GridButtonsPerRow;                                 // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentCol;                                        // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentRow;                                        // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class UWB_GridButton_C* GetChildAt(int32 Param_Index);
+	class UWB_GridButton_C* GetChildAt(int32 Index_0);
 	void ScrollToFocusedGridButton();
 	void AddChild(class UWidget* Content);
 	void ClearChildren();
@@ -52,14 +52,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_GridButtonGrid_C) == 0x000008, "Wrong alignment on UWB_GridButtonGrid_C");
-static_assert(sizeof(UWB_GridButtonGrid_C) == 0x000338, "Wrong size on UWB_GridButtonGrid_C");
-static_assert(offsetof(UWB_GridButtonGrid_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_GridButtonGrid_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_GridButtonGrid_C, Grid) == 0x0002C8, "Member 'UWB_GridButtonGrid_C::Grid' has a wrong offset!");
-static_assert(offsetof(UWB_GridButtonGrid_C, ScrollBox) == 0x0002D0, "Member 'UWB_GridButtonGrid_C::ScrollBox' has a wrong offset!");
-static_assert(offsetof(UWB_GridButtonGrid_C, FocusedGridButtonIndices) == 0x0002D8, "Member 'UWB_GridButtonGrid_C::FocusedGridButtonIndices' has a wrong offset!");
-static_assert(offsetof(UWB_GridButtonGrid_C, GridButtonsPerRow) == 0x000328, "Member 'UWB_GridButtonGrid_C::GridButtonsPerRow' has a wrong offset!");
-static_assert(offsetof(UWB_GridButtonGrid_C, CurrentCol) == 0x00032C, "Member 'UWB_GridButtonGrid_C::CurrentCol' has a wrong offset!");
-static_assert(offsetof(UWB_GridButtonGrid_C, CurrentRow) == 0x000330, "Member 'UWB_GridButtonGrid_C::CurrentRow' has a wrong offset!");
+static_assert(sizeof(UWB_GridButtonGrid_C) == 0x000358, "Wrong size on UWB_GridButtonGrid_C");
+static_assert(offsetof(UWB_GridButtonGrid_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_GridButtonGrid_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_GridButtonGrid_C, Grid) == 0x0002E8, "Member 'UWB_GridButtonGrid_C::Grid' has a wrong offset!");
+static_assert(offsetof(UWB_GridButtonGrid_C, ScrollBox) == 0x0002F0, "Member 'UWB_GridButtonGrid_C::ScrollBox' has a wrong offset!");
+static_assert(offsetof(UWB_GridButtonGrid_C, FocusedGridButtonIndices) == 0x0002F8, "Member 'UWB_GridButtonGrid_C::FocusedGridButtonIndices' has a wrong offset!");
+static_assert(offsetof(UWB_GridButtonGrid_C, GridButtonsPerRow) == 0x000348, "Member 'UWB_GridButtonGrid_C::GridButtonsPerRow' has a wrong offset!");
+static_assert(offsetof(UWB_GridButtonGrid_C, CurrentCol) == 0x00034C, "Member 'UWB_GridButtonGrid_C::CurrentCol' has a wrong offset!");
+static_assert(offsetof(UWB_GridButtonGrid_C, CurrentRow) == 0x000350, "Member 'UWB_GridButtonGrid_C::CurrentRow' has a wrong offset!");
 
 }
 

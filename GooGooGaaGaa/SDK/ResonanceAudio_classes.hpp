@@ -12,9 +12,9 @@
 
 #include "ResonanceAudio_structs.hpp"
 #include "AudioExtensions_classes.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -26,7 +26,7 @@ class UResonanceAudioSoundfieldSettings final : public USoundfieldEncodingSettin
 {
 public:
 	EResonanceRenderMode                          RenderMode;                                        // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32D7[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -64,13 +64,13 @@ static_assert(alignof(UResonanceAudioBlueprintFunctionLibrary) == 0x000008, "Wro
 static_assert(sizeof(UResonanceAudioBlueprintFunctionLibrary) == 0x000028, "Wrong size on UResonanceAudioBlueprintFunctionLibrary");
 
 // Class ResonanceAudio.ResonanceAudioDirectivityVisualizer
-// 0x0080 (0x0318 - 0x0298)
+// 0x0080 (0x0310 - 0x0290)
 class AResonanceAudioDirectivityVisualizer final : public AActor
 {
 public:
-	uint8                                         Pad_32D8[0x70];                                    // 0x0298(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterial*                              Material;                                          // 0x0308(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UResonanceAudioSpatializationSourceSettings* Settings;                                          // 0x0310(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_290[0x70];                                     // 0x0290(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterial*                              Material;                                          // 0x0300(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UResonanceAudioSpatializationSourceSettings* Settings;                                          // 0x0308(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -83,16 +83,16 @@ public:
 	}
 };
 static_assert(alignof(AResonanceAudioDirectivityVisualizer) == 0x000008, "Wrong alignment on AResonanceAudioDirectivityVisualizer");
-static_assert(sizeof(AResonanceAudioDirectivityVisualizer) == 0x000318, "Wrong size on AResonanceAudioDirectivityVisualizer");
-static_assert(offsetof(AResonanceAudioDirectivityVisualizer, Material) == 0x000308, "Member 'AResonanceAudioDirectivityVisualizer::Material' has a wrong offset!");
-static_assert(offsetof(AResonanceAudioDirectivityVisualizer, Settings) == 0x000310, "Member 'AResonanceAudioDirectivityVisualizer::Settings' has a wrong offset!");
+static_assert(sizeof(AResonanceAudioDirectivityVisualizer) == 0x000310, "Wrong size on AResonanceAudioDirectivityVisualizer");
+static_assert(offsetof(AResonanceAudioDirectivityVisualizer, Material) == 0x000300, "Member 'AResonanceAudioDirectivityVisualizer::Material' has a wrong offset!");
+static_assert(offsetof(AResonanceAudioDirectivityVisualizer, Settings) == 0x000308, "Member 'AResonanceAudioDirectivityVisualizer::Settings' has a wrong offset!");
 
 // Class ResonanceAudio.ResonanceAudioReverbPluginPreset
 // 0x0108 (0x0170 - 0x0068)
 class UResonanceAudioReverbPluginPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_32D9[0x98];                                    // 0x0068(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x98];                                      // 0x0068(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FResonanceAudioReverbPluginSettings    Settings;                                          // 0x0100(0x0070)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
@@ -127,7 +127,7 @@ class UResonanceAudioSettings final : public UObject
 public:
 	struct FSoftObjectPath                        OutputSubmix;                                      // 0x0028(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERaQualityMode                                QualityMode;                                       // 0x0048(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32DA[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        GlobalReverbPreset;                                // 0x0050(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        GlobalSourcePreset;                                // 0x0070(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -154,18 +154,18 @@ class UResonanceAudioSpatializationSourceSettings final : public USpatialization
 {
 public:
 	ERaSpatializationMethod                       SpatializationMethod;                              // 0x0028(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32DB[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Pattern;                                           // 0x002C(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Sharpness;                                         // 0x0030(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bToggleVisualization;                              // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32DC[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Scale;                                             // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Spread;                                            // 0x003C(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERaDistanceRolloffModel                       Rolloff;                                           // 0x0040(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32DD[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinDistance;                                       // 0x0044(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxDistance;                                       // 0x0048(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32DE[0x4];                                     // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetSoundSourceDirectivity(float InPattern, float InSharpness);

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_structs.hpp"
 #include "E_SkillRuleType_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ struct FS_SkillRules final
 {
 public:
 	E_SkillRuleType                               SkillType_2_5808B66B468AC4EC8E4F7096273ED505;      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3509[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParam>                       SkillParameters_6_41DDEB6C424E37EF4C61239795AF12B0; // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FS_SkillRules) == 0x000008, "Wrong alignment on FS_SkillRules");

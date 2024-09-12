@@ -92,9 +92,9 @@ void UWB_SmallDowntimeBlock_C::ParseSystemMessage(const struct FS_SystemMessage&
 // Function WB_SmallDowntimeBlock.WB_SmallDowntimeBlock_C.ShowDowntimeMessage
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FS_SystemMessage                 Param_Message                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// struct FS_SystemMessage                 Message_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWB_SmallDowntimeBlock_C::ShowDowntimeMessage(const struct FS_SystemMessage& Param_Message)
+void UWB_SmallDowntimeBlock_C::ShowDowntimeMessage(const struct FS_SystemMessage& Message_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -103,7 +103,7 @@ void UWB_SmallDowntimeBlock_C::ShowDowntimeMessage(const struct FS_SystemMessage
 
 	Params::WB_SmallDowntimeBlock_C_ShowDowntimeMessage Parms{};
 
-	Parms.Param_Message = std::move(Param_Message);
+	Parms.Message_0 = std::move(Message_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

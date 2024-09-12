@@ -60,9 +60,9 @@ void UWB_SkillListPopup_C::CheckIfPlayerWantsRandomSkills(class UWB_SelectionSki
 // Parameters:
 // class AB_PlayerState_C*                 Owning_Player                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           Skill                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// ESkillCategory                          Param_SkillCategory                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESkillCategory                          SkillCategory_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillListPopup_C::Client_Select_Skill(class AB_PlayerState_C* Owning_Player, class UClass* Skill, ESkillCategory Param_SkillCategory)
+void UWB_SkillListPopup_C::Client_Select_Skill(class AB_PlayerState_C* Owning_Player, class UClass* Skill, ESkillCategory SkillCategory_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -73,7 +73,7 @@ void UWB_SkillListPopup_C::Client_Select_Skill(class AB_PlayerState_C* Owning_Pl
 
 	Parms.Owning_Player = Owning_Player;
 	Parms.Skill = Skill;
-	Parms.Param_SkillCategory = Param_SkillCategory;
+	Parms.SkillCategory_0 = SkillCategory_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -102,9 +102,9 @@ void UWB_SkillListPopup_C::ExecuteUbergraph_WB_SkillListPopup(int32 EntryPoint)
 // Function WB_SkillListPopup.WB_SkillListPopup_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Param_InitialFocusWidget                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      InitialFocusWidget_0                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillListPopup_C::GetInitialFocusWidget(class UUserWidget** Param_InitialFocusWidget)
+void UWB_SkillListPopup_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -115,8 +115,8 @@ void UWB_SkillListPopup_C::GetInitialFocusWidget(class UUserWidget** Param_Initi
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_InitialFocusWidget != nullptr)
-		*Param_InitialFocusWidget = Parms.Param_InitialFocusWidget;
+	if (InitialFocusWidget_0 != nullptr)
+		*InitialFocusWidget_0 = Parms.InitialFocusWidget_0;
 }
 
 
@@ -215,9 +215,9 @@ void UWB_SkillListPopup_C::SelectSkill(class UWB_SelectionSkill_C* SelectionSkil
 // Parameters:
 // ETeamID                                 SetTeam                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESkillCategory                          SetSkillCategory                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWB_SkillSelectionBlock_C*        Param_SkillSelectionBlock                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWB_SkillSelectionBlock_C*        SkillSelectionBlock_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillListPopup_C::SetTeamAndCategory(ETeamID SetTeam, ESkillCategory SetSkillCategory, class UWB_SkillSelectionBlock_C* Param_SkillSelectionBlock)
+void UWB_SkillListPopup_C::SetTeamAndCategory(ETeamID SetTeam, ESkillCategory SetSkillCategory, class UWB_SkillSelectionBlock_C* SkillSelectionBlock_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -228,7 +228,7 @@ void UWB_SkillListPopup_C::SetTeamAndCategory(ETeamID SetTeam, ESkillCategory Se
 
 	Parms.SetTeam = SetTeam;
 	Parms.SetSkillCategory = SetSkillCategory;
-	Parms.Param_SkillSelectionBlock = Param_SkillSelectionBlock;
+	Parms.SkillSelectionBlock_0 = SkillSelectionBlock_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

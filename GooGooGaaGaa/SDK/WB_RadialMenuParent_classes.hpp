@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_RadialMenuParent.WB_RadialMenuParent_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_RadialMenuParent_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UImage*>                         OptionHighlightBeam;                               // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UWB_RadialMenuOptionWidget_C*>   OptionWidgets;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class FText>                           OptionTitles;                                      // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<double>                                HighlightAngles;                                   // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         SelectedOptionIndex;                               // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UImage*>                         OptionHighlightBeam;                               // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UWB_RadialMenuOptionWidget_C*>   OptionWidgets;                                     // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class FText>                           OptionTitles;                                      // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                                HighlightAngles;                                   // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         SelectedOptionIndex;                               // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ActivateOption();
@@ -50,13 +50,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_RadialMenuParent_C) == 0x000008, "Wrong alignment on UWB_RadialMenuParent_C");
-static_assert(sizeof(UWB_RadialMenuParent_C) == 0x000310, "Wrong size on UWB_RadialMenuParent_C");
-static_assert(offsetof(UWB_RadialMenuParent_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_RadialMenuParent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuParent_C, OptionHighlightBeam) == 0x0002C8, "Member 'UWB_RadialMenuParent_C::OptionHighlightBeam' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuParent_C, OptionWidgets) == 0x0002D8, "Member 'UWB_RadialMenuParent_C::OptionWidgets' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuParent_C, OptionTitles) == 0x0002E8, "Member 'UWB_RadialMenuParent_C::OptionTitles' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuParent_C, HighlightAngles) == 0x0002F8, "Member 'UWB_RadialMenuParent_C::HighlightAngles' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuParent_C, SelectedOptionIndex) == 0x000308, "Member 'UWB_RadialMenuParent_C::SelectedOptionIndex' has a wrong offset!");
+static_assert(sizeof(UWB_RadialMenuParent_C) == 0x000330, "Wrong size on UWB_RadialMenuParent_C");
+static_assert(offsetof(UWB_RadialMenuParent_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_RadialMenuParent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuParent_C, OptionHighlightBeam) == 0x0002E8, "Member 'UWB_RadialMenuParent_C::OptionHighlightBeam' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuParent_C, OptionWidgets) == 0x0002F8, "Member 'UWB_RadialMenuParent_C::OptionWidgets' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuParent_C, OptionTitles) == 0x000308, "Member 'UWB_RadialMenuParent_C::OptionTitles' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuParent_C, HighlightAngles) == 0x000318, "Member 'UWB_RadialMenuParent_C::HighlightAngles' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuParent_C, SelectedOptionIndex) == 0x000328, "Member 'UWB_RadialMenuParent_C::SelectedOptionIndex' has a wrong offset!");
 
 }
 

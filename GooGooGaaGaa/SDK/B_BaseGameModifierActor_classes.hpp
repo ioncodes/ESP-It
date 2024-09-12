@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_BaseGameModifierActor.B_BaseGameModifierActor_C
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0010 (0x02A0 - 0x0290)
 class AB_BaseGameModifierActor_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CleanUpMod();
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(AB_BaseGameModifierActor_C) == 0x000008, "Wrong alignment on AB_BaseGameModifierActor_C");
-static_assert(sizeof(AB_BaseGameModifierActor_C) == 0x0002A8, "Wrong size on AB_BaseGameModifierActor_C");
-static_assert(offsetof(AB_BaseGameModifierActor_C, UberGraphFrame) == 0x000298, "Member 'AB_BaseGameModifierActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_BaseGameModifierActor_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_BaseGameModifierActor_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AB_BaseGameModifierActor_C) == 0x0002A0, "Wrong size on AB_BaseGameModifierActor_C");
+static_assert(offsetof(AB_BaseGameModifierActor_C, UberGraphFrame) == 0x000290, "Member 'AB_BaseGameModifierActor_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_BaseGameModifierActor_C, DefaultSceneRoot) == 0x000298, "Member 'AB_BaseGameModifierActor_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

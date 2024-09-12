@@ -123,34 +123,6 @@ struct FInterchangePipelinePropertyStates UInterchangePipelineBase::FindOrAddPro
 }
 
 
-// Function InterchangeCore.InterchangePipelineBase.ScriptedCanExecuteOnAnyThread
-// (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EInterchangePipelineTask                PipelineTask                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangePipelineBase::ScriptedCanExecuteOnAnyThread(EInterchangePipelineTask PipelineTask)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedCanExecuteOnAnyThread");
-
-	Params::InterchangePipelineBase_ScriptedCanExecuteOnAnyThread Parms{};
-
-	Parms.PipelineTask = PipelineTask;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function InterchangeCore.InterchangePipelineBase.ScriptedExecuteExportPipeline
 // (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -181,8 +153,9 @@ void UInterchangePipelineBase::ScriptedExecuteExportPipeline(class UInterchangeB
 // Parameters:
 // class UInterchangeBaseNodeContainer*    BaseNodeContainer                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UInterchangeSourceData*>   SourceDatas                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FString                           ContentBasePath                                        (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangePipelineBase::ScriptedExecutePipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas)
+void UInterchangePipelineBase::ScriptedExecutePipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas, const class FString& ContentBasePath)
 {
 	static class UFunction* Func = nullptr;
 
@@ -193,6 +166,7 @@ void UInterchangePipelineBase::ScriptedExecutePipeline(class UInterchangeBaseNod
 
 	Parms.BaseNodeContainer = BaseNodeContainer;
 	Parms.SourceDatas = std::move(SourceDatas);
+	Parms.ContentBasePath = std::move(ContentBasePath);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -265,33 +239,6 @@ void UInterchangePipelineBase::ScriptedExecutePostImportPipeline(const class UIn
 }
 
 
-// Function InterchangeCore.InterchangePipelineBase.ScriptedExecutePreImportPipeline
-// (RequiredAPI, Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UInterchangeBaseNodeContainer*    BaseNodeContainer                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UInterchangeSourceData*>   SourceDatas                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UInterchangePipelineBase::ScriptedExecutePreImportPipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedExecutePreImportPipeline");
-
-	Params::InterchangePipelineBase_ScriptedExecutePreImportPipeline Parms{};
-
-	Parms.BaseNodeContainer = BaseNodeContainer;
-	Parms.SourceDatas = std::move(SourceDatas);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function InterchangeCore.InterchangePipelineBase.ScriptedSetReimportSourceIndex
 // (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -335,6 +282,31 @@ bool UInterchangePipelineBase::DoesPropertyStatesExist(const class FName Propert
 	Params::InterchangePipelineBase_DoesPropertyStatesExist Parms{};
 
 	Parms.PropertyPath = PropertyPath;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeCore.InterchangePipelineBase.ScriptedGetPipelineDisplayName
+// (RequiredAPI, Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UInterchangePipelineBase::ScriptedGetPipelineDisplayName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangePipelineBase", "ScriptedGetPipelineDisplayName");
+
+	Params::InterchangePipelineBase_ScriptedGetPipelineDisplayName Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1398,6 +1370,25 @@ void UInterchangeBaseNodeContainer::ReplaceNode(const class FString& NodeUniqueI
 }
 
 
+// Function InterchangeCore.InterchangeBaseNodeContainer.Reset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UInterchangeBaseNodeContainer::Reset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeBaseNodeContainer", "Reset");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function InterchangeCore.InterchangeBaseNodeContainer.ResetChildrenCache
 // (Final, Native, Public, BlueprintCallable)
 
@@ -2019,10 +2010,10 @@ int32 UInterchangeFactoryBaseNode::GetFactoryDependenciesCount() const
 // Function InterchangeCore.InterchangeFactoryBaseNode.GetFactoryDependency
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutDependency                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeFactoryBaseNode::GetFactoryDependency(const int32 Param_Index, class FString* OutDependency) const
+void UInterchangeFactoryBaseNode::GetFactoryDependency(const int32 Index_0, class FString* OutDependency) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2031,7 +2022,7 @@ void UInterchangeFactoryBaseNode::GetFactoryDependency(const int32 Param_Index, 
 
 	Params::InterchangeFactoryBaseNode_GetFactoryDependency Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2553,9 +2544,10 @@ bool UInterchangeSourceNode::GetCustomSourceTimelineStart(double* AttributeValue
 // class FString                           UserDefinedAttributeName                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           PayloadKey                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    RequiresDelegate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Boolean(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const bool& Value, const class FString& PayloadKey)
+bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Boolean(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const bool& Value, const class FString& PayloadKey, bool RequiresDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2568,6 +2560,7 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Boolean(cl
 	Parms.UserDefinedAttributeName = std::move(UserDefinedAttributeName);
 	Parms.Value = Value;
 	Parms.PayloadKey = std::move(PayloadKey);
+	Parms.RequiresDelegate = RequiresDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2587,9 +2580,10 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Boolean(cl
 // class FString                           UserDefinedAttributeName                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           PayloadKey                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    RequiresDelegate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Double(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const double& Value, const class FString& PayloadKey)
+bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Double(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const double& Value, const class FString& PayloadKey, bool RequiresDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2602,6 +2596,7 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Double(cla
 	Parms.UserDefinedAttributeName = std::move(UserDefinedAttributeName);
 	Parms.Value = Value;
 	Parms.PayloadKey = std::move(PayloadKey);
+	Parms.RequiresDelegate = RequiresDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2621,9 +2616,10 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Double(cla
 // class FString                           UserDefinedAttributeName                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           PayloadKey                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    RequiresDelegate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Float(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const float& Value, const class FString& PayloadKey)
+bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Float(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const float& Value, const class FString& PayloadKey, bool RequiresDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2636,6 +2632,7 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Float(clas
 	Parms.UserDefinedAttributeName = std::move(UserDefinedAttributeName);
 	Parms.Value = Value;
 	Parms.PayloadKey = std::move(PayloadKey);
+	Parms.RequiresDelegate = RequiresDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2655,9 +2652,10 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Float(clas
 // class FString                           UserDefinedAttributeName                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           PayloadKey                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    RequiresDelegate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_FString(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const class FString& Value, const class FString& PayloadKey)
+bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_FString(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const class FString& Value, const class FString& PayloadKey, bool RequiresDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2670,6 +2668,7 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_FString(cl
 	Parms.UserDefinedAttributeName = std::move(UserDefinedAttributeName);
 	Parms.Value = std::move(Value);
 	Parms.PayloadKey = std::move(PayloadKey);
+	Parms.RequiresDelegate = RequiresDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2689,9 +2688,10 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_FString(cl
 // class FString                           UserDefinedAttributeName                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           PayloadKey                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    RequiresDelegate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Int32(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const int32& Value, const class FString& PayloadKey)
+bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Int32(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const int32& Value, const class FString& PayloadKey, bool RequiresDelegate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2704,6 +2704,7 @@ bool UInterchangeUserDefinedAttributesAPI::CreateUserDefinedAttribute_Int32(clas
 	Parms.UserDefinedAttributeName = std::move(UserDefinedAttributeName);
 	Parms.Value = Value;
 	Parms.PayloadKey = std::move(PayloadKey);
+	Parms.RequiresDelegate = RequiresDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

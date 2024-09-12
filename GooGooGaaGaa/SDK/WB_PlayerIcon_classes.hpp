@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlayerIcon.WB_PlayerIcon_C
-// 0x0100 (0x03C0 - 0x02C0)
+// 0x0100 (0x03E0 - 0x02E0)
 class UWB_PlayerIcon_C final : public UUserWidget
 {
 public:
-	class UImage*                                 IconPic;                                           // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Levelabel;                                         // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FSlateBrush                            Icon;                                              // 0x02D0(0x00D0)(Edit, BlueprintVisible)
-	int32                                         Level;                                             // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            LevelTextColor;                                    // 0x03A4(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UImage*                                 IconPic;                                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Levelabel;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FSlateBrush                            Icon;                                              // 0x02F0(0x00D0)(Edit, BlueprintVisible)
+	int32                                         Level;                                             // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            LevelTextColor;                                    // 0x03C4(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	struct FSlateColor Get_Levelabel_ColorAndOpacity_0();
@@ -43,12 +43,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlayerIcon_C) == 0x000010, "Wrong alignment on UWB_PlayerIcon_C");
-static_assert(sizeof(UWB_PlayerIcon_C) == 0x0003C0, "Wrong size on UWB_PlayerIcon_C");
-static_assert(offsetof(UWB_PlayerIcon_C, IconPic) == 0x0002C0, "Member 'UWB_PlayerIcon_C::IconPic' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerIcon_C, Levelabel) == 0x0002C8, "Member 'UWB_PlayerIcon_C::Levelabel' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerIcon_C, Icon) == 0x0002D0, "Member 'UWB_PlayerIcon_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerIcon_C, Level) == 0x0003A0, "Member 'UWB_PlayerIcon_C::Level' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerIcon_C, LevelTextColor) == 0x0003A4, "Member 'UWB_PlayerIcon_C::LevelTextColor' has a wrong offset!");
+static_assert(sizeof(UWB_PlayerIcon_C) == 0x0003E0, "Wrong size on UWB_PlayerIcon_C");
+static_assert(offsetof(UWB_PlayerIcon_C, IconPic) == 0x0002E0, "Member 'UWB_PlayerIcon_C::IconPic' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerIcon_C, Levelabel) == 0x0002E8, "Member 'UWB_PlayerIcon_C::Levelabel' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerIcon_C, Icon) == 0x0002F0, "Member 'UWB_PlayerIcon_C::Icon' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerIcon_C, Level) == 0x0003C0, "Member 'UWB_PlayerIcon_C::Level' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerIcon_C, LevelTextColor) == 0x0003C4, "Member 'UWB_PlayerIcon_C::LevelTextColor' has a wrong offset!");
 
 }
 

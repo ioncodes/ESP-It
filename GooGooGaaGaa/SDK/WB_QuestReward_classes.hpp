@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_QuestReward.WB_QuestReward_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_QuestReward_C final : public UUserWidget
 {
 public:
-	class UTextBlock*                             CountText;                                         // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                IconBorder;                                        // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 IconImage;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         Count;                                             // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ItemId;                                            // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             CountText;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                IconBorder;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 IconImage;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         Count;                                             // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ItemId;                                            // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	ESlateVisibility Get_CountText_Visibility_0();
@@ -44,12 +44,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_QuestReward_C) == 0x000008, "Wrong alignment on UWB_QuestReward_C");
-static_assert(sizeof(UWB_QuestReward_C) == 0x0002E0, "Wrong size on UWB_QuestReward_C");
-static_assert(offsetof(UWB_QuestReward_C, CountText) == 0x0002C0, "Member 'UWB_QuestReward_C::CountText' has a wrong offset!");
-static_assert(offsetof(UWB_QuestReward_C, IconBorder) == 0x0002C8, "Member 'UWB_QuestReward_C::IconBorder' has a wrong offset!");
-static_assert(offsetof(UWB_QuestReward_C, IconImage) == 0x0002D0, "Member 'UWB_QuestReward_C::IconImage' has a wrong offset!");
-static_assert(offsetof(UWB_QuestReward_C, Count) == 0x0002D8, "Member 'UWB_QuestReward_C::Count' has a wrong offset!");
-static_assert(offsetof(UWB_QuestReward_C, ItemId) == 0x0002DC, "Member 'UWB_QuestReward_C::ItemId' has a wrong offset!");
+static_assert(sizeof(UWB_QuestReward_C) == 0x000300, "Wrong size on UWB_QuestReward_C");
+static_assert(offsetof(UWB_QuestReward_C, CountText) == 0x0002E0, "Member 'UWB_QuestReward_C::CountText' has a wrong offset!");
+static_assert(offsetof(UWB_QuestReward_C, IconBorder) == 0x0002E8, "Member 'UWB_QuestReward_C::IconBorder' has a wrong offset!");
+static_assert(offsetof(UWB_QuestReward_C, IconImage) == 0x0002F0, "Member 'UWB_QuestReward_C::IconImage' has a wrong offset!");
+static_assert(offsetof(UWB_QuestReward_C, Count) == 0x0002F8, "Member 'UWB_QuestReward_C::Count' has a wrong offset!");
+static_assert(offsetof(UWB_QuestReward_C, ItemId) == 0x0002FC, "Member 'UWB_QuestReward_C::ItemId' has a wrong offset!");
 
 }
 

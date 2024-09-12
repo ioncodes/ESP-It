@@ -74,6 +74,20 @@ enum class EMeterPeakType : uint8
 	EMeterPeakType_MAX                       = 4,
 };
 
+// ScriptStruct AudioSynesthesia.ConstantQResults
+// 0x0018 (0x0018 - 0x0000)
+struct FConstantQResults final
+{
+public:
+	float                                         TimeSeconds;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 SpectrumValues;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FConstantQResults) == 0x000008, "Wrong alignment on FConstantQResults");
+static_assert(sizeof(FConstantQResults) == 0x000018, "Wrong size on FConstantQResults");
+static_assert(offsetof(FConstantQResults, TimeSeconds) == 0x000000, "Member 'FConstantQResults::TimeSeconds' has a wrong offset!");
+static_assert(offsetof(FConstantQResults, SpectrumValues) == 0x000008, "Member 'FConstantQResults::SpectrumValues' has a wrong offset!");
+
 // ScriptStruct AudioSynesthesia.LoudnessResults
 // 0x0010 (0x0010 - 0x0000)
 struct FLoudnessResults final
@@ -116,7 +130,7 @@ struct FSynesthesiaSpectrumResults final
 {
 public:
 	float                                         TimeSeconds;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_327A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 SpectrumValues;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSynesthesiaSpectrumResults) == 0x000008, "Wrong alignment on FSynesthesiaSpectrumResults");

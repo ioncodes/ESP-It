@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
 #include "EMenuState_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 
 
 namespace SDK
@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0030(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	EMenuState                                    CurrentMenuState;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SplashScreenShown;                                 // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46F5[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MenuMap;                                           // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	TMap<EMenuState, class UClass*>               MenuStateClasses;                                  // 0x0050(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<EMenuState, class UUserWidget*>          MenuStateWidgets;                                  // 0x00A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -35,7 +35,7 @@ public:
 	bool                                          IsMessageDialogOpen;                               // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsOverlayWidgetOpen;                               // 0x0101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsGamepadMode;                                     // 0x0102(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46F6[0x5];                                     // 0x0103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_103[0x5];                                      // 0x0103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, double>                   SessionPings;                                      // 0x0108(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             OnGamePadModeChanged;                              // 0x0158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
@@ -45,7 +45,7 @@ public:
 	void ChangeMenuAndOpenMenuMap(EMenuState MenuState);
 	void CloseDialog(class UUserWidget* Widget);
 	void ExecuteUbergraph_B_MenuUIManager(int32 EntryPoint);
-	void GetGameInstance(class UB_GameInstance_C** Param_GameInstance);
+	void GetGameInstance(class UB_GameInstance_C** GameInstance_0);
 	void GetWidget(EMenuState MenuState, class UUserWidget** UserWidget);
 	void HandleEnterMenu();
 	void HandleLeaveMenu(EMenuState TargetMenu);
@@ -54,7 +54,7 @@ public:
 	bool IsCurrentMenuMapLoaded();
 	void MakeSureMasterScreenIsInViewport();
 	void ShowConfirmationDialog(const class FString& Title, const class FString& Message, bool bShowBackButton, bool bAutoRevertVideoMode);
-	void ShowDialog(class UClass* Param_Class, class UUserWidget** Widget);
+	void ShowDialog(class UClass* Class_0, class UUserWidget** Widget);
 	void ShowMainMenu();
 	void ShowMessageDialog(const class FString& Title, const class FString& Text);
 	void ShowOverlayWidget(class UClass* OverlayWidget, class UWidget* BaseWidget, class UWidget* SizeWidget, const struct FVector2D& Offset, class UUserWidget** CreatedOverlayWidget);

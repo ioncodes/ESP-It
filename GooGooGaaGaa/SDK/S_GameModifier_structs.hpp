@@ -23,7 +23,7 @@ struct FS_GameModifier final
 {
 public:
 	E_GameModifierType                            ModifierType_2_FEC4E34148D09164EA058CBDDCBE4C7F;   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36F4[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParam>                       UIParameters_6_270A78AB4625673AD2C87194A200889D;   // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FS_GameModifier) == 0x000008, "Wrong alignment on FS_GameModifier");

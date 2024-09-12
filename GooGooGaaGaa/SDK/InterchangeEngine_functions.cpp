@@ -95,9 +95,11 @@ bool UInterchangeFilePickerBase::ScriptedFilePickerForTranslatorType(const EInte
 // TArray<struct FInterchangeStackInfo>    PipelineStacks                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<class UInterchangePipelineBase*> OutPipelines                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class UInterchangeSourceData*           SourceData                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeTranslatorBase*       Translator                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeBaseNodeContainer*    BaseNodeContainer                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EInterchangePipelineConfigurationDialogResultReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationBase::ScriptedShowPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData)
+EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationBase::ScriptedShowPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -107,6 +109,8 @@ EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationB
 	Params::InterchangePipelineConfigurationBase_ScriptedShowPipelineConfigurationDialog Parms{};
 
 	Parms.SourceData = SourceData;
+	Parms.Translator = Translator;
+	Parms.BaseNodeContainer = BaseNodeContainer;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -131,9 +135,12 @@ EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationB
 // TArray<struct FInterchangeStackInfo>    PipelineStacks                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<class UInterchangePipelineBase*> OutPipelines                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class UInterchangeSourceData*           SourceData                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeTranslatorBase*       Translator                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeBaseNodeContainer*    BaseNodeContainer                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReimportAsset                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EInterchangePipelineConfigurationDialogResultReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationBase::ScriptedShowReimportPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData)
+EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationBase::ScriptedShowReimportPipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer, class UObject* ReimportAsset)
 {
 	static class UFunction* Func = nullptr;
 
@@ -143,6 +150,9 @@ EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationB
 	Params::InterchangePipelineConfigurationBase_ScriptedShowReimportPipelineConfigurationDialog Parms{};
 
 	Parms.SourceData = SourceData;
+	Parms.Translator = Translator;
+	Parms.BaseNodeContainer = BaseNodeContainer;
+	Parms.ReimportAsset = ReimportAsset;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -167,9 +177,11 @@ EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationB
 // TArray<struct FInterchangeStackInfo>    PipelineStacks                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<class UInterchangePipelineBase*> OutPipelines                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class UInterchangeSourceData*           SourceData                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeTranslatorBase*       Translator                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInterchangeBaseNodeContainer*    BaseNodeContainer                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EInterchangePipelineConfigurationDialogResultReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationBase::ScriptedShowScenePipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData)
+EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationBase::ScriptedShowScenePipelineConfigurationDialog(TArray<struct FInterchangeStackInfo>* PipelineStacks, TArray<class UInterchangePipelineBase*>* OutPipelines, class UInterchangeSourceData* SourceData, class UInterchangeTranslatorBase* Translator, class UInterchangeBaseNodeContainer* BaseNodeContainer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -179,6 +191,8 @@ EInterchangePipelineConfigurationDialogResult UInterchangePipelineConfigurationB
 	Params::InterchangePipelineConfigurationBase_ScriptedShowScenePipelineConfigurationDialog Parms{};
 
 	Parms.SourceData = SourceData;
+	Parms.Translator = Translator;
+	Parms.BaseNodeContainer = BaseNodeContainer;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -328,6 +342,31 @@ const class UInterchangeBaseNode* UInterchangeAssetImportData::GetStoredNode(con
 }
 
 
+// Function InterchangeEngine.InterchangeAssetImportData.GetTranslatorSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UInterchangeTranslatorSettings*ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class UInterchangeTranslatorSettings* UInterchangeAssetImportData::GetTranslatorSettings() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeAssetImportData", "GetTranslatorSettings");
+
+	Params::InterchangeAssetImportData_GetTranslatorSettings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeEngine.InterchangeAssetImportData.ScriptExtractDisplayLabels
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -443,6 +482,31 @@ void UInterchangeAssetImportData::SetPipelines(const TArray<class UObject*>& InP
 	Params::InterchangeAssetImportData_SetPipelines Parms{};
 
 	Parms.InPipelines = std::move(InPipelines);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InterchangeEngine.InterchangeAssetImportData.SetTranslatorSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// class UInterchangeTranslatorSettings*   TranslatorSettings                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UInterchangeAssetImportData::SetTranslatorSettings(class UInterchangeTranslatorSettings* TranslatorSettings) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeAssetImportData", "SetTranslatorSettings");
+
+	Params::InterchangeAssetImportData_SetTranslatorSettings Parms{};
+
+	Parms.TranslatorSettings = TranslatorSettings;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

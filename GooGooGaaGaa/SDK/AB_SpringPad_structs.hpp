@@ -17,28 +17,31 @@ namespace SDK
 {
 
 // ScriptStruct AB_SpringPad.AB_SpringPad_C.AnimBlueprintGeneratedConstantData
-// 0x0107 (0x0108 - 0x0001)
+// 0x0197 (0x0198 - 0x0001)
 struct AB_SpringPad::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
-	uint8                                         Pad_373C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __NameProperty_10;                                 // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_11;                                 // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_373D[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         __FloatProperty_12;                                // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputScaleBiasClampConstants          __StructProperty_13;                               // 0x0014(0x002C)(BlueprintVisible, NoDestructor)
 	float                                         __FloatProperty_14;                                // 0x0040(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_15;                                 // 0x0044(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimSyncMethod                               __EnumProperty_16;                                 // 0x0045(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimGroupRole                                __ByteProperty_17;                                 // 0x0046(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_373E[0x1];                                     // 0x0047(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47[0x1];                                       // 0x0047(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __NameProperty_18;                                 // 0x0048(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAnimNodeFunctionRef                   __StructProperty_19;                               // 0x0050(0x0020)(BlueprintVisible, NoDestructor)
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0070(0x0080)()
 	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00F0(0x0018)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                                // 0x0108(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                      // 0x0138(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                                // 0x0168(0x0030)()
 };
 static_assert(alignof(AB_SpringPad::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_SpringPad::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_SpringPad::FAnimBlueprintGeneratedConstantData) == 0x000108, "Wrong size on AB_SpringPad::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(AB_SpringPad::FAnimBlueprintGeneratedConstantData) == 0x000198, "Wrong size on AB_SpringPad::FAnimBlueprintGeneratedConstantData");
 static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, __NameProperty_10) == 0x000004, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::__NameProperty_10' has a wrong offset!");
 static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, __BoolProperty_11) == 0x00000C, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::__BoolProperty_11' has a wrong offset!");
 static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, __FloatProperty_12) == 0x000010, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::__FloatProperty_12' has a wrong offset!");
@@ -51,6 +54,9 @@ static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, __Name
 static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, __StructProperty_19) == 0x000050, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::__StructProperty_19' has a wrong offset!");
 static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000070, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0000F0, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000108, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x000138, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000168, "Member 'AB_SpringPad::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
 
 }
 

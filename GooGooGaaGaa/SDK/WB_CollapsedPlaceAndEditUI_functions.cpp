@@ -111,10 +111,10 @@ void UWB_CollapsedPlaceAndEditUI_C::CanContentBeInitialized(bool* CanBeInitializ
 // Function WB_CollapsedPlaceAndEditUI.WB_CollapsedPlaceAndEditUI_C.GetFullName
 // (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AActor*                           Param_TargetActor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FText                             FullName                                               (Parm, OutParm)
 
-void UWB_CollapsedPlaceAndEditUI_C::GetFullName(class AActor* Param_TargetActor, class FText* FullName) const
+void UWB_CollapsedPlaceAndEditUI_C::GetFullName(class AActor* TargetActor_0, class FText* FullName) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -123,7 +123,7 @@ void UWB_CollapsedPlaceAndEditUI_C::GetFullName(class AActor* Param_TargetActor,
 
 	Params::WB_CollapsedPlaceAndEditUI_C_GetFullName Parms{};
 
-	Parms.Param_TargetActor = Param_TargetActor;
+	Parms.TargetActor_0 = TargetActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

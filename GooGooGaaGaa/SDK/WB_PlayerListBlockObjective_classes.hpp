@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
+#include "WB_PlayerListBlock_classes.hpp"
 #include "Engine_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
-#include "WB_PlayerListBlock_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlayerListBlockObjective.WB_PlayerListBlockObjective_C
-// 0x0010 (0x0340 - 0x0330)
+// 0x0010 (0x0360 - 0x0350)
 class UWB_PlayerListBlockObjective_C final : public UWB_PlayerListBlock_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PlayerListBlockObjective_C;      // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	E_ObjectiveTeam                               ObjectiveTeamToShow;                               // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowAllObjectiveTeams;                             // 0x0339(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PlayerListBlockObjective_C;      // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	E_ObjectiveTeam                               ObjectiveTeamToShow;                               // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowAllObjectiveTeams;                             // 0x0359(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void IsPlayerShown(class AB_PlayerState_C* PlayerState, bool* IsShown);
@@ -45,10 +45,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlayerListBlockObjective_C) == 0x000008, "Wrong alignment on UWB_PlayerListBlockObjective_C");
-static_assert(sizeof(UWB_PlayerListBlockObjective_C) == 0x000340, "Wrong size on UWB_PlayerListBlockObjective_C");
-static_assert(offsetof(UWB_PlayerListBlockObjective_C, UberGraphFrame_WB_PlayerListBlockObjective_C) == 0x000330, "Member 'UWB_PlayerListBlockObjective_C::UberGraphFrame_WB_PlayerListBlockObjective_C' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerListBlockObjective_C, ObjectiveTeamToShow) == 0x000338, "Member 'UWB_PlayerListBlockObjective_C::ObjectiveTeamToShow' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerListBlockObjective_C, ShowAllObjectiveTeams) == 0x000339, "Member 'UWB_PlayerListBlockObjective_C::ShowAllObjectiveTeams' has a wrong offset!");
+static_assert(sizeof(UWB_PlayerListBlockObjective_C) == 0x000360, "Wrong size on UWB_PlayerListBlockObjective_C");
+static_assert(offsetof(UWB_PlayerListBlockObjective_C, UberGraphFrame_WB_PlayerListBlockObjective_C) == 0x000350, "Member 'UWB_PlayerListBlockObjective_C::UberGraphFrame_WB_PlayerListBlockObjective_C' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerListBlockObjective_C, ObjectiveTeamToShow) == 0x000358, "Member 'UWB_PlayerListBlockObjective_C::ObjectiveTeamToShow' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerListBlockObjective_C, ShowAllObjectiveTeams) == 0x000359, "Member 'UWB_PlayerListBlockObjective_C::ShowAllObjectiveTeams' has a wrong offset!");
 
 }
 

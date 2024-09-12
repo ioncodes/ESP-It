@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_TeamPlayerStart.B_TeamPlayerStart_C
-// 0x0070 (0x0308 - 0x0298)
+// 0x0070 (0x0300 - 0x0290)
 class AB_TeamPlayerStart_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh9;                                       // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh8;                                       // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh7;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh6;                                       // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh5;                                       // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh4;                                       // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh3;                                       // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTransform>                     Positions;                                         // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh9;                                       // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh8;                                       // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh7;                                       // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh6;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh5;                                       // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh4;                                       // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh3;                                       // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTransform>                     Positions;                                         // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddPosition(class UStaticMeshComponent* Component);
@@ -53,20 +53,20 @@ public:
 	}
 };
 static_assert(alignof(AB_TeamPlayerStart_C) == 0x000008, "Wrong alignment on AB_TeamPlayerStart_C");
-static_assert(sizeof(AB_TeamPlayerStart_C) == 0x000308, "Wrong size on AB_TeamPlayerStart_C");
-static_assert(offsetof(AB_TeamPlayerStart_C, UberGraphFrame) == 0x000298, "Member 'AB_TeamPlayerStart_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh9) == 0x0002A0, "Member 'AB_TeamPlayerStart_C::StaticMesh9' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh8) == 0x0002A8, "Member 'AB_TeamPlayerStart_C::StaticMesh8' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh7) == 0x0002B0, "Member 'AB_TeamPlayerStart_C::StaticMesh7' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh6) == 0x0002B8, "Member 'AB_TeamPlayerStart_C::StaticMesh6' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh5) == 0x0002C0, "Member 'AB_TeamPlayerStart_C::StaticMesh5' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh4) == 0x0002C8, "Member 'AB_TeamPlayerStart_C::StaticMesh4' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh3) == 0x0002D0, "Member 'AB_TeamPlayerStart_C::StaticMesh3' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh2) == 0x0002D8, "Member 'AB_TeamPlayerStart_C::StaticMesh2' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh1) == 0x0002E0, "Member 'AB_TeamPlayerStart_C::StaticMesh1' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh) == 0x0002E8, "Member 'AB_TeamPlayerStart_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, Scene) == 0x0002F0, "Member 'AB_TeamPlayerStart_C::Scene' has a wrong offset!");
-static_assert(offsetof(AB_TeamPlayerStart_C, Positions) == 0x0002F8, "Member 'AB_TeamPlayerStart_C::Positions' has a wrong offset!");
+static_assert(sizeof(AB_TeamPlayerStart_C) == 0x000300, "Wrong size on AB_TeamPlayerStart_C");
+static_assert(offsetof(AB_TeamPlayerStart_C, UberGraphFrame) == 0x000290, "Member 'AB_TeamPlayerStart_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh9) == 0x000298, "Member 'AB_TeamPlayerStart_C::StaticMesh9' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh8) == 0x0002A0, "Member 'AB_TeamPlayerStart_C::StaticMesh8' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh7) == 0x0002A8, "Member 'AB_TeamPlayerStart_C::StaticMesh7' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh6) == 0x0002B0, "Member 'AB_TeamPlayerStart_C::StaticMesh6' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh5) == 0x0002B8, "Member 'AB_TeamPlayerStart_C::StaticMesh5' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh4) == 0x0002C0, "Member 'AB_TeamPlayerStart_C::StaticMesh4' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh3) == 0x0002C8, "Member 'AB_TeamPlayerStart_C::StaticMesh3' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh2) == 0x0002D0, "Member 'AB_TeamPlayerStart_C::StaticMesh2' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh1) == 0x0002D8, "Member 'AB_TeamPlayerStart_C::StaticMesh1' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, StaticMesh) == 0x0002E0, "Member 'AB_TeamPlayerStart_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, Scene) == 0x0002E8, "Member 'AB_TeamPlayerStart_C::Scene' has a wrong offset!");
+static_assert(offsetof(AB_TeamPlayerStart_C, Positions) == 0x0002F0, "Member 'AB_TeamPlayerStart_C::Positions' has a wrong offset!");
 
 }
 

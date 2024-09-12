@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SettingsSave.B_SettingsSave_C
-// 0x0060 (0x0088 - 0x0028)
+// 0x0070 (0x0098 - 0x0028)
 class UB_SettingsSave_C final : public USaveGame
 {
 public:
 	bool                                          UseToggleStabilizeOnController;                    // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        FieldOfViewNew;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        MotionBlurNew;                                     // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsChatEnabled;                                     // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -36,15 +36,21 @@ public:
 	class FString                                 Language;                                          // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	double                                        Sharpen;                                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bShowFPSCounter;                                   // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359B[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AAMethod;                                          // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InputOptionsAreReset;                              // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         ColorBlindMode;                                    // 0x0069(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359C[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ColorBlindIntensity;                               // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AllowFriendInvites;                                // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_359D[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CoyoteTransformTime;                               // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ScopeModeSensitivity;                              // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DisplayGamma;                                      // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void GetChatEnabled(class UB_GameInstance_C* GameInstance, bool* ChatEnabled);
+	void SetChatEnabled(bool ChatEnabled);
 
 public:
 	static class UClass* StaticClass()
@@ -57,7 +63,7 @@ public:
 	}
 };
 static_assert(alignof(UB_SettingsSave_C) == 0x000008, "Wrong alignment on UB_SettingsSave_C");
-static_assert(sizeof(UB_SettingsSave_C) == 0x000088, "Wrong size on UB_SettingsSave_C");
+static_assert(sizeof(UB_SettingsSave_C) == 0x000098, "Wrong size on UB_SettingsSave_C");
 static_assert(offsetof(UB_SettingsSave_C, UseToggleStabilizeOnController) == 0x000028, "Member 'UB_SettingsSave_C::UseToggleStabilizeOnController' has a wrong offset!");
 static_assert(offsetof(UB_SettingsSave_C, FieldOfViewNew) == 0x000030, "Member 'UB_SettingsSave_C::FieldOfViewNew' has a wrong offset!");
 static_assert(offsetof(UB_SettingsSave_C, MotionBlurNew) == 0x000038, "Member 'UB_SettingsSave_C::MotionBlurNew' has a wrong offset!");
@@ -78,6 +84,8 @@ static_assert(offsetof(UB_SettingsSave_C, ColorBlindMode) == 0x000069, "Member '
 static_assert(offsetof(UB_SettingsSave_C, ColorBlindIntensity) == 0x000070, "Member 'UB_SettingsSave_C::ColorBlindIntensity' has a wrong offset!");
 static_assert(offsetof(UB_SettingsSave_C, AllowFriendInvites) == 0x000078, "Member 'UB_SettingsSave_C::AllowFriendInvites' has a wrong offset!");
 static_assert(offsetof(UB_SettingsSave_C, CoyoteTransformTime) == 0x000080, "Member 'UB_SettingsSave_C::CoyoteTransformTime' has a wrong offset!");
+static_assert(offsetof(UB_SettingsSave_C, ScopeModeSensitivity) == 0x000088, "Member 'UB_SettingsSave_C::ScopeModeSensitivity' has a wrong offset!");
+static_assert(offsetof(UB_SettingsSave_C, DisplayGamma) == 0x000090, "Member 'UB_SettingsSave_C::DisplayGamma' has a wrong offset!");
 
 }
 

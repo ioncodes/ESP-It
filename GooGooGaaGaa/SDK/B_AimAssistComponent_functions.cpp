@@ -17,23 +17,103 @@
 namespace SDK
 {
 
-// Function B_AimAssistComponent.B_AimAssistComponent_C.HasAimInput
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function B_AimAssistComponent.B_AimAssistComponent_C.DevModeValueChanged
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SettingName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UB_AimAssistComponent_C::HasAimInput()
+void UB_AimAssistComponent_C::DevModeValueChanged(class FName SettingName, float Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_AimAssistComponent_C", "HasAimInput");
+		Func = Class->GetFunction("B_AimAssistComponent_C", "DevModeValueChanged");
 
-	Params::B_AimAssistComponent_C_HasAimInput Parms{};
+	Params::B_AimAssistComponent_C_DevModeValueChanged Parms{};
+
+	Parms.SettingName = SettingName;
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_AimAssistComponent.B_AimAssistComponent_C.InitializeDevModeDefaultValues
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UB_AimAssistComponent_C::InitializeDevModeDefaultValues()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AimAssistComponent_C", "InitializeDevModeDefaultValues");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AimAssistComponent.B_AimAssistComponent_C.IsCurrentAimTargetVisible
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UB_AimAssistComponent_C::IsCurrentAimTargetVisible()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AimAssistComponent_C", "IsCurrentAimTargetVisible");
+
+	Params::B_AimAssistComponent_C_IsCurrentAimTargetVisible Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function B_AimAssistComponent.B_AimAssistComponent_C.GetCurrentRayRotation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+struct FRotator UB_AimAssistComponent_C::GetCurrentRayRotation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AimAssistComponent_C", "GetCurrentRayRotation");
+
+	Params::B_AimAssistComponent_C_GetCurrentRayRotation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function B_AimAssistComponent.B_AimAssistComponent_C.AddControllerInput
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  AxisValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsYawInput                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_AimAssistComponent_C::AddControllerInput(class APawn* Pawn, double AxisValue, bool IsYawInput)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AimAssistComponent_C", "AddControllerInput");
+
+	Params::B_AimAssistComponent_C_AddControllerInput Parms{};
+
+	Parms.Pawn = Pawn;
+	Parms.AxisValue = AxisValue;
+	Parms.IsYawInput = IsYawInput;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -75,7 +155,7 @@ void UB_AimAssistComponent_C::DestroyAssistsActor()
 
 
 // Function B_AimAssistComponent.B_AimAssistComponent_C.TickFunction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UB_AimAssistComponent_C::TickFunction()
 {

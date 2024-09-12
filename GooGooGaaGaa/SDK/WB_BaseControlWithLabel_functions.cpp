@@ -37,6 +37,28 @@ void UWB_BaseControlWithLabel_C::PreConstruct(bool IsDesignTime)
 }
 
 
+// Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_BaseControlWithLabel_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_BaseControlWithLabel_C", "Tick");
+
+	Params::WB_BaseControlWithLabel_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.CustomDown
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -133,28 +155,6 @@ void UWB_BaseControlWithLabel_C::ChangeTextColor(const struct FSlateColor& InCol
 	Params::WB_BaseControlWithLabel_C_ChangeTextColor Parms{};
 
 	Parms.InColorAndOpacity = std::move(InColorAndOpacity);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_BaseControlWithLabel_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_BaseControlWithLabel_C", "Tick");
-
-	Params::WB_BaseControlWithLabel_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

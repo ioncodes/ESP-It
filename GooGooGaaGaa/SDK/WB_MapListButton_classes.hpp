@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MapListButton.WB_MapListButton_C
-// 0x0030 (0x03E0 - 0x03B0)
+// 0x0030 (0x03F0 - 0x03C0)
 class UWB_MapListButton_C final : public UWB_MapButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MapListButton_C;                 // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          MapCycleIsEditable;                                // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B3A[0x7];                                     // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Filename;                                          // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class UTexture2D*                             MapDeletedTexture;                                 // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             MapInCycleIconTexture;                             // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MapListButton_C;                 // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          MapCycleIsEditable;                                // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C9[0x7];                                      // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Filename;                                          // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UTexture2D*                             MapDeletedTexture;                                 // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             MapInCycleIconTexture;                             // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
@@ -35,10 +35,10 @@ public:
 	void ExecuteUbergraph_WB_MapListButton(int32 EntryPoint);
 	TSoftObjectPtr<class UObject> GetIcon();
 	void GetIsSelected(bool* Is_Selected);
-	void GetMapFileName(bool* FileNameIsValid, class FString* Param_Filename);
-	void GetNotifyButtonVisibility(bool* Param_IsVisible);
+	void GetMapFileName(bool* FileNameIsValid, class FString* Filename_0);
+	void GetNotifyButtonVisibility(bool* IsVisible_0);
 	void GetQuantityVisibility(bool* ShowQuantity);
-	void GetTooltip(class UUserWidget** Param_ToolTip);
+	void GetTooltip(class UUserWidget** ToolTip_0);
 	void GetTooltipInstructionsText(class FText* Instructions);
 	void SetIndividualParameters();
 	void SetSingleMapForNextMatch();
@@ -54,12 +54,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_MapListButton_C) == 0x000008, "Wrong alignment on UWB_MapListButton_C");
-static_assert(sizeof(UWB_MapListButton_C) == 0x0003E0, "Wrong size on UWB_MapListButton_C");
-static_assert(offsetof(UWB_MapListButton_C, UberGraphFrame_WB_MapListButton_C) == 0x0003B0, "Member 'UWB_MapListButton_C::UberGraphFrame_WB_MapListButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_MapListButton_C, MapCycleIsEditable) == 0x0003B8, "Member 'UWB_MapListButton_C::MapCycleIsEditable' has a wrong offset!");
-static_assert(offsetof(UWB_MapListButton_C, Filename) == 0x0003C0, "Member 'UWB_MapListButton_C::Filename' has a wrong offset!");
-static_assert(offsetof(UWB_MapListButton_C, MapDeletedTexture) == 0x0003D0, "Member 'UWB_MapListButton_C::MapDeletedTexture' has a wrong offset!");
-static_assert(offsetof(UWB_MapListButton_C, MapInCycleIconTexture) == 0x0003D8, "Member 'UWB_MapListButton_C::MapInCycleIconTexture' has a wrong offset!");
+static_assert(sizeof(UWB_MapListButton_C) == 0x0003F0, "Wrong size on UWB_MapListButton_C");
+static_assert(offsetof(UWB_MapListButton_C, UberGraphFrame_WB_MapListButton_C) == 0x0003C0, "Member 'UWB_MapListButton_C::UberGraphFrame_WB_MapListButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_MapListButton_C, MapCycleIsEditable) == 0x0003C8, "Member 'UWB_MapListButton_C::MapCycleIsEditable' has a wrong offset!");
+static_assert(offsetof(UWB_MapListButton_C, Filename) == 0x0003D0, "Member 'UWB_MapListButton_C::Filename' has a wrong offset!");
+static_assert(offsetof(UWB_MapListButton_C, MapDeletedTexture) == 0x0003E0, "Member 'UWB_MapListButton_C::MapDeletedTexture' has a wrong offset!");
+static_assert(offsetof(UWB_MapListButton_C, MapInCycleIconTexture) == 0x0003E8, "Member 'UWB_MapListButton_C::MapInCycleIconTexture' has a wrong offset!");
 
 }
 

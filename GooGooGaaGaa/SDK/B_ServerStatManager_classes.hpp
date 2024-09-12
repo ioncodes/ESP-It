@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "S_PropData_structs.hpp"
-#include "E_PropCategory_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "S_PropData_structs.hpp"
 #include "E_PropSet_structs.hpp"
+#include "E_PropCategory_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -39,14 +39,14 @@ public:
 	int32                                         ServerStatsStoreFailures;                          // 0x0238(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsRequestEndOfRoundFailures;              // 0x023C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsStoreEndOfRoundFailures;                // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479E[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, class AB_PlayerState_C*>  PlayerStates;                                      // 0x0248(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         ServerStatsRequestPlayersNotFound;                 // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsStoreSuccesses;                         // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsRequestSuccesses;                       // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsStoreDisconnectedFailures;              // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsStoreDisconnectedSuccesses;             // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_479F[0x4];                                     // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 OverrideDropItemDefIds;                            // 0x02B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UB_AchievementManager_C*                AchievementManager;                                // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         ServerStatsHandleDropFailures;                     // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -54,11 +54,11 @@ public:
 public:
 	void CallStoreOnlineStats(class AB_PlayerState_C* PlayerState);
 	void CleanUpPropCollections();
-	void CollectProp(class APlayerState* PlayerState, int32 PropId);
-	void CollectPropFunction(const class APlayerState*& PlayerState, int32 PropId);
+	void CollectProp(class APlayerState* PlayerState, int32 PropID);
+	void CollectPropFunction(const class APlayerState*& PlayerState, int32 PropID);
 	void ExecuteUbergraph_B_ServerStatManager(int32 EntryPoint);
 	void FinishLoadingServerStats(const class FString& ProductUserId);
-	void GetLocalPropCollection(class UB_PlayerPropCollection_C** Param_LocalPropCollection);
+	void GetLocalPropCollection(class UB_PlayerPropCollection_C** LocalPropCollection_0);
 	void GetRequestingPlayerCount(int32* RequestingPlayerCount);
 	void GetStoringPlayerCount(int32* StoringPlayerCount);
 	void GrantDropExp(class APlayerState* PlayerState, int32 Exp);
@@ -70,7 +70,7 @@ public:
 	void OnLoadGSOnlineStats(bool Success, const class FString& ProductUserId);
 	void OnStoreGSOnlineStats(bool Success, const class FString& ProductUserId);
 	void SavePlayerServerStats(class APlayerState* PlayerState, bool LeftGame);
-	void UpdateCollectedPropsOfLocalPropCollection(int32 PropId, class UB_PlayerPropCollection_C** PlayerPropCollection);
+	void UpdateCollectedPropsOfLocalPropCollection(int32 PropID, class UB_PlayerPropCollection_C** PlayerPropCollection);
 
 	void GetStatsAndAchvManager(class UB_NewStatsAndAchievementsManager_C** Result) const;
 

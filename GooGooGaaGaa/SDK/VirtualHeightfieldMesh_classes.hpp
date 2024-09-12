@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	class UTexture2D*                             LodBiasTexture;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             LodBiasMinMaxTexture;                              // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxCPULevels;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2421[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector2D>                      TextureData;                                       // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FIntPoint                              TextureDataSize;                                   // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 TextureDataMips;                                   // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
@@ -60,7 +60,7 @@ class UMaterialExpressionHeightfieldMinMaxTexture final : public UMaterialExpres
 public:
 	class UHeightfieldMinMaxTexture*              MinMaxTexture;                                     // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMaterialSamplerType                          SamplerType;                                       // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2422[0x7];                                     // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -78,11 +78,11 @@ static_assert(offsetof(UMaterialExpressionHeightfieldMinMaxTexture, MinMaxTextur
 static_assert(offsetof(UMaterialExpressionHeightfieldMinMaxTexture, SamplerType) == 0x0000B8, "Member 'UMaterialExpressionHeightfieldMinMaxTexture::SamplerType' has a wrong offset!");
 
 // Class VirtualHeightfieldMesh.VirtualHeightfieldMesh
-// 0x0008 (0x02A0 - 0x0298)
+// 0x0008 (0x0298 - 0x0290)
 class AVirtualHeightfieldMesh final : public AActor
 {
 public:
-	class UVirtualHeightfieldMeshComponent*       VirtualHeightfieldMeshComponent;                   // 0x0298(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UVirtualHeightfieldMeshComponent*       VirtualHeightfieldMeshComponent;                   // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -95,33 +95,33 @@ public:
 	}
 };
 static_assert(alignof(AVirtualHeightfieldMesh) == 0x000008, "Wrong alignment on AVirtualHeightfieldMesh");
-static_assert(sizeof(AVirtualHeightfieldMesh) == 0x0002A0, "Wrong size on AVirtualHeightfieldMesh");
-static_assert(offsetof(AVirtualHeightfieldMesh, VirtualHeightfieldMeshComponent) == 0x000298, "Member 'AVirtualHeightfieldMesh::VirtualHeightfieldMeshComponent' has a wrong offset!");
+static_assert(sizeof(AVirtualHeightfieldMesh) == 0x000298, "Wrong size on AVirtualHeightfieldMesh");
+static_assert(offsetof(AVirtualHeightfieldMesh, VirtualHeightfieldMeshComponent) == 0x000290, "Member 'AVirtualHeightfieldMesh::VirtualHeightfieldMeshComponent' has a wrong offset!");
 
 // Class VirtualHeightfieldMesh.VirtualHeightfieldMeshComponent
-// 0x0080 (0x05F0 - 0x0570)
+// 0x0070 (0x0590 - 0x0520)
 class UVirtualHeightfieldMeshComponent final : public UPrimitiveComponent
 {
 public:
-	TSoftObjectPtr<class ARuntimeVirtualTextureVolume> VirtualTexture;                                    // 0x0570(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ARuntimeVirtualTextureVolume*           VirtualTextureRef;                                 // 0x0598(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UObject*                                VirtualTextureThumbnail;                           // 0x05A0(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCopyBoundsButton;                                 // 0x05A8(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2423[0x7];                                     // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHeightfieldMinMaxTexture*              MinMaxTexture;                                     // 0x05B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumMinMaxTextureBuildLevels;                       // 0x05B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bBuildMinMaxTextureButton;                         // 0x05BC(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2424[0x3];                                     // 0x05BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Material;                                          // 0x05C0(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         LOD0ScreenSize;                                    // 0x05C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Lod0Distribution;                                  // 0x05CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         LodDistribution;                                   // 0x05D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         LodBiasScale;                                      // 0x05D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumForceLoadLods;                                  // 0x05D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         NumOcclusionLods;                                  // 0x05DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHiddenInEditor;                                   // 0x05E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bWorldPositionOffsetVelocity;                      // 0x05E1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2425[0xE];                                     // 0x05E2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class ARuntimeVirtualTextureVolume> VirtualTexture;                                    // 0x0518(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ARuntimeVirtualTextureVolume*           VirtualTextureRef;                                 // 0x0540(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                VirtualTextureThumbnail;                           // 0x0548(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCopyBoundsButton;                                 // 0x0550(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_551[0x7];                                      // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHeightfieldMinMaxTexture*              MinMaxTexture;                                     // 0x0558(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumMinMaxTextureBuildLevels;                       // 0x0560(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bBuildMinMaxTextureButton;                         // 0x0564(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_565[0x3];                                      // 0x0565(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Material;                                          // 0x0568(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         LOD0ScreenSize;                                    // 0x0570(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Lod0Distribution;                                  // 0x0574(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         LodDistribution;                                   // 0x0578(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         LodBiasScale;                                      // 0x057C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumForceLoadLods;                                  // 0x0580(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumOcclusionLods;                                  // 0x0584(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHiddenInEditor;                                   // 0x0588(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bWorldPositionOffsetVelocity;                      // 0x0589(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_58A[0x6];                                      // 0x058A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void GatherHideFlags(bool* InOutHidePrimitivesInEditor, bool* InOutHidePrimitivesInGame) const;
@@ -137,23 +137,23 @@ public:
 	}
 };
 static_assert(alignof(UVirtualHeightfieldMeshComponent) == 0x000010, "Wrong alignment on UVirtualHeightfieldMeshComponent");
-static_assert(sizeof(UVirtualHeightfieldMeshComponent) == 0x0005F0, "Wrong size on UVirtualHeightfieldMeshComponent");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, VirtualTexture) == 0x000570, "Member 'UVirtualHeightfieldMeshComponent::VirtualTexture' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, VirtualTextureRef) == 0x000598, "Member 'UVirtualHeightfieldMeshComponent::VirtualTextureRef' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, VirtualTextureThumbnail) == 0x0005A0, "Member 'UVirtualHeightfieldMeshComponent::VirtualTextureThumbnail' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, bCopyBoundsButton) == 0x0005A8, "Member 'UVirtualHeightfieldMeshComponent::bCopyBoundsButton' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, MinMaxTexture) == 0x0005B0, "Member 'UVirtualHeightfieldMeshComponent::MinMaxTexture' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, NumMinMaxTextureBuildLevels) == 0x0005B8, "Member 'UVirtualHeightfieldMeshComponent::NumMinMaxTextureBuildLevels' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, bBuildMinMaxTextureButton) == 0x0005BC, "Member 'UVirtualHeightfieldMeshComponent::bBuildMinMaxTextureButton' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, Material) == 0x0005C0, "Member 'UVirtualHeightfieldMeshComponent::Material' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, LOD0ScreenSize) == 0x0005C8, "Member 'UVirtualHeightfieldMeshComponent::LOD0ScreenSize' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, Lod0Distribution) == 0x0005CC, "Member 'UVirtualHeightfieldMeshComponent::Lod0Distribution' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, LodDistribution) == 0x0005D0, "Member 'UVirtualHeightfieldMeshComponent::LodDistribution' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, LodBiasScale) == 0x0005D4, "Member 'UVirtualHeightfieldMeshComponent::LodBiasScale' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, NumForceLoadLods) == 0x0005D8, "Member 'UVirtualHeightfieldMeshComponent::NumForceLoadLods' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, NumOcclusionLods) == 0x0005DC, "Member 'UVirtualHeightfieldMeshComponent::NumOcclusionLods' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, bHiddenInEditor) == 0x0005E0, "Member 'UVirtualHeightfieldMeshComponent::bHiddenInEditor' has a wrong offset!");
-static_assert(offsetof(UVirtualHeightfieldMeshComponent, bWorldPositionOffsetVelocity) == 0x0005E1, "Member 'UVirtualHeightfieldMeshComponent::bWorldPositionOffsetVelocity' has a wrong offset!");
+static_assert(sizeof(UVirtualHeightfieldMeshComponent) == 0x000590, "Wrong size on UVirtualHeightfieldMeshComponent");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, VirtualTexture) == 0x000518, "Member 'UVirtualHeightfieldMeshComponent::VirtualTexture' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, VirtualTextureRef) == 0x000540, "Member 'UVirtualHeightfieldMeshComponent::VirtualTextureRef' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, VirtualTextureThumbnail) == 0x000548, "Member 'UVirtualHeightfieldMeshComponent::VirtualTextureThumbnail' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, bCopyBoundsButton) == 0x000550, "Member 'UVirtualHeightfieldMeshComponent::bCopyBoundsButton' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, MinMaxTexture) == 0x000558, "Member 'UVirtualHeightfieldMeshComponent::MinMaxTexture' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, NumMinMaxTextureBuildLevels) == 0x000560, "Member 'UVirtualHeightfieldMeshComponent::NumMinMaxTextureBuildLevels' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, bBuildMinMaxTextureButton) == 0x000564, "Member 'UVirtualHeightfieldMeshComponent::bBuildMinMaxTextureButton' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, Material) == 0x000568, "Member 'UVirtualHeightfieldMeshComponent::Material' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, LOD0ScreenSize) == 0x000570, "Member 'UVirtualHeightfieldMeshComponent::LOD0ScreenSize' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, Lod0Distribution) == 0x000574, "Member 'UVirtualHeightfieldMeshComponent::Lod0Distribution' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, LodDistribution) == 0x000578, "Member 'UVirtualHeightfieldMeshComponent::LodDistribution' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, LodBiasScale) == 0x00057C, "Member 'UVirtualHeightfieldMeshComponent::LodBiasScale' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, NumForceLoadLods) == 0x000580, "Member 'UVirtualHeightfieldMeshComponent::NumForceLoadLods' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, NumOcclusionLods) == 0x000584, "Member 'UVirtualHeightfieldMeshComponent::NumOcclusionLods' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, bHiddenInEditor) == 0x000588, "Member 'UVirtualHeightfieldMeshComponent::bHiddenInEditor' has a wrong offset!");
+static_assert(offsetof(UVirtualHeightfieldMeshComponent, bWorldPositionOffsetVelocity) == 0x000589, "Member 'UVirtualHeightfieldMeshComponent::bWorldPositionOffsetVelocity' has a wrong offset!");
 
 }
 

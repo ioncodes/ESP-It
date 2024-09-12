@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,7 +24,7 @@ struct B_MenuPlayerController_C_ExecuteUbergraph_B_MenuPlayerController final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50CC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   Temp_struct_Variable;                              // 0x0008(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   Temp_struct_Variable_1;                            // 0x0020(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputActionEvent_Key_1;                     // 0x0038(0x0018)(HasGetValueTypeHash)
@@ -33,14 +33,14 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50CD[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   K2Node_InputKeyEvent_Key_2;                        // 0x0098(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputKeyEvent_Key_3;                        // 0x00B0(0x0018)(HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x00C8(0x0018)(HasGetValueTypeHash)
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_InputAxisEvent_AxisValue;                   // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50CE[0x3];                                     // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_CustomEvent_AxisValue;                      // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,7 +53,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_7;      // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKey                                   K2Node_InputKeyEvent_Key_1;                        // 0x0140(0x0018)(HasGetValueTypeHash)
 	float                                         K2Node_InputAxisKeyEvent_AxisValue;                // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50CF[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_NotEqual_DoubleDouble_A_ImplicitCast;     // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -94,16 +94,16 @@ static_assert(offsetof(B_MenuPlayerController_C_ExecuteUbergraph_B_MenuPlayerCon
 struct B_MenuPlayerController_C_GetMasterScreen final
 {
 public:
-	class UWB_MasterScreen_C*                     Param_MasterScreen;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_MasterScreen_C*                     MasterScreen_0;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D0[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuPlayerController_C_GetMasterScreen) == 0x000008, "Wrong alignment on B_MenuPlayerController_C_GetMasterScreen");
 static_assert(sizeof(B_MenuPlayerController_C_GetMasterScreen) == 0x000028, "Wrong size on B_MenuPlayerController_C_GetMasterScreen");
-static_assert(offsetof(B_MenuPlayerController_C_GetMasterScreen, Param_MasterScreen) == 0x000000, "Member 'B_MenuPlayerController_C_GetMasterScreen::Param_MasterScreen' has a wrong offset!");
+static_assert(offsetof(B_MenuPlayerController_C_GetMasterScreen, MasterScreen_0) == 0x000000, "Member 'B_MenuPlayerController_C_GetMasterScreen::MasterScreen_0' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_GetMasterScreen, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'B_MenuPlayerController_C_GetMasterScreen::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_GetMasterScreen, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'B_MenuPlayerController_C_GetMasterScreen::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_GetMasterScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'B_MenuPlayerController_C_GetMasterScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
@@ -209,7 +209,7 @@ static_assert(sizeof(B_MenuPlayerController_C_InputRightThumbstickXMinusAxis) ==
 static_assert(offsetof(B_MenuPlayerController_C_InputRightThumbstickXMinusAxis, AxisValue) == 0x000000, "Member 'B_MenuPlayerController_C_InputRightThumbstickXMinusAxis::AxisValue' has a wrong offset!");
 
 // Function B_MenuPlayerController.B_MenuPlayerController_C.RotateSkinPreviewMesh
-// 0x0238 (0x0238 - 0x0000)
+// 0x0258 (0x0258 - 0x0000)
 struct B_MenuPlayerController_C_RotateSkinPreviewMesh final
 {
 public:
@@ -219,17 +219,17 @@ public:
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UWB_SkinCategoryMenuScreen_C*           K2Node_DynamicCast_AsWB_Skin_Category_Menu_Screen; // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D1[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D2[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult;       // 0x0060(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult_1;     // 0x0148(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult;       // 0x0060(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult_1;     // 0x0158(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuPlayerController_C_RotateSkinPreviewMesh) == 0x000008, "Wrong alignment on B_MenuPlayerController_C_RotateSkinPreviewMesh");
-static_assert(sizeof(B_MenuPlayerController_C_RotateSkinPreviewMesh) == 0x000238, "Wrong size on B_MenuPlayerController_C_RotateSkinPreviewMesh");
+static_assert(sizeof(B_MenuPlayerController_C_RotateSkinPreviewMesh) == 0x000258, "Wrong size on B_MenuPlayerController_C_RotateSkinPreviewMesh");
 static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, DeltaRotation_Yaw) == 0x000000, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::DeltaRotation_Yaw' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_GetMasterScreen_MasterScreen) == 0x000008, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_GetMasterScreen_MasterScreen' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_GetCurrentScreenWidget_Widget) == 0x000010, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_GetCurrentScreenWidget_Widget' has a wrong offset!");
@@ -239,9 +239,9 @@ static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, K2Node_Dy
 static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_MakeRotator_ReturnValue_1) == 0x000040, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, K2Node_SwitchEnum_CmpSuccess) == 0x000058, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_K2_AddLocalRotation_SweepHitResult) == 0x000060, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_K2_AddLocalRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_K2_AddLocalRotation_SweepHitResult_1) == 0x000148, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_K2_AddLocalRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000230, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x000234, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_K2_AddLocalRotation_SweepHitResult_1) == 0x000158, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_K2_AddLocalRotation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000250, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuPlayerController_C_RotateSkinPreviewMesh, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x000254, "Member 'B_MenuPlayerController_C_RotateSkinPreviewMesh::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
 
 }
 

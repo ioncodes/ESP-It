@@ -24,7 +24,7 @@ public:
 	struct FUInt32                                InVal;                                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         OutVal;                                            // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E3A[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_BreakUInt32) == 0x000004, "Wrong alignment on SteamGeneralLibrary_BreakUInt32");
 static_assert(sizeof(SteamGeneralLibrary_BreakUInt32) == 0x00000C, "Wrong size on SteamGeneralLibrary_BreakUInt32");
@@ -40,7 +40,7 @@ public:
 	struct FUInt64                                InVal;                                             // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         OutVal;                                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E3B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_BreakUInt64) == 0x000008, "Wrong alignment on SteamGeneralLibrary_BreakUInt64");
 static_assert(sizeof(SteamGeneralLibrary_BreakUInt64) == 0x000010, "Wrong size on SteamGeneralLibrary_BreakUInt64");
@@ -56,7 +56,7 @@ public:
 	struct FSteamAppId                            A;                                                 // 0x0000(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamAppId                            B;                                                 // 0x0004(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E3C[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Equal_SteamAppId) == 0x000004, "Wrong alignment on SteamGeneralLibrary_Equal_SteamAppId");
 static_assert(sizeof(SteamGeneralLibrary_Equal_SteamAppId) == 0x00000C, "Wrong size on SteamGeneralLibrary_Equal_SteamAppId");
@@ -72,7 +72,7 @@ public:
 	struct FSteamDepotId                          A;                                                 // 0x0000(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamDepotId                          B;                                                 // 0x0004(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E3D[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Equal_SteamDepotId) == 0x000004, "Wrong alignment on SteamGeneralLibrary_Equal_SteamDepotId");
 static_assert(sizeof(SteamGeneralLibrary_Equal_SteamDepotId) == 0x00000C, "Wrong size on SteamGeneralLibrary_Equal_SteamDepotId");
@@ -88,7 +88,7 @@ public:
 	struct FSteamUGCItemId                        A;                                                 // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        B;                                                 // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E3E[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Equal_SteamItemId) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Equal_SteamItemId");
 static_assert(sizeof(SteamGeneralLibrary_Equal_SteamItemId) == 0x000018, "Wrong size on SteamGeneralLibrary_Equal_SteamItemId");
@@ -104,7 +104,7 @@ public:
 	struct FUInt32                                A;                                                 // 0x0000(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FUInt32                                B;                                                 // 0x0004(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E3F[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Equal_UInt32) == 0x000004, "Wrong alignment on SteamGeneralLibrary_Equal_UInt32");
 static_assert(sizeof(SteamGeneralLibrary_Equal_UInt32) == 0x00000C, "Wrong size on SteamGeneralLibrary_Equal_UInt32");
@@ -120,7 +120,7 @@ public:
 	struct FUInt64                                A;                                                 // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FUInt64                                B;                                                 // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E40[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Equal_UInt64) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Equal_UInt64");
 static_assert(sizeof(SteamGeneralLibrary_Equal_UInt64) == 0x000018, "Wrong size on SteamGeneralLibrary_Equal_UInt64");
@@ -135,7 +135,7 @@ struct SteamGeneralLibrary_FromString_UInt32 final
 public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUInt32                                ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E41[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_FromString_UInt32) == 0x000008, "Wrong alignment on SteamGeneralLibrary_FromString_UInt32");
 static_assert(sizeof(SteamGeneralLibrary_FromString_UInt32) == 0x000018, "Wrong size on SteamGeneralLibrary_FromString_UInt32");
@@ -185,7 +185,7 @@ public:
 	struct FSteamAppId                            A;                                                 // 0x0000(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamAppId                            B;                                                 // 0x0004(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E42[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_NotEqual_SteamAppId) == 0x000004, "Wrong alignment on SteamGeneralLibrary_NotEqual_SteamAppId");
 static_assert(sizeof(SteamGeneralLibrary_NotEqual_SteamAppId) == 0x00000C, "Wrong size on SteamGeneralLibrary_NotEqual_SteamAppId");
@@ -201,7 +201,7 @@ public:
 	struct FSteamDepotId                          A;                                                 // 0x0000(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamDepotId                          B;                                                 // 0x0004(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E43[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_NotEqual_SteamDepotId) == 0x000004, "Wrong alignment on SteamGeneralLibrary_NotEqual_SteamDepotId");
 static_assert(sizeof(SteamGeneralLibrary_NotEqual_SteamDepotId) == 0x00000C, "Wrong size on SteamGeneralLibrary_NotEqual_SteamDepotId");
@@ -217,7 +217,7 @@ public:
 	struct FSteamUGCItemId                        A;                                                 // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        B;                                                 // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E44[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_NotEqual_SteamItemId) == 0x000008, "Wrong alignment on SteamGeneralLibrary_NotEqual_SteamItemId");
 static_assert(sizeof(SteamGeneralLibrary_NotEqual_SteamItemId) == 0x000018, "Wrong size on SteamGeneralLibrary_NotEqual_SteamItemId");
@@ -233,7 +233,7 @@ public:
 	struct FUInt32                                A;                                                 // 0x0000(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FUInt32                                B;                                                 // 0x0004(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E45[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_NotEqual_UInt32) == 0x000004, "Wrong alignment on SteamGeneralLibrary_NotEqual_UInt32");
 static_assert(sizeof(SteamGeneralLibrary_NotEqual_UInt32) == 0x00000C, "Wrong size on SteamGeneralLibrary_NotEqual_UInt32");
@@ -249,7 +249,7 @@ public:
 	struct FUInt64                                A;                                                 // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FUInt64                                B;                                                 // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E46[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_NotEqual_UInt64) == 0x000008, "Wrong alignment on SteamGeneralLibrary_NotEqual_UInt64");
 static_assert(sizeof(SteamGeneralLibrary_NotEqual_UInt64) == 0x000018, "Wrong size on SteamGeneralLibrary_NotEqual_UInt64");
@@ -280,7 +280,7 @@ public:
 	TArray<struct FSteamAppId>                    Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSteamAppId                            Value;                                             // 0x0010(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E47[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamAppIdArray_Contains) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamAppIdArray_Contains");
 static_assert(sizeof(SteamGeneralLibrary_SteamAppIdArray_Contains) == 0x000018, "Wrong size on SteamGeneralLibrary_SteamAppIdArray_Contains");
@@ -324,7 +324,7 @@ struct SteamGeneralLibrary_SteamConvertLanguageToLanguageCode final
 {
 public:
 	ESteamSupportedLanguages                      Language;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E48[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SteamGeneralLibrary_SteamConvertLanguageToLanguageCode) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamConvertLanguageToLanguageCode");
@@ -339,7 +339,7 @@ struct SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Bind final
 public:
 	TDelegate<void(bool bActive)>                 DelegateToCall;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E49[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Bind) == 0x000004, "Wrong alignment on SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Bind");
 static_assert(sizeof(SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Bind) == 0x000014, "Wrong size on SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Bind");
@@ -353,7 +353,7 @@ struct SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Unbind final
 public:
 	TDelegate<void(bool bActive)>                 DelegateToCall;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4A[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Unbind) == 0x000004, "Wrong alignment on SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Unbind");
 static_assert(sizeof(SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Unbind) == 0x000014, "Wrong size on SteamGeneralLibrary_SteamDelegate_OnGameOverlayActivated_Unbind");
@@ -383,7 +383,7 @@ public:
 	TArray<struct FSteamDepotId>                  Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSteamDepotId                          Value;                                             // 0x0010(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4B[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamDepotIdArray_Contains) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamDepotIdArray_Contains");
 static_assert(sizeof(SteamGeneralLibrary_SteamDepotIdArray_Contains) == 0x000018, "Wrong size on SteamGeneralLibrary_SteamDepotIdArray_Contains");
@@ -428,7 +428,7 @@ struct SteamGeneralLibrary_SteamGeneral_ActivateGameOverlayToWebPage final
 public:
 	class FString                                 Webpage;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4C[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamGeneral_ActivateGameOverlayToWebPage) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamGeneral_ActivateGameOverlayToWebPage");
 static_assert(sizeof(SteamGeneralLibrary_SteamGeneral_ActivateGameOverlayToWebPage) == 0x000018, "Wrong size on SteamGeneralLibrary_SteamGeneral_ActivateGameOverlayToWebPage");
@@ -455,7 +455,7 @@ struct SteamGeneralLibrary_SteamGeneral_GetFriendState final
 public:
 	struct FUInt64                                SteamUserId;                                       // 0x0000(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	EPersonaStateBP                               ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamGeneral_GetFriendState) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamGeneral_GetFriendState");
 static_assert(sizeof(SteamGeneralLibrary_SteamGeneral_GetFriendState) == 0x000010, "Wrong size on SteamGeneralLibrary_SteamGeneral_GetFriendState");
@@ -491,7 +491,7 @@ struct SteamGeneralLibrary_SteamQueryHandle_IsValid final
 public:
 	struct FSteamUGCQueryHandle                   Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4E[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamQueryHandle_IsValid) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamQueryHandle_IsValid");
 static_assert(sizeof(SteamGeneralLibrary_SteamQueryHandle_IsValid) == 0x000010, "Wrong size on SteamGeneralLibrary_SteamQueryHandle_IsValid");
@@ -505,7 +505,7 @@ struct SteamGeneralLibrary_SteamUGCHandle_IsValid final
 public:
 	struct FSteamUGCHandle                        Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4F[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamUGCHandle_IsValid) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamUGCHandle_IsValid");
 static_assert(sizeof(SteamGeneralLibrary_SteamUGCHandle_IsValid) == 0x000010, "Wrong size on SteamGeneralLibrary_SteamUGCHandle_IsValid");
@@ -520,7 +520,7 @@ public:
 	TArray<struct FSteamUGCItemId>                Values;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E50[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamUGCItemIdArray_AddUnique) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamUGCItemIdArray_AddUnique");
 static_assert(sizeof(SteamGeneralLibrary_SteamUGCItemIdArray_AddUnique) == 0x000020, "Wrong size on SteamGeneralLibrary_SteamUGCItemIdArray_AddUnique");
@@ -536,7 +536,7 @@ public:
 	TArray<struct FSteamUGCItemId>                Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E51[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamUGCItemIdArray_Contains) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamUGCItemIdArray_Contains");
 static_assert(sizeof(SteamGeneralLibrary_SteamUGCItemIdArray_Contains) == 0x000020, "Wrong size on SteamGeneralLibrary_SteamUGCItemIdArray_Contains");
@@ -552,7 +552,7 @@ public:
 	TArray<struct FSteamUGCItemId>                Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E52[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamUGCItemIdArray_Find) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamUGCItemIdArray_Find");
 static_assert(sizeof(SteamGeneralLibrary_SteamUGCItemIdArray_Find) == 0x000020, "Wrong size on SteamGeneralLibrary_SteamUGCItemIdArray_Find");
@@ -568,7 +568,7 @@ public:
 	TArray<struct FSteamUGCItemId>                Values;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSteamUGCItemId                        Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E53[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamUGCItemIdArray_Remove) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamUGCItemIdArray_Remove");
 static_assert(sizeof(SteamGeneralLibrary_SteamUGCItemIdArray_Remove) == 0x000020, "Wrong size on SteamGeneralLibrary_SteamUGCItemIdArray_Remove");
@@ -583,7 +583,7 @@ struct SteamGeneralLibrary_SteamUpdateHandle_IsValid final
 public:
 	struct FSteamUGCUpdateHandle                  Handle;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E54[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_SteamUpdateHandle_IsValid) == 0x000008, "Wrong alignment on SteamGeneralLibrary_SteamUpdateHandle_IsValid");
 static_assert(sizeof(SteamGeneralLibrary_SteamUpdateHandle_IsValid) == 0x000010, "Wrong size on SteamGeneralLibrary_SteamUpdateHandle_IsValid");
@@ -596,7 +596,7 @@ struct SteamGeneralLibrary_ToString_SteamAppId final
 {
 public:
 	struct FSteamAppId                            ID;                                                // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E55[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SteamGeneralLibrary_ToString_SteamAppId) == 0x000008, "Wrong alignment on SteamGeneralLibrary_ToString_SteamAppId");
@@ -610,7 +610,7 @@ struct SteamGeneralLibrary_ToString_SteamDepotId final
 {
 public:
 	struct FSteamDepotId                          ID;                                                // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E56[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SteamGeneralLibrary_ToString_SteamDepotId) == 0x000008, "Wrong alignment on SteamGeneralLibrary_ToString_SteamDepotId");
@@ -637,7 +637,7 @@ struct SteamGeneralLibrary_ToString_UInt32 final
 {
 public:
 	struct FUInt32                                Value;                                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E57[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SteamGeneralLibrary_ToString_UInt32) == 0x000008, "Wrong alignment on SteamGeneralLibrary_ToString_UInt32");
@@ -681,7 +681,7 @@ public:
 	TArray<struct FUInt32>                        Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FUInt32                                Value;                                             // 0x0010(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E58[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Uint32Array_Contains) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Uint32Array_Contains");
 static_assert(sizeof(SteamGeneralLibrary_Uint32Array_Contains) == 0x000018, "Wrong size on SteamGeneralLibrary_Uint32Array_Contains");
@@ -727,7 +727,7 @@ public:
 	TArray<struct FUInt64>                        Values;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FUInt64                                Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E59[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Uint64Array_AddUnique) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Uint64Array_AddUnique");
 static_assert(sizeof(SteamGeneralLibrary_Uint64Array_AddUnique) == 0x000020, "Wrong size on SteamGeneralLibrary_Uint64Array_AddUnique");
@@ -743,7 +743,7 @@ public:
 	TArray<struct FUInt64>                        Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FUInt64                                Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E5A[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Uint64Array_Contains) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Uint64Array_Contains");
 static_assert(sizeof(SteamGeneralLibrary_Uint64Array_Contains) == 0x000020, "Wrong size on SteamGeneralLibrary_Uint64Array_Contains");
@@ -759,7 +759,7 @@ public:
 	TArray<struct FUInt64>                        Values;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FUInt64                                Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E5B[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Uint64Array_Find) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Uint64Array_Find");
 static_assert(sizeof(SteamGeneralLibrary_Uint64Array_Find) == 0x000020, "Wrong size on SteamGeneralLibrary_Uint64Array_Find");
@@ -775,7 +775,7 @@ public:
 	TArray<struct FUInt64>                        Values;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FUInt64                                Value;                                             // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E5C[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SteamGeneralLibrary_Uint64Array_Remove) == 0x000008, "Wrong alignment on SteamGeneralLibrary_Uint64Array_Remove");
 static_assert(sizeof(SteamGeneralLibrary_Uint64Array_Remove) == 0x000020, "Wrong size on SteamGeneralLibrary_Uint64Array_Remove");

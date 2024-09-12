@@ -57,6 +57,20 @@ void AB_PlayerController_C::ExecuteUbergraph_B_PlayerController(int32 EntryPoint
 }
 
 
+// Function B_PlayerController.B_PlayerController_C.CheckForSleepingProps
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_PlayerController_C::CheckForSleepingProps()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PlayerController_C", "CheckForSleepingProps");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_PlayerController.B_PlayerController_C.SetScopeMode
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -94,13 +108,13 @@ void AB_PlayerController_C::TickScopeMode()
 // Function B_PlayerController.B_PlayerController_C.AddNewPropToCollection
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CategoryCount                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   SetCount                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalCategory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalSet                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerController_C::AddNewPropToCollection(int32 PropId, int32 CategoryCount, int32 SetCount, int32 TotalCategory, int32 TotalSet)
+void AB_PlayerController_C::AddNewPropToCollection(int32 PropID, int32 CategoryCount, int32 SetCount, int32 TotalCategory, int32 TotalSet)
 {
 	static class UFunction* Func = nullptr;
 
@@ -109,7 +123,7 @@ void AB_PlayerController_C::AddNewPropToCollection(int32 PropId, int32 CategoryC
 
 	Params::B_PlayerController_C_AddNewPropToCollection Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.CategoryCount = CategoryCount;
 	Parms.SetCount = SetCount;
 	Parms.TotalCategory = TotalCategory;
@@ -816,19 +830,19 @@ bool AB_PlayerController_C::MaxChatMessagesPerSecondSent()
 }
 
 
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_M_K2Node_InputKeyEvent_10
+// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_M_K2Node_InputKeyEvent_5
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AB_PlayerController_C::InpActEvt_Alt_M_K2Node_InputKeyEvent_10(const struct FKey& Key)
+void AB_PlayerController_C::InpActEvt_Alt_M_K2Node_InputKeyEvent_5(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_M_K2Node_InputKeyEvent_10");
+		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_M_K2Node_InputKeyEvent_5");
 
-	Params::B_PlayerController_C_InpActEvt_Alt_M_K2Node_InputKeyEvent_10 Parms{};
+	Params::B_PlayerController_C_InpActEvt_Alt_M_K2Node_InputKeyEvent_5 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -836,39 +850,19 @@ void AB_PlayerController_C::InpActEvt_Alt_M_K2Node_InputKeyEvent_10(const struct
 }
 
 
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_N_K2Node_InputKeyEvent_9
+// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_V_K2Node_InputKeyEvent_4
 // (BlueprintEvent)
 // Parameters:
 // struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AB_PlayerController_C::InpActEvt_Alt_N_K2Node_InputKeyEvent_9(const struct FKey& Key)
+void AB_PlayerController_C::InpActEvt_Alt_V_K2Node_InputKeyEvent_4(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_N_K2Node_InputKeyEvent_9");
+		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_V_K2Node_InputKeyEvent_4");
 
-	Params::B_PlayerController_C_InpActEvt_Alt_N_K2Node_InputKeyEvent_9 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_V_K2Node_InputKeyEvent_8
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AB_PlayerController_C::InpActEvt_Alt_V_K2Node_InputKeyEvent_8(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_V_K2Node_InputKeyEvent_8");
-
-	Params::B_PlayerController_C_InpActEvt_Alt_V_K2Node_InputKeyEvent_8 Parms{};
+	Params::B_PlayerController_C_InpActEvt_Alt_V_K2Node_InputKeyEvent_4 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -956,206 +950,6 @@ void AB_PlayerController_C::OnSuccess_E115D7FB4CB46569B723769816421735(const TAr
 }
 
 
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_J_K2Node_InputKeyEvent_7
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AB_PlayerController_C::InpActEvt_Alt_J_K2Node_InputKeyEvent_7(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_J_K2Node_InputKeyEvent_7");
-
-	Params::B_PlayerController_C_InpActEvt_Alt_J_K2Node_InputKeyEvent_7 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnFailure_042638A744992EAEEA83ACA49ECBB8F9
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBlueprintOnlineItem>     Items                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnFailure_042638A744992EAEEA83ACA49ECBB8F9(const TArray<struct FBlueprintOnlineItem>& Items)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnFailure_042638A744992EAEEA83ACA49ECBB8F9");
-
-	Params::B_PlayerController_C_OnFailure_042638A744992EAEEA83ACA49ECBB8F9 Parms{};
-
-	Parms.Items = std::move(Items);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnSuccess_042638A744992EAEEA83ACA49ECBB8F9
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBlueprintOnlineItem>     Items                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnSuccess_042638A744992EAEEA83ACA49ECBB8F9(const TArray<struct FBlueprintOnlineItem>& Items)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnSuccess_042638A744992EAEEA83ACA49ECBB8F9");
-
-	Params::B_PlayerController_C_OnSuccess_042638A744992EAEEA83ACA49ECBB8F9 Parms{};
-
-	Parms.Items = std::move(Items);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnFailure_C24E8E8A463783E6293C189C38FF744B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FBlueprintItemSerialization      ItemSerialization                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnFailure_C24E8E8A463783E6293C189C38FF744B(const struct FBlueprintItemSerialization& ItemSerialization)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnFailure_C24E8E8A463783E6293C189C38FF744B");
-
-	Params::B_PlayerController_C_OnFailure_C24E8E8A463783E6293C189C38FF744B Parms{};
-
-	Parms.ItemSerialization = std::move(ItemSerialization);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnSuccess_C24E8E8A463783E6293C189C38FF744B
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FBlueprintItemSerialization      ItemSerialization                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnSuccess_C24E8E8A463783E6293C189C38FF744B(const struct FBlueprintItemSerialization& ItemSerialization)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnSuccess_C24E8E8A463783E6293C189C38FF744B");
-
-	Params::B_PlayerController_C_OnSuccess_C24E8E8A463783E6293C189C38FF744B Parms{};
-
-	Parms.ItemSerialization = std::move(ItemSerialization);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnFailure_85D98CA74265CBF64032A9B41794D0BE
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBlueprintOnlineItem>     Items                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnFailure_85D98CA74265CBF64032A9B41794D0BE(const TArray<struct FBlueprintOnlineItem>& Items)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnFailure_85D98CA74265CBF64032A9B41794D0BE");
-
-	Params::B_PlayerController_C_OnFailure_85D98CA74265CBF64032A9B41794D0BE Parms{};
-
-	Parms.Items = std::move(Items);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnSuccess_85D98CA74265CBF64032A9B41794D0BE
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBlueprintOnlineItem>     Items                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnSuccess_85D98CA74265CBF64032A9B41794D0BE(const TArray<struct FBlueprintOnlineItem>& Items)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnSuccess_85D98CA74265CBF64032A9B41794D0BE");
-
-	Params::B_PlayerController_C_OnSuccess_85D98CA74265CBF64032A9B41794D0BE Parms{};
-
-	Parms.Items = std::move(Items);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_P_K2Node_InputKeyEvent_6
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AB_PlayerController_C::InpActEvt_Alt_P_K2Node_InputKeyEvent_6(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_P_K2Node_InputKeyEvent_6");
-
-	Params::B_PlayerController_C_InpActEvt_Alt_P_K2Node_InputKeyEvent_6 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_Z_K2Node_InputKeyEvent_5
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AB_PlayerController_C::InpActEvt_Alt_Z_K2Node_InputKeyEvent_5(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_Z_K2Node_InputKeyEvent_5");
-
-	Params::B_PlayerController_C_InpActEvt_Alt_Z_K2Node_InputKeyEvent_5 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.InpActEvt_Alt_B_K2Node_InputKeyEvent_4
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void AB_PlayerController_C::InpActEvt_Alt_B_K2Node_InputKeyEvent_4(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "InpActEvt_Alt_B_K2Node_InputKeyEvent_4");
-
-	Params::B_PlayerController_C_InpActEvt_Alt_B_K2Node_InputKeyEvent_4 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_PlayerController.B_PlayerController_C.InpActEvt_Five_K2Node_InputKeyEvent_3
 // (BlueprintEvent)
 // Parameters:
@@ -1171,46 +965,6 @@ void AB_PlayerController_C::InpActEvt_Five_K2Node_InputKeyEvent_3(const struct F
 	Params::B_PlayerController_C_InpActEvt_Five_K2Node_InputKeyEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnFailure_B67E4BD34DE2CED06BB952B738E499FF
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBlueprintOnlineItem>     Items                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnFailure_B67E4BD34DE2CED06BB952B738E499FF(const TArray<struct FBlueprintOnlineItem>& Items)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnFailure_B67E4BD34DE2CED06BB952B738E499FF");
-
-	Params::B_PlayerController_C_OnFailure_B67E4BD34DE2CED06BB952B738E499FF Parms{};
-
-	Parms.Items = std::move(Items);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PlayerController.B_PlayerController_C.OnSuccess_B67E4BD34DE2CED06BB952B738E499FF
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBlueprintOnlineItem>     Items                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_PlayerController_C::OnSuccess_B67E4BD34DE2CED06BB952B738E499FF(const TArray<struct FBlueprintOnlineItem>& Items)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PlayerController_C", "OnSuccess_B67E4BD34DE2CED06BB952B738E499FF");
-
-	Params::B_PlayerController_C_OnSuccess_B67E4BD34DE2CED06BB952B738E499FF Parms{};
-
-	Parms.Items = std::move(Items);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2129,13 +1883,13 @@ void AB_PlayerController_C::PutPropsToWakeFailedUnkownProp()
 // Function B_PlayerController.B_PlayerController_C.AddNewPropToCollectionClient
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CountCategory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CountSet                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalCategory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalSet                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerController_C::AddNewPropToCollectionClient(int32 PropId, int32 CountCategory, int32 CountSet, int32 TotalCategory, int32 TotalSet)
+void AB_PlayerController_C::AddNewPropToCollectionClient(int32 PropID, int32 CountCategory, int32 CountSet, int32 TotalCategory, int32 TotalSet)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2144,7 +1898,7 @@ void AB_PlayerController_C::AddNewPropToCollectionClient(int32 PropId, int32 Cou
 
 	Params::B_PlayerController_C_AddNewPropToCollectionClient Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.CountCategory = CountCategory;
 	Parms.CountSet = CountSet;
 	Parms.TotalCategory = TotalCategory;
@@ -2191,9 +1945,9 @@ void AB_PlayerController_C::RequestServerInfoClient(const TArray<struct FS_Serve
 // Function B_PlayerController.B_PlayerController_C.VoteMap
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PlayerController_C::VoteMap(int32 Param_Index)
+void AB_PlayerController_C::VoteMap(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2202,7 +1956,7 @@ void AB_PlayerController_C::VoteMap(int32 Param_Index)
 
 	Params::B_PlayerController_C_VoteMap Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

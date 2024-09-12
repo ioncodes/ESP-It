@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_TaskType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "S_Task_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -91,13 +91,13 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BB8[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BB9[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -129,11 +129,11 @@ public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BBA[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_Value;                           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BBB[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -158,7 +158,7 @@ static_assert(offsetof(B_TaskStarter_C_ToggleHighlight, CallFunc_BooleanAND_Retu
 static_assert(offsetof(B_TaskStarter_C_ToggleHighlight, CallFunc_BooleanAND_ReturnValue_2) == 0x000024, "Member 'B_TaskStarter_C_ToggleHighlight::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 
 // Function B_TaskStarter.B_TaskStarter_C.TryStartTask
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct B_TaskStarter_C_TryStartTask final
 {
 public:
@@ -166,7 +166,7 @@ public:
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsTickingCooldowns_TickingCooldowns;      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BBC[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -177,15 +177,15 @@ public:
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BBD[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_Task                                CallFunc_GetTask_Task;                             // 0x0028(0x0040)(HasGetValueTypeHash)
-	uint8                                         Pad_5BBE[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0070(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_Task_C*                              CallFunc_FinishSpawningActor_ReturnValue;          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_Task                                CallFunc_GetTask_Task;                             // 0x0028(0x0030)(HasGetValueTypeHash)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0060(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_Task_C*                              CallFunc_FinishSpawningActor_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_TaskStarter_C_TryStartTask) == 0x000010, "Wrong alignment on B_TaskStarter_C_TryStartTask");
-static_assert(sizeof(B_TaskStarter_C_TryStartTask) == 0x0000E0, "Wrong size on B_TaskStarter_C_TryStartTask");
+static_assert(sizeof(B_TaskStarter_C_TryStartTask) == 0x0000D0, "Wrong size on B_TaskStarter_C_TryStartTask");
 static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_GetGameState_ReturnValue) == 0x000000, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_TaskStarter_C_TryStartTask, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000008, "Member 'B_TaskStarter_C_TryStartTask::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
 static_assert(offsetof(B_TaskStarter_C_TryStartTask, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'B_TaskStarter_C_TryStartTask::K2Node_DynamicCast_bSuccess' has a wrong offset!");
@@ -201,9 +201,9 @@ static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_Map_Find_ReturnVal
 static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_Not_PreBool_ReturnValue) == 0x00001F, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_Array_Add_ReturnValue) == 0x000020, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_GetTask_Task) == 0x000028, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_GetTask_Task' has a wrong offset!");
-static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_GetTransform_ReturnValue) == 0x000070, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000D0, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000D8, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_GetTransform_ReturnValue) == 0x000060, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000C0, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_TaskStarter_C_TryStartTask, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000C8, "Member 'B_TaskStarter_C_TryStartTask::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
 
 }
 

@@ -15,18 +15,18 @@ namespace SDK::Params
 {
 
 // Function WB_BaseModWidget.WB_BaseModWidget_C.UpdateUI
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_BaseModWidget_C_UpdateUI final
 {
 public:
 	class FName                                   ParameterName;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        FloatValue;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         IntValue;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37D9[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TextValue;                                         // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   TextValue;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WB_BaseModWidget_C_UpdateUI) == 0x000008, "Wrong alignment on WB_BaseModWidget_C_UpdateUI");
-static_assert(sizeof(WB_BaseModWidget_C_UpdateUI) == 0x000030, "Wrong size on WB_BaseModWidget_C_UpdateUI");
+static_assert(sizeof(WB_BaseModWidget_C_UpdateUI) == 0x000028, "Wrong size on WB_BaseModWidget_C_UpdateUI");
 static_assert(offsetof(WB_BaseModWidget_C_UpdateUI, ParameterName) == 0x000000, "Member 'WB_BaseModWidget_C_UpdateUI::ParameterName' has a wrong offset!");
 static_assert(offsetof(WB_BaseModWidget_C_UpdateUI, FloatValue) == 0x000008, "Member 'WB_BaseModWidget_C_UpdateUI::FloatValue' has a wrong offset!");
 static_assert(offsetof(WB_BaseModWidget_C_UpdateUI, IntValue) == 0x000010, "Member 'WB_BaseModWidget_C_UpdateUI::IntValue' has a wrong offset!");

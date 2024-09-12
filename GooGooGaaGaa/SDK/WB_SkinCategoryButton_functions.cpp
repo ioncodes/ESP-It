@@ -108,9 +108,9 @@ bool UWB_SkinCategoryButton_C::GetIsActiveCategorySlot()
 // Function WB_SkinCategoryButton.WB_SkinCategoryButton_C.IsNotifyVisible
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_Visibility                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visibility_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkinCategoryButton_C::IsNotifyVisible(bool* Param_Visibility)
+void UWB_SkinCategoryButton_C::IsNotifyVisible(bool* Visibility_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -121,8 +121,8 @@ void UWB_SkinCategoryButton_C::IsNotifyVisible(bool* Param_Visibility)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Visibility != nullptr)
-		*Param_Visibility = Parms.Param_Visibility;
+	if (Visibility_0 != nullptr)
+		*Visibility_0 = Parms.Visibility_0;
 }
 
 

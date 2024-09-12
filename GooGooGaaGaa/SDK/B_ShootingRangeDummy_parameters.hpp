@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_ShootingRangeDummy.B_ShootingRangeDummy_C.UpdateMesh
-// 0x0190 (0x0190 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct B_ShootingRangeDummy_C_UpdateMesh final
 {
 public:
@@ -27,17 +27,17 @@ public:
 	class UStaticMesh*                            CallFunc_PickMesh_Static_Mesh;                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C32[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Vector_GetAbs_ReturnValue;                // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_AddWorldOffset_SweepHitResult;         // 0x00A8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_AddWorldOffset_SweepHitResult;         // 0x00A8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_ShootingRangeDummy_C_UpdateMesh) == 0x000008, "Wrong alignment on B_ShootingRangeDummy_C_UpdateMesh");
-static_assert(sizeof(B_ShootingRangeDummy_C_UpdateMesh) == 0x000190, "Wrong size on B_ShootingRangeDummy_C_UpdateMesh");
+static_assert(sizeof(B_ShootingRangeDummy_C_UpdateMesh) == 0x0001A0, "Wrong size on B_ShootingRangeDummy_C_UpdateMesh");
 static_assert(offsetof(B_ShootingRangeDummy_C_UpdateMesh, CallFunc_GetLocalBounds_Min) == 0x000000, "Member 'B_ShootingRangeDummy_C_UpdateMesh::CallFunc_GetLocalBounds_Min' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeDummy_C_UpdateMesh, CallFunc_GetLocalBounds_Max) == 0x000018, "Member 'B_ShootingRangeDummy_C_UpdateMesh::CallFunc_GetLocalBounds_Max' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeDummy_C_UpdateMesh, CallFunc_PickMesh_Static_Mesh) == 0x000030, "Member 'B_ShootingRangeDummy_C_UpdateMesh::CallFunc_PickMesh_Static_Mesh' has a wrong offset!");

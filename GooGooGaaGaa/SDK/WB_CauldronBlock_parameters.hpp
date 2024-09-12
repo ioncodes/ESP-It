@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "S_PropData_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,7 +27,7 @@ public:
 	class APawn*                                  CallFunc_GetOwningPlayerPawn_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C88[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -63,14 +63,14 @@ struct WB_CauldronBlock_C_Get_Border_Brush_0 final
 public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C89[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable;                              // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_1;                            // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_2;                            // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_3;                            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_4;                            // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              CallFunc_Get_CorrectProp_Visibility_0_ReturnValue; // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C8A[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Select_Default;                             // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0110(0x00D0)()
 };
@@ -107,27 +107,27 @@ static_assert(offsetof(WB_CauldronBlock_C_Get_CorrectProp_Visibility_0, Temp_byt
 static_assert(offsetof(WB_CauldronBlock_C_Get_CorrectProp_Visibility_0, K2Node_Select_Default) == 0x000004, "Member 'WB_CauldronBlock_C_Get_CorrectProp_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CauldronBlock.WB_CauldronBlock_C.Get_Fillstate_Text_0
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct WB_CauldronBlock_C_Get_Fillstate_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int64                                         CallFunc_Conv_ByteToInt64_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_ByteToInt64_ReturnValue_1;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0078(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int64                                         CallFunc_Conv_ByteToInt64_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_ByteToInt64_ReturnValue_1;           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0068(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0010)()
 };
 static_assert(alignof(WB_CauldronBlock_C_Get_Fillstate_Text_0) == 0x000008, "Wrong alignment on WB_CauldronBlock_C_Get_Fillstate_Text_0");
-static_assert(sizeof(WB_CauldronBlock_C_Get_Fillstate_Text_0) == 0x0000F0, "Wrong size on WB_CauldronBlock_C_Get_Fillstate_Text_0");
+static_assert(sizeof(WB_CauldronBlock_C_Get_Fillstate_Text_0) == 0x0000D0, "Wrong size on WB_CauldronBlock_C_Get_Fillstate_Text_0");
 static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, ReturnValue) == 0x000000, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, CallFunc_Conv_ByteToInt64_ReturnValue) == 0x000018, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::CallFunc_Conv_ByteToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, CallFunc_Conv_ByteToInt64_ReturnValue_1) == 0x000020, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::CallFunc_Conv_ByteToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000028, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000078, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, K2Node_MakeArray_Array) == 0x0000C8, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, CallFunc_Format_ReturnValue) == 0x0000D8, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, CallFunc_Conv_ByteToInt64_ReturnValue) == 0x000010, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::CallFunc_Conv_ByteToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, CallFunc_Conv_ByteToInt64_ReturnValue_1) == 0x000018, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::CallFunc_Conv_ByteToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000068, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, K2Node_MakeArray_Array) == 0x0000B0, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_Get_Fillstate_Text_0, CallFunc_Format_ReturnValue) == 0x0000C0, "Member 'WB_CauldronBlock_C_Get_Fillstate_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_CauldronBlock.WB_CauldronBlock_C.Get_PropIcon_Brush_0
 // 0x02B0 (0x02B0 - 0x0000)
@@ -136,15 +136,15 @@ struct WB_CauldronBlock_C_Get_PropIcon_Brush_0 final
 public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C8B[0x8];                                     // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00E0(0x00D0)()
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C8C[0x6];                                     // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_PropData                            CallFunc_Map_Find_Value;                           // 0x01C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C8D[0xF];                                     // 0x01D1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1[0xF];                                      // 0x01D1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x01E0(0x00D0)()
 };
 static_assert(alignof(WB_CauldronBlock_C_Get_PropIcon_Brush_0) == 0x000010, "Wrong alignment on WB_CauldronBlock_C_Get_PropIcon_Brush_0");
@@ -160,17 +160,17 @@ static_assert(offsetof(WB_CauldronBlock_C_Get_PropIcon_Brush_0, CallFunc_Map_Fin
 static_assert(offsetof(WB_CauldronBlock_C_Get_PropIcon_Brush_0, K2Node_MakeStruct_SlateBrush_1) == 0x0001E0, "Member 'WB_CauldronBlock_C_Get_PropIcon_Brush_0::K2Node_MakeStruct_SlateBrush_1' has a wrong offset!");
 
 // Function WB_CauldronBlock.WB_CauldronBlock_C.GetText_0
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_CauldronBlock_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CauldronBlock_C_GetText_0) == 0x000008, "Wrong alignment on WB_CauldronBlock_C_GetText_0");
-static_assert(sizeof(WB_CauldronBlock_C_GetText_0) == 0x000020, "Wrong size on WB_CauldronBlock_C_GetText_0");
+static_assert(sizeof(WB_CauldronBlock_C_GetText_0) == 0x000018, "Wrong size on WB_CauldronBlock_C_GetText_0");
 static_assert(offsetof(WB_CauldronBlock_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_CauldronBlock_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CauldronBlock_C_GetText_0, CallFunc_IsValidClass_ReturnValue) == 0x000018, "Member 'WB_CauldronBlock_C_GetText_0::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CauldronBlock_C_GetText_0, CallFunc_IsValidClass_ReturnValue) == 0x000010, "Member 'WB_CauldronBlock_C_GetText_0::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
 
 // Function WB_CauldronBlock.WB_CauldronBlock_C.GetVisibility_0
 // 0x0006 (0x0006 - 0x0000)

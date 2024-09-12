@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinWitchColorBase.B_SkinWitchColorBase_C
-// 0x0038 (0x02E8 - 0x02B0)
+// 0x0038 (0x02E0 - 0x02A8)
 class AB_SkinWitchColorBase_C : public AB_SkinItem_C
 {
 public:
-	struct FB_SkinColor                           SkinColor;                                         // 0x02B0(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FB_SkinColor                           SkinColor;                                         // 0x02A8(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,8 +35,8 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinWitchColorBase_C) == 0x000008, "Wrong alignment on AB_SkinWitchColorBase_C");
-static_assert(sizeof(AB_SkinWitchColorBase_C) == 0x0002E8, "Wrong size on AB_SkinWitchColorBase_C");
-static_assert(offsetof(AB_SkinWitchColorBase_C, SkinColor) == 0x0002B0, "Member 'AB_SkinWitchColorBase_C::SkinColor' has a wrong offset!");
+static_assert(sizeof(AB_SkinWitchColorBase_C) == 0x0002E0, "Wrong size on AB_SkinWitchColorBase_C");
+static_assert(offsetof(AB_SkinWitchColorBase_C, SkinColor) == 0x0002A8, "Member 'AB_SkinWitchColorBase_C::SkinColor' has a wrong offset!");
 
 }
 

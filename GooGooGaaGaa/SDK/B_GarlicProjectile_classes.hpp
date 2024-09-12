@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GarlicProjectile.B_GarlicProjectile_C
-// 0x0038 (0x02D0 - 0x0298)
+// 0x0038 (0x02C8 - 0x0290)
 class AB_GarlicProjectile_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_GarlicTrail;                                    // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UProjectileMovementComponent*           ProjectileMovement;                                // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GarlicCloveClass;                                  // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentLifeTime;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_GarlicTrail;                                    // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UProjectileMovementComponent*           ProjectileMovement;                                // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GarlicCloveClass;                                  // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentLifeTime;                                   // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AttachGarlicClove(class USceneComponent* Parent);
@@ -41,9 +41,9 @@ public:
 	void TearDown();
 	void TearDownMulti();
 	void TearDownPoolObject();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
-	void TearUpMulti(const struct FTransform& Transform, class AActor* Param_Owner, class APawn* Param_Instigator);
-	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
+	void TearUpMulti(const struct FTransform& Transform, class AActor* Owner_0, class APawn* Instigator_0);
+	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 	void UpdateVelocityVector();
 
 public:
@@ -57,14 +57,14 @@ public:
 	}
 };
 static_assert(alignof(AB_GarlicProjectile_C) == 0x000008, "Wrong alignment on AB_GarlicProjectile_C");
-static_assert(sizeof(AB_GarlicProjectile_C) == 0x0002D0, "Wrong size on AB_GarlicProjectile_C");
-static_assert(offsetof(AB_GarlicProjectile_C, UberGraphFrame) == 0x000298, "Member 'AB_GarlicProjectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_GarlicProjectile_C, NS_GarlicTrail) == 0x0002A0, "Member 'AB_GarlicProjectile_C::NS_GarlicTrail' has a wrong offset!");
-static_assert(offsetof(AB_GarlicProjectile_C, StaticMesh) == 0x0002A8, "Member 'AB_GarlicProjectile_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_GarlicProjectile_C, Sphere) == 0x0002B0, "Member 'AB_GarlicProjectile_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_GarlicProjectile_C, ProjectileMovement) == 0x0002B8, "Member 'AB_GarlicProjectile_C::ProjectileMovement' has a wrong offset!");
-static_assert(offsetof(AB_GarlicProjectile_C, GarlicCloveClass) == 0x0002C0, "Member 'AB_GarlicProjectile_C::GarlicCloveClass' has a wrong offset!");
-static_assert(offsetof(AB_GarlicProjectile_C, CurrentLifeTime) == 0x0002C8, "Member 'AB_GarlicProjectile_C::CurrentLifeTime' has a wrong offset!");
+static_assert(sizeof(AB_GarlicProjectile_C) == 0x0002C8, "Wrong size on AB_GarlicProjectile_C");
+static_assert(offsetof(AB_GarlicProjectile_C, UberGraphFrame) == 0x000290, "Member 'AB_GarlicProjectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_GarlicProjectile_C, NS_GarlicTrail) == 0x000298, "Member 'AB_GarlicProjectile_C::NS_GarlicTrail' has a wrong offset!");
+static_assert(offsetof(AB_GarlicProjectile_C, StaticMesh) == 0x0002A0, "Member 'AB_GarlicProjectile_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_GarlicProjectile_C, Sphere) == 0x0002A8, "Member 'AB_GarlicProjectile_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_GarlicProjectile_C, ProjectileMovement) == 0x0002B0, "Member 'AB_GarlicProjectile_C::ProjectileMovement' has a wrong offset!");
+static_assert(offsetof(AB_GarlicProjectile_C, GarlicCloveClass) == 0x0002B8, "Member 'AB_GarlicProjectile_C::GarlicCloveClass' has a wrong offset!");
+static_assert(offsetof(AB_GarlicProjectile_C, CurrentLifeTime) == 0x0002C0, "Member 'AB_GarlicProjectile_C::CurrentLifeTime' has a wrong offset!");
 
 }
 

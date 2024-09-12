@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HunterFrog.B_HunterFrog_C
-// 0x0038 (0x02D0 - 0x0298)
+// 0x0038 (0x02C8 - 0x0290)
 class AB_HunterFrog_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetComponent*                       PlayerName;                                        // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorPlayerState_C*               PlayerState;                                       // 0x02C0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          Unreportable;                                      // 0x02C8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetComponent*                       PlayerName;                                        // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorPlayerState_C*               PlayerState;                                       // 0x02B8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          Unreportable;                                      // 0x02C0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_HunterFrog(int32 EntryPoint);
@@ -47,14 +47,14 @@ public:
 	}
 };
 static_assert(alignof(AB_HunterFrog_C) == 0x000008, "Wrong alignment on AB_HunterFrog_C");
-static_assert(sizeof(AB_HunterFrog_C) == 0x0002D0, "Wrong size on AB_HunterFrog_C");
-static_assert(offsetof(AB_HunterFrog_C, UberGraphFrame) == 0x000298, "Member 'AB_HunterFrog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_HunterFrog_C, PlayerName) == 0x0002A0, "Member 'AB_HunterFrog_C::PlayerName' has a wrong offset!");
-static_assert(offsetof(AB_HunterFrog_C, Box) == 0x0002A8, "Member 'AB_HunterFrog_C::Box' has a wrong offset!");
-static_assert(offsetof(AB_HunterFrog_C, SkeletalMesh) == 0x0002B0, "Member 'AB_HunterFrog_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(AB_HunterFrog_C, DefaultSceneRoot) == 0x0002B8, "Member 'AB_HunterFrog_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_HunterFrog_C, PlayerState) == 0x0002C0, "Member 'AB_HunterFrog_C::PlayerState' has a wrong offset!");
-static_assert(offsetof(AB_HunterFrog_C, Unreportable) == 0x0002C8, "Member 'AB_HunterFrog_C::Unreportable' has a wrong offset!");
+static_assert(sizeof(AB_HunterFrog_C) == 0x0002C8, "Wrong size on AB_HunterFrog_C");
+static_assert(offsetof(AB_HunterFrog_C, UberGraphFrame) == 0x000290, "Member 'AB_HunterFrog_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_HunterFrog_C, PlayerName) == 0x000298, "Member 'AB_HunterFrog_C::PlayerName' has a wrong offset!");
+static_assert(offsetof(AB_HunterFrog_C, Box) == 0x0002A0, "Member 'AB_HunterFrog_C::Box' has a wrong offset!");
+static_assert(offsetof(AB_HunterFrog_C, SkeletalMesh) == 0x0002A8, "Member 'AB_HunterFrog_C::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(AB_HunterFrog_C, DefaultSceneRoot) == 0x0002B0, "Member 'AB_HunterFrog_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_HunterFrog_C, PlayerState) == 0x0002B8, "Member 'AB_HunterFrog_C::PlayerState' has a wrong offset!");
+static_assert(offsetof(AB_HunterFrog_C, Unreportable) == 0x0002C0, "Member 'AB_HunterFrog_C::Unreportable' has a wrong offset!");
 
 }
 

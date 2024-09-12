@@ -21,21 +21,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ObjectiveResultScreen.WB_ObjectiveResultScreen_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_ObjectiveResultScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Victory;                                           // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               VictoryLogo;                                       // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine1;                           // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine2;                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine3;                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine4;                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ResultScreenBase_C*                 WB_ResultScreenBase;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        NextScreenTime;                                    // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentResultLineIndex;                            // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlayVictoryLogo;                                   // 0x030C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Victory;                                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               VictoryLogo;                                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine1;                           // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine2;                           // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine3;                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ObjectiveResultLine_C*              WB_ObjectiveResultLine4;                           // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ResultScreenBase_C*                 WB_ResultScreenBase;                               // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        NextScreenTime;                                    // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentResultLineIndex;                            // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlayVictoryLogo;                                   // 0x032C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -58,18 +58,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_ObjectiveResultScreen_C) == 0x000008, "Wrong alignment on UWB_ObjectiveResultScreen_C");
-static_assert(sizeof(UWB_ObjectiveResultScreen_C) == 0x000310, "Wrong size on UWB_ObjectiveResultScreen_C");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ObjectiveResultScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, Victory) == 0x0002C8, "Member 'UWB_ObjectiveResultScreen_C::Victory' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, VictoryLogo) == 0x0002D0, "Member 'UWB_ObjectiveResultScreen_C::VictoryLogo' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine1) == 0x0002D8, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine1' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine2) == 0x0002E0, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine2' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine3) == 0x0002E8, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine3' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine4) == 0x0002F0, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine4' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ResultScreenBase) == 0x0002F8, "Member 'UWB_ObjectiveResultScreen_C::WB_ResultScreenBase' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, NextScreenTime) == 0x000300, "Member 'UWB_ObjectiveResultScreen_C::NextScreenTime' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, CurrentResultLineIndex) == 0x000308, "Member 'UWB_ObjectiveResultScreen_C::CurrentResultLineIndex' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveResultScreen_C, PlayVictoryLogo) == 0x00030C, "Member 'UWB_ObjectiveResultScreen_C::PlayVictoryLogo' has a wrong offset!");
+static_assert(sizeof(UWB_ObjectiveResultScreen_C) == 0x000330, "Wrong size on UWB_ObjectiveResultScreen_C");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ObjectiveResultScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, Victory) == 0x0002E8, "Member 'UWB_ObjectiveResultScreen_C::Victory' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, VictoryLogo) == 0x0002F0, "Member 'UWB_ObjectiveResultScreen_C::VictoryLogo' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine1) == 0x0002F8, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine1' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine2) == 0x000300, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine2' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine3) == 0x000308, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine3' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ObjectiveResultLine4) == 0x000310, "Member 'UWB_ObjectiveResultScreen_C::WB_ObjectiveResultLine4' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, WB_ResultScreenBase) == 0x000318, "Member 'UWB_ObjectiveResultScreen_C::WB_ResultScreenBase' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, NextScreenTime) == 0x000320, "Member 'UWB_ObjectiveResultScreen_C::NextScreenTime' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, CurrentResultLineIndex) == 0x000328, "Member 'UWB_ObjectiveResultScreen_C::CurrentResultLineIndex' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveResultScreen_C, PlayVictoryLogo) == 0x00032C, "Member 'UWB_ObjectiveResultScreen_C::PlayVictoryLogo' has a wrong offset!");
 
 }
 

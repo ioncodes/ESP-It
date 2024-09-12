@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,20 +20,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PasswordField.WB_PasswordField_C
-// 0x15E0 (0x18A0 - 0x02C0)
+// 0x15E0 (0x18C0 - 0x02E0)
 class UWB_PasswordField_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UButton*                                PasswordFocusButton;                               // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       PasswordTextboxClear;                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCheckBox*                              ScramblePasswordCheckBox;                          // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 Password;                                          // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FCheckBoxStyle                         CheckBoxStyle;                                     // 0x02F0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FCheckBoxStyle                         CheckBoxStyleFocused;                              // 0x0DC0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsPasswordTextField;                               // 0x1890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UButton*                                PasswordFocusButton;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       PasswordTextboxClear;                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCheckBox*                              ScramblePasswordCheckBox;                          // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 Password;                                          // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FCheckBoxStyle                         CheckBoxStyle;                                     // 0x0310(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FCheckBoxStyle                         CheckBoxStyleFocused;                              // 0x0DE0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsPasswordTextField;                               // 0x18B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	ESlateVisibility Get_ScramblePasswordCheckBox_Visibility_0();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__ScramblePasswordCheckBox_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
@@ -54,15 +55,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_PasswordField_C) == 0x000010, "Wrong alignment on UWB_PasswordField_C");
-static_assert(sizeof(UWB_PasswordField_C) == 0x0018A0, "Wrong size on UWB_PasswordField_C");
-static_assert(offsetof(UWB_PasswordField_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_PasswordField_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, PasswordFocusButton) == 0x0002C8, "Member 'UWB_PasswordField_C::PasswordFocusButton' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, PasswordTextboxClear) == 0x0002D0, "Member 'UWB_PasswordField_C::PasswordTextboxClear' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, ScramblePasswordCheckBox) == 0x0002D8, "Member 'UWB_PasswordField_C::ScramblePasswordCheckBox' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, Password) == 0x0002E0, "Member 'UWB_PasswordField_C::Password' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, CheckBoxStyle) == 0x0002F0, "Member 'UWB_PasswordField_C::CheckBoxStyle' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, CheckBoxStyleFocused) == 0x000DC0, "Member 'UWB_PasswordField_C::CheckBoxStyleFocused' has a wrong offset!");
-static_assert(offsetof(UWB_PasswordField_C, IsPasswordTextField) == 0x001890, "Member 'UWB_PasswordField_C::IsPasswordTextField' has a wrong offset!");
+static_assert(sizeof(UWB_PasswordField_C) == 0x0018C0, "Wrong size on UWB_PasswordField_C");
+static_assert(offsetof(UWB_PasswordField_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_PasswordField_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, PasswordFocusButton) == 0x0002E8, "Member 'UWB_PasswordField_C::PasswordFocusButton' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, PasswordTextboxClear) == 0x0002F0, "Member 'UWB_PasswordField_C::PasswordTextboxClear' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, ScramblePasswordCheckBox) == 0x0002F8, "Member 'UWB_PasswordField_C::ScramblePasswordCheckBox' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, Password) == 0x000300, "Member 'UWB_PasswordField_C::Password' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, CheckBoxStyle) == 0x000310, "Member 'UWB_PasswordField_C::CheckBoxStyle' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, CheckBoxStyleFocused) == 0x000DE0, "Member 'UWB_PasswordField_C::CheckBoxStyleFocused' has a wrong offset!");
+static_assert(offsetof(UWB_PasswordField_C, IsPasswordTextField) == 0x0018B0, "Member 'UWB_PasswordField_C::IsPasswordTextField' has a wrong offset!");
 
 }
 

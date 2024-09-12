@@ -193,9 +193,9 @@ void UWB_PropCollectionWidgetCreative_C::FulfillsFilterConditions(class UB_TileV
 // Function WB_PropCollectionWidgetCreative.WB_PropCollectionWidgetCreative_C.UpdateSelectedCategoryButton
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Param_SelectedCategoryButton                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          SelectedCategoryButton_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropCollectionWidgetCreative_C::UpdateSelectedCategoryButton(class UObject* Param_SelectedCategoryButton)
+void UWB_PropCollectionWidgetCreative_C::UpdateSelectedCategoryButton(class UObject* SelectedCategoryButton_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -204,7 +204,7 @@ void UWB_PropCollectionWidgetCreative_C::UpdateSelectedCategoryButton(class UObj
 
 	Params::WB_PropCollectionWidgetCreative_C_UpdateSelectedCategoryButton Parms{};
 
-	Parms.Param_SelectedCategoryButton = Param_SelectedCategoryButton;
+	Parms.SelectedCategoryButton_0 = SelectedCategoryButton_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

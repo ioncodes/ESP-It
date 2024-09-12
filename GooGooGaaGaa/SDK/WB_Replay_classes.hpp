@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Replay.WB_Replay_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_Replay_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Speed;                                             // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Time;                                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Speed;                                             // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Time;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WB_Replay(int32 EntryPoint);
@@ -42,10 +42,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_Replay_C) == 0x000008, "Wrong alignment on UWB_Replay_C");
-static_assert(sizeof(UWB_Replay_C) == 0x0002D8, "Wrong size on UWB_Replay_C");
-static_assert(offsetof(UWB_Replay_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Replay_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Replay_C, Speed) == 0x0002C8, "Member 'UWB_Replay_C::Speed' has a wrong offset!");
-static_assert(offsetof(UWB_Replay_C, Time) == 0x0002D0, "Member 'UWB_Replay_C::Time' has a wrong offset!");
+static_assert(sizeof(UWB_Replay_C) == 0x0002F8, "Wrong size on UWB_Replay_C");
+static_assert(offsetof(UWB_Replay_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Replay_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Replay_C, Speed) == 0x0002E8, "Member 'UWB_Replay_C::Speed' has a wrong offset!");
+static_assert(offsetof(UWB_Replay_C, Time) == 0x0002F0, "Member 'UWB_Replay_C::Time' has a wrong offset!");
 
 }
 

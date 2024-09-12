@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_BaseHunterSkill_classes.hpp"
 
 
@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ProjectileSkill.B_ProjectileSkill_C
-// 0x0058 (0x0160 - 0x0108)
+// 0x0058 (0x0158 - 0x0100)
 class UB_ProjectileSkill_C : public UB_BaseHunterSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ProjectileSkill_C;                // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USoundCue*                              ShootSound;                                        // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        ShootDelay;                                        // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      ShootAuttenuation;                                 // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ProjectileClass;                                   // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GunOffset;                                         // 0x0130(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnProjectileSpawned;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class AB_Hunter_C*                            CurrentHunter;                                     // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ProjectileSkill_C;                // 0x0100(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USoundCue*                              ShootSound;                                        // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        ShootDelay;                                        // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      ShootAuttenuation;                                 // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 ProjectileClass;                                   // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GunOffset;                                         // 0x0128(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnProjectileSpawned;                               // 0x0140(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class AB_Hunter_C*                            CurrentHunter;                                     // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnActivateSkillServer();
@@ -50,15 +50,15 @@ public:
 	}
 };
 static_assert(alignof(UB_ProjectileSkill_C) == 0x000008, "Wrong alignment on UB_ProjectileSkill_C");
-static_assert(sizeof(UB_ProjectileSkill_C) == 0x000160, "Wrong size on UB_ProjectileSkill_C");
-static_assert(offsetof(UB_ProjectileSkill_C, UberGraphFrame_B_ProjectileSkill_C) == 0x000108, "Member 'UB_ProjectileSkill_C::UberGraphFrame_B_ProjectileSkill_C' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, ShootSound) == 0x000110, "Member 'UB_ProjectileSkill_C::ShootSound' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, ShootDelay) == 0x000118, "Member 'UB_ProjectileSkill_C::ShootDelay' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, ShootAuttenuation) == 0x000120, "Member 'UB_ProjectileSkill_C::ShootAuttenuation' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, ProjectileClass) == 0x000128, "Member 'UB_ProjectileSkill_C::ProjectileClass' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, GunOffset) == 0x000130, "Member 'UB_ProjectileSkill_C::GunOffset' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, OnProjectileSpawned) == 0x000148, "Member 'UB_ProjectileSkill_C::OnProjectileSpawned' has a wrong offset!");
-static_assert(offsetof(UB_ProjectileSkill_C, CurrentHunter) == 0x000158, "Member 'UB_ProjectileSkill_C::CurrentHunter' has a wrong offset!");
+static_assert(sizeof(UB_ProjectileSkill_C) == 0x000158, "Wrong size on UB_ProjectileSkill_C");
+static_assert(offsetof(UB_ProjectileSkill_C, UberGraphFrame_B_ProjectileSkill_C) == 0x000100, "Member 'UB_ProjectileSkill_C::UberGraphFrame_B_ProjectileSkill_C' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, ShootSound) == 0x000108, "Member 'UB_ProjectileSkill_C::ShootSound' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, ShootDelay) == 0x000110, "Member 'UB_ProjectileSkill_C::ShootDelay' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, ShootAuttenuation) == 0x000118, "Member 'UB_ProjectileSkill_C::ShootAuttenuation' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, ProjectileClass) == 0x000120, "Member 'UB_ProjectileSkill_C::ProjectileClass' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, GunOffset) == 0x000128, "Member 'UB_ProjectileSkill_C::GunOffset' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, OnProjectileSpawned) == 0x000140, "Member 'UB_ProjectileSkill_C::OnProjectileSpawned' has a wrong offset!");
+static_assert(offsetof(UB_ProjectileSkill_C, CurrentHunter) == 0x000150, "Member 'UB_ProjectileSkill_C::CurrentHunter' has a wrong offset!");
 
 }
 

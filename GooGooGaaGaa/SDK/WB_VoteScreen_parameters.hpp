@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -32,7 +32,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5267[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation;    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X;                          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -50,14 +50,14 @@ public:
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5268[0x5];                                     // 0x00BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BB[0x5];                                       // 0x00BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_1;  // 0x00C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_2;  // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X_5;                        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_5;                        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5269[0x2];                                     // 0x00F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F2[0x2];                                       // 0x00F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            CallFunc_Array_Get_Item;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -110,10 +110,10 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_526A[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation;    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_526B[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_1;  // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X;                          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -122,7 +122,7 @@ public:
 	double                                        CallFunc_BreakVector2D_X_2;                        // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_2;                        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_526C[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_3;                        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_3;                        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -131,14 +131,14 @@ public:
 	double                                        CallFunc_Abs_ReturnValue;                          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_526D[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_5;                        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_5;                        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_526E[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_2;  // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_526F[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            CallFunc_Array_Get_Item;                           // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -191,7 +191,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5270[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation;    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X;                          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -205,20 +205,20 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Abs_ReturnValue;                          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5271[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_4;                        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_4;                        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue_1;  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5272[0x6];                                     // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_1;  // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X_5;                        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_5;                        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5273[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_2;  // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5274[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            CallFunc_Array_Get_Item;                           // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -271,10 +271,10 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5275[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation;    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5276[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_1;  // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X;                          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -283,7 +283,7 @@ public:
 	double                                        CallFunc_BreakVector2D_X_2;                        // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_2;                        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5277[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_3;                        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_3;                        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -295,10 +295,10 @@ public:
 	double                                        CallFunc_BreakVector2D_Y_5;                        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5278[0x6];                                     // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetActorScreenPosition_ScreenLocation_2;  // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5279[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            CallFunc_Array_Get_Item;                           // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -340,7 +340,7 @@ static_assert(offsetof(WB_VoteScreen_C_CustomUp, CallFunc_Array_Get_Item) == 0x0
 static_assert(offsetof(WB_VoteScreen_C_CustomUp, CallFunc_Less_IntInt_ReturnValue) == 0x000110, "Member 'WB_VoteScreen_C_CustomUp::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_VoteScreen.WB_VoteScreen_C.ExecuteUbergraph_WB_VoteScreen
-// 0x0390 (0x0390 - 0x0000)
+// 0x03A0 (0x03A0 - 0x0000)
 struct WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen final
 {
 public:
@@ -353,77 +353,77 @@ public:
 	struct FVector                                CallFunc_DeprojectMousePositionToWorld_WorldLocation; // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_DeprojectMousePositionToWorld_WorldDirection; // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DeprojectMousePositionToWorld_ReturnValue; // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_527A[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_527B[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_527C[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_1;             // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_527D[0x6];                                     // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_2;             // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean_1;             // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_527E[0x6];                                     // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_527F[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5280[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorHunter_C*                    K2Node_DynamicCast_AsB_Impostor_Hunter;            // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5281[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_Hunter_C*>                    CallFunc_GetAllActorsOfClass_OutActors;            // 0x0170(0x0010)(ReferenceParm)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5282[0x7];                                     // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_3;             // 0x0188(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean_2;             // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5283[0x6];                                     // 0x019A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19A[0x6];                                      // 0x019A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_4;             // 0x01A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5284[0x6];                                     // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B2[0x6];                                      // 0x01B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x01B8(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x01C8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamepadMode_ReturnValue_1;              // 0x02B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x02B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x02B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5285[0x3];                                     // 0x02B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x02C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x02D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x02F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0308(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0330(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5286[0x4];                                     // 0x0354(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0370(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x01C8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue_1;              // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x02C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x02C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C5[0x3];                                      // 0x02C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x02CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0300(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0318(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0340(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x035C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0368(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0380(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen) == 0x000008, "Wrong alignment on WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen");
-static_assert(sizeof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen) == 0x000390, "Wrong size on WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen");
+static_assert(sizeof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen) == 0x0003A0, "Wrong size on WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen");
 static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, EntryPoint) == 0x000000, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, K2Node_Event_MyGeometry) == 0x000004, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::K2Node_Event_MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::K2Node_Event_InDeltaTime' has a wrong offset!");
@@ -466,28 +466,28 @@ static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, K2Node_Dy
 static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_IsValid_ReturnValue_1) == 0x0001B1, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, Temp_object_Variable) == 0x0001B8, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_LineTraceSingleForObjects_OutHit) == 0x0001C8, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0002B0, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_IsGamepadMode_ReturnValue_1) == 0x0002B1, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_IsGamepadMode_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_Not_PreBool_ReturnValue_1) == 0x0002B2, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_bBlockingHit) == 0x0002B3, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_bInitialOverlap) == 0x0002B4, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Time) == 0x0002B8, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Distance) == 0x0002BC, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Location) == 0x0002C0, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_ImpactPoint) == 0x0002D8, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Normal) == 0x0002F0, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_ImpactNormal) == 0x000308, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_PhysMat) == 0x000320, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitActor) == 0x000328, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitComponent) == 0x000330, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitBoneName) == 0x000338, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_BoneName) == 0x000340, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitItem) == 0x000348, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_ElementIndex) == 0x00034C, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_FaceIndex) == 0x000350, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_TraceStart) == 0x000358, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_TraceEnd) == 0x000370, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_Not_PreBool_ReturnValue_2) == 0x000388, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0002C0, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_IsGamepadMode_ReturnValue_1) == 0x0002C1, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_IsGamepadMode_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_Not_PreBool_ReturnValue_1) == 0x0002C2, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_bBlockingHit) == 0x0002C3, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_bInitialOverlap) == 0x0002C4, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Time) == 0x0002C8, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Distance) == 0x0002CC, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Location) == 0x0002D0, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_ImpactPoint) == 0x0002E8, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_Normal) == 0x000300, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_ImpactNormal) == 0x000318, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_PhysMat) == 0x000330, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitActor) == 0x000338, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitComponent) == 0x000340, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitBoneName) == 0x000348, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_BoneName) == 0x000350, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_HitItem) == 0x000358, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_ElementIndex) == 0x00035C, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_FaceIndex) == 0x000360, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_TraceStart) == 0x000368, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_BreakHitResult_TraceEnd) == 0x000380, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen, CallFunc_Not_PreBool_ReturnValue_2) == 0x000398, "Member 'WB_VoteScreen_C_ExecuteUbergraph_WB_VoteScreen::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 
 // Function WB_VoteScreen.WB_VoteScreen_C.Get_VotePlayer_ColorAndOpacity_0
 // 0x00A0 (0x00A0 - 0x0000)
@@ -495,14 +495,14 @@ struct WB_VoteScreen_C_Get_VotePlayer_ColorAndOpacity_0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
-	uint8                                         Pad_5287[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5288[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5289[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetPlayerColor_ReturnValue;               // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -532,22 +532,22 @@ static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_ColorAndOpacity_0, K2Node_
 static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_ColorAndOpacity_0, K2Node_MakeStruct_B_ImplicitCast) == 0x00009C, "Member 'WB_VoteScreen_C_Get_VotePlayer_ColorAndOpacity_0::K2Node_MakeStruct_B_ImplicitCast' has a wrong offset!");
 
 // Function WB_VoteScreen.WB_VoteScreen_C.Get_VotePlayer_Text_0
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_VoteScreen_C_Get_VotePlayer_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_528A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
 };
 static_assert(alignof(WB_VoteScreen_C_Get_VotePlayer_Text_0) == 0x000008, "Wrong alignment on WB_VoteScreen_C_Get_VotePlayer_Text_0");
-static_assert(sizeof(WB_VoteScreen_C_Get_VotePlayer_Text_0) == 0x000048, "Wrong size on WB_VoteScreen_C_Get_VotePlayer_Text_0");
+static_assert(sizeof(WB_VoteScreen_C_Get_VotePlayer_Text_0) == 0x000038, "Wrong size on WB_VoteScreen_C_Get_VotePlayer_Text_0");
 static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, ReturnValue) == 0x000000, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, CallFunc_GetPlayerName_ReturnValue) == 0x000018, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, CallFunc_GetPlayerName_ReturnValue) == 0x000010, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'WB_VoteScreen_C_Get_VotePlayer_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_VoteScreen.WB_VoteScreen_C.Get_VotePlayer_Visibility_0
 // 0x0006 (0x0006 - 0x0000)
@@ -571,27 +571,27 @@ static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Visibility_0, CallFunc_IsV
 static_assert(offsetof(WB_VoteScreen_C_Get_VotePlayer_Visibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_VoteScreen_C_Get_VotePlayer_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_VoteScreen.WB_VoteScreen_C.Get_VoteQuestion_Text_0
-// 0x0070 (0x0070 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_VoteScreen_C_Get_VoteQuestion_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_528B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_528C[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0040(0x0010)()
 };
 static_assert(alignof(WB_VoteScreen_C_Get_VoteQuestion_Text_0) == 0x000008, "Wrong alignment on WB_VoteScreen_C_Get_VoteQuestion_Text_0");
-static_assert(sizeof(WB_VoteScreen_C_Get_VoteQuestion_Text_0) == 0x000070, "Wrong size on WB_VoteScreen_C_Get_VoteQuestion_Text_0");
+static_assert(sizeof(WB_VoteScreen_C_Get_VoteQuestion_Text_0) == 0x000050, "Wrong size on WB_VoteScreen_C_Get_VoteQuestion_Text_0");
 static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, ReturnValue) == 0x000000, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, Temp_bool_Variable) == 0x000018, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, Temp_text_Variable) == 0x000020, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, Temp_text_Variable_1) == 0x000038, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, K2Node_Select_Default) == 0x000058, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, Temp_bool_Variable) == 0x000010, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, Temp_text_Variable) == 0x000018, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, Temp_text_Variable_1) == 0x000028, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VoteScreen_C_Get_VoteQuestion_Text_0, K2Node_Select_Default) == 0x000040, "Member 'WB_VoteScreen_C_Get_VoteQuestion_Text_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_VoteScreen.WB_VoteScreen_C.Get_VoteQuestionBlur_Visibility_0
 // 0x0005 (0x0005 - 0x0000)
@@ -666,10 +666,10 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_7;          // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x016B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_528D[0x4];                                     // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_GetKey_ReturnValue_1;                     // 0x0170(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_8;          // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_528E[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0190(0x00B8)()
 };
 static_assert(alignof(WB_VoteScreen_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_VoteScreen_C_OnPreviewKeyDown");
@@ -702,14 +702,14 @@ struct WB_VoteScreen_C_SetNewHunterHighlight final
 public:
 	class AActor*                                 NewHunter;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_528F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5290[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_1;             // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5291[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_2;             // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean_1;             // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,20 +20,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ControllerHelp.WB_ControllerHelp_C
-// 0x00B0 (0x0370 - 0x02C0)
+// 0x00B0 (0x0390 - 0x02E0)
 class UWB_ControllerHelp_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCanvasPanel*                           Canvas;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ControllerImage;                                   // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FName>                           HunterActions;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class FName>                           WitchActions;                                      // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class FName>                           SpectatorActions;                                  // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<struct FKey, class FName>                Bindings;                                          // 0x0308(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	ETeamID                                       Team;                                              // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2565[0x7];                                     // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           SpectatorActions_0;                                // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCanvasPanel*                           Canvas;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ControllerImage;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FName>                           HunterActions;                                     // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FName>                           WitchActions;                                      // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class FName>                           SpectatorActions;                                  // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<struct FKey, class FName>                Bindings;                                          // 0x0328(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	ETeamID                                       Team;                                              // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           SpectatorActions_0;                                // 0x0380(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void Construct();
@@ -54,16 +54,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_ControllerHelp_C) == 0x000008, "Wrong alignment on UWB_ControllerHelp_C");
-static_assert(sizeof(UWB_ControllerHelp_C) == 0x000370, "Wrong size on UWB_ControllerHelp_C");
-static_assert(offsetof(UWB_ControllerHelp_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ControllerHelp_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, Canvas) == 0x0002C8, "Member 'UWB_ControllerHelp_C::Canvas' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, ControllerImage) == 0x0002D0, "Member 'UWB_ControllerHelp_C::ControllerImage' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, HunterActions) == 0x0002D8, "Member 'UWB_ControllerHelp_C::HunterActions' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, WitchActions) == 0x0002E8, "Member 'UWB_ControllerHelp_C::WitchActions' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, SpectatorActions) == 0x0002F8, "Member 'UWB_ControllerHelp_C::SpectatorActions' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, Bindings) == 0x000308, "Member 'UWB_ControllerHelp_C::Bindings' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, Team) == 0x000358, "Member 'UWB_ControllerHelp_C::Team' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerHelp_C, SpectatorActions_0) == 0x000360, "Member 'UWB_ControllerHelp_C::SpectatorActions_0' has a wrong offset!");
+static_assert(sizeof(UWB_ControllerHelp_C) == 0x000390, "Wrong size on UWB_ControllerHelp_C");
+static_assert(offsetof(UWB_ControllerHelp_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ControllerHelp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, Canvas) == 0x0002E8, "Member 'UWB_ControllerHelp_C::Canvas' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, ControllerImage) == 0x0002F0, "Member 'UWB_ControllerHelp_C::ControllerImage' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, HunterActions) == 0x0002F8, "Member 'UWB_ControllerHelp_C::HunterActions' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, WitchActions) == 0x000308, "Member 'UWB_ControllerHelp_C::WitchActions' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, SpectatorActions) == 0x000318, "Member 'UWB_ControllerHelp_C::SpectatorActions' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, Bindings) == 0x000328, "Member 'UWB_ControllerHelp_C::Bindings' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, Team) == 0x000378, "Member 'UWB_ControllerHelp_C::Team' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerHelp_C, SpectatorActions_0) == 0x000380, "Member 'UWB_ControllerHelp_C::SpectatorActions_0' has a wrong offset!");
 
 }
 

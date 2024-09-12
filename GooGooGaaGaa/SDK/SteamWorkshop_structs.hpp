@@ -214,7 +214,7 @@ static_assert(offsetof(FSteamResult, Result) == 0x000000, "Member 'FSteamResult:
 struct FGeneralWorkshopItemResult : public FSteamResult
 {
 public:
-	uint8                                         Pad_1E5D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamUGCItemId                        WorkshopItemID;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeneralWorkshopItemResult) == 0x000008, "Wrong alignment on FGeneralWorkshopItemResult");
@@ -227,7 +227,7 @@ struct FUserFavoriteItemChangedResult final : public FGeneralWorkshopItemResult
 {
 public:
 	bool                                          bWasAddRequest;                                    // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E5E[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FUserFavoriteItemChangedResult) == 0x000008, "Wrong alignment on FUserFavoriteItemChangedResult");
 static_assert(sizeof(FUserFavoriteItemChangedResult) == 0x000018, "Wrong size on FUserFavoriteItemChangedResult");
@@ -239,11 +239,43 @@ struct FUpdateWorkshopItemResult : public FGeneralWorkshopItemResult
 {
 public:
 	bool                                          bUserNeedsToAcceptWorkshopLegalAgreement;          // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E5F[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FUpdateWorkshopItemResult) == 0x000008, "Wrong alignment on FUpdateWorkshopItemResult");
 static_assert(sizeof(FUpdateWorkshopItemResult) == 0x000018, "Wrong size on FUpdateWorkshopItemResult");
 static_assert(offsetof(FUpdateWorkshopItemResult, bUserNeedsToAcceptWorkshopLegalAgreement) == 0x000010, "Member 'FUpdateWorkshopItemResult::bUserNeedsToAcceptWorkshopLegalAgreement' has a wrong offset!");
+
+// ScriptStruct SteamWorkshop.WorkshopItemDownloadInfo
+// 0x0020 (0x0020 - 0x0000)
+struct FWorkshopItemDownloadInfo
+{
+public:
+	struct FUInt64                                bytesCurrent;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	struct FUInt64                                bytesTotal;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         MegaBytesCurrent;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MegaBytesTotal;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PercentageFinished;                                // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWorkshopItemDownloadInfo) == 0x000008, "Wrong alignment on FWorkshopItemDownloadInfo");
+static_assert(sizeof(FWorkshopItemDownloadInfo) == 0x000020, "Wrong size on FWorkshopItemDownloadInfo");
+static_assert(offsetof(FWorkshopItemDownloadInfo, bytesCurrent) == 0x000000, "Member 'FWorkshopItemDownloadInfo::bytesCurrent' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, bytesTotal) == 0x000008, "Member 'FWorkshopItemDownloadInfo::bytesTotal' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesCurrent) == 0x000010, "Member 'FWorkshopItemDownloadInfo::MegaBytesCurrent' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesTotal) == 0x000014, "Member 'FWorkshopItemDownloadInfo::MegaBytesTotal' has a wrong offset!");
+static_assert(offsetof(FWorkshopItemDownloadInfo, PercentageFinished) == 0x000018, "Member 'FWorkshopItemDownloadInfo::PercentageFinished' has a wrong offset!");
+
+// ScriptStruct SteamWorkshop.WorkshopItemUpdateInfo
+// 0x0008 (0x0028 - 0x0020)
+struct FWorkshopItemUpdateInfo final : public FWorkshopItemDownloadInfo
+{
+public:
+	EItemUpdateStatusBP                           Status;                                            // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWorkshopItemUpdateInfo) == 0x000008, "Wrong alignment on FWorkshopItemUpdateInfo");
+static_assert(sizeof(FWorkshopItemUpdateInfo) == 0x000028, "Wrong size on FWorkshopItemUpdateInfo");
+static_assert(offsetof(FWorkshopItemUpdateInfo, Status) == 0x000020, "Member 'FWorkshopItemUpdateInfo::Status' has a wrong offset!");
 
 // ScriptStruct SteamWorkshop.DownloadItemResult
 // 0x0008 (0x0018 - 0x0010)
@@ -251,7 +283,7 @@ struct FDownloadItemResult : public FGeneralWorkshopItemResult
 {
 public:
 	struct FUInt32                                AppId;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E60[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDownloadItemResult) == 0x000008, "Wrong alignment on FDownloadItemResult");
 static_assert(sizeof(FDownloadItemResult) == 0x000018, "Wrong size on FDownloadItemResult");
@@ -263,7 +295,7 @@ struct FAddRemoveAppDependencyResult final : public FDownloadItemResult
 {
 public:
 	bool                                          bAddDependency;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E61[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAddRemoveAppDependencyResult) == 0x000008, "Wrong alignment on FAddRemoveAppDependencyResult");
 static_assert(sizeof(FAddRemoveAppDependencyResult) == 0x000020, "Wrong size on FAddRemoveAppDependencyResult");
@@ -276,7 +308,7 @@ struct FAddRemoveItemDependencyResult final : public FGeneralWorkshopItemResult
 public:
 	struct FSteamUGCItemId                        DependendItemId;                                   // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bAddDependency;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E62[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAddRemoveItemDependencyResult) == 0x000008, "Wrong alignment on FAddRemoveItemDependencyResult");
 static_assert(sizeof(FAddRemoveItemDependencyResult) == 0x000020, "Wrong size on FAddRemoveItemDependencyResult");
@@ -292,10 +324,10 @@ public:
 	class FString                                 Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UpdateNotice;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESteamSupportedLanguages                      UpdateLanguage;                                    // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E63[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MetaData;                                          // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESteamItemVisibility                          Visibility;                                        // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E64[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         Tags;                                              // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FSteamKeyValuePair>             KeyValueTags;                                      // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	class FString                                 ContentDirectory;                                  // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -339,7 +371,7 @@ struct FGetUserVoteOnWorkshopItemResult final : public FGeneralWorkshopItemResul
 {
 public:
 	EVoteType                                     UserVoteType;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E65[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGetUserVoteOnWorkshopItemResult) == 0x000008, "Wrong alignment on FGetUserVoteOnWorkshopItemResult");
 static_assert(sizeof(FGetUserVoteOnWorkshopItemResult) == 0x000018, "Wrong size on FGetUserVoteOnWorkshopItemResult");
@@ -352,7 +384,7 @@ struct FGetAppdependencyResult final : public FGeneralWorkshopItemResult
 public:
 	TArray<struct FSteamAppId>                    DependencyApps;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	bool                                          bAllAppDependenciesReturned;                       // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E66[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGetAppdependencyResult) == 0x000008, "Wrong alignment on FGetAppdependencyResult");
 static_assert(sizeof(FGetAppdependencyResult) == 0x000028, "Wrong size on FGetAppdependencyResult");
@@ -367,7 +399,7 @@ public:
 	class FString                                 UrlOrVideoId;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OriginalFileName;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EItemPreviewTypeBP                            ItemType;                                          // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E67[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FItemPreviewDetails) == 0x000008, "Wrong alignment on FItemPreviewDetails");
 static_assert(sizeof(FItemPreviewDetails) == 0x000028, "Wrong size on FItemPreviewDetails");
@@ -381,13 +413,13 @@ struct FSteamWorkshopItemDetails final
 {
 public:
 	EResultBP                                     Result;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E68[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamUGCItemId                        WorkshopItemID;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	EWorkshopFileTypeBP                           FileType;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E69[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamAppId                            AppIdCreatingApp;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamAppId                            AppIdUsingApp;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E6A[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Title;                                             // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Description;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUInt64                                UserIdItemCreator;                                 // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
@@ -398,7 +430,7 @@ public:
 	bool                                          bItemIsBanned;                                     // 0x0061(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bItemWasAcceptedByDevelopers;                      // 0x0062(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bTagsTruncated;                                    // 0x0063(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E6B[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         Tags;                                              // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	struct FSteamUGCHandle                        PrimaryFileHandle;                                 // 0x0078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSteamUGCHandle                        PreviewImageHandle;                                // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
@@ -455,13 +487,13 @@ static_assert(offsetof(FSteamWorkshopItemDetails, MetaData) == 0x000100, "Member
 struct FQueryWorkshopForItemsResult : public FSteamResult
 {
 public:
-	uint8                                         Pad_1E6C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamUGCQueryHandle                   QueryHandle;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FUInt32                                NumResultsReturned;                                // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	struct FUInt32                                NumMatchingResults;                                // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bHasMorePages;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRetrievedDataWasCached;                           // 0x0019(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E6D[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSteamWorkshopItemDetails>      Items;                                             // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FQueryWorkshopForItemsResult) == 0x000008, "Wrong alignment on FQueryWorkshopForItemsResult");
@@ -504,7 +536,7 @@ struct FSteamUGCQueryParameterAllUserDetails
 public:
 	int32                                         PageId;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESteamSupportedLanguages                      Language;                                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E6E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AllowedCacheResponseTime;                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumDaysPlaytime;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bReturnPreviewUrl : 1;                             // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
@@ -513,7 +545,7 @@ public:
 	uint8                                         bReturnMetaData : 1;                               // 0x0010(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bReturnChildIds : 1;                               // 0x0010(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bReturnAdditionalPreviews : 1;                     // 0x0010(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1E6F[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSteamUGCQueryParameterAllUserDetails) == 0x000004, "Wrong alignment on FSteamUGCQueryParameterAllUserDetails");
 static_assert(sizeof(FSteamUGCQueryParameterAllUserDetails) == 0x000014, "Wrong size on FSteamUGCQueryParameterAllUserDetails");
@@ -527,11 +559,11 @@ static_assert(offsetof(FSteamUGCQueryParameterAllUserDetails, NumDaysPlaytime) =
 struct FSteamUGCQueryParameterAllUser : public FSteamUGCQueryParameterAllUserDetails
 {
 public:
-	uint8                                         Pad_1E70[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamUGCQueryParameterTagsAllUser     TagParameter;                                      // 0x0018(0x0030)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
 	bool                                          bReturnTotalOnly;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReturnIdsOnly;                                    // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E71[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSteamUGCQueryParameterAllUser) == 0x000008, "Wrong alignment on FSteamUGCQueryParameterAllUser");
 static_assert(sizeof(FSteamUGCQueryParameterAllUser) == 0x000050, "Wrong size on FSteamUGCQueryParameterAllUser");
@@ -549,7 +581,7 @@ public:
 	bool                                          bMatchAnyTag;                                      // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUGCQueryBP                                   QueryType;                                         // 0x0065(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUGCMatchingUGCTypeBP                         FileType;                                          // 0x0066(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E72[0x1];                                     // 0x0067(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67[0x1];                                       // 0x0067(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSteamUGCQueryParameterAll) == 0x000008, "Wrong alignment on FSteamUGCQueryParameterAll");
 static_assert(sizeof(FSteamUGCQueryParameterAll) == 0x000068, "Wrong size on FSteamUGCQueryParameterAll");
@@ -570,44 +602,12 @@ static_assert(alignof(FQueryWorkshopForAllItemsResult) == 0x000008, "Wrong align
 static_assert(sizeof(FQueryWorkshopForAllItemsResult) == 0x000098, "Wrong size on FQueryWorkshopForAllItemsResult");
 static_assert(offsetof(FQueryWorkshopForAllItemsResult, QueryParams) == 0x000030, "Member 'FQueryWorkshopForAllItemsResult::QueryParams' has a wrong offset!");
 
-// ScriptStruct SteamWorkshop.WorkshopItemDownloadInfo
-// 0x0020 (0x0020 - 0x0000)
-struct FWorkshopItemDownloadInfo
-{
-public:
-	struct FUInt64                                bytesCurrent;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	struct FUInt64                                bytesTotal;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         MegaBytesCurrent;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MegaBytesTotal;                                    // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PercentageFinished;                                // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E73[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWorkshopItemDownloadInfo) == 0x000008, "Wrong alignment on FWorkshopItemDownloadInfo");
-static_assert(sizeof(FWorkshopItemDownloadInfo) == 0x000020, "Wrong size on FWorkshopItemDownloadInfo");
-static_assert(offsetof(FWorkshopItemDownloadInfo, bytesCurrent) == 0x000000, "Member 'FWorkshopItemDownloadInfo::bytesCurrent' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, bytesTotal) == 0x000008, "Member 'FWorkshopItemDownloadInfo::bytesTotal' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesCurrent) == 0x000010, "Member 'FWorkshopItemDownloadInfo::MegaBytesCurrent' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, MegaBytesTotal) == 0x000014, "Member 'FWorkshopItemDownloadInfo::MegaBytesTotal' has a wrong offset!");
-static_assert(offsetof(FWorkshopItemDownloadInfo, PercentageFinished) == 0x000018, "Member 'FWorkshopItemDownloadInfo::PercentageFinished' has a wrong offset!");
-
-// ScriptStruct SteamWorkshop.WorkshopItemUpdateInfo
-// 0x0008 (0x0028 - 0x0020)
-struct FWorkshopItemUpdateInfo final : public FWorkshopItemDownloadInfo
-{
-public:
-	EItemUpdateStatusBP                           Status;                                            // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E74[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWorkshopItemUpdateInfo) == 0x000008, "Wrong alignment on FWorkshopItemUpdateInfo");
-static_assert(sizeof(FWorkshopItemUpdateInfo) == 0x000028, "Wrong size on FWorkshopItemUpdateInfo");
-static_assert(offsetof(FWorkshopItemUpdateInfo, Status) == 0x000020, "Member 'FWorkshopItemUpdateInfo::Status' has a wrong offset!");
-
 // ScriptStruct SteamWorkshop.SteamUGCQueryParameterDetails
 // 0x0024 (0x0038 - 0x0014)
 struct FSteamUGCQueryParameterDetails final : public FSteamUGCQueryParameterAllUserDetails
 {
 public:
-	uint8                                         Pad_1E75[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamUGCQueryParameterTagsAllUserDetails TagParameter;                                      // 0x0018(0x0010)(Edit, BlueprintVisible, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FSteamUGCItemId>                WorkshopItemIds;                                   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
@@ -636,7 +636,7 @@ public:
 	EUserUGCListBP                                List;                                              // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUGCMatchingUGCTypeBP                         Type;                                              // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUserUGCListSortOrderBP                       SortOrder;                                         // 0x0062(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E76[0x5];                                     // 0x0063(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_63[0x5];                                       // 0x0063(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSteamUGCQueryParameterUser) == 0x000008, "Wrong alignment on FSteamUGCQueryParameterUser");
 static_assert(sizeof(FSteamUGCQueryParameterUser) == 0x000068, "Wrong size on FSteamUGCQueryParameterUser");
@@ -662,7 +662,7 @@ struct FSetUserVoteOnWorkshopItemResult final : public FGeneralWorkshopItemResul
 {
 public:
 	bool                                          bVoteUp;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E77[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSetUserVoteOnWorkshopItemResult) == 0x000008, "Wrong alignment on FSetUserVoteOnWorkshopItemResult");
 static_assert(sizeof(FSetUserVoteOnWorkshopItemResult) == 0x000018, "Wrong size on FSetUserVoteOnWorkshopItemResult");
@@ -675,7 +675,7 @@ struct FSteamWorkshopItemInstallInfo final
 public:
 	struct FUInt64                                SizeOnDiskBytes;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         SizeOnDiskMBytes;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E78[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Directory;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDateTime                              TimeStampLastUpdate;                               // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

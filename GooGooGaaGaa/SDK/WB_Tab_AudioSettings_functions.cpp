@@ -543,9 +543,9 @@ void UWB_Tab_AudioSettings_C::Init()
 // Function WB_Tab_AudioSettings.WB_Tab_AudioSettings_C.IsDirty
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bDirty                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDirty_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Tab_AudioSettings_C::IsDirty(bool* Param_bDirty)
+void UWB_Tab_AudioSettings_C::IsDirty(bool* bDirty_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -556,8 +556,8 @@ void UWB_Tab_AudioSettings_C::IsDirty(bool* Param_bDirty)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_bDirty != nullptr)
-		*Param_bDirty = Parms.Param_bDirty;
+	if (bDirty_0 != nullptr)
+		*bDirty_0 = Parms.bDirty_0;
 }
 
 
@@ -572,6 +572,29 @@ void UWB_Tab_AudioSettings_C::LoadSettings()
 		Func = Class->GetFunction("WB_Tab_AudioSettings_C", "LoadSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_Tab_AudioSettings.WB_Tab_AudioSettings_C.NavigateList
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_Tab_AudioSettings_C::NavigateList(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Tab_AudioSettings_C", "NavigateList");
+
+	Params::WB_Tab_AudioSettings_C_NavigateList Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

@@ -11,69 +11,107 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "E_PopupType_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_InviteInfoPopup.WB_InviteInfoPopup_C.ExecuteUbergraph_WB_InviteInfoPopup
-// 0x0250 (0x0250 - 0x0000)
+// 0x0460 (0x0460 - 0x0000)
 struct WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_549F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54A0[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x0020(0x00D0)()
-	class FText                                   Temp_text_Variable;                                // 0x00F0(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0108(0x0018)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54A1[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x013C(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0178(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0188(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsAnyAnimationPlaying_ReturnValue;        // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54A2[0x6];                                     // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0210(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0228(0x0018)()
-	float                                         CallFunc_GetAnimationCurrentTime_ReturnValue;      // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54A3[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_PopupType                                   Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x0030(0x00D0)()
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0118(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0154(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0168(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsAnyAnimationPlaying_ReturnValue;        // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x01E8(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x01F8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0208(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0250(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0298(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x02A8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02B8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x02C8(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x02D8(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x02E8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x02F8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0340(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0388(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0398(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x03A8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x03B8(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_4;          // 0x03C8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x03D8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0420(0x0010)(ReferenceParm)
+	float                                         CallFunc_GetAnimationCurrentTime_ReturnValue;      // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0438(0x0010)()
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x0450(0x0010)()
 };
 static_assert(alignof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup) == 0x000010, "Wrong alignment on WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup");
-static_assert(sizeof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup) == 0x000250, "Wrong size on WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup");
+static_assert(sizeof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup) == 0x000460, "Wrong size on WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup");
 static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, EntryPoint) == 0x000000, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, Temp_object_Variable) == 0x000008, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_AsTexture_2D) == 0x000010, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_AsTexture_2D' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, Temp_bool_Variable) == 0x000019, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_MakeBrushFromTexture_ReturnValue) == 0x000020, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_MakeBrushFromTexture_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, Temp_text_Variable) == 0x0000F0, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, Temp_text_Variable_1) == 0x000108, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetGameInstance_ReturnValue) == 0x000120, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_CustomEvent_Loaded) == 0x000128, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_AsB_Game_Instance) == 0x000130, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_bSuccess_1) == 0x000138, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_Event_MyGeometry) == 0x00013C, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_Event_InDeltaTime) == 0x000174, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_CreateDelegate_OutputDelegate) == 0x000178, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetSkinItem_ReturnValue) == 0x000188, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetSkinItem_Found) == 0x000208, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_IsAnyAnimationPlaying_ReturnValue) == 0x000209, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_IsAnyAnimationPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_Select_Default) == 0x000210, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Conv_StringToText_ReturnValue) == 0x000228, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetAnimationCurrentTime_ReturnValue) == 0x000240, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetAnimationCurrentTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_PlayAnimation_ReturnValue) == 0x000248, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, Temp_byte_Variable) == 0x000010, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_AsTexture_2D) == 0x000018, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_AsTexture_2D' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetGameInstance_ReturnValue) == 0x000028, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_MakeBrushFromTexture_ReturnValue) == 0x000030, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_MakeBrushFromTexture_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_AsB_Game_Instance) == 0x000100, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_DynamicCast_bSuccess_1) == 0x000108, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_CustomEvent_Loaded) == 0x000110, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_CustomEvent_Loaded' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_Event_MyGeometry) == 0x000118, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_Event_InDeltaTime) == 0x000150, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_CreateDelegate_OutputDelegate) == 0x000154, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetSkinItem_ReturnValue) == 0x000168, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetSkinItem_Found) == 0x0001E0, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_IsAnyAnimationPlaying_ReturnValue) == 0x0001E1, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_IsAnyAnimationPlaying_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Conv_StringToText_ReturnValue) == 0x0001E8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0001F8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeStruct_FormatArgumentData) == 0x000208, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeStruct_FormatArgumentData_1) == 0x000250, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeArray_Array) == 0x000298, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeArray_Array_1) == 0x0002A8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Format_ReturnValue) == 0x0002B8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Format_ReturnValue_1) == 0x0002C8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0002D8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Conv_StringToText_ReturnValue_3) == 0x0002E8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeStruct_FormatArgumentData_2) == 0x0002F8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeStruct_FormatArgumentData_3) == 0x000340, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeArray_Array_2) == 0x000388, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeArray_Array_3) == 0x000398, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Format_ReturnValue_2) == 0x0003A8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Format_ReturnValue_3) == 0x0003B8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Conv_StringToText_ReturnValue_4) == 0x0003C8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Conv_StringToText_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeStruct_FormatArgumentData_4) == 0x0003D8, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_MakeArray_Array_4) == 0x000420, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_GetAnimationCurrentTime_ReturnValue) == 0x000430, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_GetAnimationCurrentTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_Format_ReturnValue_4) == 0x000438, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, CallFunc_PlayAnimation_ReturnValue) == 0x000448, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup, K2Node_Select_Default) == 0x000450, "Member 'WB_InviteInfoPopup_C_ExecuteUbergraph_WB_InviteInfoPopup::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_InviteInfoPopup.WB_InviteInfoPopup_C.OnLoaded_3BE29F904FBDD0DBD2FF679EE9D34192
 // 0x0008 (0x0008 - 0x0000)

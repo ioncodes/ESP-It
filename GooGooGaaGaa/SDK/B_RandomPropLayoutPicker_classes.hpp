@@ -12,27 +12,27 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "S_PropLayoutData_structs.hpp"
 #include "E_MapType_structs.hpp"
+#include "S_PropLayoutData_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_RandomPropLayoutPicker.B_RandomPropLayoutPicker_C
-// 0x0068 (0x0300 - 0x0298)
+// 0x0068 (0x02F8 - 0x0290)
 class AB_RandomPropLayoutPicker_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           LayoutLevels;                                      // 0x02A8(0x0010)(Edit, BlueprintVisible)
-	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ObjectiveLayout;                                   // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           LayoutLevelsForObjective;                          // 0x02C8(0x0010)(Edit, BlueprintVisible)
-	TArray<class FName>                           AllwaysLoadLayoutLevels;                           // 0x02D8(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FS_PropLayoutData>              CustomLayouts;                                     // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	E_MapType                                     MapType;                                           // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           LayoutLevels;                                      // 0x02A0(0x0010)(Edit, BlueprintVisible)
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ObjectiveLayout;                                   // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           LayoutLevelsForObjective;                          // 0x02C0(0x0010)(Edit, BlueprintVisible)
+	TArray<class FName>                           AllwaysLoadLayoutLevels;                           // 0x02D0(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FS_PropLayoutData>              CustomLayouts;                                     // 0x02E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	E_MapType                                     MapType;                                           // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DeleteDefaultLayoutMapStatics();
@@ -50,16 +50,16 @@ public:
 	}
 };
 static_assert(alignof(AB_RandomPropLayoutPicker_C) == 0x000008, "Wrong alignment on AB_RandomPropLayoutPicker_C");
-static_assert(sizeof(AB_RandomPropLayoutPicker_C) == 0x000300, "Wrong size on AB_RandomPropLayoutPicker_C");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, UberGraphFrame) == 0x000298, "Member 'AB_RandomPropLayoutPicker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_RandomPropLayoutPicker_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, LayoutLevels) == 0x0002A8, "Member 'AB_RandomPropLayoutPicker_C::LayoutLevels' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, RenderTarget) == 0x0002B8, "Member 'AB_RandomPropLayoutPicker_C::RenderTarget' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, ObjectiveLayout) == 0x0002C0, "Member 'AB_RandomPropLayoutPicker_C::ObjectiveLayout' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, LayoutLevelsForObjective) == 0x0002C8, "Member 'AB_RandomPropLayoutPicker_C::LayoutLevelsForObjective' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, AllwaysLoadLayoutLevels) == 0x0002D8, "Member 'AB_RandomPropLayoutPicker_C::AllwaysLoadLayoutLevels' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, CustomLayouts) == 0x0002E8, "Member 'AB_RandomPropLayoutPicker_C::CustomLayouts' has a wrong offset!");
-static_assert(offsetof(AB_RandomPropLayoutPicker_C, MapType) == 0x0002F8, "Member 'AB_RandomPropLayoutPicker_C::MapType' has a wrong offset!");
+static_assert(sizeof(AB_RandomPropLayoutPicker_C) == 0x0002F8, "Wrong size on AB_RandomPropLayoutPicker_C");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, UberGraphFrame) == 0x000290, "Member 'AB_RandomPropLayoutPicker_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, DefaultSceneRoot) == 0x000298, "Member 'AB_RandomPropLayoutPicker_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, LayoutLevels) == 0x0002A0, "Member 'AB_RandomPropLayoutPicker_C::LayoutLevels' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, RenderTarget) == 0x0002B0, "Member 'AB_RandomPropLayoutPicker_C::RenderTarget' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, ObjectiveLayout) == 0x0002B8, "Member 'AB_RandomPropLayoutPicker_C::ObjectiveLayout' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, LayoutLevelsForObjective) == 0x0002C0, "Member 'AB_RandomPropLayoutPicker_C::LayoutLevelsForObjective' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, AllwaysLoadLayoutLevels) == 0x0002D0, "Member 'AB_RandomPropLayoutPicker_C::AllwaysLoadLayoutLevels' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, CustomLayouts) == 0x0002E0, "Member 'AB_RandomPropLayoutPicker_C::CustomLayouts' has a wrong offset!");
+static_assert(offsetof(AB_RandomPropLayoutPicker_C, MapType) == 0x0002F0, "Member 'AB_RandomPropLayoutPicker_C::MapType' has a wrong offset!");
 
 }
 

@@ -73,9 +73,9 @@ void UB_ActionActorSubsystem_C::GetActionBool(class AActor* Test_Actor, bool* Ac
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsActionActor                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsActionActor_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ActionActorSubsystem_C::IsActionActor(class AActor* Actor, bool* Param_IsActionActor)
+void UB_ActionActorSubsystem_C::IsActionActor(class AActor* Actor, bool* IsActionActor_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -88,8 +88,8 @@ void UB_ActionActorSubsystem_C::IsActionActor(class AActor* Actor, bool* Param_I
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsActionActor != nullptr)
-		*Param_IsActionActor = Parms.Param_IsActionActor;
+	if (IsActionActor_0 != nullptr)
+		*IsActionActor_0 = Parms.IsActionActor_0;
 }
 
 

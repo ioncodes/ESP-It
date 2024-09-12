@@ -34,9 +34,9 @@ void AB_BuffHunterRapidFire_C::BuffEnd()
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.BuffStart
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterRapidFire_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
+void AB_BuffHunterRapidFire_C::BuffStart(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -45,7 +45,7 @@ void AB_BuffHunterRapidFire_C::BuffStart(class AB_PlayerState_C* Param_PlayerSta
 
 	Params::B_BuffHunterRapidFire_C_BuffStart Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -74,10 +74,10 @@ void AB_BuffHunterRapidFire_C::ExecuteUbergraph_B_BuffHunterRapidFire(int32 Entr
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.GetActiveRapidFireBuffCount
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 AB_BuffHunterRapidFire_C::GetActiveRapidFireBuffCount(class AB_PlayerState_C*& Param_PlayerState)
+int32 AB_BuffHunterRapidFire_C::GetActiveRapidFireBuffCount(class AB_PlayerState_C*& PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,11 +86,11 @@ int32 AB_BuffHunterRapidFire_C::GetActiveRapidFireBuffCount(class AB_PlayerState
 
 	Params::B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_PlayerState = Parms.Param_PlayerState;
+	PlayerState_0 = Parms.PlayerState_0;
 
 	return Parms.ReturnValue;
 }
@@ -99,10 +99,10 @@ int32 AB_BuffHunterRapidFire_C::GetActiveRapidFireBuffCount(class AB_PlayerState
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.GetFirstRapidFireBuff
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AB_BuffHunterRapidFire_C*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-class AB_BuffHunterRapidFire_C* AB_BuffHunterRapidFire_C::GetFirstRapidFireBuff(class AB_PlayerState_C* Param_PlayerState)
+class AB_BuffHunterRapidFire_C* AB_BuffHunterRapidFire_C::GetFirstRapidFireBuff(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -111,7 +111,7 @@ class AB_BuffHunterRapidFire_C* AB_BuffHunterRapidFire_C::GetFirstRapidFireBuff(
 
 	Params::B_BuffHunterRapidFire_C_GetFirstRapidFireBuff Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -158,9 +158,9 @@ void AB_BuffHunterRapidFire_C::RemoveTrailMulti()
 // Parameters:
 // double                                  StaminaCost                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Cooldown                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UB_PotatoSkill_C*                 Param_PotatoSkill                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_PotatoSkill_C*                 PotatoSkill_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterRapidFire_C::SetRapidFireValues(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* Param_PotatoSkill)
+void AB_BuffHunterRapidFire_C::SetRapidFireValues(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* PotatoSkill_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -171,7 +171,7 @@ void AB_BuffHunterRapidFire_C::SetRapidFireValues(double StaminaCost, double Coo
 
 	Parms.StaminaCost = StaminaCost;
 	Parms.Cooldown = Cooldown;
-	Parms.Param_PotatoSkill = Param_PotatoSkill;
+	Parms.PotatoSkill_0 = PotatoSkill_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -182,9 +182,9 @@ void AB_BuffHunterRapidFire_C::SetRapidFireValues(double StaminaCost, double Coo
 // Parameters:
 // double                                  StaminaCost                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Cooldown                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UB_PotatoSkill_C*                 Param_PotatoSkill                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_PotatoSkill_C*                 PotatoSkill_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterRapidFire_C::SetRapidFireValuesMulti(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* Param_PotatoSkill)
+void AB_BuffHunterRapidFire_C::SetRapidFireValuesMulti(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* PotatoSkill_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -195,7 +195,7 @@ void AB_BuffHunterRapidFire_C::SetRapidFireValuesMulti(double StaminaCost, doubl
 
 	Parms.StaminaCost = StaminaCost;
 	Parms.Cooldown = Cooldown;
-	Parms.Param_PotatoSkill = Param_PotatoSkill;
+	Parms.PotatoSkill_0 = PotatoSkill_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -204,9 +204,9 @@ void AB_BuffHunterRapidFire_C::SetRapidFireValuesMulti(double StaminaCost, doubl
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.SpawnTrailMulti
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_Hunter_C*                      Param_Hunter                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_Hunter_C*                      Hunter_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterRapidFire_C::SpawnTrailMulti(class AB_Hunter_C* Param_Hunter)
+void AB_BuffHunterRapidFire_C::SpawnTrailMulti(class AB_Hunter_C* Hunter_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -215,7 +215,7 @@ void AB_BuffHunterRapidFire_C::SpawnTrailMulti(class AB_Hunter_C* Param_Hunter)
 
 	Params::B_BuffHunterRapidFire_C_SpawnTrailMulti Parms{};
 
-	Parms.Param_Hunter = Param_Hunter;
+	Parms.Hunter_0 = Hunter_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WB_SkinButton_classes.hpp"
 #include "S_ItemSetInfo_structs.hpp"
+#include "WB_SkinButton_classes.hpp"
 #include "E_Slot_structs.hpp"
 
 
@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkinSetButton.WB_SkinSetButton_C
-// 0x0038 (0x0438 - 0x0400)
+// 0x0030 (0x0438 - 0x0408)
 class UWB_SkinSetButton_C final : public UWB_SkinButton_C
 {
 public:
-	struct FS_ItemSetInfo                         SkinSet;                                           // 0x0400(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FS_ItemSetInfo                         SkinSet;                                           // 0x0408(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TArray<int32>                                 SortedSetIds;                                      // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void GetIsButtonEnabled(bool* IsEnabled);
-	void GetNotifyButtonVisibility(bool* Param_IsVisible);
-	void GetTooltip(class UUserWidget** Param_ToolTip);
+	void GetNotifyButtonVisibility(bool* IsVisible_0);
+	void GetTooltip(class UUserWidget** ToolTip_0);
 	void SetIndividualParameters();
 	void SortSetIdsByCategory();
 	void UpdateAfterClicked();
@@ -46,7 +46,7 @@ public:
 };
 static_assert(alignof(UWB_SkinSetButton_C) == 0x000008, "Wrong alignment on UWB_SkinSetButton_C");
 static_assert(sizeof(UWB_SkinSetButton_C) == 0x000438, "Wrong size on UWB_SkinSetButton_C");
-static_assert(offsetof(UWB_SkinSetButton_C, SkinSet) == 0x000400, "Member 'UWB_SkinSetButton_C::SkinSet' has a wrong offset!");
+static_assert(offsetof(UWB_SkinSetButton_C, SkinSet) == 0x000408, "Member 'UWB_SkinSetButton_C::SkinSet' has a wrong offset!");
 static_assert(offsetof(UWB_SkinSetButton_C, SortedSetIds) == 0x000428, "Member 'UWB_SkinSetButton_C::SortedSetIds' has a wrong offset!");
 
 }

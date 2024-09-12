@@ -10,22 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WB_BaseButton_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_RefreshButton.WB_RefreshButton_C
-// 0x0400 (0x0B30 - 0x0730)
+// 0x0400 (0x0B50 - 0x0750)
 class UWB_RefreshButton_C final : public UWB_BaseButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_RefreshButton_C;                 // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UButton*                                Button;                                            // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FButtonStyle                           RefreshStyle;                                      // 0x0740(0x03F0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_RefreshButton_C;                 // 0x0748(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UButton*                                Button;                                            // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	uint8                                         Pad_758[0x8];                                      // 0x0758(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FButtonStyle                           RefreshStyle;                                      // 0x0760(0x03F0)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__WB_RefreshButton_Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
@@ -45,10 +46,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_RefreshButton_C) == 0x000010, "Wrong alignment on UWB_RefreshButton_C");
-static_assert(sizeof(UWB_RefreshButton_C) == 0x000B30, "Wrong size on UWB_RefreshButton_C");
-static_assert(offsetof(UWB_RefreshButton_C, UberGraphFrame_WB_RefreshButton_C) == 0x000730, "Member 'UWB_RefreshButton_C::UberGraphFrame_WB_RefreshButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_RefreshButton_C, Button) == 0x000738, "Member 'UWB_RefreshButton_C::Button' has a wrong offset!");
-static_assert(offsetof(UWB_RefreshButton_C, RefreshStyle) == 0x000740, "Member 'UWB_RefreshButton_C::RefreshStyle' has a wrong offset!");
+static_assert(sizeof(UWB_RefreshButton_C) == 0x000B50, "Wrong size on UWB_RefreshButton_C");
+static_assert(offsetof(UWB_RefreshButton_C, UberGraphFrame_WB_RefreshButton_C) == 0x000748, "Member 'UWB_RefreshButton_C::UberGraphFrame_WB_RefreshButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_RefreshButton_C, Button) == 0x000750, "Member 'UWB_RefreshButton_C::Button' has a wrong offset!");
+static_assert(offsetof(UWB_RefreshButton_C, RefreshStyle) == 0x000760, "Member 'UWB_RefreshButton_C::RefreshStyle' has a wrong offset!");
 
 }
 

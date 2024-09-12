@@ -19,22 +19,22 @@ namespace SDK::Params
 struct BP_PlaceablePlayerStart_C_GetOccupied final
 {
 public:
-	bool                                          Param_Occupied;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Occupied_0;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlaceablePlayerStart_C_GetOccupied) == 0x000001, "Wrong alignment on BP_PlaceablePlayerStart_C_GetOccupied");
 static_assert(sizeof(BP_PlaceablePlayerStart_C_GetOccupied) == 0x000001, "Wrong size on BP_PlaceablePlayerStart_C_GetOccupied");
-static_assert(offsetof(BP_PlaceablePlayerStart_C_GetOccupied, Param_Occupied) == 0x000000, "Member 'BP_PlaceablePlayerStart_C_GetOccupied::Param_Occupied' has a wrong offset!");
+static_assert(offsetof(BP_PlaceablePlayerStart_C_GetOccupied, Occupied_0) == 0x000000, "Member 'BP_PlaceablePlayerStart_C_GetOccupied::Occupied_0' has a wrong offset!");
 
 // Function BP_PlaceablePlayerStart.BP_PlaceablePlayerStart_C.SetOccupied
 // 0x0001 (0x0001 - 0x0000)
 struct BP_PlaceablePlayerStart_C_SetOccupied final
 {
 public:
-	bool                                          Param_Occupied;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Occupied_0;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlaceablePlayerStart_C_SetOccupied) == 0x000001, "Wrong alignment on BP_PlaceablePlayerStart_C_SetOccupied");
 static_assert(sizeof(BP_PlaceablePlayerStart_C_SetOccupied) == 0x000001, "Wrong size on BP_PlaceablePlayerStart_C_SetOccupied");
-static_assert(offsetof(BP_PlaceablePlayerStart_C_SetOccupied, Param_Occupied) == 0x000000, "Member 'BP_PlaceablePlayerStart_C_SetOccupied::Param_Occupied' has a wrong offset!");
+static_assert(offsetof(BP_PlaceablePlayerStart_C_SetOccupied, Occupied_0) == 0x000000, "Member 'BP_PlaceablePlayerStart_C_SetOccupied::Occupied_0' has a wrong offset!");
 
 // Function BP_PlaceablePlayerStart.BP_PlaceablePlayerStart_C.ExecuteUbergraph_BP_PlaceablePlayerStart
 // 0x0038 (0x0038 - 0x0000)
@@ -42,13 +42,13 @@ struct BP_PlaceablePlayerStart_C_ExecuteUbergraph_BP_PlaceablePlayerStart final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_488D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_488E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_488F[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Occupied;                             // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

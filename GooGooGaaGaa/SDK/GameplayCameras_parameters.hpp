@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GameplayCameras_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayCameras_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,7 +27,7 @@ public:
 	TSubclassOf<class ULegacyCameraShake>         ShakeClass;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Scale;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraShakePlaySpace                         PlaySpace;                                         // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DE5[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               UserPlaySpaceRot;                                  // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	class ULegacyCameraShake*                     ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -50,7 +50,7 @@ public:
 	class UCameraShakeSourceComponent*            SourceComponent;                                   // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Scale;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraShakePlaySpace                         PlaySpace;                                         // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DE6[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               UserPlaySpaceRot;                                  // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	class ULegacyCameraShake*                     ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -65,22 +65,22 @@ static_assert(offsetof(LegacyCameraShake_StartLegacyCameraShakeFromSource, UserP
 static_assert(offsetof(LegacyCameraShake_StartLegacyCameraShakeFromSource, ReturnValue) == 0x000038, "Member 'LegacyCameraShake_StartLegacyCameraShakeFromSource::ReturnValue' has a wrong offset!");
 
 // Function GameplayCameras.LegacyCameraShake.BlueprintUpdateCameraShake
-// 0x0F90 (0x0F90 - 0x0000)
+// 0x1010 (0x1010 - 0x0000)
 struct LegacyCameraShake_BlueprintUpdateCameraShake final
 {
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Alpha;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DE7[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       POV;                                               // 0x0010(0x07C0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       ModifiedPOV;                                       // 0x07D0(0x07C0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMinimalViewInfo                       POV;                                               // 0x0010(0x0800)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       ModifiedPOV;                                       // 0x0810(0x0800)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LegacyCameraShake_BlueprintUpdateCameraShake) == 0x000010, "Wrong alignment on LegacyCameraShake_BlueprintUpdateCameraShake");
-static_assert(sizeof(LegacyCameraShake_BlueprintUpdateCameraShake) == 0x000F90, "Wrong size on LegacyCameraShake_BlueprintUpdateCameraShake");
+static_assert(sizeof(LegacyCameraShake_BlueprintUpdateCameraShake) == 0x001010, "Wrong size on LegacyCameraShake_BlueprintUpdateCameraShake");
 static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, DeltaTime) == 0x000000, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::DeltaTime' has a wrong offset!");
 static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, Alpha) == 0x000004, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::Alpha' has a wrong offset!");
 static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, POV) == 0x000010, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::POV' has a wrong offset!");
-static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, ModifiedPOV) == 0x0007D0, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::ModifiedPOV' has a wrong offset!");
+static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, ModifiedPOV) == 0x000810, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::ModifiedPOV' has a wrong offset!");
 
 // Function GameplayCameras.LegacyCameraShake.ReceivePlayShake
 // 0x0004 (0x0004 - 0x0000)
@@ -135,7 +135,7 @@ struct CameraAnimationCameraModifier_GetCameraAnimationCameraModifier final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DE9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraAnimationCameraModifier*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CameraAnimationCameraModifier_GetCameraAnimationCameraModifier) == 0x000008, "Wrong alignment on CameraAnimationCameraModifier_GetCameraAnimationCameraModifier");
@@ -151,7 +151,7 @@ struct CameraAnimationCameraModifier_GetCameraAnimationCameraModifierFromID fina
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ControllerId;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DEA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraAnimationCameraModifier*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CameraAnimationCameraModifier_GetCameraAnimationCameraModifierFromID) == 0x000008, "Wrong alignment on CameraAnimationCameraModifier_GetCameraAnimationCameraModifierFromID");
@@ -181,7 +181,7 @@ public:
 	class UCameraAnimationSequence*               Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraAnimationParams                 Params_0;                                          // 0x0008(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FCameraAnimationHandle                 ReturnValue;                                       // 0x0050(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DEB[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CameraAnimationCameraModifier_PlayCameraAnimation) == 0x000008, "Wrong alignment on CameraAnimationCameraModifier_PlayCameraAnimation");
 static_assert(sizeof(CameraAnimationCameraModifier_PlayCameraAnimation) == 0x000058, "Wrong size on CameraAnimationCameraModifier_PlayCameraAnimation");
@@ -207,7 +207,7 @@ struct CameraAnimationCameraModifier_StopAllCameraAnimationsOf final
 public:
 	class UCameraAnimationSequence*               Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediate;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DEC[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CameraAnimationCameraModifier_StopAllCameraAnimationsOf) == 0x000008, "Wrong alignment on CameraAnimationCameraModifier_StopAllCameraAnimationsOf");
 static_assert(sizeof(CameraAnimationCameraModifier_StopAllCameraAnimationsOf) == 0x000010, "Wrong size on CameraAnimationCameraModifier_StopAllCameraAnimationsOf");
@@ -221,7 +221,7 @@ struct CameraAnimationCameraModifier_StopCameraAnimation final
 public:
 	struct FCameraAnimationHandle                 Handle;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediate;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DED[0x1];                                     // 0x0005(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CameraAnimationCameraModifier_StopCameraAnimation) == 0x000002, "Wrong alignment on CameraAnimationCameraModifier_StopCameraAnimation");
 static_assert(sizeof(CameraAnimationCameraModifier_StopCameraAnimation) == 0x000006, "Wrong size on CameraAnimationCameraModifier_StopCameraAnimation");
@@ -235,7 +235,7 @@ struct CameraAnimationCameraModifier_IsCameraAnimationActive final
 public:
 	struct FCameraAnimationHandle                 Handle;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DEE[0x1];                                     // 0x0005(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x1];                                        // 0x0005(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CameraAnimationCameraModifier_IsCameraAnimationActive) == 0x000002, "Wrong alignment on CameraAnimationCameraModifier_IsCameraAnimationActive");
 static_assert(sizeof(CameraAnimationCameraModifier_IsCameraAnimationActive) == 0x000006, "Wrong size on CameraAnimationCameraModifier_IsCameraAnimationActive");
@@ -281,6 +281,72 @@ static_assert(sizeof(GameplayCamerasFunctionLibrary_Conv_CameraShakePlaySpace) =
 static_assert(offsetof(GameplayCamerasFunctionLibrary_Conv_CameraShakePlaySpace, CameraAnimationPlaySpace) == 0x000000, "Member 'GameplayCamerasFunctionLibrary_Conv_CameraShakePlaySpace::CameraAnimationPlaySpace' has a wrong offset!");
 static_assert(offsetof(GameplayCamerasFunctionLibrary_Conv_CameraShakePlaySpace, ReturnValue) == 0x000001, "Member 'GameplayCamerasFunctionLibrary_Conv_CameraShakePlaySpace::ReturnValue' has a wrong offset!");
 
+// Function GameplayCameras.GameplayCameraActor.GetCameraComponent
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayCameraActor_GetCameraComponent final
+{
+public:
+	class UGameplayCameraComponent*               ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GameplayCameraActor_GetCameraComponent) == 0x000008, "Wrong alignment on GameplayCameraActor_GetCameraComponent");
+static_assert(sizeof(GameplayCameraActor_GetCameraComponent) == 0x000008, "Wrong size on GameplayCameraActor_GetCameraComponent");
+static_assert(offsetof(GameplayCameraActor_GetCameraComponent, ReturnValue) == 0x000000, "Member 'GameplayCameraActor_GetCameraComponent::ReturnValue' has a wrong offset!");
+
+// Function GameplayCameras.GameplayCameraActor.GetSceneComponent
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayCameraActor_GetSceneComponent final
+{
+public:
+	class USceneComponent*                        ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GameplayCameraActor_GetSceneComponent) == 0x000008, "Wrong alignment on GameplayCameraActor_GetSceneComponent");
+static_assert(sizeof(GameplayCameraActor_GetSceneComponent) == 0x000008, "Wrong size on GameplayCameraActor_GetSceneComponent");
+static_assert(offsetof(GameplayCameraActor_GetSceneComponent, ReturnValue) == 0x000000, "Member 'GameplayCameraActor_GetSceneComponent::ReturnValue' has a wrong offset!");
+
+// Function GameplayCameras.GameplayCameraComponent.ActivateCamera
+// 0x0004 (0x0004 - 0x0000)
+struct GameplayCameraComponent_ActivateCamera final
+{
+public:
+	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GameplayCameraComponent_ActivateCamera) == 0x000004, "Wrong alignment on GameplayCameraComponent_ActivateCamera");
+static_assert(sizeof(GameplayCameraComponent_ActivateCamera) == 0x000004, "Wrong size on GameplayCameraComponent_ActivateCamera");
+static_assert(offsetof(GameplayCameraComponent_ActivateCamera, PlayerIndex) == 0x000000, "Member 'GameplayCameraComponent_ActivateCamera::PlayerIndex' has a wrong offset!");
+
+// Function GameplayCameras.GameplayCameraSystemActor.ActivateForPlayer
+// 0x0004 (0x0004 - 0x0000)
+struct GameplayCameraSystemActor_ActivateForPlayer final
+{
+public:
+	int32                                         PlayerIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GameplayCameraSystemActor_ActivateForPlayer) == 0x000004, "Wrong alignment on GameplayCameraSystemActor_ActivateForPlayer");
+static_assert(sizeof(GameplayCameraSystemActor_ActivateForPlayer) == 0x000004, "Wrong size on GameplayCameraSystemActor_ActivateForPlayer");
+static_assert(offsetof(GameplayCameraSystemActor_ActivateForPlayer, PlayerIndex) == 0x000000, "Member 'GameplayCameraSystemActor_ActivateForPlayer::PlayerIndex' has a wrong offset!");
+
+// Function GameplayCameras.GameplayCameraSystemActor.GetCameraSystemComponent
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayCameraSystemActor_GetCameraSystemComponent final
+{
+public:
+	class UGameplayCameraSystemComponent*         ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GameplayCameraSystemActor_GetCameraSystemComponent) == 0x000008, "Wrong alignment on GameplayCameraSystemActor_GetCameraSystemComponent");
+static_assert(sizeof(GameplayCameraSystemActor_GetCameraSystemComponent) == 0x000008, "Wrong size on GameplayCameraSystemActor_GetCameraSystemComponent");
+static_assert(offsetof(GameplayCameraSystemActor_GetCameraSystemComponent, ReturnValue) == 0x000000, "Member 'GameplayCameraSystemActor_GetCameraSystemComponent::ReturnValue' has a wrong offset!");
+
+// Function GameplayCameras.GameplayCameraSystemComponent.GetCameraSystemEvaluator
+// 0x0008 (0x0008 - 0x0000)
+struct GameplayCameraSystemComponent_GetCameraSystemEvaluator final
+{
+public:
+	class UCameraSystemEvaluator*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GameplayCameraSystemComponent_GetCameraSystemEvaluator) == 0x000008, "Wrong alignment on GameplayCameraSystemComponent_GetCameraSystemEvaluator");
+static_assert(sizeof(GameplayCameraSystemComponent_GetCameraSystemEvaluator) == 0x000008, "Wrong size on GameplayCameraSystemComponent_GetCameraSystemEvaluator");
+static_assert(offsetof(GameplayCameraSystemComponent_GetCameraSystemEvaluator, ReturnValue) == 0x000000, "Member 'GameplayCameraSystemComponent_GetCameraSystemEvaluator::ReturnValue' has a wrong offset!");
+
 // Function GameplayCameras.GameplayCamerasSubsystem.PlayCameraAnimation
 // 0x0060 (0x0060 - 0x0000)
 struct GameplayCamerasSubsystem_PlayCameraAnimation final
@@ -290,7 +356,7 @@ public:
 	class UCameraAnimationSequence*               Sequence;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraAnimationParams                 Params_0;                                          // 0x0010(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FCameraAnimationHandle                 ReturnValue;                                       // 0x0058(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DEF[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GameplayCamerasSubsystem_PlayCameraAnimation) == 0x000008, "Wrong alignment on GameplayCamerasSubsystem_PlayCameraAnimation");
 static_assert(sizeof(GameplayCamerasSubsystem_PlayCameraAnimation) == 0x000060, "Wrong size on GameplayCamerasSubsystem_PlayCameraAnimation");
@@ -306,7 +372,7 @@ struct GameplayCamerasSubsystem_StopAllCameraAnimations final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediate;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DF0[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GameplayCamerasSubsystem_StopAllCameraAnimations) == 0x000008, "Wrong alignment on GameplayCamerasSubsystem_StopAllCameraAnimations");
 static_assert(sizeof(GameplayCamerasSubsystem_StopAllCameraAnimations) == 0x000010, "Wrong size on GameplayCamerasSubsystem_StopAllCameraAnimations");
@@ -321,7 +387,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraAnimationSequence*               Sequence;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediate;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DF1[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GameplayCamerasSubsystem_StopAllCameraAnimationsOf) == 0x000008, "Wrong alignment on GameplayCamerasSubsystem_StopAllCameraAnimationsOf");
 static_assert(sizeof(GameplayCamerasSubsystem_StopAllCameraAnimationsOf) == 0x000018, "Wrong size on GameplayCamerasSubsystem_StopAllCameraAnimationsOf");
@@ -337,7 +403,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraAnimationHandle                 Handle;                                            // 0x0008(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediate;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DF2[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GameplayCamerasSubsystem_StopCameraAnimation) == 0x000008, "Wrong alignment on GameplayCamerasSubsystem_StopCameraAnimation");
 static_assert(sizeof(GameplayCamerasSubsystem_StopCameraAnimation) == 0x000010, "Wrong size on GameplayCamerasSubsystem_StopCameraAnimation");
@@ -353,7 +419,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraAnimationHandle                 Handle;                                            // 0x0008(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DF3[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GameplayCamerasSubsystem_IsCameraAnimationActive) == 0x000008, "Wrong alignment on GameplayCamerasSubsystem_IsCameraAnimationActive");
 static_assert(sizeof(GameplayCamerasSubsystem_IsCameraAnimationActive) == 0x000010, "Wrong size on GameplayCamerasSubsystem_IsCameraAnimationActive");

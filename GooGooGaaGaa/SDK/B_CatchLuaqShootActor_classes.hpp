@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "B_ShootActor_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_CatchLuaqShootActor.B_CatchLuaqShootActor_C
-// 0x0010 (0x0310 - 0x0300)
+// 0x0010 (0x0308 - 0x02F8)
 class AB_CatchLuaqShootActor_C final : public AB_ShootActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CatchLuaqShootActor_C;            // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 Luaq;                                              // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CatchLuaqShootActor_C;            // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 Luaq;                                              // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -44,9 +44,9 @@ public:
 	}
 };
 static_assert(alignof(AB_CatchLuaqShootActor_C) == 0x000008, "Wrong alignment on AB_CatchLuaqShootActor_C");
-static_assert(sizeof(AB_CatchLuaqShootActor_C) == 0x000310, "Wrong size on AB_CatchLuaqShootActor_C");
-static_assert(offsetof(AB_CatchLuaqShootActor_C, UberGraphFrame_B_CatchLuaqShootActor_C) == 0x000300, "Member 'AB_CatchLuaqShootActor_C::UberGraphFrame_B_CatchLuaqShootActor_C' has a wrong offset!");
-static_assert(offsetof(AB_CatchLuaqShootActor_C, Luaq) == 0x000308, "Member 'AB_CatchLuaqShootActor_C::Luaq' has a wrong offset!");
+static_assert(sizeof(AB_CatchLuaqShootActor_C) == 0x000308, "Wrong size on AB_CatchLuaqShootActor_C");
+static_assert(offsetof(AB_CatchLuaqShootActor_C, UberGraphFrame_B_CatchLuaqShootActor_C) == 0x0002F8, "Member 'AB_CatchLuaqShootActor_C::UberGraphFrame_B_CatchLuaqShootActor_C' has a wrong offset!");
+static_assert(offsetof(AB_CatchLuaqShootActor_C, Luaq) == 0x000300, "Member 'AB_CatchLuaqShootActor_C::Luaq' has a wrong offset!");
 
 }
 

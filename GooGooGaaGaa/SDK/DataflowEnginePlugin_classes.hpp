@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class DataflowEnginePlugin.DataflowActor
-// 0x0008 (0x02A0 - 0x0298)
+// 0x0008 (0x0298 - 0x0290)
 class ADataflowActor final : public AActor
 {
 public:
-	class UDataflowComponent*                     DataflowComponent;                                 // 0x0298(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataflowComponent*                     DataflowComponent;                                 // 0x0290(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -34,15 +34,15 @@ public:
 	}
 };
 static_assert(alignof(ADataflowActor) == 0x000008, "Wrong alignment on ADataflowActor");
-static_assert(sizeof(ADataflowActor) == 0x0002A0, "Wrong size on ADataflowActor");
-static_assert(offsetof(ADataflowActor, DataflowComponent) == 0x000298, "Member 'ADataflowActor::DataflowComponent' has a wrong offset!");
+static_assert(sizeof(ADataflowActor) == 0x000298, "Wrong size on ADataflowActor");
+static_assert(offsetof(ADataflowActor, DataflowComponent) == 0x000290, "Member 'ADataflowActor::DataflowComponent' has a wrong offset!");
 
 // Class DataflowEnginePlugin.DataflowComponent
-// 0x0140 (0x06B0 - 0x0570)
+// 0x0140 (0x0660 - 0x0520)
 class UDataflowComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_2E85[0x140];                                   // 0x0570(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_518[0x148];                                    // 0x0518(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -55,7 +55,7 @@ public:
 	}
 };
 static_assert(alignof(UDataflowComponent) == 0x000010, "Wrong alignment on UDataflowComponent");
-static_assert(sizeof(UDataflowComponent) == 0x0006B0, "Wrong size on UDataflowComponent");
+static_assert(sizeof(UDataflowComponent) == 0x000660, "Wrong size on UDataflowComponent");
 
 }
 

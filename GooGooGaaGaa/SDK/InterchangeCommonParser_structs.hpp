@@ -55,7 +55,7 @@ public:
 	EInterchangeCurveInterpMode                   InterpMode;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInterchangeCurveTangentMode                  TangentMode;                                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInterchangeCurveTangentWeightMode            TangentWeightMode;                                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34CE[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Time;                                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ArriveTangent;                                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -87,15 +87,15 @@ static_assert(sizeof(FInterchangeCurve) == 0x000010, "Wrong size on FInterchange
 static_assert(offsetof(FInterchangeCurve, Keys) == 0x000000, "Member 'FInterchangeCurve::Keys' has a wrong offset!");
 
 // ScriptStruct InterchangeCommonParser.InterchangeStepCurve
-// 0x0070 (0x0070 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct FInterchangeStepCurve final
 {
 public:
 	TArray<float>                                 KeyTimes;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34CF[0x60];                                    // 0x0010(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x78];                                      // 0x0010(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FInterchangeStepCurve) == 0x000008, "Wrong alignment on FInterchangeStepCurve");
-static_assert(sizeof(FInterchangeStepCurve) == 0x000070, "Wrong size on FInterchangeStepCurve");
+static_assert(sizeof(FInterchangeStepCurve) == 0x000088, "Wrong size on FInterchangeStepCurve");
 static_assert(offsetof(FInterchangeStepCurve, KeyTimes) == 0x000000, "Member 'FInterchangeStepCurve::KeyTimes' has a wrong offset!");
 
 }

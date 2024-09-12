@@ -10,40 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "B_BaseWitchSkill_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_FlySkill.B_FlySkill_C
-// 0x00B0 (0x01B8 - 0x0108)
+// 0x00B0 (0x01B0 - 0x0100)
 class UB_FlySkill_C final : public UB_BaseWitchSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_FlySkill_C;                       // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        ManaCostPerSecond;                                 // 0x0110(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsProp;                                            // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DEA[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PropVector;                                        // 0x0120(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               PropTrailEffect;                                   // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        FlySound;                                          // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        StartZ;                                            // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StartFlyTime;                                      // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentSoundVolume;                                // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      WitchTrailEffect;                                  // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        FlyMultiplier;                                     // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PropFlightStrength;                                // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PropFlightStrengthSlowed;                          // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxVerticalVelocity;                               // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxVerticalVelocitySlowed;                         // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AscendingGravScale;                                // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AscendingGravScaleSlowed;                          // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FallingGraveScale;                                 // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FallingGraveScaleSlowed;                           // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GravScaleOnMaxVelocity;                            // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_FlySkill_C;                       // 0x0100(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        ManaCostPerSecond;                                 // 0x0108(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsProp;                                            // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PropVector;                                        // 0x0118(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               PropTrailEffect;                                   // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        FlySound;                                          // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        StartZ;                                            // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StartFlyTime;                                      // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentSoundVolume;                                // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      WitchTrailEffect;                                  // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        FlyMultiplier;                                     // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PropFlightStrength;                                // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PropFlightStrengthSlowed;                          // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxVerticalVelocity;                               // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxVerticalVelocitySlowed;                         // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AscendingGravScale;                                // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AscendingGravScaleSlowed;                          // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FallingGraveScale;                                 // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FallingGraveScaleSlowed;                           // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GravScaleOnMaxVelocity;                            // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DecreaseFlySoundVolume(double DeltaTime);
@@ -76,27 +76,27 @@ public:
 	}
 };
 static_assert(alignof(UB_FlySkill_C) == 0x000008, "Wrong alignment on UB_FlySkill_C");
-static_assert(sizeof(UB_FlySkill_C) == 0x0001B8, "Wrong size on UB_FlySkill_C");
-static_assert(offsetof(UB_FlySkill_C, UberGraphFrame_B_FlySkill_C) == 0x000108, "Member 'UB_FlySkill_C::UberGraphFrame_B_FlySkill_C' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, ManaCostPerSecond) == 0x000110, "Member 'UB_FlySkill_C::ManaCostPerSecond' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, IsProp) == 0x000118, "Member 'UB_FlySkill_C::IsProp' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, PropVector) == 0x000120, "Member 'UB_FlySkill_C::PropVector' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, PropTrailEffect) == 0x000138, "Member 'UB_FlySkill_C::PropTrailEffect' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, FlySound) == 0x000140, "Member 'UB_FlySkill_C::FlySound' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, StartZ) == 0x000148, "Member 'UB_FlySkill_C::StartZ' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, StartFlyTime) == 0x000150, "Member 'UB_FlySkill_C::StartFlyTime' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, CurrentSoundVolume) == 0x000158, "Member 'UB_FlySkill_C::CurrentSoundVolume' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, WitchTrailEffect) == 0x000160, "Member 'UB_FlySkill_C::WitchTrailEffect' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, FlyMultiplier) == 0x000168, "Member 'UB_FlySkill_C::FlyMultiplier' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, PropFlightStrength) == 0x000170, "Member 'UB_FlySkill_C::PropFlightStrength' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, PropFlightStrengthSlowed) == 0x000178, "Member 'UB_FlySkill_C::PropFlightStrengthSlowed' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, MaxVerticalVelocity) == 0x000180, "Member 'UB_FlySkill_C::MaxVerticalVelocity' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, MaxVerticalVelocitySlowed) == 0x000188, "Member 'UB_FlySkill_C::MaxVerticalVelocitySlowed' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, AscendingGravScale) == 0x000190, "Member 'UB_FlySkill_C::AscendingGravScale' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, AscendingGravScaleSlowed) == 0x000198, "Member 'UB_FlySkill_C::AscendingGravScaleSlowed' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, FallingGraveScale) == 0x0001A0, "Member 'UB_FlySkill_C::FallingGraveScale' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, FallingGraveScaleSlowed) == 0x0001A8, "Member 'UB_FlySkill_C::FallingGraveScaleSlowed' has a wrong offset!");
-static_assert(offsetof(UB_FlySkill_C, GravScaleOnMaxVelocity) == 0x0001B0, "Member 'UB_FlySkill_C::GravScaleOnMaxVelocity' has a wrong offset!");
+static_assert(sizeof(UB_FlySkill_C) == 0x0001B0, "Wrong size on UB_FlySkill_C");
+static_assert(offsetof(UB_FlySkill_C, UberGraphFrame_B_FlySkill_C) == 0x000100, "Member 'UB_FlySkill_C::UberGraphFrame_B_FlySkill_C' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, ManaCostPerSecond) == 0x000108, "Member 'UB_FlySkill_C::ManaCostPerSecond' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, IsProp) == 0x000110, "Member 'UB_FlySkill_C::IsProp' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, PropVector) == 0x000118, "Member 'UB_FlySkill_C::PropVector' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, PropTrailEffect) == 0x000130, "Member 'UB_FlySkill_C::PropTrailEffect' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, FlySound) == 0x000138, "Member 'UB_FlySkill_C::FlySound' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, StartZ) == 0x000140, "Member 'UB_FlySkill_C::StartZ' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, StartFlyTime) == 0x000148, "Member 'UB_FlySkill_C::StartFlyTime' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, CurrentSoundVolume) == 0x000150, "Member 'UB_FlySkill_C::CurrentSoundVolume' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, WitchTrailEffect) == 0x000158, "Member 'UB_FlySkill_C::WitchTrailEffect' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, FlyMultiplier) == 0x000160, "Member 'UB_FlySkill_C::FlyMultiplier' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, PropFlightStrength) == 0x000168, "Member 'UB_FlySkill_C::PropFlightStrength' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, PropFlightStrengthSlowed) == 0x000170, "Member 'UB_FlySkill_C::PropFlightStrengthSlowed' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, MaxVerticalVelocity) == 0x000178, "Member 'UB_FlySkill_C::MaxVerticalVelocity' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, MaxVerticalVelocitySlowed) == 0x000180, "Member 'UB_FlySkill_C::MaxVerticalVelocitySlowed' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, AscendingGravScale) == 0x000188, "Member 'UB_FlySkill_C::AscendingGravScale' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, AscendingGravScaleSlowed) == 0x000190, "Member 'UB_FlySkill_C::AscendingGravScaleSlowed' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, FallingGraveScale) == 0x000198, "Member 'UB_FlySkill_C::FallingGraveScale' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, FallingGraveScaleSlowed) == 0x0001A0, "Member 'UB_FlySkill_C::FallingGraveScaleSlowed' has a wrong offset!");
+static_assert(offsetof(UB_FlySkill_C, GravScaleOnMaxVelocity) == 0x0001A8, "Member 'UB_FlySkill_C::GravScaleOnMaxVelocity' has a wrong offset!");
 
 }
 

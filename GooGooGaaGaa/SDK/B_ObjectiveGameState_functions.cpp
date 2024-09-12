@@ -31,40 +31,6 @@ void AB_ObjectiveGameState_C::OnMaxLivesChanged__DelegateSignature()
 }
 
 
-// Function B_ObjectiveGameState.B_ObjectiveGameState_C.OnCauldronFilled__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void AB_ObjectiveGameState_C::OnCauldronFilled__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ObjectiveGameState_C", "OnCauldronFilled__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_ObjectiveGameState.B_ObjectiveGameState_C.OnPropMovedToInactiveCauldron__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_ObjectiveGameState_C::OnPropMovedToInactiveCauldron__DelegateSignature(class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ObjectiveGameState_C", "OnPropMovedToInactiveCauldron__DelegateSignature");
-
-	Params::B_ObjectiveGameState_C_OnPropMovedToInactiveCauldron__DelegateSignature Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_ObjectiveGameState.B_ObjectiveGameState_C.OnPropMovedToReviveCircle__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -125,16 +91,50 @@ void AB_ObjectiveGameState_C::OnRevivePossible__DelegateSignature(class APlayerS
 }
 
 
+// Function B_ObjectiveGameState.B_ObjectiveGameState_C.OnCauldronFilled__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void AB_ObjectiveGameState_C::OnCauldronFilled__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ObjectiveGameState_C", "OnCauldronFilled__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_ObjectiveGameState.B_ObjectiveGameState_C.OnPropMovedToInactiveCauldron__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_ObjectiveGameState_C::OnPropMovedToInactiveCauldron__DelegateSignature(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ObjectiveGameState_C", "OnPropMovedToInactiveCauldron__DelegateSignature");
+
+	Params::B_ObjectiveGameState_C_OnPropMovedToInactiveCauldron__DelegateSignature Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_ObjectiveGameState.B_ObjectiveGameState_C.AddRoundStatesMulti
 // (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<int32>                           Playtime                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>                           TotalCauldronsFilled                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>                           WitchLivesLeft                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<ETeamID>                         Param_WinnerTeam                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<ETeamID>                         WinnerTeam_0                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>                           Wins                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_ObjectiveGameState_C::AddRoundStatesMulti(const TArray<int32>& Playtime, const TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, const TArray<ETeamID>& Param_WinnerTeam, const TArray<int32>& Wins)
+void AB_ObjectiveGameState_C::AddRoundStatesMulti(const TArray<int32>& Playtime, const TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, const TArray<ETeamID>& WinnerTeam_0, const TArray<int32>& Wins)
 {
 	static class UFunction* Func = nullptr;
 
@@ -146,7 +146,7 @@ void AB_ObjectiveGameState_C::AddRoundStatesMulti(const TArray<int32>& Playtime,
 	Parms.Playtime = std::move(Playtime);
 	Parms.TotalCauldronsFilled = std::move(TotalCauldronsFilled);
 	Parms.WitchLivesLeft = std::move(WitchLivesLeft);
-	Parms.Param_WinnerTeam = std::move(Param_WinnerTeam);
+	Parms.WinnerTeam_0 = std::move(WinnerTeam_0);
 	Parms.Wins = std::move(Wins);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -209,10 +209,10 @@ void AB_ObjectiveGameState_C::GeneratePropArrays()
 // TArray<int32>                           Playtime                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>                           TotalCauldronsFilled                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>                           WitchLivesLeft                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<ETeamID>                         Param_WinnerTeam                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<ETeamID>                         WinnerTeam_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<int32>                           Wins                                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_ObjectiveGameState_C::HandleAddRoundStates(TArray<int32>& Playtime, TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, TArray<ETeamID>& Param_WinnerTeam, TArray<int32>& Wins)
+void AB_ObjectiveGameState_C::HandleAddRoundStates(TArray<int32>& Playtime, TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, TArray<ETeamID>& WinnerTeam_0, TArray<int32>& Wins)
 {
 	static class UFunction* Func = nullptr;
 
@@ -224,7 +224,7 @@ void AB_ObjectiveGameState_C::HandleAddRoundStates(TArray<int32>& Playtime, TArr
 	Parms.Playtime = std::move(Playtime);
 	Parms.TotalCauldronsFilled = std::move(TotalCauldronsFilled);
 	Parms.WitchLivesLeft = std::move(WitchLivesLeft);
-	Parms.Param_WinnerTeam = std::move(Param_WinnerTeam);
+	Parms.WinnerTeam_0 = std::move(WinnerTeam_0);
 	Parms.Wins = std::move(Wins);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -232,7 +232,7 @@ void AB_ObjectiveGameState_C::HandleAddRoundStates(TArray<int32>& Playtime, TArr
 	Playtime = std::move(Parms.Playtime);
 	TotalCauldronsFilled = std::move(Parms.TotalCauldronsFilled);
 	WitchLivesLeft = std::move(Parms.WitchLivesLeft);
-	Param_WinnerTeam = std::move(Parms.Param_WinnerTeam);
+	WinnerTeam_0 = std::move(Parms.WinnerTeam_0);
 	Wins = std::move(Parms.Wins);
 }
 

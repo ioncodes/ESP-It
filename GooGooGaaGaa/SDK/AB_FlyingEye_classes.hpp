@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_FlyingEye.AB_FlyingEye_C
-// 0x0B60 (0x0EB0 - 0x0350)
+// 0x0B80 (0x0EF0 - 0x0370)
 class UAB_FlyingEye_C : public UAnimInstance
 {
 public:
-	uint8                                         Pad_38E8[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0358(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0360(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0368(0x0020)()
-	uint8                                         Pad_38E9[0x8];                                     // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0390(0x0950)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0CE0(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0D00(0x0048)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0D48(0x0020)()
-	struct FAnimNode_RandomPlayer                 AnimGraphNode_RandomPlayer;                        // 0x0D68(0x0078)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0DE0(0x00C8)()
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0378(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0380(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0388(0x0020)()
+	uint8                                         Pad_3A8[0x8];                                      // 0x03A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x03B0(0x0970)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0D20(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0D40(0x0048)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0D88(0x0020)()
+	struct FAnimNode_RandomPlayer                 AnimGraphNode_RandomPlayer;                        // 0x0DA8(0x0078)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0E20(0x00C8)()
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_AB_FlyingEye(int32 EntryPoint);
 
 public:
@@ -51,17 +51,17 @@ public:
 	}
 };
 static_assert(alignof(UAB_FlyingEye_C) == 0x000010, "Wrong alignment on UAB_FlyingEye_C");
-static_assert(sizeof(UAB_FlyingEye_C) == 0x000EB0, "Wrong size on UAB_FlyingEye_C");
-static_assert(offsetof(UAB_FlyingEye_C, UberGraphFrame) == 0x000350, "Member 'UAB_FlyingEye_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimBlueprintExtension_PropertyAccess) == 0x000358, "Member 'UAB_FlyingEye_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimBlueprintExtension_Base) == 0x000360, "Member 'UAB_FlyingEye_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_Root) == 0x000368, "Member 'UAB_FlyingEye_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_RigidBody) == 0x000390, "Member 'UAB_FlyingEye_C::AnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_ComponentToLocalSpace) == 0x000CE0, "Member 'UAB_FlyingEye_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_SequencePlayer) == 0x000D00, "Member 'UAB_FlyingEye_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_LocalToComponentSpace) == 0x000D48, "Member 'UAB_FlyingEye_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_RandomPlayer) == 0x000D68, "Member 'UAB_FlyingEye_C::AnimGraphNode_RandomPlayer' has a wrong offset!");
-static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_ApplyAdditive) == 0x000DE0, "Member 'UAB_FlyingEye_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
+static_assert(sizeof(UAB_FlyingEye_C) == 0x000EF0, "Wrong size on UAB_FlyingEye_C");
+static_assert(offsetof(UAB_FlyingEye_C, UberGraphFrame) == 0x000370, "Member 'UAB_FlyingEye_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimBlueprintExtension_PropertyAccess) == 0x000378, "Member 'UAB_FlyingEye_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimBlueprintExtension_Base) == 0x000380, "Member 'UAB_FlyingEye_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_Root) == 0x000388, "Member 'UAB_FlyingEye_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_RigidBody) == 0x0003B0, "Member 'UAB_FlyingEye_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_ComponentToLocalSpace) == 0x000D20, "Member 'UAB_FlyingEye_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_SequencePlayer) == 0x000D40, "Member 'UAB_FlyingEye_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_LocalToComponentSpace) == 0x000D88, "Member 'UAB_FlyingEye_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_RandomPlayer) == 0x000DA8, "Member 'UAB_FlyingEye_C::AnimGraphNode_RandomPlayer' has a wrong offset!");
+static_assert(offsetof(UAB_FlyingEye_C, AnimGraphNode_ApplyAdditive) == 0x000E20, "Member 'UAB_FlyingEye_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
 
 }
 

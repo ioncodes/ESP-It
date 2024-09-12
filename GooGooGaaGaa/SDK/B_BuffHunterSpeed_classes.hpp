@@ -22,7 +22,7 @@ namespace SDK
 class AB_BuffHunterSpeed_C final : public AB_Buff_C
 {
 public:
-	uint8                                         Pad_4B31[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_BuffHunterSpeed_C;                // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UCharacterMovementComponent*            CharacterMovementComp;                             // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      SpeedTrailNiagara;                                 // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -30,11 +30,11 @@ public:
 public:
 	void ApplySpeedMultiplier();
 	void BuffEnd();
-	void BuffStart(class AB_PlayerState_C* Param_PlayerState);
+	void BuffStart(class AB_PlayerState_C* PlayerState_0);
 	void ExecuteUbergraph_B_BuffHunterSpeed(int32 EntryPoint);
 	void RemoveSpeedMultiplier();
 	void RemoveTrailMulti();
-	void SetMovementMulti(class UCharacterMovementComponent* Param_CharacterMovementComp, double MoveSpeed, double CrouchSpeed);
+	void SetMovementMulti(class UCharacterMovementComponent* CharacterMovementComp_0, double MoveSpeed, double CrouchSpeed);
 	void SpawnTrailMulti(class AB_Hunter_C* Hunter);
 
 public:

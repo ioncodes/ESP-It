@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PortalEye.B_PortalEye_C
-// 0x0038 (0x0358 - 0x0320)
+// 0x0038 (0x0350 - 0x0318)
 class AB_PortalEye_C final : public APawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       Camera;                                            // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFloatingPawnMovement*                  FloatingPawnMovement;                              // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentPressedMoveUpAxisValue;                     // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         ActionSkill;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       Camera;                                            // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFloatingPawnMovement*                  FloatingPawnMovement;                              // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentPressedMoveUpAxisValue;                     // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         ActionSkill;                                       // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_PortalEye(int32 EntryPoint);
@@ -59,14 +59,14 @@ public:
 	}
 };
 static_assert(alignof(AB_PortalEye_C) == 0x000008, "Wrong alignment on AB_PortalEye_C");
-static_assert(sizeof(AB_PortalEye_C) == 0x000358, "Wrong size on AB_PortalEye_C");
-static_assert(offsetof(AB_PortalEye_C, UberGraphFrame) == 0x000320, "Member 'AB_PortalEye_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_PortalEye_C, Camera) == 0x000328, "Member 'AB_PortalEye_C::Camera' has a wrong offset!");
-static_assert(offsetof(AB_PortalEye_C, FloatingPawnMovement) == 0x000330, "Member 'AB_PortalEye_C::FloatingPawnMovement' has a wrong offset!");
-static_assert(offsetof(AB_PortalEye_C, Sphere) == 0x000338, "Member 'AB_PortalEye_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_PortalEye_C, SkeletalMesh) == 0x000340, "Member 'AB_PortalEye_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(AB_PortalEye_C, CurrentPressedMoveUpAxisValue) == 0x000348, "Member 'AB_PortalEye_C::CurrentPressedMoveUpAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_PortalEye_C, ActionSkill) == 0x000350, "Member 'AB_PortalEye_C::ActionSkill' has a wrong offset!");
+static_assert(sizeof(AB_PortalEye_C) == 0x000350, "Wrong size on AB_PortalEye_C");
+static_assert(offsetof(AB_PortalEye_C, UberGraphFrame) == 0x000318, "Member 'AB_PortalEye_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_PortalEye_C, Camera) == 0x000320, "Member 'AB_PortalEye_C::Camera' has a wrong offset!");
+static_assert(offsetof(AB_PortalEye_C, FloatingPawnMovement) == 0x000328, "Member 'AB_PortalEye_C::FloatingPawnMovement' has a wrong offset!");
+static_assert(offsetof(AB_PortalEye_C, Sphere) == 0x000330, "Member 'AB_PortalEye_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_PortalEye_C, SkeletalMesh) == 0x000338, "Member 'AB_PortalEye_C::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(AB_PortalEye_C, CurrentPressedMoveUpAxisValue) == 0x000340, "Member 'AB_PortalEye_C::CurrentPressedMoveUpAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_PortalEye_C, ActionSkill) == 0x000348, "Member 'AB_PortalEye_C::ActionSkill' has a wrong offset!");
 
 }
 

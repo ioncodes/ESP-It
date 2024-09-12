@@ -17,52 +17,52 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinPreviewRoomWitch.B_SkinPreviewRoomWitch_C
-// 0x0140 (0x03D8 - 0x0298)
+// 0x0140 (0x03D0 - 0x0290)
 class AB_SkinPreviewRoomWitch_C final : public AActor
 {
 public:
-	class UDecalComponent*                        Decal;                                             // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Broom;                                          // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight3;                                       // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight1;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_FlowerDrag;                                     // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_MagicWand;                                      // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Flask;                                          // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_BookStack1;                                     // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Hairbrush;                                      // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_PaintingSkew1;                                  // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_ReadingChair;                                   // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_PaintingRound;                                  // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_PaintingSkew;                                   // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_CupBoard;                                       // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_BookStack;                                      // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_LibDoorWay;                                     // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_CrystalPiece;                                   // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_WitchCarpet01;                                  // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_WoodShelf;                                      // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_BookBrown;                                      // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_WitchHouseDressRoom;                            // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Shape_Fog_Plane;                                // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight1;                                        // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight;                                         // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight;                                        // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight2;                                       // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        WitchLight;                                        // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_SkyDome;                                        // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cube;                                              // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  PostProcess;                                       // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   B_MenuCamera;                                      // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinBodypart_C*                      Head;                                              // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinBodypart_C*                      UpperBody;                                         // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinBodypart_C*                      LowerBody;                                         // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinItem_C*                          Hat;                                               // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinItem_C*                          RangedWeapon;                                      // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinItem_C*                          MeleeWeapon;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          MouseDown;                                         // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18DB[0x3];                                     // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MousePosition;                                     // 0x03D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        Decal;                                             // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Broom;                                          // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight3;                                       // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight1;                                       // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_FlowerDrag;                                     // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_MagicWand;                                      // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Flask;                                          // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_BookStack1;                                     // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Hairbrush;                                      // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_PaintingSkew1;                                  // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_ReadingChair;                                   // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_PaintingRound;                                  // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_PaintingSkew;                                   // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_CupBoard;                                       // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_BookStack;                                      // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_LibDoorWay;                                     // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_CrystalPiece;                                   // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_WitchCarpet01;                                  // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_WoodShelf;                                      // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_BookBrown;                                      // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_WitchHouseDressRoom;                            // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Shape_Fog_Plane;                                // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight1;                                        // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight;                                        // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight2;                                       // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        WitchLight;                                        // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_SkyDome;                                        // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cube;                                              // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  PostProcess;                                       // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   B_MenuCamera;                                      // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinBodypart_C*                      Head;                                              // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinBodypart_C*                      UpperBody;                                         // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinBodypart_C*                      LowerBody;                                         // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinItem_C*                          Hat;                                               // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinItem_C*                          RangedWeapon;                                      // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinItem_C*                          MeleeWeapon;                                       // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          MouseDown;                                         // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C9[0x3];                                      // 0x03C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MousePosition;                                     // 0x03CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -75,48 +75,48 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinPreviewRoomWitch_C) == 0x000008, "Wrong alignment on AB_SkinPreviewRoomWitch_C");
-static_assert(sizeof(AB_SkinPreviewRoomWitch_C) == 0x0003D8, "Wrong size on AB_SkinPreviewRoomWitch_C");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Decal) == 0x000298, "Member 'AB_SkinPreviewRoomWitch_C::Decal' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Broom) == 0x0002A0, "Member 'AB_SkinPreviewRoomWitch_C::SM_Broom' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight3) == 0x0002A8, "Member 'AB_SkinPreviewRoomWitch_C::PointLight3' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight1) == 0x0002B0, "Member 'AB_SkinPreviewRoomWitch_C::PointLight1' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_FlowerDrag) == 0x0002B8, "Member 'AB_SkinPreviewRoomWitch_C::SM_FlowerDrag' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_MagicWand) == 0x0002C0, "Member 'AB_SkinPreviewRoomWitch_C::SM_MagicWand' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Flask) == 0x0002C8, "Member 'AB_SkinPreviewRoomWitch_C::SM_Flask' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_BookStack1) == 0x0002D0, "Member 'AB_SkinPreviewRoomWitch_C::SM_BookStack1' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Hairbrush) == 0x0002D8, "Member 'AB_SkinPreviewRoomWitch_C::SM_Hairbrush' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_PaintingSkew1) == 0x0002E0, "Member 'AB_SkinPreviewRoomWitch_C::SM_PaintingSkew1' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_ReadingChair) == 0x0002E8, "Member 'AB_SkinPreviewRoomWitch_C::SM_ReadingChair' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_PaintingRound) == 0x0002F0, "Member 'AB_SkinPreviewRoomWitch_C::SM_PaintingRound' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_PaintingSkew) == 0x0002F8, "Member 'AB_SkinPreviewRoomWitch_C::SM_PaintingSkew' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_CupBoard) == 0x000300, "Member 'AB_SkinPreviewRoomWitch_C::SM_CupBoard' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_BookStack) == 0x000308, "Member 'AB_SkinPreviewRoomWitch_C::SM_BookStack' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_LibDoorWay) == 0x000310, "Member 'AB_SkinPreviewRoomWitch_C::SM_LibDoorWay' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_CrystalPiece) == 0x000318, "Member 'AB_SkinPreviewRoomWitch_C::SM_CrystalPiece' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_WitchCarpet01) == 0x000320, "Member 'AB_SkinPreviewRoomWitch_C::SM_WitchCarpet01' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_WoodShelf) == 0x000328, "Member 'AB_SkinPreviewRoomWitch_C::SM_WoodShelf' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_BookBrown) == 0x000330, "Member 'AB_SkinPreviewRoomWitch_C::SM_BookBrown' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_WitchHouseDressRoom) == 0x000338, "Member 'AB_SkinPreviewRoomWitch_C::SM_WitchHouseDressRoom' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Shape_Fog_Plane) == 0x000340, "Member 'AB_SkinPreviewRoomWitch_C::SM_Shape_Fog_Plane' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SpotLight1) == 0x000348, "Member 'AB_SkinPreviewRoomWitch_C::SpotLight1' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SpotLight) == 0x000350, "Member 'AB_SkinPreviewRoomWitch_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight) == 0x000358, "Member 'AB_SkinPreviewRoomWitch_C::PointLight' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight2) == 0x000360, "Member 'AB_SkinPreviewRoomWitch_C::PointLight2' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, WitchLight) == 0x000368, "Member 'AB_SkinPreviewRoomWitch_C::WitchLight' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_SkyDome) == 0x000370, "Member 'AB_SkinPreviewRoomWitch_C::SM_SkyDome' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Cube) == 0x000378, "Member 'AB_SkinPreviewRoomWitch_C::Cube' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PostProcess) == 0x000380, "Member 'AB_SkinPreviewRoomWitch_C::PostProcess' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Box) == 0x000388, "Member 'AB_SkinPreviewRoomWitch_C::Box' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, B_MenuCamera) == 0x000390, "Member 'AB_SkinPreviewRoomWitch_C::B_MenuCamera' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Scene) == 0x000398, "Member 'AB_SkinPreviewRoomWitch_C::Scene' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Head) == 0x0003A0, "Member 'AB_SkinPreviewRoomWitch_C::Head' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, UpperBody) == 0x0003A8, "Member 'AB_SkinPreviewRoomWitch_C::UpperBody' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, LowerBody) == 0x0003B0, "Member 'AB_SkinPreviewRoomWitch_C::LowerBody' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Hat) == 0x0003B8, "Member 'AB_SkinPreviewRoomWitch_C::Hat' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, RangedWeapon) == 0x0003C0, "Member 'AB_SkinPreviewRoomWitch_C::RangedWeapon' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, MeleeWeapon) == 0x0003C8, "Member 'AB_SkinPreviewRoomWitch_C::MeleeWeapon' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, MouseDown) == 0x0003D0, "Member 'AB_SkinPreviewRoomWitch_C::MouseDown' has a wrong offset!");
-static_assert(offsetof(AB_SkinPreviewRoomWitch_C, MousePosition) == 0x0003D4, "Member 'AB_SkinPreviewRoomWitch_C::MousePosition' has a wrong offset!");
+static_assert(sizeof(AB_SkinPreviewRoomWitch_C) == 0x0003D0, "Wrong size on AB_SkinPreviewRoomWitch_C");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Decal) == 0x000290, "Member 'AB_SkinPreviewRoomWitch_C::Decal' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Broom) == 0x000298, "Member 'AB_SkinPreviewRoomWitch_C::SM_Broom' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight3) == 0x0002A0, "Member 'AB_SkinPreviewRoomWitch_C::PointLight3' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight1) == 0x0002A8, "Member 'AB_SkinPreviewRoomWitch_C::PointLight1' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_FlowerDrag) == 0x0002B0, "Member 'AB_SkinPreviewRoomWitch_C::SM_FlowerDrag' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_MagicWand) == 0x0002B8, "Member 'AB_SkinPreviewRoomWitch_C::SM_MagicWand' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Flask) == 0x0002C0, "Member 'AB_SkinPreviewRoomWitch_C::SM_Flask' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_BookStack1) == 0x0002C8, "Member 'AB_SkinPreviewRoomWitch_C::SM_BookStack1' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Hairbrush) == 0x0002D0, "Member 'AB_SkinPreviewRoomWitch_C::SM_Hairbrush' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_PaintingSkew1) == 0x0002D8, "Member 'AB_SkinPreviewRoomWitch_C::SM_PaintingSkew1' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_ReadingChair) == 0x0002E0, "Member 'AB_SkinPreviewRoomWitch_C::SM_ReadingChair' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_PaintingRound) == 0x0002E8, "Member 'AB_SkinPreviewRoomWitch_C::SM_PaintingRound' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_PaintingSkew) == 0x0002F0, "Member 'AB_SkinPreviewRoomWitch_C::SM_PaintingSkew' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_CupBoard) == 0x0002F8, "Member 'AB_SkinPreviewRoomWitch_C::SM_CupBoard' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_BookStack) == 0x000300, "Member 'AB_SkinPreviewRoomWitch_C::SM_BookStack' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_LibDoorWay) == 0x000308, "Member 'AB_SkinPreviewRoomWitch_C::SM_LibDoorWay' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_CrystalPiece) == 0x000310, "Member 'AB_SkinPreviewRoomWitch_C::SM_CrystalPiece' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_WitchCarpet01) == 0x000318, "Member 'AB_SkinPreviewRoomWitch_C::SM_WitchCarpet01' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_WoodShelf) == 0x000320, "Member 'AB_SkinPreviewRoomWitch_C::SM_WoodShelf' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_BookBrown) == 0x000328, "Member 'AB_SkinPreviewRoomWitch_C::SM_BookBrown' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_WitchHouseDressRoom) == 0x000330, "Member 'AB_SkinPreviewRoomWitch_C::SM_WitchHouseDressRoom' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_Shape_Fog_Plane) == 0x000338, "Member 'AB_SkinPreviewRoomWitch_C::SM_Shape_Fog_Plane' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SpotLight1) == 0x000340, "Member 'AB_SkinPreviewRoomWitch_C::SpotLight1' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SpotLight) == 0x000348, "Member 'AB_SkinPreviewRoomWitch_C::SpotLight' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight) == 0x000350, "Member 'AB_SkinPreviewRoomWitch_C::PointLight' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PointLight2) == 0x000358, "Member 'AB_SkinPreviewRoomWitch_C::PointLight2' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, WitchLight) == 0x000360, "Member 'AB_SkinPreviewRoomWitch_C::WitchLight' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, SM_SkyDome) == 0x000368, "Member 'AB_SkinPreviewRoomWitch_C::SM_SkyDome' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Cube) == 0x000370, "Member 'AB_SkinPreviewRoomWitch_C::Cube' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, PostProcess) == 0x000378, "Member 'AB_SkinPreviewRoomWitch_C::PostProcess' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Box) == 0x000380, "Member 'AB_SkinPreviewRoomWitch_C::Box' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, B_MenuCamera) == 0x000388, "Member 'AB_SkinPreviewRoomWitch_C::B_MenuCamera' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Scene) == 0x000390, "Member 'AB_SkinPreviewRoomWitch_C::Scene' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Head) == 0x000398, "Member 'AB_SkinPreviewRoomWitch_C::Head' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, UpperBody) == 0x0003A0, "Member 'AB_SkinPreviewRoomWitch_C::UpperBody' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, LowerBody) == 0x0003A8, "Member 'AB_SkinPreviewRoomWitch_C::LowerBody' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, Hat) == 0x0003B0, "Member 'AB_SkinPreviewRoomWitch_C::Hat' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, RangedWeapon) == 0x0003B8, "Member 'AB_SkinPreviewRoomWitch_C::RangedWeapon' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, MeleeWeapon) == 0x0003C0, "Member 'AB_SkinPreviewRoomWitch_C::MeleeWeapon' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, MouseDown) == 0x0003C8, "Member 'AB_SkinPreviewRoomWitch_C::MouseDown' has a wrong offset!");
+static_assert(offsetof(AB_SkinPreviewRoomWitch_C, MousePosition) == 0x0003CC, "Member 'AB_SkinPreviewRoomWitch_C::MousePosition' has a wrong offset!");
 
 }
 

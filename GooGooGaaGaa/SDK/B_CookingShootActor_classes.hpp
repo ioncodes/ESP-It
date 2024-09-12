@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "B_ShootActor_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_CookingShootActor.B_CookingShootActor_C
-// 0x0030 (0x0330 - 0x0300)
+// 0x0030 (0x0328 - 0x02F8)
 class AB_CookingShootActor_C final : public AB_ShootActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CookingShootActor_C;              // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMesh*                            Ingredient;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          ShotInOrder;                                       // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C00[0x7];                                     // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 OriginalTargetOrder;                               // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          ReadyForCompletion;                                // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CookingShootActor_C;              // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMesh*                            Ingredient;                                        // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          ShotInOrder;                                       // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 OriginalTargetOrder;                               // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          ReadyForCompletion;                                // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -48,12 +48,12 @@ public:
 	}
 };
 static_assert(alignof(AB_CookingShootActor_C) == 0x000008, "Wrong alignment on AB_CookingShootActor_C");
-static_assert(sizeof(AB_CookingShootActor_C) == 0x000330, "Wrong size on AB_CookingShootActor_C");
-static_assert(offsetof(AB_CookingShootActor_C, UberGraphFrame_B_CookingShootActor_C) == 0x000300, "Member 'AB_CookingShootActor_C::UberGraphFrame_B_CookingShootActor_C' has a wrong offset!");
-static_assert(offsetof(AB_CookingShootActor_C, Ingredient) == 0x000308, "Member 'AB_CookingShootActor_C::Ingredient' has a wrong offset!");
-static_assert(offsetof(AB_CookingShootActor_C, ShotInOrder) == 0x000310, "Member 'AB_CookingShootActor_C::ShotInOrder' has a wrong offset!");
-static_assert(offsetof(AB_CookingShootActor_C, OriginalTargetOrder) == 0x000318, "Member 'AB_CookingShootActor_C::OriginalTargetOrder' has a wrong offset!");
-static_assert(offsetof(AB_CookingShootActor_C, ReadyForCompletion) == 0x000328, "Member 'AB_CookingShootActor_C::ReadyForCompletion' has a wrong offset!");
+static_assert(sizeof(AB_CookingShootActor_C) == 0x000328, "Wrong size on AB_CookingShootActor_C");
+static_assert(offsetof(AB_CookingShootActor_C, UberGraphFrame_B_CookingShootActor_C) == 0x0002F8, "Member 'AB_CookingShootActor_C::UberGraphFrame_B_CookingShootActor_C' has a wrong offset!");
+static_assert(offsetof(AB_CookingShootActor_C, Ingredient) == 0x000300, "Member 'AB_CookingShootActor_C::Ingredient' has a wrong offset!");
+static_assert(offsetof(AB_CookingShootActor_C, ShotInOrder) == 0x000308, "Member 'AB_CookingShootActor_C::ShotInOrder' has a wrong offset!");
+static_assert(offsetof(AB_CookingShootActor_C, OriginalTargetOrder) == 0x000310, "Member 'AB_CookingShootActor_C::OriginalTargetOrder' has a wrong offset!");
+static_assert(offsetof(AB_CookingShootActor_C, ReadyForCompletion) == 0x000320, "Member 'AB_CookingShootActor_C::ReadyForCompletion' has a wrong offset!");
 
 }
 

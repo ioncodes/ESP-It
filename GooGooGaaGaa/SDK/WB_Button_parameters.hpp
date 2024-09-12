@@ -142,50 +142,52 @@ static_assert(sizeof(WB_Button_C_ClickedWithSender__DelegateSignature) == 0x0000
 static_assert(offsetof(WB_Button_C_ClickedWithSender__DelegateSignature, Button) == 0x000000, "Member 'WB_Button_C_ClickedWithSender__DelegateSignature::Button' has a wrong offset!");
 
 // Function WB_Button.WB_Button_C.ExecuteUbergraph_WB_Button
-// 0x0090 (0x0090 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct WB_Button_C_ExecuteUbergraph_WB_Button final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsExpanded;                          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46B6[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bGamePadMode)>            K2Node_CreateDelegate_OutputDelegate;              // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46B7[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46B8[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UTextBlock*>                     K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          K2Node_CustomEvent_bGamePadMode;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_GamePadMode;                    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsSelected;                          // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x008E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool bGamePadMode)>            K2Node_CreateDelegate_OutputDelegate;              // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UTextBlock*>                     K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          K2Node_CustomEvent_bGamePadMode;                   // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_GamePadMode;                    // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsSelected;                          // 0x0083(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsExpanded;                          // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0086(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0087(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0088(0x0060)(HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Button_C_ExecuteUbergraph_WB_Button) == 0x000008, "Wrong alignment on WB_Button_C_ExecuteUbergraph_WB_Button");
-static_assert(sizeof(WB_Button_C_ExecuteUbergraph_WB_Button) == 0x000090, "Wrong size on WB_Button_C_ExecuteUbergraph_WB_Button");
+static_assert(sizeof(WB_Button_C_ExecuteUbergraph_WB_Button) == 0x0000F0, "Wrong size on WB_Button_C_ExecuteUbergraph_WB_Button");
 static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, EntryPoint) == 0x000000, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_MyGeometry) == 0x000004, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_bIsExpanded) == 0x000040, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_bIsExpanded' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_CreateDelegate_OutputDelegate) == 0x000044, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_PlayAnimation_ReturnValue) == 0x000058, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_GetGameInstance_ReturnValue) == 0x000060, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_DynamicCast_AsB_Game_Instance) == 0x000068, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_MakeArray_Array) == 0x000078, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_CustomEvent_bGamePadMode) == 0x000088, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_CustomEvent_bGamePadMode' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_CustomEvent_GamePadMode) == 0x000089, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_CustomEvent_GamePadMode' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_IsDesignTime) == 0x00008A, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_bIsSelected) == 0x00008B, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x00008C, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_Not_PreBool_ReturnValue) == 0x00008D, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_IsGamepadMode_ReturnValue) == 0x00008E, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_PlayAnimation_ReturnValue) == 0x000040, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_CreateDelegate_OutputDelegate) == 0x000048, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_GetGameInstance_ReturnValue) == 0x000058, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_DynamicCast_AsB_Game_Instance) == 0x000060, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_MakeArray_Array) == 0x000070, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_CustomEvent_bGamePadMode) == 0x000080, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_CustomEvent_bGamePadMode' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_IsDesignTime) == 0x000081, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_CustomEvent_GamePadMode) == 0x000082, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_CustomEvent_GamePadMode' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_bIsSelected) == 0x000083, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_Event_bIsExpanded) == 0x000084, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_Event_bIsExpanded' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000085, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_Not_PreBool_ReturnValue) == 0x000086, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, CallFunc_IsGamepadMode_ReturnValue) == 0x000087, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_MakeStruct_SlateFontInfo) == 0x000088, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
+static_assert(offsetof(WB_Button_C_ExecuteUbergraph_WB_Button, K2Node_MakeStruct_Size_ImplicitCast) == 0x0000E8, "Member 'WB_Button_C_ExecuteUbergraph_WB_Button::K2Node_MakeStruct_Size_ImplicitCast' has a wrong offset!");
 
 }
 

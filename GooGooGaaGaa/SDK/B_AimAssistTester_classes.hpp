@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_AimAssistTester.B_AimAssistTester_C
-// 0x0020 (0x02B8 - 0x0298)
+// 0x0020 (0x02B0 - 0x0290)
 class AB_AimAssistTester_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   AimAssistTarget;                                   // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   AimAssistTarget;                                   // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_AimAssistTester(int32 EntryPoint);
@@ -42,11 +42,11 @@ public:
 	}
 };
 static_assert(alignof(AB_AimAssistTester_C) == 0x000008, "Wrong alignment on AB_AimAssistTester_C");
-static_assert(sizeof(AB_AimAssistTester_C) == 0x0002B8, "Wrong size on AB_AimAssistTester_C");
-static_assert(offsetof(AB_AimAssistTester_C, UberGraphFrame) == 0x000298, "Member 'AB_AimAssistTester_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_AimAssistTester_C, AimAssistTarget) == 0x0002A0, "Member 'AB_AimAssistTester_C::AimAssistTarget' has a wrong offset!");
-static_assert(offsetof(AB_AimAssistTester_C, Sphere) == 0x0002A8, "Member 'AB_AimAssistTester_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_AimAssistTester_C, DefaultSceneRoot) == 0x0002B0, "Member 'AB_AimAssistTester_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AB_AimAssistTester_C) == 0x0002B0, "Wrong size on AB_AimAssistTester_C");
+static_assert(offsetof(AB_AimAssistTester_C, UberGraphFrame) == 0x000290, "Member 'AB_AimAssistTester_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_AimAssistTester_C, AimAssistTarget) == 0x000298, "Member 'AB_AimAssistTester_C::AimAssistTarget' has a wrong offset!");
+static_assert(offsetof(AB_AimAssistTester_C, Sphere) == 0x0002A0, "Member 'AB_AimAssistTester_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_AimAssistTester_C, DefaultSceneRoot) == 0x0002A8, "Member 'AB_AimAssistTester_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

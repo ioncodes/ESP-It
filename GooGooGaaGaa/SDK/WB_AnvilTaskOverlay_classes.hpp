@@ -19,23 +19,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_AnvilTaskOverlay.WB_AnvilTaskOverlay_C
-// 0x0058 (0x0318 - 0x02C0)
+// 0x0058 (0x0338 - 0x02E0)
 class UWB_AnvilTaskOverlay_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 BackgroundImage;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           CancelButton;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Glass;                                             // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ProgressBarBox;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TargetImage;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USlider*                                TimeSlider;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_AnvilInteractionActor_C*             OwnerActor;                                        // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	double                                        SliderValue;                                       // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Forward;                                           // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Stop;                                              // 0x0311(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InTargetZone;                                      // 0x0312(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 BackgroundImage;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           CancelButton;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glass;                                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ProgressBarBox;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TargetImage;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USlider*                                TimeSlider;                                        // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_AnvilInteractionActor_C*             OwnerActor;                                        // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	double                                        SliderValue;                                       // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Forward;                                           // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Stop;                                              // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InTargetZone;                                      // 0x0332(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__CancelButton_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -61,20 +61,20 @@ public:
 	}
 };
 static_assert(alignof(UWB_AnvilTaskOverlay_C) == 0x000008, "Wrong alignment on UWB_AnvilTaskOverlay_C");
-static_assert(sizeof(UWB_AnvilTaskOverlay_C) == 0x000318, "Wrong size on UWB_AnvilTaskOverlay_C");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_AnvilTaskOverlay_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, BackgroundImage) == 0x0002C8, "Member 'UWB_AnvilTaskOverlay_C::BackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, CancelButton) == 0x0002D0, "Member 'UWB_AnvilTaskOverlay_C::CancelButton' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, Glass) == 0x0002D8, "Member 'UWB_AnvilTaskOverlay_C::Glass' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, ProgressBarBox) == 0x0002E0, "Member 'UWB_AnvilTaskOverlay_C::ProgressBarBox' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, TargetImage) == 0x0002E8, "Member 'UWB_AnvilTaskOverlay_C::TargetImage' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, TimeSlider) == 0x0002F0, "Member 'UWB_AnvilTaskOverlay_C::TimeSlider' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, WB_ActionIcon) == 0x0002F8, "Member 'UWB_AnvilTaskOverlay_C::WB_ActionIcon' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, OwnerActor) == 0x000300, "Member 'UWB_AnvilTaskOverlay_C::OwnerActor' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, SliderValue) == 0x000308, "Member 'UWB_AnvilTaskOverlay_C::SliderValue' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, Forward) == 0x000310, "Member 'UWB_AnvilTaskOverlay_C::Forward' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, Stop) == 0x000311, "Member 'UWB_AnvilTaskOverlay_C::Stop' has a wrong offset!");
-static_assert(offsetof(UWB_AnvilTaskOverlay_C, InTargetZone) == 0x000312, "Member 'UWB_AnvilTaskOverlay_C::InTargetZone' has a wrong offset!");
+static_assert(sizeof(UWB_AnvilTaskOverlay_C) == 0x000338, "Wrong size on UWB_AnvilTaskOverlay_C");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_AnvilTaskOverlay_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, BackgroundImage) == 0x0002E8, "Member 'UWB_AnvilTaskOverlay_C::BackgroundImage' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, CancelButton) == 0x0002F0, "Member 'UWB_AnvilTaskOverlay_C::CancelButton' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, Glass) == 0x0002F8, "Member 'UWB_AnvilTaskOverlay_C::Glass' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, ProgressBarBox) == 0x000300, "Member 'UWB_AnvilTaskOverlay_C::ProgressBarBox' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, TargetImage) == 0x000308, "Member 'UWB_AnvilTaskOverlay_C::TargetImage' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, TimeSlider) == 0x000310, "Member 'UWB_AnvilTaskOverlay_C::TimeSlider' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, WB_ActionIcon) == 0x000318, "Member 'UWB_AnvilTaskOverlay_C::WB_ActionIcon' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, OwnerActor) == 0x000320, "Member 'UWB_AnvilTaskOverlay_C::OwnerActor' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, SliderValue) == 0x000328, "Member 'UWB_AnvilTaskOverlay_C::SliderValue' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, Forward) == 0x000330, "Member 'UWB_AnvilTaskOverlay_C::Forward' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, Stop) == 0x000331, "Member 'UWB_AnvilTaskOverlay_C::Stop' has a wrong offset!");
+static_assert(offsetof(UWB_AnvilTaskOverlay_C, InTargetZone) == 0x000332, "Member 'UWB_AnvilTaskOverlay_C::InTargetZone' has a wrong offset!");
 
 }
 

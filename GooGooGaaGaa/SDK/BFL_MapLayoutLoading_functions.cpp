@@ -254,7 +254,7 @@ void UBFL_MapLayoutLoading_C::LoadSwitches(TScriptInterface<class IIMapLayoutLoa
 // (Static, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class IIMapLayoutLoading_C>Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    StartAwake                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsFrozen                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -262,7 +262,7 @@ void UBFL_MapLayoutLoading_C::LoadSwitches(TScriptInterface<class IIMapLayoutLoa
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AB_StaticMeshProp_C*              SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBFL_MapLayoutLoading_C::SpawnPropOrActionProp(TScriptInterface<class IIMapLayoutLoading_C> Target, class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class UObject* __WorldContext, class AB_StaticMeshProp_C** SpawnedActor)
+void UBFL_MapLayoutLoading_C::SpawnPropOrActionProp(TScriptInterface<class IIMapLayoutLoading_C> Target, class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class UObject* __WorldContext, class AB_StaticMeshProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -272,7 +272,7 @@ void UBFL_MapLayoutLoading_C::SpawnPropOrActionProp(TScriptInterface<class IIMap
 	Params::BFL_MapLayoutLoading_C_SpawnPropOrActionProp Parms{};
 
 	Parms.Target = Target;
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.StartAwake = StartAwake;
 	Parms.IsFrozen = IsFrozen;
@@ -290,13 +290,13 @@ void UBFL_MapLayoutLoading_C::SpawnPropOrActionProp(TScriptInterface<class IIMap
 // (Static, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class IIMapLayoutLoading_C>Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableStaticProp_C*        SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBFL_MapLayoutLoading_C::SpawnStaticOrActionPlaceable(TScriptInterface<class IIMapLayoutLoading_C> Target, class UClass* Param_Class, const struct FTransform& Transform, bool Activated, class UObject* __WorldContext, class ABP_PlaceableStaticProp_C** SpawnedActor)
+void UBFL_MapLayoutLoading_C::SpawnStaticOrActionPlaceable(TScriptInterface<class IIMapLayoutLoading_C> Target, class UClass* Class_0, const struct FTransform& Transform, bool Activated, class UObject* __WorldContext, class ABP_PlaceableStaticProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -306,7 +306,7 @@ void UBFL_MapLayoutLoading_C::SpawnStaticOrActionPlaceable(TScriptInterface<clas
 	Params::BFL_MapLayoutLoading_C_SpawnStaticOrActionPlaceable Parms{};
 
 	Parms.Target = Target;
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.Activated = Activated;
 	Parms.__WorldContext = __WorldContext;

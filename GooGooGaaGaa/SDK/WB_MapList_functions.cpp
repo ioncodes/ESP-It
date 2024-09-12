@@ -423,6 +423,26 @@ void UWB_MapList_C::InitializeMenu()
 }
 
 
+// Function WB_MapList.WB_MapList_C.InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UWB_MapList_C::InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_MapList_C", "InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0");
+
+	Params::WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_MapList.WB_MapList_C.OnApply
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -566,9 +586,9 @@ void UWB_MapList_C::SetMenuState(E_MapListMenuState NewState)
 // Function WB_MapList.WB_MapList_C.UpdateByAutosaveSetting
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_ShowAutoSave                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShowAutoSave_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MapList_C::UpdateByAutosaveSetting(bool Param_ShowAutoSave)
+void UWB_MapList_C::UpdateByAutosaveSetting(bool ShowAutoSave_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -577,7 +597,7 @@ void UWB_MapList_C::UpdateByAutosaveSetting(bool Param_ShowAutoSave)
 
 	Params::WB_MapList_C_UpdateByAutosaveSetting Parms{};
 
-	Parms.Param_ShowAutoSave = Param_ShowAutoSave;
+	Parms.ShowAutoSave_0 = ShowAutoSave_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESkillCategory_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ESkillCategory_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,25 +20,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkillHelp.WB_SkillHelp_C
-// 0x0048 (0x0308 - 0x02C0)
+// 0x0048 (0x0328 - 0x02E0)
 class UWB_SkillHelp_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_ActionIcon_C*                       ActionIcon;                                        // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SkillBorder;                                       // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SkillDescriptionText;                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SkillIcon;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SkillNameText;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UClass*                                 SkillClass;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         SkillDefaultObject;                                // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       SkillTeam;                                         // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESkillCategory                                SkillCategory;                                     // 0x0301(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_ActionIcon_C*                       ActionIcon;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SkillBorder;                                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SkillDescriptionText;                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SkillIcon;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SkillNameText;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UClass*                                 SkillClass;                                        // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         SkillDefaultObject;                                // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       SkillTeam;                                         // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESkillCategory                                SkillCategory;                                     // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WB_SkillHelp(int32 EntryPoint);
-	void GetSkillTeam(class UClass* Param_SkillClass, ETeamID* Param_SkillTeam);
-	void SetSkill(class UClass* Param_SkillClass, ESkillCategory OldSkillCategory);
+	void GetSkillTeam(class UClass* SkillClass_0, ETeamID* SkillTeam_0);
+	void SetSkill(class UClass* SkillClass_0, ESkillCategory OldSkillCategory);
 
 public:
 	static class UClass* StaticClass()
@@ -51,17 +51,17 @@ public:
 	}
 };
 static_assert(alignof(UWB_SkillHelp_C) == 0x000008, "Wrong alignment on UWB_SkillHelp_C");
-static_assert(sizeof(UWB_SkillHelp_C) == 0x000308, "Wrong size on UWB_SkillHelp_C");
-static_assert(offsetof(UWB_SkillHelp_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SkillHelp_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, ActionIcon) == 0x0002C8, "Member 'UWB_SkillHelp_C::ActionIcon' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillBorder) == 0x0002D0, "Member 'UWB_SkillHelp_C::SkillBorder' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillDescriptionText) == 0x0002D8, "Member 'UWB_SkillHelp_C::SkillDescriptionText' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillIcon) == 0x0002E0, "Member 'UWB_SkillHelp_C::SkillIcon' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillNameText) == 0x0002E8, "Member 'UWB_SkillHelp_C::SkillNameText' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillClass) == 0x0002F0, "Member 'UWB_SkillHelp_C::SkillClass' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillDefaultObject) == 0x0002F8, "Member 'UWB_SkillHelp_C::SkillDefaultObject' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillTeam) == 0x000300, "Member 'UWB_SkillHelp_C::SkillTeam' has a wrong offset!");
-static_assert(offsetof(UWB_SkillHelp_C, SkillCategory) == 0x000301, "Member 'UWB_SkillHelp_C::SkillCategory' has a wrong offset!");
+static_assert(sizeof(UWB_SkillHelp_C) == 0x000328, "Wrong size on UWB_SkillHelp_C");
+static_assert(offsetof(UWB_SkillHelp_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SkillHelp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, ActionIcon) == 0x0002E8, "Member 'UWB_SkillHelp_C::ActionIcon' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillBorder) == 0x0002F0, "Member 'UWB_SkillHelp_C::SkillBorder' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillDescriptionText) == 0x0002F8, "Member 'UWB_SkillHelp_C::SkillDescriptionText' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillIcon) == 0x000300, "Member 'UWB_SkillHelp_C::SkillIcon' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillNameText) == 0x000308, "Member 'UWB_SkillHelp_C::SkillNameText' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillClass) == 0x000310, "Member 'UWB_SkillHelp_C::SkillClass' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillDefaultObject) == 0x000318, "Member 'UWB_SkillHelp_C::SkillDefaultObject' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillTeam) == 0x000320, "Member 'UWB_SkillHelp_C::SkillTeam' has a wrong offset!");
+static_assert(offsetof(UWB_SkillHelp_C, SkillCategory) == 0x000321, "Member 'UWB_SkillHelp_C::SkillCategory' has a wrong offset!");
 
 }
 

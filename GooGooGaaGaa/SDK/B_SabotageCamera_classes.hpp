@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SabotageCamera.B_SabotageCamera_C
-// 0x0028 (0x02C0 - 0x0298)
+// 0x0028 (0x02B8 - 0x0290)
 class AB_SabotageCamera_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       Camera;                                            // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               PropLayoutPreviewMaterial;                         // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       Camera;                                            // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               PropLayoutPreviewMaterial;                         // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_SabotageCamera(int32 EntryPoint);
@@ -43,12 +43,12 @@ public:
 	}
 };
 static_assert(alignof(AB_SabotageCamera_C) == 0x000008, "Wrong alignment on AB_SabotageCamera_C");
-static_assert(sizeof(AB_SabotageCamera_C) == 0x0002C0, "Wrong size on AB_SabotageCamera_C");
-static_assert(offsetof(AB_SabotageCamera_C, UberGraphFrame) == 0x000298, "Member 'AB_SabotageCamera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_SabotageCamera_C, SceneCaptureComponent2D) == 0x0002A0, "Member 'AB_SabotageCamera_C::SceneCaptureComponent2D' has a wrong offset!");
-static_assert(offsetof(AB_SabotageCamera_C, Camera) == 0x0002A8, "Member 'AB_SabotageCamera_C::Camera' has a wrong offset!");
-static_assert(offsetof(AB_SabotageCamera_C, DefaultSceneRoot) == 0x0002B0, "Member 'AB_SabotageCamera_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_SabotageCamera_C, PropLayoutPreviewMaterial) == 0x0002B8, "Member 'AB_SabotageCamera_C::PropLayoutPreviewMaterial' has a wrong offset!");
+static_assert(sizeof(AB_SabotageCamera_C) == 0x0002B8, "Wrong size on AB_SabotageCamera_C");
+static_assert(offsetof(AB_SabotageCamera_C, UberGraphFrame) == 0x000290, "Member 'AB_SabotageCamera_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_SabotageCamera_C, SceneCaptureComponent2D) == 0x000298, "Member 'AB_SabotageCamera_C::SceneCaptureComponent2D' has a wrong offset!");
+static_assert(offsetof(AB_SabotageCamera_C, Camera) == 0x0002A0, "Member 'AB_SabotageCamera_C::Camera' has a wrong offset!");
+static_assert(offsetof(AB_SabotageCamera_C, DefaultSceneRoot) == 0x0002A8, "Member 'AB_SabotageCamera_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_SabotageCamera_C, PropLayoutPreviewMaterial) == 0x0002B0, "Member 'AB_SabotageCamera_C::PropLayoutPreviewMaterial' has a wrong offset!");
 
 }
 

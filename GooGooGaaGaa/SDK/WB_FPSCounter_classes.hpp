@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_FPSCounter.WB_FPSCounter_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_FPSCounter_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Text;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        Total;                                             // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Ticks;                                             // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Text;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        Total;                                             // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Ticks;                                             // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WB_FPSCounter(int32 EntryPoint);
@@ -43,11 +43,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_FPSCounter_C) == 0x000008, "Wrong alignment on UWB_FPSCounter_C");
-static_assert(sizeof(UWB_FPSCounter_C) == 0x0002E0, "Wrong size on UWB_FPSCounter_C");
-static_assert(offsetof(UWB_FPSCounter_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_FPSCounter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_FPSCounter_C, Text) == 0x0002C8, "Member 'UWB_FPSCounter_C::Text' has a wrong offset!");
-static_assert(offsetof(UWB_FPSCounter_C, Total) == 0x0002D0, "Member 'UWB_FPSCounter_C::Total' has a wrong offset!");
-static_assert(offsetof(UWB_FPSCounter_C, Ticks) == 0x0002D8, "Member 'UWB_FPSCounter_C::Ticks' has a wrong offset!");
+static_assert(sizeof(UWB_FPSCounter_C) == 0x000300, "Wrong size on UWB_FPSCounter_C");
+static_assert(offsetof(UWB_FPSCounter_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_FPSCounter_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_FPSCounter_C, Text) == 0x0002E8, "Member 'UWB_FPSCounter_C::Text' has a wrong offset!");
+static_assert(offsetof(UWB_FPSCounter_C, Total) == 0x0002F0, "Member 'UWB_FPSCounter_C::Total' has a wrong offset!");
+static_assert(offsetof(UWB_FPSCounter_C, Ticks) == 0x0002F8, "Member 'UWB_FPSCounter_C::Ticks' has a wrong offset!");
 
 }
 

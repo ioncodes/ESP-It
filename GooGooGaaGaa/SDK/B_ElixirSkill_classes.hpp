@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ElixirSkill.B_ElixirSkill_C
-// 0x0000 (0x0148 - 0x0148)
+// 0x0000 (0x0140 - 0x0140)
 class UB_ElixirSkill_C final : public UB_WitchProjectileSkill_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UB_ElixirSkill_C) == 0x000008, "Wrong alignment on UB_ElixirSkill_C");
-static_assert(sizeof(UB_ElixirSkill_C) == 0x000148, "Wrong size on UB_ElixirSkill_C");
+static_assert(sizeof(UB_ElixirSkill_C) == 0x000140, "Wrong size on UB_ElixirSkill_C");
 
 }
 

@@ -94,9 +94,9 @@ bool UWB_SalvageCategoryButton_C::GetIsActiveCategorySlot()
 // Function WB_SalvageCategoryButton.WB_SalvageCategoryButton_C.OnUpdateCategory__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ESalvageCategory                        Param_Category                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESalvageCategory                        Category_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SalvageCategoryButton_C::OnUpdateCategory__DelegateSignature(ESalvageCategory Param_Category)
+void UWB_SalvageCategoryButton_C::OnUpdateCategory__DelegateSignature(ESalvageCategory Category_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -105,7 +105,7 @@ void UWB_SalvageCategoryButton_C::OnUpdateCategory__DelegateSignature(ESalvageCa
 
 	Params::WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature Parms{};
 
-	Parms.Param_Category = Param_Category;
+	Parms.Category_0 = Category_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

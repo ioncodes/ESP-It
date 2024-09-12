@@ -10,31 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Buff.B_Buff_C
-// 0x0108 (0x03A0 - 0x0298)
+// 0x0110 (0x03A0 - 0x0290)
 #pragma pack(push, 0x1)
 class alignas(0x10) AB_Buff_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        BuffLength;                                        // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       PlayerState;                                       // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           LengthTimer;                                       // 0x02B8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        BuffLength;                                        // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState;                                       // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           LengthTimer;                                       // 0x02B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            Icon;                                              // 0x02C0(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
 	uint8                                         TimeRemaining;                                     // 0x0390(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BuffEnd();
-	void BuffStart(class AB_PlayerState_C* Param_PlayerState);
+	void BuffStart(class AB_PlayerState_C* PlayerState_0);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_B_Buff(int32 EntryPoint);
 	void RemoveBuff();
@@ -56,11 +57,11 @@ public:
 #pragma pack(pop)
 static_assert(alignof(AB_Buff_C) == 0x000010, "Wrong alignment on AB_Buff_C");
 static_assert(sizeof(AB_Buff_C) == 0x0003A0, "Wrong size on AB_Buff_C");
-static_assert(offsetof(AB_Buff_C, UberGraphFrame) == 0x000298, "Member 'AB_Buff_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Buff_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_Buff_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_Buff_C, BuffLength) == 0x0002A8, "Member 'AB_Buff_C::BuffLength' has a wrong offset!");
-static_assert(offsetof(AB_Buff_C, PlayerState) == 0x0002B0, "Member 'AB_Buff_C::PlayerState' has a wrong offset!");
-static_assert(offsetof(AB_Buff_C, LengthTimer) == 0x0002B8, "Member 'AB_Buff_C::LengthTimer' has a wrong offset!");
+static_assert(offsetof(AB_Buff_C, UberGraphFrame) == 0x000290, "Member 'AB_Buff_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_Buff_C, DefaultSceneRoot) == 0x000298, "Member 'AB_Buff_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_Buff_C, BuffLength) == 0x0002A0, "Member 'AB_Buff_C::BuffLength' has a wrong offset!");
+static_assert(offsetof(AB_Buff_C, PlayerState) == 0x0002A8, "Member 'AB_Buff_C::PlayerState' has a wrong offset!");
+static_assert(offsetof(AB_Buff_C, LengthTimer) == 0x0002B0, "Member 'AB_Buff_C::LengthTimer' has a wrong offset!");
 static_assert(offsetof(AB_Buff_C, Icon) == 0x0002C0, "Member 'AB_Buff_C::Icon' has a wrong offset!");
 static_assert(offsetof(AB_Buff_C, TimeRemaining) == 0x000390, "Member 'AB_Buff_C::TimeRemaining' has a wrong offset!");
 

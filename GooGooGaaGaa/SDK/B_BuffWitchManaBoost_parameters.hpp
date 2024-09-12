@@ -19,11 +19,11 @@ namespace SDK::Params
 struct B_BuffWitchManaBoost_C_BuffStart final
 {
 public:
-	class AB_PlayerState_C*                       Param_PlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffWitchManaBoost_C_BuffStart) == 0x000008, "Wrong alignment on B_BuffWitchManaBoost_C_BuffStart");
 static_assert(sizeof(B_BuffWitchManaBoost_C_BuffStart) == 0x000008, "Wrong size on B_BuffWitchManaBoost_C_BuffStart");
-static_assert(offsetof(B_BuffWitchManaBoost_C_BuffStart, Param_PlayerState) == 0x000000, "Member 'B_BuffWitchManaBoost_C_BuffStart::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(B_BuffWitchManaBoost_C_BuffStart, PlayerState_0) == 0x000000, "Member 'B_BuffWitchManaBoost_C_BuffStart::PlayerState_0' has a wrong offset!");
 
 // Function B_BuffWitchManaBoost.B_BuffWitchManaBoost_C.ExecuteUbergraph_B_BuffWitchManaBoost
 // 0x0078 (0x0078 - 0x0000)
@@ -31,11 +31,11 @@ struct B_BuffWitchManaBoost_C_ExecuteUbergraph_B_BuffWitchManaBoost final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EF6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_Event_PlayerState;                          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EF7[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ManaComponent_C*                     K2Node_CustomEvent_ManaComponent;                  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_CustomEvent_ManaRegen;                      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SetManaRegen_ReturnValue;                 // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -97,13 +97,13 @@ static_assert(offsetof(B_BuffWitchManaBoost_C_ReceiveTick, DeltaSeconds) == 0x00
 struct B_BuffWitchManaBoost_C_SetManaRegen final
 {
 public:
-	class UB_ManaComponent_C*                     Param_ManaComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_ManaComponent_C*                     ManaComponent_0;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        ManaRegen;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffWitchManaBoost_C_SetManaRegen) == 0x000008, "Wrong alignment on B_BuffWitchManaBoost_C_SetManaRegen");
 static_assert(sizeof(B_BuffWitchManaBoost_C_SetManaRegen) == 0x000018, "Wrong size on B_BuffWitchManaBoost_C_SetManaRegen");
-static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegen, Param_ManaComponent) == 0x000000, "Member 'B_BuffWitchManaBoost_C_SetManaRegen::Param_ManaComponent' has a wrong offset!");
+static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegen, ManaComponent_0) == 0x000000, "Member 'B_BuffWitchManaBoost_C_SetManaRegen::ManaComponent_0' has a wrong offset!");
 static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegen, ManaRegen) == 0x000008, "Member 'B_BuffWitchManaBoost_C_SetManaRegen::ManaRegen' has a wrong offset!");
 static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegen, ReturnValue) == 0x000010, "Member 'B_BuffWitchManaBoost_C_SetManaRegen::ReturnValue' has a wrong offset!");
 
@@ -112,12 +112,12 @@ static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegen, ReturnValue) == 0x00
 struct B_BuffWitchManaBoost_C_SetManaRegenMulti final
 {
 public:
-	class UB_ManaComponent_C*                     Param_ManaComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_ManaComponent_C*                     ManaComponent_0;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        ManaRegen;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffWitchManaBoost_C_SetManaRegenMulti) == 0x000008, "Wrong alignment on B_BuffWitchManaBoost_C_SetManaRegenMulti");
 static_assert(sizeof(B_BuffWitchManaBoost_C_SetManaRegenMulti) == 0x000010, "Wrong size on B_BuffWitchManaBoost_C_SetManaRegenMulti");
-static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegenMulti, Param_ManaComponent) == 0x000000, "Member 'B_BuffWitchManaBoost_C_SetManaRegenMulti::Param_ManaComponent' has a wrong offset!");
+static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegenMulti, ManaComponent_0) == 0x000000, "Member 'B_BuffWitchManaBoost_C_SetManaRegenMulti::ManaComponent_0' has a wrong offset!");
 static_assert(offsetof(B_BuffWitchManaBoost_C_SetManaRegenMulti, ManaRegen) == 0x000008, "Member 'B_BuffWitchManaBoost_C_SetManaRegenMulti::ManaRegen' has a wrong offset!");
 
 }

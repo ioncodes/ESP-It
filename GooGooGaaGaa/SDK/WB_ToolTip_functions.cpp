@@ -82,9 +82,9 @@ void UWB_ToolTip_C::OnFadeOutFinished__DelegateSignature()
 // Function WB_ToolTip.WB_ToolTip_C.SetTooltipContent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Param_TooltipContent                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTipContent_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ToolTip_C::SetTooltipContent(class UUserWidget* Param_TooltipContent)
+void UWB_ToolTip_C::SetTooltipContent(class UUserWidget* ToolTipContent_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -93,7 +93,7 @@ void UWB_ToolTip_C::SetTooltipContent(class UUserWidget* Param_TooltipContent)
 
 	Params::WB_ToolTip_C_SetTooltipContent Parms{};
 
-	Parms.Param_TooltipContent = Param_TooltipContent;
+	Parms.ToolTipContent_0 = ToolTipContent_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

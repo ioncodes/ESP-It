@@ -18,37 +18,37 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SpringPad.B_SpringPad_C
-// 0x0070 (0x0308 - 0x0298)
+// 0x0070 (0x0300 - 0x0290)
 class AB_SpringPad_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                       TriggerSphere;                                     // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          OneTimeUse;                                        // 0x02B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasBeenUsed;                                       // 0x02B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4864[0x6];                                     // 0x02BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           FireMontage;                                       // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              SpringSound;                                       // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        SoundVolume;                                       // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundAttenuation*                      Attenuation;                                       // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          HitByPotato;                                       // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4865[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        SoundVolumeHitByPotato;                            // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SoundPitchHitByPotato;                             // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpulseCharacter;                                  // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpulsePhysicalObject;                             // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                       TriggerSphere;                                     // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          OneTimeUse;                                        // 0x02B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBeenUsed;                                       // 0x02B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B2[0x6];                                      // 0x02B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           FireMontage;                                       // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              SpringSound;                                       // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        SoundVolume;                                       // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundAttenuation*                      Attenuation;                                       // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          HitByPotato;                                       // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SoundVolumeHitByPotato;                            // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SoundPitchHitByPotato;                             // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpulseCharacter;                                  // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpulsePhysicalObject;                             // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentSleepSignature__DelegateSignature(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
 	void BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentWakeSignature__DelegateSignature(class UPrimitiveComponent* WakingComponent, class FName BoneName);
 	void BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void ExecuteUbergraph_B_SpringPad(int32 EntryPoint);
-	void FireMulticast(class AActor* Actor, class UPrimitiveComponent* Component, bool Param_HitByPotato);
+	void FireMulticast(class AActor* Actor, class UPrimitiveComponent* Component, bool HitByPotato_0);
 	void HandleSpringPadTriggered(class AActor* TriggerActor, class UPrimitiveComponent* TriggerComponent);
 	void LogicAfterFire();
-	void MoveTriggerActorAndPlaySound(const class AActor* TriggerActor, class UPrimitiveComponent* TriggerComponent, bool Param_HitByPotato);
+	void MoveTriggerActorAndPlaySound(const class AActor* TriggerActor, class UPrimitiveComponent* TriggerComponent, bool HitByPotato_0);
 	void OnBlendOut_716B379C4EDA7279FD1A55B5BEB22BED(class FName NotifyName);
 	void OnBlendOut_D927F1014627CF8392DB37AFF3C1C437(class FName NotifyName);
 	void OnCompleted_716B379C4EDA7279FD1A55B5BEB22BED(class FName NotifyName);
@@ -72,22 +72,22 @@ public:
 	}
 };
 static_assert(alignof(AB_SpringPad_C) == 0x000008, "Wrong alignment on AB_SpringPad_C");
-static_assert(sizeof(AB_SpringPad_C) == 0x000308, "Wrong size on AB_SpringPad_C");
-static_assert(offsetof(AB_SpringPad_C, UberGraphFrame) == 0x000298, "Member 'AB_SpringPad_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, TriggerSphere) == 0x0002A0, "Member 'AB_SpringPad_C::TriggerSphere' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, SkeletalMesh) == 0x0002A8, "Member 'AB_SpringPad_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, Box) == 0x0002B0, "Member 'AB_SpringPad_C::Box' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, OneTimeUse) == 0x0002B8, "Member 'AB_SpringPad_C::OneTimeUse' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, HasBeenUsed) == 0x0002B9, "Member 'AB_SpringPad_C::HasBeenUsed' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, FireMontage) == 0x0002C0, "Member 'AB_SpringPad_C::FireMontage' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, SpringSound) == 0x0002C8, "Member 'AB_SpringPad_C::SpringSound' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, SoundVolume) == 0x0002D0, "Member 'AB_SpringPad_C::SoundVolume' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, Attenuation) == 0x0002D8, "Member 'AB_SpringPad_C::Attenuation' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, HitByPotato) == 0x0002E0, "Member 'AB_SpringPad_C::HitByPotato' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, SoundVolumeHitByPotato) == 0x0002E8, "Member 'AB_SpringPad_C::SoundVolumeHitByPotato' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, SoundPitchHitByPotato) == 0x0002F0, "Member 'AB_SpringPad_C::SoundPitchHitByPotato' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, ImpulseCharacter) == 0x0002F8, "Member 'AB_SpringPad_C::ImpulseCharacter' has a wrong offset!");
-static_assert(offsetof(AB_SpringPad_C, ImpulsePhysicalObject) == 0x000300, "Member 'AB_SpringPad_C::ImpulsePhysicalObject' has a wrong offset!");
+static_assert(sizeof(AB_SpringPad_C) == 0x000300, "Wrong size on AB_SpringPad_C");
+static_assert(offsetof(AB_SpringPad_C, UberGraphFrame) == 0x000290, "Member 'AB_SpringPad_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, TriggerSphere) == 0x000298, "Member 'AB_SpringPad_C::TriggerSphere' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, SkeletalMesh) == 0x0002A0, "Member 'AB_SpringPad_C::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, Box) == 0x0002A8, "Member 'AB_SpringPad_C::Box' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, OneTimeUse) == 0x0002B0, "Member 'AB_SpringPad_C::OneTimeUse' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, HasBeenUsed) == 0x0002B1, "Member 'AB_SpringPad_C::HasBeenUsed' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, FireMontage) == 0x0002B8, "Member 'AB_SpringPad_C::FireMontage' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, SpringSound) == 0x0002C0, "Member 'AB_SpringPad_C::SpringSound' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, SoundVolume) == 0x0002C8, "Member 'AB_SpringPad_C::SoundVolume' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, Attenuation) == 0x0002D0, "Member 'AB_SpringPad_C::Attenuation' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, HitByPotato) == 0x0002D8, "Member 'AB_SpringPad_C::HitByPotato' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, SoundVolumeHitByPotato) == 0x0002E0, "Member 'AB_SpringPad_C::SoundVolumeHitByPotato' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, SoundPitchHitByPotato) == 0x0002E8, "Member 'AB_SpringPad_C::SoundPitchHitByPotato' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, ImpulseCharacter) == 0x0002F0, "Member 'AB_SpringPad_C::ImpulseCharacter' has a wrong offset!");
+static_assert(offsetof(AB_SpringPad_C, ImpulsePhysicalObject) == 0x0002F8, "Member 'AB_SpringPad_C::ImpulsePhysicalObject' has a wrong offset!");
 
 }
 

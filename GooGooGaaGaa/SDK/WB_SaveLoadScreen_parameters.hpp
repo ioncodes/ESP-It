@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_QuestionAnswer_structs.hpp"
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "E_QuestionAnswer_structs.hpp"
 #include "InputCore_structs.hpp"
 
 
@@ -26,12 +26,12 @@ struct WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature final
 {
 public:
 	class FString                                 Filename;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class USaveGame*                              Param_SaveFile;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USaveGame*                              SaveFile_0;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature");
 static_assert(sizeof(WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature) == 0x000018, "Wrong size on WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature");
 static_assert(offsetof(WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature, Filename) == 0x000000, "Member 'WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature::Filename' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature, Param_SaveFile) == 0x000010, "Member 'WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature::Param_SaveFile' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature, SaveFile_0) == 0x000010, "Member 'WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature::SaveFile_0' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.OnEntrySelected__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -100,11 +100,11 @@ public:
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0200(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52CF[0x6];                                     // 0x021A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21A[0x6];                                      // 0x021A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_GetKey_ReturnValue_1;                     // 0x0220(0x0018)(HasGetValueTypeHash)
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0238(0x00B8)()
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D0[0x7];                                     // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x02F8(0x00B8)()
 	struct FEventReply                            CallFunc_Handled_ReturnValue_2;                    // 0x03B0(0x00B8)()
 };
@@ -164,42 +164,42 @@ static_assert(offsetof(WB_SaveLoadScreen_C_RemoveListEntry, CallFunc_Map_Find_Re
 static_assert(offsetof(WB_SaveLoadScreen_C_RemoveListEntry, CallFunc_Map_Remove_ReturnValue) == 0x000019, "Member 'WB_SaveLoadScreen_C_RemoveListEntry::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.LoadCurrentEntryName
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_SaveLoadScreen_C_LoadCurrentEntryName final
 {
 public:
 	class USaveGame*                              SaveFile;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D1[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0038(0x0018)()
-	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly; // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly_1; // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Select_Default;                             // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0030(0x0010)()
+	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly; // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly_1; // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_LoadCurrentEntryName) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_LoadCurrentEntryName");
-static_assert(sizeof(WB_SaveLoadScreen_C_LoadCurrentEntryName) == 0x0000C8, "Wrong size on WB_SaveLoadScreen_C_LoadCurrentEntryName");
+static_assert(sizeof(WB_SaveLoadScreen_C_LoadCurrentEntryName) == 0x0000B8, "Wrong size on WB_SaveLoadScreen_C_LoadCurrentEntryName");
 static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, SaveFile) == 0x000000, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::SaveFile' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, Temp_bool_Variable) == 0x000008, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_SwitchPlatform_ReturnValue) == 0x000009, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetText_ReturnValue) == 0x000010, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetText_ReturnValue_1) == 0x000038, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetSystemFriendlyFileName_SystemFriendly) == 0x000050, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetSystemFriendlyFileName_SystemFriendly' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000060, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Concat_StrStr_ReturnValue) == 0x000070, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetSystemFriendlyFileName_SystemFriendly_1) == 0x000080, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetSystemFriendlyFileName_SystemFriendly_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000090, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0000A0, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, K2Node_Select_Default) == 0x0000B0, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_LoadGameFromSlot_ReturnValue) == 0x0000C0, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_LoadGameFromSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetText_ReturnValue_1) == 0x000030, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetSystemFriendlyFileName_SystemFriendly) == 0x000040, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetSystemFriendlyFileName_SystemFriendly' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000050, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Concat_StrStr_ReturnValue) == 0x000060, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_GetSystemFriendlyFileName_SystemFriendly_1) == 0x000070, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_GetSystemFriendlyFileName_SystemFriendly_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000080, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000090, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, K2Node_Select_Default) == 0x0000A0, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_LoadCurrentEntryName, CallFunc_LoadGameFromSlot_ReturnValue) == 0x0000B0, "Member 'WB_SaveLoadScreen_C_LoadCurrentEntryName::CallFunc_LoadGameFromSlot_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.CreateNewSaveEntry
 // 0x0038 (0x0038 - 0x0000)
@@ -221,26 +221,26 @@ static_assert(offsetof(WB_SaveLoadScreen_C_CreateNewSaveEntry, CallFunc_GetUserF
 static_assert(offsetof(WB_SaveLoadScreen_C_CreateNewSaveEntry, CallFunc_SpawnObject_ReturnValue) == 0x000030, "Member 'WB_SaveLoadScreen_C_CreateNewSaveEntry::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.InputCommitted
-// 0x0050 (0x0050 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WB_SaveLoadScreen_C_InputCommitted final
 {
 public:
-	class FText                                   InputText;                                         // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly; // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D2[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_SaveEntryData_C*                     CallFunc_Map_Find_Value;                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   InputText;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly; // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_SaveEntryData_C*                     CallFunc_Map_Find_Value;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_InputCommitted) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_InputCommitted");
-static_assert(sizeof(WB_SaveLoadScreen_C_InputCommitted) == 0x000050, "Wrong size on WB_SaveLoadScreen_C_InputCommitted");
+static_assert(sizeof(WB_SaveLoadScreen_C_InputCommitted) == 0x000048, "Wrong size on WB_SaveLoadScreen_C_InputCommitted");
 static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, InputText) == 0x000000, "Member 'WB_SaveLoadScreen_C_InputCommitted::InputText' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_Conv_TextToString_ReturnValue) == 0x000018, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_GetSystemFriendlyFileName_SystemFriendly) == 0x000028, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_GetSystemFriendlyFileName_SystemFriendly' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_Map_Find_Value) == 0x000040, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_Map_Find_ReturnValue) == 0x000048, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_Conv_TextToString_ReturnValue) == 0x000010, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_GetSystemFriendlyFileName_SystemFriendly) == 0x000020, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_GetSystemFriendlyFileName_SystemFriendly' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_Map_Find_Value) == 0x000038, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InputCommitted, CallFunc_Map_Find_ReturnValue) == 0x000040, "Member 'WB_SaveLoadScreen_C_InputCommitted::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.SaveFile
 // 0x0078 (0x0078 - 0x0000)
@@ -253,14 +253,14 @@ public:
 	class UB_SaveGameReferencer_C*                K2Node_DynamicCast_AsB_Save_Game_Referencer;       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D3[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D4[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue_1;             // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D5[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue_2;             // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -281,16 +281,16 @@ static_assert(offsetof(WB_SaveLoadScreen_C_SaveFile, CallFunc_Concat_StrStr_Retu
 static_assert(offsetof(WB_SaveLoadScreen_C_SaveFile, CallFunc_SaveGameToSlot_ReturnValue_2) == 0x000070, "Member 'WB_SaveLoadScreen_C_SaveFile::CallFunc_SaveGameToSlot_ReturnValue_2' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.SetUITexts
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_SaveLoadScreen_C_SetUITexts final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0008(0x0018)()
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0008(0x0010)()
 };
 static_assert(alignof(WB_SaveLoadScreen_C_SetUITexts) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_SetUITexts");
-static_assert(sizeof(WB_SaveLoadScreen_C_SetUITexts) == 0x000020, "Wrong size on WB_SaveLoadScreen_C_SetUITexts");
+static_assert(sizeof(WB_SaveLoadScreen_C_SetUITexts) == 0x000018, "Wrong size on WB_SaveLoadScreen_C_SetUITexts");
 static_assert(offsetof(WB_SaveLoadScreen_C_SetUITexts, Temp_bool_Variable) == 0x000000, "Member 'WB_SaveLoadScreen_C_SetUITexts::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_SetUITexts, K2Node_Select_Default) == 0x000008, "Member 'WB_SaveLoadScreen_C_SetUITexts::K2Node_Select_Default' has a wrong offset!");
 
@@ -299,20 +299,20 @@ static_assert(offsetof(WB_SaveLoadScreen_C_SetUITexts, K2Node_Select_Default) ==
 struct WB_SaveLoadScreen_C_InitializeSaveLoadUI final
 {
 public:
-	class FString                                 Param_SaveLocation;                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 SaveLocation_0;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          AllowFileEditing;                                  // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D7[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USaveGame*                              Param_FileToSave;                                  // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USaveGame*                              FileToSave_0;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D8[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_InitializeSaveLoadUI) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_InitializeSaveLoadUI");
 static_assert(sizeof(WB_SaveLoadScreen_C_InitializeSaveLoadUI) == 0x000048, "Wrong size on WB_SaveLoadScreen_C_InitializeSaveLoadUI");
-static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, Param_SaveLocation) == 0x000000, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::Param_SaveLocation' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, SaveLocation_0) == 0x000000, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::SaveLocation_0' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, AllowFileEditing) == 0x000010, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::AllowFileEditing' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, Param_FileToSave) == 0x000018, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::Param_FileToSave' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, FileToSave_0) == 0x000018, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::FileToSave_0' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, CallFunc_SwitchPlatform_ReturnValue) == 0x000030, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_InitializeSaveLoadUI, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000038, "Member 'WB_SaveLoadScreen_C_InitializeSaveLoadUI::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
@@ -348,7 +348,7 @@ static_assert(offsetof(WB_SaveLoadScreen_C_GetUserFriendlyFileName, UserFriendly
 static_assert(offsetof(WB_SaveLoadScreen_C_GetUserFriendlyFileName, CallFunc_Replace_ReturnValue) == 0x000020, "Member 'WB_SaveLoadScreen_C_GetUserFriendlyFileName::CallFunc_Replace_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.DeleteItem
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct WB_SaveLoadScreen_C_DeleteItem final
 {
 public:
@@ -357,22 +357,22 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DeleteGameInSlot_ReturnValue;             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D9[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SaveGameReferencer_C*                K2Node_DynamicCast_AsB_Save_Game_Referencer;       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DA[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DeleteGameInSlot_ReturnValue_1;           // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DB[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0068(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly; // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0068(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSystemFriendlyFileName_SystemFriendly; // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_DeleteItem) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_DeleteItem");
-static_assert(sizeof(WB_SaveLoadScreen_C_DeleteItem) == 0x0000A0, "Wrong size on WB_SaveLoadScreen_C_DeleteItem");
+static_assert(sizeof(WB_SaveLoadScreen_C_DeleteItem) == 0x000098, "Wrong size on WB_SaveLoadScreen_C_DeleteItem");
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, Filename) == 0x000000, "Member 'WB_SaveLoadScreen_C_DeleteItem::Filename' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_Concat_StrStr_ReturnValue) == 0x000010, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000020, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
@@ -386,47 +386,47 @@ static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_Concat_StrStr_Re
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_DeleteGameInSlot_ReturnValue_1) == 0x000060, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_DeleteGameInSlot_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_Array_RemoveItem_ReturnValue) == 0x000061, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_GetText_ReturnValue) == 0x000068, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_Conv_TextToString_ReturnValue) == 0x000080, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_GetSystemFriendlyFileName_SystemFriendly) == 0x000090, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_GetSystemFriendlyFileName_SystemFriendly' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_Conv_TextToString_ReturnValue) == 0x000078, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_DeleteItem, CallFunc_GetSystemFriendlyFileName_SystemFriendly) == 0x000088, "Member 'WB_SaveLoadScreen_C_DeleteItem::CallFunc_GetSystemFriendlyFileName_SystemFriendly' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.GetValidFileName
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_SaveLoadScreen_C_GetValidFileName final
 {
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_MakeValidFileName_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_MakeValidFileName_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_GetValidFileName) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_GetValidFileName");
-static_assert(sizeof(WB_SaveLoadScreen_C_GetValidFileName) == 0x000058, "Wrong size on WB_SaveLoadScreen_C_GetValidFileName");
+static_assert(sizeof(WB_SaveLoadScreen_C_GetValidFileName) == 0x000050, "Wrong size on WB_SaveLoadScreen_C_GetValidFileName");
 static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, ReturnValue) == 0x000000, "Member 'WB_SaveLoadScreen_C_GetValidFileName::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_GetText_ReturnValue) == 0x000010, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_Replace_ReturnValue) == 0x000038, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_Replace_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_MakeValidFileName_ReturnValue) == 0x000048, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_MakeValidFileName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_Replace_ReturnValue) == 0x000030, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_Replace_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_GetValidFileName, CallFunc_MakeValidFileName_ReturnValue) == 0x000040, "Member 'WB_SaveLoadScreen_C_GetValidFileName::CallFunc_MakeValidFileName_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.Get_Save_bIsEnabled_0
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0 final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0008(0x0018)()
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0008(0x0010)()
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0");
-static_assert(sizeof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0) == 0x000028, "Wrong size on WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0");
+static_assert(sizeof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0) == 0x000020, "Wrong size on WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0");
 static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, ReturnValue) == 0x000000, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_GetText_ReturnValue) == 0x000008, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_TextIsEmpty_ReturnValue) == 0x000020, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_Not_PreBool_ReturnValue) == 0x000021, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_BooleanAND_ReturnValue) == 0x000022, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_TextIsEmpty_ReturnValue) == 0x000018, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0, CallFunc_BooleanAND_ReturnValue) == 0x00001A, "Member 'WB_SaveLoadScreen_C_Get_Save_bIsEnabled_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.Valid_Save_Selected_0
 // 0x0002 (0x0002 - 0x0000)
@@ -442,17 +442,17 @@ static_assert(offsetof(WB_SaveLoadScreen_C_Valid_Save_Selected_0, ReturnValue) =
 static_assert(offsetof(WB_SaveLoadScreen_C_Valid_Save_Selected_0, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'WB_SaveLoadScreen_C_Valid_Save_Selected_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.SaveEntryClicked
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_SaveLoadScreen_C_SaveEntryClicked final
 {
 public:
 	class FString                                 GameRuleName;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UB_SaveEntryData_C*                     Sender;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              CallFunc_LoadCurrentEntryName_SaveFile;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0018)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0010)()
 };
 static_assert(alignof(WB_SaveLoadScreen_C_SaveEntryClicked) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_SaveEntryClicked");
-static_assert(sizeof(WB_SaveLoadScreen_C_SaveEntryClicked) == 0x000038, "Wrong size on WB_SaveLoadScreen_C_SaveEntryClicked");
+static_assert(sizeof(WB_SaveLoadScreen_C_SaveEntryClicked) == 0x000030, "Wrong size on WB_SaveLoadScreen_C_SaveEntryClicked");
 static_assert(offsetof(WB_SaveLoadScreen_C_SaveEntryClicked, GameRuleName) == 0x000000, "Member 'WB_SaveLoadScreen_C_SaveEntryClicked::GameRuleName' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_SaveEntryClicked, Sender) == 0x000010, "Member 'WB_SaveLoadScreen_C_SaveEntryClicked::Sender' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_SaveEntryClicked, CallFunc_LoadCurrentEntryName_SaveFile) == 0x000018, "Member 'WB_SaveLoadScreen_C_SaveEntryClicked::CallFunc_LoadCurrentEntryName_SaveFile' has a wrong offset!");
@@ -473,36 +473,36 @@ public:
 	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DD[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SaveGameReferencer_C*                K2Node_DynamicCast_AsB_Save_Game_Referencer;       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DE[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DF[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E0[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E1[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SaveEntryData_C*                     CallFunc_CreateNewSaveEntry_Entry;                 // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E2[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_SaveGameObject_GetAllSaveSlotFileNames_FileNames; // 0x0098(0x0010)(ReferenceParm)
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E3[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Split_LeftS;                              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E4[0x6];                                     // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_ChangeExtension_ReturnValue;              // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E5[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -584,17 +584,17 @@ static_assert(sizeof(WB_SaveLoadScreen_C_DeleteAnswered) == 0x000001, "Wrong siz
 static_assert(offsetof(WB_SaveLoadScreen_C_DeleteAnswered, Answer) == 0x000000, "Member 'WB_SaveLoadScreen_C_DeleteAnswered::Answer' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature");
-static_assert(sizeof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature");
+static_assert(sizeof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature");
 static_assert(offsetof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature::Text' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000018, "Member 'WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature, CommitMethod) == 0x000010, "Member 'WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature::CommitMethod' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.BndEvt__WB_SaveLoadRules_RuleList_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -610,14 +610,14 @@ static_assert(offsetof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_RuleList_K2N
 static_assert(offsetof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_RuleList_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature, bIsSelected) == 0x000008, "Member 'WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_RuleList_K2Node_ComponentBoundEvent_7_OnListItemSelectionChangedDynamic__DelegateSignature::bIsSelected' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(sizeof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature");
+static_assert(sizeof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000010, "Wrong size on WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature");
 static_assert(offsetof(WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_SaveLoadScreen_C_BndEvt__WB_SaveLoadRules_GameRulesName_K2Node_ComponentBoundEvent_5_OnEditableTextBoxChangedEvent__DelegateSignature::Text' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.PreConstruct
@@ -632,142 +632,142 @@ static_assert(sizeof(WB_SaveLoadScreen_C_PreConstruct) == 0x000001, "Wrong size 
 static_assert(offsetof(WB_SaveLoadScreen_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WB_SaveLoadScreen_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.ExecuteUbergraph_WB_SaveLoadScreen
-// 0x0340 (0x0340 - 0x0000)
+// 0x02E0 (0x02E0 - 0x0000)
 struct WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_QuestionAnswer                              K2Node_CustomEvent_Answer_1;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E6[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0008(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_QuestionAnswer                              K2Node_CustomEvent_Answer;                         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E7[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E8[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0058(0x0018)()
-	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0070(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E9[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00B0(0x0018)()
-	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00D8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0128(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0140(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0150(0x0018)()
-	bool                                          CallFunc_EqualEqual_TextText_ReturnValue;          // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EA[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EB[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_SaveEntryData_C*                     K2Node_DynamicCast_AsB_Save_Entry_Data;            // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EC[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetValidFileName_ReturnValue;             // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52ED[0x7];                                     // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetValidFileName_ReturnValue_1;           // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x01B8(0x0018)()
-	class FString                                 CallFunc_GetValidFileName_ReturnValue_2;           // 0x01D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01E0(0x0050)(HasGetValueTypeHash)
-	class UB_SaveEntryData_C*                     CallFunc_CreateNewSaveEntry_Entry;                 // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0238(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0248(0x0018)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0268(0x0018)(ConstParm)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EE[0x7];                                     // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_3;          // 0x0290(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSubstring_ReturnValue_1;               // 0x02A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x02B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x02B8(0x0018)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EF[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog_1;      // 0x02E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USaveGame*                              CallFunc_LoadCurrentEntryName_SaveFile;            // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetValidFileName_ReturnValue_3;           // 0x02F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetValidFileName_ReturnValue_4;           // 0x0308(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F0[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetUserFriendlyFileName_UserFriendly;     // 0x0320(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0334(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Valid_Save_Selected_0_ReturnValue;        // 0x0335(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Valid_Save_Selected_0_ReturnValue_1;      // 0x0336(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0337(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Get_Save_bIsEnabled_0_ReturnValue;        // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x033A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0008(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_QuestionAnswer                              K2Node_CustomEvent_Answer;                         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0050(0x0010)()
+	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0060(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0010)()
+	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B8(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0100(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0120(0x0010)()
+	bool                                          CallFunc_EqualEqual_TextText_ReturnValue;          // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_ComponentBoundEvent_Item;                   // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsSelected;            // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_SaveEntryData_C*                     K2Node_DynamicCast_AsB_Save_Entry_Data;            // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetValidFileName_ReturnValue;             // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetValidFileName_ReturnValue_1;           // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0180(0x0010)()
+	class FString                                 CallFunc_GetValidFileName_ReturnValue_2;           // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01A0(0x0048)(HasGetValueTypeHash)
+	class UB_SaveEntryData_C*                     CallFunc_CreateNewSaveEntry_Entry;                 // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01F0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0200(0x0010)()
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0218(0x0010)(ConstParm)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_3;          // 0x0238(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSubstring_ReturnValue_1;               // 0x0248(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0260(0x0010)()
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog_1;      // 0x0288(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USaveGame*                              CallFunc_LoadCurrentEntryName_SaveFile;            // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetValidFileName_ReturnValue_3;           // 0x0298(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetValidFileName_ReturnValue_4;           // 0x02A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetUserFriendlyFileName_UserFriendly;     // 0x02C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Valid_Save_Selected_0_ReturnValue;        // 0x02D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Valid_Save_Selected_0_ReturnValue_1;      // 0x02D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02D7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Get_Save_bIsEnabled_0_ReturnValue;        // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x02DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen) == 0x000008, "Wrong alignment on WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen");
-static_assert(sizeof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen) == 0x000340, "Wrong size on WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen");
+static_assert(sizeof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen) == 0x0002E0, "Wrong size on WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen");
 static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, EntryPoint) == 0x000000, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CustomEvent_Answer_1) == 0x000004, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CustomEvent_Answer_1' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_SwitchEnum_CmpSuccess) == 0x000005, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetText_ReturnValue) == 0x000008, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000030, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CustomEvent_Answer) == 0x000040, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CustomEvent_Answer' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x000044, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_SwitchEnum_CmpSuccess_1) == 0x000054, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetText_ReturnValue_1) == 0x000058, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_Text_1) == 0x000070, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_CommitMethod) == 0x000088, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000090, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000A0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue) == 0x0000B0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetSubstring_ReturnValue) == 0x0000C8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetSubstring_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeStruct_FormatArgumentData) == 0x0000D8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000128, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeArray_Array) == 0x000140, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Format_ReturnValue) == 0x000150, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_EqualEqual_TextText_ReturnValue) == 0x000168, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_EqualEqual_TextText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_Item) == 0x000170, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_bIsSelected) == 0x000178, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_AsB_Save_Entry_Data) == 0x000180, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_AsB_Save_Entry_Data' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_bSuccess) == 0x000188, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue) == 0x000190, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Map_Contains_ReturnValue) == 0x0001A0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_1) == 0x0001A8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue_2) == 0x0001B8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_2) == 0x0001D0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001E0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_CreateNewSaveEntry_Entry) == 0x000230, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_CreateNewSaveEntry_Entry' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeArray_Array_1) == 0x000238, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Format_ReturnValue_1) == 0x000248, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetGameInstance_ReturnValue) == 0x000260, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_Text) == 0x000268, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000280, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_bSuccess_1) == 0x000288, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue_3) == 0x000290, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetSubstring_ReturnValue_1) == 0x0002A0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetSubstring_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x0002B0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue_3) == 0x0002B8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x0002D0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0002D8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_bSuccess_2) == 0x0002E0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_ShowQuestionDialog_QuestionDialog_1) == 0x0002E8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_ShowQuestionDialog_QuestionDialog_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_LoadCurrentEntryName_SaveFile) == 0x0002F0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_LoadCurrentEntryName_SaveFile' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_3) == 0x0002F8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_4) == 0x000308, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_Event_IsDesignTime) == 0x000318, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetUserFriendlyFileName_UserFriendly) == 0x000320, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetUserFriendlyFileName_UserFriendly' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetNumItems_ReturnValue) == 0x000330, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Greater_IntInt_ReturnValue) == 0x000334, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Valid_Save_Selected_0_ReturnValue) == 0x000335, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Valid_Save_Selected_0_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Valid_Save_Selected_0_ReturnValue_1) == 0x000336, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Valid_Save_Selected_0_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_BooleanAND_ReturnValue) == 0x000337, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Get_Save_bIsEnabled_0_ReturnValue) == 0x000338, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Get_Save_bIsEnabled_0_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_BooleanAND_ReturnValue_1) == 0x000339, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_HasKeyboardFocus_ReturnValue) == 0x00033A, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue) == 0x000018, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CustomEvent_Answer) == 0x000038, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CustomEvent_Answer' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x00003C, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_SwitchEnum_CmpSuccess_1) == 0x00004C, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetText_ReturnValue_1) == 0x000050, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_Text_1) == 0x000060, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_CommitMethod) == 0x000070, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_CommitMethod' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000078, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue_2) == 0x000088, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue) == 0x000098, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetSubstring_ReturnValue) == 0x0000A8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetSubstring_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeStruct_FormatArgumentData) == 0x0000B8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000100, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeArray_Array) == 0x000110, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Format_ReturnValue) == 0x000120, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_EqualEqual_TextText_ReturnValue) == 0x000130, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_EqualEqual_TextText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_Item) == 0x000138, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_Item' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_bIsSelected) == 0x000140, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_AsB_Save_Entry_Data) == 0x000148, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_AsB_Save_Entry_Data' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_bSuccess) == 0x000150, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue) == 0x000158, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Map_Contains_ReturnValue) == 0x000168, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_1) == 0x000170, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000180, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_2) == 0x000190, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001A0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_CreateNewSaveEntry_Entry) == 0x0001E8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_CreateNewSaveEntry_Entry' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_MakeArray_Array_1) == 0x0001F0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Format_ReturnValue_1) == 0x000200, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetGameInstance_ReturnValue) == 0x000210, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_ComponentBoundEvent_Text) == 0x000218, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000228, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_bSuccess_1) == 0x000230, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_TextToString_ReturnValue_3) == 0x000238, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_TextToString_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetSubstring_ReturnValue_1) == 0x000248, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetSubstring_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x000258, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Conv_StringToText_ReturnValue_3) == 0x000260, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Conv_StringToText_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x000270, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000278, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_DynamicCast_bSuccess_2) == 0x000280, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_ShowQuestionDialog_QuestionDialog_1) == 0x000288, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_ShowQuestionDialog_QuestionDialog_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_LoadCurrentEntryName_SaveFile) == 0x000290, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_LoadCurrentEntryName_SaveFile' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_3) == 0x000298, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetValidFileName_ReturnValue_4) == 0x0002A8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetValidFileName_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, K2Node_Event_IsDesignTime) == 0x0002B8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetUserFriendlyFileName_UserFriendly) == 0x0002C0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetUserFriendlyFileName_UserFriendly' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_GetNumItems_ReturnValue) == 0x0002D0, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_GetNumItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Greater_IntInt_ReturnValue) == 0x0002D4, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Valid_Save_Selected_0_ReturnValue) == 0x0002D5, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Valid_Save_Selected_0_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Valid_Save_Selected_0_ReturnValue_1) == 0x0002D6, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Valid_Save_Selected_0_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_BooleanAND_ReturnValue) == 0x0002D7, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_Get_Save_bIsEnabled_0_ReturnValue) == 0x0002D8, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_Get_Save_bIsEnabled_0_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_BooleanAND_ReturnValue_1) == 0x0002D9, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen, CallFunc_HasKeyboardFocus_ReturnValue) == 0x0002DA, "Member 'WB_SaveLoadScreen_C_ExecuteUbergraph_WB_SaveLoadScreen::CallFunc_HasKeyboardFocus_ReturnValue' has a wrong offset!");
 
 }
 

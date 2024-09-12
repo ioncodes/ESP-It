@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "B_Ingredient_structs.hpp"
 #include "E_Ingredients_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "B_Rarity_structs.hpp"
 
@@ -35,7 +35,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F3[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -60,28 +60,28 @@ struct WB_IngredientInfo_C_Get_QuantityLabel_ColorAndOpacity_0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
-	uint8                                         Pad_47F4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F5[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F6[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0034(0x0014)()
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0048(0x0014)()
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F7[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetIngredientInfo_DefId;                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EB_Rarity                                     CallFunc_GetIngredientInfo_Rarity;                 // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F8[0x3];                                     // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_GetIngredientInfo_Texture;                // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraSystem*                         CallFunc_GetIngredientInfo_SpawnEffect;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F9[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47FA[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0084(0x0014)()
 };
 static_assert(alignof(WB_IngredientInfo_C_Get_QuantityLabel_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_IngredientInfo_C_Get_QuantityLabel_ColorAndOpacity_0");
@@ -112,10 +112,10 @@ public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
 	int32                                         CallFunc_GetIngredientInfo_DefId;                  // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EB_Rarity                                     CallFunc_GetIngredientInfo_Rarity;                 // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47FB[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_GetIngredientInfo_Texture;                // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraSystem*                         CallFunc_GetIngredientInfo_SpawnEffect;            // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47FC[0x8];                                     // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00F0(0x00D0)()
 };
 static_assert(alignof(WB_IngredientInfo_C_Get_IngredientIcon_Brush_0) == 0x000010, "Wrong alignment on WB_IngredientInfo_C_Get_IngredientIcon_Brush_0");
@@ -128,80 +128,80 @@ static_assert(offsetof(WB_IngredientInfo_C_Get_IngredientIcon_Brush_0, CallFunc_
 static_assert(offsetof(WB_IngredientInfo_C_Get_IngredientIcon_Brush_0, K2Node_MakeStruct_SlateBrush) == 0x0000F0, "Member 'WB_IngredientInfo_C_Get_IngredientIcon_Brush_0::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
 
 // Function WB_IngredientInfo.WB_IngredientInfo_C.Get_Quantity_Text_0
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct WB_IngredientInfo_C_Get_Quantity_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47FD[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47FE[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0038(0x0018)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47FF[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0068(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0108(0x0010)(ReferenceParm)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4800[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0120(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0138(0x0018)()
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4801[0x3];                                     // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0158(0x0018)()
-	int32                                         CallFunc_GetIngredientInfo_DefId;                  // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EB_Rarity                                     CallFunc_GetIngredientInfo_Rarity;                 // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4802[0x3];                                     // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             CallFunc_GetIngredientInfo_Texture;                // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         CallFunc_GetIngredientInfo_SpawnEffect;            // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0190(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0010)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00A0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0110(0x0010)()
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0128(0x0010)()
+	int32                                         CallFunc_GetIngredientInfo_DefId;                  // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EB_Rarity                                     CallFunc_GetIngredientInfo_Rarity;                 // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             CallFunc_GetIngredientInfo_Texture;                // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         CallFunc_GetIngredientInfo_SpawnEffect;            // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_2;             // 0x0158(0x0010)()
 };
 static_assert(alignof(WB_IngredientInfo_C_Get_Quantity_Text_0) == 0x000008, "Wrong alignment on WB_IngredientInfo_C_Get_Quantity_Text_0");
-static_assert(sizeof(WB_IngredientInfo_C_Get_Quantity_Text_0) == 0x0001A8, "Wrong size on WB_IngredientInfo_C_Get_Quantity_Text_0");
+static_assert(sizeof(WB_IngredientInfo_C_Get_Quantity_Text_0) == 0x000168, "Wrong size on WB_IngredientInfo_C_Get_Quantity_Text_0");
 static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, ReturnValue) == 0x000000, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, Temp_bool_Variable) == 0x000020, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_DynamicCast_AsB_Game_Instance) == 0x000028, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000038, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000050, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000058, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000060, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000068, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B8, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_MakeArray_Array) == 0x000108, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000118, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Format_ReturnValue) == 0x000120, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_Select_Default) == 0x000138, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000150, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Add_IntInt_ReturnValue) == 0x000154, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000158, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_DefId) == 0x000170, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_DefId' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_Rarity) == 0x000174, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_Rarity' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_Texture) == 0x000178, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_Texture' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_SpawnEffect) == 0x000180, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_SpawnEffect' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetItemQuantity_ReturnValue) == 0x000188, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Add_IntInt_ReturnValue_1) == 0x00018C, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToText_ReturnValue_2) == 0x000190, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, Temp_bool_Variable) == 0x000018, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_DynamicCast_AsB_Game_Instance) == 0x000020, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000040, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000048, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000050, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000A0, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_MakeArray_Array) == 0x0000E8, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0000F8, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Format_ReturnValue) == 0x000100, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, K2Node_Select_Default) == 0x000110, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000120, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Add_IntInt_ReturnValue) == 0x000124, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000128, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_DefId) == 0x000138, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_DefId' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_Rarity) == 0x00013C, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_Rarity' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_Texture) == 0x000140, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_Texture' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetIngredientInfo_SpawnEffect) == 0x000148, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetIngredientInfo_SpawnEffect' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_GetItemQuantity_ReturnValue) == 0x000150, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Add_IntInt_ReturnValue_1) == 0x000154, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_Get_Quantity_Text_0, CallFunc_Conv_IntToText_ReturnValue_2) == 0x000158, "Member 'WB_IngredientInfo_C_Get_Quantity_Text_0::CallFunc_Conv_IntToText_ReturnValue_2' has a wrong offset!");
 
 // Function WB_IngredientInfo.WB_IngredientInfo_C.CountIngredient
 // 0x0001 (0x0001 - 0x0000)
 struct WB_IngredientInfo_C_CountIngredient final
 {
 public:
-	E_Ingredients                                 Param_Ingredient;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Ingredients                                 Ingredient_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_IngredientInfo_C_CountIngredient) == 0x000001, "Wrong alignment on WB_IngredientInfo_C_CountIngredient");
 static_assert(sizeof(WB_IngredientInfo_C_CountIngredient) == 0x000001, "Wrong size on WB_IngredientInfo_C_CountIngredient");
-static_assert(offsetof(WB_IngredientInfo_C_CountIngredient, Param_Ingredient) == 0x000000, "Member 'WB_IngredientInfo_C_CountIngredient::Param_Ingredient' has a wrong offset!");
+static_assert(offsetof(WB_IngredientInfo_C_CountIngredient, Ingredient_0) == 0x000000, "Member 'WB_IngredientInfo_C_CountIngredient::Ingredient_0' has a wrong offset!");
 
 // Function WB_IngredientInfo.WB_IngredientInfo_C.ExecuteUbergraph_WB_IngredientInfo
 // 0x0014 (0x0014 - 0x0000)
@@ -210,10 +210,10 @@ struct WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_Ingredients                                 K2Node_CustomEvent_Ingredient;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4803[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4804[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo) == 0x000004, "Wrong alignment on WB_IngredientInfo_C_ExecuteUbergraph_WB_IngredientInfo");

@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinItem.B_SkinItem_C
-// 0x0018 (0x02B0 - 0x0298)
+// 0x0018 (0x02A8 - 0x0290)
 class AB_SkinItem_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 ParentActor;                                       // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 ParentActor;                                       // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateSkeletalMeshOptimizations();
@@ -43,10 +43,10 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinItem_C) == 0x000008, "Wrong alignment on AB_SkinItem_C");
-static_assert(sizeof(AB_SkinItem_C) == 0x0002B0, "Wrong size on AB_SkinItem_C");
-static_assert(offsetof(AB_SkinItem_C, UberGraphFrame) == 0x000298, "Member 'AB_SkinItem_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_SkinItem_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_SkinItem_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_SkinItem_C, ParentActor) == 0x0002A8, "Member 'AB_SkinItem_C::ParentActor' has a wrong offset!");
+static_assert(sizeof(AB_SkinItem_C) == 0x0002A8, "Wrong size on AB_SkinItem_C");
+static_assert(offsetof(AB_SkinItem_C, UberGraphFrame) == 0x000290, "Member 'AB_SkinItem_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_SkinItem_C, DefaultSceneRoot) == 0x000298, "Member 'AB_SkinItem_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_SkinItem_C, ParentActor) == 0x0002A0, "Member 'AB_SkinItem_C::ParentActor' has a wrong offset!");
 
 }
 

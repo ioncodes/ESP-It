@@ -27,18 +27,17 @@ enum class EHotfixResult : uint8
 };
 
 // Enum Hotfix.EUpdateState
-// NumValues: 0x0009
+// NumValues: 0x0008
 enum class EUpdateState : uint8
 {
 	UpdateIdle                               = 0,
 	UpdatePending                            = 1,
 	CheckingForPatch                         = 2,
-	DetectingPlatformEnvironment             = 3,
-	CheckingForHotfix                        = 4,
-	WaitingOnInitialLoad                     = 5,
-	InitialLoadComplete                      = 6,
-	UpdateComplete                           = 7,
-	EUpdateState_MAX                         = 8,
+	CheckingForHotfix                        = 3,
+	WaitingOnInitialLoad                     = 4,
+	InitialLoadComplete                      = 5,
+	UpdateComplete                           = 6,
+	EUpdateState_MAX                         = 7,
 };
 
 // Enum Hotfix.EUpdateCompletionStatus
@@ -66,8 +65,7 @@ public:
 	bool                                          bEnabled;                                          // 0x0010(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCheckAvailabilityOnly;                            // 0x0011(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPatchCheckEnabled;                                // 0x0012(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPlatformEnvironmentDetectionEnabled;              // 0x0013(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FF1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class FString>                           AdditionalTags;                                    // 0x0018(0x0050)(Config, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FUpdateContextDefinition) == 0x000008, "Wrong alignment on FUpdateContextDefinition");
@@ -76,7 +74,6 @@ static_assert(offsetof(FUpdateContextDefinition, Name) == 0x000000, "Member 'FUp
 static_assert(offsetof(FUpdateContextDefinition, bEnabled) == 0x000010, "Member 'FUpdateContextDefinition::bEnabled' has a wrong offset!");
 static_assert(offsetof(FUpdateContextDefinition, bCheckAvailabilityOnly) == 0x000011, "Member 'FUpdateContextDefinition::bCheckAvailabilityOnly' has a wrong offset!");
 static_assert(offsetof(FUpdateContextDefinition, bPatchCheckEnabled) == 0x000012, "Member 'FUpdateContextDefinition::bPatchCheckEnabled' has a wrong offset!");
-static_assert(offsetof(FUpdateContextDefinition, bPlatformEnvironmentDetectionEnabled) == 0x000013, "Member 'FUpdateContextDefinition::bPlatformEnvironmentDetectionEnabled' has a wrong offset!");
 static_assert(offsetof(FUpdateContextDefinition, AdditionalTags) == 0x000018, "Member 'FUpdateContextDefinition::AdditionalTags' has a wrong offset!");
 
 }

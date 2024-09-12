@@ -96,9 +96,9 @@ void UWB_SkillTileButton_C::GetIsButtonEnabled(bool* IsEnabled)
 // Function WB_SkillTileButton.WB_SkillTileButton_C.GetTooltip
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UUserWidget*                      Param_ToolTip                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTip_0                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillTileButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
+void UWB_SkillTileButton_C::GetTooltip(class UUserWidget** ToolTip_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -109,8 +109,8 @@ void UWB_SkillTileButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ToolTip != nullptr)
-		*Param_ToolTip = Parms.Param_ToolTip;
+	if (ToolTip_0 != nullptr)
+		*ToolTip_0 = Parms.ToolTip_0;
 }
 
 

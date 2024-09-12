@@ -725,9 +725,9 @@ struct FRigVMStatistics URigVM::GetStatistics() const
 // Function RigVM.DataAssetLink.SetDataAsset
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UDataAsset*                       InDataAsset                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSoftObjectPtr<class UDataAsset>        InDataAsset                                            (Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDataAssetLink::SetDataAsset(class UDataAsset* InDataAsset)
+void UDataAssetLink::SetDataAsset(TSoftObjectPtr<class UDataAsset> InDataAsset)
 {
 	static class UFunction* Func = nullptr;
 
@@ -750,9 +750,9 @@ void UDataAssetLink::SetDataAsset(class UDataAsset* InDataAsset)
 // Function RigVM.DataAssetLink.GetDataAsset
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UDataAsset*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSoftObjectPtr<class UDataAsset>        ReturnValue                                            (Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UDataAsset* UDataAssetLink::GetDataAsset() const
+TSoftObjectPtr<class UDataAsset> UDataAssetLink::GetDataAsset() const
 {
 	static class UFunction* Func = nullptr;
 
@@ -900,11 +900,11 @@ bool URigVMUserWorkflowOptions::RequiresDialog() const
 // Function RigVM.RigVMHost.FindRigVMHosts
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                          Param_Outer                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Outer_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class URigVMHost>           OptionalClass                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class URigVMHost*>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-TArray<class URigVMHost*> URigVMHost::FindRigVMHosts(class UObject* Param_Outer, TSubclassOf<class URigVMHost> OptionalClass)
+TArray<class URigVMHost*> URigVMHost::FindRigVMHosts(class UObject* Outer_0, TSubclassOf<class URigVMHost> OptionalClass)
 {
 	static class UFunction* Func = nullptr;
 
@@ -913,7 +913,7 @@ TArray<class URigVMHost*> URigVMHost::FindRigVMHosts(class UObject* Param_Outer,
 
 	Params::RigVMHost_FindRigVMHosts Parms{};
 
-	Parms.Param_Outer = Param_Outer;
+	Parms.Outer_0 = Outer_0;
 	Parms.OptionalClass = OptionalClass;
 
 	auto Flgs = Func->FunctionFlags;
@@ -1367,7 +1367,7 @@ TArray<class FName> URigVMHost::GetScriptAccessibleVariables() const
 
 
 // Function RigVM.RigVMHost.GetSupportedEvents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -1447,8 +1447,33 @@ class FName URigVMHost::GetVariableType(const class FName& InVariableName) const
 }
 
 
+// Function RigVM.RigVMHost.IsInitRequired
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::IsInitRequired() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "IsInitRequired");
+
+	Params::RigVMHost_IsInitRequired Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function RigVM.RigVMHost.SupportsEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

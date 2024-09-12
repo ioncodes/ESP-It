@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ChickenFeedTask.B_ChickenFeedTask_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x0318 - 0x0318)
 class AB_ChickenFeedTask_C final : public AB_CollectTask_C
 {
 public:
-	bool                                          PlayerHasFood;                                     // 0x031C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlayerHasFood;                                     // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void InitializeIndividualTaskParameters();
@@ -38,8 +38,8 @@ public:
 	}
 };
 static_assert(alignof(AB_ChickenFeedTask_C) == 0x000008, "Wrong alignment on AB_ChickenFeedTask_C");
-static_assert(sizeof(AB_ChickenFeedTask_C) == 0x000320, "Wrong size on AB_ChickenFeedTask_C");
-static_assert(offsetof(AB_ChickenFeedTask_C, PlayerHasFood) == 0x00031C, "Member 'AB_ChickenFeedTask_C::PlayerHasFood' has a wrong offset!");
+static_assert(sizeof(AB_ChickenFeedTask_C) == 0x000318, "Wrong size on AB_ChickenFeedTask_C");
+static_assert(offsetof(AB_ChickenFeedTask_C, PlayerHasFood) == 0x000314, "Member 'AB_ChickenFeedTask_C::PlayerHasFood' has a wrong offset!");
 
 }
 

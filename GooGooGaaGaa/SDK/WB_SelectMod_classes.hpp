@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_GameModifierCategory_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,13 +20,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SelectMod.WB_SelectMod_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_SelectMod_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_GridButtonGrid_C*                   SkillGrid;                                         // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	E_GameModifierCategory                        CurrentCategory;                                   // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_GridButtonGrid_C*                   SkillGrid;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	E_GameModifierCategory                        CurrentCategory;                                   // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyChanges();
@@ -48,10 +48,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_SelectMod_C) == 0x000008, "Wrong alignment on UWB_SelectMod_C");
-static_assert(sizeof(UWB_SelectMod_C) == 0x0002D8, "Wrong size on UWB_SelectMod_C");
-static_assert(offsetof(UWB_SelectMod_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SelectMod_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SelectMod_C, SkillGrid) == 0x0002C8, "Member 'UWB_SelectMod_C::SkillGrid' has a wrong offset!");
-static_assert(offsetof(UWB_SelectMod_C, CurrentCategory) == 0x0002D0, "Member 'UWB_SelectMod_C::CurrentCategory' has a wrong offset!");
+static_assert(sizeof(UWB_SelectMod_C) == 0x0002F8, "Wrong size on UWB_SelectMod_C");
+static_assert(offsetof(UWB_SelectMod_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SelectMod_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SelectMod_C, SkillGrid) == 0x0002E8, "Member 'UWB_SelectMod_C::SkillGrid' has a wrong offset!");
+static_assert(offsetof(UWB_SelectMod_C, CurrentCategory) == 0x0002F0, "Member 'UWB_SelectMod_C::CurrentCategory' has a wrong offset!");
 
 }
 

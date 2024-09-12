@@ -20,10 +20,10 @@ namespace SDK
 // Function ChaosCaching.ChaosCacheManager.EnablePlayback
 // (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AChaosCacheManager::EnablePlayback(int32 Param_Index, bool bEnable)
+void AChaosCacheManager::EnablePlayback(int32 Index_0, bool bEnable)
 {
 	static class UFunction* Func = nullptr;
 
@@ -32,7 +32,7 @@ void AChaosCacheManager::EnablePlayback(int32 Param_Index, bool bEnable)
 
 	Params::ChaosCacheManager_EnablePlayback Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.bEnable = bEnable;
 
 	auto Flgs = Func->FunctionFlags;
@@ -130,6 +130,31 @@ void AChaosCacheManager::SetCacheCollection(class UChaosCacheCollection* InCache
 	Params::ChaosCacheManager_SetCacheCollection Parms{};
 
 	Parms.InCacheCollection = InCacheCollection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosCaching.ChaosCacheManager.SetCurrentTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   CurrentTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::SetCurrentTime(float CurrentTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "SetCurrentTime");
+
+	Params::ChaosCacheManager_SetCurrentTime Parms{};
+
+	Parms.CurrentTime = CurrentTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -10,28 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "B_SkinItem_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_SkinItem_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinHunterRangedWeaponBase.B_SkinHunterRangedWeaponBase_C
-// 0x0020 (0x02D0 - 0x02B0)
+// 0x0020 (0x02C8 - 0x02A8)
 class AB_SkinHunterRangedWeaponBase_C : public AB_SkinItem_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_SkinHunterRangedWeaponBase_C;     // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          SelfShadowOnly;                                    // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_3DE2[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ProjectileSkin;                                    // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_SkinHunterRangedWeaponBase_C;     // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          SelfShadowOnly;                                    // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ProjectileSkin;                                    // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_B_SkinHunterRangedWeaponBase(int32 EntryPoint);
-	void ReceiveTick(float DeltaSeconds);
 	void UserConstructionScript();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_B_SkinHunterRangedWeaponBase(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -44,11 +44,11 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinHunterRangedWeaponBase_C) == 0x000008, "Wrong alignment on AB_SkinHunterRangedWeaponBase_C");
-static_assert(sizeof(AB_SkinHunterRangedWeaponBase_C) == 0x0002D0, "Wrong size on AB_SkinHunterRangedWeaponBase_C");
-static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, UberGraphFrame_B_SkinHunterRangedWeaponBase_C) == 0x0002B0, "Member 'AB_SkinHunterRangedWeaponBase_C::UberGraphFrame_B_SkinHunterRangedWeaponBase_C' has a wrong offset!");
-static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, StaticMesh) == 0x0002B8, "Member 'AB_SkinHunterRangedWeaponBase_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, SelfShadowOnly) == 0x0002C0, "Member 'AB_SkinHunterRangedWeaponBase_C::SelfShadowOnly' has a wrong offset!");
-static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, ProjectileSkin) == 0x0002C8, "Member 'AB_SkinHunterRangedWeaponBase_C::ProjectileSkin' has a wrong offset!");
+static_assert(sizeof(AB_SkinHunterRangedWeaponBase_C) == 0x0002C8, "Wrong size on AB_SkinHunterRangedWeaponBase_C");
+static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, UberGraphFrame_B_SkinHunterRangedWeaponBase_C) == 0x0002A8, "Member 'AB_SkinHunterRangedWeaponBase_C::UberGraphFrame_B_SkinHunterRangedWeaponBase_C' has a wrong offset!");
+static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, StaticMesh) == 0x0002B0, "Member 'AB_SkinHunterRangedWeaponBase_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, SelfShadowOnly) == 0x0002B8, "Member 'AB_SkinHunterRangedWeaponBase_C::SelfShadowOnly' has a wrong offset!");
+static_assert(offsetof(AB_SkinHunterRangedWeaponBase_C, ProjectileSkin) == 0x0002C0, "Member 'AB_SkinHunterRangedWeaponBase_C::ProjectileSkin' has a wrong offset!");
 
 }
 

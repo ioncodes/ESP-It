@@ -129,9 +129,9 @@ TSoftObjectPtr<class UObject> UWB_SkinConfigButton_C::GetIcon()
 // Function WB_SkinConfigButton.WB_SkinConfigButton_C.GetNotifyButtonVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsVisible                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkinConfigButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
+void UWB_SkinConfigButton_C::GetNotifyButtonVisibility(bool* IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -142,8 +142,8 @@ void UWB_SkinConfigButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsVisible != nullptr)
-		*Param_IsVisible = Parms.Param_IsVisible;
+	if (IsVisible_0 != nullptr)
+		*IsVisible_0 = Parms.IsVisible_0;
 }
 
 

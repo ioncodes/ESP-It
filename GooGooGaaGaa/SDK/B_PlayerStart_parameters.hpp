@@ -32,22 +32,22 @@ static_assert(offsetof(B_PlayerStart_C_ExecuteUbergraph_B_PlayerStart, K2Node_Ev
 struct B_PlayerStart_C_GetOccupied final
 {
 public:
-	bool                                          Param_Occupied;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Occupied_0;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PlayerStart_C_GetOccupied) == 0x000001, "Wrong alignment on B_PlayerStart_C_GetOccupied");
 static_assert(sizeof(B_PlayerStart_C_GetOccupied) == 0x000001, "Wrong size on B_PlayerStart_C_GetOccupied");
-static_assert(offsetof(B_PlayerStart_C_GetOccupied, Param_Occupied) == 0x000000, "Member 'B_PlayerStart_C_GetOccupied::Param_Occupied' has a wrong offset!");
+static_assert(offsetof(B_PlayerStart_C_GetOccupied, Occupied_0) == 0x000000, "Member 'B_PlayerStart_C_GetOccupied::Occupied_0' has a wrong offset!");
 
 // Function B_PlayerStart.B_PlayerStart_C.SetOccupied
 // 0x0001 (0x0001 - 0x0000)
 struct B_PlayerStart_C_SetOccupied final
 {
 public:
-	bool                                          Param_Occupied;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Occupied_0;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PlayerStart_C_SetOccupied) == 0x000001, "Wrong alignment on B_PlayerStart_C_SetOccupied");
 static_assert(sizeof(B_PlayerStart_C_SetOccupied) == 0x000001, "Wrong size on B_PlayerStart_C_SetOccupied");
-static_assert(offsetof(B_PlayerStart_C_SetOccupied, Param_Occupied) == 0x000000, "Member 'B_PlayerStart_C_SetOccupied::Param_Occupied' has a wrong offset!");
+static_assert(offsetof(B_PlayerStart_C_SetOccupied, Occupied_0) == 0x000000, "Member 'B_PlayerStart_C_SetOccupied::Occupied_0' has a wrong offset!");
 
 }
 

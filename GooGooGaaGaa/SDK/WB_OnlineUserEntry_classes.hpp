@@ -19,20 +19,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_OnlineUserEntry.WB_OnlineUserEntry_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_OnlineUserEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_SquareButtonWithIcon_C*             Accept;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               AcceptContainer;                                   // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   AcceptIcon;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PlayerIconAndName_C*                PlayerIconAndName;                                 // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SquareButtonWithIcon_C*             Reject;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               RejectContainer;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   RejectIcon;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOnlineUserRef*                         UserInfo;                                          // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFriendInvite;                                    // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_SquareButtonWithIcon_C*             Accept;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               AcceptContainer;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   AcceptIcon;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PlayerIconAndName_C*                PlayerIconAndName;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SquareButtonWithIcon_C*             Reject;                                            // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               RejectContainer;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   RejectIcon;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOnlineUserRef*                         UserInfo;                                          // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFriendInvite;                                    // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AcceptKeyPressed();
@@ -41,10 +41,9 @@ public:
 	void BP_OnEntryReleased();
 	void BP_OnItemExpansionChanged(bool bIsExpanded);
 	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void CreateToolTips();
+	void CreateTooltips();
 	void ExecuteUbergraph_WB_OnlineUserEntry(int32 EntryPoint);
 	ESlateVisibility Get_Reject_Visibility();
-	class FText GetFriendName();
 	void OnListItemObjectSet(class UObject* ListItemObject);
 	void SetVisualData();
 	void SpecialKeyPressed();
@@ -60,17 +59,17 @@ public:
 	}
 };
 static_assert(alignof(UWB_OnlineUserEntry_C) == 0x000008, "Wrong alignment on UWB_OnlineUserEntry_C");
-static_assert(sizeof(UWB_OnlineUserEntry_C) == 0x000310, "Wrong size on UWB_OnlineUserEntry_C");
-static_assert(offsetof(UWB_OnlineUserEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_OnlineUserEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, Accept) == 0x0002C8, "Member 'UWB_OnlineUserEntry_C::Accept' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, AcceptContainer) == 0x0002D0, "Member 'UWB_OnlineUserEntry_C::AcceptContainer' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, AcceptIcon) == 0x0002D8, "Member 'UWB_OnlineUserEntry_C::AcceptIcon' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, PlayerIconAndName) == 0x0002E0, "Member 'UWB_OnlineUserEntry_C::PlayerIconAndName' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, Reject) == 0x0002E8, "Member 'UWB_OnlineUserEntry_C::Reject' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, RejectContainer) == 0x0002F0, "Member 'UWB_OnlineUserEntry_C::RejectContainer' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, RejectIcon) == 0x0002F8, "Member 'UWB_OnlineUserEntry_C::RejectIcon' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, UserInfo) == 0x000300, "Member 'UWB_OnlineUserEntry_C::UserInfo' has a wrong offset!");
-static_assert(offsetof(UWB_OnlineUserEntry_C, IsFriendInvite) == 0x000308, "Member 'UWB_OnlineUserEntry_C::IsFriendInvite' has a wrong offset!");
+static_assert(sizeof(UWB_OnlineUserEntry_C) == 0x000330, "Wrong size on UWB_OnlineUserEntry_C");
+static_assert(offsetof(UWB_OnlineUserEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_OnlineUserEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, Accept) == 0x0002E8, "Member 'UWB_OnlineUserEntry_C::Accept' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, AcceptContainer) == 0x0002F0, "Member 'UWB_OnlineUserEntry_C::AcceptContainer' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, AcceptIcon) == 0x0002F8, "Member 'UWB_OnlineUserEntry_C::AcceptIcon' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, PlayerIconAndName) == 0x000300, "Member 'UWB_OnlineUserEntry_C::PlayerIconAndName' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, Reject) == 0x000308, "Member 'UWB_OnlineUserEntry_C::Reject' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, RejectContainer) == 0x000310, "Member 'UWB_OnlineUserEntry_C::RejectContainer' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, RejectIcon) == 0x000318, "Member 'UWB_OnlineUserEntry_C::RejectIcon' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, UserInfo) == 0x000320, "Member 'UWB_OnlineUserEntry_C::UserInfo' has a wrong offset!");
+static_assert(offsetof(UWB_OnlineUserEntry_C, IsFriendInvite) == 0x000328, "Member 'UWB_OnlineUserEntry_C::IsFriendInvite' has a wrong offset!");
 
 }
 

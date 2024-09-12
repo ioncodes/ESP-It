@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HuntAHagGameMode.B_HuntAHagGameMode_C
-// 0x0008 (0x05C8 - 0x05C0)
+// 0x0008 (0x05C0 - 0x05B8)
 class AB_HuntAHagGameMode_C final : public AB_SeekGameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagGameMode_C;               // 0x05C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagGameMode_C;               // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_HuntAHagGameMode(int32 EntryPoint);
@@ -43,8 +43,8 @@ public:
 	}
 };
 static_assert(alignof(AB_HuntAHagGameMode_C) == 0x000008, "Wrong alignment on AB_HuntAHagGameMode_C");
-static_assert(sizeof(AB_HuntAHagGameMode_C) == 0x0005C8, "Wrong size on AB_HuntAHagGameMode_C");
-static_assert(offsetof(AB_HuntAHagGameMode_C, UberGraphFrame_B_HuntAHagGameMode_C) == 0x0005C0, "Member 'AB_HuntAHagGameMode_C::UberGraphFrame_B_HuntAHagGameMode_C' has a wrong offset!");
+static_assert(sizeof(AB_HuntAHagGameMode_C) == 0x0005C0, "Wrong size on AB_HuntAHagGameMode_C");
+static_assert(offsetof(AB_HuntAHagGameMode_C, UberGraphFrame_B_HuntAHagGameMode_C) == 0x0005B8, "Member 'AB_HuntAHagGameMode_C::UberGraphFrame_B_HuntAHagGameMode_C' has a wrong offset!");
 
 }
 

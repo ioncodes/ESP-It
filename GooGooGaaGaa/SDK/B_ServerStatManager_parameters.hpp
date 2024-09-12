@@ -34,12 +34,12 @@ struct B_ServerStatManager_C_CollectProp final
 {
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         PropId;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PropID;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_CollectProp) == 0x000008, "Wrong alignment on B_ServerStatManager_C_CollectProp");
 static_assert(sizeof(B_ServerStatManager_C_CollectProp) == 0x000010, "Wrong size on B_ServerStatManager_C_CollectProp");
 static_assert(offsetof(B_ServerStatManager_C_CollectProp, PlayerState) == 0x000000, "Member 'B_ServerStatManager_C_CollectProp::PlayerState' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_CollectProp, PropId) == 0x000008, "Member 'B_ServerStatManager_C_CollectProp::PropId' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_CollectProp, PropID) == 0x000008, "Member 'B_ServerStatManager_C_CollectProp::PropID' has a wrong offset!");
 
 // Function B_ServerStatManager.B_ServerStatManager_C.CollectPropFunction
 // 0x0058 (0x0058 - 0x0000)
@@ -47,22 +47,22 @@ struct B_ServerStatManager_C_CollectPropFunction final
 {
 public:
 	const class APlayerState*                     PlayerState;                                       // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-	int32                                         PropId;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A0[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A1[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State_1;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A2[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A3[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerPropCollection_C*              CallFunc_Map_Find_Value;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CollectProp_IsNewProp;                    // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A4[0x1];                                     // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43[0x1];                                       // 0x0043(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_HandleNewPropCategoryAndSets_CountInCategory; // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_HandleNewPropCategoryAndSets_CountInSet;  // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -72,7 +72,7 @@ public:
 static_assert(alignof(B_ServerStatManager_C_CollectPropFunction) == 0x000008, "Wrong alignment on B_ServerStatManager_C_CollectPropFunction");
 static_assert(sizeof(B_ServerStatManager_C_CollectPropFunction) == 0x000058, "Wrong size on B_ServerStatManager_C_CollectPropFunction");
 static_assert(offsetof(B_ServerStatManager_C_CollectPropFunction, PlayerState) == 0x000000, "Member 'B_ServerStatManager_C_CollectPropFunction::PlayerState' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_CollectPropFunction, PropId) == 0x000008, "Member 'B_ServerStatManager_C_CollectPropFunction::PropId' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_CollectPropFunction, PropID) == 0x000008, "Member 'B_ServerStatManager_C_CollectPropFunction::PropID' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_CollectPropFunction, K2Node_DynamicCast_AsB_Player_State) == 0x000010, "Member 'B_ServerStatManager_C_CollectPropFunction::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_CollectPropFunction, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_ServerStatManager_C_CollectPropFunction::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_CollectPropFunction, K2Node_DynamicCast_AsB_Player_State_1) == 0x000020, "Member 'B_ServerStatManager_C_CollectPropFunction::K2Node_DynamicCast_AsB_Player_State_1' has a wrong offset!");
@@ -96,40 +96,40 @@ struct B_ServerStatManager_C_ExecuteUbergraph_B_ServerStatManager final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A5[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           K2Node_CustomEvent_PlayerState_2;                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_PropId;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A6[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           K2Node_CustomEvent_PlayerState_1;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_LeftGame;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A7[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A8[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_CustomEvent_PlayerState;                    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47A9[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(bool Success, const class FString& ProductUserId)> K2Node_CreateDelegate_OutputDelegate;              // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47AA[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchvManager_Result;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchvManager_Result_1;          // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchvManager_Result_2;          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchvManager_Result_3;          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_Success_1;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47AB[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ProductUserId_1;                // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchvManager_Result_4;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_Success;                        // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47AC[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ProductUserId;                  // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47AD[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_CustomEvent_PlayerState_3;                  // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47AE[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetProductUserId_ProductUserId;           // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetProductUserId_PlatformType;            // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TDelegate<void(bool Success, const class FString& ProductUserId)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x00F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -138,13 +138,13 @@ public:
 	class AB_PlayerState_C*                       CallFunc_Map_Find_Value;                           // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47AF[0x2];                                     // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_2;                               // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_3;                               // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B0[0x3];                                     // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_4;                               // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_ExecuteUbergraph_B_ServerStatManager) == 0x000008, "Wrong alignment on B_ServerStatManager_C_ExecuteUbergraph_B_ServerStatManager");
@@ -210,20 +210,20 @@ public:
 	int64                                         CallFunc_GetGSStat_ResultValue;                    // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetGSStat_ResultWasFound;                 // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B1[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerLootDrop_C*                    CallFunc_CreateObject_Object_1;                    // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B2[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerPropCollection_C*              CallFunc_CreateObject_Object_2;                    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B3[0x2];                                     // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       CallFunc_Map_Find_Value;                           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B4[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_PropData>                    CallFunc_Map_Values_Values;                        // 0x00A0(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_ServerStatManager_C_FinishLoadingServerStats) == 0x000008, "Wrong alignment on B_ServerStatManager_C_FinishLoadingServerStats");
@@ -260,14 +260,14 @@ static_assert(offsetof(B_ServerStatManager_C_FinishLoadingServerStats, CallFunc_
 struct B_ServerStatManager_C_GetLocalPropCollection final
 {
 public:
-	class UB_PlayerPropCollection_C*              Param_LocalPropCollection;                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_PlayerPropCollection_C*              LocalPropCollection_0;                             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B5[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerPropCollection_C*              CallFunc_CreateObject_Object;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_GetLocalPropCollection) == 0x000008, "Wrong alignment on B_ServerStatManager_C_GetLocalPropCollection");
 static_assert(sizeof(B_ServerStatManager_C_GetLocalPropCollection) == 0x000018, "Wrong size on B_ServerStatManager_C_GetLocalPropCollection");
-static_assert(offsetof(B_ServerStatManager_C_GetLocalPropCollection, Param_LocalPropCollection) == 0x000000, "Member 'B_ServerStatManager_C_GetLocalPropCollection::Param_LocalPropCollection' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_GetLocalPropCollection, LocalPropCollection_0) == 0x000000, "Member 'B_ServerStatManager_C_GetLocalPropCollection::LocalPropCollection_0' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_GetLocalPropCollection, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'B_ServerStatManager_C_GetLocalPropCollection::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_GetLocalPropCollection, CallFunc_CreateObject_Object) == 0x000010, "Member 'B_ServerStatManager_C_GetLocalPropCollection::CallFunc_CreateObject_Object' has a wrong offset!");
 
@@ -283,13 +283,13 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B6[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B7[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B8[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -327,7 +327,7 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47B9[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -360,14 +360,14 @@ struct B_ServerStatManager_C_GrantDropExp final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Exp;                                               // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47BA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerLootDrop_C*                    CurrentPlayerLootDrop;                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47BB[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GrantExp_AmountOfExpToSubtract;           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GrantExp_bIsInFaultState;                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47BC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerLootDrop_C*                    CallFunc_Map_Find_Value;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -392,7 +392,7 @@ struct B_ServerStatManager_C_GrantPrestigeExp final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Exp;                                               // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47BD[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerPrestigeLevel_C*               PlayerPrestige;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PlayerPrestigeLevel_C*               CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -408,38 +408,38 @@ static_assert(offsetof(B_ServerStatManager_C_GrantPrestigeExp, CallFunc_Map_Find
 static_assert(offsetof(B_ServerStatManager_C_GrantPrestigeExp, CallFunc_Map_Contains_ReturnValue) == 0x000021, "Member 'B_ServerStatManager_C_GrantPrestigeExp::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
 
 // Function B_ServerStatManager.B_ServerStatManager_C.HandleDropSuccess
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct B_ServerStatManager_C_HandleDropSuccess final
 {
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47BE[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47BF[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0088(0x0018)()
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C0[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_PlayerLootDrop_C*                    CallFunc_Map_Find_Value;                           // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0080(0x0010)()
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_PlayerLootDrop_C*                    CallFunc_Map_Find_Value;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_HandleDropSuccess) == 0x000008, "Wrong alignment on B_ServerStatManager_C_HandleDropSuccess");
-static_assert(sizeof(B_ServerStatManager_C_HandleDropSuccess) == 0x0000B8, "Wrong size on B_ServerStatManager_C_HandleDropSuccess");
+static_assert(sizeof(B_ServerStatManager_C_HandleDropSuccess) == 0x0000A8, "Wrong size on B_ServerStatManager_C_HandleDropSuccess");
 static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, PlayerState) == 0x000000, "Member 'B_ServerStatManager_C_HandleDropSuccess::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, Temp_int_Variable) == 0x000008, "Member 'B_ServerStatManager_C_HandleDropSuccess::Temp_int_Variable' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000018, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'B_ServerStatManager_C_HandleDropSuccess::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, K2Node_MakeArray_Array) == 0x000070, "Member 'B_ServerStatManager_C_HandleDropSuccess::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Add_IntInt_ReturnValue) == 0x000080, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Format_ReturnValue) == 0x000088, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Map_Contains_ReturnValue) == 0x0000A0, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Map_Find_Value) == 0x0000A8, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Map_Find_ReturnValue) == 0x0000B0, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, K2Node_MakeArray_Array) == 0x000068, "Member 'B_ServerStatManager_C_HandleDropSuccess::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Add_IntInt_ReturnValue) == 0x000078, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Format_ReturnValue) == 0x000080, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Map_Contains_ReturnValue) == 0x000090, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Map_Find_Value) == 0x000098, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_HandleDropSuccess, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'B_ServerStatManager_C_HandleDropSuccess::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function B_ServerStatManager.B_ServerStatManager_C.Initialize
 // 0x0008 (0x0008 - 0x0000)
@@ -461,19 +461,19 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C1[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C2[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_ClassDynamicCast_AsB_Static_Mesh_Prop;      // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C3[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C4[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C5[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<TSubclassOf<class UObject>>            CallFunc_GetAllChildBlueprintClasses_subclasses;   // 0x0070(0x0010)(ReferenceParm)
 };
@@ -511,7 +511,7 @@ struct B_ServerStatManager_C_OnLoadGSOnlineStats final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ProductUserId;                                     // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_OnLoadGSOnlineStats) == 0x000008, "Wrong alignment on B_ServerStatManager_C_OnLoadGSOnlineStats");
@@ -525,7 +525,7 @@ struct B_ServerStatManager_C_OnStoreGSOnlineStats final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ProductUserId;                                     // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_OnStoreGSOnlineStats) == 0x000008, "Wrong alignment on B_ServerStatManager_C_OnStoreGSOnlineStats");
@@ -551,15 +551,15 @@ static_assert(offsetof(B_ServerStatManager_C_SavePlayerServerStats, LeftGame) ==
 struct B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection final
 {
 public:
-	int32                                         PropId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PlayerPropCollection_C*              PlayerPropCollection;                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PlayerPropCollection_C*              CallFunc_GetLocalPropCollection_LocalPropCollection; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CollectProp_IsNewProp;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection) == 0x000008, "Wrong alignment on B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection");
 static_assert(sizeof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection) == 0x000020, "Wrong size on B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection");
-static_assert(offsetof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection, PropId) == 0x000000, "Member 'B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection::PropId' has a wrong offset!");
+static_assert(offsetof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection, PropID) == 0x000000, "Member 'B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection::PropID' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection, PlayerPropCollection) == 0x000008, "Member 'B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection::PlayerPropCollection' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection, CallFunc_GetLocalPropCollection_LocalPropCollection) == 0x000010, "Member 'B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection::CallFunc_GetLocalPropCollection_LocalPropCollection' has a wrong offset!");
 static_assert(offsetof(B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection, CallFunc_CollectProp_IsNewProp) == 0x000018, "Member 'B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection::CallFunc_CollectProp_IsNewProp' has a wrong offset!");

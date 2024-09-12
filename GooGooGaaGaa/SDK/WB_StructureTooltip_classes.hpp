@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_StructureTooltip.WB_StructureTooltip_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0028 (0x0308 - 0x02E0)
 class UWB_StructureTooltip_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Description;                                       // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_WB_StructureTooltip_C;                        // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 StructureImage;                                    // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UClass*                                 StructureClass;                                    // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Description;                                       // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 StructureImage;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UClass*                                 StructureClass;                                    // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -45,12 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_StructureTooltip_C) == 0x000008, "Wrong alignment on UWB_StructureTooltip_C");
-static_assert(sizeof(UWB_StructureTooltip_C) == 0x0002E8, "Wrong size on UWB_StructureTooltip_C");
-static_assert(offsetof(UWB_StructureTooltip_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_StructureTooltip_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_StructureTooltip_C, Description) == 0x0002C8, "Member 'UWB_StructureTooltip_C::Description' has a wrong offset!");
-static_assert(offsetof(UWB_StructureTooltip_C, Name_WB_StructureTooltip_C) == 0x0002D0, "Member 'UWB_StructureTooltip_C::Name_WB_StructureTooltip_C' has a wrong offset!");
-static_assert(offsetof(UWB_StructureTooltip_C, StructureImage) == 0x0002D8, "Member 'UWB_StructureTooltip_C::StructureImage' has a wrong offset!");
-static_assert(offsetof(UWB_StructureTooltip_C, StructureClass) == 0x0002E0, "Member 'UWB_StructureTooltip_C::StructureClass' has a wrong offset!");
+static_assert(sizeof(UWB_StructureTooltip_C) == 0x000308, "Wrong size on UWB_StructureTooltip_C");
+static_assert(offsetof(UWB_StructureTooltip_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_StructureTooltip_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_StructureTooltip_C, Description) == 0x0002E8, "Member 'UWB_StructureTooltip_C::Description' has a wrong offset!");
+static_assert(offsetof(UWB_StructureTooltip_C, Name_0) == 0x0002F0, "Member 'UWB_StructureTooltip_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UWB_StructureTooltip_C, StructureImage) == 0x0002F8, "Member 'UWB_StructureTooltip_C::StructureImage' has a wrong offset!");
+static_assert(offsetof(UWB_StructureTooltip_C, StructureClass) == 0x000300, "Member 'UWB_StructureTooltip_C::StructureClass' has a wrong offset!");
 
 }
 

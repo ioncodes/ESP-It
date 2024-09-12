@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_SabotageStormCrystal.B_SabotageStormCrystal_C.ExecuteUbergraph_B_SabotageStormCrystal
-// 0x0198 (0x0198 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal final
 {
 public:
@@ -27,26 +27,26 @@ public:
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5000[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult;       // 0x0038(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FInterpTo_ReturnValue;                    // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_2;       // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FInterpTo_ReturnValue_1;                  // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5001[0x7];                                     // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AB_SabotageStorm_C*>             CallFunc_GetAllActorsOfClass_OutActors;            // 0x0160(0x0010)(ReferenceParm)
-	class AB_SabotageStorm_C*                     CallFunc_Array_Get_Item;                           // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast; // 0x0194(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult;       // 0x0038(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FInterpTo_ReturnValue;                    // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_2;       // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FInterpTo_ReturnValue_1;                  // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AB_SabotageStorm_C*>             CallFunc_GetAllActorsOfClass_OutActors;            // 0x0170(0x0010)(ReferenceParm)
+	class AB_SabotageStorm_C*                     CallFunc_Array_Get_Item;                           // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast; // 0x01A4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal) == 0x000008, "Wrong alignment on B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal");
-static_assert(sizeof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal) == 0x000198, "Wrong size on B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal");
+static_assert(sizeof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal) == 0x0001A8, "Wrong size on B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal");
 static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, EntryPoint) == 0x000000, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000008, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
@@ -54,29 +54,29 @@ static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStorm
 static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_Not_PreBool_ReturnValue) == 0x000018, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_MakeRotator_ReturnValue) == 0x000020, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_K2_AddLocalRotation_SweepHitResult) == 0x000038, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_K2_AddLocalRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x000120, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_FInterpTo_ReturnValue) == 0x000128, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetWorldDeltaSeconds_ReturnValue_2) == 0x000130, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetWorldDeltaSeconds_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_FInterpTo_ReturnValue_1) == 0x000138, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_FInterpTo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetGameInstance_ReturnValue) == 0x000140, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000148, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, K2Node_DynamicCast_AsB_Impostor_Player_State) == 0x000150, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::K2Node_DynamicCast_AsB_Impostor_Player_State' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, K2Node_DynamicCast_bSuccess) == 0x000158, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetAllActorsOfClass_OutActors) == 0x000160, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_Array_Get_Item) == 0x000170, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000178, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000190, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast) == 0x000194, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x000130, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_FInterpTo_ReturnValue) == 0x000138, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetWorldDeltaSeconds_ReturnValue_2) == 0x000140, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetWorldDeltaSeconds_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_FInterpTo_ReturnValue_1) == 0x000148, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_FInterpTo_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetGameInstance_ReturnValue) == 0x000150, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000158, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, K2Node_DynamicCast_AsB_Impostor_Player_State) == 0x000160, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::K2Node_DynamicCast_AsB_Impostor_Player_State' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, K2Node_DynamicCast_bSuccess) == 0x000168, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_GetAllActorsOfClass_OutActors) == 0x000170, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_Array_Get_Item) == 0x000180, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000188, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0001A0, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal, CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast) == 0x0001A4, "Member 'B_SabotageStormCrystal_C_ExecuteUbergraph_B_SabotageStormCrystal::CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast' has a wrong offset!");
 
 // Function B_SabotageStormCrystal.B_SabotageStormCrystal_C.GetTooltipText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct B_SabotageStormCrystal_C_GetTooltipText final
 {
 public:
-	class FText                                   ToolTip;                                           // 0x0000(0x0018)(Parm, OutParm)
+	class FText                                   ToolTip;                                           // 0x0000(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(B_SabotageStormCrystal_C_GetTooltipText) == 0x000008, "Wrong alignment on B_SabotageStormCrystal_C_GetTooltipText");
-static_assert(sizeof(B_SabotageStormCrystal_C_GetTooltipText) == 0x000018, "Wrong size on B_SabotageStormCrystal_C_GetTooltipText");
+static_assert(sizeof(B_SabotageStormCrystal_C_GetTooltipText) == 0x000010, "Wrong size on B_SabotageStormCrystal_C_GetTooltipText");
 static_assert(offsetof(B_SabotageStormCrystal_C_GetTooltipText, ToolTip) == 0x000000, "Member 'B_SabotageStormCrystal_C_GetTooltipText::ToolTip' has a wrong offset!");
 
 // Function B_SabotageStormCrystal.B_SabotageStormCrystal_C.ReceiveTick

@@ -22,7 +22,7 @@ namespace SDK
 class UB_SkinSelectionFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void Get_Skin_Config_Save_Name(class UB_SkinSelection_C* SkinSelection, ETeamID Team, int32 ConfigNr, class UObject* __WorldContext, class FString* Param_Name);
+	static void Get_Skin_Config_Save_Name(class UB_SkinSelection_C* SkinSelection, ETeamID Team, int32 ConfigNr, class UObject* __WorldContext, class FString* Name_0);
 	static void Get_Default_Skin_Configs(class UObject* __WorldContext, struct FWitchSkin* Default_Witch_Skin, struct FHunterSkin* Default_Hunter_Skin);
 	static void Get_Active_Skin_Config_Nr(class UB_SkinSelection_C* SkinSelection, ETeamID Team, class UObject* __WorldContext, int32* ConfigNr);
 	static void Set_Active_Skin_Config(class UB_SkinSelection_C* SkinSelection, int32 ConfigNr, ETeamID Team, class UObject* __WorldContext);

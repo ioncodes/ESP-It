@@ -19,24 +19,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_TeamSelectionObjective.WB_TeamSelectionObjective_C
-// 0x0070 (0x0330 - 0x02C0)
+// 0x0070 (0x0350 - 0x02E0)
 class UWB_TeamSelectionObjective_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       TeamUnbalanced;                                    // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             BalanceTeamSelection;                              // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             GameModeText;                                      // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             GameNameText;                                      // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MatchStartsText;                                   // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Menu;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           ReadyButton;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           SelectSpectatorButton;                             // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           SelectTeamAButton;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           SelectTeamBButton;                                 // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TeamLogo_C*                         SpectatorLogo;                                     // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ObjectiveTeamLogo_C*                TeamALogo;                                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ObjectiveTeamLogo_C*                TeamBLogo;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       TeamUnbalanced;                                    // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             BalanceTeamSelection;                              // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             GameModeText;                                      // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             GameNameText;                                      // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MatchStartsText;                                   // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Menu;                                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           ReadyButton;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           SelectSpectatorButton;                             // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           SelectTeamAButton;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           SelectTeamBButton;                                 // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TeamLogo_C*                         SpectatorLogo;                                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ObjectiveTeamLogo_C*                TeamALogo;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ObjectiveTeamLogo_C*                TeamBLogo;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__ReadyButton_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature();
@@ -75,21 +75,21 @@ public:
 	}
 };
 static_assert(alignof(UWB_TeamSelectionObjective_C) == 0x000008, "Wrong alignment on UWB_TeamSelectionObjective_C");
-static_assert(sizeof(UWB_TeamSelectionObjective_C) == 0x000330, "Wrong size on UWB_TeamSelectionObjective_C");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_TeamSelectionObjective_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, TeamUnbalanced) == 0x0002C8, "Member 'UWB_TeamSelectionObjective_C::TeamUnbalanced' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, BalanceTeamSelection) == 0x0002D0, "Member 'UWB_TeamSelectionObjective_C::BalanceTeamSelection' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, GameModeText) == 0x0002D8, "Member 'UWB_TeamSelectionObjective_C::GameModeText' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, GameNameText) == 0x0002E0, "Member 'UWB_TeamSelectionObjective_C::GameNameText' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, MatchStartsText) == 0x0002E8, "Member 'UWB_TeamSelectionObjective_C::MatchStartsText' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, Menu) == 0x0002F0, "Member 'UWB_TeamSelectionObjective_C::Menu' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, ReadyButton) == 0x0002F8, "Member 'UWB_TeamSelectionObjective_C::ReadyButton' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, SelectSpectatorButton) == 0x000300, "Member 'UWB_TeamSelectionObjective_C::SelectSpectatorButton' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, SelectTeamAButton) == 0x000308, "Member 'UWB_TeamSelectionObjective_C::SelectTeamAButton' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, SelectTeamBButton) == 0x000310, "Member 'UWB_TeamSelectionObjective_C::SelectTeamBButton' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, SpectatorLogo) == 0x000318, "Member 'UWB_TeamSelectionObjective_C::SpectatorLogo' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, TeamALogo) == 0x000320, "Member 'UWB_TeamSelectionObjective_C::TeamALogo' has a wrong offset!");
-static_assert(offsetof(UWB_TeamSelectionObjective_C, TeamBLogo) == 0x000328, "Member 'UWB_TeamSelectionObjective_C::TeamBLogo' has a wrong offset!");
+static_assert(sizeof(UWB_TeamSelectionObjective_C) == 0x000350, "Wrong size on UWB_TeamSelectionObjective_C");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_TeamSelectionObjective_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, TeamUnbalanced) == 0x0002E8, "Member 'UWB_TeamSelectionObjective_C::TeamUnbalanced' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, BalanceTeamSelection) == 0x0002F0, "Member 'UWB_TeamSelectionObjective_C::BalanceTeamSelection' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, GameModeText) == 0x0002F8, "Member 'UWB_TeamSelectionObjective_C::GameModeText' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, GameNameText) == 0x000300, "Member 'UWB_TeamSelectionObjective_C::GameNameText' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, MatchStartsText) == 0x000308, "Member 'UWB_TeamSelectionObjective_C::MatchStartsText' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, Menu) == 0x000310, "Member 'UWB_TeamSelectionObjective_C::Menu' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, ReadyButton) == 0x000318, "Member 'UWB_TeamSelectionObjective_C::ReadyButton' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, SelectSpectatorButton) == 0x000320, "Member 'UWB_TeamSelectionObjective_C::SelectSpectatorButton' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, SelectTeamAButton) == 0x000328, "Member 'UWB_TeamSelectionObjective_C::SelectTeamAButton' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, SelectTeamBButton) == 0x000330, "Member 'UWB_TeamSelectionObjective_C::SelectTeamBButton' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, SpectatorLogo) == 0x000338, "Member 'UWB_TeamSelectionObjective_C::SpectatorLogo' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, TeamALogo) == 0x000340, "Member 'UWB_TeamSelectionObjective_C::TeamALogo' has a wrong offset!");
+static_assert(offsetof(UWB_TeamSelectionObjective_C, TeamBLogo) == 0x000348, "Member 'UWB_TeamSelectionObjective_C::TeamBLogo' has a wrong offset!");
 
 }
 

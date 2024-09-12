@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_MushroomArea.B_MushroomArea_C.BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -27,11 +27,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A6[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -40,14 +40,14 @@ static_assert(offsetof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_Co
 static_assert(offsetof(B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_MushroomArea_C_BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_MushroomArea.B_MushroomArea_C.ExecuteUbergraph_B_MushroomArea
-// 0x01E0 (0x01E0 - 0x0000)
+// 0x01F0 (0x01F0 - 0x0000)
 struct B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A7[0xA];                                     // 0x0006(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0xA];                                        // 0x0006(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             K2Node_Event_SpawnTransform;                       // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_Owner;                                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  K2Node_Event_Instigator;                           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -55,7 +55,7 @@ public:
 	double                                        K2Node_CustomEvent_MushroomSize;                   // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A8[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -63,14 +63,14 @@ public:
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A9[0x3];                                     // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x00E0(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x00E0(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_B_ImplicitCast;               // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea) == 0x000010, "Wrong alignment on B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea");
-static_assert(sizeof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea) == 0x0001E0, "Wrong size on B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea");
+static_assert(sizeof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea) == 0x0001F0, "Wrong size on B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea");
 static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, EntryPoint) == 0x000000, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
@@ -89,9 +89,9 @@ static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, K2Node_
 static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x0000D8, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
 static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, K2Node_ComponentBoundEvent_bFromSweep) == 0x0000DC, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
 static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, K2Node_ComponentBoundEvent_SweepResult) == 0x0000E0, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001D0, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_SelectFloat_B_ImplicitCast) == 0x0001D8, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001E0, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea, CallFunc_SelectFloat_B_ImplicitCast) == 0x0001E8, "Member 'B_MushroomArea_C_ExecuteUbergraph_B_MushroomArea::CallFunc_SelectFloat_B_ImplicitCast' has a wrong offset!");
 
 // Function B_MushroomArea.B_MushroomArea_C.GetConfuseDuration
 // 0x0010 (0x0010 - 0x0000)
@@ -115,10 +115,10 @@ public:
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FMin_ReturnValue;                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27AA[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_InTime_ImplicitCast;        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27AB[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MushroomArea_C_GetCurrentSphereRadius) == 0x000008, "Wrong alignment on B_MushroomArea_C_GetCurrentSphereRadius");
@@ -137,7 +137,7 @@ struct B_MushroomArea_C_HandleFade final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27AC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetCurrentSphereRadius_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -168,36 +168,36 @@ public:
 	double                                        CallFunc_GetConfuseDuration_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27AD[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27AE[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PowerBall_C*                         K2Node_DynamicCast_AsB_Power_Ball;                 // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27AF[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            CallFunc_GetInstigatorController_ReturnValue;      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B0[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B1[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter_1;                   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B2[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B3[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsRoundEnd_RoundIsEnd;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasTrackingStarted_HasTrackingStarted;    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B4[0x5];                                     // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FMax_ReturnValue;                         // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B5[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -273,15 +273,15 @@ static_assert(offsetof(B_MushroomArea_C_ReceiveTick, DeltaSeconds) == 0x000000, 
 struct B_MushroomArea_C_SetNewValuesForTearUp final
 {
 public:
-	struct FTransform                             Param_NewTransform;                                // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_NewOwner;                                    // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_NewInstigator;                               // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             NewTransform_0;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 NewOwner_0;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  NewInstigator_0;                                   // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MushroomArea_C_SetNewValuesForTearUp) == 0x000010, "Wrong alignment on B_MushroomArea_C_SetNewValuesForTearUp");
 static_assert(sizeof(B_MushroomArea_C_SetNewValuesForTearUp) == 0x000070, "Wrong size on B_MushroomArea_C_SetNewValuesForTearUp");
-static_assert(offsetof(B_MushroomArea_C_SetNewValuesForTearUp, Param_NewTransform) == 0x000000, "Member 'B_MushroomArea_C_SetNewValuesForTearUp::Param_NewTransform' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_SetNewValuesForTearUp, Param_NewOwner) == 0x000060, "Member 'B_MushroomArea_C_SetNewValuesForTearUp::Param_NewOwner' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_SetNewValuesForTearUp, Param_NewInstigator) == 0x000068, "Member 'B_MushroomArea_C_SetNewValuesForTearUp::Param_NewInstigator' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_SetNewValuesForTearUp, NewTransform_0) == 0x000000, "Member 'B_MushroomArea_C_SetNewValuesForTearUp::NewTransform_0' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_SetNewValuesForTearUp, NewOwner_0) == 0x000060, "Member 'B_MushroomArea_C_SetNewValuesForTearUp::NewOwner_0' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_SetNewValuesForTearUp, NewInstigator_0) == 0x000068, "Member 'B_MushroomArea_C_SetNewValuesForTearUp::NewInstigator_0' has a wrong offset!");
 
 // Function B_MushroomArea.B_MushroomArea_C.TearDown
 // 0x0020 (0x0020 - 0x0000)
@@ -289,7 +289,7 @@ struct B_MushroomArea_C_TearDown final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MushroomArea_C_TearDown) == 0x000008, "Wrong alignment on B_MushroomArea_C_TearDown");
@@ -303,14 +303,14 @@ struct B_MushroomArea_C_TearUp final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MushroomArea_C_TearUp) == 0x000010, "Wrong alignment on B_MushroomArea_C_TearUp");
 static_assert(sizeof(B_MushroomArea_C_TearUp) == 0x000070, "Wrong size on B_MushroomArea_C_TearUp");
 static_assert(offsetof(B_MushroomArea_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_MushroomArea_C_TearUp::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_TearUp, Param_Owner) == 0x000060, "Member 'B_MushroomArea_C_TearUp::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_TearUp, Param_Instigator) == 0x000068, "Member 'B_MushroomArea_C_TearUp::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_TearUp, Owner_0) == 0x000060, "Member 'B_MushroomArea_C_TearUp::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_TearUp, Instigator_0) == 0x000068, "Member 'B_MushroomArea_C_TearUp::Instigator_0' has a wrong offset!");
 
 // Function B_MushroomArea.B_MushroomArea_C.TearUpBySize
 // 0x0008 (0x0008 - 0x0000)
@@ -329,14 +329,14 @@ struct B_MushroomArea_C_TearUpPoolObject final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MushroomArea_C_TearUpPoolObject) == 0x000010, "Wrong alignment on B_MushroomArea_C_TearUpPoolObject");
 static_assert(sizeof(B_MushroomArea_C_TearUpPoolObject) == 0x000070, "Wrong size on B_MushroomArea_C_TearUpPoolObject");
 static_assert(offsetof(B_MushroomArea_C_TearUpPoolObject, SpawnTransform) == 0x000000, "Member 'B_MushroomArea_C_TearUpPoolObject::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_TearUpPoolObject, Param_Owner) == 0x000060, "Member 'B_MushroomArea_C_TearUpPoolObject::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_MushroomArea_C_TearUpPoolObject, Param_Instigator) == 0x000068, "Member 'B_MushroomArea_C_TearUpPoolObject::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_TearUpPoolObject, Owner_0) == 0x000060, "Member 'B_MushroomArea_C_TearUpPoolObject::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_MushroomArea_C_TearUpPoolObject, Instigator_0) == 0x000068, "Member 'B_MushroomArea_C_TearUpPoolObject::Instigator_0' has a wrong offset!");
 
 // Function B_MushroomArea.B_MushroomArea_C.UpdateMushroom
 // 0x0010 (0x0010 - 0x0000)

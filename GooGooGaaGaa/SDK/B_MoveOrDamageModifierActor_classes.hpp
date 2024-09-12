@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_MoveOrDamageModifierActor.B_MoveOrDamageModifierActor_C
-// 0x00B8 (0x0360 - 0x02A8)
+// 0x00B8 (0x0358 - 0x02A0)
 class AB_MoveOrDamageModifierActor_C final : public AB_BaseGameModifierActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_MoveOrDamageModifierActor_C;      // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMap<class APlayerState*, double>             StoppedPlayerTime;                                 // 0x02B0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class FName                                   WidgetName;                                        // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class AB_PlayerState_C*, bool>           PlayerStates;                                      // 0x0308(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class AB_PlayerState_C*                       CurrentPlayerState;                                // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_MoveOrDamageModifierActor_C;      // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMap<class APlayerState*, double>             StoppedPlayerTime;                                 // 0x02A8(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class FName                                   WidgetName;                                        // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class AB_PlayerState_C*, bool>           PlayerStates;                                      // 0x0300(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class AB_PlayerState_C*                       CurrentPlayerState;                                // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddCurrentPlayerToStopped(double DeltaTime);
@@ -55,12 +55,12 @@ public:
 	}
 };
 static_assert(alignof(AB_MoveOrDamageModifierActor_C) == 0x000008, "Wrong alignment on AB_MoveOrDamageModifierActor_C");
-static_assert(sizeof(AB_MoveOrDamageModifierActor_C) == 0x000360, "Wrong size on AB_MoveOrDamageModifierActor_C");
-static_assert(offsetof(AB_MoveOrDamageModifierActor_C, UberGraphFrame_B_MoveOrDamageModifierActor_C) == 0x0002A8, "Member 'AB_MoveOrDamageModifierActor_C::UberGraphFrame_B_MoveOrDamageModifierActor_C' has a wrong offset!");
-static_assert(offsetof(AB_MoveOrDamageModifierActor_C, StoppedPlayerTime) == 0x0002B0, "Member 'AB_MoveOrDamageModifierActor_C::StoppedPlayerTime' has a wrong offset!");
-static_assert(offsetof(AB_MoveOrDamageModifierActor_C, WidgetName) == 0x000300, "Member 'AB_MoveOrDamageModifierActor_C::WidgetName' has a wrong offset!");
-static_assert(offsetof(AB_MoveOrDamageModifierActor_C, PlayerStates) == 0x000308, "Member 'AB_MoveOrDamageModifierActor_C::PlayerStates' has a wrong offset!");
-static_assert(offsetof(AB_MoveOrDamageModifierActor_C, CurrentPlayerState) == 0x000358, "Member 'AB_MoveOrDamageModifierActor_C::CurrentPlayerState' has a wrong offset!");
+static_assert(sizeof(AB_MoveOrDamageModifierActor_C) == 0x000358, "Wrong size on AB_MoveOrDamageModifierActor_C");
+static_assert(offsetof(AB_MoveOrDamageModifierActor_C, UberGraphFrame_B_MoveOrDamageModifierActor_C) == 0x0002A0, "Member 'AB_MoveOrDamageModifierActor_C::UberGraphFrame_B_MoveOrDamageModifierActor_C' has a wrong offset!");
+static_assert(offsetof(AB_MoveOrDamageModifierActor_C, StoppedPlayerTime) == 0x0002A8, "Member 'AB_MoveOrDamageModifierActor_C::StoppedPlayerTime' has a wrong offset!");
+static_assert(offsetof(AB_MoveOrDamageModifierActor_C, WidgetName) == 0x0002F8, "Member 'AB_MoveOrDamageModifierActor_C::WidgetName' has a wrong offset!");
+static_assert(offsetof(AB_MoveOrDamageModifierActor_C, PlayerStates) == 0x000300, "Member 'AB_MoveOrDamageModifierActor_C::PlayerStates' has a wrong offset!");
+static_assert(offsetof(AB_MoveOrDamageModifierActor_C, CurrentPlayerState) == 0x000350, "Member 'AB_MoveOrDamageModifierActor_C::CurrentPlayerState' has a wrong offset!");
 
 }
 

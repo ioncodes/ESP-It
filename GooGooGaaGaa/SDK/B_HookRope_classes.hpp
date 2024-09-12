@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HookRope.B_HookRope_C
-// 0x0028 (0x02C0 - 0x0298)
+// 0x0028 (0x02B8 - 0x0290)
 class AB_HookRope_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 SK_HookRope;                                       // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Hook;                                              // 0x02A8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_HookPull_C*                          HookPull;                                          // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 HookOwner;                                         // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 SK_HookRope;                                       // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Hook;                                              // 0x02A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_HookPull_C*                          HookPull;                                          // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 HookOwner;                                         // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_HookRope(int32 EntryPoint);
@@ -45,12 +45,12 @@ public:
 	}
 };
 static_assert(alignof(AB_HookRope_C) == 0x000008, "Wrong alignment on AB_HookRope_C");
-static_assert(sizeof(AB_HookRope_C) == 0x0002C0, "Wrong size on AB_HookRope_C");
-static_assert(offsetof(AB_HookRope_C, UberGraphFrame) == 0x000298, "Member 'AB_HookRope_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_HookRope_C, SK_HookRope) == 0x0002A0, "Member 'AB_HookRope_C::SK_HookRope' has a wrong offset!");
-static_assert(offsetof(AB_HookRope_C, Hook) == 0x0002A8, "Member 'AB_HookRope_C::Hook' has a wrong offset!");
-static_assert(offsetof(AB_HookRope_C, HookPull) == 0x0002B0, "Member 'AB_HookRope_C::HookPull' has a wrong offset!");
-static_assert(offsetof(AB_HookRope_C, HookOwner) == 0x0002B8, "Member 'AB_HookRope_C::HookOwner' has a wrong offset!");
+static_assert(sizeof(AB_HookRope_C) == 0x0002B8, "Wrong size on AB_HookRope_C");
+static_assert(offsetof(AB_HookRope_C, UberGraphFrame) == 0x000290, "Member 'AB_HookRope_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_HookRope_C, SK_HookRope) == 0x000298, "Member 'AB_HookRope_C::SK_HookRope' has a wrong offset!");
+static_assert(offsetof(AB_HookRope_C, Hook) == 0x0002A0, "Member 'AB_HookRope_C::Hook' has a wrong offset!");
+static_assert(offsetof(AB_HookRope_C, HookPull) == 0x0002A8, "Member 'AB_HookRope_C::HookPull' has a wrong offset!");
+static_assert(offsetof(AB_HookRope_C, HookOwner) == 0x0002B0, "Member 'AB_HookRope_C::HookOwner' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "IrisCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "IrisCore_structs.hpp"
 
 
 namespace SDK
@@ -41,7 +41,7 @@ class UDataStreamDefinitions final : public UObject
 {
 public:
 	TArray<struct FDataStreamDefinition>          DataStreamDefinitions;                             // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_226[0x8];                                      // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -62,7 +62,7 @@ static_assert(offsetof(UDataStreamDefinitions, DataStreamDefinitions) == 0x00002
 class UDataStreamManager final : public UDataStream
 {
 public:
-	uint8                                         Pad_227[0x8];                                      // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -83,7 +83,7 @@ class UNetObjectFilterConfig : public UObject
 {
 public:
 	ENetFilterType                                FilterType;                                        // 0x0028(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228[0x7];                                      // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -121,7 +121,7 @@ static_assert(sizeof(UFilterOutNetObjectFilterConfig) == 0x000030, "Wrong size o
 class UNetObjectFilter : public UObject
 {
 public:
-	uint8                                         Pad_229[0x28];                                     // 0x0028(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x28];                                      // 0x0028(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -158,7 +158,7 @@ static_assert(sizeof(UFilterOutNetObjectFilter) == 0x000050, "Wrong size on UFil
 class UIrisObjectReferencePackageMap final : public UPackageMap
 {
 public:
-	uint8                                         Pad_22A[0x8];                                      // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -195,7 +195,7 @@ static_assert(sizeof(UNetObjectPrioritizer) == 0x000028, "Wrong size on UNetObje
 class ULocationBasedNetObjectPrioritizer : public UNetObjectPrioritizer
 {
 public:
-	uint8                                         Pad_22B[0x38];                                     // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -215,7 +215,7 @@ static_assert(sizeof(ULocationBasedNetObjectPrioritizer) == 0x000060, "Wrong siz
 class UNetBlobHandler : public UObject
 {
 public:
-	uint8                                         Pad_22C[0x10];                                     // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -274,7 +274,7 @@ class UNetObjectConnectionFilterConfig final : public UNetObjectFilterConfig
 {
 public:
 	uint16                                        MaxObjectCount;                                    // 0x0030(0x0002)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22D[0x6];                                      // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -295,7 +295,7 @@ static_assert(offsetof(UNetObjectConnectionFilterConfig, MaxObjectCount) == 0x00
 class UNetObjectConnectionFilter final : public UNetObjectFilter
 {
 public:
-	uint8                                         Pad_22E[0x50];                                     // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -337,7 +337,7 @@ public:
 	float                                         Priority;                                          // 0x0030(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OwningConnectionPriority;                          // 0x0034(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableOwnedObjectsFastLane;                       // 0x0038(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22F[0x7];                                      // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -362,7 +362,7 @@ static_assert(offsetof(UNetObjectCountLimiterConfig, bEnableOwnedObjectsFastLane
 class UNetObjectCountLimiter final : public UNetObjectPrioritizer
 {
 public:
-	uint8                                         Pad_230[0x68];                                     // 0x0028(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x68];                                      // 0x0028(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -399,18 +399,22 @@ static_assert(sizeof(UNetObjectFilterDefinitions) == 0x000038, "Wrong size on UN
 static_assert(offsetof(UNetObjectFilterDefinitions, NetObjectFilterDefinitions) == 0x000028, "Member 'UNetObjectFilterDefinitions::NetObjectFilterDefinitions' has a wrong offset!");
 
 // Class IrisCore.NetObjectGridFilterConfig
-// 0x0048 (0x0078 - 0x0030)
+// 0x0060 (0x0090 - 0x0030)
 class UNetObjectGridFilterConfig final : public UNetObjectFilterConfig
 {
 public:
 	uint32                                        ViewPosRelevancyFrameCount;                        // 0x0030(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CellSizeX;                                         // 0x0034(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CellSizeY;                                         // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxCullDistance;                                   // 0x003C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultCullDistance;                               // 0x0040(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_231[0x4];                                      // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint16                                        DefaultFrameCountBeforeCulling;                    // 0x0034(0x0002)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CellSizeX;                                         // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CellSizeY;                                         // 0x003C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxCullDistance;                                   // 0x0040(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultCullDistance;                               // 0x0044(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                MinPos;                                            // 0x0048(0x0018)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                MaxPos;                                            // 0x0060(0x0018)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseExactCullDistance;                             // 0x0078(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNetObjectGridFilterProfile>    FilterProfiles;                                    // 0x0080(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -423,21 +427,24 @@ public:
 	}
 };
 static_assert(alignof(UNetObjectGridFilterConfig) == 0x000008, "Wrong alignment on UNetObjectGridFilterConfig");
-static_assert(sizeof(UNetObjectGridFilterConfig) == 0x000078, "Wrong size on UNetObjectGridFilterConfig");
+static_assert(sizeof(UNetObjectGridFilterConfig) == 0x000090, "Wrong size on UNetObjectGridFilterConfig");
 static_assert(offsetof(UNetObjectGridFilterConfig, ViewPosRelevancyFrameCount) == 0x000030, "Member 'UNetObjectGridFilterConfig::ViewPosRelevancyFrameCount' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, CellSizeX) == 0x000034, "Member 'UNetObjectGridFilterConfig::CellSizeX' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, CellSizeY) == 0x000038, "Member 'UNetObjectGridFilterConfig::CellSizeY' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, MaxCullDistance) == 0x00003C, "Member 'UNetObjectGridFilterConfig::MaxCullDistance' has a wrong offset!");
-static_assert(offsetof(UNetObjectGridFilterConfig, DefaultCullDistance) == 0x000040, "Member 'UNetObjectGridFilterConfig::DefaultCullDistance' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, DefaultFrameCountBeforeCulling) == 0x000034, "Member 'UNetObjectGridFilterConfig::DefaultFrameCountBeforeCulling' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, CellSizeX) == 0x000038, "Member 'UNetObjectGridFilterConfig::CellSizeX' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, CellSizeY) == 0x00003C, "Member 'UNetObjectGridFilterConfig::CellSizeY' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, MaxCullDistance) == 0x000040, "Member 'UNetObjectGridFilterConfig::MaxCullDistance' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, DefaultCullDistance) == 0x000044, "Member 'UNetObjectGridFilterConfig::DefaultCullDistance' has a wrong offset!");
 static_assert(offsetof(UNetObjectGridFilterConfig, MinPos) == 0x000048, "Member 'UNetObjectGridFilterConfig::MinPos' has a wrong offset!");
 static_assert(offsetof(UNetObjectGridFilterConfig, MaxPos) == 0x000060, "Member 'UNetObjectGridFilterConfig::MaxPos' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, bUseExactCullDistance) == 0x000078, "Member 'UNetObjectGridFilterConfig::bUseExactCullDistance' has a wrong offset!");
+static_assert(offsetof(UNetObjectGridFilterConfig, FilterProfiles) == 0x000080, "Member 'UNetObjectGridFilterConfig::FilterProfiles' has a wrong offset!");
 
 // Class IrisCore.NetObjectGridFilter
-// 0x00A8 (0x00F8 - 0x0050)
+// 0x00B0 (0x0100 - 0x0050)
 class UNetObjectGridFilter : public UNetObjectFilter
 {
 public:
-	uint8                                         Pad_232[0xA8];                                     // 0x0050(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0xB0];                                      // 0x0050(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -450,14 +457,14 @@ public:
 	}
 };
 static_assert(alignof(UNetObjectGridFilter) == 0x000008, "Wrong alignment on UNetObjectGridFilter");
-static_assert(sizeof(UNetObjectGridFilter) == 0x0000F8, "Wrong size on UNetObjectGridFilter");
+static_assert(sizeof(UNetObjectGridFilter) == 0x000100, "Wrong size on UNetObjectGridFilter");
 
 // Class IrisCore.NetObjectGridWorldLocFilter
-// 0x0008 (0x0100 - 0x00F8)
+// 0x0008 (0x0108 - 0x0100)
 class UNetObjectGridWorldLocFilter final : public UNetObjectGridFilter
 {
 public:
-	uint8                                         Pad_233[0x8];                                      // 0x00F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x8];                                      // 0x0100(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -470,14 +477,14 @@ public:
 	}
 };
 static_assert(alignof(UNetObjectGridWorldLocFilter) == 0x000008, "Wrong alignment on UNetObjectGridWorldLocFilter");
-static_assert(sizeof(UNetObjectGridWorldLocFilter) == 0x000100, "Wrong size on UNetObjectGridWorldLocFilter");
+static_assert(sizeof(UNetObjectGridWorldLocFilter) == 0x000108, "Wrong size on UNetObjectGridWorldLocFilter");
 
 // Class IrisCore.NetObjectGridFragmentLocFilter
-// 0x0050 (0x0148 - 0x00F8)
+// 0x0050 (0x0150 - 0x0100)
 class UNetObjectGridFragmentLocFilter final : public UNetObjectGridFilter
 {
 public:
-	uint8                                         Pad_234[0x50];                                     // 0x00F8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_100[0x50];                                     // 0x0100(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -490,7 +497,7 @@ public:
 	}
 };
 static_assert(alignof(UNetObjectGridFragmentLocFilter) == 0x000008, "Wrong alignment on UNetObjectGridFragmentLocFilter");
-static_assert(sizeof(UNetObjectGridFragmentLocFilter) == 0x000148, "Wrong size on UNetObjectGridFragmentLocFilter");
+static_assert(sizeof(UNetObjectGridFragmentLocFilter) == 0x000150, "Wrong size on UNetObjectGridFragmentLocFilter");
 
 // Class IrisCore.NetObjectPrioritizerDefinitions
 // 0x0010 (0x0038 - 0x0028)
@@ -518,7 +525,7 @@ static_assert(offsetof(UNetObjectPrioritizerDefinitions, NetObjectPrioritizerDef
 class UNetRPCHandler final : public UNetBlobHandler
 {
 public:
-	uint8                                         Pad_235[0x8];                                      // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -538,7 +545,7 @@ static_assert(sizeof(UNetRPCHandler) == 0x000040, "Wrong size on UNetRPCHandler"
 class UNetTokenDataStream final : public UDataStream
 {
 public:
-	uint8                                         Pad_236[0x50];                                     // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -592,7 +599,7 @@ static_assert(sizeof(UNopNetObjectFilter) == 0x000050, "Wrong size on UNopNetObj
 class UReplicationBridge : public UObject
 {
 public:
-	uint8                                         Pad_237[0xE8];                                     // 0x0028(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0xE8];                                      // 0x0028(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -608,11 +615,11 @@ static_assert(alignof(UReplicationBridge) == 0x000008, "Wrong alignment on URepl
 static_assert(sizeof(UReplicationBridge) == 0x000110, "Wrong size on UReplicationBridge");
 
 // Class IrisCore.ObjectReplicationBridge
-// 0x03A0 (0x04B0 - 0x0110)
+// 0x0440 (0x0550 - 0x0110)
 class UObjectReplicationBridge : public UReplicationBridge
 {
 public:
-	uint8                                         Pad_238[0x3A0];                                    // 0x0110(0x03A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_110[0x440];                                    // 0x0110(0x0440)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -625,10 +632,10 @@ public:
 	}
 };
 static_assert(alignof(UObjectReplicationBridge) == 0x000008, "Wrong alignment on UObjectReplicationBridge");
-static_assert(sizeof(UObjectReplicationBridge) == 0x0004B0, "Wrong size on UObjectReplicationBridge");
+static_assert(sizeof(UObjectReplicationBridge) == 0x000550, "Wrong size on UObjectReplicationBridge");
 
 // Class IrisCore.ObjectReplicationBridgeConfig
-// 0x0050 (0x0078 - 0x0028)
+// 0x0088 (0x00B0 - 0x0028)
 class UObjectReplicationBridgeConfig final : public UObject
 {
 public:
@@ -636,8 +643,13 @@ public:
 	TArray<struct FObjectReplicationBridgeFilterConfig> FilterConfigs;                                     // 0x0038(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 	TArray<struct FObjectReplicationBridgePrioritizerConfig> PrioritizerConfigs;                                // 0x0048(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 	TArray<struct FObjectReplicationBridgeDeltaCompressionConfig> DeltaCompressionConfigs;                           // 0x0058(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	class FName                                   DefaultSpatialFilterName;                          // 0x0068(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   RequiredNetDriverChannelClassName;                 // 0x0070(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FObjectReplicatedBridgeCriticalClassConfig> CriticalClassConfigs;                              // 0x0068(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	bool                                          bAllClassesCritical;                               // 0x0078(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FObjectReplicationBridgeTypeStatsConfig> TypeStatsConfigs;                                  // 0x0080(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	class FName                                   DefaultSpatialFilterName;                          // 0x0090(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   RequiredNetDriverChannelClassName;                 // 0x0098(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class FName>                           CriticalActorClasses;                              // 0x00A0(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -650,13 +662,17 @@ public:
 	}
 };
 static_assert(alignof(UObjectReplicationBridgeConfig) == 0x000008, "Wrong alignment on UObjectReplicationBridgeConfig");
-static_assert(sizeof(UObjectReplicationBridgeConfig) == 0x000078, "Wrong size on UObjectReplicationBridgeConfig");
+static_assert(sizeof(UObjectReplicationBridgeConfig) == 0x0000B0, "Wrong size on UObjectReplicationBridgeConfig");
 static_assert(offsetof(UObjectReplicationBridgeConfig, PollConfigs) == 0x000028, "Member 'UObjectReplicationBridgeConfig::PollConfigs' has a wrong offset!");
 static_assert(offsetof(UObjectReplicationBridgeConfig, FilterConfigs) == 0x000038, "Member 'UObjectReplicationBridgeConfig::FilterConfigs' has a wrong offset!");
 static_assert(offsetof(UObjectReplicationBridgeConfig, PrioritizerConfigs) == 0x000048, "Member 'UObjectReplicationBridgeConfig::PrioritizerConfigs' has a wrong offset!");
 static_assert(offsetof(UObjectReplicationBridgeConfig, DeltaCompressionConfigs) == 0x000058, "Member 'UObjectReplicationBridgeConfig::DeltaCompressionConfigs' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, DefaultSpatialFilterName) == 0x000068, "Member 'UObjectReplicationBridgeConfig::DefaultSpatialFilterName' has a wrong offset!");
-static_assert(offsetof(UObjectReplicationBridgeConfig, RequiredNetDriverChannelClassName) == 0x000070, "Member 'UObjectReplicationBridgeConfig::RequiredNetDriverChannelClassName' has a wrong offset!");
+static_assert(offsetof(UObjectReplicationBridgeConfig, CriticalClassConfigs) == 0x000068, "Member 'UObjectReplicationBridgeConfig::CriticalClassConfigs' has a wrong offset!");
+static_assert(offsetof(UObjectReplicationBridgeConfig, bAllClassesCritical) == 0x000078, "Member 'UObjectReplicationBridgeConfig::bAllClassesCritical' has a wrong offset!");
+static_assert(offsetof(UObjectReplicationBridgeConfig, TypeStatsConfigs) == 0x000080, "Member 'UObjectReplicationBridgeConfig::TypeStatsConfigs' has a wrong offset!");
+static_assert(offsetof(UObjectReplicationBridgeConfig, DefaultSpatialFilterName) == 0x000090, "Member 'UObjectReplicationBridgeConfig::DefaultSpatialFilterName' has a wrong offset!");
+static_assert(offsetof(UObjectReplicationBridgeConfig, RequiredNetDriverChannelClassName) == 0x000098, "Member 'UObjectReplicationBridgeConfig::RequiredNetDriverChannelClassName' has a wrong offset!");
+static_assert(offsetof(UObjectReplicationBridgeConfig, CriticalActorClasses) == 0x0000A0, "Member 'UObjectReplicationBridgeConfig::CriticalActorClasses' has a wrong offset!");
 
 // Class IrisCore.SequentialPartialNetBlobHandlerConfig
 // 0x0008 (0x0030 - 0x0028)
@@ -682,12 +698,14 @@ static_assert(offsetof(USequentialPartialNetBlobHandlerConfig, MaxPartBitCount) 
 static_assert(offsetof(USequentialPartialNetBlobHandlerConfig, MaxPartCount) == 0x00002C, "Member 'USequentialPartialNetBlobHandlerConfig::MaxPartCount' has a wrong offset!");
 
 // Class IrisCore.PartialNetObjectAttachmentHandlerConfig
-// 0x0008 (0x0038 - 0x0030)
+// 0x0010 (0x0040 - 0x0030)
 class UPartialNetObjectAttachmentHandlerConfig final : public USequentialPartialNetBlobHandlerConfig
 {
 public:
 	uint32                                        BitCountSplitThreshold;                            // 0x0030(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_239[0x4];                                      // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint32                                        ClientUnreliableBitCountSplitThreshold;            // 0x0034(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ServerUnreliableBitCountSplitThreshold;            // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -700,15 +718,17 @@ public:
 	}
 };
 static_assert(alignof(UPartialNetObjectAttachmentHandlerConfig) == 0x000008, "Wrong alignment on UPartialNetObjectAttachmentHandlerConfig");
-static_assert(sizeof(UPartialNetObjectAttachmentHandlerConfig) == 0x000038, "Wrong size on UPartialNetObjectAttachmentHandlerConfig");
+static_assert(sizeof(UPartialNetObjectAttachmentHandlerConfig) == 0x000040, "Wrong size on UPartialNetObjectAttachmentHandlerConfig");
 static_assert(offsetof(UPartialNetObjectAttachmentHandlerConfig, BitCountSplitThreshold) == 0x000030, "Member 'UPartialNetObjectAttachmentHandlerConfig::BitCountSplitThreshold' has a wrong offset!");
+static_assert(offsetof(UPartialNetObjectAttachmentHandlerConfig, ClientUnreliableBitCountSplitThreshold) == 0x000034, "Member 'UPartialNetObjectAttachmentHandlerConfig::ClientUnreliableBitCountSplitThreshold' has a wrong offset!");
+static_assert(offsetof(UPartialNetObjectAttachmentHandlerConfig, ServerUnreliableBitCountSplitThreshold) == 0x000038, "Member 'UPartialNetObjectAttachmentHandlerConfig::ServerUnreliableBitCountSplitThreshold' has a wrong offset!");
 
 // Class IrisCore.SequentialPartialNetBlobHandler
 // 0x0010 (0x0048 - 0x0038)
 class USequentialPartialNetBlobHandler : public UNetBlobHandler
 {
 public:
-	uint8                                         Pad_23A[0x10];                                     // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -745,7 +765,7 @@ static_assert(sizeof(UPartialNetObjectAttachmentHandler) == 0x000048, "Wrong siz
 class UReplicationDataStream final : public UDataStream
 {
 public:
-	uint8                                         Pad_23B[0x10];                                     // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -765,9 +785,9 @@ static_assert(sizeof(UReplicationDataStream) == 0x000038, "Wrong size on UReplic
 class UReplicationSystem final : public UObject
 {
 public:
-	uint8                                         Pad_23C[0x10];                                     // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UReplicationBridge*                     ReplicationBridge;                                 // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_23D[0x18];                                     // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -793,7 +813,7 @@ public:
 	float                                         InnerPriority;                                     // 0x0030(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OuterPriority;                                     // 0x0034(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OutsidePriority;                                   // 0x0038(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23E[0x4];                                      // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -818,7 +838,7 @@ static_assert(offsetof(USphereNetObjectPrioritizerConfig, OutsidePriority) == 0x
 class USphereNetObjectPrioritizer : public ULocationBasedNetObjectPrioritizer
 {
 public:
-	uint8                                         Pad_23F[0x8];                                      // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -839,7 +859,7 @@ class USphereWithOwnerBoostNetObjectPrioritizerConfig final : public USphereNetO
 {
 public:
 	float                                         OwnerPriorityBoost;                                // 0x0040(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_240[0x4];                                      // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -860,7 +880,7 @@ static_assert(offsetof(USphereWithOwnerBoostNetObjectPrioritizerConfig, OwnerPri
 class USphereWithOwnerBoostNetObjectPrioritizer final : public USphereNetObjectPrioritizer
 {
 public:
-	uint8                                         Pad_241[0x38];                                     // 0x0068(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x38];                                      // 0x0068(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

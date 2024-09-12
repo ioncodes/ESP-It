@@ -18,19 +18,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WP_FriendEntry.WP_FriendEntry_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWP_FriendEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Invite;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_2;                                       // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOnlineFriendRef*                       FriendInfo;                                        // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Invite;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_2;                                       // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOnlineFriendRef*                       FriendInfo;                                        // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SanitizedFriendName;                               // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_Button_K2Node_ComponentBoundEvent_17_Clicked__DelegateSignature();
 	void ExecuteUbergraph_WP_FriendEntry(int32 EntryPoint);
 	class FText GetFriendName();
+	void OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C(bool bSuccess, const class FString& SanitizedMessage);
+	void OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C(bool bSuccess, const class FString& SanitizedMessage);
+	void SetFriendInfoValue(class UOnlineFriendRef* FriendRef);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
@@ -44,11 +48,12 @@ public:
 	}
 };
 static_assert(alignof(UWP_FriendEntry_C) == 0x000008, "Wrong alignment on UWP_FriendEntry_C");
-static_assert(sizeof(UWP_FriendEntry_C) == 0x0002E0, "Wrong size on UWP_FriendEntry_C");
-static_assert(offsetof(UWP_FriendEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWP_FriendEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWP_FriendEntry_C, Invite) == 0x0002C8, "Member 'UWP_FriendEntry_C::Invite' has a wrong offset!");
-static_assert(offsetof(UWP_FriendEntry_C, TextBlock_2) == 0x0002D0, "Member 'UWP_FriendEntry_C::TextBlock_2' has a wrong offset!");
-static_assert(offsetof(UWP_FriendEntry_C, FriendInfo) == 0x0002D8, "Member 'UWP_FriendEntry_C::FriendInfo' has a wrong offset!");
+static_assert(sizeof(UWP_FriendEntry_C) == 0x000310, "Wrong size on UWP_FriendEntry_C");
+static_assert(offsetof(UWP_FriendEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWP_FriendEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWP_FriendEntry_C, Invite) == 0x0002E8, "Member 'UWP_FriendEntry_C::Invite' has a wrong offset!");
+static_assert(offsetof(UWP_FriendEntry_C, TextBlock_2) == 0x0002F0, "Member 'UWP_FriendEntry_C::TextBlock_2' has a wrong offset!");
+static_assert(offsetof(UWP_FriendEntry_C, FriendInfo) == 0x0002F8, "Member 'UWP_FriendEntry_C::FriendInfo' has a wrong offset!");
+static_assert(offsetof(UWP_FriendEntry_C, SanitizedFriendName) == 0x000300, "Member 'UWP_FriendEntry_C::SanitizedFriendName' has a wrong offset!");
 
 }
 

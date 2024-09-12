@@ -85,13 +85,40 @@ void UB_PowerupParametersSubsystem_C::GetDefaultPowerupParameterValue(E_PowerupR
 }
 
 
+// Function B_PowerupParametersSubsystem.B_PowerupParametersSubsystem_C.GetDefaultPowerupParameterValues
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FUIParameterData>         UIParameters                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// E_PowerupRuleType                       PowerupType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FUIParam>                 ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+TArray<struct FUIParam> UB_PowerupParametersSubsystem_C::GetDefaultPowerupParameterValues(TArray<struct FUIParameterData>& UIParameters, E_PowerupRuleType PowerupType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PowerupParametersSubsystem_C", "GetDefaultPowerupParameterValues");
+
+	Params::B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues Parms{};
+
+	Parms.UIParameters = std::move(UIParameters);
+	Parms.PowerupType = PowerupType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	UIParameters = std::move(Parms.UIParameters);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function B_PowerupParametersSubsystem.B_PowerupParametersSubsystem_C.GetPowerupParameters
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // E_PowerupRuleType                       Powerup                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPowerupParameters*               Param_PowerupParameters                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPowerupParameters*               PowerupParameters_0                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_PowerupParametersSubsystem_C::GetPowerupParameters(E_PowerupRuleType Powerup, class UPowerupParameters** Param_PowerupParameters)
+void UB_PowerupParametersSubsystem_C::GetPowerupParameters(E_PowerupRuleType Powerup, class UPowerupParameters** PowerupParameters_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -104,8 +131,8 @@ void UB_PowerupParametersSubsystem_C::GetPowerupParameters(E_PowerupRuleType Pow
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_PowerupParameters != nullptr)
-		*Param_PowerupParameters = Parms.Param_PowerupParameters;
+	if (PowerupParameters_0 != nullptr)
+		*PowerupParameters_0 = Parms.PowerupParameters_0;
 }
 
 

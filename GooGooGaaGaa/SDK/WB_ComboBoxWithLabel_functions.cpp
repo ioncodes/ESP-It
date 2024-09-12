@@ -66,9 +66,9 @@ void UWB_ComboBoxWithLabel_C::SetOptionIndex(int32 OptionIndex)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FString                           Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ComboBoxWithLabel_C::GetOptionIndex(const class FString& Option, int32* Param_Index)
+void UWB_ComboBoxWithLabel_C::GetOptionIndex(const class FString& Option, int32* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -81,8 +81,8 @@ void UWB_ComboBoxWithLabel_C::GetOptionIndex(const class FString& Option, int32*
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
@@ -117,26 +117,6 @@ void UWB_ComboBoxWithLabel_C::OpenComboBoxOverlay()
 		Func = Class->GetFunction("WB_ComboBoxWithLabel_C", "OpenComboBoxOverlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_ComboBoxWithLabel.WB_ComboBoxWithLabel_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_ComboBoxWithLabel_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ComboBoxWithLabel_C", "PreConstruct");
-
-	Params::WB_ComboBoxWithLabel_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -221,6 +201,48 @@ void UWB_ComboBoxWithLabel_C::BndEvt__WB_ComboBoxWithLabel_ComboBoxButtonInsideS
 		Func = Class->GetFunction("WB_ComboBoxWithLabel_C", "BndEvt__WB_ComboBoxWithLabel_ComboBoxButtonInsideScaleBox_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ComboBoxWithLabel.WB_ComboBoxWithLabel_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ComboBoxWithLabel_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ComboBoxWithLabel_C", "PreConstruct");
+
+	Params::WB_ComboBoxWithLabel_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_ComboBoxWithLabel.WB_ComboBoxWithLabel_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ComboBoxWithLabel_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ComboBoxWithLabel_C", "Tick");
+
+	Params::WB_ComboBoxWithLabel_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

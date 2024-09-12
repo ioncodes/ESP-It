@@ -43,10 +43,10 @@ public:
 	int32                                         FailedNoItemGrantedCount;                          // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         FailedToUploadStringCount;                         // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CurrentIsDrop;                                     // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F1D[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ItemDefsToConsolidate;                             // 0x00F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          CurrentIsExtraItem;                                // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F1E[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FailedToSetGSStatCount;                            // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -59,11 +59,11 @@ public:
 	void HandleItemsAddedBRG(class AB_PlayerState_C* PlayerState, TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem);
 	void HandleItemsAddedSteam(const class FString& DownloadedString, class UB_AddItemQuery_C* Query, bool Failed);
 	void OnFailure_0E02496B446FDA893CF135AD7FA3391D(int32 AccountId, const TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState);
-	void OnFailure_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 Param_QueryID);
-	void OnFailure_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 Param_QueryID);
+	void OnFailure_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 QueryID_0);
+	void OnFailure_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 QueryID_0);
 	void OnSuccess_0E02496B446FDA893CF135AD7FA3391D(int32 AccountId, const TArray<struct FGrantItemResultEntry>& Items, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState);
-	void OnSuccess_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 Param_QueryID);
-	void OnSuccess_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 Param_QueryID);
+	void OnSuccess_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 QueryID_0);
+	void OnSuccess_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 QueryID_0);
 
 public:
 	static class UClass* StaticClass()

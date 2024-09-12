@@ -54,10 +54,10 @@ void UWB_ControllerIconWithActionName_C::ExecuteUbergraph_WB_ControllerIconWithA
 // Function WB_ControllerIconWithActionName.WB_ControllerIconWithActionName_C.GetActionTextForIndex
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText UWB_ControllerIconWithActionName_C::GetActionTextForIndex(int32 Param_Index)
+class FText UWB_ControllerIconWithActionName_C::GetActionTextForIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,7 +66,7 @@ class FText UWB_ControllerIconWithActionName_C::GetActionTextForIndex(int32 Para
 
 	Params::WB_ControllerIconWithActionName_C_GetActionTextForIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -137,10 +137,10 @@ struct FSlateColor UWB_ControllerIconWithActionName_C::GetColor_2()
 // Function WB_ControllerIconWithActionName.WB_ControllerIconWithActionName_C.GetColorForIndex
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FSlateColor                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-struct FSlateColor UWB_ControllerIconWithActionName_C::GetColorForIndex(int32 Param_Index)
+struct FSlateColor UWB_ControllerIconWithActionName_C::GetColorForIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -149,7 +149,7 @@ struct FSlateColor UWB_ControllerIconWithActionName_C::GetColorForIndex(int32 Pa
 
 	Params::WB_ControllerIconWithActionName_C_GetColorForIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -280,11 +280,11 @@ ESlateVisibility UWB_ControllerIconWithActionName_C::GetTextVisibility_2()
 // Function WB_ControllerIconWithActionName.WB_ControllerIconWithActionName_C.GetVisibilityForIndex
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bCollapse                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-ESlateVisibility UWB_ControllerIconWithActionName_C::GetVisibilityForIndex(int32 Param_Index, bool bCollapse)
+ESlateVisibility UWB_ControllerIconWithActionName_C::GetVisibilityForIndex(int32 Index_0, bool bCollapse)
 {
 	static class UFunction* Func = nullptr;
 
@@ -293,7 +293,7 @@ ESlateVisibility UWB_ControllerIconWithActionName_C::GetVisibilityForIndex(int32
 
 	Params::WB_ControllerIconWithActionName_C_GetVisibilityForIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.bCollapse = bCollapse;
 
 	UObject::ProcessEvent(Func, &Parms);

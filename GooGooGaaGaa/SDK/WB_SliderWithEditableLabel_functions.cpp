@@ -21,9 +21,9 @@ namespace SDK
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWB_SliderWithEditableLabel_C*    Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_RealValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RealValue_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithEditableLabel_C::OnRealValueChanged__DelegateSignature(class UWB_SliderWithEditableLabel_C* Sender, double Param_RealValue)
+void UWB_SliderWithEditableLabel_C::OnRealValueChanged__DelegateSignature(class UWB_SliderWithEditableLabel_C* Sender, double RealValue_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +33,7 @@ void UWB_SliderWithEditableLabel_C::OnRealValueChanged__DelegateSignature(class 
 	Params::WB_SliderWithEditableLabel_C_OnRealValueChanged__DelegateSignature Parms{};
 
 	Parms.Sender = Sender;
-	Parms.Param_RealValue = Param_RealValue;
+	Parms.RealValue_0 = RealValue_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -191,15 +191,15 @@ void UWB_SliderWithEditableLabel_C::CheckDefaultToUpdateUI()
 }
 
 
-// Function WB_SliderWithEditableLabel.WB_SliderWithEditableLabel_C.CreateToolTip
+// Function WB_SliderWithEditableLabel.WB_SliderWithEditableLabel_C.CreateTooltip
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_SliderWithEditableLabel_C::CreateToolTip()
+void UWB_SliderWithEditableLabel_C::CreateTooltip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SliderWithEditableLabel_C", "CreateToolTip");
+		Func = Class->GetFunction("WB_SliderWithEditableLabel_C", "CreateTooltip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -325,9 +325,9 @@ class FText UWB_SliderWithEditableLabel_C::GetMinutes()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithEditableLabel_C::GetOptionsOverrideIndex(double Value, double* Param_Index)
+void UWB_SliderWithEditableLabel_C::GetOptionsOverrideIndex(double Value, double* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -340,8 +340,8 @@ void UWB_SliderWithEditableLabel_C::GetOptionsOverrideIndex(double Value, double
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
@@ -610,10 +610,10 @@ void UWB_SliderWithEditableLabel_C::PreConstruct(bool IsDesignTime)
 // Function WB_SliderWithEditableLabel.WB_SliderWithEditableLabel_C.RealValueToValue
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Param_RealValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RealValue_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithEditableLabel_C::RealValueToValue(double Param_RealValue, double* Value)
+void UWB_SliderWithEditableLabel_C::RealValueToValue(double RealValue_0, double* Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -622,7 +622,7 @@ void UWB_SliderWithEditableLabel_C::RealValueToValue(double Param_RealValue, dou
 
 	Params::WB_SliderWithEditableLabel_C_RealValueToValue Parms{};
 
-	Parms.Param_RealValue = Param_RealValue;
+	Parms.RealValue_0 = RealValue_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -742,9 +742,9 @@ void UWB_SliderWithEditableLabel_C::Tick(const struct FGeometry& MyGeometry, flo
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_RealValue                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RealValue_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithEditableLabel_C::ValueToRealValue(double Value, double* Param_RealValue)
+void UWB_SliderWithEditableLabel_C::ValueToRealValue(double Value, double* RealValue_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -757,8 +757,8 @@ void UWB_SliderWithEditableLabel_C::ValueToRealValue(double Value, double* Param
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_RealValue != nullptr)
-		*Param_RealValue = Parms.Param_RealValue;
+	if (RealValue_0 != nullptr)
+		*RealValue_0 = Parms.RealValue_0;
 }
 
 }

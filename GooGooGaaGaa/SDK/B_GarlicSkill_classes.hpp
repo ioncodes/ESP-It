@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GarlicSkill.B_GarlicSkill_C
-// 0x0000 (0x0160 - 0x0160)
+// 0x0000 (0x0158 - 0x0158)
 class UB_GarlicSkill_C final : public UB_ProjectileSkill_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UB_GarlicSkill_C) == 0x000008, "Wrong alignment on UB_GarlicSkill_C");
-static_assert(sizeof(UB_GarlicSkill_C) == 0x000160, "Wrong size on UB_GarlicSkill_C");
+static_assert(sizeof(UB_GarlicSkill_C) == 0x000158, "Wrong size on UB_GarlicSkill_C");
 
 }
 

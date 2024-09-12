@@ -64,8 +64,8 @@ void UWB_NewItemPopup_C::AddItemPopup(int32 ItemDefId, int32 Quantity)
 // Parameters:
 // class FText                             Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // class FText                             Description                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UTexture2D*                       Param_Icon                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UTexture2D*                       Param_IconFrame                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       Icon_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D*                       IconFrame_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UTexture2D*                       PopupFrame                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FSlateColor                      FrameColor                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   PreviousCount                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -73,7 +73,7 @@ void UWB_NewItemPopup_C::AddItemPopup(int32 ItemDefId, int32 Quantity)
 // int32                                   MaxCount                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   IconAmount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_NewItemPopup_C::AddNewItemToQueue(const class FText& Title, const class FText& Description, class UTexture2D* Param_Icon, class UTexture2D* Param_IconFrame, class UTexture2D* PopupFrame, const struct FSlateColor& FrameColor, int32 PreviousCount, int32 NewCount, int32 MaxCount, int32 IconAmount)
+void UWB_NewItemPopup_C::AddNewItemToQueue(const class FText& Title, const class FText& Description, class UTexture2D* Icon_0, class UTexture2D* IconFrame_0, class UTexture2D* PopupFrame, const struct FSlateColor& FrameColor, int32 PreviousCount, int32 NewCount, int32 MaxCount, int32 IconAmount)
 {
 	static class UFunction* Func = nullptr;
 
@@ -84,8 +84,8 @@ void UWB_NewItemPopup_C::AddNewItemToQueue(const class FText& Title, const class
 
 	Parms.Title = std::move(Title);
 	Parms.Description = std::move(Description);
-	Parms.Param_Icon = Param_Icon;
-	Parms.Param_IconFrame = Param_IconFrame;
+	Parms.Icon_0 = Icon_0;
+	Parms.IconFrame_0 = IconFrame_0;
 	Parms.PopupFrame = PopupFrame;
 	Parms.FrameColor = std::move(FrameColor);
 	Parms.PreviousCount = PreviousCount;
@@ -100,13 +100,13 @@ void UWB_NewItemPopup_C::AddNewItemToQueue(const class FText& Title, const class
 // Function WB_NewItemPopup.WB_NewItemPopup_C.AddPropPopup
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CategoryCount                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   SetCount                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalCategory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalSet                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_NewItemPopup_C::AddPropPopup(int32 PropId, int32 CategoryCount, int32 SetCount, int32 TotalCategory, int32 TotalSet)
+void UWB_NewItemPopup_C::AddPropPopup(int32 PropID, int32 CategoryCount, int32 SetCount, int32 TotalCategory, int32 TotalSet)
 {
 	static class UFunction* Func = nullptr;
 
@@ -115,7 +115,7 @@ void UWB_NewItemPopup_C::AddPropPopup(int32 PropId, int32 CategoryCount, int32 S
 
 	Params::WB_NewItemPopup_C_AddPropPopup Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.CategoryCount = CategoryCount;
 	Parms.SetCount = SetCount;
 	Parms.TotalCategory = TotalCategory;

@@ -10,30 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "B_Task_classes.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_CollectTask.B_CollectTask_C
-// 0x0060 (0x0320 - 0x02C0)
+// 0x0060 (0x0318 - 0x02B8)
 #pragma pack(push, 0x1)
 class alignas(0x08) AB_CollectTask_C : public AB_Task_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CollectTask_C;                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          TaskArea;                                          // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AB_TaskField_C*                         TaskField;                                         // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                         TargetType;                                        // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         TargetAmount;                                      // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentAmount;                                     // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FTransform>                     TargetSpawnPoints;                                 // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UStaticMeshComponent*>           HighlightTargets;                                  // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	int32                                         SeedOffset;                                        // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRandomStream                          RandomStream;                                      // 0x0314(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CollectTask_C;                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          TaskArea;                                          // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AB_TaskField_C*                         TaskField;                                         // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UClass*>                         TargetType;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         TargetAmount;                                      // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentAmount;                                     // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTransform>                     TargetSpawnPoints;                                 // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UStaticMeshComponent*>           HighlightTargets;                                  // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	int32                                         SeedOffset;                                        // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRandomStream                          RandomStream;                                      // 0x030C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor)
 
 public:
 	void CheckCompletionConditions(bool* ReadyForCompletion);
@@ -59,17 +59,17 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AB_CollectTask_C) == 0x000008, "Wrong alignment on AB_CollectTask_C");
-static_assert(sizeof(AB_CollectTask_C) == 0x000320, "Wrong size on AB_CollectTask_C");
-static_assert(offsetof(AB_CollectTask_C, UberGraphFrame_B_CollectTask_C) == 0x0002C0, "Member 'AB_CollectTask_C::UberGraphFrame_B_CollectTask_C' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, TaskArea) == 0x0002C8, "Member 'AB_CollectTask_C::TaskArea' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, TaskField) == 0x0002D0, "Member 'AB_CollectTask_C::TaskField' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, TargetType) == 0x0002D8, "Member 'AB_CollectTask_C::TargetType' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, TargetAmount) == 0x0002E8, "Member 'AB_CollectTask_C::TargetAmount' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, CurrentAmount) == 0x0002EC, "Member 'AB_CollectTask_C::CurrentAmount' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, TargetSpawnPoints) == 0x0002F0, "Member 'AB_CollectTask_C::TargetSpawnPoints' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, HighlightTargets) == 0x000300, "Member 'AB_CollectTask_C::HighlightTargets' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, SeedOffset) == 0x000310, "Member 'AB_CollectTask_C::SeedOffset' has a wrong offset!");
-static_assert(offsetof(AB_CollectTask_C, RandomStream) == 0x000314, "Member 'AB_CollectTask_C::RandomStream' has a wrong offset!");
+static_assert(sizeof(AB_CollectTask_C) == 0x000318, "Wrong size on AB_CollectTask_C");
+static_assert(offsetof(AB_CollectTask_C, UberGraphFrame_B_CollectTask_C) == 0x0002B8, "Member 'AB_CollectTask_C::UberGraphFrame_B_CollectTask_C' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, TaskArea) == 0x0002C0, "Member 'AB_CollectTask_C::TaskArea' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, TaskField) == 0x0002C8, "Member 'AB_CollectTask_C::TaskField' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, TargetType) == 0x0002D0, "Member 'AB_CollectTask_C::TargetType' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, TargetAmount) == 0x0002E0, "Member 'AB_CollectTask_C::TargetAmount' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, CurrentAmount) == 0x0002E4, "Member 'AB_CollectTask_C::CurrentAmount' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, TargetSpawnPoints) == 0x0002E8, "Member 'AB_CollectTask_C::TargetSpawnPoints' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, HighlightTargets) == 0x0002F8, "Member 'AB_CollectTask_C::HighlightTargets' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, SeedOffset) == 0x000308, "Member 'AB_CollectTask_C::SeedOffset' has a wrong offset!");
+static_assert(offsetof(AB_CollectTask_C, RandomStream) == 0x00030C, "Member 'AB_CollectTask_C::RandomStream' has a wrong offset!");
 
 }
 

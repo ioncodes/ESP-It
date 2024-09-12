@@ -131,6 +131,26 @@ void UWB_Tab_InputSettings_C::BndEvt__WB_Tab_InputSettings_Slider_CoyoteTransfor
 }
 
 
+// Function WB_Tab_InputSettings.WB_Tab_InputSettings_C.BndEvt__WB_Tab_InputSettings_Slider_ScopeModeSensitivity_K2Node_ComponentBoundEvent_3_OnRealValueChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// double                                  RealValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_Tab_InputSettings_C::BndEvt__WB_Tab_InputSettings_Slider_ScopeModeSensitivity_K2Node_ComponentBoundEvent_3_OnRealValueChanged__DelegateSignature(double RealValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Tab_InputSettings_C", "BndEvt__WB_Tab_InputSettings_Slider_ScopeModeSensitivity_K2Node_ComponentBoundEvent_3_OnRealValueChanged__DelegateSignature");
+
+	Params::WB_Tab_InputSettings_C_BndEvt__WB_Tab_InputSettings_Slider_ScopeModeSensitivity_K2Node_ComponentBoundEvent_3_OnRealValueChanged__DelegateSignature Parms{};
+
+	Parms.RealValue = RealValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_Tab_InputSettings.WB_Tab_InputSettings_C.ConfirmAction
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -341,6 +361,29 @@ void UWB_Tab_InputSettings_C::MouseToSlider(double In, double* Out)
 
 	if (Out != nullptr)
 		*Out = Parms.Out;
+}
+
+
+// Function WB_Tab_InputSettings.WB_Tab_InputSettings_C.NavigateList
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_Tab_InputSettings_C::NavigateList(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Tab_InputSettings_C", "NavigateList");
+
+	Params::WB_Tab_InputSettings_C_NavigateList Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

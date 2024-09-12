@@ -18,28 +18,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_FriendScreen.WB_FriendScreen_C
-// 0x00A0 (0x0360 - 0x02C0)
+// 0x00A0 (0x0380 - 0x02E0)
 class UWB_FriendScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           AddFriend;                                         // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Back;                                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        FriendSwitcher;                                    // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_AccountCategoryButton_C*            OnlineFriends;                                     // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_AccountCategoryButton_C*            PendingFriends;                                    // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_AccountCategoryButton_C*            RecentlyPlayed;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_AccountCategoryButton_C*            Settings;                                          // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_AccountSettings_C*                  WB_AccountSettings;                                // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerTabIcon_C*                WB_ControllerTabIconLB;                            // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerTabIcon_C*                WB_ControllerTabIconRB;                            // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_OnlineFriends_C*                    WB_OnlineFriends;                                  // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PendingFriends_C*                   WB_PendingFriends;                                 // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_RecentlyPlayed_C*                   WB_RecentlyPlayed;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UUserWidget*>                    AccountScreens;                                    // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UWB_AccountCategoryButton_C*>    TabButtons;                                        // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FTimerHandle                           RefreshTimer;                                      // 0x0350(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                LastFocusedWidget;                                 // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           AddFriend;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Back;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        FriendSwitcher;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_AccountCategoryButton_C*            OnlineFriends;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_AccountCategoryButton_C*            PendingFriends;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_AccountCategoryButton_C*            RecentlyPlayed;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_AccountCategoryButton_C*            Settings;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_AccountSettings_C*                  WB_AccountSettings;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerTabIcon_C*                WB_ControllerTabIconLB;                            // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerTabIcon_C*                WB_ControllerTabIconRB;                            // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_OnlineFriends_C*                    WB_OnlineFriends;                                  // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PendingFriends_C*                   WB_PendingFriends;                                 // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_RecentlyPlayed_C*                   WB_RecentlyPlayed;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UUserWidget*>                    AccountScreens;                                    // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UWB_AccountCategoryButton_C*>    TabButtons;                                        // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FTimerHandle                           RefreshTimer;                                      // 0x0370(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                LastFocusedWidget;                                 // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_FriendScreen_AddFriend_K2Node_ComponentBoundEvent_5_Clicked__DelegateSignature();
@@ -58,7 +58,9 @@ public:
 	void OnApply();
 	void OnBack();
 	void OnCallFailed_2BBDE9ED47F12DAA1726459057F076D6(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
+	void OnCallFailed_762987554731BDE0AC7371A51AC5EEEB(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
 	void OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
+	void OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful);
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void OnSpecialAction();
 	void PreConstruct(bool IsDesignTime);
@@ -80,25 +82,25 @@ public:
 	}
 };
 static_assert(alignof(UWB_FriendScreen_C) == 0x000008, "Wrong alignment on UWB_FriendScreen_C");
-static_assert(sizeof(UWB_FriendScreen_C) == 0x000360, "Wrong size on UWB_FriendScreen_C");
-static_assert(offsetof(UWB_FriendScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_FriendScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, AddFriend) == 0x0002C8, "Member 'UWB_FriendScreen_C::AddFriend' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, Back) == 0x0002D0, "Member 'UWB_FriendScreen_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, FriendSwitcher) == 0x0002D8, "Member 'UWB_FriendScreen_C::FriendSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, OnlineFriends) == 0x0002E0, "Member 'UWB_FriendScreen_C::OnlineFriends' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, PendingFriends) == 0x0002E8, "Member 'UWB_FriendScreen_C::PendingFriends' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, RecentlyPlayed) == 0x0002F0, "Member 'UWB_FriendScreen_C::RecentlyPlayed' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, Settings) == 0x0002F8, "Member 'UWB_FriendScreen_C::Settings' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, WB_AccountSettings) == 0x000300, "Member 'UWB_FriendScreen_C::WB_AccountSettings' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, WB_ControllerTabIconLB) == 0x000308, "Member 'UWB_FriendScreen_C::WB_ControllerTabIconLB' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, WB_ControllerTabIconRB) == 0x000310, "Member 'UWB_FriendScreen_C::WB_ControllerTabIconRB' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, WB_OnlineFriends) == 0x000318, "Member 'UWB_FriendScreen_C::WB_OnlineFriends' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, WB_PendingFriends) == 0x000320, "Member 'UWB_FriendScreen_C::WB_PendingFriends' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, WB_RecentlyPlayed) == 0x000328, "Member 'UWB_FriendScreen_C::WB_RecentlyPlayed' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, AccountScreens) == 0x000330, "Member 'UWB_FriendScreen_C::AccountScreens' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, TabButtons) == 0x000340, "Member 'UWB_FriendScreen_C::TabButtons' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, RefreshTimer) == 0x000350, "Member 'UWB_FriendScreen_C::RefreshTimer' has a wrong offset!");
-static_assert(offsetof(UWB_FriendScreen_C, LastFocusedWidget) == 0x000358, "Member 'UWB_FriendScreen_C::LastFocusedWidget' has a wrong offset!");
+static_assert(sizeof(UWB_FriendScreen_C) == 0x000380, "Wrong size on UWB_FriendScreen_C");
+static_assert(offsetof(UWB_FriendScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_FriendScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, AddFriend) == 0x0002E8, "Member 'UWB_FriendScreen_C::AddFriend' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, Back) == 0x0002F0, "Member 'UWB_FriendScreen_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, FriendSwitcher) == 0x0002F8, "Member 'UWB_FriendScreen_C::FriendSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, OnlineFriends) == 0x000300, "Member 'UWB_FriendScreen_C::OnlineFriends' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, PendingFriends) == 0x000308, "Member 'UWB_FriendScreen_C::PendingFriends' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, RecentlyPlayed) == 0x000310, "Member 'UWB_FriendScreen_C::RecentlyPlayed' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, Settings) == 0x000318, "Member 'UWB_FriendScreen_C::Settings' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, WB_AccountSettings) == 0x000320, "Member 'UWB_FriendScreen_C::WB_AccountSettings' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, WB_ControllerTabIconLB) == 0x000328, "Member 'UWB_FriendScreen_C::WB_ControllerTabIconLB' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, WB_ControllerTabIconRB) == 0x000330, "Member 'UWB_FriendScreen_C::WB_ControllerTabIconRB' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, WB_OnlineFriends) == 0x000338, "Member 'UWB_FriendScreen_C::WB_OnlineFriends' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, WB_PendingFriends) == 0x000340, "Member 'UWB_FriendScreen_C::WB_PendingFriends' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, WB_RecentlyPlayed) == 0x000348, "Member 'UWB_FriendScreen_C::WB_RecentlyPlayed' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, AccountScreens) == 0x000350, "Member 'UWB_FriendScreen_C::AccountScreens' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, TabButtons) == 0x000360, "Member 'UWB_FriendScreen_C::TabButtons' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, RefreshTimer) == 0x000370, "Member 'UWB_FriendScreen_C::RefreshTimer' has a wrong offset!");
+static_assert(offsetof(UWB_FriendScreen_C, LastFocusedWidget) == 0x000378, "Member 'UWB_FriendScreen_C::LastFocusedWidget' has a wrong offset!");
 
 }
 

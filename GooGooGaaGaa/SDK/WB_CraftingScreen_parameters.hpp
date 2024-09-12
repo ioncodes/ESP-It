@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "S_RecipeInfo_structs.hpp"
 #include "B_Ingredient_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,7 +26,7 @@ struct WB_CraftingScreen_C_ExecuteUbergraph_WB_CraftingScreen final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_473F[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_MenuCamera_C*>                CallFunc_GetAllActorsOfClass_OutActors;            // 0x0008(0x0010)(ReferenceParm)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_MenuCamera_C*                        CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -39,7 +39,7 @@ public:
 	bool                                          CallFunc_IsCraftingPossible_ReturnValue_2;         // 0x006F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4740[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0080(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -85,7 +85,7 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FB_Ingredient                          CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4741[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -133,14 +133,14 @@ struct WB_CraftingScreen_C_IsSelectedRecipeValid final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Return;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4742[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0010(0x0010)(ConstParm, ReferenceParm)
 	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4743[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkinOrRecipeItemData_C*              K2Node_DynamicCast_AsB_Skin_or_Recipe_Item_Data;   // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -212,79 +212,79 @@ static_assert(offsetof(WB_CraftingScreen_C_Tick, MyGeometry) == 0x000000, "Membe
 static_assert(offsetof(WB_CraftingScreen_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_CraftingScreen_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WB_CraftingScreen.WB_CraftingScreen_C.UpdateCraftTileView
-// 0x0238 (0x0238 - 0x0000)
+// 0x0208 (0x0208 - 0x0000)
 struct WB_CraftingScreen_C_UpdateCraftTileView final
 {
 public:
-	struct FS_RecipeInfo                          CurrentRecipe;                                     // 0x0000(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4744[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4745[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4746[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FS_RecipeInfo>                  CallFunc_GetAllOwningRecipes_ReturnValue;          // 0x00C0(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4747[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4748[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_RecipeInfo                          CallFunc_GetRecipe_ReturnValue;                    // 0x00F0(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4749[0x3];                                     // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474A[0x3];                                     // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474B[0x5];                                     // 0x018B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_MenuTileViewManager_C*               CallFunc_CreateObject_Object;                      // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474C[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_RecipeInfo                          CallFunc_Array_Get_Item;                           // 0x01A0(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474D[0x7];                                     // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_SkinOrRecipeItemData_C*              CallFunc_GetSkinOrRecipeData_Data;                 // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          CurrentRecipe;                                     // 0x0000(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_RecipeInfo>                  CallFunc_GetAllOwningRecipes_ReturnValue;          // 0x00B0(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RecipeInfo                          CallFunc_GetRecipe_ReturnValue;                    // 0x00E0(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16B[0x5];                                      // 0x016B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_MenuTileViewManager_C*               CallFunc_CreateObject_Object;                      // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RecipeInfo                          CallFunc_Array_Get_Item;                           // 0x0180(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_SkinOrRecipeItemData_C*              CallFunc_GetSkinOrRecipeData_Data;                 // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CraftingScreen_C_UpdateCraftTileView) == 0x000008, "Wrong alignment on WB_CraftingScreen_C_UpdateCraftTileView");
-static_assert(sizeof(WB_CraftingScreen_C_UpdateCraftTileView) == 0x000238, "Wrong size on WB_CraftingScreen_C_UpdateCraftTileView");
+static_assert(sizeof(WB_CraftingScreen_C_UpdateCraftTileView) == 0x000208, "Wrong size on WB_CraftingScreen_C_UpdateCraftTileView");
 static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CurrentRecipe) == 0x000000, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CurrentRecipe' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetGameInstance_ReturnValue) == 0x000088, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, Temp_int_Loop_Counter_Variable) == 0x000090, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_AsB_Game_Instance) == 0x000098, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Add_IntInt_ReturnValue) == 0x0000A4, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetGameInstance_ReturnValue_1) == 0x0000A8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0000B0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetAllOwningRecipes_ReturnValue) == 0x0000C0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetAllOwningRecipes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Array_Length_ReturnValue) == 0x0000D0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Less_IntInt_ReturnValue) == 0x0000D4, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetGameInstance_ReturnValue_2) == 0x0000D8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x0000E0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_bSuccess_2) == 0x0000E8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetRecipe_ReturnValue) == 0x0000F0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetRecipe_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Not_PreBool_ReturnValue) == 0x000178, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetItemQuantity_ReturnValue) == 0x00017C, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000180, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Array_Length_ReturnValue_1) == 0x000184, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_BooleanAND_ReturnValue) == 0x000188, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Greater_IntInt_ReturnValue) == 0x000189, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_BooleanAND_ReturnValue_1) == 0x00018A, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_CreateObject_Object) == 0x000190, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_CreateObject_Object' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, Temp_int_Array_Index_Variable) == 0x000198, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Array_Get_Item) == 0x0001A0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000228, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetSkinOrRecipeData_Data) == 0x000230, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetSkinOrRecipeData_Data' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetGameInstance_ReturnValue) == 0x000078, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, Temp_int_Loop_Counter_Variable) == 0x000080, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_AsB_Game_Instance) == 0x000088, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Add_IntInt_ReturnValue) == 0x000094, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetGameInstance_ReturnValue_1) == 0x000098, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0000A0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetAllOwningRecipes_ReturnValue) == 0x0000B0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetAllOwningRecipes_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Array_Length_ReturnValue) == 0x0000C0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Less_IntInt_ReturnValue) == 0x0000C4, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetGameInstance_ReturnValue_2) == 0x0000C8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x0000D0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, K2Node_DynamicCast_bSuccess_2) == 0x0000D8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetRecipe_ReturnValue) == 0x0000E0, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetRecipe_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Not_PreBool_ReturnValue) == 0x000158, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetItemQuantity_ReturnValue) == 0x00015C, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000160, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Array_Length_ReturnValue_1) == 0x000164, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_BooleanAND_ReturnValue) == 0x000168, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Greater_IntInt_ReturnValue) == 0x000169, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_BooleanAND_ReturnValue_1) == 0x00016A, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_CreateObject_Object) == 0x000170, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, Temp_int_Array_Index_Variable) == 0x000178, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_Array_Get_Item) == 0x000180, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0001F8, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CraftingScreen_C_UpdateCraftTileView, CallFunc_GetSkinOrRecipeData_Data) == 0x000200, "Member 'WB_CraftingScreen_C_UpdateCraftTileView::CallFunc_GetSkinOrRecipeData_Data' has a wrong offset!");
 
 // Function WB_CraftingScreen.WB_CraftingScreen_C.UpdateMaterialListToInventoryManagerData
 // 0x0030 (0x0030 - 0x0000)
@@ -292,16 +292,16 @@ struct WB_CraftingScreen_C_UpdateMaterialListToInventoryManagerData final
 {
 public:
 	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_474F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_IngredientInfo_C*                   K2Node_DynamicCast_AsWB_Ingredient_Info;           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4750[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4751[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CraftingScreen_C_UpdateMaterialListToInventoryManagerData) == 0x000008, "Wrong alignment on WB_CraftingScreen_C_UpdateMaterialListToInventoryManagerData");

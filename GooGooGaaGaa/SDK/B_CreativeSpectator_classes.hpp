@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativeSpectator.B_CreativeSpectator_C
-// 0x0060 (0x04F0 - 0x0490)
+// 0x0060 (0x04E0 - 0x0480)
 class AB_CreativeSpectator_C final : public AB_Spectator_C
 {
 public:
-	uint8                                         Pad_3CF9[0x6];                                     // 0x0482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeSpectator_C;              // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       PlayerName;                                        // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       FollowCamera;                                      // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpringArmComponent*                    CameraBoom;                                        // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        TransformRange;                                    // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TargetProp;                                        // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_CreativePlayerController_C*          CreativePlayerController;                          // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 SmallTexture;                                      // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Filename;                                          // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	uint8                                         Pad_472[0x6];                                      // 0x0472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeSpectator_C;              // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneCaptureComponent2D*               SceneCaptureComponent2D;                           // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       PlayerName;                                        // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       FollowCamera;                                      // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpringArmComponent*                    CameraBoom;                                        // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        TransformRange;                                    // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetProp;                                        // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_CreativePlayerController_C*          CreativePlayerController;                          // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 SmallTexture;                                      // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Filename;                                          // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ClientPossessed(class APlayerController* PlayerController);
@@ -65,18 +65,18 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativeSpectator_C) == 0x000010, "Wrong alignment on AB_CreativeSpectator_C");
-static_assert(sizeof(AB_CreativeSpectator_C) == 0x0004F0, "Wrong size on AB_CreativeSpectator_C");
-static_assert(offsetof(AB_CreativeSpectator_C, UberGraphFrame_B_CreativeSpectator_C) == 0x000488, "Member 'AB_CreativeSpectator_C::UberGraphFrame_B_CreativeSpectator_C' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, SceneCaptureComponent2D) == 0x000490, "Member 'AB_CreativeSpectator_C::SceneCaptureComponent2D' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, PlayerName) == 0x000498, "Member 'AB_CreativeSpectator_C::PlayerName' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, FollowCamera) == 0x0004A0, "Member 'AB_CreativeSpectator_C::FollowCamera' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, CameraBoom) == 0x0004A8, "Member 'AB_CreativeSpectator_C::CameraBoom' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, SkeletalMesh) == 0x0004B0, "Member 'AB_CreativeSpectator_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, TransformRange) == 0x0004B8, "Member 'AB_CreativeSpectator_C::TransformRange' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, TargetProp) == 0x0004C0, "Member 'AB_CreativeSpectator_C::TargetProp' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, CreativePlayerController) == 0x0004C8, "Member 'AB_CreativeSpectator_C::CreativePlayerController' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, SmallTexture) == 0x0004D0, "Member 'AB_CreativeSpectator_C::SmallTexture' has a wrong offset!");
-static_assert(offsetof(AB_CreativeSpectator_C, Filename) == 0x0004D8, "Member 'AB_CreativeSpectator_C::Filename' has a wrong offset!");
+static_assert(sizeof(AB_CreativeSpectator_C) == 0x0004E0, "Wrong size on AB_CreativeSpectator_C");
+static_assert(offsetof(AB_CreativeSpectator_C, UberGraphFrame_B_CreativeSpectator_C) == 0x000478, "Member 'AB_CreativeSpectator_C::UberGraphFrame_B_CreativeSpectator_C' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, SceneCaptureComponent2D) == 0x000480, "Member 'AB_CreativeSpectator_C::SceneCaptureComponent2D' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, PlayerName) == 0x000488, "Member 'AB_CreativeSpectator_C::PlayerName' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, FollowCamera) == 0x000490, "Member 'AB_CreativeSpectator_C::FollowCamera' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, CameraBoom) == 0x000498, "Member 'AB_CreativeSpectator_C::CameraBoom' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, SkeletalMesh) == 0x0004A0, "Member 'AB_CreativeSpectator_C::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, TransformRange) == 0x0004A8, "Member 'AB_CreativeSpectator_C::TransformRange' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, TargetProp) == 0x0004B0, "Member 'AB_CreativeSpectator_C::TargetProp' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, CreativePlayerController) == 0x0004B8, "Member 'AB_CreativeSpectator_C::CreativePlayerController' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, SmallTexture) == 0x0004C0, "Member 'AB_CreativeSpectator_C::SmallTexture' has a wrong offset!");
+static_assert(offsetof(AB_CreativeSpectator_C, Filename) == 0x0004C8, "Member 'AB_CreativeSpectator_C::Filename' has a wrong offset!");
 
 }
 

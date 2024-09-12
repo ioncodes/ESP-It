@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EChatRelationship_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EChatRelationship_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 
 
@@ -20,54 +20,54 @@ namespace SDK::Params
 {
 
 // Function B_ChatManager.B_ChatManager_C.ChangeChatRelationship
-// 0x02A0 (0x02A0 - 0x0000)
+// 0x0260 (0x0260 - 0x0000)
 struct B_ChatManager_C_ChangeChatRelationship final
 {
 public:
 	class APlayerState*                           OtherPlayerState;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EChatRelationship                             ChatRelationship;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          New_Value;                                         // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBF[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RelationshipPosition;                              // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RelationshipBitmask;                               // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC0[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 UniqueNetId;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          NewValue;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EChatRelationship                             Relationship;                                      // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC1[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           OtherPlayer;                                       // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0038(0x0018)()
-	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0060(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00B0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00C8(0x0050)(HasGetValueTypeHash)
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0128(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0140(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_ClearBit_ReturnValue;                     // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SetBit_ReturnValue;                       // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0198(0x0020)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x01C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01D0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0220(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0230(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0248(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC2[0x3];                                     // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Temp_struct_Variable;                              // 0x025C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x026C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC3[0x2];                                     // 0x0282(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Map_Find_Value;                           // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC4[0x3];                                     // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x028C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0038(0x0010)()
+	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00A0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B0(0x0048)(HasGetValueTypeHash)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0108(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0118(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_ClearBit_ReturnValue;                     // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SetBit_ReturnValue;                       // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0168(0x0020)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01A0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01E8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x021C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x022C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_242[0x2];                                      // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Map_Find_Value;                           // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x3];                                      // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_Select_Default;                             // 0x024C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ChatManager_C_ChangeChatRelationship) == 0x000008, "Wrong alignment on B_ChatManager_C_ChangeChatRelationship");
-static_assert(sizeof(B_ChatManager_C_ChangeChatRelationship) == 0x0002A0, "Wrong size on B_ChatManager_C_ChangeChatRelationship");
+static_assert(sizeof(B_ChatManager_C_ChangeChatRelationship) == 0x000260, "Wrong size on B_ChatManager_C_ChangeChatRelationship");
 static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, OtherPlayerState) == 0x000000, "Member 'B_ChatManager_C_ChangeChatRelationship::OtherPlayerState' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, ChatRelationship) == 0x000008, "Member 'B_ChatManager_C_ChangeChatRelationship::ChatRelationship' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, New_Value) == 0x000009, "Member 'B_ChatManager_C_ChangeChatRelationship::New_Value' has a wrong offset!");
@@ -78,31 +78,31 @@ static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, NewValue) == 0x00
 static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Relationship) == 0x000029, "Member 'B_ChatManager_C_ChangeChatRelationship::Relationship' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, OtherPlayer) == 0x000030, "Member 'B_ChatManager_C_ChangeChatRelationship::OtherPlayer' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_BoolToText_ReturnValue) == 0x000038, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_BoolToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_GetPlayerName_ReturnValue) == 0x000050, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData) == 0x000060, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_StringToText_ReturnValue) == 0x0000B0, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000C8, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000118, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000128, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData_2) == 0x000140, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_ClearBit_ReturnValue) == 0x000190, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_ClearBit_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_SetBit_ReturnValue) == 0x000194, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_SetBit_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000198, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0001B8, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_UniqueNetIdToString_String) == 0x0001C0, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_UniqueNetIdToString_String' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001D0, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeArray_Array) == 0x000220, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Format_ReturnValue) == 0x000230, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_TextToString_ReturnValue) == 0x000248, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000258, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Temp_struct_Variable) == 0x00025C, "Member 'B_ChatManager_C_ChangeChatRelationship::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Temp_struct_Variable_1) == 0x00026C, "Member 'B_ChatManager_C_ChangeChatRelationship::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00027C, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_IsValid_ReturnValue) == 0x000280, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Temp_bool_Variable) == 0x000281, "Member 'B_ChatManager_C_ChangeChatRelationship::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Map_Find_Value) == 0x000284, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Map_Find_ReturnValue) == 0x000288, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_Select_Default) == 0x00028C, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_GetPlayerName_ReturnValue) == 0x000048, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_GetPlayerName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_StringToText_ReturnValue) == 0x0000A0, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B0, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x0000F8, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000108, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData_2) == 0x000118, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_ClearBit_ReturnValue) == 0x000160, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_ClearBit_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_SetBit_ReturnValue) == 0x000164, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_SetBit_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId) == 0x000168, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000188, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_UniqueNetIdToString_String) == 0x000190, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_UniqueNetIdToString_String' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001A0, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_MakeArray_Array) == 0x0001E8, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_TextToString_ReturnValue) == 0x000208, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000218, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Temp_struct_Variable) == 0x00021C, "Member 'B_ChatManager_C_ChangeChatRelationship::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Temp_struct_Variable_1) == 0x00022C, "Member 'B_ChatManager_C_ChangeChatRelationship::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00023C, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_IsValid_ReturnValue) == 0x000240, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, Temp_bool_Variable) == 0x000241, "Member 'B_ChatManager_C_ChangeChatRelationship::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Map_Find_Value) == 0x000244, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, CallFunc_Map_Find_ReturnValue) == 0x000248, "Member 'B_ChatManager_C_ChangeChatRelationship::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_ChangeChatRelationship, K2Node_Select_Default) == 0x00024C, "Member 'B_ChatManager_C_ChangeChatRelationship::K2Node_Select_Default' has a wrong offset!");
 
 // Function B_ChatManager.B_ChatManager_C.EnforcePTT_State
 // 0x0008 (0x0008 - 0x0000)
@@ -121,10 +121,10 @@ struct B_ChatManager_C_ExecuteUbergraph_B_ChatManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC6[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -132,7 +132,7 @@ public:
 	bool                                          K2Node_CustomEvent_bVoiceChatEnabled;              // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bIsTalking;                     // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC7[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           K2Node_CustomEvent_PlayerState_2;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           K2Node_CustomEvent_PlayerState_1;                  // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           K2Node_CustomEvent_PlayerState;                    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -244,17 +244,17 @@ struct B_ChatManager_C_InitPlayerRelationships final
 public:
 	class AB_PlayerState_C*                       CurrentPlayer;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FC9[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FCA[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FCB[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -278,18 +278,18 @@ struct B_ChatManager_C_IsPushToTalkKeyDown final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FCC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      PlayerPC;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FInputActionKeyMapping>         PTT_Bindings;                                      // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FCD[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionKeyMapping                 CallFunc_Array_Get_Item;                           // 0x0030(0x0028)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsInputKeyDown_ReturnValue;               // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FCE[0x2];                                     // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0070(0x0010)(ReferenceParm)
@@ -359,11 +359,11 @@ static_assert(offsetof(B_ChatManager_C_OnPushToTalkChanged_Event, bIsTalking) ==
 struct B_ChatManager_C_OnVoiceChatToggled final
 {
 public:
-	bool                                          Param_bVoiceChatEnabled;                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bVoiceChatEnabled_0;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ChatManager_C_OnVoiceChatToggled) == 0x000001, "Wrong alignment on B_ChatManager_C_OnVoiceChatToggled");
 static_assert(sizeof(B_ChatManager_C_OnVoiceChatToggled) == 0x000001, "Wrong size on B_ChatManager_C_OnVoiceChatToggled");
-static_assert(offsetof(B_ChatManager_C_OnVoiceChatToggled, Param_bVoiceChatEnabled) == 0x000000, "Member 'B_ChatManager_C_OnVoiceChatToggled::Param_bVoiceChatEnabled' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_OnVoiceChatToggled, bVoiceChatEnabled_0) == 0x000000, "Member 'B_ChatManager_C_OnVoiceChatToggled::bVoiceChatEnabled_0' has a wrong offset!");
 
 // Function B_ChatManager.B_ChatManager_C.ReceiveGameChat
 // 0x0050 (0x0050 - 0x0000)
@@ -372,13 +372,13 @@ struct B_ChatManager_C_ReceiveGameChat final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FCF[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0010(0x0020)()
 	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Map_Find_Value;                           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD0[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -401,13 +401,13 @@ struct B_ChatManager_C_ReceiveVoiceChat final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD1[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0010(0x0020)()
 	class FString                                 CallFunc_UniqueNetIdToString_String;               // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Map_Find_Value;                           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD2[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_And_IntInt_ReturnValue;                   // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -447,18 +447,18 @@ static_assert(offsetof(B_ChatManager_C_SetMyPlayerState, CallFunc_IsLocalPlayerC
 struct B_ChatManager_C_SetVoiceChatStatus final
 {
 public:
-	bool                                          Param_bVoiceChatEnabled;                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bVoiceChatEnabled_0;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0004(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0014(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD4[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0028(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ChatManager_C_SetVoiceChatStatus) == 0x000004, "Wrong alignment on B_ChatManager_C_SetVoiceChatStatus");
 static_assert(sizeof(B_ChatManager_C_SetVoiceChatStatus) == 0x000038, "Wrong size on B_ChatManager_C_SetVoiceChatStatus");
-static_assert(offsetof(B_ChatManager_C_SetVoiceChatStatus, Param_bVoiceChatEnabled) == 0x000000, "Member 'B_ChatManager_C_SetVoiceChatStatus::Param_bVoiceChatEnabled' has a wrong offset!");
+static_assert(offsetof(B_ChatManager_C_SetVoiceChatStatus, bVoiceChatEnabled_0) == 0x000000, "Member 'B_ChatManager_C_SetVoiceChatStatus::bVoiceChatEnabled_0' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_SetVoiceChatStatus, Temp_struct_Variable) == 0x000004, "Member 'B_ChatManager_C_SetVoiceChatStatus::Temp_struct_Variable' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_SetVoiceChatStatus, Temp_struct_Variable_1) == 0x000014, "Member 'B_ChatManager_C_SetVoiceChatStatus::Temp_struct_Variable_1' has a wrong offset!");
 static_assert(offsetof(B_ChatManager_C_SetVoiceChatStatus, Temp_bool_Variable) == 0x000024, "Member 'B_ChatManager_C_SetVoiceChatStatus::Temp_bool_Variable' has a wrong offset!");
@@ -473,7 +473,7 @@ public:
 	class APlayerState*                           MyPlayer;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           OtherPlayer;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD5[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -502,7 +502,7 @@ struct B_ChatManager_C_ToggleManualMute final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewManualMuteStatus;                               // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD6[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           OtherPlayerState;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -616,17 +616,17 @@ struct B_ChatManager_C_UpdateTeamVoiceStatus final
 public:
 	class AB_PlayerState_C*                       CurrentPlayer;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD7[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD8[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD9[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FDA[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -651,7 +651,7 @@ struct B_ChatManager_C_UpdateVoiceChatStatus final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ReceiveVoiceChat_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FDB[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         CallFunc_GetUniqueNetIDFromPlayerState_UniqueNetId; // 0x0010(0x0020)()
 	bool                                          CallFunc_MuteRemoteTalker_ReturnValue;             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UnMuteRemoteTalker_ReturnValue;           // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

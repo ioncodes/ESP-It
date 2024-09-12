@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -23,11 +23,11 @@ struct WB_MeetingStart_C_ExecuteUbergraph_WB_MeetingStart final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51C8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51C9[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -53,16 +53,16 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0110(0x00D0)()
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51CA[0x8];                                     // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x01F0(0x00D0)()
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51CB[0x7];                                     // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_1;      // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51CC[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E9[0x3];                                      // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 CallFunc_Array_Get_Item;                           // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FColor                                 CallFunc_Array_Get_Item_1;                         // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -93,17 +93,17 @@ static_assert(offsetof(WB_MeetingStart_C_Get_MeetingContextImage_Brush_0, CallFu
 static_assert(offsetof(WB_MeetingStart_C_Get_MeetingContextImage_Brush_0, CallFunc_IsValid_ReturnValue) == 0x000314, "Member 'WB_MeetingStart_C_Get_MeetingContextImage_Brush_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_MeetingStart.WB_MeetingStart_C.GetText_0
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_MeetingStart_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MeetingStart_C_GetText_0) == 0x000008, "Wrong alignment on WB_MeetingStart_C_GetText_0");
-static_assert(sizeof(WB_MeetingStart_C_GetText_0) == 0x000020, "Wrong size on WB_MeetingStart_C_GetText_0");
+static_assert(sizeof(WB_MeetingStart_C_GetText_0) == 0x000018, "Wrong size on WB_MeetingStart_C_GetText_0");
 static_assert(offsetof(WB_MeetingStart_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_MeetingStart_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MeetingStart_C_GetText_0, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'WB_MeetingStart_C_GetText_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MeetingStart_C_GetText_0, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WB_MeetingStart_C_GetText_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

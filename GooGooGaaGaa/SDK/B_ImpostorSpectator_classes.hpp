@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ImpostorSpectator.B_ImpostorSpectator_C
-// 0x0030 (0x04C0 - 0x0490)
+// 0x0030 (0x04B0 - 0x0480)
 class AB_ImpostorSpectator_C final : public AB_Spectator_C
 {
 public:
-	uint8                                         Pad_59BA[0x6];                                     // 0x0482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorSpectator_C;              // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_BaseSkill_C*                         PrimarySkill;                                      // 0x0490(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         ActionSkill;                                       // 0x0498(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          FireDown;                                          // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59BB[0x7];                                     // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        FireCooldown;                                      // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         SpecialUtilitySkill;                               // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_472[0x6];                                      // 0x0472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorSpectator_C;              // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_BaseSkill_C*                         PrimarySkill;                                      // 0x0480(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         ActionSkill;                                       // 0x0488(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          FireDown;                                          // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FireCooldown;                                      // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         SpecialUtilitySkill;                               // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ClientPossessed(class APlayerController* PlayerController);
@@ -56,13 +56,13 @@ public:
 	}
 };
 static_assert(alignof(AB_ImpostorSpectator_C) == 0x000010, "Wrong alignment on AB_ImpostorSpectator_C");
-static_assert(sizeof(AB_ImpostorSpectator_C) == 0x0004C0, "Wrong size on AB_ImpostorSpectator_C");
-static_assert(offsetof(AB_ImpostorSpectator_C, UberGraphFrame_B_ImpostorSpectator_C) == 0x000488, "Member 'AB_ImpostorSpectator_C::UberGraphFrame_B_ImpostorSpectator_C' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorSpectator_C, PrimarySkill) == 0x000490, "Member 'AB_ImpostorSpectator_C::PrimarySkill' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorSpectator_C, ActionSkill) == 0x000498, "Member 'AB_ImpostorSpectator_C::ActionSkill' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorSpectator_C, FireDown) == 0x0004A0, "Member 'AB_ImpostorSpectator_C::FireDown' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorSpectator_C, FireCooldown) == 0x0004A8, "Member 'AB_ImpostorSpectator_C::FireCooldown' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorSpectator_C, SpecialUtilitySkill) == 0x0004B0, "Member 'AB_ImpostorSpectator_C::SpecialUtilitySkill' has a wrong offset!");
+static_assert(sizeof(AB_ImpostorSpectator_C) == 0x0004B0, "Wrong size on AB_ImpostorSpectator_C");
+static_assert(offsetof(AB_ImpostorSpectator_C, UberGraphFrame_B_ImpostorSpectator_C) == 0x000478, "Member 'AB_ImpostorSpectator_C::UberGraphFrame_B_ImpostorSpectator_C' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorSpectator_C, PrimarySkill) == 0x000480, "Member 'AB_ImpostorSpectator_C::PrimarySkill' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorSpectator_C, ActionSkill) == 0x000488, "Member 'AB_ImpostorSpectator_C::ActionSkill' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorSpectator_C, FireDown) == 0x000490, "Member 'AB_ImpostorSpectator_C::FireDown' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorSpectator_C, FireCooldown) == 0x000498, "Member 'AB_ImpostorSpectator_C::FireCooldown' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorSpectator_C, SpecialUtilitySkill) == 0x0004A0, "Member 'AB_ImpostorSpectator_C::SpecialUtilitySkill' has a wrong offset!");
 
 }
 

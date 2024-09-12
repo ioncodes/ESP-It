@@ -271,46 +271,6 @@ bool UWB_SettingsTabs_C::GetShouldGoBackAfterAction()
 }
 
 
-// Function WB_SettingsTabs.WB_SettingsTabs_C.GetWidgetLeftToCurrent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWB_SettingsTabs_C::GetWidgetLeftToCurrent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SettingsTabs_C", "GetWidgetLeftToCurrent");
-
-	Params::WB_SettingsTabs_C_GetWidgetLeftToCurrent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WB_SettingsTabs.WB_SettingsTabs_C.GetWidgetRightToCurrent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UWB_SettingsTabs_C::GetWidgetRightToCurrent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SettingsTabs_C", "GetWidgetRightToCurrent");
-
-	Params::WB_SettingsTabs_C_GetWidgetRightToCurrent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WB_SettingsTabs.WB_SettingsTabs_C.InitControllerLayout
 // (BlueprintCallable, BlueprintEvent)
 
@@ -486,34 +446,6 @@ void UWB_SettingsTabs_C::StoreFocusedWidget()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_SettingsTabs_C", "StoreFocusedWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SettingsTabs.WB_SettingsTabs_C.TabLeft
-// (BlueprintCallable, BlueprintEvent)
-
-void UWB_SettingsTabs_C::TabLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SettingsTabs_C", "TabLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SettingsTabs.WB_SettingsTabs_C.TabRight
-// (BlueprintCallable, BlueprintEvent)
-
-void UWB_SettingsTabs_C::TabRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SettingsTabs_C", "TabRight");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

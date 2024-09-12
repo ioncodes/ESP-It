@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinHunterHatDefault.B_SkinHunterHatDefault_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x02B8 - 0x02B8)
 class AB_SkinHunterHatDefault_C final : public AB_SkinHunterHatBase_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinHunterHatDefault_C) == 0x000008, "Wrong alignment on AB_SkinHunterHatDefault_C");
-static_assert(sizeof(AB_SkinHunterHatDefault_C) == 0x0002C0, "Wrong size on AB_SkinHunterHatDefault_C");
+static_assert(sizeof(AB_SkinHunterHatDefault_C) == 0x0002B8, "Wrong size on AB_SkinHunterHatDefault_C");
 
 }
 

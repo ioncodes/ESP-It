@@ -163,6 +163,31 @@ void UWB_StartPopup_C::OnBack()
 }
 
 
+// Function WB_StartPopup.WB_StartPopup_C.OnPreviewKeyDown
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// struct FKeyEvent                        InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWB_StartPopup_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_StartPopup_C", "OnPreviewKeyDown");
+
+	Params::WB_StartPopup_C_OnPreviewKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_StartPopup.WB_StartPopup_C.OnSpecialAction
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -172,6 +197,20 @@ void UWB_StartPopup_C::OnSpecialAction()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_StartPopup_C", "OnSpecialAction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_StartPopup.WB_StartPopup_C.ShowDataPrivacy
+// (BlueprintCallable, BlueprintEvent)
+
+void UWB_StartPopup_C::ShowDataPrivacy()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_StartPopup_C", "ShowDataPrivacy");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

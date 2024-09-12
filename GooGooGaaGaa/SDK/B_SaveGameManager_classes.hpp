@@ -26,13 +26,13 @@ public:
 	class UB_MutedPlayersSave_C*                  MutedPlayersSave;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_SettingsSave_C*                      SettingsSave;                                      // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bLoadedAllSaveGames;                               // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49BC[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLoadedAllSaveGames;                              // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UB_NotificationSave_C*                  NotificationSave;                                  // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bMutedPlayersSaveLoaded;                           // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSettingsSaveLoaded;                               // 0x0069(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bNotificationsSaveLoaded;                          // 0x006A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49BD[0x5];                                     // 0x006B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B[0x5];                                       // 0x006B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_UserMessagesSave_C*                  UserMessagesSave;                                  // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bUserMessagesSaveLoaded;                           // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -42,10 +42,10 @@ public:
 	void CheckLoadingStatus();
 	void ExecuteUbergraph_B_SaveGameManager(int32 EntryPoint);
 	void InitAllSaveGames();
-	void OnMutedPlayersSaveLoaded(const class FString& Param_Name, bool bSuccess, class USaveGame* SaveGame);
-	void OnNotificationsSaveLoaded(const class FString& Param_Name, bool bSuccess, class USaveGame* SaveGame);
-	void OnSettingsSaveLoaded(const class FString& Param_Name, bool bSuccess, class USaveGame* SaveGame);
-	void OnUserMessagesSaveLoaded(const class FString& Param_Name, bool Success, class USaveGame* SaveGame);
+	void OnMutedPlayersSaveLoaded(const class FString& Name_0, bool bSuccess, class USaveGame* SaveGame);
+	void OnNotificationsSaveLoaded(const class FString& Name_0, bool bSuccess, class USaveGame* SaveGame);
+	void OnSettingsSaveLoaded(const class FString& Name_0, bool bSuccess, class USaveGame* SaveGame);
+	void OnUserMessagesSaveLoaded(const class FString& Name_0, bool Success, class USaveGame* SaveGame);
 	void SyncLoadAll();
 
 public:

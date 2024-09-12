@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -54,13 +54,13 @@ struct BP_PressurePlateSwitch_C_ExecuteUbergraph_BP_PressurePlateSwitch final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AC1[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TestSwitchActivationCondition_Activate;   // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AC2[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PressurePlateSwitch_C_ExecuteUbergraph_BP_PressurePlateSwitch) == 0x000008, "Wrong alignment on BP_PressurePlateSwitch_C_ExecuteUbergraph_BP_PressurePlateSwitch");
@@ -75,20 +75,20 @@ static_assert(offsetof(BP_PressurePlateSwitch_C_ExecuteUbergraph_BP_PressurePlat
 static_assert(offsetof(BP_PressurePlateSwitch_C_ExecuteUbergraph_BP_PressurePlateSwitch, CallFunc_Delay_Duration_ImplicitCast) == 0x000028, "Member 'BP_PressurePlateSwitch_C_ExecuteUbergraph_BP_PressurePlateSwitch::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
 
 // Function BP_PressurePlateSwitch.BP_PressurePlateSwitch_C.PushButton
-// 0x0120 (0x0120 - 0x0000)
+// 0x0130 (0x0130 - 0x0000)
 struct BP_PressurePlateSwitch_C_PushButton final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AC3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector_X;                            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0038(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0038(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(BP_PressurePlateSwitch_C_PushButton) == 0x000008, "Wrong alignment on BP_PressurePlateSwitch_C_PushButton");
-static_assert(sizeof(BP_PressurePlateSwitch_C_PushButton) == 0x000120, "Wrong size on BP_PressurePlateSwitch_C_PushButton");
+static_assert(sizeof(BP_PressurePlateSwitch_C_PushButton) == 0x000130, "Wrong size on BP_PressurePlateSwitch_C_PushButton");
 static_assert(offsetof(BP_PressurePlateSwitch_C_PushButton, CallFunc_HasAuthority_ReturnValue) == 0x000000, "Member 'BP_PressurePlateSwitch_C_PushButton::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PressurePlateSwitch_C_PushButton, CallFunc_BreakVector_X) == 0x000008, "Member 'BP_PressurePlateSwitch_C_PushButton::CallFunc_BreakVector_X' has a wrong offset!");
 static_assert(offsetof(BP_PressurePlateSwitch_C_PushButton, CallFunc_BreakVector_Y) == 0x000010, "Member 'BP_PressurePlateSwitch_C_PushButton::CallFunc_BreakVector_Y' has a wrong offset!");
@@ -97,7 +97,7 @@ static_assert(offsetof(BP_PressurePlateSwitch_C_PushButton, CallFunc_MakeVector_
 static_assert(offsetof(BP_PressurePlateSwitch_C_PushButton, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000038, "Member 'BP_PressurePlateSwitch_C_PushButton::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
 
 // Function BP_PressurePlateSwitch.BP_PressurePlateSwitch_C.ResetButton
-// 0x0118 (0x0118 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct BP_PressurePlateSwitch_C_ResetButton final
 {
 public:
@@ -105,10 +105,10 @@ public:
 	double                                        CallFunc_BreakVector_Y;                            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0030(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0030(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(BP_PressurePlateSwitch_C_ResetButton) == 0x000008, "Wrong alignment on BP_PressurePlateSwitch_C_ResetButton");
-static_assert(sizeof(BP_PressurePlateSwitch_C_ResetButton) == 0x000118, "Wrong size on BP_PressurePlateSwitch_C_ResetButton");
+static_assert(sizeof(BP_PressurePlateSwitch_C_ResetButton) == 0x000128, "Wrong size on BP_PressurePlateSwitch_C_ResetButton");
 static_assert(offsetof(BP_PressurePlateSwitch_C_ResetButton, CallFunc_BreakVector_X) == 0x000000, "Member 'BP_PressurePlateSwitch_C_ResetButton::CallFunc_BreakVector_X' has a wrong offset!");
 static_assert(offsetof(BP_PressurePlateSwitch_C_ResetButton, CallFunc_BreakVector_Y) == 0x000008, "Member 'BP_PressurePlateSwitch_C_ResetButton::CallFunc_BreakVector_Y' has a wrong offset!");
 static_assert(offsetof(BP_PressurePlateSwitch_C_ResetButton, CallFunc_BreakVector_Z) == 0x000010, "Member 'BP_PressurePlateSwitch_C_ResetButton::CallFunc_BreakVector_Z' has a wrong offset!");

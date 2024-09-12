@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
 #include "AnimationSharing_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -44,17 +44,17 @@ static_assert(sizeof(UAnimationSharingStateProcessor) == 0x000050, "Wrong size o
 static_assert(offsetof(UAnimationSharingStateProcessor, AnimationStateEnum) == 0x000028, "Member 'UAnimationSharingStateProcessor::AnimationStateEnum' has a wrong offset!");
 
 // Class AnimationSharing.AnimSharingStateInstance
-// 0x0020 (0x0370 - 0x0350)
+// 0x0020 (0x0390 - 0x0370)
 class UAnimSharingStateInstance final : public UAnimInstance
 {
 public:
-	class UAnimSequence*                          AnimationToPlay;                                   // 0x0348(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PermutationTimeOffset;                             // 0x0350(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlayRate;                                          // 0x0354(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bStateBool;                                        // 0x0358(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E03[0x7];                                     // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSharingInstance*                   Instance;                                          // 0x0360(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E04[0x8];                                     // 0x0368(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          AnimationToPlay;                                   // 0x0368(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PermutationTimeOffset;                             // 0x0370(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlayRate;                                          // 0x0374(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bStateBool;                                        // 0x0378(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSharingInstance*                   Instance;                                          // 0x0380(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void GetInstancedActors(TArray<class AActor*>* Actors);
@@ -70,23 +70,23 @@ public:
 	}
 };
 static_assert(alignof(UAnimSharingStateInstance) == 0x000010, "Wrong alignment on UAnimSharingStateInstance");
-static_assert(sizeof(UAnimSharingStateInstance) == 0x000370, "Wrong size on UAnimSharingStateInstance");
-static_assert(offsetof(UAnimSharingStateInstance, AnimationToPlay) == 0x000348, "Member 'UAnimSharingStateInstance::AnimationToPlay' has a wrong offset!");
-static_assert(offsetof(UAnimSharingStateInstance, PermutationTimeOffset) == 0x000350, "Member 'UAnimSharingStateInstance::PermutationTimeOffset' has a wrong offset!");
-static_assert(offsetof(UAnimSharingStateInstance, PlayRate) == 0x000354, "Member 'UAnimSharingStateInstance::PlayRate' has a wrong offset!");
-static_assert(offsetof(UAnimSharingStateInstance, bStateBool) == 0x000358, "Member 'UAnimSharingStateInstance::bStateBool' has a wrong offset!");
-static_assert(offsetof(UAnimSharingStateInstance, Instance) == 0x000360, "Member 'UAnimSharingStateInstance::Instance' has a wrong offset!");
+static_assert(sizeof(UAnimSharingStateInstance) == 0x000390, "Wrong size on UAnimSharingStateInstance");
+static_assert(offsetof(UAnimSharingStateInstance, AnimationToPlay) == 0x000368, "Member 'UAnimSharingStateInstance::AnimationToPlay' has a wrong offset!");
+static_assert(offsetof(UAnimSharingStateInstance, PermutationTimeOffset) == 0x000370, "Member 'UAnimSharingStateInstance::PermutationTimeOffset' has a wrong offset!");
+static_assert(offsetof(UAnimSharingStateInstance, PlayRate) == 0x000374, "Member 'UAnimSharingStateInstance::PlayRate' has a wrong offset!");
+static_assert(offsetof(UAnimSharingStateInstance, bStateBool) == 0x000378, "Member 'UAnimSharingStateInstance::bStateBool' has a wrong offset!");
+static_assert(offsetof(UAnimSharingStateInstance, Instance) == 0x000380, "Member 'UAnimSharingStateInstance::Instance' has a wrong offset!");
 
 // Class AnimationSharing.AnimSharingTransitionInstance
-// 0x0010 (0x0360 - 0x0350)
+// 0x0010 (0x0380 - 0x0370)
 class UAnimSharingTransitionInstance final : public UAnimInstance
 {
 public:
-	TWeakObjectPtr<class USkeletalMeshComponent>  FromComponent;                                     // 0x0348(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TWeakObjectPtr<class USkeletalMeshComponent>  ToComponent;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BlendTime;                                         // 0x0358(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bBlendBool;                                        // 0x035C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E05[0x3];                                     // 0x035D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class USkeletalMeshComponent>  FromComponent;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class USkeletalMeshComponent>  ToComponent;                                       // 0x0370(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BlendTime;                                         // 0x0378(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bBlendBool;                                        // 0x037C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_37D[0x3];                                      // 0x037D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -99,22 +99,22 @@ public:
 	}
 };
 static_assert(alignof(UAnimSharingTransitionInstance) == 0x000010, "Wrong alignment on UAnimSharingTransitionInstance");
-static_assert(sizeof(UAnimSharingTransitionInstance) == 0x000360, "Wrong size on UAnimSharingTransitionInstance");
-static_assert(offsetof(UAnimSharingTransitionInstance, FromComponent) == 0x000348, "Member 'UAnimSharingTransitionInstance::FromComponent' has a wrong offset!");
-static_assert(offsetof(UAnimSharingTransitionInstance, ToComponent) == 0x000350, "Member 'UAnimSharingTransitionInstance::ToComponent' has a wrong offset!");
-static_assert(offsetof(UAnimSharingTransitionInstance, BlendTime) == 0x000358, "Member 'UAnimSharingTransitionInstance::BlendTime' has a wrong offset!");
-static_assert(offsetof(UAnimSharingTransitionInstance, bBlendBool) == 0x00035C, "Member 'UAnimSharingTransitionInstance::bBlendBool' has a wrong offset!");
+static_assert(sizeof(UAnimSharingTransitionInstance) == 0x000380, "Wrong size on UAnimSharingTransitionInstance");
+static_assert(offsetof(UAnimSharingTransitionInstance, FromComponent) == 0x000368, "Member 'UAnimSharingTransitionInstance::FromComponent' has a wrong offset!");
+static_assert(offsetof(UAnimSharingTransitionInstance, ToComponent) == 0x000370, "Member 'UAnimSharingTransitionInstance::ToComponent' has a wrong offset!");
+static_assert(offsetof(UAnimSharingTransitionInstance, BlendTime) == 0x000378, "Member 'UAnimSharingTransitionInstance::BlendTime' has a wrong offset!");
+static_assert(offsetof(UAnimSharingTransitionInstance, bBlendBool) == 0x00037C, "Member 'UAnimSharingTransitionInstance::bBlendBool' has a wrong offset!");
 
 // Class AnimationSharing.AnimSharingAdditiveInstance
-// 0x0010 (0x0360 - 0x0350)
+// 0x0010 (0x0380 - 0x0370)
 class UAnimSharingAdditiveInstance final : public UAnimInstance
 {
 public:
-	TWeakObjectPtr<class USkeletalMeshComponent>  BaseComponent;                                     // 0x0348(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TWeakObjectPtr<class UAnimSequence>           AdditiveAnimation;                                 // 0x0350(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Alpha;                                             // 0x0358(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bStateBool;                                        // 0x035C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E06[0x3];                                     // 0x035D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class USkeletalMeshComponent>  BaseComponent;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class UAnimSequence>           AdditiveAnimation;                                 // 0x0370(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Alpha;                                             // 0x0378(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bStateBool;                                        // 0x037C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_37D[0x3];                                      // 0x037D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -127,11 +127,11 @@ public:
 	}
 };
 static_assert(alignof(UAnimSharingAdditiveInstance) == 0x000010, "Wrong alignment on UAnimSharingAdditiveInstance");
-static_assert(sizeof(UAnimSharingAdditiveInstance) == 0x000360, "Wrong size on UAnimSharingAdditiveInstance");
-static_assert(offsetof(UAnimSharingAdditiveInstance, BaseComponent) == 0x000348, "Member 'UAnimSharingAdditiveInstance::BaseComponent' has a wrong offset!");
-static_assert(offsetof(UAnimSharingAdditiveInstance, AdditiveAnimation) == 0x000350, "Member 'UAnimSharingAdditiveInstance::AdditiveAnimation' has a wrong offset!");
-static_assert(offsetof(UAnimSharingAdditiveInstance, Alpha) == 0x000358, "Member 'UAnimSharingAdditiveInstance::Alpha' has a wrong offset!");
-static_assert(offsetof(UAnimSharingAdditiveInstance, bStateBool) == 0x00035C, "Member 'UAnimSharingAdditiveInstance::bStateBool' has a wrong offset!");
+static_assert(sizeof(UAnimSharingAdditiveInstance) == 0x000380, "Wrong size on UAnimSharingAdditiveInstance");
+static_assert(offsetof(UAnimSharingAdditiveInstance, BaseComponent) == 0x000368, "Member 'UAnimSharingAdditiveInstance::BaseComponent' has a wrong offset!");
+static_assert(offsetof(UAnimSharingAdditiveInstance, AdditiveAnimation) == 0x000370, "Member 'UAnimSharingAdditiveInstance::AdditiveAnimation' has a wrong offset!");
+static_assert(offsetof(UAnimSharingAdditiveInstance, Alpha) == 0x000378, "Member 'UAnimSharingAdditiveInstance::Alpha' has a wrong offset!");
+static_assert(offsetof(UAnimSharingAdditiveInstance, bStateBool) == 0x00037C, "Member 'UAnimSharingAdditiveInstance::bStateBool' has a wrong offset!");
 
 // Class AnimationSharing.AnimSharingInstance
 // 0x00F8 (0x0120 - 0x0028)
@@ -139,14 +139,14 @@ class UAnimSharingInstance final : public UObject
 {
 public:
 	TArray<class AActor*>                         RegisteredActors;                                  // 0x0028(0x0010)(Edit, ZeroConstructor, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E07[0x50];                                    // 0x0038(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x50];                                      // 0x0038(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimationSharingStateProcessor*        StateProcessor;                                    // 0x0088(0x0008)(Edit, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E08[0x38];                                    // 0x0090(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x38];                                      // 0x0090(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAnimSequence*>                  UsedAnimationSequences;                            // 0x00C8(0x0010)(Edit, ZeroConstructor, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E09[0x10];                                    // 0x00D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D8[0x10];                                      // 0x00D8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UEnum*                                  StateEnum;                                         // 0x00E8(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 SharingActor;                                      // 0x00F0(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E0A[0x28];                                    // 0x00F8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F8[0x28];                                      // 0x00F8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -173,7 +173,7 @@ class UAnimationSharingManager final : public UObject
 public:
 	TArray<class USkeleton*>                      Skeletons;                                         // 0x0028(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TArray<class UAnimSharingInstance*>           PerSkeletonData;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Transient, EditConst, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E0B[0x40];                                    // 0x0048(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x40];                                      // 0x0048(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool AnimationSharingEnabled();

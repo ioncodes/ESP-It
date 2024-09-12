@@ -10,63 +10,63 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "SClientItemUnlock_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_DropReward.WB_DropReward_C.ExecuteUbergraph_WB_DropReward
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct WB_DropReward_C_ExecuteUbergraph_WB_DropReward final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetCurrentPercentValue_Percent;           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C6[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C7[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C8[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35C9[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_NoValueGranted;                 // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35CA[0x6];                                     // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_DropExpProgressionCounter_C*         CallFunc_CreateObject_Object;                      // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35CB[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00F0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0140(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0150(0x0018)()
-	struct FSClientItemUnlock                     CallFunc_Array_Get_Item;                           // 0x0168(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35CC[0x3];                                     // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35CD[0x3];                                     // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x018C(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0048)(HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_NoValueGranted;                 // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_DropExpProgressionCounter_C*         CallFunc_CreateObject_Object;                      // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0140(0x0010)()
+	struct FSClientItemUnlock                     CallFunc_Array_Get_Item;                           // 0x0150(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0174(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward) == 0x000008, "Wrong alignment on WB_DropReward_C_ExecuteUbergraph_WB_DropReward");
-static_assert(sizeof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward) == 0x0001D0, "Wrong size on WB_DropReward_C_ExecuteUbergraph_WB_DropReward");
+static_assert(sizeof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward) == 0x0001B8, "Wrong size on WB_DropReward_C_ExecuteUbergraph_WB_DropReward");
 static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, EntryPoint) == 0x000000, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000008, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetCurrentPercentValue_Percent) == 0x000010, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetCurrentPercentValue_Percent' has a wrong offset!");
@@ -74,31 +74,31 @@ static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_
 static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000020, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_PlayAnimation_ReturnValue) == 0x000028, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Not_PreBool_ReturnValue) == 0x000080, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000088, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetOwningPlayer_ReturnValue) == 0x000090, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000098, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_AsB_Player_State) == 0x0000A0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetGameInstance_ReturnValue) == 0x0000B0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000B8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_bSuccess_1) == 0x0000C0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_CustomEvent_NoValueGranted) == 0x0000C1, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_CustomEvent_NoValueGranted' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_CreateObject_Object) == 0x0000C8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_CreateObject_Object' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Greater_IntInt_ReturnValue) == 0x0000D0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000D8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0000E0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0000E8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000F0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_MakeArray_Array) == 0x000140, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Format_ReturnValue) == 0x000150, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Array_Get_Item) == 0x000168, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Not_PreBool_ReturnValue_1) == 0x000180, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Array_Length_ReturnValue) == 0x000184, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000188, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_Event_MyGeometry) == 0x00018C, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_Event_InDeltaTime) == 0x0001C4, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001C8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Not_PreBool_ReturnValue) == 0x000078, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000080, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetOwningPlayer_ReturnValue) == 0x000088, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000090, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_AsB_Player_State) == 0x000098, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_GetGameInstance_ReturnValue) == 0x0000A8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000B0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_CustomEvent_NoValueGranted) == 0x0000B9, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_CustomEvent_NoValueGranted' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_CreateObject_Object) == 0x0000C0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Greater_IntInt_ReturnValue) == 0x0000C8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000D0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0000D8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0000E0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E8, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_MakeArray_Array) == 0x000130, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Format_ReturnValue) == 0x000140, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Array_Get_Item) == 0x000150, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Not_PreBool_ReturnValue_1) == 0x000168, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Array_Length_ReturnValue) == 0x00016C, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000170, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_Event_MyGeometry) == 0x000174, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, K2Node_Event_InDeltaTime) == 0x0001AC, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_ExecuteUbergraph_WB_DropReward, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0001B0, "Member 'WB_DropReward_C_ExecuteUbergraph_WB_DropReward::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 // Function WB_DropReward.WB_DropReward_C.GrantFinished
 // 0x0001 (0x0001 - 0x0000)
@@ -116,11 +116,11 @@ static_assert(offsetof(WB_DropReward_C_GrantFinished, NoValueGranted) == 0x00000
 struct WB_DropReward_C_InitializeByPlayerState final
 {
 public:
-	class AB_PlayerState_C*                       Param_PlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DropReward_C_InitializeByPlayerState) == 0x000008, "Wrong alignment on WB_DropReward_C_InitializeByPlayerState");
 static_assert(sizeof(WB_DropReward_C_InitializeByPlayerState) == 0x000008, "Wrong size on WB_DropReward_C_InitializeByPlayerState");
-static_assert(offsetof(WB_DropReward_C_InitializeByPlayerState, Param_PlayerState) == 0x000000, "Member 'WB_DropReward_C_InitializeByPlayerState::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(WB_DropReward_C_InitializeByPlayerState, PlayerState_0) == 0x000000, "Member 'WB_DropReward_C_InitializeByPlayerState::PlayerState_0' has a wrong offset!");
 
 // Function WB_DropReward.WB_DropReward_C.InitializeValues
 // 0x0030 (0x0030 - 0x0000)

@@ -18,44 +18,44 @@ namespace SDK::Params
 {
 
 // Function WB_AnnouncementArea.WB_AnnouncementArea_C.DetermineLastWitchText
-// 0x0120 (0x0120 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct WB_AnnouncementArea_C_DetermineLastWitchText final
 {
 public:
 	class FString                                 WitchName;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   Temp_text_Variable;                                // 0x0028(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0040(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0050)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D8C[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C8(0x0018)()
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D8D[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D8E[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0108(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0010)()
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x00E0(0x0010)()
 };
 static_assert(alignof(WB_AnnouncementArea_C_DetermineLastWitchText) == 0x000008, "Wrong alignment on WB_AnnouncementArea_C_DetermineLastWitchText");
-static_assert(sizeof(WB_AnnouncementArea_C_DetermineLastWitchText) == 0x000120, "Wrong size on WB_AnnouncementArea_C_DetermineLastWitchText");
+static_assert(sizeof(WB_AnnouncementArea_C_DetermineLastWitchText) == 0x0000F0, "Wrong size on WB_AnnouncementArea_C_DetermineLastWitchText");
 static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, WitchName) == 0x000000, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::WitchName' has a wrong offset!");
 static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, ReturnValue) == 0x000010, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, Temp_text_Variable) == 0x000028, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_Conv_StringToText_ReturnValue) == 0x000040, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, Temp_bool_Variable) == 0x0000A8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_MakeArray_Array) == 0x0000B0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_GetOwningPlayer_ReturnValue) == 0x0000C0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_Format_ReturnValue) == 0x0000C8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_DynamicCast_AsB_Player_State) == 0x0000E0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_DynamicCast_bSuccess) == 0x0000E8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_GetPlayerOrBotName_Name) == 0x0000F0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000100, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_Select_Default) == 0x000108, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, Temp_text_Variable) == 0x000020, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, Temp_bool_Variable) == 0x000088, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_MakeArray_Array) == 0x000090, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_GetOwningPlayer_ReturnValue) == 0x0000A0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_DynamicCast_AsB_Player_State) == 0x0000B8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_DynamicCast_bSuccess) == 0x0000C0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_GetPlayerOrBotName_Name) == 0x0000C8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x0000D8, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_DetermineLastWitchText, K2Node_Select_Default) == 0x0000E0, "Member 'WB_AnnouncementArea_C_DetermineLastWitchText::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_AnnouncementArea.WB_AnnouncementArea_C.EVENT_OnAnnouncementAnimationFinished
 // 0x0010 (0x0010 - 0x0000)
@@ -63,7 +63,7 @@ struct WB_AnnouncementArea_C_EVENT_OnAnnouncementAnimationFinished final
 {
 public:
 	bool                                          CallFunc_IsAnAnnouncementQueued_ReturnValue;       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D8F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_AnnouncementEntry_C*                CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AnnouncementArea_C_EVENT_OnAnnouncementAnimationFinished) == 0x000008, "Wrong alignment on WB_AnnouncementArea_C_EVENT_OnAnnouncementAnimationFinished");
@@ -77,7 +77,7 @@ struct WB_AnnouncementArea_C_GetMyTeam final
 {
 public:
 	ETeamID                                       Team;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D90[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -90,23 +90,23 @@ static_assert(offsetof(WB_AnnouncementArea_C_GetMyTeam, K2Node_DynamicCast_AsB_P
 static_assert(offsetof(WB_AnnouncementArea_C_GetMyTeam, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_AnnouncementArea_C_GetMyTeam::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_AnnouncementArea.WB_AnnouncementArea_C.HandleLastWitchAnnouncement
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_AnnouncementArea_C_HandleLastWitchAnnouncement final
 {
 public:
 	class FString                                 WitchName;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UWB_AnnouncementEntry_C*                AnnouncementToShow;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_AnnouncementEntry_C*                CallFunc_Create_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_DetermineLastWitchText_ReturnValue;       // 0x0020(0x0018)()
-	bool                                          CallFunc_IsAnAnnouncementShown_ReturnValue;        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_DetermineLastWitchText_ReturnValue;       // 0x0020(0x0010)()
+	bool                                          CallFunc_IsAnAnnouncementShown_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement) == 0x000008, "Wrong alignment on WB_AnnouncementArea_C_HandleLastWitchAnnouncement");
-static_assert(sizeof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement) == 0x000040, "Wrong size on WB_AnnouncementArea_C_HandleLastWitchAnnouncement");
+static_assert(sizeof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement) == 0x000038, "Wrong size on WB_AnnouncementArea_C_HandleLastWitchAnnouncement");
 static_assert(offsetof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement, WitchName) == 0x000000, "Member 'WB_AnnouncementArea_C_HandleLastWitchAnnouncement::WitchName' has a wrong offset!");
 static_assert(offsetof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement, AnnouncementToShow) == 0x000010, "Member 'WB_AnnouncementArea_C_HandleLastWitchAnnouncement::AnnouncementToShow' has a wrong offset!");
 static_assert(offsetof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement, CallFunc_Create_ReturnValue) == 0x000018, "Member 'WB_AnnouncementArea_C_HandleLastWitchAnnouncement::CallFunc_Create_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement, CallFunc_DetermineLastWitchText_ReturnValue) == 0x000020, "Member 'WB_AnnouncementArea_C_HandleLastWitchAnnouncement::CallFunc_DetermineLastWitchText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement, CallFunc_IsAnAnnouncementShown_ReturnValue) == 0x000038, "Member 'WB_AnnouncementArea_C_HandleLastWitchAnnouncement::CallFunc_IsAnAnnouncementShown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AnnouncementArea_C_HandleLastWitchAnnouncement, CallFunc_IsAnAnnouncementShown_ReturnValue) == 0x000030, "Member 'WB_AnnouncementArea_C_HandleLastWitchAnnouncement::CallFunc_IsAnAnnouncementShown_ReturnValue' has a wrong offset!");
 
 // Function WB_AnnouncementArea.WB_AnnouncementArea_C.IsAnAnnouncementQueued
 // 0x000C (0x000C - 0x0000)
@@ -114,7 +114,7 @@ struct WB_AnnouncementArea_C_IsAnAnnouncementQueued final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D91[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -130,7 +130,7 @@ struct WB_AnnouncementArea_C_IsAnAnnouncementShown final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D92[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

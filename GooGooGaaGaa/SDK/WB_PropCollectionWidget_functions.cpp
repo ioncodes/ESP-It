@@ -128,9 +128,9 @@ void UWB_PropCollectionWidget_C::OnBack()
 // Function WB_PropCollectionWidget.WB_PropCollectionWidget_C.UpdateSelectedCategoryButton
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Param_SelectedCategoryButton                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          SelectedCategoryButton_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropCollectionWidget_C::UpdateSelectedCategoryButton(class UObject* Param_SelectedCategoryButton)
+void UWB_PropCollectionWidget_C::UpdateSelectedCategoryButton(class UObject* SelectedCategoryButton_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -139,7 +139,7 @@ void UWB_PropCollectionWidget_C::UpdateSelectedCategoryButton(class UObject* Par
 
 	Params::WB_PropCollectionWidget_C_UpdateSelectedCategoryButton Parms{};
 
-	Parms.Param_SelectedCategoryButton = Param_SelectedCategoryButton;
+	Parms.SelectedCategoryButton_0 = SelectedCategoryButton_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

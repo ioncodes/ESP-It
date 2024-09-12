@@ -713,9 +713,9 @@ class FText UWB_ServerList_C::GetStatusMessage()
 // Function WB_ServerList.WB_ServerList_C.GetStatusMessageVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ESlateVisibility                        Param_Visibility                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESlateVisibility                        Visibility_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ServerList_C::GetStatusMessageVisibility(ESlateVisibility* Param_Visibility)
+void UWB_ServerList_C::GetStatusMessageVisibility(ESlateVisibility* Visibility_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -726,8 +726,8 @@ void UWB_ServerList_C::GetStatusMessageVisibility(ESlateVisibility* Param_Visibi
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Visibility != nullptr)
-		*Param_Visibility = Parms.Param_Visibility;
+	if (Visibility_0 != nullptr)
+		*Visibility_0 = Parms.Visibility_0;
 }
 
 

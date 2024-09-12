@@ -94,9 +94,9 @@ void AB_CreativeWitch_C::ReceiveUnpossessed(class AController* OldController)
 // Function B_CreativeWitch.B_CreativeWitch_C.SetProp
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PropPawnPhysics_C*             Param_SpawnedProp                                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PropPawnPhysics_C*             SpawnedProp_0                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_CreativeWitch_C::SetProp(class AB_PropPawnPhysics_C** Param_SpawnedProp)
+void AB_CreativeWitch_C::SetProp(class AB_PropPawnPhysics_C** SpawnedProp_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -107,8 +107,8 @@ void AB_CreativeWitch_C::SetProp(class AB_PropPawnPhysics_C** Param_SpawnedProp)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_SpawnedProp != nullptr)
-		*Param_SpawnedProp = Parms.Param_SpawnedProp;
+	if (SpawnedProp_0 != nullptr)
+		*SpawnedProp_0 = Parms.SpawnedProp_0;
 }
 
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -30,26 +30,26 @@ static_assert(sizeof(B_Sunshade_C_ActivateActionProp) == 0x000001, "Wrong size o
 static_assert(offsetof(B_Sunshade_C_ActivateActionProp, Override) == 0x000000, "Member 'B_Sunshade_C_ActivateActionProp::Override' has a wrong offset!");
 
 // Function B_Sunshade.B_Sunshade_C.ExecuteUbergraph_B_Sunshade
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct B_Sunshade_C_ExecuteUbergraph_B_Sunshade final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC7[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_TInterpTo_ReturnValue;                    // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00D0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	EHighlightChannel                             K2Node_Event_Channel;                              // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00D0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	EHighlightChannel                             K2Node_Event_Channel;                              // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade) == 0x000010, "Wrong alignment on B_Sunshade_C_ExecuteUbergraph_B_Sunshade");
-static_assert(sizeof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade) == 0x0001C0, "Wrong size on B_Sunshade_C_ExecuteUbergraph_B_Sunshade");
+static_assert(sizeof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade) == 0x0001D0, "Wrong size on B_Sunshade_C_ExecuteUbergraph_B_Sunshade");
 static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, EntryPoint) == 0x000000, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, CallFunc_GetRelativeTransform_ReturnValue) == 0x000010, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, CallFunc_TInterpTo_ReturnValue) == 0x000070, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::CallFunc_TInterpTo_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x0000D0, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, K2Node_Event_Channel) == 0x0001B8, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::K2Node_Event_Channel' has a wrong offset!");
+static_assert(offsetof(B_Sunshade_C_ExecuteUbergraph_B_Sunshade, K2Node_Event_Channel) == 0x0001C8, "Member 'B_Sunshade_C_ExecuteUbergraph_B_Sunshade::K2Node_Event_Channel' has a wrong offset!");
 
 // Function B_Sunshade.B_Sunshade_C.GetRippleEffect
 // 0x0008 (0x0008 - 0x0000)
@@ -74,17 +74,17 @@ static_assert(sizeof(B_Sunshade_C_GetVisualInterpolators) == 0x000010, "Wrong si
 static_assert(offsetof(B_Sunshade_C_GetVisualInterpolators, VisualInterpolators) == 0x000000, "Member 'B_Sunshade_C_GetVisualInterpolators::VisualInterpolators' has a wrong offset!");
 
 // Function B_Sunshade.B_Sunshade_C.InitializeActionProp
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01F0 (0x01F0 - 0x0000)
 struct B_Sunshade_C_InitializeActionProp final
 {
 public:
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0000(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult_1; // 0x00E8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0000(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult_1; // 0x00F8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_Sunshade_C_InitializeActionProp) == 0x000008, "Wrong alignment on B_Sunshade_C_InitializeActionProp");
-static_assert(sizeof(B_Sunshade_C_InitializeActionProp) == 0x0001D0, "Wrong size on B_Sunshade_C_InitializeActionProp");
+static_assert(sizeof(B_Sunshade_C_InitializeActionProp) == 0x0001F0, "Wrong size on B_Sunshade_C_InitializeActionProp");
 static_assert(offsetof(B_Sunshade_C_InitializeActionProp, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000000, "Member 'B_Sunshade_C_InitializeActionProp::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Sunshade_C_InitializeActionProp, CallFunc_K2_SetRelativeTransform_SweepHitResult_1) == 0x0000E8, "Member 'B_Sunshade_C_InitializeActionProp::CallFunc_K2_SetRelativeTransform_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(B_Sunshade_C_InitializeActionProp, CallFunc_K2_SetRelativeTransform_SweepHitResult_1) == 0x0000F8, "Member 'B_Sunshade_C_InitializeActionProp::CallFunc_K2_SetRelativeTransform_SweepHitResult_1' has a wrong offset!");
 
 // Function B_Sunshade.B_Sunshade_C.Jump
 // 0x0003 (0x0003 - 0x0000)

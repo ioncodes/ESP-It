@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
-#include "E_PropSet_structs.hpp"
-#include "EPropPhysicalGroup_structs.hpp"
-#include "E_PropCategory_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "E_PropSet_structs.hpp"
+#include "E_PropCategory_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EPropPhysicalGroup_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 
 
 namespace SDK
@@ -33,65 +33,65 @@ public:
 	class UB_HitBlinker_C*                        HitBlinker;                                        // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UB_PhysicalSound_C*                     PhysicalSound;                                     // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   Mesh;                                              // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Name_B_StaticMeshProp_C;                           // 0x03A8(0x0018)(Edit, BlueprintVisible)
-	double                                        CameraDistance;                                    // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxHealth;                                         // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SpeedMultiplier;                                   // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OverrideMass;                                      // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1131[0x7];                                     // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Mass;                                              // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Force;                                             // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AirForce;                                          // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxSpeed;                                          // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        JumpForce;                                         // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPropPhysicalGroup                            PhysicalGroup;                                     // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RotateToTarget;                                    // 0x0409(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1132[0x6];                                     // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CurrentWantedRotation;                             // 0x0410(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	double                                        StartPitch;                                        // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StartYaw;                                          // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               ActorStartRotation;                                // 0x0438(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class UPhysicalMaterial*                      StopPhysicalMaterial;                              // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        RuntimeSpeedMultiplier;                            // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHighlighted;                                     // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1133[0x7];                                     // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      DefaultPhysicsMaterial;                            // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          StartAwake;                                        // 0x0470(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          TeleportOnCooldown;                                // 0x0471(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasBuoyancy;                                       // 0x0472(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFreezed;                                         // 0x0473(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          SleepHandledByPropSleepManager;                    // 0x0474(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1134[0x3];                                     // 0x0475(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PropId;                                            // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_PropCategory                                PropCategory;                                      // 0x047C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_PropSet                                     PropSet;                                           // 0x047D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1135[0x2];                                     // 0x047E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PropIconRotation;                                  // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DebugSpawnMeshAfterSuccessfullOffsetTest;          // 0x0488(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsDecoy;                                           // 0x0489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPreviewProp;                                     // 0x048A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_1136[0x5];                                     // 0x048B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           SelectingPlayerState;                              // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        ScaledSpeedMultiplier;                             // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                InitialScale;                                      // 0x04A0(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InitialIsSleeping;                                 // 0x04B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1137[0x7];                                     // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Name_0;                                            // 0x03A8(0x0010)(Edit, BlueprintVisible)
+	double                                        CameraDistance;                                    // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxHealth;                                         // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SpeedMultiplier;                                   // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OverrideMass;                                      // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Mass;                                              // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Force;                                             // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AirForce;                                          // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxSpeed;                                          // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        JumpForce;                                         // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPropPhysicalGroup                            PhysicalGroup;                                     // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RotateToTarget;                                    // 0x0401(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_402[0x6];                                      // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CurrentWantedRotation;                             // 0x0408(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	double                                        StartPitch;                                        // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StartYaw;                                          // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               ActorStartRotation;                                // 0x0430(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class UPhysicalMaterial*                      StopPhysicalMaterial;                              // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        RuntimeSpeedMultiplier;                            // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHighlighted;                                     // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      DefaultPhysicsMaterial;                            // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          StartAwake;                                        // 0x0468(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          TeleportOnCooldown;                                // 0x0469(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasBuoyancy;                                       // 0x046A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFreezed;                                         // 0x046B(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          SleepHandledByPropSleepManager;                    // 0x046C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PropCategory                                PropCategory;                                      // 0x0474(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_PropSet                                     PropSet;                                           // 0x0475(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_476[0x2];                                      // 0x0476(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PropIconRotation;                                  // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DebugSpawnMeshAfterSuccessfullOffsetTest;          // 0x0480(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDecoy;                                           // 0x0481(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPreviewProp;                                     // 0x0482(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_483[0x5];                                      // 0x0483(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           SelectingPlayerState;                              // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        ScaledSpeedMultiplier;                             // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                InitialScale;                                      // 0x0498(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InitialIsSleeping;                                 // 0x04B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B1[0xF];                                      // 0x04B1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InitialSleepTransform;                             // 0x04C0(0x0060)(Edit, BlueprintVisible, Net, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	double                                        DefaultScale;                                      // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UnlockedInCreativeModeByDefault;                   // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1138[0x7];                                     // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ExtraSpeedMultiplier;                              // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ExtraHealthMultiplier;                             // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DefaultVolume;                                     // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DissolveTime;                                      // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDissolving;                                      // 0x0550(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1139[0x7];                                     // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_551[0x7];                                      // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        AliveTime;                                         // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFadingIn;                                        // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113A[0x7];                                     // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CurrentFadeAlpha;                                  // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpawnedFromPropPawnPhysics;                        // 0x0570(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113B[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             TransformingIntoWitch;                             // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
@@ -105,23 +105,24 @@ public:
 	void GetRippleScale(struct FVector* Scale);
 	void GetSplashScale(struct FVector* Scale);
 	void GetSplashSound(class USoundCue** Sound);
-	void CanTeleport(bool* Param_CanTeleport);
+	void CanTeleport(bool* CanTeleport_0);
 	void SetHighlight(bool Highlighted, bool* ForcedBoolean);
 	void RefreshHighlight(bool* Highlightable);
 	void GetSize(double* Size);
 	void Fly(double TargetBoost, double DeltaTime, bool* ForcedBoolean);
-	void SetRuntimeSpeedMultiplier(double Param_RuntimeSpeedMultiplier, bool* ForcedBoolean);
+	void SetRuntimeSpeedMultiplier(double RuntimeSpeedMultiplier_0, bool* ForcedBoolean);
 	void SetWantedRotation(const struct FRotator& WantedRotation, bool* ForcedBoolean);
 	void Jump(bool* JumpSuccess);
 	void Stop(bool Start, const struct FRotator& WantedRotation, bool* ForcedOutput);
 	void SetControlledByWitch(class AB_PropPawnPhysics_C* Witch, const struct FSRuntimePropData& LastRuntimePropData, bool* ForcedOutput);
 	void Move(const struct FVector& Vector, bool* ForcedOutput);
-	void GetMaxHealth(double* Param_MaxHealth);
-	void GetName(class FString* Param_Name);
-	void GetCameraDistance(double* Param_CameraDistance);
+	void GetMaxHealth(double* MaxHealth_0);
+	void GetName(class FString* Name_0);
+	void GetCameraDistance(double* CameraDistance_0);
 	void GetRuntimePropData(struct FSRuntimePropData* RuntimePropData);
 	void GetCenter(struct FVector* Center);
 	void OffsetPosition(class AActor* Prop, const struct FTransform& WantedSpawnTransform, TArray<class AActor*>& IgnoreActors, bool* ValidTransform, struct FTransform* Transform);
+	void SetPhysicsEnabled(bool bIsEnabled);
 	void UpdateAfterPlayTestToggle(bool HasPlayTestStarted);
 	void UpdateMeshCollision(bool EnableCollision);
 	void HandleWake();
@@ -191,42 +192,42 @@ static_assert(offsetof(AB_StaticMeshProp_C, SpawnOffset) == 0x000388, "Member 'A
 static_assert(offsetof(AB_StaticMeshProp_C, HitBlinker) == 0x000390, "Member 'AB_StaticMeshProp_C::HitBlinker' has a wrong offset!");
 static_assert(offsetof(AB_StaticMeshProp_C, PhysicalSound) == 0x000398, "Member 'AB_StaticMeshProp_C::PhysicalSound' has a wrong offset!");
 static_assert(offsetof(AB_StaticMeshProp_C, Mesh) == 0x0003A0, "Member 'AB_StaticMeshProp_C::Mesh' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, Name_B_StaticMeshProp_C) == 0x0003A8, "Member 'AB_StaticMeshProp_C::Name_B_StaticMeshProp_C' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, CameraDistance) == 0x0003C0, "Member 'AB_StaticMeshProp_C::CameraDistance' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, MaxHealth) == 0x0003C8, "Member 'AB_StaticMeshProp_C::MaxHealth' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, SpeedMultiplier) == 0x0003D0, "Member 'AB_StaticMeshProp_C::SpeedMultiplier' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, OverrideMass) == 0x0003D8, "Member 'AB_StaticMeshProp_C::OverrideMass' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, Mass) == 0x0003E0, "Member 'AB_StaticMeshProp_C::Mass' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, Force) == 0x0003E8, "Member 'AB_StaticMeshProp_C::Force' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, AirForce) == 0x0003F0, "Member 'AB_StaticMeshProp_C::AirForce' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, MaxSpeed) == 0x0003F8, "Member 'AB_StaticMeshProp_C::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, JumpForce) == 0x000400, "Member 'AB_StaticMeshProp_C::JumpForce' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, PhysicalGroup) == 0x000408, "Member 'AB_StaticMeshProp_C::PhysicalGroup' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, RotateToTarget) == 0x000409, "Member 'AB_StaticMeshProp_C::RotateToTarget' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, CurrentWantedRotation) == 0x000410, "Member 'AB_StaticMeshProp_C::CurrentWantedRotation' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, StartPitch) == 0x000428, "Member 'AB_StaticMeshProp_C::StartPitch' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, StartYaw) == 0x000430, "Member 'AB_StaticMeshProp_C::StartYaw' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, ActorStartRotation) == 0x000438, "Member 'AB_StaticMeshProp_C::ActorStartRotation' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, StopPhysicalMaterial) == 0x000450, "Member 'AB_StaticMeshProp_C::StopPhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, RuntimeSpeedMultiplier) == 0x000458, "Member 'AB_StaticMeshProp_C::RuntimeSpeedMultiplier' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, IsHighlighted) == 0x000460, "Member 'AB_StaticMeshProp_C::IsHighlighted' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, DefaultPhysicsMaterial) == 0x000468, "Member 'AB_StaticMeshProp_C::DefaultPhysicsMaterial' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, StartAwake) == 0x000470, "Member 'AB_StaticMeshProp_C::StartAwake' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, TeleportOnCooldown) == 0x000471, "Member 'AB_StaticMeshProp_C::TeleportOnCooldown' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, HasBuoyancy) == 0x000472, "Member 'AB_StaticMeshProp_C::HasBuoyancy' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, IsFreezed) == 0x000473, "Member 'AB_StaticMeshProp_C::IsFreezed' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, SleepHandledByPropSleepManager) == 0x000474, "Member 'AB_StaticMeshProp_C::SleepHandledByPropSleepManager' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, PropId) == 0x000478, "Member 'AB_StaticMeshProp_C::PropId' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, PropCategory) == 0x00047C, "Member 'AB_StaticMeshProp_C::PropCategory' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, PropSet) == 0x00047D, "Member 'AB_StaticMeshProp_C::PropSet' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, PropIconRotation) == 0x000480, "Member 'AB_StaticMeshProp_C::PropIconRotation' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, DebugSpawnMeshAfterSuccessfullOffsetTest) == 0x000488, "Member 'AB_StaticMeshProp_C::DebugSpawnMeshAfterSuccessfullOffsetTest' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, IsDecoy) == 0x000489, "Member 'AB_StaticMeshProp_C::IsDecoy' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, IsPreviewProp) == 0x00048A, "Member 'AB_StaticMeshProp_C::IsPreviewProp' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, SelectingPlayerState) == 0x000490, "Member 'AB_StaticMeshProp_C::SelectingPlayerState' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, ScaledSpeedMultiplier) == 0x000498, "Member 'AB_StaticMeshProp_C::ScaledSpeedMultiplier' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, InitialScale) == 0x0004A0, "Member 'AB_StaticMeshProp_C::InitialScale' has a wrong offset!");
-static_assert(offsetof(AB_StaticMeshProp_C, InitialIsSleeping) == 0x0004B8, "Member 'AB_StaticMeshProp_C::InitialIsSleeping' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, Name_0) == 0x0003A8, "Member 'AB_StaticMeshProp_C::Name_0' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, CameraDistance) == 0x0003B8, "Member 'AB_StaticMeshProp_C::CameraDistance' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, MaxHealth) == 0x0003C0, "Member 'AB_StaticMeshProp_C::MaxHealth' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, SpeedMultiplier) == 0x0003C8, "Member 'AB_StaticMeshProp_C::SpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, OverrideMass) == 0x0003D0, "Member 'AB_StaticMeshProp_C::OverrideMass' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, Mass) == 0x0003D8, "Member 'AB_StaticMeshProp_C::Mass' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, Force) == 0x0003E0, "Member 'AB_StaticMeshProp_C::Force' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, AirForce) == 0x0003E8, "Member 'AB_StaticMeshProp_C::AirForce' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, MaxSpeed) == 0x0003F0, "Member 'AB_StaticMeshProp_C::MaxSpeed' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, JumpForce) == 0x0003F8, "Member 'AB_StaticMeshProp_C::JumpForce' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, PhysicalGroup) == 0x000400, "Member 'AB_StaticMeshProp_C::PhysicalGroup' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, RotateToTarget) == 0x000401, "Member 'AB_StaticMeshProp_C::RotateToTarget' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, CurrentWantedRotation) == 0x000408, "Member 'AB_StaticMeshProp_C::CurrentWantedRotation' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, StartPitch) == 0x000420, "Member 'AB_StaticMeshProp_C::StartPitch' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, StartYaw) == 0x000428, "Member 'AB_StaticMeshProp_C::StartYaw' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, ActorStartRotation) == 0x000430, "Member 'AB_StaticMeshProp_C::ActorStartRotation' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, StopPhysicalMaterial) == 0x000448, "Member 'AB_StaticMeshProp_C::StopPhysicalMaterial' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, RuntimeSpeedMultiplier) == 0x000450, "Member 'AB_StaticMeshProp_C::RuntimeSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, IsHighlighted) == 0x000458, "Member 'AB_StaticMeshProp_C::IsHighlighted' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, DefaultPhysicsMaterial) == 0x000460, "Member 'AB_StaticMeshProp_C::DefaultPhysicsMaterial' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, StartAwake) == 0x000468, "Member 'AB_StaticMeshProp_C::StartAwake' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, TeleportOnCooldown) == 0x000469, "Member 'AB_StaticMeshProp_C::TeleportOnCooldown' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, HasBuoyancy) == 0x00046A, "Member 'AB_StaticMeshProp_C::HasBuoyancy' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, IsFreezed) == 0x00046B, "Member 'AB_StaticMeshProp_C::IsFreezed' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, SleepHandledByPropSleepManager) == 0x00046C, "Member 'AB_StaticMeshProp_C::SleepHandledByPropSleepManager' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, PropID) == 0x000470, "Member 'AB_StaticMeshProp_C::PropID' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, PropCategory) == 0x000474, "Member 'AB_StaticMeshProp_C::PropCategory' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, PropSet) == 0x000475, "Member 'AB_StaticMeshProp_C::PropSet' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, PropIconRotation) == 0x000478, "Member 'AB_StaticMeshProp_C::PropIconRotation' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, DebugSpawnMeshAfterSuccessfullOffsetTest) == 0x000480, "Member 'AB_StaticMeshProp_C::DebugSpawnMeshAfterSuccessfullOffsetTest' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, IsDecoy) == 0x000481, "Member 'AB_StaticMeshProp_C::IsDecoy' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, IsPreviewProp) == 0x000482, "Member 'AB_StaticMeshProp_C::IsPreviewProp' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, SelectingPlayerState) == 0x000488, "Member 'AB_StaticMeshProp_C::SelectingPlayerState' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, ScaledSpeedMultiplier) == 0x000490, "Member 'AB_StaticMeshProp_C::ScaledSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, InitialScale) == 0x000498, "Member 'AB_StaticMeshProp_C::InitialScale' has a wrong offset!");
+static_assert(offsetof(AB_StaticMeshProp_C, InitialIsSleeping) == 0x0004B0, "Member 'AB_StaticMeshProp_C::InitialIsSleeping' has a wrong offset!");
 static_assert(offsetof(AB_StaticMeshProp_C, InitialSleepTransform) == 0x0004C0, "Member 'AB_StaticMeshProp_C::InitialSleepTransform' has a wrong offset!");
 static_assert(offsetof(AB_StaticMeshProp_C, DefaultScale) == 0x000520, "Member 'AB_StaticMeshProp_C::DefaultScale' has a wrong offset!");
 static_assert(offsetof(AB_StaticMeshProp_C, UnlockedInCreativeModeByDefault) == 0x000528, "Member 'AB_StaticMeshProp_C::UnlockedInCreativeModeByDefault' has a wrong offset!");

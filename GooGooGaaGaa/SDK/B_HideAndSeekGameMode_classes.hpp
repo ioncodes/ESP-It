@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HideAndSeekGameMode.B_HideAndSeekGameMode_C
-// 0x0010 (0x05D0 - 0x05C0)
+// 0x0010 (0x05C8 - 0x05B8)
 class AB_HideAndSeekGameMode_C : public AB_SeekGameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HideAndSeekGameMode_C;            // 0x05C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          HuntersWin;                                        // 0x05C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HideAndSeekGameMode_C;            // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          HuntersWin;                                        // 0x05C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void HandleEndMatchByTime();
@@ -44,9 +44,9 @@ public:
 	}
 };
 static_assert(alignof(AB_HideAndSeekGameMode_C) == 0x000008, "Wrong alignment on AB_HideAndSeekGameMode_C");
-static_assert(sizeof(AB_HideAndSeekGameMode_C) == 0x0005D0, "Wrong size on AB_HideAndSeekGameMode_C");
-static_assert(offsetof(AB_HideAndSeekGameMode_C, UberGraphFrame_B_HideAndSeekGameMode_C) == 0x0005C0, "Member 'AB_HideAndSeekGameMode_C::UberGraphFrame_B_HideAndSeekGameMode_C' has a wrong offset!");
-static_assert(offsetof(AB_HideAndSeekGameMode_C, HuntersWin) == 0x0005C8, "Member 'AB_HideAndSeekGameMode_C::HuntersWin' has a wrong offset!");
+static_assert(sizeof(AB_HideAndSeekGameMode_C) == 0x0005C8, "Wrong size on AB_HideAndSeekGameMode_C");
+static_assert(offsetof(AB_HideAndSeekGameMode_C, UberGraphFrame_B_HideAndSeekGameMode_C) == 0x0005B8, "Member 'AB_HideAndSeekGameMode_C::UberGraphFrame_B_HideAndSeekGameMode_C' has a wrong offset!");
+static_assert(offsetof(AB_HideAndSeekGameMode_C, HuntersWin) == 0x0005C0, "Member 'AB_HideAndSeekGameMode_C::HuntersWin' has a wrong offset!");
 
 }
 

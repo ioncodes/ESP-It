@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_BaseControl.WB_BaseControl_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_BaseControl_C : public UUserWidget
 {
 public:
-	bool                                          IsDown;                                            // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11BC[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             Clicked;                                           // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsDown;                                            // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             Clicked;                                           // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
@@ -42,9 +42,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_BaseControl_C) == 0x000008, "Wrong alignment on UWB_BaseControl_C");
-static_assert(sizeof(UWB_BaseControl_C) == 0x0002D8, "Wrong size on UWB_BaseControl_C");
-static_assert(offsetof(UWB_BaseControl_C, IsDown) == 0x0002C0, "Member 'UWB_BaseControl_C::IsDown' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControl_C, Clicked) == 0x0002C8, "Member 'UWB_BaseControl_C::Clicked' has a wrong offset!");
+static_assert(sizeof(UWB_BaseControl_C) == 0x0002F8, "Wrong size on UWB_BaseControl_C");
+static_assert(offsetof(UWB_BaseControl_C, IsDown) == 0x0002E0, "Member 'UWB_BaseControl_C::IsDown' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControl_C, Clicked) == 0x0002E8, "Member 'UWB_BaseControl_C::Clicked' has a wrong offset!");
 
 }
 

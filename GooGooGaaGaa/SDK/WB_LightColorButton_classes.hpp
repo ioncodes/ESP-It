@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_LightColorButton.WB_LightColorButton_C
-// 0x0018 (0x0308 - 0x02F0)
+// 0x0018 (0x0328 - 0x0310)
 class UWB_LightColorButton_C final : public UWB_TileViewButton_C
 {
 public:
-	struct FVector                                Color;                                             // 0x02F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Color;                                             // 0x0310(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetBorderColor(struct FLinearColor* Param_Color);
+	void GetBorderColor(struct FLinearColor* Color_0);
 	void Clicked();
 	void SetIndividualParameters();
 	TSoftObjectPtr<class UObject> GetIcon();
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(UWB_LightColorButton_C) == 0x000008, "Wrong alignment on UWB_LightColorButton_C");
-static_assert(sizeof(UWB_LightColorButton_C) == 0x000308, "Wrong size on UWB_LightColorButton_C");
-static_assert(offsetof(UWB_LightColorButton_C, Color) == 0x0002F0, "Member 'UWB_LightColorButton_C::Color' has a wrong offset!");
+static_assert(sizeof(UWB_LightColorButton_C) == 0x000328, "Wrong size on UWB_LightColorButton_C");
+static_assert(offsetof(UWB_LightColorButton_C, Color) == 0x000310, "Member 'UWB_LightColorButton_C::Color' has a wrong offset!");
 
 }
 

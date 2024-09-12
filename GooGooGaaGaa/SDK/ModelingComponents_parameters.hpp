@@ -17,39 +17,6 @@
 namespace SDK::Params
 {
 
-// Function ModelingComponents.CreateMeshObjectTypeProperties.GetOutputTypeNamesFunc
-// 0x0010 (0x0010 - 0x0000)
-struct CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc) == 0x000008, "Wrong alignment on CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc");
-static_assert(sizeof(CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc) == 0x000010, "Wrong size on CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc");
-static_assert(offsetof(CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc, ReturnValue) == 0x000000, "Member 'CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc::ReturnValue' has a wrong offset!");
-
-// Function ModelingComponents.CreateMeshObjectTypeProperties.GetCurrentCreateMeshType
-// 0x0001 (0x0001 - 0x0000)
-struct CreateMeshObjectTypeProperties_GetCurrentCreateMeshType final
-{
-public:
-	ECreateObjectTypeHint                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CreateMeshObjectTypeProperties_GetCurrentCreateMeshType) == 0x000001, "Wrong alignment on CreateMeshObjectTypeProperties_GetCurrentCreateMeshType");
-static_assert(sizeof(CreateMeshObjectTypeProperties_GetCurrentCreateMeshType) == 0x000001, "Wrong size on CreateMeshObjectTypeProperties_GetCurrentCreateMeshType");
-static_assert(offsetof(CreateMeshObjectTypeProperties_GetCurrentCreateMeshType, ReturnValue) == 0x000000, "Member 'CreateMeshObjectTypeProperties_GetCurrentCreateMeshType::ReturnValue' has a wrong offset!");
-
-// Function ModelingComponents.CreateMeshObjectTypeProperties.ShouldShowPropertySet
-// 0x0001 (0x0001 - 0x0000)
-struct CreateMeshObjectTypeProperties_ShouldShowPropertySet final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CreateMeshObjectTypeProperties_ShouldShowPropertySet) == 0x000001, "Wrong alignment on CreateMeshObjectTypeProperties_ShouldShowPropertySet");
-static_assert(sizeof(CreateMeshObjectTypeProperties_ShouldShowPropertySet) == 0x000001, "Wrong size on CreateMeshObjectTypeProperties_ShouldShowPropertySet");
-static_assert(offsetof(CreateMeshObjectTypeProperties_ShouldShowPropertySet, ReturnValue) == 0x000000, "Member 'CreateMeshObjectTypeProperties_ShouldShowPropertySet::ReturnValue' has a wrong offset!");
-
 // Function ModelingComponents.OctreeDynamicMeshComponent.SetDynamicMesh
 // 0x0008 (0x0008 - 0x0000)
 struct OctreeDynamicMeshComponent_SetDynamicMesh final
@@ -106,7 +73,7 @@ struct PreviewGeometry_CreateInWorld final
 {
 public:
 	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1892[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WithTransform;                                     // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PreviewGeometry_CreateInWorld) == 0x000010, "Wrong alignment on PreviewGeometry_CreateInWorld");
@@ -175,6 +142,17 @@ static_assert(alignof(PreviewGeometry_RemoveAllPointSets) == 0x000001, "Wrong al
 static_assert(sizeof(PreviewGeometry_RemoveAllPointSets) == 0x000001, "Wrong size on PreviewGeometry_RemoveAllPointSets");
 static_assert(offsetof(PreviewGeometry_RemoveAllPointSets, bDestroy) == 0x000000, "Member 'PreviewGeometry_RemoveAllPointSets::bDestroy' has a wrong offset!");
 
+// Function ModelingComponents.PreviewGeometry.RemoveAllTriangleSets
+// 0x0001 (0x0001 - 0x0000)
+struct PreviewGeometry_RemoveAllTriangleSets final
+{
+public:
+	bool                                          bDestroy;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PreviewGeometry_RemoveAllTriangleSets) == 0x000001, "Wrong alignment on PreviewGeometry_RemoveAllTriangleSets");
+static_assert(sizeof(PreviewGeometry_RemoveAllTriangleSets) == 0x000001, "Wrong size on PreviewGeometry_RemoveAllTriangleSets");
+static_assert(offsetof(PreviewGeometry_RemoveAllTriangleSets, bDestroy) == 0x000000, "Member 'PreviewGeometry_RemoveAllTriangleSets::bDestroy' has a wrong offset!");
+
 // Function ModelingComponents.PreviewGeometry.RemoveLineSet
 // 0x0018 (0x0018 - 0x0000)
 struct PreviewGeometry_RemoveLineSet final
@@ -183,7 +161,7 @@ public:
 	class FString                                 LineSetIdentifier;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDestroy;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1893[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PreviewGeometry_RemoveLineSet) == 0x000008, "Wrong alignment on PreviewGeometry_RemoveLineSet");
 static_assert(sizeof(PreviewGeometry_RemoveLineSet) == 0x000018, "Wrong size on PreviewGeometry_RemoveLineSet");
@@ -199,13 +177,29 @@ public:
 	class FString                                 PointSetIdentifier;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDestroy;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1894[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PreviewGeometry_RemovePointSet) == 0x000008, "Wrong alignment on PreviewGeometry_RemovePointSet");
 static_assert(sizeof(PreviewGeometry_RemovePointSet) == 0x000018, "Wrong size on PreviewGeometry_RemovePointSet");
 static_assert(offsetof(PreviewGeometry_RemovePointSet, PointSetIdentifier) == 0x000000, "Member 'PreviewGeometry_RemovePointSet::PointSetIdentifier' has a wrong offset!");
 static_assert(offsetof(PreviewGeometry_RemovePointSet, bDestroy) == 0x000010, "Member 'PreviewGeometry_RemovePointSet::bDestroy' has a wrong offset!");
 static_assert(offsetof(PreviewGeometry_RemovePointSet, ReturnValue) == 0x000011, "Member 'PreviewGeometry_RemovePointSet::ReturnValue' has a wrong offset!");
+
+// Function ModelingComponents.PreviewGeometry.RemoveTriangleSet
+// 0x0018 (0x0018 - 0x0000)
+struct PreviewGeometry_RemoveTriangleSet final
+{
+public:
+	class FString                                 TriangleSetIdentifier;                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDestroy;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PreviewGeometry_RemoveTriangleSet) == 0x000008, "Wrong alignment on PreviewGeometry_RemoveTriangleSet");
+static_assert(sizeof(PreviewGeometry_RemoveTriangleSet) == 0x000018, "Wrong size on PreviewGeometry_RemoveTriangleSet");
+static_assert(offsetof(PreviewGeometry_RemoveTriangleSet, TriangleSetIdentifier) == 0x000000, "Member 'PreviewGeometry_RemoveTriangleSet::TriangleSetIdentifier' has a wrong offset!");
+static_assert(offsetof(PreviewGeometry_RemoveTriangleSet, bDestroy) == 0x000010, "Member 'PreviewGeometry_RemoveTriangleSet::bDestroy' has a wrong offset!");
+static_assert(offsetof(PreviewGeometry_RemoveTriangleSet, ReturnValue) == 0x000011, "Member 'PreviewGeometry_RemoveTriangleSet::ReturnValue' has a wrong offset!");
 
 // Function ModelingComponents.PreviewGeometry.SetAllLineSetsMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -237,7 +231,7 @@ public:
 	class FString                                 LineSetIdentifier;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInterface*                     NewMaterial;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1895[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PreviewGeometry_SetLineSetMaterial) == 0x000008, "Wrong alignment on PreviewGeometry_SetLineSetMaterial");
 static_assert(sizeof(PreviewGeometry_SetLineSetMaterial) == 0x000020, "Wrong size on PreviewGeometry_SetLineSetMaterial");
@@ -253,7 +247,7 @@ public:
 	class FString                                 LineSetIdentifier;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bVisible;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1896[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PreviewGeometry_SetLineSetVisibility) == 0x000008, "Wrong alignment on PreviewGeometry_SetLineSetVisibility");
 static_assert(sizeof(PreviewGeometry_SetLineSetVisibility) == 0x000018, "Wrong size on PreviewGeometry_SetLineSetVisibility");
@@ -269,7 +263,7 @@ public:
 	class FString                                 PointSetIdentifier;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInterface*                     NewMaterial;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1897[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PreviewGeometry_SetPointSetMaterial) == 0x000008, "Wrong alignment on PreviewGeometry_SetPointSetMaterial");
 static_assert(sizeof(PreviewGeometry_SetPointSetMaterial) == 0x000020, "Wrong size on PreviewGeometry_SetPointSetMaterial");
@@ -285,7 +279,7 @@ public:
 	class FString                                 PointSetIdentifier;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bVisible;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1898[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PreviewGeometry_SetPointSetVisibility) == 0x000008, "Wrong alignment on PreviewGeometry_SetPointSetVisibility");
 static_assert(sizeof(PreviewGeometry_SetPointSetVisibility) == 0x000018, "Wrong size on PreviewGeometry_SetPointSetVisibility");
@@ -355,6 +349,39 @@ static_assert(alignof(ModelingObjectsCreationAPI_CreateTextureObject) == 0x00000
 static_assert(sizeof(ModelingObjectsCreationAPI_CreateTextureObject) == 0x000040, "Wrong size on ModelingObjectsCreationAPI_CreateTextureObject");
 static_assert(offsetof(ModelingObjectsCreationAPI_CreateTextureObject, CreateTexParams) == 0x000000, "Member 'ModelingObjectsCreationAPI_CreateTextureObject::CreateTexParams' has a wrong offset!");
 static_assert(offsetof(ModelingObjectsCreationAPI_CreateTextureObject, ReturnValue) == 0x000030, "Member 'ModelingObjectsCreationAPI_CreateTextureObject::ReturnValue' has a wrong offset!");
+
+// Function ModelingComponents.CreateMeshObjectTypeProperties.GetOutputTypeNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc) == 0x000008, "Wrong alignment on CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc");
+static_assert(sizeof(CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc) == 0x000010, "Wrong size on CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc");
+static_assert(offsetof(CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc, ReturnValue) == 0x000000, "Member 'CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc::ReturnValue' has a wrong offset!");
+
+// Function ModelingComponents.CreateMeshObjectTypeProperties.GetCurrentCreateMeshType
+// 0x0001 (0x0001 - 0x0000)
+struct CreateMeshObjectTypeProperties_GetCurrentCreateMeshType final
+{
+public:
+	ECreateObjectTypeHint                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CreateMeshObjectTypeProperties_GetCurrentCreateMeshType) == 0x000001, "Wrong alignment on CreateMeshObjectTypeProperties_GetCurrentCreateMeshType");
+static_assert(sizeof(CreateMeshObjectTypeProperties_GetCurrentCreateMeshType) == 0x000001, "Wrong size on CreateMeshObjectTypeProperties_GetCurrentCreateMeshType");
+static_assert(offsetof(CreateMeshObjectTypeProperties_GetCurrentCreateMeshType, ReturnValue) == 0x000000, "Member 'CreateMeshObjectTypeProperties_GetCurrentCreateMeshType::ReturnValue' has a wrong offset!");
+
+// Function ModelingComponents.CreateMeshObjectTypeProperties.ShouldShowPropertySet
+// 0x0001 (0x0001 - 0x0000)
+struct CreateMeshObjectTypeProperties_ShouldShowPropertySet final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CreateMeshObjectTypeProperties_ShouldShowPropertySet) == 0x000001, "Wrong alignment on CreateMeshObjectTypeProperties_ShouldShowPropertySet");
+static_assert(sizeof(CreateMeshObjectTypeProperties_ShouldShowPropertySet) == 0x000001, "Wrong size on CreateMeshObjectTypeProperties_ShouldShowPropertySet");
+static_assert(offsetof(CreateMeshObjectTypeProperties_ShouldShowPropertySet, ReturnValue) == 0x000000, "Member 'CreateMeshObjectTypeProperties_ShouldShowPropertySet::ReturnValue' has a wrong offset!");
 
 // Function ModelingComponents.PolygroupLayersProperties.GetGroupLayersFunc
 // 0x0010 (0x0010 - 0x0000)

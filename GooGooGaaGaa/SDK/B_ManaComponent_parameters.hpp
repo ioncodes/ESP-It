@@ -75,12 +75,12 @@ static_assert(offsetof(B_ManaComponent_C_SetCurrentManaRegenPerSecond, NewManaRe
 struct B_ManaComponent_C_SetCurrentMana final
 {
 public:
-	double                                        Param_CurrentMana;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentMana_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ManaComponent_C_SetCurrentMana) == 0x000008, "Wrong alignment on B_ManaComponent_C_SetCurrentMana");
 static_assert(sizeof(B_ManaComponent_C_SetCurrentMana) == 0x000010, "Wrong size on B_ManaComponent_C_SetCurrentMana");
-static_assert(offsetof(B_ManaComponent_C_SetCurrentMana, Param_CurrentMana) == 0x000000, "Member 'B_ManaComponent_C_SetCurrentMana::Param_CurrentMana' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_SetCurrentMana, CurrentMana_0) == 0x000000, "Member 'B_ManaComponent_C_SetCurrentMana::CurrentMana_0' has a wrong offset!");
 static_assert(offsetof(B_ManaComponent_C_SetCurrentMana, CallFunc_FClamp_ReturnValue) == 0x000008, "Member 'B_ManaComponent_C_SetCurrentMana::CallFunc_FClamp_ReturnValue' has a wrong offset!");
 
 // Function B_ManaComponent.B_ManaComponent_C.SetMaximumMana
@@ -88,12 +88,12 @@ static_assert(offsetof(B_ManaComponent_C_SetCurrentMana, CallFunc_FClamp_ReturnV
 struct B_ManaComponent_C_SetMaximumMana final
 {
 public:
-	double                                        Param_MaximumMana;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaximumMana_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FMax_ReturnValue;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ManaComponent_C_SetMaximumMana) == 0x000008, "Wrong alignment on B_ManaComponent_C_SetMaximumMana");
 static_assert(sizeof(B_ManaComponent_C_SetMaximumMana) == 0x000010, "Wrong size on B_ManaComponent_C_SetMaximumMana");
-static_assert(offsetof(B_ManaComponent_C_SetMaximumMana, Param_MaximumMana) == 0x000000, "Member 'B_ManaComponent_C_SetMaximumMana::Param_MaximumMana' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_SetMaximumMana, MaximumMana_0) == 0x000000, "Member 'B_ManaComponent_C_SetMaximumMana::MaximumMana_0' has a wrong offset!");
 static_assert(offsetof(B_ManaComponent_C_SetMaximumMana, CallFunc_FMax_ReturnValue) == 0x000008, "Member 'B_ManaComponent_C_SetMaximumMana::CallFunc_FMax_ReturnValue' has a wrong offset!");
 
 // Function B_ManaComponent.B_ManaComponent_C.GetValues
@@ -101,30 +101,30 @@ static_assert(offsetof(B_ManaComponent_C_SetMaximumMana, CallFunc_FMax_ReturnVal
 struct B_ManaComponent_C_GetValues final
 {
 public:
-	double                                        Param_MaximumMana;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_CurrentMana;                                 // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_CurrentManaRegenPerSecond;                   // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaximumMana_0;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentMana_0;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentManaRegenPerSecond_0;                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ManaComponent_C_GetValues) == 0x000008, "Wrong alignment on B_ManaComponent_C_GetValues");
 static_assert(sizeof(B_ManaComponent_C_GetValues) == 0x000018, "Wrong size on B_ManaComponent_C_GetValues");
-static_assert(offsetof(B_ManaComponent_C_GetValues, Param_MaximumMana) == 0x000000, "Member 'B_ManaComponent_C_GetValues::Param_MaximumMana' has a wrong offset!");
-static_assert(offsetof(B_ManaComponent_C_GetValues, Param_CurrentMana) == 0x000008, "Member 'B_ManaComponent_C_GetValues::Param_CurrentMana' has a wrong offset!");
-static_assert(offsetof(B_ManaComponent_C_GetValues, Param_CurrentManaRegenPerSecond) == 0x000010, "Member 'B_ManaComponent_C_GetValues::Param_CurrentManaRegenPerSecond' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_GetValues, MaximumMana_0) == 0x000000, "Member 'B_ManaComponent_C_GetValues::MaximumMana_0' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_GetValues, CurrentMana_0) == 0x000008, "Member 'B_ManaComponent_C_GetValues::CurrentMana_0' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_GetValues, CurrentManaRegenPerSecond_0) == 0x000010, "Member 'B_ManaComponent_C_GetValues::CurrentManaRegenPerSecond_0' has a wrong offset!");
 
 // Function B_ManaComponent.B_ManaComponent_C.SetValues
 // 0x0018 (0x0018 - 0x0000)
 struct B_ManaComponent_C_SetValues final
 {
 public:
-	double                                        Param_MaximumMana;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_CurrentMana;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_CurrentManaRegenPerSecond;                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaximumMana_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentMana_0;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentManaRegenPerSecond_0;                       // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ManaComponent_C_SetValues) == 0x000008, "Wrong alignment on B_ManaComponent_C_SetValues");
 static_assert(sizeof(B_ManaComponent_C_SetValues) == 0x000018, "Wrong size on B_ManaComponent_C_SetValues");
-static_assert(offsetof(B_ManaComponent_C_SetValues, Param_MaximumMana) == 0x000000, "Member 'B_ManaComponent_C_SetValues::Param_MaximumMana' has a wrong offset!");
-static_assert(offsetof(B_ManaComponent_C_SetValues, Param_CurrentMana) == 0x000008, "Member 'B_ManaComponent_C_SetValues::Param_CurrentMana' has a wrong offset!");
-static_assert(offsetof(B_ManaComponent_C_SetValues, Param_CurrentManaRegenPerSecond) == 0x000010, "Member 'B_ManaComponent_C_SetValues::Param_CurrentManaRegenPerSecond' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_SetValues, MaximumMana_0) == 0x000000, "Member 'B_ManaComponent_C_SetValues::MaximumMana_0' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_SetValues, CurrentMana_0) == 0x000008, "Member 'B_ManaComponent_C_SetValues::CurrentMana_0' has a wrong offset!");
+static_assert(offsetof(B_ManaComponent_C_SetValues, CurrentManaRegenPerSecond_0) == 0x000010, "Member 'B_ManaComponent_C_SetValues::CurrentManaRegenPerSecond_0' has a wrong offset!");
 
 // Function B_ManaComponent.B_ManaComponent_C.ApplyCurrentBuffs
 // 0x0068 (0x0068 - 0x0000)
@@ -134,20 +134,20 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F57[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F58[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F59[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Buff_C*                              CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F5A[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_BuffWitchManaBoost_C*                K2Node_DynamicCast_AsB_Buff_Witch_Mana_Boost;      // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

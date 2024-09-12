@@ -17,18 +17,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ConfusionWave.B_ConfusionWave_C
-// 0x0010 (0x03B0 - 0x03A0)
+// 0x0010 (0x03A0 - 0x0390)
 class AB_ConfusionWave_C final : public AB_MushroomArea_C
 {
 public:
-	double                                        EffectRadius;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SpawnSound;                                        // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        EffectRadius;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SpawnSound;                                        // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	double GetConfuseDuration();
 	double GetCurrentSphereRadius();
 	void HandleFade();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 
 public:
 	static class UClass* StaticClass()
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(AB_ConfusionWave_C) == 0x000010, "Wrong alignment on AB_ConfusionWave_C");
-static_assert(sizeof(AB_ConfusionWave_C) == 0x0003B0, "Wrong size on AB_ConfusionWave_C");
-static_assert(offsetof(AB_ConfusionWave_C, EffectRadius) == 0x000398, "Member 'AB_ConfusionWave_C::EffectRadius' has a wrong offset!");
-static_assert(offsetof(AB_ConfusionWave_C, SpawnSound) == 0x0003A0, "Member 'AB_ConfusionWave_C::SpawnSound' has a wrong offset!");
+static_assert(sizeof(AB_ConfusionWave_C) == 0x0003A0, "Wrong size on AB_ConfusionWave_C");
+static_assert(offsetof(AB_ConfusionWave_C, EffectRadius) == 0x000388, "Member 'AB_ConfusionWave_C::EffectRadius' has a wrong offset!");
+static_assert(offsetof(AB_ConfusionWave_C, SpawnSound) == 0x000390, "Member 'AB_ConfusionWave_C::SpawnSound' has a wrong offset!");
 
 }
 

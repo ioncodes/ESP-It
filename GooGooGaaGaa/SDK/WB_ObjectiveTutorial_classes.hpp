@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ObjectiveTutorial.WB_ObjectiveTutorial_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0028 (0x0308 - 0x02E0)
 class UWB_ObjectiveTutorial_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Button_Back;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Button_FindGame;                                   // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_BinkMoviePlayer_C*                  WB_BinkMoviePlayer;                                // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bFromQuickMatch;                                   // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Button_Back;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Button_FindGame;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_BinkMoviePlayer_C*                  WB_BinkMoviePlayer;                                // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bFromQuickMatch;                                   // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Button_FindGame_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature();
@@ -50,12 +50,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_ObjectiveTutorial_C) == 0x000008, "Wrong alignment on UWB_ObjectiveTutorial_C");
-static_assert(sizeof(UWB_ObjectiveTutorial_C) == 0x0002E8, "Wrong size on UWB_ObjectiveTutorial_C");
-static_assert(offsetof(UWB_ObjectiveTutorial_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ObjectiveTutorial_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveTutorial_C, Button_Back) == 0x0002C8, "Member 'UWB_ObjectiveTutorial_C::Button_Back' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveTutorial_C, Button_FindGame) == 0x0002D0, "Member 'UWB_ObjectiveTutorial_C::Button_FindGame' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveTutorial_C, WB_BinkMoviePlayer) == 0x0002D8, "Member 'UWB_ObjectiveTutorial_C::WB_BinkMoviePlayer' has a wrong offset!");
-static_assert(offsetof(UWB_ObjectiveTutorial_C, bFromQuickMatch) == 0x0002E0, "Member 'UWB_ObjectiveTutorial_C::bFromQuickMatch' has a wrong offset!");
+static_assert(sizeof(UWB_ObjectiveTutorial_C) == 0x000308, "Wrong size on UWB_ObjectiveTutorial_C");
+static_assert(offsetof(UWB_ObjectiveTutorial_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ObjectiveTutorial_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveTutorial_C, Button_Back) == 0x0002E8, "Member 'UWB_ObjectiveTutorial_C::Button_Back' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveTutorial_C, Button_FindGame) == 0x0002F0, "Member 'UWB_ObjectiveTutorial_C::Button_FindGame' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveTutorial_C, WB_BinkMoviePlayer) == 0x0002F8, "Member 'UWB_ObjectiveTutorial_C::WB_BinkMoviePlayer' has a wrong offset!");
+static_assert(offsetof(UWB_ObjectiveTutorial_C, bFromQuickMatch) == 0x000300, "Member 'UWB_ObjectiveTutorial_C::bFromQuickMatch' has a wrong offset!");
 
 }
 

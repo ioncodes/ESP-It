@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_VoodooInteractionActor.B_VoodooInteractionActor_C
-// 0x0000 (0x0318 - 0x0318)
+// 0x0000 (0x0308 - 0x0308)
 class AB_VoodooInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_VoodooInteractionActor_C) == 0x000008, "Wrong alignment on AB_VoodooInteractionActor_C");
-static_assert(sizeof(AB_VoodooInteractionActor_C) == 0x000318, "Wrong size on AB_VoodooInteractionActor_C");
+static_assert(sizeof(AB_VoodooInteractionActor_C) == 0x000308, "Wrong size on AB_VoodooInteractionActor_C");
 
 }
 

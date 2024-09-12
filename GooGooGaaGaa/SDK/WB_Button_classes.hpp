@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "WB_BaseButton_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -20,23 +20,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Button.WB_Button_C
-// 0x00A0 (0x07D0 - 0x0730)
+// 0x0090 (0x07E0 - 0x0750)
 class UWB_Button_C final : public UWB_BaseButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_Button_C;                        // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0738(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        GamePadSwitcher;                                   // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Label;                                             // 0x0748(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MyButton;                                          // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 NotifyIcon;                                        // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIconWithLabel_C*          WB_ControllerIconWithLabel;                        // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Text;                                              // 0x0768(0x0018)(Edit, BlueprintVisible)
-	bool                                          Notify;                                            // 0x0780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46B5[0x7];                                     // 0x0781(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   BoundKey;                                          // 0x0788(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FKey                                   KeyNone;                                           // 0x07A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             ClickedWithSender;                                 // 0x07B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_Button_C;                        // 0x0748(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0750(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        GamepadSwitcher;                                   // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Label;                                             // 0x0760(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MyButton;                                          // 0x0768(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 NotifyIcon;                                        // 0x0770(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIconWithLabel_C*          WB_ControllerIconWithLabel;                        // 0x0778(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0780(0x0010)(Edit, BlueprintVisible)
+	bool                                          Notify;                                            // 0x0790(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_791[0x7];                                      // 0x0791(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   BoundKey;                                          // 0x0798(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FKey                                   KeyNone;                                           // 0x07B0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             ClickedWithSender;                                 // 0x07C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        FontSize;                                          // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ChangeActiveWidget(class UWidget* Widget);
@@ -67,19 +68,20 @@ public:
 	}
 };
 static_assert(alignof(UWB_Button_C) == 0x000010, "Wrong alignment on UWB_Button_C");
-static_assert(sizeof(UWB_Button_C) == 0x0007D0, "Wrong size on UWB_Button_C");
-static_assert(offsetof(UWB_Button_C, UberGraphFrame_WB_Button_C) == 0x000730, "Member 'UWB_Button_C::UberGraphFrame_WB_Button_C' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, FocusAnimation) == 0x000738, "Member 'UWB_Button_C::FocusAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, GamePadSwitcher) == 0x000740, "Member 'UWB_Button_C::GamePadSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, Label) == 0x000748, "Member 'UWB_Button_C::Label' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, MyButton) == 0x000750, "Member 'UWB_Button_C::MyButton' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, NotifyIcon) == 0x000758, "Member 'UWB_Button_C::NotifyIcon' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, WB_ControllerIconWithLabel) == 0x000760, "Member 'UWB_Button_C::WB_ControllerIconWithLabel' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, Text) == 0x000768, "Member 'UWB_Button_C::Text' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, Notify) == 0x000780, "Member 'UWB_Button_C::Notify' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, BoundKey) == 0x000788, "Member 'UWB_Button_C::BoundKey' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, KeyNone) == 0x0007A0, "Member 'UWB_Button_C::KeyNone' has a wrong offset!");
-static_assert(offsetof(UWB_Button_C, ClickedWithSender) == 0x0007B8, "Member 'UWB_Button_C::ClickedWithSender' has a wrong offset!");
+static_assert(sizeof(UWB_Button_C) == 0x0007E0, "Wrong size on UWB_Button_C");
+static_assert(offsetof(UWB_Button_C, UberGraphFrame_WB_Button_C) == 0x000748, "Member 'UWB_Button_C::UberGraphFrame_WB_Button_C' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, FocusAnimation) == 0x000750, "Member 'UWB_Button_C::FocusAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, GamepadSwitcher) == 0x000758, "Member 'UWB_Button_C::GamepadSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, Label) == 0x000760, "Member 'UWB_Button_C::Label' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, MyButton) == 0x000768, "Member 'UWB_Button_C::MyButton' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, NotifyIcon) == 0x000770, "Member 'UWB_Button_C::NotifyIcon' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, WB_ControllerIconWithLabel) == 0x000778, "Member 'UWB_Button_C::WB_ControllerIconWithLabel' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, Text) == 0x000780, "Member 'UWB_Button_C::Text' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, Notify) == 0x000790, "Member 'UWB_Button_C::Notify' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, BoundKey) == 0x000798, "Member 'UWB_Button_C::BoundKey' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, KeyNone) == 0x0007B0, "Member 'UWB_Button_C::KeyNone' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, ClickedWithSender) == 0x0007C8, "Member 'UWB_Button_C::ClickedWithSender' has a wrong offset!");
+static_assert(offsetof(UWB_Button_C, FontSize) == 0x0007D8, "Member 'UWB_Button_C::FontSize' has a wrong offset!");
 
 }
 

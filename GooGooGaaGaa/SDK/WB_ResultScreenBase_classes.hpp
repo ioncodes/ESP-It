@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ResultScreenBase.WB_ResultScreenBase_C
-// 0x0038 (0x02F8 - 0x02C0)
+// 0x0038 (0x0318 - 0x02E0)
 class UWB_ResultScreenBase_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Menu;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_1;                                       // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TipsAndTricks_C*                    WB_TipsAndTricks_139;                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_WinAnimationLogic_C*                WB_WinAnimationLogic;                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Menu;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_1;                                       // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TipsAndTricks_C*                    WB_TipsAndTricks_139;                              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_WinAnimationLogic_C*                WB_WinAnimationLogic;                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class FText GetText_0();
@@ -46,14 +46,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_ResultScreenBase_C) == 0x000008, "Wrong alignment on UWB_ResultScreenBase_C");
-static_assert(sizeof(UWB_ResultScreenBase_C) == 0x0002F8, "Wrong size on UWB_ResultScreenBase_C");
-static_assert(offsetof(UWB_ResultScreenBase_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ResultScreenBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ResultScreenBase_C, CanvasPanel_0) == 0x0002C8, "Member 'UWB_ResultScreenBase_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_ResultScreenBase_C, Image_0) == 0x0002D0, "Member 'UWB_ResultScreenBase_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UWB_ResultScreenBase_C, Menu) == 0x0002D8, "Member 'UWB_ResultScreenBase_C::Menu' has a wrong offset!");
-static_assert(offsetof(UWB_ResultScreenBase_C, TextBlock_1) == 0x0002E0, "Member 'UWB_ResultScreenBase_C::TextBlock_1' has a wrong offset!");
-static_assert(offsetof(UWB_ResultScreenBase_C, WB_TipsAndTricks_139) == 0x0002E8, "Member 'UWB_ResultScreenBase_C::WB_TipsAndTricks_139' has a wrong offset!");
-static_assert(offsetof(UWB_ResultScreenBase_C, WB_WinAnimationLogic) == 0x0002F0, "Member 'UWB_ResultScreenBase_C::WB_WinAnimationLogic' has a wrong offset!");
+static_assert(sizeof(UWB_ResultScreenBase_C) == 0x000318, "Wrong size on UWB_ResultScreenBase_C");
+static_assert(offsetof(UWB_ResultScreenBase_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ResultScreenBase_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ResultScreenBase_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_ResultScreenBase_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_ResultScreenBase_C, Image_0) == 0x0002F0, "Member 'UWB_ResultScreenBase_C::Image_0' has a wrong offset!");
+static_assert(offsetof(UWB_ResultScreenBase_C, Menu) == 0x0002F8, "Member 'UWB_ResultScreenBase_C::Menu' has a wrong offset!");
+static_assert(offsetof(UWB_ResultScreenBase_C, TextBlock_1) == 0x000300, "Member 'UWB_ResultScreenBase_C::TextBlock_1' has a wrong offset!");
+static_assert(offsetof(UWB_ResultScreenBase_C, WB_TipsAndTricks_139) == 0x000308, "Member 'UWB_ResultScreenBase_C::WB_TipsAndTricks_139' has a wrong offset!");
+static_assert(offsetof(UWB_ResultScreenBase_C, WB_WinAnimationLogic) == 0x000310, "Member 'UWB_ResultScreenBase_C::WB_WinAnimationLogic' has a wrong offset!");
 
 }
 

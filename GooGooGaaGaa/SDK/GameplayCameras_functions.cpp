@@ -521,6 +521,156 @@ ECameraShakePlaySpace UGameplayCamerasFunctionLibrary::Conv_CameraShakePlaySpace
 }
 
 
+// Function GameplayCameras.GameplayCameraActor.GetCameraComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UGameplayCameraComponent*         ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameplayCameraComponent* AGameplayCameraActor::GetCameraComponent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraActor", "GetCameraComponent");
+
+	Params::GameplayCameraActor_GetCameraComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCameraActor.GetSceneComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class USceneComponent*                  ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USceneComponent* AGameplayCameraActor::GetSceneComponent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraActor", "GetSceneComponent");
+
+	Params::GameplayCameraActor_GetSceneComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCameraComponent.ActivateCamera
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameplayCameraComponent::ActivateCamera(int32 PlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraComponent", "ActivateCamera");
+
+	Params::GameplayCameraComponent_ActivateCamera Parms{};
+
+	Parms.PlayerIndex = PlayerIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCameraSystemActor.ActivateForPlayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AGameplayCameraSystemActor::ActivateForPlayer(int32 PlayerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraSystemActor", "ActivateForPlayer");
+
+	Params::GameplayCameraSystemActor_ActivateForPlayer Parms{};
+
+	Parms.PlayerIndex = PlayerIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayCameras.GameplayCameraSystemActor.GetCameraSystemComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UGameplayCameraSystemComponent*   ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameplayCameraSystemComponent* AGameplayCameraSystemActor::GetCameraSystemComponent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraSystemActor", "GetCameraSystemComponent");
+
+	Params::GameplayCameraSystemActor_GetCameraSystemComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayCameras.GameplayCameraSystemComponent.GetCameraSystemEvaluator
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UCameraSystemEvaluator*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCameraSystemEvaluator* UGameplayCameraSystemComponent::GetCameraSystemEvaluator()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayCameraSystemComponent", "GetCameraSystemEvaluator");
+
+	Params::GameplayCameraSystemComponent_GetCameraSystemEvaluator Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GameplayCameras.GameplayCamerasSubsystem.PlayCameraAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

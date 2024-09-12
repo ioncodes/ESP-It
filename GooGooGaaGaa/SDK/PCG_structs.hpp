@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "StructUtils_structs.hpp"
 
 
@@ -27,6 +27,22 @@ enum class EPCGAttributeAccessorFlags : uint8
 	AllowConstructible                       = 4,
 	AllowSetDefaultValue                     = 8,
 	EPCGAttributeAccessorFlags_MAX           = 9,
+};
+
+// Enum PCG.EPCGAttributeFilterOperator
+// NumValues: 0x000A
+enum class EPCGAttributeFilterOperator : uint8
+{
+	Greater                                  = 0,
+	GreaterOrEqual                           = 1,
+	Lesser                                   = 2,
+	LesserOrEqual                            = 3,
+	Equal                                    = 4,
+	NotEqual                                 = 5,
+	InRange                                  = 6,
+	Substring                                = 7,
+	Matches                                  = 8,
+	EPCGAttributeFilterOperator_MAX          = 9,
 };
 
 // Enum PCG.EPCGAttributePropertySelection
@@ -48,7 +64,7 @@ enum class EPCGExtraProperties : uint8
 };
 
 // Enum PCG.EPCGChangeType
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class EPCGChangeType : uint8
 {
 	None                                     = 0,
@@ -58,11 +74,12 @@ enum class EPCGChangeType : uint8
 	Edge                                     = 8,
 	Node                                     = 16,
 	Structural                               = 32,
-	EPCGChangeType_MAX                       = 33,
+	GenerationGrid                           = 64,
+	EPCGChangeType_MAX                       = 65,
 };
 
 // Enum PCG.EPCGDataType
-// NumValues: 0x0014
+// NumValues: 0x0015
 enum class EPCGDataType : uint32
 {
 	None                                     = 0,
@@ -81,6 +98,7 @@ enum class EPCGDataType : uint32
 	Composite                                = 512,
 	Spatial                                  = 1022,
 	Param                                    = 134217728,
+	PointOrParam                             = 134217730,
 	Settings                                 = 268435456,
 	Other                                    = 536870912,
 	Any                                      = 1073741823,
@@ -88,7 +106,7 @@ enum class EPCGDataType : uint32
 };
 
 // Enum PCG.EPCGExclusiveDataType
-// NumValues: 0x0014
+// NumValues: 0x0015
 enum class EPCGExclusiveDataType : uint8
 {
 	None                                     = 0,
@@ -110,14 +128,28 @@ enum class EPCGExclusiveDataType : uint8
 	Settings                                 = 16,
 	Other                                    = 17,
 	Any                                      = 18,
-	EPCGExclusiveDataType_MAX                = 19,
+	PointOrParam                             = 19,
+	EPCGExclusiveDataType_MAX                = 20,
+};
+
+// Enum PCG.EPCGCoordinateSpace
+// NumValues: 0x0004
+enum class EPCGCoordinateSpace : uint8
+{
+	World                                    = 0,
+	OriginalComponent                        = 1,
+	LocalComponent                           = 2,
+	EPCGCoordinateSpace_MAX                  = 3,
 };
 
 // Enum PCG.EPCGHiGenGrid
-// NumValues: 0x000D
+// NumValues: 0x000F
 enum class EPCGHiGenGrid : uint32
 {
 	Uninitialized                            = 0,
+	Grid4                                    = 4,
+	Grid8                                    = 8,
+	Grid16                                   = 16,
 	Grid32                                   = 32,
 	Grid64                                   = 64,
 	Grid128                                  = 128,
@@ -125,11 +157,10 @@ enum class EPCGHiGenGrid : uint32
 	Grid512                                  = 512,
 	Grid1024                                 = 1024,
 	Grid2048                                 = 2048,
-	GridMin                                  = 32,
+	GridMin                                  = 4,
 	GridMax                                  = 2048,
-	Unbounded                                = 4096,
-	GenerationDefault                        = 8192,
-	EPCGHiGenGrid_MAX                        = 8193,
+	Unbounded                                = 2147483648,
+	EPCGHiGenGrid_MAX                        = 2147483649,
 };
 
 // Enum PCG.EPCGAttachOptions
@@ -142,6 +173,82 @@ enum class EPCGAttachOptions : uint32
 	EPCGAttachOptions_MAX                    = 3,
 };
 
+// Enum PCG.EPCGEditorDirtyMode
+// NumValues: 0x0004
+enum class EPCGEditorDirtyMode : uint8
+{
+	Normal                                   = 0,
+	Preview                                  = 1,
+	LoadAsPreview                            = 2,
+	EPCGEditorDirtyMode_MAX                  = 3,
+};
+
+// Enum PCG.EPCGNodeTitleType
+// NumValues: 0x0003
+enum class EPCGNodeTitleType : uint8
+{
+	FullTitle                                = 0,
+	ListView                                 = 1,
+	EPCGNodeTitleType_MAX                    = 2,
+};
+
+// Enum PCG.EPCGControlFlowSelectionMode
+// NumValues: 0x0004
+enum class EPCGControlFlowSelectionMode : uint8
+{
+	Integer                                  = 0,
+	Enum                                     = 1,
+	String                                   = 2,
+	EPCGControlFlowSelectionMode_MAX         = 3,
+};
+
+// Enum PCG.EPCGLocalGridPivot
+// NumValues: 0x0004
+enum class EPCGLocalGridPivot : uint8
+{
+	Global                                   = 0,
+	OriginalComponent                        = 1,
+	LocalComponent                           = 2,
+	EPCGLocalGridPivot_MAX                   = 3,
+};
+
+// Enum PCG.EPCGPointPosition
+// NumValues: 0x0003
+enum class EPCGPointPosition : uint8
+{
+	CellCenter                               = 0,
+	CellCorners                              = 1,
+	EPCGPointPosition_MAX                    = 2,
+};
+
+// Enum PCG.EPCGGridPivot
+// NumValues: 0x0004
+enum class EPCGGridPivot : uint8
+{
+	Global                                   = 0,
+	OriginalComponent                        = 1,
+	LocalComponent                           = 2,
+	EPCGGridPivot_MAX                        = 3,
+};
+
+// Enum PCG.EPCGAttributeFilterOperation
+// NumValues: 0x0003
+enum class EPCGAttributeFilterOperation : uint32
+{
+	KeepSelectedAttributes                   = 0,
+	DeleteSelectedAttributes                 = 1,
+	EPCGAttributeFilterOperation_MAX         = 2,
+};
+
+// Enum PCG.EPCGTagFilterOperation
+// NumValues: 0x0003
+enum class EPCGTagFilterOperation : uint32
+{
+	KeepOnlySelectedTags                     = 0,
+	DeleteSelectedTags                       = 1,
+	EPCGTagFilterOperation_MAX               = 2,
+};
+
 // Enum PCG.PCGDistanceShape
 // NumValues: 0x0004
 enum class EPCGDistanceShape : uint32
@@ -152,8 +259,18 @@ enum class EPCGDistanceShape : uint32
 	PCGDistanceShape_MAX                     = 3,
 };
 
+// Enum PCG.EPCGUnitTestDummyEnum
+// NumValues: 0x0004
+enum class EPCGUnitTestDummyEnum : uint64
+{
+	One                                      = 0,
+	Two                                      = 1,
+	Three                                    = 2,
+	EPCGUnitTestDummyEnum_MAX                = 3,
+};
+
 // Enum PCG.EPCGMetadataTypes
-// NumValues: 0x0010
+// NumValues: 0x0012
 enum class EPCGMetadataTypes : uint8
 {
 	Float                                    = 0,
@@ -169,7 +286,9 @@ enum class EPCGMetadataTypes : uint8
 	Boolean                                  = 10,
 	Rotator                                  = 11,
 	Name                                     = 12,
-	Count                                    = 13,
+	SoftObjectPath                           = 13,
+	SoftClassPath                            = 14,
+	Count                                    = 15,
 	Unknown                                  = 255,
 	EPCGMetadataTypes_MAX                    = 256,
 };
@@ -239,6 +358,76 @@ enum class EPCGNormalToDensityMode : uint8
 	PCGNormalToDensityMode_MAX               = 7,
 };
 
+// Enum PCG.EPCGPointNeighborhoodDensityMode
+// NumValues: 0x0004
+enum class EPCGPointNeighborhoodDensityMode : uint32
+{
+	None                                     = 0,
+	SetNormalizedDistanceToDensity           = 1,
+	SetAverageDensity                        = 2,
+	EPCGPointNeighborhoodDensityMode_MAX     = 3,
+};
+
+// Enum PCG.EPCGPrintVerbosity
+// NumValues: 0x0004
+enum class EPCGPrintVerbosity : uint8
+{
+	Log                                      = 5,
+	Warning                                  = 3,
+	Error                                    = 2,
+	EPCGPrintVerbosity_MAX                   = 6,
+};
+
+// Enum PCG.EPCGProjectionColorBlendMode
+// NumValues: 0x0006
+enum class EPCGProjectionColorBlendMode : uint8
+{
+	SourceValue                              = 0,
+	TargetValue                              = 1,
+	Add                                      = 2,
+	Subtract                                 = 3,
+	Multiply                                 = 4,
+	EPCGProjectionColorBlendMode_MAX         = 5,
+};
+
+// Enum PCG.EPCGProjectionTagMergeMode
+// NumValues: 0x0004
+enum class EPCGProjectionTagMergeMode : uint8
+{
+	Source                                   = 0,
+	Target                                   = 1,
+	Both                                     = 2,
+	EPCGProjectionTagMergeMode_MAX           = 3,
+};
+
+// Enum PCG.EPCGTextureMappingMethod
+// NumValues: 0x0003
+enum class EPCGTextureMappingMethod : uint8
+{
+	Planar                                   = 0,
+	UVCoordinates                            = 1,
+	EPCGTextureMappingMethod_MAX             = 2,
+};
+
+// Enum PCG.EPCGSortMethod
+// NumValues: 0x0003
+enum class EPCGSortMethod : uint8
+{
+	Ascending                                = 0,
+	Descending                               = 1,
+	EPCGSortMethod_MAX                       = 2,
+};
+
+// Enum PCG.EPCGSplitAxis
+// NumValues: 0x0004
+enum class EPCGSplitAxis : uint32
+{
+	X                                        = 0,
+	Y                                        = 1,
+	Z                                        = 2,
+	EPCGSplitAxis_MAX                        = 3,
+};
+
 // Enum PCG.EPCGDifferenceDensityFunction
 // NumValues: 0x0004
 enum class EPCGDifferenceDensityFunction : uint8
@@ -288,6 +477,24 @@ enum class EPCGTextureDensityFunction : uint8
 	EPCGTextureDensityFunction_MAX           = 2,
 };
 
+// Enum PCG.EPCGTextureFilter
+// NumValues: 0x0003
+enum class EPCGTextureFilter : uint8
+{
+	Point                                    = 0,
+	Bilinear                                 = 1,
+	EPCGTextureFilter_MAX                    = 2,
+};
+
+// Enum PCG.EPCGTextureAddressMode
+// NumValues: 0x0003
+enum class EPCGTextureAddressMode : uint8
+{
+	Clamp                                    = 0,
+	Wrap                                     = 1,
+	EPCGTextureAddressMode_MAX               = 2,
+};
+
 // Enum PCG.EPCGUnionType
 // NumValues: 0x0004
 enum class EPCGUnionType : uint8
@@ -318,31 +525,31 @@ enum class EPCGWorldQueryFilterByTag : uint32
 	EPCGWorldQueryFilterByTag_MAX            = 3,
 };
 
-// Enum PCG.EPCGMedadataBitwiseOperation
+// Enum PCG.EPCGMetadataBitwiseOperation
 // NumValues: 0x0005
-enum class EPCGMedadataBitwiseOperation : uint16
+enum class EPCGMetadataBitwiseOperation : uint16
 {
 	And                                      = 0,
 	Not                                      = 1,
 	Or                                       = 2,
 	Xor                                      = 3,
-	EPCGMedadataBitwiseOperation_MAX         = 4,
+	EPCGMetadataBitwiseOperation_MAX         = 4,
 };
 
-// Enum PCG.EPCGMedadataBooleanOperation
+// Enum PCG.EPCGMetadataBooleanOperation
 // NumValues: 0x0005
-enum class EPCGMedadataBooleanOperation : uint16
+enum class EPCGMetadataBooleanOperation : uint16
 {
 	And                                      = 0,
 	Not                                      = 1,
 	Or                                       = 2,
 	Xor                                      = 3,
-	EPCGMedadataBooleanOperation_MAX         = 4,
+	EPCGMetadataBooleanOperation_MAX         = 4,
 };
 
-// Enum PCG.EPCGMedadataCompareOperation
+// Enum PCG.EPCGMetadataCompareOperation
 // NumValues: 0x0007
-enum class EPCGMedadataCompareOperation : uint16
+enum class EPCGMetadataCompareOperation : uint16
 {
 	Equal                                    = 0,
 	NotEqual                                 = 1,
@@ -350,17 +557,7 @@ enum class EPCGMedadataCompareOperation : uint16
 	GreaterOrEqual                           = 3,
 	Less                                     = 4,
 	LessOrEqual                              = 5,
-	EPCGMedadataCompareOperation_MAX         = 6,
-};
-
-// Enum PCG.EPCGMetadataOperationTarget
-// NumValues: 0x0004
-enum class EPCGMetadataOperationTarget : uint8
-{
-	PropertyToAttribute                      = 0,
-	AttributeToProperty                      = 1,
-	AttributeToAttribute                     = 2,
-	EPCGMetadataOperationTarget_MAX          = 3,
+	EPCGMetadataCompareOperation_MAX         = 6,
 };
 
 // Enum PCG.EPCGMetadataMakeVector3
@@ -383,9 +580,9 @@ enum class EPCGMetadataMakeVector4 : uint8
 	EPCGMetadataMakeVector4_MAX              = 4,
 };
 
-// Enum PCG.EPCGMedadataMathsOperation
+// Enum PCG.EPCGMetadataMathsOperation
 // NumValues: 0x0019
-enum class EPCGMedadataMathsOperation : uint16
+enum class EPCGMetadataMathsOperation : uint16
 {
 	UnaryOp                                  = 1024,
 	Sign                                     = 1025,
@@ -433,9 +630,9 @@ enum class EPCGMetadataSettingsBaseTypes : uint8
 	EPCGMetadataSettingsBaseTypes_MAX        = 2,
 };
 
-// Enum PCG.EPCGMedadataRotatorOperation
+// Enum PCG.EPCGMetadataRotatorOperation
 // NumValues: 0x0009
-enum class EPCGMedadataRotatorOperation : uint16
+enum class EPCGMetadataRotatorOperation : uint16
 {
 	RotatorOp                                = 0,
 	Combine                                  = 1,
@@ -445,7 +642,7 @@ enum class EPCGMedadataRotatorOperation : uint16
 	TransformOp                              = 100,
 	TransformRotation                        = 101,
 	InverseTransformRotation                 = 102,
-	EPCGMedadataRotatorOperation_MAX         = 103,
+	EPCGMetadataRotatorOperation_MAX         = 103,
 };
 
 // Enum PCG.EPCGMetadataStringOperation
@@ -456,14 +653,14 @@ enum class EPCGMetadataStringOperation : uint16
 	EPCGMetadataStringOperation_MAX          = 1,
 };
 
-// Enum PCG.EPCGMedadataTransformOperation
+// Enum PCG.EPCGMetadataTransformOperation
 // NumValues: 0x0004
-enum class EPCGMedadataTransformOperation : uint16
+enum class EPCGMetadataTransformOperation : uint16
 {
 	Compose                                  = 0,
 	Invert                                   = 1,
 	Lerp                                     = 2,
-	EPCGMedadataTransformOperation_MAX       = 3,
+	EPCGMetadataTransformOperation_MAX       = 3,
 };
 
 // Enum PCG.EPCGTransformLerpMode
@@ -476,9 +673,9 @@ enum class EPCGTransformLerpMode : uint16
 	EPCGTransformLerpMode_MAX                = 3,
 };
 
-// Enum PCG.EPCGMedadataTrigOperation
+// Enum PCG.EPCGMetadataTrigOperation
 // NumValues: 0x000A
-enum class EPCGMedadataTrigOperation : uint16
+enum class EPCGMetadataTrigOperation : uint16
 {
 	Acos                                     = 0,
 	Asin                                     = 1,
@@ -489,12 +686,12 @@ enum class EPCGMedadataTrigOperation : uint16
 	Tan                                      = 6,
 	DegToRad                                 = 7,
 	RadToDeg                                 = 8,
-	EPCGMedadataTrigOperation_MAX            = 9,
+	EPCGMetadataTrigOperation_MAX            = 9,
 };
 
-// Enum PCG.EPCGMedadataVectorOperation
+// Enum PCG.EPCGMetadataVectorOperation
 // NumValues: 0x000D
-enum class EPCGMedadataVectorOperation : uint16
+enum class EPCGMetadataVectorOperation : uint16
 {
 	VectorOp                                 = 0,
 	Cross                                    = 1,
@@ -508,18 +705,19 @@ enum class EPCGMedadataVectorOperation : uint16
 	TransformLocation                        = 102,
 	InverseTransformDirection                = 103,
 	InverseTransformLocation                 = 104,
-	EPCGMedadataVectorOperation_MAX          = 105,
+	EPCGMetadataVectorOperation_MAX          = 105,
 };
 
 // Enum PCG.EPCGActorSelection
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EPCGActorSelection : uint8
 {
 	ByTag                                    = 0,
 	ByName                                   = 1,
 	ByClass                                  = 2,
-	Unknown                                  = 3,
-	EPCGActorSelection_MAX                   = 4,
+	ByPath                                   = 3,
+	Unknown                                  = 4,
+	EPCGActorSelection_MAX                   = 5,
 };
 
 // Enum PCG.EPCGActorFilter
@@ -532,15 +730,6 @@ enum class EPCGActorFilter : uint8
 	AllWorldActors                           = 3,
 	Original                                 = 4,
 	EPCGActorFilter_MAX                      = 5,
-};
-
-// Enum PCG.EPCGAttributeFilterOperation
-// NumValues: 0x0003
-enum class EPCGAttributeFilterOperation : uint32
-{
-	KeepSelectedAttributes                   = 0,
-	DeleteSelectedAttributes                 = 1,
-	EPCGAttributeFilterOperation_MAX         = 2,
 };
 
 // Enum PCG.EPCGAttributeNoiseMode
@@ -556,12 +745,13 @@ enum class EPCGAttributeNoiseMode : uint8
 };
 
 // Enum PCG.EPCGAttributeReduceOperation
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EPCGAttributeReduceOperation : uint32
 {
 	Average                                  = 0,
 	Max                                      = 1,
 	Min                                      = 2,
+	Sum                                      = 3,
 };
 
 // Enum PCG.EPCGAttributeSelectOperation
@@ -607,6 +797,16 @@ enum class EPCGCopyPointsInheritanceMode : uint8
 	EPCGCopyPointsInheritanceMode_MAX        = 3,
 };
 
+// Enum PCG.EPCGCopyPointsTagInheritanceMode
+// NumValues: 0x0004
+enum class EPCGCopyPointsTagInheritanceMode : uint8
+{
+	Both                                     = 0,
+	Source                                   = 1,
+	Target                                   = 2,
+	EPCGCopyPointsTagInheritanceMode_MAX     = 3,
+};
+
 // Enum PCG.EPCGCopyPointsMetadataInheritanceMode
 // NumValues: 0x0006
 enum class EPCGCopyPointsMetadataInheritanceMode : uint8
@@ -650,6 +850,26 @@ enum class EPCGFilterByTagOperation : uint32
 	EPCGFilterByTagOperation_MAX             = 2,
 };
 
+// Enum PCG.EPCGProxyInterfaceMode
+// NumValues: 0x0004
+enum class EPCGProxyInterfaceMode : uint8
+{
+	ByNativeElement                          = 0,
+	ByBlueprintElement                       = 1,
+	BySettings                               = 2,
+	EPCGProxyInterfaceMode_MAX               = 3,
+};
+
+// Enum PCG.EPCGMatchMaxDistanceMode
+// NumValues: 0x0004
+enum class EPCGMatchMaxDistanceMode : uint32
+{
+	NoMaxDistance                            = 0,
+	UseConstantMaxDistance                   = 1,
+	AttributeMaxDistance                     = 2,
+	EPCGMatchMaxDistanceMode_MAX             = 3,
+};
+
 // Enum PCG.EPCGPointExtentsModifierMode
 // NumValues: 0x0006
 enum class EPCGPointExtentsModifierMode : uint8
@@ -660,54 +880,6 @@ enum class EPCGPointExtentsModifierMode : uint8
 	Add                                      = 3,
 	Multiply                                 = 4,
 	EPCGPointExtentsModifierMode_MAX         = 5,
-};
-
-// Enum PCG.EPCGPointTargetFilterType
-// NumValues: 0x0003
-enum class EPCGPointTargetFilterType : uint8
-{
-	Property                                 = 0,
-	Metadata                                 = 1,
-	EPCGPointTargetFilterType_MAX            = 2,
-};
-
-// Enum PCG.EPCGPointThresholdType
-// NumValues: 0x0004
-enum class EPCGPointThresholdType : uint8
-{
-	Property                                 = 0,
-	Metadata                                 = 1,
-	Constant                                 = 2,
-	EPCGPointThresholdType_MAX               = 3,
-};
-
-// Enum PCG.EPCGPointFilterConstantType
-// NumValues: 0x0007
-enum class EPCGPointFilterConstantType : uint8
-{
-	Integer64                                = 0,
-	Float                                    = 1,
-	Vector                                   = 2,
-	Vector4                                  = 3,
-	String                                   = 4,
-	Unknown                                  = 5,
-	EPCGPointFilterConstantType_MAX          = 6,
-};
-
-// Enum PCG.EPCGPointFilterOperator
-// NumValues: 0x000A
-enum class EPCGPointFilterOperator : uint8
-{
-	Greater                                  = 0,
-	GreaterOrEqual                           = 1,
-	Lesser                                   = 2,
-	LesserOrEqual                            = 3,
-	Equal                                    = 4,
-	NotEqual                                 = 5,
-	InRange                                  = 6,
-	Substring                                = 7,
-	Matches                                  = 8,
-	EPCGPointFilterOperator_MAX              = 9,
 };
 
 // Enum PCG.EPCGSelfPruningType
@@ -766,12 +938,13 @@ enum class EPCGSpawnActorGenerationTrigger : uint8
 };
 
 // Enum PCG.EPCGSplineSamplingMode
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EPCGSplineSamplingMode : uint8
 {
 	Subdivision                              = 0,
 	Distance                                 = 1,
-	EPCGSplineSamplingMode_MAX               = 2,
+	NumberOfSamples                          = 2,
+	EPCGSplineSamplingMode_MAX               = 3,
 };
 
 // Enum PCG.EPCGSplineSamplingDimension
@@ -804,6 +977,26 @@ enum class EPCGSplineSamplingInteriorOrientation : uint8
 	EPCGSplineSamplingInteriorOrientation_MAX = 2,
 };
 
+// Enum PCG.EPCGLandscapeCacheSerializationMode
+// NumValues: 0x0004
+enum class EPCGLandscapeCacheSerializationMode : uint8
+{
+	SerializeOnlyAtCook                      = 0,
+	NeverSerialize                           = 1,
+	AlwaysSerialize                          = 2,
+	EPCGLandscapeCacheSerializationMode_MAX  = 3,
+};
+
+// Enum PCG.EPCGLandscapeCacheSerializationContents
+// NumValues: 0x0004
+enum class EPCGLandscapeCacheSerializationContents : uint8
+{
+	SerializeOnlyPositionsAndNormals         = 0,
+	SerializeOnlyLayerData                   = 1,
+	SerializeAll                             = 2,
+	EPCGLandscapeCacheSerializationContents_MAX = 3,
+};
+
 // Enum PCG.EPCGMeshSelectorMaterialOverrideMode
 // NumValues: 0x0004
 enum class EPCGMeshSelectorMaterialOverrideMode : uint8
@@ -825,12 +1018,13 @@ enum class EPCGComponentInput : uint8
 };
 
 // Enum PCG.EPCGComponentGenerationTrigger
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EPCGComponentGenerationTrigger : uint8
 {
 	GenerateOnLoad                           = 0,
 	GenerateOnDemand                         = 1,
-	EPCGComponentGenerationTrigger_MAX       = 2,
+	GenerateAtRuntime                        = 2,
+	EPCGComponentGenerationTrigger_MAX       = 3,
 };
 
 // Enum PCG.EPCGComponentDirtyFlag
@@ -868,16 +1062,38 @@ enum class EPCGDebugVisScaleMethod : uint8
 	EPCGDebugVisScaleMethod_MAX              = 3,
 };
 
+// Enum PCG.EPCGPinUsage
+// NumValues: 0x0005
+enum class EPCGPinUsage : uint8
+{
+	Normal                                   = 0,
+	Loop                                     = 1,
+	Feedback                                 = 2,
+	DependencyOnly                           = 3,
+	EPCGPinUsage_MAX                         = 4,
+};
+
+// Enum PCG.EPCGPinStatus
+// NumValues: 0x0004
+enum class EPCGPinStatus : uint8
+{
+	Normal                                   = 0,
+	Required                                 = 1,
+	Advanced                                 = 2,
+	EPCGPinStatus_MAX                        = 3,
+};
+
 // Enum PCG.EPCGTypeConversion
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EPCGTypeConversion : uint8
 {
 	NoConversionRequired                     = 0,
 	CollapseToPoint                          = 1,
 	Filter                                   = 2,
 	MakeConcrete                             = 3,
-	Failed                                   = 4,
-	EPCGTypeConversion_MAX                   = 5,
+	SplineToSurface                          = 4,
+	Failed                                   = 5,
+	EPCGTypeConversion_MAX                   = 6,
 };
 
 // Enum PCG.EPCGPointProperties
@@ -911,7 +1127,7 @@ enum class EPCGSettingsExecutionMode : uint8
 };
 
 // Enum PCG.EPCGSettingsType
-// NumValues: 0x000F
+// NumValues: 0x0012
 enum class EPCGSettingsType : uint8
 {
 	InputOutput                              = 0,
@@ -928,7 +1144,10 @@ enum class EPCGSettingsType : uint8
 	Param                                    = 11,
 	HierarchicalGeneration                   = 12,
 	ControlFlow                              = 13,
-	EPCGSettingsType_MAX                     = 14,
+	PointOps                                 = 14,
+	GraphParameters                          = 15,
+	Reroute                                  = 16,
+	EPCGSettingsType_MAX                     = 17,
 };
 
 // Enum PCG.EDeterminismLevel
@@ -945,95 +1164,22 @@ enum class EDeterminismLevel : uint8
 	EDeterminismLevel_MAX                    = 5,
 };
 
-// Enum PCG.EPCGUnitTestDummyEnum
-// NumValues: 0x0004
-enum class EPCGUnitTestDummyEnum : uint64
-{
-	One                                      = 0,
-	Two                                      = 1,
-	Three                                    = 2,
-	EPCGUnitTestDummyEnum_MAX                = 3,
-};
-
-// ScriptStruct PCG.PCGMetadataTypesConstantStruct
-// 0x0170 (0x0170 - 0x0000)
-struct FPCGMetadataTypesConstantStruct final
+// ScriptStruct PCG.PCGAssetExporterParameters
+// 0x0030 (0x0030 - 0x0000)
+struct FPCGAssetExporterParameters final
 {
 public:
-	EPCGMetadataTypes                             Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2430[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	EPCGMetadataTypesConstantStructStringMode     StringMode;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FloatValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Int32Value;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        DoubleValue;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         IntValue;                                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              Vector2Value;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                VectorValue;                                       // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2431[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               Vector4Value;                                      // 0x0050(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  QuatValue;                                         // 0x0070(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             TransformValue;                                    // 0x0090(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 StringValue;                                       // 0x00F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          BoolValue;                                         // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2432[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               RotatorValue;                                      // 0x0108(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   NameValue;                                         // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftClassPath                         SoftClassPathValue;                                // 0x0128(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        SoftObjectPathValue;                               // 0x0148(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowsTypeChange;                                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2433[0x7];                                     // 0x0169(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bOpenSaveDialog;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AssetName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AssetPath;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPCGMetadataTypesConstantStruct) == 0x000010, "Wrong alignment on FPCGMetadataTypesConstantStruct");
-static_assert(sizeof(FPCGMetadataTypesConstantStruct) == 0x000170, "Wrong size on FPCGMetadataTypesConstantStruct");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, Type) == 0x000000, "Member 'FPCGMetadataTypesConstantStruct::Type' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, StringMode) == 0x000004, "Member 'FPCGMetadataTypesConstantStruct::StringMode' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, FloatValue) == 0x000008, "Member 'FPCGMetadataTypesConstantStruct::FloatValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, Int32Value) == 0x00000C, "Member 'FPCGMetadataTypesConstantStruct::Int32Value' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, DoubleValue) == 0x000010, "Member 'FPCGMetadataTypesConstantStruct::DoubleValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, IntValue) == 0x000018, "Member 'FPCGMetadataTypesConstantStruct::IntValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, Vector2Value) == 0x000020, "Member 'FPCGMetadataTypesConstantStruct::Vector2Value' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, VectorValue) == 0x000030, "Member 'FPCGMetadataTypesConstantStruct::VectorValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, Vector4Value) == 0x000050, "Member 'FPCGMetadataTypesConstantStruct::Vector4Value' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, QuatValue) == 0x000070, "Member 'FPCGMetadataTypesConstantStruct::QuatValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, TransformValue) == 0x000090, "Member 'FPCGMetadataTypesConstantStruct::TransformValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, StringValue) == 0x0000F0, "Member 'FPCGMetadataTypesConstantStruct::StringValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, BoolValue) == 0x000100, "Member 'FPCGMetadataTypesConstantStruct::BoolValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, RotatorValue) == 0x000108, "Member 'FPCGMetadataTypesConstantStruct::RotatorValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, NameValue) == 0x000120, "Member 'FPCGMetadataTypesConstantStruct::NameValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, SoftClassPathValue) == 0x000128, "Member 'FPCGMetadataTypesConstantStruct::SoftClassPathValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, SoftObjectPathValue) == 0x000148, "Member 'FPCGMetadataTypesConstantStruct::SoftObjectPathValue' has a wrong offset!");
-static_assert(offsetof(FPCGMetadataTypesConstantStruct, bAllowsTypeChange) == 0x000168, "Member 'FPCGMetadataTypesConstantStruct::bAllowsTypeChange' has a wrong offset!");
-
-// ScriptStruct PCG.PCGMatchAndSetWeightedEntry
-// 0x0180 (0x0180 - 0x0000)
-struct FPCGMatchAndSetWeightedEntry final
-{
-public:
-	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2434[0xC];                                     // 0x0174(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGMatchAndSetWeightedEntry) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedEntry");
-static_assert(sizeof(FPCGMatchAndSetWeightedEntry) == 0x000180, "Wrong size on FPCGMatchAndSetWeightedEntry");
-static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Value) == 0x000000, "Member 'FPCGMatchAndSetWeightedEntry::Value' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Weight) == 0x000170, "Member 'FPCGMatchAndSetWeightedEntry::Weight' has a wrong offset!");
-
-// ScriptStruct PCG.PCGMatchAndSetWeightedByCategoryEntryList
-// 0x0190 (0x0190 - 0x0000)
-struct FPCGMatchAndSetWeightedByCategoryEntryList final
-{
-public:
-	struct FPCGMetadataTypesConstantStruct        CategoryValue;                                     // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bIsDefault;                                        // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2435[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPCGMatchAndSetWeightedEntry>   WeightedEntries;                                   // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2436[0x8];                                     // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedByCategoryEntryList");
-static_assert(sizeof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000190, "Wrong size on FPCGMatchAndSetWeightedByCategoryEntryList");
-static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, CategoryValue) == 0x000000, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::CategoryValue' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, bIsDefault) == 0x000170, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::bIsDefault' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, WeightedEntries) == 0x000178, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::WeightedEntries' has a wrong offset!");
+static_assert(alignof(FPCGAssetExporterParameters) == 0x000008, "Wrong alignment on FPCGAssetExporterParameters");
+static_assert(sizeof(FPCGAssetExporterParameters) == 0x000030, "Wrong size on FPCGAssetExporterParameters");
+static_assert(offsetof(FPCGAssetExporterParameters, bOpenSaveDialog) == 0x000000, "Member 'FPCGAssetExporterParameters::bOpenSaveDialog' has a wrong offset!");
+static_assert(offsetof(FPCGAssetExporterParameters, AssetName) == 0x000008, "Member 'FPCGAssetExporterParameters::AssetName' has a wrong offset!");
+static_assert(offsetof(FPCGAssetExporterParameters, AssetPath) == 0x000018, "Member 'FPCGAssetExporterParameters::AssetPath' has a wrong offset!");
 
 // ScriptStruct PCG.PCGAttributeExtractorTestStructDepth2
 // 0x0004 (0x0004 - 0x0000)
@@ -1077,12 +1223,12 @@ static_assert(offsetof(FPCGAttributeExtractorTestStruct, Object) == 0x000008, "M
 struct FPCGAttributePropertySelector
 {
 public:
-	uint8                                         Pad_2437[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	EPCGAttributePropertySelection                Selection;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                   AttributeName;                                     // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EPCGPointProperties                           PointProperty;                                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EPCGExtraProperties                           ExtraProperty;                                     // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2438[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ExtraNames;                                        // 0x0018(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 };
 static_assert(alignof(FPCGAttributePropertySelector) == 0x000008, "Wrong alignment on FPCGAttributePropertySelector");
@@ -1093,19 +1239,6 @@ static_assert(offsetof(FPCGAttributePropertySelector, PointProperty) == 0x000014
 static_assert(offsetof(FPCGAttributePropertySelector, ExtraProperty) == 0x000015, "Member 'FPCGAttributePropertySelector::ExtraProperty' has a wrong offset!");
 static_assert(offsetof(FPCGAttributePropertySelector, ExtraNames) == 0x000018, "Member 'FPCGAttributePropertySelector::ExtraNames' has a wrong offset!");
 
-// ScriptStruct PCG.PCGLandscapeLayerWeight
-// 0x000C (0x000C - 0x0000)
-struct FPCGLandscapeLayerWeight final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPCGLandscapeLayerWeight) == 0x000004, "Wrong alignment on FPCGLandscapeLayerWeight");
-static_assert(sizeof(FPCGLandscapeLayerWeight) == 0x00000C, "Wrong size on FPCGLandscapeLayerWeight");
-static_assert(offsetof(FPCGLandscapeLayerWeight, Name) == 0x000000, "Member 'FPCGLandscapeLayerWeight::Name' has a wrong offset!");
-static_assert(offsetof(FPCGLandscapeLayerWeight, Weight) == 0x000008, "Member 'FPCGLandscapeLayerWeight::Weight' has a wrong offset!");
-
 // ScriptStruct PCG.PCGAttributePropertyInputSelector
 // 0x0000 (0x0028 - 0x0028)
 struct FPCGAttributePropertyInputSelector final : public FPCGAttributePropertySelector
@@ -1113,6 +1246,76 @@ struct FPCGAttributePropertyInputSelector final : public FPCGAttributePropertySe
 };
 static_assert(alignof(FPCGAttributePropertyInputSelector) == 0x000008, "Wrong alignment on FPCGAttributePropertyInputSelector");
 static_assert(sizeof(FPCGAttributePropertyInputSelector) == 0x000028, "Wrong size on FPCGAttributePropertyInputSelector");
+
+// ScriptStruct PCG.PCGMetadataTypesConstantStruct
+// 0x0170 (0x0170 - 0x0000)
+struct FPCGMetadataTypesConstantStruct final
+{
+public:
+	EPCGMetadataTypes                             Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGMetadataTypesConstantStructStringMode     StringMode;                                        // 0x0004(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FloatValue;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Int32Value;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        DoubleValue;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         IntValue;                                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Vector2Value;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                VectorValue;                                       // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               Vector4Value;                                      // 0x0050(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  QuatValue;                                         // 0x0070(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             TransformValue;                                    // 0x0090(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 StringValue;                                       // 0x00F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BoolValue;                                         // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               RotatorValue;                                      // 0x0108(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   NameValue;                                         // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftClassPath                         SoftClassPathValue;                                // 0x0128(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        SoftObjectPathValue;                               // 0x0148(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowsTypeChange;                                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCGMetadataTypesConstantStruct) == 0x000010, "Wrong alignment on FPCGMetadataTypesConstantStruct");
+static_assert(sizeof(FPCGMetadataTypesConstantStruct) == 0x000170, "Wrong size on FPCGMetadataTypesConstantStruct");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, Type) == 0x000000, "Member 'FPCGMetadataTypesConstantStruct::Type' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, StringMode) == 0x000004, "Member 'FPCGMetadataTypesConstantStruct::StringMode' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, FloatValue) == 0x000008, "Member 'FPCGMetadataTypesConstantStruct::FloatValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, Int32Value) == 0x00000C, "Member 'FPCGMetadataTypesConstantStruct::Int32Value' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, DoubleValue) == 0x000010, "Member 'FPCGMetadataTypesConstantStruct::DoubleValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, IntValue) == 0x000018, "Member 'FPCGMetadataTypesConstantStruct::IntValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, Vector2Value) == 0x000020, "Member 'FPCGMetadataTypesConstantStruct::Vector2Value' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, VectorValue) == 0x000030, "Member 'FPCGMetadataTypesConstantStruct::VectorValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, Vector4Value) == 0x000050, "Member 'FPCGMetadataTypesConstantStruct::Vector4Value' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, QuatValue) == 0x000070, "Member 'FPCGMetadataTypesConstantStruct::QuatValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, TransformValue) == 0x000090, "Member 'FPCGMetadataTypesConstantStruct::TransformValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, StringValue) == 0x0000F0, "Member 'FPCGMetadataTypesConstantStruct::StringValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, BoolValue) == 0x000100, "Member 'FPCGMetadataTypesConstantStruct::BoolValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, RotatorValue) == 0x000108, "Member 'FPCGMetadataTypesConstantStruct::RotatorValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, NameValue) == 0x000120, "Member 'FPCGMetadataTypesConstantStruct::NameValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, SoftClassPathValue) == 0x000128, "Member 'FPCGMetadataTypesConstantStruct::SoftClassPathValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, SoftObjectPathValue) == 0x000148, "Member 'FPCGMetadataTypesConstantStruct::SoftObjectPathValue' has a wrong offset!");
+static_assert(offsetof(FPCGMetadataTypesConstantStruct, bAllowsTypeChange) == 0x000168, "Member 'FPCGMetadataTypesConstantStruct::bAllowsTypeChange' has a wrong offset!");
+
+// ScriptStruct PCG.PCGAttributeFilterThresholdSettings
+// 0x01B0 (0x01B0 - 0x0000)
+struct FPCGAttributeFilterThresholdSettings final
+{
+public:
+	bool                                          bInclusive;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseConstantThreshold;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     ThresholdAttribute;                                // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSpatialQuery;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGMetadataTypesConstantStruct        AttributeTypes;                                    // 0x0040(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGAttributeFilterThresholdSettings) == 0x000010, "Wrong alignment on FPCGAttributeFilterThresholdSettings");
+static_assert(sizeof(FPCGAttributeFilterThresholdSettings) == 0x0001B0, "Wrong size on FPCGAttributeFilterThresholdSettings");
+static_assert(offsetof(FPCGAttributeFilterThresholdSettings, bInclusive) == 0x000000, "Member 'FPCGAttributeFilterThresholdSettings::bInclusive' has a wrong offset!");
+static_assert(offsetof(FPCGAttributeFilterThresholdSettings, bUseConstantThreshold) == 0x000001, "Member 'FPCGAttributeFilterThresholdSettings::bUseConstantThreshold' has a wrong offset!");
+static_assert(offsetof(FPCGAttributeFilterThresholdSettings, ThresholdAttribute) == 0x000008, "Member 'FPCGAttributeFilterThresholdSettings::ThresholdAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGAttributeFilterThresholdSettings, bUseSpatialQuery) == 0x000030, "Member 'FPCGAttributeFilterThresholdSettings::bUseSpatialQuery' has a wrong offset!");
+static_assert(offsetof(FPCGAttributeFilterThresholdSettings, AttributeTypes) == 0x000040, "Member 'FPCGAttributeFilterThresholdSettings::AttributeTypes' has a wrong offset!");
 
 // ScriptStruct PCG.PCGAttributePropertyOutputSelector
 // 0x0000 (0x0028 - 0x0028)
@@ -1130,6 +1333,52 @@ struct FPCGAttributePropertyOutputNoSourceSelector final : public FPCGAttributeP
 static_assert(alignof(FPCGAttributePropertyOutputNoSourceSelector) == 0x000008, "Wrong alignment on FPCGAttributePropertyOutputNoSourceSelector");
 static_assert(sizeof(FPCGAttributePropertyOutputNoSourceSelector) == 0x000028, "Wrong size on FPCGAttributePropertyOutputNoSourceSelector");
 
+// ScriptStruct PCG.PCGRuntimeGenerationRadii
+// 0x0060 (0x0060 - 0x0000)
+struct FPCGRuntimeGenerationRadii final
+{
+public:
+	double                                        GenerationRadius;                                  // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius400;                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius800;                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius1600;                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius3200;                              // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius6400;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius12800;                             // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius25600;                             // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius51200;                             // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius102400;                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        GenerationRadius204800;                            // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        CleanupRadiusMultiplier;                           // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGRuntimeGenerationRadii) == 0x000008, "Wrong alignment on FPCGRuntimeGenerationRadii");
+static_assert(sizeof(FPCGRuntimeGenerationRadii) == 0x000060, "Wrong size on FPCGRuntimeGenerationRadii");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius) == 0x000000, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius400) == 0x000008, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius400' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius800) == 0x000010, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius800' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius1600) == 0x000018, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius1600' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius3200) == 0x000020, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius3200' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius6400) == 0x000028, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius6400' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius12800) == 0x000030, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius12800' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius25600) == 0x000038, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius25600' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius51200) == 0x000040, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius51200' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius102400) == 0x000048, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius102400' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, GenerationRadius204800) == 0x000050, "Member 'FPCGRuntimeGenerationRadii::GenerationRadius204800' has a wrong offset!");
+static_assert(offsetof(FPCGRuntimeGenerationRadii, CleanupRadiusMultiplier) == 0x000058, "Member 'FPCGRuntimeGenerationRadii::CleanupRadiusMultiplier' has a wrong offset!");
+
+// ScriptStruct PCG.EnumSelector
+// 0x0010 (0x0010 - 0x0000)
+struct FEnumSelector final
+{
+public:
+	class UEnum*                                  Class;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         Value;                                             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FEnumSelector) == 0x000008, "Wrong alignment on FEnumSelector");
+static_assert(sizeof(FEnumSelector) == 0x000010, "Wrong size on FEnumSelector");
+static_assert(offsetof(FEnumSelector, Class) == 0x000000, "Member 'FEnumSelector::Class' has a wrong offset!");
+static_assert(offsetof(FEnumSelector, Value) == 0x000008, "Member 'FEnumSelector::Value' has a wrong offset!");
+
 // ScriptStruct PCG.PCGCrc
 // 0x0008 (0x0008 - 0x0000)
 struct FPCGCrc final
@@ -1137,69 +1386,12 @@ struct FPCGCrc final
 public:
 	uint32                                        Value;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bValid;                                            // 0x0004(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2439[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGCrc) == 0x000004, "Wrong alignment on FPCGCrc");
 static_assert(sizeof(FPCGCrc) == 0x000008, "Wrong size on FPCGCrc");
 static_assert(offsetof(FPCGCrc, Value) == 0x000000, "Member 'FPCGCrc::Value' has a wrong offset!");
 static_assert(offsetof(FPCGCrc, bValid) == 0x000004, "Member 'FPCGCrc::bValid' has a wrong offset!");
-
-// ScriptStruct PCG.PCGSplineSamplerParams
-// 0x00D0 (0x00D0 - 0x0000)
-struct FPCGSplineSamplerParams final
-{
-public:
-	EPCGSplineSamplingDimension                   Dimension;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGSplineSamplingMode                        Mode;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGSplineSamplingFill                        Fill;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_243A[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SubdivisionsPerSegment;                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceIncrement;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPlanarSubdivisions;                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumHeightSubdivisions;                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bComputeDirectionDelta;                            // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_243B[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   NextDirectionDeltaAttribute;                       // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bComputeCurvature;                                 // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_243C[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CurvatureAttribute;                                // 0x0024(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUnbounded;                                        // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_243D[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InteriorSampleSpacing;                             // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InteriorBorderSampleSpacing;                       // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTreatSplineAsPolyline;                            // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGSplineSamplingInteriorOrientation         InteriorOrientation;                               // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bProjectOntoSurface;                               // 0x003A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_243E[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     InteriorDensityFalloffCurve;                       // 0x0040(0x0088)(Edit, NativeAccessSpecifierPublic)
-	float                                         PointSteepness;                                    // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSeedFromLocalPosition;                            // 0x00CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSeedFrom2DPosition;                               // 0x00CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_243F[0x2];                                     // 0x00CE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGSplineSamplerParams) == 0x000008, "Wrong alignment on FPCGSplineSamplerParams");
-static_assert(sizeof(FPCGSplineSamplerParams) == 0x0000D0, "Wrong size on FPCGSplineSamplerParams");
-static_assert(offsetof(FPCGSplineSamplerParams, Dimension) == 0x000000, "Member 'FPCGSplineSamplerParams::Dimension' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, Mode) == 0x000001, "Member 'FPCGSplineSamplerParams::Mode' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, Fill) == 0x000002, "Member 'FPCGSplineSamplerParams::Fill' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, SubdivisionsPerSegment) == 0x000004, "Member 'FPCGSplineSamplerParams::SubdivisionsPerSegment' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, DistanceIncrement) == 0x000008, "Member 'FPCGSplineSamplerParams::DistanceIncrement' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, NumPlanarSubdivisions) == 0x00000C, "Member 'FPCGSplineSamplerParams::NumPlanarSubdivisions' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, NumHeightSubdivisions) == 0x000010, "Member 'FPCGSplineSamplerParams::NumHeightSubdivisions' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bComputeDirectionDelta) == 0x000014, "Member 'FPCGSplineSamplerParams::bComputeDirectionDelta' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, NextDirectionDeltaAttribute) == 0x000018, "Member 'FPCGSplineSamplerParams::NextDirectionDeltaAttribute' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bComputeCurvature) == 0x000020, "Member 'FPCGSplineSamplerParams::bComputeCurvature' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, CurvatureAttribute) == 0x000024, "Member 'FPCGSplineSamplerParams::CurvatureAttribute' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bUnbounded) == 0x00002C, "Member 'FPCGSplineSamplerParams::bUnbounded' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, InteriorSampleSpacing) == 0x000030, "Member 'FPCGSplineSamplerParams::InteriorSampleSpacing' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, InteriorBorderSampleSpacing) == 0x000034, "Member 'FPCGSplineSamplerParams::InteriorBorderSampleSpacing' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bTreatSplineAsPolyline) == 0x000038, "Member 'FPCGSplineSamplerParams::bTreatSplineAsPolyline' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, InteriorOrientation) == 0x000039, "Member 'FPCGSplineSamplerParams::InteriorOrientation' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bProjectOntoSurface) == 0x00003A, "Member 'FPCGSplineSamplerParams::bProjectOntoSurface' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, InteriorDensityFalloffCurve) == 0x000040, "Member 'FPCGSplineSamplerParams::InteriorDensityFalloffCurve' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, PointSteepness) == 0x0000C8, "Member 'FPCGSplineSamplerParams::PointSteepness' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bSeedFromLocalPosition) == 0x0000CC, "Member 'FPCGSplineSamplerParams::bSeedFromLocalPosition' has a wrong offset!");
-static_assert(offsetof(FPCGSplineSamplerParams, bSeedFrom2DPosition) == 0x0000CD, "Member 'FPCGSplineSamplerParams::bSeedFrom2DPosition' has a wrong offset!");
 
 // ScriptStruct PCG.PCGDataTableRowToParamDataTestStruct
 // 0x00A0 (0x00A0 - 0x0000)
@@ -1209,10 +1401,10 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 String;                                            // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         I32;                                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2440[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         I64;                                               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         F32;                                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2441[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        F64;                                               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              V2;                                                // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                V3;                                                // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1239,7 +1431,7 @@ struct FPCGDeterminismSettings final
 public:
 	bool                                          bNativeTests;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseBlueprintDeterminismTest;                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2442[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UPCGDeterminismTestBlueprintBase> DeterminismTestBlueprint;                          // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGDeterminismSettings) == 0x000008, "Wrong alignment on FPCGDeterminismSettings");
@@ -1248,18 +1440,75 @@ static_assert(offsetof(FPCGDeterminismSettings, bNativeTests) == 0x000000, "Memb
 static_assert(offsetof(FPCGDeterminismSettings, bUseBlueprintDeterminismTest) == 0x000001, "Member 'FPCGDeterminismSettings::bUseBlueprintDeterminismTest' has a wrong offset!");
 static_assert(offsetof(FPCGDeterminismSettings, DeterminismTestBlueprint) == 0x000008, "Member 'FPCGDeterminismSettings::DeterminismTestBlueprint' has a wrong offset!");
 
-// ScriptStruct PCG.PCGMatchAndSetByAttributeEntry
-// 0x02E0 (0x02E0 - 0x0000)
-struct FPCGMatchAndSetByAttributeEntry final
+// ScriptStruct PCG.PCGDummyGetPropertyLevel2Struct
+// 0x0010 (0x0010 - 0x0000)
+struct FPCGDummyGetPropertyLevel2Struct final
 {
 public:
-	struct FPCGMetadataTypesConstantStruct        ValueToMatch;                                      // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0170(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<double>                                DoubleArrayProperty;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPCGMatchAndSetByAttributeEntry) == 0x000010, "Wrong alignment on FPCGMatchAndSetByAttributeEntry");
-static_assert(sizeof(FPCGMatchAndSetByAttributeEntry) == 0x0002E0, "Wrong size on FPCGMatchAndSetByAttributeEntry");
-static_assert(offsetof(FPCGMatchAndSetByAttributeEntry, ValueToMatch) == 0x000000, "Member 'FPCGMatchAndSetByAttributeEntry::ValueToMatch' has a wrong offset!");
-static_assert(offsetof(FPCGMatchAndSetByAttributeEntry, Value) == 0x000170, "Member 'FPCGMatchAndSetByAttributeEntry::Value' has a wrong offset!");
+static_assert(alignof(FPCGDummyGetPropertyLevel2Struct) == 0x000008, "Wrong alignment on FPCGDummyGetPropertyLevel2Struct");
+static_assert(sizeof(FPCGDummyGetPropertyLevel2Struct) == 0x000010, "Wrong size on FPCGDummyGetPropertyLevel2Struct");
+static_assert(offsetof(FPCGDummyGetPropertyLevel2Struct, DoubleArrayProperty) == 0x000000, "Member 'FPCGDummyGetPropertyLevel2Struct::DoubleArrayProperty' has a wrong offset!");
+
+// ScriptStruct PCG.PCGDummyGetPropertyStruct
+// 0x0028 (0x0028 - 0x0000)
+struct FPCGDummyGetPropertyStruct final
+{
+public:
+	TArray<int32>                                 IntArrayProperty;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         FloatProperty;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGDummyGetPropertyLevel2Struct       Level2Struct;                                      // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGDummyGetPropertyStruct) == 0x000008, "Wrong alignment on FPCGDummyGetPropertyStruct");
+static_assert(sizeof(FPCGDummyGetPropertyStruct) == 0x000028, "Wrong size on FPCGDummyGetPropertyStruct");
+static_assert(offsetof(FPCGDummyGetPropertyStruct, IntArrayProperty) == 0x000000, "Member 'FPCGDummyGetPropertyStruct::IntArrayProperty' has a wrong offset!");
+static_assert(offsetof(FPCGDummyGetPropertyStruct, FloatProperty) == 0x000010, "Member 'FPCGDummyGetPropertyStruct::FloatProperty' has a wrong offset!");
+static_assert(offsetof(FPCGDummyGetPropertyStruct, Level2Struct) == 0x000018, "Member 'FPCGDummyGetPropertyStruct::Level2Struct' has a wrong offset!");
+
+// ScriptStruct PCG.PCGTestMyColorStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGTestMyColorStruct final
+{
+public:
+	double                                        B;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        G;                                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        R;                                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        A;                                                 // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGTestMyColorStruct) == 0x000008, "Wrong alignment on FPCGTestMyColorStruct");
+static_assert(sizeof(FPCGTestMyColorStruct) == 0x000020, "Wrong size on FPCGTestMyColorStruct");
+static_assert(offsetof(FPCGTestMyColorStruct, B) == 0x000000, "Member 'FPCGTestMyColorStruct::B' has a wrong offset!");
+static_assert(offsetof(FPCGTestMyColorStruct, G) == 0x000008, "Member 'FPCGTestMyColorStruct::G' has a wrong offset!");
+static_assert(offsetof(FPCGTestMyColorStruct, R) == 0x000010, "Member 'FPCGTestMyColorStruct::R' has a wrong offset!");
+static_assert(offsetof(FPCGTestMyColorStruct, A) == 0x000018, "Member 'FPCGTestMyColorStruct::A' has a wrong offset!");
+
+// ScriptStruct PCG.PCGObjectPropertyOverrideDescription
+// 0x0038 (0x0038 - 0x0000)
+struct FPCGObjectPropertyOverrideDescription final
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0028)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PropertyTarget;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGObjectPropertyOverrideDescription) == 0x000008, "Wrong alignment on FPCGObjectPropertyOverrideDescription");
+static_assert(sizeof(FPCGObjectPropertyOverrideDescription) == 0x000038, "Wrong size on FPCGObjectPropertyOverrideDescription");
+static_assert(offsetof(FPCGObjectPropertyOverrideDescription, InputSource) == 0x000000, "Member 'FPCGObjectPropertyOverrideDescription::InputSource' has a wrong offset!");
+static_assert(offsetof(FPCGObjectPropertyOverrideDescription, PropertyTarget) == 0x000028, "Member 'FPCGObjectPropertyOverrideDescription::PropertyTarget' has a wrong offset!");
+
+// ScriptStruct PCG.PCGActorPropertyOverride
+// 0x0038 (0x0038 - 0x0000)
+struct FPCGActorPropertyOverride final
+{
+public:
+	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0028)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PropertyTarget;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGActorPropertyOverride) == 0x000008, "Wrong alignment on FPCGActorPropertyOverride");
+static_assert(sizeof(FPCGActorPropertyOverride) == 0x000038, "Wrong size on FPCGActorPropertyOverride");
+static_assert(offsetof(FPCGActorPropertyOverride, InputSource) == 0x000000, "Member 'FPCGActorPropertyOverride::InputSource' has a wrong offset!");
+static_assert(offsetof(FPCGActorPropertyOverride, PropertyTarget) == 0x000028, "Member 'FPCGActorPropertyOverride::PropertyTarget' has a wrong offset!");
 
 // ScriptStruct PCG.PCGProjectionParams
 // 0x0020 (0x0020 - 0x0000)
@@ -1269,42 +1518,63 @@ public:
 	bool                                          bProjectPositions;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bProjectRotations;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bProjectScales;                                    // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bProjectColors;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2443[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGProjectionColorBlendMode                  ColorBlendMode;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AttributeList;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPCGMetadataFilterMode                        AttributeMode;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPCGMetadataOp                                AttributeMergeOperation;                           // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2444[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EPCGProjectionTagMergeMode                    TagMergeOperation;                                 // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGProjectionParams) == 0x000008, "Wrong alignment on FPCGProjectionParams");
 static_assert(sizeof(FPCGProjectionParams) == 0x000020, "Wrong size on FPCGProjectionParams");
 static_assert(offsetof(FPCGProjectionParams, bProjectPositions) == 0x000000, "Member 'FPCGProjectionParams::bProjectPositions' has a wrong offset!");
 static_assert(offsetof(FPCGProjectionParams, bProjectRotations) == 0x000001, "Member 'FPCGProjectionParams::bProjectRotations' has a wrong offset!");
 static_assert(offsetof(FPCGProjectionParams, bProjectScales) == 0x000002, "Member 'FPCGProjectionParams::bProjectScales' has a wrong offset!");
-static_assert(offsetof(FPCGProjectionParams, bProjectColors) == 0x000003, "Member 'FPCGProjectionParams::bProjectColors' has a wrong offset!");
+static_assert(offsetof(FPCGProjectionParams, ColorBlendMode) == 0x000003, "Member 'FPCGProjectionParams::ColorBlendMode' has a wrong offset!");
 static_assert(offsetof(FPCGProjectionParams, AttributeList) == 0x000008, "Member 'FPCGProjectionParams::AttributeList' has a wrong offset!");
 static_assert(offsetof(FPCGProjectionParams, AttributeMode) == 0x000018, "Member 'FPCGProjectionParams::AttributeMode' has a wrong offset!");
 static_assert(offsetof(FPCGProjectionParams, AttributeMergeOperation) == 0x000019, "Member 'FPCGProjectionParams::AttributeMergeOperation' has a wrong offset!");
+static_assert(offsetof(FPCGProjectionParams, TagMergeOperation) == 0x00001A, "Member 'FPCGProjectionParams::TagMergeOperation' has a wrong offset!");
 
 // ScriptStruct PCG.PCGContext
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct alignas(0x08) FPCGContext
 {
 public:
-	uint8                                         Pad_2445[0xB8];                                    // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xD0];                                       // 0x0000(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGContext) == 0x000008, "Wrong alignment on FPCGContext");
-static_assert(sizeof(FPCGContext) == 0x0000B8, "Wrong size on FPCGContext");
+static_assert(sizeof(FPCGContext) == 0x0000D0, "Wrong size on FPCGContext");
 
 // ScriptStruct PCG.PCGStaticMeshSpawnerContext
-// 0x01F8 (0x02B0 - 0x00B8)
+// 0x0248 (0x0318 - 0x00D0)
 struct FPCGStaticMeshSpawnerContext final : public FPCGContext
 {
 public:
-	uint8                                         Pad_2446[0x1F8];                                   // 0x00B8(0x01F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D0[0x248];                                     // 0x00D0(0x0248)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGStaticMeshSpawnerContext) == 0x000008, "Wrong alignment on FPCGStaticMeshSpawnerContext");
-static_assert(sizeof(FPCGStaticMeshSpawnerContext) == 0x0002B0, "Wrong size on FPCGStaticMeshSpawnerContext");
+static_assert(sizeof(FPCGStaticMeshSpawnerContext) == 0x000318, "Wrong size on FPCGStaticMeshSpawnerContext");
+
+// ScriptStruct PCG.PCGLandscapeDataProps
+// 0x0005 (0x0005 - 0x0000)
+struct FPCGLandscapeDataProps final
+{
+public:
+	bool                                          bGetHeightOnly;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetLayerWeights;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetActorReference;                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetPhysicalMaterial;                              // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetComponentCoordinates;                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGLandscapeDataProps) == 0x000001, "Wrong alignment on FPCGLandscapeDataProps");
+static_assert(sizeof(FPCGLandscapeDataProps) == 0x000005, "Wrong size on FPCGLandscapeDataProps");
+static_assert(offsetof(FPCGLandscapeDataProps, bGetHeightOnly) == 0x000000, "Member 'FPCGLandscapeDataProps::bGetHeightOnly' has a wrong offset!");
+static_assert(offsetof(FPCGLandscapeDataProps, bGetLayerWeights) == 0x000001, "Member 'FPCGLandscapeDataProps::bGetLayerWeights' has a wrong offset!");
+static_assert(offsetof(FPCGLandscapeDataProps, bGetActorReference) == 0x000002, "Member 'FPCGLandscapeDataProps::bGetActorReference' has a wrong offset!");
+static_assert(offsetof(FPCGLandscapeDataProps, bGetPhysicalMaterial) == 0x000003, "Member 'FPCGLandscapeDataProps::bGetPhysicalMaterial' has a wrong offset!");
+static_assert(offsetof(FPCGLandscapeDataProps, bGetComponentCoordinates) == 0x000004, "Member 'FPCGLandscapeDataProps::bGetComponentCoordinates' has a wrong offset!");
 
 // ScriptStruct PCG.PCGSplineStruct
 // 0x0160 (0x0160 - 0x0000)
@@ -1316,7 +1586,7 @@ public:
 	struct FVector                                DefaultUpVector;                                   // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReparamStepsPerSegment;                            // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bClosedLoop;                                       // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2447[0x3];                                     // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBoxSphereBounds                       LocalBounds;                                       // 0x00F0(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBoxSphereBounds                       Bounds;                                            // 0x0128(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -1329,26 +1599,6 @@ static_assert(offsetof(FPCGSplineStruct, ReparamStepsPerSegment) == 0x0000E8, "M
 static_assert(offsetof(FPCGSplineStruct, bClosedLoop) == 0x0000EC, "Member 'FPCGSplineStruct::bClosedLoop' has a wrong offset!");
 static_assert(offsetof(FPCGSplineStruct, LocalBounds) == 0x0000F0, "Member 'FPCGSplineStruct::LocalBounds' has a wrong offset!");
 static_assert(offsetof(FPCGSplineStruct, Bounds) == 0x000128, "Member 'FPCGSplineStruct::Bounds' has a wrong offset!");
-
-// ScriptStruct PCG.PCGPinProperties
-// 0x0010 (0x0010 - 0x0000)
-struct FPCGPinProperties final
-{
-public:
-	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGDataType                                  AllowedTypes;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultipleData;                                // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMultipleConnections;                         // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAdvancedPin;                                      // 0x000E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2448[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCGPinProperties) == 0x000004, "Wrong alignment on FPCGPinProperties");
-static_assert(sizeof(FPCGPinProperties) == 0x000010, "Wrong size on FPCGPinProperties");
-static_assert(offsetof(FPCGPinProperties, Label) == 0x000000, "Member 'FPCGPinProperties::Label' has a wrong offset!");
-static_assert(offsetof(FPCGPinProperties, AllowedTypes) == 0x000008, "Member 'FPCGPinProperties::AllowedTypes' has a wrong offset!");
-static_assert(offsetof(FPCGPinProperties, bAllowMultipleData) == 0x00000C, "Member 'FPCGPinProperties::bAllowMultipleData' has a wrong offset!");
-static_assert(offsetof(FPCGPinProperties, bAllowMultipleConnections) == 0x00000D, "Member 'FPCGPinProperties::bAllowMultipleConnections' has a wrong offset!");
-static_assert(offsetof(FPCGPinProperties, bAdvancedPin) == 0x00000E, "Member 'FPCGPinProperties::bAdvancedPin' has a wrong offset!");
 
 // ScriptStruct PCG.PCGWorldCommonQueryParams
 // 0x0070 (0x0070 - 0x0000)
@@ -1363,7 +1613,7 @@ public:
 	class FString                                 ActorTagsList;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreLandscapeHits;                              // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bGetReferenceToActorHit;                           // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2449[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class FName>                             ParsedActorTagsList;                               // 0x0020(0x0050)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGWorldCommonQueryParams) == 0x000008, "Wrong alignment on FPCGWorldCommonQueryParams");
@@ -1384,7 +1634,7 @@ struct FPCGWorldVolumetricQueryParams final : public FPCGWorldCommonQueryParams
 {
 public:
 	bool                                          bSearchForOverlap;                                 // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244A[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGWorldVolumetricQueryParams) == 0x000008, "Wrong alignment on FPCGWorldVolumetricQueryParams");
 static_assert(sizeof(FPCGWorldVolumetricQueryParams) == 0x000078, "Wrong size on FPCGWorldVolumetricQueryParams");
@@ -1396,13 +1646,13 @@ struct FPCGWorldRayHitQueryParams final : public FPCGWorldCommonQueryParams
 {
 public:
 	bool                                          bOverrideDefaultParams;                            // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244B[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                RayOrigin;                                         // 0x0078(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                RayDirection;                                      // 0x0090(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        RayLength;                                         // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyMetadataFromLandscape;                       // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bGetReferenceToPhysicalMaterial;                   // 0x00B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244C[0x6];                                     // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGWorldRayHitQueryParams) == 0x000008, "Wrong alignment on FPCGWorldRayHitQueryParams");
 static_assert(sizeof(FPCGWorldRayHitQueryParams) == 0x0000B8, "Wrong size on FPCGWorldRayHitQueryParams");
@@ -1412,6 +1662,29 @@ static_assert(offsetof(FPCGWorldRayHitQueryParams, RayDirection) == 0x000090, "M
 static_assert(offsetof(FPCGWorldRayHitQueryParams, RayLength) == 0x0000A8, "Member 'FPCGWorldRayHitQueryParams::RayLength' has a wrong offset!");
 static_assert(offsetof(FPCGWorldRayHitQueryParams, bApplyMetadataFromLandscape) == 0x0000B0, "Member 'FPCGWorldRayHitQueryParams::bApplyMetadataFromLandscape' has a wrong offset!");
 static_assert(offsetof(FPCGWorldRayHitQueryParams, bGetReferenceToPhysicalMaterial) == 0x0000B1, "Member 'FPCGWorldRayHitQueryParams::bGetReferenceToPhysicalMaterial' has a wrong offset!");
+
+// ScriptStruct PCG.PCGSelectionKey
+// 0x0040 (0x0040 - 0x0000)
+struct FPCGSelectionKey final
+{
+public:
+	EPCGActorFilter                               ActorFilter;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGActorSelection                            Selection;                                         // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Tag;                                               // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    SelectionClass;                                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ObjectPath;                                        // 0x0018(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    OptionalExtraDependency;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGSelectionKey) == 0x000008, "Wrong alignment on FPCGSelectionKey");
+static_assert(sizeof(FPCGSelectionKey) == 0x000040, "Wrong size on FPCGSelectionKey");
+static_assert(offsetof(FPCGSelectionKey, ActorFilter) == 0x000000, "Member 'FPCGSelectionKey::ActorFilter' has a wrong offset!");
+static_assert(offsetof(FPCGSelectionKey, Selection) == 0x000001, "Member 'FPCGSelectionKey::Selection' has a wrong offset!");
+static_assert(offsetof(FPCGSelectionKey, Tag) == 0x000004, "Member 'FPCGSelectionKey::Tag' has a wrong offset!");
+static_assert(offsetof(FPCGSelectionKey, SelectionClass) == 0x000010, "Member 'FPCGSelectionKey::SelectionClass' has a wrong offset!");
+static_assert(offsetof(FPCGSelectionKey, ObjectPath) == 0x000018, "Member 'FPCGSelectionKey::ObjectPath' has a wrong offset!");
+static_assert(offsetof(FPCGSelectionKey, OptionalExtraDependency) == 0x000038, "Member 'FPCGSelectionKey::OptionalExtraDependency' has a wrong offset!");
 
 // ScriptStruct PCG.PCGActorSelectorSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -1423,7 +1696,7 @@ public:
 	bool                                          bIncludeChildren;                                  // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisableFilter;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPCGActorSelection                            ActorSelection;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ActorSelectionTag;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AActor>                     ActorSelectionClass;                               // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSelectMultiple;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1433,7 +1706,7 @@ public:
 	bool                                          bShowActorSelection;                               // 0x001C(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowActorSelectionClass;                          // 0x001D(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowSelectMultiple;                               // 0x001E(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244E[0x1];                                     // 0x001F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bShowIgnoreSelfAndChildren;                        // 0x001F(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGActorSelectorSettings) == 0x000008, "Wrong alignment on FPCGActorSelectorSettings");
 static_assert(sizeof(FPCGActorSelectorSettings) == 0x000020, "Wrong size on FPCGActorSelectorSettings");
@@ -1451,67 +1724,124 @@ static_assert(offsetof(FPCGActorSelectorSettings, bShowIncludeChildren) == 0x000
 static_assert(offsetof(FPCGActorSelectorSettings, bShowActorSelection) == 0x00001C, "Member 'FPCGActorSelectorSettings::bShowActorSelection' has a wrong offset!");
 static_assert(offsetof(FPCGActorSelectorSettings, bShowActorSelectionClass) == 0x00001D, "Member 'FPCGActorSelectorSettings::bShowActorSelectionClass' has a wrong offset!");
 static_assert(offsetof(FPCGActorSelectorSettings, bShowSelectMultiple) == 0x00001E, "Member 'FPCGActorSelectorSettings::bShowSelectMultiple' has a wrong offset!");
+static_assert(offsetof(FPCGActorSelectorSettings, bShowIgnoreSelfAndChildren) == 0x00001F, "Member 'FPCGActorSelectorSettings::bShowIgnoreSelfAndChildren' has a wrong offset!");
 
-// ScriptStruct PCG.PCGPointFilterThresholdSettings
-// 0x01B0 (0x01B0 - 0x0000)
-struct FPCGPointFilterThresholdSettings final
-{
-public:
-	bool                                          bInclusive;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseConstantThreshold;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244F[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGAttributePropertyInputSelector     ThresholdAttribute;                                // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bUseSpatialQuery;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2450[0xF];                                     // 0x0031(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGMetadataTypesConstantStruct        AttributeTypes;                                    // 0x0040(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPCGPointFilterThresholdSettings) == 0x000010, "Wrong alignment on FPCGPointFilterThresholdSettings");
-static_assert(sizeof(FPCGPointFilterThresholdSettings) == 0x0001B0, "Wrong size on FPCGPointFilterThresholdSettings");
-static_assert(offsetof(FPCGPointFilterThresholdSettings, bInclusive) == 0x000000, "Member 'FPCGPointFilterThresholdSettings::bInclusive' has a wrong offset!");
-static_assert(offsetof(FPCGPointFilterThresholdSettings, bUseConstantThreshold) == 0x000001, "Member 'FPCGPointFilterThresholdSettings::bUseConstantThreshold' has a wrong offset!");
-static_assert(offsetof(FPCGPointFilterThresholdSettings, ThresholdAttribute) == 0x000008, "Member 'FPCGPointFilterThresholdSettings::ThresholdAttribute' has a wrong offset!");
-static_assert(offsetof(FPCGPointFilterThresholdSettings, bUseSpatialQuery) == 0x000030, "Member 'FPCGPointFilterThresholdSettings::bUseSpatialQuery' has a wrong offset!");
-static_assert(offsetof(FPCGPointFilterThresholdSettings, AttributeTypes) == 0x000040, "Member 'FPCGPointFilterThresholdSettings::AttributeTypes' has a wrong offset!");
-
-// ScriptStruct PCG.PCGActorPropertyOverride
+// ScriptStruct PCG.PCGSelfPruningParameters
 // 0x0038 (0x0038 - 0x0000)
-struct FPCGActorPropertyOverride final
+struct FPCGSelfPruningParameters final
 {
 public:
-	struct FPCGAttributePropertyInputSelector     InputSource;                                       // 0x0000(0x0028)(Edit, NativeAccessSpecifierPublic)
-	class FString                                 PropertyTarget;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGSelfPruningType                           PruningType;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGAttributePropertyInputSelector     ComparisonSource;                                  // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RadiusSimilarityFactor;                            // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRandomizedPruning;                                // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPCGActorPropertyOverride) == 0x000008, "Wrong alignment on FPCGActorPropertyOverride");
-static_assert(sizeof(FPCGActorPropertyOverride) == 0x000038, "Wrong size on FPCGActorPropertyOverride");
-static_assert(offsetof(FPCGActorPropertyOverride, InputSource) == 0x000000, "Member 'FPCGActorPropertyOverride::InputSource' has a wrong offset!");
-static_assert(offsetof(FPCGActorPropertyOverride, PropertyTarget) == 0x000028, "Member 'FPCGActorPropertyOverride::PropertyTarget' has a wrong offset!");
+static_assert(alignof(FPCGSelfPruningParameters) == 0x000008, "Wrong alignment on FPCGSelfPruningParameters");
+static_assert(sizeof(FPCGSelfPruningParameters) == 0x000038, "Wrong size on FPCGSelfPruningParameters");
+static_assert(offsetof(FPCGSelfPruningParameters, PruningType) == 0x000000, "Member 'FPCGSelfPruningParameters::PruningType' has a wrong offset!");
+static_assert(offsetof(FPCGSelfPruningParameters, ComparisonSource) == 0x000008, "Member 'FPCGSelfPruningParameters::ComparisonSource' has a wrong offset!");
+static_assert(offsetof(FPCGSelfPruningParameters, RadiusSimilarityFactor) == 0x000030, "Member 'FPCGSelfPruningParameters::RadiusSimilarityFactor' has a wrong offset!");
+static_assert(offsetof(FPCGSelfPruningParameters, bRandomizedPruning) == 0x000034, "Member 'FPCGSelfPruningParameters::bRandomizedPruning' has a wrong offset!");
 
-// ScriptStruct PCG.PCGStaticMeshSpawnerEntry
-// 0x0040 (0x0040 - 0x0000)
-struct FPCGStaticMeshSpawnerEntry final
+// ScriptStruct PCG.PCGSplineSamplerParams
+// 0x0120 (0x0120 - 0x0000)
+struct FPCGSplineSamplerParams final
 {
 public:
-	int32                                         Weight;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2451[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UStaticMesh>             Mesh;                                              // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideCollisionProfile;                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2452[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCollisionProfileName                  CollisionProfile;                                  // 0x0034(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2453[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EPCGSplineSamplingDimension                   Dimension;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGSplineSamplingMode                        Mode;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGSplineSamplingFill                        Fill;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SubdivisionsPerSegment;                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceIncrement;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumSamples;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPlanarSubdivisions;                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumHeightSubdivisions;                             // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeDirectionDelta;                            // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   NextDirectionDeltaAttribute;                       // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeCurvature;                                 // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CurvatureAttribute;                                // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeSegmentIndex;                              // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   SegmentIndexAttribute;                             // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeSubsegmentIndex;                           // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   SubsegmentIndexAttribute;                          // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeTangents;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ArriveTangentAttribute;                            // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LeaveTangentAttribute;                             // 0x0054(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeAlpha;                                     // 0x005C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AlphaAttribute;                                    // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeDistance;                                  // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DistanceAttribute;                                 // 0x006C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bComputeInputKey;                                  // 0x0074(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   InputKeyAttribute;                                 // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUnbounded;                                        // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InteriorSampleSpacing;                             // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InteriorBorderSampleSpacing;                       // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTreatSplineAsPolyline;                            // 0x008C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGSplineSamplingInteriorOrientation         InteriorOrientation;                               // 0x008D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bProjectOntoSurface;                               // 0x008E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8F[0x1];                                       // 0x008F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     InteriorDensityFalloffCurve;                       // 0x0090(0x0088)(Edit, NativeAccessSpecifierPublic)
+	float                                         PointSteepness;                                    // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSeedFromLocalPosition;                            // 0x011C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSeedFrom2DPosition;                               // 0x011D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11E[0x2];                                      // 0x011E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPCGStaticMeshSpawnerEntry) == 0x000008, "Wrong alignment on FPCGStaticMeshSpawnerEntry");
-static_assert(sizeof(FPCGStaticMeshSpawnerEntry) == 0x000040, "Wrong size on FPCGStaticMeshSpawnerEntry");
-static_assert(offsetof(FPCGStaticMeshSpawnerEntry, Weight) == 0x000000, "Member 'FPCGStaticMeshSpawnerEntry::Weight' has a wrong offset!");
-static_assert(offsetof(FPCGStaticMeshSpawnerEntry, Mesh) == 0x000008, "Member 'FPCGStaticMeshSpawnerEntry::Mesh' has a wrong offset!");
-static_assert(offsetof(FPCGStaticMeshSpawnerEntry, bOverrideCollisionProfile) == 0x000030, "Member 'FPCGStaticMeshSpawnerEntry::bOverrideCollisionProfile' has a wrong offset!");
-static_assert(offsetof(FPCGStaticMeshSpawnerEntry, CollisionProfile) == 0x000034, "Member 'FPCGStaticMeshSpawnerEntry::CollisionProfile' has a wrong offset!");
+static_assert(alignof(FPCGSplineSamplerParams) == 0x000008, "Wrong alignment on FPCGSplineSamplerParams");
+static_assert(sizeof(FPCGSplineSamplerParams) == 0x000120, "Wrong size on FPCGSplineSamplerParams");
+static_assert(offsetof(FPCGSplineSamplerParams, Dimension) == 0x000000, "Member 'FPCGSplineSamplerParams::Dimension' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, Mode) == 0x000001, "Member 'FPCGSplineSamplerParams::Mode' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, Fill) == 0x000002, "Member 'FPCGSplineSamplerParams::Fill' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, SubdivisionsPerSegment) == 0x000004, "Member 'FPCGSplineSamplerParams::SubdivisionsPerSegment' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, DistanceIncrement) == 0x000008, "Member 'FPCGSplineSamplerParams::DistanceIncrement' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, NumSamples) == 0x00000C, "Member 'FPCGSplineSamplerParams::NumSamples' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, NumPlanarSubdivisions) == 0x000010, "Member 'FPCGSplineSamplerParams::NumPlanarSubdivisions' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, NumHeightSubdivisions) == 0x000014, "Member 'FPCGSplineSamplerParams::NumHeightSubdivisions' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeDirectionDelta) == 0x000018, "Member 'FPCGSplineSamplerParams::bComputeDirectionDelta' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, NextDirectionDeltaAttribute) == 0x00001C, "Member 'FPCGSplineSamplerParams::NextDirectionDeltaAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeCurvature) == 0x000024, "Member 'FPCGSplineSamplerParams::bComputeCurvature' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, CurvatureAttribute) == 0x000028, "Member 'FPCGSplineSamplerParams::CurvatureAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeSegmentIndex) == 0x000030, "Member 'FPCGSplineSamplerParams::bComputeSegmentIndex' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, SegmentIndexAttribute) == 0x000034, "Member 'FPCGSplineSamplerParams::SegmentIndexAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeSubsegmentIndex) == 0x00003C, "Member 'FPCGSplineSamplerParams::bComputeSubsegmentIndex' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, SubsegmentIndexAttribute) == 0x000040, "Member 'FPCGSplineSamplerParams::SubsegmentIndexAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeTangents) == 0x000048, "Member 'FPCGSplineSamplerParams::bComputeTangents' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, ArriveTangentAttribute) == 0x00004C, "Member 'FPCGSplineSamplerParams::ArriveTangentAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, LeaveTangentAttribute) == 0x000054, "Member 'FPCGSplineSamplerParams::LeaveTangentAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeAlpha) == 0x00005C, "Member 'FPCGSplineSamplerParams::bComputeAlpha' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, AlphaAttribute) == 0x000060, "Member 'FPCGSplineSamplerParams::AlphaAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeDistance) == 0x000068, "Member 'FPCGSplineSamplerParams::bComputeDistance' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, DistanceAttribute) == 0x00006C, "Member 'FPCGSplineSamplerParams::DistanceAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bComputeInputKey) == 0x000074, "Member 'FPCGSplineSamplerParams::bComputeInputKey' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, InputKeyAttribute) == 0x000078, "Member 'FPCGSplineSamplerParams::InputKeyAttribute' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bUnbounded) == 0x000080, "Member 'FPCGSplineSamplerParams::bUnbounded' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, InteriorSampleSpacing) == 0x000084, "Member 'FPCGSplineSamplerParams::InteriorSampleSpacing' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, InteriorBorderSampleSpacing) == 0x000088, "Member 'FPCGSplineSamplerParams::InteriorBorderSampleSpacing' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bTreatSplineAsPolyline) == 0x00008C, "Member 'FPCGSplineSamplerParams::bTreatSplineAsPolyline' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, InteriorOrientation) == 0x00008D, "Member 'FPCGSplineSamplerParams::InteriorOrientation' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bProjectOntoSurface) == 0x00008E, "Member 'FPCGSplineSamplerParams::bProjectOntoSurface' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, InteriorDensityFalloffCurve) == 0x000090, "Member 'FPCGSplineSamplerParams::InteriorDensityFalloffCurve' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, PointSteepness) == 0x000118, "Member 'FPCGSplineSamplerParams::PointSteepness' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bSeedFromLocalPosition) == 0x00011C, "Member 'FPCGSplineSamplerParams::bSeedFromLocalPosition' has a wrong offset!");
+static_assert(offsetof(FPCGSplineSamplerParams, bSeedFrom2DPosition) == 0x00011D, "Member 'FPCGSplineSamplerParams::bSeedFrom2DPosition' has a wrong offset!");
 
 // ScriptStruct PCG.PCGStackFrame
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x04) FPCGStackFrame final
 {
 public:
-	uint8                                         Pad_2454[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGStackFrame) == 0x000004, "Wrong alignment on FPCGStackFrame");
 static_assert(sizeof(FPCGStackFrame) == 0x000010, "Wrong size on FPCGStackFrame");
@@ -1521,10 +1851,23 @@ static_assert(sizeof(FPCGStackFrame) == 0x000010, "Wrong size on FPCGStackFrame"
 struct alignas(0x08) FPCGStack final
 {
 public:
-	uint8                                         Pad_2455[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGStack) == 0x000008, "Wrong alignment on FPCGStack");
 static_assert(sizeof(FPCGStack) == 0x000010, "Wrong size on FPCGStack");
+
+// ScriptStruct PCG.PCGLandscapeLayerWeight
+// 0x000C (0x000C - 0x0000)
+struct FPCGLandscapeLayerWeight final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Weight;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGLandscapeLayerWeight) == 0x000004, "Wrong alignment on FPCGLandscapeLayerWeight");
+static_assert(sizeof(FPCGLandscapeLayerWeight) == 0x00000C, "Wrong size on FPCGLandscapeLayerWeight");
+static_assert(offsetof(FPCGLandscapeLayerWeight, Name) == 0x000000, "Member 'FPCGLandscapeLayerWeight::Name' has a wrong offset!");
+static_assert(offsetof(FPCGLandscapeLayerWeight, Weight) == 0x000008, "Member 'FPCGLandscapeLayerWeight::Weight' has a wrong offset!");
 
 // ScriptStruct PCG.PCGPackedCustomData
 // 0x0018 (0x0018 - 0x0000)
@@ -1532,7 +1875,7 @@ struct FPCGPackedCustomData final
 {
 public:
 	int32                                         NumCustomDataFloats;                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2456[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 CustomData;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGPackedCustomData) == 0x000008, "Wrong alignment on FPCGPackedCustomData");
@@ -1540,34 +1883,79 @@ static_assert(sizeof(FPCGPackedCustomData) == 0x000018, "Wrong size on FPCGPacke
 static_assert(offsetof(FPCGPackedCustomData, NumCustomDataFloats) == 0x000000, "Member 'FPCGPackedCustomData::NumCustomDataFloats' has a wrong offset!");
 static_assert(offsetof(FPCGPackedCustomData, CustomData) == 0x000008, "Member 'FPCGPackedCustomData::CustomData' has a wrong offset!");
 
+// ScriptStruct PCG.PCGMatchAndSetByAttributeEntry
+// 0x02E0 (0x02E0 - 0x0000)
+struct FPCGMatchAndSetByAttributeEntry final
+{
+public:
+	struct FPCGMetadataTypesConstantStruct        ValueToMatch;                                      // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0170(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGMatchAndSetByAttributeEntry) == 0x000010, "Wrong alignment on FPCGMatchAndSetByAttributeEntry");
+static_assert(sizeof(FPCGMatchAndSetByAttributeEntry) == 0x0002E0, "Wrong size on FPCGMatchAndSetByAttributeEntry");
+static_assert(offsetof(FPCGMatchAndSetByAttributeEntry, ValueToMatch) == 0x000000, "Member 'FPCGMatchAndSetByAttributeEntry::ValueToMatch' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetByAttributeEntry, Value) == 0x000170, "Member 'FPCGMatchAndSetByAttributeEntry::Value' has a wrong offset!");
+
+// ScriptStruct PCG.PCGMatchAndSetWeightedEntry
+// 0x0180 (0x0180 - 0x0000)
+struct FPCGMatchAndSetWeightedEntry final
+{
+public:
+	struct FPCGMetadataTypesConstantStruct        Value;                                             // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         Weight;                                            // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_174[0xC];                                      // 0x0174(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCGMatchAndSetWeightedEntry) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedEntry");
+static_assert(sizeof(FPCGMatchAndSetWeightedEntry) == 0x000180, "Wrong size on FPCGMatchAndSetWeightedEntry");
+static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Value) == 0x000000, "Member 'FPCGMatchAndSetWeightedEntry::Value' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetWeightedEntry, Weight) == 0x000170, "Member 'FPCGMatchAndSetWeightedEntry::Weight' has a wrong offset!");
+
+// ScriptStruct PCG.PCGMatchAndSetWeightedByCategoryEntryList
+// 0x0190 (0x0190 - 0x0000)
+struct FPCGMatchAndSetWeightedByCategoryEntryList final
+{
+public:
+	struct FPCGMetadataTypesConstantStruct        CategoryValue;                                     // 0x0000(0x0170)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bIsDefault;                                        // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPCGMatchAndSetWeightedEntry>   WeightedEntries;                                   // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000010, "Wrong alignment on FPCGMatchAndSetWeightedByCategoryEntryList");
+static_assert(sizeof(FPCGMatchAndSetWeightedByCategoryEntryList) == 0x000190, "Wrong size on FPCGMatchAndSetWeightedByCategoryEntryList");
+static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, CategoryValue) == 0x000000, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::CategoryValue' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, bIsDefault) == 0x000170, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::bIsDefault' has a wrong offset!");
+static_assert(offsetof(FPCGMatchAndSetWeightedByCategoryEntryList, WeightedEntries) == 0x000178, "Member 'FPCGMatchAndSetWeightedByCategoryEntryList::WeightedEntries' has a wrong offset!");
+
 // ScriptStruct PCG.PCGMeshInstanceList
-// 0x0268 (0x0268 - 0x0000)
+// 0x0280 (0x0280 - 0x0000)
 struct FPCGMeshInstanceList final
 {
 public:
-	struct FSoftISMComponentDescriptor            Descriptor;                                        // 0x0000(0x0248)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Instances;                                         // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int64>                                 InstancesMetadataEntry;                            // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FSoftISMComponentDescriptor            Descriptor;                                        // 0x0000(0x0258)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Instances;                                         // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int64>                                 InstancesMetadataEntry;                            // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGMeshInstanceList) == 0x000008, "Wrong alignment on FPCGMeshInstanceList");
-static_assert(sizeof(FPCGMeshInstanceList) == 0x000268, "Wrong size on FPCGMeshInstanceList");
+static_assert(sizeof(FPCGMeshInstanceList) == 0x000280, "Wrong size on FPCGMeshInstanceList");
 static_assert(offsetof(FPCGMeshInstanceList, Descriptor) == 0x000000, "Member 'FPCGMeshInstanceList::Descriptor' has a wrong offset!");
-static_assert(offsetof(FPCGMeshInstanceList, Instances) == 0x000248, "Member 'FPCGMeshInstanceList::Instances' has a wrong offset!");
-static_assert(offsetof(FPCGMeshInstanceList, InstancesMetadataEntry) == 0x000258, "Member 'FPCGMeshInstanceList::InstancesMetadataEntry' has a wrong offset!");
+static_assert(offsetof(FPCGMeshInstanceList, Instances) == 0x000258, "Member 'FPCGMeshInstanceList::Instances' has a wrong offset!");
+static_assert(offsetof(FPCGMeshInstanceList, InstancesMetadataEntry) == 0x000268, "Member 'FPCGMeshInstanceList::InstancesMetadataEntry' has a wrong offset!");
 
 // ScriptStruct PCG.PCGMeshSelectorWeightedEntry
-// 0x0250 (0x0250 - 0x0000)
+// 0x0260 (0x0260 - 0x0000)
 struct FPCGMeshSelectorWeightedEntry final
 {
 public:
-	struct FSoftISMComponentDescriptor            Descriptor;                                        // 0x0000(0x0248)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Weight;                                            // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2457[0x4];                                     // 0x024C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSoftISMComponentDescriptor            Descriptor;                                        // 0x0000(0x0258)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Weight;                                            // 0x0258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGMeshSelectorWeightedEntry) == 0x000008, "Wrong alignment on FPCGMeshSelectorWeightedEntry");
-static_assert(sizeof(FPCGMeshSelectorWeightedEntry) == 0x000250, "Wrong size on FPCGMeshSelectorWeightedEntry");
+static_assert(sizeof(FPCGMeshSelectorWeightedEntry) == 0x000260, "Wrong size on FPCGMeshSelectorWeightedEntry");
 static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Descriptor) == 0x000000, "Member 'FPCGMeshSelectorWeightedEntry::Descriptor' has a wrong offset!");
-static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Weight) == 0x000248, "Member 'FPCGMeshSelectorWeightedEntry::Weight' has a wrong offset!");
+static_assert(offsetof(FPCGMeshSelectorWeightedEntry, Weight) == 0x000258, "Member 'FPCGMeshSelectorWeightedEntry::Weight' has a wrong offset!");
 
 // ScriptStruct PCG.PCGWeightedByCategoryEntryList
 // 0x0028 (0x0028 - 0x0000)
@@ -1576,7 +1964,7 @@ struct FPCGWeightedByCategoryEntryList final
 public:
 	class FString                                 CategoryEntry;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsDefault;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2458[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPCGMeshSelectorWeightedEntry>  WeightedMeshEntries;                               // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGWeightedByCategoryEntryList) == 0x000008, "Wrong alignment on FPCGWeightedByCategoryEntryList");
@@ -1586,17 +1974,15 @@ static_assert(offsetof(FPCGWeightedByCategoryEntryList, IsDefault) == 0x000010, 
 static_assert(offsetof(FPCGWeightedByCategoryEntryList, WeightedMeshEntries) == 0x000018, "Member 'FPCGWeightedByCategoryEntryList::WeightedMeshEntries' has a wrong offset!");
 
 // ScriptStruct PCG.PCGComponentInstanceData
-// 0x0018 (0x0080 - 0x0068)
+// 0x0008 (0x0070 - 0x0068)
 struct FPCGComponentInstanceData final : public FActorComponentInstanceData
 {
 public:
-	TArray<class UPCGManagedResource*>            GeneratedResources;                                // 0x0068(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	class UPCGComponent*                          SourceComponent;                                   // 0x0078(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPCGComponent*                          SourceComponent;                                   // 0x0068(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
 static_assert(alignof(FPCGComponentInstanceData) == 0x000008, "Wrong alignment on FPCGComponentInstanceData");
-static_assert(sizeof(FPCGComponentInstanceData) == 0x000080, "Wrong size on FPCGComponentInstanceData");
-static_assert(offsetof(FPCGComponentInstanceData, GeneratedResources) == 0x000068, "Member 'FPCGComponentInstanceData::GeneratedResources' has a wrong offset!");
-static_assert(offsetof(FPCGComponentInstanceData, SourceComponent) == 0x000078, "Member 'FPCGComponentInstanceData::SourceComponent' has a wrong offset!");
+static_assert(sizeof(FPCGComponentInstanceData) == 0x000070, "Wrong size on FPCGComponentInstanceData");
+static_assert(offsetof(FPCGComponentInstanceData, SourceComponent) == 0x000068, "Member 'FPCGComponentInstanceData::SourceComponent' has a wrong offset!");
 
 // ScriptStruct PCG.PCGTaggedData
 // 0x0068 (0x0068 - 0x0000)
@@ -1607,7 +1993,7 @@ public:
 	TSet<class FString>                           Tags;                                              // 0x0008(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class FName                                   Pin;                                               // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPinlessData;                                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2459[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGTaggedData) == 0x000008, "Wrong alignment on FPCGTaggedData");
 static_assert(sizeof(FPCGTaggedData) == 0x000068, "Wrong size on FPCGTaggedData");
@@ -1617,39 +2003,36 @@ static_assert(offsetof(FPCGTaggedData, Pin) == 0x000058, "Member 'FPCGTaggedData
 static_assert(offsetof(FPCGTaggedData, bPinlessData) == 0x000060, "Member 'FPCGTaggedData::bPinlessData' has a wrong offset!");
 
 // ScriptStruct PCG.PCGDataCollection
-// 0x0020 (0x0020 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FPCGDataCollection final
 {
 public:
 	TArray<struct FPCGTaggedData>                 TaggedData;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bCancelExecutionOnEmpty;                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_245A[0xF];                                     // 0x0011(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x1F];                                      // 0x0011(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGDataCollection) == 0x000008, "Wrong alignment on FPCGDataCollection");
-static_assert(sizeof(FPCGDataCollection) == 0x000020, "Wrong size on FPCGDataCollection");
+static_assert(sizeof(FPCGDataCollection) == 0x000030, "Wrong size on FPCGDataCollection");
 static_assert(offsetof(FPCGDataCollection, TaggedData) == 0x000000, "Member 'FPCGDataCollection::TaggedData' has a wrong offset!");
 static_assert(offsetof(FPCGDataCollection, bCancelExecutionOnEmpty) == 0x000010, "Member 'FPCGDataCollection::bCancelExecutionOnEmpty' has a wrong offset!");
 
 // ScriptStruct PCG.PCGDebugVisualizationSettings
-// 0x0060 (0x0060 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct FPCGDebugVisualizationSettings final
 {
 public:
 	float                                         PointScale;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPCGDebugVisScaleMethod                       ScaleMethod;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_245B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UStaticMesh>             PointMesh;                                         // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMaterialInterface>      MaterialOverride;                                  // 0x0030(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCheckForDuplicates;                               // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_245C[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGDebugVisualizationSettings) == 0x000008, "Wrong alignment on FPCGDebugVisualizationSettings");
-static_assert(sizeof(FPCGDebugVisualizationSettings) == 0x000060, "Wrong size on FPCGDebugVisualizationSettings");
+static_assert(sizeof(FPCGDebugVisualizationSettings) == 0x000058, "Wrong size on FPCGDebugVisualizationSettings");
 static_assert(offsetof(FPCGDebugVisualizationSettings, PointScale) == 0x000000, "Member 'FPCGDebugVisualizationSettings::PointScale' has a wrong offset!");
 static_assert(offsetof(FPCGDebugVisualizationSettings, ScaleMethod) == 0x000004, "Member 'FPCGDebugVisualizationSettings::ScaleMethod' has a wrong offset!");
 static_assert(offsetof(FPCGDebugVisualizationSettings, PointMesh) == 0x000008, "Member 'FPCGDebugVisualizationSettings::PointMesh' has a wrong offset!");
 static_assert(offsetof(FPCGDebugVisualizationSettings, MaterialOverride) == 0x000030, "Member 'FPCGDebugVisualizationSettings::MaterialOverride' has a wrong offset!");
-static_assert(offsetof(FPCGDebugVisualizationSettings, bCheckForDuplicates) == 0x000058, "Member 'FPCGDebugVisualizationSettings::bCheckForDuplicates' has a wrong offset!");
 
 // ScriptStruct PCG.PCGOverrideInstancedPropertyBag
 // 0x0060 (0x0060 - 0x0000)
@@ -1664,6 +2047,30 @@ static_assert(sizeof(FPCGOverrideInstancedPropertyBag) == 0x000060, "Wrong size 
 static_assert(offsetof(FPCGOverrideInstancedPropertyBag, Parameters) == 0x000000, "Member 'FPCGOverrideInstancedPropertyBag::Parameters' has a wrong offset!");
 static_assert(offsetof(FPCGOverrideInstancedPropertyBag, PropertiesIDsOverridden) == 0x000010, "Member 'FPCGOverrideInstancedPropertyBag::PropertiesIDsOverridden' has a wrong offset!");
 
+// ScriptStruct PCG.PCGPinProperties
+// 0x0014 (0x0014 - 0x0000)
+struct FPCGPinProperties final
+{
+public:
+	class FName                                   Label;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPinUsage                                  Usage;                                             // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EPCGDataType                                  AllowedTypes;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultipleData;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPinStatus                                 PinStatus;                                         // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvisiblePin;                                     // 0x0012(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMultipleConnections;                         // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FPCGPinProperties) == 0x000004, "Wrong alignment on FPCGPinProperties");
+static_assert(sizeof(FPCGPinProperties) == 0x000014, "Wrong size on FPCGPinProperties");
+static_assert(offsetof(FPCGPinProperties, Label) == 0x000000, "Member 'FPCGPinProperties::Label' has a wrong offset!");
+static_assert(offsetof(FPCGPinProperties, Usage) == 0x000008, "Member 'FPCGPinProperties::Usage' has a wrong offset!");
+static_assert(offsetof(FPCGPinProperties, AllowedTypes) == 0x00000C, "Member 'FPCGPinProperties::AllowedTypes' has a wrong offset!");
+static_assert(offsetof(FPCGPinProperties, bAllowMultipleData) == 0x000010, "Member 'FPCGPinProperties::bAllowMultipleData' has a wrong offset!");
+static_assert(offsetof(FPCGPinProperties, PinStatus) == 0x000011, "Member 'FPCGPinProperties::PinStatus' has a wrong offset!");
+static_assert(offsetof(FPCGPinProperties, bInvisiblePin) == 0x000012, "Member 'FPCGPinProperties::bInvisiblePin' has a wrong offset!");
+static_assert(offsetof(FPCGPinProperties, bAllowMultipleConnections) == 0x000013, "Member 'FPCGPinProperties::bAllowMultipleConnections' has a wrong offset!");
+
 // ScriptStruct PCG.PCGPoint
 // 0x00D0 (0x00D0 - 0x0000)
 struct FPCGPoint final
@@ -1671,10 +2078,10 @@ struct FPCGPoint final
 public:
 	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Density;                                           // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_245D[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                BoundsMin;                                         // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                BoundsMax;                                         // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_245E[0x8];                                     // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               Color;                                             // 0x00A0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Steepness;                                         // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Seed;                                              // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1712,7 +2119,7 @@ public:
 	class UStruct*                                PropertyClass;                                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<int32, struct FPCGPropertyAliases>       MapOfAliases;                                      // 0x0020(0x0050)(NativeAccessSpecifierPublic)
 	bool                                          bHasNameClash;                                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_245F[0x17];                                    // 0x0071(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x17];                                      // 0x0071(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPCGSettingsOverridableParam) == 0x000008, "Wrong alignment on FPCGSettingsOverridableParam");
 static_assert(sizeof(FPCGSettingsOverridableParam) == 0x000088, "Wrong size on FPCGSettingsOverridableParam");
@@ -1723,18 +2130,33 @@ static_assert(offsetof(FPCGSettingsOverridableParam, MapOfAliases) == 0x000020, 
 static_assert(offsetof(FPCGSettingsOverridableParam, bHasNameClash) == 0x000070, "Member 'FPCGSettingsOverridableParam::bHasNameClash' has a wrong offset!");
 
 // ScriptStruct PCG.PCGPreConfiguredSettingsInfo
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct FPCGPreConfiguredSettingsInfo final
 {
 public:
 	int32                                         PreconfiguredIndex;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2460[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Label;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Label;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPCGPreConfiguredSettingsInfo) == 0x000008, "Wrong alignment on FPCGPreConfiguredSettingsInfo");
-static_assert(sizeof(FPCGPreConfiguredSettingsInfo) == 0x000020, "Wrong size on FPCGPreConfiguredSettingsInfo");
+static_assert(sizeof(FPCGPreConfiguredSettingsInfo) == 0x000018, "Wrong size on FPCGPreConfiguredSettingsInfo");
 static_assert(offsetof(FPCGPreConfiguredSettingsInfo, PreconfiguredIndex) == 0x000000, "Member 'FPCGPreConfiguredSettingsInfo::PreconfiguredIndex' has a wrong offset!");
 static_assert(offsetof(FPCGPreConfiguredSettingsInfo, Label) == 0x000008, "Member 'FPCGPreConfiguredSettingsInfo::Label' has a wrong offset!");
+
+// ScriptStruct PCG.PCGPartitionActorRecord
+// 0x0020 (0x0020 - 0x0000)
+struct FPCGPartitionActorRecord final
+{
+public:
+	struct FGuid                                  GridGuid;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        GridSize;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntVector                             GridCoords;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCGPartitionActorRecord) == 0x000004, "Wrong alignment on FPCGPartitionActorRecord");
+static_assert(sizeof(FPCGPartitionActorRecord) == 0x000020, "Wrong size on FPCGPartitionActorRecord");
+static_assert(offsetof(FPCGPartitionActorRecord, GridGuid) == 0x000000, "Member 'FPCGPartitionActorRecord::GridGuid' has a wrong offset!");
+static_assert(offsetof(FPCGPartitionActorRecord, GridSize) == 0x000010, "Member 'FPCGPartitionActorRecord::GridSize' has a wrong offset!");
+static_assert(offsetof(FPCGPartitionActorRecord, GridCoords) == 0x000014, "Member 'FPCGPartitionActorRecord::GridCoords' has a wrong offset!");
 
 // ScriptStruct PCG.DeterminismTestResult
 // 0x0088 (0x0088 - 0x0000)
@@ -1748,7 +2170,7 @@ public:
 	TMap<class FName, EDeterminismLevel>          TestResults;                                       // 0x0020(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TArray<class FString>                         AdditionalDetails;                                 // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bFlagRaised;                                       // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2461[0x7];                                     // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDeterminismTestResult) == 0x000008, "Wrong alignment on FDeterminismTestResult");
 static_assert(sizeof(FDeterminismTestResult) == 0x000088, "Wrong size on FDeterminismTestResult");

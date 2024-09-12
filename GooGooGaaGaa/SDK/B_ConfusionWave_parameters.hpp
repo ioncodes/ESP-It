@@ -37,10 +37,10 @@ public:
 	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D53[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_InTime_ImplicitCast;        // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D54[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ConfusionWave_C_GetCurrentSphereRadius) == 0x000008, "Wrong alignment on B_ConfusionWave_C_GetCurrentSphereRadius");
@@ -71,8 +71,8 @@ struct B_ConfusionWave_C_TearUp final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -82,8 +82,8 @@ public:
 static_assert(alignof(B_ConfusionWave_C_TearUp) == 0x000010, "Wrong alignment on B_ConfusionWave_C_TearUp");
 static_assert(sizeof(B_ConfusionWave_C_TearUp) == 0x0000D0, "Wrong size on B_ConfusionWave_C_TearUp");
 static_assert(offsetof(B_ConfusionWave_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_ConfusionWave_C_TearUp::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_ConfusionWave_C_TearUp, Param_Owner) == 0x000060, "Member 'B_ConfusionWave_C_TearUp::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_ConfusionWave_C_TearUp, Param_Instigator) == 0x000068, "Member 'B_ConfusionWave_C_TearUp::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_ConfusionWave_C_TearUp, Owner_0) == 0x000060, "Member 'B_ConfusionWave_C_TearUp::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_ConfusionWave_C_TearUp, Instigator_0) == 0x000068, "Member 'B_ConfusionWave_C_TearUp::Instigator_0' has a wrong offset!");
 static_assert(offsetof(B_ConfusionWave_C_TearUp, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000070, "Member 'B_ConfusionWave_C_TearUp::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ConfusionWave_C_TearUp, CallFunc_BreakTransform_Location) == 0x000078, "Member 'B_ConfusionWave_C_TearUp::CallFunc_BreakTransform_Location' has a wrong offset!");
 static_assert(offsetof(B_ConfusionWave_C_TearUp, CallFunc_BreakTransform_Rotation) == 0x000090, "Member 'B_ConfusionWave_C_TearUp::CallFunc_BreakTransform_Rotation' has a wrong offset!");

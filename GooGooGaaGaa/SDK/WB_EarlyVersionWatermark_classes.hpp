@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_EarlyVersionWatermark.WB_EarlyVersionWatermark_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x02E0 - 0x02E0)
 class UWB_EarlyVersionWatermark_C final : public UUserWidget
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_EarlyVersionWatermark_C) == 0x000008, "Wrong alignment on UWB_EarlyVersionWatermark_C");
-static_assert(sizeof(UWB_EarlyVersionWatermark_C) == 0x0002C0, "Wrong size on UWB_EarlyVersionWatermark_C");
+static_assert(sizeof(UWB_EarlyVersionWatermark_C) == 0x0002E0, "Wrong size on UWB_EarlyVersionWatermark_C");
 
 }
 

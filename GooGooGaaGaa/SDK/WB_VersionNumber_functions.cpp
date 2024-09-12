@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function WB_VersionNumber.WB_VersionNumber_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWB_VersionNumber_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_VersionNumber_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_VersionNumber.WB_VersionNumber_C.ExecuteUbergraph_WB_VersionNumber
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_VersionNumber_C::ExecuteUbergraph_WB_VersionNumber(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_VersionNumber_C", "ExecuteUbergraph_WB_VersionNumber");
-
-	Params::WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WB_VersionNumber.WB_VersionNumber_C.Get_UnrealVersionText_Text_0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -88,6 +54,40 @@ class FText UWB_VersionNumber_C::Get_VersionText_Text_0()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function WB_VersionNumber.WB_VersionNumber_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_VersionNumber_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_VersionNumber_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_VersionNumber.WB_VersionNumber_C.ExecuteUbergraph_WB_VersionNumber
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_VersionNumber_C::ExecuteUbergraph_WB_VersionNumber(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_VersionNumber_C", "ExecuteUbergraph_WB_VersionNumber");
+
+	Params::WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

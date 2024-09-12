@@ -227,9 +227,9 @@ void AB_StaticMeshProp_C::GetSplashSound(class USoundCue** Sound)
 // Function B_StaticMeshProp.B_StaticMeshProp_C.CanTeleport
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_CanTeleport                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanTeleport_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_StaticMeshProp_C::CanTeleport(bool* Param_CanTeleport)
+void AB_StaticMeshProp_C::CanTeleport(bool* CanTeleport_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -240,8 +240,8 @@ void AB_StaticMeshProp_C::CanTeleport(bool* Param_CanTeleport)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanTeleport != nullptr)
-		*Param_CanTeleport = Parms.Param_CanTeleport;
+	if (CanTeleport_0 != nullptr)
+		*CanTeleport_0 = Parms.CanTeleport_0;
 }
 
 
@@ -340,10 +340,10 @@ void AB_StaticMeshProp_C::Fly(double TargetBoost, double DeltaTime, bool* Forced
 // Function B_StaticMeshProp.B_StaticMeshProp_C.SetRuntimeSpeedMultiplier
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_RuntimeSpeedMultiplier                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RuntimeSpeedMultiplier_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ForcedBoolean                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_StaticMeshProp_C::SetRuntimeSpeedMultiplier(double Param_RuntimeSpeedMultiplier, bool* ForcedBoolean)
+void AB_StaticMeshProp_C::SetRuntimeSpeedMultiplier(double RuntimeSpeedMultiplier_0, bool* ForcedBoolean)
 {
 	static class UFunction* Func = nullptr;
 
@@ -352,7 +352,7 @@ void AB_StaticMeshProp_C::SetRuntimeSpeedMultiplier(double Param_RuntimeSpeedMul
 
 	Params::B_StaticMeshProp_C_SetRuntimeSpeedMultiplier Parms{};
 
-	Parms.Param_RuntimeSpeedMultiplier = Param_RuntimeSpeedMultiplier;
+	Parms.RuntimeSpeedMultiplier_0 = RuntimeSpeedMultiplier_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -485,9 +485,9 @@ void AB_StaticMeshProp_C::Move(const struct FVector& Vector, bool* ForcedOutput)
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetMaxHealth
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_MaxHealth                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  MaxHealth_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_StaticMeshProp_C::GetMaxHealth(double* Param_MaxHealth)
+void AB_StaticMeshProp_C::GetMaxHealth(double* MaxHealth_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -498,17 +498,17 @@ void AB_StaticMeshProp_C::GetMaxHealth(double* Param_MaxHealth)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_MaxHealth != nullptr)
-		*Param_MaxHealth = Parms.Param_MaxHealth;
+	if (MaxHealth_0 != nullptr)
+		*MaxHealth_0 = Parms.MaxHealth_0;
 }
 
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void AB_StaticMeshProp_C::GetName(class FString* Param_Name)
+void AB_StaticMeshProp_C::GetName(class FString* Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -519,17 +519,17 @@ void AB_StaticMeshProp_C::GetName(class FString* Param_Name)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 }
 
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetCameraDistance
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_CameraDistance                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CameraDistance_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_StaticMeshProp_C::GetCameraDistance(double* Param_CameraDistance)
+void AB_StaticMeshProp_C::GetCameraDistance(double* CameraDistance_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -540,8 +540,8 @@ void AB_StaticMeshProp_C::GetCameraDistance(double* Param_CameraDistance)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CameraDistance != nullptr)
-		*Param_CameraDistance = Parms.Param_CameraDistance;
+	if (CameraDistance_0 != nullptr)
+		*CameraDistance_0 = Parms.CameraDistance_0;
 }
 
 
@@ -618,6 +618,26 @@ void AB_StaticMeshProp_C::OffsetPosition(class AActor* Prop, const struct FTrans
 
 	if (Transform != nullptr)
 		*Transform = std::move(Parms.Transform);
+}
+
+
+// Function B_StaticMeshProp.B_StaticMeshProp_C.SetPhysicsEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bIsEnabled                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_StaticMeshProp_C::SetPhysicsEnabled(bool bIsEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_StaticMeshProp_C", "SetPhysicsEnabled");
+
+	Params::B_StaticMeshProp_C_SetPhysicsEnabled Parms{};
+
+	Parms.bIsEnabled = bIsEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

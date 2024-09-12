@@ -46,19 +46,19 @@ public:
 	float                                         RotationStiffness;                                 // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositionStiffness;                                 // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPBIKLimitType                                X;                                                 // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33C5[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinX;                                              // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxX;                                              // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPBIKLimitType                                Y;                                                 // 0x001C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33C6[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinY;                                              // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxY;                                              // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPBIKLimitType                                Z;                                                 // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33C7[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinZ;                                              // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxZ;                                              // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUsePreferredAngles;                               // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33C8[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PreferredAngles;                                   // 0x0038(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPBIKBoneSetting) == 0x000008, "Wrong alignment on FPBIKBoneSetting");
@@ -104,43 +104,45 @@ static_assert(offsetof(FRootPrePullSettings, PositionAlphaY) == 0x000018, "Membe
 static_assert(offsetof(FRootPrePullSettings, PositionAlphaZ) == 0x00001C, "Member 'FRootPrePullSettings::PositionAlphaZ' has a wrong offset!");
 
 // ScriptStruct PBIK.PBIKSolverSettings
-// 0x003C (0x003C - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FPBIKSolverSettings final
 {
 public:
 	int32                                         Iterations;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MassMultiplier;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowStretch;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPBIKRootBehavior                             RootBehavior;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33C9[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRootPrePullSettings                   PrePullRootSettings;                               // 0x000C(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         GlobalPullChainAlpha;                              // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxAngle;                                          // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverRelaxation;                                    // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStartSolveFromInputPose;                          // 0x0038(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33CA[0x3];                                     // 0x0039(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         SubIterations;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MassMultiplier;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowStretch;                                     // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPBIKRootBehavior                             RootBehavior;                                      // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRootPrePullSettings                   PrePullRootSettings;                               // 0x0010(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         GlobalPullChainAlpha;                              // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxAngle;                                          // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverRelaxation;                                    // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStartSolveFromInputPose;                          // 0x003C(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPBIKSolverSettings) == 0x000004, "Wrong alignment on FPBIKSolverSettings");
-static_assert(sizeof(FPBIKSolverSettings) == 0x00003C, "Wrong size on FPBIKSolverSettings");
+static_assert(sizeof(FPBIKSolverSettings) == 0x000040, "Wrong size on FPBIKSolverSettings");
 static_assert(offsetof(FPBIKSolverSettings, Iterations) == 0x000000, "Member 'FPBIKSolverSettings::Iterations' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, MassMultiplier) == 0x000004, "Member 'FPBIKSolverSettings::MassMultiplier' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, bAllowStretch) == 0x000008, "Member 'FPBIKSolverSettings::bAllowStretch' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, RootBehavior) == 0x000009, "Member 'FPBIKSolverSettings::RootBehavior' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, PrePullRootSettings) == 0x00000C, "Member 'FPBIKSolverSettings::PrePullRootSettings' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, GlobalPullChainAlpha) == 0x00002C, "Member 'FPBIKSolverSettings::GlobalPullChainAlpha' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, MaxAngle) == 0x000030, "Member 'FPBIKSolverSettings::MaxAngle' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, OverRelaxation) == 0x000034, "Member 'FPBIKSolverSettings::OverRelaxation' has a wrong offset!");
-static_assert(offsetof(FPBIKSolverSettings, bStartSolveFromInputPose) == 0x000038, "Member 'FPBIKSolverSettings::bStartSolveFromInputPose' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, SubIterations) == 0x000004, "Member 'FPBIKSolverSettings::SubIterations' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, MassMultiplier) == 0x000008, "Member 'FPBIKSolverSettings::MassMultiplier' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, bAllowStretch) == 0x00000C, "Member 'FPBIKSolverSettings::bAllowStretch' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, RootBehavior) == 0x00000D, "Member 'FPBIKSolverSettings::RootBehavior' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, PrePullRootSettings) == 0x000010, "Member 'FPBIKSolverSettings::PrePullRootSettings' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, GlobalPullChainAlpha) == 0x000030, "Member 'FPBIKSolverSettings::GlobalPullChainAlpha' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, MaxAngle) == 0x000034, "Member 'FPBIKSolverSettings::MaxAngle' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, OverRelaxation) == 0x000038, "Member 'FPBIKSolverSettings::OverRelaxation' has a wrong offset!");
+static_assert(offsetof(FPBIKSolverSettings, bStartSolveFromInputPose) == 0x00003C, "Member 'FPBIKSolverSettings::bStartSolveFromInputPose' has a wrong offset!");
 
 // ScriptStruct PBIK.PBIKSolver
-// 0x0068 (0x0068 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct alignas(0x08) FPBIKSolver final
 {
 public:
-	uint8                                         Pad_33CB[0x68];                                    // 0x0000(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x58];                                       // 0x0000(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPBIKSolver) == 0x000008, "Wrong alignment on FPBIKSolver");
-static_assert(sizeof(FPBIKSolver) == 0x000068, "Wrong size on FPBIKSolver");
+static_assert(sizeof(FPBIKSolver) == 0x000058, "Wrong size on FPBIKSolver");
 
 // ScriptStruct PBIK.PBIKDebug
 // 0x0008 (0x0008 - 0x0000)
@@ -149,7 +151,7 @@ struct FPBIKDebug final
 public:
 	float                                         DrawScale;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDrawDebug;                                        // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33CC[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPBIKDebug) == 0x000004, "Wrong alignment on FPBIKDebug");
 static_assert(sizeof(FPBIKDebug) == 0x000008, "Wrong size on FPBIKDebug");
@@ -162,14 +164,15 @@ struct FPBIKEffector final
 {
 public:
 	class FName                                   bone;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33CD[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositionAlpha;                                     // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotationAlpha;                                     // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StrengthAlpha;                                     // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PullChainAlpha;                                    // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PinRotation;                                       // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33CE[0xC];                                     // 0x0084(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ChainDepth;                                        // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PullChainAlpha;                                    // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PinRotation;                                       // 0x0084(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPBIKEffector) == 0x000010, "Wrong alignment on FPBIKEffector");
 static_assert(sizeof(FPBIKEffector) == 0x000090, "Wrong size on FPBIKEffector");
@@ -178,23 +181,24 @@ static_assert(offsetof(FPBIKEffector, Transform) == 0x000010, "Member 'FPBIKEffe
 static_assert(offsetof(FPBIKEffector, PositionAlpha) == 0x000070, "Member 'FPBIKEffector::PositionAlpha' has a wrong offset!");
 static_assert(offsetof(FPBIKEffector, RotationAlpha) == 0x000074, "Member 'FPBIKEffector::RotationAlpha' has a wrong offset!");
 static_assert(offsetof(FPBIKEffector, StrengthAlpha) == 0x000078, "Member 'FPBIKEffector::StrengthAlpha' has a wrong offset!");
-static_assert(offsetof(FPBIKEffector, PullChainAlpha) == 0x00007C, "Member 'FPBIKEffector::PullChainAlpha' has a wrong offset!");
-static_assert(offsetof(FPBIKEffector, PinRotation) == 0x000080, "Member 'FPBIKEffector::PinRotation' has a wrong offset!");
+static_assert(offsetof(FPBIKEffector, ChainDepth) == 0x00007C, "Member 'FPBIKEffector::ChainDepth' has a wrong offset!");
+static_assert(offsetof(FPBIKEffector, PullChainAlpha) == 0x000080, "Member 'FPBIKEffector::PullChainAlpha' has a wrong offset!");
+static_assert(offsetof(FPBIKEffector, PinRotation) == 0x000084, "Member 'FPBIKEffector::PinRotation' has a wrong offset!");
 
 // ScriptStruct PBIK.PBIKWorkData
-// 0x0090 (0x0090 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct FPBIKWorkData final
 {
 public:
 	bool                                          bNeedsInit;                                        // 0x0000(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33CF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        HashInitializedWith;                               // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 BoneSettingToSolverBoneIndex;                      // 0x0008(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	TArray<int32>                                 SolverBoneToElementIndex;                          // 0x0018(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	struct FPBIKSolver                            Solver;                                            // 0x0028(0x0068)(Transient, NativeAccessSpecifierPublic)
+	struct FPBIKSolver                            Solver;                                            // 0x0028(0x0058)(Transient, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPBIKWorkData) == 0x000008, "Wrong alignment on FPBIKWorkData");
-static_assert(sizeof(FPBIKWorkData) == 0x000090, "Wrong size on FPBIKWorkData");
+static_assert(sizeof(FPBIKWorkData) == 0x000080, "Wrong size on FPBIKWorkData");
 static_assert(offsetof(FPBIKWorkData, bNeedsInit) == 0x000000, "Member 'FPBIKWorkData::bNeedsInit' has a wrong offset!");
 static_assert(offsetof(FPBIKWorkData, HashInitializedWith) == 0x000004, "Member 'FPBIKWorkData::HashInitializedWith' has a wrong offset!");
 static_assert(offsetof(FPBIKWorkData, BoneSettingToSolverBoneIndex) == 0x000008, "Member 'FPBIKWorkData::BoneSettingToSolverBoneIndex' has a wrong offset!");
@@ -202,30 +206,29 @@ static_assert(offsetof(FPBIKWorkData, SolverBoneToElementIndex) == 0x000018, "Me
 static_assert(offsetof(FPBIKWorkData, Solver) == 0x000028, "Member 'FPBIKWorkData::Solver' has a wrong offset!");
 
 // ScriptStruct PBIK.RigUnit_PBIK
-// 0x0120 (0x0280 - 0x0160)
+// 0x0110 (0x02E0 - 0x01D0)
 struct FRigUnit_PBIK final : public FRigUnit_HighlevelBaseMutable
 {
 public:
-	class FName                                   Root;                                              // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FPBIKEffector>                  Effectors;                                         // 0x0168(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 EffectorSolverIndices;                             // 0x0178(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<struct FPBIKBoneSetting>               BoneSettings;                                      // 0x0188(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           ExcludedBones;                                     // 0x0198(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FPBIKSolverSettings                    Settings;                                          // 0x01A8(0x003C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPBIKDebug                             Debug;                                             // 0x01E4(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_33D0[0x4];                                     // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPBIKWorkData                          WorkData;                                          // 0x01F0(0x0090)(Transient, NativeAccessSpecifierPublic)
+	class FName                                   Root;                                              // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPBIKEffector>                  Effectors;                                         // 0x01D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 EffectorSolverIndices;                             // 0x01E8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<struct FPBIKBoneSetting>               BoneSettings;                                      // 0x01F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           ExcludedBones;                                     // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FPBIKSolverSettings                    Settings;                                          // 0x0218(0x0040)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPBIKDebug                             Debug;                                             // 0x0258(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPBIKWorkData                          WorkData;                                          // 0x0260(0x0080)(Transient, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRigUnit_PBIK) == 0x000010, "Wrong alignment on FRigUnit_PBIK");
-static_assert(sizeof(FRigUnit_PBIK) == 0x000280, "Wrong size on FRigUnit_PBIK");
-static_assert(offsetof(FRigUnit_PBIK, Root) == 0x000160, "Member 'FRigUnit_PBIK::Root' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, Effectors) == 0x000168, "Member 'FRigUnit_PBIK::Effectors' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, EffectorSolverIndices) == 0x000178, "Member 'FRigUnit_PBIK::EffectorSolverIndices' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, BoneSettings) == 0x000188, "Member 'FRigUnit_PBIK::BoneSettings' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, ExcludedBones) == 0x000198, "Member 'FRigUnit_PBIK::ExcludedBones' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, Settings) == 0x0001A8, "Member 'FRigUnit_PBIK::Settings' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, Debug) == 0x0001E4, "Member 'FRigUnit_PBIK::Debug' has a wrong offset!");
-static_assert(offsetof(FRigUnit_PBIK, WorkData) == 0x0001F0, "Member 'FRigUnit_PBIK::WorkData' has a wrong offset!");
+static_assert(sizeof(FRigUnit_PBIK) == 0x0002E0, "Wrong size on FRigUnit_PBIK");
+static_assert(offsetof(FRigUnit_PBIK, Root) == 0x0001D0, "Member 'FRigUnit_PBIK::Root' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, Effectors) == 0x0001D8, "Member 'FRigUnit_PBIK::Effectors' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, EffectorSolverIndices) == 0x0001E8, "Member 'FRigUnit_PBIK::EffectorSolverIndices' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, BoneSettings) == 0x0001F8, "Member 'FRigUnit_PBIK::BoneSettings' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, ExcludedBones) == 0x000208, "Member 'FRigUnit_PBIK::ExcludedBones' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, Settings) == 0x000218, "Member 'FRigUnit_PBIK::Settings' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, Debug) == 0x000258, "Member 'FRigUnit_PBIK::Debug' has a wrong offset!");
+static_assert(offsetof(FRigUnit_PBIK, WorkData) == 0x000260, "Member 'FRigUnit_PBIK::WorkData' has a wrong offset!");
 
 }
 

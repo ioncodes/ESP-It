@@ -22,7 +22,7 @@ struct FS_PropLayoutData final
 {
 public:
 	E_PropLayoutType                              LayoutType_3_723A46B84CDA3855FEC9D49D6379A874;     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_350A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 FileName_6_F3CC8069497D007AD2E96A9AE00D2700;       // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 LayoutName_8_C5C516E347406BABDAF0F59A6150BC5A;     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 MapName_10_67B8E5E54A16D786C60266AF5B396E36;       // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)

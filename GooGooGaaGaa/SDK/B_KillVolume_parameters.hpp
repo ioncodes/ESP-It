@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function B_KillVolume.B_KillVolume_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -26,11 +26,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4057[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -39,26 +39,26 @@ static_assert(offsetof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_C
 static_assert(offsetof(B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_KillVolume_C_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_KillVolume.B_KillVolume_C.ExecuteUbergraph_B_KillVolume
-// 0x0128 (0x0128 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct B_KillVolume_C_ExecuteUbergraph_B_KillVolume final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4058[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4059[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume) == 0x000008, "Wrong alignment on B_KillVolume_C_ExecuteUbergraph_B_KillVolume");
-static_assert(sizeof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume) == 0x000128, "Wrong size on B_KillVolume_C_ExecuteUbergraph_B_KillVolume");
+static_assert(sizeof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume) == 0x000138, "Wrong size on B_KillVolume_C_ExecuteUbergraph_B_KillVolume");
 static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, EntryPoint) == 0x000000, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_HasAuthority_ReturnValue) == 0x000004, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000008, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
@@ -67,9 +67,9 @@ static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, K2Node_Comp
 static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000020, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
 static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, K2Node_ComponentBoundEvent_bFromSweep) == 0x000024, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
 static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, K2Node_ComponentBoundEvent_SweepResult) == 0x000028, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_GetGameMode_ReturnValue) == 0x000110, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_GetObjectClass_ReturnValue) == 0x000118, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000120, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_GetGameMode_ReturnValue) == 0x000120, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_GetObjectClass_ReturnValue) == 0x000128, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_KillVolume_C_ExecuteUbergraph_B_KillVolume, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000130, "Member 'B_KillVolume_C_ExecuteUbergraph_B_KillVolume::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
 
 // Function B_KillVolume.B_KillVolume_C.Handle Kill Hunter
 // 0x0020 (0x0020 - 0x0000)
@@ -95,34 +95,34 @@ struct B_KillVolume_C_HandleKillActor final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405A[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PowerBall_C*                         K2Node_DynamicCast_AsB_Power_Ball;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetWitchPlayerController_PlayerController; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405C[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Witch_C*                             K2Node_DynamicCast_AsB_Witch;                      // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405D[0x5];                                     // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop_1;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405E[0x5];                                     // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_405F[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetWitchActor_ReturnActor;                // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_DamageHandler_C*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4060[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4061[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_2;             // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)

@@ -31,51 +31,100 @@ void AB_GameMode_C::OnMidGamePlayerJoin__DelegateSignature()
 }
 
 
-// Function B_GameMode.B_GameMode_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_GameMode.B_GameMode_C.CheckEndMatchWitchesDead
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AB_GameMode_C::ReceiveBeginPlay()
+void AB_GameMode_C::CheckEndMatchWitchesDead()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_GameMode_C", "CheckEndMatchWitchesDead");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_GameMode.B_GameMode_C.PlayerIDReceived
+// Function B_GameMode.B_GameMode_C.EnsureInitialize
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::PlayerIDReceived(class AB_PlayerState_C* PlayerState)
+void AB_GameMode_C::EnsureInitialize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "PlayerIDReceived");
+		Func = Class->GetFunction("B_GameMode_C", "EnsureInitialize");
 
-	Params::B_GameMode_C_PlayerIDReceived Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.GetBaseXPNumerator
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  Numerator                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::GetBaseXPNumerator(double* Numerator)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "GetBaseXPNumerator");
+
+	Params::B_GameMode_C_GetBaseXPNumerator Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Numerator != nullptr)
+		*Numerator = Parms.Numerator;
+}
+
+
+// Function B_GameMode.B_GameMode_C.GetPlayerPlayTime
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   Playtime                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::GetPlayerPlayTime(class AB_PlayerState_C* PlayerState, int32* Playtime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "GetPlayerPlayTime");
+
+	Params::B_GameMode_C_GetPlayerPlayTime Parms{};
 
 	Parms.PlayerState = PlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Playtime != nullptr)
+		*Playtime = Parms.Playtime;
 }
 
 
-// Function B_GameMode.B_GameMode_C.HandleStartMatch
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function B_GameMode.B_GameMode_C.GetPlayerScoreStatManager
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_ScoreStatManager_C*            ScoreStatManager                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::HandleStartMatch()
+void AB_GameMode_C::GetPlayerScoreStatManager(class AB_PlayerState_C* PlayerState, class UB_ScoreStatManager_C** ScoreStatManager)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "HandleStartMatch");
+		Func = Class->GetFunction("B_GameMode_C", "GetPlayerScoreStatManager");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_GameMode_C_GetPlayerScoreStatManager Parms{};
+
+	Parms.PlayerState = PlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScoreStatManager != nullptr)
+		*ScoreStatManager = Parms.ScoreStatManager;
 }
 
 
@@ -101,6 +150,190 @@ void AB_GameMode_C::HandleEndMatch(ETeamID WinnerTeam, bool ForceRegardlessOfEnd
 }
 
 
+// Function B_GameMode.B_GameMode_C.HandleGrantExp
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AB_PlayerState_C*                 CurrentPlayerState                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   TotalGrantedXp                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::HandleGrantExp(class AB_PlayerState_C* CurrentPlayerState, int32* TotalGrantedXp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "HandleGrantExp");
+
+	Params::B_GameMode_C_HandleGrantExp Parms{};
+
+	Parms.CurrentPlayerState = CurrentPlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (TotalGrantedXp != nullptr)
+		*TotalGrantedXp = Parms.TotalGrantedXp;
+}
+
+
+// Function B_GameMode.B_GameMode_C.HandleStartMatch
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_GameMode_C::HandleStartMatch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "HandleStartMatch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.Initialize
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_GameMode_C::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "Initialize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.IsPlayerInWinnerTeam
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    InWinnerTeam                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::IsPlayerInWinnerTeam(class AB_PlayerState_C* PlayerState, bool* InWinnerTeam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "IsPlayerInWinnerTeam");
+
+	Params::B_GameMode_C_IsPlayerInWinnerTeam Parms{};
+
+	Parms.PlayerState = PlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (InWinnerTeam != nullptr)
+		*InWinnerTeam = Parms.InWinnerTeam;
+}
+
+
+// Function B_GameMode.B_GameMode_C.K2_OnLogout
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AController*                      ExitingController                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::K2_OnLogout(class AController* ExitingController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "K2_OnLogout");
+
+	Params::B_GameMode_C_K2_OnLogout Parms{};
+
+	Parms.ExitingController = ExitingController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.K2_PostLogin
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class APlayerController*                NewPlayer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::K2_PostLogin(class APlayerController* NewPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "K2_PostLogin");
+
+	Params::B_GameMode_C_K2_PostLogin Parms{};
+
+	Parms.NewPlayer = NewPlayer;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_GameMode_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "ReceiveTick");
+
+	Params::B_GameMode_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.StartGame
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_GameMode_C::StartGame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "StartGame");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.StartNewGame
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    RestartByPlayerJoin                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::StartNewGame(bool RestartByPlayerJoin)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "StartNewGame");
+
+	Params::B_GameMode_C_StartNewGame Parms{};
+
+	Parms.RestartByPlayerJoin = RestartByPlayerJoin;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameMode.B_GameMode_C.TimerFinished
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -115,14 +348,108 @@ void AB_GameMode_C::TimerFinished()
 }
 
 
+// Function B_GameMode.B_GameMode_C.TimerSecondElapsed
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  RemainingSeconds                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::TimerSecondElapsed(double RemainingSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "TimerSecondElapsed");
+
+	Params::B_GameMode_C_TimerSecondElapsed Parms{};
+
+	Parms.RemainingSeconds = RemainingSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.UnregisterPlayer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController*                      PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::UnregisterPlayer(class AController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "UnregisterPlayer");
+
+	Params::B_GameMode_C_UnregisterPlayer Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.UpdateCustomGameMatchOptions
+// (Protected, BlueprintCallable, BlueprintEvent)
+
+void AB_GameMode_C::UpdateCustomGameMatchOptions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "UpdateCustomGameMatchOptions");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameMode.B_GameMode_C.ExecuteUbergraph_B_GameMode
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::ExecuteUbergraph_B_GameMode(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "ExecuteUbergraph_B_GameMode");
+
+	Params::B_GameMode_C_ExecuteUbergraph_B_GameMode Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameMode.B_GameMode_C.PlayerIDReceived
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::PlayerIDReceived(class AB_PlayerState_C* PlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "PlayerIDReceived");
+
+	Params::B_GameMode_C_PlayerIDReceived Parms{};
+
+	Parms.PlayerState = PlayerState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameMode.B_GameMode_C.SpawnPlaceableStatic
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableStaticProp_C*        SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::SpawnPlaceableStatic(class UClass* Param_Class, const struct FTransform& Transform, class ABP_PlaceableStaticProp_C** SpawnedActor)
+void AB_GameMode_C::SpawnPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, class ABP_PlaceableStaticProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -131,7 +458,7 @@ void AB_GameMode_C::SpawnPlaceableStatic(class UClass* Param_Class, const struct
 
 	Params::B_GameMode_C_SpawnPlaceableStatic Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -144,12 +471,12 @@ void AB_GameMode_C::SpawnPlaceableStatic(class UClass* Param_Class, const struct
 // Function B_GameMode.B_GameMode_C.SpawnSwitch
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    BreaksAfterUse                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_Switch_C*                     SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::SpawnSwitch(class UClass* Param_Class, const struct FTransform& Transform, bool BreaksAfterUse, class ABP_Switch_C** SpawnedActor)
+void AB_GameMode_C::SpawnSwitch(class UClass* Class_0, const struct FTransform& Transform, bool BreaksAfterUse, class ABP_Switch_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -158,7 +485,7 @@ void AB_GameMode_C::SpawnSwitch(class UClass* Param_Class, const struct FTransfo
 
 	Params::B_GameMode_C_SpawnSwitch Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.BreaksAfterUse = BreaksAfterUse;
 
@@ -172,13 +499,13 @@ void AB_GameMode_C::SpawnSwitch(class UClass* Param_Class, const struct FTransfo
 // Function B_GameMode.B_GameMode_C.SpawnProp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    StartAwake                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsFrozen                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_StaticMeshProp_C*              SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::SpawnProp(class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, class AB_StaticMeshProp_C** SpawnedActor)
+void AB_GameMode_C::SpawnProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, class AB_StaticMeshProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -187,7 +514,7 @@ void AB_GameMode_C::SpawnProp(class UClass* Param_Class, const struct FTransform
 
 	Params::B_GameMode_C_SpawnProp Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.StartAwake = StartAwake;
 	Parms.IsFrozen = IsFrozen;
@@ -202,13 +529,13 @@ void AB_GameMode_C::SpawnProp(class UClass* Param_Class, const struct FTransform
 // Function B_GameMode.B_GameMode_C.SpawnPlaceableLight
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableLight_C*             SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::SpawnPlaceableLight(class UClass* Param_Class, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor)
+void AB_GameMode_C::SpawnPlaceableLight(class UClass* Class_0, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -217,7 +544,7 @@ void AB_GameMode_C::SpawnPlaceableLight(class UClass* Param_Class, const struct 
 
 	Params::B_GameMode_C_SpawnPlaceableLight Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.Color = std::move(Color);
 	Parms.Activated = Activated;
@@ -232,14 +559,14 @@ void AB_GameMode_C::SpawnPlaceableLight(class UClass* Param_Class, const struct 
 // Function B_GameMode.B_GameMode_C.SpawnActionProp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    StartAwake                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsFrozen                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_StaticMeshProp_C*              SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::SpawnActionProp(class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor)
+void AB_GameMode_C::SpawnActionProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -248,7 +575,7 @@ void AB_GameMode_C::SpawnActionProp(class UClass* Param_Class, const struct FTra
 
 	Params::B_GameMode_C_SpawnActionProp Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.StartAwake = StartAwake;
 	Parms.IsFrozen = IsFrozen;
@@ -264,12 +591,12 @@ void AB_GameMode_C::SpawnActionProp(class UClass* Param_Class, const struct FTra
 // Function B_GameMode.B_GameMode_C.SpawnActionPlaceableStatic
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableStaticProp_C*        SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::SpawnActionPlaceableStatic(class UClass* Param_Class, const struct FTransform& Transform, bool Activated, class ABP_PlaceableStaticProp_C** SpawnedActor)
+void AB_GameMode_C::SpawnActionPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, bool Activated, class ABP_PlaceableStaticProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -278,7 +605,7 @@ void AB_GameMode_C::SpawnActionPlaceableStatic(class UClass* Param_Class, const 
 
 	Params::B_GameMode_C_SpawnActionPlaceableStatic Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.Activated = Activated;
 
@@ -286,6 +613,32 @@ void AB_GameMode_C::SpawnActionPlaceableStatic(class UClass* Param_Class, const 
 
 	if (SpawnedActor != nullptr)
 		*SpawnedActor = Parms.SpawnedActor;
+}
+
+
+// Function B_GameMode.B_GameMode_C.HandleReceivedAccountInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   AccountId                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ProductUserId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UB_ServerClientConfig_C*          AccountClientConfig                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   AccountState                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_GameMode_C::HandleReceivedAccountInfo(int32 AccountId, const class FString& ProductUserId, class UB_ServerClientConfig_C* AccountClientConfig, int32 AccountState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameMode_C", "HandleReceivedAccountInfo");
+
+	Params::B_GameMode_C_HandleReceivedAccountInfo Parms{};
+
+	Parms.AccountId = AccountId;
+	Parms.ProductUserId = std::move(ProductUserId);
+	Parms.AccountClientConfig = AccountClientConfig;
+	Parms.AccountState = AccountState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -672,20 +1025,6 @@ void AB_GameMode_C::GetAntiBotTravelRequirement(class AB_PlayerState_C* PlayerSt
 }
 
 
-// Function B_GameMode.B_GameMode_C.UpdateCustomGameMatchOptions
-// (Protected, BlueprintCallable, BlueprintEvent)
-
-void AB_GameMode_C::UpdateCustomGameMatchOptions()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "UpdateCustomGameMatchOptions");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_GameMode.B_GameMode_C.SpawnNewPlayerPawn
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -834,27 +1173,6 @@ void AB_GameMode_C::GetNewPlayerStartTransform(ETeamID Team, struct FTransform* 
 }
 
 
-// Function B_GameMode.B_GameMode_C.GetBaseXPNumerator
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double                                  Numerator                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::GetBaseXPNumerator(double* Numerator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "GetBaseXPNumerator");
-
-	Params::B_GameMode_C_GetBaseXPNumerator Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Numerator != nullptr)
-		*Numerator = Parms.Numerator;
-}
-
-
 // Function B_GameMode.B_GameMode_C.GetLastSurvivingWitch
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -948,11 +1266,11 @@ void AB_GameMode_C::LoadPropLayoutFromSaveGame(TArray<struct FPropToSave>& Props
 // Parameters:
 // struct FS_PropLayoutData                Layout                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    UseCompression                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           WorkshopId                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           WorkshopID                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 // int32                                   AmountOfProps                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   AmountOfPlaceableStatics                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::LoadPropLayout(const struct FS_PropLayoutData& Layout, bool UseCompression, class FString* WorkshopId, int32* AmountOfProps, int32* AmountOfPlaceableStatics)
+void AB_GameMode_C::LoadPropLayout(const struct FS_PropLayoutData& Layout, bool UseCompression, class FString* WorkshopID, int32* AmountOfProps, int32* AmountOfPlaceableStatics)
 {
 	static class UFunction* Func = nullptr;
 
@@ -966,8 +1284,8 @@ void AB_GameMode_C::LoadPropLayout(const struct FS_PropLayoutData& Layout, bool 
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (WorkshopId != nullptr)
-		*WorkshopId = std::move(Parms.WorkshopId);
+	if (WorkshopID != nullptr)
+		*WorkshopID = std::move(Parms.WorkshopID);
 
 	if (AmountOfProps != nullptr)
 		*AmountOfProps = Parms.AmountOfProps;
@@ -986,20 +1304,6 @@ void AB_GameMode_C::RemoveAllProps()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_GameMode_C", "RemoveAllProps");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_GameMode.B_GameMode_C.TickSystemMessage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AB_GameMode_C::TickSystemMessage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "TickSystemMessage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1045,78 +1349,6 @@ void AB_GameMode_C::Handle_Player_Join(class APlayerController* PlayerController
 }
 
 
-// Function B_GameMode.B_GameMode_C.GetPlayerScoreStatManager
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UB_ScoreStatManager_C*            ScoreStatManager                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::GetPlayerScoreStatManager(class AB_PlayerState_C* PlayerState, class UB_ScoreStatManager_C** ScoreStatManager)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "GetPlayerScoreStatManager");
-
-	Params::B_GameMode_C_GetPlayerScoreStatManager Parms{};
-
-	Parms.PlayerState = PlayerState;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ScoreStatManager != nullptr)
-		*ScoreStatManager = Parms.ScoreStatManager;
-}
-
-
-// Function B_GameMode.B_GameMode_C.IsPlayerInWinnerTeam
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    InWinnerTeam                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::IsPlayerInWinnerTeam(class AB_PlayerState_C* PlayerState, bool* InWinnerTeam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "IsPlayerInWinnerTeam");
-
-	Params::B_GameMode_C_IsPlayerInWinnerTeam Parms{};
-
-	Parms.PlayerState = PlayerState;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (InWinnerTeam != nullptr)
-		*InWinnerTeam = Parms.InWinnerTeam;
-}
-
-
-// Function B_GameMode.B_GameMode_C.GetPlayerPlayTime
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Playtime                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::GetPlayerPlayTime(class AB_PlayerState_C* PlayerState, int32* Playtime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "GetPlayerPlayTime");
-
-	Params::B_GameMode_C_GetPlayerPlayTime Parms{};
-
-	Parms.PlayerState = PlayerState;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Playtime != nullptr)
-		*Playtime = Parms.Playtime;
-}
-
-
 // Function B_GameMode.B_GameMode_C.UpdateSessionProperties
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -1128,26 +1360,6 @@ void AB_GameMode_C::UpdateSessionProperties()
 		Func = Class->GetFunction("B_GameMode_C", "UpdateSessionProperties");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_GameMode.B_GameMode_C.TimerSecondElapsed
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  RemainingSeconds                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::TimerSecondElapsed(double RemainingSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "TimerSecondElapsed");
-
-	Params::B_GameMode_C_TimerSecondElapsed Parms{};
-
-	Parms.RemainingSeconds = RemainingSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1196,30 +1408,6 @@ void AB_GameMode_C::TimerStart(int32 Time)
 	Parms.Time = Time;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_GameMode.B_GameMode_C.HandleGrantExp
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AB_PlayerState_C*                 CurrentPlayerState                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   TotalGrantedXp                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::HandleGrantExp(class AB_PlayerState_C* CurrentPlayerState, int32* TotalGrantedXp)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "HandleGrantExp");
-
-	Params::B_GameMode_C_HandleGrantExp Parms{};
-
-	Parms.CurrentPlayerState = CurrentPlayerState;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (TotalGrantedXp != nullptr)
-		*TotalGrantedXp = Parms.TotalGrantedXp;
 }
 
 
@@ -1554,20 +1742,6 @@ void AB_GameMode_C::CheckEndMatchHuntersDead()
 }
 
 
-// Function B_GameMode.B_GameMode_C.CheckEndMatchWitchesDead
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_GameMode_C::CheckEndMatchWitchesDead()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "CheckEndMatchWitchesDead");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_GameMode.B_GameMode_C.GetHuntersCount
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1612,60 +1786,6 @@ void AB_GameMode_C::RandomizeTeamSelection()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_GameMode_C", "RandomizeTeamSelection");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_GameMode.B_GameMode_C.StartNewGame
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    RestartByPlayerJoin                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::StartNewGame(bool RestartByPlayerJoin)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "StartNewGame");
-
-	Params::B_GameMode_C_StartNewGame Parms{};
-
-	Parms.RestartByPlayerJoin = RestartByPlayerJoin;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_GameMode.B_GameMode_C.UnregisterPlayer
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AController*                      PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::UnregisterPlayer(class AController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "UnregisterPlayer");
-
-	Params::B_GameMode_C_UnregisterPlayer Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_GameMode.B_GameMode_C.EnsureInitialize
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_GameMode_C::EnsureInitialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "EnsureInitialize");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1756,20 +1876,6 @@ void AB_GameMode_C::RegisterPlayer(class APlayerController* PlayerController)
 }
 
 
-// Function B_GameMode.B_GameMode_C.Initialize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AB_GameMode_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_GameMode.B_GameMode_C.CheckIfAllPlayersAreReady
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1835,75 +1941,45 @@ void AB_GameMode_C::OnCallFailed_BC6CE1BA4A9064285EE44985FF9B06B2(class FName Se
 }
 
 
-// Function B_GameMode.B_GameMode_C.StartGame
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_GameMode_C::StartGame()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "StartGame");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_GameMode.B_GameMode_C.K2_PostLogin
-// (Event, Public, BlueprintEvent)
+// Function B_GameMode.B_GameMode_C.OnMessageArrayProcessed_2F4EA87B48E126019BCA89A0AFF27015
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*                NewPlayer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_GameMode_C::K2_PostLogin(class APlayerController* NewPlayer)
+void AB_GameMode_C::OnMessageArrayProcessed_2F4EA87B48E126019BCA89A0AFF27015(bool bSuccess, const TArray<class FString>& SanitizedMessages)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "K2_PostLogin");
+		Func = Class->GetFunction("B_GameMode_C", "OnMessageArrayProcessed_2F4EA87B48E126019BCA89A0AFF27015");
 
-	Params::B_GameMode_C_K2_PostLogin Parms{};
+	Params::B_GameMode_C_OnMessageArrayProcessed_2F4EA87B48E126019BCA89A0AFF27015 Parms{};
 
-	Parms.NewPlayer = NewPlayer;
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function B_GameMode.B_GameMode_C.K2_OnLogout
-// (Event, Public, BlueprintEvent)
+// Function B_GameMode.B_GameMode_C.OnCallFailed_2F4EA87B48E126019BCA89A0AFF27015
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      ExitingController                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class FString>                   SanitizedMessages                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_GameMode_C::K2_OnLogout(class AController* ExitingController)
+void AB_GameMode_C::OnCallFailed_2F4EA87B48E126019BCA89A0AFF27015(bool bSuccess, const TArray<class FString>& SanitizedMessages)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "K2_OnLogout");
+		Func = Class->GetFunction("B_GameMode_C", "OnCallFailed_2F4EA87B48E126019BCA89A0AFF27015");
 
-	Params::B_GameMode_C_K2_OnLogout Parms{};
+	Params::B_GameMode_C_OnCallFailed_2F4EA87B48E126019BCA89A0AFF27015 Parms{};
 
-	Parms.ExitingController = ExitingController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_GameMode.B_GameMode_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_GameMode_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "ReceiveTick");
-
-	Params::B_GameMode_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessages = std::move(SanitizedMessages);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2111,21 +2187,23 @@ void AB_GameMode_C::ShutdownServer()
 }
 
 
-// Function B_GameMode.B_GameMode_C.ExecuteUbergraph_B_GameMode
-// (Final, UbergraphFunction, HasDefaults)
+// Function B_GameMode.B_GameMode_C.SendSanitizedGameMessageToAll
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SourcePlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           TargetPlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void AB_GameMode_C::ExecuteUbergraph_B_GameMode(int32 EntryPoint)
+void AB_GameMode_C::SendSanitizedGameMessageToAll(const class FString& SourcePlayerName, const class FString& TargetPlayerName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameMode_C", "ExecuteUbergraph_B_GameMode");
+		Func = Class->GetFunction("B_GameMode_C", "SendSanitizedGameMessageToAll");
 
-	Params::B_GameMode_C_ExecuteUbergraph_B_GameMode Parms{};
+	Params::B_GameMode_C_SendSanitizedGameMessageToAll Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.SourcePlayerName = std::move(SourcePlayerName);
+	Parms.TargetPlayerName = std::move(TargetPlayerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

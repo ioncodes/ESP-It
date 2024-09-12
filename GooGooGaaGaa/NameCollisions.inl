@@ -9,34 +9,52 @@
 // FORWARD DECLARATIONS
 
 
-namespace AB_MagicBunny { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace AB_SkillSuitcase { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace AB_SantaHut { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace AB_Chicken { struct FAnimBlueprintGeneratedConstantData; }
+namespace AB_HookRope { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace AB_SpringPad { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace AB_LuaqAttack { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace AB_HookRope { struct FAnimBlueprintGeneratedConstantData; }
+namespace AB_LuaqTravel { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace AB_FlyingEyeSpectator { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace AB_FlyingEye { struct FAnimBlueprintGeneratedConstantData; }
+namespace AB_SkillSuitcase { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace AB_Sunshade { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace AB_LuaqTravel { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace AB_LuaqSpectator { struct FAnimBlueprintGeneratedConstantData; }
+namespace AB_FlyingEye { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace AB_DefaultHat { struct FAnimBlueprintGeneratedConstantData; }
 
+namespace AB_LuaqSpectator { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace AB_WitchHat
+namespace AB_MagicBunny { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace AB_SantaHut { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace AB_LuaqAttack { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace AB_Chicken { struct FAnimBlueprintGeneratedConstantData; }
+
+
+namespace AB_HunterSkinPreview
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace AB_NewWitch
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace AB_Hunter
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace AB_HunterFirstPerson
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -46,40 +64,4 @@ namespace OnlineSubsystemUtils
 {
 	class UOnlineEngineInterfaceImpl;
 	class UOnlineEngineInterfaceImpl;
-}
-
-namespace AB_NewWitch
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace AB_Hunter
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace AB_DeepSeaWitchHat
-{
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace AB_HunterFirstPerson
-{
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
-
-namespace AB_HunterBunnyHat
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace AB_HunterSkinPreview
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
 }

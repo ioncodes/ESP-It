@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_UtilityDoor.BP_UtilityDoor_C
-// 0x0010 (0x03A0 - 0x0390)
+// 0x0010 (0x0388 - 0x0378)
 class ABP_UtilityDoor_C : public ABP_ActionPlacable_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UtilityDoor_C;                   // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          ShouldOpenInSeek;                                  // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_UtilityDoor_C;                   // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          ShouldOpenInSeek;                                  // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CloseDoor(bool Fast);
@@ -47,9 +47,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_UtilityDoor_C) == 0x000008, "Wrong alignment on ABP_UtilityDoor_C");
-static_assert(sizeof(ABP_UtilityDoor_C) == 0x0003A0, "Wrong size on ABP_UtilityDoor_C");
-static_assert(offsetof(ABP_UtilityDoor_C, UberGraphFrame_BP_UtilityDoor_C) == 0x000390, "Member 'ABP_UtilityDoor_C::UberGraphFrame_BP_UtilityDoor_C' has a wrong offset!");
-static_assert(offsetof(ABP_UtilityDoor_C, ShouldOpenInSeek) == 0x000398, "Member 'ABP_UtilityDoor_C::ShouldOpenInSeek' has a wrong offset!");
+static_assert(sizeof(ABP_UtilityDoor_C) == 0x000388, "Wrong size on ABP_UtilityDoor_C");
+static_assert(offsetof(ABP_UtilityDoor_C, UberGraphFrame_BP_UtilityDoor_C) == 0x000378, "Member 'ABP_UtilityDoor_C::UberGraphFrame_BP_UtilityDoor_C' has a wrong offset!");
+static_assert(offsetof(ABP_UtilityDoor_C, ShouldOpenInSeek) == 0x000380, "Member 'ABP_UtilityDoor_C::ShouldOpenInSeek' has a wrong offset!");
 
 }
 

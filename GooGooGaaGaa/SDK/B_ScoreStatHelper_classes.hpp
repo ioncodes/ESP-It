@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "EHunterScoreStat_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EWitchScoreStat_structs.hpp"
 
 

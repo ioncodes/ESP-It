@@ -39,7 +39,7 @@ static_assert(sizeof(IMetaSoundDocumentInterface) == 0x000028, "Wrong size on IM
 class UMetasoundParameterPack final : public UObject
 {
 public:
-	uint8                                         Pad_31F8[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UMetasoundParameterPack* MakeMetasoundParameterPack();
@@ -75,13 +75,13 @@ static_assert(alignof(UMetasoundParameterPack) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UMetasoundParameterPack) == 0x000040, "Wrong size on UMetasoundParameterPack");
 
 // Class MetasoundFrontend.MetaSoundBuilderDocument
-// 0x01D8 (0x0200 - 0x0028)
+// 0x01E0 (0x0208 - 0x0028)
 class UMetaSoundBuilderDocument final : public UObject
 {
 public:
-	uint8                                         Pad_3208[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendDocument             Document;                                          // 0x0030(0x01C8)(Transient, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UObject>                    MetaSoundUClass;                                   // 0x01F8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendDocument             Document;                                          // 0x0030(0x01D0)(Transient, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UObject>                    MetaSoundUClass;                                   // 0x0200(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -94,9 +94,9 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundBuilderDocument) == 0x000008, "Wrong alignment on UMetaSoundBuilderDocument");
-static_assert(sizeof(UMetaSoundBuilderDocument) == 0x000200, "Wrong size on UMetaSoundBuilderDocument");
+static_assert(sizeof(UMetaSoundBuilderDocument) == 0x000208, "Wrong size on UMetaSoundBuilderDocument");
 static_assert(offsetof(UMetaSoundBuilderDocument, Document) == 0x000030, "Member 'UMetaSoundBuilderDocument::Document' has a wrong offset!");
-static_assert(offsetof(UMetaSoundBuilderDocument, MetaSoundUClass) == 0x0001F8, "Member 'UMetaSoundBuilderDocument::MetaSoundUClass' has a wrong offset!");
+static_assert(offsetof(UMetaSoundBuilderDocument, MetaSoundUClass) == 0x000200, "Member 'UMetaSoundBuilderDocument::MetaSoundUClass' has a wrong offset!");
 
 }
 

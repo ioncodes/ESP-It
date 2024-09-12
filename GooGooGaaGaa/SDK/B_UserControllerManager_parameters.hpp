@@ -24,22 +24,22 @@ struct B_UserControllerManager_C_ExecuteUbergraph_B_UserControllerManager final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEstablishUserReason                          K2Node_CustomEvent_EstablishUserReason;            // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetMessageDialogText_ReturnValue;         // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetMessageDialogTitle_ReturnValue;        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyChildren_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1D[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIMenuScreen_C>        K2Node_DynamicCast_AsIMenu_Screen;                 // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1E[0x2];                                     // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x2];                                       // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EEstablishUserReason& EstablishUserReason)> K2Node_CreateDelegate_OutputDelegate;              // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1F[0xC];                                     // 0x0084(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0xC];                                       // 0x0084(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_CustomEvent_IconBrush;                      // 0x0090(0x00D0)(ConstParm)
 	class FString                                 K2Node_CustomEvent_DisplayString;                  // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TDelegate<void(struct FSlateBrush& IconBrush, const class FString& DisplayString)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0170(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -73,85 +73,85 @@ static_assert(offsetof(B_UserControllerManager_C_ExecuteUbergraph_B_UserControll
 static_assert(offsetof(B_UserControllerManager_C_ExecuteUbergraph_B_UserControllerManager, K2Node_DynamicCast_bSuccess_1) == 0x0001A0, "Member 'B_UserControllerManager_C_ExecuteUbergraph_B_UserControllerManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 
 // Function B_UserControllerManager.B_UserControllerManager_C.GetMessageDialogText
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct B_UserControllerManager_C_GetMessageDialogText final
 {
 public:
-	EEstablishUserReason                          Param_Index;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E20[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EEstablishUserReason                          Index_0;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	EEstablishUserReason                          Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E21[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0050(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0068(0x0018)()
-	class FText                                   Temp_text_Variable_4;                              // 0x0080(0x0018)()
-	class FText                                   Temp_text_Variable_5;                              // 0x0098(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x00B0(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00C8(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0030(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0050(0x0010)()
+	class FText                                   Temp_text_Variable_4;                              // 0x0060(0x0010)()
+	class FText                                   Temp_text_Variable_5;                              // 0x0070(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0080(0x0010)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0090(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_UserControllerManager_C_GetMessageDialogText) == 0x000008, "Wrong alignment on B_UserControllerManager_C_GetMessageDialogText");
-static_assert(sizeof(B_UserControllerManager_C_GetMessageDialogText) == 0x0000F0, "Wrong size on B_UserControllerManager_C_GetMessageDialogText");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Param_Index) == 0x000000, "Member 'B_UserControllerManager_C_GetMessageDialogText::Param_Index' has a wrong offset!");
+static_assert(sizeof(B_UserControllerManager_C_GetMessageDialogText) == 0x0000B0, "Wrong size on B_UserControllerManager_C_GetMessageDialogText");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Index_0) == 0x000000, "Member 'B_UserControllerManager_C_GetMessageDialogText::Index_0' has a wrong offset!");
 static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, ReturnValue) == 0x000008, "Member 'B_UserControllerManager_C_GetMessageDialogText::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_byte_Variable) == 0x000018, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable) == 0x000020, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_1) == 0x000038, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_2) == 0x000050, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_3) == 0x000068, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_4) == 0x000080, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_5) == 0x000098, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, K2Node_Select_Default) == 0x0000B0, "Member 'B_UserControllerManager_C_GetMessageDialogText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, CallFunc_MakeLiteralText_ReturnValue) == 0x0000C8, "Member 'B_UserControllerManager_C_GetMessageDialogText::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, CallFunc_Conv_TextToString_ReturnValue) == 0x0000E0, "Member 'B_UserControllerManager_C_GetMessageDialogText::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_1) == 0x000030, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_2) == 0x000040, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_3) == 0x000050, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_4) == 0x000060, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, Temp_text_Variable_5) == 0x000070, "Member 'B_UserControllerManager_C_GetMessageDialogText::Temp_text_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, K2Node_Select_Default) == 0x000080, "Member 'B_UserControllerManager_C_GetMessageDialogText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, CallFunc_MakeLiteralText_ReturnValue) == 0x000090, "Member 'B_UserControllerManager_C_GetMessageDialogText::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogText, CallFunc_Conv_TextToString_ReturnValue) == 0x0000A0, "Member 'B_UserControllerManager_C_GetMessageDialogText::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 
 // Function B_UserControllerManager.B_UserControllerManager_C.GetMessageDialogTitle
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct B_UserControllerManager_C_GetMessageDialogTitle final
 {
 public:
-	EEstablishUserReason                          Param_Index;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E22[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EEstablishUserReason                          Index_0;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	EEstablishUserReason                          Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E23[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0050(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0068(0x0018)()
-	class FText                                   Temp_text_Variable_4;                              // 0x0080(0x0018)()
-	class FText                                   Temp_text_Variable_5;                              // 0x0098(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x00B0(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00C8(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0030(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0050(0x0010)()
+	class FText                                   Temp_text_Variable_4;                              // 0x0060(0x0010)()
+	class FText                                   Temp_text_Variable_5;                              // 0x0070(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0080(0x0010)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0090(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_UserControllerManager_C_GetMessageDialogTitle) == 0x000008, "Wrong alignment on B_UserControllerManager_C_GetMessageDialogTitle");
-static_assert(sizeof(B_UserControllerManager_C_GetMessageDialogTitle) == 0x0000F0, "Wrong size on B_UserControllerManager_C_GetMessageDialogTitle");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Param_Index) == 0x000000, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Param_Index' has a wrong offset!");
+static_assert(sizeof(B_UserControllerManager_C_GetMessageDialogTitle) == 0x0000B0, "Wrong size on B_UserControllerManager_C_GetMessageDialogTitle");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Index_0) == 0x000000, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Index_0' has a wrong offset!");
 static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, ReturnValue) == 0x000008, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_byte_Variable) == 0x000018, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable) == 0x000020, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_1) == 0x000038, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_2) == 0x000050, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_3) == 0x000068, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_4) == 0x000080, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_5) == 0x000098, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, K2Node_Select_Default) == 0x0000B0, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, CallFunc_MakeLiteralText_ReturnValue) == 0x0000C8, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, CallFunc_Conv_TextToString_ReturnValue) == 0x0000E0, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_1) == 0x000030, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_2) == 0x000040, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_3) == 0x000050, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_4) == 0x000060, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, Temp_text_Variable_5) == 0x000070, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::Temp_text_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, K2Node_Select_Default) == 0x000080, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, CallFunc_MakeLiteralText_ReturnValue) == 0x000090, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_GetMessageDialogTitle, CallFunc_Conv_TextToString_ReturnValue) == 0x0000A0, "Member 'B_UserControllerManager_C_GetMessageDialogTitle::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 
 // Function B_UserControllerManager.B_UserControllerManager_C.Initialize
 // 0x0008 (0x0008 - 0x0000)
 struct B_UserControllerManager_C_Initialize final
 {
 public:
-	class UGameInstance*                          Param_GameInstance;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          GameInstance_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_UserControllerManager_C_Initialize) == 0x000008, "Wrong alignment on B_UserControllerManager_C_Initialize");
 static_assert(sizeof(B_UserControllerManager_C_Initialize) == 0x000008, "Wrong size on B_UserControllerManager_C_Initialize");
-static_assert(offsetof(B_UserControllerManager_C_Initialize, Param_GameInstance) == 0x000000, "Member 'B_UserControllerManager_C_Initialize::Param_GameInstance' has a wrong offset!");
+static_assert(offsetof(B_UserControllerManager_C_Initialize, GameInstance_0) == 0x000000, "Member 'B_UserControllerManager_C_Initialize::GameInstance_0' has a wrong offset!");
 
 // Function B_UserControllerManager.B_UserControllerManager_C.OnActiveUserInfoUpdated_Event
 // 0x00E0 (0x00E0 - 0x0000)

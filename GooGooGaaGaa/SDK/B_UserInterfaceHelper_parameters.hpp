@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -20,121 +20,121 @@ namespace SDK::Params
 {
 
 // Function B_UserInterfaceHelper.B_UserInterfaceHelper_C.CreateTextTooltip
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct B_UserInterfaceHelper_C_CreateTextTooltip final
 {
 public:
-	class FText                                   ToolTipText;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            ToolTip;                                           // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_ToolTip_C*                          NewTooltip;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_TooltipTextContent_C*               TooltipContent;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_ToolTip_C*                          CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_TooltipTextContent_C*               CallFunc_Create_ReturnValue_1;                     // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ToolTipText;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ToolTip;                                           // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_ToolTip_C*                          NewTooltip;                                        // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_TooltipTextContent_C*               ToolTipContent;                                    // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWB_ToolTip_C*                          CallFunc_Create_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_TooltipTextContent_C*               CallFunc_Create_ReturnValue_1;                     // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_UserInterfaceHelper_C_CreateTextTooltip) == 0x000008, "Wrong alignment on B_UserInterfaceHelper_C_CreateTextTooltip");
-static_assert(sizeof(B_UserInterfaceHelper_C_CreateTextTooltip) == 0x000058, "Wrong size on B_UserInterfaceHelper_C_CreateTextTooltip");
+static_assert(sizeof(B_UserInterfaceHelper_C_CreateTextTooltip) == 0x000050, "Wrong size on B_UserInterfaceHelper_C_CreateTextTooltip");
 static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, ToolTipText) == 0x000000, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::ToolTipText' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, __WorldContext) == 0x000018, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::__WorldContext' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, ToolTip) == 0x000020, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::ToolTip' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, NewTooltip) == 0x000028, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::NewTooltip' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, TooltipContent) == 0x000030, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::TooltipContent' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_GetGameInstance_ReturnValue) == 0x000038, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000040, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_Create_ReturnValue) == 0x000048, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_Create_ReturnValue_1) == 0x000050, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_Create_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, __WorldContext) == 0x000010, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::__WorldContext' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, ToolTip) == 0x000018, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::ToolTip' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, NewTooltip) == 0x000020, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::NewTooltip' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, ToolTipContent) == 0x000028, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::ToolTipContent' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_GetGameInstance_ReturnValue) == 0x000030, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000038, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_Create_ReturnValue) == 0x000040, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_CreateTextTooltip, CallFunc_Create_ReturnValue_1) == 0x000048, "Member 'B_UserInterfaceHelper_C_CreateTextTooltip::CallFunc_Create_ReturnValue_1' has a wrong offset!");
 
 // Function B_UserInterfaceHelper.B_UserInterfaceHelper_C.GetFormattedTime
-// 0x0120 (0x0120 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct B_UserInterfaceHelper_C_GetFormattedTime final
 {
 public:
 	int32                                         RealValue;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_194[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   FormattedTime;                                     // 0x0010(0x0018)(Parm, OutParm)
-	class FText                                   CallFunc_GetMinutesFromSeconds_MinutesText;        // 0x0028(0x0018)()
-	class FText                                   CallFunc_RemoveMinutesFromSeconds_SecondsFormatted; // 0x0040(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00A8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0108(0x0018)()
+	class FText                                   FormattedTime;                                     // 0x0010(0x0010)(Parm, OutParm)
+	class FText                                   CallFunc_GetMinutesFromSeconds_MinutesText;        // 0x0020(0x0010)()
+	class FText                                   CallFunc_RemoveMinutesFromSeconds_SecondsFormatted; // 0x0030(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0088(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00D0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0010)()
 };
 static_assert(alignof(B_UserInterfaceHelper_C_GetFormattedTime) == 0x000008, "Wrong alignment on B_UserInterfaceHelper_C_GetFormattedTime");
-static_assert(sizeof(B_UserInterfaceHelper_C_GetFormattedTime) == 0x000120, "Wrong size on B_UserInterfaceHelper_C_GetFormattedTime");
+static_assert(sizeof(B_UserInterfaceHelper_C_GetFormattedTime) == 0x0000F0, "Wrong size on B_UserInterfaceHelper_C_GetFormattedTime");
 static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, RealValue) == 0x000000, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::RealValue' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, __WorldContext) == 0x000008, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, FormattedTime) == 0x000010, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::FormattedTime' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, CallFunc_GetMinutesFromSeconds_MinutesText) == 0x000028, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::CallFunc_GetMinutesFromSeconds_MinutesText' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, CallFunc_RemoveMinutesFromSeconds_SecondsFormatted) == 0x000040, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::CallFunc_RemoveMinutesFromSeconds_SecondsFormatted' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000A8, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, K2Node_MakeArray_Array) == 0x0000F8, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, CallFunc_Format_ReturnValue) == 0x000108, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, CallFunc_GetMinutesFromSeconds_MinutesText) == 0x000020, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::CallFunc_GetMinutesFromSeconds_MinutesText' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, CallFunc_RemoveMinutesFromSeconds_SecondsFormatted) == 0x000030, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::CallFunc_RemoveMinutesFromSeconds_SecondsFormatted' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, K2Node_MakeStruct_FormatArgumentData_1) == 0x000088, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, K2Node_MakeArray_Array) == 0x0000D0, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetFormattedTime, CallFunc_Format_ReturnValue) == 0x0000E0, "Member 'B_UserInterfaceHelper_C_GetFormattedTime::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function B_UserInterfaceHelper.B_UserInterfaceHelper_C.RemoveMinutesFromSeconds
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct B_UserInterfaceHelper_C_RemoveMinutesFromSeconds final
 {
 public:
 	int32                                         RealValue;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_195[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   SecondsFormatted;                                  // 0x0010(0x0018)(Parm, OutParm)
-	int32                                         FullSeconds;                                       // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_196[0x4];                                      // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0018)()
-	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_197[0x4];                                      // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Percent_IntInt_ReturnValue_1;             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_198[0x4];                                      // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0078(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0090(0x0018)()
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   SecondsFormatted;                                  // 0x0010(0x0010)(Parm, OutParm)
+	int32                                         FullSeconds;                                       // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0010)()
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue_1;             // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0068(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0078(0x0010)()
+	int32                                         CallFunc_Len_ReturnValue;                          // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds) == 0x000008, "Wrong alignment on B_UserInterfaceHelper_C_RemoveMinutesFromSeconds");
-static_assert(sizeof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds) == 0x0000B0, "Wrong size on B_UserInterfaceHelper_C_RemoveMinutesFromSeconds");
+static_assert(sizeof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds) == 0x000090, "Wrong size on B_UserInterfaceHelper_C_RemoveMinutesFromSeconds");
 static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, RealValue) == 0x000000, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::RealValue' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, __WorldContext) == 0x000008, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, SecondsFormatted) == 0x000010, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::SecondsFormatted' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, FullSeconds) == 0x000028, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::FullSeconds' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Percent_IntInt_ReturnValue) == 0x000048, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_IntToString_ReturnValue) == 0x000050, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Percent_IntInt_ReturnValue_1) == 0x000060, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Percent_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Concat_StrStr_ReturnValue) == 0x000068, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000078, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_StringToText_ReturnValue) == 0x000090, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Len_ReturnValue) == 0x0000A8, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Len_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000AC, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Less_IntInt_ReturnValue) == 0x0000AD, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, FullSeconds) == 0x000020, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::FullSeconds' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Percent_IntInt_ReturnValue) == 0x000038, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_IntToString_ReturnValue) == 0x000040, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Percent_IntInt_ReturnValue_1) == 0x000050, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Percent_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Concat_StrStr_ReturnValue) == 0x000058, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000068, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Conv_StringToText_ReturnValue) == 0x000078, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Len_ReturnValue) == 0x000088, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Len_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00008C, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_RemoveMinutesFromSeconds, CallFunc_Less_IntInt_ReturnValue) == 0x00008D, "Member 'B_UserInterfaceHelper_C_RemoveMinutesFromSeconds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_UserInterfaceHelper.B_UserInterfaceHelper_C.GetMinutesFromSeconds
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct B_UserInterfaceHelper_C_GetMinutesFromSeconds final
 {
 public:
 	int32                                         RealValue;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   MinutesText;                                       // 0x0010(0x0018)(Parm, OutParm)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19A[0x4];                                      // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0018)()
+	class FText                                   MinutesText;                                       // 0x0010(0x0010)(Parm, OutParm)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0010)()
 };
 static_assert(alignof(B_UserInterfaceHelper_C_GetMinutesFromSeconds) == 0x000008, "Wrong alignment on B_UserInterfaceHelper_C_GetMinutesFromSeconds");
-static_assert(sizeof(B_UserInterfaceHelper_C_GetMinutesFromSeconds) == 0x000048, "Wrong size on B_UserInterfaceHelper_C_GetMinutesFromSeconds");
+static_assert(sizeof(B_UserInterfaceHelper_C_GetMinutesFromSeconds) == 0x000038, "Wrong size on B_UserInterfaceHelper_C_GetMinutesFromSeconds");
 static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, RealValue) == 0x000000, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::RealValue' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, __WorldContext) == 0x000008, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, MinutesText) == 0x000010, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::MinutesText' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, CallFunc_Divide_IntInt_ReturnValue) == 0x000028, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, CallFunc_Divide_IntInt_ReturnValue) == 0x000020, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_GetMinutesFromSeconds, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'B_UserInterfaceHelper_C_GetMinutesFromSeconds::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function B_UserInterfaceHelper.B_UserInterfaceHelper_C.UpdateXPProgressionBar
 // 0x0040 (0x0040 - 0x0000)
@@ -145,12 +145,12 @@ public:
 	bool                                          WinBonusXPGranted;                                 // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CatchXPGranted;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LastWitchXPGranted;                                // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19B[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ProgressionCounter_C*                ProgressionCounter;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         WinBonusXP;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         LastWitchXP;                                       // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CatchXP;                                           // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19C[0x4];                                      // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -177,10 +177,10 @@ struct B_UserInterfaceHelper_C_SetButtonNormalAsHoveredStyle final
 {
 public:
 	class UButton*                                Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19D[0x8];                                      // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           ButtonStyle;                                       // 0x0010(0x03F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UObject*                                __WorldContext;                                    // 0x0400(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19E[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           K2Node_MakeStruct_ButtonStyle;                     // 0x0410(0x03F0)()
 };
 static_assert(alignof(B_UserInterfaceHelper_C_SetButtonNormalAsHoveredStyle) == 0x000010, "Wrong alignment on B_UserInterfaceHelper_C_SetButtonNormalAsHoveredStyle");
@@ -196,10 +196,10 @@ struct B_UserInterfaceHelper_C_SetButtonNormalAsPressedStyle final
 {
 public:
 	class UButton*                                Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19F[0x8];                                      // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           ButtonStyle;                                       // 0x0010(0x03F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UObject*                                __WorldContext;                                    // 0x0400(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A0[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           K2Node_MakeStruct_ButtonStyle;                     // 0x0410(0x03F0)()
 };
 static_assert(alignof(B_UserInterfaceHelper_C_SetButtonNormalAsPressedStyle) == 0x000010, "Wrong alignment on B_UserInterfaceHelper_C_SetButtonNormalAsPressedStyle");
@@ -215,7 +215,7 @@ struct B_UserInterfaceHelper_C_ResetButtonToNormalStyle final
 {
 public:
 	class UButton*                                Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A1[0x8];                                      // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           ButtonStyle;                                       // 0x0010(0x03F0)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UObject*                                __WorldContext;                                    // 0x0400(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -232,16 +232,16 @@ struct B_UserInterfaceHelper_C_IsKeyTab final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_IsKeyTab;                                    // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsKeyTab_0;                                        // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A2[0x2];                                      // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0038(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A3[0x4];                                      // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionKeyMapping                 CallFunc_Array_Get_Item;                           // 0x0050(0x0028)()
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -250,7 +250,7 @@ static_assert(alignof(B_UserInterfaceHelper_C_IsKeyTab) == 0x000008, "Wrong alig
 static_assert(sizeof(B_UserInterfaceHelper_C_IsKeyTab) == 0x000080, "Wrong size on B_UserInterfaceHelper_C_IsKeyTab");
 static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, Key) == 0x000000, "Member 'B_UserInterfaceHelper_C_IsKeyTab::Key' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, __WorldContext) == 0x000018, "Member 'B_UserInterfaceHelper_C_IsKeyTab::__WorldContext' has a wrong offset!");
-static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, Param_IsKeyTab) == 0x000020, "Member 'B_UserInterfaceHelper_C_IsKeyTab::Param_IsKeyTab' has a wrong offset!");
+static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, IsKeyTab_0) == 0x000020, "Member 'B_UserInterfaceHelper_C_IsKeyTab::IsKeyTab_0' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000021, "Member 'B_UserInterfaceHelper_C_IsKeyTab::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, Temp_int_Array_Index_Variable) == 0x000024, "Member 'B_UserInterfaceHelper_C_IsKeyTab::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_UserInterfaceHelper_C_IsKeyTab, Temp_int_Loop_Counter_Variable) == 0x000028, "Member 'B_UserInterfaceHelper_C_IsKeyTab::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -270,7 +270,7 @@ public:
 	struct FKeyEvent                              KeyEvent;                                          // 0x0000(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UUserWidget*                            UserWidget;                                        // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          AllowClose;                                        // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A4[0x7];                                      // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FEventReply                            EventReply;                                        // 0x0058(0x00B8)(Parm, OutParm)
 	class UB_IngameUIManager_C*                   IngameUIManager;                                   // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -279,21 +279,21 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A5[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsKeyForAction_ReturnValue;               // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsKeyForAction_ReturnValue_1;             // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A6[0x5];                                      // 0x015B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15B[0x5];                                      // 0x015B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0160(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsKeyTab_IsKeyTab;                        // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x017B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A7[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0180(0x00B8)()
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A8[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x0240(0x00B8)()
 	struct FEventReply                            CallFunc_Handled_ReturnValue_2;                    // 0x02F8(0x00B8)()
 	struct FEventReply                            CallFunc_Handled_ReturnValue_3;                    // 0x03B0(0x00B8)()
@@ -335,25 +335,25 @@ struct B_UserInterfaceHelper_C_ShowSelectionScreen final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ScreenShown;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A9[0x7];                                      // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ObjectiveGameState_C*                ObjectiveGameState;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         GameState;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      GameInstance;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ObjectiveGameState_C*                K2Node_DynamicCast_AsB_Objective_Game_State;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AA[0x7];                                      // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AB[0x7];                                      // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasRoundStarted_RoundHasStarted;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AC[0x4];                                      // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ObjectivePlayerState_C*              K2Node_DynamicCast_AsB_Objective_Player_State;     // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

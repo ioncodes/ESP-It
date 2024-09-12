@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -24,7 +24,7 @@ class UOculusCreateSessionCallbackProxy final : public UOnlineBlueprintCallProxy
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2798[0x48];                                    // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOculusCreateSessionCallbackProxy* CreateSession(int32 PublicConnections, const class FString& OculusMatchmakingPool);
@@ -77,7 +77,7 @@ class UOculusFindSessionsCallbackProxy final : public UOnlineBlueprintCallProxyB
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_279A[0x48];                                    // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOculusFindSessionsCallbackProxy* FindMatchmakingSessions(int32 MaxResults, const class FString& OculusMatchmakingPool);
@@ -105,7 +105,7 @@ class UOculusIdentityCallbackProxy final : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_279D[0x10];                                    // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOculusIdentityCallbackProxy* GetOculusIdentity(int32 LocalUserNum);
@@ -126,11 +126,11 @@ static_assert(offsetof(UOculusIdentityCallbackProxy, OnSuccess) == 0x000030, "Me
 static_assert(offsetof(UOculusIdentityCallbackProxy, OnFailure) == 0x000040, "Member 'UOculusIdentityCallbackProxy::OnFailure' has a wrong offset!");
 
 // Class OnlineSubsystemOculus.OculusNetConnection
-// 0x0010 (0x1E98 - 0x1E88)
+// 0x0010 (0x1EA0 - 0x1E90)
 class UOculusNetConnection final : public UIpConnection
 {
 public:
-	uint8                                         Pad_279F[0x10];                                    // 0x1E88(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E90[0x10];                                    // 0x1E90(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -143,14 +143,14 @@ public:
 	}
 };
 static_assert(alignof(UOculusNetConnection) == 0x000008, "Wrong alignment on UOculusNetConnection");
-static_assert(sizeof(UOculusNetConnection) == 0x001E98, "Wrong size on UOculusNetConnection");
+static_assert(sizeof(UOculusNetConnection) == 0x001EA0, "Wrong size on UOculusNetConnection");
 
 // Class OnlineSubsystemOculus.OculusNetDriver
-// 0x00B8 (0x0958 - 0x08A0)
+// 0x00B8 (0x0A30 - 0x0978)
 class UOculusNetDriver final : public UIpNetDriver
 {
 public:
-	uint8                                         Pad_27A0[0xB8];                                    // 0x08A0(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_978[0xB8];                                     // 0x0978(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -163,7 +163,7 @@ public:
 	}
 };
 static_assert(alignof(UOculusNetDriver) == 0x000008, "Wrong alignment on UOculusNetDriver");
-static_assert(sizeof(UOculusNetDriver) == 0x000958, "Wrong size on UOculusNetDriver");
+static_assert(sizeof(UOculusNetDriver) == 0x000A30, "Wrong size on UOculusNetDriver");
 
 // Class OnlineSubsystemOculus.OculusUpdateSessionCallbackProxy
 // 0x0040 (0x0070 - 0x0030)
@@ -172,7 +172,7 @@ class UOculusUpdateSessionCallbackProxy final : public UOnlineBlueprintCallProxy
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_27A1[0x20];                                    // 0x0050(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x20];                                      // 0x0050(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOculusUpdateSessionCallbackProxy* SetSessionEnqueue(bool bShouldEnqueueInMatchmakingPool);

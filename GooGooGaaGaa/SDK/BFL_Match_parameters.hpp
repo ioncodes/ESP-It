@@ -15,30 +15,40 @@ namespace SDK::Params
 {
 
 // Function BFL_Match.BFL_Match_C.IsUsingPropReplicationOptimization
-// 0x0020 (0x0020 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct BFL_Match_C_IsUsingPropReplicationOptimization final
 {
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4BA3[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_MatchOptions_C*                      CallFunc_GetUsedMatchOptions_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PropSleepManagerEnabled;                           // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_MatchOptions_C*                      CallFunc_GetUsedMatchOptions_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BFL_Match_C_IsUsingPropReplicationOptimization) == 0x000008, "Wrong alignment on BFL_Match_C_IsUsingPropReplicationOptimization");
-static_assert(sizeof(BFL_Match_C_IsUsingPropReplicationOptimization) == 0x000020, "Wrong size on BFL_Match_C_IsUsingPropReplicationOptimization");
+static_assert(sizeof(BFL_Match_C_IsUsingPropReplicationOptimization) == 0x000030, "Wrong size on BFL_Match_C_IsUsingPropReplicationOptimization");
 static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, __WorldContext) == 0x000000, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, ReturnValue) == 0x000008, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_GetUsedMatchOptions_ReturnValue) == 0x000010, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_GetUsedMatchOptions_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_Not_PreBool_ReturnValue) == 0x000018, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_Not_PreBool_ReturnValue_1) == 0x000019, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_Not_PreBool_ReturnValue_2) == 0x00001A, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_BooleanAND_ReturnValue) == 0x00001B, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_BooleanAND_ReturnValue_1) == 0x00001C, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, PropSleepManagerEnabled) == 0x000009, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::PropSleepManagerEnabled' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_GetUsedMatchOptions_ReturnValue) == 0x000018, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_GetUsedMatchOptions_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, K2Node_DynamicCast_AsB_Game_State) == 0x000020, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_Not_PreBool_ReturnValue) == 0x000029, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_Not_PreBool_ReturnValue_1) == 0x00002A, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_Not_PreBool_ReturnValue_2) == 0x00002B, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_BooleanAND_ReturnValue) == 0x00002C, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_BooleanAND_ReturnValue_1) == 0x00002D, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BFL_Match_C_IsUsingPropReplicationOptimization, CallFunc_BooleanAND_ReturnValue_2) == 0x00002E, "Member 'BFL_Match_C_IsUsingPropReplicationOptimization::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 
 // Function BFL_Match.BFL_Match_C.GetUsedMatchOptions
 // 0x0018 (0x0018 - 0x0000)

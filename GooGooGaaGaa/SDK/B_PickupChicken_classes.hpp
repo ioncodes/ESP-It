@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_Chicken_classes.hpp"
 
 
@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PickupChicken.B_PickupChicken_C
-// 0x0020 (0x0398 - 0x0378)
+// 0x0020 (0x0390 - 0x0370)
 class AB_PickupChicken_C final : public AB_Chicken_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_PickupChicken_C;                  // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FVector                                ChickenHeadOffset;                                 // 0x0380(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_PickupChicken_C;                  // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FVector                                ChickenHeadOffset;                                 // 0x0378(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_PickupChicken(int32 EntryPoint);
@@ -34,7 +34,7 @@ public:
 	void IncrementLifeTime();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 
 public:
 	static class UClass* StaticClass()
@@ -47,9 +47,9 @@ public:
 	}
 };
 static_assert(alignof(AB_PickupChicken_C) == 0x000008, "Wrong alignment on AB_PickupChicken_C");
-static_assert(sizeof(AB_PickupChicken_C) == 0x000398, "Wrong size on AB_PickupChicken_C");
-static_assert(offsetof(AB_PickupChicken_C, UberGraphFrame_B_PickupChicken_C) == 0x000378, "Member 'AB_PickupChicken_C::UberGraphFrame_B_PickupChicken_C' has a wrong offset!");
-static_assert(offsetof(AB_PickupChicken_C, ChickenHeadOffset) == 0x000380, "Member 'AB_PickupChicken_C::ChickenHeadOffset' has a wrong offset!");
+static_assert(sizeof(AB_PickupChicken_C) == 0x000390, "Wrong size on AB_PickupChicken_C");
+static_assert(offsetof(AB_PickupChicken_C, UberGraphFrame_B_PickupChicken_C) == 0x000370, "Member 'AB_PickupChicken_C::UberGraphFrame_B_PickupChicken_C' has a wrong offset!");
+static_assert(offsetof(AB_PickupChicken_C, ChickenHeadOffset) == 0x000378, "Member 'AB_PickupChicken_C::ChickenHeadOffset' has a wrong offset!");
 
 }
 

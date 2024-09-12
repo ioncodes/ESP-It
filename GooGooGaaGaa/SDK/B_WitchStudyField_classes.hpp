@@ -17,16 +17,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchStudyField.B_WitchStudyField_C
-// 0x0030 (0x0370 - 0x0340)
+// 0x0030 (0x0368 - 0x0338)
 class AB_WitchStudyField_C final : public AB_TaskField_C
 {
 public:
-	class UStaticMeshComponent*                   Book;                                              // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Shelf;                                             // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Arrow2;                                            // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Arrow1;                                            // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Arrow;                                             // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Witch;                                             // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Book;                                              // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Shelf;                                             // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Arrow2;                                            // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Arrow1;                                            // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Arrow;                                             // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Witch;                                             // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void InitializeTaskField();
@@ -42,13 +42,13 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchStudyField_C) == 0x000008, "Wrong alignment on AB_WitchStudyField_C");
-static_assert(sizeof(AB_WitchStudyField_C) == 0x000370, "Wrong size on AB_WitchStudyField_C");
-static_assert(offsetof(AB_WitchStudyField_C, Book) == 0x000340, "Member 'AB_WitchStudyField_C::Book' has a wrong offset!");
-static_assert(offsetof(AB_WitchStudyField_C, Shelf) == 0x000348, "Member 'AB_WitchStudyField_C::Shelf' has a wrong offset!");
-static_assert(offsetof(AB_WitchStudyField_C, Arrow2) == 0x000350, "Member 'AB_WitchStudyField_C::Arrow2' has a wrong offset!");
-static_assert(offsetof(AB_WitchStudyField_C, Arrow1) == 0x000358, "Member 'AB_WitchStudyField_C::Arrow1' has a wrong offset!");
-static_assert(offsetof(AB_WitchStudyField_C, Arrow) == 0x000360, "Member 'AB_WitchStudyField_C::Arrow' has a wrong offset!");
-static_assert(offsetof(AB_WitchStudyField_C, Witch) == 0x000368, "Member 'AB_WitchStudyField_C::Witch' has a wrong offset!");
+static_assert(sizeof(AB_WitchStudyField_C) == 0x000368, "Wrong size on AB_WitchStudyField_C");
+static_assert(offsetof(AB_WitchStudyField_C, Book) == 0x000338, "Member 'AB_WitchStudyField_C::Book' has a wrong offset!");
+static_assert(offsetof(AB_WitchStudyField_C, Shelf) == 0x000340, "Member 'AB_WitchStudyField_C::Shelf' has a wrong offset!");
+static_assert(offsetof(AB_WitchStudyField_C, Arrow2) == 0x000348, "Member 'AB_WitchStudyField_C::Arrow2' has a wrong offset!");
+static_assert(offsetof(AB_WitchStudyField_C, Arrow1) == 0x000350, "Member 'AB_WitchStudyField_C::Arrow1' has a wrong offset!");
+static_assert(offsetof(AB_WitchStudyField_C, Arrow) == 0x000358, "Member 'AB_WitchStudyField_C::Arrow' has a wrong offset!");
+static_assert(offsetof(AB_WitchStudyField_C, Witch) == 0x000360, "Member 'AB_WitchStudyField_C::Witch' has a wrong offset!");
 
 }
 

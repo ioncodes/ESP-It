@@ -21,16 +21,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MapButton.WB_MapButton_C
-// 0x00C0 (0x03B0 - 0x02F0)
+// 0x00B0 (0x03C0 - 0x0310)
 class UWB_MapButton_C : public UWB_TileViewButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MapButton_C;                     // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FocusAnimation;                                    // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	struct FSMapData                              MapData;                                           // 0x0300(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      LayoutData;                                        // 0x0350(0x0048)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class UTexture2D*                             LayoutImage;                                       // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnClicked;                                         // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MapButton_C;                     // 0x0310(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              MapData;                                           // 0x0320(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      LayoutData;                                        // 0x0360(0x0048)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class UTexture2D*                             LayoutImage;                                       // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnClicked;                                         // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void Clicked();
@@ -58,13 +58,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_MapButton_C) == 0x000008, "Wrong alignment on UWB_MapButton_C");
-static_assert(sizeof(UWB_MapButton_C) == 0x0003B0, "Wrong size on UWB_MapButton_C");
-static_assert(offsetof(UWB_MapButton_C, UberGraphFrame_WB_MapButton_C) == 0x0002F0, "Member 'UWB_MapButton_C::UberGraphFrame_WB_MapButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_MapButton_C, FocusAnimation) == 0x0002F8, "Member 'UWB_MapButton_C::FocusAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_MapButton_C, MapData) == 0x000300, "Member 'UWB_MapButton_C::MapData' has a wrong offset!");
-static_assert(offsetof(UWB_MapButton_C, LayoutData) == 0x000350, "Member 'UWB_MapButton_C::LayoutData' has a wrong offset!");
-static_assert(offsetof(UWB_MapButton_C, LayoutImage) == 0x000398, "Member 'UWB_MapButton_C::LayoutImage' has a wrong offset!");
-static_assert(offsetof(UWB_MapButton_C, OnClicked) == 0x0003A0, "Member 'UWB_MapButton_C::OnClicked' has a wrong offset!");
+static_assert(sizeof(UWB_MapButton_C) == 0x0003C0, "Wrong size on UWB_MapButton_C");
+static_assert(offsetof(UWB_MapButton_C, UberGraphFrame_WB_MapButton_C) == 0x000310, "Member 'UWB_MapButton_C::UberGraphFrame_WB_MapButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_MapButton_C, FocusAnimation) == 0x000318, "Member 'UWB_MapButton_C::FocusAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_MapButton_C, MapData) == 0x000320, "Member 'UWB_MapButton_C::MapData' has a wrong offset!");
+static_assert(offsetof(UWB_MapButton_C, LayoutData) == 0x000360, "Member 'UWB_MapButton_C::LayoutData' has a wrong offset!");
+static_assert(offsetof(UWB_MapButton_C, LayoutImage) == 0x0003A8, "Member 'UWB_MapButton_C::LayoutImage' has a wrong offset!");
+static_assert(offsetof(UWB_MapButton_C, OnClicked) == 0x0003B0, "Member 'UWB_MapButton_C::OnClicked' has a wrong offset!");
 
 }
 

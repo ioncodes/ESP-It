@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_MobificationGameMode.B_MobificationGameMode_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05C8 - 0x05C8)
 class AB_MobificationGameMode_C final : public AB_HideAndSeekGameMode_C
 {
 public:
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(AB_MobificationGameMode_C) == 0x000008, "Wrong alignment on AB_MobificationGameMode_C");
-static_assert(sizeof(AB_MobificationGameMode_C) == 0x0005D0, "Wrong size on AB_MobificationGameMode_C");
+static_assert(sizeof(AB_MobificationGameMode_C) == 0x0005C8, "Wrong size on AB_MobificationGameMode_C");
 
 }
 

@@ -40,9 +40,9 @@ void AB_ObjectivePlayerController_C::ExecuteUbergraph_B_ObjectivePlayerControlle
 // Function B_ObjectivePlayerController.B_ObjectivePlayerController_C.GetObjectivePlayerState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AB_ObjectivePlayerState_C*        Param_ObjectivePlayerState                             (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_ObjectivePlayerState_C*        ObjectivePlayerState_0                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_ObjectivePlayerController_C::GetObjectivePlayerState(class AB_ObjectivePlayerState_C** Param_ObjectivePlayerState)
+void AB_ObjectivePlayerController_C::GetObjectivePlayerState(class AB_ObjectivePlayerState_C** ObjectivePlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -53,8 +53,8 @@ void AB_ObjectivePlayerController_C::GetObjectivePlayerState(class AB_ObjectiveP
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ObjectivePlayerState != nullptr)
-		*Param_ObjectivePlayerState = Parms.Param_ObjectivePlayerState;
+	if (ObjectivePlayerState_0 != nullptr)
+		*ObjectivePlayerState_0 = Parms.ObjectivePlayerState_0;
 }
 
 

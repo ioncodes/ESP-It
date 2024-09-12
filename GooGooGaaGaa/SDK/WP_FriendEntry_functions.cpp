@@ -71,6 +71,70 @@ class FText UWP_FriendEntry_C::GetFriendName()
 }
 
 
+// Function WP_FriendEntry.WP_FriendEntry_C.OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWP_FriendEntry_C::OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WP_FriendEntry_C", "OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C");
+
+	Params::WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WP_FriendEntry.WP_FriendEntry_C.OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWP_FriendEntry_C::OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WP_FriendEntry_C", "OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C");
+
+	Params::WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WP_FriendEntry.WP_FriendEntry_C.SetFriendInfoValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UOnlineFriendRef*                 FriendRef                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWP_FriendEntry_C::SetFriendInfoValue(class UOnlineFriendRef* FriendRef)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WP_FriendEntry_C", "SetFriendInfoValue");
+
+	Params::WP_FriendEntry_C_SetFriendInfoValue Parms{};
+
+	Parms.FriendRef = FriendRef;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WP_FriendEntry.WP_FriendEntry_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "WB_PlaceAndEditUITab_classes.hpp"
-#include "E_ActionPropType_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "E_ActionPropType_structs.hpp"
+#include "WB_PlaceAndEditUITab_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "E_CreativePlayerMode_structs.hpp"
 
 
@@ -22,27 +22,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ActionTab.WB_ActionTab_C
-// 0x0070 (0x0348 - 0x02D8)
+// 0x0070 (0x0368 - 0x02F8)
 class UWB_ActionTab_C final : public UWB_PlaceAndEditUITab_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_ActionTab_C;                     // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_GroupPreviewInfo_C*                 ActionGroupPreviewInfo;                            // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ActionTypeText;                                    // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        ActivateCheckboxOrButtonSwitcher;                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActivatedCheckboxAreaButton_C*      ActivatedCheckboxAreaButton;                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BorderLine;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             HeaderTitle;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        TriggerButton;                                     // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         TypeBox;                                           // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_WorldSettingsTab_C*                 WorldsettingsTabParent;                            // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasMixedActionTypes;                               // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_ActionPropType                              ActionType;                                        // 0x0329(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19A9[0x2];                                     // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ToggleActorCount;                                  // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TriggerActorCount;                                 // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SingleUseActorCount;                               // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         ToggleActors;                                      // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_ActionTab_C;                     // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_GroupPreviewInfo_C*                 ActionGroupPreviewInfo;                            // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ActionTypeText;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        ActivateCheckboxOrButtonSwitcher;                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActivatedCheckboxAreaButton_C*      ActivatedCheckboxAreaButton;                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BorderLine;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             HeaderTitle;                                       // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TriggerButton;                                     // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         TypeBox;                                           // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_WorldSettingsTab_C*                 WorldsettingsTabParent;                            // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasMixedActionTypes;                               // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_ActionPropType                              ActionType;                                        // 0x0349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34A[0x2];                                      // 0x034A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ToggleActorCount;                                  // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TriggerActorCount;                                 // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SingleUseActorCount;                               // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         ToggleActors;                                      // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void ActivateToggleActors();
@@ -70,23 +70,23 @@ public:
 	}
 };
 static_assert(alignof(UWB_ActionTab_C) == 0x000008, "Wrong alignment on UWB_ActionTab_C");
-static_assert(sizeof(UWB_ActionTab_C) == 0x000348, "Wrong size on UWB_ActionTab_C");
-static_assert(offsetof(UWB_ActionTab_C, UberGraphFrame_WB_ActionTab_C) == 0x0002D8, "Member 'UWB_ActionTab_C::UberGraphFrame_WB_ActionTab_C' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ActionGroupPreviewInfo) == 0x0002E0, "Member 'UWB_ActionTab_C::ActionGroupPreviewInfo' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ActionTypeText) == 0x0002E8, "Member 'UWB_ActionTab_C::ActionTypeText' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ActivateCheckboxOrButtonSwitcher) == 0x0002F0, "Member 'UWB_ActionTab_C::ActivateCheckboxOrButtonSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ActivatedCheckboxAreaButton) == 0x0002F8, "Member 'UWB_ActionTab_C::ActivatedCheckboxAreaButton' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, BorderLine) == 0x000300, "Member 'UWB_ActionTab_C::BorderLine' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, HeaderTitle) == 0x000308, "Member 'UWB_ActionTab_C::HeaderTitle' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, TriggerButton) == 0x000310, "Member 'UWB_ActionTab_C::TriggerButton' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, TypeBox) == 0x000318, "Member 'UWB_ActionTab_C::TypeBox' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, WorldsettingsTabParent) == 0x000320, "Member 'UWB_ActionTab_C::WorldsettingsTabParent' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, HasMixedActionTypes) == 0x000328, "Member 'UWB_ActionTab_C::HasMixedActionTypes' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ActionType) == 0x000329, "Member 'UWB_ActionTab_C::ActionType' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ToggleActorCount) == 0x00032C, "Member 'UWB_ActionTab_C::ToggleActorCount' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, TriggerActorCount) == 0x000330, "Member 'UWB_ActionTab_C::TriggerActorCount' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, SingleUseActorCount) == 0x000334, "Member 'UWB_ActionTab_C::SingleUseActorCount' has a wrong offset!");
-static_assert(offsetof(UWB_ActionTab_C, ToggleActors) == 0x000338, "Member 'UWB_ActionTab_C::ToggleActors' has a wrong offset!");
+static_assert(sizeof(UWB_ActionTab_C) == 0x000368, "Wrong size on UWB_ActionTab_C");
+static_assert(offsetof(UWB_ActionTab_C, UberGraphFrame_WB_ActionTab_C) == 0x0002F8, "Member 'UWB_ActionTab_C::UberGraphFrame_WB_ActionTab_C' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ActionGroupPreviewInfo) == 0x000300, "Member 'UWB_ActionTab_C::ActionGroupPreviewInfo' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ActionTypeText) == 0x000308, "Member 'UWB_ActionTab_C::ActionTypeText' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ActivateCheckboxOrButtonSwitcher) == 0x000310, "Member 'UWB_ActionTab_C::ActivateCheckboxOrButtonSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ActivatedCheckboxAreaButton) == 0x000318, "Member 'UWB_ActionTab_C::ActivatedCheckboxAreaButton' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, BorderLine) == 0x000320, "Member 'UWB_ActionTab_C::BorderLine' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, HeaderTitle) == 0x000328, "Member 'UWB_ActionTab_C::HeaderTitle' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, TriggerButton) == 0x000330, "Member 'UWB_ActionTab_C::TriggerButton' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, TypeBox) == 0x000338, "Member 'UWB_ActionTab_C::TypeBox' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, WorldsettingsTabParent) == 0x000340, "Member 'UWB_ActionTab_C::WorldsettingsTabParent' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, HasMixedActionTypes) == 0x000348, "Member 'UWB_ActionTab_C::HasMixedActionTypes' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ActionType) == 0x000349, "Member 'UWB_ActionTab_C::ActionType' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ToggleActorCount) == 0x00034C, "Member 'UWB_ActionTab_C::ToggleActorCount' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, TriggerActorCount) == 0x000350, "Member 'UWB_ActionTab_C::TriggerActorCount' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, SingleUseActorCount) == 0x000354, "Member 'UWB_ActionTab_C::SingleUseActorCount' has a wrong offset!");
+static_assert(offsetof(UWB_ActionTab_C, ToggleActors) == 0x000358, "Member 'UWB_ActionTab_C::ToggleActors' has a wrong offset!");
 
 }
 

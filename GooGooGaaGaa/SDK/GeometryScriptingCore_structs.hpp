@@ -65,6 +65,15 @@ enum class EGeometryScriptAxis : uint8
 	EGeometryScriptAxis_MAX                  = 3,
 };
 
+// Enum GeometryScriptingCore.EGeometryScriptCoordinateSpace
+// NumValues: 0x0003
+enum class EGeometryScriptCoordinateSpace : uint8
+{
+	Local                                    = 0,
+	World                                    = 1,
+	EGeometryScriptCoordinateSpace_MAX       = 2,
+};
+
 // Enum GeometryScriptingCore.EGeometryScriptIndexType
 // NumValues: 0x0006
 enum class EGeometryScriptIndexType : uint8
@@ -98,7 +107,7 @@ enum class EGeometryScriptErrorType : uint8
 };
 
 // Enum GeometryScriptingCore.EGeometryScriptCollisionGenerationMethod
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class EGeometryScriptCollisionGenerationMethod : uint8
 {
 	AlignedBoxes                             = 0,
@@ -108,7 +117,8 @@ enum class EGeometryScriptCollisionGenerationMethod : uint8
 	ConvexHulls                              = 4,
 	SweptHulls                               = 5,
 	MinVolumeShapes                          = 6,
-	EGeometryScriptCollisionGenerationMethod_MAX = 7,
+	LevelSets                                = 7,
+	EGeometryScriptCollisionGenerationMethod_MAX = 8,
 };
 
 // Enum GeometryScriptingCore.EGeometryScriptSweptHullAxis
@@ -121,6 +131,24 @@ enum class EGeometryScriptSweptHullAxis : uint8
 	SmallestBoxDimension                     = 3,
 	SmallestVolume                           = 4,
 	EGeometryScriptSweptHullAxis_MAX         = 5,
+};
+
+// Enum GeometryScriptingCore.ENegativeSpaceSampleMethod
+// NumValues: 0x0003
+enum class ENegativeSpaceSampleMethod : uint8
+{
+	Uniform                                  = 0,
+	VoxelSearch                              = 1,
+	ENegativeSpaceSampleMethod_MAX           = 2,
+};
+
+// Enum GeometryScriptingCore.EGeometryScriptConvexHullSimplifyMethod
+// NumValues: 0x0003
+enum class EGeometryScriptConvexHullSimplifyMethod : uint8
+{
+	MeshQSlim                                = 0,
+	AngleTolerance                           = 1,
+	EGeometryScriptConvexHullSimplifyMethod_MAX = 2,
 };
 
 // Enum GeometryScriptingCore.EGeometryScriptMeshSelectionType
@@ -211,21 +239,23 @@ enum class EGeometryScriptBakeFilteringType : uint8
 };
 
 // Enum GeometryScriptingCore.EGeometryScriptBakeTypes
-// NumValues: 0x000C
+// NumValues: 0x000E
 enum class EGeometryScriptBakeTypes : uint8
 {
-	TangentSpaceNormal                       = 0,
-	ObjectSpaceNormal                        = 1,
-	FaceNormal                               = 2,
-	BentNormal                               = 3,
-	Position                                 = 4,
-	Curvature                                = 5,
-	AmbientOcclusion                         = 6,
-	Texture                                  = 7,
-	MultiTexture                             = 8,
-	VertexColor                              = 9,
-	MaterialID                               = 10,
-	EGeometryScriptBakeTypes_MAX             = 11,
+	None                                     = 0,
+	TangentSpaceNormal                       = 1,
+	ObjectSpaceNormal                        = 2,
+	FaceNormal                               = 3,
+	BentNormal                               = 4,
+	Position                                 = 5,
+	Curvature                                = 6,
+	AmbientOcclusion                         = 7,
+	Texture                                  = 8,
+	MultiTexture                             = 9,
+	VertexColor                              = 10,
+	MaterialID                               = 11,
+	Constant                                 = 12,
+	EGeometryScriptBakeTypes_MAX             = 13,
 };
 
 // Enum GeometryScriptingCore.EGeometryScriptBakeOutputMode
@@ -600,6 +630,15 @@ enum class EGeometryScriptMorphologicalOpType : uint8
 	EGeometryScriptMorphologicalOpType_MAX   = 4,
 };
 
+// Enum GeometryScriptingCore.EGeometryScriptInitKMeansMethod
+// NumValues: 0x0003
+enum class EGeometryScriptInitKMeansMethod : uint8
+{
+	Random                                   = 0,
+	UniformSpacing                           = 1,
+	EGeometryScriptInitKMeansMethod_MAX      = 2,
+};
+
 // Enum GeometryScriptingCore.EGeometryScriptPolyOffsetJoinType
 // NumValues: 0x0004
 enum class EGeometryScriptPolyOffsetJoinType : uint8
@@ -630,6 +669,17 @@ enum class EGeometryScriptSampleSpacing : uint8
 	EGeometryScriptSampleSpacing_MAX         = 3,
 };
 
+// Enum GeometryScriptingCore.EGeometryScriptEvaluateSplineRange
+// NumValues: 0x0005
+enum class EGeometryScriptEvaluateSplineRange : uint8
+{
+	FullSpline                               = 0,
+	DistanceRange                            = 1,
+	TimeRange_ConstantSpeed                  = 2,
+	TimeRange_VariableSpeed                  = 3,
+	EGeometryScriptEvaluateSplineRange_MAX   = 4,
+};
+
 // Enum GeometryScriptingCore.EGeometryScriptPixelSamplingMethod
 // NumValues: 0x0003
 enum class EGeometryScriptPixelSamplingMethod : uint8
@@ -645,7 +695,7 @@ struct FGeometryScriptMeshReadLOD final
 {
 public:
 	EGeometryScriptLODType                        LODType;                                           // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2573[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LODIndex;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshReadLOD) == 0x000004, "Wrong alignment on FGeometryScriptMeshReadLOD");
@@ -659,13 +709,52 @@ struct FGeometryScriptMeshWriteLOD final
 {
 public:
 	bool                                          bWriteHiResSource;                                 // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2574[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LODIndex;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshWriteLOD) == 0x000004, "Wrong alignment on FGeometryScriptMeshWriteLOD");
 static_assert(sizeof(FGeometryScriptMeshWriteLOD) == 0x000008, "Wrong size on FGeometryScriptMeshWriteLOD");
 static_assert(offsetof(FGeometryScriptMeshWriteLOD, bWriteHiResSource) == 0x000000, "Member 'FGeometryScriptMeshWriteLOD::bWriteHiResSource' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshWriteLOD, LODIndex) == 0x000004, "Member 'FGeometryScriptMeshWriteLOD::LODIndex' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptSimpleCollision
+// 0x0080 (0x0080 - 0x0000)
+struct FGeometryScriptSimpleCollision final
+{
+public:
+	struct FKAggregateGeom                        AggGeom;                                           // 0x0000(0x0080)(NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptSimpleCollision) == 0x000008, "Wrong alignment on FGeometryScriptSimpleCollision");
+static_assert(sizeof(FGeometryScriptSimpleCollision) == 0x000080, "Wrong size on FGeometryScriptSimpleCollision");
+static_assert(offsetof(FGeometryScriptSimpleCollision, AggGeom) == 0x000000, "Member 'FGeometryScriptSimpleCollision::AggGeom' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptSphereCovering
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FGeometryScriptSphereCovering final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryScriptSphereCovering) == 0x000008, "Wrong alignment on FGeometryScriptSphereCovering");
+static_assert(sizeof(FGeometryScriptSphereCovering) == 0x000010, "Wrong size on FGeometryScriptSphereCovering");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptSimpleCollisionTriangulationOptions
+// 0x0010 (0x0010 - 0x0000)
+struct FGeometryScriptSimpleCollisionTriangulationOptions final
+{
+public:
+	int32                                         SphereStepsPerSide;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CapsuleHemisphereSteps;                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CapsuleCircleSteps;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApproximateLevelSetsWithCubes;                    // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryScriptSimpleCollisionTriangulationOptions) == 0x000004, "Wrong alignment on FGeometryScriptSimpleCollisionTriangulationOptions");
+static_assert(sizeof(FGeometryScriptSimpleCollisionTriangulationOptions) == 0x000010, "Wrong size on FGeometryScriptSimpleCollisionTriangulationOptions");
+static_assert(offsetof(FGeometryScriptSimpleCollisionTriangulationOptions, SphereStepsPerSide) == 0x000000, "Member 'FGeometryScriptSimpleCollisionTriangulationOptions::SphereStepsPerSide' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSimpleCollisionTriangulationOptions, CapsuleHemisphereSteps) == 0x000004, "Member 'FGeometryScriptSimpleCollisionTriangulationOptions::CapsuleHemisphereSteps' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSimpleCollisionTriangulationOptions, CapsuleCircleSteps) == 0x000008, "Member 'FGeometryScriptSimpleCollisionTriangulationOptions::CapsuleCircleSteps' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSimpleCollisionTriangulationOptions, bApproximateLevelSetsWithCubes) == 0x00000C, "Member 'FGeometryScriptSimpleCollisionTriangulationOptions::bApproximateLevelSetsWithCubes' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptTriangle
 // 0x0048 (0x0048 - 0x0000)
@@ -688,7 +777,7 @@ struct FGeometryScriptTrianglePoint final
 {
 public:
 	bool                                          bValid;                                            // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2575[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TriangleID;                                        // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Position;                                          // 0x0008(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                BaryCoords;                                        // 0x0020(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -738,7 +827,7 @@ struct FGeometryScriptGroupLayer final
 {
 public:
 	bool                                          bDefaultLayer;                                     // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2576[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ExtendedLayerIndex;                                // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptGroupLayer) == 0x000004, "Wrong alignment on FGeometryScriptGroupLayer");
@@ -752,7 +841,7 @@ struct alignas(0x08) FGeometryScriptIndexList final
 {
 public:
 	EGeometryScriptIndexType                      IndexType;                                         // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2577[0x17];                                    // 0x0001(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x17];                                       // 0x0001(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptIndexList) == 0x000008, "Wrong alignment on FGeometryScriptIndexList");
 static_assert(sizeof(FGeometryScriptIndexList) == 0x000018, "Wrong size on FGeometryScriptIndexList");
@@ -763,7 +852,7 @@ static_assert(offsetof(FGeometryScriptIndexList, IndexType) == 0x000000, "Member
 struct alignas(0x08) FGeometryScriptTriangleList final
 {
 public:
-	uint8                                         Pad_2578[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptTriangleList) == 0x000008, "Wrong alignment on FGeometryScriptTriangleList");
 static_assert(sizeof(FGeometryScriptTriangleList) == 0x000010, "Wrong size on FGeometryScriptTriangleList");
@@ -773,17 +862,33 @@ static_assert(sizeof(FGeometryScriptTriangleList) == 0x000010, "Wrong size on FG
 struct alignas(0x08) FGeometryScriptScalarList final
 {
 public:
-	uint8                                         Pad_2579[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptScalarList) == 0x000008, "Wrong alignment on FGeometryScriptScalarList");
 static_assert(sizeof(FGeometryScriptScalarList) == 0x000010, "Wrong size on FGeometryScriptScalarList");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptDetermineMeshOcclusionOptions
+// 0x0010 (0x0010 - 0x0000)
+struct FGeometryScriptDetermineMeshOcclusionOptions final
+{
+public:
+	double                                        SamplingDensity;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoubleSided;                                      // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumSearchDirections;                               // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptDetermineMeshOcclusionOptions) == 0x000008, "Wrong alignment on FGeometryScriptDetermineMeshOcclusionOptions");
+static_assert(sizeof(FGeometryScriptDetermineMeshOcclusionOptions) == 0x000010, "Wrong size on FGeometryScriptDetermineMeshOcclusionOptions");
+static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, SamplingDensity) == 0x000000, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::SamplingDensity' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, bDoubleSided) == 0x000008, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::bDoubleSided' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptDetermineMeshOcclusionOptions, NumSearchDirections) == 0x00000C, "Member 'FGeometryScriptDetermineMeshOcclusionOptions::NumSearchDirections' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptVectorList
 // 0x0010 (0x0010 - 0x0000)
 struct alignas(0x08) FGeometryScriptVectorList final
 {
 public:
-	uint8                                         Pad_257A[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptVectorList) == 0x000008, "Wrong alignment on FGeometryScriptVectorList");
 static_assert(sizeof(FGeometryScriptVectorList) == 0x000010, "Wrong size on FGeometryScriptVectorList");
@@ -793,7 +898,7 @@ static_assert(sizeof(FGeometryScriptVectorList) == 0x000010, "Wrong size on FGeo
 struct alignas(0x08) FGeometryScriptUVList final
 {
 public:
-	uint8                                         Pad_257B[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptUVList) == 0x000008, "Wrong alignment on FGeometryScriptUVList");
 static_assert(sizeof(FGeometryScriptUVList) == 0x000010, "Wrong size on FGeometryScriptUVList");
@@ -803,7 +908,7 @@ static_assert(sizeof(FGeometryScriptUVList) == 0x000010, "Wrong size on FGeometr
 struct alignas(0x08) FGeometryScriptColorList final
 {
 public:
-	uint8                                         Pad_257C[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptColorList) == 0x000008, "Wrong alignment on FGeometryScriptColorList");
 static_assert(sizeof(FGeometryScriptColorList) == 0x000010, "Wrong size on FGeometryScriptColorList");
@@ -813,9 +918,9 @@ static_assert(sizeof(FGeometryScriptColorList) == 0x000010, "Wrong size on FGeom
 struct alignas(0x08) FGeometryScriptPolyPath final
 {
 public:
-	uint8                                         Pad_257D[0x10];                                    // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bClosedLoop;                                       // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_257E[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptPolyPath) == 0x000008, "Wrong alignment on FGeometryScriptPolyPath");
 static_assert(sizeof(FGeometryScriptPolyPath) == 0x000018, "Wrong size on FGeometryScriptPolyPath");
@@ -826,7 +931,7 @@ static_assert(offsetof(FGeometryScriptPolyPath, bClosedLoop) == 0x000010, "Membe
 struct alignas(0x08) FGeometryScriptSimplePolygon final
 {
 public:
-	uint8                                         Pad_257F[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptSimplePolygon) == 0x000008, "Wrong alignment on FGeometryScriptSimplePolygon");
 static_assert(sizeof(FGeometryScriptSimplePolygon) == 0x000010, "Wrong size on FGeometryScriptSimplePolygon");
@@ -836,7 +941,7 @@ static_assert(sizeof(FGeometryScriptSimplePolygon) == 0x000010, "Wrong size on F
 struct alignas(0x08) FGeometryScriptGeneralPolygonList final
 {
 public:
-	uint8                                         Pad_2580[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptGeneralPolygonList) == 0x000008, "Wrong alignment on FGeometryScriptGeneralPolygonList");
 static_assert(sizeof(FGeometryScriptGeneralPolygonList) == 0x000010, "Wrong size on FGeometryScriptGeneralPolygonList");
@@ -846,23 +951,72 @@ static_assert(sizeof(FGeometryScriptGeneralPolygonList) == 0x000010, "Wrong size
 struct alignas(0x08) FGeometryScriptDynamicMeshBVH final
 {
 public:
-	uint8                                         Pad_2581[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptDynamicMeshBVH) == 0x000008, "Wrong alignment on FGeometryScriptDynamicMeshBVH");
 static_assert(sizeof(FGeometryScriptDynamicMeshBVH) == 0x000020, "Wrong size on FGeometryScriptDynamicMeshBVH");
 
+// ScriptStruct GeometryScriptingCore.GeometryScriptRenderCaptureCamera
+// 0x0048 (0x0048 - 0x0000)
+struct FGeometryScriptRenderCaptureCamera final
+{
+public:
+	int32                                         Resolution;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FieldOfViewDegrees;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ViewPosition;                                      // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ViewDirection;                                     // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        NearPlaneDist;                                     // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptRenderCaptureCamera) == 0x000008, "Wrong alignment on FGeometryScriptRenderCaptureCamera");
+static_assert(sizeof(FGeometryScriptRenderCaptureCamera) == 0x000048, "Wrong size on FGeometryScriptRenderCaptureCamera");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamera, Resolution) == 0x000000, "Member 'FGeometryScriptRenderCaptureCamera::Resolution' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamera, FieldOfViewDegrees) == 0x000008, "Member 'FGeometryScriptRenderCaptureCamera::FieldOfViewDegrees' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamera, ViewPosition) == 0x000010, "Member 'FGeometryScriptRenderCaptureCamera::ViewPosition' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamera, ViewDirection) == 0x000028, "Member 'FGeometryScriptRenderCaptureCamera::ViewDirection' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamera, NearPlaneDist) == 0x000040, "Member 'FGeometryScriptRenderCaptureCamera::NearPlaneDist' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptRenderCaptureCamerasForBoxOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FGeometryScriptRenderCaptureCamerasForBoxOptions final
+{
+public:
+	int32                                         Resolution;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FieldOfViewDegrees;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bViewFromBoxFaces;                                 // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bViewFromUpperCorners;                             // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bViewFromLowerCorners;                             // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bViewFromUpperEdges;                               // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bViewFromLowerEdges;                               // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bViewFromSideEdges;                                // 0x0015(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        ExtraViewFromPositions;                            // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptRenderCaptureCamerasForBoxOptions) == 0x000008, "Wrong alignment on FGeometryScriptRenderCaptureCamerasForBoxOptions");
+static_assert(sizeof(FGeometryScriptRenderCaptureCamerasForBoxOptions) == 0x000028, "Wrong size on FGeometryScriptRenderCaptureCamerasForBoxOptions");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, Resolution) == 0x000000, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::Resolution' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, FieldOfViewDegrees) == 0x000008, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::FieldOfViewDegrees' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, bViewFromBoxFaces) == 0x000010, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::bViewFromBoxFaces' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, bViewFromUpperCorners) == 0x000011, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::bViewFromUpperCorners' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, bViewFromLowerCorners) == 0x000012, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::bViewFromLowerCorners' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, bViewFromUpperEdges) == 0x000013, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::bViewFromUpperEdges' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, bViewFromLowerEdges) == 0x000014, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::bViewFromLowerEdges' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, bViewFromSideEdges) == 0x000015, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::bViewFromSideEdges' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptRenderCaptureCamerasForBoxOptions, ExtraViewFromPositions) == 0x000018, "Member 'FGeometryScriptRenderCaptureCamerasForBoxOptions::ExtraViewFromPositions' has a wrong offset!");
+
 // ScriptStruct GeometryScriptingCore.GeometryScriptDebugMessage
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct FGeometryScriptDebugMessage final
 {
 public:
 	EGeometryScriptDebugMessageType               MessageType;                                       // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptErrorType                      ErrorType;                                         // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2582[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Message;                                           // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Message;                                           // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptDebugMessage) == 0x000008, "Wrong alignment on FGeometryScriptDebugMessage");
-static_assert(sizeof(FGeometryScriptDebugMessage) == 0x000020, "Wrong size on FGeometryScriptDebugMessage");
+static_assert(sizeof(FGeometryScriptDebugMessage) == 0x000018, "Wrong size on FGeometryScriptDebugMessage");
 static_assert(offsetof(FGeometryScriptDebugMessage, MessageType) == 0x000000, "Member 'FGeometryScriptDebugMessage::MessageType' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptDebugMessage, ErrorType) == 0x000001, "Member 'FGeometryScriptDebugMessage::ErrorType' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptDebugMessage, Message) == 0x000008, "Member 'FGeometryScriptDebugMessage::Message' has a wrong offset!");
@@ -877,10 +1031,10 @@ public:
 	bool                                          bAutoDetectSpheres;                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoDetectBoxes;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoDetectCapsules;                               // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2583[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinThickness;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSimplifyHulls;                                    // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2584[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ConvexHullTargetFaceCount;                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxConvexHullsPerMesh;                             // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ConvexDecompositionSearchFactor;                   // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -889,7 +1043,7 @@ public:
 	float                                         SweptHullSimplifyTolerance;                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptSweptHullAxis                  SweptHullAxis;                                     // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRemoveFullyContainedShapes;                       // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2585[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxShapeCount;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptCollisionFromMeshOptions) == 0x000004, "Wrong alignment on FGeometryScriptCollisionFromMeshOptions");
@@ -922,13 +1076,128 @@ static_assert(alignof(FGeometryScriptSetSimpleCollisionOptions) == 0x000001, "Wr
 static_assert(sizeof(FGeometryScriptSetSimpleCollisionOptions) == 0x000001, "Wrong size on FGeometryScriptSetSimpleCollisionOptions");
 static_assert(offsetof(FGeometryScriptSetSimpleCollisionOptions, bEmitTransaction) == 0x000000, "Member 'FGeometryScriptSetSimpleCollisionOptions::bEmitTransaction' has a wrong offset!");
 
+// ScriptStruct GeometryScriptingCore.GeometryScriptSetStaticMeshCollisionOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FGeometryScriptSetStaticMeshCollisionOptions final
+{
+public:
+	bool                                          bMarkAsCustomized;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptSetStaticMeshCollisionOptions) == 0x000001, "Wrong alignment on FGeometryScriptSetStaticMeshCollisionOptions");
+static_assert(sizeof(FGeometryScriptSetStaticMeshCollisionOptions) == 0x000001, "Wrong size on FGeometryScriptSetStaticMeshCollisionOptions");
+static_assert(offsetof(FGeometryScriptSetStaticMeshCollisionOptions, bMarkAsCustomized) == 0x000000, "Member 'FGeometryScriptSetStaticMeshCollisionOptions::bMarkAsCustomized' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.ComputeNegativeSpaceOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FComputeNegativeSpaceOptions final
+{
+public:
+	ENegativeSpaceSampleMethod                    SampleMethod;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequireSearchSampleCoverage;                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyConnectedToHull;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxVoxelsPerDim;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TargetNumSamples;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MinSampleSpacing;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        NegativeSpaceTolerance;                            // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MinRadius;                                         // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FComputeNegativeSpaceOptions) == 0x000008, "Wrong alignment on FComputeNegativeSpaceOptions");
+static_assert(sizeof(FComputeNegativeSpaceOptions) == 0x000028, "Wrong size on FComputeNegativeSpaceOptions");
+static_assert(offsetof(FComputeNegativeSpaceOptions, SampleMethod) == 0x000000, "Member 'FComputeNegativeSpaceOptions::SampleMethod' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, bRequireSearchSampleCoverage) == 0x000001, "Member 'FComputeNegativeSpaceOptions::bRequireSearchSampleCoverage' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, bOnlyConnectedToHull) == 0x000002, "Member 'FComputeNegativeSpaceOptions::bOnlyConnectedToHull' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, MaxVoxelsPerDim) == 0x000004, "Member 'FComputeNegativeSpaceOptions::MaxVoxelsPerDim' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, TargetNumSamples) == 0x000008, "Member 'FComputeNegativeSpaceOptions::TargetNumSamples' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, MinSampleSpacing) == 0x000010, "Member 'FComputeNegativeSpaceOptions::MinSampleSpacing' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, NegativeSpaceTolerance) == 0x000018, "Member 'FComputeNegativeSpaceOptions::NegativeSpaceTolerance' has a wrong offset!");
+static_assert(offsetof(FComputeNegativeSpaceOptions, MinRadius) == 0x000020, "Member 'FComputeNegativeSpaceOptions::MinRadius' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptMergeSimpleCollisionOptions
+// 0x0070 (0x0070 - 0x0000)
+struct FGeometryScriptMergeSimpleCollisionOptions final
+{
+public:
+	int32                                         MaxShapeCount;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ErrorTolerance;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MinThicknessTolerance;                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConsiderAllPossibleMerges;                        // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptSphereCovering          PrecomputedNegativeSpace;                          // 0x0020(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bComputeNegativeSpace;                             // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FComputeNegativeSpaceOptions           ComputeNegativeSpaceOptions;                       // 0x0038(0x0028)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimpleCollisionTriangulationOptions ShapeToHullTriangulation;                          // 0x0060(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptMergeSimpleCollisionOptions) == 0x000008, "Wrong alignment on FGeometryScriptMergeSimpleCollisionOptions");
+static_assert(sizeof(FGeometryScriptMergeSimpleCollisionOptions) == 0x000070, "Wrong size on FGeometryScriptMergeSimpleCollisionOptions");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, MaxShapeCount) == 0x000000, "Member 'FGeometryScriptMergeSimpleCollisionOptions::MaxShapeCount' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, ErrorTolerance) == 0x000008, "Member 'FGeometryScriptMergeSimpleCollisionOptions::ErrorTolerance' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, MinThicknessTolerance) == 0x000010, "Member 'FGeometryScriptMergeSimpleCollisionOptions::MinThicknessTolerance' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, bConsiderAllPossibleMerges) == 0x000018, "Member 'FGeometryScriptMergeSimpleCollisionOptions::bConsiderAllPossibleMerges' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, PrecomputedNegativeSpace) == 0x000020, "Member 'FGeometryScriptMergeSimpleCollisionOptions::PrecomputedNegativeSpace' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, bComputeNegativeSpace) == 0x000030, "Member 'FGeometryScriptMergeSimpleCollisionOptions::bComputeNegativeSpace' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, ComputeNegativeSpaceOptions) == 0x000038, "Member 'FGeometryScriptMergeSimpleCollisionOptions::ComputeNegativeSpaceOptions' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMergeSimpleCollisionOptions, ShapeToHullTriangulation) == 0x000060, "Member 'FGeometryScriptMergeSimpleCollisionOptions::ShapeToHullTriangulation' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptConvexHullSimplificationOptions
+// 0x0010 (0x0010 - 0x0000)
+struct FGeometryScriptConvexHullSimplificationOptions final
+{
+public:
+	EGeometryScriptConvexHullSimplifyMethod       SimplificationMethod;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SimplificationDistanceThreshold;                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SimplificationAngleThreshold;                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinTargetFaceCount;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptConvexHullSimplificationOptions) == 0x000004, "Wrong alignment on FGeometryScriptConvexHullSimplificationOptions");
+static_assert(sizeof(FGeometryScriptConvexHullSimplificationOptions) == 0x000010, "Wrong size on FGeometryScriptConvexHullSimplificationOptions");
+static_assert(offsetof(FGeometryScriptConvexHullSimplificationOptions, SimplificationMethod) == 0x000000, "Member 'FGeometryScriptConvexHullSimplificationOptions::SimplificationMethod' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptConvexHullSimplificationOptions, SimplificationDistanceThreshold) == 0x000004, "Member 'FGeometryScriptConvexHullSimplificationOptions::SimplificationDistanceThreshold' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptConvexHullSimplificationOptions, SimplificationAngleThreshold) == 0x000008, "Member 'FGeometryScriptConvexHullSimplificationOptions::SimplificationAngleThreshold' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptConvexHullSimplificationOptions, MinTargetFaceCount) == 0x00000C, "Member 'FGeometryScriptConvexHullSimplificationOptions::MinTargetFaceCount' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptConvexHullApproximationOptions
+// 0x000C (0x000C - 0x0000)
+struct FGeometryScriptConvexHullApproximationOptions final
+{
+public:
+	bool                                          bFitSpheres;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFitBoxes;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DistanceThreshold;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VolumeDiffThreshold_Fraction;                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptConvexHullApproximationOptions) == 0x000004, "Wrong alignment on FGeometryScriptConvexHullApproximationOptions");
+static_assert(sizeof(FGeometryScriptConvexHullApproximationOptions) == 0x00000C, "Wrong size on FGeometryScriptConvexHullApproximationOptions");
+static_assert(offsetof(FGeometryScriptConvexHullApproximationOptions, bFitSpheres) == 0x000000, "Member 'FGeometryScriptConvexHullApproximationOptions::bFitSpheres' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptConvexHullApproximationOptions, bFitBoxes) == 0x000001, "Member 'FGeometryScriptConvexHullApproximationOptions::bFitBoxes' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptConvexHullApproximationOptions, DistanceThreshold) == 0x000004, "Member 'FGeometryScriptConvexHullApproximationOptions::DistanceThreshold' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptConvexHullApproximationOptions, VolumeDiffThreshold_Fraction) == 0x000008, "Member 'FGeometryScriptConvexHullApproximationOptions::VolumeDiffThreshold_Fraction' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptTransformCollisionOptions
+// 0x0002 (0x0002 - 0x0000)
+struct FGeometryScriptTransformCollisionOptions final
+{
+public:
+	bool                                          bWarnOnInvalidTransforms;                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCenterTransformPivotPerShape;                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptTransformCollisionOptions) == 0x000001, "Wrong alignment on FGeometryScriptTransformCollisionOptions");
+static_assert(sizeof(FGeometryScriptTransformCollisionOptions) == 0x000002, "Wrong size on FGeometryScriptTransformCollisionOptions");
+static_assert(offsetof(FGeometryScriptTransformCollisionOptions, bWarnOnInvalidTransforms) == 0x000000, "Member 'FGeometryScriptTransformCollisionOptions::bWarnOnInvalidTransforms' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptTransformCollisionOptions, bCenterTransformPivotPerShape) == 0x000001, "Member 'FGeometryScriptTransformCollisionOptions::bCenterTransformPivotPerShape' has a wrong offset!");
+
 // ScriptStruct GeometryScriptingCore.GeometryScriptConvexHullOptions
 // 0x000C (0x000C - 0x0000)
 struct FGeometryScriptConvexHullOptions final
 {
 public:
 	bool                                          bPrefilterVertices;                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2586[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PrefilterGridResolution;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SimplifyToFaceCount;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -944,11 +1213,11 @@ struct FGeometryScriptSweptHullOptions final
 {
 public:
 	bool                                          bPrefilterVertices;                                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2587[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PrefilterGridResolution;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinThickness;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSimplify;                                         // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2588[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinEdgeLength;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SimplifyTolerance;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -961,18 +1230,39 @@ static_assert(offsetof(FGeometryScriptSweptHullOptions, bSimplify) == 0x00000C, 
 static_assert(offsetof(FGeometryScriptSweptHullOptions, MinEdgeLength) == 0x000010, "Member 'FGeometryScriptSweptHullOptions::MinEdgeLength' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSweptHullOptions, SimplifyTolerance) == 0x000014, "Member 'FGeometryScriptSweptHullOptions::SimplifyTolerance' has a wrong offset!");
 
+// ScriptStruct GeometryScriptingCore.GeometryScriptPolygonOffsetOptions
+// 0x0028 (0x0028 - 0x0000)
+struct FGeometryScriptPolygonOffsetOptions final
+{
+public:
+	EGeometryScriptPolyOffsetJoinType             JoinType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MiterLimit;                                        // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOffsetBothSides;                                  // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StepsPerRadianScale;                               // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MaximumStepsPerRadian;                             // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGeometryScriptPolygonOffsetOptions) == 0x000008, "Wrong alignment on FGeometryScriptPolygonOffsetOptions");
+static_assert(sizeof(FGeometryScriptPolygonOffsetOptions) == 0x000028, "Wrong size on FGeometryScriptPolygonOffsetOptions");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, JoinType) == 0x000000, "Member 'FGeometryScriptPolygonOffsetOptions::JoinType' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MiterLimit) == 0x000008, "Member 'FGeometryScriptPolygonOffsetOptions::MiterLimit' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, bOffsetBothSides) == 0x000010, "Member 'FGeometryScriptPolygonOffsetOptions::bOffsetBothSides' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, StepsPerRadianScale) == 0x000018, "Member 'FGeometryScriptPolygonOffsetOptions::StepsPerRadianScale' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MaximumStepsPerRadian) == 0x000020, "Member 'FGeometryScriptPolygonOffsetOptions::MaximumStepsPerRadian' has a wrong offset!");
+
 // ScriptStruct GeometryScriptingCore.GeometryScriptConvexDecompositionOptions
 // 0x0028 (0x0028 - 0x0000)
 struct FGeometryScriptConvexDecompositionOptions final
 {
 public:
 	int32                                         NumHulls;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2589[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SearchFactor;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        ErrorTolerance;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        MinPartThickness;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SimplifyToFaceCount;                               // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_258A[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptConvexDecompositionOptions) == 0x000008, "Wrong alignment on FGeometryScriptConvexDecompositionOptions");
 static_assert(sizeof(FGeometryScriptConvexDecompositionOptions) == 0x000028, "Wrong size on FGeometryScriptConvexDecompositionOptions");
@@ -987,25 +1277,27 @@ static_assert(offsetof(FGeometryScriptConvexDecompositionOptions, SimplifyToFace
 struct alignas(0x08) FGeometryScriptMeshSelection final
 {
 public:
-	uint8                                         Pad_258B[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptMeshSelection) == 0x000008, "Wrong alignment on FGeometryScriptMeshSelection");
 static_assert(sizeof(FGeometryScriptMeshSelection) == 0x000010, "Wrong size on FGeometryScriptMeshSelection");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptCopyMeshFromAssetOptions
-// 0x0003 (0x0003 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct FGeometryScriptCopyMeshFromAssetOptions final
 {
 public:
 	bool                                          bApplyBuildSettings;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRequestTangents;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreRemoveDegenerates;                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBuildScale;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptCopyMeshFromAssetOptions) == 0x000001, "Wrong alignment on FGeometryScriptCopyMeshFromAssetOptions");
-static_assert(sizeof(FGeometryScriptCopyMeshFromAssetOptions) == 0x000003, "Wrong size on FGeometryScriptCopyMeshFromAssetOptions");
+static_assert(sizeof(FGeometryScriptCopyMeshFromAssetOptions) == 0x000004, "Wrong size on FGeometryScriptCopyMeshFromAssetOptions");
 static_assert(offsetof(FGeometryScriptCopyMeshFromAssetOptions, bApplyBuildSettings) == 0x000000, "Member 'FGeometryScriptCopyMeshFromAssetOptions::bApplyBuildSettings' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshFromAssetOptions, bRequestTangents) == 0x000001, "Member 'FGeometryScriptCopyMeshFromAssetOptions::bRequestTangents' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshFromAssetOptions, bIgnoreRemoveDegenerates) == 0x000002, "Member 'FGeometryScriptCopyMeshFromAssetOptions::bIgnoreRemoveDegenerates' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshFromAssetOptions, bUseBuildScale) == 0x000003, "Member 'FGeometryScriptCopyMeshFromAssetOptions::bUseBuildScale' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptNaniteOptions
 // 0x000C (0x000C - 0x0000)
@@ -1013,7 +1305,7 @@ struct FGeometryScriptNaniteOptions final
 {
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_258C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FallbackPercentTriangles;                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FallbackRelativeError;                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1031,24 +1323,26 @@ public:
 	bool                                          bEnableRecomputeNormals;                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableRecomputeTangents;                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableRemoveDegenerates;                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReplaceMaterials;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_258D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseBuildScale;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReplaceMaterials;                                 // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInterface*>             NewMaterials;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class FName>                           NewMaterialSlotNames;                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bApplyNaniteSettings;                              // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_258E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptNaniteOptions           NaniteSettings;                                    // 0x002C(0x000C)(Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	struct FMeshNaniteSettings                    NewNaniteSettings;                                 // 0x0038(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bEmitTransaction;                                  // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferMeshPostEditChange;                          // 0x0079(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_258F[0x6];                                     // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptCopyMeshToAssetOptions) == 0x000008, "Wrong alignment on FGeometryScriptCopyMeshToAssetOptions");
 static_assert(sizeof(FGeometryScriptCopyMeshToAssetOptions) == 0x000080, "Wrong size on FGeometryScriptCopyMeshToAssetOptions");
 static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bEnableRecomputeNormals) == 0x000000, "Member 'FGeometryScriptCopyMeshToAssetOptions::bEnableRecomputeNormals' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bEnableRecomputeTangents) == 0x000001, "Member 'FGeometryScriptCopyMeshToAssetOptions::bEnableRecomputeTangents' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bEnableRemoveDegenerates) == 0x000002, "Member 'FGeometryScriptCopyMeshToAssetOptions::bEnableRemoveDegenerates' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bReplaceMaterials) == 0x000003, "Member 'FGeometryScriptCopyMeshToAssetOptions::bReplaceMaterials' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bUseBuildScale) == 0x000003, "Member 'FGeometryScriptCopyMeshToAssetOptions::bUseBuildScale' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bReplaceMaterials) == 0x000004, "Member 'FGeometryScriptCopyMeshToAssetOptions::bReplaceMaterials' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, NewMaterials) == 0x000008, "Member 'FGeometryScriptCopyMeshToAssetOptions::NewMaterials' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, NewMaterialSlotNames) == 0x000018, "Member 'FGeometryScriptCopyMeshToAssetOptions::NewMaterialSlotNames' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshToAssetOptions, bApplyNaniteSettings) == 0x000028, "Member 'FGeometryScriptCopyMeshToAssetOptions::bApplyNaniteSettings' has a wrong offset!");
@@ -1063,7 +1357,7 @@ struct alignas(0x08) FGeometryScriptBakeTypeOptions final
 {
 public:
 	EGeometryScriptBakeTypes                      BakeType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2590[0x17];                                    // 0x0001(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x17];                                       // 0x0001(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptBakeTypeOptions) == 0x000008, "Wrong alignment on FGeometryScriptBakeTypeOptions");
 static_assert(sizeof(FGeometryScriptBakeTypeOptions) == 0x000018, "Wrong size on FGeometryScriptBakeTypeOptions");
@@ -1077,13 +1371,13 @@ public:
 	EGeometryScriptBakeResolution                 Resolution;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBakeBitDepth                   BitDepth;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBakeSamplesPerPixel            SamplesPerPixel;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2591[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             SampleFilterMask;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBakeFilteringType              FilteringType;                                     // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2592[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ProjectionDistance;                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bProjectionInWorldSpace;                           // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2593[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptBakeTextureOptions) == 0x000008, "Wrong alignment on FGeometryScriptBakeTextureOptions");
 static_assert(sizeof(FGeometryScriptBakeTextureOptions) == 0x000020, "Wrong size on FGeometryScriptBakeTextureOptions");
@@ -1102,10 +1396,10 @@ struct FGeometryScriptBakeVertexOptions final
 public:
 	bool                                          bSplitAtNormalSeams;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSplitAtUVSeams;                                   // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2594[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ProjectionDistance;                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bProjectionInWorldSpace;                           // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2595[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptBakeVertexOptions) == 0x000004, "Wrong alignment on FGeometryScriptBakeVertexOptions");
 static_assert(sizeof(FGeometryScriptBakeVertexOptions) == 0x00000C, "Wrong size on FGeometryScriptBakeVertexOptions");
@@ -1120,7 +1414,7 @@ struct FGeometryScriptBakeOutputType final
 {
 public:
 	EGeometryScriptBakeOutputMode                 OutputMode;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2596[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptBakeTypeOptions         RGBA;                                              // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeTypeOptions         R;                                                 // 0x0020(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeTypeOptions         G;                                                 // 0x0038(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
@@ -1155,7 +1449,7 @@ public:
 	class UTexture2D*                             SourceNormalMap;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SourceNormalUVLayer;                               // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBakeNormalSpace                SourceNormalSpace;                                 // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2597[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptBakeSourceMeshOptions) == 0x000008, "Wrong alignment on FGeometryScriptBakeSourceMeshOptions");
 static_assert(sizeof(FGeometryScriptBakeSourceMeshOptions) == 0x000010, "Wrong size on FGeometryScriptBakeSourceMeshOptions");
@@ -1164,46 +1458,50 @@ static_assert(offsetof(FGeometryScriptBakeSourceMeshOptions, SourceNormalUVLayer
 static_assert(offsetof(FGeometryScriptBakeSourceMeshOptions, SourceNormalSpace) == 0x00000C, "Member 'FGeometryScriptBakeSourceMeshOptions::SourceNormalSpace' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptBakeRenderCaptureOptions
-// 0x0028 (0x0028 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FGeometryScriptBakeRenderCaptureOptions final
 {
 public:
-	EGeometryScriptBakeResolution                 Resolution;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptBakeResolution                 RenderCaptureResolution;                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptBakeSamplesPerPixel            SamplesPerPixel;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRenderCaptureAntiAliasing;                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CleanupTolerance;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBaseColorMap;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNormalMap;                                        // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPackedMRSMap;                                     // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMetallicMap;                                      // 0x000B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRoughnessMap;                                     // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSpecularMap;                                      // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEmissiveMap;                                      // 0x000E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOpacityMap;                                       // 0x000F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSubsurfaceColorMap;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2598[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGeometryScriptRenderCaptureCamera> Cameras;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	EGeometryScriptBakeResolution                 RenderCaptureResolution;                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        FieldOfViewDegrees;                                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        NearPlaneDist;                                     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptBakeResolution                 Resolution;                                        // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptBakeSamplesPerPixel            SamplesPerPixel;                                   // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRenderCaptureAntiAliasing;                        // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CleanupTolerance;                                  // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBaseColorMap;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNormalMap;                                        // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPackedMRSMap;                                     // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMetallicMap;                                      // 0x0033(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRoughnessMap;                                     // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSpecularMap;                                      // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEmissiveMap;                                      // 0x0036(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOpacityMap;                                       // 0x0037(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSubsurfaceColorMap;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptBakeRenderCaptureOptions) == 0x000008, "Wrong alignment on FGeometryScriptBakeRenderCaptureOptions");
-static_assert(sizeof(FGeometryScriptBakeRenderCaptureOptions) == 0x000028, "Wrong size on FGeometryScriptBakeRenderCaptureOptions");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, Resolution) == 0x000000, "Member 'FGeometryScriptBakeRenderCaptureOptions::Resolution' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, RenderCaptureResolution) == 0x000001, "Member 'FGeometryScriptBakeRenderCaptureOptions::RenderCaptureResolution' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, SamplesPerPixel) == 0x000002, "Member 'FGeometryScriptBakeRenderCaptureOptions::SamplesPerPixel' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bRenderCaptureAntiAliasing) == 0x000003, "Member 'FGeometryScriptBakeRenderCaptureOptions::bRenderCaptureAntiAliasing' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, CleanupTolerance) == 0x000004, "Member 'FGeometryScriptBakeRenderCaptureOptions::CleanupTolerance' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bBaseColorMap) == 0x000008, "Member 'FGeometryScriptBakeRenderCaptureOptions::bBaseColorMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bNormalMap) == 0x000009, "Member 'FGeometryScriptBakeRenderCaptureOptions::bNormalMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bPackedMRSMap) == 0x00000A, "Member 'FGeometryScriptBakeRenderCaptureOptions::bPackedMRSMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bMetallicMap) == 0x00000B, "Member 'FGeometryScriptBakeRenderCaptureOptions::bMetallicMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bRoughnessMap) == 0x00000C, "Member 'FGeometryScriptBakeRenderCaptureOptions::bRoughnessMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bSpecularMap) == 0x00000D, "Member 'FGeometryScriptBakeRenderCaptureOptions::bSpecularMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bEmissiveMap) == 0x00000E, "Member 'FGeometryScriptBakeRenderCaptureOptions::bEmissiveMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bOpacityMap) == 0x00000F, "Member 'FGeometryScriptBakeRenderCaptureOptions::bOpacityMap' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bSubsurfaceColorMap) == 0x000010, "Member 'FGeometryScriptBakeRenderCaptureOptions::bSubsurfaceColorMap' has a wrong offset!");
+static_assert(sizeof(FGeometryScriptBakeRenderCaptureOptions) == 0x000040, "Wrong size on FGeometryScriptBakeRenderCaptureOptions");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, Cameras) == 0x000000, "Member 'FGeometryScriptBakeRenderCaptureOptions::Cameras' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, RenderCaptureResolution) == 0x000010, "Member 'FGeometryScriptBakeRenderCaptureOptions::RenderCaptureResolution' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, FieldOfViewDegrees) == 0x000018, "Member 'FGeometryScriptBakeRenderCaptureOptions::FieldOfViewDegrees' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, NearPlaneDist) == 0x000020, "Member 'FGeometryScriptBakeRenderCaptureOptions::NearPlaneDist' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, Resolution) == 0x000028, "Member 'FGeometryScriptBakeRenderCaptureOptions::Resolution' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, SamplesPerPixel) == 0x000029, "Member 'FGeometryScriptBakeRenderCaptureOptions::SamplesPerPixel' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bRenderCaptureAntiAliasing) == 0x00002A, "Member 'FGeometryScriptBakeRenderCaptureOptions::bRenderCaptureAntiAliasing' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, CleanupTolerance) == 0x00002C, "Member 'FGeometryScriptBakeRenderCaptureOptions::CleanupTolerance' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bBaseColorMap) == 0x000030, "Member 'FGeometryScriptBakeRenderCaptureOptions::bBaseColorMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bNormalMap) == 0x000031, "Member 'FGeometryScriptBakeRenderCaptureOptions::bNormalMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bPackedMRSMap) == 0x000032, "Member 'FGeometryScriptBakeRenderCaptureOptions::bPackedMRSMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bMetallicMap) == 0x000033, "Member 'FGeometryScriptBakeRenderCaptureOptions::bMetallicMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bRoughnessMap) == 0x000034, "Member 'FGeometryScriptBakeRenderCaptureOptions::bRoughnessMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bSpecularMap) == 0x000035, "Member 'FGeometryScriptBakeRenderCaptureOptions::bSpecularMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bEmissiveMap) == 0x000036, "Member 'FGeometryScriptBakeRenderCaptureOptions::bEmissiveMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bOpacityMap) == 0x000037, "Member 'FGeometryScriptBakeRenderCaptureOptions::bOpacityMap' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptBakeRenderCaptureOptions, bSubsurfaceColorMap) == 0x000038, "Member 'FGeometryScriptBakeRenderCaptureOptions::bSubsurfaceColorMap' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptRenderCaptureTextures
 // 0x0090 (0x0090 - 0x0000)
@@ -1212,31 +1510,31 @@ struct FGeometryScriptRenderCaptureTextures final
 public:
 	class UTexture2D*                             BaseColorMap;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasBaseColorMap;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2599[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             NormalMap;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasNormalMap;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_259A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             PackedMRSMap;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasPackedMRSMap;                                  // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_259B[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             MetallicMap;                                       // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasMetallicMap;                                   // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_259C[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             RoughnessMap;                                      // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasRoughnessMap;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_259D[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             SpecularMap;                                       // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasSpecularMap;                                   // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_259E[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             EmissiveMap;                                       // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasEmissiveMap;                                   // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_259F[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             OpacityMap;                                        // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasOpacityMap;                                    // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A0[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             SubsurfaceColorMap;                                // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasSubsurfaceColorMap;                            // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A1[0x7];                                     // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptRenderCaptureTextures) == 0x000008, "Wrong alignment on FGeometryScriptRenderCaptureTextures");
 static_assert(sizeof(FGeometryScriptRenderCaptureTextures) == 0x000090, "Wrong size on FGeometryScriptRenderCaptureTextures");
@@ -1335,7 +1633,7 @@ struct FGeometryScriptSmoothBoneWeightsOptions final
 {
 public:
 	EGeometryScriptSmoothBoneWeightsType          DistanceWeighingType;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Stiffness;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxInfluences;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VoxelResolution;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1354,18 +1652,18 @@ struct FGeometryScriptTransferBoneWeightsOptions final
 public:
 	ETransferBoneWeightsMethod                    TransferMethod;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOutputTargetMeshBones                        OutputTargetMeshBones;                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A3[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptBoneWeightProfile       SourceProfile;                                     // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBoneWeightProfile       TargetProfile;                                     // 0x000C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        RadiusPercentage;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        NormalThreshold;                                   // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          LayeredMeshSupport;                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A5[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumSmoothingIterations;                            // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SmoothingStrength;                                 // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   InpaintMask;                                       // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A6[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptTransferBoneWeightsOptions) == 0x000008, "Wrong alignment on FGeometryScriptTransferBoneWeightsOptions");
 static_assert(sizeof(FGeometryScriptTransferBoneWeightsOptions) == 0x000040, "Wrong size on FGeometryScriptTransferBoneWeightsOptions");
@@ -1402,20 +1700,23 @@ static_assert(offsetof(FGeometryScriptBoneInfo, WorldTransform) == 0x000070, "Me
 static_assert(offsetof(FGeometryScriptBoneInfo, Color) == 0x0000D0, "Member 'FGeometryScriptBoneInfo::Color' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptMeshBooleanOptions
-// 0x0008 (0x0008 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct FGeometryScriptMeshBooleanOptions final
 {
 public:
 	bool                                          bFillHoles;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSimplifyOutput;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A7[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SimplifyPlanarTolerance;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowEmptyResult;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptMeshBooleanOptions) == 0x000004, "Wrong alignment on FGeometryScriptMeshBooleanOptions");
-static_assert(sizeof(FGeometryScriptMeshBooleanOptions) == 0x000008, "Wrong size on FGeometryScriptMeshBooleanOptions");
+static_assert(sizeof(FGeometryScriptMeshBooleanOptions) == 0x00000C, "Wrong size on FGeometryScriptMeshBooleanOptions");
 static_assert(offsetof(FGeometryScriptMeshBooleanOptions, bFillHoles) == 0x000000, "Member 'FGeometryScriptMeshBooleanOptions::bFillHoles' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBooleanOptions, bSimplifyOutput) == 0x000001, "Member 'FGeometryScriptMeshBooleanOptions::bSimplifyOutput' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBooleanOptions, SimplifyPlanarTolerance) == 0x000004, "Member 'FGeometryScriptMeshBooleanOptions::SimplifyPlanarTolerance' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBooleanOptions, bAllowEmptyResult) == 0x000008, "Member 'FGeometryScriptMeshBooleanOptions::bAllowEmptyResult' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptMeshSelfUnionOptions
 // 0x000C (0x000C - 0x0000)
@@ -1425,7 +1726,7 @@ public:
 	bool                                          bFillHoles;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bTrimFlaps;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSimplifyOutput;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A8[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SimplifyPlanarTolerance;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WindingThreshold;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1445,7 +1746,7 @@ public:
 	bool                                          bFillHoles;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFillSpans;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFlipCutSide;                                      // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25A9[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         UVWorldDimension;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshPlaneCutOptions) == 0x000004, "Wrong alignment on FGeometryScriptMeshPlaneCutOptions");
@@ -1462,7 +1763,7 @@ struct FGeometryScriptMeshPlaneSliceOptions final
 public:
 	bool                                          bFillHoles;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFillSpans;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25AA[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         GapWidth;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         UVWorldDimension;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1500,7 +1801,7 @@ public:
 	bool                                          bCheckUVs;                                         // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCheckGroups;                                      // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCheckAttributes;                                  // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25AB[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Epsilon;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptIsSameMeshOptions) == 0x000004, "Wrong alignment on FGeometryScriptIsSameMeshOptions");
@@ -1531,10 +1832,10 @@ struct FGeometryScriptBendWarpOptions final
 {
 public:
 	bool                                          bSymmetricExtents;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25AC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LowerExtent;                                       // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBidirectional;                                    // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25AD[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptBendWarpOptions) == 0x000004, "Wrong alignment on FGeometryScriptBendWarpOptions");
 static_assert(sizeof(FGeometryScriptBendWarpOptions) == 0x00000C, "Wrong size on FGeometryScriptBendWarpOptions");
@@ -1548,10 +1849,10 @@ struct FGeometryScriptTwistWarpOptions final
 {
 public:
 	bool                                          bSymmetricExtents;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25AE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LowerExtent;                                       // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBidirectional;                                    // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25AF[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptTwistWarpOptions) == 0x000004, "Wrong alignment on FGeometryScriptTwistWarpOptions");
 static_assert(sizeof(FGeometryScriptTwistWarpOptions) == 0x00000C, "Wrong size on FGeometryScriptTwistWarpOptions");
@@ -1565,10 +1866,10 @@ struct FGeometryScriptFlareWarpOptions final
 {
 public:
 	bool                                          bSymmetricExtents;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LowerExtent;                                       // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptFlareType                      FlareType;                                         // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B1[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptFlareWarpOptions) == 0x000004, "Wrong alignment on FGeometryScriptFlareWarpOptions");
 static_assert(sizeof(FGeometryScriptFlareWarpOptions) == 0x00000C, "Wrong size on FGeometryScriptFlareWarpOptions");
@@ -1585,7 +1886,7 @@ public:
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                FrequencyShift;                                    // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RandomSeed;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B2[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptPerlinNoiseLayerOptions) == 0x000008, "Wrong alignment on FGeometryScriptPerlinNoiseLayerOptions");
 static_assert(sizeof(FGeometryScriptPerlinNoiseLayerOptions) == 0x000028, "Wrong size on FGeometryScriptPerlinNoiseLayerOptions");
@@ -1617,7 +1918,7 @@ public:
 	struct FGeometryScriptPerlinNoiseLayerOptions BaseLayer;                                         // 0x0000(0x0028)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bApplyAlongNormal;                                 // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptEmptySelectionBehavior         EmptyBehavior;                                     // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B3[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptPerlinNoiseOptions) == 0x000008, "Wrong alignment on FGeometryScriptPerlinNoiseOptions");
 static_assert(sizeof(FGeometryScriptPerlinNoiseOptions) == 0x000030, "Wrong size on FGeometryScriptPerlinNoiseOptions");
@@ -1633,7 +1934,7 @@ public:
 	int32                                         NumIterations;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Alpha;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptEmptySelectionBehavior         EmptyBehavior;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B4[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptIterativeMeshSmoothingOptions) == 0x000004, "Wrong alignment on FGeometryScriptIterativeMeshSmoothingOptions");
 static_assert(sizeof(FGeometryScriptIterativeMeshSmoothingOptions) == 0x00000C, "Wrong size on FGeometryScriptIterativeMeshSmoothingOptions");
@@ -1647,13 +1948,13 @@ struct FGeometryScriptDisplaceFromTextureOptions final
 {
 public:
 	float                                         Magnitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              UVScale;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              UVOffset;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Center;                                            // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ImageChannel;                                      // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptEmptySelectionBehavior         EmptyBehavior;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B6[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptDisplaceFromTextureOptions) == 0x000008, "Wrong alignment on FGeometryScriptDisplaceFromTextureOptions");
 static_assert(sizeof(FGeometryScriptDisplaceFromTextureOptions) == 0x000038, "Wrong size on FGeometryScriptDisplaceFromTextureOptions");
@@ -1670,7 +1971,7 @@ struct FGeometryScriptMeshEditPolygroupOptions final
 {
 public:
 	EGeometryScriptMeshEditPolygroupMode          GroupMode;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ConstantGroup;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshEditPolygroupOptions) == 0x000004, "Wrong alignment on FGeometryScriptMeshEditPolygroupOptions");
@@ -1685,11 +1986,11 @@ struct FGeometryScriptMeshOffsetOptions final
 public:
 	float                                         OffsetDistance;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFixedBoundary;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B8[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SolveSteps;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SmoothAlpha;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReprojectDuringSmoothing;                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25B9[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BoundaryAlpha;                                     // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshOffsetOptions) == 0x000004, "Wrong alignment on FGeometryScriptMeshOffsetOptions");
@@ -1707,11 +2008,11 @@ struct FGeometryScriptMeshExtrudeOptions final
 {
 public:
 	float                                         ExtrudeDistance;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25BA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ExtrudeDirection;                                  // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         UVScale;                                           // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSolidsToShells;                                   // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25BB[0x3];                                     // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptMeshExtrudeOptions) == 0x000008, "Wrong alignment on FGeometryScriptMeshExtrudeOptions");
 static_assert(sizeof(FGeometryScriptMeshExtrudeOptions) == 0x000028, "Wrong size on FGeometryScriptMeshExtrudeOptions");
@@ -1727,14 +2028,14 @@ struct FGeometryScriptMeshLinearExtrudeOptions final
 public:
 	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptLinearExtrudeDirection         DirectionMode;                                     // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25BC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Direction;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPolyOperationArea              AreaMode;                                          // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25BD[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshEditPolygroupOptions GroupOptions;                                      // 0x0024(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         UVScale;                                           // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSolidsToShells;                                   // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25BE[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptMeshLinearExtrudeOptions) == 0x000008, "Wrong alignment on FGeometryScriptMeshLinearExtrudeOptions");
 static_assert(sizeof(FGeometryScriptMeshLinearExtrudeOptions) == 0x000038, "Wrong size on FGeometryScriptMeshLinearExtrudeOptions");
@@ -1754,11 +2055,11 @@ public:
 	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptOffsetFacesType                OffsetType;                                        // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPolyOperationArea              AreaMode;                                          // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25BF[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshEditPolygroupOptions GroupOptions;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         UVScale;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSolidsToShells;                                   // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C0[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptMeshOffsetFacesOptions) == 0x000004, "Wrong alignment on FGeometryScriptMeshOffsetFacesOptions");
 static_assert(sizeof(FGeometryScriptMeshOffsetFacesOptions) == 0x000018, "Wrong size on FGeometryScriptMeshOffsetFacesOptions");
@@ -1777,11 +2078,11 @@ public:
 	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReproject;                                        // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBoundaryOnly;                                     // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C1[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Softness;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AreaScale;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPolyOperationArea              AreaMode;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C2[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshEditPolygroupOptions GroupOptions;                                      // 0x0014(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         UVScale;                                           // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1803,41 +2104,48 @@ struct FGeometryScriptMeshBevelOptions final
 public:
 	float                                         BevelDistance;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInferMaterialID;                                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C3[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SetMaterialID;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyFilterBox;                                   // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C4[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBox                                   FilterBox;                                         // 0x0010(0x0038)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C5[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Subdivisions;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RoundWeight;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyFilterBox;                                   // 0x0014(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBox                                   FilterBox;                                         // 0x0018(0x0038)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	struct FTransform                             FilterBoxTransform;                                // 0x0050(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFullyContained;                                   // 0x00B0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C6[0xF];                                     // 0x00B1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0xF];                                       // 0x00B1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptMeshBevelOptions) == 0x000010, "Wrong alignment on FGeometryScriptMeshBevelOptions");
 static_assert(sizeof(FGeometryScriptMeshBevelOptions) == 0x0000C0, "Wrong size on FGeometryScriptMeshBevelOptions");
 static_assert(offsetof(FGeometryScriptMeshBevelOptions, BevelDistance) == 0x000000, "Member 'FGeometryScriptMeshBevelOptions::BevelDistance' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBevelOptions, bInferMaterialID) == 0x000004, "Member 'FGeometryScriptMeshBevelOptions::bInferMaterialID' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBevelOptions, SetMaterialID) == 0x000008, "Member 'FGeometryScriptMeshBevelOptions::SetMaterialID' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMeshBevelOptions, bApplyFilterBox) == 0x00000C, "Member 'FGeometryScriptMeshBevelOptions::bApplyFilterBox' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptMeshBevelOptions, FilterBox) == 0x000010, "Member 'FGeometryScriptMeshBevelOptions::FilterBox' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBevelOptions, Subdivisions) == 0x00000C, "Member 'FGeometryScriptMeshBevelOptions::Subdivisions' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBevelOptions, RoundWeight) == 0x000010, "Member 'FGeometryScriptMeshBevelOptions::RoundWeight' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBevelOptions, bApplyFilterBox) == 0x000014, "Member 'FGeometryScriptMeshBevelOptions::bApplyFilterBox' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBevelOptions, FilterBox) == 0x000018, "Member 'FGeometryScriptMeshBevelOptions::FilterBox' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBevelOptions, FilterBoxTransform) == 0x000050, "Member 'FGeometryScriptMeshBevelOptions::FilterBoxTransform' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBevelOptions, bFullyContained) == 0x0000B0, "Member 'FGeometryScriptMeshBevelOptions::bFullyContained' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptMeshBevelSelectionOptions
-// 0x000C (0x000C - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FGeometryScriptMeshBevelSelectionOptions final
 {
 public:
 	float                                         BevelDistance;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInferMaterialID;                                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C7[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SetMaterialID;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Subdivisions;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RoundWeight;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshBevelSelectionOptions) == 0x000004, "Wrong alignment on FGeometryScriptMeshBevelSelectionOptions");
-static_assert(sizeof(FGeometryScriptMeshBevelSelectionOptions) == 0x00000C, "Wrong size on FGeometryScriptMeshBevelSelectionOptions");
+static_assert(sizeof(FGeometryScriptMeshBevelSelectionOptions) == 0x000014, "Wrong size on FGeometryScriptMeshBevelSelectionOptions");
 static_assert(offsetof(FGeometryScriptMeshBevelSelectionOptions, BevelDistance) == 0x000000, "Member 'FGeometryScriptMeshBevelSelectionOptions::BevelDistance' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBevelSelectionOptions, bInferMaterialID) == 0x000004, "Member 'FGeometryScriptMeshBevelSelectionOptions::bInferMaterialID' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMeshBevelSelectionOptions, SetMaterialID) == 0x000008, "Member 'FGeometryScriptMeshBevelSelectionOptions::SetMaterialID' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBevelSelectionOptions, Subdivisions) == 0x00000C, "Member 'FGeometryScriptMeshBevelSelectionOptions::Subdivisions' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptMeshBevelSelectionOptions, RoundWeight) == 0x000010, "Member 'FGeometryScriptMeshBevelSelectionOptions::RoundWeight' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptCalculateNormalsOptions
 // 0x0002 (0x0002 - 0x0000)
@@ -1858,10 +2166,10 @@ struct FGeometryScriptSplitNormalsOptions final
 {
 public:
 	bool                                          bSplitByOpeningAngle;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OpeningAngleDeg;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSplitByFaceGroup;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25C9[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x000C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptSplitNormalsOptions) == 0x000004, "Wrong alignment on FGeometryScriptSplitNormalsOptions");
@@ -1877,7 +2185,7 @@ struct FGeometryScriptTangentsOptions final
 {
 public:
 	EGeometryScriptTangentTypes                   Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25CA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         UVLayer;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptTangentsOptions) == 0x000004, "Wrong alignment on FGeometryScriptTangentsOptions");
@@ -1909,11 +2217,11 @@ public:
 	float                                         DegreeOffset;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReverseDirection;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHardNormals;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25CB[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HardNormalAngle;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bProfileAtMidpoint;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFillPartialRevolveEndcaps;                        // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25CC[0x2];                                     // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptRevolveOptions) == 0x000004, "Wrong alignment on FGeometryScriptRevolveOptions");
 static_assert(sizeof(FGeometryScriptRevolveOptions) == 0x000014, "Wrong size on FGeometryScriptRevolveOptions");
@@ -1931,11 +2239,11 @@ struct FGeometryScriptVoronoiOptions final
 {
 public:
 	float                                         BoundsExpand;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25CD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBox                                   Bounds;                                            // 0x0008(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 CreateCells;                                       // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bIncludeBoundary;                                  // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25CE[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptVoronoiOptions) == 0x000008, "Wrong alignment on FGeometryScriptVoronoiOptions");
 static_assert(sizeof(FGeometryScriptVoronoiOptions) == 0x000058, "Wrong size on FGeometryScriptVoronoiOptions");
@@ -1978,7 +2286,7 @@ public:
 	bool                                          bDiscardAttributes;                                // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReprojectToInputMesh;                             // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptRemeshSmoothingType            SmoothingType;                                     // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25CF[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SmoothingRate;                                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptRemeshEdgeConstraintType       MeshBoundaryConstraint;                            // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptRemeshEdgeConstraintType       GroupBoundaryConstraint;                           // 0x0009(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1989,10 +2297,10 @@ public:
 	bool                                          bPreventNormalFlips;                               // 0x000E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPreventTinyTriangles;                             // 0x000F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseFullRemeshPasses;                              // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D0[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RemeshIterations;                                  // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoCompact;                                      // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D1[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptRemeshOptions) == 0x000004, "Wrong alignment on FGeometryScriptRemeshOptions");
 static_assert(sizeof(FGeometryScriptRemeshOptions) == 0x00001C, "Wrong size on FGeometryScriptRemeshOptions");
@@ -2018,7 +2326,7 @@ struct FGeometryScriptUniformRemeshOptions final
 {
 public:
 	EGeometryScriptUniformRemeshTargetType        TargetType;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TargetTriangleCount;                               // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TargetEdgeLength;                                  // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2035,7 +2343,7 @@ struct FGeometryScriptWeldEdgesOptions final
 public:
 	float                                         Tolerance;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOnlyUniquePairs;                                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D3[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptWeldEdgesOptions) == 0x000004, "Wrong alignment on FGeometryScriptWeldEdgesOptions");
 static_assert(sizeof(FGeometryScriptWeldEdgesOptions) == 0x000008, "Wrong size on FGeometryScriptWeldEdgesOptions");
@@ -2087,14 +2395,14 @@ struct FGeometryScriptRemoveHiddenTrianglesOptions final
 {
 public:
 	EGeometryScriptRemoveHiddenTrianglesMethod    Method;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SamplesPerTriangle;                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ShrinkSelection;                                   // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WindingIsoValue;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RaysPerSample;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         NormalOffset;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCompactResult;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D5[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptRemoveHiddenTrianglesOptions) == 0x000004, "Wrong alignment on FGeometryScriptRemoveHiddenTrianglesOptions");
 static_assert(sizeof(FGeometryScriptRemoveHiddenTrianglesOptions) == 0x00001C, "Wrong size on FGeometryScriptRemoveHiddenTrianglesOptions");
@@ -2112,11 +2420,11 @@ struct FGeometryScriptDegenerateTriangleOptions final
 {
 public:
 	EGeometryScriptRepairMeshMode                 Mode;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        MinTriangleArea;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        MinEdgeLength;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCompactOnCompletion;                              // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D7[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptDegenerateTriangleOptions) == 0x000008, "Wrong alignment on FGeometryScriptDegenerateTriangleOptions");
 static_assert(sizeof(FGeometryScriptDegenerateTriangleOptions) == 0x000020, "Wrong size on FGeometryScriptDegenerateTriangleOptions");
@@ -2133,7 +2441,7 @@ public:
 	float                                         SamplingRadius;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxNumSamples;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RandomSeed;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SubSampleDensity;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMeshPointSamplingOptions) == 0x000008, "Wrong alignment on FGeometryScriptMeshPointSamplingOptions");
@@ -2150,11 +2458,11 @@ struct FGeometryScriptNonUniformPointSamplingOptions final
 public:
 	float                                         MaxSamplingRadius;                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptSamplingDistributionMode       SizeDistribution;                                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25D9[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SizeDistributionPower;                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptSamplingWeightMode             WeightMode;                                        // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInvertWeights;                                    // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25DA[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptNonUniformPointSamplingOptions) == 0x000008, "Wrong alignment on FGeometryScriptNonUniformPointSamplingOptions");
 static_assert(sizeof(FGeometryScriptNonUniformPointSamplingOptions) == 0x000018, "Wrong size on FGeometryScriptNonUniformPointSamplingOptions");
@@ -2171,7 +2479,7 @@ struct FGeometryScriptPlanarSimplifyOptions final
 public:
 	float                                         AngleThreshold;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoCompact;                                      // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25DB[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptPlanarSimplifyOptions) == 0x000004, "Wrong alignment on FGeometryScriptPlanarSimplifyOptions");
 static_assert(sizeof(FGeometryScriptPlanarSimplifyOptions) == 0x000008, "Wrong size on FGeometryScriptPlanarSimplifyOptions");
@@ -2185,7 +2493,7 @@ struct FGeometryScriptPolygroupSimplifyOptions final
 public:
 	float                                         AngleThreshold;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoCompact;                                      // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25DC[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptPolygroupSimplifyOptions) == 0x000004, "Wrong alignment on FGeometryScriptPolygroupSimplifyOptions");
 static_assert(sizeof(FGeometryScriptPolygroupSimplifyOptions) == 0x000008, "Wrong size on FGeometryScriptPolygroupSimplifyOptions");
@@ -2222,7 +2530,7 @@ struct FGeometryScriptSpatialQueryOptions final
 public:
 	float                                         MaxDistance;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowUnsafeModifiedQueries;                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25DD[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         WindingIsoThreshold;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptSpatialQueryOptions) == 0x000004, "Wrong alignment on FGeometryScriptSpatialQueryOptions");
@@ -2237,10 +2545,10 @@ struct FGeometryScriptRayHitResult final
 {
 public:
 	bool                                          bHit;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25DE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         RayParameter;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         HitTriangleID;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25DF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                HitPosition;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                HitBaryCoords;                                     // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2283,7 +2591,7 @@ struct FGeometryScriptRepackUVsOptions final
 public:
 	int32                                         TargetImageWidth;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOptimizeIslandRotation;                           // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E0[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptRepackUVsOptions) == 0x000004, "Wrong alignment on FGeometryScriptRepackUVsOptions");
 static_assert(sizeof(FGeometryScriptRepackUVsOptions) == 0x000008, "Wrong size on FGeometryScriptRepackUVsOptions");
@@ -2321,13 +2629,13 @@ struct FGeometryScriptRecomputeUVsOptions final
 public:
 	EGeometryScriptUVFlattenMethod                Method;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptUVIslandSource                 IslandSource;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E1[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptExpMapUVOptions         ExpMapOptions;                                     // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSpectralConformalUVOptions SpectralConformalOptions;                          // 0x000C(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E2[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bAutoAlignIslandsWithAxes;                         // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E3[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGeometryScriptRecomputeUVsOptions) == 0x000004, "Wrong alignment on FGeometryScriptRecomputeUVsOptions");
 static_assert(sizeof(FGeometryScriptRecomputeUVsOptions) == 0x00001C, "Wrong size on FGeometryScriptRecomputeUVsOptions");
@@ -2350,10 +2658,10 @@ public:
 	float                                         PatchMergingAngleThresh;                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptExpMapUVOptions         ExpMapOptions;                                     // 0x0014(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bRespectInputGroups;                               // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E4[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0020(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bAutoPack;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E5[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptRepackUVsOptions        PackingOptions;                                    // 0x002C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptPatchBuilderOptions) == 0x000004, "Wrong alignment on FGeometryScriptPatchBuilderOptions");
@@ -2403,7 +2711,7 @@ struct FGeometryScript3DGridParameters final
 {
 public:
 	EGeometryScriptGridSizingMethod               SizeMethod;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         GridCellSize;                                      // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         GridResolution;                                    // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2421,11 +2729,11 @@ public:
 	struct FGeometryScript3DGridParameters        GridParameters;                                    // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         WindingThreshold;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSolidAtBoundaries;                                // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E7[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ExtendBounds;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SurfaceSearchSteps;                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bThickenShells;                                    // 0x001C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E8[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ShellThickness;                                    // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptSolidifyOptions) == 0x000008, "Wrong alignment on FGeometryScriptSolidifyOptions");
@@ -2445,10 +2753,10 @@ struct FGeometryScriptMorphologyOptions final
 public:
 	struct FGeometryScript3DGridParameters        SDFGridParameters;                                 // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bUseSeparateMeshGrid;                              // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25E9[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScript3DGridParameters        MeshGridParameters;                                // 0x0010(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	EGeometryScriptMorphologicalOpType            Operation;                                         // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25EA[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Distance;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptMorphologyOptions) == 0x000004, "Wrong alignment on FGeometryScriptMorphologyOptions");
@@ -2459,26 +2767,53 @@ static_assert(offsetof(FGeometryScriptMorphologyOptions, MeshGridParameters) == 
 static_assert(offsetof(FGeometryScriptMorphologyOptions, Operation) == 0x00001C, "Member 'FGeometryScriptMorphologyOptions::Operation' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptMorphologyOptions, Distance) == 0x000020, "Member 'FGeometryScriptMorphologyOptions::Distance' has a wrong offset!");
 
-// ScriptStruct GeometryScriptingCore.GeometryScriptPolygonOffsetOptions
-// 0x0028 (0x0028 - 0x0000)
-struct FGeometryScriptPolygonOffsetOptions final
+// ScriptStruct GeometryScriptingCore.GeometryScriptPointClusteringOptions
+// 0x0020 (0x0020 - 0x0000)
+struct FGeometryScriptPointClusteringOptions final
 {
 public:
-	EGeometryScriptPolyOffsetJoinType             JoinType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25EB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MiterLimit;                                        // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOffsetBothSides;                                  // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25EC[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StepsPerRadianScale;                               // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        MaximumStepsPerRadian;                             // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        InitialClusterCenters;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         TargetNumClusters;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptInitKMeansMethod               InitializeMethod;                                  // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RandomSeed;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxIterations;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGeometryScriptPolygonOffsetOptions) == 0x000008, "Wrong alignment on FGeometryScriptPolygonOffsetOptions");
-static_assert(sizeof(FGeometryScriptPolygonOffsetOptions) == 0x000028, "Wrong size on FGeometryScriptPolygonOffsetOptions");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, JoinType) == 0x000000, "Member 'FGeometryScriptPolygonOffsetOptions::JoinType' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MiterLimit) == 0x000008, "Member 'FGeometryScriptPolygonOffsetOptions::MiterLimit' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, bOffsetBothSides) == 0x000010, "Member 'FGeometryScriptPolygonOffsetOptions::bOffsetBothSides' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, StepsPerRadianScale) == 0x000018, "Member 'FGeometryScriptPolygonOffsetOptions::StepsPerRadianScale' has a wrong offset!");
-static_assert(offsetof(FGeometryScriptPolygonOffsetOptions, MaximumStepsPerRadian) == 0x000020, "Member 'FGeometryScriptPolygonOffsetOptions::MaximumStepsPerRadian' has a wrong offset!");
+static_assert(alignof(FGeometryScriptPointClusteringOptions) == 0x000008, "Wrong alignment on FGeometryScriptPointClusteringOptions");
+static_assert(sizeof(FGeometryScriptPointClusteringOptions) == 0x000020, "Wrong size on FGeometryScriptPointClusteringOptions");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, InitialClusterCenters) == 0x000000, "Member 'FGeometryScriptPointClusteringOptions::InitialClusterCenters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, TargetNumClusters) == 0x000010, "Member 'FGeometryScriptPointClusteringOptions::TargetNumClusters' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, InitializeMethod) == 0x000014, "Member 'FGeometryScriptPointClusteringOptions::InitializeMethod' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, RandomSeed) == 0x000018, "Member 'FGeometryScriptPointClusteringOptions::RandomSeed' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointClusteringOptions, MaxIterations) == 0x00001C, "Member 'FGeometryScriptPointClusteringOptions::MaxIterations' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptPointPriorityOptions
+// 0x0018 (0x0018 - 0x0000)
+struct FGeometryScriptPointPriorityOptions final
+{
+public:
+	TArray<float>                                 OptionalPriorityWeights;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bUniformSpacing;                                   // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryScriptPointPriorityOptions) == 0x000008, "Wrong alignment on FGeometryScriptPointPriorityOptions");
+static_assert(sizeof(FGeometryScriptPointPriorityOptions) == 0x000018, "Wrong size on FGeometryScriptPointPriorityOptions");
+static_assert(offsetof(FGeometryScriptPointPriorityOptions, OptionalPriorityWeights) == 0x000000, "Member 'FGeometryScriptPointPriorityOptions::OptionalPriorityWeights' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointPriorityOptions, bUniformSpacing) == 0x000010, "Member 'FGeometryScriptPointPriorityOptions::bUniformSpacing' has a wrong offset!");
+
+// ScriptStruct GeometryScriptingCore.GeometryScriptPointFlatteningOptions
+// 0x0070 (0x0070 - 0x0000)
+struct FGeometryScriptPointFlatteningOptions final
+{
+public:
+	struct FTransform                             Frame;                                             // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptAxis                           DropAxis;                                          // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryScriptPointFlatteningOptions) == 0x000010, "Wrong alignment on FGeometryScriptPointFlatteningOptions");
+static_assert(sizeof(FGeometryScriptPointFlatteningOptions) == 0x000070, "Wrong size on FGeometryScriptPointFlatteningOptions");
+static_assert(offsetof(FGeometryScriptPointFlatteningOptions, Frame) == 0x000000, "Member 'FGeometryScriptPointFlatteningOptions::Frame' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptPointFlatteningOptions, DropAxis) == 0x000060, "Member 'FGeometryScriptPointFlatteningOptions::DropAxis' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptOpenPathOffsetOptions
 // 0x0028 (0x0028 - 0x0000)
@@ -2486,10 +2821,10 @@ struct FGeometryScriptOpenPathOffsetOptions final
 {
 public:
 	EGeometryScriptPolyOffsetJoinType             JoinType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25ED[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        MiterLimit;                                        // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPathOffsetEndType              EndType;                                           // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25EE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        StepsPerRadianScale;                               // 0x0018(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        MaximumStepsPerRadian;                             // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2502,7 +2837,7 @@ static_assert(offsetof(FGeometryScriptOpenPathOffsetOptions, StepsPerRadianScale
 static_assert(offsetof(FGeometryScriptOpenPathOffsetOptions, MaximumStepsPerRadian) == 0x000020, "Member 'FGeometryScriptOpenPathOffsetOptions::MaximumStepsPerRadian' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptSplineSamplingOptions
-// 0x000C (0x000C - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FGeometryScriptSplineSamplingOptions final
 {
 public:
@@ -2510,14 +2845,20 @@ public:
 	float                                         ErrorTolerance;                                    // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptSampleSpacing                  SampleSpacing;                                     // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESplineCoordinateSpace                        CoordinateSpace;                                   // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25EF[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EGeometryScriptEvaluateSplineRange            RangeMethod;                                       // 0x000A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RangeStart;                                        // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RangeEnd;                                          // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptSplineSamplingOptions) == 0x000004, "Wrong alignment on FGeometryScriptSplineSamplingOptions");
-static_assert(sizeof(FGeometryScriptSplineSamplingOptions) == 0x00000C, "Wrong size on FGeometryScriptSplineSamplingOptions");
+static_assert(sizeof(FGeometryScriptSplineSamplingOptions) == 0x000014, "Wrong size on FGeometryScriptSplineSamplingOptions");
 static_assert(offsetof(FGeometryScriptSplineSamplingOptions, NumSamples) == 0x000000, "Member 'FGeometryScriptSplineSamplingOptions::NumSamples' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSplineSamplingOptions, ErrorTolerance) == 0x000004, "Member 'FGeometryScriptSplineSamplingOptions::ErrorTolerance' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSplineSamplingOptions, SampleSpacing) == 0x000008, "Member 'FGeometryScriptSplineSamplingOptions::SampleSpacing' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptSplineSamplingOptions, CoordinateSpace) == 0x000009, "Member 'FGeometryScriptSplineSamplingOptions::CoordinateSpace' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSplineSamplingOptions, RangeMethod) == 0x00000A, "Member 'FGeometryScriptSplineSamplingOptions::RangeMethod' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSplineSamplingOptions, RangeStart) == 0x00000C, "Member 'FGeometryScriptSplineSamplingOptions::RangeStart' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptSplineSamplingOptions, RangeEnd) == 0x000010, "Member 'FGeometryScriptSplineSamplingOptions::RangeEnd' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptCopyMeshFromComponentOptions
 // 0x000C (0x000C - 0x0000)
@@ -2526,13 +2867,15 @@ struct FGeometryScriptCopyMeshFromComponentOptions final
 public:
 	bool                                          bWantNormals;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWantTangents;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25F0[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bWantInstanceColors;                               // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshReadLOD             RequestedLOD;                                      // 0x0004(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGeometryScriptCopyMeshFromComponentOptions) == 0x000004, "Wrong alignment on FGeometryScriptCopyMeshFromComponentOptions");
 static_assert(sizeof(FGeometryScriptCopyMeshFromComponentOptions) == 0x00000C, "Wrong size on FGeometryScriptCopyMeshFromComponentOptions");
 static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantNormals) == 0x000000, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantNormals' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantTangents) == 0x000001, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantTangents' has a wrong offset!");
+static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, bWantInstanceColors) == 0x000002, "Member 'FGeometryScriptCopyMeshFromComponentOptions::bWantInstanceColors' has a wrong offset!");
 static_assert(offsetof(FGeometryScriptCopyMeshFromComponentOptions, RequestedLOD) == 0x000004, "Member 'FGeometryScriptCopyMeshFromComponentOptions::RequestedLOD' has a wrong offset!");
 
 // ScriptStruct GeometryScriptingCore.GeometryScriptSampleTextureOptions
@@ -2542,7 +2885,7 @@ struct FGeometryScriptSampleTextureOptions final
 public:
 	EGeometryScriptPixelSamplingMethod            SamplingMethod;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWrap;                                             // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25F1[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              UVScale;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              UVOffset;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

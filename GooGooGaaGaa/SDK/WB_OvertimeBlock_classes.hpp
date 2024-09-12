@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_OvertimeBlock.WB_OvertimeBlock_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_OvertimeBlock_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Image_0;                                           // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           ProgressBar_0;                                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        Percentage;                                        // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           ProgressBar_0;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        Percentage;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	float GetPercent_0();
@@ -39,10 +39,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_OvertimeBlock_C) == 0x000008, "Wrong alignment on UWB_OvertimeBlock_C");
-static_assert(sizeof(UWB_OvertimeBlock_C) == 0x0002D8, "Wrong size on UWB_OvertimeBlock_C");
-static_assert(offsetof(UWB_OvertimeBlock_C, Image_0) == 0x0002C0, "Member 'UWB_OvertimeBlock_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UWB_OvertimeBlock_C, ProgressBar_0) == 0x0002C8, "Member 'UWB_OvertimeBlock_C::ProgressBar_0' has a wrong offset!");
-static_assert(offsetof(UWB_OvertimeBlock_C, Percentage) == 0x0002D0, "Member 'UWB_OvertimeBlock_C::Percentage' has a wrong offset!");
+static_assert(sizeof(UWB_OvertimeBlock_C) == 0x0002F8, "Wrong size on UWB_OvertimeBlock_C");
+static_assert(offsetof(UWB_OvertimeBlock_C, Image_0) == 0x0002E0, "Member 'UWB_OvertimeBlock_C::Image_0' has a wrong offset!");
+static_assert(offsetof(UWB_OvertimeBlock_C, ProgressBar_0) == 0x0002E8, "Member 'UWB_OvertimeBlock_C::ProgressBar_0' has a wrong offset!");
+static_assert(offsetof(UWB_OvertimeBlock_C, Percentage) == 0x0002F0, "Member 'UWB_OvertimeBlock_C::Percentage' has a wrong offset!");
 
 }
 

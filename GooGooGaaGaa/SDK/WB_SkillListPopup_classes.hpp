@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESkillCategory_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ESkillCategory_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,33 +20,33 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkillListPopup.WB_SkillListPopup_C
-// 0x0030 (0x02F0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_SkillListPopup_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWrapBox*                               SkillListWrap;                                     // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         RetryCounter;                                      // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Team;                                              // 0x02DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	ESkillCategory                                SkillCategory;                                     // 0x02DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC7[0x2];                                     // 0x02DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_SkillSelectionBlock_C*              SkillSelectionBlock;                               // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            InitialFocusWidget;                                // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWrapBox*                               SkillListWrap;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         RetryCounter;                                      // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Team;                                              // 0x02FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	ESkillCategory                                SkillCategory;                                     // 0x02FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2FE[0x2];                                      // 0x02FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SkillSelectionBlock_C*              SkillSelectionBlock;                               // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            InitialFocusWidget;                                // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
 	void CheckIfPlayerWantsRandomSkills(class UWB_SelectionSkill_C* SelectionSkill, bool* ChangedToRandomSkills);
-	void Client_Select_Skill(class AB_PlayerState_C* Owning_Player, class UClass* Skill, ESkillCategory Param_SkillCategory);
+	void Client_Select_Skill(class AB_PlayerState_C* Owning_Player, class UClass* Skill, ESkillCategory SkillCategory_0);
 	void ExecuteUbergraph_WB_SkillListPopup(int32 EntryPoint);
-	void GetInitialFocusWidget(class UUserWidget** Param_InitialFocusWidget);
+	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0);
 	void OnApply();
 	void OnBack();
 	void OnSpecialAction();
 	void RefreshSkillList();
 	void RetryRefreshSkillList();
 	void SelectSkill(class UWB_SelectionSkill_C* SelectionSkill);
-	void SetTeamAndCategory(ETeamID SetTeam, ESkillCategory SetSkillCategory, class UWB_SkillSelectionBlock_C* Param_SkillSelectionBlock);
+	void SetTeamAndCategory(ETeamID SetTeam, ESkillCategory SetSkillCategory, class UWB_SkillSelectionBlock_C* SkillSelectionBlock_0);
 	void SetUpNavigation(int32 NumberOfColumns);
 	void SkillClicked(class UWB_SelectionSkill_C* SelectionSkill);
 	void UpdateMainScreenFocusWidget();
@@ -62,15 +62,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_SkillListPopup_C) == 0x000008, "Wrong alignment on UWB_SkillListPopup_C");
-static_assert(sizeof(UWB_SkillListPopup_C) == 0x0002F0, "Wrong size on UWB_SkillListPopup_C");
-static_assert(offsetof(UWB_SkillListPopup_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SkillListPopup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, Back) == 0x0002C8, "Member 'UWB_SkillListPopup_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, SkillListWrap) == 0x0002D0, "Member 'UWB_SkillListPopup_C::SkillListWrap' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, RetryCounter) == 0x0002D8, "Member 'UWB_SkillListPopup_C::RetryCounter' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, Team) == 0x0002DC, "Member 'UWB_SkillListPopup_C::Team' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, SkillCategory) == 0x0002DD, "Member 'UWB_SkillListPopup_C::SkillCategory' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, SkillSelectionBlock) == 0x0002E0, "Member 'UWB_SkillListPopup_C::SkillSelectionBlock' has a wrong offset!");
-static_assert(offsetof(UWB_SkillListPopup_C, InitialFocusWidget) == 0x0002E8, "Member 'UWB_SkillListPopup_C::InitialFocusWidget' has a wrong offset!");
+static_assert(sizeof(UWB_SkillListPopup_C) == 0x000310, "Wrong size on UWB_SkillListPopup_C");
+static_assert(offsetof(UWB_SkillListPopup_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SkillListPopup_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, Back) == 0x0002E8, "Member 'UWB_SkillListPopup_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, SkillListWrap) == 0x0002F0, "Member 'UWB_SkillListPopup_C::SkillListWrap' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, RetryCounter) == 0x0002F8, "Member 'UWB_SkillListPopup_C::RetryCounter' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, Team) == 0x0002FC, "Member 'UWB_SkillListPopup_C::Team' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, SkillCategory) == 0x0002FD, "Member 'UWB_SkillListPopup_C::SkillCategory' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, SkillSelectionBlock) == 0x000300, "Member 'UWB_SkillListPopup_C::SkillSelectionBlock' has a wrong offset!");
+static_assert(offsetof(UWB_SkillListPopup_C, InitialFocusWidget) == 0x000308, "Member 'UWB_SkillListPopup_C::InitialFocusWidget' has a wrong offset!");
 
 }
 

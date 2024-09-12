@@ -12,9 +12,9 @@
 
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "MediaAssets_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MediaAssets_structs.hpp"
 
 
 namespace SDK
@@ -27,7 +27,7 @@ class UMovieSceneMediaPlayerPropertySection final : public UMovieSceneSection
 public:
 	class UMediaSource*                           MediaSource;                                       // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3189[0x7];                                     // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -49,7 +49,7 @@ static_assert(offsetof(UMovieSceneMediaPlayerPropertySection, bLoop) == 0x0000F8
 class UMovieSceneMediaPlayerPropertyTrack final : public UMovieScenePropertyTrack
 {
 public:
-	uint8                                         Pad_318A[0x8];                                     // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -65,27 +65,27 @@ static_assert(alignof(UMovieSceneMediaPlayerPropertyTrack) == 0x000008, "Wrong a
 static_assert(sizeof(UMovieSceneMediaPlayerPropertyTrack) == 0x0000D0, "Wrong size on UMovieSceneMediaPlayerPropertyTrack");
 
 // Class MediaCompositing.MovieSceneMediaSection
-// 0x0160 (0x0250 - 0x00F0)
+// 0x0168 (0x0258 - 0x00F0)
 class UMovieSceneMediaSection final : public UMovieSceneSection
 {
 public:
 	class UMediaSource*                           MediaSource;                                       // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MediaSourceProxyIndex;                             // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLooping;                                          // 0x00FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_318B[0x3];                                     // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameNumber                           StartFrameOffset;                                  // 0x0100(0x0004)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_318C[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMediaTexture*                          MediaTexture;                                      // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMediaSoundComponent*                   MediaSoundComponent;                               // 0x0110(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseExternalMediaPlayer;                           // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_318D[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMediaPlayer*                           ExternalMediaPlayer;                               // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMediaSourceCacheSettings              CacheSettings;                                     // 0x0128(0x0008)(Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	int32                                         TextureIndex;                                      // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasMediaPlayerProxy;                              // 0x0134(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_318E[0x3];                                     // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneBoolChannel                 ChannelCanPlayerBeOpen;                            // 0x0138(0x0100)(NativeAccessSpecifierPublic)
-	struct FMovieSceneObjectBindingID             MediaSourceProxyBindingID;                         // 0x0238(0x0018)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneBoolChannel                 ChannelCanPlayerBeOpen;                            // 0x0138(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneObjectBindingID             MediaSourceProxyBindingID;                         // 0x0240(0x0018)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -98,7 +98,7 @@ public:
 	}
 };
 static_assert(alignof(UMovieSceneMediaSection) == 0x000008, "Wrong alignment on UMovieSceneMediaSection");
-static_assert(sizeof(UMovieSceneMediaSection) == 0x000250, "Wrong size on UMovieSceneMediaSection");
+static_assert(sizeof(UMovieSceneMediaSection) == 0x000258, "Wrong size on UMovieSceneMediaSection");
 static_assert(offsetof(UMovieSceneMediaSection, MediaSource) == 0x0000F0, "Member 'UMovieSceneMediaSection::MediaSource' has a wrong offset!");
 static_assert(offsetof(UMovieSceneMediaSection, MediaSourceProxyIndex) == 0x0000F8, "Member 'UMovieSceneMediaSection::MediaSourceProxyIndex' has a wrong offset!");
 static_assert(offsetof(UMovieSceneMediaSection, bLooping) == 0x0000FC, "Member 'UMovieSceneMediaSection::bLooping' has a wrong offset!");
@@ -111,14 +111,14 @@ static_assert(offsetof(UMovieSceneMediaSection, CacheSettings) == 0x000128, "Mem
 static_assert(offsetof(UMovieSceneMediaSection, TextureIndex) == 0x000130, "Member 'UMovieSceneMediaSection::TextureIndex' has a wrong offset!");
 static_assert(offsetof(UMovieSceneMediaSection, bHasMediaPlayerProxy) == 0x000134, "Member 'UMovieSceneMediaSection::bHasMediaPlayerProxy' has a wrong offset!");
 static_assert(offsetof(UMovieSceneMediaSection, ChannelCanPlayerBeOpen) == 0x000138, "Member 'UMovieSceneMediaSection::ChannelCanPlayerBeOpen' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, MediaSourceProxyBindingID) == 0x000238, "Member 'UMovieSceneMediaSection::MediaSourceProxyBindingID' has a wrong offset!");
+static_assert(offsetof(UMovieSceneMediaSection, MediaSourceProxyBindingID) == 0x000240, "Member 'UMovieSceneMediaSection::MediaSourceProxyBindingID' has a wrong offset!");
 
 // Class MediaCompositing.MovieSceneMediaTrack
 // 0x0018 (0x00B0 - 0x0098)
 class UMovieSceneMediaTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_318F[0x8];                                     // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneSection*>             MediaSections;                                     // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:

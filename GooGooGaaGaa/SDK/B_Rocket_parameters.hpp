@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,17 +29,17 @@ static_assert(sizeof(B_Rocket_C_StartFuse) == 0x000060, "Wrong size on B_Rocket_
 static_assert(offsetof(B_Rocket_C_StartFuse, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000000, "Member 'B_Rocket_C_StartFuse::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
 
 // Function B_Rocket.B_Rocket_C.ApplyExplosion
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct B_Rocket_C_ApplyExplosion final
 {
 public:
 	bool                                          CallFunc_IsPendingKill_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C40[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0008(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0008(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_Rocket_C_ApplyExplosion) == 0x000008, "Wrong alignment on B_Rocket_C_ApplyExplosion");
-static_assert(sizeof(B_Rocket_C_ApplyExplosion) == 0x0000F0, "Wrong size on B_Rocket_C_ApplyExplosion");
+static_assert(sizeof(B_Rocket_C_ApplyExplosion) == 0x000100, "Wrong size on B_Rocket_C_ApplyExplosion");
 static_assert(offsetof(B_Rocket_C_ApplyExplosion, CallFunc_IsPendingKill_ReturnValue) == 0x000000, "Member 'B_Rocket_C_ApplyExplosion::CallFunc_IsPendingKill_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Rocket_C_ApplyExplosion, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'B_Rocket_C_ApplyExplosion::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Rocket_C_ApplyExplosion, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x000008, "Member 'B_Rocket_C_ApplyExplosion::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
@@ -54,10 +54,10 @@ public:
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C41[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C42[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetPhysicsAngularVelocityInDegrees_ReturnValue; // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

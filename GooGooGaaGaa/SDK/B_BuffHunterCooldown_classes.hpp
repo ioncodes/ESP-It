@@ -22,7 +22,7 @@ namespace SDK
 class AB_BuffHunterCooldown_C final : public AB_Buff_C
 {
 public:
-	uint8                                         Pad_4ACD[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_BuffHunterCooldown_C;             // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UB_BaseSkill_C*                         MovementSkill;                                     // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_BaseSkill_C*                         UtilitySkill;                                      // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -30,11 +30,11 @@ public:
 
 public:
 	void BuffEnd();
-	void BuffStart(class AB_PlayerState_C* Param_PlayerState);
+	void BuffStart(class AB_PlayerState_C* PlayerState_0);
 	void ExecuteUbergraph_B_BuffHunterCooldown(int32 EntryPoint);
 	void RemoveEffectMulti();
 	void SetSkillCooldownValues(class UB_BaseSkill_C* MovementSkillObject, double MovementSkillCooldown, class UB_BaseSkill_C* UtilitySkillObject, double UtilitySkillCooldown);
-	void SetSkillCooldownValuesMulti(const class UB_BaseSkill_C* Param_MovementSkill, const double MovementSkillCooldown, class UB_BaseSkill_C* Param_UtilitySkill, double UtilitySkillCooldown);
+	void SetSkillCooldownValuesMulti(const class UB_BaseSkill_C* MovementSkill_0, const double MovementSkillCooldown, class UB_BaseSkill_C* UtilitySkill_0, double UtilitySkillCooldown);
 	void SpawnEffectMulti(class AB_Hunter_C* Hunter);
 
 public:

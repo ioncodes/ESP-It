@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "MasterServerPlugin_structs.hpp"
 #include "ClientQuest_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ERestCommonError_structs.hpp"
 #include "ClientQuestType_structs.hpp"
 #include "LowEntryJson_structs.hpp"
-#include "MasterServerPlugin_structs.hpp"
+#include "ERestCommonError_structs.hpp"
 
 
 namespace SDK::Params
@@ -64,7 +64,7 @@ struct B_ClientQuestInterface_C_BuildFinalizeQuestRequest final
 public:
 	int64                                         AccountQuestId;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         QuestID;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5862[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     Request;                                           // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     TempRequest;                                       // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -176,7 +176,7 @@ static_assert(offsetof(B_ClientQuestInterface_C_BuildRequestWeeklyFlagRequest, K
 static_assert(offsetof(B_ClientQuestInterface_C_BuildRequestWeeklyFlagRequest, CallFunc_BuildQuestCallUrl_Url) == 0x000070, "Member 'B_ClientQuestInterface_C_BuildRequestWeeklyFlagRequest::CallFunc_BuildQuestCallUrl_Url' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.ExecuteUbergraph_B_ClientQuestInterface
-// 0x0338 (0x0338 - 0x0000)
+// 0x0310 (0x0310 - 0x0000)
 struct B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface final
 {
 public:
@@ -186,7 +186,7 @@ public:
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_4;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetResponseContentAsString_ReturnValue;   // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetResponseCode_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5863[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -195,27 +195,27 @@ public:
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch;                 // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Object_GetInteger_ReturnValue;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_1;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5864[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_1;          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_2;               // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5865[0x1];                                     // 0x0053(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53[0x1];                                       // 0x0053(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_2;          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_3;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5866[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_3;          // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5867[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FClientQuest>                   CallFunc_ParseClientQuestsFromResponse_Quests;     // 0x0068(0x0010)(ReferenceParm)
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_3;                      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ERestCommonError                              CallFunc_ParseErrorCodeFromLEJsonObject_Result;    // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseErrorCodeFromLEJsonObject_ResultIsValid; // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5868[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_2;                      // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5869[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_1;                      // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request;                        // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseSuccessFromJsonResponse_Success;     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -223,7 +223,7 @@ public:
 	bool                                          CallFunc_ParseSuccessFromJsonResponse_Success_2;   // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseSuccessFromJsonResponse_Success_3;   // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseSuccessFromJsonResponse_Success_4;   // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_586A[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_RealWorldTime__GetCurrentOSTime_MilliSeconds; // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RealWorldTime__GetCurrentOSTime_Seconds;  // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RealWorldTime__GetCurrentOSTime_Minutes;  // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -237,29 +237,29 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Array_Get_Item;                           // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetQuestFromID_QuestFound;                // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_586B[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClientQuest                           CallFunc_GetQuestFromID_Quest;                     // 0x00F8(0x00F0)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_586C[0x3];                                     // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1ED[0x3];                                      // 0x01ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	const class UB_NewMasterServerManager_C*      K2Node_CustomEvent_NewMasterServerManager;         // 0x01F0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EQuestChangeReason                            K2Node_CustomEvent_Reason;                         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_586D[0x7];                                     // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         K2Node_CustomEvent_accountQuestId;                 // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_586E[0x4];                                     // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_ToString_ReturnValue;                     // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0230(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0248(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0260(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x02B0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0300(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0310(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0328(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0230(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0240(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0250(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0298(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x02E0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02F0(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0300(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface");
-static_assert(sizeof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface) == 0x000338, "Wrong size on B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface");
+static_assert(sizeof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface) == 0x000310, "Wrong size on B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface");
 static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, EntryPoint) == 0x000000, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, Temp_int_Array_Index_Variable) == 0x000004, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_CustomEvent_Request_5) == 0x000008, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_CustomEvent_Request_5' has a wrong offset!");
@@ -319,12 +319,12 @@ static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestIn
 static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_ToString_ReturnValue) == 0x000210, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_ToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000220, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Conv_StringToText_ReturnValue) == 0x000230, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000248, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_MakeStruct_FormatArgumentData) == 0x000260, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_MakeStruct_FormatArgumentData_1) == 0x0002B0, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_MakeArray_Array) == 0x000300, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Format_ReturnValue) == 0x000310, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Conv_TextToString_ReturnValue) == 0x000328, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000240, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_MakeStruct_FormatArgumentData) == 0x000250, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_MakeStruct_FormatArgumentData_1) == 0x000298, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, K2Node_MakeArray_Array) == 0x0002E0, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Format_ReturnValue) == 0x0002F0, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface, CallFunc_Conv_TextToString_ReturnValue) == 0x000300, "Member 'B_ClientQuestInterface_C_ExecuteUbergraph_B_ClientQuestInterface::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.FinalizeQuest
 // 0x0040 (0x0040 - 0x0000)
@@ -333,7 +333,7 @@ struct B_ClientQuestInterface_C_FinalizeQuest final
 public:
 	int64                                         AccountQuestId;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         QuestID;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_586F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     VARequest;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     CallFunc_BuildFinalizeQuestRequest_Request;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UVaRestRequestJSON* Request)> K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -349,63 +349,63 @@ static_assert(offsetof(B_ClientQuestInterface_C_FinalizeQuest, K2Node_CreateDele
 static_assert(offsetof(B_ClientQuestInterface_C_FinalizeQuest, CallFunc_GetURL_ReturnValue) == 0x000030, "Member 'B_ClientQuestInterface_C_FinalizeQuest::CallFunc_GetURL_ReturnValue' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.GamemodeNameHelper
-// 0x0220 (0x0220 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct B_ClientQuestInterface_C_GamemodeNameHelper final
 {
 public:
 	bool                                          Win;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5870[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 GameMode;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Value;                                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5871[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Text;                                              // 0x0018(0x0018)(Parm, OutParm)
-	bool                                          Temp_bool_Variable;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5872[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0038(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00A8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue_1;            // 0x00F8(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0120(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0170(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0190(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01F0(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0208(0x0018)()
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0018(0x0010)(Parm, OutParm)
+	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0030(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0090(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue_1;            // 0x00D8(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00F8(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0140(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0158(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01A0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01B0(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x01C0(0x0010)()
 };
 static_assert(alignof(B_ClientQuestInterface_C_GamemodeNameHelper) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_GamemodeNameHelper");
-static_assert(sizeof(B_ClientQuestInterface_C_GamemodeNameHelper) == 0x000220, "Wrong size on B_ClientQuestInterface_C_GamemodeNameHelper");
+static_assert(sizeof(B_ClientQuestInterface_C_GamemodeNameHelper) == 0x0001D0, "Wrong size on B_ClientQuestInterface_C_GamemodeNameHelper");
 static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, Win) == 0x000000, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::Win' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, GameMode) == 0x000008, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::GameMode' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, Value) == 0x000010, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::Value' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, Text) == 0x000018, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::Text' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, Temp_bool_Variable) == 0x000030, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_NameToText_ReturnValue) == 0x000038, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000050, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000A8, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_NameToText_ReturnValue_1) == 0x0000F8, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_NameToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeArray_Array) == 0x000110, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData_2) == 0x000120, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Format_ReturnValue) == 0x000170, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000188, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData_3) == 0x000190, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeArray_Array_1) == 0x0001E0, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Format_ReturnValue_1) == 0x0001F0, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_Select_Default) == 0x000208, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, Temp_bool_Variable) == 0x000028, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_NameToText_ReturnValue) == 0x000030, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000040, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData_1) == 0x000090, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_NameToText_ReturnValue_1) == 0x0000D8, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_NameToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeArray_Array) == 0x0000E8, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000F8, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Format_ReturnValue) == 0x000140, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000150, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeStruct_FormatArgumentData_3) == 0x000158, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_MakeArray_Array_1) == 0x0001A0, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, CallFunc_Format_ReturnValue_1) == 0x0001B0, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GamemodeNameHelper, K2Node_Select_Default) == 0x0001C0, "Member 'B_ClientQuestInterface_C_GamemodeNameHelper::K2Node_Select_Default' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.GetCachedQuests
 // 0x0010 (0x0010 - 0x0000)
 struct B_ClientQuestInterface_C_GetCachedQuests final
 {
 public:
-	TArray<struct FClientQuest>                   Param_CurrentAssignedQuests;                       // 0x0000(0x0010)(Parm, OutParm)
+	TArray<struct FClientQuest>                   CurrentAssignedQuests_0;                           // 0x0000(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(B_ClientQuestInterface_C_GetCachedQuests) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_GetCachedQuests");
 static_assert(sizeof(B_ClientQuestInterface_C_GetCachedQuests) == 0x000010, "Wrong size on B_ClientQuestInterface_C_GetCachedQuests");
-static_assert(offsetof(B_ClientQuestInterface_C_GetCachedQuests, Param_CurrentAssignedQuests) == 0x000000, "Member 'B_ClientQuestInterface_C_GetCachedQuests::Param_CurrentAssignedQuests' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetCachedQuests, CurrentAssignedQuests_0) == 0x000000, "Member 'B_ClientQuestInterface_C_GetCachedQuests::CurrentAssignedQuests_0' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.GetJsonValueObjectField
 // 0x0030 (0x0030 - 0x0000)
@@ -433,7 +433,7 @@ struct B_ClientQuestInterface_C_GetQuestFromID final
 public:
 	int64                                         AccountQuestId;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          QuestFound;                                        // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5873[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClientQuest                           Quest;                                             // 0x0010(0x00F0)(Parm, OutParm, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -457,134 +457,134 @@ static_assert(offsetof(B_ClientQuestInterface_C_GetQuestFromID, CallFunc_Less_In
 static_assert(offsetof(B_ClientQuestInterface_C_GetQuestFromID, CallFunc_EqualEqual_Int64Int64_ReturnValue) == 0x000201, "Member 'B_ClientQuestInterface_C_GetQuestFromID::CallFunc_EqualEqual_Int64Int64_ReturnValue' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.GetQuestName
-// 0x0538 (0x0538 - 0x0000)
+// 0x0420 (0x0420 - 0x0000)
 struct B_ClientQuestInterface_C_GetQuestName final
 {
 public:
 	int32                                         QuestID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MaxValue;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   QuestName;                                         // 0x0008(0x0018)(Parm, OutParm)
-	int32                                         Temp_int_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5874[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0028(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GamemodeNameHelper_Text;                  // 0x0098(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_1;                // 0x00D8(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_2;                // 0x00F0(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_3;                // 0x0108(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_4;                // 0x0120(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_5;                // 0x0138(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_6;                // 0x0150(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_7;                // 0x0168(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_8;                // 0x0180(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_9;                // 0x0198(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01C0(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0210(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0260(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0270(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0280(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0298(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GamemodeNameHelper_Text_10;               // 0x02B8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x02D0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0320(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_GamemodeNameHelper_Text_11;               // 0x0330(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0348(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_12;               // 0x0360(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_13;               // 0x0378(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_14;               // 0x0390(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_15;               // 0x03A8(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_16;               // 0x03C0(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_17;               // 0x03D8(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_18;               // 0x03F0(0x0018)()
-	class FText                                   CallFunc_GamemodeNameHelper_Text_19;               // 0x0408(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0430(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0480(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x04D0(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x04E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x04F0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0508(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0520(0x0018)()
+	class FText                                   QuestName;                                         // 0x0008(0x0010)(Parm, OutParm)
+	int32                                         Temp_int_Variable;                                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GamemodeNameHelper_Text;                  // 0x0080(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_1;                // 0x00B0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_2;                // 0x00C0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_3;                // 0x00D0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_4;                // 0x00E0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_5;                // 0x00F0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_6;                // 0x0100(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_7;                // 0x0110(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_8;                // 0x0120(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_9;                // 0x0130(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0150(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0198(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01E0(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x01F0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0200(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0210(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GamemodeNameHelper_Text_10;               // 0x0228(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0238(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0280(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_GamemodeNameHelper_Text_11;               // 0x0290(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x02A0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_12;               // 0x02B0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_13;               // 0x02C0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_14;               // 0x02D0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_15;               // 0x02E0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_16;               // 0x02F0(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_17;               // 0x0300(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_18;               // 0x0310(0x0010)()
+	class FText                                   CallFunc_GamemodeNameHelper_Text_19;               // 0x0320(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0330(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0338(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0340(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0388(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x03D0(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x03E0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x03F0(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0400(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0410(0x0010)()
 };
 static_assert(alignof(B_ClientQuestInterface_C_GetQuestName) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_GetQuestName");
-static_assert(sizeof(B_ClientQuestInterface_C_GetQuestName) == 0x000538, "Wrong size on B_ClientQuestInterface_C_GetQuestName");
+static_assert(sizeof(B_ClientQuestInterface_C_GetQuestName) == 0x000420, "Wrong size on B_ClientQuestInterface_C_GetQuestName");
 static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, QuestID) == 0x000000, "Member 'B_ClientQuestInterface_C_GetQuestName::QuestID' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, MaxValue) == 0x000004, "Member 'B_ClientQuestInterface_C_GetQuestName::MaxValue' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, QuestName) == 0x000008, "Member 'B_ClientQuestInterface_C_GetQuestName::QuestName' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, Temp_int_Variable) == 0x000020, "Member 'B_ClientQuestInterface_C_GetQuestName::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, Temp_text_Variable) == 0x000028, "Member 'B_ClientQuestInterface_C_GetQuestName::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000040, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text) == 0x000098, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array) == 0x0000B0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue) == 0x0000C0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_1) == 0x0000D8, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_2) == 0x0000F0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_2' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_3) == 0x000108, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_3' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_4) == 0x000120, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_4' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_5) == 0x000138, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_5' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_6) == 0x000150, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_6' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_7) == 0x000168, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_7' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_8) == 0x000180, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_8' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_9) == 0x000198, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_9' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0001B0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x0001B8, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001C0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_2) == 0x000210, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_1) == 0x000260, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_2) == 0x000270, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_1) == 0x000280, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_2) == 0x000298, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x0002B0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_10) == 0x0002B8, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_10' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_3) == 0x0002D0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_3) == 0x000320, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_11) == 0x000330, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_11' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_3) == 0x000348, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_12) == 0x000360, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_12' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_13) == 0x000378, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_13' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_14) == 0x000390, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_14' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_15) == 0x0003A8, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_15' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_16) == 0x0003C0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_16' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_17) == 0x0003D8, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_17' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_18) == 0x0003F0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_18' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_19) == 0x000408, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_19' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000420, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x000428, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_4) == 0x000430, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_5) == 0x000480, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_4) == 0x0004D0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_5) == 0x0004E0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_4) == 0x0004F0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_5) == 0x000508, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_Select_Default) == 0x000520, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, Temp_int_Variable) == 0x000018, "Member 'B_ClientQuestInterface_C_GetQuestName::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, Temp_text_Variable) == 0x000020, "Member 'B_ClientQuestInterface_C_GetQuestName::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000030, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text) == 0x000080, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array) == 0x000090, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue) == 0x0000A0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_1) == 0x0000B0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_2) == 0x0000C0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_2' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_3) == 0x0000D0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_3' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_4) == 0x0000E0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_4' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_5) == 0x0000F0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_5' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_6) == 0x000100, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_6' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_7) == 0x000110, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_7' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_8) == 0x000120, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_8' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_9) == 0x000130, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_9' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000140, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000148, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_1) == 0x000150, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_2) == 0x000198, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_1) == 0x0001E0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_2) == 0x0001F0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_1) == 0x000200, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_2) == 0x000210, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x000220, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_10) == 0x000228, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_10' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_3) == 0x000238, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_3) == 0x000280, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_11) == 0x000290, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_11' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_3) == 0x0002A0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_12) == 0x0002B0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_12' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_13) == 0x0002C0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_13' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_14) == 0x0002D0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_14' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_15) == 0x0002E0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_15' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_16) == 0x0002F0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_16' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_17) == 0x000300, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_17' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_18) == 0x000310, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_18' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_GamemodeNameHelper_Text_19) == 0x000320, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_GamemodeNameHelper_Text_19' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000330, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x000338, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_4) == 0x000340, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeStruct_FormatArgumentData_5) == 0x000388, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_4) == 0x0003D0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_MakeArray_Array_5) == 0x0003E0, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_MakeArray_Array_5' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_4) == 0x0003F0, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, CallFunc_Format_ReturnValue_5) == 0x000400, "Member 'B_ClientQuestInterface_C_GetQuestName::CallFunc_Format_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_GetQuestName, K2Node_Select_Default) == 0x000410, "Member 'B_ClientQuestInterface_C_GetQuestName::K2Node_Select_Default' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.HandleInvalidRequestActiveQuests
-// 0x0088 (0x0088 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5875[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0070(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0068(0x0010)()
 };
 static_assert(alignof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests");
-static_assert(sizeof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests) == 0x000088, "Wrong size on B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests");
+static_assert(sizeof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests) == 0x000078, "Wrong size on B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests");
 static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, Code) == 0x000000, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::Code' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000008, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, K2Node_MakeArray_Array) == 0x000060, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, CallFunc_Format_ReturnValue) == 0x000070, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, K2Node_MakeArray_Array) == 0x000058, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests, CallFunc_Format_ReturnValue) == 0x000068, "Member 'B_ClientQuestInterface_C_HandleInvalidRequestActiveQuests::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.HandleQuestDidChange
 // 0x0010 (0x0010 - 0x0000)
@@ -592,7 +592,7 @@ struct B_ClientQuestInterface_C_HandleQuestDidChange final
 {
 public:
 	EQuestChangeReason                            Reason;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5876[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         AccountQuestId;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClientQuestInterface_C_HandleQuestDidChange) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_HandleQuestDidChange");
@@ -605,11 +605,11 @@ static_assert(offsetof(B_ClientQuestInterface_C_HandleQuestDidChange, AccountQue
 struct B_ClientQuestInterface_C_Init final
 {
 public:
-	const class UB_NewMasterServerManager_C*      Param_NewMasterServerManager;                      // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	const class UB_NewMasterServerManager_C*      NewMasterServerManager_0;                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClientQuestInterface_C_Init) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_Init");
 static_assert(sizeof(B_ClientQuestInterface_C_Init) == 0x000008, "Wrong size on B_ClientQuestInterface_C_Init");
-static_assert(offsetof(B_ClientQuestInterface_C_Init, Param_NewMasterServerManager) == 0x000000, "Member 'B_ClientQuestInterface_C_Init::Param_NewMasterServerManager' has a wrong offset!");
+static_assert(offsetof(B_ClientQuestInterface_C_Init, NewMasterServerManager_0) == 0x000000, "Member 'B_ClientQuestInterface_C_Init::NewMasterServerManager_0' has a wrong offset!");
 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.OnCompleteQuestRequestComplete
 // 0x0008 (0x0008 - 0x0000)
@@ -697,63 +697,63 @@ public:
 	struct FClientQuest                           Quest;                                             // 0x0008(0x00F0)(Parm, OutParm, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x00F8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SuccessResult;                                     // 0x00F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5877[0x6];                                     // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClientQuest                           ResultQuest;                                       // 0x0100(0x00F0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result;           // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_1;         // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetString_Branch;                   // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5878[0x7];                                     // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Value_GetString_ReturnValue;              // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetString_Branch_1;                 // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5879[0x7];                                     // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Value_GetString_ReturnValue_1;            // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587A[0x6];                                     // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_232[0x6];                                      // 0x0232(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_2;         // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_3;         // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetInteger_Branch;                  // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587B[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_249[0x3];                                      // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Value_GetInteger_ReturnValue;             // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetInteger_Branch_1;                // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587C[0x3];                                     // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Value_GetInteger_ReturnValue_1;           // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587D[0x6];                                     // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_4;         // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_5;         // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetBoolean_Branch;                  // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Value_GetBoolean_ReturnValue;             // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetString_Branch_2;                 // 0x0272(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587E[0x5];                                     // 0x0273(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_273[0x5];                                      // 0x0273(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Value_GetString_ReturnValue_2;            // 0x0278(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_5;                    // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_587F[0x6];                                     // 0x028A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28A[0x6];                                      // 0x028A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_6;         // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_7;         // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetLong_Branch;                     // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5880[0x7];                                     // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Value_GetLong_ReturnValue;                // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetString_Branch_3;                 // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5881[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Value_GetString_ReturnValue_3;            // 0x02B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_6;                    // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_7;                    // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5882[0x6];                                     // 0x02CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CA[0x6];                                      // 0x02CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_8;         // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonValue*                     CallFunc_GetJsonValueObjectField_Result_9;         // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetInteger_Branch_2;                // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5883[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E1[0x3];                                      // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Value_GetInteger_ReturnValue_2;           // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonTypeFound                        CallFunc_Value_GetString_Branch_4;                 // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5884[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Value_GetString_ReturnValue_4;            // 0x02F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_8;                    // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EClientQuestType                              CallFunc_ParseQuestTypeEnum_Result;                // 0x0301(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_9;                    // 0x0302(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5885[0x5];                                     // 0x0303(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303[0x5];                                      // 0x0303(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClientQuest                           K2Node_MakeStruct_ClientQuest;                     // 0x0308(0x00F0)(HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClientQuestInterface_C_ParseClientQuestFromJsonObject) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_ParseClientQuestFromJsonObject");
@@ -815,22 +815,22 @@ public:
 	TArray<struct FClientQuest>                   Quests;                                            // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FClientQuest>                   TempLocalQuests;                                   // 0x0018(0x0010)(Edit, BlueprintVisible)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetJsonArray_Branch;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5886[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonArray*                     CallFunc_Object_GetJsonArray_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5887[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueFound                       CallFunc_Array_GetJsonValue_Branch;                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5888[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonValue*                     CallFunc_Array_GetJsonValue_ReturnValue;           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FClientQuest                           CallFunc_ParseClientQuestFromJsonObject_Quest;     // 0x0050(0x00F0)(HasGetValueTypeHash)
 	bool                                          CallFunc_ParseClientQuestFromJsonObject_Success;   // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5889[0x2];                                     // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_588A[0x3];                                     // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ClientQuestInterface_C_ParseClientQuestsFromResponse) == 0x000008, "Wrong alignment on B_ClientQuestInterface_C_ParseClientQuestsFromResponse");

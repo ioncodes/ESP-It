@@ -91,6 +91,20 @@ void ABP_SwitchablePalaceDoor_C::OpenDoor(bool Fast)
 }
 
 
+// Function BP_SwitchablePalaceDoor.BP_SwitchablePalaceDoor_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SwitchablePalaceDoor_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SwitchablePalaceDoor_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SwitchablePalaceDoor.BP_SwitchablePalaceDoor_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

@@ -17,6 +17,57 @@
 namespace SDK
 {
 
+// Function AudioSynesthesia.ConstantQAnalyzer.GetCenterFrequencies
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<float>                           OutCenterFrequencies                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UConstantQAnalyzer::GetCenterFrequencies(TArray<float>* OutCenterFrequencies)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConstantQAnalyzer", "GetCenterFrequencies");
+
+	Params::ConstantQAnalyzer_GetCenterFrequencies Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutCenterFrequencies != nullptr)
+		*OutCenterFrequencies = std::move(Parms.OutCenterFrequencies);
+}
+
+
+// Function AudioSynesthesia.ConstantQAnalyzer.GetNumCenterFrequencies
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const int32 UConstantQAnalyzer::GetNumCenterFrequencies() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConstantQAnalyzer", "GetNumCenterFrequencies");
+
+	Params::ConstantQAnalyzer_GetNumCenterFrequencies Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AudioSynesthesia.ConstantQNRT.GetChannelConstantQAtTime
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

@@ -20,19 +20,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_UnlockBar.WB_UnlockBar_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_UnlockBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             RewardsText;                                       // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         UnlockList;                                        // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ShownSkinUnlocks;                                  // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShownAdditionalSkinUnlocks;                        // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShownDropReward;                                   // 0x02DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShownAdditionRecipeUnlocks;                        // 0x02DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasMaterialDrop;                                   // 0x02DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowExtraUnlocks;                                  // 0x02DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             RewardsText;                                       // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         UnlockList;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ShownSkinUnlocks;                                  // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShownAdditionalSkinUnlocks;                        // 0x02F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShownDropReward;                                   // 0x02FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShownAdditionRecipeUnlocks;                        // 0x02FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasMaterialDrop;                                   // 0x02FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowExtraUnlocks;                                  // 0x02FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Add_Skin_Unlocks(TArray<int32>& ItemIds, int32 StartIndex, bool ClearList);
@@ -57,16 +57,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_UnlockBar_C) == 0x000008, "Wrong alignment on UWB_UnlockBar_C");
-static_assert(sizeof(UWB_UnlockBar_C) == 0x0002E0, "Wrong size on UWB_UnlockBar_C");
-static_assert(offsetof(UWB_UnlockBar_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_UnlockBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, RewardsText) == 0x0002C8, "Member 'UWB_UnlockBar_C::RewardsText' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, UnlockList) == 0x0002D0, "Member 'UWB_UnlockBar_C::UnlockList' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, ShownSkinUnlocks) == 0x0002D8, "Member 'UWB_UnlockBar_C::ShownSkinUnlocks' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, ShownAdditionalSkinUnlocks) == 0x0002D9, "Member 'UWB_UnlockBar_C::ShownAdditionalSkinUnlocks' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, ShownDropReward) == 0x0002DA, "Member 'UWB_UnlockBar_C::ShownDropReward' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, ShownAdditionRecipeUnlocks) == 0x0002DB, "Member 'UWB_UnlockBar_C::ShownAdditionRecipeUnlocks' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, HasMaterialDrop) == 0x0002DC, "Member 'UWB_UnlockBar_C::HasMaterialDrop' has a wrong offset!");
-static_assert(offsetof(UWB_UnlockBar_C, ShowExtraUnlocks) == 0x0002DD, "Member 'UWB_UnlockBar_C::ShowExtraUnlocks' has a wrong offset!");
+static_assert(sizeof(UWB_UnlockBar_C) == 0x000300, "Wrong size on UWB_UnlockBar_C");
+static_assert(offsetof(UWB_UnlockBar_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_UnlockBar_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, RewardsText) == 0x0002E8, "Member 'UWB_UnlockBar_C::RewardsText' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, UnlockList) == 0x0002F0, "Member 'UWB_UnlockBar_C::UnlockList' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, ShownSkinUnlocks) == 0x0002F8, "Member 'UWB_UnlockBar_C::ShownSkinUnlocks' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, ShownAdditionalSkinUnlocks) == 0x0002F9, "Member 'UWB_UnlockBar_C::ShownAdditionalSkinUnlocks' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, ShownDropReward) == 0x0002FA, "Member 'UWB_UnlockBar_C::ShownDropReward' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, ShownAdditionRecipeUnlocks) == 0x0002FB, "Member 'UWB_UnlockBar_C::ShownAdditionRecipeUnlocks' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, HasMaterialDrop) == 0x0002FC, "Member 'UWB_UnlockBar_C::HasMaterialDrop' has a wrong offset!");
+static_assert(offsetof(UWB_UnlockBar_C, ShowExtraUnlocks) == 0x0002FD, "Member 'UWB_UnlockBar_C::ShowExtraUnlocks' has a wrong offset!");
 
 }
 

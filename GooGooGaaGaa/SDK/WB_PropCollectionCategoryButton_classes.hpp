@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_PropCategory_structs.hpp"
+#include "Engine_structs.hpp"
 #include "WB_CategoryButton_classes.hpp"
 
 
@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PropCollectionCategoryButton.WB_PropCollectionCategoryButton_C
-// 0x0048 (0x0328 - 0x02E0)
+// 0x0048 (0x0348 - 0x0300)
 class UWB_PropCollectionCategoryButton_C final : public UWB_CategoryButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PropCollectionCategoryButton_C;  // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Background;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                UpdateCategory;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTexture2D*                             ImageTexture;                                      // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSelected;                                        // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4785[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnUpdateCategory;                                  // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	E_PropCategory                                Category;                                          // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PropCollectionCategoryButton_C;  // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Background;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                UpdateCategory;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTexture2D*                             ImageTexture;                                      // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSelected;                                        // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnUpdateCategory;                                  // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	E_PropCategory                                Category;                                          // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnUpdateCategory__DelegateSignature(class UWB_CategoryButton_C* Button);
@@ -51,15 +51,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_PropCollectionCategoryButton_C) == 0x000008, "Wrong alignment on UWB_PropCollectionCategoryButton_C");
-static_assert(sizeof(UWB_PropCollectionCategoryButton_C) == 0x000328, "Wrong size on UWB_PropCollectionCategoryButton_C");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, UberGraphFrame_WB_PropCollectionCategoryButton_C) == 0x0002E0, "Member 'UWB_PropCollectionCategoryButton_C::UberGraphFrame_WB_PropCollectionCategoryButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, Background) == 0x0002E8, "Member 'UWB_PropCollectionCategoryButton_C::Background' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, Icon) == 0x0002F0, "Member 'UWB_PropCollectionCategoryButton_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, UpdateCategory) == 0x0002F8, "Member 'UWB_PropCollectionCategoryButton_C::UpdateCategory' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, ImageTexture) == 0x000300, "Member 'UWB_PropCollectionCategoryButton_C::ImageTexture' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, IsSelected) == 0x000308, "Member 'UWB_PropCollectionCategoryButton_C::IsSelected' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, OnUpdateCategory) == 0x000310, "Member 'UWB_PropCollectionCategoryButton_C::OnUpdateCategory' has a wrong offset!");
-static_assert(offsetof(UWB_PropCollectionCategoryButton_C, Category) == 0x000320, "Member 'UWB_PropCollectionCategoryButton_C::Category' has a wrong offset!");
+static_assert(sizeof(UWB_PropCollectionCategoryButton_C) == 0x000348, "Wrong size on UWB_PropCollectionCategoryButton_C");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, UberGraphFrame_WB_PropCollectionCategoryButton_C) == 0x000300, "Member 'UWB_PropCollectionCategoryButton_C::UberGraphFrame_WB_PropCollectionCategoryButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, Background) == 0x000308, "Member 'UWB_PropCollectionCategoryButton_C::Background' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, Icon) == 0x000310, "Member 'UWB_PropCollectionCategoryButton_C::Icon' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, UpdateCategory) == 0x000318, "Member 'UWB_PropCollectionCategoryButton_C::UpdateCategory' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, ImageTexture) == 0x000320, "Member 'UWB_PropCollectionCategoryButton_C::ImageTexture' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, IsSelected) == 0x000328, "Member 'UWB_PropCollectionCategoryButton_C::IsSelected' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, OnUpdateCategory) == 0x000330, "Member 'UWB_PropCollectionCategoryButton_C::OnUpdateCategory' has a wrong offset!");
+static_assert(offsetof(UWB_PropCollectionCategoryButton_C, Category) == 0x000340, "Member 'UWB_PropCollectionCategoryButton_C::Category' has a wrong offset!");
 
 }
 

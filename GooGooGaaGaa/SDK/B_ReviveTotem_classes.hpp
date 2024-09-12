@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ReviveTotem.B_ReviveTotem_C
-// 0x0070 (0x0308 - 0x0298)
+// 0x0070 (0x0300 - 0x0290)
 class AB_ReviveTotem_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_ReviveTotem;                                    // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Mesh;                                              // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Cat;                                               // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       WitchCheckerSphere;                                // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDecalComponent*                        Decal;                                             // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumberOfWitches;                                   // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D54[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        WitchInCircleTime;                                 // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        WitchInCircleTimeNeeded;                           // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VisualCirclelFill;                                 // 0x02E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DecalMaterial;                                     // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_ObjectiveKillSpectator_C*            Specator;                                          // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           RespawningState;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_ReviveTotem;                                    // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Mesh;                                              // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Cat;                                               // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       WitchCheckerSphere;                                // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        Decal;                                             // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumberOfWitches;                                   // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        WitchInCircleTime;                                 // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WitchInCircleTimeNeeded;                           // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VisualCirclelFill;                                 // 0x02E0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DecalMaterial;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_ObjectiveKillSpectator_C*            Specator;                                          // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           RespawningState;                                   // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -58,21 +58,21 @@ public:
 	}
 };
 static_assert(alignof(AB_ReviveTotem_C) == 0x000008, "Wrong alignment on AB_ReviveTotem_C");
-static_assert(sizeof(AB_ReviveTotem_C) == 0x000308, "Wrong size on AB_ReviveTotem_C");
-static_assert(offsetof(AB_ReviveTotem_C, UberGraphFrame) == 0x000298, "Member 'AB_ReviveTotem_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, NS_ReviveTotem) == 0x0002A0, "Member 'AB_ReviveTotem_C::NS_ReviveTotem' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, Mesh) == 0x0002A8, "Member 'AB_ReviveTotem_C::Mesh' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, Cat) == 0x0002B0, "Member 'AB_ReviveTotem_C::Cat' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, WitchCheckerSphere) == 0x0002B8, "Member 'AB_ReviveTotem_C::WitchCheckerSphere' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, Decal) == 0x0002C0, "Member 'AB_ReviveTotem_C::Decal' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, DefaultSceneRoot) == 0x0002C8, "Member 'AB_ReviveTotem_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, NumberOfWitches) == 0x0002D0, "Member 'AB_ReviveTotem_C::NumberOfWitches' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, WitchInCircleTime) == 0x0002D8, "Member 'AB_ReviveTotem_C::WitchInCircleTime' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, WitchInCircleTimeNeeded) == 0x0002E0, "Member 'AB_ReviveTotem_C::WitchInCircleTimeNeeded' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, VisualCirclelFill) == 0x0002E8, "Member 'AB_ReviveTotem_C::VisualCirclelFill' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, DecalMaterial) == 0x0002F0, "Member 'AB_ReviveTotem_C::DecalMaterial' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, Specator) == 0x0002F8, "Member 'AB_ReviveTotem_C::Specator' has a wrong offset!");
-static_assert(offsetof(AB_ReviveTotem_C, RespawningState) == 0x000300, "Member 'AB_ReviveTotem_C::RespawningState' has a wrong offset!");
+static_assert(sizeof(AB_ReviveTotem_C) == 0x000300, "Wrong size on AB_ReviveTotem_C");
+static_assert(offsetof(AB_ReviveTotem_C, UberGraphFrame) == 0x000290, "Member 'AB_ReviveTotem_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, NS_ReviveTotem) == 0x000298, "Member 'AB_ReviveTotem_C::NS_ReviveTotem' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, Mesh) == 0x0002A0, "Member 'AB_ReviveTotem_C::Mesh' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, Cat) == 0x0002A8, "Member 'AB_ReviveTotem_C::Cat' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, WitchCheckerSphere) == 0x0002B0, "Member 'AB_ReviveTotem_C::WitchCheckerSphere' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, Decal) == 0x0002B8, "Member 'AB_ReviveTotem_C::Decal' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, DefaultSceneRoot) == 0x0002C0, "Member 'AB_ReviveTotem_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, NumberOfWitches) == 0x0002C8, "Member 'AB_ReviveTotem_C::NumberOfWitches' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, WitchInCircleTime) == 0x0002D0, "Member 'AB_ReviveTotem_C::WitchInCircleTime' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, WitchInCircleTimeNeeded) == 0x0002D8, "Member 'AB_ReviveTotem_C::WitchInCircleTimeNeeded' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, VisualCirclelFill) == 0x0002E0, "Member 'AB_ReviveTotem_C::VisualCirclelFill' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, DecalMaterial) == 0x0002E8, "Member 'AB_ReviveTotem_C::DecalMaterial' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, Specator) == 0x0002F0, "Member 'AB_ReviveTotem_C::Specator' has a wrong offset!");
+static_assert(offsetof(AB_ReviveTotem_C, RespawningState) == 0x0002F8, "Member 'AB_ReviveTotem_C::RespawningState' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "LowEntryExtendedStandardLibrary_structs.hpp"
 
 
@@ -26,11 +26,11 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CollectTask_C*                       K2Node_DynamicCast_AsB_Collect_Task;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C8E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Spectator_C*                         K2Node_DynamicCast_AsB_Spectator;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C8F[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -51,33 +51,33 @@ struct B_WitchSkillStudyInteractionActor_C_Highlight final
 {
 public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C90[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMeshComponent*                   CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C91[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C92[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C93[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_WitchSkillStudyTask_C*               K2Node_DynamicCast_AsB_Witch_Skill_Study_Task;     // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C94[0x6];                                     // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_WitchSkillStudyField_C*              K2Node_DynamicCast_AsB_Witch_Skill_Study_Field;    // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C95[0x3];                                     // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryExtendedStandardLibrary1to10other    CallFunc_CaseSwitchObject_Branch;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C96[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C97[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_WitchSkillStudyTask_C*               K2Node_DynamicCast_AsB_Witch_Skill_Study_Task_1;   // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C98[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_WitchSkillStudyField_C*              K2Node_DynamicCast_AsB_Witch_Skill_Study_Field_1;  // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -108,7 +108,7 @@ static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_Highlight, K2Node_Dyn
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_Highlight, CallFunc_IsValid_ReturnValue) == 0x0000E9, "Member 'B_WitchSkillStudyInteractionActor_C_Highlight::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function B_WitchSkillStudyInteractionActor.B_WitchSkillStudyInteractionActor_C.MoveDummyIntoPlayerView
-// 0x03A0 (0x03A0 - 0x0000)
+// 0x03C0 (0x03C0 - 0x0000)
 struct B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView final
 {
 public:
@@ -116,10 +116,10 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Task_C*                              K2Node_DynamicCast_AsB_Task;                       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C99[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Spectator_C*                         K2Node_DynamicCast_AsB_Spectator;                  // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9A[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -127,19 +127,19 @@ public:
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0100(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0178(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9B[0x7];                                     // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_WitchSkillStudyDummy_C*              CallFunc_FinishSpawningActor_ReturnValue;          // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0288(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue_1;         // 0x02A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_1;     // 0x02B8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0178(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_WitchSkillStudyDummy_C*              CallFunc_FinishSpawningActor_ReturnValue;          // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue_1;         // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_1;     // 0x02C8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView) == 0x000010, "Wrong alignment on B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView");
-static_assert(sizeof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView) == 0x0003A0, "Wrong size on B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView");
+static_assert(sizeof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView) == 0x0003C0, "Wrong size on B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView");
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, PlayerFaceLocation) == 0x000000, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::PlayerFaceLocation' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, K2Node_DynamicCast_AsB_Task) == 0x000020, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::K2Node_DynamicCast_AsB_Task' has a wrong offset!");
@@ -154,14 +154,14 @@ static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerVi
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_MakeTransform_ReturnValue) == 0x000100, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_FindLookAtRotation_ReturnValue) == 0x000160, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000178, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, K2Node_DynamicCast_AsB_Hunter) == 0x000260, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::K2Node_DynamicCast_AsB_Hunter' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, K2Node_DynamicCast_bSuccess_2) == 0x000268, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_GetOwner_ReturnValue_1) == 0x000270, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000278, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_FinishSpawningActor_ReturnValue) == 0x000280, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000288, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_FindLookAtRotation_ReturnValue_1) == 0x0002A0, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_FindLookAtRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_K2_SetWorldRotation_SweepHitResult_1) == 0x0002B8, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_K2_SetWorldRotation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, K2Node_DynamicCast_AsB_Hunter) == 0x000270, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::K2Node_DynamicCast_AsB_Hunter' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, K2Node_DynamicCast_bSuccess_2) == 0x000278, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_GetOwner_ReturnValue_1) == 0x000280, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000288, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_FinishSpawningActor_ReturnValue) == 0x000290, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000298, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_FindLookAtRotation_ReturnValue_1) == 0x0002B0, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_FindLookAtRotation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView, CallFunc_K2_SetWorldRotation_SweepHitResult_1) == 0x0002C8, "Member 'B_WitchSkillStudyInteractionActor_C_MoveDummyIntoPlayerView::CallFunc_K2_SetWorldRotation_SweepHitResult_1' has a wrong offset!");
 
 // Function B_WitchSkillStudyInteractionActor.B_WitchSkillStudyInteractionActor_C.RemoveHighlight
 // 0x0020 (0x0020 - 0x0000)
@@ -194,10 +194,10 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CollectTask_C*                       K2Node_DynamicCast_AsB_Collect_Task;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9C[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_WitchSkillStudyField_C*              K2Node_DynamicCast_AsB_Witch_Skill_Study_Field;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9D[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchSkillStudyInteractionActor_C_UserConstructionScript) == 0x000008, "Wrong alignment on B_WitchSkillStudyInteractionActor_C_UserConstructionScript");

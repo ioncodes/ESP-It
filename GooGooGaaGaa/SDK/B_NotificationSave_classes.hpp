@@ -26,12 +26,13 @@ public:
 	int32                                         LastShownWhatsNew;                                 // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         LastShownSurvey;                                   // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         LastShownDataPrivacy;                              // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3510[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 LastObjectiveMatchGUID;                            // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          bWatchedObjectiveTutorial;                         // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ClickedTutorial;                                   // 0x00E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HideCustomGameWarning;                             // 0x00EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HideRegionSpecificWarning;                         // 0x00EB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TradingIsPrivateShown;                             // 0x00EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -55,6 +56,7 @@ static_assert(offsetof(UB_NotificationSave_C, bWatchedObjectiveTutorial) == 0x00
 static_assert(offsetof(UB_NotificationSave_C, ClickedTutorial) == 0x0000E9, "Member 'UB_NotificationSave_C::ClickedTutorial' has a wrong offset!");
 static_assert(offsetof(UB_NotificationSave_C, HideCustomGameWarning) == 0x0000EA, "Member 'UB_NotificationSave_C::HideCustomGameWarning' has a wrong offset!");
 static_assert(offsetof(UB_NotificationSave_C, HideRegionSpecificWarning) == 0x0000EB, "Member 'UB_NotificationSave_C::HideRegionSpecificWarning' has a wrong offset!");
+static_assert(offsetof(UB_NotificationSave_C, TradingIsPrivateShown) == 0x0000EC, "Member 'UB_NotificationSave_C::TradingIsPrivateShown' has a wrong offset!");
 
 }
 

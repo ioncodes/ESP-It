@@ -22,14 +22,14 @@ class UB_MapCycleObject_C final : public USaveGame
 {
 public:
 	bool                                          RandomOrder;                                       // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3805[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         FileNames;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FString                                 MapCycleName;                                      // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void AddItemToMapCycle(const class FString& Filename, int32 AllowedAmountOfMaps, bool* Success);
 	void ClearMapCycle();
-	bool MapCycleContainsItem(const class FString& Filename, int32* Param_Index);
+	bool MapCycleContainsItem(const class FString& Filename, int32* Index_0);
 	void MapCycleIsEmpty(bool* IsEmpty);
 	void RemoveMapFromMapCycle(int32 IndexToRemove);
 

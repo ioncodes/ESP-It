@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SequencerScripting_structs.hpp"
 #include "MovieScene_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SequencerScripting_structs.hpp"
+#include "Engine_structs.hpp"
 #include "MovieSceneTracks_structs.hpp"
 
 
@@ -27,8 +27,8 @@ struct MovieSceneScriptingActorReferenceKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CF9[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingActorReferenceKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingActorReferenceKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingActorReferenceKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingActorReferenceKey_SetTime");
@@ -52,8 +52,8 @@ static_assert(offsetof(MovieSceneScriptingActorReferenceKey_SetValue, InNewValue
 struct MovieSceneScriptingActorReferenceKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CFA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingActorReferenceKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingActorReferenceKey_GetTime");
@@ -80,8 +80,8 @@ public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneObjectBindingID             NewValue;                                          // 0x0004(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CFC[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingActorReferenceKey*  ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingActorReferenceChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingActorReferenceChannel_AddKey");
@@ -136,6 +136,19 @@ static_assert(alignof(MovieSceneScriptingActorReferenceChannel_GetKeys) == 0x000
 static_assert(sizeof(MovieSceneScriptingActorReferenceChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingActorReferenceChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingActorReferenceChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingActorReferenceChannel_GetKeys::ReturnValue' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneScriptingActorReferenceChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingActorReferenceChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingActorReferenceChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingActorReferenceChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingActorReferenceChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingActorReferenceChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingActorReferenceChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingActorReferenceChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingActorReferenceChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingActorReferenceChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneScriptingActorReferenceChannel.HasDefault
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneScriptingActorReferenceChannel_HasDefault final
@@ -154,8 +167,8 @@ struct MovieSceneScriptingBoolKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CFE[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingBoolKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingBoolKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingBoolKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingBoolKey_SetTime");
@@ -179,8 +192,8 @@ static_assert(offsetof(MovieSceneScriptingBoolKey_SetValue, InNewValue) == 0x000
 struct MovieSceneScriptingBoolKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CFF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingBoolKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingBoolKey_GetTime");
@@ -206,10 +219,10 @@ struct MovieSceneScriptingBoolChannel_AddKey final
 public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          NewValue;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D01[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SubFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D02[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingBoolKey*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingBoolChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingBoolChannel_AddKey");
@@ -260,7 +273,7 @@ struct MovieSceneScriptingBoolChannel_EvaluateKeys final
 public:
 	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFrameRate                             FrameRate;                                         // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D03[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingBoolChannel_EvaluateKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingBoolChannel_EvaluateKeys");
@@ -291,6 +304,19 @@ static_assert(alignof(MovieSceneScriptingBoolChannel_GetKeys) == 0x000008, "Wron
 static_assert(sizeof(MovieSceneScriptingBoolChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingBoolChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingBoolChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingBoolChannel_GetKeys::ReturnValue' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneScriptingBoolChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingBoolChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingBoolChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingBoolChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingBoolChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingBoolChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingBoolChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingBoolChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingBoolChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingBoolChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneScriptingBoolChannel.GetNumKeys
 // 0x0004 (0x0004 - 0x0000)
 struct MovieSceneScriptingBoolChannel_GetNumKeys final
@@ -320,8 +346,8 @@ struct MovieSceneScriptingByteKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D05[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingByteKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingByteKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingByteKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingByteKey_SetTime");
@@ -345,8 +371,8 @@ static_assert(offsetof(MovieSceneScriptingByteKey_SetValue, InNewValue) == 0x000
 struct MovieSceneScriptingByteKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D06[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingByteKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingByteKey_GetTime");
@@ -372,11 +398,11 @@ struct MovieSceneScriptingByteChannel_AddKey final
 public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         NewValue;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D08[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SubFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMovieSceneKeyInterpolation                   InInterpolation;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D09[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingByteKey*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingByteChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingByteChannel_AddKey");
@@ -431,6 +457,19 @@ public:
 static_assert(alignof(MovieSceneScriptingByteChannel_GetKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingByteChannel_GetKeys");
 static_assert(sizeof(MovieSceneScriptingByteChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingByteChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingByteChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingByteChannel_GetKeys::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneScriptingByteChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingByteChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingByteChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingByteChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingByteChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingByteChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingByteChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingByteChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingByteChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingByteChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneScriptingByteChannel.HasDefault
 // 0x0001 (0x0001 - 0x0000)
@@ -527,8 +566,8 @@ struct MovieSceneScriptingDoubleKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D0B[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingDoubleKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingDoubleKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingDoubleKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingDoubleKey_SetTime");
@@ -629,8 +668,8 @@ static_assert(offsetof(MovieSceneScriptingDoubleKey_GetTangentWeightMode, Return
 struct MovieSceneScriptingDoubleKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D0C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingDoubleKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingDoubleKey_GetTime");
@@ -655,12 +694,12 @@ struct MovieSceneScriptingDoubleChannel_AddKey final
 {
 public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D0E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        NewValue;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMovieSceneKeyInterpolation                   InInterpolation;                                   // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D0F[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingDoubleKey*          ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingDoubleChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingDoubleChannel_AddKey");
@@ -734,7 +773,7 @@ struct MovieSceneScriptingDoubleChannel_EvaluateKeys final
 public:
 	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFrameRate                             FrameRate;                                         // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D10[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingDoubleChannel_EvaluateKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingDoubleChannel_EvaluateKeys");
@@ -764,6 +803,19 @@ public:
 static_assert(alignof(MovieSceneScriptingDoubleChannel_GetKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingDoubleChannel_GetKeys");
 static_assert(sizeof(MovieSceneScriptingDoubleChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingDoubleChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingDoubleChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingDoubleChannel_GetKeys::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneScriptingDoubleChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingDoubleChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingDoubleChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingDoubleChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingDoubleChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingDoubleChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingDoubleChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingDoubleChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingDoubleChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingDoubleChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneScriptingDoubleChannel.GetNumKeys
 // 0x0004 (0x0004 - 0x0000)
@@ -816,8 +868,8 @@ struct MovieSceneScriptingEventKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D12[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingEventKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingEventKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingEventKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingEventKey_SetTime");
@@ -841,8 +893,8 @@ static_assert(offsetof(MovieSceneScriptingEventKey_SetValue, InNewValue) == 0x00
 struct MovieSceneScriptingEventKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D13[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingEventKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingEventKey_GetTime");
@@ -867,11 +919,11 @@ struct MovieSceneScriptingEventChannel_AddKey final
 {
 public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D15[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneEvent                       NewValue;                                          // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D16[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingEventKey*           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingEventChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingEventChannel_AddKey");
@@ -903,6 +955,19 @@ public:
 static_assert(alignof(MovieSceneScriptingEventChannel_GetKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingEventChannel_GetKeys");
 static_assert(sizeof(MovieSceneScriptingEventChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingEventChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingEventChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingEventChannel_GetKeys::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneScriptingEventChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingEventChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingEventChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingEventChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingEventChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingEventChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingEventChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingEventChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingEventChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingEventChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneScriptingFloatKey.SetArriveTangent
 // 0x0004 (0x0004 - 0x0000)
@@ -988,8 +1053,8 @@ struct MovieSceneScriptingFloatKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D17[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingFloatKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingFloatKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingFloatKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingFloatKey_SetTime");
@@ -1090,8 +1155,8 @@ static_assert(offsetof(MovieSceneScriptingFloatKey_GetTangentWeightMode, ReturnV
 struct MovieSceneScriptingFloatKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D18[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingFloatKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingFloatKey_GetTime");
@@ -1118,9 +1183,9 @@ public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         NewValue;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMovieSceneKeyInterpolation                   InInterpolation;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D1C[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingFloatKey*           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingFloatChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingFloatChannel_AddKey");
@@ -1194,7 +1259,7 @@ struct MovieSceneScriptingFloatChannel_EvaluateKeys final
 public:
 	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FFrameRate                             FrameRate;                                         // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D1D[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingFloatChannel_EvaluateKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingFloatChannel_EvaluateKeys");
@@ -1224,6 +1289,19 @@ public:
 static_assert(alignof(MovieSceneScriptingFloatChannel_GetKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingFloatChannel_GetKeys");
 static_assert(sizeof(MovieSceneScriptingFloatChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingFloatChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingFloatChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingFloatChannel_GetKeys::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneScriptingFloatChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingFloatChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingFloatChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingFloatChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingFloatChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingFloatChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingFloatChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingFloatChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingFloatChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingFloatChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneScriptingFloatChannel.GetNumKeys
 // 0x0004 (0x0004 - 0x0000)
@@ -1276,8 +1354,8 @@ struct MovieSceneScriptingIntegerKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D1F[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingIntegerKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingIntegerKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingIntegerKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingIntegerKey_SetTime");
@@ -1301,8 +1379,8 @@ static_assert(offsetof(MovieSceneScriptingIntegerKey_SetValue, InNewValue) == 0x
 struct MovieSceneScriptingIntegerKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D20[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingIntegerKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingIntegerKey_GetTime");
@@ -1329,8 +1407,8 @@ public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewValue;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D22[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingIntegerKey*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingIntegerChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingIntegerChannel_AddKey");
@@ -1363,6 +1441,22 @@ static_assert(alignof(MovieSceneScriptingIntegerChannel_SetDefault) == 0x000004,
 static_assert(sizeof(MovieSceneScriptingIntegerChannel_SetDefault) == 0x000004, "Wrong size on MovieSceneScriptingIntegerChannel_SetDefault");
 static_assert(offsetof(MovieSceneScriptingIntegerChannel_SetDefault, InDefaultValue) == 0x000000, "Member 'MovieSceneScriptingIntegerChannel_SetDefault::InDefaultValue' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.EvaluateKeys
+// 0x0030 (0x0030 - 0x0000)
+struct MovieSceneScriptingIntegerChannel_EvaluateKeys final
+{
+public:
+	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFrameRate                             FrameRate;                                         // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingIntegerChannel_EvaluateKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingIntegerChannel_EvaluateKeys");
+static_assert(sizeof(MovieSceneScriptingIntegerChannel_EvaluateKeys) == 0x000030, "Wrong size on MovieSceneScriptingIntegerChannel_EvaluateKeys");
+static_assert(offsetof(MovieSceneScriptingIntegerChannel_EvaluateKeys, Range) == 0x000000, "Member 'MovieSceneScriptingIntegerChannel_EvaluateKeys::Range' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingIntegerChannel_EvaluateKeys, FrameRate) == 0x000014, "Member 'MovieSceneScriptingIntegerChannel_EvaluateKeys::FrameRate' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingIntegerChannel_EvaluateKeys, ReturnValue) == 0x000020, "Member 'MovieSceneScriptingIntegerChannel_EvaluateKeys::ReturnValue' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetDefault
 // 0x0004 (0x0004 - 0x0000)
 struct MovieSceneScriptingIntegerChannel_GetDefault final
@@ -1385,6 +1479,30 @@ static_assert(alignof(MovieSceneScriptingIntegerChannel_GetKeys) == 0x000008, "W
 static_assert(sizeof(MovieSceneScriptingIntegerChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingIntegerChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingIntegerChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingIntegerChannel_GetKeys::ReturnValue' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingIntegerChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingIntegerChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingIntegerChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingIntegerChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingIntegerChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingIntegerChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingIntegerChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingIntegerChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingIntegerChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneScriptingIntegerChannel.GetNumKeys
+// 0x0004 (0x0004 - 0x0000)
+struct MovieSceneScriptingIntegerChannel_GetNumKeys final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingIntegerChannel_GetNumKeys) == 0x000004, "Wrong alignment on MovieSceneScriptingIntegerChannel_GetNumKeys");
+static_assert(sizeof(MovieSceneScriptingIntegerChannel_GetNumKeys) == 0x000004, "Wrong size on MovieSceneScriptingIntegerChannel_GetNumKeys");
+static_assert(offsetof(MovieSceneScriptingIntegerChannel_GetNumKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingIntegerChannel_GetNumKeys::ReturnValue' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneScriptingIntegerChannel.HasDefault
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneScriptingIntegerChannel_HasDefault final
@@ -1403,8 +1521,8 @@ struct MovieSceneScriptingObjectPathKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D24[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingObjectPathKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingObjectPathKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingObjectPathKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingObjectPathKey_SetTime");
@@ -1428,8 +1546,8 @@ static_assert(offsetof(MovieSceneScriptingObjectPathKey_SetValue, InNewValue) ==
 struct MovieSceneScriptingObjectPathKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D25[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingObjectPathKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingObjectPathKey_GetTime");
@@ -1454,11 +1572,11 @@ struct MovieSceneScriptingObjectPathChannel_AddKey final
 {
 public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D27[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                NewValue;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D28[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingObjectPathKey*      ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingObjectPathChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingObjectPathChannel_AddKey");
@@ -1513,6 +1631,19 @@ static_assert(alignof(MovieSceneScriptingObjectPathChannel_GetKeys) == 0x000008,
 static_assert(sizeof(MovieSceneScriptingObjectPathChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingObjectPathChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingObjectPathChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingObjectPathChannel_GetKeys::ReturnValue' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneScriptingObjectPathChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingObjectPathChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingObjectPathChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingObjectPathChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingObjectPathChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingObjectPathChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingObjectPathChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingObjectPathChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingObjectPathChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingObjectPathChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneScriptingObjectPathChannel.HasDefault
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneScriptingObjectPathChannel_HasDefault final
@@ -1531,8 +1662,8 @@ struct MovieSceneScriptingStringKey_SetTime final
 public:
 	struct FFrameNumber                           NewFrameNumber;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D2A[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneScriptingStringKey_SetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingStringKey_SetTime");
 static_assert(sizeof(MovieSceneScriptingStringKey_SetTime) == 0x00000C, "Wrong size on MovieSceneScriptingStringKey_SetTime");
@@ -1556,8 +1687,8 @@ static_assert(offsetof(MovieSceneScriptingStringKey_SetValue, InNewValue) == 0x0
 struct MovieSceneScriptingStringKey_GetTime final
 {
 public:
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D2B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFrameTime                             ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingStringKey_GetTime) == 0x000004, "Wrong alignment on MovieSceneScriptingStringKey_GetTime");
@@ -1582,11 +1713,11 @@ struct MovieSceneScriptingStringChannel_AddKey final
 {
 public:
 	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D2D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 NewValue;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SubFrame;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceTimeUnit                             TimeUnit;                                          // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D2E[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneScriptingStringKey*          ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneScriptingStringChannel_AddKey) == 0x000008, "Wrong alignment on MovieSceneScriptingStringChannel_AddKey");
@@ -1640,6 +1771,19 @@ public:
 static_assert(alignof(MovieSceneScriptingStringChannel_GetKeys) == 0x000008, "Wrong alignment on MovieSceneScriptingStringChannel_GetKeys");
 static_assert(sizeof(MovieSceneScriptingStringChannel_GetKeys) == 0x000010, "Wrong size on MovieSceneScriptingStringChannel_GetKeys");
 static_assert(offsetof(MovieSceneScriptingStringChannel_GetKeys, ReturnValue) == 0x000000, "Member 'MovieSceneScriptingStringChannel_GetKeys::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneScriptingStringChannel.GetKeysByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneScriptingStringChannel_GetKeysByIndex final
+{
+public:
+	TArray<int32>                                 Indices;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UMovieSceneScriptingKey*>        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneScriptingStringChannel_GetKeysByIndex) == 0x000008, "Wrong alignment on MovieSceneScriptingStringChannel_GetKeysByIndex");
+static_assert(sizeof(MovieSceneScriptingStringChannel_GetKeysByIndex) == 0x000020, "Wrong size on MovieSceneScriptingStringChannel_GetKeysByIndex");
+static_assert(offsetof(MovieSceneScriptingStringChannel_GetKeysByIndex, Indices) == 0x000000, "Member 'MovieSceneScriptingStringChannel_GetKeysByIndex::Indices' has a wrong offset!");
+static_assert(offsetof(MovieSceneScriptingStringChannel_GetKeysByIndex, ReturnValue) == 0x000010, "Member 'MovieSceneScriptingStringChannel_GetKeysByIndex::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneScriptingStringChannel.HasDefault
 // 0x0001 (0x0001 - 0x0000)
@@ -1711,15 +1855,15 @@ static_assert(offsetof(MovieSceneBindingExtensions_GetChildPossessables, InBindi
 static_assert(offsetof(MovieSceneBindingExtensions_GetChildPossessables, ReturnValue) == 0x000018, "Member 'MovieSceneBindingExtensions_GetChildPossessables::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneBindingExtensions.GetDisplayName
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct MovieSceneBindingExtensions_GetDisplayName final
 {
 public:
 	struct FMovieSceneBindingProxy                InBinding;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneBindingExtensions_GetDisplayName) == 0x000008, "Wrong alignment on MovieSceneBindingExtensions_GetDisplayName");
-static_assert(sizeof(MovieSceneBindingExtensions_GetDisplayName) == 0x000030, "Wrong size on MovieSceneBindingExtensions_GetDisplayName");
+static_assert(sizeof(MovieSceneBindingExtensions_GetDisplayName) == 0x000028, "Wrong size on MovieSceneBindingExtensions_GetDisplayName");
 static_assert(offsetof(MovieSceneBindingExtensions_GetDisplayName, InBinding) == 0x000000, "Member 'MovieSceneBindingExtensions_GetDisplayName::InBinding' has a wrong offset!");
 static_assert(offsetof(MovieSceneBindingExtensions_GetDisplayName, ReturnValue) == 0x000018, "Member 'MovieSceneBindingExtensions_GetDisplayName::ReturnValue' has a wrong offset!");
 
@@ -1795,7 +1939,7 @@ struct MovieSceneBindingExtensions_GetSortingOrder final
 public:
 	struct FMovieSceneBindingProxy                InBinding;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D2F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneBindingExtensions_GetSortingOrder) == 0x000008, "Wrong alignment on MovieSceneBindingExtensions_GetSortingOrder");
 static_assert(sizeof(MovieSceneBindingExtensions_GetSortingOrder) == 0x000020, "Wrong size on MovieSceneBindingExtensions_GetSortingOrder");
@@ -1822,7 +1966,7 @@ struct MovieSceneBindingExtensions_IsValid final
 public:
 	struct FMovieSceneBindingProxy                InBinding;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D30[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneBindingExtensions_IsValid) == 0x000008, "Wrong alignment on MovieSceneBindingExtensions_IsValid");
 static_assert(sizeof(MovieSceneBindingExtensions_IsValid) == 0x000020, "Wrong size on MovieSceneBindingExtensions_IsValid");
@@ -1867,15 +2011,15 @@ static_assert(offsetof(MovieSceneBindingExtensions_RemoveTrack, InBinding) == 0x
 static_assert(offsetof(MovieSceneBindingExtensions_RemoveTrack, TrackToRemove) == 0x000018, "Member 'MovieSceneBindingExtensions_RemoveTrack::TrackToRemove' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneBindingExtensions.SetDisplayName
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct MovieSceneBindingExtensions_SetDisplayName final
 {
 public:
 	struct FMovieSceneBindingProxy                InBinding;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   InDisplayName;                                     // 0x0018(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   InDisplayName;                                     // 0x0018(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneBindingExtensions_SetDisplayName) == 0x000008, "Wrong alignment on MovieSceneBindingExtensions_SetDisplayName");
-static_assert(sizeof(MovieSceneBindingExtensions_SetDisplayName) == 0x000030, "Wrong size on MovieSceneBindingExtensions_SetDisplayName");
+static_assert(sizeof(MovieSceneBindingExtensions_SetDisplayName) == 0x000028, "Wrong size on MovieSceneBindingExtensions_SetDisplayName");
 static_assert(offsetof(MovieSceneBindingExtensions_SetDisplayName, InBinding) == 0x000000, "Member 'MovieSceneBindingExtensions_SetDisplayName::InBinding' has a wrong offset!");
 static_assert(offsetof(MovieSceneBindingExtensions_SetDisplayName, InDisplayName) == 0x000018, "Member 'MovieSceneBindingExtensions_SetDisplayName::InDisplayName' has a wrong offset!");
 
@@ -1912,7 +2056,7 @@ struct MovieSceneBindingExtensions_SetSortingOrder final
 public:
 	struct FMovieSceneBindingProxy                InBinding;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SortingOrder;                                      // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D31[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneBindingExtensions_SetSortingOrder) == 0x000008, "Wrong alignment on MovieSceneBindingExtensions_SetSortingOrder");
 static_assert(sizeof(MovieSceneBindingExtensions_SetSortingOrder) == 0x000020, "Wrong size on MovieSceneBindingExtensions_SetSortingOrder");
@@ -1979,7 +2123,7 @@ public:
 	class UMovieSceneFolder*                      TargetFolder;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneFolder*                      FolderToAdd;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D32[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_AddChildFolder) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_AddChildFolder");
 static_assert(sizeof(MovieSceneFolderExtensions_AddChildFolder) == 0x000018, "Wrong size on MovieSceneFolderExtensions_AddChildFolder");
@@ -1995,7 +2139,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D33[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_AddChildMasterTrack) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_AddChildMasterTrack");
 static_assert(sizeof(MovieSceneFolderExtensions_AddChildMasterTrack) == 0x000018, "Wrong size on MovieSceneFolderExtensions_AddChildMasterTrack");
@@ -2011,7 +2155,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneBindingProxy                InObjectBinding;                                   // 0x0008(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D34[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_AddChildObjectBinding) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_AddChildObjectBinding");
 static_assert(sizeof(MovieSceneFolderExtensions_AddChildObjectBinding) == 0x000028, "Wrong size on MovieSceneFolderExtensions_AddChildObjectBinding");
@@ -2027,7 +2171,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D35[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_AddChildTrack) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_AddChildTrack");
 static_assert(sizeof(MovieSceneFolderExtensions_AddChildTrack) == 0x000018, "Wrong size on MovieSceneFolderExtensions_AddChildTrack");
@@ -2094,7 +2238,7 @@ struct MovieSceneFolderExtensions_GetFolderColor final
 public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D36[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_GetFolderColor) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_GetFolderColor");
 static_assert(sizeof(MovieSceneFolderExtensions_GetFolderColor) == 0x000010, "Wrong size on MovieSceneFolderExtensions_GetFolderColor");
@@ -2122,7 +2266,7 @@ public:
 	class UMovieSceneFolder*                      TargetFolder;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneFolder*                      FolderToRemove;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D37[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_RemoveChildFolder) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_RemoveChildFolder");
 static_assert(sizeof(MovieSceneFolderExtensions_RemoveChildFolder) == 0x000018, "Wrong size on MovieSceneFolderExtensions_RemoveChildFolder");
@@ -2138,7 +2282,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D38[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_RemoveChildMasterTrack) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_RemoveChildMasterTrack");
 static_assert(sizeof(MovieSceneFolderExtensions_RemoveChildMasterTrack) == 0x000018, "Wrong size on MovieSceneFolderExtensions_RemoveChildMasterTrack");
@@ -2154,7 +2298,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneBindingProxy                InObjectBinding;                                   // 0x0008(0x0018)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D39[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_RemoveChildObjectBinding) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_RemoveChildObjectBinding");
 static_assert(sizeof(MovieSceneFolderExtensions_RemoveChildObjectBinding) == 0x000028, "Wrong size on MovieSceneFolderExtensions_RemoveChildObjectBinding");
@@ -2170,7 +2314,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       InTrack;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D3A[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_RemoveChildTrack) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_RemoveChildTrack");
 static_assert(sizeof(MovieSceneFolderExtensions_RemoveChildTrack) == 0x000018, "Wrong size on MovieSceneFolderExtensions_RemoveChildTrack");
@@ -2186,7 +2330,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 InFolderColor;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D3B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_SetFolderColor) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_SetFolderColor");
 static_assert(sizeof(MovieSceneFolderExtensions_SetFolderColor) == 0x000010, "Wrong size on MovieSceneFolderExtensions_SetFolderColor");
@@ -2202,7 +2346,7 @@ public:
 	class UMovieSceneFolder*                      Folder;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   InFolderName;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D3C[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFolderExtensions_SetFolderName) == 0x000008, "Wrong alignment on MovieSceneFolderExtensions_SetFolderName");
 static_assert(sizeof(MovieSceneFolderExtensions_SetFolderName) == 0x000018, "Wrong size on MovieSceneFolderExtensions_SetFolderName");
@@ -2217,12 +2361,25 @@ struct MovieSceneMaterialTrackExtensions_GetMaterialIndex final
 public:
 	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D3D[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneMaterialTrackExtensions_GetMaterialIndex) == 0x000008, "Wrong alignment on MovieSceneMaterialTrackExtensions_GetMaterialIndex");
 static_assert(sizeof(MovieSceneMaterialTrackExtensions_GetMaterialIndex) == 0x000010, "Wrong size on MovieSceneMaterialTrackExtensions_GetMaterialIndex");
 static_assert(offsetof(MovieSceneMaterialTrackExtensions_GetMaterialIndex, Track) == 0x000000, "Member 'MovieSceneMaterialTrackExtensions_GetMaterialIndex::Track' has a wrong offset!");
 static_assert(offsetof(MovieSceneMaterialTrackExtensions_GetMaterialIndex, ReturnValue) == 0x000008, "Member 'MovieSceneMaterialTrackExtensions_GetMaterialIndex::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneMaterialTrackExtensions.GetMaterialInfo
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneMaterialTrackExtensions_GetMaterialInfo final
+{
+public:
+	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComponentMaterialInfo                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneMaterialTrackExtensions_GetMaterialInfo) == 0x000008, "Wrong alignment on MovieSceneMaterialTrackExtensions_GetMaterialInfo");
+static_assert(sizeof(MovieSceneMaterialTrackExtensions_GetMaterialInfo) == 0x000018, "Wrong size on MovieSceneMaterialTrackExtensions_GetMaterialInfo");
+static_assert(offsetof(MovieSceneMaterialTrackExtensions_GetMaterialInfo, Track) == 0x000000, "Member 'MovieSceneMaterialTrackExtensions_GetMaterialInfo::Track' has a wrong offset!");
+static_assert(offsetof(MovieSceneMaterialTrackExtensions_GetMaterialInfo, ReturnValue) == 0x000008, "Member 'MovieSceneMaterialTrackExtensions_GetMaterialInfo::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialIndex
 // 0x0010 (0x0010 - 0x0000)
@@ -2231,12 +2388,25 @@ struct MovieSceneMaterialTrackExtensions_SetMaterialIndex final
 public:
 	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D3E[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneMaterialTrackExtensions_SetMaterialIndex) == 0x000008, "Wrong alignment on MovieSceneMaterialTrackExtensions_SetMaterialIndex");
 static_assert(sizeof(MovieSceneMaterialTrackExtensions_SetMaterialIndex) == 0x000010, "Wrong size on MovieSceneMaterialTrackExtensions_SetMaterialIndex");
 static_assert(offsetof(MovieSceneMaterialTrackExtensions_SetMaterialIndex, Track) == 0x000000, "Member 'MovieSceneMaterialTrackExtensions_SetMaterialIndex::Track' has a wrong offset!");
 static_assert(offsetof(MovieSceneMaterialTrackExtensions_SetMaterialIndex, MaterialIndex) == 0x000008, "Member 'MovieSceneMaterialTrackExtensions_SetMaterialIndex::MaterialIndex' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneMaterialTrackExtensions.SetMaterialInfo
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneMaterialTrackExtensions_SetMaterialInfo final
+{
+public:
+	class UMovieSceneComponentMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComponentMaterialInfo                 MaterialInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneMaterialTrackExtensions_SetMaterialInfo) == 0x000008, "Wrong alignment on MovieSceneMaterialTrackExtensions_SetMaterialInfo");
+static_assert(sizeof(MovieSceneMaterialTrackExtensions_SetMaterialInfo) == 0x000018, "Wrong size on MovieSceneMaterialTrackExtensions_SetMaterialInfo");
+static_assert(offsetof(MovieSceneMaterialTrackExtensions_SetMaterialInfo, Track) == 0x000000, "Member 'MovieSceneMaterialTrackExtensions_SetMaterialInfo::Track' has a wrong offset!");
+static_assert(offsetof(MovieSceneMaterialTrackExtensions_SetMaterialInfo, MaterialInfo) == 0x000008, "Member 'MovieSceneMaterialTrackExtensions_SetMaterialInfo::MaterialInfo' has a wrong offset!");
 
 // Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialIndex
 // 0x0010 (0x0010 - 0x0000)
@@ -2245,12 +2415,25 @@ struct MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex final
 public:
 	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D3F[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex) == 0x000008, "Wrong alignment on MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex");
 static_assert(sizeof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex) == 0x000010, "Wrong size on MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex");
 static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex, Track) == 0x000000, "Member 'MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex::Track' has a wrong offset!");
 static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex, ReturnValue) == 0x000008, "Member 'MovieScenePrimitiveMaterialTrackExtensions_GetMaterialIndex::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.GetMaterialInfo
+// 0x0018 (0x0018 - 0x0000)
+struct MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo final
+{
+public:
+	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComponentMaterialInfo                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo) == 0x000008, "Wrong alignment on MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo");
+static_assert(sizeof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo) == 0x000018, "Wrong size on MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo");
+static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo, Track) == 0x000000, "Member 'MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo::Track' has a wrong offset!");
+static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo, ReturnValue) == 0x000008, "Member 'MovieScenePrimitiveMaterialTrackExtensions_GetMaterialInfo::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialIndex
 // 0x0010 (0x0010 - 0x0000)
@@ -2259,12 +2442,25 @@ struct MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex final
 public:
 	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndex;                                     // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D40[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex) == 0x000008, "Wrong alignment on MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex");
 static_assert(sizeof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex) == 0x000010, "Wrong size on MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex");
 static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex, Track) == 0x000000, "Member 'MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex::Track' has a wrong offset!");
 static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex, MaterialIndex) == 0x000008, "Member 'MovieScenePrimitiveMaterialTrackExtensions_SetMaterialIndex::MaterialIndex' has a wrong offset!");
+
+// Function SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions.SetMaterialInfo
+// 0x0018 (0x0018 - 0x0000)
+struct MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo final
+{
+public:
+	class UMovieScenePrimitiveMaterialTrack*      Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FComponentMaterialInfo                 MaterialInfo;                                      // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo) == 0x000008, "Wrong alignment on MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo");
+static_assert(sizeof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo) == 0x000018, "Wrong size on MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo");
+static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo, Track) == 0x000000, "Member 'MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo::Track' has a wrong offset!");
+static_assert(offsetof(MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo, MaterialInfo) == 0x000008, "Member 'MovieScenePrimitiveMaterialTrackExtensions_SetMaterialInfo::MaterialInfo' has a wrong offset!");
 
 // Function SequencerScripting.MovieScenePropertyTrackExtensions.GetByteTrackEnum
 // 0x0010 (0x0010 - 0x0000)
@@ -2392,7 +2588,7 @@ struct MovieSceneSectionExtensions_GetAutoSizeEndFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D41[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetAutoSizeEndFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetAutoSizeEndFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetAutoSizeEndFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetAutoSizeEndFrame");
@@ -2406,7 +2602,7 @@ struct MovieSceneSectionExtensions_GetAutoSizeEndFrameSeconds final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D42[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetAutoSizeEndFrameSeconds) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetAutoSizeEndFrameSeconds");
 static_assert(sizeof(MovieSceneSectionExtensions_GetAutoSizeEndFrameSeconds) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetAutoSizeEndFrameSeconds");
@@ -2420,7 +2616,7 @@ struct MovieSceneSectionExtensions_GetAutoSizeHasEndFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D43[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetAutoSizeHasEndFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetAutoSizeHasEndFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetAutoSizeHasEndFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetAutoSizeHasEndFrame");
@@ -2434,7 +2630,7 @@ struct MovieSceneSectionExtensions_GetAutoSizeHasStartFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D44[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetAutoSizeHasStartFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetAutoSizeHasStartFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetAutoSizeHasStartFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetAutoSizeHasStartFrame");
@@ -2448,7 +2644,7 @@ struct MovieSceneSectionExtensions_GetAutoSizeStartFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D45[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetAutoSizeStartFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetAutoSizeStartFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetAutoSizeStartFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetAutoSizeStartFrame");
@@ -2462,12 +2658,27 @@ struct MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D46[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds");
 static_assert(sizeof(MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds");
 static_assert(offsetof(MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds, Section) == 0x000000, "Member 'MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds::Section' has a wrong offset!");
 static_assert(offsetof(MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds, ReturnValue) == 0x000008, "Member 'MovieSceneSectionExtensions_GetAutoSizeStartFrameSeconds::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneSectionExtensions.GetChannel
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneSectionExtensions_GetChannel final
+{
+public:
+	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ChannelName;                                       // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneScriptingChannel*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneSectionExtensions_GetChannel) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetChannel");
+static_assert(sizeof(MovieSceneSectionExtensions_GetChannel) == 0x000018, "Wrong size on MovieSceneSectionExtensions_GetChannel");
+static_assert(offsetof(MovieSceneSectionExtensions_GetChannel, Section) == 0x000000, "Member 'MovieSceneSectionExtensions_GetChannel::Section' has a wrong offset!");
+static_assert(offsetof(MovieSceneSectionExtensions_GetChannel, ChannelName) == 0x000008, "Member 'MovieSceneSectionExtensions_GetChannel::ChannelName' has a wrong offset!");
+static_assert(offsetof(MovieSceneSectionExtensions_GetChannel, ReturnValue) == 0x000010, "Member 'MovieSceneSectionExtensions_GetChannel::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneSectionExtensions.GetChannelsByType
 // 0x0020 (0x0020 - 0x0000)
@@ -2491,7 +2702,7 @@ struct MovieSceneSectionExtensions_GetEndFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D47[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetEndFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetEndFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetEndFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetEndFrame");
@@ -2505,7 +2716,7 @@ struct MovieSceneSectionExtensions_GetEndFrameSeconds final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D48[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetEndFrameSeconds) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetEndFrameSeconds");
 static_assert(sizeof(MovieSceneSectionExtensions_GetEndFrameSeconds) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetEndFrameSeconds");
@@ -2519,10 +2730,10 @@ struct MovieSceneSectionExtensions_GetParentSequenceFrame final
 public:
 	class UMovieSceneSubSection*                  Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InFrame;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D49[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneSequence*                    ParentSequence;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4A[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetParentSequenceFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetParentSequenceFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetParentSequenceFrame) == 0x000020, "Wrong size on MovieSceneSectionExtensions_GetParentSequenceFrame");
@@ -2538,7 +2749,7 @@ struct MovieSceneSectionExtensions_GetStartFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4B[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetStartFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetStartFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_GetStartFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetStartFrame");
@@ -2552,7 +2763,7 @@ struct MovieSceneSectionExtensions_GetStartFrameSeconds final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4C[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_GetStartFrameSeconds) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_GetStartFrameSeconds");
 static_assert(sizeof(MovieSceneSectionExtensions_GetStartFrameSeconds) == 0x000010, "Wrong size on MovieSceneSectionExtensions_GetStartFrameSeconds");
@@ -2566,7 +2777,7 @@ struct MovieSceneSectionExtensions_HasEndFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_HasEndFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_HasEndFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_HasEndFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_HasEndFrame");
@@ -2580,7 +2791,7 @@ struct MovieSceneSectionExtensions_HasStartFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4E[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_HasStartFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_HasStartFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_HasStartFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_HasStartFrame");
@@ -2594,7 +2805,7 @@ struct MovieSceneSectionExtensions_SetEndFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EndFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4F[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_SetEndFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_SetEndFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_SetEndFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_SetEndFrame");
@@ -2608,7 +2819,7 @@ struct MovieSceneSectionExtensions_SetEndFrameBounded final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsBounded;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D50[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_SetEndFrameBounded) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_SetEndFrameBounded");
 static_assert(sizeof(MovieSceneSectionExtensions_SetEndFrameBounded) == 0x000010, "Wrong size on MovieSceneSectionExtensions_SetEndFrameBounded");
@@ -2622,7 +2833,7 @@ struct MovieSceneSectionExtensions_SetEndFrameSeconds final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndTime;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D51[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_SetEndFrameSeconds) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_SetEndFrameSeconds");
 static_assert(sizeof(MovieSceneSectionExtensions_SetEndFrameSeconds) == 0x000010, "Wrong size on MovieSceneSectionExtensions_SetEndFrameSeconds");
@@ -2666,7 +2877,7 @@ struct MovieSceneSectionExtensions_SetStartFrame final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StartFrame;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D52[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_SetStartFrame) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_SetStartFrame");
 static_assert(sizeof(MovieSceneSectionExtensions_SetStartFrame) == 0x000010, "Wrong size on MovieSceneSectionExtensions_SetStartFrame");
@@ -2680,7 +2891,7 @@ struct MovieSceneSectionExtensions_SetStartFrameBounded final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsBounded;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D53[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_SetStartFrameBounded) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_SetStartFrameBounded");
 static_assert(sizeof(MovieSceneSectionExtensions_SetStartFrameBounded) == 0x000010, "Wrong size on MovieSceneSectionExtensions_SetStartFrameBounded");
@@ -2694,7 +2905,7 @@ struct MovieSceneSectionExtensions_SetStartFrameSeconds final
 public:
 	class UMovieSceneSection*                     Section;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartTime;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D54[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSectionExtensions_SetStartFrameSeconds) == 0x000008, "Wrong alignment on MovieSceneSectionExtensions_SetStartFrameSeconds");
 static_assert(sizeof(MovieSceneSectionExtensions_SetStartFrameSeconds) == 0x000010, "Wrong size on MovieSceneSectionExtensions_SetStartFrameSeconds");
@@ -2709,13 +2920,31 @@ public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneMarkedFrame                 InMarkedFrame;                                     // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D55[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_AddMarkedFrame) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_AddMarkedFrame");
 static_assert(sizeof(MovieSceneSequenceExtensions_AddMarkedFrame) == 0x000030, "Wrong size on MovieSceneSequenceExtensions_AddMarkedFrame");
 static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrame, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_AddMarkedFrame::Sequence' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrame, InMarkedFrame) == 0x000008, "Member 'MovieSceneSequenceExtensions_AddMarkedFrame::InMarkedFrame' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrame, ReturnValue) == 0x000028, "Member 'MovieSceneSequenceExtensions_AddMarkedFrame::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneSequenceExtensions.AddMarkedFrameToSequence
+// 0x0030 (0x0030 - 0x0000)
+struct MovieSceneSequenceExtensions_AddMarkedFrameToSequence final
+{
+public:
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMovieSceneMarkedFrame                 InMarkedFrame;                                     // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneSequenceExtensions_AddMarkedFrameToSequence) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_AddMarkedFrameToSequence");
+static_assert(sizeof(MovieSceneSequenceExtensions_AddMarkedFrameToSequence) == 0x000030, "Wrong size on MovieSceneSequenceExtensions_AddMarkedFrameToSequence");
+static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrameToSequence, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_AddMarkedFrameToSequence::Sequence' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrameToSequence, InMarkedFrame) == 0x000008, "Member 'MovieSceneSequenceExtensions_AddMarkedFrameToSequence::InMarkedFrame' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrameToSequence, TimeUnit) == 0x000028, "Member 'MovieSceneSequenceExtensions_AddMarkedFrameToSequence::TimeUnit' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_AddMarkedFrameToSequence, ReturnValue) == 0x00002C, "Member 'MovieSceneSequenceExtensions_AddMarkedFrameToSequence::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneSequenceExtensions.AddMasterTrack
 // 0x0018 (0x0018 - 0x0000)
@@ -2814,7 +3043,7 @@ struct MovieSceneSequenceExtensions_AreMarkedFramesLocked final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D56[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_AreMarkedFramesLocked) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_AreMarkedFramesLocked");
 static_assert(sizeof(MovieSceneSequenceExtensions_AreMarkedFramesLocked) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_AreMarkedFramesLocked");
@@ -2828,7 +3057,7 @@ struct MovieSceneSequenceExtensions_DeleteMarkedFrame final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DeleteIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D57[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_DeleteMarkedFrame) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_DeleteMarkedFrame");
 static_assert(sizeof(MovieSceneSequenceExtensions_DeleteMarkedFrame) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_DeleteMarkedFrame");
@@ -2867,13 +3096,13 @@ struct MovieSceneSequenceExtensions_FindBindingByName final
 {
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Param_Name;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneBindingProxy                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_FindBindingByName) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_FindBindingByName");
 static_assert(sizeof(MovieSceneSequenceExtensions_FindBindingByName) == 0x000030, "Wrong size on MovieSceneSequenceExtensions_FindBindingByName");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_FindBindingByName::Sequence' has a wrong offset!");
-static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, Param_Name) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindBindingByName::Param_Name' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, Name_0) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindBindingByName::Name_0' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindBindingByName, ReturnValue) == 0x000018, "Member 'MovieSceneSequenceExtensions_FindBindingByName::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByFrameNumber
@@ -2891,6 +3120,25 @@ static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumber
 static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumber, InFrameNumber) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumber::InFrameNumber' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumber, ReturnValue) == 0x00000C, "Member 'MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumber::ReturnValue' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByFrameNumberInSequence
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence final
+{
+public:
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InFrameNumber;                                     // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence");
+static_assert(sizeof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence::Sequence' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence, InFrameNumber) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence::InFrameNumber' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence, TimeUnit) == 0x00000C, "Member 'MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence::TimeUnit' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence, ReturnValue) == 0x000010, "Member 'MovieSceneSequenceExtensions_FindMarkedFrameByFrameNumberInSequence::ReturnValue' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneSequenceExtensions.FindMarkedFrameByLabel
 // 0x0020 (0x0020 - 0x0000)
 struct MovieSceneSequenceExtensions_FindMarkedFrameByLabel final
@@ -2899,7 +3147,7 @@ public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InLabel;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D58[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_FindMarkedFrameByLabel) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_FindMarkedFrameByLabel");
 static_assert(sizeof(MovieSceneSequenceExtensions_FindMarkedFrameByLabel) == 0x000020, "Wrong size on MovieSceneSequenceExtensions_FindMarkedFrameByLabel");
@@ -2945,9 +3193,9 @@ public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFrameNumber                           InFrameNumber;                                     // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForward;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D59[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D5A[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_FindNextMarkedFrame) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_FindNextMarkedFrame");
 static_assert(sizeof(MovieSceneSequenceExtensions_FindNextMarkedFrame) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_FindNextMarkedFrame");
@@ -2955,6 +3203,27 @@ static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrame, Sequenc
 static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrame, InFrameNumber) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrame::InFrameNumber' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrame, bForward) == 0x00000C, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrame::bForward' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrame, ReturnValue) == 0x000010, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrame::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneSequenceExtensions.FindNextMarkedFrameInSequence
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence final
+{
+public:
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InFrameNumber;                                     // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForward;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence");
+static_assert(sizeof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence::Sequence' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence, InFrameNumber) == 0x000008, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence::InFrameNumber' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence, bForward) == 0x00000C, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence::bForward' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence, TimeUnit) == 0x00000D, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence::TimeUnit' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence, ReturnValue) == 0x000010, "Member 'MovieSceneSequenceExtensions_FindNextMarkedFrameInSequence::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneSequenceExtensions.FindTracksByExactType
 // 0x0020 (0x0020 - 0x0000)
@@ -3021,7 +3290,7 @@ struct MovieSceneSequenceExtensions_GetClockSource final
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUpdateClockSource                            ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D5B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetClockSource) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetClockSource");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetClockSource) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetClockSource");
@@ -3048,7 +3317,7 @@ struct MovieSceneSequenceExtensions_GetEvaluationType final
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMovieSceneEvaluationType                     ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D5C[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetEvaluationType) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetEvaluationType");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetEvaluationType) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetEvaluationType");
@@ -3067,6 +3336,22 @@ static_assert(alignof(MovieSceneSequenceExtensions_GetMarkedFrames) == 0x000008,
 static_assert(sizeof(MovieSceneSequenceExtensions_GetMarkedFrames) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_GetMarkedFrames");
 static_assert(offsetof(MovieSceneSequenceExtensions_GetMarkedFrames, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_GetMarkedFrames::Sequence' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_GetMarkedFrames, ReturnValue) == 0x000008, "Member 'MovieSceneSequenceExtensions_GetMarkedFrames::ReturnValue' has a wrong offset!");
+
+// Function SequencerScripting.MovieSceneSequenceExtensions.GetMarkedFramesFromSequence
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneSequenceExtensions_GetMarkedFramesFromSequence final
+{
+public:
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMovieSceneMarkedFrame>         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneSequenceExtensions_GetMarkedFramesFromSequence) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetMarkedFramesFromSequence");
+static_assert(sizeof(MovieSceneSequenceExtensions_GetMarkedFramesFromSequence) == 0x000020, "Wrong size on MovieSceneSequenceExtensions_GetMarkedFramesFromSequence");
+static_assert(offsetof(MovieSceneSequenceExtensions_GetMarkedFramesFromSequence, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_GetMarkedFramesFromSequence::Sequence' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_GetMarkedFramesFromSequence, TimeUnit) == 0x000008, "Member 'MovieSceneSequenceExtensions_GetMarkedFramesFromSequence::TimeUnit' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_GetMarkedFramesFromSequence, ReturnValue) == 0x000010, "Member 'MovieSceneSequenceExtensions_GetMarkedFramesFromSequence::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneSequenceExtensions.GetMasterTracks
 // 0x0018 (0x0018 - 0x0000)
@@ -3101,7 +3386,7 @@ struct MovieSceneSequenceExtensions_GetPlaybackEnd final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D5D[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetPlaybackEnd) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetPlaybackEnd");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetPlaybackEnd) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetPlaybackEnd");
@@ -3115,7 +3400,7 @@ struct MovieSceneSequenceExtensions_GetPlaybackEndSeconds final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D5E[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetPlaybackEndSeconds) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetPlaybackEndSeconds");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetPlaybackEndSeconds) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetPlaybackEndSeconds");
@@ -3129,7 +3414,7 @@ struct MovieSceneSequenceExtensions_GetPlaybackRange final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSequencerScriptingRange               ReturnValue;                                       // 0x0008(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D5F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetPlaybackRange) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetPlaybackRange");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetPlaybackRange) == 0x000020, "Wrong size on MovieSceneSequenceExtensions_GetPlaybackRange");
@@ -3143,7 +3428,7 @@ struct MovieSceneSequenceExtensions_GetPlaybackStart final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D60[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetPlaybackStart) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetPlaybackStart");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetPlaybackStart) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetPlaybackStart");
@@ -3157,7 +3442,7 @@ struct MovieSceneSequenceExtensions_GetPlaybackStartSeconds final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D61[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetPlaybackStartSeconds) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetPlaybackStartSeconds");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetPlaybackStartSeconds) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetPlaybackStartSeconds");
@@ -3252,8 +3537,7 @@ struct MovieSceneSequenceExtensions_GetViewRangeEnd final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D62[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetViewRangeEnd) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetViewRangeEnd");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetViewRangeEnd) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetViewRangeEnd");
@@ -3266,8 +3550,7 @@ struct MovieSceneSequenceExtensions_GetViewRangeStart final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D63[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetViewRangeStart) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetViewRangeStart");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetViewRangeStart) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetViewRangeStart");
@@ -3280,8 +3563,7 @@ struct MovieSceneSequenceExtensions_GetWorkRangeEnd final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D64[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetWorkRangeEnd) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetWorkRangeEnd");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetWorkRangeEnd) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetWorkRangeEnd");
@@ -3294,8 +3576,7 @@ struct MovieSceneSequenceExtensions_GetWorkRangeStart final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D65[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_GetWorkRangeStart) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_GetWorkRangeStart");
 static_assert(sizeof(MovieSceneSequenceExtensions_GetWorkRangeStart) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_GetWorkRangeStart");
@@ -3309,7 +3590,7 @@ struct MovieSceneSequenceExtensions_IsPlaybackRangeLocked final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D66[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_IsPlaybackRangeLocked) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_IsPlaybackRangeLocked");
 static_assert(sizeof(MovieSceneSequenceExtensions_IsPlaybackRangeLocked) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_IsPlaybackRangeLocked");
@@ -3323,7 +3604,7 @@ struct MovieSceneSequenceExtensions_IsReadOnly final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D67[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_IsReadOnly) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_IsReadOnly");
 static_assert(sizeof(MovieSceneSequenceExtensions_IsReadOnly) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_IsReadOnly");
@@ -3356,7 +3637,7 @@ public:
 	int32                                         StartFrame;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Duration;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSequencerScriptingRange               ReturnValue;                                       // 0x0010(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D68[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_MakeRange) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_MakeRange");
 static_assert(sizeof(MovieSceneSequenceExtensions_MakeRange) == 0x000028, "Wrong size on MovieSceneSequenceExtensions_MakeRange");
@@ -3374,7 +3655,7 @@ public:
 	float                                         StartTime;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSequencerScriptingRange               ReturnValue;                                       // 0x0010(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D69[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_MakeRangeSeconds) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_MakeRangeSeconds");
 static_assert(sizeof(MovieSceneSequenceExtensions_MakeRangeSeconds) == 0x000028, "Wrong size on MovieSceneSequenceExtensions_MakeRangeSeconds");
@@ -3391,7 +3672,7 @@ public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       Track;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D6A[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_RemoveMasterTrack) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_RemoveMasterTrack");
 static_assert(sizeof(MovieSceneSequenceExtensions_RemoveMasterTrack) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_RemoveMasterTrack");
@@ -3420,7 +3701,7 @@ public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       Track;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D6B[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_RemoveTrack) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_RemoveTrack");
 static_assert(sizeof(MovieSceneSequenceExtensions_RemoveTrack) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_RemoveTrack");
@@ -3450,7 +3731,7 @@ struct MovieSceneSequenceExtensions_SetClockSource final
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUpdateClockSource                            InClockSource;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D6C[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetClockSource) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetClockSource");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetClockSource) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetClockSource");
@@ -3477,7 +3758,7 @@ struct MovieSceneSequenceExtensions_SetEvaluationType final
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMovieSceneEvaluationType                     InEvaluationType;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D6D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetEvaluationType) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetEvaluationType");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetEvaluationType) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetEvaluationType");
@@ -3499,6 +3780,24 @@ static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrame, Sequence) ==
 static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrame, InMarkIndex) == 0x000008, "Member 'MovieSceneSequenceExtensions_SetMarkedFrame::InMarkIndex' has a wrong offset!");
 static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrame, InFrameNumber) == 0x00000C, "Member 'MovieSceneSequenceExtensions_SetMarkedFrame::InFrameNumber' has a wrong offset!");
 
+// Function SequencerScripting.MovieSceneSequenceExtensions.SetMarkedFrameInSequence
+// 0x0018 (0x0018 - 0x0000)
+struct MovieSceneSequenceExtensions_SetMarkedFrameInSequence final
+{
+public:
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InMarkIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InFrameNumber;                                     // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneTimeUnit                           TimeUnit;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneSequenceExtensions_SetMarkedFrameInSequence) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetMarkedFrameInSequence");
+static_assert(sizeof(MovieSceneSequenceExtensions_SetMarkedFrameInSequence) == 0x000018, "Wrong size on MovieSceneSequenceExtensions_SetMarkedFrameInSequence");
+static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrameInSequence, Sequence) == 0x000000, "Member 'MovieSceneSequenceExtensions_SetMarkedFrameInSequence::Sequence' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrameInSequence, InMarkIndex) == 0x000008, "Member 'MovieSceneSequenceExtensions_SetMarkedFrameInSequence::InMarkIndex' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrameInSequence, InFrameNumber) == 0x00000C, "Member 'MovieSceneSequenceExtensions_SetMarkedFrameInSequence::InFrameNumber' has a wrong offset!");
+static_assert(offsetof(MovieSceneSequenceExtensions_SetMarkedFrameInSequence, TimeUnit) == 0x000010, "Member 'MovieSceneSequenceExtensions_SetMarkedFrameInSequence::TimeUnit' has a wrong offset!");
+
 // Function SequencerScripting.MovieSceneSequenceExtensions.SetMarkedFramesLocked
 // 0x0010 (0x0010 - 0x0000)
 struct MovieSceneSequenceExtensions_SetMarkedFramesLocked final
@@ -3506,7 +3805,7 @@ struct MovieSceneSequenceExtensions_SetMarkedFramesLocked final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInLocked;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D6E[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetMarkedFramesLocked) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetMarkedFramesLocked");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetMarkedFramesLocked) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetMarkedFramesLocked");
@@ -3520,7 +3819,7 @@ struct MovieSceneSequenceExtensions_SetPlaybackEnd final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EndFrame;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D6F[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetPlaybackEnd) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetPlaybackEnd");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetPlaybackEnd) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetPlaybackEnd");
@@ -3534,7 +3833,7 @@ struct MovieSceneSequenceExtensions_SetPlaybackEndSeconds final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndTime;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D70[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetPlaybackEndSeconds) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetPlaybackEndSeconds");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetPlaybackEndSeconds) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetPlaybackEndSeconds");
@@ -3548,7 +3847,7 @@ struct MovieSceneSequenceExtensions_SetPlaybackRangeLocked final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInLocked;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D71[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetPlaybackRangeLocked) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetPlaybackRangeLocked");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetPlaybackRangeLocked) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetPlaybackRangeLocked");
@@ -3562,7 +3861,7 @@ struct MovieSceneSequenceExtensions_SetPlaybackStart final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StartFrame;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D72[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetPlaybackStart) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetPlaybackStart");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetPlaybackStart) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetPlaybackStart");
@@ -3576,7 +3875,7 @@ struct MovieSceneSequenceExtensions_SetPlaybackStartSeconds final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartTime;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D73[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetPlaybackStartSeconds) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetPlaybackStartSeconds");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetPlaybackStartSeconds) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetPlaybackStartSeconds");
@@ -3590,7 +3889,7 @@ struct MovieSceneSequenceExtensions_SetReadOnly final
 public:
 	class UMovieSceneSequence*                    Sequence;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInReadOnly;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D74[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetReadOnly) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetReadOnly");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetReadOnly) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetReadOnly");
@@ -3629,8 +3928,7 @@ struct MovieSceneSequenceExtensions_SetViewRangeEnd final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndTimeInSeconds;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D75[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        EndTimeInSeconds;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetViewRangeEnd) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetViewRangeEnd");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetViewRangeEnd) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetViewRangeEnd");
@@ -3643,8 +3941,7 @@ struct MovieSceneSequenceExtensions_SetViewRangeStart final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartTimeInSeconds;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D76[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        StartTimeInSeconds;                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetViewRangeStart) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetViewRangeStart");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetViewRangeStart) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetViewRangeStart");
@@ -3657,8 +3954,7 @@ struct MovieSceneSequenceExtensions_SetWorkRangeEnd final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndTimeInSeconds;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D77[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        EndTimeInSeconds;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetWorkRangeEnd) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetWorkRangeEnd");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetWorkRangeEnd) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetWorkRangeEnd");
@@ -3671,8 +3967,7 @@ struct MovieSceneSequenceExtensions_SetWorkRangeStart final
 {
 public:
 	class UMovieSceneSequence*                    InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartTimeInSeconds;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D78[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	double                                        StartTimeInSeconds;                                // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneSequenceExtensions_SetWorkRangeStart) == 0x000008, "Wrong alignment on MovieSceneSequenceExtensions_SetWorkRangeStart");
 static_assert(sizeof(MovieSceneSequenceExtensions_SetWorkRangeStart) == 0x000010, "Wrong size on MovieSceneSequenceExtensions_SetWorkRangeStart");
@@ -3710,7 +4005,7 @@ struct MovieSceneTrackExtensions_GetColorTint final
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D79[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneTrackExtensions_GetColorTint) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_GetColorTint");
 static_assert(sizeof(MovieSceneTrackExtensions_GetColorTint) == 0x000010, "Wrong size on MovieSceneTrackExtensions_GetColorTint");
@@ -3718,15 +4013,15 @@ static_assert(offsetof(MovieSceneTrackExtensions_GetColorTint, Track) == 0x00000
 static_assert(offsetof(MovieSceneTrackExtensions_GetColorTint, ReturnValue) == 0x000008, "Member 'MovieSceneTrackExtensions_GetColorTint::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneTrackExtensions.GetDisplayName
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct MovieSceneTrackExtensions_GetDisplayName final
 {
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneTrackExtensions_GetDisplayName) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_GetDisplayName");
-static_assert(sizeof(MovieSceneTrackExtensions_GetDisplayName) == 0x000020, "Wrong size on MovieSceneTrackExtensions_GetDisplayName");
+static_assert(sizeof(MovieSceneTrackExtensions_GetDisplayName) == 0x000018, "Wrong size on MovieSceneTrackExtensions_GetDisplayName");
 static_assert(offsetof(MovieSceneTrackExtensions_GetDisplayName, Track) == 0x000000, "Member 'MovieSceneTrackExtensions_GetDisplayName::Track' has a wrong offset!");
 static_assert(offsetof(MovieSceneTrackExtensions_GetDisplayName, ReturnValue) == 0x000008, "Member 'MovieSceneTrackExtensions_GetDisplayName::ReturnValue' has a wrong offset!");
 
@@ -3763,7 +4058,7 @@ struct MovieSceneTrackExtensions_GetSortingOrder final
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D7A[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneTrackExtensions_GetSortingOrder) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_GetSortingOrder");
 static_assert(sizeof(MovieSceneTrackExtensions_GetSortingOrder) == 0x000010, "Wrong size on MovieSceneTrackExtensions_GetSortingOrder");
@@ -3771,17 +4066,17 @@ static_assert(offsetof(MovieSceneTrackExtensions_GetSortingOrder, Track) == 0x00
 static_assert(offsetof(MovieSceneTrackExtensions_GetSortingOrder, ReturnValue) == 0x000008, "Member 'MovieSceneTrackExtensions_GetSortingOrder::ReturnValue' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneTrackExtensions.GetTrackRowDisplayName
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct MovieSceneTrackExtensions_GetTrackRowDisplayName final
 {
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RowIndex;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D7B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneTrackExtensions_GetTrackRowDisplayName) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_GetTrackRowDisplayName");
-static_assert(sizeof(MovieSceneTrackExtensions_GetTrackRowDisplayName) == 0x000028, "Wrong size on MovieSceneTrackExtensions_GetTrackRowDisplayName");
+static_assert(sizeof(MovieSceneTrackExtensions_GetTrackRowDisplayName) == 0x000020, "Wrong size on MovieSceneTrackExtensions_GetTrackRowDisplayName");
 static_assert(offsetof(MovieSceneTrackExtensions_GetTrackRowDisplayName, Track) == 0x000000, "Member 'MovieSceneTrackExtensions_GetTrackRowDisplayName::Track' has a wrong offset!");
 static_assert(offsetof(MovieSceneTrackExtensions_GetTrackRowDisplayName, RowIndex) == 0x000008, "Member 'MovieSceneTrackExtensions_GetTrackRowDisplayName::RowIndex' has a wrong offset!");
 static_assert(offsetof(MovieSceneTrackExtensions_GetTrackRowDisplayName, ReturnValue) == 0x000010, "Member 'MovieSceneTrackExtensions_GetTrackRowDisplayName::ReturnValue' has a wrong offset!");
@@ -3806,7 +4101,7 @@ struct MovieSceneTrackExtensions_SetColorTint final
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 ColorTint;                                         // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D7C[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneTrackExtensions_SetColorTint) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_SetColorTint");
 static_assert(sizeof(MovieSceneTrackExtensions_SetColorTint) == 0x000010, "Wrong size on MovieSceneTrackExtensions_SetColorTint");
@@ -3814,15 +4109,15 @@ static_assert(offsetof(MovieSceneTrackExtensions_SetColorTint, Track) == 0x00000
 static_assert(offsetof(MovieSceneTrackExtensions_SetColorTint, ColorTint) == 0x000008, "Member 'MovieSceneTrackExtensions_SetColorTint::ColorTint' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneTrackExtensions.SetDisplayName
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct MovieSceneTrackExtensions_SetDisplayName final
 {
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   InName;                                            // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   InName;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneTrackExtensions_SetDisplayName) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_SetDisplayName");
-static_assert(sizeof(MovieSceneTrackExtensions_SetDisplayName) == 0x000020, "Wrong size on MovieSceneTrackExtensions_SetDisplayName");
+static_assert(sizeof(MovieSceneTrackExtensions_SetDisplayName) == 0x000018, "Wrong size on MovieSceneTrackExtensions_SetDisplayName");
 static_assert(offsetof(MovieSceneTrackExtensions_SetDisplayName, Track) == 0x000000, "Member 'MovieSceneTrackExtensions_SetDisplayName::Track' has a wrong offset!");
 static_assert(offsetof(MovieSceneTrackExtensions_SetDisplayName, InName) == 0x000008, "Member 'MovieSceneTrackExtensions_SetDisplayName::InName' has a wrong offset!");
 
@@ -3846,7 +4141,7 @@ struct MovieSceneTrackExtensions_SetSortingOrder final
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SortingOrder;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D7D[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneTrackExtensions_SetSortingOrder) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_SetSortingOrder");
 static_assert(sizeof(MovieSceneTrackExtensions_SetSortingOrder) == 0x000010, "Wrong size on MovieSceneTrackExtensions_SetSortingOrder");
@@ -3854,20 +4149,20 @@ static_assert(offsetof(MovieSceneTrackExtensions_SetSortingOrder, Track) == 0x00
 static_assert(offsetof(MovieSceneTrackExtensions_SetSortingOrder, SortingOrder) == 0x000008, "Member 'MovieSceneTrackExtensions_SetSortingOrder::SortingOrder' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneTrackExtensions.SetTrackRowDisplayName
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct MovieSceneTrackExtensions_SetTrackRowDisplayName final
 {
 public:
 	class UMovieSceneTrack*                       Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   InName;                                            // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         RowIndex;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D7E[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   InName;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         RowIndex;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneTrackExtensions_SetTrackRowDisplayName) == 0x000008, "Wrong alignment on MovieSceneTrackExtensions_SetTrackRowDisplayName");
-static_assert(sizeof(MovieSceneTrackExtensions_SetTrackRowDisplayName) == 0x000028, "Wrong size on MovieSceneTrackExtensions_SetTrackRowDisplayName");
+static_assert(sizeof(MovieSceneTrackExtensions_SetTrackRowDisplayName) == 0x000020, "Wrong size on MovieSceneTrackExtensions_SetTrackRowDisplayName");
 static_assert(offsetof(MovieSceneTrackExtensions_SetTrackRowDisplayName, Track) == 0x000000, "Member 'MovieSceneTrackExtensions_SetTrackRowDisplayName::Track' has a wrong offset!");
 static_assert(offsetof(MovieSceneTrackExtensions_SetTrackRowDisplayName, InName) == 0x000008, "Member 'MovieSceneTrackExtensions_SetTrackRowDisplayName::InName' has a wrong offset!");
-static_assert(offsetof(MovieSceneTrackExtensions_SetTrackRowDisplayName, RowIndex) == 0x000020, "Member 'MovieSceneTrackExtensions_SetTrackRowDisplayName::RowIndex' has a wrong offset!");
+static_assert(offsetof(MovieSceneTrackExtensions_SetTrackRowDisplayName, RowIndex) == 0x000018, "Member 'MovieSceneTrackExtensions_SetTrackRowDisplayName::RowIndex' has a wrong offset!");
 
 // Function SequencerScripting.MovieSceneFloatVectorTrackExtensions.GetNumChannelsUsed
 // 0x0010 (0x0010 - 0x0000)
@@ -3876,7 +4171,7 @@ struct MovieSceneFloatVectorTrackExtensions_GetNumChannelsUsed final
 public:
 	class UMovieSceneFloatVectorTrack*            Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D7F[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFloatVectorTrackExtensions_GetNumChannelsUsed) == 0x000008, "Wrong alignment on MovieSceneFloatVectorTrackExtensions_GetNumChannelsUsed");
 static_assert(sizeof(MovieSceneFloatVectorTrackExtensions_GetNumChannelsUsed) == 0x000010, "Wrong size on MovieSceneFloatVectorTrackExtensions_GetNumChannelsUsed");
@@ -3890,7 +4185,7 @@ struct MovieSceneFloatVectorTrackExtensions_SetNumChannelsUsed final
 public:
 	class UMovieSceneFloatVectorTrack*            Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InNumChannelsUsed;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D80[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneFloatVectorTrackExtensions_SetNumChannelsUsed) == 0x000008, "Wrong alignment on MovieSceneFloatVectorTrackExtensions_SetNumChannelsUsed");
 static_assert(sizeof(MovieSceneFloatVectorTrackExtensions_SetNumChannelsUsed) == 0x000010, "Wrong size on MovieSceneFloatVectorTrackExtensions_SetNumChannelsUsed");
@@ -3904,7 +4199,7 @@ struct MovieSceneDoubleVectorTrackExtensions_GetNumChannelsUsed final
 public:
 	class UMovieSceneDoubleVectorTrack*           Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D81[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneDoubleVectorTrackExtensions_GetNumChannelsUsed) == 0x000008, "Wrong alignment on MovieSceneDoubleVectorTrackExtensions_GetNumChannelsUsed");
 static_assert(sizeof(MovieSceneDoubleVectorTrackExtensions_GetNumChannelsUsed) == 0x000010, "Wrong size on MovieSceneDoubleVectorTrackExtensions_GetNumChannelsUsed");
@@ -3918,7 +4213,7 @@ struct MovieSceneDoubleVectorTrackExtensions_SetNumChannelsUsed final
 public:
 	class UMovieSceneDoubleVectorTrack*           Track;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InNumChannelsUsed;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D82[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MovieSceneDoubleVectorTrackExtensions_SetNumChannelsUsed) == 0x000008, "Wrong alignment on MovieSceneDoubleVectorTrackExtensions_SetNumChannelsUsed");
 static_assert(sizeof(MovieSceneDoubleVectorTrackExtensions_SetNumChannelsUsed) == 0x000010, "Wrong size on MovieSceneDoubleVectorTrackExtensions_SetNumChannelsUsed");
@@ -3984,7 +4279,7 @@ struct SequencerScriptingRangeExtensions_HasEnd final
 public:
 	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D83[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencerScriptingRangeExtensions_HasEnd) == 0x000004, "Wrong alignment on SequencerScriptingRangeExtensions_HasEnd");
 static_assert(sizeof(SequencerScriptingRangeExtensions_HasEnd) == 0x000018, "Wrong size on SequencerScriptingRangeExtensions_HasEnd");
@@ -3998,7 +4293,7 @@ struct SequencerScriptingRangeExtensions_HasStart final
 public:
 	struct FSequencerScriptingRange               Range;                                             // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D84[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencerScriptingRangeExtensions_HasStart) == 0x000004, "Wrong alignment on SequencerScriptingRangeExtensions_HasStart");
 static_assert(sizeof(SequencerScriptingRangeExtensions_HasStart) == 0x000018, "Wrong size on SequencerScriptingRangeExtensions_HasStart");

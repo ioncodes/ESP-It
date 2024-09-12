@@ -32,7 +32,7 @@ void UWB_DataPrivacy_C::BndEvt__WB_DataPrivacy_CloseBtn_K2Node_ComponentBoundEve
 
 
 // Function WB_DataPrivacy.WB_DataPrivacy_C.ExecuteUbergraph_WB_DataPrivacy
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -46,6 +46,136 @@ void UWB_DataPrivacy_C::ExecuteUbergraph_WB_DataPrivacy(int32 EntryPoint)
 	Params::WB_DataPrivacy_C_ExecuteUbergraph_WB_DataPrivacy Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.GetInitialFocusWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InitialFocusWidget                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWB_DataPrivacy_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "GetInitialFocusWidget");
+
+	Params::WB_DataPrivacy_C_GetInitialFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (InitialFocusWidget != nullptr)
+		*InitialFocusWidget = Parms.InitialFocusWidget;
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.OnApply
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_DataPrivacy_C::OnApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "OnApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.OnBack
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_DataPrivacy_C::OnBack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "OnBack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.OnPreviewKeyDown
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// struct FKeyEvent                        InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWB_DataPrivacy_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "OnPreviewKeyDown");
+
+	Params::WB_DataPrivacy_C_OnPreviewKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.OnSpecialAction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_DataPrivacy_C::OnSpecialAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "OnSpecialAction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.Scroll
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Offset                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_DataPrivacy_C::Scroll(double Offset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "Scroll");
+
+	Params::WB_DataPrivacy_C_Scroll Parms{};
+
+	Parms.Offset = Offset;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_DataPrivacy.WB_DataPrivacy_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_DataPrivacy_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_DataPrivacy_C", "Tick");
+
+	Params::WB_DataPrivacy_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -21,6 +21,9 @@ namespace SDK
 class AB_Apple_C final : public AB_StaticMeshProp_C
 {
 public:
+	class UB_WindForce_C*                         B_WindForce;                                       // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
 	static class UClass* StaticClass()
 	{
 		return StaticBPGeneratedClassImpl<"B_Apple_C">();
@@ -32,6 +35,7 @@ public:
 };
 static_assert(alignof(AB_Apple_C) == 0x000010, "Wrong alignment on AB_Apple_C");
 static_assert(sizeof(AB_Apple_C) == 0x000590, "Wrong size on AB_Apple_C");
+static_assert(offsetof(AB_Apple_C, B_WindForce) == 0x000588, "Member 'AB_Apple_C::B_WindForce' has a wrong offset!");
 
 }
 

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_JumpScareGhost.B_JumpScareGhost_C.BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -27,11 +27,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5106[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -44,35 +44,35 @@ static_assert(offsetof(B_JumpScareGhost_C_BndEvt__SphereCollision_K2Node_Compone
 struct B_JumpScareGhost_C_CanTeleport final
 {
 public:
-	bool                                          Param_CanTeleport;                                 // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTeleport_0;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_JumpScareGhost_C_CanTeleport) == 0x000001, "Wrong alignment on B_JumpScareGhost_C_CanTeleport");
 static_assert(sizeof(B_JumpScareGhost_C_CanTeleport) == 0x000002, "Wrong size on B_JumpScareGhost_C_CanTeleport");
-static_assert(offsetof(B_JumpScareGhost_C_CanTeleport, Param_CanTeleport) == 0x000000, "Member 'B_JumpScareGhost_C_CanTeleport::Param_CanTeleport' has a wrong offset!");
+static_assert(offsetof(B_JumpScareGhost_C_CanTeleport, CanTeleport_0) == 0x000000, "Member 'B_JumpScareGhost_C_CanTeleport::CanTeleport_0' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_CanTeleport, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'B_JumpScareGhost_C_CanTeleport::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_JumpScareGhost.B_JumpScareGhost_C.ExecuteUbergraph_B_JumpScareGhost
-// 0x0138 (0x0138 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5107[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5108[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5109[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentScale_ReturnValue;         // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentScale_ReturnValue;         // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost) == 0x000008, "Wrong alignment on B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost");
-static_assert(sizeof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost) == 0x000138, "Wrong size on B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost");
+static_assert(sizeof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost) == 0x000148, "Wrong size on B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost");
 static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, EntryPoint) == 0x000000, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000008, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_ComponentBoundEvent_OtherActor) == 0x000010, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
@@ -80,9 +80,9 @@ static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2N
 static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000020, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_ComponentBoundEvent_bFromSweep) == 0x000024, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_ComponentBoundEvent_SweepResult) == 0x000028, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, CallFunc_HasAuthority_ReturnValue) == 0x000110, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, CallFunc_K2_GetComponentScale_ReturnValue) == 0x000118, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::CallFunc_K2_GetComponentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_Event_DeltaSeconds) == 0x000130, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, CallFunc_HasAuthority_ReturnValue) == 0x000120, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, CallFunc_K2_GetComponentScale_ReturnValue) == 0x000128, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::CallFunc_K2_GetComponentScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost, K2Node_Event_DeltaSeconds) == 0x000140, "Member 'B_JumpScareGhost_C_ExecuteUbergraph_B_JumpScareGhost::K2Node_Event_DeltaSeconds' has a wrong offset!");
 
 // Function B_JumpScareGhost.B_JumpScareGhost_C.HandleOverlap
 // 0x0088 (0x0088 - 0x0000)
@@ -95,23 +95,23 @@ public:
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasTrackingStarted_HasTrackingStarted;    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_510A[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_510B[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PowerBall_C*                         K2Node_DynamicCast_AsB_Power_Ball;                 // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_510C[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_510D[0x5];                                     // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_510E[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -168,7 +168,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_510F[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -192,7 +192,7 @@ struct B_JumpScareGhost_C_TearDown final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5110[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Multiply_VectorInt_ReturnValue;           // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_JumpScareGhost_C_TearDown) == 0x000008, "Wrong alignment on B_JumpScareGhost_C_TearDown");
@@ -206,15 +206,15 @@ struct B_JumpScareGhost_C_TearUp final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_JumpScareGhost_C_TearUp) == 0x000010, "Wrong alignment on B_JumpScareGhost_C_TearUp");
 static_assert(sizeof(B_JumpScareGhost_C_TearUp) == 0x000080, "Wrong size on B_JumpScareGhost_C_TearUp");
 static_assert(offsetof(B_JumpScareGhost_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_JumpScareGhost_C_TearUp::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_JumpScareGhost_C_TearUp, Param_Owner) == 0x000060, "Member 'B_JumpScareGhost_C_TearUp::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_JumpScareGhost_C_TearUp, Param_Instigator) == 0x000068, "Member 'B_JumpScareGhost_C_TearUp::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_JumpScareGhost_C_TearUp, Owner_0) == 0x000060, "Member 'B_JumpScareGhost_C_TearUp::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_JumpScareGhost_C_TearUp, Instigator_0) == 0x000068, "Member 'B_JumpScareGhost_C_TearUp::Instigator_0' has a wrong offset!");
 static_assert(offsetof(B_JumpScareGhost_C_TearUp, CallFunc_HasAuthority_ReturnValue) == 0x000070, "Member 'B_JumpScareGhost_C_TearUp::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 
 // Function B_JumpScareGhost.B_JumpScareGhost_C.UpdateScaleVelocityAndBlindDuration
@@ -223,15 +223,15 @@ struct B_JumpScareGhost_C_UpdateScaleVelocityAndBlindDuration final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5111[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5112[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5113[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentScale_ReturnValue;         // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

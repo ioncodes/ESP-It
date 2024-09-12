@@ -24,12 +24,12 @@ struct WB_ObjectiveTeamLogo_C_Get_Logo_Brush_0 final
 public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
 	E_ObjectiveTeam                               Temp_byte_Variable;                                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_392B[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             Temp_object_Variable;                              // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             Temp_object_Variable_1;                            // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             Temp_object_Variable_2;                            // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_Select_Default;                             // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_392C[0x8];                                     // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x0100(0x00D0)()
 };
 static_assert(alignof(WB_ObjectiveTeamLogo_C_Get_Logo_Brush_0) == 0x000010, "Wrong alignment on WB_ObjectiveTeamLogo_C_Get_Logo_Brush_0");
@@ -43,26 +43,26 @@ static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Logo_Brush_0, K2Node_Select_De
 static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Logo_Brush_0, CallFunc_MakeBrushFromTexture_ReturnValue) == 0x000100, "Member 'WB_ObjectiveTeamLogo_C_Get_Logo_Brush_0::CallFunc_MakeBrushFromTexture_ReturnValue' has a wrong offset!");
 
 // Function WB_ObjectiveTeamLogo.WB_ObjectiveTeamLogo_C.Get_Name_Text_0
-// 0x0080 (0x0080 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct WB_ObjectiveTeamLogo_C_Get_Name_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	E_ObjectiveTeam                               Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_392D[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0050(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0068(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	E_ObjectiveTeam                               Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0038(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0048(0x0010)()
 };
 static_assert(alignof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0) == 0x000008, "Wrong alignment on WB_ObjectiveTeamLogo_C_Get_Name_Text_0");
-static_assert(sizeof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0) == 0x000080, "Wrong size on WB_ObjectiveTeamLogo_C_Get_Name_Text_0");
+static_assert(sizeof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0) == 0x000058, "Wrong size on WB_ObjectiveTeamLogo_C_Get_Name_Text_0");
 static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, ReturnValue) == 0x000000, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_byte_Variable) == 0x000018, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_text_Variable) == 0x000020, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_text_Variable_1) == 0x000038, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_text_Variable_2) == 0x000050, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, K2Node_Select_Default) == 0x000068, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_byte_Variable) == 0x000010, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_text_Variable) == 0x000018, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_text_Variable_1) == 0x000028, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, Temp_text_Variable_2) == 0x000038, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveTeamLogo_C_Get_Name_Text_0, K2Node_Select_Default) == 0x000048, "Member 'WB_ObjectiveTeamLogo_C_Get_Name_Text_0::K2Node_Select_Default' has a wrong offset!");
 
 }
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "MasterServerPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "LowEntryJson_structs.hpp"
 
 
@@ -27,7 +27,7 @@ class UB_UserBehaviorTrackingManager_C final : public UBaseUserBehaviorTrackingM
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0038(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          IsEnabled;                                         // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37E4[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVaRestRequestJSON*                     TempRequest;                                       // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_NewMasterServerManager_C*            CachedNewMasterServerManager;                      // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FUserBehaviorEvent>             CachedEvents;                                      // 0x0058(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -47,7 +47,7 @@ public:
 	void OnMultipleRequestFail(class UVaRestRequestJSON* Request);
 	void OnRequestComplete(class UVaRestRequestJSON* Request);
 	void OnRequestFail(class UVaRestRequestJSON* Request);
-	void SetEnabled(bool Param_IsEnabled);
+	void SetEnabled(bool IsEnabled_0);
 	void UploadCachedEvents();
 	void UploadSingleData(const class UB_NewMasterServerManager_C*& NewMasterServerManager, const ENativeUserBehaviorEventType& EventType, const class FString& EventData);
 

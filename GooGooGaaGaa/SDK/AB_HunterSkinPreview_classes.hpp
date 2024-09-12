@@ -10,68 +10,68 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AB_HunterSkinPreview_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_HunterSkinPreview.AB_HunterSkinPreview_C
-// 0x0E70 (0x11C0 - 0x0350)
+// 0x0E90 (0x1200 - 0x0370)
 class UAB_HunterSkinPreview_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3874[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct AB_HunterSkinPreview::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0358(0x0014)(HasGetValueTypeHash)
-	uint8                                         Pad_3875[0x4];                                     // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0370(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0378(0x0008)()
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0380(0x0950)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0CD0(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x0CF0(0x0070)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0D60(0x0080)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0DE0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0E08(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0E30(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0E58(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0E80(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x0EC8(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0EE8(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0F30(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0F50(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x0F98(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x0FB8(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1028(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1048(0x00C8)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1110(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1130(0x0020)()
-	double                                        Direction;                                         // 0x1150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Speed;                                             // 0x1158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsWalking;                                         // 0x1160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInAir;                                           // 0x1161(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCrouching;                                       // 0x1162(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3876[0x5];                                     // 0x1163(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LookLeftRight;                                     // 0x1168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LookUpDown;                                        // 0x1170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentMeshYaw;                                    // 0x1178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               ActorRotation;                                     // 0x1180(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	double                                        CurrentControllerYaw;                              // 0x1198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MeleeWeaponPhysics;                                // 0x11A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Confusion;                                         // 0x11A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACharacter*                             CurrentCharacter;                                  // 0x11B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPlayingEhh;                                      // 0x11B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsQuestionTaunting;                                // 0x11B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPlayingOoh;                                      // 0x11BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPlayingUhh;                                      // 0x11BB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsQuestionTauntingAgain;                           // 0x11BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct AB_HunterSkinPreview::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0378(0x0014)(HasGetValueTypeHash)
+	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0390(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0398(0x0008)()
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x03A0(0x0970)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0D10(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x0D30(0x0070)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0DA0(0x0080)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0E20(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0E48(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0E70(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0E98(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0EC0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x0F08(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0F28(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0F70(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0F90(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x0FD8(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x0FF8(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1068(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1088(0x00C8)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1150(0x0020)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1170(0x0020)()
+	double                                        Direction;                                         // 0x1190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Speed;                                             // 0x1198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsWalking;                                         // 0x11A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInAir;                                           // 0x11A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCrouching;                                       // 0x11A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11A3[0x5];                                     // 0x11A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LookLeftRight;                                     // 0x11A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LookUpDown;                                        // 0x11B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentMeshYaw;                                    // 0x11B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               ActorRotation;                                     // 0x11C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	double                                        CurrentControllerYaw;                              // 0x11D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MeleeWeaponPhysics;                                // 0x11E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Confusion;                                         // 0x11E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CurrentCharacter;                                  // 0x11F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPlayingEhh;                                      // 0x11F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsQuestionTaunting;                                // 0x11F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPlayingOoh;                                      // 0x11FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPlayingUhh;                                      // 0x11FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsQuestionTauntingAgain;                           // 0x11FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void AnimNotify_LeftEhh();
 	void AnimNotify_LeftOoh();
 	void AnimNotify_LeftQuestion();
@@ -95,48 +95,48 @@ public:
 	}
 };
 static_assert(alignof(UAB_HunterSkinPreview_C) == 0x000010, "Wrong alignment on UAB_HunterSkinPreview_C");
-static_assert(sizeof(UAB_HunterSkinPreview_C) == 0x0011C0, "Wrong size on UAB_HunterSkinPreview_C");
-static_assert(offsetof(UAB_HunterSkinPreview_C, UberGraphFrame) == 0x000350, "Member 'UAB_HunterSkinPreview_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, __AnimBlueprintMutables) == 0x000358, "Member 'UAB_HunterSkinPreview_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimBlueprintExtension_PropertyAccess) == 0x000370, "Member 'UAB_HunterSkinPreview_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimBlueprintExtension_Base) == 0x000378, "Member 'UAB_HunterSkinPreview_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_RigidBody) == 0x000380, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_ComponentToLocalSpace) == 0x000CD0, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_BlendSpacePlayer_1) == 0x000CF0, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_BlendSpacePlayer_1' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SaveCachedPose) == 0x000D60, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult_3) == 0x000DE0, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult_2) == 0x000E08, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult_1) == 0x000E30, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult) == 0x000E58, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SequencePlayer_2) == 0x000E80, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult_3) == 0x000EC8, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SequencePlayer_1) == 0x000EE8, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult_2) == 0x000F30, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SequencePlayer) == 0x000F50, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult_1) == 0x000F98, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_BlendSpacePlayer) == 0x000FB8, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult) == 0x001028, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateMachine) == 0x001048, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_LocalToComponentSpace) == 0x001110, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_Root) == 0x001130, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, Direction) == 0x001150, "Member 'UAB_HunterSkinPreview_C::Direction' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, Speed) == 0x001158, "Member 'UAB_HunterSkinPreview_C::Speed' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsWalking) == 0x001160, "Member 'UAB_HunterSkinPreview_C::IsWalking' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsInAir) == 0x001161, "Member 'UAB_HunterSkinPreview_C::IsInAir' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsCrouching) == 0x001162, "Member 'UAB_HunterSkinPreview_C::IsCrouching' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, LookLeftRight) == 0x001168, "Member 'UAB_HunterSkinPreview_C::LookLeftRight' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, LookUpDown) == 0x001170, "Member 'UAB_HunterSkinPreview_C::LookUpDown' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, CurrentMeshYaw) == 0x001178, "Member 'UAB_HunterSkinPreview_C::CurrentMeshYaw' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, ActorRotation) == 0x001180, "Member 'UAB_HunterSkinPreview_C::ActorRotation' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, CurrentControllerYaw) == 0x001198, "Member 'UAB_HunterSkinPreview_C::CurrentControllerYaw' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, MeleeWeaponPhysics) == 0x0011A0, "Member 'UAB_HunterSkinPreview_C::MeleeWeaponPhysics' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, Confusion) == 0x0011A8, "Member 'UAB_HunterSkinPreview_C::Confusion' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, CurrentCharacter) == 0x0011B0, "Member 'UAB_HunterSkinPreview_C::CurrentCharacter' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsPlayingEhh) == 0x0011B8, "Member 'UAB_HunterSkinPreview_C::IsPlayingEhh' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsQuestionTaunting) == 0x0011B9, "Member 'UAB_HunterSkinPreview_C::IsQuestionTaunting' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsPlayingOoh) == 0x0011BA, "Member 'UAB_HunterSkinPreview_C::IsPlayingOoh' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsPlayingUhh) == 0x0011BB, "Member 'UAB_HunterSkinPreview_C::IsPlayingUhh' has a wrong offset!");
-static_assert(offsetof(UAB_HunterSkinPreview_C, IsQuestionTauntingAgain) == 0x0011BC, "Member 'UAB_HunterSkinPreview_C::IsQuestionTauntingAgain' has a wrong offset!");
+static_assert(sizeof(UAB_HunterSkinPreview_C) == 0x001200, "Wrong size on UAB_HunterSkinPreview_C");
+static_assert(offsetof(UAB_HunterSkinPreview_C, UberGraphFrame) == 0x000370, "Member 'UAB_HunterSkinPreview_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, __AnimBlueprintMutables) == 0x000378, "Member 'UAB_HunterSkinPreview_C::__AnimBlueprintMutables' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimBlueprintExtension_PropertyAccess) == 0x000390, "Member 'UAB_HunterSkinPreview_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimBlueprintExtension_Base) == 0x000398, "Member 'UAB_HunterSkinPreview_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_RigidBody) == 0x0003A0, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_ComponentToLocalSpace) == 0x000D10, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_BlendSpacePlayer_1) == 0x000D30, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_BlendSpacePlayer_1' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SaveCachedPose) == 0x000DA0, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult_3) == 0x000E20, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult_2) == 0x000E48, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult_1) == 0x000E70, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_TransitionResult) == 0x000E98, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SequencePlayer_2) == 0x000EC0, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult_3) == 0x000F08, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult_3' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SequencePlayer_1) == 0x000F28, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult_2) == 0x000F70, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_SequencePlayer) == 0x000F90, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult_1) == 0x000FD8, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_BlendSpacePlayer) == 0x000FF8, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateResult) == 0x001068, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_StateMachine) == 0x001088, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_StateMachine' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_LocalToComponentSpace) == 0x001150, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, AnimGraphNode_Root) == 0x001170, "Member 'UAB_HunterSkinPreview_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, Direction) == 0x001190, "Member 'UAB_HunterSkinPreview_C::Direction' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, Speed) == 0x001198, "Member 'UAB_HunterSkinPreview_C::Speed' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsWalking) == 0x0011A0, "Member 'UAB_HunterSkinPreview_C::IsWalking' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsInAir) == 0x0011A1, "Member 'UAB_HunterSkinPreview_C::IsInAir' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsCrouching) == 0x0011A2, "Member 'UAB_HunterSkinPreview_C::IsCrouching' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, LookLeftRight) == 0x0011A8, "Member 'UAB_HunterSkinPreview_C::LookLeftRight' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, LookUpDown) == 0x0011B0, "Member 'UAB_HunterSkinPreview_C::LookUpDown' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, CurrentMeshYaw) == 0x0011B8, "Member 'UAB_HunterSkinPreview_C::CurrentMeshYaw' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, ActorRotation) == 0x0011C0, "Member 'UAB_HunterSkinPreview_C::ActorRotation' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, CurrentControllerYaw) == 0x0011D8, "Member 'UAB_HunterSkinPreview_C::CurrentControllerYaw' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, MeleeWeaponPhysics) == 0x0011E0, "Member 'UAB_HunterSkinPreview_C::MeleeWeaponPhysics' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, Confusion) == 0x0011E8, "Member 'UAB_HunterSkinPreview_C::Confusion' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, CurrentCharacter) == 0x0011F0, "Member 'UAB_HunterSkinPreview_C::CurrentCharacter' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsPlayingEhh) == 0x0011F8, "Member 'UAB_HunterSkinPreview_C::IsPlayingEhh' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsQuestionTaunting) == 0x0011F9, "Member 'UAB_HunterSkinPreview_C::IsQuestionTaunting' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsPlayingOoh) == 0x0011FA, "Member 'UAB_HunterSkinPreview_C::IsPlayingOoh' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsPlayingUhh) == 0x0011FB, "Member 'UAB_HunterSkinPreview_C::IsPlayingUhh' has a wrong offset!");
+static_assert(offsetof(UAB_HunterSkinPreview_C, IsQuestionTauntingAgain) == 0x0011FC, "Member 'UAB_HunterSkinPreview_C::IsQuestionTauntingAgain' has a wrong offset!");
 
 }
 

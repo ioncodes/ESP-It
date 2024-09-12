@@ -11,25 +11,26 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Information.WB_Information_C
-// 0x0038 (0x02F8 - 0x02C0)
+// 0x0038 (0x0318 - 0x02E0)
 class UWB_Information_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Credits;                                           // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           DataPrivacy;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Tutorial;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           WhatsNew;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Credits;                                           // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           DataPrivacy;                                       // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Tutorial;                                          // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           WhatsNew;                                          // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__MatchFillAPot_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -41,6 +42,7 @@ public:
 	void Construct();
 	void ExecuteUbergraph_WB_Information(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
+	class UWidget* NavigateToWhatsNew(EUINavigation Navigation_0);
 	void OnApply();
 	void OnBack();
 	void OnSpecialAction();
@@ -56,14 +58,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_Information_C) == 0x000008, "Wrong alignment on UWB_Information_C");
-static_assert(sizeof(UWB_Information_C) == 0x0002F8, "Wrong size on UWB_Information_C");
-static_assert(offsetof(UWB_Information_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Information_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Information_C, Back) == 0x0002C8, "Member 'UWB_Information_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_Information_C, CanvasPanel_0) == 0x0002D0, "Member 'UWB_Information_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_Information_C, Credits) == 0x0002D8, "Member 'UWB_Information_C::Credits' has a wrong offset!");
-static_assert(offsetof(UWB_Information_C, DataPrivacy) == 0x0002E0, "Member 'UWB_Information_C::DataPrivacy' has a wrong offset!");
-static_assert(offsetof(UWB_Information_C, Tutorial) == 0x0002E8, "Member 'UWB_Information_C::Tutorial' has a wrong offset!");
-static_assert(offsetof(UWB_Information_C, WhatsNew) == 0x0002F0, "Member 'UWB_Information_C::WhatsNew' has a wrong offset!");
+static_assert(sizeof(UWB_Information_C) == 0x000318, "Wrong size on UWB_Information_C");
+static_assert(offsetof(UWB_Information_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Information_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Information_C, Back) == 0x0002E8, "Member 'UWB_Information_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_Information_C, CanvasPanel_0) == 0x0002F0, "Member 'UWB_Information_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_Information_C, Credits) == 0x0002F8, "Member 'UWB_Information_C::Credits' has a wrong offset!");
+static_assert(offsetof(UWB_Information_C, DataPrivacy) == 0x000300, "Member 'UWB_Information_C::DataPrivacy' has a wrong offset!");
+static_assert(offsetof(UWB_Information_C, Tutorial) == 0x000308, "Member 'UWB_Information_C::Tutorial' has a wrong offset!");
+static_assert(offsetof(UWB_Information_C, WhatsNew) == 0x000310, "Member 'UWB_Information_C::WhatsNew' has a wrong offset!");
 
 }
 

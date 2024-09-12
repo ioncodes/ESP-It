@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
+#include "EHighlightChannel_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_PlaceableStaticProp_classes.hpp"
-#include "EHighlightChannel_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BaseUtilityPlaceable.BP_BaseUtilityPlaceable_C
-// 0x0028 (0x0390 - 0x0368)
+// 0x0028 (0x0378 - 0x0350)
 #pragma pack(push, 0x1)
 class alignas(0x08) ABP_BaseUtilityPlaceable_C : public ABP_PlaceableStaticProp_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_BaseUtilityPlaceable_C;          // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AActor*                                 SpawnedActor;                                      // 0x0370(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	double                                        RealActorZOffset;                                  // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 RealActorClass;                                    // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ChangeRealActorCollisionInCreativeMode;            // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECollisionEnabled                             RealActorCollisionResponseInCreativeMode;          // 0x0389(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_BaseUtilityPlaceable_C;          // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AActor*                                 SpawnedActor;                                      // 0x0358(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, RepNotify, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	double                                        RealActorZOffset;                                  // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 RealActorClass;                                    // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChangeRealActorCollisionInCreativeMode;            // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionEnabled                             RealActorCollisionResponseInCreativeMode;          // 0x0371(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void GetRealActorSpawnTransform(struct FTransform* SpawnTransform);
-	void RespawnonPlayTestStart(bool HasPlayTestStarted);
+	void RespawnOnPlayTestStart(bool HasPlayTestStarted);
 	void OnRep_SpawnedActor();
-	void HandleSpawnedRealActor(class AActor* Param_SpawnedActor);
+	void HandleSpawnedRealActor(class AActor* SpawnedActor_0);
 	class AActor* SpawnRealActor();
 	void RefreshHighlight(bool* Highlightable);
 	void SpawnActor();
@@ -58,13 +58,13 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ABP_BaseUtilityPlaceable_C) == 0x000008, "Wrong alignment on ABP_BaseUtilityPlaceable_C");
-static_assert(sizeof(ABP_BaseUtilityPlaceable_C) == 0x000390, "Wrong size on ABP_BaseUtilityPlaceable_C");
-static_assert(offsetof(ABP_BaseUtilityPlaceable_C, UberGraphFrame_BP_BaseUtilityPlaceable_C) == 0x000368, "Member 'ABP_BaseUtilityPlaceable_C::UberGraphFrame_BP_BaseUtilityPlaceable_C' has a wrong offset!");
-static_assert(offsetof(ABP_BaseUtilityPlaceable_C, SpawnedActor) == 0x000370, "Member 'ABP_BaseUtilityPlaceable_C::SpawnedActor' has a wrong offset!");
-static_assert(offsetof(ABP_BaseUtilityPlaceable_C, RealActorZOffset) == 0x000378, "Member 'ABP_BaseUtilityPlaceable_C::RealActorZOffset' has a wrong offset!");
-static_assert(offsetof(ABP_BaseUtilityPlaceable_C, RealActorClass) == 0x000380, "Member 'ABP_BaseUtilityPlaceable_C::RealActorClass' has a wrong offset!");
-static_assert(offsetof(ABP_BaseUtilityPlaceable_C, ChangeRealActorCollisionInCreativeMode) == 0x000388, "Member 'ABP_BaseUtilityPlaceable_C::ChangeRealActorCollisionInCreativeMode' has a wrong offset!");
-static_assert(offsetof(ABP_BaseUtilityPlaceable_C, RealActorCollisionResponseInCreativeMode) == 0x000389, "Member 'ABP_BaseUtilityPlaceable_C::RealActorCollisionResponseInCreativeMode' has a wrong offset!");
+static_assert(sizeof(ABP_BaseUtilityPlaceable_C) == 0x000378, "Wrong size on ABP_BaseUtilityPlaceable_C");
+static_assert(offsetof(ABP_BaseUtilityPlaceable_C, UberGraphFrame_BP_BaseUtilityPlaceable_C) == 0x000350, "Member 'ABP_BaseUtilityPlaceable_C::UberGraphFrame_BP_BaseUtilityPlaceable_C' has a wrong offset!");
+static_assert(offsetof(ABP_BaseUtilityPlaceable_C, SpawnedActor) == 0x000358, "Member 'ABP_BaseUtilityPlaceable_C::SpawnedActor' has a wrong offset!");
+static_assert(offsetof(ABP_BaseUtilityPlaceable_C, RealActorZOffset) == 0x000360, "Member 'ABP_BaseUtilityPlaceable_C::RealActorZOffset' has a wrong offset!");
+static_assert(offsetof(ABP_BaseUtilityPlaceable_C, RealActorClass) == 0x000368, "Member 'ABP_BaseUtilityPlaceable_C::RealActorClass' has a wrong offset!");
+static_assert(offsetof(ABP_BaseUtilityPlaceable_C, ChangeRealActorCollisionInCreativeMode) == 0x000370, "Member 'ABP_BaseUtilityPlaceable_C::ChangeRealActorCollisionInCreativeMode' has a wrong offset!");
+static_assert(offsetof(ABP_BaseUtilityPlaceable_C, RealActorCollisionResponseInCreativeMode) == 0x000371, "Member 'ABP_BaseUtilityPlaceable_C::RealActorCollisionResponseInCreativeMode' has a wrong offset!");
 
 }
 

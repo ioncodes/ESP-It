@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
-#include "Engine_structs.hpp"
 #include "E_Achievements_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -34,14 +34,14 @@ public:
 	class UB_Achievement_C*                       AchSneakyWItch;                                    // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UB_Achievement_C*>               AchievementList;                                   // 0x0070(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         DefaultPlayerAmount;                               // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5002[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       AchWitchHunter;                                    // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       AchPickup;                                         // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       AchTourist;                                        // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       AchPossess;                                        // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AB_GameMode_C*                          GameMode;                                          // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDedicatedServer;                                 // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5003[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       AchPotato;                                         // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       AchCatchFly;                                       // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       AchCannonball;                                     // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -57,16 +57,16 @@ public:
 	int32                                         FruitSaladTarget;                                  // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BarrelRollTarget;                                  // 0x019C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TouristTarget;                                     // 0x01A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5004[0x4];                                     // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       AchPhoto;                                          // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         PhotoTarget;                                       // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Achievement_Is_Not_Owned(class AB_PlayerState_C* PlayerState, class FName Param_Name, bool* IsNotOwned);
+	void Achievement_Is_Not_Owned(class AB_PlayerState_C* PlayerState, class FName Name_0, bool* IsNotOwned);
 	void Activate_Achievement(class AB_PlayerState_C* PlayerState, E_Achievements AchievementType);
-	void Activate_By_Id(class AB_PlayerState_C* PlayerState, E_Achievements Achievement_Type, int32 PropId);
+	void Activate_By_Id(class AB_PlayerState_C* PlayerState, E_Achievements Achievement_Type, int32 PropID);
 	void Check_Achievement_Validity(class AB_PlayerState_C* PlayerState, class UB_Achievement_C* Achievement, bool* IsValid);
-	void Check_Prop_Achievements(int32 PropId, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState);
+	void Check_Prop_Achievements(int32 PropID, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState);
 	void CheckDefaultNrOfActivePlayers(bool* Sufficient_Players);
 	void CheckNrOfActivePlayers(bool* Sufficient_Players);
 	void Create_New_Achievement_Instance(class UB_Achievement_C* Model, class UB_Achievement_C** Achievement, bool* Success);
@@ -77,24 +77,24 @@ public:
 	void Get_AchFruitSalad_Ids(TArray<int32>* IDs);
 	void Get_Achievement_Key(class UB_Achievement_C* Achievement, E_Achievements* Key);
 	void Get_AchPhoto_Ids(TArray<int32>* IDs);
-	void Get_Divider(int32 Param_Index, int32* Divider);
+	void Get_Divider(int32 Index_0, int32* Divider);
 	void Get_Player_Achievement(class AB_PlayerState_C* PlayerState, E_Achievements Achievement_Type, class UB_Achievement_C** Achievement, bool* Success);
 	void Give_Achievement(class AB_PlayerState_C* PlayerState, E_Achievements Achievement_Type);
 	void Initialize_GS(class AB_PlayerState_C* Player_State);
 	void Initialize_Player_Achievement_List(class AB_PlayerState_C* PlayerState);
-	void Reset_Or_Disable_Prop_Achievements(int32 PropId, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState);
+	void Reset_Or_Disable_Prop_Achievements(int32 PropID, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState);
 	void Set_Achievement_Conversion_Map();
 	void Set_Individual_Achievement_Content(class UB_Achievement_C* Achievement, E_Achievements Achievement_Type, bool Starts_Active, bool Requires_Player_Survival, bool Mobification, bool Hide_and_Seek, bool Hunt_a_Hag, bool Fill_the_Pot, int32 Target_Value, int32 Required_Player_Amount);
 	void Set_Level_Name_List();
 	void Set_Name_Conversion_Map();
 	void Set_Valid_Game_Modes(class UB_Achievement_C* Achievement, bool Mobification, bool Hide_and_Seek, bool Hunt_a_Hag, bool Fill_the_Pot);
-	void SetAchievementContent(class UB_GameInstance_C* Param_GameInstance, class AB_GameMode_C* Param_GameMode);
-	void Test_AchFruitSalad_Ids(int32 PropId, class UB_Achievement_C* Achievement, bool* Give_Achievement);
+	void SetAchievementContent(class UB_GameInstance_C* GameInstance_0, class AB_GameMode_C* GameMode_0);
+	void Test_AchFruitSalad_Ids(int32 PropID, class UB_Achievement_C* Achievement, bool* Give_Achievement);
 	void Test_Amount_Of_Won_Maps(int32 AllMapsCode, bool* GiveAchievement);
 	void Test_Hunter_Catch_in_Air(const struct FDateTime& StartInAir, const struct FDateTime& EndInAir, class AB_PlayerState_C* PlayerState, class UB_Achievement_C* Achievement, bool* Give_Achievement);
-	void Test_Luaq_Statue_Photo(class AActor* Param_PhotoTarget, class AB_PlayerState_C* Player_State, class UB_Achievement_C* Achievement, bool* Give_Achievement);
+	void Test_Luaq_Statue_Photo(class AActor* PhotoTarget_0, class AB_PlayerState_C* Player_State, class UB_Achievement_C* Achievement, bool* Give_Achievement);
 	void Test_Match_Value(class UB_Achievement_C* Achievement, bool* Give_Achievement);
-	void Test_NonMinusSurvival_Achievement(E_Achievements AchievementType, class AB_PlayerState_C* PlayerState, int32 PropId, double TravelDistance, class AActor* ControlledProp, const struct FDateTime& StartHunterInAir, const struct FDateTime& EndHunterInAir, class AActor* Param_PhotoTarget);
+	void Test_NonMinusSurvival_Achievement(E_Achievements AchievementType, class AB_PlayerState_C* PlayerState, int32 PropID, double TravelDistance, class AActor* ControlledProp, const struct FDateTime& StartHunterInAir, const struct FDateTime& EndHunterInAir, class AActor* PhotoTarget_0);
 	void Test_Survival_Achievement(class AB_PlayerState_C* PlayerState, class UB_Achievement_C* Achievement);
 	void Test_Travel_Distance(class UB_Achievement_C* Achievement, double NewTravelDistance, class AActor* Barrel, bool* GiveAchievement);
 	void Update_Map_Stat(const class FString& Current_Level, class AB_PlayerState_C* Player_State);

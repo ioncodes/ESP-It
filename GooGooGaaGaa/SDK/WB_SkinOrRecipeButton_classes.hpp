@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "S_RecipeInfo_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
 #include "WB_TileViewButton_classes.hpp"
 
 
@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkinOrRecipeButton.WB_SkinOrRecipeButton_C
-// 0x0108 (0x03F8 - 0x02F0)
+// 0x00F0 (0x0400 - 0x0310)
 class UWB_SkinOrRecipeButton_C : public UWB_TileViewButton_C
 {
 public:
-	struct FS_ItemInfo                            SkinItemInfo;                                      // 0x02F0(0x0080)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FS_RecipeInfo                          RecipeInfo;                                        // 0x0370(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FS_ItemInfo                            SkinItemInfo;                                      // 0x0310(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          RecipeInfo;                                        // 0x0388(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void GetIsButtonEnabled(bool* IsEnabled);
-	void GetNotifyButtonVisibility(bool* Param_IsVisible);
+	void GetNotifyButtonVisibility(bool* IsVisible_0);
 	void GetRecipeIconVisibility(bool* ShowIcon);
-	void GetTooltip(class UUserWidget** Param_ToolTip);
+	void GetTooltip(class UUserWidget** ToolTip_0);
 	void SetIndividualParameters();
 	void GetBorderColor(struct FLinearColor* Color);
 	TSoftObjectPtr<class UObject> GetIcon();
@@ -46,9 +46,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_SkinOrRecipeButton_C) == 0x000008, "Wrong alignment on UWB_SkinOrRecipeButton_C");
-static_assert(sizeof(UWB_SkinOrRecipeButton_C) == 0x0003F8, "Wrong size on UWB_SkinOrRecipeButton_C");
-static_assert(offsetof(UWB_SkinOrRecipeButton_C, SkinItemInfo) == 0x0002F0, "Member 'UWB_SkinOrRecipeButton_C::SkinItemInfo' has a wrong offset!");
-static_assert(offsetof(UWB_SkinOrRecipeButton_C, RecipeInfo) == 0x000370, "Member 'UWB_SkinOrRecipeButton_C::RecipeInfo' has a wrong offset!");
+static_assert(sizeof(UWB_SkinOrRecipeButton_C) == 0x000400, "Wrong size on UWB_SkinOrRecipeButton_C");
+static_assert(offsetof(UWB_SkinOrRecipeButton_C, SkinItemInfo) == 0x000310, "Member 'UWB_SkinOrRecipeButton_C::SkinItemInfo' has a wrong offset!");
+static_assert(offsetof(UWB_SkinOrRecipeButton_C, RecipeInfo) == 0x000388, "Member 'UWB_SkinOrRecipeButton_C::RecipeInfo' has a wrong offset!");
 
 }
 

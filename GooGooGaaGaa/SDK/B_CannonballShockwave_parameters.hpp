@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_CannonballShockwave.B_CannonballShockwave_C.BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -27,11 +27,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3742[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -40,45 +40,45 @@ static_assert(offsetof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sph
 static_assert(offsetof(B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_CannonballShockwave_C_BndEvt__B_CannonballShockwave_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_CannonballShockwave.B_CannonballShockwave_C.ExecuteUbergraph_B_CannonballShockwave
-// 0x01F0 (0x01F0 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3743[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3744[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3745[0x6];                                     // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class AActor*                           Temp_object_Variable;                              // 0x0130(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3746[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetDirectionUnitVector_ReturnValue;       // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3747[0x7];                                     // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3748[0x4];                                     // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0028(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class AActor*                           Temp_object_Variable;                              // 0x0140(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetDirectionUnitVector_ReturnValue;       // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x01E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave) == 0x000008, "Wrong alignment on B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave");
-static_assert(sizeof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave) == 0x0001F0, "Wrong size on B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave");
+static_assert(sizeof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave) == 0x000200, "Wrong size on B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave");
 static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, EntryPoint) == 0x000000, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000008, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_ComponentBoundEvent_OtherActor) == 0x000010, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
@@ -86,25 +86,25 @@ static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShoc
 static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000020, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
 static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_ComponentBoundEvent_bFromSweep) == 0x000024, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
 static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_ComponentBoundEvent_SweepResult) == 0x000028, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_IsSimulatingPhysics_ReturnValue) == 0x000110, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_IsSimulatingPhysics_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000111, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000118, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, Temp_object_Variable) == 0x000130, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_Event_DeltaSeconds) == 0x000138, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000140, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_FMin_ReturnValue) == 0x000148, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000150, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000168, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_GetDirectionUnitVector_ReturnValue) == 0x000180, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_GetDirectionUnitVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_VSize_ReturnValue) == 0x000198, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001A0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Array_Contains_ReturnValue) == 0x0001A8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_FMax_ReturnValue) == 0x0001B0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001B8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Array_Add_ReturnValue) == 0x0001C0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x0001D0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0001E8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_IsSimulatingPhysics_ReturnValue) == 0x000120, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_IsSimulatingPhysics_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000121, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000128, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, Temp_object_Variable) == 0x000140, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, K2Node_Event_DeltaSeconds) == 0x000148, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000150, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_FMin_ReturnValue) == 0x000158, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_FMin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000160, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000178, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_GetDirectionUnitVector_ReturnValue) == 0x000190, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_GetDirectionUnitVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_VSize_ReturnValue) == 0x0001A8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_VSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001B0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Array_Contains_ReturnValue) == 0x0001B8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_FMax_ReturnValue) == 0x0001C0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Array_Add_ReturnValue) == 0x0001D0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x0001E0, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave, CallFunc_Add_DoubleDouble_B_ImplicitCast) == 0x0001F8, "Member 'B_CannonballShockwave_C_ExecuteUbergraph_B_CannonballShockwave::CallFunc_Add_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 // Function B_CannonballShockwave.B_CannonballShockwave_C.HandleFadeAndSize
 // 0x0030 (0x0030 - 0x0000)
@@ -113,10 +113,10 @@ struct B_CannonballShockwave_C_HandleFadeAndSize final
 public:
 	double                                        CallFunc_FMin_ReturnValue;                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3749[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_InTime_ImplicitCast;        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_374A[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

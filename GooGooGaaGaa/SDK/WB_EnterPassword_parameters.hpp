@@ -10,6 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "InputCore_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -35,11 +39,11 @@ struct WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5469[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_546A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPassword_PasswordNew;                  // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword) == 0x000008, "Wrong alignment on WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword");
@@ -49,6 +53,27 @@ static_assert(offsetof(WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword, Cal
 static_assert(offsetof(WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword, CallFunc_GetPassword_PasswordNew) == 0x000020, "Member 'WB_EnterPassword_C_ExecuteUbergraph_WB_EnterPassword::CallFunc_GetPassword_PasswordNew' has a wrong offset!");
+
+// Function WB_EnterPassword.WB_EnterPassword_C.Get_ControllerIcon_Visibility
+// 0x0006 (0x0006 - 0x0000)
+struct WB_EnterPassword_C_Get_ControllerIcon_Visibility final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_EnterPassword_C_Get_ControllerIcon_Visibility) == 0x000001, "Wrong alignment on WB_EnterPassword_C_Get_ControllerIcon_Visibility");
+static_assert(sizeof(WB_EnterPassword_C_Get_ControllerIcon_Visibility) == 0x000006, "Wrong size on WB_EnterPassword_C_Get_ControllerIcon_Visibility");
+static_assert(offsetof(WB_EnterPassword_C_Get_ControllerIcon_Visibility, ReturnValue) == 0x000000, "Member 'WB_EnterPassword_C_Get_ControllerIcon_Visibility::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_Get_ControllerIcon_Visibility, Temp_bool_Variable) == 0x000001, "Member 'WB_EnterPassword_C_Get_ControllerIcon_Visibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_Get_ControllerIcon_Visibility, Temp_byte_Variable) == 0x000002, "Member 'WB_EnterPassword_C_Get_ControllerIcon_Visibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_Get_ControllerIcon_Visibility, Temp_byte_Variable_1) == 0x000003, "Member 'WB_EnterPassword_C_Get_ControllerIcon_Visibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_Get_ControllerIcon_Visibility, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_EnterPassword_C_Get_ControllerIcon_Visibility::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_Get_ControllerIcon_Visibility, K2Node_Select_Default) == 0x000005, "Member 'WB_EnterPassword_C_Get_ControllerIcon_Visibility::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_EnterPassword.WB_EnterPassword_C.GetInitialFocusWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -60,6 +85,30 @@ public:
 static_assert(alignof(WB_EnterPassword_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_EnterPassword_C_GetInitialFocusWidget");
 static_assert(sizeof(WB_EnterPassword_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_EnterPassword_C_GetInitialFocusWidget");
 static_assert(offsetof(WB_EnterPassword_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_EnterPassword_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
+
+// Function WB_EnterPassword.WB_EnterPassword_C.OnPreviewKeyDown
+// 0x02C0 (0x02C0 - 0x0000)
+struct WB_EnterPassword_C_OnPreviewKeyDown final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0150(0x00B8)()
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0208(0x00B8)()
+};
+static_assert(alignof(WB_EnterPassword_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_EnterPassword_C_OnPreviewKeyDown");
+static_assert(sizeof(WB_EnterPassword_C_OnPreviewKeyDown) == 0x0002C0, "Wrong size on WB_EnterPassword_C_OnPreviewKeyDown");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x000130, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000148, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, CallFunc_OnPreviewKeyDown_ReturnValue) == 0x000150, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::CallFunc_OnPreviewKeyDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EnterPassword_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000208, "Member 'WB_EnterPassword_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 }
 

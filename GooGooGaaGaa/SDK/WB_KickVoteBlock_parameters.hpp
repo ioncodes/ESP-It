@@ -24,7 +24,7 @@ struct WB_KickVoteBlock_C_Get_Vote_Brush_0 final
 public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CB9[0xF];                                     // 0x00D1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0xF];                                       // 0x00D1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x00E0(0x00D0)()
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_1;       // 0x01B0(0x00D0)()
 	struct FSlateBrush                            K2Node_Select_Default;                             // 0x0280(0x00D0)()

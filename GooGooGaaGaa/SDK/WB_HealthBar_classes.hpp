@@ -19,26 +19,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_HealthBar.WB_HealthBar_C
-// 0x0058 (0x0318 - 0x02C0)
+// 0x0058 (0x0338 - 0x02E0)
 class UWB_HealthBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Glow;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Health;                                            // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           HealthBar;                                         // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           OverHealthBar;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	double                                        Percentage;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VisualPercentage;                                  // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_DamageHandler_C*                     DamageHandler;                                     // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        OverHealPercentage;                                // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         HP;                                                // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Glow;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Health;                                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           HealthBar;                                         // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           OverHealthBar;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	double                                        Percentage;                                        // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VisualPercentage;                                  // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_DamageHandler_C*                     DamageHandler;                                     // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        OverHealPercentage;                                // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         HP;                                                // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_WB_HealthBar(int32 EntryPoint);
 	ESlateVisibility GetVisibility_0();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_WB_HealthBar(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -51,18 +51,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_HealthBar_C) == 0x000008, "Wrong alignment on UWB_HealthBar_C");
-static_assert(sizeof(UWB_HealthBar_C) == 0x000318, "Wrong size on UWB_HealthBar_C");
-static_assert(offsetof(UWB_HealthBar_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_HealthBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, Glow) == 0x0002C8, "Member 'UWB_HealthBar_C::Glow' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, Health) == 0x0002D0, "Member 'UWB_HealthBar_C::Health' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, HealthBar) == 0x0002D8, "Member 'UWB_HealthBar_C::HealthBar' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, InvalidationBox_0) == 0x0002E0, "Member 'UWB_HealthBar_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, OverHealthBar) == 0x0002E8, "Member 'UWB_HealthBar_C::OverHealthBar' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, Percentage) == 0x0002F0, "Member 'UWB_HealthBar_C::Percentage' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, VisualPercentage) == 0x0002F8, "Member 'UWB_HealthBar_C::VisualPercentage' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, DamageHandler) == 0x000300, "Member 'UWB_HealthBar_C::DamageHandler' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, OverHealPercentage) == 0x000308, "Member 'UWB_HealthBar_C::OverHealPercentage' has a wrong offset!");
-static_assert(offsetof(UWB_HealthBar_C, HP) == 0x000310, "Member 'UWB_HealthBar_C::HP' has a wrong offset!");
+static_assert(sizeof(UWB_HealthBar_C) == 0x000338, "Wrong size on UWB_HealthBar_C");
+static_assert(offsetof(UWB_HealthBar_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_HealthBar_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, Glow) == 0x0002E8, "Member 'UWB_HealthBar_C::Glow' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, Health) == 0x0002F0, "Member 'UWB_HealthBar_C::Health' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, HealthBar) == 0x0002F8, "Member 'UWB_HealthBar_C::HealthBar' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, InvalidationBox_0) == 0x000300, "Member 'UWB_HealthBar_C::InvalidationBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, OverHealthBar) == 0x000308, "Member 'UWB_HealthBar_C::OverHealthBar' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, Percentage) == 0x000310, "Member 'UWB_HealthBar_C::Percentage' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, VisualPercentage) == 0x000318, "Member 'UWB_HealthBar_C::VisualPercentage' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, DamageHandler) == 0x000320, "Member 'UWB_HealthBar_C::DamageHandler' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, OverHealPercentage) == 0x000328, "Member 'UWB_HealthBar_C::OverHealPercentage' has a wrong offset!");
+static_assert(offsetof(UWB_HealthBar_C, HP) == 0x000330, "Member 'UWB_HealthBar_C::HP' has a wrong offset!");
 
 }
 

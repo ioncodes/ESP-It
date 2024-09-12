@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -34,7 +34,7 @@ struct B_RockDixi_C_ExecuteUbergraph_B_RockDixi final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_UpdateImageHeight_Heght_ImplicitCast;     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_RockDixi_C_ExecuteUbergraph_B_RockDixi) == 0x000008, "Wrong alignment on B_RockDixi_C_ExecuteUbergraph_B_RockDixi");
@@ -62,7 +62,7 @@ static_assert(offsetof(B_RockDixi_C_GetVisualInterpolators, CallFunc_CreateVisua
 static_assert(offsetof(B_RockDixi_C_GetVisualInterpolators, CallFunc_Array_Add_ReturnValue) == 0x000038, "Member 'B_RockDixi_C_GetVisualInterpolators::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_RockDixi.B_RockDixi_C.UpdateImageHeight
-// 0x0150 (0x0150 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct B_RockDixi_C_UpdateImageHeight final
 {
 public:
@@ -77,10 +77,10 @@ public:
 	double                                        CallFunc_BreakVector_Y_1;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z_1;                          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0068(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0068(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_RockDixi_C_UpdateImageHeight) == 0x000008, "Wrong alignment on B_RockDixi_C_UpdateImageHeight");
-static_assert(sizeof(B_RockDixi_C_UpdateImageHeight) == 0x000150, "Wrong size on B_RockDixi_C_UpdateImageHeight");
+static_assert(sizeof(B_RockDixi_C_UpdateImageHeight) == 0x000160, "Wrong size on B_RockDixi_C_UpdateImageHeight");
 static_assert(offsetof(B_RockDixi_C_UpdateImageHeight, Heght) == 0x000000, "Member 'B_RockDixi_C_UpdateImageHeight::Heght' has a wrong offset!");
 static_assert(offsetof(B_RockDixi_C_UpdateImageHeight, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'B_RockDixi_C_UpdateImageHeight::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_RockDixi_C_UpdateImageHeight, CallFunc_BreakVector_X) == 0x000010, "Member 'B_RockDixi_C_UpdateImageHeight::CallFunc_BreakVector_X' has a wrong offset!");

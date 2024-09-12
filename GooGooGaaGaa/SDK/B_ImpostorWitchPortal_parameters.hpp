@@ -24,16 +24,16 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECollisionEnabled                             Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECollisionEnabled                             Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_472D[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_472E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_472F[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State_1;    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -57,14 +57,14 @@ static_assert(offsetof(B_ImpostorWitchPortal_C_ExecuteUbergraph_B_ImpostorWitchP
 static_assert(offsetof(B_ImpostorWitchPortal_C_ExecuteUbergraph_B_ImpostorWitchPortal, K2Node_Select_Default) == 0x00004A, "Member 'B_ImpostorWitchPortal_C_ExecuteUbergraph_B_ImpostorWitchPortal::K2Node_Select_Default' has a wrong offset!");
 
 // Function B_ImpostorWitchPortal.B_ImpostorWitchPortal_C.GetTooltipText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct B_ImpostorWitchPortal_C_GetTooltipText final
 {
 public:
-	class FText                                   ToolTip;                                           // 0x0000(0x0018)(Parm, OutParm)
+	class FText                                   ToolTip;                                           // 0x0000(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(B_ImpostorWitchPortal_C_GetTooltipText) == 0x000008, "Wrong alignment on B_ImpostorWitchPortal_C_GetTooltipText");
-static_assert(sizeof(B_ImpostorWitchPortal_C_GetTooltipText) == 0x000018, "Wrong size on B_ImpostorWitchPortal_C_GetTooltipText");
+static_assert(sizeof(B_ImpostorWitchPortal_C_GetTooltipText) == 0x000010, "Wrong size on B_ImpostorWitchPortal_C_GetTooltipText");
 static_assert(offsetof(B_ImpostorWitchPortal_C_GetTooltipText, ToolTip) == 0x000000, "Member 'B_ImpostorWitchPortal_C_GetTooltipText::ToolTip' has a wrong offset!");
 
 // Function B_ImpostorWitchPortal.B_ImpostorWitchPortal_C.ReceiveTick

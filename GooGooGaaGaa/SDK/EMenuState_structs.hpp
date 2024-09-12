@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EMenuState.EMenuState
-// NumValues: 0x002D
+// NumValues: 0x0034
 enum class EMenuState : uint8
 {
 	NewEnumerator0                           = 0,
@@ -62,7 +62,14 @@ enum class EMenuState : uint8
 	NewEnumerator60                          = 41,
 	NewEnumerator61                          = 42,
 	NewEnumerator62                          = 43,
-	EMenuState_MAX                           = 44,
+	NewEnumerator63                          = 44,
+	NewEnumerator64                          = 45,
+	NewEnumerator65                          = 46,
+	NewEnumerator66                          = 47,
+	NewEnumerator67                          = 48,
+	NewEnumerator68                          = 49,
+	NewEnumerator69                          = 50,
+	EMenuState_MAX                           = 51,
 };
 
 }

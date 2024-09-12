@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_TooltipTextContent.WB_TooltipTextContent_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_TooltipTextContent_C final : public UUserWidget
 {
 public:
-	class UTextBlock*                             TextBlock_80;                                      // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Text;                                              // 0x02C8(0x0018)(Edit, BlueprintVisible)
+	class UTextBlock*                             TextBlock_80;                                      // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x02E8(0x0010)(Edit, BlueprintVisible)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_TooltipTextContent_C) == 0x000008, "Wrong alignment on UWB_TooltipTextContent_C");
-static_assert(sizeof(UWB_TooltipTextContent_C) == 0x0002E0, "Wrong size on UWB_TooltipTextContent_C");
-static_assert(offsetof(UWB_TooltipTextContent_C, TextBlock_80) == 0x0002C0, "Member 'UWB_TooltipTextContent_C::TextBlock_80' has a wrong offset!");
-static_assert(offsetof(UWB_TooltipTextContent_C, Text) == 0x0002C8, "Member 'UWB_TooltipTextContent_C::Text' has a wrong offset!");
+static_assert(sizeof(UWB_TooltipTextContent_C) == 0x0002F8, "Wrong size on UWB_TooltipTextContent_C");
+static_assert(offsetof(UWB_TooltipTextContent_C, TextBlock_80) == 0x0002E0, "Member 'UWB_TooltipTextContent_C::TextBlock_80' has a wrong offset!");
+static_assert(offsetof(UWB_TooltipTextContent_C, Text) == 0x0002E8, "Member 'UWB_TooltipTextContent_C::Text' has a wrong offset!");
 
 }
 

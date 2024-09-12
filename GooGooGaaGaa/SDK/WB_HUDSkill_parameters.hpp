@@ -17,6 +17,56 @@
 namespace SDK::Params
 {
 
+// Function WB_HUDSkill.WB_HUDSkill_C.ExecuteUbergraph_WB_HUDSkill
+// 0x0058 (0x0058 - 0x0000)
+struct WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               CallFunc_K2_GetTextureParameterValue_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0014(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill) == 0x000008, "Wrong alignment on WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill");
+static_assert(sizeof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill) == 0x000058, "Wrong size on WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, EntryPoint) == 0x000000, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_K2_GetTextureParameterValue_ReturnValue) == 0x000008, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_K2_GetTextureParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000010, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, K2Node_Event_MyGeometry) == 0x000014, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, K2Node_Event_InDeltaTime) == 0x00004C, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000050, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+
+// Function WB_HUDSkill.WB_HUDSkill_C.Get_SkillCooldownText_Text_0
+// 0x0040 (0x0040 - 0x0000)
+struct WB_HUDSkill_C_Get_SkillCooldownText_Text_0 final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0010)()
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FCeil_A_ImplicitCast;                     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0) == 0x000008, "Wrong alignment on WB_HUDSkill_C_Get_SkillCooldownText_Text_0");
+static_assert(sizeof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0) == 0x000040, "Wrong size on WB_HUDSkill_C_Get_SkillCooldownText_Text_0");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, ReturnValue) == 0x000000, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_FCeil_ReturnValue) == 0x000014, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_FCeil_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000018, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000030, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_FCeil_A_ImplicitCast) == 0x000038, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_FCeil_A_ImplicitCast' has a wrong offset!");
+
 // Function WB_HUDSkill.WB_HUDSkill_C.GetActionIconVisibility
 // 0x0020 (0x0020 - 0x0000)
 struct WB_HUDSkill_C_GetActionIconVisibility final
@@ -24,7 +74,7 @@ struct WB_HUDSkill_C_GetActionIconVisibility final
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B92[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -45,56 +95,6 @@ static_assert(offsetof(WB_HUDSkill_C_GetActionIconVisibility, CallFunc_IsValid_R
 static_assert(offsetof(WB_HUDSkill_C_GetActionIconVisibility, Temp_bool_Variable) == 0x00001B, "Member 'WB_HUDSkill_C_GetActionIconVisibility::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_HUDSkill_C_GetActionIconVisibility, K2Node_Select_Default) == 0x00001C, "Member 'WB_HUDSkill_C_GetActionIconVisibility::K2Node_Select_Default' has a wrong offset!");
 
-// Function WB_HUDSkill.WB_HUDSkill_C.GetVisibility_0
-// 0x0028 (0x0028 - 0x0000)
-struct WB_HUDSkill_C_GetVisibility_0 final
-{
-public:
-	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B93[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B94[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasRoundStarted_RoundHasStarted;          // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_HUDSkill_C_GetVisibility_0) == 0x000008, "Wrong alignment on WB_HUDSkill_C_GetVisibility_0");
-static_assert(sizeof(WB_HUDSkill_C_GetVisibility_0) == 0x000028, "Wrong size on WB_HUDSkill_C_GetVisibility_0");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, ReturnValue) == 0x000000, "Member 'WB_HUDSkill_C_GetVisibility_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_IsValid_ReturnValue_1) == 0x000010, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, K2Node_DynamicCast_AsB_Game_State) == 0x000018, "Member 'WB_HUDSkill_C_GetVisibility_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_HUDSkill_C_GetVisibility_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_HasRoundStarted_RoundHasStarted) == 0x000021, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_HasRoundStarted_RoundHasStarted' has a wrong offset!");
-
-// Function WB_HUDSkill.WB_HUDSkill_C.Get_SkillCooldownText_Text_0
-// 0x0050 (0x0050 - 0x0000)
-struct WB_HUDSkill_C_Get_SkillCooldownText_Text_0 final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B95[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B96[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0018)()
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FCeil_A_ImplicitCast;                     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0) == 0x000008, "Wrong alignment on WB_HUDSkill_C_Get_SkillCooldownText_Text_0");
-static_assert(sizeof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0) == 0x000050, "Wrong size on WB_HUDSkill_C_Get_SkillCooldownText_Text_0");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, ReturnValue) == 0x000000, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_FCeil_ReturnValue) == 0x00001C, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_FCeil_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000020, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_Get_SkillCooldownText_Text_0, CallFunc_FCeil_A_ImplicitCast) == 0x000048, "Member 'WB_HUDSkill_C_Get_SkillCooldownText_Text_0::CallFunc_FCeil_A_ImplicitCast' has a wrong offset!");
-
 // Function WB_HUDSkill.WB_HUDSkill_C.GetBrush_0
 // 0x0370 (0x0370 - 0x0000)
 struct WB_HUDSkill_C_GetBrush_0 final
@@ -104,10 +104,10 @@ public:
 	struct FSlateBrush                            CallFunc_MakeBrushFromMaterial_ReturnValue;        // 0x00D0(0x00D0)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanActivate_ReturnValue;                  // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B97[0xE];                                     // 0x01A2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A2[0xE];                                      // 0x01A2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x01B0(0x00D0)()
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B98[0xF];                                     // 0x0281(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_281[0xF];                                      // 0x0281(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromMaterial_ReturnValue_1;      // 0x0290(0x00D0)()
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -122,6 +122,31 @@ static_assert(offsetof(WB_HUDSkill_C_GetBrush_0, CallFunc_Greater_DoubleDouble_R
 static_assert(offsetof(WB_HUDSkill_C_GetBrush_0, CallFunc_MakeBrushFromMaterial_ReturnValue_1) == 0x000290, "Member 'WB_HUDSkill_C_GetBrush_0::CallFunc_MakeBrushFromMaterial_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_HUDSkill_C_GetBrush_0, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000360, "Member 'WB_HUDSkill_C_GetBrush_0::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
+// Function WB_HUDSkill.WB_HUDSkill_C.GetVisibility_0
+// 0x0028 (0x0028 - 0x0000)
+struct WB_HUDSkill_C_GetVisibility_0 final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasRoundStarted_RoundHasStarted;          // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_HUDSkill_C_GetVisibility_0) == 0x000008, "Wrong alignment on WB_HUDSkill_C_GetVisibility_0");
+static_assert(sizeof(WB_HUDSkill_C_GetVisibility_0) == 0x000028, "Wrong size on WB_HUDSkill_C_GetVisibility_0");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, ReturnValue) == 0x000000, "Member 'WB_HUDSkill_C_GetVisibility_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_IsValid_ReturnValue_1) == 0x000010, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, K2Node_DynamicCast_AsB_Game_State) == 0x000018, "Member 'WB_HUDSkill_C_GetVisibility_0::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_HUDSkill_C_GetVisibility_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_HUDSkill_C_GetVisibility_0, CallFunc_HasRoundStarted_RoundHasStarted) == 0x000021, "Member 'WB_HUDSkill_C_GetVisibility_0::CallFunc_HasRoundStarted_RoundHasStarted' has a wrong offset!");
+
 // Function WB_HUDSkill.WB_HUDSkill_C.Tick
 // 0x003C (0x003C - 0x0000)
 struct WB_HUDSkill_C_Tick final
@@ -134,31 +159,6 @@ static_assert(alignof(WB_HUDSkill_C_Tick) == 0x000004, "Wrong alignment on WB_HU
 static_assert(sizeof(WB_HUDSkill_C_Tick) == 0x00003C, "Wrong size on WB_HUDSkill_C_Tick");
 static_assert(offsetof(WB_HUDSkill_C_Tick, MyGeometry) == 0x000000, "Member 'WB_HUDSkill_C_Tick::MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_HUDSkill_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_HUDSkill_C_Tick::InDeltaTime' has a wrong offset!");
-
-// Function WB_HUDSkill.WB_HUDSkill_C.ExecuteUbergraph_WB_HUDSkill
-// 0x0058 (0x0058 - 0x0000)
-struct WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B99[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               CallFunc_K2_GetTextureParameterValue_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B9A[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0014(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill) == 0x000008, "Wrong alignment on WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill");
-static_assert(sizeof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill) == 0x000058, "Wrong size on WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, EntryPoint) == 0x000000, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_K2_GetTextureParameterValue_ReturnValue) == 0x000008, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_K2_GetTextureParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000010, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, K2Node_Event_MyGeometry) == 0x000014, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, K2Node_Event_InDeltaTime) == 0x00004C, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000050, "Member 'WB_HUDSkill_C_ExecuteUbergraph_WB_HUDSkill::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
 
 }
 

@@ -20,137 +20,137 @@ namespace SDK::Params
 {
 
 // Function B_MapManager.B_MapManager_C.AddMapToMapLists
-// 0x0068 (0x0068 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct B_MapManager_C_AddMapToMapLists final
 {
 public:
-	struct FSMapData                              MapToAdd;                                          // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              MapToAdd;                                          // 0x0000(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_AddMapToMapLists) == 0x000008, "Wrong alignment on B_MapManager_C_AddMapToMapLists");
-static_assert(sizeof(B_MapManager_C_AddMapToMapLists) == 0x000068, "Wrong size on B_MapManager_C_AddMapToMapLists");
+static_assert(sizeof(B_MapManager_C_AddMapToMapLists) == 0x000058, "Wrong size on B_MapManager_C_AddMapToMapLists");
 static_assert(offsetof(B_MapManager_C_AddMapToMapLists, MapToAdd) == 0x000000, "Member 'B_MapManager_C_AddMapToMapLists::MapToAdd' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_AddMapToMapLists, CallFunc_Conv_NameToString_ReturnValue) == 0x000050, "Member 'B_MapManager_C_AddMapToMapLists::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_AddMapToMapLists, CallFunc_Array_Add_ReturnValue) == 0x000060, "Member 'B_MapManager_C_AddMapToMapLists::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_AddMapToMapLists, CallFunc_Conv_NameToString_ReturnValue) == 0x000040, "Member 'B_MapManager_C_AddMapToMapLists::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_AddMapToMapLists, CallFunc_Array_Add_ReturnValue) == 0x000050, "Member 'B_MapManager_C_AddMapToMapLists::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.DetermineNextMapFromCustomMapCycle
-// 0x03D0 (0x03D0 - 0x0000)
+// 0x0380 (0x0380 - 0x0000)
 struct B_MapManager_C_DetermineNextMapFromCustomMapCycle final
 {
 public:
 	bool                                          MapDataFound;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LayoutDataFound;                                   // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ECC[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              MapData;                                           // 0x0008(0x0050)(Parm, OutParm, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      LayoutData;                                        // 0x0058(0x0048)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      FoundCustomMap;                                    // 0x00A0(0x0048)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FSMapData                              FoundMap;                                          // 0x00E8(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          ValidCustomMap;                                    // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ValidMap;                                          // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ECD[0x2];                                     // 0x013A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TempIndex;                                         // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumberOfTries;                                     // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         AmountOfMaps;                                      // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 PossibleMapFileName;                               // 0x0148(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<class FString>                         TempCycleFileNames;                                // 0x0158(0x0010)(Edit, BlueprintVisible)
-	TArray<class FString>                         CycleFileNames;                                    // 0x0168(0x0010)(Edit, BlueprintVisible)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ECE[0x2];                                     // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound; // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound; // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ECF[0x6];                                     // 0x0192(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData; // 0x0198(0x0050)(HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData; // 0x01E8(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0235(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0236(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED0[0x1];                                     // 0x0237(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED1[0x4];                                     // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_1; // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_1; // 0x0252(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED2[0x5];                                     // 0x0253(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_1; // 0x0258(0x0050)(HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_1; // 0x02A8(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED3[0x7];                                     // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x02F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_2; // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_2; // 0x030D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED4[0x2];                                     // 0x030E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_2; // 0x0310(0x0050)(HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_2; // 0x0360(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED5[0x4];                                     // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item_2;                         // 0x03B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED6[0x3];                                     // 0x03C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select_Default;                             // 0x03CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              MapData;                                           // 0x0008(0x0040)(Parm, OutParm, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      LayoutData;                                        // 0x0048(0x0048)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      FoundCustomMap;                                    // 0x0090(0x0048)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FSMapData                              FoundMap;                                          // 0x00D8(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          ValidCustomMap;                                    // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ValidMap;                                          // 0x0119(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TempIndex;                                         // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumberOfTries;                                     // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AmountOfMaps;                                      // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 PossibleMapFileName;                               // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         TempCycleFileNames;                                // 0x0138(0x0010)(Edit, BlueprintVisible)
+	TArray<class FString>                         CycleFileNames;                                    // 0x0148(0x0010)(Edit, BlueprintVisible)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15A[0x2];                                      // 0x015A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound; // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound; // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_172[0x6];                                      // 0x0172(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData; // 0x0178(0x0040)(HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData; // 0x01B8(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0205(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0206(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_207[0x1];                                      // 0x0207(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_1; // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_1; // 0x0222(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_223[0x5];                                      // 0x0223(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_1; // 0x0228(0x0040)(HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_1; // 0x0268(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x02B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_2; // 0x02CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_2; // 0x02CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CE[0x2];                                      // 0x02CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_2; // 0x02D0(0x0040)(HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_2; // 0x0310(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item_2;                         // 0x0360(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_379[0x3];                                      // 0x0379(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default;                             // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_DetermineNextMapFromCustomMapCycle) == 0x000008, "Wrong alignment on B_MapManager_C_DetermineNextMapFromCustomMapCycle");
-static_assert(sizeof(B_MapManager_C_DetermineNextMapFromCustomMapCycle) == 0x0003D0, "Wrong size on B_MapManager_C_DetermineNextMapFromCustomMapCycle");
+static_assert(sizeof(B_MapManager_C_DetermineNextMapFromCustomMapCycle) == 0x000380, "Wrong size on B_MapManager_C_DetermineNextMapFromCustomMapCycle");
 static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, MapDataFound) == 0x000000, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::MapDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, LayoutDataFound) == 0x000001, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::LayoutDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, MapData) == 0x000008, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::MapData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, LayoutData) == 0x000058, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::LayoutData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, FoundCustomMap) == 0x0000A0, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::FoundCustomMap' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, FoundMap) == 0x0000E8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::FoundMap' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, ValidCustomMap) == 0x000138, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::ValidCustomMap' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, ValidMap) == 0x000139, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::ValidMap' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, TempIndex) == 0x00013C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::TempIndex' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, NumberOfTries) == 0x000140, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::NumberOfTries' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, AmountOfMaps) == 0x000144, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::AmountOfMaps' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, PossibleMapFileName) == 0x000148, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::PossibleMapFileName' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, TempCycleFileNames) == 0x000158, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::TempCycleFileNames' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CycleFileNames) == 0x000168, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CycleFileNames' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_BooleanOR_ReturnValue) == 0x000178, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_BooleanOR_ReturnValue_1) == 0x000179, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Length_ReturnValue) == 0x00017C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Subtract_IntInt_ReturnValue) == 0x000180, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_RandomIntegerInRange_ReturnValue) == 0x000184, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_RandomIntegerInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Length_ReturnValue_1) == 0x000188, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, Temp_int_Variable) == 0x00018C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound) == 0x000190, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound) == 0x000191, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData) == 0x000198, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData) == 0x0001E8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Find_ReturnValue) == 0x000230, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Greater_IntInt_ReturnValue) == 0x000234, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000235, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000236, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, Temp_int_Variable_1) == 0x000238, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Get_Item) == 0x000240, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, Temp_bool_Variable) == 0x000250, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_1) == 0x000251, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_1) == 0x000252, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_1) == 0x000258, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_1) == 0x0002A8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Less_IntInt_ReturnValue) == 0x0002F0, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Get_Item_1) == 0x0002F8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Add_IntInt_ReturnValue) == 0x000308, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_2) == 0x00030C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_2) == 0x00030D, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_2) == 0x000310, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_2) == 0x000360, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Length_ReturnValue_2) == 0x0003A8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Get_Item_2) == 0x0003B0, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Add_IntInt_ReturnValue_1) == 0x0003C0, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Add_IntInt_ReturnValue_2) == 0x0003C4, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0003C8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, K2Node_Select_Default) == 0x0003CC, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, LayoutData) == 0x000048, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::LayoutData' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, FoundCustomMap) == 0x000090, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::FoundCustomMap' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, FoundMap) == 0x0000D8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::FoundMap' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, ValidCustomMap) == 0x000118, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::ValidCustomMap' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, ValidMap) == 0x000119, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::ValidMap' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, TempIndex) == 0x00011C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::TempIndex' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, NumberOfTries) == 0x000120, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::NumberOfTries' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, AmountOfMaps) == 0x000124, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::AmountOfMaps' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, PossibleMapFileName) == 0x000128, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::PossibleMapFileName' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, TempCycleFileNames) == 0x000138, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::TempCycleFileNames' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CycleFileNames) == 0x000148, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CycleFileNames' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_BooleanOR_ReturnValue) == 0x000158, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_BooleanOR_ReturnValue_1) == 0x000159, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Length_ReturnValue) == 0x00015C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Subtract_IntInt_ReturnValue) == 0x000160, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_RandomIntegerInRange_ReturnValue) == 0x000164, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_RandomIntegerInRange_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Length_ReturnValue_1) == 0x000168, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, Temp_int_Variable) == 0x00016C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound) == 0x000170, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound) == 0x000171, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData) == 0x000178, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData) == 0x0001B8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Find_ReturnValue) == 0x000200, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Greater_IntInt_ReturnValue) == 0x000204, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000205, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000206, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, Temp_int_Variable_1) == 0x000208, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Get_Item) == 0x000210, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, Temp_bool_Variable) == 0x000220, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_1) == 0x000221, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_1) == 0x000222, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_1) == 0x000228, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_1) == 0x000268, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Less_IntInt_ReturnValue) == 0x0002B0, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Get_Item_1) == 0x0002B8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Add_IntInt_ReturnValue) == 0x0002C8, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_2) == 0x0002CC, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_2) == 0x0002CD, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_2) == 0x0002D0, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_2) == 0x000310, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Length_ReturnValue_2) == 0x000358, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Array_Get_Item_2) == 0x000360, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Add_IntInt_ReturnValue_1) == 0x000370, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Add_IntInt_ReturnValue_2) == 0x000374, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000378, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_DetermineNextMapFromCustomMapCycle, K2Node_Select_Default) == 0x00037C, "Member 'B_MapManager_C_DetermineNextMapFromCustomMapCycle::K2Node_Select_Default' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.ExecuteUbergraph_B_MapManager
 // 0x0058 (0x0058 - 0x0000)
@@ -158,7 +158,7 @@ struct B_MapManager_C_ExecuteUbergraph_B_MapManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ReferenceParm)
 	TArray<struct FSMapData>                      K2Node_MakeArray_Array_1;                          // 0x0018(0x0010)(ReferenceParm)
 	TArray<struct FSMapData>                      K2Node_MakeArray_Array_2;                          // 0x0028(0x0010)(ReferenceParm)
@@ -177,7 +177,7 @@ static_assert(offsetof(B_MapManager_C_ExecuteUbergraph_B_MapManager, K2Node_Make
 static_assert(offsetof(B_MapManager_C_ExecuteUbergraph_B_MapManager, K2Node_Event_InGameInstance) == 0x000050, "Member 'B_MapManager_C_ExecuteUbergraph_B_MapManager::K2Node_Event_InGameInstance' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.FilterMapsBySize
-// 0x0118 (0x0118 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct B_MapManager_C_FilterMapsBySize final
 {
 public:
@@ -186,37 +186,37 @@ public:
 	TArray<struct FSMapData>                      BigMaps;                                           // 0x0020(0x0010)(Parm, OutParm)
 	TArray<struct FSMapData>                      FilteredBigMaps;                                   // 0x0030(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSMapData>                      FilteredSmallMaps;                                 // 0x0040(0x0010)(Edit, BlueprintVisible)
-	struct FSMapData                              CurrentMap;                                        // 0x0050(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED8[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x00B0(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ED9[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EDA[0x3];                                     // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              CurrentMap;                                        // 0x0050(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x00A0(0x0040)(HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_FilterMapsBySize) == 0x000008, "Wrong alignment on B_MapManager_C_FilterMapsBySize");
-static_assert(sizeof(B_MapManager_C_FilterMapsBySize) == 0x000118, "Wrong size on B_MapManager_C_FilterMapsBySize");
+static_assert(sizeof(B_MapManager_C_FilterMapsBySize) == 0x0000F8, "Wrong size on B_MapManager_C_FilterMapsBySize");
 static_assert(offsetof(B_MapManager_C_FilterMapsBySize, MapsToFilter) == 0x000000, "Member 'B_MapManager_C_FilterMapsBySize::MapsToFilter' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_FilterMapsBySize, SmallMaps) == 0x000010, "Member 'B_MapManager_C_FilterMapsBySize::SmallMaps' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_FilterMapsBySize, BigMaps) == 0x000020, "Member 'B_MapManager_C_FilterMapsBySize::BigMaps' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_FilterMapsBySize, FilteredBigMaps) == 0x000030, "Member 'B_MapManager_C_FilterMapsBySize::FilteredBigMaps' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_FilterMapsBySize, FilteredSmallMaps) == 0x000040, "Member 'B_MapManager_C_FilterMapsBySize::FilteredSmallMaps' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CurrentMap) == 0x000050, "Member 'B_MapManager_C_FilterMapsBySize::CurrentMap' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_Length_ReturnValue) == 0x0000A0, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, Temp_int_Array_Index_Variable) == 0x0000A4, "Member 'B_MapManager_C_FilterMapsBySize::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, Temp_int_Loop_Counter_Variable) == 0x0000A8, "Member 'B_MapManager_C_FilterMapsBySize::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_Get_Item) == 0x0000B0, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Less_IntInt_ReturnValue) == 0x000100, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Add_IntInt_ReturnValue) == 0x000104, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, K2Node_SwitchEnum_CmpSuccess) == 0x000108, "Member 'B_MapManager_C_FilterMapsBySize::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_AddUnique_ReturnValue) == 0x00010C, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000110, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, Temp_int_Array_Index_Variable) == 0x000094, "Member 'B_MapManager_C_FilterMapsBySize::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, Temp_int_Loop_Counter_Variable) == 0x000098, "Member 'B_MapManager_C_FilterMapsBySize::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_Get_Item) == 0x0000A0, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Less_IntInt_ReturnValue) == 0x0000E0, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Add_IntInt_ReturnValue) == 0x0000E4, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, K2Node_SwitchEnum_CmpSuccess) == 0x0000E8, "Member 'B_MapManager_C_FilterMapsBySize::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_AddUnique_ReturnValue) == 0x0000EC, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_FilterMapsBySize, CallFunc_Array_AddUnique_ReturnValue_1) == 0x0000F0, "Member 'B_MapManager_C_FilterMapsBySize::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetAllCustomMapsOrByLevelNameFromSave
 // 0x0330 (0x0330 - 0x0000)
@@ -240,50 +240,50 @@ public:
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EDB[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EDC[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_LeftS;                              // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Contains_ReturnValue;                     // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EDD[0x2];                                     // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FA[0x2];                                       // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Workshop_GetNumSubscribedItems_ReturnValue; // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FUGCItemId>                     CallFunc_Workshop_GetSubscribedItems_outItems;     // 0x0100(0x0010)(ReferenceParm)
 	bool                                          CallFunc_StringIsEmpty_ReturnValue;                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_StringIsEmpty_ReturnValue_1;              // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EDE[0x5];                                     // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_113[0x5];                                      // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EDF[0x7];                                     // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Replace_ReturnValue_1;                    // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EndsWith_ReturnValue;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE0[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Replace_ReturnValue_2;                    // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Replace_ReturnValue_3;                    // 0x0178(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE1[0x4];                                     // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetExtension_ReturnValue;                 // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE2[0x2];                                     // 0x01A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A2[0x2];                                      // 0x01A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetBaseFilename_ReturnValue;              // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_LeftS_1;                            // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS_1;                           // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue_1;                      // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE3[0x3];                                     // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FS_PropLayoutData                      K2Node_MakeStruct_S_PropLayoutData;                // 0x01E0(0x0048)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x022D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE4[0x2];                                     // 0x022E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22E[0x2];                                      // 0x022E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetProjectSavedDirectory_ReturnValue;     // 0x0230(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Replace_ReturnValue_4;                    // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0250(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -291,15 +291,15 @@ public:
 	class FString                                 CallFunc_Replace_ReturnValue_6;                    // 0x0270(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FS_PropLayoutData                      K2Node_MakeStruct_S_PropLayoutData_1;              // 0x0280(0x0048)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE5[0x4];                                     // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_SaveGameObject_GetAllSaveSlotFileNames_FileNames; // 0x02D0(0x0010)(ReferenceParm)
 	struct FUGCItemId                             CallFunc_Array_Get_Item_2;                         // 0x02E0(0x0008)(NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE6[0x4];                                     // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWorkshopItemInstallInfo               CallFunc_Workshop_GetItemInstallInfo_info;         // 0x02F0(0x0028)()
 	EResultBRGBP                                  CallFunc_Workshop_GetItemInstallInfo_ReturnValue;  // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE7[0x6];                                     // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31A[0x6];                                      // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_GetFiles_ReturnValue;                     // 0x0320(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_MapManager_C_GetAllCustomMapsOrByLevelNameFromSave) == 0x000008, "Wrong alignment on B_MapManager_C_GetAllCustomMapsOrByLevelNameFromSave");
@@ -376,7 +376,7 @@ struct B_MapManager_C_GetAllQuickmatchMaps final
 {
 public:
 	bool                                          ExcludeRandomMapCycle;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      QuickmatchMaps;                                    // 0x0008(0x0010)(Parm, OutParm)
 	class FString                                 MapFileName;                                       // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	TArray<struct FSMapData>                      Maps;                                              // 0x0028(0x0010)(Edit, BlueprintVisible)
@@ -403,10 +403,10 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EE9[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_PropLayoutData                      CallFunc_Array_Get_Item;                           // 0x0098(0x0048)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EEA[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -441,7 +441,7 @@ public:
 	class FString                                 CallFunc_Split_LeftS;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EEB[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Replace_ReturnValue_1;                    // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Replace_ReturnValue_2;                    // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
@@ -458,114 +458,114 @@ static_assert(offsetof(B_MapManager_C_GetLevelNameFromFileName, CallFunc_Replace
 static_assert(offsetof(B_MapManager_C_GetLevelNameFromFileName, CallFunc_Replace_ReturnValue_2) == 0x000070, "Member 'B_MapManager_C_GetLevelNameFromFileName::CallFunc_Replace_ReturnValue_2' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetMapVoteMapsBySize
-// 0x0160 (0x0160 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct B_MapManager_C_GetMapVoteMapsBySize final
 {
 public:
 	E_MapSize                                     TargetSize;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EEC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      TargetMaps;                                        // 0x0008(0x0010)(Parm, OutParm)
-	struct FSMapData                              MapToAdd;                                          // 0x0018(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int32                                         TargetCustomMapAmount;                             // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CustomMapAmount;                                   // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         OfficalMapAmount;                                  // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EED[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSMapData>                      FilteredMaps;                                      // 0x0078(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FSMapData>                      FilteredCustomMaps;                                // 0x0088(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FSMapData>                      FilteredOfficialMaps;                              // 0x0098(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FSMapData>                      OfficialMaps;                                      // 0x00A8(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Variable;                                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EEE[0x3];                                     // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EEF[0x1];                                     // 0x00DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x00E8(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF0[0x3];                                     // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default;                             // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF1[0x4];                                     // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              MapToAdd;                                          // 0x0018(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         TargetCustomMapAmount;                             // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CustomMapAmount;                                   // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         OfficalMapAmount;                                  // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSMapData>                      FilteredMaps;                                      // 0x0068(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FSMapData>                      FilteredCustomMaps;                                // 0x0078(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FSMapData>                      FilteredOfficialMaps;                              // 0x0088(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FSMapData>                      OfficialMaps;                                      // 0x0098(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Variable;                                 // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x00CE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CF[0x1];                                       // 0x00CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x00D8(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_GetMapVoteMapsBySize) == 0x000008, "Wrong alignment on B_MapManager_C_GetMapVoteMapsBySize");
-static_assert(sizeof(B_MapManager_C_GetMapVoteMapsBySize) == 0x000160, "Wrong size on B_MapManager_C_GetMapVoteMapsBySize");
+static_assert(sizeof(B_MapManager_C_GetMapVoteMapsBySize) == 0x000140, "Wrong size on B_MapManager_C_GetMapVoteMapsBySize");
 static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, TargetSize) == 0x000000, "Member 'B_MapManager_C_GetMapVoteMapsBySize::TargetSize' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, TargetMaps) == 0x000008, "Member 'B_MapManager_C_GetMapVoteMapsBySize::TargetMaps' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, MapToAdd) == 0x000018, "Member 'B_MapManager_C_GetMapVoteMapsBySize::MapToAdd' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, TargetCustomMapAmount) == 0x000068, "Member 'B_MapManager_C_GetMapVoteMapsBySize::TargetCustomMapAmount' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CustomMapAmount) == 0x00006C, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CustomMapAmount' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, OfficalMapAmount) == 0x000070, "Member 'B_MapManager_C_GetMapVoteMapsBySize::OfficalMapAmount' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, FilteredMaps) == 0x000078, "Member 'B_MapManager_C_GetMapVoteMapsBySize::FilteredMaps' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, FilteredCustomMaps) == 0x000088, "Member 'B_MapManager_C_GetMapVoteMapsBySize::FilteredCustomMaps' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, FilteredOfficialMaps) == 0x000098, "Member 'B_MapManager_C_GetMapVoteMapsBySize::FilteredOfficialMaps' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, OfficialMaps) == 0x0000A8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::OfficialMaps' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, Temp_int_Variable) == 0x0000B8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Length_ReturnValue) == 0x0000C0, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, K2Node_SwitchEnum_CmpSuccess) == 0x0000C4, "Member 'B_MapManager_C_GetMapVoteMapsBySize::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000C8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000D0, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Length_ReturnValue_1) == 0x0000D8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000DC, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0000DD, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_RemoveItem_ReturnValue) == 0x0000DE, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Length_ReturnValue_2) == 0x0000E0, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_RandomInteger_ReturnValue) == 0x0000E4, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Get_Item) == 0x0000E8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_AddUnique_ReturnValue) == 0x000138, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, Temp_bool_Variable) == 0x00013C, "Member 'B_MapManager_C_GetMapVoteMapsBySize::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000140, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, K2Node_Select_Default) == 0x000148, "Member 'B_MapManager_C_GetMapVoteMapsBySize::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000150, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_FFloor_ReturnValue) == 0x000158, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_FFloor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, TargetCustomMapAmount) == 0x000058, "Member 'B_MapManager_C_GetMapVoteMapsBySize::TargetCustomMapAmount' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CustomMapAmount) == 0x00005C, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CustomMapAmount' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, OfficalMapAmount) == 0x000060, "Member 'B_MapManager_C_GetMapVoteMapsBySize::OfficalMapAmount' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, FilteredMaps) == 0x000068, "Member 'B_MapManager_C_GetMapVoteMapsBySize::FilteredMaps' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, FilteredCustomMaps) == 0x000078, "Member 'B_MapManager_C_GetMapVoteMapsBySize::FilteredCustomMaps' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, FilteredOfficialMaps) == 0x000088, "Member 'B_MapManager_C_GetMapVoteMapsBySize::FilteredOfficialMaps' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, OfficialMaps) == 0x000098, "Member 'B_MapManager_C_GetMapVoteMapsBySize::OfficialMaps' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, Temp_int_Variable) == 0x0000A8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Add_IntInt_ReturnValue) == 0x0000AC, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Length_ReturnValue) == 0x0000B0, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, K2Node_SwitchEnum_CmpSuccess) == 0x0000B4, "Member 'B_MapManager_C_GetMapVoteMapsBySize::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000B8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Length_ReturnValue_1) == 0x0000C8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000CC, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0000CD, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_RemoveItem_ReturnValue) == 0x0000CE, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Length_ReturnValue_2) == 0x0000D0, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_RandomInteger_ReturnValue) == 0x0000D4, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_Get_Item) == 0x0000D8, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Array_AddUnique_ReturnValue) == 0x000118, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, Temp_bool_Variable) == 0x00011C, "Member 'B_MapManager_C_GetMapVoteMapsBySize::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000120, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, K2Node_Select_Default) == 0x000128, "Member 'B_MapManager_C_GetMapVoteMapsBySize::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000130, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapVoteMapsBySize, CallFunc_FFloor_ReturnValue) == 0x000138, "Member 'B_MapManager_C_GetMapVoteMapsBySize::CallFunc_FFloor_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetSpecificMapFromLevelName
-// 0x0140 (0x0140 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct B_MapManager_C_GetSpecificMapFromLevelName final
 {
 public:
 	class FString                                 LevelName;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FSMapData                              MapData;                                           // 0x0010(0x0050)(Parm, OutParm, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF2[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSMapData>                      CallFunc_Map_Values_Values;                        // 0x0070(0x0010)(ReferenceParm)
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0080(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF3[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetLevelNameFromFileName_MapName;         // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FSMapData                              CallFunc_Map_Find_Value;                           // 0x00E8(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              MapData;                                           // 0x0010(0x0040)(Parm, OutParm, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSMapData>                      CallFunc_Map_Values_Values;                        // 0x0060(0x0010)(ReferenceParm)
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0070(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetLevelNameFromFileName_MapName;         // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FSMapData                              CallFunc_Map_Find_Value;                           // 0x00C8(0x0040)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_GetSpecificMapFromLevelName) == 0x000008, "Wrong alignment on B_MapManager_C_GetSpecificMapFromLevelName");
-static_assert(sizeof(B_MapManager_C_GetSpecificMapFromLevelName) == 0x000140, "Wrong size on B_MapManager_C_GetSpecificMapFromLevelName");
+static_assert(sizeof(B_MapManager_C_GetSpecificMapFromLevelName) == 0x000110, "Wrong size on B_MapManager_C_GetSpecificMapFromLevelName");
 static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, LevelName) == 0x000000, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::LevelName' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, MapData) == 0x000010, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::MapData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, Temp_int_Array_Index_Variable) == 0x000060, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, Temp_int_Loop_Counter_Variable) == 0x000064, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Add_IntInt_ReturnValue) == 0x000068, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Map_Values_Values) == 0x000070, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Array_Get_Item) == 0x000080, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Array_Length_ReturnValue) == 0x0000D0, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Less_IntInt_ReturnValue) == 0x0000D4, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_GetLevelNameFromFileName_MapName) == 0x0000D8, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_GetLevelNameFromFileName_MapName' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Map_Find_Value) == 0x0000E8, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Map_Find_ReturnValue) == 0x000138, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000139, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, Temp_int_Array_Index_Variable) == 0x000050, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, Temp_int_Loop_Counter_Variable) == 0x000054, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Add_IntInt_ReturnValue) == 0x000058, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Map_Values_Values) == 0x000060, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Array_Get_Item) == 0x000070, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Array_Length_ReturnValue) == 0x0000B0, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Less_IntInt_ReturnValue) == 0x0000B4, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_GetLevelNameFromFileName_MapName) == 0x0000B8, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_GetLevelNameFromFileName_MapName' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Map_Find_Value) == 0x0000C8, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_Map_Find_ReturnValue) == 0x000108, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapFromLevelName, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000109, "Member 'B_MapManager_C_GetSpecificMapFromLevelName::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetTextureForCustomMap
 // 0x0088 (0x0088 - 0x0000)
@@ -577,7 +577,7 @@ public:
 	class UTexture2D*                             CreatedTexture;                                    // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 ScreenshotFile;                                    // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_FileExists_ReturnValue;                   // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF4[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_LoadImageFromDisk_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             CallFunc_Map_Find_Value;                           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -613,11 +613,11 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF5[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_PropLayoutData                      CallFunc_Array_Get_Item;                           // 0x0020(0x0048)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF6[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_PropLayoutData>              CallFunc_GetAllCustomMapsOrByLevelNameFromSave_Layouts; // 0x0070(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_MapManager_C_SetLayoutDataByFileName) == 0x000008, "Wrong alignment on B_MapManager_C_SetLayoutDataByFileName");
@@ -666,7 +666,7 @@ static_assert(offsetof(B_MapManager_C_SetOrResetCustomMapCycle, NewCustomMapCycl
 static_assert(offsetof(B_MapManager_C_SetOrResetCustomMapCycle, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'B_MapManager_C_SetOrResetCustomMapCycle::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.SetupAndSortMapLists
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x0190 (0x0190 - 0x0000)
 struct B_MapManager_C_SetupAndSortMapLists final
 {
 public:
@@ -686,24 +686,24 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0070(0x0050)(HasGetValueTypeHash)
-	struct FSMapData                              CallFunc_Array_Get_Item_1;                         // 0x00C0(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF7[0x6];                                     // 0x011A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item_2;                         // 0x0120(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF8[0x3];                                     // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item_3;                         // 0x0178(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x01CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0070(0x0040)(HasGetValueTypeHash)
+	struct FSMapData                              CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item_2;                         // 0x0100(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_145[0x3];                                      // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item_3;                         // 0x0148(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_SetupAndSortMapLists) == 0x000008, "Wrong alignment on B_MapManager_C_SetupAndSortMapLists");
-static_assert(sizeof(B_MapManager_C_SetupAndSortMapLists) == 0x0001D0, "Wrong size on B_MapManager_C_SetupAndSortMapLists");
+static_assert(sizeof(B_MapManager_C_SetupAndSortMapLists) == 0x000190, "Wrong size on B_MapManager_C_SetupAndSortMapLists");
 static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, UnsortedOfficialMaps) == 0x000000, "Member 'B_MapManager_C_SetupAndSortMapLists::UnsortedOfficialMaps' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, MapsToExcludeFromLiveBuild) == 0x000010, "Member 'B_MapManager_C_SetupAndSortMapLists::MapsToExcludeFromLiveBuild' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, EmptyMapsForCreativeMode) == 0x000020, "Member 'B_MapManager_C_SetupAndSortMapLists::EmptyMapsForCreativeMode' has a wrong offset!");
@@ -721,38 +721,38 @@ static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Add_IntInt_
 static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, Temp_int_Array_Index_Variable_2) == 0x000068, "Member 'B_MapManager_C_SetupAndSortMapLists::Temp_int_Array_Index_Variable_2' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, Temp_int_Array_Index_Variable_3) == 0x00006C, "Member 'B_MapManager_C_SetupAndSortMapLists::Temp_int_Array_Index_Variable_3' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item) == 0x000070, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item_1) == 0x0000C0, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue) == 0x000110, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue_1) == 0x000114, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue) == 0x000118, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue_1) == 0x000119, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item_2) == 0x000120, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue_2) == 0x000170, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue_2) == 0x000174, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item_3) == 0x000178, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue_3) == 0x0001C8, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue_3) == 0x0001CC, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_WithEditor_ReturnValue) == 0x0001CD, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item_1) == 0x0000B0, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue) == 0x0000F0, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue_1) == 0x0000F4, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue) == 0x0000F8, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000F9, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item_2) == 0x000100, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue_2) == 0x000140, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue_2) == 0x000144, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Get_Item_3) == 0x000148, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Array_Length_ReturnValue_3) == 0x000188, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_Less_IntInt_ReturnValue_3) == 0x00018C, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_SetupAndSortMapLists, CallFunc_WithEditor_ReturnValue) == 0x00018D, "Member 'B_MapManager_C_SetupAndSortMapLists::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.UpdateNextMapFromCustomMapCycle
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct B_MapManager_C_UpdateNextMapFromCustomMapCycle final
 {
 public:
 	class UB_MatchOptions_C*                      NextMatchOptions;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DetermineNextMapFromCustomMapCycle_MapDataFound; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DetermineNextMapFromCustomMapCycle_LayoutDataFound; // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EF9[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_DetermineNextMapFromCustomMapCycle_MapData; // 0x0010(0x0050)(HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_DetermineNextMapFromCustomMapCycle_LayoutData; // 0x0060(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_DetermineNextMapFromCustomMapCycle_MapData; // 0x0010(0x0040)(HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_DetermineNextMapFromCustomMapCycle_LayoutData; // 0x0050(0x0048)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_UpdateNextMapFromCustomMapCycle) == 0x000008, "Wrong alignment on B_MapManager_C_UpdateNextMapFromCustomMapCycle");
-static_assert(sizeof(B_MapManager_C_UpdateNextMapFromCustomMapCycle) == 0x0000A8, "Wrong size on B_MapManager_C_UpdateNextMapFromCustomMapCycle");
+static_assert(sizeof(B_MapManager_C_UpdateNextMapFromCustomMapCycle) == 0x000098, "Wrong size on B_MapManager_C_UpdateNextMapFromCustomMapCycle");
 static_assert(offsetof(B_MapManager_C_UpdateNextMapFromCustomMapCycle, NextMatchOptions) == 0x000000, "Member 'B_MapManager_C_UpdateNextMapFromCustomMapCycle::NextMatchOptions' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_UpdateNextMapFromCustomMapCycle, CallFunc_DetermineNextMapFromCustomMapCycle_MapDataFound) == 0x000008, "Member 'B_MapManager_C_UpdateNextMapFromCustomMapCycle::CallFunc_DetermineNextMapFromCustomMapCycle_MapDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_UpdateNextMapFromCustomMapCycle, CallFunc_DetermineNextMapFromCustomMapCycle_LayoutDataFound) == 0x000009, "Member 'B_MapManager_C_UpdateNextMapFromCustomMapCycle::CallFunc_DetermineNextMapFromCustomMapCycle_LayoutDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_UpdateNextMapFromCustomMapCycle, CallFunc_DetermineNextMapFromCustomMapCycle_MapData) == 0x000010, "Member 'B_MapManager_C_UpdateNextMapFromCustomMapCycle::CallFunc_DetermineNextMapFromCustomMapCycle_MapData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_UpdateNextMapFromCustomMapCycle, CallFunc_DetermineNextMapFromCustomMapCycle_LayoutData) == 0x000060, "Member 'B_MapManager_C_UpdateNextMapFromCustomMapCycle::CallFunc_DetermineNextMapFromCustomMapCycle_LayoutData' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_UpdateNextMapFromCustomMapCycle, CallFunc_DetermineNextMapFromCustomMapCycle_LayoutData) == 0x000050, "Member 'B_MapManager_C_UpdateNextMapFromCustomMapCycle::CallFunc_DetermineNextMapFromCustomMapCycle_LayoutData' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetBuiltInMaps
 // 0x0020 (0x0020 - 0x0000)
@@ -773,7 +773,7 @@ struct B_MapManager_C_GetCustomMaps final
 {
 public:
 	bool                                          WithAutosaves;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EFA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_PropLayoutData>              CustomMaps;                                        // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FS_PropLayoutData>              AllCustomMaps;                                     // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FS_PropLayoutData>              FoundMaps;                                         // 0x0028(0x0010)(Edit, BlueprintVisible)
@@ -782,9 +782,9 @@ public:
 	struct FS_PropLayoutData                      CallFunc_Array_Get_Item;                           // 0x0040(0x0048)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EFB[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EFC[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_PropLayoutData>              CallFunc_Map_Values_Values;                        // 0x0098(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EndsWith_ReturnValue;                     // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -808,14 +808,14 @@ static_assert(offsetof(B_MapManager_C_GetCustomMaps, CallFunc_EndsWith_ReturnVal
 static_assert(offsetof(B_MapManager_C_GetCustomMaps, CallFunc_Not_PreBool_ReturnValue) == 0x0000AD, "Member 'B_MapManager_C_GetCustomMaps::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetMapsByFilterCriterion
-// 0x0190 (0x0190 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct B_MapManager_C_GetMapsByFilterCriterion final
 {
 public:
 	bool                                          UsedInObjective;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsedInImpostor;                                    // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsedAsCreativeTemplate;                            // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EFD[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      FoundMaps;                                         // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FSMapData>                      ReturnMaps;                                        // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSMapData>                      MapsToTest;                                        // 0x0028(0x0010)(Edit, BlueprintVisible)
@@ -827,27 +827,27 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSMapData>                      CallFunc_Map_Values_Values;                        // 0x0050(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EFE[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0068(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EFF[0x3];                                     // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F00[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item_1;                         // 0x00D0(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F01[0x7];                                     // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item_2;                         // 0x0130(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0068(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item_1;                         // 0x00C0(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item_2;                         // 0x0110(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_2;            // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_GetMapsByFilterCriterion) == 0x000008, "Wrong alignment on B_MapManager_C_GetMapsByFilterCriterion");
-static_assert(sizeof(B_MapManager_C_GetMapsByFilterCriterion) == 0x000190, "Wrong size on B_MapManager_C_GetMapsByFilterCriterion");
+static_assert(sizeof(B_MapManager_C_GetMapsByFilterCriterion) == 0x000160, "Wrong size on B_MapManager_C_GetMapsByFilterCriterion");
 static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, UsedInObjective) == 0x000000, "Member 'B_MapManager_C_GetMapsByFilterCriterion::UsedInObjective' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, UsedInImpostor) == 0x000001, "Member 'B_MapManager_C_GetMapsByFilterCriterion::UsedInImpostor' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, UsedAsCreativeTemplate) == 0x000002, "Member 'B_MapManager_C_GetMapsByFilterCriterion::UsedAsCreativeTemplate' has a wrong offset!");
@@ -863,19 +863,19 @@ static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, Temp_int_Loop_Co
 static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Map_Values_Values) == 0x000050, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Map_Values_Values' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Add_IntInt_ReturnValue_1) == 0x000060, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Get_Item) == 0x000068, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Length_ReturnValue) == 0x0000B8, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_AddUnique_ReturnValue) == 0x0000BC, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, Temp_int_Loop_Counter_Variable_2) == 0x0000C0, "Member 'B_MapManager_C_GetMapsByFilterCriterion::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Less_IntInt_ReturnValue) == 0x0000C4, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000C8, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Get_Item_1) == 0x0000D0, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Length_ReturnValue_1) == 0x000120, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000124, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Less_IntInt_ReturnValue_1) == 0x000128, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Get_Item_2) == 0x000130, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Length_ReturnValue_2) == 0x000180, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_AddUnique_ReturnValue_2) == 0x000184, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_AddUnique_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Less_IntInt_ReturnValue_2) == 0x000188, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Length_ReturnValue) == 0x0000A8, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_AddUnique_ReturnValue) == 0x0000AC, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, Temp_int_Loop_Counter_Variable_2) == 0x0000B0, "Member 'B_MapManager_C_GetMapsByFilterCriterion::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Less_IntInt_ReturnValue) == 0x0000B4, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000B8, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Get_Item_1) == 0x0000C0, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Length_ReturnValue_1) == 0x000100, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000104, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Less_IntInt_ReturnValue_1) == 0x000108, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Get_Item_2) == 0x000110, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_Length_ReturnValue_2) == 0x000150, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Array_AddUnique_ReturnValue_2) == 0x000154, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Array_AddUnique_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetMapsByFilterCriterion, CallFunc_Less_IntInt_ReturnValue_2) == 0x000158, "Member 'B_MapManager_C_GetMapsByFilterCriterion::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetOfficialMaps
 // 0x0030 (0x0030 - 0x0000)
@@ -883,7 +883,7 @@ struct B_MapManager_C_GetOfficialMaps final
 {
 public:
 	bool                                          ExcludeRandomMapCycle;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F02[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      OfficialMaps;                                      // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FSMapData>                      AllOfficialMaps;                                   // 0x0018(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -898,92 +898,92 @@ static_assert(offsetof(B_MapManager_C_GetOfficialMaps, CallFunc_Array_Add_Return
 static_assert(offsetof(B_MapManager_C_GetOfficialMaps, CallFunc_Not_PreBool_ReturnValue) == 0x00002C, "Member 'B_MapManager_C_GetOfficialMaps::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetSpecificMapOrCustomMapFromFileName
-// 0x0158 (0x0158 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct B_MapManager_C_GetSpecificMapOrCustomMapFromFileName final
 {
 public:
 	class FString                                 Filename;                                          // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
 	bool                                          MapDataFound;                                      // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LayoutDataFound;                                   // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F03[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              MapData;                                           // 0x0018(0x0050)(Parm, OutParm, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      LayoutData;                                        // 0x0068(0x0048)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_Map_Find_Value;                           // 0x00B0(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F04[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Map_Find_Value_1;                         // 0x0100(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              MapData;                                           // 0x0018(0x0040)(Parm, OutParm, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      LayoutData;                                        // 0x0058(0x0048)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_Map_Find_Value;                           // 0x00A0(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Map_Find_Value_1;                         // 0x00F0(0x0040)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName) == 0x000008, "Wrong alignment on B_MapManager_C_GetSpecificMapOrCustomMapFromFileName");
-static_assert(sizeof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName) == 0x000158, "Wrong size on B_MapManager_C_GetSpecificMapOrCustomMapFromFileName");
+static_assert(sizeof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName) == 0x000138, "Wrong size on B_MapManager_C_GetSpecificMapOrCustomMapFromFileName");
 static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, Filename) == 0x000000, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::Filename' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, MapDataFound) == 0x000010, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::MapDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, LayoutDataFound) == 0x000011, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::LayoutDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, MapData) == 0x000018, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::MapData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, LayoutData) == 0x000068, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::LayoutData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_Value) == 0x0000B0, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_ReturnValue) == 0x0000F8, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_Value_1) == 0x000100, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_ReturnValue_1) == 0x000150, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, LayoutData) == 0x000058, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::LayoutData' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_Value) == 0x0000A0, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_ReturnValue) == 0x0000E8, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_Value_1) == 0x0000F0, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSpecificMapOrCustomMapFromFileName, CallFunc_Map_Find_ReturnValue_1) == 0x000130, "Member 'B_MapManager_C_GetSpecificMapOrCustomMapFromFileName::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.GetSuitableMapCycleName
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct B_MapManager_C_GetSuitableMapCycleName final
 {
 public:
-	class FText                                   Param_Name;                                        // 0x0000(0x0018)(Parm, OutParm)
-	class FText                                   SuitableName;                                      // 0x0018(0x0018)(Edit, BlueprintVisible)
-	bool                                          Temp_bool_Variable;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F05[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0050(0x0018)()
-	bool                                          CallFunc_MapCycleHasNoName_HasNoName;              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F06[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0070(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0088(0x0018)()
+	class FText                                   Name_0;                                            // 0x0000(0x0010)(Parm, OutParm)
+	class FText                                   SuitableName;                                      // 0x0010(0x0010)(Edit, BlueprintVisible)
+	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0028(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0010)()
+	bool                                          CallFunc_MapCycleHasNoName_HasNoName;              // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0050(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0060(0x0010)()
 };
 static_assert(alignof(B_MapManager_C_GetSuitableMapCycleName) == 0x000008, "Wrong alignment on B_MapManager_C_GetSuitableMapCycleName");
-static_assert(sizeof(B_MapManager_C_GetSuitableMapCycleName) == 0x0000A0, "Wrong size on B_MapManager_C_GetSuitableMapCycleName");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Param_Name) == 0x000000, "Member 'B_MapManager_C_GetSuitableMapCycleName::Param_Name' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, SuitableName) == 0x000018, "Member 'B_MapManager_C_GetSuitableMapCycleName::SuitableName' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Temp_bool_Variable) == 0x000030, "Member 'B_MapManager_C_GetSuitableMapCycleName::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Temp_text_Variable) == 0x000038, "Member 'B_MapManager_C_GetSuitableMapCycleName::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Temp_text_Variable_1) == 0x000050, "Member 'B_MapManager_C_GetSuitableMapCycleName::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, CallFunc_MapCycleHasNoName_HasNoName) == 0x000068, "Member 'B_MapManager_C_GetSuitableMapCycleName::CallFunc_MapCycleHasNoName_HasNoName' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, CallFunc_Conv_StringToText_ReturnValue) == 0x000070, "Member 'B_MapManager_C_GetSuitableMapCycleName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, K2Node_Select_Default) == 0x000088, "Member 'B_MapManager_C_GetSuitableMapCycleName::K2Node_Select_Default' has a wrong offset!");
+static_assert(sizeof(B_MapManager_C_GetSuitableMapCycleName) == 0x000070, "Wrong size on B_MapManager_C_GetSuitableMapCycleName");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Name_0) == 0x000000, "Member 'B_MapManager_C_GetSuitableMapCycleName::Name_0' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, SuitableName) == 0x000010, "Member 'B_MapManager_C_GetSuitableMapCycleName::SuitableName' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Temp_bool_Variable) == 0x000020, "Member 'B_MapManager_C_GetSuitableMapCycleName::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Temp_text_Variable) == 0x000028, "Member 'B_MapManager_C_GetSuitableMapCycleName::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, Temp_text_Variable_1) == 0x000038, "Member 'B_MapManager_C_GetSuitableMapCycleName::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, CallFunc_MapCycleHasNoName_HasNoName) == 0x000048, "Member 'B_MapManager_C_GetSuitableMapCycleName::CallFunc_MapCycleHasNoName_HasNoName' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, CallFunc_Conv_StringToText_ReturnValue) == 0x000050, "Member 'B_MapManager_C_GetSuitableMapCycleName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_GetSuitableMapCycleName, K2Node_Select_Default) == 0x000060, "Member 'B_MapManager_C_GetSuitableMapCycleName::K2Node_Select_Default' has a wrong offset!");
 
 // Function B_MapManager.B_MapManager_C.ValidCustomMapCycleIsSelected
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct B_MapManager_C_ValidCustomMapCycleIsSelected final
 {
 public:
 	bool                                          ValidSelection;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasValidMap;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F07[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F08[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_MapCycleIsEmpty_IsEmpty;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F09[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound; // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound; // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F0A[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData; // 0x0030(0x0050)(HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData; // 0x0080(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F0B[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData; // 0x0030(0x0040)(HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData; // 0x0070(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MapManager_C_ValidCustomMapCycleIsSelected) == 0x000008, "Wrong alignment on B_MapManager_C_ValidCustomMapCycleIsSelected");
-static_assert(sizeof(B_MapManager_C_ValidCustomMapCycleIsSelected) == 0x0000D8, "Wrong size on B_MapManager_C_ValidCustomMapCycleIsSelected");
+static_assert(sizeof(B_MapManager_C_ValidCustomMapCycleIsSelected) == 0x0000C8, "Wrong size on B_MapManager_C_ValidCustomMapCycleIsSelected");
 static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, ValidSelection) == 0x000000, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::ValidSelection' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, HasValidMap) == 0x000001, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::HasValidMap' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, Temp_bool_True_if_break_was_hit_Variable) == 0x000002, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
@@ -997,11 +997,11 @@ static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_No
 static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound) == 0x000029, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound) == 0x00002A, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound' has a wrong offset!");
 static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData) == 0x000030, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData) == 0x000080, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_BooleanOR_ReturnValue) == 0x0000C8, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_Array_Length_ReturnValue) == 0x0000CC, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_Less_IntInt_ReturnValue) == 0x0000D0, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_BooleanAND_ReturnValue) == 0x0000D1, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData) == 0x000070, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_BooleanOR_ReturnValue) == 0x0000B8, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_Array_Length_ReturnValue) == 0x0000BC, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_Less_IntInt_ReturnValue) == 0x0000C0, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MapManager_C_ValidCustomMapCycleIsSelected, CallFunc_BooleanAND_ReturnValue) == 0x0000C1, "Member 'B_MapManager_C_ValidCustomMapCycleIsSelected::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

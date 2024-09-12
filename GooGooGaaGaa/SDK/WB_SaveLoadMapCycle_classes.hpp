@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SaveLoadMapCycle.WB_SaveLoadMapCycle_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_SaveLoadMapCycle_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_MapCyclePreview_C*                  WB_MapCyclePreview;                                // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SaveLoadScreen_C*                   WB_SaveLoadScreen;                                 // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UB_MapCycleObject_C*                    SelectedMapCycle;                                  // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_MapCyclePreview_C*                  WB_MapCyclePreview;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SaveLoadScreen_C*                   WB_SaveLoadScreen;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UB_MapCycleObject_C*                    SelectedMapCycle;                                  // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ChangeMenuOnBack();
@@ -52,11 +52,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_SaveLoadMapCycle_C) == 0x000008, "Wrong alignment on UWB_SaveLoadMapCycle_C");
-static_assert(sizeof(UWB_SaveLoadMapCycle_C) == 0x0002E0, "Wrong size on UWB_SaveLoadMapCycle_C");
-static_assert(offsetof(UWB_SaveLoadMapCycle_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SaveLoadMapCycle_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadMapCycle_C, WB_MapCyclePreview) == 0x0002C8, "Member 'UWB_SaveLoadMapCycle_C::WB_MapCyclePreview' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadMapCycle_C, WB_SaveLoadScreen) == 0x0002D0, "Member 'UWB_SaveLoadMapCycle_C::WB_SaveLoadScreen' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadMapCycle_C, SelectedMapCycle) == 0x0002D8, "Member 'UWB_SaveLoadMapCycle_C::SelectedMapCycle' has a wrong offset!");
+static_assert(sizeof(UWB_SaveLoadMapCycle_C) == 0x000300, "Wrong size on UWB_SaveLoadMapCycle_C");
+static_assert(offsetof(UWB_SaveLoadMapCycle_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SaveLoadMapCycle_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadMapCycle_C, WB_MapCyclePreview) == 0x0002E8, "Member 'UWB_SaveLoadMapCycle_C::WB_MapCyclePreview' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadMapCycle_C, WB_SaveLoadScreen) == 0x0002F0, "Member 'UWB_SaveLoadMapCycle_C::WB_SaveLoadScreen' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadMapCycle_C, SelectedMapCycle) == 0x0002F8, "Member 'UWB_SaveLoadMapCycle_C::SelectedMapCycle' has a wrong offset!");
 
 }
 

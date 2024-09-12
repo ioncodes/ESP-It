@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_StaticMeshLightProp_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_StaticMeshLightProp_classes.hpp"
 
 
 namespace SDK
@@ -22,7 +22,7 @@ namespace SDK
 class AB_Gramophone_C final : public AB_StaticMeshLightProp_C
 {
 public:
-	uint8                                         Pad_4C6E[0x7];                                     // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_Gramophone_C;                     // 0x05F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        PercentTime;                                       // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

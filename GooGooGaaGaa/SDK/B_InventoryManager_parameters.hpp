@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "B_SteamItemDef_structs.hpp"
-#include "E_Slot_structs.hpp"
-#include "PropWitchHuntModule_structs.hpp"
-#include "S_RecipeInfo_structs.hpp"
-#include "S_ItemSetInfo_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "E_Slot_structs.hpp"
+#include "B_SteamItemDef_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "S_ItemSetInfo_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "EventNames_structs.hpp"
 #include "S_EventInfo_structs.hpp"
@@ -47,15 +47,15 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3987[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3988[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3989[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_AddGrantedItems) == 0x000008, "Wrong alignment on B_InventoryManager_C_AddGrantedItems");
@@ -88,7 +88,7 @@ static_assert(offsetof(B_InventoryManager_C_CheckItemValidity, IsValid) == 0x000
 static_assert(offsetof(B_InventoryManager_C_CheckItemValidity, CallFunc_Set_Contains_ReturnValue) == 0x000005, "Member 'B_InventoryManager_C_CheckItemValidity::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.CheckNotifyState
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct B_InventoryManager_C_CheckNotifyState final
 {
 public:
@@ -102,10 +102,10 @@ public:
 	bool                                          NewWitchItem;                                      // 0x0016(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewHunterItem;                                     // 0x0017(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_398A[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_398B[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -118,17 +118,17 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_398C[0x2];                                     // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_Array_Get_Item;                           // 0x0038(0x0080)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsNewItem_New;                            // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00BF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_Array_Get_Item;                           // 0x0038(0x0078)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsNewItem_New;                            // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_CheckNotifyState) == 0x000008, "Wrong alignment on B_InventoryManager_C_CheckNotifyState");
-static_assert(sizeof(B_InventoryManager_C_CheckNotifyState) == 0x0000C8, "Wrong size on B_InventoryManager_C_CheckNotifyState");
+static_assert(sizeof(B_InventoryManager_C_CheckNotifyState) == 0x0000C0, "Wrong size on B_InventoryManager_C_CheckNotifyState");
 static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, Items) == 0x000000, "Member 'B_InventoryManager_C_CheckNotifyState::Items' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, NewItems) == 0x000010, "Member 'B_InventoryManager_C_CheckNotifyState::NewItems' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, NewHunter) == 0x000011, "Member 'B_InventoryManager_C_CheckNotifyState::NewHunter' has a wrong offset!");
@@ -154,12 +154,12 @@ static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, K2Node_SwitchEnum_
 static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Not_PreBool_ReturnValue_2) == 0x000034, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Not_PreBool_ReturnValue_3) == 0x000035, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Array_Get_Item) == 0x000038, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Array_Length_ReturnValue) == 0x0000B8, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Less_IntInt_ReturnValue) == 0x0000BC, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_BooleanAND_ReturnValue_2) == 0x0000BD, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_IsNewItem_New) == 0x0000BE, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_IsNewItem_New' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Set_Contains_ReturnValue) == 0x0000BF, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_BooleanAND_ReturnValue_3) == 0x0000C0, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Array_Length_ReturnValue) == 0x0000B0, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Less_IntInt_ReturnValue) == 0x0000B4, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_BooleanAND_ReturnValue_2) == 0x0000B5, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_IsNewItem_New) == 0x0000B6, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_IsNewItem_New' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_Set_Contains_ReturnValue) == 0x0000B7, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CheckNotifyState, CallFunc_BooleanAND_ReturnValue_3) == 0x0000B8, "Member 'B_InventoryManager_C_CheckNotifyState::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.CheckSetNotifyState
 // 0x0030 (0x0030 - 0x0000)
@@ -169,14 +169,14 @@ public:
 	TArray<int32>                                 SetIds;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          New;                                               // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LocalNew;                                          // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_398D[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsNewItem_New;                            // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_398E[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -206,15 +206,15 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_398F[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0030(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Set_Length_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3990[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3991[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -246,7 +246,7 @@ public:
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Map_Find_Value;                           // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3992[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -267,282 +267,253 @@ static_assert(offsetof(B_InventoryManager_C_CountItemToQuantity, CallFunc_Map_Co
 struct B_InventoryManager_C_CraftItem final
 {
 public:
-	TArray<int32>                                 Param_ItemsToCraft;                                // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<int32>                                 Param_ReagentIds;                                  // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	int32                                         Param_AmountToCraft;                               // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 ItemsToCraft_0;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<int32>                                 ReagentIDs_0;                                      // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         AmountToCraft_0;                                   // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_CraftItem) == 0x000008, "Wrong alignment on B_InventoryManager_C_CraftItem");
 static_assert(sizeof(B_InventoryManager_C_CraftItem) == 0x000028, "Wrong size on B_InventoryManager_C_CraftItem");
-static_assert(offsetof(B_InventoryManager_C_CraftItem, Param_ItemsToCraft) == 0x000000, "Member 'B_InventoryManager_C_CraftItem::Param_ItemsToCraft' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CraftItem, Param_ReagentIds) == 0x000010, "Member 'B_InventoryManager_C_CraftItem::Param_ReagentIds' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_CraftItem, Param_AmountToCraft) == 0x000020, "Member 'B_InventoryManager_C_CraftItem::Param_AmountToCraft' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CraftItem, ItemsToCraft_0) == 0x000000, "Member 'B_InventoryManager_C_CraftItem::ItemsToCraft_0' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CraftItem, ReagentIDs_0) == 0x000010, "Member 'B_InventoryManager_C_CraftItem::ReagentIDs_0' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_CraftItem, AmountToCraft_0) == 0x000020, "Member 'B_InventoryManager_C_CraftItem::AmountToCraft_0' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.ExecuteUbergraph_B_InventoryManager
-// 0x04D8 (0x04D8 - 0x0000)
+// 0x0498 (0x0498 - 0x0000)
 struct B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_16;                       // 0x0008(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable;                              // 0x0028(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_15;                       // 0x0048(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_14;                       // 0x0058(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_1;                            // 0x0078(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0088(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_13;                       // 0x0098(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_12;                       // 0x00A8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x00B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_2;                            // 0x00C8(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x00D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_11;                       // 0x00E8(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_10;                       // 0x00F8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0108(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_3;                            // 0x0118(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0128(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_9;                        // 0x0138(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_8;                        // 0x0148(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0158(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_4;                            // 0x0168(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           CallFunc_FastReloadItems_NewItems;                 // 0x0178(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0188(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_7;                        // 0x0198(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_6;                        // 0x01A8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x01B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_5;                            // 0x01C8(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x01D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_5;                        // 0x01E8(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_4;                        // 0x01F8(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0208(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_6;                            // 0x0218(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x0228(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_3;                        // 0x0238(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_2;                        // 0x0248(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x0258(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_7;                            // 0x0268(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Variable;                                 // 0x0278(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3993[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           CallFunc_GetOwnedIngredientItems_IngredientItems;  // 0x0280(0x0010)(ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x0290(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_1;                        // 0x02A0(0x0010)(ConstParm, ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items;                          // 0x02B0(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x02C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_8;                            // 0x02D0(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_18;                       // 0x02E0(0x0010)(ConstParm, ReferenceParm)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue;                  // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue;              // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0311(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3994[0x6];                                     // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue;              // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_3; // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue_1;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_1;            // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3995[0x6];                                     // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_2;            // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_3;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0359(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x035A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3996[0x1];                                     // 0x035B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x035C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3997[0x4];                                     // 0x036C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_GetUnownedItemIDs_Unowned_Item_IDs;       // 0x0370(0x0010)(ReferenceParm)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_4; // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_GenerateItems_ReturnValue;                // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3998[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_CustomEvent_ItemsToCraft;                   // 0x0398(0x0010)(ConstParm, ReferenceParm)
-	TArray<int32>                                 K2Node_CustomEvent_ReagentIDs;                     // 0x03A8(0x0010)(ConstParm, ReferenceParm)
-	int32                                         K2Node_CustomEvent_AmountToCraft;                  // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x03BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3999[0x3];                                     // 0x03BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_19;                       // 0x03C0(0x0010)(ConstParm, ReferenceParm)
-	class APlayerController*                      CallFunc_GetPlayerController_PlayerController;     // 0x03D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x03E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399A[0x6];                                     // 0x03EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x03F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399B[0x4];                                     // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_17;                       // 0x0408(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0419(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsXboxBuild_ReturnValue;                  // 0x041A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPS4Build_ReturnValue;                   // 0x041B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x041C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x041D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399C[0x2];                                     // 0x041E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x0420(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_19;           // 0x0430(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0444(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0450(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399D[0x7];                                     // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_5; // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGetAllItemsCallbackProxy*              CallFunc_ConsumeItem_ReturnValue;                  // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x046C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399E[0x3];                                     // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0474(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_399F[0x3];                                     // 0x0475(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0478(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0481(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0482(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A0[0x1];                                     // 0x0483(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetAccountId_ReturnValue;                 // 0x0484(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A1[0x7];                                     // 0x0489(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetEarliestPurchaseUnixTime_ReturnValue;  // 0x0490(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A2[0x3];                                     // 0x04A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x04A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A3[0x3];                                     // 0x04A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x04AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x04B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x04B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A4[0x6];                                     // 0x04B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_9;                            // 0x04B8(0x0010)(ReferenceParm)
-	class UGetAllItemsCallbackProxy*              CallFunc_ExchangeItems_ReturnValue;                // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x04D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_17;                       // 0x0008(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_16;                       // 0x0018(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate;              // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable;                              // 0x0038(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_15;                       // 0x0058(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_14;                       // 0x0068(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_1;                            // 0x0088(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0098(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_13;                       // 0x00A8(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_12;                       // 0x00B8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x00C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_2;                            // 0x00D8(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x00E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_11;                       // 0x00F8(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_10;                       // 0x0108(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0118(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_3;                            // 0x0128(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0138(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_9;                        // 0x0148(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_8;                        // 0x0158(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0168(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_4;                            // 0x0178(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           CallFunc_FastReloadItems_NewItems;                 // 0x0188(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0198(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_7;                        // 0x01A8(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_6;                        // 0x01B8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x01C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_5;                            // 0x01D8(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x01E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_5;                        // 0x01F8(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_4;                        // 0x0208(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0218(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_6;                            // 0x0228(0x0010)(ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x0238(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_3;                        // 0x0248(0x0010)(ConstParm, ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_2;                        // 0x0258(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x0268(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_7;                            // 0x0278(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           CallFunc_GetOwnedIngredientItems_IngredientItems;  // 0x0288(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_1;                        // 0x0298(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x02A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items;                          // 0x02B8(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x02C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_8;                            // 0x02D8(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_18;                       // 0x02E8(0x0010)(ConstParm, ReferenceParm)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue;                  // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue;              // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31A[0x6];                                      // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue;              // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_3; // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GrantPromoItems_ReturnValue_1;            // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_1;            // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34A[0x6];                                      // 0x034A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_2;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_TriggerItemDrop_ReturnValue_3;            // 0x0358(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0361(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0362(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_363[0x1];                                      // 0x0363(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x0364(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_GetUnownedItemIDs_Unowned_Item_IDs;       // 0x0378(0x0010)(ReferenceParm)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_4; // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_GenerateItems_ReturnValue;                // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_CustomEvent_ItemsToCraft;                   // 0x03A0(0x0010)(ConstParm, ReferenceParm)
+	TArray<int32>                                 K2Node_CustomEvent_ReagentIDs;                     // 0x03B0(0x0010)(ConstParm, ReferenceParm)
+	int32                                         K2Node_CustomEvent_AmountToCraft;                  // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x03C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C5[0x3];                                      // 0x03C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_19;                       // 0x03C8(0x0010)(ConstParm, ReferenceParm)
+	class APlayerController*                      CallFunc_GetPlayerController_PlayerController;     // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F2[0x6];                                      // 0x03F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x03F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x040C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_40D[0x3];                                      // 0x040D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x0410(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsXboxBuild_ReturnValue;                  // 0x0421(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPS4Build_ReturnValue;                   // 0x0422(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0423(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_425[0x3];                                      // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_19;           // 0x0428(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0440(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_5; // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGetAllItemsCallbackProxy*              CallFunc_ConsumeItem_ReturnValue;                  // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0464(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_465[0x3];                                      // 0x0465(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x046C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0474(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_475[0x3];                                      // 0x0475(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_9;                            // 0x0478(0x0010)(ReferenceParm)
+	class UGetAllItemsCallbackProxy*              CallFunc_ExchangeItems_ReturnValue;                // 0x0488(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0491(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager) == 0x000008, "Wrong alignment on B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager");
-static_assert(sizeof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager) == 0x0004D8, "Wrong size on B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager");
+static_assert(sizeof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager) == 0x000498, "Wrong size on B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, EntryPoint) == 0x000000, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_int_Array_Index_Variable) == 0x000004, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_16) == 0x000008, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_16' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate) == 0x000018, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable) == 0x000028, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000038, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_15) == 0x000048, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_15' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_14) == 0x000058, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_14' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000068, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_1) == 0x000078, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x000088, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_13) == 0x000098, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_13' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_12) == 0x0000A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_12' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_2) == 0x0000C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_11) == 0x0000E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_11' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_10) == 0x0000F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_10' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000108, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_3) == 0x000118, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_7) == 0x000128, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_9) == 0x000138, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_9' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_8) == 0x000148, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_8) == 0x000158, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_4) == 0x000168, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_FastReloadItems_NewItems) == 0x000178, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_FastReloadItems_NewItems' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_9) == 0x000188, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_7) == 0x000198, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_6) == 0x0001A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_10) == 0x0001B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_5) == 0x0001C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_11) == 0x0001D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_5) == 0x0001E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_4) == 0x0001F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_12) == 0x000208, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_6) == 0x000218, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_13) == 0x000228, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_3) == 0x000238, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_2) == 0x000248, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_14) == 0x000258, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_7) == 0x000268, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_int_Variable) == 0x000278, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetOwnedIngredientItems_IngredientItems) == 0x000280, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetOwnedIngredientItems_IngredientItems' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_15) == 0x000290, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_1) == 0x0002A0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items) == 0x0002B0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_16) == 0x0002C0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_8) == 0x0002D0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_18) == 0x0002E0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_18' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x0002F0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x0002F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetAllItems_ReturnValue) == 0x000300, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetAllItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue) == 0x000308, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue) == 0x000310, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_1) == 0x000311, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_2) == 0x000318, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue) == 0x000320, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_3) == 0x000328, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue_1) == 0x000330, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_1) == 0x000338, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_2) == 0x000340, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_3) == 0x000341, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_2) == 0x000348, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_3) == 0x000350, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_4) == 0x000358, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_5) == 0x000359, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_6) == 0x00035A, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_17) == 0x00035C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetUnownedItemIDs_Unowned_Item_IDs) == 0x000370, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetUnownedItemIDs_Unowned_Item_IDs' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_4) == 0x000380, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GenerateItems_ReturnValue) == 0x000388, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GenerateItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_7) == 0x000390, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ItemsToCraft) == 0x000398, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ItemsToCraft' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ReagentIDs) == 0x0003A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ReagentIDs' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_AmountToCraft) == 0x0003B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_AmountToCraft' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_WithEditor_ReturnValue) == 0x0003BC, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_19) == 0x0003C0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_19' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetPlayerController_PlayerController) == 0x0003D0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetPlayerController_PlayerController' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameState_ReturnValue) == 0x0003D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_AsB_Game_State) == 0x0003E0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_bSuccess) == 0x0003E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue) == 0x0003E9, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Get_Item) == 0x0003F0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue) == 0x000400, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_17) == 0x000408, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_17' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsConsoleBuild_ReturnValue) == 0x000418, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue) == 0x000419, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsXboxBuild_ReturnValue) == 0x00041A, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsXboxBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsPS4Build_ReturnValue) == 0x00041B, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsPS4Build_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_1) == 0x00041C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_2) == 0x00041D, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_18) == 0x000420, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_19) == 0x000430, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetItemQuantity_ReturnValue) == 0x000440, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue_1) == 0x000444, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameInstance_ReturnValue) == 0x000448, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Greater_IntInt_ReturnValue) == 0x000450, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_5) == 0x000458, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_ConsumeItem_ReturnValue) == 0x000460, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_ConsumeItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_int_Loop_Counter_Variable) == 0x000468, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Less_IntInt_ReturnValue) == 0x00046C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Add_IntInt_ReturnValue) == 0x000470, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_8) == 0x000474, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000478, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_bSuccess_1) == 0x000480, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Map_Contains_ReturnValue) == 0x000481, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000482, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetAccountId_ReturnValue) == 0x000484, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetAccountId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000488, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetEarliestPurchaseUnixTime_ReturnValue) == 0x000490, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetEarliestPurchaseUnixTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsEmpty_ReturnValue) == 0x0004A0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Subtract_IntInt_ReturnValue) == 0x0004A4, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue_2) == 0x0004A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Conv_StringToInt_ReturnValue) == 0x0004AC, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0004B0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0004B1, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_9) == 0x0004B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_9' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_ExchangeItems_ReturnValue) == 0x0004C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_ExchangeItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_9) == 0x0004D0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue_3) == 0x0004D1, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_17) == 0x000008, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_17' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_16) == 0x000018, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_16' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable) == 0x000038, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000048, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_15) == 0x000058, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_15' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_14) == 0x000068, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_14' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_2) == 0x000078, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_1) == 0x000088, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_3) == 0x000098, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_13) == 0x0000A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_13' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_12) == 0x0000B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_12' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_4) == 0x0000C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_2) == 0x0000D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_11) == 0x0000F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_11' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_10) == 0x000108, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_10' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_6) == 0x000118, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_3) == 0x000128, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_7) == 0x000138, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_9) == 0x000148, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_9' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_8) == 0x000158, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_8) == 0x000168, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_4) == 0x000178, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_FastReloadItems_NewItems) == 0x000188, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_FastReloadItems_NewItems' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_9) == 0x000198, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_7) == 0x0001A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_6) == 0x0001B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_10) == 0x0001C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_5) == 0x0001D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_11) == 0x0001E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_5) == 0x0001F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_4) == 0x000208, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_12) == 0x000218, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_6) == 0x000228, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_13) == 0x000238, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_3) == 0x000248, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_2) == 0x000258, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_14) == 0x000268, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_7) == 0x000278, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetOwnedIngredientItems_IngredientItems) == 0x000288, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetOwnedIngredientItems_IngredientItems' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_1) == 0x000298, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_15) == 0x0002A8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items) == 0x0002B8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_16) == 0x0002C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_8) == 0x0002D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_18) == 0x0002E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_18' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x0002F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000300, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetAllItems_ReturnValue) == 0x000308, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetAllItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue) == 0x000310, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue) == 0x000318, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_1) == 0x000319, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_2) == 0x000320, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue) == 0x000328, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_3) == 0x000330, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GrantPromoItems_ReturnValue_1) == 0x000338, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GrantPromoItems_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_1) == 0x000340, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_2) == 0x000348, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_3) == 0x000349, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_2) == 0x000350, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_TriggerItemDrop_ReturnValue_3) == 0x000358, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_TriggerItemDrop_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_4) == 0x000360, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_5) == 0x000361, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_6) == 0x000362, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_17) == 0x000364, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetUnownedItemIDs_Unowned_Item_IDs) == 0x000378, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetUnownedItemIDs_Unowned_Item_IDs' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_4) == 0x000388, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GenerateItems_ReturnValue) == 0x000390, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GenerateItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_7) == 0x000398, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ItemsToCraft) == 0x0003A0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ItemsToCraft' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_ReagentIDs) == 0x0003B0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_ReagentIDs' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_AmountToCraft) == 0x0003C0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_AmountToCraft' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_WithEditor_ReturnValue) == 0x0003C4, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CustomEvent_Items_19) == 0x0003C8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CustomEvent_Items_19' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetPlayerController_PlayerController) == 0x0003D8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetPlayerController_PlayerController' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameState_ReturnValue) == 0x0003E0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_AsB_Game_State) == 0x0003E8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_DynamicCast_bSuccess) == 0x0003F0, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue) == 0x0003F1, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Get_Item) == 0x0003F8, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue) == 0x000408, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsConsoleBuild_ReturnValue) == 0x00040C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_18) == 0x000410, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue) == 0x000420, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsXboxBuild_ReturnValue) == 0x000421, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsXboxBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsPS4Build_ReturnValue) == 0x000422, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsPS4Build_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_1) == 0x000423, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_BooleanOR_ReturnValue_2) == 0x000424, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, K2Node_CreateDelegate_OutputDelegate_19) == 0x000428, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetItemQuantity_ReturnValue) == 0x000438, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Array_Length_ReturnValue_1) == 0x00043C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetGameInstance_ReturnValue) == 0x000440, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Greater_IntInt_ReturnValue) == 0x000448, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_GetFirstLocalPlayerController_ReturnValue_5) == 0x000450, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_GetFirstLocalPlayerController_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_ConsumeItem_ReturnValue) == 0x000458, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_ConsumeItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_int_Loop_Counter_Variable) == 0x000460, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Less_IntInt_ReturnValue) == 0x000464, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Add_IntInt_ReturnValue) == 0x000468, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_8) == 0x00046C, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Subtract_IntInt_ReturnValue) == 0x000470, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000474, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, Temp_struct_Variable_9) == 0x000478, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::Temp_struct_Variable_9' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_ExchangeItems_ReturnValue) == 0x000488, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_ExchangeItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_IsValid_ReturnValue_9) == 0x000490, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager, CallFunc_Not_PreBool_ReturnValue_1) == 0x000491, "Member 'B_InventoryManager_C_ExecuteUbergraph_B_InventoryManager::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.FastReloadItems
 // 0x00D8 (0x00D8 - 0x0000)
@@ -557,26 +528,26 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A5[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class FString                                 CallFunc_GetItemId_ReturnValue;                    // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A6[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           CallFunc_Map_Values_Values;                        // 0x0080(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A7[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item_1;                         // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A8[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetItemId_ReturnValue_1;                  // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39A9[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39AA[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -608,31 +579,31 @@ static_assert(offsetof(B_InventoryManager_C_FastReloadItems, CallFunc_Array_Add_
 static_assert(offsetof(B_InventoryManager_C_FastReloadItems, CallFunc_Map_Contains_ReturnValue) == 0x0000D0, "Member 'B_InventoryManager_C_FastReloadItems::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetAllItemsBySlot
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct B_InventoryManager_C_GetAllItemsBySlot final
 {
 public:
 	E_Slot                                        Slot;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39AB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_ItemInfo>                    ItemInfos;                                         // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FS_ItemInfo>                    ItemInfoList;                                      // 0x0018(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39AC[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_ItemInfo>                    CallFunc_Map_Values_Values;                        // 0x0038(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39AD[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_Array_Get_Item;                           // 0x0050(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39AE[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_Array_Get_Item;                           // 0x0050(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_GetAllItemsBySlot) == 0x000008, "Wrong alignment on B_InventoryManager_C_GetAllItemsBySlot");
-static_assert(sizeof(B_InventoryManager_C_GetAllItemsBySlot) == 0x0000E0, "Wrong size on B_InventoryManager_C_GetAllItemsBySlot");
+static_assert(sizeof(B_InventoryManager_C_GetAllItemsBySlot) == 0x0000D8, "Wrong size on B_InventoryManager_C_GetAllItemsBySlot");
 static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, Slot) == 0x000000, "Member 'B_InventoryManager_C_GetAllItemsBySlot::Slot' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, ItemInfos) == 0x000008, "Member 'B_InventoryManager_C_GetAllItemsBySlot::ItemInfos' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, ItemInfoList) == 0x000018, "Member 'B_InventoryManager_C_GetAllItemsBySlot::ItemInfoList' has a wrong offset!");
@@ -642,49 +613,49 @@ static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Add_IntI
 static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Map_Values_Values) == 0x000038, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Map_Values_Values' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Array_Get_Item) == 0x000050, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Less_IntInt_ReturnValue) == 0x0000D0, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Array_Add_ReturnValue) == 0x0000D4, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Set_Contains_ReturnValue) == 0x0000D8, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000D9, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_BooleanAND_ReturnValue) == 0x0000DA, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Less_IntInt_ReturnValue) == 0x0000C8, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Array_Add_ReturnValue) == 0x0000CC, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_Set_Contains_ReturnValue) == 0x0000D0, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000D1, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllItemsBySlot, CallFunc_BooleanAND_ReturnValue) == 0x0000D2, "Member 'B_InventoryManager_C_GetAllItemsBySlot::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetAllOwningRecipes
-// 0x0160 (0x0160 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct B_InventoryManager_C_GetAllOwningRecipes final
 {
 public:
 	TArray<struct FS_RecipeInfo>                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
-	struct FS_RecipeInfo                          CurrentRecipe;                                     // 0x0010(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FS_RecipeInfo>                  Recipes;                                           // 0x0098(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FS_RecipeInfo>                  CallFunc_Map_Values_Values;                        // 0x00B8(0x0010)(ReferenceParm)
-	struct FS_RecipeInfo                          CallFunc_Array_Get_Item;                           // 0x00C8(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39AF[0x3];                                     // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          CurrentRecipe;                                     // 0x0010(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FS_RecipeInfo>                  Recipes;                                           // 0x0088(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_RecipeInfo>                  CallFunc_Map_Values_Values;                        // 0x00A8(0x0010)(ReferenceParm)
+	struct FS_RecipeInfo                          CallFunc_Array_Get_Item;                           // 0x00B8(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_GetAllOwningRecipes) == 0x000008, "Wrong alignment on B_InventoryManager_C_GetAllOwningRecipes");
-static_assert(sizeof(B_InventoryManager_C_GetAllOwningRecipes) == 0x000160, "Wrong size on B_InventoryManager_C_GetAllOwningRecipes");
+static_assert(sizeof(B_InventoryManager_C_GetAllOwningRecipes) == 0x000140, "Wrong size on B_InventoryManager_C_GetAllOwningRecipes");
 static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, ReturnValue) == 0x000000, "Member 'B_InventoryManager_C_GetAllOwningRecipes::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CurrentRecipe) == 0x000010, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CurrentRecipe' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, Recipes) == 0x000098, "Member 'B_InventoryManager_C_GetAllOwningRecipes::Recipes' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, Temp_int_Array_Index_Variable) == 0x0000A8, "Member 'B_InventoryManager_C_GetAllOwningRecipes::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, Temp_int_Loop_Counter_Variable) == 0x0000AC, "Member 'B_InventoryManager_C_GetAllOwningRecipes::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Array_Add_ReturnValue) == 0x0000B4, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Map_Values_Values) == 0x0000B8, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Array_Get_Item) == 0x0000C8, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Set_Contains_ReturnValue) == 0x000150, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Array_Length_ReturnValue) == 0x000154, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_BooleanOR_ReturnValue) == 0x000158, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Less_IntInt_ReturnValue) == 0x000159, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_BooleanAND_ReturnValue) == 0x00015A, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, Recipes) == 0x000088, "Member 'B_InventoryManager_C_GetAllOwningRecipes::Recipes' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, Temp_int_Array_Index_Variable) == 0x000098, "Member 'B_InventoryManager_C_GetAllOwningRecipes::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, Temp_int_Loop_Counter_Variable) == 0x00009C, "Member 'B_InventoryManager_C_GetAllOwningRecipes::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Add_IntInt_ReturnValue) == 0x0000A0, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Array_Add_ReturnValue) == 0x0000A4, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Map_Values_Values) == 0x0000A8, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Array_Get_Item) == 0x0000B8, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Set_Contains_ReturnValue) == 0x000130, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Array_Length_ReturnValue) == 0x000134, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_BooleanOR_ReturnValue) == 0x000138, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_Less_IntInt_ReturnValue) == 0x000139, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetAllOwningRecipes, CallFunc_BooleanAND_ReturnValue) == 0x00013A, "Member 'B_InventoryManager_C_GetAllOwningRecipes::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetItemQuantity
 // 0x0010 (0x0010 - 0x0000)
@@ -714,13 +685,13 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B0[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           CallFunc_Map_Values_Values;                        // 0x0040(0x0010)(ReferenceParm)
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B1[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -754,22 +725,22 @@ static_assert(offsetof(B_InventoryManager_C_GetPlayerController, PlayerControlle
 static_assert(offsetof(B_InventoryManager_C_GetPlayerController, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000008, "Member 'B_InventoryManager_C_GetPlayerController::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetRecipe
-// 0x0120 (0x0120 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct B_InventoryManager_C_GetRecipe final
 {
 public:
 	int32                                         RecipeId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_RecipeInfo                          ReturnValue;                                       // 0x0008(0x0088)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
-	struct FS_RecipeInfo                          CallFunc_Map_Find_Value;                           // 0x0090(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RecipeInfo                          ReturnValue;                                       // 0x0008(0x0078)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          CallFunc_Map_Find_Value;                           // 0x0080(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_GetRecipe) == 0x000008, "Wrong alignment on B_InventoryManager_C_GetRecipe");
-static_assert(sizeof(B_InventoryManager_C_GetRecipe) == 0x000120, "Wrong size on B_InventoryManager_C_GetRecipe");
+static_assert(sizeof(B_InventoryManager_C_GetRecipe) == 0x000100, "Wrong size on B_InventoryManager_C_GetRecipe");
 static_assert(offsetof(B_InventoryManager_C_GetRecipe, RecipeId) == 0x000000, "Member 'B_InventoryManager_C_GetRecipe::RecipeId' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetRecipe, ReturnValue) == 0x000008, "Member 'B_InventoryManager_C_GetRecipe::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetRecipe, CallFunc_Map_Find_Value) == 0x000090, "Member 'B_InventoryManager_C_GetRecipe::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetRecipe, CallFunc_Map_Find_ReturnValue) == 0x000118, "Member 'B_InventoryManager_C_GetRecipe::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetRecipe, CallFunc_Map_Find_Value) == 0x000080, "Member 'B_InventoryManager_C_GetRecipe::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetRecipe, CallFunc_Map_Find_ReturnValue) == 0x0000F8, "Member 'B_InventoryManager_C_GetRecipe::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetRecipes
 // 0x0020 (0x0020 - 0x0000)
@@ -785,25 +756,25 @@ static_assert(offsetof(B_InventoryManager_C_GetRecipes, ReturnValue) == 0x000000
 static_assert(offsetof(B_InventoryManager_C_GetRecipes, CallFunc_Map_Values_Values) == 0x000010, "Member 'B_InventoryManager_C_GetRecipes::CallFunc_Map_Values_Values' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetSkinItem
-// 0x0118 (0x0118 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct B_InventoryManager_C_GetSkinItem final
 {
 public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            ReturnValue;                                       // 0x0008(0x0080)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
-	bool                                          Found;                                             // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B4[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0090(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            ReturnValue;                                       // 0x0008(0x0078)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+	bool                                          Found;                                             // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0088(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_GetSkinItem) == 0x000008, "Wrong alignment on B_InventoryManager_C_GetSkinItem");
-static_assert(sizeof(B_InventoryManager_C_GetSkinItem) == 0x000118, "Wrong size on B_InventoryManager_C_GetSkinItem");
+static_assert(sizeof(B_InventoryManager_C_GetSkinItem) == 0x000108, "Wrong size on B_InventoryManager_C_GetSkinItem");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItem, ItemId) == 0x000000, "Member 'B_InventoryManager_C_GetSkinItem::ItemId' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItem, ReturnValue) == 0x000008, "Member 'B_InventoryManager_C_GetSkinItem::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItem, Found) == 0x000088, "Member 'B_InventoryManager_C_GetSkinItem::Found' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItem, CallFunc_Map_Find_Value) == 0x000090, "Member 'B_InventoryManager_C_GetSkinItem::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItem, CallFunc_Map_Find_ReturnValue) == 0x000110, "Member 'B_InventoryManager_C_GetSkinItem::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItem, Found) == 0x000080, "Member 'B_InventoryManager_C_GetSkinItem::Found' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItem, CallFunc_Map_Find_Value) == 0x000088, "Member 'B_InventoryManager_C_GetSkinItem::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItem, CallFunc_Map_Find_ReturnValue) == 0x000100, "Member 'B_InventoryManager_C_GetSkinItem::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetSkinItemIdBySoftReference
 // 0x0038 (0x0038 - 0x0000)
@@ -836,21 +807,21 @@ static_assert(offsetof(B_InventoryManager_C_GetSkinItems, ReturnValue) == 0x0000
 static_assert(offsetof(B_InventoryManager_C_GetSkinItems, CallFunc_Map_Values_Values) == 0x000010, "Member 'B_InventoryManager_C_GetSkinItems::CallFunc_Map_Values_Values' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetSkinItemSets
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct B_InventoryManager_C_GetSkinItemSets final
 {
 public:
 	ETeamID                                       Team;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_ItemSetInfo>                 ItemSets;                                          // 0x0008(0x0010)(Parm, OutParm)
 	class UDataTable*                             DataTable;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CurrentMinIndex;                                   // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B6[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 SortValues;                                        // 0x0028(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FS_ItemSetInfo>                 SetsSorted;                                        // 0x0038(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FS_ItemSetInfo>                 Sets;                                              // 0x0048(0x0010)(Edit, BlueprintVisible)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B7[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -859,34 +830,34 @@ public:
 	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0070(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B8[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemSetInfo                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0090(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39B9[0x2];                                     // 0x00BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_ItemSetInfo                         CallFunc_Array_Get_Item_1;                         // 0x00C0(0x0028)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MinOfIntArray_IndexOfMinValue;            // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_MinOfIntArray_MinValue;                   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39BA[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemSetInfo                         CallFunc_Array_Get_Item_2;                         // 0x0100(0x0028)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39BB[0x3];                                     // 0x012D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item_3;                         // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39BC[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0138(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39BD[0x3];                                     // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetRaritySortingValue_ReturnValue;        // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemSetInfo                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0090(0x0020)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x2];                                       // 0x00B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemSetInfo                         CallFunc_Array_Get_Item_1;                         // 0x00B8(0x0020)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MinOfIntArray_IndexOfMinValue;            // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_MinOfIntArray_MinValue;                   // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemSetInfo                         CallFunc_Array_Get_Item_2;                         // 0x00F0(0x0020)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item_3;                         // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0120(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetRaritySortingValue_ReturnValue;        // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_GetSkinItemSets) == 0x000008, "Wrong alignment on B_InventoryManager_C_GetSkinItemSets");
-static_assert(sizeof(B_InventoryManager_C_GetSkinItemSets) == 0x0001C8, "Wrong size on B_InventoryManager_C_GetSkinItemSets");
+static_assert(sizeof(B_InventoryManager_C_GetSkinItemSets) == 0x0001A8, "Wrong size on B_InventoryManager_C_GetSkinItemSets");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, Team) == 0x000000, "Member 'B_InventoryManager_C_GetSkinItemSets::Team' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, ItemSets) == 0x000008, "Member 'B_InventoryManager_C_GetSkinItemSets::ItemSets' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, DataTable) == 0x000018, "Member 'B_InventoryManager_C_GetSkinItemSets::DataTable' has a wrong offset!");
@@ -904,42 +875,42 @@ static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetDataTab
 static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item) == 0x000080, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Length_ReturnValue) == 0x000088, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetDataTableRowFromName_OutRow) == 0x000090, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000B8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Less_IntInt_ReturnValue) == 0x0000B9, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, Temp_int_Array_Index_Variable_1) == 0x0000BC, "Member 'B_InventoryManager_C_GetSkinItemSets::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item_1) == 0x0000C0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Add_ReturnValue) == 0x0000E8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_MinOfIntArray_IndexOfMinValue) == 0x0000EC, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_MinOfIntArray_IndexOfMinValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_MinOfIntArray_MinValue) == 0x0000F0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_MinOfIntArray_MinValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Length_ReturnValue_1) == 0x0000F4, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Greater_IntInt_ReturnValue) == 0x0000F8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item_2) == 0x000100, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Length_ReturnValue_2) == 0x000128, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Less_IntInt_ReturnValue_1) == 0x00012C, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item_3) == 0x000130, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetSkinItem_ReturnValue) == 0x000138, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetSkinItem_Found) == 0x0001B8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Add_ReturnValue_1) == 0x0001BC, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetRaritySortingValue_ReturnValue) == 0x0001C0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetRaritySortingValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Add_ReturnValue_2) == 0x0001C4, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000B0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Less_IntInt_ReturnValue) == 0x0000B1, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, Temp_int_Array_Index_Variable_1) == 0x0000B4, "Member 'B_InventoryManager_C_GetSkinItemSets::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item_1) == 0x0000B8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Add_ReturnValue) == 0x0000D8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_MinOfIntArray_IndexOfMinValue) == 0x0000DC, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_MinOfIntArray_IndexOfMinValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_MinOfIntArray_MinValue) == 0x0000E0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_MinOfIntArray_MinValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Length_ReturnValue_1) == 0x0000E4, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Greater_IntInt_ReturnValue) == 0x0000E8, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item_2) == 0x0000F0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Length_ReturnValue_2) == 0x000110, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000114, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Get_Item_3) == 0x000118, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetSkinItem_ReturnValue) == 0x000120, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetSkinItem_Found) == 0x000198, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Add_ReturnValue_1) == 0x00019C, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_GetRaritySortingValue_ReturnValue) == 0x0001A0, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_GetRaritySortingValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinItemSets, CallFunc_Array_Add_ReturnValue_2) == 0x0001A4, "Member 'B_InventoryManager_C_GetSkinItemSets::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetSkinSoftReference
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct B_InventoryManager_C_GetSkinSoftReference final
 {
 public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39BE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0030(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0030(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_GetSkinSoftReference) == 0x000008, "Wrong alignment on B_InventoryManager_C_GetSkinSoftReference");
-static_assert(sizeof(B_InventoryManager_C_GetSkinSoftReference) == 0x0000B8, "Wrong size on B_InventoryManager_C_GetSkinSoftReference");
+static_assert(sizeof(B_InventoryManager_C_GetSkinSoftReference) == 0x0000B0, "Wrong size on B_InventoryManager_C_GetSkinSoftReference");
 static_assert(offsetof(B_InventoryManager_C_GetSkinSoftReference, ItemId) == 0x000000, "Member 'B_InventoryManager_C_GetSkinSoftReference::ItemId' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinSoftReference, ReturnValue) == 0x000008, "Member 'B_InventoryManager_C_GetSkinSoftReference::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_GetSkinSoftReference, CallFunc_Map_Find_Value) == 0x000030, "Member 'B_InventoryManager_C_GetSkinSoftReference::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_GetSkinSoftReference, CallFunc_Map_Find_ReturnValue) == 0x0000B0, "Member 'B_InventoryManager_C_GetSkinSoftReference::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_GetSkinSoftReference, CallFunc_Map_Find_ReturnValue) == 0x0000A8, "Member 'B_InventoryManager_C_GetSkinSoftReference::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.GetSteamItemData
 // 0x00D8 (0x00D8 - 0x0000)
@@ -948,22 +919,22 @@ struct B_InventoryManager_C_GetSteamItemData final
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	bool                                          IsFastReload;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39BF[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LocalDefinitionId;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C0[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetItemId_ReturnValue;                    // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C1[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetItemProperty_ReturnValue;              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C2[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetItemProperty_ReturnValue_1;            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetItemProperty_ReturnValue_2;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C3[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetItemProperty_ReturnValue_3;            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetItemProperty_ReturnValue_4;            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FB_SteamItemDef                        K2Node_MakeStruct_B_SteamItemDef;                  // 0x0098(0x0040)(ZeroConstructor, HasGetValueTypeHash)
@@ -993,7 +964,7 @@ struct B_InventoryManager_C_GetSteamItemDef final
 {
 public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FB_SteamItemDef                        ReturnValue;                                       // 0x0008(0x0040)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	struct FB_SteamItemDef                        CallFunc_Map_Find_Value;                           // 0x0048(0x0040)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1012,7 +983,7 @@ struct B_InventoryManager_C_GetUnownedItemIDs final
 public:
 	TArray<int32>                                 Unowned_Item_IDs;                                  // 0x0000(0x0010)(Parm, OutParm)
 	int32                                         CurrentId;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C5[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 UnownedItemIDs;                                    // 0x0018(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1020,13 +991,13 @@ public:
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C6[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0040(0x0010)(ReferenceParm)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C7[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C8[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1049,7 +1020,7 @@ static_assert(offsetof(B_InventoryManager_C_GetUnownedItemIDs, CallFunc_Array_Le
 static_assert(offsetof(B_InventoryManager_C_GetUnownedItemIDs, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'B_InventoryManager_C_GetUnownedItemIDs::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.InitAllRecipes
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct B_InventoryManager_C_InitAllRecipes final
 {
 public:
@@ -1057,17 +1028,17 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C9[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0020(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39CA[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_RecipeInfo                          CallFunc_GetDataTableRowFromName_OutRow;           // 0x0040(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RecipeInfo                          CallFunc_GetDataTableRowFromName_OutRow;           // 0x0040(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_InitAllRecipes) == 0x000008, "Wrong alignment on B_InventoryManager_C_InitAllRecipes");
-static_assert(sizeof(B_InventoryManager_C_InitAllRecipes) == 0x0000D0, "Wrong size on B_InventoryManager_C_InitAllRecipes");
+static_assert(sizeof(B_InventoryManager_C_InitAllRecipes) == 0x0000C0, "Wrong size on B_InventoryManager_C_InitAllRecipes");
 static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, RecipeCache) == 0x000000, "Member 'B_InventoryManager_C_InitAllRecipes::RecipeCache' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, Temp_int_Array_Index_Variable) == 0x000010, "Member 'B_InventoryManager_C_InitAllRecipes::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'B_InventoryManager_C_InitAllRecipes::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -1076,11 +1047,11 @@ static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_GetDataTabl
 static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_Array_Get_Item) == 0x000030, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_GetDataTableRowFromName_OutRow) == 0x000040, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000C8, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_Less_IntInt_ReturnValue) == 0x0000C9, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000B8, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllRecipes, CallFunc_Less_IntInt_ReturnValue) == 0x0000B9, "Member 'B_InventoryManager_C_InitAllRecipes::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.InitAllSkinItems
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct B_InventoryManager_C_InitAllSkinItems final
 {
 public:
@@ -1089,20 +1060,20 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39CB[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0030(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39CC[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0050(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LoadItemDefinitions_ReturnValue;          // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0050(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LoadItemDefinitions_ReturnValue;          // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_InitAllSkinItems) == 0x000008, "Wrong alignment on B_InventoryManager_C_InitAllSkinItems");
-static_assert(sizeof(B_InventoryManager_C_InitAllSkinItems) == 0x0000D8, "Wrong size on B_InventoryManager_C_InitAllSkinItems");
+static_assert(sizeof(B_InventoryManager_C_InitAllSkinItems) == 0x0000D0, "Wrong size on B_InventoryManager_C_InitAllSkinItems");
 static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, AssetList) == 0x000000, "Member 'B_InventoryManager_C_InitAllSkinItems::AssetList' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, ObjectCache) == 0x000010, "Member 'B_InventoryManager_C_InitAllSkinItems::ObjectCache' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, Temp_int_Array_Index_Variable) == 0x000020, "Member 'B_InventoryManager_C_InitAllSkinItems::Temp_int_Array_Index_Variable' has a wrong offset!");
@@ -1112,45 +1083,45 @@ static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_GetDataTa
 static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_Array_Get_Item) == 0x000040, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_GetDataTableRowFromName_OutRow) == 0x000050, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000D0, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_Less_IntInt_ReturnValue) == 0x0000D1, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_WithEditor_ReturnValue) == 0x0000D2, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_Not_PreBool_ReturnValue) == 0x0000D3, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_LoadItemDefinitions_ReturnValue) == 0x0000D4, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_LoadItemDefinitions_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000C8, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_Less_IntInt_ReturnValue) == 0x0000C9, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_WithEditor_ReturnValue) == 0x0000CA, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_WithEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_Not_PreBool_ReturnValue) == 0x0000CB, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_InitAllSkinItems, CallFunc_LoadItemDefinitions_ReturnValue) == 0x0000CC, "Member 'B_InventoryManager_C_InitAllSkinItems::CallFunc_LoadItemDefinitions_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.IsEquippedItemValid
-// 0x0198 (0x0198 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct B_InventoryManager_C_IsEquippedItemValid final
 {
 public:
 	class UClass*                                 SkinItemClass;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Slot                                        Slot;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39CD[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_ClassDynamicCast_AsB_Skin_Item;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39CE[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   CallFunc_Conv_ClassToSoftClassReference_ReturnValue; // 0x0020(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	class UClass*                                 K2Node_ClassDynamicCast_AsB_Skin_Item_1;           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess_1;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39CF[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSkinItemIdBySoftReference_ReturnValue; // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   CallFunc_Conv_ClassToSoftClassReference_ReturnValue_1; // 0x0058(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0080(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D0[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetSkinItemIdBySoftReference_ReturnValue_1; // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D1[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue_1;                // 0x0110(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found_1;                      // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0193(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0194(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0080(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetSkinItemIdBySoftReference_ReturnValue_1; // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue_1;                // 0x0108(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found_1;                      // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0183(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_IsEquippedItemValid) == 0x000008, "Wrong alignment on B_InventoryManager_C_IsEquippedItemValid");
-static_assert(sizeof(B_InventoryManager_C_IsEquippedItemValid) == 0x000198, "Wrong size on B_InventoryManager_C_IsEquippedItemValid");
+static_assert(sizeof(B_InventoryManager_C_IsEquippedItemValid) == 0x000188, "Wrong size on B_InventoryManager_C_IsEquippedItemValid");
 static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, SkinItemClass) == 0x000000, "Member 'B_InventoryManager_C_IsEquippedItemValid::SkinItemClass' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, Slot) == 0x000008, "Member 'B_InventoryManager_C_IsEquippedItemValid::Slot' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, ReturnValue) == 0x000009, "Member 'B_InventoryManager_C_IsEquippedItemValid::ReturnValue' has a wrong offset!");
@@ -1162,15 +1133,15 @@ static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, K2Node_ClassDyn
 static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItemIdBySoftReference_ReturnValue) == 0x000054, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItemIdBySoftReference_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_Conv_ClassToSoftClassReference_ReturnValue_1) == 0x000058, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_Conv_ClassToSoftClassReference_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_ReturnValue) == 0x000080, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_Found) == 0x000100, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItemIdBySoftReference_ReturnValue_1) == 0x000104, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItemIdBySoftReference_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_Set_Contains_ReturnValue) == 0x000108, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_ReturnValue_1) == 0x000110, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_Found_1) == 0x000190, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_Found_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_BooleanOR_ReturnValue) == 0x000191, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000192, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_BooleanAND_ReturnValue) == 0x000193, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_BooleanAND_ReturnValue_1) == 0x000194, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_Found) == 0x0000F8, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItemIdBySoftReference_ReturnValue_1) == 0x0000FC, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItemIdBySoftReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_Set_Contains_ReturnValue) == 0x000100, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_ReturnValue_1) == 0x000108, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_GetSkinItem_Found_1) == 0x000180, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_GetSkinItem_Found_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_BooleanOR_ReturnValue) == 0x000181, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000182, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_BooleanAND_ReturnValue) == 0x000183, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsEquippedItemValid, CallFunc_BooleanAND_ReturnValue_1) == 0x000184, "Member 'B_InventoryManager_C_IsEquippedItemValid::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.IsItemIdValid
 // 0x0008 (0x0008 - 0x0000)
@@ -1192,56 +1163,56 @@ static_assert(offsetof(B_InventoryManager_C_IsItemIdValid, CallFunc_Map_Contains
 static_assert(offsetof(B_InventoryManager_C_IsItemIdValid, CallFunc_BooleanAND_ReturnValue) == 0x000007, "Member 'B_InventoryManager_C_IsItemIdValid::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.IsItemToBeConsumed
-// 0x01B8 (0x01B8 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct B_InventoryManager_C_IsItemToBeConsumed final
 {
 public:
 	struct FBlueprintOnlineItem                   OnlineItem;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EventNames                                    Event;                                             // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D2[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ItemDefinitionId;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D3[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D4[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D5[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D6[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EventNames>                            CallFunc_Map_Keys_Keys;                            // 0x0060(0x0010)(ReferenceParm)
 	EventNames                                    CallFunc_Array_Get_Item;                           // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D7[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_EventInfo                           CallFunc_Map_Find_Value;                           // 0x0078(0x0110)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D8[0x3];                                     // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0193(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39D9[0x3];                                     // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39DA[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item_1;                         // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39DB[0x2];                                     // 0x01AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_EventInfo                           CallFunc_Map_Find_Value;                           // 0x0078(0x00D8)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x015B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item_1;                         // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_172[0x2];                                      // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_IsItemToBeConsumed) == 0x000008, "Wrong alignment on B_InventoryManager_C_IsItemToBeConsumed");
-static_assert(sizeof(B_InventoryManager_C_IsItemToBeConsumed) == 0x0001B8, "Wrong size on B_InventoryManager_C_IsItemToBeConsumed");
+static_assert(sizeof(B_InventoryManager_C_IsItemToBeConsumed) == 0x000180, "Wrong size on B_InventoryManager_C_IsItemToBeConsumed");
 static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, OnlineItem) == 0x000000, "Member 'B_InventoryManager_C_IsItemToBeConsumed::OnlineItem' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, ReturnValue) == 0x000010, "Member 'B_InventoryManager_C_IsItemToBeConsumed::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, Event) == 0x000011, "Member 'B_InventoryManager_C_IsItemToBeConsumed::Event' has a wrong offset!");
@@ -1260,21 +1231,21 @@ static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, K2Node_DynamicCa
 static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Map_Keys_Keys) == 0x000060, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Map_Keys_Keys' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Get_Item) == 0x000070, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Map_Find_Value) == 0x000078, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Map_Find_ReturnValue) == 0x000188, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Length_ReturnValue) == 0x00018C, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000190, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000191, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_BooleanAND_ReturnValue) == 0x000192, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_BooleanOR_ReturnValue) == 0x000193, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, Temp_int_Loop_Counter_Variable_1) == 0x000194, "Member 'B_InventoryManager_C_IsItemToBeConsumed::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Less_IntInt_ReturnValue) == 0x000198, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Add_IntInt_ReturnValue_1) == 0x00019C, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Map_Contains_ReturnValue) == 0x0001A0, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Get_Item_1) == 0x0001A4, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Not_PreBool_ReturnValue) == 0x0001A8, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x0001A9, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Length_ReturnValue_1) == 0x0001AC, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001B0, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Map_Find_ReturnValue) == 0x000150, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Length_ReturnValue) == 0x000154, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000158, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000159, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_BooleanAND_ReturnValue) == 0x00015A, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_BooleanOR_ReturnValue) == 0x00015B, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, Temp_int_Loop_Counter_Variable_1) == 0x00015C, "Member 'B_InventoryManager_C_IsItemToBeConsumed::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Less_IntInt_ReturnValue) == 0x000160, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Add_IntInt_ReturnValue_1) == 0x000164, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Map_Contains_ReturnValue) == 0x000168, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Get_Item_1) == 0x00016C, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Not_PreBool_ReturnValue) == 0x000170, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000171, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Array_Length_ReturnValue_1) == 0x000174, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsItemToBeConsumed, CallFunc_Less_IntInt_ReturnValue_1) == 0x000178, "Member 'B_InventoryManager_C_IsItemToBeConsumed::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.IsNewItem
 // 0x0018 (0x0018 - 0x0000)
@@ -1283,7 +1254,7 @@ struct B_InventoryManager_C_IsNewItem final
 public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          New;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39DC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1339,12 +1310,12 @@ static_assert(offsetof(B_InventoryManager_C_IsSteamValid, CallFunc_OwnsItemByDef
 struct B_InventoryManager_C_IsUpdating final
 {
 public:
-	bool                                          Param_IsUpdating;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsUpdating_0;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_IsUpdating) == 0x000001, "Wrong alignment on B_InventoryManager_C_IsUpdating");
 static_assert(sizeof(B_InventoryManager_C_IsUpdating) == 0x000002, "Wrong size on B_InventoryManager_C_IsUpdating");
-static_assert(offsetof(B_InventoryManager_C_IsUpdating, Param_IsUpdating) == 0x000000, "Member 'B_InventoryManager_C_IsUpdating::Param_IsUpdating' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_IsUpdating, IsUpdating_0) == 0x000000, "Member 'B_InventoryManager_C_IsUpdating::IsUpdating_0' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_IsUpdating, CallFunc_BooleanOR_ReturnValue) == 0x000001, "Member 'B_InventoryManager_C_IsUpdating::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.OnFailure_0AD4911A4B4941B8D52F1FA4362F425C
@@ -1568,27 +1539,27 @@ static_assert(sizeof(B_InventoryManager_C_OnSuccess_EDAC6D924408692EE5962598A11B
 static_assert(offsetof(B_InventoryManager_C_OnSuccess_EDAC6D924408692EE5962598A11B2935, Items) == 0x000000, "Member 'B_InventoryManager_C_OnSuccess_EDAC6D924408692EE5962598A11B2935::Items' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.ReloadValidItems
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct B_InventoryManager_C_ReloadValidItems final
 {
 public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39DD[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x0010(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39DE[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0030(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0030(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_ReloadValidItems) == 0x000008, "Wrong alignment on B_InventoryManager_C_ReloadValidItems");
-static_assert(sizeof(B_InventoryManager_C_ReloadValidItems) == 0x0000B8, "Wrong size on B_InventoryManager_C_ReloadValidItems");
+static_assert(sizeof(B_InventoryManager_C_ReloadValidItems) == 0x0000B0, "Wrong size on B_InventoryManager_C_ReloadValidItems");
 static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'B_InventoryManager_C_ReloadValidItems::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, Temp_int_Array_Index_Variable) == 0x000008, "Member 'B_InventoryManager_C_ReloadValidItems::Temp_int_Array_Index_Variable' has a wrong offset!");
@@ -1597,10 +1568,10 @@ static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Array_Len
 static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Array_Get_Item) == 0x000024, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Less_IntInt_ReturnValue) == 0x000028, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Map_Find_Value) == 0x000030, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Map_Find_ReturnValue) == 0x0000B0, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Set_Contains_ReturnValue) == 0x0000B1, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_BooleanOR_ReturnValue) == 0x0000B2, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_BooleanAND_ReturnValue) == 0x0000B3, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Map_Find_ReturnValue) == 0x0000A8, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_Set_Contains_ReturnValue) == 0x0000A9, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_BooleanOR_ReturnValue) == 0x0000AA, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_ReloadValidItems, CallFunc_BooleanAND_ReturnValue) == 0x0000AB, "Member 'B_InventoryManager_C_ReloadValidItems::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.SelectedPlayerIconWasChanged
 // 0x0020 (0x0020 - 0x0000)
@@ -1608,7 +1579,7 @@ struct B_InventoryManager_C_SelectedPlayerIconWasChanged final
 {
 public:
 	int32                                         ItemDefId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39DF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1632,13 +1603,13 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E0[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E1[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsItemToBeConsumed_ReturnValue;           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E2[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_SetupAllItemsToConsume) == 0x000008, "Wrong alignment on B_InventoryManager_C_SetupAllItemsToConsume");
@@ -1655,7 +1626,7 @@ static_assert(offsetof(B_InventoryManager_C_SetupAllItemsToConsume, CallFunc_IsI
 static_assert(offsetof(B_InventoryManager_C_SetupAllItemsToConsume, CallFunc_Array_Add_ReturnValue) == 0x00004C, "Member 'B_InventoryManager_C_SetupAllItemsToConsume::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.UpdateValidItems
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct B_InventoryManager_C_UpdateValidItems final
 {
 public:
@@ -1665,20 +1636,20 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E3[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0020(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E4[0x6];                                     // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x00A8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E5[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item;                           // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_Map_Find_Value;                           // 0x0020(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 CallFunc_Map_Keys_Keys;                            // 0x00A0(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item;                           // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InventoryManager_C_UpdateValidItems) == 0x000008, "Wrong alignment on B_InventoryManager_C_UpdateValidItems");
-static_assert(sizeof(B_InventoryManager_C_UpdateValidItems) == 0x0000C8, "Wrong size on B_InventoryManager_C_UpdateValidItems");
+static_assert(sizeof(B_InventoryManager_C_UpdateValidItems) == 0x0000C0, "Wrong size on B_InventoryManager_C_UpdateValidItems");
 static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CurrentId) == 0x000000, "Member 'B_InventoryManager_C_UpdateValidItems::CurrentId' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, Temp_int_Array_Index_Variable) == 0x000004, "Member 'B_InventoryManager_C_UpdateValidItems::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'B_InventoryManager_C_UpdateValidItems::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -1686,13 +1657,13 @@ static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Add_IntIn
 static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'B_InventoryManager_C_UpdateValidItems::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_InventoryManager_C_UpdateValidItems::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Map_Find_Value) == 0x000020, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_BooleanAND_ReturnValue) == 0x0000A1, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Map_Keys_Keys) == 0x0000A8, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Not_PreBool_ReturnValue) == 0x0000B8, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Array_Get_Item) == 0x0000BC, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Array_Length_ReturnValue) == 0x0000C0, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Less_IntInt_ReturnValue) == 0x0000C4, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Map_Find_ReturnValue) == 0x000098, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_BooleanAND_ReturnValue) == 0x000099, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Map_Keys_Keys) == 0x0000A0, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Not_PreBool_ReturnValue) == 0x0000B0, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Array_Get_Item) == 0x0000B4, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Array_Length_ReturnValue) == 0x0000B8, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InventoryManager_C_UpdateValidItems, CallFunc_Less_IntInt_ReturnValue) == 0x0000BC, "Member 'B_InventoryManager_C_UpdateValidItems::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_InventoryManager.B_InventoryManager_C.Verifiy Skin Items
 // 0x0110 (0x0110 - 0x0000)
@@ -1700,7 +1671,7 @@ struct B_InventoryManager_C_Verifiy_Skin_Items final
 {
 public:
 	ETeamID                                       Team;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      B_GameInstance;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkinSelection_C*                     Skin_Save;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 PlayerIcon;                                        // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -1719,7 +1690,7 @@ public:
 	bool                                          InvalidIcon;                                       // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InvalidHunterSkin;                                 // 0x0081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InvalidWitchSkin;                                  // 0x0082(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E7[0x5];                                     // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetSelectedPlayerIcon_OutClass;           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSelectedPlayerIcon_OutItemDefId;       // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEquippedItemValid_ReturnValue;          // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1739,10 +1710,10 @@ public:
 	bool                                          CallFunc_IsEquippedItemValid_ReturnValue_10;       // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEquippedItemValid_ReturnValue_11;       // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEquippedItemValid_ReturnValue_12;       // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E8[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHunterSkin                            K2Node_MakeStruct_HunterSkin;                      // 0x00A8(0x0038)(NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39E9[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWitchSkin                             K2Node_MakeStruct_WitchSkin;                       // 0x00E8(0x0028)(NoDestructor)
 };
 static_assert(alignof(B_InventoryManager_C_Verifiy_Skin_Items) == 0x000008, "Wrong alignment on B_InventoryManager_C_Verifiy_Skin_Items");
@@ -1812,7 +1783,7 @@ public:
 	bool                                          InvalidWitchSkin;                                  // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InvalidHunterSkin;                                 // 0x0079(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SavingNeeded;                                      // 0x007A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39EA[0x5];                                     // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

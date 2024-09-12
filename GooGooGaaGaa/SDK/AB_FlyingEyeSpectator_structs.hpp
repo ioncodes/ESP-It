@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // ScriptStruct AB_FlyingEyeSpectator.AB_FlyingEyeSpectator_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0x0110 - 0x0110)
+// 0x0000 (0x0260 - 0x0260)
 struct AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData final : public AB_FlyingEye::FAnimBlueprintGeneratedConstantData
 {
 };
 static_assert(alignof(AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData) == 0x000110, "Wrong size on AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData) == 0x000260, "Wrong size on AB_FlyingEyeSpectator::FAnimBlueprintGeneratedConstantData");
 
 }
 

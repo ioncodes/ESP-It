@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_Buff_classes.hpp"
 
 
@@ -23,14 +23,14 @@ namespace SDK
 class AB_BuffHunterDetection_C final : public AB_Buff_C
 {
 public:
-	uint8                                         Pad_4B7C[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_BuffHunterDetection_C;            // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FVector                                ChickenHeadOffset;                                 // 0x03A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_PickupChicken_C*                     SpawnedChicken;                                    // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BuffEnd();
-	void BuffStart(class AB_PlayerState_C* Param_PlayerState);
+	void BuffStart(class AB_PlayerState_C* PlayerState_0);
 	void DetachPickupChicken(class AB_Hunter_C* ParentHunter);
 	void DetachPickupChickenMulti(class AB_Hunter_C* ParentHunter);
 	void ExecuteUbergraph_B_BuffHunterDetection(int32 EntryPoint);

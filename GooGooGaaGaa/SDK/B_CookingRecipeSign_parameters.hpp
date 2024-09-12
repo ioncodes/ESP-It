@@ -10,42 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_CookingRecipeSign.B_CookingRecipeSign_C.PickMesh
-// 0x02C8 (0x02C8 - 0x0000)
+// 0x02F8 (0x02F8 - 0x0000)
 struct B_CookingRecipeSign_C_PickMesh final
 {
 public:
 	class UStaticMesh*                            Static_Mesh;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0008(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_1;     // 0x00F0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_AddWorldRotation_SweepHitResult;       // 0x01D8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0008(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_1;     // 0x0100(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_AddWorldRotation_SweepHitResult;       // 0x01F8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x02F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_CookingRecipeSign_C_PickMesh) == 0x000008, "Wrong alignment on B_CookingRecipeSign_C_PickMesh");
-static_assert(sizeof(B_CookingRecipeSign_C_PickMesh) == 0x0002C8, "Wrong size on B_CookingRecipeSign_C_PickMesh");
+static_assert(sizeof(B_CookingRecipeSign_C_PickMesh) == 0x0002F8, "Wrong size on B_CookingRecipeSign_C_PickMesh");
 static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, Static_Mesh) == 0x000000, "Member 'B_CookingRecipeSign_C_PickMesh::Static_Mesh' has a wrong offset!");
 static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000008, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_K2_SetWorldRotation_SweepHitResult_1) == 0x0000F0, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_K2_SetWorldRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_K2_AddWorldRotation_SweepHitResult) == 0x0001D8, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_K2_AddWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0002C0, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x0002C1, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_K2_SetWorldRotation_SweepHitResult_1) == 0x000100, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_K2_SetWorldRotation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_K2_AddWorldRotation_SweepHitResult) == 0x0001F8, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_K2_AddWorldRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0002F0, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CookingRecipeSign_C_PickMesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x0002F1, "Member 'B_CookingRecipeSign_C_PickMesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
 
 // Function B_CookingRecipeSign.B_CookingRecipeSign_C.UpdateIngredientMesh
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x01C0 (0x01C0 - 0x0000)
 struct B_CookingRecipeSign_C_UpdateIngredientMesh final
 {
 public:
-	class UStaticMesh*                            Param_Ingredient;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            Ingredient_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18F3[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -53,11 +53,11 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0060(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00C0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00C0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_CookingRecipeSign_C_UpdateIngredientMesh) == 0x000010, "Wrong alignment on B_CookingRecipeSign_C_UpdateIngredientMesh");
-static_assert(sizeof(B_CookingRecipeSign_C_UpdateIngredientMesh) == 0x0001B0, "Wrong size on B_CookingRecipeSign_C_UpdateIngredientMesh");
-static_assert(offsetof(B_CookingRecipeSign_C_UpdateIngredientMesh, Param_Ingredient) == 0x000000, "Member 'B_CookingRecipeSign_C_UpdateIngredientMesh::Param_Ingredient' has a wrong offset!");
+static_assert(sizeof(B_CookingRecipeSign_C_UpdateIngredientMesh) == 0x0001C0, "Wrong size on B_CookingRecipeSign_C_UpdateIngredientMesh");
+static_assert(offsetof(B_CookingRecipeSign_C_UpdateIngredientMesh, Ingredient_0) == 0x000000, "Member 'B_CookingRecipeSign_C_UpdateIngredientMesh::Ingredient_0' has a wrong offset!");
 static_assert(offsetof(B_CookingRecipeSign_C_UpdateIngredientMesh, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'B_CookingRecipeSign_C_UpdateIngredientMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_CookingRecipeSign_C_UpdateIngredientMesh, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000010, "Member 'B_CookingRecipeSign_C_UpdateIngredientMesh::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_CookingRecipeSign_C_UpdateIngredientMesh, CallFunc_BreakVector_X) == 0x000028, "Member 'B_CookingRecipeSign_C_UpdateIngredientMesh::CallFunc_BreakVector_X' has a wrong offset!");

@@ -10,28 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WB_BaseButton_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SquareButtonWithIcon.WB_SquareButtonWithIcon_C
-// 0x0810 (0x0F40 - 0x0730)
+// 0x0800 (0x0F50 - 0x0750)
 class UWB_SquareButtonWithIcon_C final : public UWB_BaseButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SquareButtonWithIcon_C;          // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Icon;                                              // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MyButton;                                          // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         Pad_5539[0x8];                                     // 0x0748(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FButtonStyle                           ButtonStyleInactive;                               // 0x0750(0x03F0)(Edit, BlueprintVisible)
-	struct FButtonStyle                           ButtonStyleActive;                                 // 0x0B40(0x03F0)(Edit, BlueprintVisible)
-	bool                                          bActive;                                           // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_553A[0x7];                                     // 0x0F31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             ButtonIcon;                                        // 0x0F38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SquareButtonWithIcon_C;          // 0x0748(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Icon;                                              // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MyButton;                                          // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FButtonStyle                           ButtonStyleInactive;                               // 0x0760(0x03F0)(Edit, BlueprintVisible)
+	struct FButtonStyle                           ButtonStyleActive;                                 // 0x0B50(0x03F0)(Edit, BlueprintVisible)
+	bool                                          bActive;                                           // 0x0F40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F41[0x7];                                      // 0x0F41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             ButtonIcon;                                        // 0x0F48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Update_Button_Icon(class UObject* NewIcon);
@@ -54,14 +53,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_SquareButtonWithIcon_C) == 0x000010, "Wrong alignment on UWB_SquareButtonWithIcon_C");
-static_assert(sizeof(UWB_SquareButtonWithIcon_C) == 0x000F40, "Wrong size on UWB_SquareButtonWithIcon_C");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, UberGraphFrame_WB_SquareButtonWithIcon_C) == 0x000730, "Member 'UWB_SquareButtonWithIcon_C::UberGraphFrame_WB_SquareButtonWithIcon_C' has a wrong offset!");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, Icon) == 0x000738, "Member 'UWB_SquareButtonWithIcon_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, MyButton) == 0x000740, "Member 'UWB_SquareButtonWithIcon_C::MyButton' has a wrong offset!");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, ButtonStyleInactive) == 0x000750, "Member 'UWB_SquareButtonWithIcon_C::ButtonStyleInactive' has a wrong offset!");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, ButtonStyleActive) == 0x000B40, "Member 'UWB_SquareButtonWithIcon_C::ButtonStyleActive' has a wrong offset!");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, bActive) == 0x000F30, "Member 'UWB_SquareButtonWithIcon_C::bActive' has a wrong offset!");
-static_assert(offsetof(UWB_SquareButtonWithIcon_C, ButtonIcon) == 0x000F38, "Member 'UWB_SquareButtonWithIcon_C::ButtonIcon' has a wrong offset!");
+static_assert(sizeof(UWB_SquareButtonWithIcon_C) == 0x000F50, "Wrong size on UWB_SquareButtonWithIcon_C");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, UberGraphFrame_WB_SquareButtonWithIcon_C) == 0x000748, "Member 'UWB_SquareButtonWithIcon_C::UberGraphFrame_WB_SquareButtonWithIcon_C' has a wrong offset!");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, Icon) == 0x000750, "Member 'UWB_SquareButtonWithIcon_C::Icon' has a wrong offset!");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, MyButton) == 0x000758, "Member 'UWB_SquareButtonWithIcon_C::MyButton' has a wrong offset!");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, ButtonStyleInactive) == 0x000760, "Member 'UWB_SquareButtonWithIcon_C::ButtonStyleInactive' has a wrong offset!");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, ButtonStyleActive) == 0x000B50, "Member 'UWB_SquareButtonWithIcon_C::ButtonStyleActive' has a wrong offset!");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, bActive) == 0x000F40, "Member 'UWB_SquareButtonWithIcon_C::bActive' has a wrong offset!");
+static_assert(offsetof(UWB_SquareButtonWithIcon_C, ButtonIcon) == 0x000F48, "Member 'UWB_SquareButtonWithIcon_C::ButtonIcon' has a wrong offset!");
 
 }
 

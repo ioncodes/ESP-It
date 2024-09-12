@@ -29,14 +29,14 @@ public:
 	class FName                                   StatAccountLevel;                                  // 0x0044(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   StatServerLevel;                                   // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   StatServerExperience;                              // 0x0054(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D6C[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            LevelingCurve;                                     // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         MaxLevel;                                          // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void GetMaxExp(int32* MaxExp);
 	void GrantExp(int32 Exp);
-	void InitializeGS(class UGameInstance* Param_GameInstance, class APlayerState* Param_PlayerState);
+	void InitializeGS(class UGameInstance* GameInstance_0, class APlayerState* PlayerState_0);
 
 	void Get_Stats_and_Achievements_Manager(class UB_NewStatsAndAchievementsManager_C** Result) const;
 

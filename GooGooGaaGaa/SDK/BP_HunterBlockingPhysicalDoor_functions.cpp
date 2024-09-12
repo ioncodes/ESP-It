@@ -20,9 +20,9 @@ namespace SDK
 // Function BP_HunterBlockingPhysicalDoor.BP_HunterBlockingPhysicalDoor_C.HandleSpawnedRealActor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_SpawnedActor                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SpawnedActor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_HunterBlockingPhysicalDoor_C::HandleSpawnedRealActor(class AActor* Param_SpawnedActor)
+void ABP_HunterBlockingPhysicalDoor_C::HandleSpawnedRealActor(class AActor* SpawnedActor_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void ABP_HunterBlockingPhysicalDoor_C::HandleSpawnedRealActor(class AActor* Para
 
 	Params::BP_HunterBlockingPhysicalDoor_C_HandleSpawnedRealActor Parms{};
 
-	Parms.Param_SpawnedActor = Param_SpawnedActor;
+	Parms.SpawnedActor_0 = SpawnedActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

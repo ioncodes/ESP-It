@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_MatchRuleType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "E_MatchRuleType_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ struct FS_MatchRules final
 {
 public:
 	E_MatchRuleType                               MatchRuleType_2_7A33ED664F8C0FBEE1C782B8057AEA07;  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35DC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParam>                       UIParameters_6_D7D219FA47CFCDF8FCA3DB9DBCF39E11;   // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FS_MatchRules) == 0x000008, "Wrong alignment on FS_MatchRules");

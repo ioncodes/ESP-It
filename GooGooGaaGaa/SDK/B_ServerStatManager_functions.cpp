@@ -55,9 +55,9 @@ void UB_ServerStatManager_C::CleanUpPropCollections()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerState*                     PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ServerStatManager_C::CollectProp(class APlayerState* PlayerState, int32 PropId)
+void UB_ServerStatManager_C::CollectProp(class APlayerState* PlayerState, int32 PropID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -67,7 +67,7 @@ void UB_ServerStatManager_C::CollectProp(class APlayerState* PlayerState, int32 
 	Params::B_ServerStatManager_C_CollectProp Parms{};
 
 	Parms.PlayerState = PlayerState;
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,9 +77,9 @@ void UB_ServerStatManager_C::CollectProp(class APlayerState* PlayerState, int32 
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class APlayerState*                     PlayerState                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ServerStatManager_C::CollectPropFunction(const class APlayerState*& PlayerState, int32 PropId)
+void UB_ServerStatManager_C::CollectPropFunction(const class APlayerState*& PlayerState, int32 PropID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -89,7 +89,7 @@ void UB_ServerStatManager_C::CollectPropFunction(const class APlayerState*& Play
 	Params::B_ServerStatManager_C_CollectPropFunction Parms{};
 
 	Parms.PlayerState = PlayerState;
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -138,9 +138,9 @@ void UB_ServerStatManager_C::FinishLoadingServerStats(const class FString& Produ
 // Function B_ServerStatManager.B_ServerStatManager_C.GetLocalPropCollection
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UB_PlayerPropCollection_C*        Param_LocalPropCollection                              (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_PlayerPropCollection_C*        LocalPropCollection_0                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_ServerStatManager_C::GetLocalPropCollection(class UB_PlayerPropCollection_C** Param_LocalPropCollection)
+void UB_ServerStatManager_C::GetLocalPropCollection(class UB_PlayerPropCollection_C** LocalPropCollection_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -151,8 +151,8 @@ void UB_ServerStatManager_C::GetLocalPropCollection(class UB_PlayerPropCollectio
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_LocalPropCollection != nullptr)
-		*Param_LocalPropCollection = Parms.Param_LocalPropCollection;
+	if (LocalPropCollection_0 != nullptr)
+		*LocalPropCollection_0 = Parms.LocalPropCollection_0;
 }
 
 
@@ -385,10 +385,10 @@ void UB_ServerStatManager_C::SavePlayerServerStats(class APlayerState* PlayerSta
 // Function B_ServerStatManager.B_ServerStatManager_C.UpdateCollectedPropsOfLocalPropCollection
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UB_PlayerPropCollection_C*        PlayerPropCollection                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_ServerStatManager_C::UpdateCollectedPropsOfLocalPropCollection(int32 PropId, class UB_PlayerPropCollection_C** PlayerPropCollection)
+void UB_ServerStatManager_C::UpdateCollectedPropsOfLocalPropCollection(int32 PropID, class UB_PlayerPropCollection_C** PlayerPropCollection)
 {
 	static class UFunction* Func = nullptr;
 
@@ -397,7 +397,7 @@ void UB_ServerStatManager_C::UpdateCollectedPropsOfLocalPropCollection(int32 Pro
 
 	Params::B_ServerStatManager_C_UpdateCollectedPropsOfLocalPropCollection Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 
 	UObject::ProcessEvent(Func, &Parms);
 

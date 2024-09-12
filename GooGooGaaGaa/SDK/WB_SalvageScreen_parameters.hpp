@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "PropWitchHuntModule_structs.hpp"
-#include "S_RecipeInfo_structs.hpp"
-#include "S_ItemInfo_structs.hpp"
 #include "ESalvageCategory_structs.hpp"
 #include "E_Slot_structs.hpp"
-#include "Engine_structs.hpp"
+#include "S_ItemInfo_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "B_Rarity_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,21 +31,21 @@ struct WB_SalvageScreen_C_BindCategoryButtonEvents final
 {
 public:
 	TDelegate<void(ESalvageCategory Category)>    Event;                                             // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWB_SalvageCategoryButton_C*>    Param_CategoryButtons;                             // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	TArray<class UWB_SalvageCategoryButton_C*>    CategoryButtons_0;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5773[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SalvageCategoryButton_C*            CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5774[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWB_SalvageCategoryButton_C*>    K2Node_MakeArray_Array;                            // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(WB_SalvageScreen_C_BindCategoryButtonEvents) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_BindCategoryButtonEvents");
 static_assert(sizeof(WB_SalvageScreen_C_BindCategoryButtonEvents) == 0x000050, "Wrong size on WB_SalvageScreen_C_BindCategoryButtonEvents");
 static_assert(offsetof(WB_SalvageScreen_C_BindCategoryButtonEvents, Event) == 0x000000, "Member 'WB_SalvageScreen_C_BindCategoryButtonEvents::Event' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_BindCategoryButtonEvents, Param_CategoryButtons) == 0x000010, "Member 'WB_SalvageScreen_C_BindCategoryButtonEvents::Param_CategoryButtons' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_BindCategoryButtonEvents, CategoryButtons_0) == 0x000010, "Member 'WB_SalvageScreen_C_BindCategoryButtonEvents::CategoryButtons_0' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_BindCategoryButtonEvents, Temp_int_Array_Index_Variable) == 0x000020, "Member 'WB_SalvageScreen_C_BindCategoryButtonEvents::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_BindCategoryButtonEvents, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'WB_SalvageScreen_C_BindCategoryButtonEvents::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_BindCategoryButtonEvents, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'WB_SalvageScreen_C_BindCategoryButtonEvents::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
@@ -72,7 +72,7 @@ struct WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5775[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_MenuCamera_C*>                CallFunc_GetAllActorsOfClass_OutActors;            // 0x0008(0x0010)(ReferenceParm)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_MenuCamera_C*                        CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -85,7 +85,7 @@ public:
 	bool                                          CallFunc_IsSomethingSelected_ReturnValue;          // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSalvagingPossible_ReturnValue;          // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5776[0x1];                                     // 0x00DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DF[0x1];                                       // 0x00DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -93,13 +93,14 @@ public:
 	ESalvageCategory                              K2Node_CustomEvent_Category;                       // 0x00F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5777[0x3];                                     // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(ESalvageCategory Category)>    K2Node_CreateDelegate_OutputDelegate;              // 0x00F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5778[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen) == 0x000010, "Wrong alignment on WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen");
 static_assert(sizeof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen) == 0x000130, "Wrong size on WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen");
@@ -129,6 +130,7 @@ static_assert(offsetof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen, Cal
 static_assert(offsetof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x000110, "Member 'WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000118, "Member 'WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen, K2Node_DynamicCast_bSuccess) == 0x000120, "Member 'WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen, CallFunc_Not_PreBool_ReturnValue_2) == 0x000121, "Member 'WB_SalvageScreen_C_ExecuteUbergraph_WB_SalvageScreen::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.GetIndividualCategoryButtonData
 // 0x0010 (0x0010 - 0x0000)
@@ -144,197 +146,208 @@ static_assert(offsetof(WB_SalvageScreen_C_GetIndividualCategoryButtonData, Butto
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualCategoryButtonData, Category) == 0x000008, "Member 'WB_SalvageScreen_C_GetIndividualCategoryButtonData::Category' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.GetIndividualItemDataAndFocus
-// 0x0470 (0x0470 - 0x0000)
+// 0x0438 (0x0438 - 0x0000)
 struct WB_SalvageScreen_C_GetIndividualItemDataAndFocus final
 {
 public:
 	class UUserWidget*                            CategoryButton;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ESalvageCategory                              SalvageCategory;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5779[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UB_TileViewData_C*>              Data;                                              // 0x0010(0x0010)(Parm, OutParm)
 	TArray<bool>                                  FocusNeeded;                                       // 0x0020(0x0010)(Parm, OutParm)
 	TArray<struct FS_ItemInfo>                    SkinItems;                                         // 0x0030(0x0010)(Edit, BlueprintVisible)
-	struct FS_ItemInfo                            CurrentItemInfo;                                   // 0x0040(0x0080)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FS_RecipeInfo>                  TempRecipeInfos;                                   // 0x00C0(0x0010)(Edit, BlueprintVisible)
-	TArray<class UClass*>                         TempRecipes;                                       // 0x00D0(0x0010)(Edit, BlueprintVisible)
-	TArray<bool>                                  FocusNeededArray;                                  // 0x00E0(0x0010)(Edit, BlueprintVisible)
-	TArray<class UB_SkinOrRecipeItemData_C*>      DataArray;                                         // 0x00F0(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_RecipeInfo                          CallFunc_Array_Get_Item;                           // 0x0110(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_577A[0x3];                                     // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShowDuplicate_ReturnValue;                // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x01A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_577B[0x5];                                     // 0x01A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_577C[0x4];                                     // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_577D[0x3];                                     // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FS_RecipeInfo>                  CallFunc_GetRecipes_ReturnValue;                   // 0x01C8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_577E[0x4];                                     // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FS_RecipeInfo>                  CallFunc_SortRecipeClassArrayByRarity_SortedRecipeInfos; // 0x01E0(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShowDuplicate_ReturnValue_1;              // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInActiveCategory_ReturnValue;           // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSmashableItem_ReturnValue;              // 0x01F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01F7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_577F[0x7];                                     // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_Array_Get_Item_1;                         // 0x0200(0x0080)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5780[0x4];                                     // 0x0284(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5781[0x3];                                     // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x02A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x02A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x02A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5782[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x02AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x02B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x02B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5783[0x1];                                     // 0x02B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5784[0x3];                                     // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_Array_Get_Item_2;                         // 0x02C0(0x0080)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0345(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5785[0x2];                                     // 0x0346(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_SkinOrRecipeItemData_C*              CallFunc_GetSkinOrRecipeData_Data;                 // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_4;          // 0x0359(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x035A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5786[0x5];                                     // 0x035B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FS_ItemInfo>                    CallFunc_SortSkinClassArrayByRarity_SortedItemInfos; // 0x0360(0x0010)(ReferenceParm)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5787[0x7];                                     // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5788[0x4];                                     // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5789[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FS_ItemInfo>                    CallFunc_GetSkinItems_ReturnValue;                 // 0x0398(0x0010)(ReferenceParm)
-	TArray<bool>                                  CallFunc_CheckIfInitialFocusExists_FocusArray;     // 0x03A8(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_578A[0x4];                                     // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_RecipeInfo                          CallFunc_Array_Get_Item_3;                         // 0x03C0(0x0088)(HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_5;          // 0x0449(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_578B[0x6];                                     // 0x044A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_SkinOrRecipeItemData_C*              CallFunc_GetSkinOrRecipeData_Data_1;               // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x045C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0464(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_578C[0x3];                                     // 0x0465(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x046C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            CurrentItemInfo;                                   // 0x0040(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FS_RecipeInfo>                  TempRecipeInfos;                                   // 0x00B8(0x0010)(Edit, BlueprintVisible)
+	TArray<class UClass*>                         TempRecipes;                                       // 0x00C8(0x0010)(Edit, BlueprintVisible)
+	TArray<bool>                                  FocusNeededArray;                                  // 0x00D8(0x0010)(Edit, BlueprintVisible)
+	TArray<class UB_SkinOrRecipeItemData_C*>      DataArray;                                         // 0x00E8(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          CallFunc_Array_Get_Item;                           // 0x0108(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_181[0x3];                                      // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShowDuplicate_ReturnValue;                // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18B[0x5];                                      // 0x018B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_RecipeInfo>                  CallFunc_GetRecipes_ReturnValue;                   // 0x01B0(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_RecipeInfo>                  CallFunc_SortRecipeClassArrayByRarity_SortedRecipeInfos; // 0x01C8(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShowDuplicate_ReturnValue_1;              // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInActiveCategory_ReturnValue;           // 0x01DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSmashableItem_ReturnValue;              // 0x01DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_Array_Get_Item_1;                         // 0x01E8(0x0078)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_279[0x3];                                      // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0282(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0283(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0284(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_285[0x3];                                      // 0x0285(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0292(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_293[0x1];                                      // 0x0293(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_299[0x3];                                      // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            CallFunc_Array_Get_Item_2;                         // 0x02A0(0x0078)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x031C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x031D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31E[0x2];                                      // 0x031E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_SkinOrRecipeItemData_C*              CallFunc_GetSkinOrRecipeData_Data;                 // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_3;          // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_4;          // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0332(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_333[0x5];                                      // 0x0333(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_ItemInfo>                    CallFunc_SortSkinClassArrayByRarity_SortedItemInfos; // 0x0338(0x0010)(ReferenceParm)
+	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_ItemInfo>                    CallFunc_GetSkinItems_ReturnValue;                 // 0x0370(0x0010)(ReferenceParm)
+	TArray<bool>                                  CallFunc_CheckIfInitialFocusExists_FocusArray;     // 0x0380(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RecipeInfo                          CallFunc_Array_Get_Item_3;                         // 0x0398(0x0078)(HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_5;          // 0x0411(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_412[0x6];                                      // 0x0412(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_SkinOrRecipeItemData_C*              CallFunc_GetSkinOrRecipeData_Data_1;               // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0420(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x042C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42D[0x3];                                      // 0x042D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0434(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_GetIndividualItemDataAndFocus");
-static_assert(sizeof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus) == 0x000470, "Wrong size on WB_SalvageScreen_C_GetIndividualItemDataAndFocus");
+static_assert(sizeof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus) == 0x000438, "Wrong size on WB_SalvageScreen_C_GetIndividualItemDataAndFocus");
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CategoryButton) == 0x000000, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CategoryButton' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, SalvageCategory) == 0x000008, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::SalvageCategory' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Data) == 0x000010, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Data' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, FocusNeeded) == 0x000020, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::FocusNeeded' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, SkinItems) == 0x000030, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::SkinItems' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CurrentItemInfo) == 0x000040, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CurrentItemInfo' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, TempRecipeInfos) == 0x0000C0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::TempRecipeInfos' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, TempRecipes) == 0x0000D0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::TempRecipes' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, FocusNeededArray) == 0x0000E0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::FocusNeededArray' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, DataArray) == 0x0000F0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::DataArray' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable) == 0x000100, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable) == 0x000104, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue) == 0x000108, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue) == 0x00010C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item) == 0x000110, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Greater_IntInt_ReturnValue) == 0x000198, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_1) == 0x00019C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_ShowDuplicate_ReturnValue) == 0x0001A0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_ShowDuplicate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue) == 0x0001A1, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0001A2, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue) == 0x0001A8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_1) == 0x0001B0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance) == 0x0001B8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess) == 0x0001C0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_1) == 0x0001C4, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetRecipes_ReturnValue) == 0x0001C8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetRecipes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_1) == 0x0001D8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_SortRecipeClassArrayByRarity_SortedRecipeInfos) == 0x0001E0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_SortRecipeClassArrayByRarity_SortedRecipeInfos' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_2) == 0x0001F0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_ShowDuplicate_ReturnValue_1) == 0x0001F4, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_ShowDuplicate_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_IsInActiveCategory_ReturnValue) == 0x0001F5, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_IsInActiveCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_IsSmashableItem_ReturnValue) == 0x0001F6, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_IsSmashableItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue) == 0x0001F7, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_1) == 0x0001F8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_1) == 0x000200, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_2) == 0x000280, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue_1) == 0x000288, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000290, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess_1) == 0x000298, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_3) == 0x00029C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Set_Contains_ReturnValue) == 0x0002A0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_2) == 0x0002A1, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_3) == 0x0002A2, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0002A3, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0002A4, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_2) == 0x0002A8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_4) == 0x0002AC, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_1) == 0x0002B0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0002B1, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_4) == 0x0002B2, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_2) == 0x0002B4, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_5) == 0x0002B8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue) == 0x0002BC, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_2) == 0x0002C0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_5) == 0x000340, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_2) == 0x000344, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000345, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetSkinOrRecipeData_Data) == 0x000348, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetSkinOrRecipeData_Data' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_1) == 0x000350, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_2) == 0x000354, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000358, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x000359, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_6) == 0x00035A, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_SortSkinClassArrayByRarity_SortedItemInfos) == 0x000360, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_SortSkinClassArrayByRarity_SortedItemInfos' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_7) == 0x000370, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue_2) == 0x000378, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_3) == 0x000380, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000388, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess_2) == 0x000390, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetSkinItems_ReturnValue) == 0x000398, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetSkinItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_CheckIfInitialFocusExists_FocusArray) == 0x0003A8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_CheckIfInitialFocusExists_FocusArray' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_3) == 0x0003B8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_3) == 0x0003C0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_SwitchEnum_CmpSuccess) == 0x000448, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_5) == 0x000449, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetSkinOrRecipeData_Data_1) == 0x000450, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetSkinOrRecipeData_Data_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_4) == 0x000458, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_5) == 0x00045C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_3) == 0x000460, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_3) == 0x000464, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_3) == 0x000468, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_SwitchEnum_CmpSuccess_1) == 0x00046C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, TempRecipeInfos) == 0x0000B8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::TempRecipeInfos' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, TempRecipes) == 0x0000C8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::TempRecipes' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, FocusNeededArray) == 0x0000D8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::FocusNeededArray' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, DataArray) == 0x0000E8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::DataArray' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable) == 0x0000F8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable) == 0x0000FC, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue) == 0x000100, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue) == 0x000104, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item) == 0x000108, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Greater_IntInt_ReturnValue) == 0x000180, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_1) == 0x000184, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_ShowDuplicate_ReturnValue) == 0x000188, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_ShowDuplicate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue) == 0x000189, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_NotEqual_IntInt_ReturnValue) == 0x00018A, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue) == 0x000190, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_1) == 0x000198, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance) == 0x0001A0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess) == 0x0001A8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_1) == 0x0001AC, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetRecipes_ReturnValue) == 0x0001B0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetRecipes_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_1) == 0x0001C0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_SortRecipeClassArrayByRarity_SortedRecipeInfos) == 0x0001C8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_SortRecipeClassArrayByRarity_SortedRecipeInfos' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_2) == 0x0001D8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_ShowDuplicate_ReturnValue_1) == 0x0001DC, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_ShowDuplicate_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_IsInActiveCategory_ReturnValue) == 0x0001DD, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_IsInActiveCategory_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_IsSmashableItem_ReturnValue) == 0x0001DE, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_IsSmashableItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue) == 0x0001DF, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_1) == 0x0001E0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_1) == 0x0001E8, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_2) == 0x000260, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue_1) == 0x000268, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000270, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess_1) == 0x000278, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_3) == 0x00027C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Set_Contains_ReturnValue) == 0x000280, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_2) == 0x000281, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_3) == 0x000282, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000283, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000284, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_2) == 0x000288, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_4) == 0x00028C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_1) == 0x000290, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000291, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_4) == 0x000292, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_2) == 0x000294, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_5) == 0x000298, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue) == 0x00029C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_2) == 0x0002A0, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_5) == 0x000318, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_2) == 0x00031C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x00031D, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetSkinOrRecipeData_Data) == 0x000320, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetSkinOrRecipeData_Data' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_1) == 0x000328, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_2) == 0x00032C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000330, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x000331, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_6) == 0x000332, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_SortSkinClassArrayByRarity_SortedItemInfos) == 0x000338, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_SortSkinClassArrayByRarity_SortedItemInfos' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_7) == 0x000348, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue_2) == 0x000350, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_3) == 0x000358, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000360, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess_2) == 0x000368, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetSkinItems_ReturnValue) == 0x000370, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetSkinItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_CheckIfInitialFocusExists_FocusArray) == 0x000380, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_CheckIfInitialFocusExists_FocusArray' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_3) == 0x000390, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_3) == 0x000398, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_SwitchEnum_CmpSuccess) == 0x000410, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_IntInt_ReturnValue_5) == 0x000411, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_GetSkinOrRecipeData_Data_1) == 0x000418, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_GetSkinOrRecipeData_Data_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_4) == 0x000420, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_5) == 0x000424, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_3) == 0x000428, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_3) == 0x00042C, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_3) == 0x000430, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_GetIndividualItemDataAndFocus, K2Node_SwitchEnum_CmpSuccess_1) == 0x000434, "Member 'WB_SalvageScreen_C_GetIndividualItemDataAndFocus::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+
+// Function WB_SalvageScreen.WB_SalvageScreen_C.GetInitialFocusWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WB_SalvageScreen_C_GetInitialFocusWidget final
+{
+public:
+	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_SalvageScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_GetInitialFocusWidget");
+static_assert(sizeof(WB_SalvageScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_SalvageScreen_C_GetInitialFocusWidget");
+static_assert(offsetof(WB_SalvageScreen_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_SalvageScreen_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.GetRecipeQuantity
 // 0x0020 (0x0020 - 0x0000)
@@ -346,7 +359,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_578D[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_GetRecipeQuantity) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_GetRecipeQuantity");
@@ -368,7 +381,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_578E[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_GetSkinItemQuantity) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_GetSkinItemQuantity");
@@ -410,19 +423,19 @@ public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RecipeId;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_578F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5790[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5791[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5792[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue_1;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -446,32 +459,32 @@ static_assert(offsetof(WB_SalvageScreen_C_IsDuplicate, CallFunc_NotEqual_IntInt_
 static_assert(offsetof(WB_SalvageScreen_C_IsDuplicate, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000049, "Member 'WB_SalvageScreen_C_IsDuplicate::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsHighQualityItemSelected
-// 0x0158 (0x0158 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct WB_SalvageScreen_C_IsHighQualityItemSelected final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5793[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedRecipeIdValid_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5794[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedItemIdValid_ReturnValue;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5795[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0030(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5796[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHighQualityItem_ReturnValue;            // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5797[0x6];                                     // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_RecipeInfo                          CallFunc_GetRecipe_ReturnValue;                    // 0x00C8(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsHighQualityRecipe_ReturnValue;          // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0030(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHighQualityItem_ReturnValue;            // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_RecipeInfo                          CallFunc_GetRecipe_ReturnValue;                    // 0x00C0(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsHighQualityRecipe_ReturnValue;          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_IsHighQualityItemSelected) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_IsHighQualityItemSelected");
-static_assert(sizeof(WB_SalvageScreen_C_IsHighQualityItemSelected) == 0x000158, "Wrong size on WB_SalvageScreen_C_IsHighQualityItemSelected");
+static_assert(sizeof(WB_SalvageScreen_C_IsHighQualityItemSelected) == 0x000140, "Wrong size on WB_SalvageScreen_C_IsHighQualityItemSelected");
 static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, ReturnValue) == 0x000000, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_IsSelectedRecipeIdValid_ReturnValue) == 0x000010, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_IsSelectedRecipeIdValid_ReturnValue' has a wrong offset!");
@@ -480,12 +493,12 @@ static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, K2Node_Dyna
 static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_IsSelectedItemIdValid_ReturnValue) == 0x000021, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_IsSelectedItemIdValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetGameInstance_ReturnValue_1) == 0x000028, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetSkinItem_ReturnValue) == 0x000030, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetSkinItem_Found) == 0x0000B0, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0000B8, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, K2Node_DynamicCast_bSuccess_1) == 0x0000C0, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_IsHighQualityItem_ReturnValue) == 0x0000C1, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_IsHighQualityItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetRecipe_ReturnValue) == 0x0000C8, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetRecipe_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_IsHighQualityRecipe_ReturnValue) == 0x000150, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_IsHighQualityRecipe_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetSkinItem_Found) == 0x0000A8, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x0000B0, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_IsHighQualityItem_ReturnValue) == 0x0000B9, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_IsHighQualityItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_GetRecipe_ReturnValue) == 0x0000C0, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_GetRecipe_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsHighQualityItemSelected, CallFunc_IsHighQualityRecipe_ReturnValue) == 0x000138, "Member 'WB_SalvageScreen_C_IsHighQualityItemSelected::CallFunc_IsHighQualityRecipe_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsHunterSkin
 // 0x0058 (0x0058 - 0x0000)
@@ -494,15 +507,15 @@ struct WB_SalvageScreen_C_IsHunterSkin final
 public:
 	class UClass*                                 SkinItem;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5798[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         HunterSkinClasses;                                 // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5799[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x0030(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_579A[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -522,26 +535,26 @@ static_assert(offsetof(WB_SalvageScreen_C_IsHunterSkin, CallFunc_Less_IntInt_Ret
 static_assert(offsetof(WB_SalvageScreen_C_IsHunterSkin, CallFunc_ClassIsChildOf_ReturnValue) == 0x000051, "Member 'WB_SalvageScreen_C_IsHunterSkin::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsInActiveCategory
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct WB_SalvageScreen_C_IsInActiveCategory final
 {
 public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_579B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_579C[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0020(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWitchSlot_ReturnValue;                  // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsIconSlot_ReturnValue;                   // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHunterSlot_ReturnValue;                 // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0020(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWitchSlot_ReturnValue;                  // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsIconSlot_ReturnValue;                   // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHunterSlot_ReturnValue;                 // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_IsInActiveCategory) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_IsInActiveCategory");
-static_assert(sizeof(WB_SalvageScreen_C_IsInActiveCategory) == 0x0000A8, "Wrong size on WB_SalvageScreen_C_IsInActiveCategory");
+static_assert(sizeof(WB_SalvageScreen_C_IsInActiveCategory) == 0x0000A0, "Wrong size on WB_SalvageScreen_C_IsInActiveCategory");
 static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, ItemId) == 0x000000, "Member 'WB_SalvageScreen_C_IsInActiveCategory::ItemId' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, ReturnValue) == 0x000004, "Member 'WB_SalvageScreen_C_IsInActiveCategory::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -549,10 +562,10 @@ static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, K2Node_DynamicCast
 static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_SalvageScreen_C_IsInActiveCategory::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, K2Node_SwitchEnum_CmpSuccess) == 0x000019, "Member 'WB_SalvageScreen_C_IsInActiveCategory::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_GetSkinItem_ReturnValue) == 0x000020, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_GetSkinItem_Found) == 0x0000A0, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_IsWitchSlot_ReturnValue) == 0x0000A1, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_IsWitchSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_IsIconSlot_ReturnValue) == 0x0000A2, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_IsIconSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_IsHunterSlot_ReturnValue) == 0x0000A3, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_IsHunterSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_GetSkinItem_Found) == 0x000098, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_IsWitchSlot_ReturnValue) == 0x000099, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_IsWitchSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_IsIconSlot_ReturnValue) == 0x00009A, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_IsIconSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsInActiveCategory, CallFunc_IsHunterSlot_ReturnValue) == 0x00009B, "Member 'WB_SalvageScreen_C_IsInActiveCategory::CallFunc_IsHunterSlot_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsLastOfTotalAmountSelected
 // 0x001C (0x001C - 0x0000)
@@ -560,15 +573,15 @@ struct WB_SalvageScreen_C_IsLastOfTotalAmountSelected final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_579D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Quantity;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_579E[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetRecipeQuantity_Value;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedItemIdValid_ReturnValue;        // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedRecipeIdValid_ReturnValue;      // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_579F[0x1];                                     // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetSkinItemQuantity_Value;                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -632,7 +645,7 @@ static_assert(offsetof(WB_SalvageScreen_C_IsSalvagableRarity, CallFunc_BooleanOR
 struct WB_SalvageScreen_C_IsSalvagableSlot final
 {
 public:
-	E_Slot                                        Param_Slot;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Slot                                        Slot_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSalvagable;                                      // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -640,7 +653,7 @@ public:
 };
 static_assert(alignof(WB_SalvageScreen_C_IsSalvagableSlot) == 0x000001, "Wrong alignment on WB_SalvageScreen_C_IsSalvagableSlot");
 static_assert(sizeof(WB_SalvageScreen_C_IsSalvagableSlot) == 0x000005, "Wrong size on WB_SalvageScreen_C_IsSalvagableSlot");
-static_assert(offsetof(WB_SalvageScreen_C_IsSalvagableSlot, Param_Slot) == 0x000000, "Member 'WB_SalvageScreen_C_IsSalvagableSlot::Param_Slot' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSalvagableSlot, Slot_0) == 0x000000, "Member 'WB_SalvageScreen_C_IsSalvagableSlot::Slot_0' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSalvagableSlot, IsSalvagable) == 0x000001, "Member 'WB_SalvageScreen_C_IsSalvagableSlot::IsSalvagable' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSalvagableSlot, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000002, "Member 'WB_SalvageScreen_C_IsSalvagableSlot::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSalvagableSlot, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000003, "Member 'WB_SalvageScreen_C_IsSalvagableSlot::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
@@ -652,10 +665,10 @@ struct WB_SalvageScreen_C_IsSalvagingPossible final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0008(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A1[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -676,14 +689,14 @@ struct WB_SalvageScreen_C_IsSelectedItem final
 public:
 	class UClass*                                 SkinItemClass;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSelected;                                        // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A2[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 K2Node_ClassDynamicCast_AsB_Skin_Item;             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A3[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A4[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   CallFunc_Conv_ClassToSoftClassReference_ReturnValue; // 0x0038(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSkinItemIdBySoftReference_ReturnValue; // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -728,34 +741,34 @@ static_assert(offsetof(WB_SalvageScreen_C_IsSelectedRecipeIdValid, ReturnValue) 
 static_assert(offsetof(WB_SalvageScreen_C_IsSelectedRecipeIdValid, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000001, "Member 'WB_SalvageScreen_C_IsSelectedRecipeIdValid::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsSmashableItem
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_SalvageScreen_C_IsSmashableItem final
 {
 public:
 	int32                                         ItemId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A5[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A6[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A7[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0038(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSalvagableRarity_IsSalvagable;          // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSalvagableSlot_IsSalvagable;            // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00BF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0038(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSalvagableRarity_IsSalvagable;          // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSalvagableSlot_IsSalvagable;            // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_IsSmashableItem) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_IsSmashableItem");
-static_assert(sizeof(WB_SalvageScreen_C_IsSmashableItem) == 0x0000C0, "Wrong size on WB_SalvageScreen_C_IsSmashableItem");
+static_assert(sizeof(WB_SalvageScreen_C_IsSmashableItem) == 0x0000B8, "Wrong size on WB_SalvageScreen_C_IsSmashableItem");
 static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, ItemId) == 0x000000, "Member 'WB_SalvageScreen_C_IsSmashableItem::ItemId' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, ReturnValue) == 0x000004, "Member 'WB_SalvageScreen_C_IsSmashableItem::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -766,14 +779,14 @@ static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, K2Node_DynamicCast_As
 static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_SalvageScreen_C_IsSmashableItem::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_GetItemQuantity_ReturnValue) == 0x000034, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_GetSkinItem_ReturnValue) == 0x000038, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_GetSkinItem_Found) == 0x0000B8, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_Greater_IntInt_ReturnValue) == 0x0000B9, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_IsSalvagableRarity_IsSalvagable) == 0x0000BA, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_IsSalvagableRarity_IsSalvagable' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_Not_PreBool_ReturnValue) == 0x0000BB, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_BooleanAND_ReturnValue) == 0x0000BC, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_IsSalvagableSlot_IsSalvagable) == 0x0000BD, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_IsSalvagableSlot_IsSalvagable' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_BooleanAND_ReturnValue_1) == 0x0000BE, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_BooleanAND_ReturnValue_2) == 0x0000BF, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_GetSkinItem_Found) == 0x0000B0, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_Greater_IntInt_ReturnValue) == 0x0000B1, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_IsSalvagableRarity_IsSalvagable) == 0x0000B2, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_IsSalvagableRarity_IsSalvagable' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_Not_PreBool_ReturnValue) == 0x0000B3, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_BooleanAND_ReturnValue) == 0x0000B4, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_IsSalvagableSlot_IsSalvagable) == 0x0000B5, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_IsSalvagableSlot_IsSalvagable' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_BooleanAND_ReturnValue_1) == 0x0000B6, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsSmashableItem, CallFunc_BooleanAND_ReturnValue_2) == 0x0000B7, "Member 'WB_SalvageScreen_C_IsSmashableItem::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsSomethingSelected
 // 0x0004 (0x0004 - 0x0000)
@@ -799,11 +812,11 @@ struct WB_SalvageScreen_C_IsTileViewEntrySelectionValid final
 public:
 	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsRecipe;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A8[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    EntryWidgets;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	bool                                          IsValidRecipe;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SelectionIsValid;                                  // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57A9[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -812,19 +825,19 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedRecipeIdValid_ReturnValue;      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedItemIdValid_ReturnValue;        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57AA[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57AB[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ItemSalvageButton_C*                K2Node_DynamicCast_AsWB_Item_Salvage_Button;       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57AC[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57AD[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0058(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(WB_SalvageScreen_C_IsTileViewEntrySelectionValid) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_IsTileViewEntrySelectionValid");
@@ -860,15 +873,15 @@ struct WB_SalvageScreen_C_IsWitchSkin final
 public:
 	class UClass*                                 SkinItem;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57AE[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         WitchSkinClasses;                                  // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57AF[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x0030(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B0[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -888,33 +901,33 @@ static_assert(offsetof(WB_SalvageScreen_C_IsWitchSkin, CallFunc_Less_IntInt_Retu
 static_assert(offsetof(WB_SalvageScreen_C_IsWitchSkin, CallFunc_ClassIsChildOf_ReturnValue) == 0x000051, "Member 'WB_SalvageScreen_C_IsWitchSkin::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsWornItemSelected
-// 0x0188 (0x0188 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct WB_SalvageScreen_C_IsWornItemSelected final
 {
 public:
 	bool                                          Is_Worn;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ItemIsWorn;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B1[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B2[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B3[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B4[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B5[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable_1;        // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B6[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B7[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWitchSkin                             CallFunc_Array_Get_Item;                           // 0x0048(0x0028)(NoDestructor)
 	bool                                          CallFunc_IsSelectedItem_IsSelected;                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedItem_IsSelected_1;              // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -927,17 +940,17 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B8[0x5];                                     // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57B9[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedItemIdValid_ReturnValue;        // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLastOfTotalAmountSelected_ReturnValue;  // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57BA[0x5];                                     // 0x00AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AB[0x5];                                       // 0x00AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHunterSkin                            CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0038)(NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelectedItem_IsSelected_5;              // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -955,14 +968,14 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_7;                  // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_8;                  // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57BB[0x5];                                     // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0100(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_9;                  // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0100(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_9;                  // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_IsWornItemSelected) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_IsWornItemSelected");
-static_assert(sizeof(WB_SalvageScreen_C_IsWornItemSelected) == 0x000188, "Wrong size on WB_SalvageScreen_C_IsWornItemSelected");
+static_assert(sizeof(WB_SalvageScreen_C_IsWornItemSelected) == 0x000180, "Wrong size on WB_SalvageScreen_C_IsWornItemSelected");
 static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, Is_Worn) == 0x000000, "Member 'WB_SalvageScreen_C_IsWornItemSelected::Is_Worn' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, ItemIsWorn) == 0x000001, "Member 'WB_SalvageScreen_C_IsWornItemSelected::ItemIsWorn' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, Temp_bool_True_if_break_was_hit_Variable) == 0x000002, "Member 'WB_SalvageScreen_C_IsWornItemSelected::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
@@ -1017,9 +1030,9 @@ static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_BooleanOR
 static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_BooleanOR_ReturnValue_7) == 0x0000F9, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_BooleanOR_ReturnValue_7' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_BooleanOR_ReturnValue_8) == 0x0000FA, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_BooleanOR_ReturnValue_8' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_GetSkinItem_ReturnValue) == 0x000100, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_GetSkinItem_Found) == 0x000180, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_BooleanOR_ReturnValue_9) == 0x000181, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_BooleanOR_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, K2Node_SwitchEnum_CmpSuccess) == 0x000182, "Member 'WB_SalvageScreen_C_IsWornItemSelected::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_GetSkinItem_Found) == 0x000178, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, CallFunc_BooleanOR_ReturnValue_9) == 0x000179, "Member 'WB_SalvageScreen_C_IsWornItemSelected::CallFunc_BooleanOR_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_IsWornItemSelected, K2Node_SwitchEnum_CmpSuccess) == 0x00017A, "Member 'WB_SalvageScreen_C_IsWornItemSelected::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.OnTab
 // 0x0028 (0x0028 - 0x0000)
@@ -1089,77 +1102,77 @@ static_assert(offsetof(WB_SalvageScreen_C_ShowDuplicate, ReturnValue) == 0x00000
 static_assert(offsetof(WB_SalvageScreen_C_ShowDuplicate, CallFunc_IsDuplicate_ReturnValue) == 0x000009, "Member 'WB_SalvageScreen_C_ShowDuplicate::CallFunc_IsDuplicate_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.ShowWarningDialogIfNecessary
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct WB_SalvageScreen_C_ShowWarningDialogIfNecessary final
 {
 public:
 	bool                                          Worn;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          QualityItem;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DialogNeeded;                                      // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57BC[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Content;                                           // 0x0008(0x0018)(Edit, BlueprintVisible)
-	class FText                                   Title;                                             // 0x0020(0x0018)(Edit, BlueprintVisible)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0038(0x0010)(ReferenceParm)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0050(0x0018)()
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57BD[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0078(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0088(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0098(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x00B0(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x00C8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x00D8(0x0018)()
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLastOfTotalAmountSelected_ReturnValue;  // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57BE[0x5];                                     // 0x00F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x00F8(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0108(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0118(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0130(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0148(0x0010)(ReferenceParm)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57BF[0x7];                                     // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0160(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0178(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWornItemSelected_Is_Worn;               // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHighQualityItemSelected_ReturnValue;    // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Content;                                           // 0x0008(0x0010)(Edit, BlueprintVisible)
+	class FText                                   Title;                                             // 0x0018(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0040(0x0010)()
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0060(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0070(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0080(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0090(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x00A0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x00B0(0x0010)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLastOfTotalAmountSelected_ReturnValue;  // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x00C8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x00D8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x00E8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x00F8(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0108(0x0010)(ReferenceParm)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0120(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWornItemSelected_Is_Worn;               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHighQualityItemSelected_ReturnValue;    // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_ShowWarningDialogIfNecessary");
-static_assert(sizeof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary) == 0x0001A0, "Wrong size on WB_SalvageScreen_C_ShowWarningDialogIfNecessary");
+static_assert(sizeof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary) == 0x000158, "Wrong size on WB_SalvageScreen_C_ShowWarningDialogIfNecessary");
 static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, Worn) == 0x000000, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::Worn' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, QualityItem) == 0x000001, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::QualityItem' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, DialogNeeded) == 0x000002, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::DialogNeeded' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, Content) == 0x000008, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::Content' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, Title) == 0x000020, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::Title' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array) == 0x000038, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_GetGameInstance_ReturnValue) == 0x000048, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue) == 0x000050, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_DynamicCast_AsB_Game_Instance) == 0x000068, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_1) == 0x000078, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_2) == 0x000088, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_1) == 0x000098, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_2) == 0x0000B0, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_3) == 0x0000C8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_3) == 0x0000D8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Greater_IntInt_ReturnValue) == 0x0000F0, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_IsLastOfTotalAmountSelected_ReturnValue) == 0x0000F1, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_IsLastOfTotalAmountSelected_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_BooleanAND_ReturnValue) == 0x0000F2, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_4) == 0x0000F8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_5) == 0x000108, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_4) == 0x000118, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_5) == 0x000130, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_6) == 0x000148, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_6' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_BooleanAND_ReturnValue_1) == 0x000158, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_6) == 0x000160, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Conv_TextToString_ReturnValue) == 0x000178, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000188, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_IsWornItemSelected_Is_Worn) == 0x000198, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_IsWornItemSelected_Is_Worn' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_IsHighQualityItemSelected_ReturnValue) == 0x000199, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_IsHighQualityItemSelected_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, Title) == 0x000018, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::Title' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array) == 0x000028, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_GetGameInstance_ReturnValue) == 0x000038, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue) == 0x000040, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_DynamicCast_AsB_Game_Instance) == 0x000050, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_1) == 0x000060, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_2) == 0x000070, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_1) == 0x000080, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_2) == 0x000090, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_3) == 0x0000A0, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_3) == 0x0000B0, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Greater_IntInt_ReturnValue) == 0x0000C0, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_IsLastOfTotalAmountSelected_ReturnValue) == 0x0000C1, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_IsLastOfTotalAmountSelected_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_BooleanAND_ReturnValue) == 0x0000C2, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_4) == 0x0000C8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_5) == 0x0000D8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_5' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_4) == 0x0000E8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_5) == 0x0000F8, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, K2Node_MakeArray_Array_6) == 0x000108, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::K2Node_MakeArray_Array_6' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_BooleanAND_ReturnValue_1) == 0x000118, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Format_ReturnValue_6) == 0x000120, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Format_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Conv_TextToString_ReturnValue) == 0x000130, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000140, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_IsWornItemSelected_Is_Worn) == 0x000150, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_IsWornItemSelected_Is_Worn' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_ShowWarningDialogIfNecessary, CallFunc_IsHighQualityItemSelected_ReturnValue) == 0x000151, "Member 'WB_SalvageScreen_C_ShowWarningDialogIfNecessary::CallFunc_IsHighQualityItemSelected_ReturnValue' has a wrong offset!");
 
 // Function WB_SalvageScreen.WB_SalvageScreen_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -1193,12 +1206,12 @@ struct WB_SalvageScreen_C_UpdateIndexToUseAfterSmash final
 {
 public:
 	TArray<class UObject*>                        ListItems;                                         // 0x0000(0x0010)(Edit, BlueprintVisible)
-	int32                                         Param_Index;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C0[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C1[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1206,17 +1219,17 @@ public:
 	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkinOrRecipeItemData_C*              K2Node_DynamicCast_AsB_Skin_or_Recipe_Item_Data;   // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C2[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C3[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0050(0x0010)(ConstParm, ReferenceParm)
 };
 static_assert(alignof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash) == 0x000008, "Wrong alignment on WB_SalvageScreen_C_UpdateIndexToUseAfterSmash");
 static_assert(sizeof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash) == 0x000060, "Wrong size on WB_SalvageScreen_C_UpdateIndexToUseAfterSmash");
 static_assert(offsetof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash, ListItems) == 0x000000, "Member 'WB_SalvageScreen_C_UpdateIndexToUseAfterSmash::ListItems' has a wrong offset!");
-static_assert(offsetof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash, Param_Index) == 0x000010, "Member 'WB_SalvageScreen_C_UpdateIndexToUseAfterSmash::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash, Index_0) == 0x000010, "Member 'WB_SalvageScreen_C_UpdateIndexToUseAfterSmash::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash, Temp_bool_True_if_break_was_hit_Variable) == 0x000014, "Member 'WB_SalvageScreen_C_UpdateIndexToUseAfterSmash::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash, Temp_int_Array_Index_Variable) == 0x000018, "Member 'WB_SalvageScreen_C_UpdateIndexToUseAfterSmash::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WB_SalvageScreen_C_UpdateIndexToUseAfterSmash, CallFunc_Not_PreBool_ReturnValue) == 0x00001C, "Member 'WB_SalvageScreen_C_UpdateIndexToUseAfterSmash::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
@@ -1246,10 +1259,10 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C4[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkinOrRecipeItemData_C*              K2Node_DynamicCast_AsB_Skin_or_Recipe_Item_Data;   // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C5[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1260,7 +1273,7 @@ public:
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0058(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C6[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetRecipeQuantity_Value;                  // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSkinItemQuantity_Value;                // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

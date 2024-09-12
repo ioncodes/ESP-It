@@ -21,9 +21,9 @@ namespace SDK
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UB_EnteredPortalCode_C*           PortalCode                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SabotagePortal_C::CheckEnteredCode(class UB_EnteredPortalCode_C* PortalCode, int32 Param_Index)
+void AB_SabotagePortal_C::CheckEnteredCode(class UB_EnteredPortalCode_C* PortalCode, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +33,7 @@ void AB_SabotagePortal_C::CheckEnteredCode(class UB_EnteredPortalCode_C* PortalC
 	Params::B_SabotagePortal_C_CheckEnteredCode Parms{};
 
 	Parms.PortalCode = PortalCode;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -130,9 +130,9 @@ void AB_SabotagePortal_C::Stop()
 // Function B_SabotagePortal.B_SabotagePortal_C.StopPortal
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SabotagePortal_C::StopPortal(int32 Param_Index)
+void AB_SabotagePortal_C::StopPortal(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -141,7 +141,7 @@ void AB_SabotagePortal_C::StopPortal(int32 Param_Index)
 
 	Params::B_SabotagePortal_C_StopPortal Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

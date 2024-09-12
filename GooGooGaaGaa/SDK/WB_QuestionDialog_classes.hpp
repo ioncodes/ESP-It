@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_QuestionAnswer_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,18 +20,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_QuestionDialog.WB_QuestionDialog_C
-// 0x0048 (0x0308 - 0x02C0)
+// 0x0048 (0x0328 - 0x02E0)
 class UWB_QuestionDialog_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Cancel;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           No;                                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Ok;                                                // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             QuestionText;                                      // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TitleText;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Yes;                                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnAnswer;                                          // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Cancel;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           No;                                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           OK;                                                // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             QuestionText;                                      // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TitleText;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Yes;                                               // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnAnswer;                                          // 0x0318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void OnAnswer__DelegateSignature(E_QuestionAnswer Answer);
@@ -41,13 +41,14 @@ public:
 	void BndEvt__Yes_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
 	void BottomButtonPressed();
 	void CloseDialog();
+	void Construct();
 	void ExecuteUbergraph_WB_QuestionDialog(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	void OnApply();
 	void OnBack();
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void OnSpecialAction();
-	void SetData(const class FText& Title, const class FText& Param_QuestionText, bool OkButton, bool YesButton, bool NoButton, bool CancelButton);
+	void SetData(const class FText& Title, const class FText& QuestionText_0, bool OkButton, bool YesButton, bool NoButton, bool CancelButton);
 
 public:
 	static class UClass* StaticClass()
@@ -60,15 +61,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_QuestionDialog_C) == 0x000008, "Wrong alignment on UWB_QuestionDialog_C");
-static_assert(sizeof(UWB_QuestionDialog_C) == 0x000308, "Wrong size on UWB_QuestionDialog_C");
-static_assert(offsetof(UWB_QuestionDialog_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_QuestionDialog_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, Cancel) == 0x0002C8, "Member 'UWB_QuestionDialog_C::Cancel' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, No) == 0x0002D0, "Member 'UWB_QuestionDialog_C::No' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, Ok) == 0x0002D8, "Member 'UWB_QuestionDialog_C::Ok' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, QuestionText) == 0x0002E0, "Member 'UWB_QuestionDialog_C::QuestionText' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, TitleText) == 0x0002E8, "Member 'UWB_QuestionDialog_C::TitleText' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, Yes) == 0x0002F0, "Member 'UWB_QuestionDialog_C::Yes' has a wrong offset!");
-static_assert(offsetof(UWB_QuestionDialog_C, OnAnswer) == 0x0002F8, "Member 'UWB_QuestionDialog_C::OnAnswer' has a wrong offset!");
+static_assert(sizeof(UWB_QuestionDialog_C) == 0x000328, "Wrong size on UWB_QuestionDialog_C");
+static_assert(offsetof(UWB_QuestionDialog_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_QuestionDialog_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, Cancel) == 0x0002E8, "Member 'UWB_QuestionDialog_C::Cancel' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, No) == 0x0002F0, "Member 'UWB_QuestionDialog_C::No' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, OK) == 0x0002F8, "Member 'UWB_QuestionDialog_C::OK' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, QuestionText) == 0x000300, "Member 'UWB_QuestionDialog_C::QuestionText' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, TitleText) == 0x000308, "Member 'UWB_QuestionDialog_C::TitleText' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, Yes) == 0x000310, "Member 'UWB_QuestionDialog_C::Yes' has a wrong offset!");
+static_assert(offsetof(UWB_QuestionDialog_C, OnAnswer) == 0x000318, "Member 'UWB_QuestionDialog_C::OnAnswer' has a wrong offset!");
 
 }
 

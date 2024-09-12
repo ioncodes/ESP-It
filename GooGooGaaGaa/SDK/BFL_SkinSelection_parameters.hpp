@@ -10,36 +10,36 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "E_Slot_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BFL_SkinSelection.BFL_SkinSelection_C.GetRandomSkin
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct BFL_SkinSelection_C_GetRandomSkin final
 {
 public:
 	E_Slot                                        Slot;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         ItemId;                                            // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_InventoryManager_C*                  InventoryManager;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FS_ItemInfo>                    SkinsToSelectFrom;                                 // 0x0020(0x0010)(Edit, BlueprintVisible)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D5[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_ItemInfo>                    CallFunc_GetAllItemsBySlot_ItemInfos;              // 0x0048(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_ItemInfo                            CallFunc_Array_Get_Item;                           // 0x0060(0x0080)(HasGetValueTypeHash)
+	struct FS_ItemInfo                            CallFunc_Array_Get_Item;                           // 0x0060(0x0078)(HasGetValueTypeHash)
 };
 static_assert(alignof(BFL_SkinSelection_C_GetRandomSkin) == 0x000008, "Wrong alignment on BFL_SkinSelection_C_GetRandomSkin");
-static_assert(sizeof(BFL_SkinSelection_C_GetRandomSkin) == 0x0000E0, "Wrong size on BFL_SkinSelection_C_GetRandomSkin");
+static_assert(sizeof(BFL_SkinSelection_C_GetRandomSkin) == 0x0000D8, "Wrong size on BFL_SkinSelection_C_GetRandomSkin");
 static_assert(offsetof(BFL_SkinSelection_C_GetRandomSkin, Slot) == 0x000000, "Member 'BFL_SkinSelection_C_GetRandomSkin::Slot' has a wrong offset!");
 static_assert(offsetof(BFL_SkinSelection_C_GetRandomSkin, __WorldContext) == 0x000008, "Member 'BFL_SkinSelection_C_GetRandomSkin::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BFL_SkinSelection_C_GetRandomSkin, ItemId) == 0x000010, "Member 'BFL_SkinSelection_C_GetRandomSkin::ItemId' has a wrong offset!");

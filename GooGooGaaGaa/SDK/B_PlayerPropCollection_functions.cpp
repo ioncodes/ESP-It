@@ -46,11 +46,11 @@ void UB_PlayerPropCollection_C::CheckAndSetOwnedPropsCount(TArray<struct FS_Prop
 // Function B_PlayerPropCollection.B_PlayerPropCollection_C.CollectProp
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Local                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsNewProp                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_PlayerPropCollection_C::CollectProp(int32 PropId, bool Local, bool* IsNewProp)
+void UB_PlayerPropCollection_C::CollectProp(int32 PropID, bool Local, bool* IsNewProp)
 {
 	static class UFunction* Func = nullptr;
 
@@ -59,7 +59,7 @@ void UB_PlayerPropCollection_C::CollectProp(int32 PropId, bool Local, bool* IsNe
 
 	Params::B_PlayerPropCollection_C_CollectProp Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.Local = Local;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -142,9 +142,9 @@ void UB_PlayerPropCollection_C::HandleNewPropCategoryAndSets(int32 NewPropId, co
 // Function B_PlayerPropCollection.B_PlayerPropCollection_C.Initialize
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UGameInstance*                    Param_GameInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UGameInstance*                    GameInstance_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_PlayerPropCollection_C::Initialize(class UGameInstance* Param_GameInstance)
+void UB_PlayerPropCollection_C::Initialize(class UGameInstance* GameInstance_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -153,7 +153,7 @@ void UB_PlayerPropCollection_C::Initialize(class UGameInstance* Param_GameInstan
 
 	Params::B_PlayerPropCollection_C_Initialize Parms{};
 
-	Parms.Param_GameInstance = Param_GameInstance;
+	Parms.GameInstance_0 = GameInstance_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -162,10 +162,10 @@ void UB_PlayerPropCollection_C::Initialize(class UGameInstance* Param_GameInstan
 // Function B_PlayerPropCollection.B_PlayerPropCollection_C.InitializeGS
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UGameInstance*                    Param_GameInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APlayerState*                     Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UGameInstance*                    GameInstance_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerState*                     PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_PlayerPropCollection_C::InitializeGS(class UGameInstance* Param_GameInstance, class APlayerState* Param_PlayerState)
+void UB_PlayerPropCollection_C::InitializeGS(class UGameInstance* GameInstance_0, class APlayerState* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -174,8 +174,8 @@ void UB_PlayerPropCollection_C::InitializeGS(class UGameInstance* Param_GameInst
 
 	Params::B_PlayerPropCollection_C_InitializeGS Parms{};
 
-	Parms.Param_GameInstance = Param_GameInstance;
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.GameInstance_0 = GameInstance_0;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

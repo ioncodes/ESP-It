@@ -37,6 +37,7 @@ public:
 	void ApplyModRules(TArray<struct FS_GameModifier>& ModRules);
 	void ExecuteUbergraph_B_ModParametersSubsystem(int32 EntryPoint);
 	void GetDefaultModParameterValue(E_GameModifierType SkillType, const struct FUIParameterData& UIPameter, struct FUIParam* DefaultValue);
+	TArray<struct FUIParam> GetDefaultModParameterValues(TArray<struct FUIParameterData>& UIParameters, E_GameModifierType ModType);
 	void GetModParameters(E_GameModifierType ModType, class UModParameters** ModParameter);
 	void GetUIParameters(E_GameModifierType ModType, TArray<struct FUIParameterData>* UIParameters);
 	void InitializeDefaultModParameters();

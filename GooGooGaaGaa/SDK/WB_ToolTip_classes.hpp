@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ToolTip.WB_ToolTip_C
-// 0x0030 (0x02F0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_ToolTip_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeInAnimation;                                   // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                TooltipContentParent;                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUserWidget*                            TooltipContent;                                    // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnFadeOutFinished;                                 // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeInAnimation;                                   // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                TooltipContentParent;                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUserWidget*                            ToolTipContent;                                    // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnFadeOutFinished;                                 // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_WB_ToolTip(int32 EntryPoint);
 	void FadeIn();
 	void FadeOut();
 	void OnFadeOutFinished__DelegateSignature();
-	void SetTooltipContent(class UUserWidget* Param_TooltipContent);
+	void SetTooltipContent(class UUserWidget* ToolTipContent_0);
 
 public:
 	static class UClass* StaticClass()
@@ -46,12 +46,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_ToolTip_C) == 0x000008, "Wrong alignment on UWB_ToolTip_C");
-static_assert(sizeof(UWB_ToolTip_C) == 0x0002F0, "Wrong size on UWB_ToolTip_C");
-static_assert(offsetof(UWB_ToolTip_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ToolTip_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ToolTip_C, FadeInAnimation) == 0x0002C8, "Member 'UWB_ToolTip_C::FadeInAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_ToolTip_C, TooltipContentParent) == 0x0002D0, "Member 'UWB_ToolTip_C::TooltipContentParent' has a wrong offset!");
-static_assert(offsetof(UWB_ToolTip_C, TooltipContent) == 0x0002D8, "Member 'UWB_ToolTip_C::TooltipContent' has a wrong offset!");
-static_assert(offsetof(UWB_ToolTip_C, OnFadeOutFinished) == 0x0002E0, "Member 'UWB_ToolTip_C::OnFadeOutFinished' has a wrong offset!");
+static_assert(sizeof(UWB_ToolTip_C) == 0x000310, "Wrong size on UWB_ToolTip_C");
+static_assert(offsetof(UWB_ToolTip_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ToolTip_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ToolTip_C, FadeInAnimation) == 0x0002E8, "Member 'UWB_ToolTip_C::FadeInAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_ToolTip_C, TooltipContentParent) == 0x0002F0, "Member 'UWB_ToolTip_C::TooltipContentParent' has a wrong offset!");
+static_assert(offsetof(UWB_ToolTip_C, ToolTipContent) == 0x0002F8, "Member 'UWB_ToolTip_C::ToolTipContent' has a wrong offset!");
+static_assert(offsetof(UWB_ToolTip_C, OnFadeOutFinished) == 0x000300, "Member 'UWB_ToolTip_C::OnFadeOutFinished' has a wrong offset!");
 
 }
 

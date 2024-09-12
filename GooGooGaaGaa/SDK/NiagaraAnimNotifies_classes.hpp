@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 #include "NiagaraAnimNotifies_structs.hpp"
 
 
@@ -27,8 +27,9 @@ public:
 	class FName                                   SocketName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LocationOffset;                                    // 0x0040(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RotationOffset;                                    // 0x0058(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bDestroyAtEnd;                                     // 0x0070(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2277[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bApplyRateScaleAsTimeDilation;                     // 0x0070(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDestroyAtEnd;                                     // 0x0071(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UFXSystemComponent* GetSpawnedEffect(class UMeshComponent* MeshComp) const;
@@ -49,7 +50,8 @@ static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, Template) == 0x00003
 static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, SocketName) == 0x000038, "Member 'UAnimNotifyState_TimedNiagaraEffect::SocketName' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, LocationOffset) == 0x000040, "Member 'UAnimNotifyState_TimedNiagaraEffect::LocationOffset' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, RotationOffset) == 0x000058, "Member 'UAnimNotifyState_TimedNiagaraEffect::RotationOffset' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, bDestroyAtEnd) == 0x000070, "Member 'UAnimNotifyState_TimedNiagaraEffect::bDestroyAtEnd' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, bApplyRateScaleAsTimeDilation) == 0x000070, "Member 'UAnimNotifyState_TimedNiagaraEffect::bApplyRateScaleAsTimeDilation' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffect, bDestroyAtEnd) == 0x000071, "Member 'UAnimNotifyState_TimedNiagaraEffect::bDestroyAtEnd' has a wrong offset!");
 
 // Class NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffectAdvanced
 // 0x0070 (0x00E8 - 0x0078)
@@ -57,11 +59,12 @@ class UAnimNotifyState_TimedNiagaraEffectAdvanced final : public UAnimNotifyStat
 {
 public:
 	bool                                          bEnableNormalizedNotifyProgress;                   // 0x0078(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2278[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bApplyRateScaleToProgress;                         // 0x0079(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   NotifyProgressUserParameter;                       // 0x007C(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2279[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FCurveParameterPair>            AnimCurves;                                        // 0x0088(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227A[0x50];                                    // 0x0098(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x50];                                      // 0x0098(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetNotifyProgress(class UMeshComponent* MeshComp) const;
@@ -79,6 +82,7 @@ public:
 static_assert(alignof(UAnimNotifyState_TimedNiagaraEffectAdvanced) == 0x000008, "Wrong alignment on UAnimNotifyState_TimedNiagaraEffectAdvanced");
 static_assert(sizeof(UAnimNotifyState_TimedNiagaraEffectAdvanced) == 0x0000E8, "Wrong size on UAnimNotifyState_TimedNiagaraEffectAdvanced");
 static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffectAdvanced, bEnableNormalizedNotifyProgress) == 0x000078, "Member 'UAnimNotifyState_TimedNiagaraEffectAdvanced::bEnableNormalizedNotifyProgress' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffectAdvanced, bApplyRateScaleToProgress) == 0x000079, "Member 'UAnimNotifyState_TimedNiagaraEffectAdvanced::bApplyRateScaleToProgress' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffectAdvanced, NotifyProgressUserParameter) == 0x00007C, "Member 'UAnimNotifyState_TimedNiagaraEffectAdvanced::NotifyProgressUserParameter' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffectAdvanced, AnimCurves) == 0x000088, "Member 'UAnimNotifyState_TimedNiagaraEffectAdvanced::AnimCurves' has a wrong offset!");
 
@@ -92,11 +96,11 @@ public:
 	struct FRotator                               RotationOffset;                                    // 0x0058(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                Scale;                                             // 0x0070(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAbsoluteScale;                                    // 0x0088(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227C[0x37];                                    // 0x0089(0x0037)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x37];                                      // 0x0089(0x0037)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         Attached : 1;                                      // 0x00C0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_227D[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   SocketName;                                        // 0x00C4(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227E[0x4];                                     // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UFXSystemComponent* GetSpawnedEffect() const;

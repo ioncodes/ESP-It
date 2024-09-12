@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchInvisibleParameters.B_WitchInvisibleParameters_C
-// 0x0008 (0x0080 - 0x0078)
+// 0x0008 (0x0070 - 0x0068)
 class UB_WitchInvisibleParameters_C final : public UPowerupParameters
 {
 public:
-	double                                        BuffLength;                                        // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BuffLength;                                        // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UB_WitchInvisibleParameters_C) == 0x000008, "Wrong alignment on UB_WitchInvisibleParameters_C");
-static_assert(sizeof(UB_WitchInvisibleParameters_C) == 0x000080, "Wrong size on UB_WitchInvisibleParameters_C");
-static_assert(offsetof(UB_WitchInvisibleParameters_C, BuffLength) == 0x000078, "Member 'UB_WitchInvisibleParameters_C::BuffLength' has a wrong offset!");
+static_assert(sizeof(UB_WitchInvisibleParameters_C) == 0x000070, "Wrong size on UB_WitchInvisibleParameters_C");
+static_assert(offsetof(UB_WitchInvisibleParameters_C, BuffLength) == 0x000068, "Member 'UB_WitchInvisibleParameters_C::BuffLength' has a wrong offset!");
 
 }
 

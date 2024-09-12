@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_CauldronFillstate.WB_CauldronFillstate_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0010 (0x02F0 - 0x02E0)
 class UWB_CauldronFillstate_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Fillstate;                                         // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         Stacks;                                            // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Fillstate;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	uint8                                         Stacks;                                            // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	struct FSlateBrush Get_Fillstate_Brush_0();
@@ -38,9 +38,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_CauldronFillstate_C) == 0x000008, "Wrong alignment on UWB_CauldronFillstate_C");
-static_assert(sizeof(UWB_CauldronFillstate_C) == 0x0002D0, "Wrong size on UWB_CauldronFillstate_C");
-static_assert(offsetof(UWB_CauldronFillstate_C, Fillstate) == 0x0002C0, "Member 'UWB_CauldronFillstate_C::Fillstate' has a wrong offset!");
-static_assert(offsetof(UWB_CauldronFillstate_C, Stacks) == 0x0002C8, "Member 'UWB_CauldronFillstate_C::Stacks' has a wrong offset!");
+static_assert(sizeof(UWB_CauldronFillstate_C) == 0x0002F0, "Wrong size on UWB_CauldronFillstate_C");
+static_assert(offsetof(UWB_CauldronFillstate_C, Fillstate) == 0x0002E0, "Member 'UWB_CauldronFillstate_C::Fillstate' has a wrong offset!");
+static_assert(offsetof(UWB_CauldronFillstate_C, Stacks) == 0x0002E8, "Member 'UWB_CauldronFillstate_C::Stacks' has a wrong offset!");
 
 }
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "E_WorldSettingstabStates_structs.hpp"
+#include "Engine_structs.hpp"
 #include "WB_PlaceAndEditUITab_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -21,53 +21,53 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_WorldSettingsTab.WB_WorldSettingsTab_C
-// 0x0178 (0x0450 - 0x02D8)
+// 0x0178 (0x0470 - 0x02F8)
 class UWB_WorldSettingsTab_C final : public UWB_PlaceAndEditUITab_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_WorldSettingsTab_C;              // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         HorizontalBoxScale;                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LocationIcon;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       LocationX;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       LocationY;                                         // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       LocationZ;                                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                PositionresetButton;                               // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RotationImage;                                     // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                RotationResetButton;                               // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       RotationX;                                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       RotationY;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       RotationZ;                                         // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ScaleIcon;                                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                ScaleResetButton;                                  // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       ScaleX;                                            // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       ScaleY;                                            // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       ScaleZ;                                            // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           TransformBox;                                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                UniformRotationButton;                             // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                UniformScaleButton;                                // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                UniformTransformButton;                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActionTab_C*                        WB_ActionTab;                                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_LightColorPopup_C*                  WB_LightColorPopup;                                // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_LightColorTab_C*                    WB_LightColorTab;                                  // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MaterialChangeTab_C*                WB_MaterialChangeTab;                              // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MaterialListPopup_C*                WB_MaterialListPopup;                              // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PropTab_C*                          WB_PropTab;                                        // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SwitchConnectionsTab_C*             WB_SwitchConnectionsTab;                           // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SwitchInfoTab_C*                    WB_SwitchInfoTab;                                  // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          NeedsUniformScale;                                 // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseWorldSpace;                                     // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4623[0x6];                                     // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MinTargetActorScale;                               // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxTargetActorScale;                               // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_StaticMeshProp_C*>            Props;                                             // 0x03D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class ABP_PlaceableLight_C*>           Lights;                                            // 0x03E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class ABP_PlaceableStaticProp_C*>      MaterialStructures;                                // 0x03F8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         ActionActors;                                      // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class ABP_Switch_C*>                   Switches;                                          // 0x0418(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class UClass*>                         TargetMaterialOverwrites;                          // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	E_WorldSettingstabStates                      MenuState;                                         // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4624[0x7];                                     // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UEditableTextBox*>               AllTransformInputFields;                           // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_WorldSettingsTab_C;              // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HorizontalBoxScale;                                // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LocationIcon;                                      // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       LocationX;                                         // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       LocationY;                                         // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       LocationZ;                                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                PositionresetButton;                               // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RotationImage;                                     // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                RotationResetButton;                               // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       RotationX;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       RotationY;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       RotationZ;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ScaleIcon;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                ScaleResetButton;                                  // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       ScaleX;                                            // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       ScaleY;                                            // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       ScaleZ;                                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           TransformBox;                                      // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                UniformRotationButton;                             // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                UniformScaleButton;                                // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                UniformTransformButton;                            // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionTab_C*                        WB_ActionTab;                                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_LightColorPopup_C*                  WB_LightColorPopup;                                // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_LightColorTab_C*                    WB_LightColorTab;                                  // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MaterialChangeTab_C*                WB_MaterialChangeTab;                              // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MaterialListPopup_C*                WB_MaterialListPopup;                              // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PropTab_C*                          WB_PropTab;                                        // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SwitchConnectionsTab_C*             WB_SwitchConnectionsTab;                           // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SwitchInfoTab_C*                    WB_SwitchInfoTab;                                  // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          NeedsUniformScale;                                 // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseWorldSpace;                                     // 0x03E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E2[0x6];                                      // 0x03E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MinTargetActorScale;                               // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxTargetActorScale;                               // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AB_StaticMeshProp_C*>            Props;                                             // 0x03F8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class ABP_PlaceableLight_C*>           Lights;                                            // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class ABP_PlaceableStaticProp_C*>      MaterialStructures;                                // 0x0418(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         ActionActors;                                      // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class ABP_Switch_C*>                   Switches;                                          // 0x0438(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class UClass*>                         TargetMaterialOverwrites;                          // 0x0448(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	E_WorldSettingstabStates                      MenuState;                                         // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UEditableTextBox*>               AllTransformInputFields;                           // 0x0460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void ResetScale();
@@ -115,48 +115,48 @@ public:
 	}
 };
 static_assert(alignof(UWB_WorldSettingsTab_C) == 0x000008, "Wrong alignment on UWB_WorldSettingsTab_C");
-static_assert(sizeof(UWB_WorldSettingsTab_C) == 0x000450, "Wrong size on UWB_WorldSettingsTab_C");
-static_assert(offsetof(UWB_WorldSettingsTab_C, UberGraphFrame_WB_WorldSettingsTab_C) == 0x0002D8, "Member 'UWB_WorldSettingsTab_C::UberGraphFrame_WB_WorldSettingsTab_C' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, HorizontalBoxScale) == 0x0002E0, "Member 'UWB_WorldSettingsTab_C::HorizontalBoxScale' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, LocationIcon) == 0x0002E8, "Member 'UWB_WorldSettingsTab_C::LocationIcon' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, LocationX) == 0x0002F0, "Member 'UWB_WorldSettingsTab_C::LocationX' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, LocationY) == 0x0002F8, "Member 'UWB_WorldSettingsTab_C::LocationY' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, LocationZ) == 0x000300, "Member 'UWB_WorldSettingsTab_C::LocationZ' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, PositionresetButton) == 0x000308, "Member 'UWB_WorldSettingsTab_C::PositionresetButton' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, RotationImage) == 0x000310, "Member 'UWB_WorldSettingsTab_C::RotationImage' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, RotationResetButton) == 0x000318, "Member 'UWB_WorldSettingsTab_C::RotationResetButton' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, RotationX) == 0x000320, "Member 'UWB_WorldSettingsTab_C::RotationX' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, RotationY) == 0x000328, "Member 'UWB_WorldSettingsTab_C::RotationY' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, RotationZ) == 0x000330, "Member 'UWB_WorldSettingsTab_C::RotationZ' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleIcon) == 0x000338, "Member 'UWB_WorldSettingsTab_C::ScaleIcon' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleResetButton) == 0x000340, "Member 'UWB_WorldSettingsTab_C::ScaleResetButton' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleX) == 0x000348, "Member 'UWB_WorldSettingsTab_C::ScaleX' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleY) == 0x000350, "Member 'UWB_WorldSettingsTab_C::ScaleY' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleZ) == 0x000358, "Member 'UWB_WorldSettingsTab_C::ScaleZ' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, TransformBox) == 0x000360, "Member 'UWB_WorldSettingsTab_C::TransformBox' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, UniformRotationButton) == 0x000368, "Member 'UWB_WorldSettingsTab_C::UniformRotationButton' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, UniformScaleButton) == 0x000370, "Member 'UWB_WorldSettingsTab_C::UniformScaleButton' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, UniformTransformButton) == 0x000378, "Member 'UWB_WorldSettingsTab_C::UniformTransformButton' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_ActionTab) == 0x000380, "Member 'UWB_WorldSettingsTab_C::WB_ActionTab' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_LightColorPopup) == 0x000388, "Member 'UWB_WorldSettingsTab_C::WB_LightColorPopup' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_LightColorTab) == 0x000390, "Member 'UWB_WorldSettingsTab_C::WB_LightColorTab' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_MaterialChangeTab) == 0x000398, "Member 'UWB_WorldSettingsTab_C::WB_MaterialChangeTab' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_MaterialListPopup) == 0x0003A0, "Member 'UWB_WorldSettingsTab_C::WB_MaterialListPopup' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_PropTab) == 0x0003A8, "Member 'UWB_WorldSettingsTab_C::WB_PropTab' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_SwitchConnectionsTab) == 0x0003B0, "Member 'UWB_WorldSettingsTab_C::WB_SwitchConnectionsTab' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, WB_SwitchInfoTab) == 0x0003B8, "Member 'UWB_WorldSettingsTab_C::WB_SwitchInfoTab' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, NeedsUniformScale) == 0x0003C0, "Member 'UWB_WorldSettingsTab_C::NeedsUniformScale' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, UseWorldSpace) == 0x0003C1, "Member 'UWB_WorldSettingsTab_C::UseWorldSpace' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, MinTargetActorScale) == 0x0003C8, "Member 'UWB_WorldSettingsTab_C::MinTargetActorScale' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, MaxTargetActorScale) == 0x0003D0, "Member 'UWB_WorldSettingsTab_C::MaxTargetActorScale' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, Props) == 0x0003D8, "Member 'UWB_WorldSettingsTab_C::Props' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, Lights) == 0x0003E8, "Member 'UWB_WorldSettingsTab_C::Lights' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, MaterialStructures) == 0x0003F8, "Member 'UWB_WorldSettingsTab_C::MaterialStructures' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, ActionActors) == 0x000408, "Member 'UWB_WorldSettingsTab_C::ActionActors' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, Switches) == 0x000418, "Member 'UWB_WorldSettingsTab_C::Switches' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, TargetMaterialOverwrites) == 0x000428, "Member 'UWB_WorldSettingsTab_C::TargetMaterialOverwrites' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, MenuState) == 0x000438, "Member 'UWB_WorldSettingsTab_C::MenuState' has a wrong offset!");
-static_assert(offsetof(UWB_WorldSettingsTab_C, AllTransformInputFields) == 0x000440, "Member 'UWB_WorldSettingsTab_C::AllTransformInputFields' has a wrong offset!");
+static_assert(sizeof(UWB_WorldSettingsTab_C) == 0x000470, "Wrong size on UWB_WorldSettingsTab_C");
+static_assert(offsetof(UWB_WorldSettingsTab_C, UberGraphFrame_WB_WorldSettingsTab_C) == 0x0002F8, "Member 'UWB_WorldSettingsTab_C::UberGraphFrame_WB_WorldSettingsTab_C' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, HorizontalBoxScale) == 0x000300, "Member 'UWB_WorldSettingsTab_C::HorizontalBoxScale' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, LocationIcon) == 0x000308, "Member 'UWB_WorldSettingsTab_C::LocationIcon' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, LocationX) == 0x000310, "Member 'UWB_WorldSettingsTab_C::LocationX' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, LocationY) == 0x000318, "Member 'UWB_WorldSettingsTab_C::LocationY' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, LocationZ) == 0x000320, "Member 'UWB_WorldSettingsTab_C::LocationZ' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, PositionresetButton) == 0x000328, "Member 'UWB_WorldSettingsTab_C::PositionresetButton' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, RotationImage) == 0x000330, "Member 'UWB_WorldSettingsTab_C::RotationImage' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, RotationResetButton) == 0x000338, "Member 'UWB_WorldSettingsTab_C::RotationResetButton' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, RotationX) == 0x000340, "Member 'UWB_WorldSettingsTab_C::RotationX' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, RotationY) == 0x000348, "Member 'UWB_WorldSettingsTab_C::RotationY' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, RotationZ) == 0x000350, "Member 'UWB_WorldSettingsTab_C::RotationZ' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleIcon) == 0x000358, "Member 'UWB_WorldSettingsTab_C::ScaleIcon' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleResetButton) == 0x000360, "Member 'UWB_WorldSettingsTab_C::ScaleResetButton' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleX) == 0x000368, "Member 'UWB_WorldSettingsTab_C::ScaleX' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleY) == 0x000370, "Member 'UWB_WorldSettingsTab_C::ScaleY' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, ScaleZ) == 0x000378, "Member 'UWB_WorldSettingsTab_C::ScaleZ' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, TransformBox) == 0x000380, "Member 'UWB_WorldSettingsTab_C::TransformBox' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, UniformRotationButton) == 0x000388, "Member 'UWB_WorldSettingsTab_C::UniformRotationButton' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, UniformScaleButton) == 0x000390, "Member 'UWB_WorldSettingsTab_C::UniformScaleButton' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, UniformTransformButton) == 0x000398, "Member 'UWB_WorldSettingsTab_C::UniformTransformButton' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_ActionTab) == 0x0003A0, "Member 'UWB_WorldSettingsTab_C::WB_ActionTab' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_LightColorPopup) == 0x0003A8, "Member 'UWB_WorldSettingsTab_C::WB_LightColorPopup' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_LightColorTab) == 0x0003B0, "Member 'UWB_WorldSettingsTab_C::WB_LightColorTab' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_MaterialChangeTab) == 0x0003B8, "Member 'UWB_WorldSettingsTab_C::WB_MaterialChangeTab' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_MaterialListPopup) == 0x0003C0, "Member 'UWB_WorldSettingsTab_C::WB_MaterialListPopup' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_PropTab) == 0x0003C8, "Member 'UWB_WorldSettingsTab_C::WB_PropTab' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_SwitchConnectionsTab) == 0x0003D0, "Member 'UWB_WorldSettingsTab_C::WB_SwitchConnectionsTab' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, WB_SwitchInfoTab) == 0x0003D8, "Member 'UWB_WorldSettingsTab_C::WB_SwitchInfoTab' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, NeedsUniformScale) == 0x0003E0, "Member 'UWB_WorldSettingsTab_C::NeedsUniformScale' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, UseWorldSpace) == 0x0003E1, "Member 'UWB_WorldSettingsTab_C::UseWorldSpace' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, MinTargetActorScale) == 0x0003E8, "Member 'UWB_WorldSettingsTab_C::MinTargetActorScale' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, MaxTargetActorScale) == 0x0003F0, "Member 'UWB_WorldSettingsTab_C::MaxTargetActorScale' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, Props) == 0x0003F8, "Member 'UWB_WorldSettingsTab_C::Props' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, Lights) == 0x000408, "Member 'UWB_WorldSettingsTab_C::Lights' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, MaterialStructures) == 0x000418, "Member 'UWB_WorldSettingsTab_C::MaterialStructures' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, ActionActors) == 0x000428, "Member 'UWB_WorldSettingsTab_C::ActionActors' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, Switches) == 0x000438, "Member 'UWB_WorldSettingsTab_C::Switches' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, TargetMaterialOverwrites) == 0x000448, "Member 'UWB_WorldSettingsTab_C::TargetMaterialOverwrites' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, MenuState) == 0x000458, "Member 'UWB_WorldSettingsTab_C::MenuState' has a wrong offset!");
+static_assert(offsetof(UWB_WorldSettingsTab_C, AllTransformInputFields) == 0x000460, "Member 'UWB_WorldSettingsTab_C::AllTransformInputFields' has a wrong offset!");
 
 }
 

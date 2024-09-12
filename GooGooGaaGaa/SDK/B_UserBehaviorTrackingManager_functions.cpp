@@ -279,9 +279,9 @@ void UB_UserBehaviorTrackingManager_C::OnRequestFail(class UVaRestRequestJSON* R
 // Function B_UserBehaviorTrackingManager.B_UserBehaviorTrackingManager_C.SetEnabled
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsEnabled                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsEnabled_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_UserBehaviorTrackingManager_C::SetEnabled(bool Param_IsEnabled)
+void UB_UserBehaviorTrackingManager_C::SetEnabled(bool IsEnabled_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -290,7 +290,7 @@ void UB_UserBehaviorTrackingManager_C::SetEnabled(bool Param_IsEnabled)
 
 	Params::B_UserBehaviorTrackingManager_C_SetEnabled Parms{};
 
-	Parms.Param_IsEnabled = Param_IsEnabled;
+	Parms.IsEnabled_0 = IsEnabled_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

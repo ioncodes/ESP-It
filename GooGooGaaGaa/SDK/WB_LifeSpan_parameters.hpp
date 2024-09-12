@@ -15,19 +15,19 @@ namespace SDK::Params
 {
 
 // Function WB_LifeSpan.WB_LifeSpan_C.GetText_0
-// 0x0038 (0x0038 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_LifeSpan_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0018)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_LifeSpan_C_GetText_0) == 0x000008, "Wrong alignment on WB_LifeSpan_C_GetText_0");
-static_assert(sizeof(WB_LifeSpan_C_GetText_0) == 0x000038, "Wrong size on WB_LifeSpan_C_GetText_0");
+static_assert(sizeof(WB_LifeSpan_C_GetText_0) == 0x000028, "Wrong size on WB_LifeSpan_C_GetText_0");
 static_assert(offsetof(WB_LifeSpan_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_LifeSpan_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LifeSpan_C_GetText_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_LifeSpan_C_GetText_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LifeSpan_C_GetText_0, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000030, "Member 'WB_LifeSpan_C_GetText_0::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LifeSpan_C_GetText_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WB_LifeSpan_C_GetText_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LifeSpan_C_GetText_0, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000020, "Member 'WB_LifeSpan_C_GetText_0::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "GeometryScriptingCore_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -44,10 +44,24 @@ static_assert(offsetof(UGeometryScriptDebug, Messages) == 0x000028, "Member 'UGe
 class UGeometryScriptLibrary_CollisionFunctions final : public UBlueprintFunctionLibrary
 {
 public:
+	static void ApproximateConvexHullsWithSimplerCollisionShapes(struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptConvexHullApproximationOptions& ApproximateOptions, bool* bHasApproximated, class UGeometryScriptDebug* Debug);
+	static void CombineSimpleCollision(struct FGeometryScriptSimpleCollision& CollisionToUpdate, const struct FGeometryScriptSimpleCollision& AppendCollision, class UGeometryScriptDebug* Debug);
+	static struct FGeometryScriptSphereCovering ComputeNegativeSpace(const struct FGeometryScriptDynamicMeshBVH& MeshBVH, const struct FComputeNegativeSpaceOptions& NegativeSpaceOptions, class UGeometryScriptDebug* Debug);
+	static TArray<struct FSphere> Conv_GeometryScriptSphereCoveringToSphereArray(const struct FGeometryScriptSphereCovering& SphereCovering);
+	static struct FGeometryScriptSphereCovering Conv_SphereArrayToGeometryScriptSphereCovering(const TArray<struct FSphere>& Spheres);
+	static struct FGeometryScriptSimpleCollision GetSimpleCollisionFromComponent(class UPrimitiveComponent* Component, class UGeometryScriptDebug* Debug);
+	static struct FGeometryScriptSimpleCollision GetSimpleCollisionFromStaticMesh(class UStaticMesh* StaticMesh, class UGeometryScriptDebug* Debug);
+	static int32 GetSimpleCollisionShapeCount(const struct FGeometryScriptSimpleCollision& SimpleCollision);
+	static struct FGeometryScriptSimpleCollision MergeSimpleCollisionShapes(const struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptMergeSimpleCollisionOptions& MergeOptions, bool* bHasMerged, class UGeometryScriptDebug* Debug);
 	static void ResetDynamicMeshCollision(class UDynamicMeshComponent* Component, bool bEmitTransaction, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetDynamicMeshCollisionFromMesh(class UDynamicMesh* FromDynamicMesh, class UDynamicMeshComponent* ToDynamicMeshComponent, const struct FGeometryScriptCollisionFromMeshOptions& Options, class UGeometryScriptDebug* Debug);
-	static void SetStaticMeshCollisionFromComponent(class UStaticMesh* StaticMeshAsset, class UPrimitiveComponent* SourceComponent, const struct FGeometryScriptSetSimpleCollisionOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* SetStaticMeshCollisionFromMesh(class UDynamicMesh* FromDynamicMesh, class UStaticMesh* ToStaticMeshAsset, const struct FGeometryScriptCollisionFromMeshOptions& Options, class UGeometryScriptDebug* Debug);
+	static void SetSimpleCollisionOfDynamicMeshComponent(const struct FGeometryScriptSimpleCollision& SimpleCollision, class UDynamicMeshComponent* DynamicMeshComponent, const struct FGeometryScriptSetSimpleCollisionOptions& Options, class UGeometryScriptDebug* Debug);
+	static void SetSimpleCollisionOfStaticMesh(const struct FGeometryScriptSimpleCollision& SimpleCollision, class UStaticMesh* StaticMesh, const struct FGeometryScriptSetSimpleCollisionOptions& Options, const struct FGeometryScriptSetStaticMeshCollisionOptions& StaticMeshCollisionOptions, class UGeometryScriptDebug* Debug);
+	static void SetStaticMeshCollisionFromComponent(class UStaticMesh* StaticMeshAsset, class UPrimitiveComponent* SourceComponent, const struct FGeometryScriptSetSimpleCollisionOptions& Options, const struct FGeometryScriptSetStaticMeshCollisionOptions& StaticMeshCollisionOptions, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetStaticMeshCollisionFromMesh(class UDynamicMesh* FromDynamicMesh, class UStaticMesh* ToStaticMeshAsset, const struct FGeometryScriptCollisionFromMeshOptions& Options, const struct FGeometryScriptSetStaticMeshCollisionOptions& StaticMeshCollisionOptions, class UGeometryScriptDebug* Debug);
+	static void SimplifyConvexHulls(struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptConvexHullSimplificationOptions& SimplifyOptions, bool* bHasSimplified, class UGeometryScriptDebug* Debug);
+	static bool StaticMeshHasCustomizedCollision(class UStaticMesh* StaticMeshAsset);
+	static struct FGeometryScriptSimpleCollision TransformSimpleCollisionShapes(const struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FTransform& Transform, const struct FGeometryScriptTransformCollisionOptions& TransformOptions, bool* bSuccess, class UGeometryScriptDebug* Debug);
 
 public:
 	static class UClass* StaticClass()
@@ -113,29 +127,29 @@ public:
 	static void DuplicateVectorList(const struct FGeometryScriptVectorList& VectorList, struct FGeometryScriptVectorList* DuplicateList);
 	static void ExtractColorListChannel(const struct FGeometryScriptColorList& ColorList, struct FGeometryScriptScalarList* ScalarList, int32 ChannelIndex);
 	static void ExtractColorListChannels(const struct FGeometryScriptColorList& ColorList, struct FGeometryScriptVectorList* VectorList, int32 XChannelIndex, int32 YChannelIndex, int32 ZChannelIndex);
-	static struct FLinearColor GetColorListItem(const struct FGeometryScriptColorList& ColorList, int32 Param_Index, bool* bIsValidIndex);
+	static struct FLinearColor GetColorListItem(const struct FGeometryScriptColorList& ColorList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetColorListLastIndex(const struct FGeometryScriptColorList& ColorList);
 	static int32 GetColorListLength(const struct FGeometryScriptColorList& ColorList);
-	static int32 GetIndexListItem(const struct FGeometryScriptIndexList& IndexList, int32 Param_Index, bool* bIsValidIndex);
+	static int32 GetIndexListItem(const struct FGeometryScriptIndexList& IndexList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetIndexListLastIndex(const struct FGeometryScriptIndexList& IndexList);
 	static int32 GetIndexListLength(const struct FGeometryScriptIndexList& IndexList);
-	static double GetScalarListItem(const struct FGeometryScriptScalarList& ScalarList, int32 Param_Index, bool* bIsValidIndex);
+	static double GetScalarListItem(const struct FGeometryScriptScalarList& ScalarList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetScalarListLastIndex(const struct FGeometryScriptScalarList& ScalarList);
 	static int32 GetScalarListLength(const struct FGeometryScriptScalarList& ScalarList);
 	static struct FIntVector GetTriangleListItem(const struct FGeometryScriptTriangleList& TriangleList, int32 Triangle, bool* bIsValidTriangle);
 	static int32 GetTriangleListLastTriangle(const struct FGeometryScriptTriangleList& TriangleList);
 	static int32 GetTriangleListLength(const struct FGeometryScriptTriangleList& TriangleList);
-	static struct FVector2D GetUVListItem(const struct FGeometryScriptUVList& UVList, int32 Param_Index, bool* bIsValidIndex);
+	static struct FVector2D GetUVListItem(const struct FGeometryScriptUVList& UVList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetUVListLastIndex(const struct FGeometryScriptUVList& UVList);
 	static int32 GetUVListLength(const struct FGeometryScriptUVList& UVList);
-	static struct FVector GetVectorListItem(const struct FGeometryScriptVectorList& VectorList, int32 Param_Index, bool* bIsValidIndex);
+	static struct FVector GetVectorListItem(const struct FGeometryScriptVectorList& VectorList, int32 Index_0, bool* bIsValidIndex);
 	static int32 GetVectorListLastIndex(const struct FGeometryScriptVectorList& VectorList);
 	static int32 GetVectorListLength(const struct FGeometryScriptVectorList& VectorList);
-	static void SetColorListItem(struct FGeometryScriptColorList& ColorList, int32 Param_Index, const struct FLinearColor& NewColor, bool* bIsValidIndex);
-	static void SetIndexListItem(struct FGeometryScriptIndexList& IndexList, int32 Param_Index, int32 NewValue, bool* bIsValidIndex);
-	static void SetScalarListItem(struct FGeometryScriptScalarList& ScalarList, int32 Param_Index, double NewValue, bool* bIsValidIndex);
-	static void SetUVListItem(struct FGeometryScriptUVList& UVList, int32 Param_Index, const struct FVector2D& NewUV, bool* bIsValidIndex);
-	static void SetVectorListItem(struct FGeometryScriptVectorList& VectorList, int32 Param_Index, const struct FVector& NewValue, bool* bIsValidIndex);
+	static void SetColorListItem(struct FGeometryScriptColorList& ColorList, int32 Index_0, const struct FLinearColor& NewColor, bool* bIsValidIndex);
+	static void SetIndexListItem(struct FGeometryScriptIndexList& IndexList, int32 Index_0, int32 NewValue, bool* bIsValidIndex);
+	static void SetScalarListItem(struct FGeometryScriptScalarList& ScalarList, int32 Index_0, double NewValue, bool* bIsValidIndex);
+	static void SetUVListItem(struct FGeometryScriptUVList& UVList, int32 Index_0, const struct FVector2D& NewUV, bool* bIsValidIndex);
+	static void SetVectorListItem(struct FGeometryScriptVectorList& VectorList, int32 Index_0, const struct FVector& NewValue, bool* bIsValidIndex);
 
 public:
 	static class UClass* StaticClass()
@@ -155,11 +169,13 @@ static_assert(sizeof(UGeometryScriptLibrary_ListUtilityFunctions) == 0x000028, "
 class UGeometryScriptLibrary_StaticMeshFunctions final : public UBlueprintFunctionLibrary
 {
 public:
+	static bool CheckStaticMeshHasAvailableLOD(class UStaticMesh* StaticMeshAsset, const struct FGeometryScriptMeshReadLOD& RequestedLOD, EGeometryScriptSearchOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshFromSkeletalMesh(class USkeletalMesh* FromSkeletalMeshAsset, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromAssetOptions& AssetOptions, const struct FGeometryScriptMeshReadLOD& RequestedLOD, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshFromStaticMesh(class UStaticMesh* FromStaticMeshAsset, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromAssetOptions& AssetOptions, const struct FGeometryScriptMeshReadLOD& RequestedLOD, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshToSkeletalMesh(class UDynamicMesh* FromDynamicMesh, class USkeletalMesh* ToSkeletalMeshAsset, const struct FGeometryScriptCopyMeshToAssetOptions& Options, const struct FGeometryScriptMeshWriteLOD& TargetLod, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshToStaticMesh(class UDynamicMesh* FromDynamicMesh, class UStaticMesh* ToStaticMeshAsset, const struct FGeometryScriptCopyMeshToAssetOptions& Options, const struct FGeometryScriptMeshWriteLOD& TargetLod, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
-	static void GetSectionMaterialListFromStaticMesh(class UStaticMesh* FromStaticMeshAsset, const struct FGeometryScriptMeshReadLOD& RequestedLOD, TArray<class UMaterialInterface*>* MaterialList, TArray<int32>* MaterialIndex, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
+	static int32 GetNumStaticMeshLODsOfType(class UStaticMesh* StaticMeshAsset, EGeometryScriptLODType LODType);
+	static void GetSectionMaterialListFromStaticMesh(class UStaticMesh* FromStaticMeshAsset, const struct FGeometryScriptMeshReadLOD& RequestedLOD, TArray<class UMaterialInterface*>* MaterialList, TArray<int32>* MaterialIndex, TArray<class FName>* MaterialSlotNames, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 
 public:
 	static class UClass* StaticClass()
@@ -182,8 +198,10 @@ public:
 	static TArray<class UTexture2D*> BakeTexture(class UDynamicMesh* TargetMesh, const struct FTransform& TargetTransform, const struct FGeometryScriptBakeTargetMeshOptions& TargetOptions, class UDynamicMesh* SourceMesh, const struct FTransform& SourceTransform, const struct FGeometryScriptBakeSourceMeshOptions& SourceOptions, const TArray<struct FGeometryScriptBakeTypeOptions>& BakeTypes, const struct FGeometryScriptBakeTextureOptions& BakeOptions, class UGeometryScriptDebug* Debug);
 	static struct FGeometryScriptRenderCaptureTextures BakeTextureFromRenderCaptures(class UDynamicMesh* TargetMesh, const struct FTransform& TargetLocalToWorld, const struct FGeometryScriptBakeTargetMeshOptions& TargetOptions, const TArray<class AActor*>& SourceActors, const struct FGeometryScriptBakeRenderCaptureOptions& BakeOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* BakeVertex(class UDynamicMesh* TargetMesh, const struct FTransform& TargetTransform, const struct FGeometryScriptBakeTargetMeshOptions& TargetOptions, class UDynamicMesh* SourceMesh, const struct FTransform& SourceTransform, const struct FGeometryScriptBakeSourceMeshOptions& SourceOptions, const struct FGeometryScriptBakeOutputType& BakeTypes, const struct FGeometryScriptBakeVertexOptions& BakeOptions, class UGeometryScriptDebug* Debug);
+	static int32 ConvertBakeResolutionToInt(EGeometryScriptBakeResolution BakeResolution);
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeAmbientOcclusion(int32 OcclusionRays, float MaxDistance, float SpreadAngle, float BiasAngle);
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeBentNormal(int32 OcclusionRays, float MaxDistance, float SpreadAngle);
+	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeConstant(float Value);
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeCurvature(EGeometryScriptBakeCurvatureTypeMode CurvatureType, EGeometryScriptBakeCurvatureColorMode ColorMapping, float ColorRangeMultiplier, float MinRangeMultiplier, EGeometryScriptBakeCurvatureClampMode Clamping);
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeFaceNormal();
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeMaterialID();
@@ -217,7 +235,7 @@ public:
 	static class UDynamicMesh* AddVertexToMesh(class UDynamicMesh* TargetMesh, const struct FVector& NewPosition, int32* NewVertexIndex, bool bDeferChangeNotifications);
 	static class UDynamicMesh* AddVerticesToMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptVectorList& NewPositionsList, struct FGeometryScriptIndexList* NewIndicesList, bool bDeferChangeNotifications);
 	static class UDynamicMesh* AppendBuffersToMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSimpleMeshBuffers& Buffers, struct FGeometryScriptIndexList* NewTriangleIndicesList, int32 MaterialID, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* AppendMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* Param_AppendMesh, const struct FTransform& AppendTransform, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh_0, const struct FTransform& AppendTransform, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendMeshRepeated(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh, const struct FTransform& AppendTransform, int32 RepeatCount, bool bApplyTransformToFirstInstance, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendMeshTransformed(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh, const TArray<struct FTransform>& AppendTransforms, const struct FTransform& ConstantTransform, bool bConstantTransformIsRelative, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* DeleteSelectedTrianglesFromMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, int32* NumDeleted, bool bDeferChangeNotifications);
@@ -412,6 +430,7 @@ public:
 	static int32 GetTriangleMaterialID(class UDynamicMesh* TargetMesh, int32 TriangleID, bool* bIsValidTriangle);
 	static class UDynamicMesh* GetTrianglesByMaterialID(class UDynamicMesh* TargetMesh, int32 MaterialID, struct FGeometryScriptIndexList* TriangleIDList, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RemapMaterialIDs(class UDynamicMesh* TargetMesh, int32 FromMaterialID, int32 ToMaterialID, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RemapToNewMaterialIDsByMaterial(class UDynamicMesh* TargetMesh, const TArray<class UMaterialInterface*>& FromMaterialList, const TArray<class UMaterialInterface*>& ToMaterialList, int32 MissingMaterialID, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetAllTriangleMaterialIDs(class UDynamicMesh* TargetMesh, const struct FGeometryScriptIndexList& TriangleMaterialIDList, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMaterialIDForMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, int32 MaterialID, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMaterialIDOnTriangles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptIndexList& TriangleIDList, int32 MaterialID, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
@@ -549,15 +568,18 @@ public:
 	static class UDynamicMesh* AppendRevolvePolygon(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolygonVertices, const struct FGeometryScriptRevolveOptions& RevolveOptions, float Radius, int32 Steps, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendRoundRectangle_Compatibility_5_0(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float DimensionX, float DimensionY, float CornerRadius, int32 StepsWidth, int32 StepsHeight, int32 StepsRound, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendRoundRectangleXY(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float DimensionX, float DimensionY, float CornerRadius, int32 StepsWidth, int32 StepsHeight, int32 StepsRound, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendSimpleCollisionShapes(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptSimpleCollisionTriangulationOptions& TriangulationOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSimpleExtrudePolygon(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolygonVertices, float Height, int32 HeightSteps, bool bCapped, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSimpleSweptPolygon(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolygonVertices, const TArray<struct FVector>& SweepPath, bool bLoop, bool bCapped, float StartScale, float EndScale, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSphereBox(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float Radius, int32 StepsX, int32 StepsY, int32 StepsZ, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendSphereCovering(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FGeometryScriptSphereCovering& SphereCovering, int32 StepsX, int32 StepsY, int32 StepsZ, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSphereLatLong(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float Radius, int32 StepsPhi, int32 StepsTheta, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSpiralRevolvePolygon(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolygonVertices, const struct FGeometryScriptRevolveOptions& RevolveOptions, float Radius, int32 Steps, float RisePerRevolution, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSweepPolygon(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolygonVertices, const TArray<struct FTransform>& SweepPath, bool bLoop, bool bCapped, float StartScale, float EndScale, float RotationAngleDeg, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendSweepPolyline(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolylineVertices, const TArray<struct FTransform>& SweepPath, const TArray<float>& PolylineTexParamU, const TArray<float>& SweepPathTexParamV, bool bLoop, float StartScale, float EndScale, float RotationAngleDeg, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendTorus(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FGeometryScriptRevolveOptions& RevolveOptions, float MajorRadius, float MinorRadius, int32 MajorSteps, int32 MinorSteps, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendTriangulatedPolygon(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& PolygonVertices, bool bAllowSelfIntersections, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendTriangulatedPolygon3D(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector>& PolygonVertices3D, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendVoronoiDiagram2D(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector2D>& VoronoiSites, const struct FGeometryScriptVoronoiOptions& VoronoiOptions, class UGeometryScriptDebug* Debug);
 
 public:
@@ -666,6 +688,7 @@ public:
 	static class UDynamicMesh* FillAllMeshHoles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptFillHolesOptions& FillOptions, int32* NumFilledHoles, int32* NumFailedHoleFills, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RemoveHiddenTriangles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptRemoveHiddenTrianglesOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RemoveSmallComponents(class UDynamicMesh* TargetMesh, const struct FGeometryScriptRemoveSmallComponentOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RemoveUnusedVertices(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RepairMeshDegenerateGeometry(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDegenerateTriangleOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ResolveMeshTJunctions(class UDynamicMesh* TargetMesh, const struct FGeometryScriptResolveTJunctionOptions& ResolveOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SplitMeshBowties(class UDynamicMesh* TargetMesh, bool bMeshBowties, bool bAttributeBowties, class UGeometryScriptDebug* Debug);
@@ -691,6 +714,8 @@ class UGeometryScriptLibrary_MeshSamplingFunctions final : public UBlueprintFunc
 public:
 	static class UDynamicMesh* ComputeNonUniformPointSampling(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshPointSamplingOptions& Options, const struct FGeometryScriptNonUniformPointSamplingOptions& NonUniformOptions, TArray<struct FTransform>* Samples, TArray<double>* SampleRadii, struct FGeometryScriptIndexList* TriangleIDs, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ComputePointSampling(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshPointSamplingOptions& Options, TArray<struct FTransform>* Samples, struct FGeometryScriptIndexList* TriangleIDs, class UGeometryScriptDebug* Debug);
+	static void ComputeRenderCaptureCamerasForBox(TArray<struct FGeometryScriptRenderCaptureCamera>* Cameras, const struct FBox& Box, const struct FGeometryScriptRenderCaptureCamerasForBoxOptions& Options, class UGeometryScriptDebug* Debug);
+	static void ComputeRenderCapturePointSampling(TArray<struct FTransform>* Samples, const TArray<class AActor*>& Actors, const TArray<struct FGeometryScriptRenderCaptureCamera>& Cameras, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ComputeVertexWeightedPointSampling(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshPointSamplingOptions& Options, const struct FGeometryScriptNonUniformPointSamplingOptions& NonUniformOptions, const struct FGeometryScriptScalarList& VertexWeights, TArray<struct FTransform>* Samples, TArray<double>* SampleRadii, struct FGeometryScriptIndexList* TriangleIDs, class UGeometryScriptDebug* Debug);
 
 public:
@@ -799,7 +824,7 @@ public:
 	static class UDynamicMesh* IsBVHValidForMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDynamicMeshBVH& TestBVH, bool* bIsValid, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* IsPointInsideMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& QueryPoint, const struct FGeometryScriptSpatialQueryOptions& Options, bool* bIsInside, EGeometryScriptContainmentOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RebuildBVHForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& UpdateBVH, bool bOnlyIfInvalid, class UGeometryScriptDebug* Debug);
-	static void ResetBVH(struct FGeometryScriptDynamicMeshBVH& Param_ResetBVH);
+	static void ResetBVH(struct FGeometryScriptDynamicMeshBVH& ResetBVH_0);
 	static class UDynamicMesh* SelectMeshElementsInBoxWithBVH(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FBox& QueryBox, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptMeshSelection* Selection, EGeometryScriptMeshSelectionType SelectionType, int32 MinNumTrianglePoints, class UGeometryScriptDebug* Debug);
 
 public:
@@ -870,6 +895,7 @@ static_assert(sizeof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000028,
 class UGeometryScriptLibrary_MeshUVFunctions final : public UBlueprintFunctionLibrary
 {
 public:
+	static class UDynamicMesh* AddUVElementToMesh(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FVector2D& NewUVPosition, int32* NewUVElementID, bool* bIsValidUVSet, bool bDeferChangeNotifications);
 	static class UDynamicMesh* AutoGeneratePatchBuilderMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptPatchBuilderOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AutoGenerateXAtlasMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptXAtlasOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ComputeMeshLocalUVParam(class UDynamicMesh* TargetMesh, const struct FVector& CenterPoint, int32 CenterPointTriangleID, TArray<int32>* VertexIDs, TArray<struct FVector2D>* VertexUVs, double Radius, bool bUseInterpolatedNormal, const struct FVector& TangentYDirection, double UVRotationDeg, class UGeometryScriptDebug* Debug);
@@ -877,12 +903,16 @@ public:
 	static class UDynamicMesh* CopyMeshUVLayerToMesh(class UDynamicMesh* CopyFromMesh, int32 UvSetIndex, class UDynamicMesh*& CopyToUVMesh, class UDynamicMesh** CopyToUVMeshOut, bool* bInvalidTopology, bool* bIsValidUVSet, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyUVSet(class UDynamicMesh* TargetMesh, int32 FromUVSet, int32 ToUVSet, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* GetMeshPerVertexUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, struct FGeometryScriptUVList* UVList, bool* bIsValidUVSet, bool* bHasVertexIDGaps, bool* bHasSplitUVs, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetMeshTriangleUVElementIDs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, struct FIntVector* TriangleUVElements, bool* bHaveValidUVs);
+	static class UDynamicMesh* GetMeshUVElementPosition(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 ElementID, struct FVector2D* UVPosition, bool* bIsValidElementID);
 	static class UDynamicMesh* GetMeshUVSizeInfo(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptMeshSelection& Selection, double* MeshArea, double* UVArea, struct FBox* MeshBounds, struct FBox2D* UVBounds, bool* bIsValidUVSet, bool* bFoundUnsetUVs, bool bOnlyIncludeValidUVTris, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RecomputeMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptRecomputeUVsOptions& Options, const struct FGeometryScriptMeshSelection& Selection, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RepackMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptRepackUVsOptions& RepackOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* RotateMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, float RotationAngle, const struct FVector2D& RotationOrigin, const struct FGeometryScriptMeshSelection& Selection, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ScaleMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FVector2D& Scale, const struct FVector2D& ScaleOrigin, const struct FGeometryScriptMeshSelection& Selection, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshTriangleUVElementIDs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, const struct FIntVector& TriangleUVElements, bool* bIsValidTriangle, bool bDeferChangeNotifications);
 	static class UDynamicMesh* SetMeshTriangleUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, const struct FGeometryScriptUVTriangle& UVs, bool* bIsValidTriangle, bool bDeferChangeNotifications);
+	static class UDynamicMesh* SetMeshUVElementPosition(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 ElementID, const struct FVector2D& NewUVPosition, bool* bIsValidElementID, bool bDeferChangeNotifications);
 	static class UDynamicMesh* SetMeshUVsFromBoxProjection(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FTransform& BoxTransform, const struct FGeometryScriptMeshSelection& Selection, int32 MinIslandTriCount, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMeshUVsFromCylinderProjection(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FTransform& CylinderTransform, const struct FGeometryScriptMeshSelection& Selection, float SplitAngle, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMeshUVsFromPlanarProjection(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FTransform& PlaneTransform, const struct FGeometryScriptMeshSelection& Selection, class UGeometryScriptDebug* Debug);
@@ -911,9 +941,9 @@ public:
 	static class UDynamicMesh* ConvertMeshVertexColorsLinearToSRGB(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ConvertMeshVertexColorsSRGBToLinear(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* GetMeshPerVertexColors(class UDynamicMesh* TargetMesh, struct FGeometryScriptColorList* ColorList, bool* bIsValidColorSet, bool* bHasVertexIDGaps, bool bBlendSplitVertexValues);
-	static class UDynamicMesh* SetMeshConstantVertexColor(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bClearExisting, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshConstantVertexColor(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bClearExisting, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMeshPerVertexColors(class UDynamicMesh* TargetMesh, const struct FGeometryScriptColorList& VertexColorList, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* SetMeshSelectionVertexColor(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bCreateColorSeam, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshSelectionVertexColor(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bCreateColorSeam, class UGeometryScriptDebug* Debug);
 
 public:
 	static class UClass* StaticClass()
@@ -948,6 +978,34 @@ public:
 };
 static_assert(alignof(UGeometryScriptLibrary_MeshVoxelFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshVoxelFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshVoxelFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshVoxelFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_PointSetSamplingFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static void DownsamplePoints(const TArray<struct FVector>& Points, const struct FGeometryScriptPointPriorityOptions& Options, struct FGeometryScriptIndexList* DownsampledIndices, int32 KeepNumPoints, class UGeometryScriptDebug* Debug);
+	static void FlattenPoints(const TArray<struct FVector>& PointsIn3D, TArray<struct FVector2D>* PointsIn2D, const struct FGeometryScriptPointFlatteningOptions& Options);
+	static void GetPointsFromIndexList(const TArray<struct FVector>& AllPoints, const struct FGeometryScriptIndexList& Indices, TArray<struct FVector>* SelectedPoints);
+	static void KMeansClusterToArrays(const TArray<struct FVector>& Points, const struct FGeometryScriptPointClusteringOptions& Options, TArray<struct FGeometryScriptIndexList>* ClusterIDToLists);
+	static void KMeansClusterToIDs(const TArray<struct FVector>& Points, const struct FGeometryScriptPointClusteringOptions& Options, TArray<int32>* PointClusterIndices);
+	static struct FBox MakeBoundingBoxFromPoints(const TArray<struct FVector>& Points, double ExpandBy);
+	static void OffsetTransforms(TArray<struct FTransform>& Transforms, double Offset, const struct FVector& Direction, EGeometryScriptCoordinateSpace Space);
+	static void TransformsToPoints(const TArray<struct FTransform>& Transforms, TArray<struct FVector>* Points);
+	static void UnflattenPoints(const TArray<struct FVector2D>& PointsIn2D, TArray<struct FVector>* PointsIn3D, const struct FGeometryScriptPointFlatteningOptions& Options, double Height);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_PointSetSamplingFunctions">();
+	}
+	static class UGeometryScriptLibrary_PointSetSamplingFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_PointSetSamplingFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_PointSetSamplingFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_PointSetSamplingFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_PointSetSamplingFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_PointSetSamplingFunctions");
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1047,9 +1105,9 @@ public:
 	static double GetPolyPathArcLength(const struct FGeometryScriptPolyPath& PolyPath);
 	static int32 GetPolyPathLastIndex(const struct FGeometryScriptPolyPath& PolyPath);
 	static int32 GetPolyPathNumVertices(const struct FGeometryScriptPolyPath& PolyPath);
-	static struct FVector GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Param_Index, bool* bIsValidIndex);
-	static struct FVector GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Param_Index, bool* bIsValidIndex);
-	static void SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale);
+	static struct FVector GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
+	static struct FVector GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
+	static bool SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale);
 
 public:
 	static class UClass* StaticClass()
@@ -1072,6 +1130,7 @@ public:
 	static class UDynamicMesh* CopyCollisionMeshesFromObject(class UObject* FromObject, class UDynamicMesh* ToDynamicMesh, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, bool bUseComplexCollision, int32 SphereResolution, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshFromComponent(class USceneComponent* Component, class UDynamicMesh* ToDynamicMesh, const struct FGeometryScriptCopyMeshFromComponentOptions& Options, bool bTransformToWorld, struct FTransform* LocalToWorld, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
 	static class UDynamicMeshPool* CreateDynamicMeshPool();
+	static void DetermineMeshOcclusion(const TArray<class UDynamicMesh*>& SourceMeshes, const TArray<struct FTransform>& SourceMeshTransforms, TArray<bool>* OutMeshIsHidden, const TArray<class UDynamicMesh*>& TransparentMeshes, const TArray<struct FTransform>& TransparentMeshTransforms, TArray<bool>* OutTransparentMeshIsHidden, const TArray<class UDynamicMesh*>& OccludeMeshes, const TArray<struct FTransform>& OccludeMeshTransforms, const struct FGeometryScriptDetermineMeshOcclusionOptions& OcclusionOptions, class UGeometryScriptDebug* Debug);
 	static void SetComponentMaterialList(class UPrimitiveComponent* Component, const TArray<class UMaterialInterface*>& MaterialList, class UGeometryScriptDebug* Debug);
 
 public:

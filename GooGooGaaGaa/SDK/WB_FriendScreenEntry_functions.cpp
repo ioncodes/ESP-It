@@ -127,15 +127,15 @@ void UWB_FriendScreenEntry_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.CreateToolTips
+// Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.CreateTooltips
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_FriendScreenEntry_C::CreateToolTips()
+void UWB_FriendScreenEntry_C::CreateTooltips()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_FriendScreenEntry_C", "CreateToolTips");
+		Func = Class->GetFunction("WB_FriendScreenEntry_C", "CreateTooltips");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -158,26 +158,6 @@ void UWB_FriendScreenEntry_C::ExecuteUbergraph_WB_FriendScreenEntry(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.GetFriendName
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWB_FriendScreenEntry_C::GetFriendName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_FriendScreenEntry_C", "GetFriendName");
-
-	Params::WB_FriendScreenEntry_C_GetFriendName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -258,6 +238,26 @@ void UWB_FriendScreenEntry_C::SetButtons()
 		Func = Class->GetFunction("WB_FriendScreenEntry_C", "SetButtons");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_FriendScreenEntry.WB_FriendScreenEntry_C.SetFriendInfoValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UOnlineFriendRef*                 FriendRef                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWB_FriendScreenEntry_C::SetFriendInfoValue(class UOnlineFriendRef* FriendRef)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_FriendScreenEntry_C", "SetFriendInfoValue");
+
+	Params::WB_FriendScreenEntry_C_SetFriendInfoValue Parms{};
+
+	Parms.FriendRef = FriendRef;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

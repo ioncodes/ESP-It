@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "S_AchievementData_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "S_AchievementData_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -47,7 +47,7 @@ struct WB_AchievementItem_C_ExecuteUbergraph_WB_AchievementItem final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5631[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_AchievementData_C*                   K2Node_DynamicCast_AsB_Achievement_Data;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -75,92 +75,92 @@ static_assert(sizeof(WB_AchievementItem_C_OnListItemObjectSet) == 0x000008, "Wro
 static_assert(offsetof(WB_AchievementItem_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WB_AchievementItem_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
 
 // Function WB_AchievementItem.WB_AchievementItem_C.SetAchievementData
-// 0x0410 (0x0410 - 0x0000)
+// 0x03D0 (0x03D0 - 0x0000)
 struct WB_AchievementItem_C_SetAchievementData final
 {
 public:
-	struct FS_AchievementData                     Param_AchievementData;                             // 0x0000(0x0120)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          Completed;                                         // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5632[0x2];                                     // 0x0122(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0124(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5633[0xC];                                     // 0x0134(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0140(0x00D0)()
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0220(0x0050)(HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5634[0x7];                                     // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5635[0x6];                                     // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_GetStat_ResultValue;                      // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStat_ResultWasFound;                   // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5636[0x3];                                     // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_Select_Default;                             // 0x02A8(0x0014)()
-	int32                                         CallFunc_Min_ReturnValue;                          // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x02D0(0x0050)(HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0328(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0338(0x0018)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0358(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetAchievementStatus_bIsCompleted;        // 0x0361(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5637[0x6];                                     // 0x0362(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              CallFunc_GetAchievementStatus_CompletionDateTime;  // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetAchievementStatus_bIsHIdden;           // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5638[0x7];                                     // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_AsDate_DateTime_ReturnValue;              // 0x0378(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0390(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x03E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x03F0(0x0018)()
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_AchievementData                     AchievementData_0;                                 // 0x0000(0x0110)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          Completed;                                         // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0114(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_124[0xC];                                      // 0x0124(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0130(0x00D0)()
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0210(0x0048)(HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27A[0x6];                                      // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_GetStat_ResultValue;                      // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStat_ResultWasFound;                   // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_Select_Default;                             // 0x0290(0x0014)()
+	int32                                         CallFunc_Min_ReturnValue;                          // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x02B8(0x0048)(HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0308(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0318(0x0010)()
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetAchievementStatus_bIsCompleted;        // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33A[0x6];                                      // 0x033A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              CallFunc_GetAchievementStatus_CompletionDateTime;  // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetAchievementStatus_bIsHIdden;           // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_AsDate_DateTime_ReturnValue;              // 0x0350(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0360(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x03A8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x03B8(0x0010)()
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AchievementItem_C_SetAchievementData) == 0x000010, "Wrong alignment on WB_AchievementItem_C_SetAchievementData");
-static_assert(sizeof(WB_AchievementItem_C_SetAchievementData) == 0x000410, "Wrong size on WB_AchievementItem_C_SetAchievementData");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, Param_AchievementData) == 0x000000, "Member 'WB_AchievementItem_C_SetAchievementData::Param_AchievementData' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, Completed) == 0x000120, "Member 'WB_AchievementItem_C_SetAchievementData::Completed' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Not_PreBool_ReturnValue) == 0x000121, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_SelectColor_ReturnValue) == 0x000124, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_SlateBrush) == 0x000140, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000210, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000218, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_FormatArgumentData) == 0x000220, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000270, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetGameInstance_ReturnValue) == 0x000278, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_BooleanAND_ReturnValue) == 0x000280, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_AsB_Game_Instance) == 0x000288, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_bSuccess) == 0x000290, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, Temp_bool_Variable) == 0x000291, "Member 'WB_AchievementItem_C_SetAchievementData::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetStat_ResultValue) == 0x000298, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetStat_ResultValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetStat_ResultWasFound) == 0x0002A0, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetStat_ResultWasFound' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_Int64ToInt_ReturnValue) == 0x0002A4, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_Int64ToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_Select_Default) == 0x0002A8, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Min_ReturnValue) == 0x0002BC, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Min_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0002C0, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0002C8, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_FormatArgumentData_1) == 0x0002D0, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000320, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeArray_Array) == 0x000328, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Format_ReturnValue) == 0x000338, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetGameInstance_ReturnValue_1) == 0x000350, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000358, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_bSuccess_1) == 0x000360, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetAchievementStatus_bIsCompleted) == 0x000361, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetAchievementStatus_bIsCompleted' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetAchievementStatus_CompletionDateTime) == 0x000368, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetAchievementStatus_CompletionDateTime' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetAchievementStatus_bIsHIdden) == 0x000370, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetAchievementStatus_bIsHIdden' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_AsDate_DateTime_ReturnValue) == 0x000378, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_AsDate_DateTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_FormatArgumentData_2) == 0x000390, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeArray_Array_1) == 0x0003E0, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Format_ReturnValue_1) == 0x0003F0, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000408, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(sizeof(WB_AchievementItem_C_SetAchievementData) == 0x0003D0, "Wrong size on WB_AchievementItem_C_SetAchievementData");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, AchievementData_0) == 0x000000, "Member 'WB_AchievementItem_C_SetAchievementData::AchievementData_0' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, Completed) == 0x000110, "Member 'WB_AchievementItem_C_SetAchievementData::Completed' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Not_PreBool_ReturnValue) == 0x000111, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_SelectColor_ReturnValue) == 0x000114, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_SlateBrush) == 0x000130, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000200, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000208, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_FormatArgumentData) == 0x000210, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000258, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetGameInstance_ReturnValue) == 0x000260, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_BooleanAND_ReturnValue) == 0x000268, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_AsB_Game_Instance) == 0x000270, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_bSuccess) == 0x000278, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, Temp_bool_Variable) == 0x000279, "Member 'WB_AchievementItem_C_SetAchievementData::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetStat_ResultValue) == 0x000280, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetStat_ResultValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetStat_ResultWasFound) == 0x000288, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetStat_ResultWasFound' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_Int64ToInt_ReturnValue) == 0x00028C, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_Int64ToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_Select_Default) == 0x000290, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Min_ReturnValue) == 0x0002A4, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Min_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0002A8, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x0002B0, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_FormatArgumentData_1) == 0x0002B8, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000300, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeArray_Array) == 0x000308, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Format_ReturnValue) == 0x000318, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetGameInstance_ReturnValue_1) == 0x000328, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000330, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_DynamicCast_bSuccess_1) == 0x000338, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetAchievementStatus_bIsCompleted) == 0x000339, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetAchievementStatus_bIsCompleted' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetAchievementStatus_CompletionDateTime) == 0x000340, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetAchievementStatus_CompletionDateTime' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_GetAchievementStatus_bIsHIdden) == 0x000348, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_GetAchievementStatus_bIsHIdden' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_AsDate_DateTime_ReturnValue) == 0x000350, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_AsDate_DateTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeStruct_FormatArgumentData_2) == 0x000360, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, K2Node_MakeArray_Array_1) == 0x0003A8, "Member 'WB_AchievementItem_C_SetAchievementData::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_Format_ReturnValue_1) == 0x0003B8, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementItem_C_SetAchievementData, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0003C8, "Member 'WB_AchievementItem_C_SetAchievementData::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 }
 

@@ -10,146 +10,146 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Hunter.B_Hunter_C
-// 0x03B0 (0x0A30 - 0x0680)
+// 0x03B0 (0x0A20 - 0x0670)
 #pragma pack(push, 0x1)
 class alignas(0x10) AB_Hunter_C : public AHunter
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0680(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_DamageSound_C*                       DamageSound;                                       // 0x0688(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_KillRagdoll_C*                       KillEffect;                                        // 0x0690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_DamageEffect_C*                      DamageEffect;                                      // 0x0698(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_KillPlayerGameModeHandler_C*         B_KillPlayerGameModeHandler;                       // 0x06A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      HookDashLines;                                     // 0x06A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_ActorEvents_C*                       B_ActorEvents;                                     // 0x06B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_DamageHandler_C*                     B_DamageHandler;                                   // 0x06B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CommunicationSound;                                // 0x06C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 FirstPersonMesh;                                   // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        FirstPersonCenter;                                 // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       ThreerdPersonCamera;                               // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpringArmComponent*                    SpringArm;                                         // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       PlayerName;                                        // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       FirstPersonCamera;                                 // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseTurnRate;                                      // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseLookUpRate;                                    // 0x0700(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              ShootSound;                                        // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentControllerYaw;                              // 0x0710(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              QuestionSound;                                     // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              SpeakSound;                                        // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              AlarmSound;                                        // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          CageSpawend;                                       // 0x0730(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4357[0x7];                                     // 0x0731(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundCue*                              ChickenThrowSound;                                 // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              ChickenBackSound;                                  // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         TauntBudget;                                       // 0x0748(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxTaunts;                                         // 0x074C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMeshComponent*>                 ThirdPersonMeshes;                                 // 0x0750(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UMeshComponent*>                 FirstPersonMeshes;                                 // 0x0760(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UClass*                                 PrimarySkillClass;                                 // 0x0770(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 MeleeSkillClass;                                   // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         PrimarySkill;                                      // 0x0780(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         SpecialUtilitySkill;                               // 0x0788(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         SpecialMovementSkill;                              // 0x0790(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         MeleeSkill;                                        // 0x0798(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsConfused;                                        // 0x07A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4358[0x7];                                     // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Confusion;                                         // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        ConfusionSound;                                    // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SlightlyConfusionSound;                            // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentControllerPitch;                            // 0x07C0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RotateInstantForOneFrame;                          // 0x07C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4359[0x7];                                     // 0x07C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_VisualIntepolator_C*                 VisualChild;                                       // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        JumpPlaySoundTime;                                 // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BlockedMeleeSkillCooldown;                         // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AreMeleeSkillsTotallyBlocked;                      // 0x07E8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMeleeBlocked;                                    // 0x07E9(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435A[0x6];                                     // 0x07EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        IdleTime;                                          // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TeleportOnCooldown;                                // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435B[0x7];                                     // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LastTravelLocation;                                // 0x0800(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FloatingPositionOne;                               // 0x0818(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FloatingPositionTwo;                               // 0x0830(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Stuck;                                             // 0x0848(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBlinded;                                         // 0x0849(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435C[0x6];                                     // 0x084A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               BlindMaterialInstance;                             // 0x0850(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Blind;                                             // 0x0858(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BlindTime;                                         // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BlindDuration;                                     // 0x0868(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MagicRelictTravelDistance;                         // 0x0870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_JumpScareMobThirdPerson_C*           BlindActorThirdPerson;                             // 0x0878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_JumpScareMobFirstPerson_C*           BlindActorFirstPerson;                             // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFirstPersonCamera;                               // 0x0888(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SkinContentInitialized;                            // 0x0889(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435D[0x6];                                     // 0x088A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHunterSkin                            Skin;                                              // 0x0890(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          FirstPersonBeforeBlind;                            // 0x08C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435E[0x7];                                     // 0x08C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ForwardAxisValue;                                  // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightAxisValue;                                    // 0x08D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ForwardCircular;                                   // 0x08E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightCircular;                                     // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TurnAxisValue;                                     // 0x08F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LookUpAxisValue;                                   // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TempAxisValue;                                     // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHighlighted;                                      // 0x0908(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUsingSkill;                                       // 0x0909(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlaySpeakTaunt;                                    // 0x090A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlayQuestionTaunt;                                 // 0x090B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        HeadSkin;                                          // 0x090C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        UpperBodySkin;                                     // 0x091C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        LowerBodySkin;                                     // 0x092C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        HatSkin;                                           // 0x093C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        RangedWeaponSkin;                                  // 0x094C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        MeleeWeaponSkin;                                   // 0x095C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        SkinColorSkin;                                     // 0x096C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435F[0x4];                                     // 0x097C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              StartInAir;                                        // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              EndInAir;                                          // 0x0988(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          InAir;                                             // 0x0990(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BlockCameraViewToggle;                             // 0x0991(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4360[0x2];                                     // 0x0992(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         IgnoreClientMovementCorrections;                   // 0x0994(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableTurn;                                       // 0x0998(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableFire;                                       // 0x0999(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableFireForMatch;                                // 0x099A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableMeleeForMatch;                               // 0x099B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4361[0x4];                                     // 0x099C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CurrentAcceleration;                               // 0x09A0(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WantsToCrouch;                                     // 0x09B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4362[0x7];                                     // 0x09B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DefaultMaxWalkSpeed;                               // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultMaxWalkSpeedCrouched;                       // 0x09C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxWalkSpeed;                                      // 0x09D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxWalkSpeedCrouched;                              // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultJumpHeight;                                 // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultCameraBoomLength;                           // 0x09E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DefaultCameraBoomOffset;                           // 0x09F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultCameraBoomProbeSize;                        // 0x0A08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      ConfusedEffectNiagara;                             // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AB_SkinBodypart_C*                      HeadSkinActor;                                     // 0x0A18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 HatSkinActor;                                      // 0x0A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0670(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_DamageSound_C*                       DamageSound;                                       // 0x0678(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_KillRagdoll_C*                       KillEffect;                                        // 0x0680(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_DamageEffect_C*                      DamageEffect;                                      // 0x0688(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_KillPlayerGameModeHandler_C*         B_KillPlayerGameModeHandler;                       // 0x0690(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      HookDashLines;                                     // 0x0698(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_ActorEvents_C*                       B_ActorEvents;                                     // 0x06A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_DamageHandler_C*                     B_DamageHandler;                                   // 0x06A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CommunicationSound;                                // 0x06B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 FirstPersonMesh;                                   // 0x06B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        FirstPersonCenter;                                 // 0x06C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       ThreerdPersonCamera;                               // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpringArmComponent*                    SpringArm;                                         // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       PlayerName;                                        // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       FirstPersonCamera;                                 // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseTurnRate;                                      // 0x06E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseLookUpRate;                                    // 0x06F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              ShootSound;                                        // 0x06F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentControllerYaw;                              // 0x0700(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              QuestionSound;                                     // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              SpeakSound;                                        // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              AlarmSound;                                        // 0x0718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          CageSpawend;                                       // 0x0720(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_721[0x7];                                      // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundCue*                              ChickenThrowSound;                                 // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              ChickenBackSound;                                  // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         TauntBudget;                                       // 0x0738(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxTaunts;                                         // 0x073C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMeshComponent*>                 ThirdPersonMeshes;                                 // 0x0740(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UMeshComponent*>                 FirstPersonMeshes;                                 // 0x0750(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UClass*                                 PrimarySkillClass;                                 // 0x0760(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 MeleeSkillClass;                                   // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         PrimarySkill;                                      // 0x0770(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         SpecialUtilitySkill;                               // 0x0778(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         SpecialMovementSkill;                              // 0x0780(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         MeleeSkill;                                        // 0x0788(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsConfused;                                        // 0x0790(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_791[0x7];                                      // 0x0791(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Confusion;                                         // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        ConfusionSound;                                    // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SlightlyConfusionSound;                            // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentControllerPitch;                            // 0x07B0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RotateInstantForOneFrame;                          // 0x07B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B9[0x7];                                      // 0x07B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_VisualIntepolator_C*                 VisualChild;                                       // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        JumpPlaySoundTime;                                 // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BlockedMeleeSkillCooldown;                         // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AreMeleeSkillsTotallyBlocked;                      // 0x07D8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMeleeBlocked;                                    // 0x07D9(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7DA[0x6];                                      // 0x07DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        IdleTime;                                          // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TeleportOnCooldown;                                // 0x07E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E9[0x7];                                      // 0x07E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LastTravelLocation;                                // 0x07F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FloatingPositionOne;                               // 0x0808(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FloatingPositionTwo;                               // 0x0820(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Stuck;                                             // 0x0838(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBlinded;                                         // 0x0839(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83A[0x6];                                      // 0x083A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               BlindMaterialInstance;                             // 0x0840(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Blind;                                             // 0x0848(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BlindTime;                                         // 0x0850(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BlindDuration;                                     // 0x0858(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MagicRelictTravelDistance;                         // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_JumpScareMobThirdPerson_C*           BlindActorThirdPerson;                             // 0x0868(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_JumpScareMobFirstPerson_C*           BlindActorFirstPerson;                             // 0x0870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFirstPersonCamera;                               // 0x0878(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SkinContentInitialized;                            // 0x0879(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_87A[0x6];                                      // 0x087A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHunterSkin                            Skin;                                              // 0x0880(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          FirstPersonBeforeBlind;                            // 0x08B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B9[0x7];                                      // 0x08B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ForwardAxisValue;                                  // 0x08C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightAxisValue;                                    // 0x08C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ForwardCircular;                                   // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightCircular;                                     // 0x08D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TurnAxisValue;                                     // 0x08E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LookUpAxisValue;                                   // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TempAxisValue;                                     // 0x08F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHighlighted;                                      // 0x08F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUsingSkill;                                       // 0x08F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlaySpeakTaunt;                                    // 0x08FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlayQuestionTaunt;                                 // 0x08FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        HeadSkin;                                          // 0x08FC(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        UpperBodySkin;                                     // 0x090C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        LowerBodySkin;                                     // 0x091C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        HatSkin;                                           // 0x092C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        RangedWeaponSkin;                                  // 0x093C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        MeleeWeaponSkin;                                   // 0x094C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        SkinColorSkin;                                     // 0x095C(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_96C[0x4];                                      // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              StartInAir;                                        // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              EndInAir;                                          // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          InAir;                                             // 0x0980(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BlockCameraViewToggle;                             // 0x0981(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_982[0x2];                                      // 0x0982(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         IgnoreClientMovementCorrections;                   // 0x0984(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableTurn;                                       // 0x0988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableFire;                                       // 0x0989(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableFireForMatch;                                // 0x098A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableMeleeForMatch;                               // 0x098B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_98C[0x4];                                      // 0x098C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CurrentAcceleration;                               // 0x0990(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WantsToCrouch;                                     // 0x09A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9A9[0x7];                                      // 0x09A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DefaultMaxWalkSpeed;                               // 0x09B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultMaxWalkSpeedCrouched;                       // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxWalkSpeed;                                      // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxWalkSpeedCrouched;                              // 0x09C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultJumpHeight;                                 // 0x09D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultCameraBoomLength;                           // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DefaultCameraBoomOffset;                           // 0x09E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultCameraBoomProbeSize;                        // 0x09F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      ConfusedEffectNiagara;                             // 0x0A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AB_SkinBodypart_C*                      HeadSkinActor;                                     // 0x0A08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 HatSkinActor;                                      // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void LoadSkills(class AController* Param_Controller);
+	void LoadSkills(class AController* Controller_0);
 	void PossessedClient();
 	void ReceiveBeginPlay();
 	void ReceivePossessed(class AController* NewController);
 	void GetAttachComponent(class USceneComponent** Component);
-	void GetCurrentController(class AController** Param_Controller);
+	void GetCurrentController(class AController** Controller_0);
 	void IsPlayingQuestionTaunt(bool* IsPlaying);
 	void IsPlayingSpeakTaunt(bool* IsPlaying);
 	struct FTransform GetSpawnTransform(const struct FVector& Offset);
@@ -165,7 +165,7 @@ public:
 	void GetRippleScale(struct FVector* Scale);
 	void GetSplashScale(struct FVector* Scale);
 	void GetSplashSound(class USoundCue** Sound);
-	void CanTeleport(bool* Param_CanTeleport);
+	void CanTeleport(bool* CanTeleport_0);
 	void InitializeHunterViewVisuals();
 	void HandleHunterHealthBar();
 	void InitializeRules();
@@ -190,7 +190,7 @@ public:
 	void InitMovementSkill(class UClass* ActorComponentClass);
 	void InitUtilitySkill(class UClass* ActorComponentClass);
 	void InitMeleeSkill(class UClass* ActorComponentClass);
-	void InitPrimarySkill(class UClass* Param_PrimarySkillClass);
+	void InitPrimarySkill(class UClass* PrimarySkillClass_0);
 	void SetCameraView();
 	void TickBlind();
 	void OnRep_IsBlinded();
@@ -208,17 +208,17 @@ public:
 	void ShowScoreStats();
 	void TickAverageDistance();
 	void InitVisualChild();
-	void UpdateSkinColor(class UClass* Param_Class);
+	void UpdateSkinColor(class UClass* Class_0);
 	void TickVisuals();
 	void ReplicateSkinData();
 	void OnRep_IsConfused();
 	void TickConfusion();
 	void InitThirdPersonMeshes(class AActor* Body_Part);
 	void InitFirstPersonMeshes(class AActor* Body_Part);
-	void AttachToSocket(class UClass* Param_Class, class FName InSocketName, class USceneComponent* Parent, class AActor** ActorRef);
+	void AttachToSocket(class UClass* Class_0, class FName InSocketName, class USceneComponent* Parent, class AActor** ActorRef);
 	void InitPlayername();
 	struct FTransform GetSpawnTransform_X(const struct FVector& Offset);
-	void AttachBodyPart(class UClass* Param_Class, class USkeletalMeshComponent* Parent, bool SelfShadowOlny, class AB_SkinBodypart_C** BodyPart);
+	void AttachBodyPart(class UClass* Class_0, class USkeletalMeshComponent* Parent, bool SelfShadowOlny, class AB_SkinBodypart_C** BodyPart);
 	void InitializeSkinContent();
 	void TryInitializeSkinContent();
 	void DecreaseTauntBudget();
@@ -240,6 +240,16 @@ public:
 	void InpActEvt_SwitchCamera_K2Node_InputActionEvent_2(const struct FKey& Key);
 	void InpActEvt_ActivateUtilitySkill_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void InpActEvt_ActivateUtilitySkill_K2Node_InputActionEvent_0(const struct FKey& Key);
+	void OnNotifyEnd_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName);
+	void OnNotifyBegin_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName);
+	void OnInterrupted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName);
+	void OnBlendOut_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName);
+	void OnCompleted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName);
+	void OnNotifyEnd_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName);
+	void OnNotifyBegin_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName);
+	void OnInterrupted_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName);
+	void OnBlendOut_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName);
+	void OnCompleted_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName);
 	void InpActEvt_Four_K2Node_InputKeyEvent_0(const struct FKey& Key);
 	void Completed_41F2EA2D4AF99E35F668F7B0825F5768(TSubclassOf<class UObject> Loaded);
 	void InpAxisEvt_Turn_K2Node_InputAxisEvent_157(float AxisValue);
@@ -264,7 +274,7 @@ public:
 	void DebugServerConfusion();
 	void SetHighlightChannel(EHighlightChannel Channel);
 	void OnSetConfused(bool bConfused, double Duration);
-	void HitActor(class AActor* Param_HitActor);
+	void HitActor(class AActor* HitActor_0);
 	void K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust);
 	void K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust);
 	void LoadSkinsServer(const struct FPrimaryAssetId& HeadSkinClass, const struct FPrimaryAssetId& UpperBodySkinClass, const struct FPrimaryAssetId& LowerBodySkinClass, const struct FPrimaryAssetId& HatSkinClass, const struct FPrimaryAssetId& RangedWeaponSkinClass, const struct FPrimaryAssetId& MeleeWeaponSkinClass, const struct FPrimaryAssetId& SkinColorSkinClass);
@@ -285,111 +295,111 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AB_Hunter_C) == 0x000010, "Wrong alignment on AB_Hunter_C");
-static_assert(sizeof(AB_Hunter_C) == 0x000A30, "Wrong size on AB_Hunter_C");
-static_assert(offsetof(AB_Hunter_C, UberGraphFrame) == 0x000680, "Member 'AB_Hunter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DamageSound) == 0x000688, "Member 'AB_Hunter_C::DamageSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, KillEffect) == 0x000690, "Member 'AB_Hunter_C::KillEffect' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DamageEffect) == 0x000698, "Member 'AB_Hunter_C::DamageEffect' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, B_KillPlayerGameModeHandler) == 0x0006A0, "Member 'AB_Hunter_C::B_KillPlayerGameModeHandler' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, HookDashLines) == 0x0006A8, "Member 'AB_Hunter_C::HookDashLines' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, B_ActorEvents) == 0x0006B0, "Member 'AB_Hunter_C::B_ActorEvents' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, B_DamageHandler) == 0x0006B8, "Member 'AB_Hunter_C::B_DamageHandler' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, CommunicationSound) == 0x0006C0, "Member 'AB_Hunter_C::CommunicationSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FirstPersonMesh) == 0x0006C8, "Member 'AB_Hunter_C::FirstPersonMesh' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FirstPersonCenter) == 0x0006D0, "Member 'AB_Hunter_C::FirstPersonCenter' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ThreerdPersonCamera) == 0x0006D8, "Member 'AB_Hunter_C::ThreerdPersonCamera' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SpringArm) == 0x0006E0, "Member 'AB_Hunter_C::SpringArm' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, PlayerName) == 0x0006E8, "Member 'AB_Hunter_C::PlayerName' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FirstPersonCamera) == 0x0006F0, "Member 'AB_Hunter_C::FirstPersonCamera' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BaseTurnRate) == 0x0006F8, "Member 'AB_Hunter_C::BaseTurnRate' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BaseLookUpRate) == 0x000700, "Member 'AB_Hunter_C::BaseLookUpRate' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ShootSound) == 0x000708, "Member 'AB_Hunter_C::ShootSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, CurrentControllerYaw) == 0x000710, "Member 'AB_Hunter_C::CurrentControllerYaw' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, QuestionSound) == 0x000718, "Member 'AB_Hunter_C::QuestionSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SpeakSound) == 0x000720, "Member 'AB_Hunter_C::SpeakSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, AlarmSound) == 0x000728, "Member 'AB_Hunter_C::AlarmSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, CageSpawend) == 0x000730, "Member 'AB_Hunter_C::CageSpawend' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ChickenThrowSound) == 0x000738, "Member 'AB_Hunter_C::ChickenThrowSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ChickenBackSound) == 0x000740, "Member 'AB_Hunter_C::ChickenBackSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, TauntBudget) == 0x000748, "Member 'AB_Hunter_C::TauntBudget' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MaxTaunts) == 0x00074C, "Member 'AB_Hunter_C::MaxTaunts' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ThirdPersonMeshes) == 0x000750, "Member 'AB_Hunter_C::ThirdPersonMeshes' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FirstPersonMeshes) == 0x000760, "Member 'AB_Hunter_C::FirstPersonMeshes' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, PrimarySkillClass) == 0x000770, "Member 'AB_Hunter_C::PrimarySkillClass' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MeleeSkillClass) == 0x000778, "Member 'AB_Hunter_C::MeleeSkillClass' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, PrimarySkill) == 0x000780, "Member 'AB_Hunter_C::PrimarySkill' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SpecialUtilitySkill) == 0x000788, "Member 'AB_Hunter_C::SpecialUtilitySkill' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SpecialMovementSkill) == 0x000790, "Member 'AB_Hunter_C::SpecialMovementSkill' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MeleeSkill) == 0x000798, "Member 'AB_Hunter_C::MeleeSkill' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, IsConfused) == 0x0007A0, "Member 'AB_Hunter_C::IsConfused' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, Confusion) == 0x0007A8, "Member 'AB_Hunter_C::Confusion' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ConfusionSound) == 0x0007B0, "Member 'AB_Hunter_C::ConfusionSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SlightlyConfusionSound) == 0x0007B8, "Member 'AB_Hunter_C::SlightlyConfusionSound' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, CurrentControllerPitch) == 0x0007C0, "Member 'AB_Hunter_C::CurrentControllerPitch' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, RotateInstantForOneFrame) == 0x0007C8, "Member 'AB_Hunter_C::RotateInstantForOneFrame' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, VisualChild) == 0x0007D0, "Member 'AB_Hunter_C::VisualChild' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, JumpPlaySoundTime) == 0x0007D8, "Member 'AB_Hunter_C::JumpPlaySoundTime' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlockedMeleeSkillCooldown) == 0x0007E0, "Member 'AB_Hunter_C::BlockedMeleeSkillCooldown' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, AreMeleeSkillsTotallyBlocked) == 0x0007E8, "Member 'AB_Hunter_C::AreMeleeSkillsTotallyBlocked' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, IsMeleeBlocked) == 0x0007E9, "Member 'AB_Hunter_C::IsMeleeBlocked' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, IdleTime) == 0x0007F0, "Member 'AB_Hunter_C::IdleTime' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, TeleportOnCooldown) == 0x0007F8, "Member 'AB_Hunter_C::TeleportOnCooldown' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, LastTravelLocation) == 0x000800, "Member 'AB_Hunter_C::LastTravelLocation' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FloatingPositionOne) == 0x000818, "Member 'AB_Hunter_C::FloatingPositionOne' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FloatingPositionTwo) == 0x000830, "Member 'AB_Hunter_C::FloatingPositionTwo' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, Stuck) == 0x000848, "Member 'AB_Hunter_C::Stuck' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, IsBlinded) == 0x000849, "Member 'AB_Hunter_C::IsBlinded' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlindMaterialInstance) == 0x000850, "Member 'AB_Hunter_C::BlindMaterialInstance' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, Blind) == 0x000858, "Member 'AB_Hunter_C::Blind' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlindTime) == 0x000860, "Member 'AB_Hunter_C::BlindTime' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlindDuration) == 0x000868, "Member 'AB_Hunter_C::BlindDuration' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MagicRelictTravelDistance) == 0x000870, "Member 'AB_Hunter_C::MagicRelictTravelDistance' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlindActorThirdPerson) == 0x000878, "Member 'AB_Hunter_C::BlindActorThirdPerson' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlindActorFirstPerson) == 0x000880, "Member 'AB_Hunter_C::BlindActorFirstPerson' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, IsFirstPersonCamera) == 0x000888, "Member 'AB_Hunter_C::IsFirstPersonCamera' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SkinContentInitialized) == 0x000889, "Member 'AB_Hunter_C::SkinContentInitialized' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, Skin) == 0x000890, "Member 'AB_Hunter_C::Skin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, FirstPersonBeforeBlind) == 0x0008C8, "Member 'AB_Hunter_C::FirstPersonBeforeBlind' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ForwardAxisValue) == 0x0008D0, "Member 'AB_Hunter_C::ForwardAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, RightAxisValue) == 0x0008D8, "Member 'AB_Hunter_C::RightAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ForwardCircular) == 0x0008E0, "Member 'AB_Hunter_C::ForwardCircular' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, RightCircular) == 0x0008E8, "Member 'AB_Hunter_C::RightCircular' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, TurnAxisValue) == 0x0008F0, "Member 'AB_Hunter_C::TurnAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, LookUpAxisValue) == 0x0008F8, "Member 'AB_Hunter_C::LookUpAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, TempAxisValue) == 0x000900, "Member 'AB_Hunter_C::TempAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, bHighlighted) == 0x000908, "Member 'AB_Hunter_C::bHighlighted' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, bUsingSkill) == 0x000909, "Member 'AB_Hunter_C::bUsingSkill' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, PlaySpeakTaunt) == 0x00090A, "Member 'AB_Hunter_C::PlaySpeakTaunt' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, PlayQuestionTaunt) == 0x00090B, "Member 'AB_Hunter_C::PlayQuestionTaunt' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, HeadSkin) == 0x00090C, "Member 'AB_Hunter_C::HeadSkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, UpperBodySkin) == 0x00091C, "Member 'AB_Hunter_C::UpperBodySkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, LowerBodySkin) == 0x00092C, "Member 'AB_Hunter_C::LowerBodySkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, HatSkin) == 0x00093C, "Member 'AB_Hunter_C::HatSkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, RangedWeaponSkin) == 0x00094C, "Member 'AB_Hunter_C::RangedWeaponSkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MeleeWeaponSkin) == 0x00095C, "Member 'AB_Hunter_C::MeleeWeaponSkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, SkinColorSkin) == 0x00096C, "Member 'AB_Hunter_C::SkinColorSkin' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, StartInAir) == 0x000980, "Member 'AB_Hunter_C::StartInAir' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, EndInAir) == 0x000988, "Member 'AB_Hunter_C::EndInAir' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, InAir) == 0x000990, "Member 'AB_Hunter_C::InAir' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, BlockCameraViewToggle) == 0x000991, "Member 'AB_Hunter_C::BlockCameraViewToggle' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, IgnoreClientMovementCorrections) == 0x000994, "Member 'AB_Hunter_C::IgnoreClientMovementCorrections' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DisableTurn) == 0x000998, "Member 'AB_Hunter_C::DisableTurn' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DisableFire) == 0x000999, "Member 'AB_Hunter_C::DisableFire' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, EnableFireForMatch) == 0x00099A, "Member 'AB_Hunter_C::EnableFireForMatch' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, EnableMeleeForMatch) == 0x00099B, "Member 'AB_Hunter_C::EnableMeleeForMatch' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, CurrentAcceleration) == 0x0009A0, "Member 'AB_Hunter_C::CurrentAcceleration' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, WantsToCrouch) == 0x0009B8, "Member 'AB_Hunter_C::WantsToCrouch' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DefaultMaxWalkSpeed) == 0x0009C0, "Member 'AB_Hunter_C::DefaultMaxWalkSpeed' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DefaultMaxWalkSpeedCrouched) == 0x0009C8, "Member 'AB_Hunter_C::DefaultMaxWalkSpeedCrouched' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MaxWalkSpeed) == 0x0009D0, "Member 'AB_Hunter_C::MaxWalkSpeed' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, MaxWalkSpeedCrouched) == 0x0009D8, "Member 'AB_Hunter_C::MaxWalkSpeedCrouched' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DefaultJumpHeight) == 0x0009E0, "Member 'AB_Hunter_C::DefaultJumpHeight' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DefaultCameraBoomLength) == 0x0009E8, "Member 'AB_Hunter_C::DefaultCameraBoomLength' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DefaultCameraBoomOffset) == 0x0009F0, "Member 'AB_Hunter_C::DefaultCameraBoomOffset' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, DefaultCameraBoomProbeSize) == 0x000A08, "Member 'AB_Hunter_C::DefaultCameraBoomProbeSize' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, ConfusedEffectNiagara) == 0x000A10, "Member 'AB_Hunter_C::ConfusedEffectNiagara' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, HeadSkinActor) == 0x000A18, "Member 'AB_Hunter_C::HeadSkinActor' has a wrong offset!");
-static_assert(offsetof(AB_Hunter_C, HatSkinActor) == 0x000A20, "Member 'AB_Hunter_C::HatSkinActor' has a wrong offset!");
+static_assert(sizeof(AB_Hunter_C) == 0x000A20, "Wrong size on AB_Hunter_C");
+static_assert(offsetof(AB_Hunter_C, UberGraphFrame) == 0x000670, "Member 'AB_Hunter_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DamageSound) == 0x000678, "Member 'AB_Hunter_C::DamageSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, KillEffect) == 0x000680, "Member 'AB_Hunter_C::KillEffect' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DamageEffect) == 0x000688, "Member 'AB_Hunter_C::DamageEffect' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, B_KillPlayerGameModeHandler) == 0x000690, "Member 'AB_Hunter_C::B_KillPlayerGameModeHandler' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, HookDashLines) == 0x000698, "Member 'AB_Hunter_C::HookDashLines' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, B_ActorEvents) == 0x0006A0, "Member 'AB_Hunter_C::B_ActorEvents' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, B_DamageHandler) == 0x0006A8, "Member 'AB_Hunter_C::B_DamageHandler' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, CommunicationSound) == 0x0006B0, "Member 'AB_Hunter_C::CommunicationSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FirstPersonMesh) == 0x0006B8, "Member 'AB_Hunter_C::FirstPersonMesh' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FirstPersonCenter) == 0x0006C0, "Member 'AB_Hunter_C::FirstPersonCenter' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ThreerdPersonCamera) == 0x0006C8, "Member 'AB_Hunter_C::ThreerdPersonCamera' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SpringArm) == 0x0006D0, "Member 'AB_Hunter_C::SpringArm' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, PlayerName) == 0x0006D8, "Member 'AB_Hunter_C::PlayerName' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FirstPersonCamera) == 0x0006E0, "Member 'AB_Hunter_C::FirstPersonCamera' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BaseTurnRate) == 0x0006E8, "Member 'AB_Hunter_C::BaseTurnRate' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BaseLookUpRate) == 0x0006F0, "Member 'AB_Hunter_C::BaseLookUpRate' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ShootSound) == 0x0006F8, "Member 'AB_Hunter_C::ShootSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, CurrentControllerYaw) == 0x000700, "Member 'AB_Hunter_C::CurrentControllerYaw' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, QuestionSound) == 0x000708, "Member 'AB_Hunter_C::QuestionSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SpeakSound) == 0x000710, "Member 'AB_Hunter_C::SpeakSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, AlarmSound) == 0x000718, "Member 'AB_Hunter_C::AlarmSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, CageSpawend) == 0x000720, "Member 'AB_Hunter_C::CageSpawend' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ChickenThrowSound) == 0x000728, "Member 'AB_Hunter_C::ChickenThrowSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ChickenBackSound) == 0x000730, "Member 'AB_Hunter_C::ChickenBackSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, TauntBudget) == 0x000738, "Member 'AB_Hunter_C::TauntBudget' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MaxTaunts) == 0x00073C, "Member 'AB_Hunter_C::MaxTaunts' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ThirdPersonMeshes) == 0x000740, "Member 'AB_Hunter_C::ThirdPersonMeshes' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FirstPersonMeshes) == 0x000750, "Member 'AB_Hunter_C::FirstPersonMeshes' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, PrimarySkillClass) == 0x000760, "Member 'AB_Hunter_C::PrimarySkillClass' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MeleeSkillClass) == 0x000768, "Member 'AB_Hunter_C::MeleeSkillClass' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, PrimarySkill) == 0x000770, "Member 'AB_Hunter_C::PrimarySkill' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SpecialUtilitySkill) == 0x000778, "Member 'AB_Hunter_C::SpecialUtilitySkill' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SpecialMovementSkill) == 0x000780, "Member 'AB_Hunter_C::SpecialMovementSkill' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MeleeSkill) == 0x000788, "Member 'AB_Hunter_C::MeleeSkill' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, IsConfused) == 0x000790, "Member 'AB_Hunter_C::IsConfused' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, Confusion) == 0x000798, "Member 'AB_Hunter_C::Confusion' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ConfusionSound) == 0x0007A0, "Member 'AB_Hunter_C::ConfusionSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SlightlyConfusionSound) == 0x0007A8, "Member 'AB_Hunter_C::SlightlyConfusionSound' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, CurrentControllerPitch) == 0x0007B0, "Member 'AB_Hunter_C::CurrentControllerPitch' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, RotateInstantForOneFrame) == 0x0007B8, "Member 'AB_Hunter_C::RotateInstantForOneFrame' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, VisualChild) == 0x0007C0, "Member 'AB_Hunter_C::VisualChild' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, JumpPlaySoundTime) == 0x0007C8, "Member 'AB_Hunter_C::JumpPlaySoundTime' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlockedMeleeSkillCooldown) == 0x0007D0, "Member 'AB_Hunter_C::BlockedMeleeSkillCooldown' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, AreMeleeSkillsTotallyBlocked) == 0x0007D8, "Member 'AB_Hunter_C::AreMeleeSkillsTotallyBlocked' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, IsMeleeBlocked) == 0x0007D9, "Member 'AB_Hunter_C::IsMeleeBlocked' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, IdleTime) == 0x0007E0, "Member 'AB_Hunter_C::IdleTime' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, TeleportOnCooldown) == 0x0007E8, "Member 'AB_Hunter_C::TeleportOnCooldown' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, LastTravelLocation) == 0x0007F0, "Member 'AB_Hunter_C::LastTravelLocation' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FloatingPositionOne) == 0x000808, "Member 'AB_Hunter_C::FloatingPositionOne' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FloatingPositionTwo) == 0x000820, "Member 'AB_Hunter_C::FloatingPositionTwo' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, Stuck) == 0x000838, "Member 'AB_Hunter_C::Stuck' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, IsBlinded) == 0x000839, "Member 'AB_Hunter_C::IsBlinded' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlindMaterialInstance) == 0x000840, "Member 'AB_Hunter_C::BlindMaterialInstance' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, Blind) == 0x000848, "Member 'AB_Hunter_C::Blind' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlindTime) == 0x000850, "Member 'AB_Hunter_C::BlindTime' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlindDuration) == 0x000858, "Member 'AB_Hunter_C::BlindDuration' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MagicRelictTravelDistance) == 0x000860, "Member 'AB_Hunter_C::MagicRelictTravelDistance' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlindActorThirdPerson) == 0x000868, "Member 'AB_Hunter_C::BlindActorThirdPerson' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlindActorFirstPerson) == 0x000870, "Member 'AB_Hunter_C::BlindActorFirstPerson' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, IsFirstPersonCamera) == 0x000878, "Member 'AB_Hunter_C::IsFirstPersonCamera' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SkinContentInitialized) == 0x000879, "Member 'AB_Hunter_C::SkinContentInitialized' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, Skin) == 0x000880, "Member 'AB_Hunter_C::Skin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, FirstPersonBeforeBlind) == 0x0008B8, "Member 'AB_Hunter_C::FirstPersonBeforeBlind' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ForwardAxisValue) == 0x0008C0, "Member 'AB_Hunter_C::ForwardAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, RightAxisValue) == 0x0008C8, "Member 'AB_Hunter_C::RightAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ForwardCircular) == 0x0008D0, "Member 'AB_Hunter_C::ForwardCircular' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, RightCircular) == 0x0008D8, "Member 'AB_Hunter_C::RightCircular' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, TurnAxisValue) == 0x0008E0, "Member 'AB_Hunter_C::TurnAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, LookUpAxisValue) == 0x0008E8, "Member 'AB_Hunter_C::LookUpAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, TempAxisValue) == 0x0008F0, "Member 'AB_Hunter_C::TempAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, bHighlighted) == 0x0008F8, "Member 'AB_Hunter_C::bHighlighted' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, bUsingSkill) == 0x0008F9, "Member 'AB_Hunter_C::bUsingSkill' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, PlaySpeakTaunt) == 0x0008FA, "Member 'AB_Hunter_C::PlaySpeakTaunt' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, PlayQuestionTaunt) == 0x0008FB, "Member 'AB_Hunter_C::PlayQuestionTaunt' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, HeadSkin) == 0x0008FC, "Member 'AB_Hunter_C::HeadSkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, UpperBodySkin) == 0x00090C, "Member 'AB_Hunter_C::UpperBodySkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, LowerBodySkin) == 0x00091C, "Member 'AB_Hunter_C::LowerBodySkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, HatSkin) == 0x00092C, "Member 'AB_Hunter_C::HatSkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, RangedWeaponSkin) == 0x00093C, "Member 'AB_Hunter_C::RangedWeaponSkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MeleeWeaponSkin) == 0x00094C, "Member 'AB_Hunter_C::MeleeWeaponSkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, SkinColorSkin) == 0x00095C, "Member 'AB_Hunter_C::SkinColorSkin' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, StartInAir) == 0x000970, "Member 'AB_Hunter_C::StartInAir' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, EndInAir) == 0x000978, "Member 'AB_Hunter_C::EndInAir' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, InAir) == 0x000980, "Member 'AB_Hunter_C::InAir' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, BlockCameraViewToggle) == 0x000981, "Member 'AB_Hunter_C::BlockCameraViewToggle' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, IgnoreClientMovementCorrections) == 0x000984, "Member 'AB_Hunter_C::IgnoreClientMovementCorrections' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DisableTurn) == 0x000988, "Member 'AB_Hunter_C::DisableTurn' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DisableFire) == 0x000989, "Member 'AB_Hunter_C::DisableFire' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, EnableFireForMatch) == 0x00098A, "Member 'AB_Hunter_C::EnableFireForMatch' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, EnableMeleeForMatch) == 0x00098B, "Member 'AB_Hunter_C::EnableMeleeForMatch' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, CurrentAcceleration) == 0x000990, "Member 'AB_Hunter_C::CurrentAcceleration' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, WantsToCrouch) == 0x0009A8, "Member 'AB_Hunter_C::WantsToCrouch' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DefaultMaxWalkSpeed) == 0x0009B0, "Member 'AB_Hunter_C::DefaultMaxWalkSpeed' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DefaultMaxWalkSpeedCrouched) == 0x0009B8, "Member 'AB_Hunter_C::DefaultMaxWalkSpeedCrouched' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MaxWalkSpeed) == 0x0009C0, "Member 'AB_Hunter_C::MaxWalkSpeed' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, MaxWalkSpeedCrouched) == 0x0009C8, "Member 'AB_Hunter_C::MaxWalkSpeedCrouched' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DefaultJumpHeight) == 0x0009D0, "Member 'AB_Hunter_C::DefaultJumpHeight' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DefaultCameraBoomLength) == 0x0009D8, "Member 'AB_Hunter_C::DefaultCameraBoomLength' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DefaultCameraBoomOffset) == 0x0009E0, "Member 'AB_Hunter_C::DefaultCameraBoomOffset' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, DefaultCameraBoomProbeSize) == 0x0009F8, "Member 'AB_Hunter_C::DefaultCameraBoomProbeSize' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, ConfusedEffectNiagara) == 0x000A00, "Member 'AB_Hunter_C::ConfusedEffectNiagara' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, HeadSkinActor) == 0x000A08, "Member 'AB_Hunter_C::HeadSkinActor' has a wrong offset!");
+static_assert(offsetof(AB_Hunter_C, HatSkinActor) == 0x000A10, "Member 'AB_Hunter_C::HatSkinActor' has a wrong offset!");
 
 }
 

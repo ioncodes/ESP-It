@@ -21,10 +21,10 @@ namespace SDK
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FName                             Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsNotOwned                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Achievement_Is_Not_Owned(class AB_PlayerState_C* PlayerState, class FName Param_Name, bool* IsNotOwned)
+void UB_AchievementManager_C::Achievement_Is_Not_Owned(class AB_PlayerState_C* PlayerState, class FName Name_0, bool* IsNotOwned)
 {
 	static class UFunction* Func = nullptr;
 
@@ -34,7 +34,7 @@ void UB_AchievementManager_C::Achievement_Is_Not_Owned(class AB_PlayerState_C* P
 	Params::B_AchievementManager_C_Achievement_Is_Not_Owned Parms{};
 
 	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
+	Parms.Name_0 = Name_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -70,9 +70,9 @@ void UB_AchievementManager_C::Activate_Achievement(class AB_PlayerState_C* Playe
 // Parameters:
 // class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // E_Achievements                          Achievement_Type                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Activate_By_Id(class AB_PlayerState_C* PlayerState, E_Achievements Achievement_Type, int32 PropId)
+void UB_AchievementManager_C::Activate_By_Id(class AB_PlayerState_C* PlayerState, E_Achievements Achievement_Type, int32 PropID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -83,7 +83,7 @@ void UB_AchievementManager_C::Activate_By_Id(class AB_PlayerState_C* PlayerState
 
 	Parms.PlayerState = PlayerState;
 	Parms.Achievement_Type = Achievement_Type;
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -118,11 +118,11 @@ void UB_AchievementManager_C::Check_Achievement_Validity(class AB_PlayerState_C*
 // Function B_AchievementManager.B_AchievementManager_C.Check Prop Achievements
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AB_SeekGameState_C*               SeekGameState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Check_Prop_Achievements(int32 PropId, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState)
+void UB_AchievementManager_C::Check_Prop_Achievements(int32 PropID, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -131,7 +131,7 @@ void UB_AchievementManager_C::Check_Prop_Achievements(int32 PropId, class AB_Pla
 
 	Params::B_AchievementManager_C_Check_Prop_Achievements Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.PlayerState = PlayerState;
 	Parms.SeekGameState = SeekGameState;
 
@@ -362,10 +362,10 @@ void UB_AchievementManager_C::Get_AchPhoto_Ids(TArray<int32>* IDs)
 // Function B_AchievementManager.B_AchievementManager_C.Get Divider
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Divider                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Get_Divider(int32 Param_Index, int32* Divider)
+void UB_AchievementManager_C::Get_Divider(int32 Index_0, int32* Divider)
 {
 	static class UFunction* Func = nullptr;
 
@@ -374,7 +374,7 @@ void UB_AchievementManager_C::Get_Divider(int32 Param_Index, int32* Divider)
 
 	Params::B_AchievementManager_C_Get_Divider Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -478,11 +478,11 @@ void UB_AchievementManager_C::Initialize_Player_Achievement_List(class AB_Player
 // Function B_AchievementManager.B_AchievementManager_C.Reset Or Disable Prop Achievements
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AB_SeekGameState_C*               SeekGameState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Reset_Or_Disable_Prop_Achievements(int32 PropId, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState)
+void UB_AchievementManager_C::Reset_Or_Disable_Prop_Achievements(int32 PropID, class AB_PlayerState_C* PlayerState, class AB_SeekGameState_C* SeekGameState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -491,7 +491,7 @@ void UB_AchievementManager_C::Reset_Or_Disable_Prop_Achievements(int32 PropId, c
 
 	Params::B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.PlayerState = PlayerState;
 	Parms.SeekGameState = SeekGameState;
 
@@ -610,10 +610,10 @@ void UB_AchievementManager_C::Set_Valid_Game_Modes(class UB_Achievement_C* Achie
 // Function B_AchievementManager.B_AchievementManager_C.SetAchievementContent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UB_GameInstance_C*                Param_GameInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AB_GameMode_C*                    Param_GameMode                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_GameInstance_C*                GameInstance_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_GameMode_C*                    GameMode_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::SetAchievementContent(class UB_GameInstance_C* Param_GameInstance, class AB_GameMode_C* Param_GameMode)
+void UB_AchievementManager_C::SetAchievementContent(class UB_GameInstance_C* GameInstance_0, class AB_GameMode_C* GameMode_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -622,8 +622,8 @@ void UB_AchievementManager_C::SetAchievementContent(class UB_GameInstance_C* Par
 
 	Params::B_AchievementManager_C_SetAchievementContent Parms{};
 
-	Parms.Param_GameInstance = Param_GameInstance;
-	Parms.Param_GameMode = Param_GameMode;
+	Parms.GameInstance_0 = GameInstance_0;
+	Parms.GameMode_0 = GameMode_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -632,11 +632,11 @@ void UB_AchievementManager_C::SetAchievementContent(class UB_GameInstance_C* Par
 // Function B_AchievementManager.B_AchievementManager_C.Test AchFruitSalad Ids
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UB_Achievement_C*                 Achievement                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    Give_Achievement                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Test_AchFruitSalad_Ids(int32 PropId, class UB_Achievement_C* Achievement, bool* Give_Achievement)
+void UB_AchievementManager_C::Test_AchFruitSalad_Ids(int32 PropID, class UB_Achievement_C* Achievement, bool* Give_Achievement)
 {
 	static class UFunction* Func = nullptr;
 
@@ -645,7 +645,7 @@ void UB_AchievementManager_C::Test_AchFruitSalad_Ids(int32 PropId, class UB_Achi
 
 	Params::B_AchievementManager_C_Test_AchFruitSalad_Ids Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.Achievement = Achievement;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -712,12 +712,12 @@ void UB_AchievementManager_C::Test_Hunter_Catch_in_Air(const struct FDateTime& S
 // Function B_AchievementManager.B_AchievementManager_C.Test Luaq Statue Photo
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_PhotoTarget                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           PhotoTarget_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AB_PlayerState_C*                 Player_State                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UB_Achievement_C*                 Achievement                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    Give_Achievement                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Test_Luaq_Statue_Photo(class AActor* Param_PhotoTarget, class AB_PlayerState_C* Player_State, class UB_Achievement_C* Achievement, bool* Give_Achievement)
+void UB_AchievementManager_C::Test_Luaq_Statue_Photo(class AActor* PhotoTarget_0, class AB_PlayerState_C* Player_State, class UB_Achievement_C* Achievement, bool* Give_Achievement)
 {
 	static class UFunction* Func = nullptr;
 
@@ -726,7 +726,7 @@ void UB_AchievementManager_C::Test_Luaq_Statue_Photo(class AActor* Param_PhotoTa
 
 	Params::B_AchievementManager_C_Test_Luaq_Statue_Photo Parms{};
 
-	Parms.Param_PhotoTarget = Param_PhotoTarget;
+	Parms.PhotoTarget_0 = PhotoTarget_0;
 	Parms.Player_State = Player_State;
 	Parms.Achievement = Achievement;
 
@@ -766,14 +766,14 @@ void UB_AchievementManager_C::Test_Match_Value(class UB_Achievement_C* Achieveme
 // Parameters:
 // E_Achievements                          AchievementType                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  TravelDistance                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           ControlledProp                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FDateTime                        StartHunterInAir                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FDateTime                        EndHunterInAir                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_PhotoTarget                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           PhotoTarget_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_AchievementManager_C::Test_NonMinusSurvival_Achievement(E_Achievements AchievementType, class AB_PlayerState_C* PlayerState, int32 PropId, double TravelDistance, class AActor* ControlledProp, const struct FDateTime& StartHunterInAir, const struct FDateTime& EndHunterInAir, class AActor* Param_PhotoTarget)
+void UB_AchievementManager_C::Test_NonMinusSurvival_Achievement(E_Achievements AchievementType, class AB_PlayerState_C* PlayerState, int32 PropID, double TravelDistance, class AActor* ControlledProp, const struct FDateTime& StartHunterInAir, const struct FDateTime& EndHunterInAir, class AActor* PhotoTarget_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -784,12 +784,12 @@ void UB_AchievementManager_C::Test_NonMinusSurvival_Achievement(E_Achievements A
 
 	Parms.AchievementType = AchievementType;
 	Parms.PlayerState = PlayerState;
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.TravelDistance = TravelDistance;
 	Parms.ControlledProp = ControlledProp;
 	Parms.StartHunterInAir = std::move(StartHunterInAir);
 	Parms.EndHunterInAir = std::move(EndHunterInAir);
-	Parms.Param_PhotoTarget = Param_PhotoTarget;
+	Parms.PhotoTarget_0 = PhotoTarget_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -40,21 +40,21 @@ struct WB_ConfirmationDialog_C_ExecuteUbergraph_WB_ConfirmationDialog final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F04[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F05[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetConfirmableWidget_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIConfirmable_C>       K2Node_DynamicCast_AsIConfirmable;                 // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F06[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue_1;        // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetConfirmableWidget_ReturnValue_1;       // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIConfirmable_C>       K2Node_DynamicCast_AsIConfirmable_1;               // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F07[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -78,48 +78,48 @@ static_assert(offsetof(WB_ConfirmationDialog_C_ExecuteUbergraph_WB_ConfirmationD
 static_assert(offsetof(WB_ConfirmationDialog_C_ExecuteUbergraph_WB_ConfirmationDialog, K2Node_DynamicCast_bSuccess_3) == 0x000080, "Member 'WB_ConfirmationDialog_C_ExecuteUbergraph_WB_ConfirmationDialog::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
 
 // Function WB_ConfirmationDialog.WB_ConfirmationDialog_C.Get_MessageTextBlock_Text_0
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F08[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0018)()
-	double                                        CallFunc_CeilDecimals_ReturnValue;                 // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F09[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0018)()
-	double                                        CallFunc_CeilDecimals_Number_ImplicitCast;         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0010)()
+	double                                        CallFunc_CeilDecimals_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0088(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0010)()
+	double                                        CallFunc_CeilDecimals_Number_ImplicitCast;         // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0) == 0x000008, "Wrong alignment on WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0");
-static_assert(sizeof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0) == 0x0000D0, "Wrong size on WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0");
+static_assert(sizeof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0) == 0x0000B0, "Wrong size on WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0");
 static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, ReturnValue) == 0x000000, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue) == 0x000018, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000020, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_CeilDecimals_ReturnValue) == 0x000038, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_CeilDecimals_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Round_ReturnValue) == 0x000040, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000048, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, K2Node_MakeArray_Array) == 0x0000A0, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Format_ReturnValue) == 0x0000B0, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_CeilDecimals_Number_ImplicitCast) == 0x0000C8, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_CeilDecimals_Number_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue) == 0x000010, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_CeilDecimals_ReturnValue) == 0x000028, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_CeilDecimals_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Round_ReturnValue) == 0x000030, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000038, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, K2Node_MakeArray_Array) == 0x000088, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_Format_ReturnValue) == 0x000098, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0, CallFunc_CeilDecimals_Number_ImplicitCast) == 0x0000A8, "Member 'WB_ConfirmationDialog_C_Get_MessageTextBlock_Text_0::CallFunc_CeilDecimals_Number_ImplicitCast' has a wrong offset!");
 
 // Function WB_ConfirmationDialog.WB_ConfirmationDialog_C.Get_TitleText_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_ConfirmationDialog_C_Get_TitleText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_ConfirmationDialog_C_Get_TitleText_Text_0) == 0x000008, "Wrong alignment on WB_ConfirmationDialog_C_Get_TitleText_Text_0");
-static_assert(sizeof(WB_ConfirmationDialog_C_Get_TitleText_Text_0) == 0x000030, "Wrong size on WB_ConfirmationDialog_C_Get_TitleText_Text_0");
+static_assert(sizeof(WB_ConfirmationDialog_C_Get_TitleText_Text_0) == 0x000020, "Wrong size on WB_ConfirmationDialog_C_Get_TitleText_Text_0");
 static_assert(offsetof(WB_ConfirmationDialog_C_Get_TitleText_Text_0, ReturnValue) == 0x000000, "Member 'WB_ConfirmationDialog_C_Get_TitleText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ConfirmationDialog_C_Get_TitleText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_ConfirmationDialog_C_Get_TitleText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ConfirmationDialog_C_Get_TitleText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_ConfirmationDialog_C_Get_TitleText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_ConfirmationDialog.WB_ConfirmationDialog_C.GetConfirmableWidget
 // 0x0038 (0x0038 - 0x0000)
@@ -129,10 +129,10 @@ public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetCurrentScreenWidget_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsCurrentScreenTabable_ReturnValue;       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F0A[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IITabable_C>           K2Node_DynamicCast_AsITabable;                     // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F0B[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetActiveTab_ActiveTab;                   // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ConfirmationDialog_C_GetConfirmableWidget) == 0x000008, "Wrong alignment on WB_ConfirmationDialog_C_GetConfirmableWidget");
@@ -153,7 +153,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F0C[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetCurrentScreenWidget_Widget;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ConfirmationDialog_C_GetCurrentScreenWidget) == 0x000008, "Wrong alignment on WB_ConfirmationDialog_C_GetCurrentScreenWidget");
@@ -182,10 +182,10 @@ struct WB_ConfirmationDialog_C_GoBackMaybe final
 public:
 	class UWidget*                                ConfirmableWidget;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsCurrentScreenTabable_ReturnValue;       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F0D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIMenuScreen_C>        K2Node_DynamicCast_AsIMenu_Screen;                 // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F0E[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IITabable_C>           K2Node_DynamicCast_AsITabable;                     // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetShouldGoBackAfterAction_ReturnValue;   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -208,13 +208,13 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F0F[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F10[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0020(0x0008)(NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F11[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ConfirmationDialog_C_Inititalize) == 0x000008, "Wrong alignment on WB_ConfirmationDialog_C_Inititalize");
@@ -234,7 +234,7 @@ struct WB_ConfirmationDialog_C_IsCurrentScreenTabable final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F12[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetCurrentScreenWidget_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

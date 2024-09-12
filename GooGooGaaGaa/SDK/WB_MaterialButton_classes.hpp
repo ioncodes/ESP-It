@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MaterialButton.WB_MaterialButton_C
-// 0x0048 (0x0338 - 0x02F0)
+// 0x0048 (0x0358 - 0x0310)
 class UWB_MaterialButton_C final : public UWB_TileViewButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MaterialButton_C;                // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMaterialInterface*                     Material;                                          // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_BasePlaceableMaterialOverwrite_C*    MaterialOverwrite;                                 // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         SaveSlotIndex;                                     // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46AF[0x4];                                     // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_PlaceableStaticProp_C*              TargetStructure;                                   // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_MaterialButtonData_C*                MaterialButtonData;                                // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_PlaceableStaticProp_C*>      Material_Structures;                               // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_MaterialButton_C;                // 0x0310(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMaterialInterface*                     Material;                                          // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_BasePlaceableMaterialOverwrite_C*    MaterialOverwrite;                                 // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         SaveSlotIndex;                                     // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_PlaceableStaticProp_C*              TargetStructure;                                   // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_MaterialButtonData_C*                MaterialButtonData;                                // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_PlaceableStaticProp_C*>      Material_Structures;                               // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
@@ -51,15 +51,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_MaterialButton_C) == 0x000008, "Wrong alignment on UWB_MaterialButton_C");
-static_assert(sizeof(UWB_MaterialButton_C) == 0x000338, "Wrong size on UWB_MaterialButton_C");
-static_assert(offsetof(UWB_MaterialButton_C, UberGraphFrame_WB_MaterialButton_C) == 0x0002F0, "Member 'UWB_MaterialButton_C::UberGraphFrame_WB_MaterialButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, Material) == 0x0002F8, "Member 'UWB_MaterialButton_C::Material' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, MaterialOverwrite) == 0x000300, "Member 'UWB_MaterialButton_C::MaterialOverwrite' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, SaveSlotIndex) == 0x000308, "Member 'UWB_MaterialButton_C::SaveSlotIndex' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, TargetStructure) == 0x000310, "Member 'UWB_MaterialButton_C::TargetStructure' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, MaterialButtonData) == 0x000318, "Member 'UWB_MaterialButton_C::MaterialButtonData' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, Material_Structures) == 0x000320, "Member 'UWB_MaterialButton_C::Material_Structures' has a wrong offset!");
-static_assert(offsetof(UWB_MaterialButton_C, OwningCreativePlayerController) == 0x000330, "Member 'UWB_MaterialButton_C::OwningCreativePlayerController' has a wrong offset!");
+static_assert(sizeof(UWB_MaterialButton_C) == 0x000358, "Wrong size on UWB_MaterialButton_C");
+static_assert(offsetof(UWB_MaterialButton_C, UberGraphFrame_WB_MaterialButton_C) == 0x000310, "Member 'UWB_MaterialButton_C::UberGraphFrame_WB_MaterialButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, Material) == 0x000318, "Member 'UWB_MaterialButton_C::Material' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, MaterialOverwrite) == 0x000320, "Member 'UWB_MaterialButton_C::MaterialOverwrite' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, SaveSlotIndex) == 0x000328, "Member 'UWB_MaterialButton_C::SaveSlotIndex' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, TargetStructure) == 0x000330, "Member 'UWB_MaterialButton_C::TargetStructure' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, MaterialButtonData) == 0x000338, "Member 'UWB_MaterialButton_C::MaterialButtonData' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, Material_Structures) == 0x000340, "Member 'UWB_MaterialButton_C::Material_Structures' has a wrong offset!");
+static_assert(offsetof(UWB_MaterialButton_C, OwningCreativePlayerController) == 0x000350, "Member 'UWB_MaterialButton_C::OwningCreativePlayerController' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,23 +19,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ControllerIconWithLabel.WB_ControllerIconWithLabel_C
-// 0x0058 (0x0318 - 0x02C0)
+// 0x0058 (0x0338 - 0x02E0)
 class UWB_ControllerIconWithLabel_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         HorizontalBox_1;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Label;                                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   WB_ControllerIcon;                                 // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTexture*                               InitialIcon;                                       // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   BoundKey;                                          // 0x02E8(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          bIconOnTheRight;                                   // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46F4[0x7];                                     // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ControllerIcon_C*                   IconWidget;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             LabelWidget;                                       // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         HorizontalBox_1;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Label;                                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   WB_ControllerIcon;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTexture*                               InitialIcon;                                       // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   BoundKey;                                          // 0x0308(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          bIconOnTheRight;                                   // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_ControllerIcon_C*                   IconWidget;                                        // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             LabelWidget;                                       // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Center(class UHorizontalBoxSlot* Param_Slot);
+	void Center(class UHorizontalBoxSlot* Slot_0);
 	void AddWidgetsToHorizontalBox(class UWidget* Left, class UWidget* Right);
 	void PreConstruct(bool IsDesignTime);
 	void UpdateOrder();
@@ -52,16 +52,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_ControllerIconWithLabel_C) == 0x000008, "Wrong alignment on UWB_ControllerIconWithLabel_C");
-static_assert(sizeof(UWB_ControllerIconWithLabel_C) == 0x000318, "Wrong size on UWB_ControllerIconWithLabel_C");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ControllerIconWithLabel_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, HorizontalBox_1) == 0x0002C8, "Member 'UWB_ControllerIconWithLabel_C::HorizontalBox_1' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, Label) == 0x0002D0, "Member 'UWB_ControllerIconWithLabel_C::Label' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, WB_ControllerIcon) == 0x0002D8, "Member 'UWB_ControllerIconWithLabel_C::WB_ControllerIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, InitialIcon) == 0x0002E0, "Member 'UWB_ControllerIconWithLabel_C::InitialIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, BoundKey) == 0x0002E8, "Member 'UWB_ControllerIconWithLabel_C::BoundKey' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, bIconOnTheRight) == 0x000300, "Member 'UWB_ControllerIconWithLabel_C::bIconOnTheRight' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, IconWidget) == 0x000308, "Member 'UWB_ControllerIconWithLabel_C::IconWidget' has a wrong offset!");
-static_assert(offsetof(UWB_ControllerIconWithLabel_C, LabelWidget) == 0x000310, "Member 'UWB_ControllerIconWithLabel_C::LabelWidget' has a wrong offset!");
+static_assert(sizeof(UWB_ControllerIconWithLabel_C) == 0x000338, "Wrong size on UWB_ControllerIconWithLabel_C");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ControllerIconWithLabel_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, HorizontalBox_1) == 0x0002E8, "Member 'UWB_ControllerIconWithLabel_C::HorizontalBox_1' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, Label) == 0x0002F0, "Member 'UWB_ControllerIconWithLabel_C::Label' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, WB_ControllerIcon) == 0x0002F8, "Member 'UWB_ControllerIconWithLabel_C::WB_ControllerIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, InitialIcon) == 0x000300, "Member 'UWB_ControllerIconWithLabel_C::InitialIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, BoundKey) == 0x000308, "Member 'UWB_ControllerIconWithLabel_C::BoundKey' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, bIconOnTheRight) == 0x000320, "Member 'UWB_ControllerIconWithLabel_C::bIconOnTheRight' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, IconWidget) == 0x000328, "Member 'UWB_ControllerIconWithLabel_C::IconWidget' has a wrong offset!");
+static_assert(offsetof(UWB_ControllerIconWithLabel_C, LabelWidget) == 0x000330, "Member 'UWB_ControllerIconWithLabel_C::LabelWidget' has a wrong offset!");
 
 }
 

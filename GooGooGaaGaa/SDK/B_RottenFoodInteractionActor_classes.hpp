@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenFoodInteractionActor.B_RottenFoodInteractionActor_C
-// 0x0008 (0x0320 - 0x0318)
+// 0x0008 (0x0310 - 0x0308)
 class AB_RottenFoodInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
-	class UStaticMeshComponent*                   Fishbone;                                          // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Fishbone;                                          // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Highlight();
@@ -38,8 +38,8 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenFoodInteractionActor_C) == 0x000008, "Wrong alignment on AB_RottenFoodInteractionActor_C");
-static_assert(sizeof(AB_RottenFoodInteractionActor_C) == 0x000320, "Wrong size on AB_RottenFoodInteractionActor_C");
-static_assert(offsetof(AB_RottenFoodInteractionActor_C, Fishbone) == 0x000318, "Member 'AB_RottenFoodInteractionActor_C::Fishbone' has a wrong offset!");
+static_assert(sizeof(AB_RottenFoodInteractionActor_C) == 0x000310, "Wrong size on AB_RottenFoodInteractionActor_C");
+static_assert(offsetof(AB_RottenFoodInteractionActor_C, Fishbone) == 0x000308, "Member 'AB_RottenFoodInteractionActor_C::Fishbone' has a wrong offset!");
 
 }
 

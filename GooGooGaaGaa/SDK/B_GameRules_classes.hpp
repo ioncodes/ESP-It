@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "S_MatchRules_structs.hpp"
-#include "E_GameModifierType_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
 #include "S_SkillRules_structs.hpp"
-#include "E_PowerupRuleType_structs.hpp"
+#include "E_GameModifierType_structs.hpp"
+#include "S_MatchRules_structs.hpp"
 #include "S_GameModifier_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 #include "E_SkillRuleType_structs.hpp"
 
 
@@ -45,7 +45,7 @@ public:
 	void RemovePowerupRule(E_PowerupRuleType Powerup);
 	void RemoveSkillRule(E_SkillRuleType SkillType);
 	void ResetAll();
-	void Save(const class FString& Param_Name);
+	void Save(const class FString& Name_0);
 
 public:
 	static class UClass* StaticClass()

@@ -25,7 +25,7 @@ public:
 	class FString                                 Name_2_1730E0BF459E512F4D7921BEF9C0B5CD;           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	int64                                         Value_6_139A162643E76D3104F78E8B78CFC3D6;          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_StatSetBy                                   SetBy_9_68021A5545BCAAD3F9C484B0F2B0DBED;          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37BB[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              AchievementGrantTimestamp_12_31229AC64275305811E7C5AC4BBFB510; // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsHidden_14_94CB02304348B15F71D88688858D02B5;     // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

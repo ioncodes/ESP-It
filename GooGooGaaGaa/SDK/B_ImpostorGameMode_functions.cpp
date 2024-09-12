@@ -347,10 +347,10 @@ void AB_ImpostorGameMode_C::RespawnAllPlayers()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_ImpostorGameMode_C::SpawnPlayer(const struct FTransform& Transform, class UClass* Param_Class, class APlayerController* PlayerController)
+void AB_ImpostorGameMode_C::SpawnPlayer(const struct FTransform& Transform, class UClass* Class_0, class APlayerController* PlayerController)
 {
 	static class UFunction* Func = nullptr;
 
@@ -360,7 +360,7 @@ void AB_ImpostorGameMode_C::SpawnPlayer(const struct FTransform& Transform, clas
 	Params::B_ImpostorGameMode_C_SpawnPlayer Parms{};
 
 	Parms.Transform = std::move(Transform);
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.PlayerController = PlayerController;
 
 	UObject::ProcessEvent(Func, &Parms);

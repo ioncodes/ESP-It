@@ -20,9 +20,9 @@ namespace SDK
 // Function BP_PlaceablePlayerStart.BP_PlaceablePlayerStart_C.GetOccupied
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_Occupied                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Occupied_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlaceablePlayerStart_C::GetOccupied(bool* Param_Occupied)
+void ABP_PlaceablePlayerStart_C::GetOccupied(bool* Occupied_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,8 +33,8 @@ void ABP_PlaceablePlayerStart_C::GetOccupied(bool* Param_Occupied)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Occupied != nullptr)
-		*Param_Occupied = Parms.Param_Occupied;
+	if (Occupied_0 != nullptr)
+		*Occupied_0 = Parms.Occupied_0;
 }
 
 
@@ -69,9 +69,9 @@ void ABP_PlaceablePlayerStart_C::UnselectFromEditing()
 // Function BP_PlaceablePlayerStart.BP_PlaceablePlayerStart_C.SetOccupied
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_Occupied                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Occupied_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlaceablePlayerStart_C::SetOccupied(bool Param_Occupied)
+void ABP_PlaceablePlayerStart_C::SetOccupied(bool Occupied_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -80,7 +80,7 @@ void ABP_PlaceablePlayerStart_C::SetOccupied(bool Param_Occupied)
 
 	Params::BP_PlaceablePlayerStart_C_SetOccupied Parms{};
 
-	Parms.Param_Occupied = Param_Occupied;
+	Parms.Occupied_0 = Occupied_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

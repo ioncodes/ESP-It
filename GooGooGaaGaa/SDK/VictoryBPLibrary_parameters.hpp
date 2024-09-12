@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "VictoryBPLibrary_structs.hpp"
+#include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,7 +26,7 @@ struct RamaColorPicker_SetJoyColor final
 public:
 	struct FLinearColor                           NewColor;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SkipAnimation;                                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1908[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RamaColorPicker_SetJoyColor) == 0x000004, "Wrong alignment on RamaColorPicker_SetJoyColor");
 static_assert(sizeof(RamaColorPicker_SetJoyColor) == 0x000014, "Wrong size on RamaColorPicker_SetJoyColor");
@@ -62,7 +62,7 @@ struct RamaVictoryPluginCreateProcessPipe_ReadFromPipe final
 public:
 	class FString                                 PipeContents;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190A[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RamaVictoryPluginCreateProcessPipe_ReadFromPipe) == 0x000008, "Wrong alignment on RamaVictoryPluginCreateProcessPipe_ReadFromPipe");
 static_assert(sizeof(RamaVictoryPluginCreateProcessPipe_ReadFromPipe) == 0x000018, "Wrong size on RamaVictoryPluginCreateProcessPipe_ReadFromPipe");
@@ -89,7 +89,7 @@ struct VictoryBPFunctionLibrary_Accessor__GetPlayerController final
 public:
 	class AActor*                                 TheCharacter;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Accessor__GetPlayerController) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Accessor__GetPlayerController");
@@ -107,7 +107,7 @@ public:
 	float                                         Pitch;                                             // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Yaw;                                               // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190C[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Animation__GetAimOffsets) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Animation__GetAimOffsets");
 static_assert(sizeof(VictoryBPFunctionLibrary_Animation__GetAimOffsets) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Animation__GetAimOffsets");
@@ -126,7 +126,7 @@ public:
 	float                                         Pitch;                                             // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Yaw;                                               // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190D[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Animation__GetAimOffsetsFromRotation) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Animation__GetAimOffsetsFromRotation");
 static_assert(sizeof(VictoryBPFunctionLibrary_Animation__GetAimOffsetsFromRotation) == 0x000030, "Wrong size on VictoryBPFunctionLibrary_Animation__GetAimOffsetsFromRotation");
@@ -158,9 +158,9 @@ struct VictoryBPFunctionLibrary_Array_Sort final
 public:
 	TArray<int32>                                 TargetArray;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bAscendingOrder;                                   // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190E[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   VariableName;                                      // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Array_Sort) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Array_Sort");
 static_assert(sizeof(VictoryBPFunctionLibrary_Array_Sort) == 0x000020, "Wrong size on VictoryBPFunctionLibrary_Array_Sort");
@@ -177,7 +177,7 @@ public:
 	struct FVector                                Location;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              OutPixelLocation;                                  // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1910[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Capture2D_Project) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Capture2D_Project");
 static_assert(sizeof(VictoryBPFunctionLibrary_Capture2D_Project) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_Capture2D_Project");
@@ -195,7 +195,7 @@ public:
 	class FString                                 ImagePath;                                         // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           ClearColour;                                       // 0x0018(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1911[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Capture2D_SaveImage) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Capture2D_SaveImage");
 static_assert(sizeof(VictoryBPFunctionLibrary_Capture2D_SaveImage) == 0x000030, "Wrong size on VictoryBPFunctionLibrary_Capture2D_SaveImage");
@@ -213,7 +213,7 @@ public:
 	struct FVector                                Location;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              OutPixelLocation;                                  // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1912[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_CaptureComponent2D_Project) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_CaptureComponent2D_Project");
 static_assert(sizeof(VictoryBPFunctionLibrary_CaptureComponent2D_Project) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_CaptureComponent2D_Project");
@@ -231,7 +231,7 @@ public:
 	class FString                                 ImagePath;                                         // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           ClearColour;                                       // 0x0018(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1913[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_CaptureComponent2D_SaveImage) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_CaptureComponent2D_SaveImage");
 static_assert(sizeof(VictoryBPFunctionLibrary_CaptureComponent2D_SaveImage) == 0x000030, "Wrong size on VictoryBPFunctionLibrary_CaptureComponent2D_SaveImage");
@@ -284,7 +284,7 @@ public:
 	struct FVector                                LinePoint2;                                        // 0x0060(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LineVec2;                                          // 0x0078(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1914[0x7];                                     // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_ClosestPointsOnTwoLines) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_ClosestPointsOnTwoLines");
 static_assert(sizeof(VictoryBPFunctionLibrary_ClosestPointsOnTwoLines) == 0x000098, "Wrong size on VictoryBPFunctionLibrary_ClosestPointsOnTwoLines");
@@ -306,7 +306,7 @@ public:
 	class FString                                 Status;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 NewAssetFilePath;                                  // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Success;                                           // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1915[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_CreateStaticMeshAssetFromDynamicMesh) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_CreateStaticMeshAssetFromDynamicMesh");
@@ -326,7 +326,7 @@ public:
 	class UMaterialInterface*                     Mat;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Parameter;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1916[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_DoesMaterialHaveParameter) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_DoesMaterialHaveParameter");
 static_assert(sizeof(VictoryBPFunctionLibrary_DoesMaterialHaveParameter) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_DoesMaterialHaveParameter");
@@ -345,7 +345,7 @@ public:
 	bool                                          AllowOverWriting;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AllowAppend;                                       // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0032(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1917[0x5];                                     // 0x0033(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_FileIO__SaveStringArrayToFile) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_FileIO__SaveStringArrayToFile");
 static_assert(sizeof(VictoryBPFunctionLibrary_FileIO__SaveStringArrayToFile) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_FileIO__SaveStringArrayToFile");
@@ -367,7 +367,7 @@ public:
 	bool                                          AllowOverWriting;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AllowAppend;                                       // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0032(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1918[0x5];                                     // 0x0033(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_FileIO__SaveStringTextToFile) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_FileIO__SaveStringTextToFile");
 static_assert(sizeof(VictoryBPFunctionLibrary_FileIO__SaveStringTextToFile) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_FileIO__SaveStringTextToFile");
@@ -385,10 +385,10 @@ struct VictoryBPFunctionLibrary_FlashGameOnTaskBar final
 public:
 	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          FlashContinuous;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1919[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxFlashCount;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FlashFrequencyMilliseconds;                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191A[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_FlashGameOnTaskBar) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_FlashGameOnTaskBar");
 static_assert(sizeof(VictoryBPFunctionLibrary_FlashGameOnTaskBar) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_FlashGameOnTaskBar");
@@ -407,7 +407,7 @@ public:
 	class FString                                 AbsolutePath;                                      // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          CreateFolderTree;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191B[0x6];                                     // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GenerateUniqueContentRelativeFileName) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GenerateUniqueContentRelativeFileName");
 static_assert(sizeof(VictoryBPFunctionLibrary_GenerateUniqueContentRelativeFileName) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_GenerateUniqueContentRelativeFileName");
@@ -426,7 +426,7 @@ public:
 	class FName                                   StartingBoneName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           BoneNames;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191C[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GetAllBoneNamesBelowBone) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GetAllBoneNamesBelowBone");
 static_assert(sizeof(VictoryBPFunctionLibrary_GetAllBoneNamesBelowBone) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_GetAllBoneNamesBelowBone");
@@ -445,7 +445,7 @@ public:
 	class AActor*                                 ActorCenter;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191D[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfActor) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfActor");
@@ -467,7 +467,7 @@ public:
 	struct FVector                                Center;                                            // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191E[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfLocation) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GetClosestActorOfClassInRadiusOfLocation");
@@ -487,7 +487,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          TopLevelOnly;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_191F[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            ReturnValue;                                       // 0x0018(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GetFirstWidgetOfClass) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GetFirstWidgetOfClass");
@@ -532,7 +532,7 @@ public:
 	TArray<struct FVector>                        VertexPositions;                                   // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         LODIndex;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1920[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GetStaticMeshVertexLocations) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GetStaticMeshVertexLocations");
 static_assert(sizeof(VictoryBPFunctionLibrary_GetStaticMeshVertexLocations) == 0x000020, "Wrong size on VictoryBPFunctionLibrary_GetStaticMeshVertexLocations");
@@ -573,13 +573,13 @@ struct VictoryBPFunctionLibrary_GetWidgetFromName final
 {
 public:
 	class UUserWidget*                            ParentUserWidget;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Name_0;                                            // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidget*                                ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_GetWidgetFromName) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_GetWidgetFromName");
 static_assert(sizeof(VictoryBPFunctionLibrary_GetWidgetFromName) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_GetWidgetFromName");
 static_assert(offsetof(VictoryBPFunctionLibrary_GetWidgetFromName, ParentUserWidget) == 0x000000, "Member 'VictoryBPFunctionLibrary_GetWidgetFromName::ParentUserWidget' has a wrong offset!");
-static_assert(offsetof(VictoryBPFunctionLibrary_GetWidgetFromName, Param_Name) == 0x000008, "Member 'VictoryBPFunctionLibrary_GetWidgetFromName::Param_Name' has a wrong offset!");
+static_assert(offsetof(VictoryBPFunctionLibrary_GetWidgetFromName, Name_0) == 0x000008, "Member 'VictoryBPFunctionLibrary_GetWidgetFromName::Name_0' has a wrong offset!");
 static_assert(offsetof(VictoryBPFunctionLibrary_GetWidgetFromName, ReturnValue) == 0x000010, "Member 'VictoryBPFunctionLibrary_GetWidgetFromName::ReturnValue' has a wrong offset!");
 
 // Function VictoryBPLibrary.VictoryBPFunctionLibrary.HasSubstring
@@ -592,7 +592,7 @@ public:
 	ESearchCase                                   SearchCase;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESearchDir                                    SearchDir;                                         // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0022(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1921[0x5];                                     // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_HasSubstring) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_HasSubstring");
 static_assert(sizeof(VictoryBPFunctionLibrary_HasSubstring) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_HasSubstring");
@@ -609,7 +609,7 @@ struct VictoryBPFunctionLibrary_IsAlphaNumeric final
 public:
 	class FString                                 String;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1922[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_IsAlphaNumeric) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_IsAlphaNumeric");
 static_assert(sizeof(VictoryBPFunctionLibrary_IsAlphaNumeric) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_IsAlphaNumeric");
@@ -624,7 +624,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1923[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_IsWidgetOfClassInViewport) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_IsWidgetOfClassInViewport");
 static_assert(sizeof(VictoryBPFunctionLibrary_IsWidgetOfClassInViewport) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_IsWidgetOfClassInViewport");
@@ -640,7 +640,7 @@ public:
 	TSubclassOf<class UObject>                    ObjectClass;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Path;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1924[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_LoadObjectFromAssetPath) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_LoadObjectFromAssetPath");
@@ -657,11 +657,11 @@ struct VictoryBPFunctionLibrary_LoadStringArrayFromFile final
 public:
 	TArray<class FString>                         StringArray;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         ArraySize;                                         // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1925[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 FullFilePath;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ExcludeEmptyLines;                                 // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1926[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_LoadStringArrayFromFile) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_LoadStringArrayFromFile");
 static_assert(sizeof(VictoryBPFunctionLibrary_LoadStringArrayFromFile) == 0x000030, "Wrong size on VictoryBPFunctionLibrary_LoadStringArrayFromFile");
@@ -679,7 +679,7 @@ public:
 	class FString                                 Result;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 FullFilePath;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1927[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_LoadStringFromFile) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_LoadStringFromFile");
 static_assert(sizeof(VictoryBPFunctionLibrary_LoadStringFromFile) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_LoadStringFromFile");
@@ -776,7 +776,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MapName;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSkipNotifyPlayers;                                // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1928[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_ServerTravel) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_ServerTravel");
 static_assert(sizeof(VictoryBPFunctionLibrary_ServerTravel) == 0x000020, "Wrong size on VictoryBPFunctionLibrary_ServerTravel");
@@ -827,7 +827,7 @@ struct VictoryBPFunctionLibrary_StringIsEmpty final
 public:
 	class FString                                 Target;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1929[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_StringIsEmpty) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_StringIsEmpty");
 static_assert(sizeof(VictoryBPFunctionLibrary_StringIsEmpty) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_StringIsEmpty");
@@ -835,50 +835,50 @@ static_assert(offsetof(VictoryBPFunctionLibrary_StringIsEmpty, Target) == 0x0000
 static_assert(offsetof(VictoryBPFunctionLibrary_StringIsEmpty, ReturnValue) == 0x000010, "Member 'VictoryBPFunctionLibrary_StringIsEmpty::ReturnValue' has a wrong offset!");
 
 // Function VictoryBPLibrary.VictoryBPFunctionLibrary.Text_IsNumeric
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct VictoryBPFunctionLibrary_Text_IsNumeric final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_192A[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Text_IsNumeric) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Text_IsNumeric");
-static_assert(sizeof(VictoryBPFunctionLibrary_Text_IsNumeric) == 0x000020, "Wrong size on VictoryBPFunctionLibrary_Text_IsNumeric");
+static_assert(sizeof(VictoryBPFunctionLibrary_Text_IsNumeric) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Text_IsNumeric");
 static_assert(offsetof(VictoryBPFunctionLibrary_Text_IsNumeric, Text) == 0x000000, "Member 'VictoryBPFunctionLibrary_Text_IsNumeric::Text' has a wrong offset!");
-static_assert(offsetof(VictoryBPFunctionLibrary_Text_IsNumeric, ReturnValue) == 0x000018, "Member 'VictoryBPFunctionLibrary_Text_IsNumeric::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VictoryBPFunctionLibrary_Text_IsNumeric, ReturnValue) == 0x000010, "Member 'VictoryBPFunctionLibrary_Text_IsNumeric::ReturnValue' has a wrong offset!");
 
 // Function VictoryBPLibrary.VictoryBPFunctionLibrary.Text_ToFloat
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct VictoryBPFunctionLibrary_Text_ToFloat final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          UseDotForThousands;                                // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_192B[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          UseDotForThousands;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Text_ToFloat) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Text_ToFloat");
-static_assert(sizeof(VictoryBPFunctionLibrary_Text_ToFloat) == 0x000020, "Wrong size on VictoryBPFunctionLibrary_Text_ToFloat");
+static_assert(sizeof(VictoryBPFunctionLibrary_Text_ToFloat) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Text_ToFloat");
 static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToFloat, Text) == 0x000000, "Member 'VictoryBPFunctionLibrary_Text_ToFloat::Text' has a wrong offset!");
-static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToFloat, UseDotForThousands) == 0x000018, "Member 'VictoryBPFunctionLibrary_Text_ToFloat::UseDotForThousands' has a wrong offset!");
-static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToFloat, ReturnValue) == 0x00001C, "Member 'VictoryBPFunctionLibrary_Text_ToFloat::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToFloat, UseDotForThousands) == 0x000010, "Member 'VictoryBPFunctionLibrary_Text_ToFloat::UseDotForThousands' has a wrong offset!");
+static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToFloat, ReturnValue) == 0x000014, "Member 'VictoryBPFunctionLibrary_Text_ToFloat::ReturnValue' has a wrong offset!");
 
 // Function VictoryBPLibrary.VictoryBPFunctionLibrary.Text_ToInt
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct VictoryBPFunctionLibrary_Text_ToInt final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          UseDotForThousands;                                // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_192C[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          UseDotForThousands;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Text_ToInt) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Text_ToInt");
-static_assert(sizeof(VictoryBPFunctionLibrary_Text_ToInt) == 0x000020, "Wrong size on VictoryBPFunctionLibrary_Text_ToInt");
+static_assert(sizeof(VictoryBPFunctionLibrary_Text_ToInt) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Text_ToInt");
 static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToInt, Text) == 0x000000, "Member 'VictoryBPFunctionLibrary_Text_ToInt::Text' has a wrong offset!");
-static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToInt, UseDotForThousands) == 0x000018, "Member 'VictoryBPFunctionLibrary_Text_ToInt::UseDotForThousands' has a wrong offset!");
-static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToInt, ReturnValue) == 0x00001C, "Member 'VictoryBPFunctionLibrary_Text_ToInt::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToInt, UseDotForThousands) == 0x000010, "Member 'VictoryBPFunctionLibrary_Text_ToInt::UseDotForThousands' has a wrong offset!");
+static_assert(offsetof(VictoryBPFunctionLibrary_Text_ToInt, ReturnValue) == 0x000014, "Member 'VictoryBPFunctionLibrary_Text_ToInt::ReturnValue' has a wrong offset!");
 
 // Function VictoryBPLibrary.VictoryBPFunctionLibrary.UTCToLocal
 // 0x0010 (0x0010 - 0x0000)
@@ -904,7 +904,7 @@ public:
 	int32                                         Y;                                                 // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           FoundColor;                                        // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_192D[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_Get_Pixel) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_Get_Pixel");
 static_assert(sizeof(VictoryBPFunctionLibrary_Victory_Get_Pixel) == 0x000030, "Wrong size on VictoryBPFunctionLibrary_Victory_Get_Pixel");
@@ -924,7 +924,7 @@ public:
 	class FString                                 RootFolderFullPath;                                // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Ext;                                               // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_192E[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_GetFiles) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_GetFiles");
 static_assert(sizeof(VictoryBPFunctionLibrary_Victory_GetFiles) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_Victory_GetFiles");
@@ -942,7 +942,7 @@ public:
 	class FString                                 RootFolderFullPath;                                // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Ext;                                               // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_192F[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_GetFilesInRootAndAllSubFolders) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_GetFilesInRootAndAllSubFolders");
 static_assert(sizeof(VictoryBPFunctionLibrary_Victory_GetFilesInRootAndAllSubFolders) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_Victory_GetFilesInRootAndAllSubFolders");
@@ -974,7 +974,7 @@ public:
 	int32                                         Y;                                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           PixelColor;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1930[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_GetPixelFromT2D) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_GetPixelFromT2D");
 static_assert(sizeof(VictoryBPFunctionLibrary_Victory_GetPixelFromT2D) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_Victory_GetPixelFromT2D");
@@ -994,7 +994,7 @@ public:
 	int32                                         TextureHeight;                                     // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FLinearColor>                   PixelArray;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1931[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_GetPixelsArrayFromT2D) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_GetPixelsArrayFromT2D");
 static_assert(sizeof(VictoryBPFunctionLibrary_Victory_GetPixelsArrayFromT2D) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_Victory_GetPixelsArrayFromT2D");
@@ -1022,10 +1022,10 @@ struct VictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile final
 public:
 	class FString                                 FullFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1932[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Width;                                             // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1933[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFile");
@@ -1044,10 +1044,10 @@ public:
 	class FString                                 FullFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EJoyImageFormats                              ImageFormat;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1934[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Width;                                             // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1935[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FLinearColor>                   OutPixels;                                         // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class UTexture2D*                             ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1069,10 +1069,10 @@ public:
 	class FString                                 FullFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EJoyImageFormats                              ImageFormat;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1936[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Width;                                             // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1937[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFileByExtension) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_LoadTexture2D_FromFileByExtension");
@@ -1095,10 +1095,10 @@ public:
 	TArray<struct FLinearColor>                   ImagePixels;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          SaveAsBMP;                                         // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SRGB;                                              // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1938[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorString;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1939[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Victory_SavePixels) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Victory_SavePixels");
 static_assert(sizeof(VictoryBPFunctionLibrary_Victory_SavePixels) == 0x000048, "Wrong size on VictoryBPFunctionLibrary_Victory_SavePixels");
@@ -1141,12 +1141,12 @@ struct VictoryBPFunctionLibrary_VictoryCreateProc final
 {
 public:
 	int32                                         ProcessId;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 FullPathOfProgramToRun;                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         CommandlineArgs;                                   // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          Detach;                                            // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Hidden;                                            // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193B[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OptionalWorkingDirectory;                          // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class URamaVictoryPluginCreateProcessPipe*    ReadPipeObject;                                    // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1198,7 +1198,7 @@ struct VictoryBPFunctionLibrary_VictoryGetApplicationName final
 {
 public:
 	int32                                         ProcessId;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetApplicationName) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetApplicationName");
@@ -1215,7 +1215,7 @@ public:
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193D[0x6];                                     // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Bool) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Bool");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Bool) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Bool");
@@ -1232,9 +1232,9 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193E[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193F[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Color) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Color");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Color) == 0x000038, "Wrong size on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Color");
@@ -1251,7 +1251,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1940[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Float) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Float");
@@ -1269,7 +1269,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1941[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Int) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Int");
@@ -1287,7 +1287,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1942[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Rotator) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Rotator");
@@ -1305,7 +1305,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1943[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_String) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_String");
@@ -1323,7 +1323,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1944[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector");
@@ -1341,7 +1341,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsValid;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1945[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector2D) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictoryGetCustomConfigVar_Vector2D");
@@ -1388,7 +1388,7 @@ struct VictoryBPFunctionLibrary_VictoryIsApplicationRunning final
 public:
 	int32                                         ProcessId;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1946[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictoryIsApplicationRunning) == 0x000004, "Wrong alignment on VictoryBPFunctionLibrary_VictoryIsApplicationRunning");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictoryIsApplicationRunning) == 0x000008, "Wrong size on VictoryBPFunctionLibrary_VictoryIsApplicationRunning");
@@ -1414,7 +1414,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Value;                                             // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1947[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Bool) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Bool");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Bool) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Bool");
@@ -1445,7 +1445,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1948[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Float) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Float");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Float) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Float");
@@ -1461,7 +1461,7 @@ public:
 	class FString                                 SectionName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariableName;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1949[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Int) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Int");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Int) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_VictorySetCustomConfigVar_Int");
@@ -1537,7 +1537,7 @@ public:
 	class APlayerController*                      ThePC;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKey                                   Key;                                               // 0x0008(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInputEvent                                   EventType;                                         // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_194A[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_VictorySimulateKeyPress) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_VictorySimulateKeyPress");
 static_assert(sizeof(VictoryBPFunctionLibrary_VictorySimulateKeyPress) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_VictorySimulateKeyPress");
@@ -1604,7 +1604,7 @@ public:
 	float                                         PosX;                                              // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PosY;                                              // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_194B[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Viewport__GetCenterOfViewport) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Viewport__GetCenterOfViewport");
 static_assert(sizeof(VictoryBPFunctionLibrary_Viewport__GetCenterOfViewport) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Viewport__GetCenterOfViewport");
@@ -1622,7 +1622,7 @@ public:
 	float                                         PosX;                                              // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PosY;                                              // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_194C[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Viewport__GetMousePosition) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Viewport__GetMousePosition");
 static_assert(sizeof(VictoryBPFunctionLibrary_Viewport__GetMousePosition) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Viewport__GetMousePosition");
@@ -1640,7 +1640,7 @@ public:
 	float                                         PosX;                                              // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PosY;                                              // 0x000C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_194D[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_Viewport__SetMousePosition) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_Viewport__SetMousePosition");
 static_assert(sizeof(VictoryBPFunctionLibrary_Viewport__SetMousePosition) == 0x000018, "Wrong size on VictoryBPFunctionLibrary_Viewport__SetMousePosition");
@@ -1659,7 +1659,7 @@ public:
 	struct FVector                                OutWorldOrigin;                                    // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                OutWorldDirection;                                 // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_194E[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_ViewportPositionDeproject) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_ViewportPositionDeproject");
 static_assert(sizeof(VictoryBPFunctionLibrary_ViewportPositionDeproject) == 0x000050, "Wrong size on VictoryBPFunctionLibrary_ViewportPositionDeproject");
@@ -1678,7 +1678,7 @@ public:
 	TArray<class UUserWidget*>                    ChildWidgets;                                      // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TSubclassOf<class UUserWidget>                WidgetClass;                                       // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bImmediateOnly;                                    // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_194F[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_WidgetGetChildrenOfClass) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_WidgetGetChildrenOfClass");
 static_assert(sizeof(VictoryBPFunctionLibrary_WidgetGetChildrenOfClass) == 0x000028, "Wrong size on VictoryBPFunctionLibrary_WidgetGetChildrenOfClass");
@@ -1709,7 +1709,7 @@ struct VictoryBPFunctionLibrary_WorldType__InEditorWorld final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1950[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_WorldType__InEditorWorld) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_WorldType__InEditorWorld");
 static_assert(sizeof(VictoryBPFunctionLibrary_WorldType__InEditorWorld) == 0x000010, "Wrong size on VictoryBPFunctionLibrary_WorldType__InEditorWorld");
@@ -1723,7 +1723,7 @@ struct VictoryBPFunctionLibrary_WorldType__InGameInstanceWorld final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1951[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_WorldType__InGameInstanceWorld) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_WorldType__InGameInstanceWorld");
 static_assert(sizeof(VictoryBPFunctionLibrary_WorldType__InGameInstanceWorld) == 0x000010, "Wrong size on VictoryBPFunctionLibrary_WorldType__InGameInstanceWorld");
@@ -1737,7 +1737,7 @@ struct VictoryBPFunctionLibrary_WorldType__InPIEWorld final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1952[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VictoryBPFunctionLibrary_WorldType__InPIEWorld) == 0x000008, "Wrong alignment on VictoryBPFunctionLibrary_WorldType__InPIEWorld");
 static_assert(sizeof(VictoryBPFunctionLibrary_WorldType__InPIEWorld) == 0x000010, "Wrong size on VictoryBPFunctionLibrary_WorldType__InPIEWorld");
@@ -1790,7 +1790,7 @@ struct TKMathFunctionLibrary_SetVectorLength final
 public:
 	struct FVector                                A;                                                 // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Size;                                              // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1953[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TKMathFunctionLibrary_SetVectorLength) == 0x000008, "Wrong alignment on TKMathFunctionLibrary_SetVectorLength");

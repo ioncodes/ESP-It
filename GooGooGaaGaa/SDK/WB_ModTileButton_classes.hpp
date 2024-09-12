@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ModTileButton.WB_ModTileButton_C
-// 0x0028 (0x0318 - 0x02F0)
+// 0x0028 (0x0338 - 0x0310)
 class UWB_ModTileButton_C final : public UWB_TileViewButton_C
 {
 public:
-	E_GameModifierType                            Modifier;                                          // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_55A3[0x3];                                     // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           NoRuleActiveColor;                                 // 0x02F4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ActiveRuleColor;                                   // 0x0304(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_GameModifierType                            Modifier;                                          // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_311[0x3];                                      // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           NoRuleActiveColor;                                 // 0x0314(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ActiveRuleColor;                                   // 0x0324(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
 	void GetBorderColor(struct FLinearColor* Color);
 	TSoftObjectPtr<class UObject> GetIcon();
 	void GetIsButtonEnabled(bool* IsEnabled);
-	void GetTooltip(class UUserWidget** Param_ToolTip);
+	void GetTooltip(class UUserWidget** ToolTip_0);
 	void SetIndividualParameters();
 
 public:
@@ -47,10 +47,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_ModTileButton_C) == 0x000008, "Wrong alignment on UWB_ModTileButton_C");
-static_assert(sizeof(UWB_ModTileButton_C) == 0x000318, "Wrong size on UWB_ModTileButton_C");
-static_assert(offsetof(UWB_ModTileButton_C, Modifier) == 0x0002F0, "Member 'UWB_ModTileButton_C::Modifier' has a wrong offset!");
-static_assert(offsetof(UWB_ModTileButton_C, NoRuleActiveColor) == 0x0002F4, "Member 'UWB_ModTileButton_C::NoRuleActiveColor' has a wrong offset!");
-static_assert(offsetof(UWB_ModTileButton_C, ActiveRuleColor) == 0x000304, "Member 'UWB_ModTileButton_C::ActiveRuleColor' has a wrong offset!");
+static_assert(sizeof(UWB_ModTileButton_C) == 0x000338, "Wrong size on UWB_ModTileButton_C");
+static_assert(offsetof(UWB_ModTileButton_C, Modifier) == 0x000310, "Member 'UWB_ModTileButton_C::Modifier' has a wrong offset!");
+static_assert(offsetof(UWB_ModTileButton_C, NoRuleActiveColor) == 0x000314, "Member 'UWB_ModTileButton_C::NoRuleActiveColor' has a wrong offset!");
+static_assert(offsetof(UWB_ModTileButton_C, ActiveRuleColor) == 0x000324, "Member 'UWB_ModTileButton_C::ActiveRuleColor' has a wrong offset!");
 
 }
 

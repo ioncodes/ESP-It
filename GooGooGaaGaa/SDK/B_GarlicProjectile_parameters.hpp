@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -25,23 +25,23 @@ public:
 	class USceneComponent*                        Parent;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3916[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0030(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3917[0x8];                                     // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0100(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3918[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_SpawnActorOrTakeFromPool_ReturnValue;     // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GarlicClove_C*                       K2Node_DynamicCast_AsB_Garlic_Clove;               // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3919[0x2];                                     // 0x0182(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_182[0x2];                                      // 0x0182(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GarlicProjectile_C_AttachGarlicClove) == 0x000010, "Wrong alignment on B_GarlicProjectile_C_AttachGarlicClove");
@@ -65,12 +65,12 @@ static_assert(offsetof(B_GarlicProjectile_C_AttachGarlicClove, CallFunc_K2_Attac
 static_assert(offsetof(B_GarlicProjectile_C_AttachGarlicClove, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000184, "Member 'B_GarlicProjectile_C_AttachGarlicClove::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
 
 // Function B_GarlicProjectile.B_GarlicProjectile_C.ExecuteUbergraph_B_GarlicProjectile
-// 0x0260 (0x0260 - 0x0000)
+// 0x0270 (0x0270 - 0x0000)
 struct B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                K2Node_CustomEvent_Location;                       // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             K2Node_Event_SpawnTransform;                       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_Owner;                                // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -83,15 +83,15 @@ public:
 	class AActor*                                 K2Node_Event_Other;                                // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_Event_OtherComp;                            // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bSelfMoved;                           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391B[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                K2Node_Event_HitLocation;                          // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_HitNormal;                            // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_NormalImpulse;                        // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_Hit;                                  // 0x0170(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_Hit;                                  // 0x0170(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile) == 0x000010, "Wrong alignment on B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile");
-static_assert(sizeof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile) == 0x000260, "Wrong size on B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile");
+static_assert(sizeof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile) == 0x000270, "Wrong size on B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile");
 static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, EntryPoint) == 0x000000, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, K2Node_CustomEvent_Location) == 0x000008, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::K2Node_CustomEvent_Location' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, K2Node_Event_SpawnTransform) == 0x000020, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::K2Node_Event_SpawnTransform' has a wrong offset!");
@@ -109,7 +109,7 @@ static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile,
 static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, K2Node_Event_HitNormal) == 0x000140, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::K2Node_Event_HitNormal' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, K2Node_Event_NormalImpulse) == 0x000158, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::K2Node_Event_NormalImpulse' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, K2Node_Event_Hit) == 0x000170, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::K2Node_Event_Hit' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, CallFunc_HasAuthority_ReturnValue) == 0x000258, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile, CallFunc_HasAuthority_ReturnValue) == 0x000268, "Member 'B_GarlicProjectile_C_ExecuteUbergraph_B_GarlicProjectile::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 
 // Function B_GarlicProjectile.B_GarlicProjectile_C.IncrementLifeSpanTimer
 // 0x0020 (0x0020 - 0x0000)
@@ -153,7 +153,7 @@ static_assert(sizeof(B_GarlicProjectile_C_PlayDestroyEffectsMulti) == 0x000018, 
 static_assert(offsetof(B_GarlicProjectile_C_PlayDestroyEffectsMulti, Location) == 0x000000, "Member 'B_GarlicProjectile_C_PlayDestroyEffectsMulti::Location' has a wrong offset!");
 
 // Function B_GarlicProjectile.B_GarlicProjectile_C.ReceiveHit
-// 0x0150 (0x0150 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct B_GarlicProjectile_C_ReceiveHit final
 {
 public:
@@ -161,14 +161,14 @@ public:
 	class AActor*                                 Other;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSelfMoved;                                        // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391C[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                HitLocation;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                HitNormal;                                         // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                NormalImpulse;                                     // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0068(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             Hit;                                               // 0x0068(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_GarlicProjectile_C_ReceiveHit) == 0x000008, "Wrong alignment on B_GarlicProjectile_C_ReceiveHit");
-static_assert(sizeof(B_GarlicProjectile_C_ReceiveHit) == 0x000150, "Wrong size on B_GarlicProjectile_C_ReceiveHit");
+static_assert(sizeof(B_GarlicProjectile_C_ReceiveHit) == 0x000160, "Wrong size on B_GarlicProjectile_C_ReceiveHit");
 static_assert(offsetof(B_GarlicProjectile_C_ReceiveHit, MyComp) == 0x000000, "Member 'B_GarlicProjectile_C_ReceiveHit::MyComp' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_ReceiveHit, Other) == 0x000008, "Member 'B_GarlicProjectile_C_ReceiveHit::Other' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_ReceiveHit, OtherComp) == 0x000010, "Member 'B_GarlicProjectile_C_ReceiveHit::OtherComp' has a wrong offset!");
@@ -195,15 +195,15 @@ struct B_GarlicProjectile_C_TearUp final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GarlicProjectile_C_TearUp) == 0x000010, "Wrong alignment on B_GarlicProjectile_C_TearUp");
 static_assert(sizeof(B_GarlicProjectile_C_TearUp) == 0x000080, "Wrong size on B_GarlicProjectile_C_TearUp");
 static_assert(offsetof(B_GarlicProjectile_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_GarlicProjectile_C_TearUp::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_TearUp, Param_Owner) == 0x000060, "Member 'B_GarlicProjectile_C_TearUp::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_TearUp, Param_Instigator) == 0x000068, "Member 'B_GarlicProjectile_C_TearUp::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_TearUp, Owner_0) == 0x000060, "Member 'B_GarlicProjectile_C_TearUp::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_TearUp, Instigator_0) == 0x000068, "Member 'B_GarlicProjectile_C_TearUp::Instigator_0' has a wrong offset!");
 static_assert(offsetof(B_GarlicProjectile_C_TearUp, CallFunc_HasAuthority_ReturnValue) == 0x000070, "Member 'B_GarlicProjectile_C_TearUp::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 
 // Function B_GarlicProjectile.B_GarlicProjectile_C.TearUpMulti
@@ -212,14 +212,14 @@ struct B_GarlicProjectile_C_TearUpMulti final
 {
 public:
 	struct FTransform                             Transform;                                         // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GarlicProjectile_C_TearUpMulti) == 0x000010, "Wrong alignment on B_GarlicProjectile_C_TearUpMulti");
 static_assert(sizeof(B_GarlicProjectile_C_TearUpMulti) == 0x000070, "Wrong size on B_GarlicProjectile_C_TearUpMulti");
 static_assert(offsetof(B_GarlicProjectile_C_TearUpMulti, Transform) == 0x000000, "Member 'B_GarlicProjectile_C_TearUpMulti::Transform' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_TearUpMulti, Param_Owner) == 0x000060, "Member 'B_GarlicProjectile_C_TearUpMulti::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_TearUpMulti, Param_Instigator) == 0x000068, "Member 'B_GarlicProjectile_C_TearUpMulti::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_TearUpMulti, Owner_0) == 0x000060, "Member 'B_GarlicProjectile_C_TearUpMulti::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_TearUpMulti, Instigator_0) == 0x000068, "Member 'B_GarlicProjectile_C_TearUpMulti::Instigator_0' has a wrong offset!");
 
 // Function B_GarlicProjectile.B_GarlicProjectile_C.TearUpPoolObject
 // 0x0070 (0x0070 - 0x0000)
@@ -227,14 +227,14 @@ struct B_GarlicProjectile_C_TearUpPoolObject final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_GarlicProjectile_C_TearUpPoolObject) == 0x000010, "Wrong alignment on B_GarlicProjectile_C_TearUpPoolObject");
 static_assert(sizeof(B_GarlicProjectile_C_TearUpPoolObject) == 0x000070, "Wrong size on B_GarlicProjectile_C_TearUpPoolObject");
 static_assert(offsetof(B_GarlicProjectile_C_TearUpPoolObject, SpawnTransform) == 0x000000, "Member 'B_GarlicProjectile_C_TearUpPoolObject::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_TearUpPoolObject, Param_Owner) == 0x000060, "Member 'B_GarlicProjectile_C_TearUpPoolObject::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_GarlicProjectile_C_TearUpPoolObject, Param_Instigator) == 0x000068, "Member 'B_GarlicProjectile_C_TearUpPoolObject::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_TearUpPoolObject, Owner_0) == 0x000060, "Member 'B_GarlicProjectile_C_TearUpPoolObject::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_GarlicProjectile_C_TearUpPoolObject, Instigator_0) == 0x000068, "Member 'B_GarlicProjectile_C_TearUpPoolObject::Instigator_0' has a wrong offset!");
 
 // Function B_GarlicProjectile.B_GarlicProjectile_C.UpdateVelocityVector
 // 0x0040 (0x0040 - 0x0000)

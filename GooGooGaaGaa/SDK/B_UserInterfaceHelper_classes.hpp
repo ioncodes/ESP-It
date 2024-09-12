@@ -29,7 +29,7 @@ public:
 	static void SetButtonNormalAsHoveredStyle(class UButton* Button, const struct FButtonStyle& ButtonStyle, class UObject* __WorldContext);
 	static void SetButtonNormalAsPressedStyle(class UButton* Button, const struct FButtonStyle& ButtonStyle, class UObject* __WorldContext);
 	static void ResetButtonToNormalStyle(class UButton* Button, const struct FButtonStyle& ButtonStyle, class UObject* __WorldContext);
-	static void IsKeyTab(const struct FKey& Key, class UObject* __WorldContext, bool* Param_IsKeyTab);
+	static void IsKeyTab(const struct FKey& Key, class UObject* __WorldContext, bool* IsKeyTab_0);
 	static void HandleSelectionScreenPreviewKeyDown(const struct FKeyEvent& KeyEvent, class UUserWidget* UserWidget, bool AllowClose, class UObject* __WorldContext, struct FEventReply* EventReply);
 	static void ShowSelectionScreen(class UObject* __WorldContext, bool* ScreenShown);
 

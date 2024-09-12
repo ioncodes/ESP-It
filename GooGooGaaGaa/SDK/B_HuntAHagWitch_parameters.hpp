@@ -20,11 +20,11 @@ struct B_HuntAHagWitch_C_ExecuteUbergraph_B_HuntAHagWitch final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DA8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DA9[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AController*                            K2Node_Event_Controller;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWB_HUD_C*                              K2Node_DynamicCast_AsWB_HUD;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -46,11 +46,11 @@ static_assert(offsetof(B_HuntAHagWitch_C_ExecuteUbergraph_B_HuntAHagWitch, K2Nod
 struct B_HuntAHagWitch_C_LoadSkills final
 {
 public:
-	class AController*                            Param_Controller;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AController*                            Controller_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_HuntAHagWitch_C_LoadSkills) == 0x000008, "Wrong alignment on B_HuntAHagWitch_C_LoadSkills");
 static_assert(sizeof(B_HuntAHagWitch_C_LoadSkills) == 0x000008, "Wrong size on B_HuntAHagWitch_C_LoadSkills");
-static_assert(offsetof(B_HuntAHagWitch_C_LoadSkills, Param_Controller) == 0x000000, "Member 'B_HuntAHagWitch_C_LoadSkills::Param_Controller' has a wrong offset!");
+static_assert(offsetof(B_HuntAHagWitch_C_LoadSkills, Controller_0) == 0x000000, "Member 'B_HuntAHagWitch_C_LoadSkills::Controller_0' has a wrong offset!");
 
 // Function B_HuntAHagWitch.B_HuntAHagWitch_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

@@ -55,9 +55,9 @@ void AB_GameState_C::HasRoundStarted(bool* RoundHasStarted)
 // Function B_GameState.B_GameState_C.HasTrackingStarted
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasTrackingStarted                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HasTrackingStarted_0                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameState_C::HasTrackingStarted(bool* Param_HasTrackingStarted)
+void AB_GameState_C::HasTrackingStarted(bool* HasTrackingStarted_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -68,8 +68,8 @@ void AB_GameState_C::HasTrackingStarted(bool* Param_HasTrackingStarted)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasTrackingStarted != nullptr)
-		*Param_HasTrackingStarted = Parms.Param_HasTrackingStarted;
+	if (HasTrackingStarted_0 != nullptr)
+		*HasTrackingStarted_0 = Parms.HasTrackingStarted_0;
 }
 
 
@@ -322,9 +322,9 @@ class AB_PlayerState_C* AB_GameState_C::GetPlayerStateById(const class FString& 
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class FString>                   PlayerIds                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FS_TournamentPlayer>      Param_TournamentPlayers                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FS_TournamentPlayer>      TournamentPlayers_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_GameState_C::InitializeTournamentPlayers(TArray<class FString>& PlayerIds, TArray<struct FS_TournamentPlayer>& Param_TournamentPlayers)
+void AB_GameState_C::InitializeTournamentPlayers(TArray<class FString>& PlayerIds, TArray<struct FS_TournamentPlayer>& TournamentPlayers_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -334,12 +334,12 @@ void AB_GameState_C::InitializeTournamentPlayers(TArray<class FString>& PlayerId
 	Params::B_GameState_C_InitializeTournamentPlayers Parms{};
 
 	Parms.PlayerIds = std::move(PlayerIds);
-	Parms.Param_TournamentPlayers = std::move(Param_TournamentPlayers);
+	Parms.TournamentPlayers_0 = std::move(TournamentPlayers_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	PlayerIds = std::move(Parms.PlayerIds);
-	Param_TournamentPlayers = std::move(Parms.Param_TournamentPlayers);
+	TournamentPlayers_0 = std::move(Parms.TournamentPlayers_0);
 }
 
 
@@ -748,11 +748,11 @@ void AB_GameState_C::RemoveSleepProp(class AActor* Actor)
 // Function B_GameState.B_GameState_C.StartKickVote
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_PlayerNameToKick                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             Param_ReasonToKick                                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FName                             Param_PlayerNameStartedKickVote                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             PlayerNameToKick_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReasonToKick_0                                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FName                             PlayerNameStartedKickVote_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_GameState_C::StartKickVote(class FName Param_PlayerNameToKick, const class FText& Param_ReasonToKick, class FName Param_PlayerNameStartedKickVote)
+void AB_GameState_C::StartKickVote(class FName PlayerNameToKick_0, const class FText& ReasonToKick_0, class FName PlayerNameStartedKickVote_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -761,9 +761,9 @@ void AB_GameState_C::StartKickVote(class FName Param_PlayerNameToKick, const cla
 
 	Params::B_GameState_C_StartKickVote Parms{};
 
-	Parms.Param_PlayerNameToKick = Param_PlayerNameToKick;
-	Parms.Param_ReasonToKick = std::move(Param_ReasonToKick);
-	Parms.Param_PlayerNameStartedKickVote = Param_PlayerNameStartedKickVote;
+	Parms.PlayerNameToKick_0 = PlayerNameToKick_0;
+	Parms.ReasonToKick_0 = std::move(ReasonToKick_0);
+	Parms.PlayerNameStartedKickVote_0 = PlayerNameStartedKickVote_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -905,9 +905,9 @@ void AB_GameState_C::SendTournamentScoresMulti(const TArray<class FString>& Play
 // (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class FString>                   PlayerIds                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FS_TournamentPlayer>      Param_TournamentPlayers                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FS_TournamentPlayer>      TournamentPlayers_0                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_GameState_C::InitializeTournamentPlayersMulti(const TArray<class FString>& PlayerIds, const TArray<struct FS_TournamentPlayer>& Param_TournamentPlayers)
+void AB_GameState_C::InitializeTournamentPlayersMulti(const TArray<class FString>& PlayerIds, const TArray<struct FS_TournamentPlayer>& TournamentPlayers_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -917,7 +917,7 @@ void AB_GameState_C::InitializeTournamentPlayersMulti(const TArray<class FString
 	Params::B_GameState_C_InitializeTournamentPlayersMulti Parms{};
 
 	Parms.PlayerIds = std::move(PlayerIds);
-	Parms.Param_TournamentPlayers = std::move(Param_TournamentPlayers);
+	Parms.TournamentPlayers_0 = std::move(TournamentPlayers_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -954,6 +954,20 @@ void AB_GameState_C::SkillsUpdated()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_GameState_C", "SkillsUpdated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_GameState.B_GameState_C.UpdateGameNameSanitized
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_GameState_C::UpdateGameNameSanitized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameState_C", "UpdateGameNameSanitized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

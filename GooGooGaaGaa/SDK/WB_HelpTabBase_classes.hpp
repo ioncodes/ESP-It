@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_HelpTabBase.WB_HelpTabBase_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_HelpTabBase_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UUserWidget*>                    HelpTabButtons;                                    // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UUserWidget*>                    HelpTabButtons;                                    // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void Activate();
@@ -42,9 +42,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_HelpTabBase_C) == 0x000008, "Wrong alignment on UWB_HelpTabBase_C");
-static_assert(sizeof(UWB_HelpTabBase_C) == 0x0002D8, "Wrong size on UWB_HelpTabBase_C");
-static_assert(offsetof(UWB_HelpTabBase_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_HelpTabBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_HelpTabBase_C, HelpTabButtons) == 0x0002C8, "Member 'UWB_HelpTabBase_C::HelpTabButtons' has a wrong offset!");
+static_assert(sizeof(UWB_HelpTabBase_C) == 0x0002F8, "Wrong size on UWB_HelpTabBase_C");
+static_assert(offsetof(UWB_HelpTabBase_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_HelpTabBase_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_HelpTabBase_C, HelpTabButtons) == 0x0002E8, "Member 'UWB_HelpTabBase_C::HelpTabButtons' has a wrong offset!");
 
 }
 

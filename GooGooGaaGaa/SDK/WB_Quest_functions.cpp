@@ -48,9 +48,9 @@ void UWB_Quest_C::BndEvt__WB_Quest_WB_RefreshButton_K2Node_ComponentBoundEvent_2
 // Function WB_Quest.WB_Quest_C.CanBeFocused
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_CanBeFocused                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanBeFocused_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Quest_C::CanBeFocused(bool* Param_CanBeFocused)
+void UWB_Quest_C::CanBeFocused(bool* CanBeFocused_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -61,8 +61,8 @@ void UWB_Quest_C::CanBeFocused(bool* Param_CanBeFocused)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanBeFocused != nullptr)
-		*Param_CanBeFocused = Parms.Param_CanBeFocused;
+	if (CanBeFocused_0 != nullptr)
+		*CanBeFocused_0 = Parms.CanBeFocused_0;
 }
 
 

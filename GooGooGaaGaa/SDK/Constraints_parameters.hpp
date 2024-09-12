@@ -16,6 +16,64 @@
 namespace SDK::Params
 {
 
+// SparseDelegateFunction Constraints.ConstraintsManager.OnConstraintAdded__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct ConstraintsManager_OnConstraintAdded__DelegateSignature final
+{
+public:
+	class UConstraintsManager*                    Mananger;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTickableConstraint*                    Constraint;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ConstraintsManager_OnConstraintAdded__DelegateSignature) == 0x000008, "Wrong alignment on ConstraintsManager_OnConstraintAdded__DelegateSignature");
+static_assert(sizeof(ConstraintsManager_OnConstraintAdded__DelegateSignature) == 0x000010, "Wrong size on ConstraintsManager_OnConstraintAdded__DelegateSignature");
+static_assert(offsetof(ConstraintsManager_OnConstraintAdded__DelegateSignature, Mananger) == 0x000000, "Member 'ConstraintsManager_OnConstraintAdded__DelegateSignature::Mananger' has a wrong offset!");
+static_assert(offsetof(ConstraintsManager_OnConstraintAdded__DelegateSignature, Constraint) == 0x000008, "Member 'ConstraintsManager_OnConstraintAdded__DelegateSignature::Constraint' has a wrong offset!");
+
+// SparseDelegateFunction Constraints.ConstraintsManager.OnConstraintRemoved__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct ConstraintsManager_OnConstraintRemoved__DelegateSignature final
+{
+public:
+	class UConstraintsManager*                    Mananger;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTickableConstraint*                    Constraint;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoNotCompensate;                                  // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ConstraintsManager_OnConstraintRemoved__DelegateSignature) == 0x000008, "Wrong alignment on ConstraintsManager_OnConstraintRemoved__DelegateSignature");
+static_assert(sizeof(ConstraintsManager_OnConstraintRemoved__DelegateSignature) == 0x000018, "Wrong size on ConstraintsManager_OnConstraintRemoved__DelegateSignature");
+static_assert(offsetof(ConstraintsManager_OnConstraintRemoved__DelegateSignature, Mananger) == 0x000000, "Member 'ConstraintsManager_OnConstraintRemoved__DelegateSignature::Mananger' has a wrong offset!");
+static_assert(offsetof(ConstraintsManager_OnConstraintRemoved__DelegateSignature, Constraint) == 0x000008, "Member 'ConstraintsManager_OnConstraintRemoved__DelegateSignature::Constraint' has a wrong offset!");
+static_assert(offsetof(ConstraintsManager_OnConstraintRemoved__DelegateSignature, bDoNotCompensate) == 0x000010, "Member 'ConstraintsManager_OnConstraintRemoved__DelegateSignature::bDoNotCompensate' has a wrong offset!");
+
+// SparseDelegateFunction Constraints.ConstraintSubsystem.OnConstraintAddedToSystem__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature final
+{
+public:
+	class UConstraintSubsystem*                   Mananger;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTickableConstraint*                    Constraint;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature) == 0x000008, "Wrong alignment on ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature");
+static_assert(sizeof(ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature) == 0x000010, "Wrong size on ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature");
+static_assert(offsetof(ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature, Mananger) == 0x000000, "Member 'ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature::Mananger' has a wrong offset!");
+static_assert(offsetof(ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature, Constraint) == 0x000008, "Member 'ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature::Constraint' has a wrong offset!");
+
+// SparseDelegateFunction Constraints.ConstraintSubsystem.OnConstraintRemovedFromSystem__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature final
+{
+public:
+	class UConstraintSubsystem*                   Mananger;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTickableConstraint*                    Constraint;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoNotCompensate;                                  // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature) == 0x000008, "Wrong alignment on ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature");
+static_assert(sizeof(ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature) == 0x000018, "Wrong size on ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature");
+static_assert(offsetof(ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature, Mananger) == 0x000000, "Member 'ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature::Mananger' has a wrong offset!");
+static_assert(offsetof(ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature, Constraint) == 0x000008, "Member 'ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature::Constraint' has a wrong offset!");
+static_assert(offsetof(ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature, bDoNotCompensate) == 0x000010, "Member 'ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature::bDoNotCompensate' has a wrong offset!");
+
 // Function Constraints.ConstraintsScriptingLibrary.AddConstraint
 // 0x0028 (0x0028 - 0x0000)
 struct ConstraintsScriptingLibrary_AddConstraint final
@@ -27,7 +85,7 @@ public:
 	class UTickableTransformConstraint*           InConstraint;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMaintainOffset;                                   // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_141F[0x6];                                     // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ConstraintsScriptingLibrary_AddConstraint) == 0x000008, "Wrong alignment on ConstraintsScriptingLibrary_AddConstraint");
 static_assert(sizeof(ConstraintsScriptingLibrary_AddConstraint) == 0x000028, "Wrong size on ConstraintsScriptingLibrary_AddConstraint");
@@ -45,7 +103,7 @@ struct ConstraintsScriptingLibrary_CreateFromType final
 public:
 	class UWorld*                                 InWorld;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETransformConstraintType                      InType;                                            // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1420[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTickableTransformConstraint*           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ConstraintsScriptingLibrary_CreateFromType) == 0x000008, "Wrong alignment on ConstraintsScriptingLibrary_CreateFromType");
@@ -101,19 +159,6 @@ static_assert(sizeof(ConstraintsScriptingLibrary_GetConstraintsArray) == 0x00001
 static_assert(offsetof(ConstraintsScriptingLibrary_GetConstraintsArray, InWorld) == 0x000000, "Member 'ConstraintsScriptingLibrary_GetConstraintsArray::InWorld' has a wrong offset!");
 static_assert(offsetof(ConstraintsScriptingLibrary_GetConstraintsArray, ReturnValue) == 0x000008, "Member 'ConstraintsScriptingLibrary_GetConstraintsArray::ReturnValue' has a wrong offset!");
 
-// Function Constraints.ConstraintsScriptingLibrary.GetManager
-// 0x0010 (0x0010 - 0x0000)
-struct ConstraintsScriptingLibrary_GetManager final
-{
-public:
-	class UWorld*                                 InWorld;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UConstraintsManager*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ConstraintsScriptingLibrary_GetManager) == 0x000008, "Wrong alignment on ConstraintsScriptingLibrary_GetManager");
-static_assert(sizeof(ConstraintsScriptingLibrary_GetManager) == 0x000010, "Wrong size on ConstraintsScriptingLibrary_GetManager");
-static_assert(offsetof(ConstraintsScriptingLibrary_GetManager, InWorld) == 0x000000, "Member 'ConstraintsScriptingLibrary_GetManager::InWorld' has a wrong offset!");
-static_assert(offsetof(ConstraintsScriptingLibrary_GetManager, ReturnValue) == 0x000008, "Member 'ConstraintsScriptingLibrary_GetManager::ReturnValue' has a wrong offset!");
-
 // Function Constraints.ConstraintsScriptingLibrary.RemoveConstraint
 // 0x0010 (0x0010 - 0x0000)
 struct ConstraintsScriptingLibrary_RemoveConstraint final
@@ -122,7 +167,7 @@ public:
 	class UWorld*                                 InWorld;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InIndex;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1421[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ConstraintsScriptingLibrary_RemoveConstraint) == 0x000008, "Wrong alignment on ConstraintsScriptingLibrary_RemoveConstraint");
 static_assert(sizeof(ConstraintsScriptingLibrary_RemoveConstraint) == 0x000010, "Wrong size on ConstraintsScriptingLibrary_RemoveConstraint");
@@ -138,7 +183,7 @@ public:
 	class UWorld*                                 InWorld;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTickableConstraint*                    InTickableConstraint;                              // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1422[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ConstraintsScriptingLibrary_RemoveThisConstraint) == 0x000008, "Wrong alignment on ConstraintsScriptingLibrary_RemoveThisConstraint");
 static_assert(sizeof(ConstraintsScriptingLibrary_RemoveThisConstraint) == 0x000018, "Wrong size on ConstraintsScriptingLibrary_RemoveThisConstraint");

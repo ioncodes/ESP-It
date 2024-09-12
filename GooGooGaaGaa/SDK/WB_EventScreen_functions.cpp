@@ -573,9 +573,9 @@ class UB_EventManager_C* UWB_EventScreen_C::GetEventManager()
 // Function WB_EventScreen.WB_EventScreen_C.GetIngredients
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<struct FBlueprintOnlineItem>     Param_Ingredients                                      (Parm, OutParm)
+// TArray<struct FBlueprintOnlineItem>     Ingredients_0                                          (Parm, OutParm)
 
-void UWB_EventScreen_C::GetIngredients(TArray<struct FBlueprintOnlineItem>* Param_Ingredients)
+void UWB_EventScreen_C::GetIngredients(TArray<struct FBlueprintOnlineItem>* Ingredients_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -586,8 +586,8 @@ void UWB_EventScreen_C::GetIngredients(TArray<struct FBlueprintOnlineItem>* Para
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Ingredients != nullptr)
-		*Param_Ingredients = std::move(Parms.Param_Ingredients);
+	if (Ingredients_0 != nullptr)
+		*Ingredients_0 = std::move(Parms.Ingredients_0);
 }
 
 

@@ -25,7 +25,7 @@ public:
 	static void TearDownPoolActor(class AActor* ActorToTearDown, class UObject* __WorldContext);
 	static void TearUpPoolActor(class AActor* ActorToTearUp, const struct FTransform& SpawnTransform, class AActor* Owner, class APawn* Instigator, bool TickEnabled, class UObject* __WorldContext);
 	static void MoveActorToPoolOrDestroy(class AActor* Actor, class UObject* __WorldContext);
-	static class AActor* SpawnActorOrTakeFromPool(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, class UObject* __WorldContext);
+	static class AActor* SpawnActorOrTakeFromPool(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, class UObject* __WorldContext);
 	static class UB_PoolManager_C* GetPoolManager(class UObject* __WorldContext);
 
 public:

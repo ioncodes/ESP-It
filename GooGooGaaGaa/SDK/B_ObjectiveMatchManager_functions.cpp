@@ -232,9 +232,9 @@ void UB_ObjectiveMatchManager_C::GetWinnerTeam(class AB_GameState_C* GameState, 
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AB_GameState_C*                   GameState                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsMatchDead                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsMatchDead_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ObjectiveMatchManager_C::IsMatchDead(class AB_GameState_C* GameState, bool* Param_IsMatchDead)
+void UB_ObjectiveMatchManager_C::IsMatchDead(class AB_GameState_C* GameState, bool* IsMatchDead_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -247,8 +247,8 @@ void UB_ObjectiveMatchManager_C::IsMatchDead(class AB_GameState_C* GameState, bo
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsMatchDead != nullptr)
-		*Param_IsMatchDead = Parms.Param_IsMatchDead;
+	if (IsMatchDead_0 != nullptr)
+		*IsMatchDead_0 = Parms.IsMatchDead_0;
 }
 
 

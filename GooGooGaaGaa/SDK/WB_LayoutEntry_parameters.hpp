@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "E_QuestionAnswer_structs.hpp"
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "E_QuestionAnswer_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -45,53 +45,53 @@ static_assert(sizeof(WB_LayoutEntry_C_DeleteAnswered) == 0x000001, "Wrong size o
 static_assert(offsetof(WB_LayoutEntry_C_DeleteAnswered, Answer) == 0x000000, "Member 'WB_LayoutEntry_C_DeleteAnswered::Answer' has a wrong offset!");
 
 // Function WB_LayoutEntry.WB_LayoutEntry_C.ExecuteUbergraph_WB_LayoutEntry
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B61[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B62[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B63[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(E_QuestionAnswer Answer)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x0044(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B64[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue_1;                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameMode_C*                  K2Node_DynamicCast_AsB_Creative_Game_Mode;         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B65[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeGameMode_C*                  K2Node_DynamicCast_AsB_Creative_Game_Mode_1;       // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B66[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue_2;                // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameMode_C*                  K2Node_DynamicCast_AsB_Creative_Game_Mode_2;       // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_QuestionAnswer                              K2Node_CustomEvent_Answer_1;                       // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B67[0x5];                                     // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00A0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0108(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0130(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0180(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0198(0x0010)(ReferenceParm)
-	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01B0(0x0018)()
-	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog_1;      // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	E_QuestionAnswer                              K2Node_CustomEvent_Answer;                         // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SaveLayout_Success;                       // 0x01D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00A0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B0(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00F8(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0108(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0118(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0160(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0170(0x0010)(ReferenceParm)
+	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0188(0x0010)()
+	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog_1;      // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	E_QuestionAnswer                              K2Node_CustomEvent_Answer;                         // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SaveLayout_Success;                       // 0x01A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry) == 0x000008, "Wrong alignment on WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry");
-static_assert(sizeof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry) == 0x0001D8, "Wrong size on WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry");
+static_assert(sizeof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry) == 0x0001A8, "Wrong size on WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry");
 static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, EntryPoint) == 0x000000, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
@@ -113,18 +113,18 @@ static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_
 static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_CustomEvent_Answer_1) == 0x000099, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_CustomEvent_Answer_1' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_SwitchEnum_CmpSuccess) == 0x00009A, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Conv_StringToText_ReturnValue) == 0x0000A0, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeStruct_FormatArgumentData) == 0x0000B8, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000108, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeArray_Array) == 0x000120, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeStruct_FormatArgumentData_1) == 0x000130, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Format_ReturnValue) == 0x000180, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeArray_Array_1) == 0x000198, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x0001A8, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Format_ReturnValue_1) == 0x0001B0, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_ShowQuestionDialog_QuestionDialog_1) == 0x0001C8, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_ShowQuestionDialog_QuestionDialog_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_CustomEvent_Answer) == 0x0001D0, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_CustomEvent_Answer' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_SwitchEnum_CmpSuccess_1) == 0x0001D1, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_SaveLayout_Success) == 0x0001D2, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_SaveLayout_Success' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeStruct_FormatArgumentData) == 0x0000B0, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000F8, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeArray_Array) == 0x000108, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeStruct_FormatArgumentData_1) == 0x000118, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Format_ReturnValue) == 0x000160, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_MakeArray_Array_1) == 0x000170, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x000180, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_Format_ReturnValue_1) == 0x000188, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_ShowQuestionDialog_QuestionDialog_1) == 0x000198, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_ShowQuestionDialog_QuestionDialog_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_CustomEvent_Answer) == 0x0001A0, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_CustomEvent_Answer' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, K2Node_SwitchEnum_CmpSuccess_1) == 0x0001A1, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry, CallFunc_SaveLayout_Success) == 0x0001A2, "Member 'WB_LayoutEntry_C_ExecuteUbergraph_WB_LayoutEntry::CallFunc_SaveLayout_Success' has a wrong offset!");
 
 // Function WB_LayoutEntry.WB_LayoutEntry_C.Get_Delete_Visibility_0
 // 0x0006 (0x0006 - 0x0000)
@@ -148,56 +148,56 @@ static_assert(offsetof(WB_LayoutEntry_C_Get_Delete_Visibility_0, CallFunc_EqualE
 static_assert(offsetof(WB_LayoutEntry_C_Get_Delete_Visibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_LayoutEntry_C_Get_Delete_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_LayoutEntry.WB_LayoutEntry_C.Get_Layout_ColorAndOpacity_0
-// 0x0158 (0x0158 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B68[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0018(0x0014)()
-	uint8                                         Pad_5B69[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0018)()
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6A[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ReferenceParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B8(0x0018)()
-	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6B[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Select_Default;                             // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0100(0x0018)()
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6C[0x2];                                     // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x011C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x012C(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0140(0x0014)()
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0010)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0010)()
+	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00E8(0x0010)()
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FA[0x2];                                       // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x00FC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x010C(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0120(0x0014)()
 };
 static_assert(alignof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0");
-static_assert(sizeof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0) == 0x000158, "Wrong size on WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0");
+static_assert(sizeof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0) == 0x000138, "Wrong size on WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0");
 static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, ReturnValue) == 0x000000, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, Temp_bool_Variable) == 0x000014, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor) == 0x000018, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000048, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeArray_Array) == 0x0000A0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_GetGameState_ReturnValue) == 0x0000B0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Format_ReturnValue) == 0x0000B8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x0000D0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_DynamicCast_bSuccess) == 0x0000D8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Conv_TextToString_ReturnValue) == 0x0000E0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_Select_Default) == 0x0000F0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000100, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000118, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_BooleanAND_ReturnValue) == 0x000119, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_SelectColor_ReturnValue) == 0x00011C, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor_1) == 0x00012C, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor_2) == 0x000140, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000040, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeArray_Array) == 0x000090, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_GetGameState_ReturnValue) == 0x0000A0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x0000B8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_DynamicCast_bSuccess) == 0x0000C0, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Conv_TextToString_ReturnValue) == 0x0000C8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_Select_Default) == 0x0000D8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000E8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x0000F8, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_BooleanAND_ReturnValue) == 0x0000F9, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, CallFunc_SelectColor_ReturnValue) == 0x0000FC, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::CallFunc_SelectColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor_1) == 0x00010C, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor_2) == 0x000120, "Member 'WB_LayoutEntry_C_Get_Layout_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor_2' has a wrong offset!");
 
 // Function WB_LayoutEntry.WB_LayoutEntry_C.Get_Load_Visibility_0
 // 0x0005 (0x0005 - 0x0000)

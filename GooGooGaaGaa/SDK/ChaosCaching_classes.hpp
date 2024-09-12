@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MovieScene_classes.hpp"
 #include "ChaosCaching_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "MovieSceneTracks_classes.hpp"
+#include "MovieScene_classes.hpp"
 
 
 namespace SDK
@@ -44,25 +44,26 @@ static_assert(sizeof(UChaosCacheCollection) == 0x000038, "Wrong size on UChaosCa
 static_assert(offsetof(UChaosCacheCollection, Caches) == 0x000028, "Member 'UChaosCacheCollection::Caches' has a wrong offset!");
 
 // Class ChaosCaching.ChaosCacheManager
-// 0x00B0 (0x0348 - 0x0298)
+// 0x00B0 (0x0340 - 0x0290)
 class AChaosCacheManager : public AActor
 {
 public:
-	class UChaosCacheCollection*                  CacheCollection;                                   // 0x0298(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECacheMode                                    CacheMode;                                         // 0x02A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EStartMode                                    StartMode;                                         // 0x02A1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E59[0x2];                                     // 0x02A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartTime;                                         // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E5A[0x8];                                     // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FObservedComponent>             ObservedComponents;                                // 0x02B0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E5B[0x88];                                    // 0x02C0(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UChaosCacheCollection*                  CacheCollection;                                   // 0x0290(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECacheMode                                    CacheMode;                                         // 0x0298(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStartMode                                    StartMode;                                         // 0x0299(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29A[0x2];                                      // 0x029A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartTime;                                         // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A0[0x8];                                      // 0x02A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FObservedComponent>             ObservedComponents;                                // 0x02A8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2B8[0x88];                                     // 0x02B8(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void EnablePlayback(int32 Param_Index, bool bEnable);
+	void EnablePlayback(int32 Index_0, bool bEnable);
 	void EnablePlaybackByCache(class FName InCacheName, bool bEnable);
 	void ResetAllComponentTransforms();
 	void ResetSingleTransform(int32 InIndex);
 	void SetCacheCollection(class UChaosCacheCollection* InCacheCollection);
+	void SetCurrentTime(float CurrentTime);
 	void SetStartTime(float InStartTime);
 	void TriggerAll();
 	void TriggerComponent(class UPrimitiveComponent* InComponent);
@@ -79,15 +80,15 @@ public:
 	}
 };
 static_assert(alignof(AChaosCacheManager) == 0x000008, "Wrong alignment on AChaosCacheManager");
-static_assert(sizeof(AChaosCacheManager) == 0x000348, "Wrong size on AChaosCacheManager");
-static_assert(offsetof(AChaosCacheManager, CacheCollection) == 0x000298, "Member 'AChaosCacheManager::CacheCollection' has a wrong offset!");
-static_assert(offsetof(AChaosCacheManager, CacheMode) == 0x0002A0, "Member 'AChaosCacheManager::CacheMode' has a wrong offset!");
-static_assert(offsetof(AChaosCacheManager, StartMode) == 0x0002A1, "Member 'AChaosCacheManager::StartMode' has a wrong offset!");
-static_assert(offsetof(AChaosCacheManager, StartTime) == 0x0002A4, "Member 'AChaosCacheManager::StartTime' has a wrong offset!");
-static_assert(offsetof(AChaosCacheManager, ObservedComponents) == 0x0002B0, "Member 'AChaosCacheManager::ObservedComponents' has a wrong offset!");
+static_assert(sizeof(AChaosCacheManager) == 0x000340, "Wrong size on AChaosCacheManager");
+static_assert(offsetof(AChaosCacheManager, CacheCollection) == 0x000290, "Member 'AChaosCacheManager::CacheCollection' has a wrong offset!");
+static_assert(offsetof(AChaosCacheManager, CacheMode) == 0x000298, "Member 'AChaosCacheManager::CacheMode' has a wrong offset!");
+static_assert(offsetof(AChaosCacheManager, StartMode) == 0x000299, "Member 'AChaosCacheManager::StartMode' has a wrong offset!");
+static_assert(offsetof(AChaosCacheManager, StartTime) == 0x00029C, "Member 'AChaosCacheManager::StartTime' has a wrong offset!");
+static_assert(offsetof(AChaosCacheManager, ObservedComponents) == 0x0002A8, "Member 'AChaosCacheManager::ObservedComponents' has a wrong offset!");
 
 // Class ChaosCaching.ChaosCachePlayer
-// 0x0000 (0x0348 - 0x0348)
+// 0x0000 (0x0340 - 0x0340)
 class AChaosCachePlayer final : public AChaosCacheManager
 {
 public:
@@ -101,7 +102,7 @@ public:
 	}
 };
 static_assert(alignof(AChaosCachePlayer) == 0x000008, "Wrong alignment on AChaosCachePlayer");
-static_assert(sizeof(AChaosCachePlayer) == 0x000348, "Wrong size on AChaosCachePlayer");
+static_assert(sizeof(AChaosCachePlayer) == 0x000340, "Wrong size on AChaosCachePlayer");
 
 // Class ChaosCaching.ChaosCache
 // 0x0338 (0x0360 - 0x0028)
@@ -118,15 +119,15 @@ public:
 	TMap<class FName, struct FRichCurve>          CurveData;                                         // 0x0100(0x0050)(NativeAccessSpecifierPublic)
 	TMap<class FName, struct FParticleTransformTrack> NamedTransformTracks;                              // 0x0150(0x0050)(NativeAccessSpecifierPublic)
 	bool                                          bCompressChannels;                                 // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E5E[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ChannelsCompressionErrorThreshold;                 // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ChannelsCompressionSampleRate;                     // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E5F[0x4];                                     // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FCacheEventTrack>    EventTracks;                                       // 0x01B0(0x0050)(NativeAccessSpecifierPrivate)
 	struct FCacheSpawnableTemplate                Spawnable;                                         // 0x0200(0x00D0)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPrivate)
 	struct FGuid                                  AdapterGuid;                                       // 0x02D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         Version;                                           // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E60[0x7C];                                    // 0x02E4(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E4[0x7C];                                     // 0x02E4(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -162,7 +163,7 @@ static_assert(offsetof(UChaosCache, Version) == 0x0002E0, "Member 'UChaosCache::
 class UMovieSceneChaosCacheSection final : public UMovieSceneBaseCacheSection
 {
 public:
-	struct FMovieSceneChaosCacheParams            Params;                                            // 0x00F8(0x0028)(Edit, NativeAccessSpecifierPublic)
+	struct FMovieSceneChaosCacheParams            Params_0;                                          // 0x00F8(0x0028)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -176,14 +177,14 @@ public:
 };
 static_assert(alignof(UMovieSceneChaosCacheSection) == 0x000008, "Wrong alignment on UMovieSceneChaosCacheSection");
 static_assert(sizeof(UMovieSceneChaosCacheSection) == 0x000120, "Wrong size on UMovieSceneChaosCacheSection");
-static_assert(offsetof(UMovieSceneChaosCacheSection, Params) == 0x0000F8, "Member 'UMovieSceneChaosCacheSection::Params' has a wrong offset!");
+static_assert(offsetof(UMovieSceneChaosCacheSection, Params_0) == 0x0000F8, "Member 'UMovieSceneChaosCacheSection::Params_0' has a wrong offset!");
 
 // Class ChaosCaching.MovieSceneChaosCacheTrack
 // 0x0018 (0x00B0 - 0x0098)
 class UMovieSceneChaosCacheTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_2E61[0x8];                                     // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneSection*>             AnimationSections;                                 // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:

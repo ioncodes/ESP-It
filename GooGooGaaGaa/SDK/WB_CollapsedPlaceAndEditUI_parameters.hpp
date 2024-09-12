@@ -22,7 +22,7 @@ struct WB_CollapsedPlaceAndEditUI_C_ExecuteUbergraph_WB_CollapsedPlaceAndEditUI 
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4769[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CollapsedPlaceAndEditUI_C_ExecuteUbergraph_WB_CollapsedPlaceAndEditUI) == 0x000008, "Wrong alignment on WB_CollapsedPlaceAndEditUI_C_ExecuteUbergraph_WB_CollapsedPlaceAndEditUI");
@@ -74,23 +74,23 @@ static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_CanContentBeInitialized, Cal
 static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_CanContentBeInitialized, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'WB_CollapsedPlaceAndEditUI_C_CanContentBeInitialized::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WB_CollapsedPlaceAndEditUI.WB_CollapsedPlaceAndEditUI_C.GetFullName
-// 0x0058 (0x0058 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct WB_CollapsedPlaceAndEditUI_C_GetFullName final
 {
 public:
-	class AActor*                                 Param_TargetActor;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   FullName;                                          // 0x0008(0x0018)(Parm, OutParm)
-	class FText                                   CallFunc_GetNameForSingleActorOrGroup_FullName;    // 0x0020(0x0018)()
-	class FText                                   CallFunc_GetNameForSingleActorOrGroup_FullName_1;  // 0x0038(0x0018)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetActor_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   FullName;                                          // 0x0008(0x0010)(Parm, OutParm)
+	class FText                                   CallFunc_GetNameForSingleActorOrGroup_FullName;    // 0x0018(0x0010)()
+	class FText                                   CallFunc_GetNameForSingleActorOrGroup_FullName_1;  // 0x0028(0x0010)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CollapsedPlaceAndEditUI_C_GetFullName) == 0x000008, "Wrong alignment on WB_CollapsedPlaceAndEditUI_C_GetFullName");
-static_assert(sizeof(WB_CollapsedPlaceAndEditUI_C_GetFullName) == 0x000058, "Wrong size on WB_CollapsedPlaceAndEditUI_C_GetFullName");
-static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, Param_TargetActor) == 0x000000, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::Param_TargetActor' has a wrong offset!");
+static_assert(sizeof(WB_CollapsedPlaceAndEditUI_C_GetFullName) == 0x000040, "Wrong size on WB_CollapsedPlaceAndEditUI_C_GetFullName");
+static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, TargetActor_0) == 0x000000, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::TargetActor_0' has a wrong offset!");
 static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, FullName) == 0x000008, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::FullName' has a wrong offset!");
-static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, CallFunc_GetNameForSingleActorOrGroup_FullName) == 0x000020, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::CallFunc_GetNameForSingleActorOrGroup_FullName' has a wrong offset!");
-static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, CallFunc_GetNameForSingleActorOrGroup_FullName_1) == 0x000038, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::CallFunc_GetNameForSingleActorOrGroup_FullName_1' has a wrong offset!");
-static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, K2Node_SwitchEnum_CmpSuccess) == 0x000050, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, CallFunc_GetNameForSingleActorOrGroup_FullName) == 0x000018, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::CallFunc_GetNameForSingleActorOrGroup_FullName' has a wrong offset!");
+static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, CallFunc_GetNameForSingleActorOrGroup_FullName_1) == 0x000028, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::CallFunc_GetNameForSingleActorOrGroup_FullName_1' has a wrong offset!");
+static_assert(offsetof(WB_CollapsedPlaceAndEditUI_C_GetFullName, K2Node_SwitchEnum_CmpSuccess) == 0x000038, "Member 'WB_CollapsedPlaceAndEditUI_C_GetFullName::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 }
 

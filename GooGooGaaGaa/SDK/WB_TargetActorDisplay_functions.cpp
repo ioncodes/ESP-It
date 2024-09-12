@@ -223,9 +223,9 @@ void UWB_TargetActorDisplay_C::UpdateGroupInfo(class AActor* AddedOrRemovedActor
 // Function WB_TargetActorDisplay.WB_TargetActorDisplay_C.UpdateName
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_TargetActor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TargetActorDisplay_C::UpdateName(class AActor* Param_TargetActor)
+void UWB_TargetActorDisplay_C::UpdateName(class AActor* TargetActor_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -234,7 +234,7 @@ void UWB_TargetActorDisplay_C::UpdateName(class AActor* Param_TargetActor)
 
 	Params::WB_TargetActorDisplay_C_UpdateName Parms{};
 
-	Parms.Param_TargetActor = Param_TargetActor;
+	Parms.TargetActor_0 = TargetActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -278,10 +278,10 @@ void UWB_TargetActorDisplay_C::CanContentBeInitialized(bool* CanBeInitialized) c
 // Function WB_TargetActorDisplay.WB_TargetActorDisplay_C.GetFullName
 // (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AActor*                           Param_TargetActor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FText                             FullName                                               (Parm, OutParm)
 
-void UWB_TargetActorDisplay_C::GetFullName(class AActor* Param_TargetActor, class FText* FullName) const
+void UWB_TargetActorDisplay_C::GetFullName(class AActor* TargetActor_0, class FText* FullName) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -290,7 +290,7 @@ void UWB_TargetActorDisplay_C::GetFullName(class AActor* Param_TargetActor, clas
 
 	Params::WB_TargetActorDisplay_C_GetFullName Parms{};
 
-	Parms.Param_TargetActor = Param_TargetActor;
+	Parms.TargetActor_0 = TargetActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -10,40 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "LowEntryFileManager_structs.hpp"
 #include "Engine_structs.hpp"
+#include "B_GameMode_classes.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "E_PropLayoutType_structs.hpp"
-#include "B_GameMode_classes.hpp"
+#include "LowEntryFileManager_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativeGameMode.B_CreativeGameMode_C
-// 0x0268 (0x0818 - 0x05B0)
+// 0x0268 (0x0810 - 0x05A8)
 class AB_CreativeGameMode_C final : public AB_GameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeGameMode_C;               // 0x05B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FUGCUpdateHandle                       CurrentWorkshopUpdateHandle;                       // 0x05B8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          SubmittingLayout;                                  // 0x05C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_425E[0x7];                                     // 0x05C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 LoadedLayoutWorkshopId;                            // 0x05C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 LoadedLayoutFullPath;                              // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 LoadedLayoutName;                                  // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 LoadedLayoutScreenshotFile;                        // 0x05F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	E_PropLayoutType                              LoadedLayoutType;                                  // 0x0608(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_425F[0x7];                                     // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWorkshopItemDetails                   LoadedWorkshopItemDetails;                         // 0x0610(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsLoadingWorkshopDetails;                          // 0x0720(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOwningWorkshopItem;                              // 0x0721(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FailedLoadingWorkshopItemData;                     // 0x0722(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4260[0x5];                                     // 0x0723(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           AutoSaveTimer;                                     // 0x0728(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        AutoSaveTime;                                      // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FPrefabToSave>                  CurrentPrefabs;                                    // 0x0738(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FWorkshopUpdateDetails                 CurrentUploadingWorkshopItemDetails;               // 0x0748(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeGameMode_C;               // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FUGCUpdateHandle                       CurrentWorkshopUpdateHandle;                       // 0x05B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          SubmittingLayout;                                  // 0x05B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B9[0x7];                                      // 0x05B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 LoadedLayoutWorkshopId;                            // 0x05C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 LoadedLayoutFullPath;                              // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 LoadedLayoutName;                                  // 0x05E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 LoadedLayoutScreenshotFile;                        // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	E_PropLayoutType                              LoadedLayoutType;                                  // 0x0600(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_601[0x7];                                      // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWorkshopItemDetails                   LoadedWorkshopItemDetails;                         // 0x0608(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsLoadingWorkshopDetails;                          // 0x0718(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOwningWorkshopItem;                              // 0x0719(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FailedLoadingWorkshopItemData;                     // 0x071A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71B[0x5];                                      // 0x071B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           AutoSaveTimer;                                     // 0x0720(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        AutoSaveTime;                                      // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FPrefabToSave>                  CurrentPrefabs;                                    // 0x0730(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FWorkshopUpdateDetails                 CurrentUploadingWorkshopItemDetails;               // 0x0740(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AddPrefab(const struct FPrefabToSave& PrefabToAdd);
@@ -93,23 +93,23 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativeGameMode_C) == 0x000008, "Wrong alignment on AB_CreativeGameMode_C");
-static_assert(sizeof(AB_CreativeGameMode_C) == 0x000818, "Wrong size on AB_CreativeGameMode_C");
-static_assert(offsetof(AB_CreativeGameMode_C, UberGraphFrame_B_CreativeGameMode_C) == 0x0005B0, "Member 'AB_CreativeGameMode_C::UberGraphFrame_B_CreativeGameMode_C' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, CurrentWorkshopUpdateHandle) == 0x0005B8, "Member 'AB_CreativeGameMode_C::CurrentWorkshopUpdateHandle' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, SubmittingLayout) == 0x0005C0, "Member 'AB_CreativeGameMode_C::SubmittingLayout' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutWorkshopId) == 0x0005C8, "Member 'AB_CreativeGameMode_C::LoadedLayoutWorkshopId' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutFullPath) == 0x0005D8, "Member 'AB_CreativeGameMode_C::LoadedLayoutFullPath' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutName) == 0x0005E8, "Member 'AB_CreativeGameMode_C::LoadedLayoutName' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutScreenshotFile) == 0x0005F8, "Member 'AB_CreativeGameMode_C::LoadedLayoutScreenshotFile' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutType) == 0x000608, "Member 'AB_CreativeGameMode_C::LoadedLayoutType' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, LoadedWorkshopItemDetails) == 0x000610, "Member 'AB_CreativeGameMode_C::LoadedWorkshopItemDetails' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, IsLoadingWorkshopDetails) == 0x000720, "Member 'AB_CreativeGameMode_C::IsLoadingWorkshopDetails' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, IsOwningWorkshopItem) == 0x000721, "Member 'AB_CreativeGameMode_C::IsOwningWorkshopItem' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, FailedLoadingWorkshopItemData) == 0x000722, "Member 'AB_CreativeGameMode_C::FailedLoadingWorkshopItemData' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, AutoSaveTimer) == 0x000728, "Member 'AB_CreativeGameMode_C::AutoSaveTimer' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, AutoSaveTime) == 0x000730, "Member 'AB_CreativeGameMode_C::AutoSaveTime' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, CurrentPrefabs) == 0x000738, "Member 'AB_CreativeGameMode_C::CurrentPrefabs' has a wrong offset!");
-static_assert(offsetof(AB_CreativeGameMode_C, CurrentUploadingWorkshopItemDetails) == 0x000748, "Member 'AB_CreativeGameMode_C::CurrentUploadingWorkshopItemDetails' has a wrong offset!");
+static_assert(sizeof(AB_CreativeGameMode_C) == 0x000810, "Wrong size on AB_CreativeGameMode_C");
+static_assert(offsetof(AB_CreativeGameMode_C, UberGraphFrame_B_CreativeGameMode_C) == 0x0005A8, "Member 'AB_CreativeGameMode_C::UberGraphFrame_B_CreativeGameMode_C' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, CurrentWorkshopUpdateHandle) == 0x0005B0, "Member 'AB_CreativeGameMode_C::CurrentWorkshopUpdateHandle' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, SubmittingLayout) == 0x0005B8, "Member 'AB_CreativeGameMode_C::SubmittingLayout' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutWorkshopId) == 0x0005C0, "Member 'AB_CreativeGameMode_C::LoadedLayoutWorkshopId' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutFullPath) == 0x0005D0, "Member 'AB_CreativeGameMode_C::LoadedLayoutFullPath' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutName) == 0x0005E0, "Member 'AB_CreativeGameMode_C::LoadedLayoutName' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutScreenshotFile) == 0x0005F0, "Member 'AB_CreativeGameMode_C::LoadedLayoutScreenshotFile' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, LoadedLayoutType) == 0x000600, "Member 'AB_CreativeGameMode_C::LoadedLayoutType' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, LoadedWorkshopItemDetails) == 0x000608, "Member 'AB_CreativeGameMode_C::LoadedWorkshopItemDetails' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, IsLoadingWorkshopDetails) == 0x000718, "Member 'AB_CreativeGameMode_C::IsLoadingWorkshopDetails' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, IsOwningWorkshopItem) == 0x000719, "Member 'AB_CreativeGameMode_C::IsOwningWorkshopItem' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, FailedLoadingWorkshopItemData) == 0x00071A, "Member 'AB_CreativeGameMode_C::FailedLoadingWorkshopItemData' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, AutoSaveTimer) == 0x000720, "Member 'AB_CreativeGameMode_C::AutoSaveTimer' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, AutoSaveTime) == 0x000728, "Member 'AB_CreativeGameMode_C::AutoSaveTime' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, CurrentPrefabs) == 0x000730, "Member 'AB_CreativeGameMode_C::CurrentPrefabs' has a wrong offset!");
+static_assert(offsetof(AB_CreativeGameMode_C, CurrentUploadingWorkshopItemDetails) == 0x000740, "Member 'AB_CreativeGameMode_C::CurrentUploadingWorkshopItemDetails' has a wrong offset!");
 
 }
 

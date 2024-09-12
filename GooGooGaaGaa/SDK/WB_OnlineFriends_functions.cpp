@@ -184,10 +184,10 @@ void UWB_OnlineFriends_C::Init()
 // Function WB_OnlineFriends.WB_OnlineFriends_C.OfflineListUpNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_OnlineFriends_C::OfflineListUpNav(EUINavigation Param_Navigation)
+class UWidget* UWB_OnlineFriends_C::OfflineListUpNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -196,7 +196,7 @@ class UWidget* UWB_OnlineFriends_C::OfflineListUpNav(EUINavigation Param_Navigat
 
 	Params::WB_OnlineFriends_C_OfflineListUpNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -251,10 +251,10 @@ void UWB_OnlineFriends_C::OnFriendRemovedEvent(const struct FUniqueNetIdRepl& Us
 // Function WB_OnlineFriends.WB_OnlineFriends_C.OnlineListNavigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_OnlineFriends_C::OnlineListNavigation(EUINavigation Param_Navigation)
+class UWidget* UWB_OnlineFriends_C::OnlineListNavigation(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -263,7 +263,7 @@ class UWidget* UWB_OnlineFriends_C::OnlineListNavigation(EUINavigation Param_Nav
 
 	Params::WB_OnlineFriends_C_OnlineListNavigation Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -296,10 +296,10 @@ void UWB_OnlineFriends_C::OnPresenceTaskComplete_4FF8CDDC47A799776156C89975A69A9
 // Function WB_OnlineFriends.WB_OnlineFriends_C.PlayingListDownNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_OnlineFriends_C::PlayingListDownNav(EUINavigation Param_Navigation)
+class UWidget* UWB_OnlineFriends_C::PlayingListDownNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -308,7 +308,7 @@ class UWidget* UWB_OnlineFriends_C::PlayingListDownNav(EUINavigation Param_Navig
 
 	Params::WB_OnlineFriends_C_PlayingListDownNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -437,6 +437,52 @@ void UWB_OnlineFriends_C::SetListVisibility()
 		Func = Class->GetFunction("WB_OnlineFriends_C", "SetListVisibility");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.SortFriendEntries
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          ObjectA                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ObjectB                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_OnlineFriends_C::SortFriendEntries(class UObject* ObjectA, class UObject* ObjectB, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "SortFriendEntries");
+
+	Params::WB_OnlineFriends_C_SortFriendEntries Parms{};
+
+	Parms.ObjectA = ObjectA;
+	Parms.ObjectB = ObjectB;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function WB_OnlineFriends.WB_OnlineFriends_C.SortListViewAlphabetically
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UListView*                        ListView                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWB_OnlineFriends_C::SortListViewAlphabetically(class UListView* ListView)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_OnlineFriends_C", "SortListViewAlphabetically");
+
+	Params::WB_OnlineFriends_C_SortListViewAlphabetically Parms{};
+
+	Parms.ListView = ListView;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -21,25 +21,25 @@ namespace SDK::Params
 struct B_BuffHunterRapidFire_C_BuffStart final
 {
 public:
-	class AB_PlayerState_C*                       Param_PlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_BuffStart) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_BuffStart");
 static_assert(sizeof(B_BuffHunterRapidFire_C_BuffStart) == 0x000008, "Wrong size on B_BuffHunterRapidFire_C_BuffStart");
-static_assert(offsetof(B_BuffHunterRapidFire_C_BuffStart, Param_PlayerState) == 0x000000, "Member 'B_BuffHunterRapidFire_C_BuffStart::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_BuffStart, PlayerState_0) == 0x000000, "Member 'B_BuffHunterRapidFire_C_BuffStart::PlayerState_0' has a wrong offset!");
 
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.ExecuteUbergraph_B_BuffHunterRapidFire
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x01E8 (0x01E8 - 0x0000)
 struct B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A52[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A53[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_Event_PlayerState;                          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -47,38 +47,38 @@ public:
 	double                                        K2Node_CustomEvent_cooldown;                       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_PotatoSkill_C*                       K2Node_CustomEvent_PotatoSkill;                    // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A54[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_CustomEvent_Hunter;                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A55[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue_1;        // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0080(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A56[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A57[0x7];                                     // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A58[0x2];                                     // 0x019A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A59[0x7];                                     // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5A[0x7];                                     // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_PotatoSkill_C*                       K2Node_DynamicCast_AsB_Potato_Skill;               // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5B[0x7];                                     // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0080(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AA[0x2];                                      // 0x01AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_PotatoSkill_C*                       K2Node_DynamicCast_AsB_Potato_Skill;               // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire");
-static_assert(sizeof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire) == 0x0001D8, "Wrong size on B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire");
+static_assert(sizeof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire) == 0x0001E8, "Wrong size on B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire");
 static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, EntryPoint) == 0x000000, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_K2_GetPawn_ReturnValue) == 0x000008, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
@@ -97,47 +97,47 @@ static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapi
 static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000070, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_SpawnSystemAttached_ReturnValue_1) == 0x000078, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_SpawnSystemAttached_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000080, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_1) == 0x000168, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000170, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000178, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_2) == 0x000180, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000188, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000190, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_3) == 0x000198, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000199, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, K2Node_Event_DeltaSeconds) == 0x00019C, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x0001A0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Array_Get_Item) == 0x0001A8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_4) == 0x0001B0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, K2Node_DynamicCast_AsB_Potato_Skill) == 0x0001B8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::K2Node_DynamicCast_AsB_Potato_Skill' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, K2Node_DynamicCast_bSuccess_1) == 0x0001C0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0001C8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001D0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_1) == 0x000178, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000180, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000188, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_2) == 0x000190, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000198, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0001A0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_3) == 0x0001A8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x0001A9, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, K2Node_Event_DeltaSeconds) == 0x0001AC, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x0001B0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Array_Get_Item) == 0x0001B8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_IsValid_ReturnValue_4) == 0x0001C0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, K2Node_DynamicCast_AsB_Potato_Skill) == 0x0001C8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::K2Node_DynamicCast_AsB_Potato_Skill' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, K2Node_DynamicCast_bSuccess_1) == 0x0001D0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0001D8, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001E0, "Member 'B_BuffHunterRapidFire_C_ExecuteUbergraph_B_BuffHunterRapidFire::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.GetActiveRapidFireBuffCount
 // 0x0040 (0x0040 - 0x0000)
 struct B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount final
 {
 public:
-	class AB_PlayerState_C*                       Param_PlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Counter;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5C[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Buff_C*                              CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_BuffHunterRapidFire_C*               K2Node_DynamicCast_AsB_Buff_Hunter_Rapid_Fire;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5D[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount");
 static_assert(sizeof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount) == 0x000040, "Wrong size on B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount");
-static_assert(offsetof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount, Param_PlayerState) == 0x000000, "Member 'B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount, PlayerState_0) == 0x000000, "Member 'B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount::PlayerState_0' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount, ReturnValue) == 0x000008, "Member 'B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount, Counter) == 0x00000C, "Member 'B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount::Counter' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -156,22 +156,22 @@ static_assert(offsetof(B_BuffHunterRapidFire_C_GetActiveRapidFireBuffCount, Call
 struct B_BuffHunterRapidFire_C_GetFirstRapidFireBuff final
 {
 public:
-	class AB_PlayerState_C*                       Param_PlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_BuffHunterRapidFire_C*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Buff_C*                              CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_BuffHunterRapidFire_C*               K2Node_DynamicCast_AsB_Buff_Hunter_Rapid_Fire;     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5F[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_GetFirstRapidFireBuff");
 static_assert(sizeof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff) == 0x000038, "Wrong size on B_BuffHunterRapidFire_C_GetFirstRapidFireBuff");
-static_assert(offsetof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff, Param_PlayerState) == 0x000000, "Member 'B_BuffHunterRapidFire_C_GetFirstRapidFireBuff::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff, PlayerState_0) == 0x000000, "Member 'B_BuffHunterRapidFire_C_GetFirstRapidFireBuff::PlayerState_0' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff, ReturnValue) == 0x000008, "Member 'B_BuffHunterRapidFire_C_GetFirstRapidFireBuff::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff, Temp_int_Array_Index_Variable) == 0x000010, "Member 'B_BuffHunterRapidFire_C_GetFirstRapidFireBuff::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_GetFirstRapidFireBuff, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'B_BuffHunterRapidFire_C_GetFirstRapidFireBuff::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
@@ -200,14 +200,14 @@ struct B_BuffHunterRapidFire_C_SetRapidFireValues final
 public:
 	double                                        StaminaCost;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Cooldown;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_PotatoSkill_C*                       Param_PotatoSkill;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_PotatoSkill_C*                       PotatoSkill_0;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_cooldown_ImplicitCast;          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_SetRapidFireValues) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_SetRapidFireValues");
 static_assert(sizeof(B_BuffHunterRapidFire_C_SetRapidFireValues) == 0x000020, "Wrong size on B_BuffHunterRapidFire_C_SetRapidFireValues");
 static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValues, StaminaCost) == 0x000000, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValues::StaminaCost' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValues, Cooldown) == 0x000008, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValues::Cooldown' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValues, Param_PotatoSkill) == 0x000010, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValues::Param_PotatoSkill' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValues, PotatoSkill_0) == 0x000010, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValues::PotatoSkill_0' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValues, K2Node_VariableSet_cooldown_ImplicitCast) == 0x000018, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValues::K2Node_VariableSet_cooldown_ImplicitCast' has a wrong offset!");
 
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.SetRapidFireValuesMulti
@@ -217,24 +217,24 @@ struct B_BuffHunterRapidFire_C_SetRapidFireValuesMulti final
 public:
 	double                                        StaminaCost;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Cooldown;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_PotatoSkill_C*                       Param_PotatoSkill;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_PotatoSkill_C*                       PotatoSkill_0;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_SetRapidFireValuesMulti) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_SetRapidFireValuesMulti");
 static_assert(sizeof(B_BuffHunterRapidFire_C_SetRapidFireValuesMulti) == 0x000018, "Wrong size on B_BuffHunterRapidFire_C_SetRapidFireValuesMulti");
 static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValuesMulti, StaminaCost) == 0x000000, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValuesMulti::StaminaCost' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValuesMulti, Cooldown) == 0x000008, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValuesMulti::Cooldown' has a wrong offset!");
-static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValuesMulti, Param_PotatoSkill) == 0x000010, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValuesMulti::Param_PotatoSkill' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_SetRapidFireValuesMulti, PotatoSkill_0) == 0x000010, "Member 'B_BuffHunterRapidFire_C_SetRapidFireValuesMulti::PotatoSkill_0' has a wrong offset!");
 
 // Function B_BuffHunterRapidFire.B_BuffHunterRapidFire_C.SpawnTrailMulti
 // 0x0008 (0x0008 - 0x0000)
 struct B_BuffHunterRapidFire_C_SpawnTrailMulti final
 {
 public:
-	class AB_Hunter_C*                            Param_Hunter;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_Hunter_C*                            Hunter_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterRapidFire_C_SpawnTrailMulti) == 0x000008, "Wrong alignment on B_BuffHunterRapidFire_C_SpawnTrailMulti");
 static_assert(sizeof(B_BuffHunterRapidFire_C_SpawnTrailMulti) == 0x000008, "Wrong size on B_BuffHunterRapidFire_C_SpawnTrailMulti");
-static_assert(offsetof(B_BuffHunterRapidFire_C_SpawnTrailMulti, Param_Hunter) == 0x000000, "Member 'B_BuffHunterRapidFire_C_SpawnTrailMulti::Param_Hunter' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterRapidFire_C_SpawnTrailMulti, Hunter_0) == 0x000000, "Member 'B_BuffHunterRapidFire_C_SpawnTrailMulti::Hunter_0' has a wrong offset!");
 
 }
 

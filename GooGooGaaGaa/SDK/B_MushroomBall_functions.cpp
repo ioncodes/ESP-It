@@ -98,10 +98,10 @@ void AB_MushroomBall_C::ExecuteUbergraph_B_MushroomBall(int32 EntryPoint)
 // Function B_MushroomBall.B_MushroomBall_C.GetFirstTransformVelocity
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Velocity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::GetFirstTransformVelocity(class APawn* Param_Instigator, struct FVector* Velocity)
+void AB_MushroomBall_C::GetFirstTransformVelocity(class APawn* Instigator_0, struct FVector* Velocity)
 {
 	static class UFunction* Func = nullptr;
 
@@ -110,7 +110,7 @@ void AB_MushroomBall_C::GetFirstTransformVelocity(class APawn* Param_Instigator,
 
 	Params::B_MushroomBall_C_GetFirstTransformVelocity Parms{};
 
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -142,10 +142,10 @@ struct FTransform AB_MushroomBall_C::GetRandomMushroomBallChildTransform()
 // Function B_MushroomBall.B_MushroomBall_C.HandleEnvironmentHit
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Param_HitLocation                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Param_HitNormal                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          HitLocation_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          HitNormal_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::HandleEnvironmentHit(const struct FVector& Param_HitLocation, const struct FVector& Param_HitNormal)
+void AB_MushroomBall_C::HandleEnvironmentHit(const struct FVector& HitLocation_0, const struct FVector& HitNormal_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -154,8 +154,8 @@ void AB_MushroomBall_C::HandleEnvironmentHit(const struct FVector& Param_HitLoca
 
 	Params::B_MushroomBall_C_HandleEnvironmentHit Parms{};
 
-	Parms.Param_HitLocation = std::move(Param_HitLocation);
-	Parms.Param_HitNormal = std::move(Param_HitNormal);
+	Parms.HitLocation_0 = std::move(HitLocation_0);
+	Parms.HitNormal_0 = std::move(HitNormal_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -199,9 +199,9 @@ void AB_MushroomBall_C::IncrementLifeTime()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_FirstIteration                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FirstIteration_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::PlayDestroyEffects(const struct FVector& Location, bool Param_FirstIteration)
+void AB_MushroomBall_C::PlayDestroyEffects(const struct FVector& Location, bool FirstIteration_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -211,7 +211,7 @@ void AB_MushroomBall_C::PlayDestroyEffects(const struct FVector& Location, bool 
 	Params::B_MushroomBall_C_PlayDestroyEffects Parms{};
 
 	Parms.Location = std::move(Location);
-	Parms.Param_FirstIteration = Param_FirstIteration;
+	Parms.FirstIteration_0 = FirstIteration_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -221,9 +221,9 @@ void AB_MushroomBall_C::PlayDestroyEffects(const struct FVector& Location, bool 
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_FirstIteration                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FirstIteration_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::PlayDestroyEffectsMulticast(const struct FVector& Location, bool Param_FirstIteration)
+void AB_MushroomBall_C::PlayDestroyEffectsMulticast(const struct FVector& Location, bool FirstIteration_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -233,7 +233,7 @@ void AB_MushroomBall_C::PlayDestroyEffectsMulticast(const struct FVector& Locati
 	Params::B_MushroomBall_C_PlayDestroyEffectsMulticast Parms{};
 
 	Parms.Location = std::move(Location);
-	Parms.Param_FirstIteration = Param_FirstIteration;
+	Parms.FirstIteration_0 = FirstIteration_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -407,11 +407,11 @@ void AB_MushroomBall_C::TearDownPoolObject()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Velocity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator, const struct FVector& Velocity)
+void AB_MushroomBall_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0, const struct FVector& Velocity)
 {
 	static class UFunction* Func = nullptr;
 
@@ -421,8 +421,8 @@ void AB_MushroomBall_C::TearUp(const struct FTransform& SpawnTransform, class AA
 	Params::B_MushroomBall_C_TearUp Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 	Parms.Velocity = std::move(Velocity);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -433,11 +433,11 @@ void AB_MushroomBall_C::TearUp(const struct FTransform& SpawnTransform, class AA
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Velocity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator, const struct FVector& Velocity)
+void AB_MushroomBall_C::TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0, const struct FVector& Velocity)
 {
 	static class UFunction* Func = nullptr;
 
@@ -447,8 +447,8 @@ void AB_MushroomBall_C::TearUpMulticast(const struct FTransform& SpawnTransform,
 	Params::B_MushroomBall_C_TearUpMulticast Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 	Parms.Velocity = std::move(Velocity);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -459,10 +459,10 @@ void AB_MushroomBall_C::TearUpMulticast(const struct FTransform& SpawnTransform,
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_MushroomBall_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -472,8 +472,8 @@ void AB_MushroomBall_C::TearUpPoolObject(const struct FTransform& SpawnTransform
 	Params::B_MushroomBall_C_TearUpPoolObject Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -483,9 +483,9 @@ void AB_MushroomBall_C::TearUpPoolObject(const struct FTransform& SpawnTransform
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_FirstIteration                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FirstIteration_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomBall_C::IsFirstMushroomInIteration(const struct FTransform& Transform, bool* Param_FirstIteration) const
+void AB_MushroomBall_C::IsFirstMushroomInIteration(const struct FTransform& Transform, bool* FirstIteration_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -498,8 +498,8 @@ void AB_MushroomBall_C::IsFirstMushroomInIteration(const struct FTransform& Tran
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_FirstIteration != nullptr)
-		*Param_FirstIteration = Parms.Param_FirstIteration;
+	if (FirstIteration_0 != nullptr)
+		*FirstIteration_0 = Parms.FirstIteration_0;
 }
 
 }

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SLanguage_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
 #include "InputCore_structs.hpp"
+#include "SLanguage_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SButtonLocalization_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 
 
 namespace SDK

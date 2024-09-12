@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ActionkeyHelp.WB_ActionkeyHelp_C
-// 0x0038 (0x02F8 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_ActionkeyHelp_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Loca;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FName                                   ActionName;                                        // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ActionLoca;                                        // 0x02E0(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Loca;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FName                                   ActionName;                                        // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ActionLoca;                                        // 0x0300(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void Construct();
@@ -44,12 +44,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_ActionkeyHelp_C) == 0x000008, "Wrong alignment on UWB_ActionkeyHelp_C");
-static_assert(sizeof(UWB_ActionkeyHelp_C) == 0x0002F8, "Wrong size on UWB_ActionkeyHelp_C");
-static_assert(offsetof(UWB_ActionkeyHelp_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ActionkeyHelp_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ActionkeyHelp_C, Loca) == 0x0002C8, "Member 'UWB_ActionkeyHelp_C::Loca' has a wrong offset!");
-static_assert(offsetof(UWB_ActionkeyHelp_C, WB_ActionIcon) == 0x0002D0, "Member 'UWB_ActionkeyHelp_C::WB_ActionIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ActionkeyHelp_C, ActionName) == 0x0002D8, "Member 'UWB_ActionkeyHelp_C::ActionName' has a wrong offset!");
-static_assert(offsetof(UWB_ActionkeyHelp_C, ActionLoca) == 0x0002E0, "Member 'UWB_ActionkeyHelp_C::ActionLoca' has a wrong offset!");
+static_assert(sizeof(UWB_ActionkeyHelp_C) == 0x000310, "Wrong size on UWB_ActionkeyHelp_C");
+static_assert(offsetof(UWB_ActionkeyHelp_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ActionkeyHelp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ActionkeyHelp_C, Loca) == 0x0002E8, "Member 'UWB_ActionkeyHelp_C::Loca' has a wrong offset!");
+static_assert(offsetof(UWB_ActionkeyHelp_C, WB_ActionIcon) == 0x0002F0, "Member 'UWB_ActionkeyHelp_C::WB_ActionIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ActionkeyHelp_C, ActionName) == 0x0002F8, "Member 'UWB_ActionkeyHelp_C::ActionName' has a wrong offset!");
+static_assert(offsetof(UWB_ActionkeyHelp_C, ActionLoca) == 0x000300, "Member 'UWB_ActionkeyHelp_C::ActionLoca' has a wrong offset!");
 
 }
 

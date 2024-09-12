@@ -43,9 +43,9 @@ void UB_HunterChanceManager_C::AllocatePlayers(TArray<class APlayerState*>& Play
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   Amount                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class APlayerState*>             Param_Players                                          (Parm, OutParm)
+// TArray<class APlayerState*>             Players_0                                              (Parm, OutParm)
 
-void UB_HunterChanceManager_C::GetHunterPlayersByChance(int32 Amount, TArray<class APlayerState*>* Param_Players)
+void UB_HunterChanceManager_C::GetHunterPlayersByChance(int32 Amount, TArray<class APlayerState*>* Players_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -58,8 +58,8 @@ void UB_HunterChanceManager_C::GetHunterPlayersByChance(int32 Amount, TArray<cla
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Players != nullptr)
-		*Param_Players = std::move(Parms.Param_Players);
+	if (Players_0 != nullptr)
+		*Players_0 = std::move(Parms.Players_0);
 }
 
 

@@ -17,18 +17,14 @@
 namespace SDK
 {
 
-// Enum MasterServerPlugin.ELoginAndRegisterResult
-// NumValues: 0x0008
-enum class ELoginAndRegisterResult : uint8
+// Enum MasterServerPlugin.ECreativeMapVisibility
+// NumValues: 0x0004
+enum class ECreativeMapVisibility : uint8
 {
-	UnkownError                              = 0,
-	AccountAlreadyExists                     = 1,
-	FailedRegister                           = 2,
-	RegisterAndLoginSuccessful               = 3,
-	LoginSuccessful                          = 4,
-	LoginFailed                              = 5,
-	LoginFailedCredentials                   = 6,
-	ELoginAndRegisterResult_MAX              = 7,
+	Public                                   = 0,
+	Friends                                  = 1,
+	Private                                  = 2,
+	ECreativeMapVisibility_MAX               = 3,
 };
 
 // Enum MasterServerPlugin.EItemChangeReason
@@ -86,6 +82,16 @@ enum class EStatChangeReason : uint8
 	EStatChangeReason_MAX                    = 2,
 };
 
+// Enum MasterServerPlugin.ETradeReason
+// NumValues: 0x0004
+enum class ETradeReason : uint8
+{
+	RequestReceived                          = 0,
+	Accepted                                 = 1,
+	Rejected                                 = 2,
+	ETradeReason_MAX                         = 3,
+};
+
 // Enum MasterServerPlugin.EAccountSettingType
 // NumValues: 0x0004
 enum class EAccountSettingType : uint8
@@ -106,6 +112,26 @@ enum class ENativeUserBehaviorEventType : uint8
 	End                                      = 3,
 	Singular                                 = 4,
 	ENativeUserBehaviorEventType_MAX         = 5,
+};
+
+// Enum MasterServerPlugin.ESorting
+// NumValues: 0x0005
+enum class ESorting : uint8
+{
+	LastUpdated                              = 0,
+	Rating                                   = 1,
+	Downloads                                = 2,
+	Alphabetically                           = 3,
+	ESorting_MAX                             = 4,
+};
+
+// Enum MasterServerPlugin.ESortOrder
+// NumValues: 0x0003
+enum class ESortOrder : uint8
+{
+	Ascending                                = 0,
+	Descending                               = 1,
+	ESortOrder_MAX                           = 2,
 };
 
 // Enum MasterServerPlugin.EInstanceMgrPacketType
@@ -153,36 +179,72 @@ enum class EServerBrowserEntryOnlineSystemType : uint32
 	EServerBrowserEntryOnlineSystemType_MAX  = 3,
 };
 
-// ScriptStruct MasterServerPlugin.UserBehaviorEvent
-// 0x0030 (0x0030 - 0x0000)
-struct FUserBehaviorEvent final
+// ScriptStruct MasterServerPlugin.CreativeWorkshopMapDetails
+// 0x0098 (0x0098 - 0x0000)
+struct FCreativeWorkshopMapDetails
 {
 public:
-	ENativeUserBehaviorEventType                  EventType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 EventData;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              Timestamp;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              TimestampExt;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsTimestampExtSet;                                 // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF3[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Title;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ChangeNotes;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         WitchItWorkshopID;                                 // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SteamWorkshopID;                                   // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CreaterPUID;                                       // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CreatorName;                                       // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              CreationTime;                                      // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              LastUpdatedTime;                                   // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             PreviewImage;                                      // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECreativeMapVisibility                        MapVisibility;                                     // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumberOfDownloads;                                 // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rating;                                            // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumberofRatings;                                   // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserRating;                                   // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FUserBehaviorEvent) == 0x000008, "Wrong alignment on FUserBehaviorEvent");
-static_assert(sizeof(FUserBehaviorEvent) == 0x000030, "Wrong size on FUserBehaviorEvent");
-static_assert(offsetof(FUserBehaviorEvent, EventType) == 0x000000, "Member 'FUserBehaviorEvent::EventType' has a wrong offset!");
-static_assert(offsetof(FUserBehaviorEvent, EventData) == 0x000008, "Member 'FUserBehaviorEvent::EventData' has a wrong offset!");
-static_assert(offsetof(FUserBehaviorEvent, Timestamp) == 0x000018, "Member 'FUserBehaviorEvent::Timestamp' has a wrong offset!");
-static_assert(offsetof(FUserBehaviorEvent, TimestampExt) == 0x000020, "Member 'FUserBehaviorEvent::TimestampExt' has a wrong offset!");
-static_assert(offsetof(FUserBehaviorEvent, IsTimestampExtSet) == 0x000028, "Member 'FUserBehaviorEvent::IsTimestampExtSet' has a wrong offset!");
+static_assert(alignof(FCreativeWorkshopMapDetails) == 0x000008, "Wrong alignment on FCreativeWorkshopMapDetails");
+static_assert(sizeof(FCreativeWorkshopMapDetails) == 0x000098, "Wrong size on FCreativeWorkshopMapDetails");
+static_assert(offsetof(FCreativeWorkshopMapDetails, Title) == 0x000000, "Member 'FCreativeWorkshopMapDetails::Title' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, Description) == 0x000010, "Member 'FCreativeWorkshopMapDetails::Description' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, ChangeNotes) == 0x000020, "Member 'FCreativeWorkshopMapDetails::ChangeNotes' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, WitchItWorkshopID) == 0x000030, "Member 'FCreativeWorkshopMapDetails::WitchItWorkshopID' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, SteamWorkshopID) == 0x000038, "Member 'FCreativeWorkshopMapDetails::SteamWorkshopID' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, CreaterPUID) == 0x000048, "Member 'FCreativeWorkshopMapDetails::CreaterPUID' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, CreatorName) == 0x000058, "Member 'FCreativeWorkshopMapDetails::CreatorName' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, CreationTime) == 0x000068, "Member 'FCreativeWorkshopMapDetails::CreationTime' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, LastUpdatedTime) == 0x000070, "Member 'FCreativeWorkshopMapDetails::LastUpdatedTime' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, PreviewImage) == 0x000078, "Member 'FCreativeWorkshopMapDetails::PreviewImage' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, MapVisibility) == 0x000080, "Member 'FCreativeWorkshopMapDetails::MapVisibility' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, NumberOfDownloads) == 0x000084, "Member 'FCreativeWorkshopMapDetails::NumberOfDownloads' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, Rating) == 0x000088, "Member 'FCreativeWorkshopMapDetails::Rating' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, NumberofRatings) == 0x00008C, "Member 'FCreativeWorkshopMapDetails::NumberofRatings' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapDetails, LocalUserRating) == 0x000090, "Member 'FCreativeWorkshopMapDetails::LocalUserRating' has a wrong offset!");
 
-// ScriptStruct MasterServerPlugin.BlueprintOnlineItem
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FBlueprintOnlineItem final
+// ScriptStruct MasterServerPlugin.TradingItem
+// 0x0008 (0x0008 - 0x0000)
+struct FTradingItem final
 {
 public:
-	uint8                                         Pad_1DF4[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ItemDefId;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Quantity;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBlueprintOnlineItem) == 0x000008, "Wrong alignment on FBlueprintOnlineItem");
-static_assert(sizeof(FBlueprintOnlineItem) == 0x000010, "Wrong size on FBlueprintOnlineItem");
+static_assert(alignof(FTradingItem) == 0x000004, "Wrong alignment on FTradingItem");
+static_assert(sizeof(FTradingItem) == 0x000008, "Wrong size on FTradingItem");
+static_assert(offsetof(FTradingItem, ItemDefId) == 0x000000, "Member 'FTradingItem::ItemDefId' has a wrong offset!");
+static_assert(offsetof(FTradingItem, Quantity) == 0x000004, "Member 'FTradingItem::Quantity' has a wrong offset!");
+
+// ScriptStruct MasterServerPlugin.CreativeWorkshopMapLayout
+// 0x0020 (0x00B8 - 0x0098)
+struct FCreativeWorkshopMapLayout final : public FCreativeWorkshopMapDetails
+{
+public:
+	class FString                                 MapLayout;                                         // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BaseMapName;                                       // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCreativeWorkshopMapLayout) == 0x000008, "Wrong alignment on FCreativeWorkshopMapLayout");
+static_assert(sizeof(FCreativeWorkshopMapLayout) == 0x0000B8, "Wrong size on FCreativeWorkshopMapLayout");
+static_assert(offsetof(FCreativeWorkshopMapLayout, MapLayout) == 0x000098, "Member 'FCreativeWorkshopMapLayout::MapLayout' has a wrong offset!");
+static_assert(offsetof(FCreativeWorkshopMapLayout, BaseMapName) == 0x0000A8, "Member 'FCreativeWorkshopMapLayout::BaseMapName' has a wrong offset!");
 
 // ScriptStruct MasterServerPlugin.GrantItemResultEntry
 // 0x0008 (0x0008 - 0x0000)
@@ -197,22 +259,6 @@ static_assert(sizeof(FGrantItemResultEntry) == 0x000008, "Wrong size on FGrantIt
 static_assert(offsetof(FGrantItemResultEntry, ItemDefId) == 0x000000, "Member 'FGrantItemResultEntry::ItemDefId' has a wrong offset!");
 static_assert(offsetof(FGrantItemResultEntry, StackSize) == 0x000004, "Member 'FGrantItemResultEntry::StackSize' has a wrong offset!");
 
-// ScriptStruct MasterServerPlugin.AddedItem
-// 0x0028 (0x0028 - 0x0000)
-struct FAddedItem final
-{
-public:
-	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	EItemChangeReason                             Reason;                                            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF5[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Payload;                                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAddedItem) == 0x000008, "Wrong alignment on FAddedItem");
-static_assert(sizeof(FAddedItem) == 0x000028, "Wrong size on FAddedItem");
-static_assert(offsetof(FAddedItem, Item) == 0x000000, "Member 'FAddedItem::Item' has a wrong offset!");
-static_assert(offsetof(FAddedItem, Reason) == 0x000010, "Member 'FAddedItem::Reason' has a wrong offset!");
-static_assert(offsetof(FAddedItem, Payload) == 0x000018, "Member 'FAddedItem::Payload' has a wrong offset!");
-
 // ScriptStruct MasterServerPlugin.AccountSetting
 // 0x0030 (0x0030 - 0x0000)
 struct FAccountSetting final
@@ -220,10 +266,10 @@ struct FAccountSetting final
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAccountSettingType                           Type;                                              // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF6[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 StringValue;                                       // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBoolValue;                                        // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF7[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Int32Value;                                        // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAccountSetting) == 0x000008, "Wrong alignment on FAccountSetting");
@@ -240,13 +286,81 @@ struct FDatabaseItem final
 {
 public:
 	int32                                         ItemDefId;                                         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, class FString>              Properties;                                        // 0x0008(0x0050)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FDatabaseItem) == 0x000008, "Wrong alignment on FDatabaseItem");
 static_assert(sizeof(FDatabaseItem) == 0x000058, "Wrong size on FDatabaseItem");
 static_assert(offsetof(FDatabaseItem, ItemDefId) == 0x000000, "Member 'FDatabaseItem::ItemDefId' has a wrong offset!");
 static_assert(offsetof(FDatabaseItem, Properties) == 0x000008, "Member 'FDatabaseItem::Properties' has a wrong offset!");
+
+// ScriptStruct MasterServerPlugin.TradeRequest
+// 0x0050 (0x0050 - 0x0000)
+struct FTradeRequest final
+{
+public:
+	int64                                         TradeRequestId;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TargetPlayerId;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTradingItem>                   SendingItems;                                      // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FTradingItem>                   TargetItems;                                       // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 State;                                             // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         UnixCreationTime;                                  // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FTradeRequest) == 0x000008, "Wrong alignment on FTradeRequest");
+static_assert(sizeof(FTradeRequest) == 0x000050, "Wrong size on FTradeRequest");
+static_assert(offsetof(FTradeRequest, TradeRequestId) == 0x000000, "Member 'FTradeRequest::TradeRequestId' has a wrong offset!");
+static_assert(offsetof(FTradeRequest, TargetPlayerId) == 0x000008, "Member 'FTradeRequest::TargetPlayerId' has a wrong offset!");
+static_assert(offsetof(FTradeRequest, SendingItems) == 0x000018, "Member 'FTradeRequest::SendingItems' has a wrong offset!");
+static_assert(offsetof(FTradeRequest, TargetItems) == 0x000028, "Member 'FTradeRequest::TargetItems' has a wrong offset!");
+static_assert(offsetof(FTradeRequest, State) == 0x000038, "Member 'FTradeRequest::State' has a wrong offset!");
+static_assert(offsetof(FTradeRequest, UnixCreationTime) == 0x000048, "Member 'FTradeRequest::UnixCreationTime' has a wrong offset!");
+
+// ScriptStruct MasterServerPlugin.BlueprintOnlineItem
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FBlueprintOnlineItem final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBlueprintOnlineItem) == 0x000008, "Wrong alignment on FBlueprintOnlineItem");
+static_assert(sizeof(FBlueprintOnlineItem) == 0x000010, "Wrong size on FBlueprintOnlineItem");
+
+// ScriptStruct MasterServerPlugin.UserBehaviorEvent
+// 0x0030 (0x0030 - 0x0000)
+struct FUserBehaviorEvent final
+{
+public:
+	ENativeUserBehaviorEventType                  EventType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 EventData;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              Timestamp;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              TimestampExt;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsTimestampExtSet;                                 // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUserBehaviorEvent) == 0x000008, "Wrong alignment on FUserBehaviorEvent");
+static_assert(sizeof(FUserBehaviorEvent) == 0x000030, "Wrong size on FUserBehaviorEvent");
+static_assert(offsetof(FUserBehaviorEvent, EventType) == 0x000000, "Member 'FUserBehaviorEvent::EventType' has a wrong offset!");
+static_assert(offsetof(FUserBehaviorEvent, EventData) == 0x000008, "Member 'FUserBehaviorEvent::EventData' has a wrong offset!");
+static_assert(offsetof(FUserBehaviorEvent, Timestamp) == 0x000018, "Member 'FUserBehaviorEvent::Timestamp' has a wrong offset!");
+static_assert(offsetof(FUserBehaviorEvent, TimestampExt) == 0x000020, "Member 'FUserBehaviorEvent::TimestampExt' has a wrong offset!");
+static_assert(offsetof(FUserBehaviorEvent, IsTimestampExtSet) == 0x000028, "Member 'FUserBehaviorEvent::IsTimestampExtSet' has a wrong offset!");
+
+// ScriptStruct MasterServerPlugin.AddedItem
+// 0x0028 (0x0028 - 0x0000)
+struct FAddedItem final
+{
+public:
+	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	EItemChangeReason                             Reason;                                            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Payload;                                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAddedItem) == 0x000008, "Wrong alignment on FAddedItem");
+static_assert(sizeof(FAddedItem) == 0x000028, "Wrong size on FAddedItem");
+static_assert(offsetof(FAddedItem, Item) == 0x000000, "Member 'FAddedItem::Item' has a wrong offset!");
+static_assert(offsetof(FAddedItem, Reason) == 0x000010, "Member 'FAddedItem::Reason' has a wrong offset!");
+static_assert(offsetof(FAddedItem, Payload) == 0x000018, "Member 'FAddedItem::Payload' has a wrong offset!");
 
 // ScriptStruct MasterServerPlugin.AccountPresenceEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -255,7 +369,7 @@ struct FAccountPresenceEntry final
 public:
 	class FString                                 ProductUserId;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsOnline;                                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF9[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PresenceString;                                    // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerLevel;                                       // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayerIconItemDefId;                               // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -277,7 +391,7 @@ public:
 	class FString                                 GameRules;                                         // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 CustomHost;                                        // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CustomListeningPort;                               // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DFA[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintSessionResult                Session;                                           // 0x0038(0x0120)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FGameServerInfo) == 0x000008, "Wrong alignment on FGameServerInfo");
@@ -300,7 +414,7 @@ public:
 	class FString                                 Name;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OnlineSystemUserId;                                // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGameServerType                               ServerType;                                        // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DFB[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CurrentPlayers;                                    // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxPlayers;                                        // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MatchTime;                                         // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -314,7 +428,7 @@ public:
 	bool                                          bHasObjectiveMatchStarted;                         // 0x009A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsPasswordProtected;                              // 0x009B(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasMatchStarted;                                  // 0x009C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DFC[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 HostName;                                          // 0x00A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ListeningPort;                                     // 0x00B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EServerBrowserEntryOnlineSystemType           OnlineSystemType;                                  // 0x00B4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

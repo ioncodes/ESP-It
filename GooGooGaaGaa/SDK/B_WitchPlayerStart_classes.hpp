@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchPlayerStart.B_WitchPlayerStart_C
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x02D8 - 0x02D8)
 class AB_WitchPlayerStart_C final : public AB_PlayerStart_C
 {
 public:
-	bool                                          ReservedForObjectives;                             // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReservedForObjectives;                             // 0x02D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchPlayerStart_C) == 0x000008, "Wrong alignment on AB_WitchPlayerStart_C");
-static_assert(sizeof(AB_WitchPlayerStart_C) == 0x0002E0, "Wrong size on AB_WitchPlayerStart_C");
-static_assert(offsetof(AB_WitchPlayerStart_C, ReservedForObjectives) == 0x0002D9, "Member 'AB_WitchPlayerStart_C::ReservedForObjectives' has a wrong offset!");
+static_assert(sizeof(AB_WitchPlayerStart_C) == 0x0002D8, "Wrong size on AB_WitchPlayerStart_C");
+static_assert(offsetof(AB_WitchPlayerStart_C, ReservedForObjectives) == 0x0002D1, "Member 'AB_WitchPlayerStart_C::ReservedForObjectives' has a wrong offset!");
 
 }
 

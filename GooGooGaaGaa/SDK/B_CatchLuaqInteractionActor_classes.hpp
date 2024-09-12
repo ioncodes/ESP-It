@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CatchLuaqInteractionActor.B_CatchLuaqInteractionActor_C
-// 0x0008 (0x0320 - 0x0318)
+// 0x0008 (0x0310 - 0x0308)
 class AB_CatchLuaqInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
-	class UStaticMeshComponent*                   Luaq;                                              // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Luaq;                                              // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Highlight();
@@ -37,8 +37,8 @@ public:
 	}
 };
 static_assert(alignof(AB_CatchLuaqInteractionActor_C) == 0x000008, "Wrong alignment on AB_CatchLuaqInteractionActor_C");
-static_assert(sizeof(AB_CatchLuaqInteractionActor_C) == 0x000320, "Wrong size on AB_CatchLuaqInteractionActor_C");
-static_assert(offsetof(AB_CatchLuaqInteractionActor_C, Luaq) == 0x000318, "Member 'AB_CatchLuaqInteractionActor_C::Luaq' has a wrong offset!");
+static_assert(sizeof(AB_CatchLuaqInteractionActor_C) == 0x000310, "Wrong size on AB_CatchLuaqInteractionActor_C");
+static_assert(offsetof(AB_CatchLuaqInteractionActor_C, Luaq) == 0x000308, "Member 'AB_CatchLuaqInteractionActor_C::Luaq' has a wrong offset!");
 
 }
 

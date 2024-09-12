@@ -129,9 +129,9 @@ void UB_PowerBallSkill_C::OnActivateSkillServer()
 // Function B_PowerBallSkill.B_PowerBallSkill_C.OwnlingClientCooldown
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_Cooldown                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Cooldown_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_PowerBallSkill_C::OwnlingClientCooldown(bool Param_Cooldown)
+void UB_PowerBallSkill_C::OwnlingClientCooldown(bool Cooldown_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -140,7 +140,7 @@ void UB_PowerBallSkill_C::OwnlingClientCooldown(bool Param_Cooldown)
 
 	Params::B_PowerBallSkill_C_OwnlingClientCooldown Parms{};
 
-	Parms.Param_Cooldown = Param_Cooldown;
+	Parms.Cooldown_0 = Cooldown_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -19,23 +19,23 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SwitchConnectionsTab.WB_SwitchConnectionsTab_C
-// 0x0078 (0x0350 - 0x02D8)
+// 0x0078 (0x0370 - 0x02F8)
 class UWB_SwitchConnectionsTab_C final : public UWB_PlaceAndEditUITab_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SwitchConnectionsTab_C;          // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 BorderLine;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ConnectionManagementBox;                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ConnectionsTitle;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              NoConnectionsBox;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             NoConnectionsText;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        RemoveAllButton;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         RemoveButtonsBox;                                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        RemoveSelectedTargetsButton;                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UListView*                              TargetListView;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               TargetListViewBox;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UB_TargetActorData_C*>           TargetsDataArray;                                  // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class ABP_Switch_C*>                   AllSwitches;                                       // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SwitchConnectionsTab_C;          // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 BorderLine;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ConnectionManagementBox;                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ConnectionsTitle;                                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              NoConnectionsBox;                                  // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             NoConnectionsText;                                 // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        RemoveAllButton;                                   // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         RemoveButtonsBox;                                  // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        RemoveSelectedTargetsButton;                       // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UListView*                              TargetListView;                                    // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               TargetListViewBox;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UB_TargetActorData_C*>           TargetsDataArray;                                  // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class ABP_Switch_C*>                   AllSwitches;                                       // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void BndEvt__WB_SwitchConnectionsTab_RemoveAllButton_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -57,20 +57,20 @@ public:
 	}
 };
 static_assert(alignof(UWB_SwitchConnectionsTab_C) == 0x000008, "Wrong alignment on UWB_SwitchConnectionsTab_C");
-static_assert(sizeof(UWB_SwitchConnectionsTab_C) == 0x000350, "Wrong size on UWB_SwitchConnectionsTab_C");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, UberGraphFrame_WB_SwitchConnectionsTab_C) == 0x0002D8, "Member 'UWB_SwitchConnectionsTab_C::UberGraphFrame_WB_SwitchConnectionsTab_C' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, BorderLine) == 0x0002E0, "Member 'UWB_SwitchConnectionsTab_C::BorderLine' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, ConnectionManagementBox) == 0x0002E8, "Member 'UWB_SwitchConnectionsTab_C::ConnectionManagementBox' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, ConnectionsTitle) == 0x0002F0, "Member 'UWB_SwitchConnectionsTab_C::ConnectionsTitle' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, NoConnectionsBox) == 0x0002F8, "Member 'UWB_SwitchConnectionsTab_C::NoConnectionsBox' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, NoConnectionsText) == 0x000300, "Member 'UWB_SwitchConnectionsTab_C::NoConnectionsText' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, RemoveAllButton) == 0x000308, "Member 'UWB_SwitchConnectionsTab_C::RemoveAllButton' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, RemoveButtonsBox) == 0x000310, "Member 'UWB_SwitchConnectionsTab_C::RemoveButtonsBox' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, RemoveSelectedTargetsButton) == 0x000318, "Member 'UWB_SwitchConnectionsTab_C::RemoveSelectedTargetsButton' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, TargetListView) == 0x000320, "Member 'UWB_SwitchConnectionsTab_C::TargetListView' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, TargetListViewBox) == 0x000328, "Member 'UWB_SwitchConnectionsTab_C::TargetListViewBox' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, TargetsDataArray) == 0x000330, "Member 'UWB_SwitchConnectionsTab_C::TargetsDataArray' has a wrong offset!");
-static_assert(offsetof(UWB_SwitchConnectionsTab_C, AllSwitches) == 0x000340, "Member 'UWB_SwitchConnectionsTab_C::AllSwitches' has a wrong offset!");
+static_assert(sizeof(UWB_SwitchConnectionsTab_C) == 0x000370, "Wrong size on UWB_SwitchConnectionsTab_C");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, UberGraphFrame_WB_SwitchConnectionsTab_C) == 0x0002F8, "Member 'UWB_SwitchConnectionsTab_C::UberGraphFrame_WB_SwitchConnectionsTab_C' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, BorderLine) == 0x000300, "Member 'UWB_SwitchConnectionsTab_C::BorderLine' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, ConnectionManagementBox) == 0x000308, "Member 'UWB_SwitchConnectionsTab_C::ConnectionManagementBox' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, ConnectionsTitle) == 0x000310, "Member 'UWB_SwitchConnectionsTab_C::ConnectionsTitle' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, NoConnectionsBox) == 0x000318, "Member 'UWB_SwitchConnectionsTab_C::NoConnectionsBox' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, NoConnectionsText) == 0x000320, "Member 'UWB_SwitchConnectionsTab_C::NoConnectionsText' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, RemoveAllButton) == 0x000328, "Member 'UWB_SwitchConnectionsTab_C::RemoveAllButton' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, RemoveButtonsBox) == 0x000330, "Member 'UWB_SwitchConnectionsTab_C::RemoveButtonsBox' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, RemoveSelectedTargetsButton) == 0x000338, "Member 'UWB_SwitchConnectionsTab_C::RemoveSelectedTargetsButton' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, TargetListView) == 0x000340, "Member 'UWB_SwitchConnectionsTab_C::TargetListView' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, TargetListViewBox) == 0x000348, "Member 'UWB_SwitchConnectionsTab_C::TargetListViewBox' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, TargetsDataArray) == 0x000350, "Member 'UWB_SwitchConnectionsTab_C::TargetsDataArray' has a wrong offset!");
+static_assert(offsetof(UWB_SwitchConnectionsTab_C, AllSwitches) == 0x000360, "Member 'UWB_SwitchConnectionsTab_C::AllSwitches' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 
@@ -20,12 +20,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PropPawnPhysics.B_PropPawnPhysics_C
-// 0x02A0 (0x05C8 - 0x0328)
+// 0x02A8 (0x05C8 - 0x0320)
 class AB_PropPawnPhysics_C : public APropPawnPhysics
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   AimAssistTarget;                                   // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   AimAssistTarget;                                   // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_AimAssistTargetComponent_C*          B_AimAssistTargetComponent;                        // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UB_ManaComponent_C*                     B_ManaComponent;                                   // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UB_KillRelictDropper_C*                 B_KillRelictDropper;                               // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        CommunicationSound;                                // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -53,11 +54,11 @@ public:
 	class AActor*                                 PropTemplate;                                      // 0x0400(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsStabilizing;                                     // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SwitchIsOnCooldown;                                // 0x0409(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F5B[0x6];                                     // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A[0x6];                                      // 0x040A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_BaseWitchSkill_C*                    SpecialUtilitySkill;                               // 0x0410(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_BaseWitchSkill_C*                    SpecialMovementSkill;                              // 0x0418(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         DispelDebuff;                                      // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F5C[0x4];                                     // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_424[0x4];                                      // 0x0424(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_VisualIntepolator_C*>         CurrentVisualChilds;                               // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	struct FVector                                LastTravelLocation;                                // 0x0438(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TauntBudget;                                       // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -68,22 +69,22 @@ public:
 	struct FRuntimePropData                       LastRuntimePropDataNew;                            // 0x0470(0x0038)(Edit, BlueprintVisible, Net, DisableEditOnInstance, NoDestructor)
 	class AB_Witch_C*                             SpawnedWitch;                                      // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsTransformingBack;                                // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F5D[0x7];                                     // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B1[0x7];                                      // 0x04B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        TransformBackTime;                                 // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        FPTargetArmLength;                                 // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                FPSocketOffset;                                    // 0x04C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                FPTargetOffset;                                    // 0x04E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                TPTargetOffset;                                    // 0x04F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ManaDrainDebuff;                                   // 0x0510(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F5E[0x4];                                     // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_514[0x4];                                      // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SettingsSave_C*                      SettingsSave;                                      // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_MenuUIManager_C*                     MenuUIManager;                                     // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          DisableFire;                                       // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F5F[0x7];                                     // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 PossessedProp;                                     // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       PossessingPlayer;                                  // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         CurrentPropId;                                     // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F60[0x4];                                     // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_544[0x4];                                      // 0x0544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 LastControllingProp;                               // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      TransformEffectParticle;                           // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        TPArmLength;                                       // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -93,12 +94,12 @@ public:
 	class AActor*                                 LastCameraProp;                                    // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AB_AchievementTestVolume_C*             LastPhotoTarget;                                   // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          ToggleModeActive;                                  // 0x0588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F61[0x7];                                     // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        TargetArmLength;                                   // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        PropMaxHealth;                                     // 0x0598(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MovementAllowed;                                   // 0x05A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HiddenToHunters;                                   // 0x05A1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_3F62[0x6];                                     // 0x05A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A2[0x6];                                      // 0x05A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInterface*>             OriginalStaticMeshMaterials;                       // 0x05A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class UMaterialInterface*>             OriginalSkeletalMeshMaterials;                     // 0x05B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
@@ -110,7 +111,7 @@ public:
 	void TickVisuals();
 	void TransformEffect(const struct FSRuntimePropData& LastRuntimePropData, const struct FSRuntimePropData& CurrentRuntimePropData);
 	void ExecuteUbergraph_B_PropPawnPhysics(int32 EntryPoint);
-	void GetCurrentController(class AController** Param_Controller);
+	void GetCurrentController(class AController** Controller_0);
 	void GetAttachComponent(class USceneComponent** Component);
 	void OnControllingPropSleep(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
 	void UnhideFromOtherPlayers();
@@ -120,8 +121,8 @@ public:
 	void StartZoom(double MouseWheelAxis);
 	void UpdateTPArmLength();
 	void SetOriginalTPArmLength();
-	void GetMenuUIManager(class UB_MenuUIManager_C** Param_MenuUIManager);
-	void GetSettingsSave(class UB_SettingsSave_C** Param_SettingsSave);
+	void GetMenuUIManager(class UB_MenuUIManager_C** MenuUIManager_0);
+	void GetSettingsSave(class UB_SettingsSave_C** SettingsSave_0);
 	void StopStabilize();
 	void StartStabilize();
 	void TickManaDrainDebuff();
@@ -146,7 +147,7 @@ public:
 	void UpdateAverageDistanceToHunters();
 	void DestroyVisualChild(class AB_VisualIntepolator_C* VisualChild);
 	void NoValidTransformUX();
-	void LoadSkills(class AController* Param_Controller);
+	void LoadSkills(class AController* Controller_0);
 	void InitializePlayername();
 	void Fire();
 	void SwitchProp(class AActor* Prop);
@@ -222,9 +223,9 @@ public:
 	void AssignOnKilled();
 	void BndEvt__WhichHuntActorEvents_K2Node_ComponentBoundEvent_2_OnManaDrainDebuffStart__DelegateSignature();
 	void BndEvt__WhichHuntActorEvents_K2Node_ComponentBoundEvent_3_OnManaDrainDebuffEnd__DelegateSignature();
-	void PropPossessed(class AActor* Param_PossessedProp);
+	void PropPossessed(class AActor* PossessedProp_0);
 	void Test();
-	void ServerToggleMovementAllowed(bool Param_MovementAllowed);
+	void ServerToggleMovementAllowed(bool MovementAllowed_0);
 
 public:
 	static class UClass* StaticClass()
@@ -238,8 +239,9 @@ public:
 };
 static_assert(alignof(AB_PropPawnPhysics_C) == 0x000008, "Wrong alignment on AB_PropPawnPhysics_C");
 static_assert(sizeof(AB_PropPawnPhysics_C) == 0x0005C8, "Wrong size on AB_PropPawnPhysics_C");
-static_assert(offsetof(AB_PropPawnPhysics_C, UberGraphFrame) == 0x000328, "Member 'AB_PropPawnPhysics_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_PropPawnPhysics_C, AimAssistTarget) == 0x000330, "Member 'AB_PropPawnPhysics_C::AimAssistTarget' has a wrong offset!");
+static_assert(offsetof(AB_PropPawnPhysics_C, UberGraphFrame) == 0x000320, "Member 'AB_PropPawnPhysics_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_PropPawnPhysics_C, AimAssistTarget) == 0x000328, "Member 'AB_PropPawnPhysics_C::AimAssistTarget' has a wrong offset!");
+static_assert(offsetof(AB_PropPawnPhysics_C, B_AimAssistTargetComponent) == 0x000330, "Member 'AB_PropPawnPhysics_C::B_AimAssistTargetComponent' has a wrong offset!");
 static_assert(offsetof(AB_PropPawnPhysics_C, B_ManaComponent) == 0x000338, "Member 'AB_PropPawnPhysics_C::B_ManaComponent' has a wrong offset!");
 static_assert(offsetof(AB_PropPawnPhysics_C, B_KillRelictDropper) == 0x000340, "Member 'AB_PropPawnPhysics_C::B_KillRelictDropper' has a wrong offset!");
 static_assert(offsetof(AB_PropPawnPhysics_C, CommunicationSound) == 0x000348, "Member 'AB_PropPawnPhysics_C::CommunicationSound' has a wrong offset!");

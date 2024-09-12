@@ -22,7 +22,7 @@ namespace SDK
 class AB_ExplosionProp_C : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4C34[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_ExplosionProp_C;                  // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        Scene;                                             // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             ExplosionSound;                                    // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)

@@ -18,17 +18,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_StartupVideos.WB_StartupVideos_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_StartupVideos_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 StartupVideo;                                      // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlaybackStarted;                                   // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 StartupVideo;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlaybackStarted;                                   // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x3];                                      // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentVideoIndex;                                 // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         VideoLinks;                                        // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BndEvt__WB_StartupVideos_MediaPlayer_K2Node_ComponentBoundEvent_1_OnBinkMediaPlayerMediaReachedEnd__DelegateSignature();
 	void Construct();
 	void ExecuteUbergraph_WB_StartupVideos(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
@@ -50,11 +52,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_StartupVideos_C) == 0x000008, "Wrong alignment on UWB_StartupVideos_C");
-static_assert(sizeof(UWB_StartupVideos_C) == 0x0002E0, "Wrong size on UWB_StartupVideos_C");
-static_assert(offsetof(UWB_StartupVideos_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_StartupVideos_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_StartupVideos_C, StartupVideo) == 0x0002C8, "Member 'UWB_StartupVideos_C::StartupVideo' has a wrong offset!");
-static_assert(offsetof(UWB_StartupVideos_C, MediaPlayer) == 0x0002D0, "Member 'UWB_StartupVideos_C::MediaPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_StartupVideos_C, PlaybackStarted) == 0x0002D8, "Member 'UWB_StartupVideos_C::PlaybackStarted' has a wrong offset!");
+static_assert(sizeof(UWB_StartupVideos_C) == 0x000310, "Wrong size on UWB_StartupVideos_C");
+static_assert(offsetof(UWB_StartupVideos_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_StartupVideos_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_StartupVideos_C, StartupVideo) == 0x0002E8, "Member 'UWB_StartupVideos_C::StartupVideo' has a wrong offset!");
+static_assert(offsetof(UWB_StartupVideos_C, MediaPlayer) == 0x0002F0, "Member 'UWB_StartupVideos_C::MediaPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_StartupVideos_C, PlaybackStarted) == 0x0002F8, "Member 'UWB_StartupVideos_C::PlaybackStarted' has a wrong offset!");
+static_assert(offsetof(UWB_StartupVideos_C, CurrentVideoIndex) == 0x0002FC, "Member 'UWB_StartupVideos_C::CurrentVideoIndex' has a wrong offset!");
+static_assert(offsetof(UWB_StartupVideos_C, VideoLinks) == 0x000300, "Member 'UWB_StartupVideos_C::VideoLinks' has a wrong offset!");
 
 }
 

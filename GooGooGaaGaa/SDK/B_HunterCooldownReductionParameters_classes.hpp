@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HunterCooldownReductionParameters.B_HunterCooldownReductionParameters_C
-// 0x0010 (0x0088 - 0x0078)
+// 0x0010 (0x0078 - 0x0068)
 class UB_HunterCooldownReductionParameters_C final : public UPowerupParameters
 {
 public:
-	double                                        BuffLength;                                        // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CooldownMultiplier;                                // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BuffLength;                                        // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CooldownMultiplier;                                // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UB_HunterCooldownReductionParameters_C) == 0x000008, "Wrong alignment on UB_HunterCooldownReductionParameters_C");
-static_assert(sizeof(UB_HunterCooldownReductionParameters_C) == 0x000088, "Wrong size on UB_HunterCooldownReductionParameters_C");
-static_assert(offsetof(UB_HunterCooldownReductionParameters_C, BuffLength) == 0x000078, "Member 'UB_HunterCooldownReductionParameters_C::BuffLength' has a wrong offset!");
-static_assert(offsetof(UB_HunterCooldownReductionParameters_C, CooldownMultiplier) == 0x000080, "Member 'UB_HunterCooldownReductionParameters_C::CooldownMultiplier' has a wrong offset!");
+static_assert(sizeof(UB_HunterCooldownReductionParameters_C) == 0x000078, "Wrong size on UB_HunterCooldownReductionParameters_C");
+static_assert(offsetof(UB_HunterCooldownReductionParameters_C, BuffLength) == 0x000068, "Member 'UB_HunterCooldownReductionParameters_C::BuffLength' has a wrong offset!");
+static_assert(offsetof(UB_HunterCooldownReductionParameters_C, CooldownMultiplier) == 0x000070, "Member 'UB_HunterCooldownReductionParameters_C::CooldownMultiplier' has a wrong offset!");
 
 }
 

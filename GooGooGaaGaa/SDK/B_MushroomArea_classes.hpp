@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "B_PooledActor_classes.hpp"
 
 
@@ -19,28 +19,28 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_MushroomArea.B_MushroomArea_C
-// 0x00D8 (0x03A0 - 0x02C8)
+// 0x00D0 (0x0390 - 0x02C0)
 #pragma pack(push, 0x1)
 class alignas(0x10) AB_MushroomArea_C : public AB_PooledActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_MushroomArea_C;                   // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      MushroomVisuals;                                   // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio;                                             // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            ExplodeCurve;                                      // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          FadeIn;                                            // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A3[0x7];                                     // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            FadeCurve;                                         // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          FadeFast;                                          // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A4[0xF];                                     // 0x0301(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             NewTransform;                                      // 0x0310(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 NewOwner;                                          // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  NewInstigator;                                     // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          DestroyByOverlap;                                  // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A5[0x7];                                     // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraSystem*                         DestroyEffect;                                     // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             DestroySound;                                      // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_MushroomArea_C;                   // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      MushroomVisuals;                                   // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio;                                             // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            ExplodeCurve;                                      // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          FadeIn;                                            // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            FadeCurve;                                         // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          FadeFast;                                          // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             NewTransform;                                      // 0x0300(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 NewOwner;                                          // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  NewInstigator;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          DestroyByOverlap;                                  // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         DestroyEffect;                                     // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             DestroySound;                                      // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__B_MushroomArea_Sphere1_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -53,11 +53,11 @@ public:
 	void PlayDestroyEffectsMulticast(const struct FVector& Location);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void SetNewValuesForTearUp(const struct FTransform& Param_NewTransform, class AActor* Param_NewOwner, class APawn* Param_NewInstigator);
+	void SetNewValuesForTearUp(const struct FTransform& NewTransform_0, class AActor* NewOwner_0, class APawn* NewInstigator_0);
 	void TearDown();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 	void TearUpBySize(double Size);
-	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 	void UpdateMushroom(double NewSize);
 	void UpdateMushroomMulticast(double MushroomSize);
 	void UserConstructionScript();
@@ -74,21 +74,21 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AB_MushroomArea_C) == 0x000010, "Wrong alignment on AB_MushroomArea_C");
-static_assert(sizeof(AB_MushroomArea_C) == 0x0003A0, "Wrong size on AB_MushroomArea_C");
-static_assert(offsetof(AB_MushroomArea_C, UberGraphFrame_B_MushroomArea_C) == 0x0002C8, "Member 'AB_MushroomArea_C::UberGraphFrame_B_MushroomArea_C' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, MushroomVisuals) == 0x0002D0, "Member 'AB_MushroomArea_C::MushroomVisuals' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, Audio) == 0x0002D8, "Member 'AB_MushroomArea_C::Audio' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, Sphere) == 0x0002E0, "Member 'AB_MushroomArea_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, ExplodeCurve) == 0x0002E8, "Member 'AB_MushroomArea_C::ExplodeCurve' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, FadeIn) == 0x0002F0, "Member 'AB_MushroomArea_C::FadeIn' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, FadeCurve) == 0x0002F8, "Member 'AB_MushroomArea_C::FadeCurve' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, FadeFast) == 0x000300, "Member 'AB_MushroomArea_C::FadeFast' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, NewTransform) == 0x000310, "Member 'AB_MushroomArea_C::NewTransform' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, NewOwner) == 0x000370, "Member 'AB_MushroomArea_C::NewOwner' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, NewInstigator) == 0x000378, "Member 'AB_MushroomArea_C::NewInstigator' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, DestroyByOverlap) == 0x000380, "Member 'AB_MushroomArea_C::DestroyByOverlap' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, DestroyEffect) == 0x000388, "Member 'AB_MushroomArea_C::DestroyEffect' has a wrong offset!");
-static_assert(offsetof(AB_MushroomArea_C, DestroySound) == 0x000390, "Member 'AB_MushroomArea_C::DestroySound' has a wrong offset!");
+static_assert(sizeof(AB_MushroomArea_C) == 0x000390, "Wrong size on AB_MushroomArea_C");
+static_assert(offsetof(AB_MushroomArea_C, UberGraphFrame_B_MushroomArea_C) == 0x0002C0, "Member 'AB_MushroomArea_C::UberGraphFrame_B_MushroomArea_C' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, MushroomVisuals) == 0x0002C8, "Member 'AB_MushroomArea_C::MushroomVisuals' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, Audio) == 0x0002D0, "Member 'AB_MushroomArea_C::Audio' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, Sphere) == 0x0002D8, "Member 'AB_MushroomArea_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, ExplodeCurve) == 0x0002E0, "Member 'AB_MushroomArea_C::ExplodeCurve' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, FadeIn) == 0x0002E8, "Member 'AB_MushroomArea_C::FadeIn' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, FadeCurve) == 0x0002F0, "Member 'AB_MushroomArea_C::FadeCurve' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, FadeFast) == 0x0002F8, "Member 'AB_MushroomArea_C::FadeFast' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, NewTransform) == 0x000300, "Member 'AB_MushroomArea_C::NewTransform' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, NewOwner) == 0x000360, "Member 'AB_MushroomArea_C::NewOwner' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, NewInstigator) == 0x000368, "Member 'AB_MushroomArea_C::NewInstigator' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, DestroyByOverlap) == 0x000370, "Member 'AB_MushroomArea_C::DestroyByOverlap' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, DestroyEffect) == 0x000378, "Member 'AB_MushroomArea_C::DestroyEffect' has a wrong offset!");
+static_assert(offsetof(AB_MushroomArea_C, DestroySound) == 0x000380, "Member 'AB_MushroomArea_C::DestroySound' has a wrong offset!");
 
 }
 

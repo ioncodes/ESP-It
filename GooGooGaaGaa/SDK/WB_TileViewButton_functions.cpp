@@ -86,6 +86,27 @@ void UWB_TileViewButton_C::SetIndividualParameters()
 }
 
 
+// Function WB_TileViewButton.WB_TileViewButton_C.GetDangerIconVisbility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ShowIcon                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TileViewButton_C::GetDangerIconVisbility(bool* ShowIcon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TileViewButton_C", "GetDangerIconVisbility");
+
+	Params::WB_TileViewButton_C_GetDangerIconVisbility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ShowIcon != nullptr)
+		*ShowIcon = Parms.ShowIcon;
+}
+
+
 // Function WB_TileViewButton.WB_TileViewButton_C.GetSwitchIconVisibilty
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -110,9 +131,9 @@ void UWB_TileViewButton_C::GetSwitchIconVisibilty(bool* Show_Switch_Icon)
 // Function WB_TileViewButton.WB_TileViewButton_C.GetNotifyButtonVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsVisible                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TileViewButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
+void UWB_TileViewButton_C::GetNotifyButtonVisibility(bool* IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -123,8 +144,8 @@ void UWB_TileViewButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsVisible != nullptr)
-		*Param_IsVisible = Parms.Param_IsVisible;
+	if (IsVisible_0 != nullptr)
+		*IsVisible_0 = Parms.IsVisible_0;
 }
 
 
@@ -270,9 +291,9 @@ void UWB_TileViewButton_C::Initialize(class UObject* ListItemObject)
 // Function WB_TileViewButton.WB_TileViewButton_C.GetIsInitial
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsInitial                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsInitial_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TileViewButton_C::GetIsInitial(bool* Param_IsInitial)
+void UWB_TileViewButton_C::GetIsInitial(bool* IsInitial_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -283,17 +304,17 @@ void UWB_TileViewButton_C::GetIsInitial(bool* Param_IsInitial)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsInitial != nullptr)
-		*Param_IsInitial = Parms.Param_IsInitial;
+	if (IsInitial_0 != nullptr)
+		*IsInitial_0 = Parms.IsInitial_0;
 }
 
 
 // Function WB_TileViewButton.WB_TileViewButton_C.GetTooltip
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UUserWidget*                      Param_ToolTip                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTip_0                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TileViewButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
+void UWB_TileViewButton_C::GetTooltip(class UUserWidget** ToolTip_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -304,8 +325,8 @@ void UWB_TileViewButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ToolTip != nullptr)
-		*Param_ToolTip = Parms.Param_ToolTip;
+	if (ToolTip_0 != nullptr)
+		*ToolTip_0 = Parms.ToolTip_0;
 }
 
 

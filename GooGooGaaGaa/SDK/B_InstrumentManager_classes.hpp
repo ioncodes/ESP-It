@@ -10,30 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "S_InstrumentTracks_structs.hpp"
 #include "E_InstrumentTypes_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "S_InstrumentTracks_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_InstrumentManager.B_InstrumentManager_C
-// 0x0080 (0x0320 - 0x02A0)
+// 0x0080 (0x02B0 - 0x0230)
 class UB_InstrumentManager_C final : public USceneComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          IsMusicPlaying;                                    // 0x02A8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3923[0x3];                                     // 0x02A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentMusicIndex;                                 // 0x02AC(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlayingInstrumentsCount;                           // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStartTimeSet;                                    // 0x02B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3924[0x3];                                     // 0x02B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<E_InstrumentTypes, struct FS_InstrumentTracks> InstrumentTrackList;                               // 0x02B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	FMulticastInlineDelegateProperty_             MusicToggled;                                      // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	double                                        StartTime;                                         // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          IsMusicPlaying;                                    // 0x0238(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x3];                                      // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentMusicIndex;                                 // 0x023C(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlayingInstrumentsCount;                           // 0x0240(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsStartTimeSet;                                    // 0x0244(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_245[0x3];                                      // 0x0245(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<E_InstrumentTypes, struct FS_InstrumentTracks> InstrumentTrackList;                               // 0x0248(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	FMulticastInlineDelegateProperty_             MusicToggled;                                      // 0x0298(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        StartTime;                                         // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddToMusic(const class FString& InstrumentName);
@@ -54,15 +54,15 @@ public:
 	}
 };
 static_assert(alignof(UB_InstrumentManager_C) == 0x000010, "Wrong alignment on UB_InstrumentManager_C");
-static_assert(sizeof(UB_InstrumentManager_C) == 0x000320, "Wrong size on UB_InstrumentManager_C");
-static_assert(offsetof(UB_InstrumentManager_C, UberGraphFrame) == 0x0002A0, "Member 'UB_InstrumentManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, IsMusicPlaying) == 0x0002A8, "Member 'UB_InstrumentManager_C::IsMusicPlaying' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, CurrentMusicIndex) == 0x0002AC, "Member 'UB_InstrumentManager_C::CurrentMusicIndex' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, PlayingInstrumentsCount) == 0x0002B0, "Member 'UB_InstrumentManager_C::PlayingInstrumentsCount' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, IsStartTimeSet) == 0x0002B4, "Member 'UB_InstrumentManager_C::IsStartTimeSet' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, InstrumentTrackList) == 0x0002B8, "Member 'UB_InstrumentManager_C::InstrumentTrackList' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, MusicToggled) == 0x000308, "Member 'UB_InstrumentManager_C::MusicToggled' has a wrong offset!");
-static_assert(offsetof(UB_InstrumentManager_C, StartTime) == 0x000318, "Member 'UB_InstrumentManager_C::StartTime' has a wrong offset!");
+static_assert(sizeof(UB_InstrumentManager_C) == 0x0002B0, "Wrong size on UB_InstrumentManager_C");
+static_assert(offsetof(UB_InstrumentManager_C, UberGraphFrame) == 0x000230, "Member 'UB_InstrumentManager_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, IsMusicPlaying) == 0x000238, "Member 'UB_InstrumentManager_C::IsMusicPlaying' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, CurrentMusicIndex) == 0x00023C, "Member 'UB_InstrumentManager_C::CurrentMusicIndex' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, PlayingInstrumentsCount) == 0x000240, "Member 'UB_InstrumentManager_C::PlayingInstrumentsCount' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, IsStartTimeSet) == 0x000244, "Member 'UB_InstrumentManager_C::IsStartTimeSet' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, InstrumentTrackList) == 0x000248, "Member 'UB_InstrumentManager_C::InstrumentTrackList' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, MusicToggled) == 0x000298, "Member 'UB_InstrumentManager_C::MusicToggled' has a wrong offset!");
+static_assert(offsetof(UB_InstrumentManager_C, StartTime) == 0x0002A8, "Member 'UB_InstrumentManager_C::StartTime' has a wrong offset!");
 
 }
 

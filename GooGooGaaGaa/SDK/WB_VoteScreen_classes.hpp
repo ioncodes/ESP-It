@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_VoteScreen.WB_VoteScreen_C
-// 0x0088 (0x0348 - 0x02C0)
+// 0x0088 (0x0368 - 0x02E0)
 class UWB_VoteScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           CloseButton;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           NoButton;                                          // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                ScreenButton;                                      // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           SkipVoteButton;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             VotePlayer;                                        // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             VoteQuestion;                                      // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBackgroundBlur*                        VoteQuestionBlur;                                  // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ImpostorTimer_C*                    WB_ImpostorTimer;                                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           YesButton;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AActor*                                 HighlightHunter;                                   // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           VotingPlayer;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsVoting;                                          // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5266[0x7];                                     // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorPlayerState_C*               OwningPlayerState;                                 // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorHunter_C*                    OwningHunter;                                      // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_Hunter_C*>                    AllHunters;                                        // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           CloseButton;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           NoButton;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                ScreenButton;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           SkipVoteButton;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             VotePlayer;                                        // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             VoteQuestion;                                      // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBackgroundBlur*                        VoteQuestionBlur;                                  // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ImpostorTimer_C*                    WB_ImpostorTimer;                                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           YesButton;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AActor*                                 HighlightHunter;                                   // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           VotingPlayer;                                      // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsVoting;                                          // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorPlayerState_C*               OwningPlayerState;                                 // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorHunter_C*                    OwningHunter;                                      // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class AB_Hunter_C*>                    AllHunters;                                        // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
@@ -79,23 +79,23 @@ public:
 	}
 };
 static_assert(alignof(UWB_VoteScreen_C) == 0x000008, "Wrong alignment on UWB_VoteScreen_C");
-static_assert(sizeof(UWB_VoteScreen_C) == 0x000348, "Wrong size on UWB_VoteScreen_C");
-static_assert(offsetof(UWB_VoteScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_VoteScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, CloseButton) == 0x0002C8, "Member 'UWB_VoteScreen_C::CloseButton' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, NoButton) == 0x0002D0, "Member 'UWB_VoteScreen_C::NoButton' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, ScreenButton) == 0x0002D8, "Member 'UWB_VoteScreen_C::ScreenButton' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, SkipVoteButton) == 0x0002E0, "Member 'UWB_VoteScreen_C::SkipVoteButton' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, VotePlayer) == 0x0002E8, "Member 'UWB_VoteScreen_C::VotePlayer' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, VoteQuestion) == 0x0002F0, "Member 'UWB_VoteScreen_C::VoteQuestion' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, VoteQuestionBlur) == 0x0002F8, "Member 'UWB_VoteScreen_C::VoteQuestionBlur' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, WB_ImpostorTimer) == 0x000300, "Member 'UWB_VoteScreen_C::WB_ImpostorTimer' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, YesButton) == 0x000308, "Member 'UWB_VoteScreen_C::YesButton' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, HighlightHunter) == 0x000310, "Member 'UWB_VoteScreen_C::HighlightHunter' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, VotingPlayer) == 0x000318, "Member 'UWB_VoteScreen_C::VotingPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, IsVoting) == 0x000320, "Member 'UWB_VoteScreen_C::IsVoting' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, OwningPlayerState) == 0x000328, "Member 'UWB_VoteScreen_C::OwningPlayerState' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, OwningHunter) == 0x000330, "Member 'UWB_VoteScreen_C::OwningHunter' has a wrong offset!");
-static_assert(offsetof(UWB_VoteScreen_C, AllHunters) == 0x000338, "Member 'UWB_VoteScreen_C::AllHunters' has a wrong offset!");
+static_assert(sizeof(UWB_VoteScreen_C) == 0x000368, "Wrong size on UWB_VoteScreen_C");
+static_assert(offsetof(UWB_VoteScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_VoteScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, CloseButton) == 0x0002E8, "Member 'UWB_VoteScreen_C::CloseButton' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, NoButton) == 0x0002F0, "Member 'UWB_VoteScreen_C::NoButton' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, ScreenButton) == 0x0002F8, "Member 'UWB_VoteScreen_C::ScreenButton' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, SkipVoteButton) == 0x000300, "Member 'UWB_VoteScreen_C::SkipVoteButton' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, VotePlayer) == 0x000308, "Member 'UWB_VoteScreen_C::VotePlayer' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, VoteQuestion) == 0x000310, "Member 'UWB_VoteScreen_C::VoteQuestion' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, VoteQuestionBlur) == 0x000318, "Member 'UWB_VoteScreen_C::VoteQuestionBlur' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, WB_ImpostorTimer) == 0x000320, "Member 'UWB_VoteScreen_C::WB_ImpostorTimer' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, YesButton) == 0x000328, "Member 'UWB_VoteScreen_C::YesButton' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, HighlightHunter) == 0x000330, "Member 'UWB_VoteScreen_C::HighlightHunter' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, VotingPlayer) == 0x000338, "Member 'UWB_VoteScreen_C::VotingPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, IsVoting) == 0x000340, "Member 'UWB_VoteScreen_C::IsVoting' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, OwningPlayerState) == 0x000348, "Member 'UWB_VoteScreen_C::OwningPlayerState' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, OwningHunter) == 0x000350, "Member 'UWB_VoteScreen_C::OwningHunter' has a wrong offset!");
+static_assert(offsetof(UWB_VoteScreen_C, AllHunters) == 0x000358, "Member 'UWB_VoteScreen_C::AllHunters' has a wrong offset!");
 
 }
 

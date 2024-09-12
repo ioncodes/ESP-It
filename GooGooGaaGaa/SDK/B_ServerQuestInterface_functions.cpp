@@ -96,10 +96,10 @@ void UB_ServerQuestInterface_C::ExecuteUbergraph_B_ServerQuestInterface(int32 En
 // Function B_ServerQuestInterface.B_ServerQuestInterface_C.GetObjectiveIdFromName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   ObjectiveId                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ServerQuestInterface_C::GetObjectiveIdFromName(class FName Param_Name, int64* ObjectiveId)
+void UB_ServerQuestInterface_C::GetObjectiveIdFromName(class FName Name_0, int64* ObjectiveId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -108,7 +108,7 @@ void UB_ServerQuestInterface_C::GetObjectiveIdFromName(class FName Param_Name, i
 
 	Params::B_ServerQuestInterface_C_GetObjectiveIdFromName Parms{};
 
-	Parms.Param_Name = Param_Name;
+	Parms.Name_0 = Name_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -140,9 +140,9 @@ void UB_ServerQuestInterface_C::HandleUserIdCompleted(class UVaRestRequestJSON* 
 // Function B_ServerQuestInterface.B_ServerQuestInterface_C.Init
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UB_NewMasterServerManager_C*      Param_NewMasterServerManager                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UB_NewMasterServerManager_C*      NewMasterServerManager_0                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
-void UB_ServerQuestInterface_C::Init(const class UB_NewMasterServerManager_C*& Param_NewMasterServerManager)
+void UB_ServerQuestInterface_C::Init(const class UB_NewMasterServerManager_C*& NewMasterServerManager_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -151,7 +151,7 @@ void UB_ServerQuestInterface_C::Init(const class UB_NewMasterServerManager_C*& P
 
 	Params::B_ServerQuestInterface_C_Init Parms{};
 
-	Parms.Param_NewMasterServerManager = Param_NewMasterServerManager;
+	Parms.NewMasterServerManager_0 = NewMasterServerManager_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

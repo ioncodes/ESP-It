@@ -20,15 +20,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_LifeBlock.WB_LifeBlock_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0028 (0x0308 - 0x02E0)
 class UWB_LifeBlock_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVerticalBox*                           VerticalBox_0;                                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         MaxLives;                                          // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2415[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWB_Life_C*>                     LifeIcons;                                         // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           VerticalBox_0;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	uint8                                         MaxLives;                                          // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWB_Life_C*>                     LifeIcons;                                         // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void Construct();
@@ -49,11 +49,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_LifeBlock_C) == 0x000008, "Wrong alignment on UWB_LifeBlock_C");
-static_assert(sizeof(UWB_LifeBlock_C) == 0x0002E8, "Wrong size on UWB_LifeBlock_C");
-static_assert(offsetof(UWB_LifeBlock_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_LifeBlock_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_LifeBlock_C, VerticalBox_0) == 0x0002C8, "Member 'UWB_LifeBlock_C::VerticalBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_LifeBlock_C, MaxLives) == 0x0002D0, "Member 'UWB_LifeBlock_C::MaxLives' has a wrong offset!");
-static_assert(offsetof(UWB_LifeBlock_C, LifeIcons) == 0x0002D8, "Member 'UWB_LifeBlock_C::LifeIcons' has a wrong offset!");
+static_assert(sizeof(UWB_LifeBlock_C) == 0x000308, "Wrong size on UWB_LifeBlock_C");
+static_assert(offsetof(UWB_LifeBlock_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_LifeBlock_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_LifeBlock_C, VerticalBox_0) == 0x0002E8, "Member 'UWB_LifeBlock_C::VerticalBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_LifeBlock_C, MaxLives) == 0x0002F0, "Member 'UWB_LifeBlock_C::MaxLives' has a wrong offset!");
+static_assert(offsetof(UWB_LifeBlock_C, LifeIcons) == 0x0002F8, "Member 'UWB_LifeBlock_C::LifeIcons' has a wrong offset!");
 
 }
 

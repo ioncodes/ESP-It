@@ -248,13 +248,13 @@ void UB_NewMasterServerManager_C::BuildLoginRequest(const class FString& UserNam
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.BuildLoginRequestWithRefreshToken
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_RefreshToken                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           RefreshToken_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           Locale                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           AccountType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           AdditionalAuthInformation                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UVaRestRequestJSON*               RestRequest                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_NewMasterServerManager_C::BuildLoginRequestWithRefreshToken(const class FString& Param_RefreshToken, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, class UVaRestRequestJSON** RestRequest)
+void UB_NewMasterServerManager_C::BuildLoginRequestWithRefreshToken(const class FString& RefreshToken_0, const class FString& Locale, const class FString& AccountType, const class FString& AdditionalAuthInformation, class UVaRestRequestJSON** RestRequest)
 {
 	static class UFunction* Func = nullptr;
 
@@ -263,7 +263,7 @@ void UB_NewMasterServerManager_C::BuildLoginRequestWithRefreshToken(const class 
 
 	Params::B_NewMasterServerManager_C_BuildLoginRequestWithRefreshToken Parms{};
 
-	Parms.Param_RefreshToken = std::move(Param_RefreshToken);
+	Parms.RefreshToken_0 = std::move(RefreshToken_0);
 	Parms.Locale = std::move(Locale);
 	Parms.AccountType = std::move(AccountType);
 	Parms.AdditionalAuthInformation = std::move(AdditionalAuthInformation);
@@ -1228,11 +1228,11 @@ void UB_NewMasterServerManager_C::PerformLogin(const class FString& UserName, co
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.PerformLoginUsingRefreshToken
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_RefreshToken                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           RefreshToken_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           Locale                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class FString                           AccountType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_NewMasterServerManager_C::PerformLoginUsingRefreshToken(const class FString& Param_RefreshToken, const class FString& Locale, const class FString& AccountType)
+void UB_NewMasterServerManager_C::PerformLoginUsingRefreshToken(const class FString& RefreshToken_0, const class FString& Locale, const class FString& AccountType)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1241,7 +1241,7 @@ void UB_NewMasterServerManager_C::PerformLoginUsingRefreshToken(const class FStr
 
 	Params::B_NewMasterServerManager_C_PerformLoginUsingRefreshToken Parms{};
 
-	Parms.Param_RefreshToken = std::move(Param_RefreshToken);
+	Parms.RefreshToken_0 = std::move(RefreshToken_0);
 	Parms.Locale = std::move(Locale);
 	Parms.AccountType = std::move(AccountType);
 
@@ -1384,9 +1384,9 @@ void UB_NewMasterServerManager_C::SetRefreshTokenExpiryDateTime(const struct FDa
 // Function B_NewMasterServerManager.B_NewMasterServerManager_C.SetRestApiConnectivityState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsConnected                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsConnected_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_NewMasterServerManager_C::SetRestApiConnectivityState(bool Param_IsConnected)
+void UB_NewMasterServerManager_C::SetRestApiConnectivityState(bool IsConnected_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1395,7 +1395,7 @@ void UB_NewMasterServerManager_C::SetRestApiConnectivityState(bool Param_IsConne
 
 	Params::B_NewMasterServerManager_C_SetRestApiConnectivityState Parms{};
 
-	Parms.Param_IsConnected = Param_IsConnected;
+	Parms.IsConnected_0 = IsConnected_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

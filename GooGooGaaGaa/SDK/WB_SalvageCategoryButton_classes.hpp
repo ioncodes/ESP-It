@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SalvageCategoryButton.WB_SalvageCategoryButton_C
-// 0x0040 (0x0320 - 0x02E0)
+// 0x0040 (0x0340 - 0x0300)
 class UWB_SalvageCategoryButton_C final : public UWB_CategoryButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SalvageCategoryButton_C;         // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Background;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                UpdateCategory;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnUpdateCategory;                                  // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	ESalvageCategory                              Category;                                          // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_488B[0x7];                                     // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             IconTexture;                                       // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SalvageCategoryButton_C;         // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Background;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                UpdateCategory;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnUpdateCategory;                                  // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	ESalvageCategory                              Category;                                          // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             IconTexture;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__SelectCategory_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_WB_SalvageCategoryButton(int32 EntryPoint);
 	struct FSlateBrush Get_Icon_Brush_0();
 	bool GetIsActiveCategorySlot();
-	void OnUpdateCategory__DelegateSignature(ESalvageCategory Param_Category);
+	void OnUpdateCategory__DelegateSignature(ESalvageCategory Category_0);
 	void PreConstruct(bool IsDesignTime);
 
 public:
@@ -51,14 +51,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_SalvageCategoryButton_C) == 0x000008, "Wrong alignment on UWB_SalvageCategoryButton_C");
-static_assert(sizeof(UWB_SalvageCategoryButton_C) == 0x000320, "Wrong size on UWB_SalvageCategoryButton_C");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, UberGraphFrame_WB_SalvageCategoryButton_C) == 0x0002E0, "Member 'UWB_SalvageCategoryButton_C::UberGraphFrame_WB_SalvageCategoryButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, Background) == 0x0002E8, "Member 'UWB_SalvageCategoryButton_C::Background' has a wrong offset!");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, Icon) == 0x0002F0, "Member 'UWB_SalvageCategoryButton_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, UpdateCategory) == 0x0002F8, "Member 'UWB_SalvageCategoryButton_C::UpdateCategory' has a wrong offset!");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, OnUpdateCategory) == 0x000300, "Member 'UWB_SalvageCategoryButton_C::OnUpdateCategory' has a wrong offset!");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, Category) == 0x000310, "Member 'UWB_SalvageCategoryButton_C::Category' has a wrong offset!");
-static_assert(offsetof(UWB_SalvageCategoryButton_C, IconTexture) == 0x000318, "Member 'UWB_SalvageCategoryButton_C::IconTexture' has a wrong offset!");
+static_assert(sizeof(UWB_SalvageCategoryButton_C) == 0x000340, "Wrong size on UWB_SalvageCategoryButton_C");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, UberGraphFrame_WB_SalvageCategoryButton_C) == 0x000300, "Member 'UWB_SalvageCategoryButton_C::UberGraphFrame_WB_SalvageCategoryButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, Background) == 0x000308, "Member 'UWB_SalvageCategoryButton_C::Background' has a wrong offset!");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, Icon) == 0x000310, "Member 'UWB_SalvageCategoryButton_C::Icon' has a wrong offset!");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, UpdateCategory) == 0x000318, "Member 'UWB_SalvageCategoryButton_C::UpdateCategory' has a wrong offset!");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, OnUpdateCategory) == 0x000320, "Member 'UWB_SalvageCategoryButton_C::OnUpdateCategory' has a wrong offset!");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, Category) == 0x000330, "Member 'UWB_SalvageCategoryButton_C::Category' has a wrong offset!");
+static_assert(offsetof(UWB_SalvageCategoryButton_C, IconTexture) == 0x000338, "Member 'UWB_SalvageCategoryButton_C::IconTexture' has a wrong offset!");
 
 }
 

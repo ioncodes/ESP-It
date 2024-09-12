@@ -21,7 +21,7 @@ namespace SDK
 class IITeleportable_C final : public IInterface
 {
 public:
-	void CanTeleport(bool* Param_CanTeleport);
+	void CanTeleport(bool* CanTeleport_0);
 	void PostProccedTeleport();
 	void ProceedTeleport();
 

@@ -30,7 +30,7 @@ public:
 	bool                                          UpdateSessionAfterCurrentUpdate;                   // 0x008A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          RegisterPlayersIsRunning;                          // 0x008B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UnregisterPlayersIsRunning;                        // 0x008C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5068[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               PlayersToRegister;                                 // 0x0090(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FUniqueNetIdRepl>               PlayersToUnregister;                               // 0x00A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 

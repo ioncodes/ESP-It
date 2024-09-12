@@ -262,6 +262,64 @@ TArray<struct FMeterChannelInfo> UAudioMeter::GetMeterChannelInfo() const
 }
 
 
+// DelegateFunction AudioWidgets.AudioOscilloscope.GetOscilloscopeAudioSamples__DelegateSignature
+// (Public, Delegate)
+// Parameters:
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UAudioOscilloscope::GetOscilloscopeAudioSamples__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioOscilloscope", "GetOscilloscopeAudioSamples__DelegateSignature");
+
+	Params::AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioWidgets.AudioOscilloscope.StartProcessing
+// (Final, Native, Public, BlueprintCallable)
+
+void UAudioOscilloscope::StartProcessing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioOscilloscope", "StartProcessing");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioOscilloscope.StopProcessing
+// (Final, Native, Public, BlueprintCallable)
+
+void UAudioOscilloscope::StopProcessing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioOscilloscope", "StopProcessing");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function AudioWidgets.AudioRadialSlider.GetOutputValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -972,6 +1030,64 @@ void UAudioSliderBase::SetWidgetBackgroundColor(const struct FLinearColor& InVal
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// DelegateFunction AudioWidgets.AudioVectorscope.GetVectorscopeAudioSamples__DelegateSignature
+// (Public, Delegate)
+// Parameters:
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UAudioVectorscope::GetVectorscopeAudioSamples__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioVectorscope", "GetVectorscopeAudioSamples__DelegateSignature");
+
+	Params::AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioWidgets.AudioVectorscope.StartProcessing
+// (Final, Native, Public, BlueprintCallable)
+
+void UAudioVectorscope::StartProcessing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioVectorscope", "StartProcessing");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioVectorscope.StopProcessing
+// (Final, Native, Public, BlueprintCallable)
+
+void UAudioVectorscope::StopProcessing()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioVectorscope", "StopProcessing");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

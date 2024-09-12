@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HunterPlayerStart.BP_HunterPlayerStart_C
-// 0x0000 (0x0378 - 0x0378)
+// 0x0000 (0x0360 - 0x0360)
 class ABP_HunterPlayerStart_C final : public ABP_PlaceablePlayerStart_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_HunterPlayerStart_C) == 0x000008, "Wrong alignment on ABP_HunterPlayerStart_C");
-static_assert(sizeof(ABP_HunterPlayerStart_C) == 0x000378, "Wrong size on ABP_HunterPlayerStart_C");
+static_assert(sizeof(ABP_HunterPlayerStart_C) == 0x000360, "Wrong size on ABP_HunterPlayerStart_C");
 
 }
 

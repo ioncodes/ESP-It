@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_HelpGamemodes.WB_HelpGamemodes_C
-// 0x0040 (0x0318 - 0x02D8)
+// 0x0040 (0x0338 - 0x02F8)
 class UWB_HelpGamemodes_C final : public UWB_HelpTabBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_HelpGamemodes_C;                 // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           BackButton;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           FillAPotButton;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           HideAndSeekButton;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           HuntAHagButton;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           MobificationButton;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_BinkMoviePlayer_C*                  WB_BinkMoviePlayer;                                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_HelpGamemodes_C;                 // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           BackButton;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           FillAPotButton;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           HideAndSeekButton;                                 // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           HuntAHagButton;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           MobificationButton;                                // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_BinkMoviePlayer_C*                  WB_BinkMoviePlayer;                                // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Activate();
@@ -53,15 +53,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_HelpGamemodes_C) == 0x000008, "Wrong alignment on UWB_HelpGamemodes_C");
-static_assert(sizeof(UWB_HelpGamemodes_C) == 0x000318, "Wrong size on UWB_HelpGamemodes_C");
-static_assert(offsetof(UWB_HelpGamemodes_C, UberGraphFrame_WB_HelpGamemodes_C) == 0x0002D8, "Member 'UWB_HelpGamemodes_C::UberGraphFrame_WB_HelpGamemodes_C' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, BackButton) == 0x0002E0, "Member 'UWB_HelpGamemodes_C::BackButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_HelpGamemodes_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, FillAPotButton) == 0x0002F0, "Member 'UWB_HelpGamemodes_C::FillAPotButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, HideAndSeekButton) == 0x0002F8, "Member 'UWB_HelpGamemodes_C::HideAndSeekButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, HuntAHagButton) == 0x000300, "Member 'UWB_HelpGamemodes_C::HuntAHagButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, MobificationButton) == 0x000308, "Member 'UWB_HelpGamemodes_C::MobificationButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpGamemodes_C, WB_BinkMoviePlayer) == 0x000310, "Member 'UWB_HelpGamemodes_C::WB_BinkMoviePlayer' has a wrong offset!");
+static_assert(sizeof(UWB_HelpGamemodes_C) == 0x000338, "Wrong size on UWB_HelpGamemodes_C");
+static_assert(offsetof(UWB_HelpGamemodes_C, UberGraphFrame_WB_HelpGamemodes_C) == 0x0002F8, "Member 'UWB_HelpGamemodes_C::UberGraphFrame_WB_HelpGamemodes_C' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, BackButton) == 0x000300, "Member 'UWB_HelpGamemodes_C::BackButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, CanvasPanel_0) == 0x000308, "Member 'UWB_HelpGamemodes_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, FillAPotButton) == 0x000310, "Member 'UWB_HelpGamemodes_C::FillAPotButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, HideAndSeekButton) == 0x000318, "Member 'UWB_HelpGamemodes_C::HideAndSeekButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, HuntAHagButton) == 0x000320, "Member 'UWB_HelpGamemodes_C::HuntAHagButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, MobificationButton) == 0x000328, "Member 'UWB_HelpGamemodes_C::MobificationButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpGamemodes_C, WB_BinkMoviePlayer) == 0x000330, "Member 'UWB_HelpGamemodes_C::WB_BinkMoviePlayer' has a wrong offset!");
 
 }
 

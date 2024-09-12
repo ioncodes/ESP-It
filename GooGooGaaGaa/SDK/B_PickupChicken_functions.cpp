@@ -149,10 +149,10 @@ void AB_PickupChicken_C::ReceiveTick(float DeltaSeconds)
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PickupChicken_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_PickupChicken_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -162,8 +162,8 @@ void AB_PickupChicken_C::TearUp(const struct FTransform& SpawnTransform, class A
 	Params::B_PickupChicken_C_TearUp Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,21 +17,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_RadialMenuCreative.WB_RadialMenuCreative_C
-// 0x0058 (0x0368 - 0x0310)
+// 0x0058 (0x0388 - 0x0330)
 class UWB_RadialMenuCreative_C final : public UWB_RadialMenuParent_C
 {
 public:
-	class UImage*                                 BackgroundImage;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border;                                            // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_1;                                          // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                Border_2;                                          // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HIghlightBeamImage;                                // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HIghlightBeamImage_1;                              // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HIghlightBeamImage_2;                              // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             OptionTitleTextField;                              // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_RadialMenuOptionWidget_C*           WB_RadialMenuOption;                               // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_RadialMenuOptionWidget_C*           WB_RadialMenuOption_1;                             // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_RadialMenuOptionWidget_C*           WB_RadialMenuOption_2;                             // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BackgroundImage;                                   // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border;                                            // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_1;                                          // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_2;                                          // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HIghlightBeamImage;                                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HIghlightBeamImage_1;                              // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HIghlightBeamImage_2;                              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             OptionTitleTextField;                              // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_RadialMenuOptionWidget_C*           WB_RadialMenuOption;                               // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_RadialMenuOptionWidget_C*           WB_RadialMenuOption_1;                             // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_RadialMenuOptionWidget_C*           WB_RadialMenuOption_2;                             // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Initialize();
@@ -51,18 +51,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_RadialMenuCreative_C) == 0x000008, "Wrong alignment on UWB_RadialMenuCreative_C");
-static_assert(sizeof(UWB_RadialMenuCreative_C) == 0x000368, "Wrong size on UWB_RadialMenuCreative_C");
-static_assert(offsetof(UWB_RadialMenuCreative_C, BackgroundImage) == 0x000310, "Member 'UWB_RadialMenuCreative_C::BackgroundImage' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, Border) == 0x000318, "Member 'UWB_RadialMenuCreative_C::Border' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, Border_1) == 0x000320, "Member 'UWB_RadialMenuCreative_C::Border_1' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, Border_2) == 0x000328, "Member 'UWB_RadialMenuCreative_C::Border_2' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, HIghlightBeamImage) == 0x000330, "Member 'UWB_RadialMenuCreative_C::HIghlightBeamImage' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, HIghlightBeamImage_1) == 0x000338, "Member 'UWB_RadialMenuCreative_C::HIghlightBeamImage_1' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, HIghlightBeamImage_2) == 0x000340, "Member 'UWB_RadialMenuCreative_C::HIghlightBeamImage_2' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, OptionTitleTextField) == 0x000348, "Member 'UWB_RadialMenuCreative_C::OptionTitleTextField' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, WB_RadialMenuOption) == 0x000350, "Member 'UWB_RadialMenuCreative_C::WB_RadialMenuOption' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, WB_RadialMenuOption_1) == 0x000358, "Member 'UWB_RadialMenuCreative_C::WB_RadialMenuOption_1' has a wrong offset!");
-static_assert(offsetof(UWB_RadialMenuCreative_C, WB_RadialMenuOption_2) == 0x000360, "Member 'UWB_RadialMenuCreative_C::WB_RadialMenuOption_2' has a wrong offset!");
+static_assert(sizeof(UWB_RadialMenuCreative_C) == 0x000388, "Wrong size on UWB_RadialMenuCreative_C");
+static_assert(offsetof(UWB_RadialMenuCreative_C, BackgroundImage) == 0x000330, "Member 'UWB_RadialMenuCreative_C::BackgroundImage' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, Border) == 0x000338, "Member 'UWB_RadialMenuCreative_C::Border' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, Border_1) == 0x000340, "Member 'UWB_RadialMenuCreative_C::Border_1' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, Border_2) == 0x000348, "Member 'UWB_RadialMenuCreative_C::Border_2' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, HIghlightBeamImage) == 0x000350, "Member 'UWB_RadialMenuCreative_C::HIghlightBeamImage' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, HIghlightBeamImage_1) == 0x000358, "Member 'UWB_RadialMenuCreative_C::HIghlightBeamImage_1' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, HIghlightBeamImage_2) == 0x000360, "Member 'UWB_RadialMenuCreative_C::HIghlightBeamImage_2' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, OptionTitleTextField) == 0x000368, "Member 'UWB_RadialMenuCreative_C::OptionTitleTextField' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, WB_RadialMenuOption) == 0x000370, "Member 'UWB_RadialMenuCreative_C::WB_RadialMenuOption' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, WB_RadialMenuOption_1) == 0x000378, "Member 'UWB_RadialMenuCreative_C::WB_RadialMenuOption_1' has a wrong offset!");
+static_assert(offsetof(UWB_RadialMenuCreative_C, WB_RadialMenuOption_2) == 0x000380, "Member 'UWB_RadialMenuCreative_C::WB_RadialMenuOption_2' has a wrong offset!");
 
 }
 

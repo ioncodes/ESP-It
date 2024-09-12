@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenEggInteractionActor.B_RottenEggInteractionActor_C
-// 0x0028 (0x0340 - 0x0318)
+// 0x0028 (0x0330 - 0x0308)
 class AB_RottenEggInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_RottenEggInteractionActor_C;      // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          HasDummyEgg;                                       // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          EggReady;                                          // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C4C[0x6];                                     // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_RottenEggChickenDummy_C*             ChickenDummy;                                      // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        FlyTime;                                           // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        WaitTime;                                          // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_RottenEggInteractionActor_C;      // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          HasDummyEgg;                                       // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          EggReady;                                          // 0x0311(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_312[0x6];                                      // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_RottenEggChickenDummy_C*             ChickenDummy;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        FlyTime;                                           // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WaitTime;                                          // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -50,13 +50,13 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenEggInteractionActor_C) == 0x000008, "Wrong alignment on AB_RottenEggInteractionActor_C");
-static_assert(sizeof(AB_RottenEggInteractionActor_C) == 0x000340, "Wrong size on AB_RottenEggInteractionActor_C");
-static_assert(offsetof(AB_RottenEggInteractionActor_C, UberGraphFrame_B_RottenEggInteractionActor_C) == 0x000318, "Member 'AB_RottenEggInteractionActor_C::UberGraphFrame_B_RottenEggInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggInteractionActor_C, HasDummyEgg) == 0x000320, "Member 'AB_RottenEggInteractionActor_C::HasDummyEgg' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggInteractionActor_C, EggReady) == 0x000321, "Member 'AB_RottenEggInteractionActor_C::EggReady' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggInteractionActor_C, ChickenDummy) == 0x000328, "Member 'AB_RottenEggInteractionActor_C::ChickenDummy' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggInteractionActor_C, FlyTime) == 0x000330, "Member 'AB_RottenEggInteractionActor_C::FlyTime' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggInteractionActor_C, WaitTime) == 0x000338, "Member 'AB_RottenEggInteractionActor_C::WaitTime' has a wrong offset!");
+static_assert(sizeof(AB_RottenEggInteractionActor_C) == 0x000330, "Wrong size on AB_RottenEggInteractionActor_C");
+static_assert(offsetof(AB_RottenEggInteractionActor_C, UberGraphFrame_B_RottenEggInteractionActor_C) == 0x000308, "Member 'AB_RottenEggInteractionActor_C::UberGraphFrame_B_RottenEggInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggInteractionActor_C, HasDummyEgg) == 0x000310, "Member 'AB_RottenEggInteractionActor_C::HasDummyEgg' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggInteractionActor_C, EggReady) == 0x000311, "Member 'AB_RottenEggInteractionActor_C::EggReady' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggInteractionActor_C, ChickenDummy) == 0x000318, "Member 'AB_RottenEggInteractionActor_C::ChickenDummy' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggInteractionActor_C, FlyTime) == 0x000320, "Member 'AB_RottenEggInteractionActor_C::FlyTime' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggInteractionActor_C, WaitTime) == 0x000328, "Member 'AB_RottenEggInteractionActor_C::WaitTime' has a wrong offset!");
 
 }
 

@@ -156,6 +156,29 @@ void UWB_Information_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWi
 }
 
 
+// Function WB_Information.WB_Information_C.NavigateToWhatsNew
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_Information_C::NavigateToWhatsNew(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Information_C", "NavigateToWhatsNew");
+
+	Params::WB_Information_C_NavigateToWhatsNew Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_Information.WB_Information_C.OnApply
 // (Public, BlueprintCallable, BlueprintEvent)
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "B_WaitInteractionActor_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "LowEntryExtendedStandardLibrary_structs.hpp"
 
 
@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchSkillStudyInteractionActor.B_WitchSkillStudyInteractionActor_C
-// 0x0048 (0x0380 - 0x0338)
+// 0x0048 (0x0370 - 0x0328)
 class AB_WitchSkillStudyInteractionActor_C final : public AB_WaitInteractionActor_C
 {
 public:
-	class UAudioComponent*                        SuccessAudio;                                      // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class UStaticMeshComponent*>           HighlightMeshCluster;                              // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<struct FTransform>                     OriginalTransforms;                                // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AB_WitchSkillStudyDummy_C*              DummyInView;                                       // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DummyInViewLocation;                               // 0x0368(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SuccessAudio;                                      // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class UStaticMeshComponent*>           HighlightMeshCluster;                              // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<struct FTransform>                     OriginalTransforms;                                // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AB_WitchSkillStudyDummy_C*              DummyInView;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DummyInViewLocation;                               // 0x0358(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -49,12 +49,12 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchSkillStudyInteractionActor_C) == 0x000008, "Wrong alignment on AB_WitchSkillStudyInteractionActor_C");
-static_assert(sizeof(AB_WitchSkillStudyInteractionActor_C) == 0x000380, "Wrong size on AB_WitchSkillStudyInteractionActor_C");
-static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, SuccessAudio) == 0x000338, "Member 'AB_WitchSkillStudyInteractionActor_C::SuccessAudio' has a wrong offset!");
-static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, HighlightMeshCluster) == 0x000340, "Member 'AB_WitchSkillStudyInteractionActor_C::HighlightMeshCluster' has a wrong offset!");
-static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, OriginalTransforms) == 0x000350, "Member 'AB_WitchSkillStudyInteractionActor_C::OriginalTransforms' has a wrong offset!");
-static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, DummyInView) == 0x000360, "Member 'AB_WitchSkillStudyInteractionActor_C::DummyInView' has a wrong offset!");
-static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, DummyInViewLocation) == 0x000368, "Member 'AB_WitchSkillStudyInteractionActor_C::DummyInViewLocation' has a wrong offset!");
+static_assert(sizeof(AB_WitchSkillStudyInteractionActor_C) == 0x000370, "Wrong size on AB_WitchSkillStudyInteractionActor_C");
+static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, SuccessAudio) == 0x000328, "Member 'AB_WitchSkillStudyInteractionActor_C::SuccessAudio' has a wrong offset!");
+static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, HighlightMeshCluster) == 0x000330, "Member 'AB_WitchSkillStudyInteractionActor_C::HighlightMeshCluster' has a wrong offset!");
+static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, OriginalTransforms) == 0x000340, "Member 'AB_WitchSkillStudyInteractionActor_C::OriginalTransforms' has a wrong offset!");
+static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, DummyInView) == 0x000350, "Member 'AB_WitchSkillStudyInteractionActor_C::DummyInView' has a wrong offset!");
+static_assert(offsetof(AB_WitchSkillStudyInteractionActor_C, DummyInViewLocation) == 0x000358, "Member 'AB_WitchSkillStudyInteractionActor_C::DummyInViewLocation' has a wrong offset!");
 
 }
 

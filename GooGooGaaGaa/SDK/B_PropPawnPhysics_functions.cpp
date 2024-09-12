@@ -144,9 +144,9 @@ void AB_PropPawnPhysics_C::ExecuteUbergraph_B_PropPawnPhysics(int32 EntryPoint)
 // Function B_PropPawnPhysics.B_PropPawnPhysics_C.GetCurrentController
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PropPawnPhysics_C::GetCurrentController(class AController** Param_Controller)
+void AB_PropPawnPhysics_C::GetCurrentController(class AController** Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -157,8 +157,8 @@ void AB_PropPawnPhysics_C::GetCurrentController(class AController** Param_Contro
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Controller != nullptr)
-		*Param_Controller = Parms.Param_Controller;
+	if (Controller_0 != nullptr)
+		*Controller_0 = Parms.Controller_0;
 }
 
 
@@ -312,9 +312,9 @@ void AB_PropPawnPhysics_C::SetOriginalTPArmLength()
 // Function B_PropPawnPhysics.B_PropPawnPhysics_C.GetMenuUIManager
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UB_MenuUIManager_C*               Param_MenuUIManager                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_MenuUIManager_C*               MenuUIManager_0                                        (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PropPawnPhysics_C::GetMenuUIManager(class UB_MenuUIManager_C** Param_MenuUIManager)
+void AB_PropPawnPhysics_C::GetMenuUIManager(class UB_MenuUIManager_C** MenuUIManager_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -325,17 +325,17 @@ void AB_PropPawnPhysics_C::GetMenuUIManager(class UB_MenuUIManager_C** Param_Men
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_MenuUIManager != nullptr)
-		*Param_MenuUIManager = Parms.Param_MenuUIManager;
+	if (MenuUIManager_0 != nullptr)
+		*MenuUIManager_0 = Parms.MenuUIManager_0;
 }
 
 
 // Function B_PropPawnPhysics.B_PropPawnPhysics_C.GetSettingsSave
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UB_SettingsSave_C*                Param_SettingsSave                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_SettingsSave_C*                SettingsSave_0                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PropPawnPhysics_C::GetSettingsSave(class UB_SettingsSave_C** Param_SettingsSave)
+void AB_PropPawnPhysics_C::GetSettingsSave(class UB_SettingsSave_C** SettingsSave_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -346,8 +346,8 @@ void AB_PropPawnPhysics_C::GetSettingsSave(class UB_SettingsSave_C** Param_Setti
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_SettingsSave != nullptr)
-		*Param_SettingsSave = Parms.Param_SettingsSave;
+	if (SettingsSave_0 != nullptr)
+		*SettingsSave_0 = Parms.SettingsSave_0;
 }
 
 
@@ -767,9 +767,9 @@ void AB_PropPawnPhysics_C::NoValidTransformUX()
 // Function B_PropPawnPhysics.B_PropPawnPhysics_C.LoadSkills
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PropPawnPhysics_C::LoadSkills(class AController* Param_Controller)
+void AB_PropPawnPhysics_C::LoadSkills(class AController* Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -778,7 +778,7 @@ void AB_PropPawnPhysics_C::LoadSkills(class AController* Param_Controller)
 
 	Params::B_PropPawnPhysics_C_LoadSkills Parms{};
 
-	Parms.Param_Controller = Param_Controller;
+	Parms.Controller_0 = Controller_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2158,9 +2158,9 @@ void AB_PropPawnPhysics_C::BndEvt__WhichHuntActorEvents_K2Node_ComponentBoundEve
 // Function B_PropPawnPhysics.B_PropPawnPhysics_C.PropPossessed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_PossessedProp                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           PossessedProp_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PropPawnPhysics_C::PropPossessed(class AActor* Param_PossessedProp)
+void AB_PropPawnPhysics_C::PropPossessed(class AActor* PossessedProp_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2169,7 +2169,7 @@ void AB_PropPawnPhysics_C::PropPossessed(class AActor* Param_PossessedProp)
 
 	Params::B_PropPawnPhysics_C_PropPossessed Parms{};
 
-	Parms.Param_PossessedProp = Param_PossessedProp;
+	Parms.PossessedProp_0 = PossessedProp_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2192,9 +2192,9 @@ void AB_PropPawnPhysics_C::Test()
 // Function B_PropPawnPhysics.B_PropPawnPhysics_C.ServerToggleMovementAllowed
 // (Net, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_MovementAllowed                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    MovementAllowed_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_PropPawnPhysics_C::ServerToggleMovementAllowed(bool Param_MovementAllowed)
+void AB_PropPawnPhysics_C::ServerToggleMovementAllowed(bool MovementAllowed_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2203,7 +2203,7 @@ void AB_PropPawnPhysics_C::ServerToggleMovementAllowed(bool Param_MovementAllowe
 
 	Params::B_PropPawnPhysics_C_ServerToggleMovementAllowed Parms{};
 
-	Parms.Param_MovementAllowed = Param_MovementAllowed;
+	Parms.MovementAllowed_0 = MovementAllowed_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

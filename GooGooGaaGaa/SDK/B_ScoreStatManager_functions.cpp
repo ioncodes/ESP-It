@@ -343,9 +343,9 @@ void UB_ScoreStatManager_C::GetWitchValueToUseForCalculation(EWitchScoreStat Wit
 // Function B_ScoreStatManager.B_ScoreStatManager_C.IsRecordingStats
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsRecordingStats                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsRecordingStats_0                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ScoreStatManager_C::IsRecordingStats(bool* Param_IsRecordingStats)
+void UB_ScoreStatManager_C::IsRecordingStats(bool* IsRecordingStats_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -356,8 +356,8 @@ void UB_ScoreStatManager_C::IsRecordingStats(bool* Param_IsRecordingStats)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsRecordingStats != nullptr)
-		*Param_IsRecordingStats = Parms.Param_IsRecordingStats;
+	if (IsRecordingStats_0 != nullptr)
+		*IsRecordingStats_0 = Parms.IsRecordingStats_0;
 }
 
 

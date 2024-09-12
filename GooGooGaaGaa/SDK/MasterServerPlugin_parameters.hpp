@@ -11,8 +11,9 @@
 #include "Basic.hpp"
 
 #include "MasterServerPlugin_structs.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,31 +30,122 @@ static_assert(alignof(BaseUserBehaviorTrackingManager_BPTick) == 0x000004, "Wron
 static_assert(sizeof(BaseUserBehaviorTrackingManager_BPTick) == 0x000004, "Wrong size on BaseUserBehaviorTrackingManager_BPTick");
 static_assert(offsetof(BaseUserBehaviorTrackingManager_BPTick, DeltaTime) == 0x000000, "Member 'BaseUserBehaviorTrackingManager_BPTick::DeltaTime' has a wrong offset!");
 
+// Function MasterServerPlugin.GetAllWorkshopMapDetailsProxy.GetAllWorkshopMapDetails
+// 0x0010 (0x0010 - 0x0000)
+struct GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGetAllWorkshopMapDetailsProxy*         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails) == 0x000008, "Wrong alignment on GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails");
+static_assert(sizeof(GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails) == 0x000010, "Wrong size on GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails");
+static_assert(offsetof(GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails, WorldContextObject) == 0x000000, "Member 'GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails, ReturnValue) == 0x000008, "Member 'GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.DownloadWorkshopMapProxy.DownloadWorkshopMap
+// 0x0018 (0x0018 - 0x0000)
+struct DownloadWorkshopMapProxy_DownloadWorkshopMap final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         WorkshopID;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDownloadWorkshopMapProxy*              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DownloadWorkshopMapProxy_DownloadWorkshopMap) == 0x000008, "Wrong alignment on DownloadWorkshopMapProxy_DownloadWorkshopMap");
+static_assert(sizeof(DownloadWorkshopMapProxy_DownloadWorkshopMap) == 0x000018, "Wrong size on DownloadWorkshopMapProxy_DownloadWorkshopMap");
+static_assert(offsetof(DownloadWorkshopMapProxy_DownloadWorkshopMap, WorldContextObject) == 0x000000, "Member 'DownloadWorkshopMapProxy_DownloadWorkshopMap::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(DownloadWorkshopMapProxy_DownloadWorkshopMap, WorkshopID) == 0x000008, "Member 'DownloadWorkshopMapProxy_DownloadWorkshopMap::WorkshopID' has a wrong offset!");
+static_assert(offsetof(DownloadWorkshopMapProxy_DownloadWorkshopMap, ReturnValue) == 0x000010, "Member 'DownloadWorkshopMapProxy_DownloadWorkshopMap::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.DeleteWorkshopMapProxy.DeleteWorkshopMap
+// 0x0018 (0x0018 - 0x0000)
+struct DeleteWorkshopMapProxy_DeleteWorkshopMap final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         WorkshopID;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDeleteWorkshopMapProxy*                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DeleteWorkshopMapProxy_DeleteWorkshopMap) == 0x000008, "Wrong alignment on DeleteWorkshopMapProxy_DeleteWorkshopMap");
+static_assert(sizeof(DeleteWorkshopMapProxy_DeleteWorkshopMap) == 0x000018, "Wrong size on DeleteWorkshopMapProxy_DeleteWorkshopMap");
+static_assert(offsetof(DeleteWorkshopMapProxy_DeleteWorkshopMap, WorldContextObject) == 0x000000, "Member 'DeleteWorkshopMapProxy_DeleteWorkshopMap::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(DeleteWorkshopMapProxy_DeleteWorkshopMap, WorkshopID) == 0x000008, "Member 'DeleteWorkshopMapProxy_DeleteWorkshopMap::WorkshopID' has a wrong offset!");
+static_assert(offsetof(DeleteWorkshopMapProxy_DeleteWorkshopMap, ReturnValue) == 0x000010, "Member 'DeleteWorkshopMapProxy_DeleteWorkshopMap::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.UploadWorkshopMapProxy.UpdateWorkshopMap
+// 0x00C8 (0x00C8 - 0x0000)
+struct UploadWorkshopMapProxy_UpdateWorkshopMap final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCreativeWorkshopMapLayout             MapLayout;                                         // 0x0008(0x00B8)(Parm, NativeAccessSpecifierPublic)
+	class UUploadWorkshopMapProxy*                ReturnValue;                                       // 0x00C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(UploadWorkshopMapProxy_UpdateWorkshopMap) == 0x000008, "Wrong alignment on UploadWorkshopMapProxy_UpdateWorkshopMap");
+static_assert(sizeof(UploadWorkshopMapProxy_UpdateWorkshopMap) == 0x0000C8, "Wrong size on UploadWorkshopMapProxy_UpdateWorkshopMap");
+static_assert(offsetof(UploadWorkshopMapProxy_UpdateWorkshopMap, WorldContextObject) == 0x000000, "Member 'UploadWorkshopMapProxy_UpdateWorkshopMap::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(UploadWorkshopMapProxy_UpdateWorkshopMap, MapLayout) == 0x000008, "Member 'UploadWorkshopMapProxy_UpdateWorkshopMap::MapLayout' has a wrong offset!");
+static_assert(offsetof(UploadWorkshopMapProxy_UpdateWorkshopMap, ReturnValue) == 0x0000C0, "Member 'UploadWorkshopMapProxy_UpdateWorkshopMap::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.UploadWorkshopMapProxy.UploadNewWorkshopMap
+// 0x00C8 (0x00C8 - 0x0000)
+struct UploadWorkshopMapProxy_UploadNewWorkshopMap final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCreativeWorkshopMapLayout             MapLayout;                                         // 0x0008(0x00B8)(Parm, NativeAccessSpecifierPublic)
+	class UUploadWorkshopMapProxy*                ReturnValue;                                       // 0x00C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(UploadWorkshopMapProxy_UploadNewWorkshopMap) == 0x000008, "Wrong alignment on UploadWorkshopMapProxy_UploadNewWorkshopMap");
+static_assert(sizeof(UploadWorkshopMapProxy_UploadNewWorkshopMap) == 0x0000C8, "Wrong size on UploadWorkshopMapProxy_UploadNewWorkshopMap");
+static_assert(offsetof(UploadWorkshopMapProxy_UploadNewWorkshopMap, WorldContextObject) == 0x000000, "Member 'UploadWorkshopMapProxy_UploadNewWorkshopMap::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(UploadWorkshopMapProxy_UploadNewWorkshopMap, MapLayout) == 0x000008, "Member 'UploadWorkshopMapProxy_UploadNewWorkshopMap::MapLayout' has a wrong offset!");
+static_assert(offsetof(UploadWorkshopMapProxy_UploadNewWorkshopMap, ReturnValue) == 0x0000C0, "Member 'UploadWorkshopMapProxy_UploadNewWorkshopMap::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.SubmitMapRatingProxy.SubmitMapRating
+// 0x0020 (0x0020 - 0x0000)
+struct SubmitMapRatingProxy_SubmitMapRating final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         WorkshopID;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rating;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USubmitMapRatingProxy*                  ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SubmitMapRatingProxy_SubmitMapRating) == 0x000008, "Wrong alignment on SubmitMapRatingProxy_SubmitMapRating");
+static_assert(sizeof(SubmitMapRatingProxy_SubmitMapRating) == 0x000020, "Wrong size on SubmitMapRatingProxy_SubmitMapRating");
+static_assert(offsetof(SubmitMapRatingProxy_SubmitMapRating, WorldContextObject) == 0x000000, "Member 'SubmitMapRatingProxy_SubmitMapRating::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(SubmitMapRatingProxy_SubmitMapRating, WorkshopID) == 0x000008, "Member 'SubmitMapRatingProxy_SubmitMapRating::WorkshopID' has a wrong offset!");
+static_assert(offsetof(SubmitMapRatingProxy_SubmitMapRating, Rating) == 0x000010, "Member 'SubmitMapRatingProxy_SubmitMapRating::Rating' has a wrong offset!");
+static_assert(offsetof(SubmitMapRatingProxy_SubmitMapRating, ReturnValue) == 0x000018, "Member 'SubmitMapRatingProxy_SubmitMapRating::ReturnValue' has a wrong offset!");
+
 // Function MasterServerPlugin.GrantItemsCallbackProxy.GrantItems
 // 0x0038 (0x0038 - 0x0000)
 struct GrantItemsCallbackProxy_GrantItems final
 {
 public:
-	class UObject*                                Param_WorldContextObject;                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                WorldContextObject_0;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AccountId;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E01[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 Param_ItemDefIds;                                  // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ItemDefIds_0;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bNotify;                                           // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsDrop;                                           // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsExtraItem;                                      // 0x0022(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E02[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           Param_PlayerState;                                 // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           PlayerState_0;                                     // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGrantItemsCallbackProxy*               ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GrantItemsCallbackProxy_GrantItems) == 0x000008, "Wrong alignment on GrantItemsCallbackProxy_GrantItems");
 static_assert(sizeof(GrantItemsCallbackProxy_GrantItems) == 0x000038, "Wrong size on GrantItemsCallbackProxy_GrantItems");
-static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, Param_WorldContextObject) == 0x000000, "Member 'GrantItemsCallbackProxy_GrantItems::Param_WorldContextObject' has a wrong offset!");
+static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, WorldContextObject_0) == 0x000000, "Member 'GrantItemsCallbackProxy_GrantItems::WorldContextObject_0' has a wrong offset!");
 static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, AccountId) == 0x000008, "Member 'GrantItemsCallbackProxy_GrantItems::AccountId' has a wrong offset!");
-static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, Param_ItemDefIds) == 0x000010, "Member 'GrantItemsCallbackProxy_GrantItems::Param_ItemDefIds' has a wrong offset!");
+static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, ItemDefIds_0) == 0x000010, "Member 'GrantItemsCallbackProxy_GrantItems::ItemDefIds_0' has a wrong offset!");
 static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, bNotify) == 0x000020, "Member 'GrantItemsCallbackProxy_GrantItems::bNotify' has a wrong offset!");
 static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, bIsDrop) == 0x000021, "Member 'GrantItemsCallbackProxy_GrantItems::bIsDrop' has a wrong offset!");
 static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, bIsExtraItem) == 0x000022, "Member 'GrantItemsCallbackProxy_GrantItems::bIsExtraItem' has a wrong offset!");
-static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, Param_PlayerState) == 0x000028, "Member 'GrantItemsCallbackProxy_GrantItems::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, PlayerState_0) == 0x000028, "Member 'GrantItemsCallbackProxy_GrantItems::PlayerState_0' has a wrong offset!");
 static_assert(offsetof(GrantItemsCallbackProxy_GrantItems, ReturnValue) == 0x000030, "Member 'GrantItemsCallbackProxy_GrantItems::ReturnValue' has a wrong offset!");
 
 // Function MasterServerPlugin.GrantItemsCallbackProxy.GrantItemsResponse
@@ -78,7 +170,7 @@ public:
 	int32                                         InD;                                               // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Port;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E05[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InstanceManagerConnSubsystem_Connect) == 0x000004, "Wrong alignment on InstanceManagerConnSubsystem_Connect");
 static_assert(sizeof(InstanceManagerConnSubsystem_Connect) == 0x000018, "Wrong size on InstanceManagerConnSubsystem_Connect");
@@ -97,7 +189,7 @@ public:
 	class FString                                 HostName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Port;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E06[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InstanceManagerConnSubsystem_ConnectHost) == 0x000008, "Wrong alignment on InstanceManagerConnSubsystem_ConnectHost");
 static_assert(sizeof(InstanceManagerConnSubsystem_ConnectHost) == 0x000018, "Wrong size on InstanceManagerConnSubsystem_ConnectHost");
@@ -135,10 +227,10 @@ struct InstanceManagerConnSubsystem_SendPacket final
 {
 public:
 	EInstanceMgrPacketType                        PacketType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E07[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 Payload;                                           // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E08[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InstanceManagerConnSubsystem_SendPacket) == 0x000008, "Wrong alignment on InstanceManagerConnSubsystem_SendPacket");
 static_assert(sizeof(InstanceManagerConnSubsystem_SendPacket) == 0x000020, "Wrong size on InstanceManagerConnSubsystem_SendPacket");
@@ -175,7 +267,7 @@ struct InstanceManagerConnSubsystem_SendData final
 public:
 	TArray<uint8>                                 Data;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E09[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InstanceManagerConnSubsystem_SendData) == 0x000008, "Wrong alignment on InstanceManagerConnSubsystem_SendData");
 static_assert(sizeof(InstanceManagerConnSubsystem_SendData) == 0x000018, "Wrong size on InstanceManagerConnSubsystem_SendData");
@@ -188,7 +280,7 @@ struct InventorySubsystem_AddAddedItem final
 {
 public:
 	EItemChangeReason                             Reason;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E11[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	class FString                                 Payload;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -205,7 +297,7 @@ struct InventorySubsystem_GetItemProperty final
 public:
 	int32                                         DefinitionId;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   PropertyName;                                      // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E12[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InventorySubsystem_GetItemProperty) == 0x000008, "Wrong alignment on InventorySubsystem_GetItemProperty");
@@ -220,11 +312,11 @@ struct InventorySubsystem_GrantItems final
 {
 public:
 	int32                                         TargetAccountId;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E13[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ItemDefIds;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<int32>                                 StackSizes;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bIsCauldronDrop;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E14[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InventorySubsystem_GrantItems) == 0x000008, "Wrong alignment on InventorySubsystem_GrantItems");
 static_assert(sizeof(InventorySubsystem_GrantItems) == 0x000030, "Wrong size on InventorySubsystem_GrantItems");
@@ -261,7 +353,7 @@ struct InventorySubsystem_PopAddedItemsByReason final
 {
 public:
 	EItemChangeReason                             Reason;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E15[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           ItemsResult;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InventorySubsystem_PopAddedItemsByReason) == 0x000008, "Wrong alignment on InventorySubsystem_PopAddedItemsByReason");
@@ -293,298 +385,16 @@ static_assert(alignof(InventorySubsystem_PopAllAddedItems) == 0x000008, "Wrong a
 static_assert(sizeof(InventorySubsystem_PopAllAddedItems) == 0x000010, "Wrong size on InventorySubsystem_PopAllAddedItems");
 static_assert(offsetof(InventorySubsystem_PopAllAddedItems, ItemsResult) == 0x000000, "Member 'InventorySubsystem_PopAllAddedItems::ItemsResult' has a wrong offset!");
 
-// Function MasterServerPlugin.MasterServerLoginCallbackProxy.MasterServerLogin
-// 0x0038 (0x0038 - 0x0000)
-struct MasterServerLoginCallbackProxy_MasterServerLogin final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerManager*                   MasterServerManager;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserName;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Password;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerLoginCallbackProxy*        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerLoginCallbackProxy_MasterServerLogin) == 0x000008, "Wrong alignment on MasterServerLoginCallbackProxy_MasterServerLogin");
-static_assert(sizeof(MasterServerLoginCallbackProxy_MasterServerLogin) == 0x000038, "Wrong size on MasterServerLoginCallbackProxy_MasterServerLogin");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerLogin, WorldContextObject) == 0x000000, "Member 'MasterServerLoginCallbackProxy_MasterServerLogin::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerLogin, MasterServerManager) == 0x000008, "Member 'MasterServerLoginCallbackProxy_MasterServerLogin::MasterServerManager' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerLogin, UserName) == 0x000010, "Member 'MasterServerLoginCallbackProxy_MasterServerLogin::UserName' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerLogin, Password) == 0x000020, "Member 'MasterServerLoginCallbackProxy_MasterServerLogin::Password' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerLogin, ReturnValue) == 0x000030, "Member 'MasterServerLoginCallbackProxy_MasterServerLogin::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerLoginCallbackProxy.MasterServerRegisterAndLogin
-// 0x0038 (0x0038 - 0x0000)
-struct MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerManager*                   MasterServerManager;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserName;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Password;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerLoginCallbackProxy*        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin) == 0x000008, "Wrong alignment on MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin");
-static_assert(sizeof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin) == 0x000038, "Wrong size on MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin, WorldContextObject) == 0x000000, "Member 'MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin, MasterServerManager) == 0x000008, "Member 'MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin::MasterServerManager' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin, UserName) == 0x000010, "Member 'MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin::UserName' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin, Password) == 0x000020, "Member 'MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin::Password' has a wrong offset!");
-static_assert(offsetof(MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin, ReturnValue) == 0x000030, "Member 'MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerPingCallbackProxy.MasterServerPing
-// 0x0018 (0x0018 - 0x0000)
-struct MasterServerPingCallbackProxy_MasterServerPing final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerManager*                   MasterServerManager;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerPingCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerPingCallbackProxy_MasterServerPing) == 0x000008, "Wrong alignment on MasterServerPingCallbackProxy_MasterServerPing");
-static_assert(sizeof(MasterServerPingCallbackProxy_MasterServerPing) == 0x000018, "Wrong size on MasterServerPingCallbackProxy_MasterServerPing");
-static_assert(offsetof(MasterServerPingCallbackProxy_MasterServerPing, WorldContextObject) == 0x000000, "Member 'MasterServerPingCallbackProxy_MasterServerPing::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(MasterServerPingCallbackProxy_MasterServerPing, MasterServerManager) == 0x000008, "Member 'MasterServerPingCallbackProxy_MasterServerPing::MasterServerManager' has a wrong offset!");
-static_assert(offsetof(MasterServerPingCallbackProxy_MasterServerPing, ReturnValue) == 0x000010, "Member 'MasterServerPingCallbackProxy_MasterServerPing::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy.MatchFillAPot
-// 0x0020 (0x0020 - 0x0000)
-struct MasterServerMatchFillAPotCallbackProxy_MatchFillAPot final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerManager*                   MasterServerManager;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         WantedRegion;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E19[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMasterServerMatchFillAPotCallbackProxy* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPot) == 0x000008, "Wrong alignment on MasterServerMatchFillAPotCallbackProxy_MatchFillAPot");
-static_assert(sizeof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPot) == 0x000020, "Wrong size on MasterServerMatchFillAPotCallbackProxy_MatchFillAPot");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPot, WorldContextObject) == 0x000000, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPot::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPot, MasterServerManager) == 0x000008, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPot::MasterServerManager' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPot, WantedRegion) == 0x000010, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPot::WantedRegion' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPot, ReturnValue) == 0x000018, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPot::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy.MatchFillAPotJoinFriend
-// 0x0018 (0x0018 - 0x0000)
-struct MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerManager*                   MasterServerManager;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerMatchFillAPotCallbackProxy* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend) == 0x000008, "Wrong alignment on MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend");
-static_assert(sizeof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend) == 0x000018, "Wrong size on MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend, WorldContextObject) == 0x000000, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend, MasterServerManager) == 0x000008, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend::MasterServerManager' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend, ReturnValue) == 0x000010, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy.MatchFillAPotWithFriend
-// 0x0020 (0x0020 - 0x0000)
-struct MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerManager*                   MasterServerManager;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         WantedRegion;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FriendAccountId;                                   // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMasterServerMatchFillAPotCallbackProxy* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend) == 0x000008, "Wrong alignment on MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend");
-static_assert(sizeof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend) == 0x000020, "Wrong size on MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend, WorldContextObject) == 0x000000, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend, MasterServerManager) == 0x000008, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend::MasterServerManager' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend, WantedRegion) == 0x000010, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend::WantedRegion' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend, FriendAccountId) == 0x000014, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend::FriendAccountId' has a wrong offset!");
-static_assert(offsetof(MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend, ReturnValue) == 0x000018, "Member 'MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.Connect
-// 0x0014 (0x0014 - 0x0000)
-struct MasterServerManager_Connect final
-{
-public:
-	int32                                         InA;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InB;                                               // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InC;                                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InD;                                               // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Port;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_Connect) == 0x000004, "Wrong alignment on MasterServerManager_Connect");
-static_assert(sizeof(MasterServerManager_Connect) == 0x000014, "Wrong size on MasterServerManager_Connect");
-static_assert(offsetof(MasterServerManager_Connect, InA) == 0x000000, "Member 'MasterServerManager_Connect::InA' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_Connect, InB) == 0x000004, "Member 'MasterServerManager_Connect::InB' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_Connect, InC) == 0x000008, "Member 'MasterServerManager_Connect::InC' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_Connect, InD) == 0x00000C, "Member 'MasterServerManager_Connect::InD' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_Connect, Port) == 0x000010, "Member 'MasterServerManager_Connect::Port' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.ConnectHost
-// 0x0018 (0x0018 - 0x0000)
-struct MasterServerManager_ConnectHost final
-{
-public:
-	class FString                                 HostName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Port;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E1D[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MasterServerManager_ConnectHost) == 0x000008, "Wrong alignment on MasterServerManager_ConnectHost");
-static_assert(sizeof(MasterServerManager_ConnectHost) == 0x000018, "Wrong size on MasterServerManager_ConnectHost");
-static_assert(offsetof(MasterServerManager_ConnectHost, HostName) == 0x000000, "Member 'MasterServerManager_ConnectHost::HostName' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_ConnectHost, Port) == 0x000010, "Member 'MasterServerManager_ConnectHost::Port' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_ConnectHost, ReturnValue) == 0x000014, "Member 'MasterServerManager_ConnectHost::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.Disconnect
-// 0x0001 (0x0001 - 0x0000)
-struct MasterServerManager_Disconnect final
-{
-public:
-	bool                                          AutomaticalReconnectWhenKeepAlive;                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_Disconnect) == 0x000001, "Wrong alignment on MasterServerManager_Disconnect");
-static_assert(sizeof(MasterServerManager_Disconnect) == 0x000001, "Wrong size on MasterServerManager_Disconnect");
-static_assert(offsetof(MasterServerManager_Disconnect, AutomaticalReconnectWhenKeepAlive) == 0x000000, "Member 'MasterServerManager_Disconnect::AutomaticalReconnectWhenKeepAlive' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.GetAccountId
-// 0x0004 (0x0004 - 0x0000)
-struct MasterServerManager_GetAccountId final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_GetAccountId) == 0x000004, "Wrong alignment on MasterServerManager_GetAccountId");
-static_assert(sizeof(MasterServerManager_GetAccountId) == 0x000004, "Wrong size on MasterServerManager_GetAccountId");
-static_assert(offsetof(MasterServerManager_GetAccountId, ReturnValue) == 0x000000, "Member 'MasterServerManager_GetAccountId::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.GetIsInMatchmaking
-// 0x0001 (0x0001 - 0x0000)
-struct MasterServerManager_GetIsInMatchmaking final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_GetIsInMatchmaking) == 0x000001, "Wrong alignment on MasterServerManager_GetIsInMatchmaking");
-static_assert(sizeof(MasterServerManager_GetIsInMatchmaking) == 0x000001, "Wrong size on MasterServerManager_GetIsInMatchmaking");
-static_assert(offsetof(MasterServerManager_GetIsInMatchmaking, ReturnValue) == 0x000000, "Member 'MasterServerManager_GetIsInMatchmaking::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.GetTestSessionSearchResult
-// 0x0120 (0x0120 - 0x0000)
-struct MasterServerManager_GetTestSessionSearchResult final
-{
-public:
-	struct FBlueprintSessionResult                ReturnValue;                                       // 0x0000(0x0120)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_GetTestSessionSearchResult) == 0x000008, "Wrong alignment on MasterServerManager_GetTestSessionSearchResult");
-static_assert(sizeof(MasterServerManager_GetTestSessionSearchResult) == 0x000120, "Wrong size on MasterServerManager_GetTestSessionSearchResult");
-static_assert(offsetof(MasterServerManager_GetTestSessionSearchResult, ReturnValue) == 0x000000, "Member 'MasterServerManager_GetTestSessionSearchResult::ReturnValue' has a wrong offset!");
-
-// DelegateFunction MasterServerPlugin.MasterServerManager.InitializeClientsForMatchMaking__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature final
-{
-public:
-	TArray<class FString>                         UserIds;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 ObjectiveTeam;                                     // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature) == 0x000008, "Wrong alignment on MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature");
-static_assert(sizeof(MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature) == 0x000020, "Wrong size on MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature");
-static_assert(offsetof(MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature, UserIds) == 0x000000, "Member 'MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature::UserIds' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature, ObjectiveTeam) == 0x000010, "Member 'MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature::ObjectiveTeam' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.InitializeInstanceId
-// 0x0008 (0x0008 - 0x0000)
-struct MasterServerManager_InitializeInstanceId final
-{
-public:
-	int32                                         InstanceId;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         IsStaticInstance;                                  // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E1E[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MasterServerManager_InitializeInstanceId) == 0x000004, "Wrong alignment on MasterServerManager_InitializeInstanceId");
-static_assert(sizeof(MasterServerManager_InitializeInstanceId) == 0x000008, "Wrong size on MasterServerManager_InitializeInstanceId");
-static_assert(offsetof(MasterServerManager_InitializeInstanceId, InstanceId) == 0x000000, "Member 'MasterServerManager_InitializeInstanceId::InstanceId' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_InitializeInstanceId, IsStaticInstance) == 0x000004, "Member 'MasterServerManager_InitializeInstanceId::IsStaticInstance' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.InitializeUnsecureUserId
-// 0x0020 (0x0020 - 0x0000)
-struct MasterServerManager_InitializeUnsecureUserId final
-{
-public:
-	class FString                                 UnsecureUserId;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Language;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_InitializeUnsecureUserId) == 0x000008, "Wrong alignment on MasterServerManager_InitializeUnsecureUserId");
-static_assert(sizeof(MasterServerManager_InitializeUnsecureUserId) == 0x000020, "Wrong size on MasterServerManager_InitializeUnsecureUserId");
-static_assert(offsetof(MasterServerManager_InitializeUnsecureUserId, UnsecureUserId) == 0x000000, "Member 'MasterServerManager_InitializeUnsecureUserId::UnsecureUserId' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_InitializeUnsecureUserId, Language) == 0x000010, "Member 'MasterServerManager_InitializeUnsecureUserId::Language' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.IsConnected
-// 0x0001 (0x0001 - 0x0000)
-struct MasterServerManager_IsConnected final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_IsConnected) == 0x000001, "Wrong alignment on MasterServerManager_IsConnected");
-static_assert(sizeof(MasterServerManager_IsConnected) == 0x000001, "Wrong size on MasterServerManager_IsConnected");
-static_assert(offsetof(MasterServerManager_IsConnected, ReturnValue) == 0x000000, "Member 'MasterServerManager_IsConnected::ReturnValue' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.IsTearingDown
-// 0x0001 (0x0001 - 0x0000)
-struct MasterServerManager_IsTearingDown final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_IsTearingDown) == 0x000001, "Wrong alignment on MasterServerManager_IsTearingDown");
-static_assert(sizeof(MasterServerManager_IsTearingDown) == 0x000001, "Wrong size on MasterServerManager_IsTearingDown");
-static_assert(offsetof(MasterServerManager_IsTearingDown, ReturnValue) == 0x000000, "Member 'MasterServerManager_IsTearingDown::ReturnValue' has a wrong offset!");
-
-// DelegateFunction MasterServerPlugin.MasterServerManager.NotifyQuestChange__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct MasterServerManager_NotifyQuestChange__DelegateSignature final
-{
-public:
-	EQuestChangeReason                            Reason;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E1F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         AccountQuestId;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_NotifyQuestChange__DelegateSignature) == 0x000008, "Wrong alignment on MasterServerManager_NotifyQuestChange__DelegateSignature");
-static_assert(sizeof(MasterServerManager_NotifyQuestChange__DelegateSignature) == 0x000010, "Wrong size on MasterServerManager_NotifyQuestChange__DelegateSignature");
-static_assert(offsetof(MasterServerManager_NotifyQuestChange__DelegateSignature, Reason) == 0x000000, "Member 'MasterServerManager_NotifyQuestChange__DelegateSignature::Reason' has a wrong offset!");
-static_assert(offsetof(MasterServerManager_NotifyQuestChange__DelegateSignature, AccountQuestId) == 0x000008, "Member 'MasterServerManager_NotifyQuestChange__DelegateSignature::AccountQuestId' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.SendServerSystemMessage
-// 0x0010 (0x0010 - 0x0000)
-struct MasterServerManager_SendServerSystemMessage final
-{
-public:
-	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_SendServerSystemMessage) == 0x000008, "Wrong alignment on MasterServerManager_SendServerSystemMessage");
-static_assert(sizeof(MasterServerManager_SendServerSystemMessage) == 0x000010, "Wrong size on MasterServerManager_SendServerSystemMessage");
-static_assert(offsetof(MasterServerManager_SendServerSystemMessage, Message) == 0x000000, "Member 'MasterServerManager_SendServerSystemMessage::Message' has a wrong offset!");
-
-// Function MasterServerPlugin.MasterServerManager.SetAccessToken
-// 0x0010 (0x0010 - 0x0000)
-struct MasterServerManager_SetAccessToken final
-{
-public:
-	class FString                                 Param_SetAccessToken;                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MasterServerManager_SetAccessToken) == 0x000008, "Wrong alignment on MasterServerManager_SetAccessToken");
-static_assert(sizeof(MasterServerManager_SetAccessToken) == 0x000010, "Wrong size on MasterServerManager_SetAccessToken");
-static_assert(offsetof(MasterServerManager_SetAccessToken, Param_SetAccessToken) == 0x000000, "Member 'MasterServerManager_SetAccessToken::Param_SetAccessToken' has a wrong offset!");
-
 // Function MasterServerPlugin.MasterServerSubsystem.SetNewMasterServerManager
 // 0x0008 (0x0008 - 0x0000)
 struct MasterServerSubsystem_SetNewMasterServerManager final
 {
 public:
-	class UNewMasterServerManager*                Param_SetNewMasterServerManager;                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UNewMasterServerManager*                SetNewMasterServerManager_0;                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MasterServerSubsystem_SetNewMasterServerManager) == 0x000008, "Wrong alignment on MasterServerSubsystem_SetNewMasterServerManager");
 static_assert(sizeof(MasterServerSubsystem_SetNewMasterServerManager) == 0x000008, "Wrong size on MasterServerSubsystem_SetNewMasterServerManager");
-static_assert(offsetof(MasterServerSubsystem_SetNewMasterServerManager, Param_SetNewMasterServerManager) == 0x000000, "Member 'MasterServerSubsystem_SetNewMasterServerManager::Param_SetNewMasterServerManager' has a wrong offset!");
+static_assert(offsetof(MasterServerSubsystem_SetNewMasterServerManager, SetNewMasterServerManager_0) == 0x000000, "Member 'MasterServerSubsystem_SetNewMasterServerManager::SetNewMasterServerManager_0' has a wrong offset!");
 
 // Function MasterServerPlugin.MasterServerSubsystem.GetNewMasterServerManager
 // 0x0008 (0x0008 - 0x0000)
@@ -615,10 +425,10 @@ struct NewMasterServerManager_Connect final
 public:
 	class FString                                 Ip;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Port;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E27[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Resource;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E28[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(NewMasterServerManager_Connect) == 0x000008, "Wrong alignment on NewMasterServerManager_Connect");
 static_assert(sizeof(NewMasterServerManager_Connect) == 0x000030, "Wrong size on NewMasterServerManager_Connect");
@@ -645,7 +455,7 @@ struct NewMasterServerManager_GetPresenceForUser final
 public:
 	class UOnlineUserRef*                         User;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValid;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E29[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAccountPresenceEntry                  ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(NewMasterServerManager_GetPresenceForUser) == 0x000008, "Wrong alignment on NewMasterServerManager_GetPresenceForUser");
@@ -672,7 +482,7 @@ struct NewMasterServerManager_IsRestApiAccessTokenValid final
 public:
 	double                                        MaxExpiryDeltaSeconds;                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E2A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(NewMasterServerManager_IsRestApiAccessTokenValid) == 0x000008, "Wrong alignment on NewMasterServerManager_IsRestApiAccessTokenValid");
 static_assert(sizeof(NewMasterServerManager_IsRestApiAccessTokenValid) == 0x000010, "Wrong size on NewMasterServerManager_IsRestApiAccessTokenValid");
@@ -685,7 +495,7 @@ struct NewMasterServerManager_OnConnected final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E2B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorMessage;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(NewMasterServerManager_OnConnected) == 0x000008, "Wrong alignment on NewMasterServerManager_OnConnected");
@@ -699,10 +509,10 @@ struct NewMasterServerManager_OnDisconnected final
 {
 public:
 	int32                                         StatusCode;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E2C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Reason;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWasClean;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E2D[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(NewMasterServerManager_OnDisconnected) == 0x000008, "Wrong alignment on NewMasterServerManager_OnDisconnected");
 static_assert(sizeof(NewMasterServerManager_OnDisconnected) == 0x000020, "Wrong size on NewMasterServerManager_OnDisconnected");
@@ -716,7 +526,7 @@ struct NewMasterServerManager_OnLoginResponse final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E2E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AccountId;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(NewMasterServerManager_OnLoginResponse) == 0x000004, "Wrong alignment on NewMasterServerManager_OnLoginResponse");
@@ -899,6 +709,188 @@ static_assert(alignof(ServerBrowser_HasActiveGameSession) == 0x000001, "Wrong al
 static_assert(sizeof(ServerBrowser_HasActiveGameSession) == 0x000001, "Wrong size on ServerBrowser_HasActiveGameSession");
 static_assert(offsetof(ServerBrowser_HasActiveGameSession, ReturnValue) == 0x000000, "Member 'ServerBrowser_HasActiveGameSession::ReturnValue' has a wrong offset!");
 
+// Function MasterServerPlugin.RequestPlayerInventoryProxy.RequestPlayerInventory
+// 0x0040 (0x0040 - 0x0000)
+struct RequestPlayerInventoryProxy_RequestPlayerInventory final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       TargetPlayerId;                                    // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URequestPlayerInventoryProxy*           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RequestPlayerInventoryProxy_RequestPlayerInventory) == 0x000008, "Wrong alignment on RequestPlayerInventoryProxy_RequestPlayerInventory");
+static_assert(sizeof(RequestPlayerInventoryProxy_RequestPlayerInventory) == 0x000040, "Wrong size on RequestPlayerInventoryProxy_RequestPlayerInventory");
+static_assert(offsetof(RequestPlayerInventoryProxy_RequestPlayerInventory, WorldContextObject) == 0x000000, "Member 'RequestPlayerInventoryProxy_RequestPlayerInventory::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(RequestPlayerInventoryProxy_RequestPlayerInventory, TargetPlayerId) == 0x000008, "Member 'RequestPlayerInventoryProxy_RequestPlayerInventory::TargetPlayerId' has a wrong offset!");
+static_assert(offsetof(RequestPlayerInventoryProxy_RequestPlayerInventory, ReturnValue) == 0x000038, "Member 'RequestPlayerInventoryProxy_RequestPlayerInventory::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.RequestPlayerInventoryProxy.RequestPlayerInventoryResponse
+// 0x0008 (0x0008 - 0x0000)
+struct RequestPlayerInventoryProxy_RequestPlayerInventoryResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RequestPlayerInventoryProxy_RequestPlayerInventoryResponse) == 0x000008, "Wrong alignment on RequestPlayerInventoryProxy_RequestPlayerInventoryResponse");
+static_assert(sizeof(RequestPlayerInventoryProxy_RequestPlayerInventoryResponse) == 0x000008, "Wrong size on RequestPlayerInventoryProxy_RequestPlayerInventoryResponse");
+static_assert(offsetof(RequestPlayerInventoryProxy_RequestPlayerInventoryResponse, Request) == 0x000000, "Member 'RequestPlayerInventoryProxy_RequestPlayerInventoryResponse::Request' has a wrong offset!");
+
+// Function MasterServerPlugin.SendTradeRequestProxy.SendTradeRequest
+// 0x0060 (0x0060 - 0x0000)
+struct SendTradeRequestProxy_SendTradeRequest final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       TargetPlayerId;                                    // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTradingItem>                   SendingItems;                                      // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTradingItem>                   TargetItems;                                       // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class USendTradeRequestProxy*                 ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SendTradeRequestProxy_SendTradeRequest) == 0x000008, "Wrong alignment on SendTradeRequestProxy_SendTradeRequest");
+static_assert(sizeof(SendTradeRequestProxy_SendTradeRequest) == 0x000060, "Wrong size on SendTradeRequestProxy_SendTradeRequest");
+static_assert(offsetof(SendTradeRequestProxy_SendTradeRequest, WorldContextObject) == 0x000000, "Member 'SendTradeRequestProxy_SendTradeRequest::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(SendTradeRequestProxy_SendTradeRequest, TargetPlayerId) == 0x000008, "Member 'SendTradeRequestProxy_SendTradeRequest::TargetPlayerId' has a wrong offset!");
+static_assert(offsetof(SendTradeRequestProxy_SendTradeRequest, SendingItems) == 0x000038, "Member 'SendTradeRequestProxy_SendTradeRequest::SendingItems' has a wrong offset!");
+static_assert(offsetof(SendTradeRequestProxy_SendTradeRequest, TargetItems) == 0x000048, "Member 'SendTradeRequestProxy_SendTradeRequest::TargetItems' has a wrong offset!");
+static_assert(offsetof(SendTradeRequestProxy_SendTradeRequest, ReturnValue) == 0x000058, "Member 'SendTradeRequestProxy_SendTradeRequest::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.SendTradeRequestProxy.SendTradeRequestResponse
+// 0x0008 (0x0008 - 0x0000)
+struct SendTradeRequestProxy_SendTradeRequestResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SendTradeRequestProxy_SendTradeRequestResponse) == 0x000008, "Wrong alignment on SendTradeRequestProxy_SendTradeRequestResponse");
+static_assert(sizeof(SendTradeRequestProxy_SendTradeRequestResponse) == 0x000008, "Wrong size on SendTradeRequestProxy_SendTradeRequestResponse");
+static_assert(offsetof(SendTradeRequestProxy_SendTradeRequestResponse, Request) == 0x000000, "Member 'SendTradeRequestProxy_SendTradeRequestResponse::Request' has a wrong offset!");
+
+// Function MasterServerPlugin.AcceptTradeRequestProxy.AcceptTradeRequest
+// 0x0018 (0x0018 - 0x0000)
+struct AcceptTradeRequestProxy_AcceptTradeRequest final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         TradeRequestId;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAcceptTradeRequestProxy*               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AcceptTradeRequestProxy_AcceptTradeRequest) == 0x000008, "Wrong alignment on AcceptTradeRequestProxy_AcceptTradeRequest");
+static_assert(sizeof(AcceptTradeRequestProxy_AcceptTradeRequest) == 0x000018, "Wrong size on AcceptTradeRequestProxy_AcceptTradeRequest");
+static_assert(offsetof(AcceptTradeRequestProxy_AcceptTradeRequest, WorldContextObject) == 0x000000, "Member 'AcceptTradeRequestProxy_AcceptTradeRequest::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(AcceptTradeRequestProxy_AcceptTradeRequest, TradeRequestId) == 0x000008, "Member 'AcceptTradeRequestProxy_AcceptTradeRequest::TradeRequestId' has a wrong offset!");
+static_assert(offsetof(AcceptTradeRequestProxy_AcceptTradeRequest, ReturnValue) == 0x000010, "Member 'AcceptTradeRequestProxy_AcceptTradeRequest::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.AcceptTradeRequestProxy.AcceptTradeRequestResponse
+// 0x0008 (0x0008 - 0x0000)
+struct AcceptTradeRequestProxy_AcceptTradeRequestResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AcceptTradeRequestProxy_AcceptTradeRequestResponse) == 0x000008, "Wrong alignment on AcceptTradeRequestProxy_AcceptTradeRequestResponse");
+static_assert(sizeof(AcceptTradeRequestProxy_AcceptTradeRequestResponse) == 0x000008, "Wrong size on AcceptTradeRequestProxy_AcceptTradeRequestResponse");
+static_assert(offsetof(AcceptTradeRequestProxy_AcceptTradeRequestResponse, Request) == 0x000000, "Member 'AcceptTradeRequestProxy_AcceptTradeRequestResponse::Request' has a wrong offset!");
+
+// Function MasterServerPlugin.RejectTradeRequestProxy.RejectTradeRequest
+// 0x0018 (0x0018 - 0x0000)
+struct RejectTradeRequestProxy_RejectTradeRequest final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         TradeRequestId;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URejectTradeRequestProxy*               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RejectTradeRequestProxy_RejectTradeRequest) == 0x000008, "Wrong alignment on RejectTradeRequestProxy_RejectTradeRequest");
+static_assert(sizeof(RejectTradeRequestProxy_RejectTradeRequest) == 0x000018, "Wrong size on RejectTradeRequestProxy_RejectTradeRequest");
+static_assert(offsetof(RejectTradeRequestProxy_RejectTradeRequest, WorldContextObject) == 0x000000, "Member 'RejectTradeRequestProxy_RejectTradeRequest::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(RejectTradeRequestProxy_RejectTradeRequest, TradeRequestId) == 0x000008, "Member 'RejectTradeRequestProxy_RejectTradeRequest::TradeRequestId' has a wrong offset!");
+static_assert(offsetof(RejectTradeRequestProxy_RejectTradeRequest, ReturnValue) == 0x000010, "Member 'RejectTradeRequestProxy_RejectTradeRequest::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.RejectTradeRequestProxy.RejectTradeRequestResponse
+// 0x0008 (0x0008 - 0x0000)
+struct RejectTradeRequestProxy_RejectTradeRequestResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RejectTradeRequestProxy_RejectTradeRequestResponse) == 0x000008, "Wrong alignment on RejectTradeRequestProxy_RejectTradeRequestResponse");
+static_assert(sizeof(RejectTradeRequestProxy_RejectTradeRequestResponse) == 0x000008, "Wrong size on RejectTradeRequestProxy_RejectTradeRequestResponse");
+static_assert(offsetof(RejectTradeRequestProxy_RejectTradeRequestResponse, Request) == 0x000000, "Member 'RejectTradeRequestProxy_RejectTradeRequestResponse::Request' has a wrong offset!");
+
+// Function MasterServerPlugin.CancelTradeRequestProxy.CancelTradeRequest
+// 0x0018 (0x0018 - 0x0000)
+struct CancelTradeRequestProxy_CancelTradeRequest final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         TradeRequestId;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCancelTradeRequestProxy*               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CancelTradeRequestProxy_CancelTradeRequest) == 0x000008, "Wrong alignment on CancelTradeRequestProxy_CancelTradeRequest");
+static_assert(sizeof(CancelTradeRequestProxy_CancelTradeRequest) == 0x000018, "Wrong size on CancelTradeRequestProxy_CancelTradeRequest");
+static_assert(offsetof(CancelTradeRequestProxy_CancelTradeRequest, WorldContextObject) == 0x000000, "Member 'CancelTradeRequestProxy_CancelTradeRequest::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(CancelTradeRequestProxy_CancelTradeRequest, TradeRequestId) == 0x000008, "Member 'CancelTradeRequestProxy_CancelTradeRequest::TradeRequestId' has a wrong offset!");
+static_assert(offsetof(CancelTradeRequestProxy_CancelTradeRequest, ReturnValue) == 0x000010, "Member 'CancelTradeRequestProxy_CancelTradeRequest::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.CancelTradeRequestProxy.CancelTradeRequestResponse
+// 0x0008 (0x0008 - 0x0000)
+struct CancelTradeRequestProxy_CancelTradeRequestResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CancelTradeRequestProxy_CancelTradeRequestResponse) == 0x000008, "Wrong alignment on CancelTradeRequestProxy_CancelTradeRequestResponse");
+static_assert(sizeof(CancelTradeRequestProxy_CancelTradeRequestResponse) == 0x000008, "Wrong size on CancelTradeRequestProxy_CancelTradeRequestResponse");
+static_assert(offsetof(CancelTradeRequestProxy_CancelTradeRequestResponse, Request) == 0x000000, "Member 'CancelTradeRequestProxy_CancelTradeRequestResponse::Request' has a wrong offset!");
+
+// Function MasterServerPlugin.GetIncomingTradeRequestsProxy.GetIncomingTradeRequests
+// 0x0010 (0x0010 - 0x0000)
+struct GetIncomingTradeRequestsProxy_GetIncomingTradeRequests final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGetIncomingTradeRequestsProxy*         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequests) == 0x000008, "Wrong alignment on GetIncomingTradeRequestsProxy_GetIncomingTradeRequests");
+static_assert(sizeof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequests) == 0x000010, "Wrong size on GetIncomingTradeRequestsProxy_GetIncomingTradeRequests");
+static_assert(offsetof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequests, WorldContextObject) == 0x000000, "Member 'GetIncomingTradeRequestsProxy_GetIncomingTradeRequests::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequests, ReturnValue) == 0x000008, "Member 'GetIncomingTradeRequestsProxy_GetIncomingTradeRequests::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.GetIncomingTradeRequestsProxy.GetIncomingTradeRequestsResponse
+// 0x0008 (0x0008 - 0x0000)
+struct GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse) == 0x000008, "Wrong alignment on GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse");
+static_assert(sizeof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse) == 0x000008, "Wrong size on GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse");
+static_assert(offsetof(GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse, Request) == 0x000000, "Member 'GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse::Request' has a wrong offset!");
+
+// Function MasterServerPlugin.GetOutgoingTradeRequestsProxy.GetOutgoingTradeRequests
+// 0x0010 (0x0010 - 0x0000)
+struct GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGetOutgoingTradeRequestsProxy*         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests) == 0x000008, "Wrong alignment on GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests");
+static_assert(sizeof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests) == 0x000010, "Wrong size on GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests");
+static_assert(offsetof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests, WorldContextObject) == 0x000000, "Member 'GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests, ReturnValue) == 0x000008, "Member 'GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests::ReturnValue' has a wrong offset!");
+
+// Function MasterServerPlugin.GetOutgoingTradeRequestsProxy.GetOutgoingTradeRequestsResponse
+// 0x0008 (0x0008 - 0x0000)
+struct GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse final
+{
+public:
+	class UVaRestRequestJSON*                     Request;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse) == 0x000008, "Wrong alignment on GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse");
+static_assert(sizeof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse) == 0x000008, "Wrong size on GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse");
+static_assert(offsetof(GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse, Request) == 0x000000, "Member 'GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse::Request' has a wrong offset!");
+
 // Function MasterServerPlugin.WitchItPacket.ParseFromBytes
 // 0x0018 (0x0018 - 0x0000)
 struct WitchItPacket_ParseFromBytes final
@@ -906,7 +898,7 @@ struct WitchItPacket_ParseFromBytes final
 public:
 	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E31[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItPacket_ParseFromBytes) == 0x000008, "Wrong alignment on WitchItPacket_ParseFromBytes");
 static_assert(sizeof(WitchItPacket_ParseFromBytes) == 0x000018, "Wrong size on WitchItPacket_ParseFromBytes");
@@ -919,13 +911,13 @@ struct WitchItPacket_PutArray final
 {
 public:
 	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutArray) == 0x000008, "Wrong alignment on WitchItPacket_PutArray");
 static_assert(sizeof(WitchItPacket_PutArray) == 0x000018, "Wrong size on WitchItPacket_PutArray");
 static_assert(offsetof(WitchItPacket_PutArray, Bytes) == 0x000000, "Member 'WitchItPacket_PutArray::Bytes' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutArray, Param_Index) == 0x000010, "Member 'WitchItPacket_PutArray::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutArray, Index_0) == 0x000010, "Member 'WitchItPacket_PutArray::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutArray, AdvancedPosition) == 0x000014, "Member 'WitchItPacket_PutArray::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutFloat32
@@ -934,13 +926,13 @@ struct WitchItPacket_PutFloat32 final
 {
 public:
 	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutFloat32) == 0x000004, "Wrong alignment on WitchItPacket_PutFloat32");
 static_assert(sizeof(WitchItPacket_PutFloat32) == 0x00000C, "Wrong size on WitchItPacket_PutFloat32");
 static_assert(offsetof(WitchItPacket_PutFloat32, Value) == 0x000000, "Member 'WitchItPacket_PutFloat32::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutFloat32, Param_Index) == 0x000004, "Member 'WitchItPacket_PutFloat32::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutFloat32, Index_0) == 0x000004, "Member 'WitchItPacket_PutFloat32::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutFloat32, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutFloat32::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutInt16
@@ -949,14 +941,14 @@ struct WitchItPacket_PutInt16 final
 {
 public:
 	int16                                         Value;                                             // 0x0000(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E32[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutInt16) == 0x000004, "Wrong alignment on WitchItPacket_PutInt16");
 static_assert(sizeof(WitchItPacket_PutInt16) == 0x00000C, "Wrong size on WitchItPacket_PutInt16");
 static_assert(offsetof(WitchItPacket_PutInt16, Value) == 0x000000, "Member 'WitchItPacket_PutInt16::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutInt16, Param_Index) == 0x000004, "Member 'WitchItPacket_PutInt16::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutInt16, Index_0) == 0x000004, "Member 'WitchItPacket_PutInt16::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutInt16, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutInt16::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutInt32
@@ -965,13 +957,13 @@ struct WitchItPacket_PutInt32 final
 {
 public:
 	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutInt32) == 0x000004, "Wrong alignment on WitchItPacket_PutInt32");
 static_assert(sizeof(WitchItPacket_PutInt32) == 0x00000C, "Wrong size on WitchItPacket_PutInt32");
 static_assert(offsetof(WitchItPacket_PutInt32, Value) == 0x000000, "Member 'WitchItPacket_PutInt32::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutInt32, Param_Index) == 0x000004, "Member 'WitchItPacket_PutInt32::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutInt32, Index_0) == 0x000004, "Member 'WitchItPacket_PutInt32::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutInt32, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutInt32::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutInt64
@@ -980,13 +972,13 @@ struct WitchItPacket_PutInt64 final
 {
 public:
 	int64                                         Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutInt64) == 0x000008, "Wrong alignment on WitchItPacket_PutInt64");
 static_assert(sizeof(WitchItPacket_PutInt64) == 0x000010, "Wrong size on WitchItPacket_PutInt64");
 static_assert(offsetof(WitchItPacket_PutInt64, Value) == 0x000000, "Member 'WitchItPacket_PutInt64::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutInt64, Param_Index) == 0x000008, "Member 'WitchItPacket_PutInt64::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutInt64, Index_0) == 0x000008, "Member 'WitchItPacket_PutInt64::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutInt64, AdvancedPosition) == 0x00000C, "Member 'WitchItPacket_PutInt64::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutInt8
@@ -995,14 +987,14 @@ struct WitchItPacket_PutInt8 final
 {
 public:
 	int8                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E33[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutInt8) == 0x000004, "Wrong alignment on WitchItPacket_PutInt8");
 static_assert(sizeof(WitchItPacket_PutInt8) == 0x00000C, "Wrong size on WitchItPacket_PutInt8");
 static_assert(offsetof(WitchItPacket_PutInt8, Value) == 0x000000, "Member 'WitchItPacket_PutInt8::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutInt8, Param_Index) == 0x000004, "Member 'WitchItPacket_PutInt8::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutInt8, Index_0) == 0x000004, "Member 'WitchItPacket_PutInt8::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutInt8, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutInt8::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutString
@@ -1011,13 +1003,13 @@ struct WitchItPacket_PutString final
 {
 public:
 	class FString                                 Value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutString) == 0x000008, "Wrong alignment on WitchItPacket_PutString");
 static_assert(sizeof(WitchItPacket_PutString) == 0x000018, "Wrong size on WitchItPacket_PutString");
 static_assert(offsetof(WitchItPacket_PutString, Value) == 0x000000, "Member 'WitchItPacket_PutString::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutString, Param_Index) == 0x000010, "Member 'WitchItPacket_PutString::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutString, Index_0) == 0x000010, "Member 'WitchItPacket_PutString::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutString, AdvancedPosition) == 0x000014, "Member 'WitchItPacket_PutString::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutUInt16
@@ -1026,14 +1018,14 @@ struct WitchItPacket_PutUInt16 final
 {
 public:
 	uint16                                        Value;                                             // 0x0000(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E34[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutUInt16) == 0x000004, "Wrong alignment on WitchItPacket_PutUInt16");
 static_assert(sizeof(WitchItPacket_PutUInt16) == 0x00000C, "Wrong size on WitchItPacket_PutUInt16");
 static_assert(offsetof(WitchItPacket_PutUInt16, Value) == 0x000000, "Member 'WitchItPacket_PutUInt16::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutUInt16, Param_Index) == 0x000004, "Member 'WitchItPacket_PutUInt16::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutUInt16, Index_0) == 0x000004, "Member 'WitchItPacket_PutUInt16::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutUInt16, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutUInt16::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutUInt32
@@ -1042,13 +1034,13 @@ struct WitchItPacket_PutUInt32 final
 {
 public:
 	uint32                                        Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutUInt32) == 0x000004, "Wrong alignment on WitchItPacket_PutUInt32");
 static_assert(sizeof(WitchItPacket_PutUInt32) == 0x00000C, "Wrong size on WitchItPacket_PutUInt32");
 static_assert(offsetof(WitchItPacket_PutUInt32, Value) == 0x000000, "Member 'WitchItPacket_PutUInt32::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutUInt32, Param_Index) == 0x000004, "Member 'WitchItPacket_PutUInt32::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutUInt32, Index_0) == 0x000004, "Member 'WitchItPacket_PutUInt32::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutUInt32, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutUInt32::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutUInt64
@@ -1057,13 +1049,13 @@ struct WitchItPacket_PutUInt64 final
 {
 public:
 	uint64                                        Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutUInt64) == 0x000008, "Wrong alignment on WitchItPacket_PutUInt64");
 static_assert(sizeof(WitchItPacket_PutUInt64) == 0x000010, "Wrong size on WitchItPacket_PutUInt64");
 static_assert(offsetof(WitchItPacket_PutUInt64, Value) == 0x000000, "Member 'WitchItPacket_PutUInt64::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutUInt64, Param_Index) == 0x000008, "Member 'WitchItPacket_PutUInt64::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutUInt64, Index_0) == 0x000008, "Member 'WitchItPacket_PutUInt64::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutUInt64, AdvancedPosition) == 0x00000C, "Member 'WitchItPacket_PutUInt64::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.PutUInt8
@@ -1072,14 +1064,14 @@ struct WitchItPacket_PutUInt8 final
 {
 public:
 	uint8                                         Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E35[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_PutUInt8) == 0x000004, "Wrong alignment on WitchItPacket_PutUInt8");
 static_assert(sizeof(WitchItPacket_PutUInt8) == 0x00000C, "Wrong size on WitchItPacket_PutUInt8");
 static_assert(offsetof(WitchItPacket_PutUInt8, Value) == 0x000000, "Member 'WitchItPacket_PutUInt8::Value' has a wrong offset!");
-static_assert(offsetof(WitchItPacket_PutUInt8, Param_Index) == 0x000004, "Member 'WitchItPacket_PutUInt8::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_PutUInt8, Index_0) == 0x000004, "Member 'WitchItPacket_PutUInt8::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_PutUInt8, AdvancedPosition) == 0x000008, "Member 'WitchItPacket_PutUInt8::AdvancedPosition' has a wrong offset!");
 
 // Function MasterServerPlugin.WitchItPacket.ReadBytes
@@ -1087,13 +1079,13 @@ static_assert(offsetof(WitchItPacket_PutUInt8, AdvancedPosition) == 0x000008, "M
 struct WitchItPacket_ReadBytes final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadBytes) == 0x000008, "Wrong alignment on WitchItPacket_ReadBytes");
 static_assert(sizeof(WitchItPacket_ReadBytes) == 0x000018, "Wrong size on WitchItPacket_ReadBytes");
-static_assert(offsetof(WitchItPacket_ReadBytes, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadBytes::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadBytes, Index_0) == 0x000000, "Member 'WitchItPacket_ReadBytes::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadBytes, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadBytes::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadBytes, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadBytes::ReturnValue' has a wrong offset!");
 
@@ -1102,13 +1094,13 @@ static_assert(offsetof(WitchItPacket_ReadBytes, ReturnValue) == 0x000008, "Membe
 struct WitchItPacket_ReadFloat32 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadFloat32) == 0x000004, "Wrong alignment on WitchItPacket_ReadFloat32");
 static_assert(sizeof(WitchItPacket_ReadFloat32) == 0x00000C, "Wrong size on WitchItPacket_ReadFloat32");
-static_assert(offsetof(WitchItPacket_ReadFloat32, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadFloat32::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadFloat32, Index_0) == 0x000000, "Member 'WitchItPacket_ReadFloat32::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadFloat32, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadFloat32::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadFloat32, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadFloat32::ReturnValue' has a wrong offset!");
 
@@ -1117,14 +1109,14 @@ static_assert(offsetof(WitchItPacket_ReadFloat32, ReturnValue) == 0x000008, "Mem
 struct WitchItPacket_ReadInt16 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int16                                         ReturnValue;                                       // 0x0008(0x0002)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E36[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItPacket_ReadInt16) == 0x000004, "Wrong alignment on WitchItPacket_ReadInt16");
 static_assert(sizeof(WitchItPacket_ReadInt16) == 0x00000C, "Wrong size on WitchItPacket_ReadInt16");
-static_assert(offsetof(WitchItPacket_ReadInt16, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadInt16::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadInt16, Index_0) == 0x000000, "Member 'WitchItPacket_ReadInt16::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt16, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadInt16::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt16, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadInt16::ReturnValue' has a wrong offset!");
 
@@ -1133,13 +1125,13 @@ static_assert(offsetof(WitchItPacket_ReadInt16, ReturnValue) == 0x000008, "Membe
 struct WitchItPacket_ReadInt32 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadInt32) == 0x000004, "Wrong alignment on WitchItPacket_ReadInt32");
 static_assert(sizeof(WitchItPacket_ReadInt32) == 0x00000C, "Wrong size on WitchItPacket_ReadInt32");
-static_assert(offsetof(WitchItPacket_ReadInt32, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadInt32::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadInt32, Index_0) == 0x000000, "Member 'WitchItPacket_ReadInt32::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt32, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadInt32::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt32, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadInt32::ReturnValue' has a wrong offset!");
 
@@ -1148,13 +1140,13 @@ static_assert(offsetof(WitchItPacket_ReadInt32, ReturnValue) == 0x000008, "Membe
 struct WitchItPacket_ReadInt64 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int64                                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadInt64) == 0x000008, "Wrong alignment on WitchItPacket_ReadInt64");
 static_assert(sizeof(WitchItPacket_ReadInt64) == 0x000010, "Wrong size on WitchItPacket_ReadInt64");
-static_assert(offsetof(WitchItPacket_ReadInt64, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadInt64::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadInt64, Index_0) == 0x000000, "Member 'WitchItPacket_ReadInt64::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt64, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadInt64::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt64, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadInt64::ReturnValue' has a wrong offset!");
 
@@ -1163,14 +1155,14 @@ static_assert(offsetof(WitchItPacket_ReadInt64, ReturnValue) == 0x000008, "Membe
 struct WitchItPacket_ReadInt8 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int8                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E37[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItPacket_ReadInt8) == 0x000004, "Wrong alignment on WitchItPacket_ReadInt8");
 static_assert(sizeof(WitchItPacket_ReadInt8) == 0x00000C, "Wrong size on WitchItPacket_ReadInt8");
-static_assert(offsetof(WitchItPacket_ReadInt8, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadInt8::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadInt8, Index_0) == 0x000000, "Member 'WitchItPacket_ReadInt8::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt8, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadInt8::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadInt8, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadInt8::ReturnValue' has a wrong offset!");
 
@@ -1179,13 +1171,13 @@ static_assert(offsetof(WitchItPacket_ReadInt8, ReturnValue) == 0x000008, "Member
 struct WitchItPacket_ReadString final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadString) == 0x000008, "Wrong alignment on WitchItPacket_ReadString");
 static_assert(sizeof(WitchItPacket_ReadString) == 0x000018, "Wrong size on WitchItPacket_ReadString");
-static_assert(offsetof(WitchItPacket_ReadString, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadString::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadString, Index_0) == 0x000000, "Member 'WitchItPacket_ReadString::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadString, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadString::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadString, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadString::ReturnValue' has a wrong offset!");
 
@@ -1194,14 +1186,14 @@ static_assert(offsetof(WitchItPacket_ReadString, ReturnValue) == 0x000008, "Memb
 struct WitchItPacket_ReadUInt16 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        ReturnValue;                                       // 0x0008(0x0002)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E38[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItPacket_ReadUInt16) == 0x000004, "Wrong alignment on WitchItPacket_ReadUInt16");
 static_assert(sizeof(WitchItPacket_ReadUInt16) == 0x00000C, "Wrong size on WitchItPacket_ReadUInt16");
-static_assert(offsetof(WitchItPacket_ReadUInt16, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadUInt16::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadUInt16, Index_0) == 0x000000, "Member 'WitchItPacket_ReadUInt16::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt16, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadUInt16::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt16, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadUInt16::ReturnValue' has a wrong offset!");
 
@@ -1210,13 +1202,13 @@ static_assert(offsetof(WitchItPacket_ReadUInt16, ReturnValue) == 0x000008, "Memb
 struct WitchItPacket_ReadUInt32 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadUInt32) == 0x000004, "Wrong alignment on WitchItPacket_ReadUInt32");
 static_assert(sizeof(WitchItPacket_ReadUInt32) == 0x00000C, "Wrong size on WitchItPacket_ReadUInt32");
-static_assert(offsetof(WitchItPacket_ReadUInt32, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadUInt32::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadUInt32, Index_0) == 0x000000, "Member 'WitchItPacket_ReadUInt32::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt32, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadUInt32::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt32, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadUInt32::ReturnValue' has a wrong offset!");
 
@@ -1225,13 +1217,13 @@ static_assert(offsetof(WitchItPacket_ReadUInt32, ReturnValue) == 0x000008, "Memb
 struct WitchItPacket_ReadUInt64 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint64                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WitchItPacket_ReadUInt64) == 0x000008, "Wrong alignment on WitchItPacket_ReadUInt64");
 static_assert(sizeof(WitchItPacket_ReadUInt64) == 0x000010, "Wrong size on WitchItPacket_ReadUInt64");
-static_assert(offsetof(WitchItPacket_ReadUInt64, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadUInt64::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadUInt64, Index_0) == 0x000000, "Member 'WitchItPacket_ReadUInt64::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt64, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadUInt64::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt64, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadUInt64::ReturnValue' has a wrong offset!");
 
@@ -1240,14 +1232,14 @@ static_assert(offsetof(WitchItPacket_ReadUInt64, ReturnValue) == 0x000008, "Memb
 struct WitchItPacket_ReadUInt8 final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AdvancedPosition;                                  // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E39[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItPacket_ReadUInt8) == 0x000004, "Wrong alignment on WitchItPacket_ReadUInt8");
 static_assert(sizeof(WitchItPacket_ReadUInt8) == 0x00000C, "Wrong size on WitchItPacket_ReadUInt8");
-static_assert(offsetof(WitchItPacket_ReadUInt8, Param_Index) == 0x000000, "Member 'WitchItPacket_ReadUInt8::Param_Index' has a wrong offset!");
+static_assert(offsetof(WitchItPacket_ReadUInt8, Index_0) == 0x000000, "Member 'WitchItPacket_ReadUInt8::Index_0' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt8, AdvancedPosition) == 0x000004, "Member 'WitchItPacket_ReadUInt8::AdvancedPosition' has a wrong offset!");
 static_assert(offsetof(WitchItPacket_ReadUInt8, ReturnValue) == 0x000008, "Member 'WitchItPacket_ReadUInt8::ReturnValue' has a wrong offset!");
 

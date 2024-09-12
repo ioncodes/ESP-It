@@ -17,6 +17,101 @@
 namespace SDK
 {
 
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigidBodyAnimNodeReference      ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FRigidBodyAnimNodeReference UAnimNodeRigidBodyLibrary::ConvertToRigidBodyAnimNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimNodeRigidBodyLibrary", "ConvertToRigidBodyAnimNode");
+
+	Params::AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNodePure
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FRigidBodyAnimNodeReference      RigidBodyAnimNode                                      (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAnimNodeRigidBodyLibrary::ConvertToRigidBodyAnimNodePure(const struct FAnimNodeReference& Node, struct FRigidBodyAnimNodeReference* RigidBodyAnimNode, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimNodeRigidBodyLibrary", "ConvertToRigidBodyAnimNodePure");
+
+	Params::AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (RigidBodyAnimNode != nullptr)
+		*RigidBodyAnimNode = std::move(Parms.RigidBodyAnimNode);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.SetOverridePhysicsAsset
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FRigidBodyAnimNodeReference      Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UPhysicsAsset*                    PhysicsAsset                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRigidBodyAnimNodeReference      ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FRigidBodyAnimNodeReference UAnimNodeRigidBodyLibrary::SetOverridePhysicsAsset(const struct FRigidBodyAnimNodeReference& Node, class UPhysicsAsset* PhysicsAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimNodeRigidBodyLibrary", "SetOverridePhysicsAsset");
+
+	Params::AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset Parms{};
+
+	Parms.Node = std::move(Node);
+	Parms.PhysicsAsset = PhysicsAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpace
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -162,6 +257,56 @@ void UBlendSpaceLibrary::SnapToPosition(const struct FBlendSpaceReference& Blend
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AnimGraphRuntime.SequencerAnimationOverride.AllowsCinematicOverride
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISequencerAnimationOverride::AllowsCinematicOverride() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SequencerAnimationOverride", "AllowsCinematicOverride");
+
+	Params::SequencerAnimationOverride_AllowsCinematicOverride Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.SequencerAnimationOverride.GetSequencerAnimSlotNames
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> ISequencerAnimationOverride::GetSequencerAnimSlotNames() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SequencerAnimationOverride", "GetSequencerAnimSlotNames");
+
+	Params::SequencerAnimationOverride_GetSequencerAnimSlotNames Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -646,10 +791,10 @@ class UAnimInstance* UAnimExecutionContextLibrary::GetAnimInstance(const struct 
 // (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UAnimInstance*                    Instance                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FAnimNodeReference               ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FAnimNodeReference UAnimExecutionContextLibrary::GetAnimNodeReference(class UAnimInstance* Instance, int32 Param_Index)
+struct FAnimNodeReference UAnimExecutionContextLibrary::GetAnimNodeReference(class UAnimInstance* Instance, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -659,7 +804,7 @@ struct FAnimNodeReference UAnimExecutionContextLibrary::GetAnimNodeReference(cla
 	Params::AnimExecutionContextLibrary_GetAnimNodeReference Parms{};
 
 	Parms.Instance = Instance;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -725,6 +870,91 @@ float UAnimExecutionContextLibrary::GetDeltaTime(const struct FAnimUpdateContext
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.AnimExecutionContextLibrary.IsActive
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnimExecutionContext            Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAnimExecutionContextLibrary::IsActive(const struct FAnimExecutionContext& Context)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AnimExecutionContextLibrary", "IsActive");
+
+	Params::AnimExecutionContextLibrary_IsActive Parms{};
+
+	Parms.Context = std::move(Context);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendListBaseLibrary.ConvertToBlendListBase
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendListBaseReference          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendListBaseReference UBlendListBaseLibrary::ConvertToBlendListBase(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendListBaseLibrary", "ConvertToBlendListBase");
+
+	Params::BlendListBaseLibrary_ConvertToBlendListBase Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendListBaseLibrary.ResetNode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FBlendListBaseReference          BlendListBase                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlendListBaseLibrary::ResetNode(const struct FBlendListBaseReference& BlendListBase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendListBaseLibrary", "ResetNode");
+
+	Params::BlendListBaseLibrary_ResetNode Parms{};
+
+	Parms.BlendListBase = std::move(BlendListBase);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -1132,63 +1362,6 @@ void UBlendSpacePlayerLibrary::SnapToPosition(const struct FBlendSpacePlayerRefe
 
 	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
 	Parms.NewPosition = std::move(NewPosition);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AnimGraphRuntime.BlendListBaseLibrary.ConvertToBlendListBase
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendListBaseReference          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBlendListBaseReference UBlendListBaseLibrary::ConvertToBlendListBase(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendListBaseLibrary", "ConvertToBlendListBase");
-
-	Params::BlendListBaseLibrary_ConvertToBlendListBase Parms{};
-
-	Parms.Node = std::move(Node);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendListBaseLibrary.ResetNode
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlendListBaseReference          BlendListBase                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UBlendListBaseLibrary::ResetNode(const struct FBlendListBaseReference& BlendListBase)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendListBaseLibrary", "ResetNode");
-
-	Params::BlendListBaseLibrary_ResetNode Parms{};
-
-	Parms.BlendListBase = std::move(BlendListBase);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1857,6 +2030,426 @@ bool ULinkedAnimGraphLibrary::HasLinkedAnimInstance(const struct FLinkedAnimGrap
 }
 
 
+// Function AnimGraphRuntime.MirrorAnimLibrary.ConvertToMirrorNode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMirrorAnimNodeReference         ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMirrorAnimNodeReference UMirrorAnimLibrary::ConvertToMirrorNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "ConvertToMirrorNode");
+
+	Params::MirrorAnimLibrary_ConvertToMirrorNode Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.ConvertToMirrorNodePure
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FMirrorAnimNodeReference         MirrorNode                                             (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMirrorAnimLibrary::ConvertToMirrorNodePure(const struct FAnimNodeReference& Node, struct FMirrorAnimNodeReference* MirrorNode, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "ConvertToMirrorNodePure");
+
+	Params::MirrorAnimLibrary_ConvertToMirrorNodePure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MirrorNode != nullptr)
+		*MirrorNode = std::move(Parms.MirrorNode);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.GetMirror
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FMirrorAnimNodeReference         MirrorNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMirrorAnimLibrary::GetMirror(const struct FMirrorAnimNodeReference& MirrorNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "GetMirror");
+
+	Params::MirrorAnimLibrary_GetMirror Parms{};
+
+	Parms.MirrorNode = std::move(MirrorNode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.GetMirrorDataTable
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FMirrorAnimNodeReference         MirrorNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UMirrorDataTable*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMirrorDataTable* UMirrorAnimLibrary::GetMirrorDataTable(const struct FMirrorAnimNodeReference& MirrorNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "GetMirrorDataTable");
+
+	Params::MirrorAnimLibrary_GetMirrorDataTable Parms{};
+
+	Parms.MirrorNode = std::move(MirrorNode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.GetMirrorTransitionBlendTime
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FMirrorAnimNodeReference         MirrorNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMirrorAnimLibrary::GetMirrorTransitionBlendTime(const struct FMirrorAnimNodeReference& MirrorNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "GetMirrorTransitionBlendTime");
+
+	Params::MirrorAnimLibrary_GetMirrorTransitionBlendTime Parms{};
+
+	Parms.MirrorNode = std::move(MirrorNode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.SetMirror
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FMirrorAnimNodeReference         MirrorNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bInMirror                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMirrorAnimNodeReference         ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMirrorAnimNodeReference UMirrorAnimLibrary::SetMirror(const struct FMirrorAnimNodeReference& MirrorNode, bool bInMirror)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "SetMirror");
+
+	Params::MirrorAnimLibrary_SetMirror Parms{};
+
+	Parms.MirrorNode = std::move(MirrorNode);
+	Parms.bInMirror = bInMirror;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.SetMirrorTransitionBlendTime
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FMirrorAnimNodeReference         MirrorNode                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   InBlendTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMirrorAnimNodeReference         ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMirrorAnimNodeReference UMirrorAnimLibrary::SetMirrorTransitionBlendTime(const struct FMirrorAnimNodeReference& MirrorNode, float InBlendTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MirrorAnimLibrary", "SetMirrorTransitionBlendTime");
+
+	Params::MirrorAnimLibrary_SetMirrorTransitionBlendTime Parms{};
+
+	Parms.MirrorNode = std::move(MirrorNode);
+	Parms.InBlendTime = InBlendTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.ConvertToModifyCurveNode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FModifyCurveAnimNodeReference    ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FModifyCurveAnimNodeReference UModifyCurveAnimLibrary::ConvertToModifyCurveNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "ConvertToModifyCurveNode");
+
+	Params::ModifyCurveAnimLibrary_ConvertToModifyCurveNode Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.ConvertToModifyCurveNodePure
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FModifyCurveAnimNodeReference    ModifyCurveNode                                        (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UModifyCurveAnimLibrary::ConvertToModifyCurveNodePure(const struct FAnimNodeReference& Node, struct FModifyCurveAnimNodeReference* ModifyCurveNode, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "ConvertToModifyCurveNodePure");
+
+	Params::ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ModifyCurveNode != nullptr)
+		*ModifyCurveNode = std::move(Parms.ModifyCurveNode);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.GetAlpha
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FModifyCurveAnimNodeReference    ModifyCurveNode                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UModifyCurveAnimLibrary::GetAlpha(const struct FModifyCurveAnimNodeReference& ModifyCurveNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "GetAlpha");
+
+	Params::ModifyCurveAnimLibrary_GetAlpha Parms{};
+
+	Parms.ModifyCurveNode = std::move(ModifyCurveNode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.GetApplyMode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FModifyCurveAnimNodeReference    ModifyCurveNode                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EModifyCurveApplyMode                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EModifyCurveApplyMode UModifyCurveAnimLibrary::GetApplyMode(const struct FModifyCurveAnimNodeReference& ModifyCurveNode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "GetApplyMode");
+
+	Params::ModifyCurveAnimLibrary_GetApplyMode Parms{};
+
+	Parms.ModifyCurveNode = std::move(ModifyCurveNode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetAlpha
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FModifyCurveAnimNodeReference    ModifyCurveNode                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   InAlpha                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FModifyCurveAnimNodeReference    ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FModifyCurveAnimNodeReference UModifyCurveAnimLibrary::SetAlpha(const struct FModifyCurveAnimNodeReference& ModifyCurveNode, float InAlpha)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "SetAlpha");
+
+	Params::ModifyCurveAnimLibrary_SetAlpha Parms{};
+
+	Parms.ModifyCurveNode = std::move(ModifyCurveNode);
+	Parms.InAlpha = InAlpha;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetApplyMode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FModifyCurveAnimNodeReference    ModifyCurveNode                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EModifyCurveApplyMode                   InMode                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FModifyCurveAnimNodeReference    ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FModifyCurveAnimNodeReference UModifyCurveAnimLibrary::SetApplyMode(const struct FModifyCurveAnimNodeReference& ModifyCurveNode, EModifyCurveApplyMode InMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "SetApplyMode");
+
+	Params::ModifyCurveAnimLibrary_SetApplyMode Parms{};
+
+	Parms.ModifyCurveNode = std::move(ModifyCurveNode);
+	Parms.InMode = InMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetCurveMap
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FModifyCurveAnimNodeReference    ModifyCurveNode                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// TMap<class FName, float>                InCurveMap                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FModifyCurveAnimNodeReference    ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FModifyCurveAnimNodeReference UModifyCurveAnimLibrary::SetCurveMap(const struct FModifyCurveAnimNodeReference& ModifyCurveNode, const TMap<class FName, float>& InCurveMap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ModifyCurveAnimLibrary", "SetCurveMap");
+
+	Params::ModifyCurveAnimLibrary_SetCurveMap Parms{};
+
+	Parms.ModifyCurveNode = std::move(ModifyCurveNode);
+	Parms.InCurveMap = std::move(InCurveMap);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
 // (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -2142,6 +2735,36 @@ class UAnimSequenceBase* USequenceEvaluatorLibrary::GetSequence(const struct FSe
 	Params::SequenceEvaluatorLibrary_GetSequence Parms{};
 
 	Parms.SequenceEvaluator = std::move(SequenceEvaluator);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetExplicitFrame
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// int32                                   Frame                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FSequenceEvaluatorReference      ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FSequenceEvaluatorReference USequenceEvaluatorLibrary::SetExplicitFrame(const struct FSequenceEvaluatorReference& SequenceEvaluator, int32 Frame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SequenceEvaluatorLibrary", "SetExplicitFrame");
+
+	Params::SequenceEvaluatorLibrary_SetExplicitFrame Parms{};
+
+	Parms.SequenceEvaluator = std::move(SequenceEvaluator);
+	Parms.Frame = Frame;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -44,7 +44,7 @@ static_assert(offsetof(USlateWidgetStyleAsset, CustomStyle) == 0x000028, "Member
 class UFontBulkData final : public UObject
 {
 public:
-	uint8                                         Pad_DC[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -115,7 +115,7 @@ static_assert(sizeof(USlateTypes) == 0x000028, "Wrong size on USlateTypes");
 class USlateWidgetStyleContainerBase : public UObject
 {
 public:
-	uint8                                         Pad_DD[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -148,12 +148,12 @@ static_assert(alignof(ISlateWidgetStyleContainerInterface) == 0x000008, "Wrong a
 static_assert(sizeof(ISlateWidgetStyleContainerInterface) == 0x000028, "Wrong size on ISlateWidgetStyleContainerInterface");
 
 // Class SlateCore.SlateThemeManager
-// 0x0998 (0x09C0 - 0x0028)
+// 0x07B0 (0x07D8 - 0x0028)
 class USlateThemeManager final : public UObject
 {
 public:
 	struct FGuid                                  CurrentThemeId;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FStyleColorList                        ActiveColors;                                      // 0x0038(0x0988)(Edit, Transient, NativeAccessSpecifierPublic)
+	struct FStyleColorList                        ActiveColors;                                      // 0x0038(0x07A0)(Edit, Transient, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -166,7 +166,7 @@ public:
 	}
 };
 static_assert(alignof(USlateThemeManager) == 0x000008, "Wrong alignment on USlateThemeManager");
-static_assert(sizeof(USlateThemeManager) == 0x0009C0, "Wrong size on USlateThemeManager");
+static_assert(sizeof(USlateThemeManager) == 0x0007D8, "Wrong size on USlateThemeManager");
 static_assert(offsetof(USlateThemeManager, CurrentThemeId) == 0x000028, "Member 'USlateThemeManager::CurrentThemeId' has a wrong offset!");
 static_assert(offsetof(USlateThemeManager, ActiveColors) == 0x000038, "Member 'USlateThemeManager::ActiveColors' has a wrong offset!");
 

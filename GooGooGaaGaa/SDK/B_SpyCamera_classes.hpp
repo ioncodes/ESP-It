@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SpyCamera.B_SpyCamera_C
-// 0x0028 (0x02C0 - 0x0298)
+// 0x0028 (0x02B8 - 0x0290)
 class AB_SpyCamera_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       Camera;                                            // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_SpyGlasses;                                     // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Active;                                            // 0x02B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       Camera;                                            // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_SpyGlasses;                                     // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Active;                                            // 0x02B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_SpyCamera(int32 EntryPoint);
@@ -43,12 +43,12 @@ public:
 	}
 };
 static_assert(alignof(AB_SpyCamera_C) == 0x000008, "Wrong alignment on AB_SpyCamera_C");
-static_assert(sizeof(AB_SpyCamera_C) == 0x0002C0, "Wrong size on AB_SpyCamera_C");
-static_assert(offsetof(AB_SpyCamera_C, UberGraphFrame) == 0x000298, "Member 'AB_SpyCamera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_SpyCamera_C, Camera) == 0x0002A0, "Member 'AB_SpyCamera_C::Camera' has a wrong offset!");
-static_assert(offsetof(AB_SpyCamera_C, SM_SpyGlasses) == 0x0002A8, "Member 'AB_SpyCamera_C::SM_SpyGlasses' has a wrong offset!");
-static_assert(offsetof(AB_SpyCamera_C, DefaultSceneRoot) == 0x0002B0, "Member 'AB_SpyCamera_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_SpyCamera_C, Active) == 0x0002B8, "Member 'AB_SpyCamera_C::Active' has a wrong offset!");
+static_assert(sizeof(AB_SpyCamera_C) == 0x0002B8, "Wrong size on AB_SpyCamera_C");
+static_assert(offsetof(AB_SpyCamera_C, UberGraphFrame) == 0x000290, "Member 'AB_SpyCamera_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_SpyCamera_C, Camera) == 0x000298, "Member 'AB_SpyCamera_C::Camera' has a wrong offset!");
+static_assert(offsetof(AB_SpyCamera_C, SM_SpyGlasses) == 0x0002A0, "Member 'AB_SpyCamera_C::SM_SpyGlasses' has a wrong offset!");
+static_assert(offsetof(AB_SpyCamera_C, DefaultSceneRoot) == 0x0002A8, "Member 'AB_SpyCamera_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_SpyCamera_C, Active) == 0x0002B0, "Member 'AB_SpyCamera_C::Active' has a wrong offset!");
 
 }
 

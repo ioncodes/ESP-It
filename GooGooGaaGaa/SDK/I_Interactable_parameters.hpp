@@ -15,14 +15,14 @@ namespace SDK::Params
 {
 
 // Function I_Interactable.I_Interactable_C.GetTooltipText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct I_Interactable_C_GetTooltipText final
 {
 public:
-	class FText                                   ToolTip;                                           // 0x0000(0x0018)(Parm, OutParm)
+	class FText                                   ToolTip;                                           // 0x0000(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(I_Interactable_C_GetTooltipText) == 0x000008, "Wrong alignment on I_Interactable_C_GetTooltipText");
-static_assert(sizeof(I_Interactable_C_GetTooltipText) == 0x000018, "Wrong size on I_Interactable_C_GetTooltipText");
+static_assert(sizeof(I_Interactable_C_GetTooltipText) == 0x000010, "Wrong size on I_Interactable_C_GetTooltipText");
 static_assert(offsetof(I_Interactable_C_GetTooltipText, ToolTip) == 0x000000, "Member 'I_Interactable_C_GetTooltipText::ToolTip' has a wrong offset!");
 
 }

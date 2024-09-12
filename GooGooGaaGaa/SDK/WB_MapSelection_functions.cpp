@@ -181,9 +181,9 @@ void UWB_MapSelection_C::ExecuteUbergraph_WB_MapSelection(int32 EntryPoint)
 // Function WB_MapSelection.WB_MapSelection_C.UseMapCycleInfo
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                                    Param_UseMapCycleInfo                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseMapCycleInfo_0                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MapSelection_C::UseMapCycleInfo(bool* Param_UseMapCycleInfo) const
+void UWB_MapSelection_C::UseMapCycleInfo(bool* UseMapCycleInfo_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,8 +194,8 @@ void UWB_MapSelection_C::UseMapCycleInfo(bool* Param_UseMapCycleInfo) const
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_UseMapCycleInfo != nullptr)
-		*Param_UseMapCycleInfo = Parms.Param_UseMapCycleInfo;
+	if (UseMapCycleInfo_0 != nullptr)
+		*UseMapCycleInfo_0 = Parms.UseMapCycleInfo_0;
 }
 
 }

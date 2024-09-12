@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_GameStartTimer.WB_GameStartTimer_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0010 (0x02F0 - 0x02E0)
 class UWB_GameStartTimer_C final : public UUserWidget
 {
 public:
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MatchStartsText;                                   // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MatchStartsText;                                   // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	class FText Get_AutomaticallyStartText_Text_0();
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_GameStartTimer_C) == 0x000008, "Wrong alignment on UWB_GameStartTimer_C");
-static_assert(sizeof(UWB_GameStartTimer_C) == 0x0002D0, "Wrong size on UWB_GameStartTimer_C");
-static_assert(offsetof(UWB_GameStartTimer_C, CanvasPanel_0) == 0x0002C0, "Member 'UWB_GameStartTimer_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_GameStartTimer_C, MatchStartsText) == 0x0002C8, "Member 'UWB_GameStartTimer_C::MatchStartsText' has a wrong offset!");
+static_assert(sizeof(UWB_GameStartTimer_C) == 0x0002F0, "Wrong size on UWB_GameStartTimer_C");
+static_assert(offsetof(UWB_GameStartTimer_C, CanvasPanel_0) == 0x0002E0, "Member 'UWB_GameStartTimer_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_GameStartTimer_C, MatchStartsText) == 0x0002E8, "Member 'UWB_GameStartTimer_C::MatchStartsText' has a wrong offset!");
 
 }
 

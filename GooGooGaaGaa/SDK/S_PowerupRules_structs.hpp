@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ struct FS_PowerupRules final
 {
 public:
 	E_PowerupRuleType                             PowerupType_5_07F0F6FF44288141C9331F8C816DF5AF;    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37DB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParam>                       PowerupParameters_6_855163784BFC03D7EC9FB8B8D2C10128; // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FS_PowerupRules) == 0x000008, "Wrong alignment on FS_PowerupRules");

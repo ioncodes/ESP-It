@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PressurePlateSwitch.BP_PressurePlateSwitch_C
-// 0x0020 (0x03F0 - 0x03D0)
+// 0x0020 (0x03D8 - 0x03B8)
 class ABP_PressurePlateSwitch_C final : public ABP_Switch_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PressurePlateSwitch_C;           // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Button;                                            // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        ButtonDepth;                                       // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ResetDelay;                                        // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PressurePlateSwitch_C;           // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Button;                                            // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        ButtonDepth;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ResetDelay;                                        // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Action();
@@ -53,11 +53,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_PressurePlateSwitch_C) == 0x000008, "Wrong alignment on ABP_PressurePlateSwitch_C");
-static_assert(sizeof(ABP_PressurePlateSwitch_C) == 0x0003F0, "Wrong size on ABP_PressurePlateSwitch_C");
-static_assert(offsetof(ABP_PressurePlateSwitch_C, UberGraphFrame_BP_PressurePlateSwitch_C) == 0x0003D0, "Member 'ABP_PressurePlateSwitch_C::UberGraphFrame_BP_PressurePlateSwitch_C' has a wrong offset!");
-static_assert(offsetof(ABP_PressurePlateSwitch_C, Button) == 0x0003D8, "Member 'ABP_PressurePlateSwitch_C::Button' has a wrong offset!");
-static_assert(offsetof(ABP_PressurePlateSwitch_C, ButtonDepth) == 0x0003E0, "Member 'ABP_PressurePlateSwitch_C::ButtonDepth' has a wrong offset!");
-static_assert(offsetof(ABP_PressurePlateSwitch_C, ResetDelay) == 0x0003E8, "Member 'ABP_PressurePlateSwitch_C::ResetDelay' has a wrong offset!");
+static_assert(sizeof(ABP_PressurePlateSwitch_C) == 0x0003D8, "Wrong size on ABP_PressurePlateSwitch_C");
+static_assert(offsetof(ABP_PressurePlateSwitch_C, UberGraphFrame_BP_PressurePlateSwitch_C) == 0x0003B8, "Member 'ABP_PressurePlateSwitch_C::UberGraphFrame_BP_PressurePlateSwitch_C' has a wrong offset!");
+static_assert(offsetof(ABP_PressurePlateSwitch_C, Button) == 0x0003C0, "Member 'ABP_PressurePlateSwitch_C::Button' has a wrong offset!");
+static_assert(offsetof(ABP_PressurePlateSwitch_C, ButtonDepth) == 0x0003C8, "Member 'ABP_PressurePlateSwitch_C::ButtonDepth' has a wrong offset!");
+static_assert(offsetof(ABP_PressurePlateSwitch_C, ResetDelay) == 0x0003D0, "Member 'ABP_PressurePlateSwitch_C::ResetDelay' has a wrong offset!");
 
 }
 

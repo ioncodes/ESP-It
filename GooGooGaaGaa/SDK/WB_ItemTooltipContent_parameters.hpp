@@ -11,60 +11,65 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "B_SteamItemDef_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.ExecuteUbergraph_WB_ItemTooltipContent
-// 0x0080 (0x0080 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_505A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_505B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Temp_object_Variable;                              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FB_SteamItemDef                        CallFunc_GetSteamItemDef_ReturnValue;              // 0x0028(0x0040)(ZeroConstructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0070(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInventorySubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInventorySubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UInventorySubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetItemProperty_ReturnValue;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetItemProperty_ReturnValue_1;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                Temp_object_Variable;                              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetItemProperty_ReturnValue_2;            // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent) == 0x000008, "Wrong alignment on WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent");
-static_assert(sizeof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent) == 0x000080, "Wrong size on WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent");
+static_assert(sizeof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent) == 0x000078, "Wrong size on WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent");
 static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, EntryPoint) == 0x000000, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, Temp_object_Variable) == 0x000020, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetSteamItemDef_ReturnValue) == 0x000028, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetSteamItemDef_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, K2Node_CustomEvent_Loaded) == 0x000068, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, K2Node_CreateDelegate_OutputDelegate) == 0x000070, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000008, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000020, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetEngineSubsystem_ReturnValue_2) == 0x000028, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetEngineSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetItemProperty_ReturnValue) == 0x000030, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetItemProperty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetItemProperty_ReturnValue_1) == 0x000040, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetItemProperty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, Temp_object_Variable) == 0x000050, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_EqualEqual_StriStri_ReturnValue) == 0x000058, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_EqualEqual_StriStri_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, K2Node_CustomEvent_Loaded) == 0x000060, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::K2Node_CustomEvent_Loaded' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent, CallFunc_GetItemProperty_ReturnValue_2) == 0x000068, "Member 'WB_ItemTooltipContent_C_ExecuteUbergraph_WB_ItemTooltipContent::CallFunc_GetItemProperty_ReturnValue_2' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.Get_Description_Text_0
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct WB_ItemTooltipContent_C_Get_Description_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
 };
 static_assert(alignof(WB_ItemTooltipContent_C_Get_Description_Text_0) == 0x000008, "Wrong alignment on WB_ItemTooltipContent_C_Get_Description_Text_0");
-static_assert(sizeof(WB_ItemTooltipContent_C_Get_Description_Text_0) == 0x0000A8, "Wrong size on WB_ItemTooltipContent_C_Get_Description_Text_0");
+static_assert(sizeof(WB_ItemTooltipContent_C_Get_Description_Text_0) == 0x000088, "Wrong size on WB_ItemTooltipContent_C_Get_Description_Text_0");
 static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, ReturnValue) == 0x000000, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, K2Node_MakeArray_Array) == 0x000068, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Text_0, CallFunc_Format_ReturnValue) == 0x000078, "Member 'WB_ItemTooltipContent_C_Get_Description_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.Get_Description_Visibility_0
 // 0x0002 (0x0002 - 0x0000)
@@ -80,50 +85,50 @@ static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Visibility_0, Ret
 static_assert(offsetof(WB_ItemTooltipContent_C_Get_Description_Visibility_0, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000001, "Member 'WB_ItemTooltipContent_C_Get_Description_Visibility_0::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.Get_ItemType_ColorAndOpacity_0
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0 final
 {
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
-	uint8                                         Pad_505C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x0018(0x0018)()
-	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0040(0x0014)()
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x0018(0x0010)()
+	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0038(0x0014)()
 };
 static_assert(alignof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0");
-static_assert(sizeof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0) == 0x000058, "Wrong size on WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0");
+static_assert(sizeof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0) == 0x000050, "Wrong size on WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0");
 static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0, ReturnValue) == 0x000000, "Member 'WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0, CallFunc_GetRarityInfo_Name) == 0x000018, "Member 'WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0::CallFunc_GetRarityInfo_Name' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0, CallFunc_GetRarityInfo_Color) == 0x000030, "Member 'WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor) == 0x000040, "Member 'WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0, CallFunc_GetRarityInfo_Color) == 0x000028, "Member 'WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0, K2Node_MakeStruct_SlateColor) == 0x000038, "Member 'WB_ItemTooltipContent_C_Get_ItemType_ColorAndOpacity_0::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.Get_ItemType_Text_0
-// 0x0040 (0x0040 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_ItemTooltipContent_C_Get_ItemType_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x0018(0x0018)()
-	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x0010(0x0010)()
+	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ItemTooltipContent_C_Get_ItemType_Text_0) == 0x000008, "Wrong alignment on WB_ItemTooltipContent_C_Get_ItemType_Text_0");
-static_assert(sizeof(WB_ItemTooltipContent_C_Get_ItemType_Text_0) == 0x000040, "Wrong size on WB_ItemTooltipContent_C_Get_ItemType_Text_0");
+static_assert(sizeof(WB_ItemTooltipContent_C_Get_ItemType_Text_0) == 0x000030, "Wrong size on WB_ItemTooltipContent_C_Get_ItemType_Text_0");
 static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_Text_0, ReturnValue) == 0x000000, "Member 'WB_ItemTooltipContent_C_Get_ItemType_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_Text_0, CallFunc_GetRarityInfo_Name) == 0x000018, "Member 'WB_ItemTooltipContent_C_Get_ItemType_Text_0::CallFunc_GetRarityInfo_Name' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_Text_0, CallFunc_GetRarityInfo_Color) == 0x000030, "Member 'WB_ItemTooltipContent_C_Get_ItemType_Text_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_Text_0, CallFunc_GetRarityInfo_Name) == 0x000010, "Member 'WB_ItemTooltipContent_C_Get_ItemType_Text_0::CallFunc_GetRarityInfo_Name' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_ItemType_Text_0, CallFunc_GetRarityInfo_Color) == 0x000020, "Member 'WB_ItemTooltipContent_C_Get_ItemType_Text_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.Get_Name_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_ItemTooltipContent_C_Get_Name_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_ItemTooltipContent_C_Get_Name_Text_0) == 0x000008, "Wrong alignment on WB_ItemTooltipContent_C_Get_Name_Text_0");
-static_assert(sizeof(WB_ItemTooltipContent_C_Get_Name_Text_0) == 0x000030, "Wrong size on WB_ItemTooltipContent_C_Get_Name_Text_0");
+static_assert(sizeof(WB_ItemTooltipContent_C_Get_Name_Text_0) == 0x000020, "Wrong size on WB_ItemTooltipContent_C_Get_Name_Text_0");
 static_assert(offsetof(WB_ItemTooltipContent_C_Get_Name_Text_0, ReturnValue) == 0x000000, "Member 'WB_ItemTooltipContent_C_Get_Name_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_Get_Name_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_ItemTooltipContent_C_Get_Name_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_Get_Name_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_ItemTooltipContent_C_Get_Name_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.GetBrush_0
 // 0x01A0 (0x01A0 - 0x0000)
@@ -139,27 +144,19 @@ static_assert(offsetof(WB_ItemTooltipContent_C_GetBrush_0, ReturnValue) == 0x000
 static_assert(offsetof(WB_ItemTooltipContent_C_GetBrush_0, K2Node_MakeStruct_SlateBrush) == 0x0000D0, "Member 'WB_ItemTooltipContent_C_GetBrush_0::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.GetText_0
-// 0x0110 (0x0110 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_ItemTooltipContent_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   Marketable;                                        // 0x0018(0x0018)(Edit, BlueprintVisible)
-	class FText                                   Tradable;                                          // 0x0030(0x0018)(Edit, BlueprintVisible)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0098(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00F8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   Marketable;                                        // 0x0010(0x0010)(Edit, BlueprintVisible)
+	class FText                                   Tradable;                                          // 0x0020(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(WB_ItemTooltipContent_C_GetText_0) == 0x000008, "Wrong alignment on WB_ItemTooltipContent_C_GetText_0");
-static_assert(sizeof(WB_ItemTooltipContent_C_GetText_0) == 0x000110, "Wrong size on WB_ItemTooltipContent_C_GetText_0");
+static_assert(sizeof(WB_ItemTooltipContent_C_GetText_0) == 0x000030, "Wrong size on WB_ItemTooltipContent_C_GetText_0");
 static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_ItemTooltipContent_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, Marketable) == 0x000018, "Member 'WB_ItemTooltipContent_C_GetText_0::Marketable' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, Tradable) == 0x000030, "Member 'WB_ItemTooltipContent_C_GetText_0::Tradable' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'WB_ItemTooltipContent_C_GetText_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000098, "Member 'WB_ItemTooltipContent_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, K2Node_MakeArray_Array) == 0x0000E8, "Member 'WB_ItemTooltipContent_C_GetText_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, CallFunc_Format_ReturnValue) == 0x0000F8, "Member 'WB_ItemTooltipContent_C_GetText_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, Marketable) == 0x000010, "Member 'WB_ItemTooltipContent_C_GetText_0::Marketable' has a wrong offset!");
+static_assert(offsetof(WB_ItemTooltipContent_C_GetText_0, Tradable) == 0x000020, "Member 'WB_ItemTooltipContent_C_GetText_0::Tradable' has a wrong offset!");
 
 // Function WB_ItemTooltipContent.WB_ItemTooltipContent_C.GetVisibility_0
 // 0x0001 (0x0001 - 0x0000)

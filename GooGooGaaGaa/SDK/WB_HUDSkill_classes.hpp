@@ -19,29 +19,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_HUDSkill.WB_HUDSkill_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_HUDSkill_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 SkillBorder;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SkillCooldownText;                                 // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SkillImage;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_0;                                     // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               GrayscaleMaterial;                                 // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentCooldown;                                   // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         Skill;                                             // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ActionName;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 SkillBorder;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SkillCooldownText;                                 // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SkillImage;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_0;                                     // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               GrayscaleMaterial;                                 // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentCooldown;                                   // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         Skill;                                             // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ActionName;                                        // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	ESlateVisibility GetActionIconVisibility();
-	ESlateVisibility GetVisibility_0();
-	class FText Get_SkillCooldownText_Text_0();
-	struct FSlateBrush GetBrush_0();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Construct();
 	void ExecuteUbergraph_WB_HUDSkill(int32 EntryPoint);
+	class FText Get_SkillCooldownText_Text_0();
+	ESlateVisibility GetActionIconVisibility();
+	struct FSlateBrush GetBrush_0();
+	ESlateVisibility GetVisibility_0();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()
@@ -54,17 +54,17 @@ public:
 	}
 };
 static_assert(alignof(UWB_HUDSkill_C) == 0x000008, "Wrong alignment on UWB_HUDSkill_C");
-static_assert(sizeof(UWB_HUDSkill_C) == 0x000310, "Wrong size on UWB_HUDSkill_C");
-static_assert(offsetof(UWB_HUDSkill_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_HUDSkill_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, SkillBorder) == 0x0002C8, "Member 'UWB_HUDSkill_C::SkillBorder' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, SkillCooldownText) == 0x0002D0, "Member 'UWB_HUDSkill_C::SkillCooldownText' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, SkillImage) == 0x0002D8, "Member 'UWB_HUDSkill_C::SkillImage' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, VerticalBox_0) == 0x0002E0, "Member 'UWB_HUDSkill_C::VerticalBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, WB_ActionIcon) == 0x0002E8, "Member 'UWB_HUDSkill_C::WB_ActionIcon' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, GrayscaleMaterial) == 0x0002F0, "Member 'UWB_HUDSkill_C::GrayscaleMaterial' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, CurrentCooldown) == 0x0002F8, "Member 'UWB_HUDSkill_C::CurrentCooldown' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, Skill) == 0x000300, "Member 'UWB_HUDSkill_C::Skill' has a wrong offset!");
-static_assert(offsetof(UWB_HUDSkill_C, ActionName) == 0x000308, "Member 'UWB_HUDSkill_C::ActionName' has a wrong offset!");
+static_assert(sizeof(UWB_HUDSkill_C) == 0x000330, "Wrong size on UWB_HUDSkill_C");
+static_assert(offsetof(UWB_HUDSkill_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_HUDSkill_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, SkillBorder) == 0x0002E8, "Member 'UWB_HUDSkill_C::SkillBorder' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, SkillCooldownText) == 0x0002F0, "Member 'UWB_HUDSkill_C::SkillCooldownText' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, SkillImage) == 0x0002F8, "Member 'UWB_HUDSkill_C::SkillImage' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, VerticalBox_0) == 0x000300, "Member 'UWB_HUDSkill_C::VerticalBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, WB_ActionIcon) == 0x000308, "Member 'UWB_HUDSkill_C::WB_ActionIcon' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, GrayscaleMaterial) == 0x000310, "Member 'UWB_HUDSkill_C::GrayscaleMaterial' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, CurrentCooldown) == 0x000318, "Member 'UWB_HUDSkill_C::CurrentCooldown' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, Skill) == 0x000320, "Member 'UWB_HUDSkill_C::Skill' has a wrong offset!");
+static_assert(offsetof(UWB_HUDSkill_C, ActionName) == 0x000328, "Member 'UWB_HUDSkill_C::ActionName' has a wrong offset!");
 
 }
 

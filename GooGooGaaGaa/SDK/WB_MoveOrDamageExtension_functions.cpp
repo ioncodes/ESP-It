@@ -80,9 +80,9 @@ ESlateVisibility UWB_MoveOrDamageExtension_C::GetVisibility_0()
 // Function WB_MoveOrDamageExtension.WB_MoveOrDamageExtension_C.SetRemainingTime
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_RemainingTime                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RemainingTime_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MoveOrDamageExtension_C::SetRemainingTime(double Param_RemainingTime)
+void UWB_MoveOrDamageExtension_C::SetRemainingTime(double RemainingTime_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -91,7 +91,7 @@ void UWB_MoveOrDamageExtension_C::SetRemainingTime(double Param_RemainingTime)
 
 	Params::WB_MoveOrDamageExtension_C_SetRemainingTime Parms{};
 
-	Parms.Param_RemainingTime = Param_RemainingTime;
+	Parms.RemainingTime_0 = RemainingTime_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

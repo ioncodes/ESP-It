@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "NetCore_structs.hpp"
 
 
@@ -137,7 +137,7 @@ public:
 	int32                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Pos;                                               // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EC8[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BitmaskLibrary_IsBitSet) == 0x000004, "Wrong alignment on BitmaskLibrary_IsBitSet");
 static_assert(sizeof(BitmaskLibrary_IsBitSet) == 0x00000C, "Wrong size on BitmaskLibrary_IsBitSet");
@@ -335,7 +335,7 @@ struct BpInputSettingsLibrary_GetInputMode final
 public:
 	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInputMode                                    ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EC9[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BpInputSettingsLibrary_GetInputMode) == 0x000008, "Wrong alignment on BpInputSettingsLibrary_GetInputMode");
 static_assert(sizeof(BpInputSettingsLibrary_GetInputMode) == 0x000010, "Wrong size on BpInputSettingsLibrary_GetInputMode");
@@ -362,7 +362,7 @@ struct BpInputSettingsLibrary_GetKeyBindingsForAxis final
 public:
 	class FName                                   AxisName;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Scale;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ECA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FInputAxisKeyMapping>           Bindings;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BpInputSettingsLibrary_GetKeyBindingsForAxis) == 0x000008, "Wrong alignment on BpInputSettingsLibrary_GetKeyBindingsForAxis");
@@ -483,7 +483,7 @@ struct BpVideoSettingsLibrary_ChangeScreenResolution final
 public:
 	struct FSupportedResolution                   Resolution;                                        // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	EWindowMode                                   WindowMode;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ECB[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BpVideoSettingsLibrary_ChangeScreenResolution) == 0x000008, "Wrong alignment on BpVideoSettingsLibrary_ChangeScreenResolution");
 static_assert(sizeof(BpVideoSettingsLibrary_ChangeScreenResolution) == 0x000020, "Wrong size on BpVideoSettingsLibrary_ChangeScreenResolution");
@@ -541,7 +541,7 @@ struct BpVideoSettingsLibrary_GetScreenResolution final
 public:
 	struct FSupportedResolution                   Resolution;                                        // 0x0000(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EWindowMode                                   WindowMode;                                        // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ECC[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BpVideoSettingsLibrary_GetScreenResolution) == 0x000008, "Wrong alignment on BpVideoSettingsLibrary_GetScreenResolution");
 static_assert(sizeof(BpVideoSettingsLibrary_GetScreenResolution) == 0x000020, "Wrong size on BpVideoSettingsLibrary_GetScreenResolution");
@@ -655,7 +655,7 @@ struct BpVideoSettingsLibrary_SetScreenResolution final
 public:
 	struct FSupportedResolution                   Resolution;                                        // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	EWindowMode                                   WindowMode;                                        // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ECD[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BpVideoSettingsLibrary_SetScreenResolution) == 0x000008, "Wrong alignment on BpVideoSettingsLibrary_SetScreenResolution");
 static_assert(sizeof(BpVideoSettingsLibrary_SetScreenResolution) == 0x000020, "Wrong size on BpVideoSettingsLibrary_SetScreenResolution");
@@ -714,7 +714,7 @@ struct CommandLineFunctionLibrary_GetValue final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFound;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ECE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CommandLineFunctionLibrary_GetValue) == 0x000008, "Wrong alignment on CommandLineFunctionLibrary_GetValue");
@@ -730,7 +730,7 @@ struct CommandLineFunctionLibrary_HasToken final
 public:
 	class FString                                 Token;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ECF[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CommandLineFunctionLibrary_HasToken) == 0x000008, "Wrong alignment on CommandLineFunctionLibrary_HasToken");
 static_assert(sizeof(CommandLineFunctionLibrary_HasToken) == 0x000018, "Wrong size on CommandLineFunctionLibrary_HasToken");
@@ -744,7 +744,7 @@ struct CustomLogSubsystem_AddLogTarget final
 public:
 	class FString                                 Host;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Port;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Tag;                                               // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CustomLogSubsystem_AddLogTarget) == 0x000008, "Wrong alignment on CustomLogSubsystem_AddLogTarget");
@@ -754,17 +754,17 @@ static_assert(offsetof(CustomLogSubsystem_AddLogTarget, Port) == 0x000010, "Memb
 static_assert(offsetof(CustomLogSubsystem_AddLogTarget, Tag) == 0x000018, "Member 'CustomLogSubsystem_AddLogTarget::Tag' has a wrong offset!");
 
 // Function PropWitchHuntModule.CustomLogSubsystem.Log
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct CustomLogSubsystem_Log final
 {
 public:
-	class FText                                   TextToLog;                                         // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	class FName                                   Category;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   TextToLog;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class FName                                   Category;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CustomLogSubsystem_Log) == 0x000008, "Wrong alignment on CustomLogSubsystem_Log");
-static_assert(sizeof(CustomLogSubsystem_Log) == 0x000020, "Wrong size on CustomLogSubsystem_Log");
+static_assert(sizeof(CustomLogSubsystem_Log) == 0x000018, "Wrong size on CustomLogSubsystem_Log");
 static_assert(offsetof(CustomLogSubsystem_Log, TextToLog) == 0x000000, "Member 'CustomLogSubsystem_Log::TextToLog' has a wrong offset!");
-static_assert(offsetof(CustomLogSubsystem_Log, Category) == 0x000018, "Member 'CustomLogSubsystem_Log::Category' has a wrong offset!");
+static_assert(offsetof(CustomLogSubsystem_Log, Category) == 0x000010, "Member 'CustomLogSubsystem_Log::Category' has a wrong offset!");
 
 // Function PropWitchHuntModule.CustomLogSubsystem.LogString
 // 0x0018 (0x0018 - 0x0000)
@@ -778,23 +778,6 @@ static_assert(alignof(CustomLogSubsystem_LogString) == 0x000008, "Wrong alignmen
 static_assert(sizeof(CustomLogSubsystem_LogString) == 0x000018, "Wrong size on CustomLogSubsystem_LogString");
 static_assert(offsetof(CustomLogSubsystem_LogString, StringToLog) == 0x000000, "Member 'CustomLogSubsystem_LogString::StringToLog' has a wrong offset!");
 static_assert(offsetof(CustomLogSubsystem_LogString, Category) == 0x000010, "Member 'CustomLogSubsystem_LogString::Category' has a wrong offset!");
-
-// Function PropWitchHuntModule.DeserializeItemsCallbackProxy.DeserializeItems
-// 0x0028 (0x0028 - 0x0000)
-struct DeserializeItemsCallbackProxy_DeserializeItems final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintItemSerialization            ItemSerialization;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UDeserializeItemsCallbackProxy*         ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(DeserializeItemsCallbackProxy_DeserializeItems) == 0x000008, "Wrong alignment on DeserializeItemsCallbackProxy_DeserializeItems");
-static_assert(sizeof(DeserializeItemsCallbackProxy_DeserializeItems) == 0x000028, "Wrong size on DeserializeItemsCallbackProxy_DeserializeItems");
-static_assert(offsetof(DeserializeItemsCallbackProxy_DeserializeItems, WorldContextObject) == 0x000000, "Member 'DeserializeItemsCallbackProxy_DeserializeItems::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(DeserializeItemsCallbackProxy_DeserializeItems, PlayerController) == 0x000008, "Member 'DeserializeItemsCallbackProxy_DeserializeItems::PlayerController' has a wrong offset!");
-static_assert(offsetof(DeserializeItemsCallbackProxy_DeserializeItems, ItemSerialization) == 0x000010, "Member 'DeserializeItemsCallbackProxy_DeserializeItems::ItemSerialization' has a wrong offset!");
-static_assert(offsetof(DeserializeItemsCallbackProxy_DeserializeItems, ReturnValue) == 0x000020, "Member 'DeserializeItemsCallbackProxy_DeserializeItems::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.DeveloperModeSubsystem.CouldEnableDeveloperMode
 // 0x0001 (0x0001 - 0x0000)
@@ -826,13 +809,29 @@ public:
 	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasValue;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED5[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DeveloperModeSubsystem_GetBoolSetting) == 0x000004, "Wrong alignment on DeveloperModeSubsystem_GetBoolSetting");
 static_assert(sizeof(DeveloperModeSubsystem_GetBoolSetting) == 0x00000C, "Wrong size on DeveloperModeSubsystem_GetBoolSetting");
 static_assert(offsetof(DeveloperModeSubsystem_GetBoolSetting, SettingName) == 0x000000, "Member 'DeveloperModeSubsystem_GetBoolSetting::SettingName' has a wrong offset!");
 static_assert(offsetof(DeveloperModeSubsystem_GetBoolSetting, bHasValue) == 0x000008, "Member 'DeveloperModeSubsystem_GetBoolSetting::bHasValue' has a wrong offset!");
 static_assert(offsetof(DeveloperModeSubsystem_GetBoolSetting, ReturnValue) == 0x000009, "Member 'DeveloperModeSubsystem_GetBoolSetting::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.DeveloperModeSubsystem.GetFloatSetting
+// 0x0010 (0x0010 - 0x0000)
+struct DeveloperModeSubsystem_GetFloatSetting final
+{
+public:
+	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasValue;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DeveloperModeSubsystem_GetFloatSetting) == 0x000004, "Wrong alignment on DeveloperModeSubsystem_GetFloatSetting");
+static_assert(sizeof(DeveloperModeSubsystem_GetFloatSetting) == 0x000010, "Wrong size on DeveloperModeSubsystem_GetFloatSetting");
+static_assert(offsetof(DeveloperModeSubsystem_GetFloatSetting, SettingName) == 0x000000, "Member 'DeveloperModeSubsystem_GetFloatSetting::SettingName' has a wrong offset!");
+static_assert(offsetof(DeveloperModeSubsystem_GetFloatSetting, bHasValue) == 0x000008, "Member 'DeveloperModeSubsystem_GetFloatSetting::bHasValue' has a wrong offset!");
+static_assert(offsetof(DeveloperModeSubsystem_GetFloatSetting, ReturnValue) == 0x00000C, "Member 'DeveloperModeSubsystem_GetFloatSetting::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.DeveloperModeSubsystem.GetInt32Setting
 // 0x0010 (0x0010 - 0x0000)
@@ -841,7 +840,7 @@ struct DeveloperModeSubsystem_GetInt32Setting final
 public:
 	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasValue;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED6[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DeveloperModeSubsystem_GetInt32Setting) == 0x000004, "Wrong alignment on DeveloperModeSubsystem_GetInt32Setting");
@@ -857,7 +856,7 @@ struct DeveloperModeSubsystem_GetStringSetting final
 public:
 	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasValue;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED7[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DeveloperModeSubsystem_GetStringSetting) == 0x000008, "Wrong alignment on DeveloperModeSubsystem_GetStringSetting");
@@ -873,7 +872,7 @@ struct DeveloperModeSubsystem_HasAnySetting final
 public:
 	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED8[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DeveloperModeSubsystem_HasAnySetting) == 0x000004, "Wrong alignment on DeveloperModeSubsystem_HasAnySetting");
 static_assert(sizeof(DeveloperModeSubsystem_HasAnySetting) == 0x00000C, "Wrong size on DeveloperModeSubsystem_HasAnySetting");
@@ -887,12 +886,25 @@ struct DeveloperModeSubsystem_SetBoolSetting final
 public:
 	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bValue;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ED9[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DeveloperModeSubsystem_SetBoolSetting) == 0x000004, "Wrong alignment on DeveloperModeSubsystem_SetBoolSetting");
 static_assert(sizeof(DeveloperModeSubsystem_SetBoolSetting) == 0x00000C, "Wrong size on DeveloperModeSubsystem_SetBoolSetting");
 static_assert(offsetof(DeveloperModeSubsystem_SetBoolSetting, SettingName) == 0x000000, "Member 'DeveloperModeSubsystem_SetBoolSetting::SettingName' has a wrong offset!");
 static_assert(offsetof(DeveloperModeSubsystem_SetBoolSetting, bValue) == 0x000008, "Member 'DeveloperModeSubsystem_SetBoolSetting::bValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.DeveloperModeSubsystem.SetFloatSetting
+// 0x000C (0x000C - 0x0000)
+struct DeveloperModeSubsystem_SetFloatSetting final
+{
+public:
+	class FName                                   SettingName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DeveloperModeSubsystem_SetFloatSetting) == 0x000004, "Wrong alignment on DeveloperModeSubsystem_SetFloatSetting");
+static_assert(sizeof(DeveloperModeSubsystem_SetFloatSetting) == 0x00000C, "Wrong size on DeveloperModeSubsystem_SetFloatSetting");
+static_assert(offsetof(DeveloperModeSubsystem_SetFloatSetting, SettingName) == 0x000000, "Member 'DeveloperModeSubsystem_SetFloatSetting::SettingName' has a wrong offset!");
+static_assert(offsetof(DeveloperModeSubsystem_SetFloatSetting, Value) == 0x000008, "Member 'DeveloperModeSubsystem_SetFloatSetting::Value' has a wrong offset!");
 
 // Function PropWitchHuntModule.DeveloperModeSubsystem.SetInt32Setting
 // 0x000C (0x000C - 0x0000)
@@ -961,7 +973,7 @@ public:
 	class FString                                 URL;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StringToPost;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         QueryID;                                           // 0x0028(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EDB[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDownloadStringCallbackProxy*           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DownloadStringCallbackProxy_UploadStringQuery) == 0x000008, "Wrong alignment on DownloadStringCallbackProxy_UploadStringQuery");
@@ -978,7 +990,7 @@ struct FileHelperBlueprint_GetUnrealPath final
 {
 public:
 	EUnrealPath                                   UnrealPath;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EDC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FileHelperBlueprint_GetUnrealPath) == 0x000008, "Wrong alignment on FileHelperBlueprint_GetUnrealPath");
@@ -995,7 +1007,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlueprintOnlineItem                   ItemToConsume;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         Quantity;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EDE[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGetAllItemsCallbackProxy*              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GetAllItemsCallbackProxy_ConsumeItem) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_ConsumeItem");
@@ -1064,7 +1076,7 @@ struct GetAllItemsCallbackProxy_GetItemDefinitionId final
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EDF[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GetAllItemsCallbackProxy_GetItemDefinitionId) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_GetItemDefinitionId");
 static_assert(sizeof(GetAllItemsCallbackProxy_GetItemDefinitionId) == 0x000018, "Wrong size on GetAllItemsCallbackProxy_GetItemDefinitionId");
@@ -1078,7 +1090,7 @@ struct GetAllItemsCallbackProxy_GetItemFlags final
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE0[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GetAllItemsCallbackProxy_GetItemFlags) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_GetItemFlags");
 static_assert(sizeof(GetAllItemsCallbackProxy_GetItemFlags) == 0x000018, "Wrong size on GetAllItemsCallbackProxy_GetItemFlags");
@@ -1105,7 +1117,7 @@ struct GetAllItemsCallbackProxy_GetItemQuantity final
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE1[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GetAllItemsCallbackProxy_GetItemQuantity) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_GetItemQuantity");
 static_assert(sizeof(GetAllItemsCallbackProxy_GetItemQuantity) == 0x000018, "Wrong size on GetAllItemsCallbackProxy_GetItemQuantity");
@@ -1134,7 +1146,7 @@ struct GetAllItemsCallbackProxy_SetItemDefinitionId final
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         DefinitionId;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE2[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GetAllItemsCallbackProxy_SetItemDefinitionId) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_SetItemDefinitionId");
 static_assert(sizeof(GetAllItemsCallbackProxy_SetItemDefinitionId) == 0x000018, "Wrong size on GetAllItemsCallbackProxy_SetItemDefinitionId");
@@ -1147,13 +1159,13 @@ struct GetAllItemsCallbackProxy_SetItemFlags final
 {
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         Param_Flags;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE3[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Flags_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GetAllItemsCallbackProxy_SetItemFlags) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_SetItemFlags");
 static_assert(sizeof(GetAllItemsCallbackProxy_SetItemFlags) == 0x000018, "Wrong size on GetAllItemsCallbackProxy_SetItemFlags");
 static_assert(offsetof(GetAllItemsCallbackProxy_SetItemFlags, Item) == 0x000000, "Member 'GetAllItemsCallbackProxy_SetItemFlags::Item' has a wrong offset!");
-static_assert(offsetof(GetAllItemsCallbackProxy_SetItemFlags, Param_Flags) == 0x000010, "Member 'GetAllItemsCallbackProxy_SetItemFlags::Param_Flags' has a wrong offset!");
+static_assert(offsetof(GetAllItemsCallbackProxy_SetItemFlags, Flags_0) == 0x000010, "Member 'GetAllItemsCallbackProxy_SetItemFlags::Flags_0' has a wrong offset!");
 
 // Function PropWitchHuntModule.GetAllItemsCallbackProxy.SetItemQuantity
 // 0x0018 (0x0018 - 0x0000)
@@ -1162,7 +1174,7 @@ struct GetAllItemsCallbackProxy_SetItemQuantity final
 public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         Quantity;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE4[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GetAllItemsCallbackProxy_SetItemQuantity) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_SetItemQuantity");
 static_assert(sizeof(GetAllItemsCallbackProxy_SetItemQuantity) == 0x000018, "Wrong size on GetAllItemsCallbackProxy_SetItemQuantity");
@@ -1177,7 +1189,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ItemDefinitionId;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE5[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGetAllItemsCallbackProxy*              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GetAllItemsCallbackProxy_TriggerItemDrop) == 0x000008, "Wrong alignment on GetAllItemsCallbackProxy_TriggerItemDrop");
@@ -1214,13 +1226,13 @@ static_assert(offsetof(GetAllItemsCallbackProxy_RequestItemExchangeResponse, Req
 struct ImageLoader_LoadImageFromDisk final
 {
 public:
-	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ImagePath;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ImageLoader_LoadImageFromDisk) == 0x000008, "Wrong alignment on ImageLoader_LoadImageFromDisk");
 static_assert(sizeof(ImageLoader_LoadImageFromDisk) == 0x000020, "Wrong size on ImageLoader_LoadImageFromDisk");
-static_assert(offsetof(ImageLoader_LoadImageFromDisk, Param_Outer) == 0x000000, "Member 'ImageLoader_LoadImageFromDisk::Param_Outer' has a wrong offset!");
+static_assert(offsetof(ImageLoader_LoadImageFromDisk, Outer_0) == 0x000000, "Member 'ImageLoader_LoadImageFromDisk::Outer_0' has a wrong offset!");
 static_assert(offsetof(ImageLoader_LoadImageFromDisk, ImagePath) == 0x000008, "Member 'ImageLoader_LoadImageFromDisk::ImagePath' has a wrong offset!");
 static_assert(offsetof(ImageLoader_LoadImageFromDisk, ReturnValue) == 0x000018, "Member 'ImageLoader_LoadImageFromDisk::ReturnValue' has a wrong offset!");
 
@@ -1332,7 +1344,7 @@ public:
 	struct FBPUniqueNetId                         LocalPlayerNetId;                                  // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         PlayerNetId;                                       // 0x0020(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EE9[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSubsystemLibrary_IsPlayerBlocked) == 0x000008, "Wrong alignment on OnlineSubsystemLibrary_IsPlayerBlocked");
 static_assert(sizeof(OnlineSubsystemLibrary_IsPlayerBlocked) == 0x000048, "Wrong size on OnlineSubsystemLibrary_IsPlayerBlocked");
@@ -1357,7 +1369,7 @@ struct PhysicalSoundComponent_GetLatestVelocity final
 {
 public:
 	int32                                         TicksToGoBack;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EEB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PhysicalSoundComponent_GetLatestVelocity) == 0x000008, "Wrong alignment on PhysicalSoundComponent_GetLatestVelocity");
@@ -1366,17 +1378,17 @@ static_assert(offsetof(PhysicalSoundComponent_GetLatestVelocity, TicksToGoBack) 
 static_assert(offsetof(PhysicalSoundComponent_GetLatestVelocity, ReturnValue) == 0x000008, "Member 'PhysicalSoundComponent_GetLatestVelocity::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.PhysicalSoundComponent.OnMeshHit
-// 0x0110 (0x0110 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct PhysicalSoundComponent_OnMeshHit final
 {
 public:
 	class AActor*                                 SelfActor;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                NormalImpulse;                                     // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             Hit;                                               // 0x0028(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x0028(0x00F8)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PhysicalSoundComponent_OnMeshHit) == 0x000008, "Wrong alignment on PhysicalSoundComponent_OnMeshHit");
-static_assert(sizeof(PhysicalSoundComponent_OnMeshHit) == 0x000110, "Wrong size on PhysicalSoundComponent_OnMeshHit");
+static_assert(sizeof(PhysicalSoundComponent_OnMeshHit) == 0x000120, "Wrong size on PhysicalSoundComponent_OnMeshHit");
 static_assert(offsetof(PhysicalSoundComponent_OnMeshHit, SelfActor) == 0x000000, "Member 'PhysicalSoundComponent_OnMeshHit::SelfActor' has a wrong offset!");
 static_assert(offsetof(PhysicalSoundComponent_OnMeshHit, OtherActor) == 0x000008, "Member 'PhysicalSoundComponent_OnMeshHit::OtherActor' has a wrong offset!");
 static_assert(offsetof(PhysicalSoundComponent_OnMeshHit, NormalImpulse) == 0x000010, "Member 'PhysicalSoundComponent_OnMeshHit::NormalImpulse' has a wrong offset!");
@@ -1416,7 +1428,7 @@ public:
 	double                                        DotProduct;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        ClampedVelocity;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EEC[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicalSoundComponent_ShouldCollisionSoundPlay) == 0x000008, "Wrong alignment on PhysicalSoundComponent_ShouldCollisionSoundPlay");
 static_assert(sizeof(PhysicalSoundComponent_ShouldCollisionSoundPlay) == 0x000018, "Wrong size on PhysicalSoundComponent_ShouldCollisionSoundPlay");
@@ -1432,7 +1444,7 @@ public:
 	double                                        DotProduct;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        ClampedVelocity;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EED[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PhysicalSoundComponent_ShouldSlideSoundPlay) == 0x000008, "Wrong alignment on PhysicalSoundComponent_ShouldSlideSoundPlay");
 static_assert(sizeof(PhysicalSoundComponent_ShouldSlideSoundPlay) == 0x000018, "Wrong size on PhysicalSoundComponent_ShouldSlideSoundPlay");
@@ -1491,53 +1503,19 @@ static_assert(offsetof(ProjectVersionBlueprint_AddActorComponent, ActorComponent
 static_assert(offsetof(ProjectVersionBlueprint_AddActorComponent, ReturnValue) == 0x000010, "Member 'ProjectVersionBlueprint_AddActorComponent::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.BanPlayer
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct ProjectVersionBlueprint_BanPlayer final
 {
 public:
 	class AGameModeBase*                          GameMode;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      BannedPlayer;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   BanReason;                                         // 0x0010(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   BanReason;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ProjectVersionBlueprint_BanPlayer) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_BanPlayer");
-static_assert(sizeof(ProjectVersionBlueprint_BanPlayer) == 0x000028, "Wrong size on ProjectVersionBlueprint_BanPlayer");
+static_assert(sizeof(ProjectVersionBlueprint_BanPlayer) == 0x000020, "Wrong size on ProjectVersionBlueprint_BanPlayer");
 static_assert(offsetof(ProjectVersionBlueprint_BanPlayer, GameMode) == 0x000000, "Member 'ProjectVersionBlueprint_BanPlayer::GameMode' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_BanPlayer, BannedPlayer) == 0x000008, "Member 'ProjectVersionBlueprint_BanPlayer::BannedPlayer' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_BanPlayer, BanReason) == 0x000010, "Member 'ProjectVersionBlueprint_BanPlayer::BanReason' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.ClearAchievement
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_ClearAchievement final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF1[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_ClearAchievement) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_ClearAchievement");
-static_assert(sizeof(ProjectVersionBlueprint_ClearAchievement) == 0x000018, "Wrong size on ProjectVersionBlueprint_ClearAchievement");
-static_assert(offsetof(ProjectVersionBlueprint_ClearAchievement, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_ClearAchievement::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ClearAchievement, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_ClearAchievement::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ClearAchievement, ReturnValue) == 0x000010, "Member 'ProjectVersionBlueprint_ClearAchievement::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.ClearGSAchievement
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_ClearGSAchievement final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF2[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_ClearGSAchievement) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_ClearGSAchievement");
-static_assert(sizeof(ProjectVersionBlueprint_ClearGSAchievement) == 0x000020, "Wrong size on ProjectVersionBlueprint_ClearGSAchievement");
-static_assert(offsetof(ProjectVersionBlueprint_ClearGSAchievement, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_ClearGSAchievement::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ClearGSAchievement, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_ClearGSAchievement::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ClearGSAchievement, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_ClearGSAchievement::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ClearGSAchievement, ReturnValue) == 0x000018, "Member 'ProjectVersionBlueprint_ClearGSAchievement::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.ComponentEncroachesGeometry
 // 0x0090 (0x0090 - 0x0000)
@@ -1549,7 +1527,7 @@ public:
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         IgnoreActors;                                      // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF3[0xF];                                     // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_ComponentEncroachesGeometry) == 0x000010, "Wrong alignment on ProjectVersionBlueprint_ComponentEncroachesGeometry");
 static_assert(sizeof(ProjectVersionBlueprint_ComponentEncroachesGeometry) == 0x000090, "Wrong size on ProjectVersionBlueprint_ComponentEncroachesGeometry");
@@ -1558,24 +1536,6 @@ static_assert(offsetof(ProjectVersionBlueprint_ComponentEncroachesGeometry, Prim
 static_assert(offsetof(ProjectVersionBlueprint_ComponentEncroachesGeometry, Transform) == 0x000010, "Member 'ProjectVersionBlueprint_ComponentEncroachesGeometry::Transform' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_ComponentEncroachesGeometry, IgnoreActors) == 0x000070, "Member 'ProjectVersionBlueprint_ComponentEncroachesGeometry::IgnoreActors' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_ComponentEncroachesGeometry, ReturnValue) == 0x000080, "Member 'ProjectVersionBlueprint_ComponentEncroachesGeometry::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetAchievement
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_GetAchievement final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Achieved;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF4[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_GetAchievement) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetAchievement");
-static_assert(sizeof(ProjectVersionBlueprint_GetAchievement) == 0x000018, "Wrong size on ProjectVersionBlueprint_GetAchievement");
-static_assert(offsetof(ProjectVersionBlueprint_GetAchievement, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetAchievement::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetAchievement, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_GetAchievement::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetAchievement, Achieved) == 0x000010, "Member 'ProjectVersionBlueprint_GetAchievement::Achieved' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetAchievement, ReturnValue) == 0x000011, "Member 'ProjectVersionBlueprint_GetAchievement::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.GetAllChildBlueprintClasses
 // 0x0018 (0x0018 - 0x0000)
@@ -1673,7 +1633,7 @@ public:
 	class FString                                 RootFolderFullPath;                                // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Ext;                                               // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF5[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_GetFiles) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetFiles");
 static_assert(sizeof(ProjectVersionBlueprint_GetFiles) == 0x000038, "Wrong size on ProjectVersionBlueprint_GetFiles");
@@ -1694,66 +1654,6 @@ static_assert(alignof(ProjectVersionBlueprint_GetFirstLocalPlayerController) == 
 static_assert(sizeof(ProjectVersionBlueprint_GetFirstLocalPlayerController) == 0x000010, "Wrong size on ProjectVersionBlueprint_GetFirstLocalPlayerController");
 static_assert(offsetof(ProjectVersionBlueprint_GetFirstLocalPlayerController, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetFirstLocalPlayerController::GameInstance' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_GetFirstLocalPlayerController, ReturnValue) == 0x000008, "Member 'ProjectVersionBlueprint_GetFirstLocalPlayerController::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetGSAchievement
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_GetGSAchievement final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Achieved;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF6[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_GetGSAchievement) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetGSAchievement");
-static_assert(sizeof(ProjectVersionBlueprint_GetGSAchievement) == 0x000020, "Wrong size on ProjectVersionBlueprint_GetGSAchievement");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSAchievement, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetGSAchievement::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSAchievement, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_GetGSAchievement::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSAchievement, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_GetGSAchievement::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSAchievement, Achieved) == 0x000018, "Member 'ProjectVersionBlueprint_GetGSAchievement::Achieved' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSAchievement, ReturnValue) == 0x000019, "Member 'ProjectVersionBlueprint_GetGSAchievement::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetGSOnlineStatFloat
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_GetGSOnlineStatFloat final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF7[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_GetGSOnlineStatFloat) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetGSOnlineStatFloat");
-static_assert(sizeof(ProjectVersionBlueprint_GetGSOnlineStatFloat) == 0x000020, "Wrong size on ProjectVersionBlueprint_GetGSOnlineStatFloat");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatFloat, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetGSOnlineStatFloat::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatFloat, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_GetGSOnlineStatFloat::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatFloat, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_GetGSOnlineStatFloat::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatFloat, Value) == 0x000018, "Member 'ProjectVersionBlueprint_GetGSOnlineStatFloat::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatFloat, ReturnValue) == 0x00001C, "Member 'ProjectVersionBlueprint_GetGSOnlineStatFloat::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetGSOnlineStatInt
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_GetGSOnlineStatInt final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF8[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_GetGSOnlineStatInt) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetGSOnlineStatInt");
-static_assert(sizeof(ProjectVersionBlueprint_GetGSOnlineStatInt) == 0x000020, "Wrong size on ProjectVersionBlueprint_GetGSOnlineStatInt");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatInt, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetGSOnlineStatInt::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatInt, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_GetGSOnlineStatInt::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatInt, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_GetGSOnlineStatInt::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatInt, Value) == 0x000018, "Member 'ProjectVersionBlueprint_GetGSOnlineStatInt::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetGSOnlineStatInt, ReturnValue) == 0x00001C, "Member 'ProjectVersionBlueprint_GetGSOnlineStatInt::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.GetItemProperty
 // 0x0030 (0x0030 - 0x0000)
@@ -1808,42 +1708,6 @@ static_assert(offsetof(ProjectVersionBlueprint_GetMemoryStats, AvailableVirtual)
 static_assert(offsetof(ProjectVersionBlueprint_GetMemoryStats, TotalPhysical) == 0x000018, "Member 'ProjectVersionBlueprint_GetMemoryStats::TotalPhysical' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_GetMemoryStats, TotalVirtual) == 0x00001C, "Member 'ProjectVersionBlueprint_GetMemoryStats::TotalVirtual' has a wrong offset!");
 
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetOnlineStatFloat
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_GetOnlineStatFloat final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF9[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_GetOnlineStatFloat) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetOnlineStatFloat");
-static_assert(sizeof(ProjectVersionBlueprint_GetOnlineStatFloat) == 0x000018, "Wrong size on ProjectVersionBlueprint_GetOnlineStatFloat");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatFloat, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetOnlineStatFloat::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatFloat, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_GetOnlineStatFloat::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatFloat, Value) == 0x000010, "Member 'ProjectVersionBlueprint_GetOnlineStatFloat::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatFloat, ReturnValue) == 0x000014, "Member 'ProjectVersionBlueprint_GetOnlineStatFloat::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetOnlineStatInt
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_GetOnlineStatInt final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFA[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_GetOnlineStatInt) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_GetOnlineStatInt");
-static_assert(sizeof(ProjectVersionBlueprint_GetOnlineStatInt) == 0x000018, "Wrong size on ProjectVersionBlueprint_GetOnlineStatInt");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatInt, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_GetOnlineStatInt::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatInt, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_GetOnlineStatInt::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatInt, Value) == 0x000010, "Member 'ProjectVersionBlueprint_GetOnlineStatInt::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_GetOnlineStatInt, ReturnValue) == 0x000014, "Member 'ProjectVersionBlueprint_GetOnlineStatInt::ReturnValue' has a wrong offset!");
-
 // Function PropWitchHuntModule.ProjectVersionBlueprint.GetProjectVersion
 // 0x0010 (0x0010 - 0x0000)
 struct ProjectVersionBlueprint_GetProjectVersion final
@@ -1889,7 +1753,7 @@ public:
 	class FString                                 SlotName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         UserIndex;                                         // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFB[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_HasSaveGameAnyBytes) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_HasSaveGameAnyBytes");
 static_assert(sizeof(ProjectVersionBlueprint_HasSaveGameAnyBytes) == 0x000018, "Wrong size on ProjectVersionBlueprint_HasSaveGameAnyBytes");
@@ -1917,7 +1781,7 @@ public:
 	struct FVector                                TestLocation;                                      // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               TestRotation;                                      // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFC[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_IsEncroachingBlockingGeometry) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_IsEncroachingBlockingGeometry");
 static_assert(sizeof(ProjectVersionBlueprint_IsEncroachingBlockingGeometry) == 0x000040, "Wrong size on ProjectVersionBlueprint_IsEncroachingBlockingGeometry");
@@ -1936,7 +1800,7 @@ public:
 	struct FRotator                               TestRotation;                                      // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                Adjust;                                            // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFD[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_IsEncroachingBlockingGeometryWithAdjustment) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_IsEncroachingBlockingGeometryWithAdjustment");
 static_assert(sizeof(ProjectVersionBlueprint_IsEncroachingBlockingGeometryWithAdjustment) == 0x000058, "Wrong size on ProjectVersionBlueprint_IsEncroachingBlockingGeometryWithAdjustment");
@@ -1954,7 +1818,7 @@ public:
 	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFE[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_IsLevelInitializedForActor) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_IsLevelInitializedForActor");
 static_assert(sizeof(ProjectVersionBlueprint_IsLevelInitializedForActor) == 0x000018, "Wrong size on ProjectVersionBlueprint_IsLevelInitializedForActor");
@@ -1980,7 +1844,7 @@ struct ProjectVersionBlueprint_IsPendingKill final
 public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EFF[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_IsPendingKill) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_IsPendingKill");
 static_assert(sizeof(ProjectVersionBlueprint_IsPendingKill) == 0x000010, "Wrong size on ProjectVersionBlueprint_IsPendingKill");
@@ -2005,7 +1869,7 @@ struct ProjectVersionBlueprint_IsSessionDedicatedServer final
 public:
 	struct FBlueprintSessionResult                Result;                                            // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0120(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F00[0x7];                                     // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_IsSessionDedicatedServer) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_IsSessionDedicatedServer");
 static_assert(sizeof(ProjectVersionBlueprint_IsSessionDedicatedServer) == 0x000128, "Wrong size on ProjectVersionBlueprint_IsSessionDedicatedServer");
@@ -2046,16 +1910,16 @@ static_assert(sizeof(ProjectVersionBlueprint_IsXboxBuild) == 0x000001, "Wrong si
 static_assert(offsetof(ProjectVersionBlueprint_IsXboxBuild, ReturnValue) == 0x000000, "Member 'ProjectVersionBlueprint_IsXboxBuild::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.KickPlayer
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct ProjectVersionBlueprint_KickPlayer final
 {
 public:
 	class AGameModeBase*                          GameMode;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      KickedPlayer;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   KickReason;                                        // 0x0010(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FText                                   KickReason;                                        // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ProjectVersionBlueprint_KickPlayer) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_KickPlayer");
-static_assert(sizeof(ProjectVersionBlueprint_KickPlayer) == 0x000028, "Wrong size on ProjectVersionBlueprint_KickPlayer");
+static_assert(sizeof(ProjectVersionBlueprint_KickPlayer) == 0x000020, "Wrong size on ProjectVersionBlueprint_KickPlayer");
 static_assert(offsetof(ProjectVersionBlueprint_KickPlayer, GameMode) == 0x000000, "Member 'ProjectVersionBlueprint_KickPlayer::GameMode' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_KickPlayer, KickedPlayer) == 0x000008, "Member 'ProjectVersionBlueprint_KickPlayer::KickedPlayer' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_KickPlayer, KickReason) == 0x000010, "Member 'ProjectVersionBlueprint_KickPlayer::KickReason' has a wrong offset!");
@@ -2067,7 +1931,7 @@ struct ProjectVersionBlueprint_LoadGameFromFile final
 public:
 	class FString                                 AbsoluteFileName;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         UserIndex;                                         // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F01[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ProjectVersionBlueprint_LoadGameFromFile) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_LoadGameFromFile");
@@ -2083,7 +1947,7 @@ struct ProjectVersionBlueprint_LoadItemDefinitions final
 public:
 	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F02[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_LoadItemDefinitions) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_LoadItemDefinitions");
 static_assert(sizeof(ProjectVersionBlueprint_LoadItemDefinitions) == 0x000010, "Wrong size on ProjectVersionBlueprint_LoadItemDefinitions");
@@ -2097,19 +1961,19 @@ struct ProjectVersionBlueprint_LoadPropLayoutFromFile final
 public:
 	class FString                                 AbsoluteFileName;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPropToSave>                    PropsToLoad;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 WorkshopId;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 WorkshopID;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableStaticToSave>         PlaceableStaticsToLoad;                            // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableLightToSave>          PlaceableLightsToLoad;                             // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FSwitchToSave>                  SwitchesToLoad;                                    // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPrefabToSave>                  PrefabsToLoad;                                     // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F03[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_LoadPropLayoutFromFile) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_LoadPropLayoutFromFile");
 static_assert(sizeof(ProjectVersionBlueprint_LoadPropLayoutFromFile) == 0x000078, "Wrong size on ProjectVersionBlueprint_LoadPropLayoutFromFile");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, AbsoluteFileName) == 0x000000, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::AbsoluteFileName' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, PropsToLoad) == 0x000010, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::PropsToLoad' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, WorkshopId) == 0x000020, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::WorkshopId' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, WorkshopID) == 0x000020, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::WorkshopID' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, PlaceableStaticsToLoad) == 0x000030, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::PlaceableStaticsToLoad' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, PlaceableLightsToLoad) == 0x000040, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::PlaceableLightsToLoad' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFile, SwitchesToLoad) == 0x000050, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFile::SwitchesToLoad' has a wrong offset!");
@@ -2123,19 +1987,19 @@ struct ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed final
 public:
 	class FString                                 AbsoluteFileName;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPropToSave>                    PropsToLoad;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 WorkshopId;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 WorkshopID;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableStaticToSave>         PlaceableStaticsToLoad;                            // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableLightToSave>          PlaceableLightsToLoad;                             // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FSwitchToSave>                  SwitchesToLoad;                                    // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPrefabToSave>                  PrefabsToLoad;                                     // 0x0060(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F04[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed");
 static_assert(sizeof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed) == 0x000078, "Wrong size on ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, AbsoluteFileName) == 0x000000, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::AbsoluteFileName' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, PropsToLoad) == 0x000010, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::PropsToLoad' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, WorkshopId) == 0x000020, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::WorkshopId' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, WorkshopID) == 0x000020, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::WorkshopID' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, PlaceableStaticsToLoad) == 0x000030, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::PlaceableStaticsToLoad' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, PlaceableLightsToLoad) == 0x000040, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::PlaceableLightsToLoad' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed, SwitchesToLoad) == 0x000050, "Member 'ProjectVersionBlueprint_LoadPropLayoutFromFileCompressed::SwitchesToLoad' has a wrong offset!");
@@ -2148,12 +2012,12 @@ struct ProjectVersionBlueprint_PlayReplay final
 {
 public:
 	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Param_Name;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ProjectVersionBlueprint_PlayReplay) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_PlayReplay");
 static_assert(sizeof(ProjectVersionBlueprint_PlayReplay) == 0x000018, "Wrong size on ProjectVersionBlueprint_PlayReplay");
 static_assert(offsetof(ProjectVersionBlueprint_PlayReplay, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_PlayReplay::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_PlayReplay, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_PlayReplay::Param_Name' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_PlayReplay, Name_0) == 0x000008, "Member 'ProjectVersionBlueprint_PlayReplay::Name_0' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.ReadStringFromFile
 // 0x0028 (0x0028 - 0x0000)
@@ -2163,7 +2027,7 @@ public:
 	class FString                                 Result;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 FullFilePath;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F05[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_ReadStringFromFile) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_ReadStringFromFile");
 static_assert(sizeof(ProjectVersionBlueprint_ReadStringFromFile) == 0x000028, "Wrong size on ProjectVersionBlueprint_ReadStringFromFile");
@@ -2177,30 +2041,14 @@ struct ProjectVersionBlueprint_RecordReplay final
 {
 public:
 	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Param_Name;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 FriendlyName;                                      // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ProjectVersionBlueprint_RecordReplay) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_RecordReplay");
 static_assert(sizeof(ProjectVersionBlueprint_RecordReplay) == 0x000028, "Wrong size on ProjectVersionBlueprint_RecordReplay");
 static_assert(offsetof(ProjectVersionBlueprint_RecordReplay, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_RecordReplay::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_RecordReplay, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_RecordReplay::Param_Name' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_RecordReplay, Name_0) == 0x000008, "Member 'ProjectVersionBlueprint_RecordReplay::Name_0' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_RecordReplay, FriendlyName) == 0x000018, "Member 'ProjectVersionBlueprint_RecordReplay::FriendlyName' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.ResetAllOnlineStats
-// 0x0010 (0x0010 - 0x0000)
-struct ProjectVersionBlueprint_ResetAllOnlineStats final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AchievementsToo;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F06[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_ResetAllOnlineStats) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_ResetAllOnlineStats");
-static_assert(sizeof(ProjectVersionBlueprint_ResetAllOnlineStats) == 0x000010, "Wrong size on ProjectVersionBlueprint_ResetAllOnlineStats");
-static_assert(offsetof(ProjectVersionBlueprint_ResetAllOnlineStats, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_ResetAllOnlineStats::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ResetAllOnlineStats, AchievementsToo) == 0x000008, "Member 'ProjectVersionBlueprint_ResetAllOnlineStats::AchievementsToo' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_ResetAllOnlineStats, ReturnValue) == 0x000009, "Member 'ProjectVersionBlueprint_ResetAllOnlineStats::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.SaveGameToFile
 // 0x0020 (0x0020 - 0x0000)
@@ -2211,7 +2059,7 @@ public:
 	class FString                                 AbsoluteFileName;                                  // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         UserIndex;                                         // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F07[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SaveGameToFile) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SaveGameToFile");
 static_assert(sizeof(ProjectVersionBlueprint_SaveGameToFile) == 0x000020, "Wrong size on ProjectVersionBlueprint_SaveGameToFile");
@@ -2227,19 +2075,19 @@ struct ProjectVersionBlueprint_SavePropLayoutToFile final
 public:
 	class FString                                 AbsoluteFileName;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPropToSave>                    PropsToSave;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 WorkshopId;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 WorkshopID;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableStaticToSave>         PlaceableStaticsToSave;                            // 0x0030(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableLightToSave>          PlaceableLightsToSave;                             // 0x0040(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FSwitchToSave>                  SwitchesToSave;                                    // 0x0050(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPrefabToSave>                  PrefabsToSave;                                     // 0x0060(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F08[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SavePropLayoutToFile) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SavePropLayoutToFile");
 static_assert(sizeof(ProjectVersionBlueprint_SavePropLayoutToFile) == 0x000078, "Wrong size on ProjectVersionBlueprint_SavePropLayoutToFile");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, AbsoluteFileName) == 0x000000, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::AbsoluteFileName' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, PropsToSave) == 0x000010, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::PropsToSave' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, WorkshopId) == 0x000020, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::WorkshopId' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, WorkshopID) == 0x000020, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::WorkshopID' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, PlaceableStaticsToSave) == 0x000030, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::PlaceableStaticsToSave' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, PlaceableLightsToSave) == 0x000040, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::PlaceableLightsToSave' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFile, SwitchesToSave) == 0x000050, "Member 'ProjectVersionBlueprint_SavePropLayoutToFile::SwitchesToSave' has a wrong offset!");
@@ -2253,51 +2101,24 @@ struct ProjectVersionBlueprint_SavePropLayoutToFileCompressed final
 public:
 	class FString                                 AbsoluteFileName;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPropToSave>                    PropsToSave;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 WorkshopId;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 WorkshopID;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableStaticToSave>         PlaceableStaticsToSave;                            // 0x0030(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPlaceableLightToSave>          PlaceableLightsToSave;                             // 0x0040(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FSwitchToSave>                  SwitchesToSave;                                    // 0x0050(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FPrefabToSave>                  PrefabsToSave;                                     // 0x0060(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F09[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SavePropLayoutToFileCompressed");
 static_assert(sizeof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed) == 0x000078, "Wrong size on ProjectVersionBlueprint_SavePropLayoutToFileCompressed");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, AbsoluteFileName) == 0x000000, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::AbsoluteFileName' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, PropsToSave) == 0x000010, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::PropsToSave' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, WorkshopId) == 0x000020, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::WorkshopId' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, WorkshopID) == 0x000020, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::WorkshopID' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, PlaceableStaticsToSave) == 0x000030, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::PlaceableStaticsToSave' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, PlaceableLightsToSave) == 0x000040, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::PlaceableLightsToSave' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, SwitchesToSave) == 0x000050, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::SwitchesToSave' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, PrefabsToSave) == 0x000060, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::PrefabsToSave' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SavePropLayoutToFileCompressed, ReturnValue) == 0x000070, "Member 'ProjectVersionBlueprint_SavePropLayoutToFileCompressed::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SendItemDropHeartbeat
-// 0x0008 (0x0008 - 0x0000)
-struct ProjectVersionBlueprint_SendItemDropHeartbeat final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ProjectVersionBlueprint_SendItemDropHeartbeat) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SendItemDropHeartbeat");
-static_assert(sizeof(ProjectVersionBlueprint_SendItemDropHeartbeat) == 0x000008, "Wrong size on ProjectVersionBlueprint_SendItemDropHeartbeat");
-static_assert(offsetof(ProjectVersionBlueprint_SendItemDropHeartbeat, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SendItemDropHeartbeat::GameInstance' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetAchievement
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_SetAchievement final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0A[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_SetAchievement) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetAchievement");
-static_assert(sizeof(ProjectVersionBlueprint_SetAchievement) == 0x000018, "Wrong size on ProjectVersionBlueprint_SetAchievement");
-static_assert(offsetof(ProjectVersionBlueprint_SetAchievement, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SetAchievement::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetAchievement, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_SetAchievement::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetAchievement, ReturnValue) == 0x000010, "Member 'ProjectVersionBlueprint_SetAchievement::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.SetCCDEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -2306,70 +2127,12 @@ struct ProjectVersionBlueprint_SetCCDEnabled final
 public:
 	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Enabled;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SetCCDEnabled) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetCCDEnabled");
 static_assert(sizeof(ProjectVersionBlueprint_SetCCDEnabled) == 0x000010, "Wrong size on ProjectVersionBlueprint_SetCCDEnabled");
 static_assert(offsetof(ProjectVersionBlueprint_SetCCDEnabled, PrimitiveComponent) == 0x000000, "Member 'ProjectVersionBlueprint_SetCCDEnabled::PrimitiveComponent' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SetCCDEnabled, Enabled) == 0x000008, "Member 'ProjectVersionBlueprint_SetCCDEnabled::Enabled' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetGSAchievement
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_SetGSAchievement final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0C[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_SetGSAchievement) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetGSAchievement");
-static_assert(sizeof(ProjectVersionBlueprint_SetGSAchievement) == 0x000020, "Wrong size on ProjectVersionBlueprint_SetGSAchievement");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSAchievement, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SetGSAchievement::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSAchievement, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_SetGSAchievement::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSAchievement, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_SetGSAchievement::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSAchievement, ReturnValue) == 0x000018, "Member 'ProjectVersionBlueprint_SetGSAchievement::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetGSOnlineStatFloat
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_SetGSOnlineStatFloat final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0D[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_SetGSOnlineStatFloat) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetGSOnlineStatFloat");
-static_assert(sizeof(ProjectVersionBlueprint_SetGSOnlineStatFloat) == 0x000020, "Wrong size on ProjectVersionBlueprint_SetGSOnlineStatFloat");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatFloat, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SetGSOnlineStatFloat::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatFloat, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_SetGSOnlineStatFloat::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatFloat, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_SetGSOnlineStatFloat::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatFloat, Value) == 0x000018, "Member 'ProjectVersionBlueprint_SetGSOnlineStatFloat::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatFloat, ReturnValue) == 0x00001C, "Member 'ProjectVersionBlueprint_SetGSOnlineStatFloat::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetGSOnlineStatInt
-// 0x0020 (0x0020 - 0x0000)
-struct ProjectVersionBlueprint_SetGSOnlineStatInt final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0E[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_SetGSOnlineStatInt) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetGSOnlineStatInt");
-static_assert(sizeof(ProjectVersionBlueprint_SetGSOnlineStatInt) == 0x000020, "Wrong size on ProjectVersionBlueprint_SetGSOnlineStatInt");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatInt, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SetGSOnlineStatInt::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatInt, PlayerState) == 0x000008, "Member 'ProjectVersionBlueprint_SetGSOnlineStatInt::PlayerState' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatInt, Param_Name) == 0x000010, "Member 'ProjectVersionBlueprint_SetGSOnlineStatInt::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatInt, Value) == 0x000018, "Member 'ProjectVersionBlueprint_SetGSOnlineStatInt::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetGSOnlineStatInt, ReturnValue) == 0x00001C, "Member 'ProjectVersionBlueprint_SetGSOnlineStatInt::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.SetHiddenShadow
 // 0x0010 (0x0010 - 0x0000)
@@ -2378,48 +2141,12 @@ struct ProjectVersionBlueprint_SetHiddenShadow final
 public:
 	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Enabled;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F0F[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SetHiddenShadow) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetHiddenShadow");
 static_assert(sizeof(ProjectVersionBlueprint_SetHiddenShadow) == 0x000010, "Wrong size on ProjectVersionBlueprint_SetHiddenShadow");
 static_assert(offsetof(ProjectVersionBlueprint_SetHiddenShadow, PrimitiveComponent) == 0x000000, "Member 'ProjectVersionBlueprint_SetHiddenShadow::PrimitiveComponent' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SetHiddenShadow, Enabled) == 0x000008, "Member 'ProjectVersionBlueprint_SetHiddenShadow::Enabled' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetOnlineStatFloat
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_SetOnlineStatFloat final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F10[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_SetOnlineStatFloat) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetOnlineStatFloat");
-static_assert(sizeof(ProjectVersionBlueprint_SetOnlineStatFloat) == 0x000018, "Wrong size on ProjectVersionBlueprint_SetOnlineStatFloat");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatFloat, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SetOnlineStatFloat::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatFloat, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_SetOnlineStatFloat::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatFloat, Value) == 0x000010, "Member 'ProjectVersionBlueprint_SetOnlineStatFloat::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatFloat, ReturnValue) == 0x000014, "Member 'ProjectVersionBlueprint_SetOnlineStatFloat::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetOnlineStatInt
-// 0x0018 (0x0018 - 0x0000)
-struct ProjectVersionBlueprint_SetOnlineStatInt final
-{
-public:
-	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F11[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ProjectVersionBlueprint_SetOnlineStatInt) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetOnlineStatInt");
-static_assert(sizeof(ProjectVersionBlueprint_SetOnlineStatInt) == 0x000018, "Wrong size on ProjectVersionBlueprint_SetOnlineStatInt");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatInt, GameInstance) == 0x000000, "Member 'ProjectVersionBlueprint_SetOnlineStatInt::GameInstance' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatInt, Param_Name) == 0x000008, "Member 'ProjectVersionBlueprint_SetOnlineStatInt::Param_Name' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatInt, Value) == 0x000010, "Member 'ProjectVersionBlueprint_SetOnlineStatInt::Value' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SetOnlineStatInt, ReturnValue) == 0x000014, "Member 'ProjectVersionBlueprint_SetOnlineStatInt::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.ProjectVersionBlueprint.SetSelfShadowOnly
 // 0x0010 (0x0010 - 0x0000)
@@ -2428,7 +2155,7 @@ struct ProjectVersionBlueprint_SetSelfShadowOnly final
 public:
 	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Enabled;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F12[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SetSelfShadowOnly) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetSelfShadowOnly");
 static_assert(sizeof(ProjectVersionBlueprint_SetSelfShadowOnly) == 0x000010, "Wrong size on ProjectVersionBlueprint_SetSelfShadowOnly");
@@ -2442,7 +2169,7 @@ struct ProjectVersionBlueprint_SetWorldGravity final
 public:
 	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Gravity;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F13[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ProjectVersionBlueprint_SetWorldGravity) == 0x000008, "Wrong alignment on ProjectVersionBlueprint_SetWorldGravity");
 static_assert(sizeof(ProjectVersionBlueprint_SetWorldGravity) == 0x000010, "Wrong size on ProjectVersionBlueprint_SetWorldGravity");
@@ -2455,16 +2182,16 @@ struct ProjectVersionBlueprint_SpawnActorByWorldContextObject final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 Param_Class;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESpawnActorCollisionHandlingMethod            CollisionHandling;                                 // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F14[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ProjectVersionBlueprint_SpawnActorByWorldContextObject) == 0x000010, "Wrong alignment on ProjectVersionBlueprint_SpawnActorByWorldContextObject");
 static_assert(sizeof(ProjectVersionBlueprint_SpawnActorByWorldContextObject) == 0x000080, "Wrong size on ProjectVersionBlueprint_SpawnActorByWorldContextObject");
 static_assert(offsetof(ProjectVersionBlueprint_SpawnActorByWorldContextObject, WorldContextObject) == 0x000000, "Member 'ProjectVersionBlueprint_SpawnActorByWorldContextObject::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(ProjectVersionBlueprint_SpawnActorByWorldContextObject, Param_Class) == 0x000008, "Member 'ProjectVersionBlueprint_SpawnActorByWorldContextObject::Param_Class' has a wrong offset!");
+static_assert(offsetof(ProjectVersionBlueprint_SpawnActorByWorldContextObject, Class_0) == 0x000008, "Member 'ProjectVersionBlueprint_SpawnActorByWorldContextObject::Class_0' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SpawnActorByWorldContextObject, Transform) == 0x000010, "Member 'ProjectVersionBlueprint_SpawnActorByWorldContextObject::Transform' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SpawnActorByWorldContextObject, CollisionHandling) == 0x000070, "Member 'ProjectVersionBlueprint_SpawnActorByWorldContextObject::CollisionHandling' has a wrong offset!");
 static_assert(offsetof(ProjectVersionBlueprint_SpawnActorByWorldContextObject, ReturnValue) == 0x000078, "Member 'ProjectVersionBlueprint_SpawnActorByWorldContextObject::ReturnValue' has a wrong offset!");
@@ -2552,7 +2279,7 @@ struct RealTimeClock_GetCurrentUtcDateAndTime final
 {
 public:
 	int32                                         MyTimezone;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F16[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RealTimeClock_GetCurrentUtcDateAndTime) == 0x000008, "Wrong alignment on RealTimeClock_GetCurrentUtcDateAndTime");
@@ -2566,7 +2293,7 @@ struct RealTimeClock_GetCurrentUtcTime final
 {
 public:
 	int32                                         MyTimezone;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F17[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RealTimeClock_GetCurrentUtcTime) == 0x000008, "Wrong alignment on RealTimeClock_GetCurrentUtcTime");
@@ -2587,64 +2314,6 @@ static_assert(sizeof(RealTimeClock_GetCurrentUtcTimeInSeconds) == 0x000008, "Wro
 static_assert(offsetof(RealTimeClock_GetCurrentUtcTimeInSeconds, MyTimezone) == 0x000000, "Member 'RealTimeClock_GetCurrentUtcTimeInSeconds::MyTimezone' has a wrong offset!");
 static_assert(offsetof(RealTimeClock_GetCurrentUtcTimeInSeconds, ReturnValue) == 0x000004, "Member 'RealTimeClock_GetCurrentUtcTimeInSeconds::ReturnValue' has a wrong offset!");
 
-// Function PropWitchHuntModule.RequestCurrentStatsCallbackProxy.RequestCurrentOnlineStats
-// 0x0010 (0x0010 - 0x0000)
-struct RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URequestCurrentStatsCallbackProxy*      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats) == 0x000008, "Wrong alignment on RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats");
-static_assert(sizeof(RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats) == 0x000010, "Wrong size on RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats");
-static_assert(offsetof(RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats, WorldContextObject) == 0x000000, "Member 'RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats, ReturnValue) == 0x000008, "Member 'RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.RequestCurrentStatsCallbackProxy.RequestGSOnlineStats
-// 0x0018 (0x0018 - 0x0000)
-struct RequestCurrentStatsCallbackProxy_RequestGSOnlineStats final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URequestCurrentStatsCallbackProxy*      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RequestCurrentStatsCallbackProxy_RequestGSOnlineStats) == 0x000008, "Wrong alignment on RequestCurrentStatsCallbackProxy_RequestGSOnlineStats");
-static_assert(sizeof(RequestCurrentStatsCallbackProxy_RequestGSOnlineStats) == 0x000018, "Wrong size on RequestCurrentStatsCallbackProxy_RequestGSOnlineStats");
-static_assert(offsetof(RequestCurrentStatsCallbackProxy_RequestGSOnlineStats, WorldContextObject) == 0x000000, "Member 'RequestCurrentStatsCallbackProxy_RequestGSOnlineStats::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(RequestCurrentStatsCallbackProxy_RequestGSOnlineStats, PlayerState) == 0x000008, "Member 'RequestCurrentStatsCallbackProxy_RequestGSOnlineStats::PlayerState' has a wrong offset!");
-static_assert(offsetof(RequestCurrentStatsCallbackProxy_RequestGSOnlineStats, ReturnValue) == 0x000010, "Member 'RequestCurrentStatsCallbackProxy_RequestGSOnlineStats::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.SerializeItemsCallbackProxy.GetSerializationBuffer
-// 0x0020 (0x0020 - 0x0000)
-struct SerializeItemsCallbackProxy_GetSerializationBuffer final
-{
-public:
-	struct FBlueprintItemSerialization            ItemSerialization;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SerializeItemsCallbackProxy_GetSerializationBuffer) == 0x000008, "Wrong alignment on SerializeItemsCallbackProxy_GetSerializationBuffer");
-static_assert(sizeof(SerializeItemsCallbackProxy_GetSerializationBuffer) == 0x000020, "Wrong size on SerializeItemsCallbackProxy_GetSerializationBuffer");
-static_assert(offsetof(SerializeItemsCallbackProxy_GetSerializationBuffer, ItemSerialization) == 0x000000, "Member 'SerializeItemsCallbackProxy_GetSerializationBuffer::ItemSerialization' has a wrong offset!");
-static_assert(offsetof(SerializeItemsCallbackProxy_GetSerializationBuffer, ReturnValue) == 0x000010, "Member 'SerializeItemsCallbackProxy_GetSerializationBuffer::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.SerializeItemsCallbackProxy.SerializeItems
-// 0x0028 (0x0028 - 0x0000)
-struct SerializeItemsCallbackProxy_SerializeItems final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FBlueprintOnlineItem>           ItemsToSerialize;                                  // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class USerializeItemsCallbackProxy*           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SerializeItemsCallbackProxy_SerializeItems) == 0x000008, "Wrong alignment on SerializeItemsCallbackProxy_SerializeItems");
-static_assert(sizeof(SerializeItemsCallbackProxy_SerializeItems) == 0x000028, "Wrong size on SerializeItemsCallbackProxy_SerializeItems");
-static_assert(offsetof(SerializeItemsCallbackProxy_SerializeItems, WorldContextObject) == 0x000000, "Member 'SerializeItemsCallbackProxy_SerializeItems::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(SerializeItemsCallbackProxy_SerializeItems, PlayerController) == 0x000008, "Member 'SerializeItemsCallbackProxy_SerializeItems::PlayerController' has a wrong offset!");
-static_assert(offsetof(SerializeItemsCallbackProxy_SerializeItems, ItemsToSerialize) == 0x000010, "Member 'SerializeItemsCallbackProxy_SerializeItems::ItemsToSerialize' has a wrong offset!");
-static_assert(offsetof(SerializeItemsCallbackProxy_SerializeItems, ReturnValue) == 0x000020, "Member 'SerializeItemsCallbackProxy_SerializeItems::ReturnValue' has a wrong offset!");
-
 // Function PropWitchHuntModule.SessionSubsystem.GetActiveGameSession
 // 0x0128 (0x0128 - 0x0000)
 struct SessionSubsystem_GetActiveGameSession final
@@ -2659,14 +2328,14 @@ static_assert(offsetof(SessionSubsystem_GetActiveGameSession, WorldContextObject
 static_assert(offsetof(SessionSubsystem_GetActiveGameSession, ReturnValue) == 0x000008, "Member 'SessionSubsystem_GetActiveGameSession::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.SkillParameters.GetFormattedTooltip
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct SkillParameters_GetFormattedTooltip final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SkillParameters_GetFormattedTooltip) == 0x000008, "Wrong alignment on SkillParameters_GetFormattedTooltip");
-static_assert(sizeof(SkillParameters_GetFormattedTooltip) == 0x000018, "Wrong size on SkillParameters_GetFormattedTooltip");
+static_assert(sizeof(SkillParameters_GetFormattedTooltip) == 0x000010, "Wrong size on SkillParameters_GetFormattedTooltip");
 static_assert(offsetof(SkillParameters_GetFormattedTooltip, ReturnValue) == 0x000000, "Member 'SkillParameters_GetFormattedTooltip::ReturnValue' has a wrong offset!");
 
 // Function PropWitchHuntModule.StartupSubsystem.CompleteStartupPhase
@@ -2715,34 +2384,6 @@ static_assert(alignof(StaticMeshProp_SetActorSubComponentsTickState) == 0x000001
 static_assert(sizeof(StaticMeshProp_SetActorSubComponentsTickState) == 0x000001, "Wrong size on StaticMeshProp_SetActorSubComponentsTickState");
 static_assert(offsetof(StaticMeshProp_SetActorSubComponentsTickState, bTickEnabled) == 0x000000, "Member 'StaticMeshProp_SetActorSubComponentsTickState::bTickEnabled' has a wrong offset!");
 
-// Function PropWitchHuntModule.StoreStatsCallbackProxy.StoreGSOnlineStats
-// 0x0018 (0x0018 - 0x0000)
-struct StoreStatsCallbackProxy_StoreGSOnlineStats final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerState*                           PlayerState;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStoreStatsCallbackProxy*               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(StoreStatsCallbackProxy_StoreGSOnlineStats) == 0x000008, "Wrong alignment on StoreStatsCallbackProxy_StoreGSOnlineStats");
-static_assert(sizeof(StoreStatsCallbackProxy_StoreGSOnlineStats) == 0x000018, "Wrong size on StoreStatsCallbackProxy_StoreGSOnlineStats");
-static_assert(offsetof(StoreStatsCallbackProxy_StoreGSOnlineStats, WorldContextObject) == 0x000000, "Member 'StoreStatsCallbackProxy_StoreGSOnlineStats::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(StoreStatsCallbackProxy_StoreGSOnlineStats, PlayerState) == 0x000008, "Member 'StoreStatsCallbackProxy_StoreGSOnlineStats::PlayerState' has a wrong offset!");
-static_assert(offsetof(StoreStatsCallbackProxy_StoreGSOnlineStats, ReturnValue) == 0x000010, "Member 'StoreStatsCallbackProxy_StoreGSOnlineStats::ReturnValue' has a wrong offset!");
-
-// Function PropWitchHuntModule.StoreStatsCallbackProxy.StoreOnlineStats
-// 0x0010 (0x0010 - 0x0000)
-struct StoreStatsCallbackProxy_StoreOnlineStats final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStoreStatsCallbackProxy*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(StoreStatsCallbackProxy_StoreOnlineStats) == 0x000008, "Wrong alignment on StoreStatsCallbackProxy_StoreOnlineStats");
-static_assert(sizeof(StoreStatsCallbackProxy_StoreOnlineStats) == 0x000010, "Wrong size on StoreStatsCallbackProxy_StoreOnlineStats");
-static_assert(offsetof(StoreStatsCallbackProxy_StoreOnlineStats, WorldContextObject) == 0x000000, "Member 'StoreStatsCallbackProxy_StoreOnlineStats::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(StoreStatsCallbackProxy_StoreOnlineStats, ReturnValue) == 0x000008, "Member 'StoreStatsCallbackProxy_StoreOnlineStats::ReturnValue' has a wrong offset!");
-
 // Function PropWitchHuntModule.StructDataLibrary.ApplyParameterRules
 // 0x0018 (0x0018 - 0x0000)
 struct StructDataLibrary_ApplyParameterRules final
@@ -2764,7 +2405,7 @@ public:
 	class UObject*                                FirstParameter;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                SecondParameter;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F20[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(StructDataLibrary_AreParametersEqual) == 0x000008, "Wrong alignment on StructDataLibrary_AreParametersEqual");
 static_assert(sizeof(StructDataLibrary_AreParametersEqual) == 0x000018, "Wrong size on StructDataLibrary_AreParametersEqual");
@@ -2780,7 +2421,7 @@ public:
 	class UObject*                                Parameter;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ParameterName;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUIParam                               ReturnValue;                                       // 0x0010(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F21[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(StructDataLibrary_GetParameterValue) == 0x000008, "Wrong alignment on StructDataLibrary_GetParameterValue");
 static_assert(sizeof(StructDataLibrary_GetParameterValue) == 0x000028, "Wrong size on StructDataLibrary_GetParameterValue");
@@ -2832,11 +2473,11 @@ static_assert(offsetof(TljhUserControllerSystem_ActiveUserInfoUpdatedSignature__
 struct TljhUserControllerSystem_Initialize final
 {
 public:
-	class UGameInstance*                          Param_GameInstance;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameInstance*                          GameInstance_0;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TljhUserControllerSystem_Initialize) == 0x000008, "Wrong alignment on TljhUserControllerSystem_Initialize");
 static_assert(sizeof(TljhUserControllerSystem_Initialize) == 0x000008, "Wrong size on TljhUserControllerSystem_Initialize");
-static_assert(offsetof(TljhUserControllerSystem_Initialize, Param_GameInstance) == 0x000000, "Member 'TljhUserControllerSystem_Initialize::Param_GameInstance' has a wrong offset!");
+static_assert(offsetof(TljhUserControllerSystem_Initialize, GameInstance_0) == 0x000000, "Member 'TljhUserControllerSystem_Initialize::GameInstance_0' has a wrong offset!");
 
 // DelegateFunction PropWitchHuntModule.TljhUserControllerSystem.OnInputChangedSignature__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
@@ -2888,7 +2529,7 @@ struct TljhUserControllerSystem_GetActiveUserDisplayInfo final
 {
 public:
 	bool                                          Supported;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F27[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            Icon;                                              // 0x0010(0x00D0)(Parm, OutParm, NativeAccessSpecifierPublic)
 	class FString                                 DisplayName;                                       // 0x00E0(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2946,7 +2587,7 @@ public:
 	class FString                                 Language;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MetaData;                                          // 0x0050(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUGCItemVisibility                            Visibility;                                        // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2A[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         Tags;                                              // 0x0068(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FString, class FString>            KeyValueTags;                                      // 0x0078(0x0050)(Parm, NativeAccessSpecifierPublic)
 	class FString                                 ContentFolder;                                     // 0x00C8(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2989,7 +2630,7 @@ public:
 	class FString                                 NativePlatformId;                                  // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 NativePlatform;                                    // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2E[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItGameInstance_AddPlayerLookupEntry) == 0x000008, "Wrong alignment on WitchItGameInstance_AddPlayerLookupEntry");
 static_assert(sizeof(WitchItGameInstance_AddPlayerLookupEntry) == 0x000058, "Wrong size on WitchItGameInstance_AddPlayerLookupEntry");
@@ -2998,16 +2639,38 @@ static_assert(offsetof(WitchItGameInstance_AddPlayerLookupEntry, NativePlatformI
 static_assert(offsetof(WitchItGameInstance_AddPlayerLookupEntry, NativePlatform) == 0x000040, "Member 'WitchItGameInstance_AddPlayerLookupEntry::NativePlatform' has a wrong offset!");
 static_assert(offsetof(WitchItGameInstance_AddPlayerLookupEntry, ReturnValue) == 0x000050, "Member 'WitchItGameInstance_AddPlayerLookupEntry::ReturnValue' has a wrong offset!");
 
+// Function PropWitchHuntModule.WitchItGameInstance.BeginLoadingScreen
+// 0x0010 (0x0010 - 0x0000)
+struct WitchItGameInstance_BeginLoadingScreen final
+{
+public:
+	class FString                                 String;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WitchItGameInstance_BeginLoadingScreen) == 0x000008, "Wrong alignment on WitchItGameInstance_BeginLoadingScreen");
+static_assert(sizeof(WitchItGameInstance_BeginLoadingScreen) == 0x000010, "Wrong size on WitchItGameInstance_BeginLoadingScreen");
+static_assert(offsetof(WitchItGameInstance_BeginLoadingScreen, String) == 0x000000, "Member 'WitchItGameInstance_BeginLoadingScreen::String' has a wrong offset!");
+
+// Function PropWitchHuntModule.WitchItGameInstance.EndLoadingScreen
+// 0x0008 (0x0008 - 0x0000)
+struct WitchItGameInstance_EndLoadingScreen final
+{
+public:
+	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WitchItGameInstance_EndLoadingScreen) == 0x000008, "Wrong alignment on WitchItGameInstance_EndLoadingScreen");
+static_assert(sizeof(WitchItGameInstance_EndLoadingScreen) == 0x000008, "Wrong size on WitchItGameInstance_EndLoadingScreen");
+static_assert(offsetof(WitchItGameInstance_EndLoadingScreen, World) == 0x000000, "Member 'WitchItGameInstance_EndLoadingScreen::World' has a wrong offset!");
+
 // Function PropWitchHuntModule.WitchItGameInstance.OnNetworkFailure
 // 0x0020 (0x0020 - 0x0000)
 struct WitchItGameInstance_OnNetworkFailure final
 {
 public:
 	ENetworkFailure                               FailureType;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F2F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorText;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsServer;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F30[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItGameInstance_OnNetworkFailure) == 0x000008, "Wrong alignment on WitchItGameInstance_OnNetworkFailure");
 static_assert(sizeof(WitchItGameInstance_OnNetworkFailure) == 0x000020, "Wrong size on WitchItGameInstance_OnNetworkFailure");
@@ -3022,12 +2685,23 @@ struct WitchItGameInstance_RemovePlayerLookupEntry final
 public:
 	struct FUniqueNetIdRepl                       UniqueNetId;                                       // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F31[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItGameInstance_RemovePlayerLookupEntry) == 0x000008, "Wrong alignment on WitchItGameInstance_RemovePlayerLookupEntry");
 static_assert(sizeof(WitchItGameInstance_RemovePlayerLookupEntry) == 0x000038, "Wrong size on WitchItGameInstance_RemovePlayerLookupEntry");
 static_assert(offsetof(WitchItGameInstance_RemovePlayerLookupEntry, UniqueNetId) == 0x000000, "Member 'WitchItGameInstance_RemovePlayerLookupEntry::UniqueNetId' has a wrong offset!");
 static_assert(offsetof(WitchItGameInstance_RemovePlayerLookupEntry, ReturnValue) == 0x000030, "Member 'WitchItGameInstance_RemovePlayerLookupEntry::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.WitchItGameInstance.SetSuspendInBackground
+// 0x0001 (0x0001 - 0x0000)
+struct WitchItGameInstance_SetSuspendInBackground final
+{
+public:
+	bool                                          ShouldSuspend;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WitchItGameInstance_SetSuspendInBackground) == 0x000001, "Wrong alignment on WitchItGameInstance_SetSuspendInBackground");
+static_assert(sizeof(WitchItGameInstance_SetSuspendInBackground) == 0x000001, "Wrong size on WitchItGameInstance_SetSuspendInBackground");
+static_assert(offsetof(WitchItGameInstance_SetSuspendInBackground, ShouldSuspend) == 0x000000, "Member 'WitchItGameInstance_SetSuspendInBackground::ShouldSuspend' has a wrong offset!");
 
 // Function PropWitchHuntModule.WitchItGameInstance.GetNativePlatformInfo
 // 0x0058 (0x0058 - 0x0000)
@@ -3038,7 +2712,7 @@ public:
 	class FString                                 NativePlatformId;                                  // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 NativePlatform;                                    // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F32[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WitchItGameInstance_GetNativePlatformInfo) == 0x000008, "Wrong alignment on WitchItGameInstance_GetNativePlatformInfo");
 static_assert(sizeof(WitchItGameInstance_GetNativePlatformInfo) == 0x000058, "Wrong size on WitchItGameInstance_GetNativePlatformInfo");
@@ -3046,6 +2720,28 @@ static_assert(offsetof(WitchItGameInstance_GetNativePlatformInfo, UniqueNetId) =
 static_assert(offsetof(WitchItGameInstance_GetNativePlatformInfo, NativePlatformId) == 0x000030, "Member 'WitchItGameInstance_GetNativePlatformInfo::NativePlatformId' has a wrong offset!");
 static_assert(offsetof(WitchItGameInstance_GetNativePlatformInfo, NativePlatform) == 0x000040, "Member 'WitchItGameInstance_GetNativePlatformInfo::NativePlatform' has a wrong offset!");
 static_assert(offsetof(WitchItGameInstance_GetNativePlatformInfo, ReturnValue) == 0x000050, "Member 'WitchItGameInstance_GetNativePlatformInfo::ReturnValue' has a wrong offset!");
+
+// Function PropWitchHuntModule.WitchItPlayerState.PostOnRepPlayerName
+// 0x0010 (0x0010 - 0x0000)
+struct WitchItPlayerState_PostOnRepPlayerName final
+{
+public:
+	class FString                                 NewPlayerName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WitchItPlayerState_PostOnRepPlayerName) == 0x000008, "Wrong alignment on WitchItPlayerState_PostOnRepPlayerName");
+static_assert(sizeof(WitchItPlayerState_PostOnRepPlayerName) == 0x000010, "Wrong size on WitchItPlayerState_PostOnRepPlayerName");
+static_assert(offsetof(WitchItPlayerState_PostOnRepPlayerName, NewPlayerName) == 0x000000, "Member 'WitchItPlayerState_PostOnRepPlayerName::NewPlayerName' has a wrong offset!");
+
+// Function PropWitchHuntModule.WitchItPlayerState.SetSafePlayerName
+// 0x0010 (0x0010 - 0x0000)
+struct WitchItPlayerState_SetSafePlayerName final
+{
+public:
+	class FString                                 SafePlayerName;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WitchItPlayerState_SetSafePlayerName) == 0x000008, "Wrong alignment on WitchItPlayerState_SetSafePlayerName");
+static_assert(sizeof(WitchItPlayerState_SetSafePlayerName) == 0x000010, "Wrong size on WitchItPlayerState_SetSafePlayerName");
+static_assert(offsetof(WitchItPlayerState_SetSafePlayerName, SafePlayerName) == 0x000000, "Member 'WitchItPlayerState_SetSafePlayerName::SafePlayerName' has a wrong offset!");
 
 // Function PropWitchHuntModule.CallbackProxyCreateWorkshopItemBRG.Workshop_CreateItem
 // 0x00D8 (0x00D8 - 0x0000)
@@ -3098,7 +2794,7 @@ public:
 	struct FUInt64BRG                             InVal;                                             // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         OutVal;                                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F36[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WorkshopGeneralLibrary_BreakUInt64BRG) == 0x000008, "Wrong alignment on WorkshopGeneralLibrary_BreakUInt64BRG");
 static_assert(sizeof(WorkshopGeneralLibrary_BreakUInt64BRG) == 0x000010, "Wrong size on WorkshopGeneralLibrary_BreakUInt64BRG");
@@ -3151,7 +2847,7 @@ public:
 	TArray<int32>                                 IndexOfPreviewToRemove;                            // 0x00B0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	ESupportedLanguages                           UpdateLanguage;                                    // 0x00C0(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EItemVisibility                               Visibility;                                        // 0x00C1(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F37[0x6];                                     // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWorkshopUpdateDetails                 ReturnValue;                                       // 0x00C8(0x00D0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WorkshopLibrary_MakeWorkshopUpdateDetails) == 0x000008, "Wrong alignment on WorkshopLibrary_MakeWorkshopUpdateDetails");
@@ -3180,7 +2876,7 @@ public:
 	struct FUGCItemId                             ItemId;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWorkshopItemInstallInfo               Info;                                              // 0x0008(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EResultBRGBP                                  ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F38[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WorkshopLibrary_Workshop_GetItemInstallInfo) == 0x000008, "Wrong alignment on WorkshopLibrary_Workshop_GetItemInstallInfo");
 static_assert(sizeof(WorkshopLibrary_Workshop_GetItemInstallInfo) == 0x000038, "Wrong size on WorkshopLibrary_Workshop_GetItemInstallInfo");
@@ -3205,7 +2901,7 @@ struct WorkshopLibrary_Workshop_GetSubscribedItems final
 {
 public:
 	int32                                         MaxNumItemsToReturn;                               // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F39[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUGCItemId>                     OutItems;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WorkshopLibrary_Workshop_GetSubscribedItems) == 0x000008, "Wrong alignment on WorkshopLibrary_Workshop_GetSubscribedItems");

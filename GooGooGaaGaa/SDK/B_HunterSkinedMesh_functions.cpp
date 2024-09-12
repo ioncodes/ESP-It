@@ -40,9 +40,9 @@ void AB_HunterSkinedMesh_C::ExecuteUbergraph_B_HunterSkinedMesh(int32 EntryPoint
 // Function B_HunterSkinedMesh.B_HunterSkinedMesh_C.GetRandomSkin
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FHunterSkin                      Param_RandomSkin                                       (Parm, OutParm, NoDestructor)
+// struct FHunterSkin                      RandomSkin_0                                           (Parm, OutParm, NoDestructor)
 
-void AB_HunterSkinedMesh_C::GetRandomSkin(struct FHunterSkin* Param_RandomSkin)
+void AB_HunterSkinedMesh_C::GetRandomSkin(struct FHunterSkin* RandomSkin_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -53,8 +53,8 @@ void AB_HunterSkinedMesh_C::GetRandomSkin(struct FHunterSkin* Param_RandomSkin)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_RandomSkin != nullptr)
-		*Param_RandomSkin = std::move(Parms.Param_RandomSkin);
+	if (RandomSkin_0 != nullptr)
+		*RandomSkin_0 = std::move(Parms.RandomSkin_0);
 }
 
 

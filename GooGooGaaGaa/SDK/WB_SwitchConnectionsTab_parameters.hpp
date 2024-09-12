@@ -33,7 +33,7 @@ struct WB_SwitchConnectionsTab_C_Initialize final
 {
 public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_162[0x3];                                      // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class AActor* AddedOrRemovedActor, bool WasAdded)> K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SwitchConnectionsTab_C_Initialize) == 0x000004, "Wrong alignment on WB_SwitchConnectionsTab_C_Initialize");
@@ -47,19 +47,19 @@ struct WB_SwitchConnectionsTab_C_RemoveSelectedConnections final
 {
 public:
 	bool                                          SelectAll;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_163[0x7];                                      // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_TargetActorData_C*                   CurrentTargetActorData;                            // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_164[0x3];                                      // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Switch_C*                           K2Node_DynamicCast_AsBP_Switch;                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_165[0x7];                                      // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Switch_C*                           K2Node_DynamicCast_AsBP_Switch_1;                  // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_166[0x7];                                      // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_TargetActorData_C*                   CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -89,10 +89,10 @@ public:
 	bool                                          WasAdded;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsActionActor;                                     // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_167[0x5];                                      // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ActionActorSubsystem_C*              CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_168[0x7];                                      // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Switch_C*                           K2Node_DynamicCast_AsBP_Switch;                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsActionActor_IsActionActor;              // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -114,7 +114,7 @@ static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateContent, Temp_bool_Variab
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateContent, K2Node_Select_Default) == 0x00002B, "Member 'WB_SwitchConnectionsTab_C_UpdateContent::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_SwitchConnectionsTab.WB_SwitchConnectionsTab_C.UpdateListViewContent
-// 0x0178 (0x0178 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct WB_SwitchConnectionsTab_C_UpdateListViewContent final
 {
 public:
@@ -126,11 +126,11 @@ public:
 	bool                                          Temp_bool_Variable_1;                              // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x3];                                      // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16A[0x3];                                      // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_Switch_C*                           CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -140,45 +140,45 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16B[0x3];                                      // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0050(0x0018)()
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16C[0x4];                                      // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16D[0x7];                                      // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16E[0x7];                                      // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_2; // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00D0(0x0018)()
-	class UB_TargetActorData_C*                   CallFunc_Array_Get_Item_1;                         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16F[0x3];                                      // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_Switch_C*>                   CallFunc_GetAllActorsOfClass_OutActors;            // 0x00F8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x010B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_TargetActorData_C*                   CallFunc_CreateObject_Object;                      // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_TargetActorData_C*                   CallFunc_CreateObject_Object_1;                    // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable;                                // 0x0120(0x0018)()
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_170[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0140(0x0018)()
-	class ABP_Switch_C*                           K2Node_DynamicCast_AsBP_Switch;                    // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_171[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0050(0x0010)()
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_2; // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00C8(0x0010)()
+	class UB_TargetActorData_C*                   CallFunc_Array_Get_Item_1;                         // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_Switch_C*>                   CallFunc_GetAllActorsOfClass_OutActors;            // 0x00E8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsEmpty_ReturnValue;                // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_TargetActorData_C*                   CallFunc_CreateObject_Object;                      // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_TargetActorData_C*                   CallFunc_CreateObject_Object_1;                    // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable;                                // 0x0110(0x0010)()
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x0128(0x0010)()
+	class ABP_Switch_C*                           K2Node_DynamicCast_AsBP_Switch;                    // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SwitchConnectionsTab_C_UpdateListViewContent) == 0x000008, "Wrong alignment on WB_SwitchConnectionsTab_C_UpdateListViewContent");
-static_assert(sizeof(WB_SwitchConnectionsTab_C_UpdateListViewContent) == 0x000178, "Wrong size on WB_SwitchConnectionsTab_C_UpdateListViewContent");
+static_assert(sizeof(WB_SwitchConnectionsTab_C_UpdateListViewContent) == 0x000158, "Wrong size on WB_SwitchConnectionsTab_C_UpdateListViewContent");
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, TempTargetActor) == 0x000000, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::TempTargetActor' has a wrong offset!");
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, TempTargetActorData) == 0x000008, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::TempTargetActorData' has a wrong offset!");
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_bool_Variable) == 0x000010, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::Temp_bool_Variable' has a wrong offset!");
@@ -200,34 +200,34 @@ static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_int
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Add_IntInt_ReturnValue_2) == 0x000048, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_byte_Variable_3) == 0x00004C, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::Temp_byte_Variable_3' has a wrong offset!");
 static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_MakeLiteralText_ReturnValue) == 0x000050, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Length_ReturnValue_1) == 0x000068, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Conv_TextToString_ReturnValue) == 0x000070, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Greater_IntInt_ReturnValue) == 0x000080, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_String__CombineStrings_Multi_ReturnValue) == 0x000088, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_String__CombineStrings_Multi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Conv_IntToString_ReturnValue) == 0x000098, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_bool_Variable_2) == 0x0000A8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_String__CombineStrings_Multi_ReturnValue_1) == 0x0000B0, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_String__CombineStrings_Multi_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_String__CombineStrings_Multi_ReturnValue_2) == 0x0000C0, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_String__CombineStrings_Multi_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Conv_StringToText_ReturnValue) == 0x0000D0, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Get_Item_1) == 0x0000E8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Length_ReturnValue_2) == 0x0000F0, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000F4, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_GetAllActorsOfClass_OutActors) == 0x0000F8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_IsValid_ReturnValue) == 0x000108, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_IsEmpty_ReturnValue) == 0x000109, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_Select_Default) == 0x00010A, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_Select_Default_1) == 0x00010B, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_AddUnique_ReturnValue) == 0x00010C, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_CreateObject_Object) == 0x000110, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_CreateObject_Object' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_CreateObject_Object_1) == 0x000118, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_CreateObject_Object_1' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_text_Variable) == 0x000120, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Contains_ReturnValue) == 0x000138, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_Select_Default_2) == 0x000140, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_DynamicCast_AsBP_Switch) == 0x000158, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_DynamicCast_AsBP_Switch' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_DynamicCast_bSuccess) == 0x000160, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Length_ReturnValue_3) == 0x000164, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Get_Item_2) == 0x000168, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Less_IntInt_ReturnValue_2) == 0x000170, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Length_ReturnValue_1) == 0x000060, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Conv_TextToString_ReturnValue) == 0x000068, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Greater_IntInt_ReturnValue) == 0x000078, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_String__CombineStrings_Multi_ReturnValue) == 0x000080, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_String__CombineStrings_Multi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Conv_IntToString_ReturnValue) == 0x000090, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_bool_Variable_2) == 0x0000A0, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_String__CombineStrings_Multi_ReturnValue_1) == 0x0000A8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_String__CombineStrings_Multi_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_String__CombineStrings_Multi_ReturnValue_2) == 0x0000B8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_String__CombineStrings_Multi_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Conv_StringToText_ReturnValue) == 0x0000C8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Get_Item_1) == 0x0000D8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Length_ReturnValue_2) == 0x0000E0, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000E4, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_GetAllActorsOfClass_OutActors) == 0x0000E8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_IsValid_ReturnValue) == 0x0000F8, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_IsEmpty_ReturnValue) == 0x0000F9, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_Select_Default) == 0x0000FA, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_Select_Default_1) == 0x0000FB, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_AddUnique_ReturnValue) == 0x0000FC, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_CreateObject_Object) == 0x000100, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_CreateObject_Object_1) == 0x000108, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_CreateObject_Object_1' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, Temp_text_Variable) == 0x000110, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Contains_ReturnValue) == 0x000120, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_Select_Default_2) == 0x000128, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_DynamicCast_AsBP_Switch) == 0x000138, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_DynamicCast_AsBP_Switch' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, K2Node_DynamicCast_bSuccess) == 0x000140, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Length_ReturnValue_3) == 0x000144, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Array_Get_Item_2) == 0x000148, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WB_SwitchConnectionsTab_C_UpdateListViewContent, CallFunc_Less_IntInt_ReturnValue_2) == 0x000150, "Member 'WB_SwitchConnectionsTab_C_UpdateListViewContent::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
 
 }
 

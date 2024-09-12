@@ -74,9 +74,9 @@ void UWB_DropReward_C::GrantFinished(bool NoValueGranted)
 // Function WB_DropReward.WB_DropReward_C.InitializeByPlayerState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_DropReward_C::InitializeByPlayerState(class AB_PlayerState_C* Param_PlayerState)
+void UWB_DropReward_C::InitializeByPlayerState(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -85,7 +85,7 @@ void UWB_DropReward_C::InitializeByPlayerState(class AB_PlayerState_C* Param_Pla
 
 	Params::WB_DropReward_C_InitializeByPlayerState Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

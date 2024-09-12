@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_QuestionAnswer_structs.hpp"
 #include "Engine_structs.hpp"
 #include "E_RememberAfterSaveLayoutAction_structs.hpp"
-#include "E_QuestionAnswer_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -21,27 +21,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SaveLoadLayout.WB_SaveLoadLayout_C
-// 0x0070 (0x0330 - 0x02C0)
+// 0x0070 (0x0350 - 0x02E0)
 class UWB_SaveLoadLayout_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_CheckBoxWithLabelSmall_C*           CheckBoxAutoSave;                                  // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBox_64;                                  // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             LayoutListScroll;                                  // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       LayoutName;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             LayoutNameText;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Save;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SaveLoadLayout;                                    // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_CheckBoxWithLabel_C*                UseCompression;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          SaveMode;                                          // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowAutoSaves;                                     // 0x0311(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_509C[0x2];                                     // 0x0312(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AmountOfProps;                                     // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_RememberAfterSaveLayoutAction               RememberAfterSaveAction;                           // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_509D[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         CurrentListedLayoutNames;                          // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabelSmall_C*           CheckBoxAutoSave;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_64;                                  // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             LayoutListScroll;                                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       LayoutName;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             LayoutNameText;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Save;                                              // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SaveLoadLayout;                                    // 0x0320(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                UseCompression;                                    // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          SaveMode;                                          // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowAutoSaves;                                     // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x2];                                      // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AmountOfProps;                                     // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_RememberAfterSaveLayoutAction               RememberAfterSaveAction;                           // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         CurrentListedLayoutNames;                          // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AfterSaveAction();
@@ -55,7 +55,7 @@ public:
 	ESlateVisibility Get_SaveAsName_Visibility_0();
 	class FText Get_SaveLoadLayout_Text_0();
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
-	void Loaded(const class FString& Param_LayoutName, bool Saved);
+	void Loaded(const class FString& LayoutName_0, bool Saved);
 	void OnApply();
 	void OnBack();
 	void OnSpecialAction();
@@ -73,22 +73,22 @@ public:
 	}
 };
 static_assert(alignof(UWB_SaveLoadLayout_C) == 0x000008, "Wrong alignment on UWB_SaveLoadLayout_C");
-static_assert(sizeof(UWB_SaveLoadLayout_C) == 0x000330, "Wrong size on UWB_SaveLoadLayout_C");
-static_assert(offsetof(UWB_SaveLoadLayout_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SaveLoadLayout_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, Back) == 0x0002C8, "Member 'UWB_SaveLoadLayout_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, CheckBoxAutoSave) == 0x0002D0, "Member 'UWB_SaveLoadLayout_C::CheckBoxAutoSave' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, HorizontalBox_64) == 0x0002D8, "Member 'UWB_SaveLoadLayout_C::HorizontalBox_64' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, LayoutListScroll) == 0x0002E0, "Member 'UWB_SaveLoadLayout_C::LayoutListScroll' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, LayoutName) == 0x0002E8, "Member 'UWB_SaveLoadLayout_C::LayoutName' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, LayoutNameText) == 0x0002F0, "Member 'UWB_SaveLoadLayout_C::LayoutNameText' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, Save) == 0x0002F8, "Member 'UWB_SaveLoadLayout_C::Save' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, SaveLoadLayout) == 0x000300, "Member 'UWB_SaveLoadLayout_C::SaveLoadLayout' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, UseCompression) == 0x000308, "Member 'UWB_SaveLoadLayout_C::UseCompression' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, SaveMode) == 0x000310, "Member 'UWB_SaveLoadLayout_C::SaveMode' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, ShowAutoSaves) == 0x000311, "Member 'UWB_SaveLoadLayout_C::ShowAutoSaves' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, AmountOfProps) == 0x000314, "Member 'UWB_SaveLoadLayout_C::AmountOfProps' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, RememberAfterSaveAction) == 0x000318, "Member 'UWB_SaveLoadLayout_C::RememberAfterSaveAction' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadLayout_C, CurrentListedLayoutNames) == 0x000320, "Member 'UWB_SaveLoadLayout_C::CurrentListedLayoutNames' has a wrong offset!");
+static_assert(sizeof(UWB_SaveLoadLayout_C) == 0x000350, "Wrong size on UWB_SaveLoadLayout_C");
+static_assert(offsetof(UWB_SaveLoadLayout_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SaveLoadLayout_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, Back) == 0x0002E8, "Member 'UWB_SaveLoadLayout_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, CheckBoxAutoSave) == 0x0002F0, "Member 'UWB_SaveLoadLayout_C::CheckBoxAutoSave' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, HorizontalBox_64) == 0x0002F8, "Member 'UWB_SaveLoadLayout_C::HorizontalBox_64' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, LayoutListScroll) == 0x000300, "Member 'UWB_SaveLoadLayout_C::LayoutListScroll' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, LayoutName) == 0x000308, "Member 'UWB_SaveLoadLayout_C::LayoutName' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, LayoutNameText) == 0x000310, "Member 'UWB_SaveLoadLayout_C::LayoutNameText' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, Save) == 0x000318, "Member 'UWB_SaveLoadLayout_C::Save' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, SaveLoadLayout) == 0x000320, "Member 'UWB_SaveLoadLayout_C::SaveLoadLayout' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, UseCompression) == 0x000328, "Member 'UWB_SaveLoadLayout_C::UseCompression' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, SaveMode) == 0x000330, "Member 'UWB_SaveLoadLayout_C::SaveMode' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, ShowAutoSaves) == 0x000331, "Member 'UWB_SaveLoadLayout_C::ShowAutoSaves' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, AmountOfProps) == 0x000334, "Member 'UWB_SaveLoadLayout_C::AmountOfProps' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, RememberAfterSaveAction) == 0x000338, "Member 'UWB_SaveLoadLayout_C::RememberAfterSaveAction' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadLayout_C, CurrentListedLayoutNames) == 0x000340, "Member 'UWB_SaveLoadLayout_C::CurrentListedLayoutNames' has a wrong offset!");
 
 }
 

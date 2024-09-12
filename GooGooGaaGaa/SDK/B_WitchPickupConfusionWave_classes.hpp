@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchPickupConfusionWave.B_WitchPickupConfusionWave_C
-// 0x0008 (0x0328 - 0x0320)
+// 0x0008 (0x0318 - 0x0310)
 class AB_WitchPickupConfusionWave_C final : public AB_WitchPickup_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_WitchPickupConfusionWave_C;       // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_WitchPickupConfusionWave_C;       // 0x0310(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_WitchPickupConfusionWave(int32 EntryPoint);
@@ -39,8 +39,8 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchPickupConfusionWave_C) == 0x000008, "Wrong alignment on AB_WitchPickupConfusionWave_C");
-static_assert(sizeof(AB_WitchPickupConfusionWave_C) == 0x000328, "Wrong size on AB_WitchPickupConfusionWave_C");
-static_assert(offsetof(AB_WitchPickupConfusionWave_C, UberGraphFrame_B_WitchPickupConfusionWave_C) == 0x000320, "Member 'AB_WitchPickupConfusionWave_C::UberGraphFrame_B_WitchPickupConfusionWave_C' has a wrong offset!");
+static_assert(sizeof(AB_WitchPickupConfusionWave_C) == 0x000318, "Wrong size on AB_WitchPickupConfusionWave_C");
+static_assert(offsetof(AB_WitchPickupConfusionWave_C, UberGraphFrame_B_WitchPickupConfusionWave_C) == 0x000310, "Member 'AB_WitchPickupConfusionWave_C::UberGraphFrame_B_WitchPickupConfusionWave_C' has a wrong offset!");
 
 }
 

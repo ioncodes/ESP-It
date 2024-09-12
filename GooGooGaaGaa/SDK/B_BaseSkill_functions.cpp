@@ -54,9 +54,9 @@ bool UB_BaseSkill_C::CanActivate()
 // Function B_BaseSkill.B_BaseSkill_C.HasAuthority
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasAuthority                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HasAuthority_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_BaseSkill_C::HasAuthority(bool* Param_HasAuthority)
+void UB_BaseSkill_C::HasAuthority(bool* HasAuthority_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -67,8 +67,8 @@ void UB_BaseSkill_C::HasAuthority(bool* Param_HasAuthority)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasAuthority != nullptr)
-		*Param_HasAuthority = Parms.Param_HasAuthority;
+	if (HasAuthority_0 != nullptr)
+		*HasAuthority_0 = Parms.HasAuthority_0;
 }
 
 

@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "AdvancedSessions_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SClientItemUnlock_structs.hpp"
-#include "EventTime_structs.hpp"
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MasterServerPlugin_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SNeededIngredient_structs.hpp"
+#include "EventTime_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
 #include "S_EventInfo_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK::Params
@@ -53,7 +53,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_337B[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -73,7 +73,7 @@ static_assert(offsetof(WB_EventScreen_C_CountAndStoreIngredient, CallFunc_Array_
 static_assert(offsetof(WB_EventScreen_C_CountAndStoreIngredient, CallFunc_BooleanAND_ReturnValue) == 0x000040, "Member 'WB_EventScreen_C_CountAndStoreIngredient::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.ExecuteUbergraph_WB_EventScreen
-// 0x0788 (0x0788 - 0x0000)
+// 0x06E8 (0x06E8 - 0x0000)
 struct WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen final
 {
 public:
@@ -84,32 +84,32 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_337C[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_4;                        // 0x0010(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_337D[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate;              // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_337E[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_337F[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue;                  // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3380[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_5;                        // 0x0070(0x0010)(ConstParm, ReferenceParm)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue_1;                // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3381[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x009C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3382[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x00B0(0x0008)(NoDestructor, HasGetValueTypeHash)
 	class UWB_Unlock_C*                           CallFunc_Create_ReturnValue;                       // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable;                              // 0x00C0(0x0010)(ReferenceParm)
@@ -118,131 +118,131 @@ public:
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_2; // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGetAllItemsCallbackProxy*              CallFunc_GetAllItems_ReturnValue_2;                // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3383[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items;                          // 0x0100(0x0010)(ConstParm, ReferenceParm)
 	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0110(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_1;                        // 0x0120(0x0010)(ConstParm, ReferenceParm)
 	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0130(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_1;                            // 0x0140(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3384[0x4];                                     // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_6;                        // 0x0158(0x0010)(ConstParm, ReferenceParm)
 	int32                                         Temp_int_Variable;                                 // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3385[0x3];                                     // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3386[0x4];                                     // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSClientItemUnlock                     K2Node_MakeStruct_SClientItemUnlock;               // 0x0188(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x01A0(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x01DC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3387[0x4];                                     // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_3; // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0200(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyChildren_ReturnValue;               // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3388[0x7];                                     // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_5;            // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetCraftButtonText_ReturnValue;           // 0x0228(0x0018)()
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3389[0x4];                                     // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_6;            // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_338A[0x7];                                     // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_2;                            // 0x0260(0x0010)(ReferenceParm)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_7;                        // 0x0270(0x0010)(ConstParm, ReferenceParm)
-	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item_1;                         // 0x0280(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetItemProperty_ReturnValue;              // 0x02A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_2;                        // 0x02B0(0x0010)(ConstParm, ReferenceParm)
-	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Max_ReturnValue;                          // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x02CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_338B[0x3];                                     // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_338C[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_7;            // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_338D[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x02EC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x02FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02FE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_338E[0x1];                                     // 0x02FF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        K2Node_CustomEvent_AnimatedSceneComponent;         // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_UnlockDelay;                    // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0310(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_8;            // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_WasUsedAsIngredient_ReturnValue;          // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_338F[0x7];                                     // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0339(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3390[0x6];                                     // 0x033A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_3;                        // 0x0340(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3391[0x3];                                     // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         CallFunc_GetAllActorsWithTag_OutActors;            // 0x0358(0x0010)(ReferenceParm)
-	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0370(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ANiagaraActor*                          K2Node_DynamicCast_AsNiagara_Actor;                // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3392[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSNeededIngredient>             K2Node_MakeArray_Array;                            // 0x0390(0x0010)(ReferenceParm)
-	struct FSNeededIngredient                     K2Node_MakeStruct_SNeededIngredient;               // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default;                             // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3393[0x4];                                     // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSNeededIngredient>             K2Node_MakeArray_Array_1;                          // 0x03B0(0x0010)(ReferenceParm)
-	TArray<int32>                                 K2Node_MakeArray_Array_2;                          // 0x03C0(0x0010)(ReferenceParm)
-	TArray<struct FSNeededIngredient>             K2Node_Select_Default_1;                           // 0x03D0(0x0010)(ReferenceParm)
-	class UGetAllItemsCallbackProxy*              CallFunc_ExchangeItems_ReturnValue;                // 0x03E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3394[0x7];                                     // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_EventInfo                           CallFunc_Map_Find_Value;                           // 0x03F0(0x0110)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3395[0x3];                                     // 0x0501(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x0504(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSNeededIngredient                     K2Node_MakeStruct_SNeededIngredient_1;             // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSNeededIngredient                     K2Node_MakeStruct_SNeededIngredient_2;             // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBlueprintResultSwitch                        CallFunc_ShowWebURLUI_Result;                      // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3396[0x7];                                     // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         CallFunc_ShowWebURLUI_AllowedDomains;              // 0x0520(0x0010)(ReferenceParm)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3397[0x7];                                     // 0x0531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_EventInfo                           CallFunc_Map_Find_Value_1;                         // 0x0538(0x0110)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3398[0x7];                                     // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0650(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x06A0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x06F0(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0700(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0710(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0728(0x0018)()
-	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_3;                            // 0x0740(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0750(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3399[0x7];                                     // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0758(0x0018)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_9;            // 0x0770(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0778(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0780(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339A[0x3];                                     // 0x0781(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0784(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetCraftButtonText_ReturnValue;           // 0x0228(0x0010)()
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_6;            // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_2;                            // 0x0258(0x0010)(ReferenceParm)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_7;                        // 0x0268(0x0010)(ConstParm, ReferenceParm)
+	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item_1;                         // 0x0278(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetItemProperty_ReturnValue;              // 0x0298(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_2;                        // 0x02A8(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue;                          // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x02C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C5[0x3];                                      // 0x02C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_7;            // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E1[0x3];                                      // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x02E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x02F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F7[0x1];                                      // 0x02F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        K2Node_CustomEvent_AnimatedSceneComponent;         // 0x02F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_UnlockDelay;                    // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0308(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_8;            // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_WasUsedAsIngredient_ReturnValue;          // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x6];                                      // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           K2Node_CustomEvent_Items_3;                        // 0x0338(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x3];                                      // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_GetAllActorsWithTag_OutActors;            // 0x0350(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_Array_Get_Item_2;                         // 0x0360(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FBlueprintOnlineItem>& Items)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x0368(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ANiagaraActor*                          K2Node_DynamicCast_AsNiagara_Actor;                // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSNeededIngredient>             K2Node_MakeArray_Array;                            // 0x0388(0x0010)(ReferenceParm)
+	struct FSNeededIngredient                     K2Node_MakeStruct_SNeededIngredient;               // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSNeededIngredient>             K2Node_MakeArray_Array_1;                          // 0x03A8(0x0010)(ReferenceParm)
+	TArray<int32>                                 K2Node_MakeArray_Array_2;                          // 0x03B8(0x0010)(ReferenceParm)
+	TArray<struct FSNeededIngredient>             K2Node_Select_Default_1;                           // 0x03C8(0x0010)(ReferenceParm)
+	class UGetAllItemsCallbackProxy*              CallFunc_ExchangeItems_ReturnValue;                // 0x03D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_EventInfo                           CallFunc_Map_Find_Value;                           // 0x03E8(0x00D8)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C1[0x3];                                      // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x04C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSNeededIngredient                     K2Node_MakeStruct_SNeededIngredient_1;             // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSNeededIngredient                     K2Node_MakeStruct_SNeededIngredient_2;             // 0x04D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBlueprintResultSwitch                        CallFunc_ShowWebURLUI_Result;                      // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         CallFunc_ShowWebURLUI_AllowedDomains;              // 0x04E0(0x0010)(ReferenceParm)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_EventInfo                           CallFunc_Map_Find_Value_1;                         // 0x04F8(0x00D8)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x05D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x05D8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0620(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0668(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0678(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0688(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0698(0x0010)()
+	TArray<struct FBlueprintOnlineItem>           Temp_struct_Variable_3;                            // 0x06A8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x06B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6B9[0x7];                                      // 0x06B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x06C0(0x0010)()
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_9;            // 0x06D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x06D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E1[0x3];                                      // 0x06E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x06E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen) == 0x000008, "Wrong alignment on WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen");
-static_assert(sizeof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen) == 0x000788, "Wrong size on WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen");
+static_assert(sizeof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen) == 0x0006E8, "Wrong size on WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen");
 static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, EntryPoint) == 0x000000, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_bool_Variable) == 0x000008, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_bool_Variable' has a wrong offset!");
@@ -303,213 +303,213 @@ static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFun
 static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_PlayAnimation_ReturnValue_1) == 0x000218, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_5) == 0x000220, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetCraftButtonText_ReturnValue) == 0x000228, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetCraftButtonText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue_2) == 0x000240, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_6) == 0x000248, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000250, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_1) == 0x000258, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_struct_Variable_2) == 0x000260, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_Items_7) == 0x000270, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_Items_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Get_Item_1) == 0x000280, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetItemDefinitionId_ReturnValue) == 0x000290, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetItemDefinitionId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Add_ReturnValue) == 0x000294, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue_3) == 0x000298, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Add_ReturnValue_1) == 0x00029C, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetItemProperty_ReturnValue) == 0x0002A0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetItemProperty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_Items_2) == 0x0002B0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_Items_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Conv_StringToInt_ReturnValue) == 0x0002C0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Max_ReturnValue) == 0x0002C4, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_int_Loop_Counter_Variable_1) == 0x0002C8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Less_IntInt_ReturnValue_3) == 0x0002CC, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Add_IntInt_ReturnValue_1) == 0x0002D0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_7) == 0x0002D8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x0002E0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_2) == 0x0002E8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CreateDelegate_OutputDelegate_6) == 0x0002EC, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetVisibility_ReturnValue) == 0x0002FC, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_SwitchEnum_CmpSuccess) == 0x0002FD, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Not_PreBool_ReturnValue) == 0x0002FE, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_AnimatedSceneComponent) == 0x000300, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_AnimatedSceneComponent' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_UnlockDelay) == 0x000308, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_UnlockDelay' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CreateDelegate_OutputDelegate_7) == 0x000310, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_8) == 0x000320, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_WasUsedAsIngredient_ReturnValue) == 0x000328, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_WasUsedAsIngredient_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000330, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_3) == 0x000338, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Not_PreBool_ReturnValue_1) == 0x000339, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_Items_3) == 0x000340, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_Items_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Less_IntInt_ReturnValue_4) == 0x000350, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Add_IntInt_ReturnValue_2) == 0x000354, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetAllActorsWithTag_OutActors) == 0x000358, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetAllActorsWithTag_OutActors' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Get_Item_2) == 0x000368, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CreateDelegate_OutputDelegate_8) == 0x000370, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsNiagara_Actor) == 0x000380, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsNiagara_Actor' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_4) == 0x000388, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array) == 0x000390, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_SNeededIngredient) == 0x0003A0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_SNeededIngredient' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_Select_Default) == 0x0003A8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_1) == 0x0003B0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_2) == 0x0003C0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_Select_Default_1) == 0x0003D0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_ExchangeItems_ReturnValue) == 0x0003E0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_ExchangeItems_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_IsValid_ReturnValue_3) == 0x0003E8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_Value) == 0x0003F0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_ReturnValue) == 0x000500, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue_4) == 0x000504, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_SNeededIngredient_1) == 0x000508, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_SNeededIngredient_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_SNeededIngredient_2) == 0x000510, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_SNeededIngredient_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_ShowWebURLUI_Result) == 0x000518, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_ShowWebURLUI_Result' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_ShowWebURLUI_AllowedDomains) == 0x000520, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_ShowWebURLUI_AllowedDomains' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_SwitchEnum_CmpSuccess_1) == 0x000530, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_Value_1) == 0x000538, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_ReturnValue_1) == 0x000648, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_FormatArgumentData) == 0x000650, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_FormatArgumentData_1) == 0x0006A0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_3) == 0x0006F0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_4) == 0x000700, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Format_ReturnValue) == 0x000710, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Format_ReturnValue_1) == 0x000728, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_struct_Variable_3) == 0x000740, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Less_IntInt_ReturnValue_5) == 0x000750, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_Select_Default_2) == 0x000758, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_9) == 0x000770, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x000778, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_5) == 0x000780, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Delay_Duration_ImplicitCast) == 0x000784, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue_2) == 0x000238, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_6) == 0x000240, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000248, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_1) == 0x000250, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_struct_Variable_2) == 0x000258, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_struct_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_Items_7) == 0x000268, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_Items_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Get_Item_1) == 0x000278, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetItemDefinitionId_ReturnValue) == 0x000288, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetItemDefinitionId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Add_ReturnValue) == 0x00028C, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue_3) == 0x000290, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Add_ReturnValue_1) == 0x000294, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetItemProperty_ReturnValue) == 0x000298, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetItemProperty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_Items_2) == 0x0002A8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_Items_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Conv_StringToInt_ReturnValue) == 0x0002B8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Max_ReturnValue) == 0x0002BC, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Max_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_int_Loop_Counter_Variable_1) == 0x0002C0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Less_IntInt_ReturnValue_3) == 0x0002C4, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Add_IntInt_ReturnValue_1) == 0x0002C8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_7) == 0x0002D0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x0002D8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_2) == 0x0002E0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CreateDelegate_OutputDelegate_6) == 0x0002E4, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetVisibility_ReturnValue) == 0x0002F4, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_SwitchEnum_CmpSuccess) == 0x0002F5, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Not_PreBool_ReturnValue) == 0x0002F6, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_AnimatedSceneComponent) == 0x0002F8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_AnimatedSceneComponent' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_UnlockDelay) == 0x000300, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_UnlockDelay' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CreateDelegate_OutputDelegate_7) == 0x000308, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_8) == 0x000318, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_WasUsedAsIngredient_ReturnValue) == 0x000320, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_WasUsedAsIngredient_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000328, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_3) == 0x000330, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Not_PreBool_ReturnValue_1) == 0x000331, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CustomEvent_Items_3) == 0x000338, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CustomEvent_Items_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Less_IntInt_ReturnValue_4) == 0x000348, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Add_IntInt_ReturnValue_2) == 0x00034C, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetAllActorsWithTag_OutActors) == 0x000350, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetAllActorsWithTag_OutActors' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Get_Item_2) == 0x000360, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_CreateDelegate_OutputDelegate_8) == 0x000368, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsNiagara_Actor) == 0x000378, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsNiagara_Actor' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_4) == 0x000380, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array) == 0x000388, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_SNeededIngredient) == 0x000398, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_SNeededIngredient' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_Select_Default) == 0x0003A0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_1) == 0x0003A8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_2) == 0x0003B8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_Select_Default_1) == 0x0003C8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_ExchangeItems_ReturnValue) == 0x0003D8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_ExchangeItems_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_IsValid_ReturnValue_3) == 0x0003E0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_Value) == 0x0003E8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_ReturnValue) == 0x0004C0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Array_Length_ReturnValue_4) == 0x0004C4, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_SNeededIngredient_1) == 0x0004C8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_SNeededIngredient_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_SNeededIngredient_2) == 0x0004D0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_SNeededIngredient_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_ShowWebURLUI_Result) == 0x0004D8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_ShowWebURLUI_Result' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_ShowWebURLUI_AllowedDomains) == 0x0004E0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_ShowWebURLUI_AllowedDomains' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_SwitchEnum_CmpSuccess_1) == 0x0004F0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_Value_1) == 0x0004F8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Map_Find_ReturnValue_1) == 0x0005D0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_FormatArgumentData) == 0x0005D8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeStruct_FormatArgumentData_1) == 0x000620, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_3) == 0x000668, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_MakeArray_Array_4) == 0x000678, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Format_ReturnValue) == 0x000688, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Format_ReturnValue_1) == 0x000698, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, Temp_struct_Variable_3) == 0x0006A8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::Temp_struct_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Less_IntInt_ReturnValue_5) == 0x0006B8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_Select_Default_2) == 0x0006C0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_GetGameInstance_ReturnValue_9) == 0x0006D0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_GetGameInstance_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x0006D8, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, K2Node_DynamicCast_bSuccess_5) == 0x0006E0, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen, CallFunc_Delay_Duration_ImplicitCast) == 0x0006E4, "Member 'WB_EventScreen_C_ExecuteUbergraph_WB_EventScreen::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GenerateAdditionalInfo
-// 0x0568 (0x0568 - 0x0000)
+// 0x04A8 (0x04A8 - 0x0000)
 struct WB_EventScreen_C_GenerateAdditionalInfo final
 {
 public:
-	class FText                                   AdditionalInfo;                                    // 0x0000(0x0018)(Parm, OutParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0038(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable_1;                              // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339C[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_1;                              // 0x0050(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0068(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00B8(0x0010)(ReferenceParm)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0138(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0188(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x01D8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0228(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0278(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0288(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x02D8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x02F0(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0340(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0390(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x03A0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x03B0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x03C8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x03E0(0x0050)(HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default;                             // 0x0430(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0448(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0458(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0470(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0488(0x0050)(HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default_1;                           // 0x04D8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x04F0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0540(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0550(0x0018)()
+	class FText                                   AdditionalInfo;                                    // 0x0000(0x0010)(Parm, OutParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
+	bool                                          Temp_bool_Variable_1;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_1;                              // 0x0040(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0098(0x0010)(ReferenceParm)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00C0(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0108(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0150(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0198(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x01E0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0228(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0238(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0280(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0290(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x02D8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0320(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0330(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0340(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0350(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0360(0x0048)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x03A8(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x03B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x03C8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x03D8(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x03E8(0x0048)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_1;                           // 0x0430(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x0440(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0488(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0498(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GenerateAdditionalInfo) == 0x000008, "Wrong alignment on WB_EventScreen_C_GenerateAdditionalInfo");
-static_assert(sizeof(WB_EventScreen_C_GenerateAdditionalInfo) == 0x000568, "Wrong size on WB_EventScreen_C_GenerateAdditionalInfo");
+static_assert(sizeof(WB_EventScreen_C_GenerateAdditionalInfo) == 0x0004A8, "Wrong size on WB_EventScreen_C_GenerateAdditionalInfo");
 static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, AdditionalInfo) == 0x000000, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::AdditionalInfo' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_bool_Variable) == 0x000018, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_text_Variable) == 0x000020, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array) == 0x000038, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_bool_Variable_1) == 0x000048, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_text_Variable_1) == 0x000050, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000068, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_1) == 0x0000B8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000C8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue) == 0x0000D0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_2) == 0x000138, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_3) == 0x000188, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_4) == 0x0001D8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_5) == 0x000228, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_2) == 0x000278, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_6) == 0x000288, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_1) == 0x0002D8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_7) == 0x0002F0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_8) == 0x000340, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_3) == 0x000390, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_4) == 0x0003A0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_2) == 0x0003B0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_3) == 0x0003C8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_9) == 0x0003E0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_Select_Default) == 0x000430, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_5) == 0x000448, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_4) == 0x000458, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_5) == 0x000470, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_10) == 0x000488, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_10' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_Select_Default_1) == 0x0004D8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_11) == 0x0004F0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_11' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_6) == 0x000540, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_6) == 0x000550, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_bool_Variable) == 0x000010, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_text_Variable) == 0x000018, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array) == 0x000028, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_bool_Variable_1) == 0x000038, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, Temp_text_Variable_1) == 0x000040, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_1) == 0x000098, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000A8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue) == 0x0000B0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000C0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_2) == 0x000108, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_3) == 0x000150, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_4) == 0x000198, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_5) == 0x0001E0, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_2) == 0x000228, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_6) == 0x000238, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_1) == 0x000280, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_7) == 0x000290, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_8) == 0x0002D8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_3) == 0x000320, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_4) == 0x000330, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_2) == 0x000340, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_3) == 0x000350, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_9) == 0x000360, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_Select_Default) == 0x0003A8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_5) == 0x0003B8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_4) == 0x0003C8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_5) == 0x0003D8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_10) == 0x0003E8, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_10' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_Select_Default_1) == 0x000430, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeStruct_FormatArgumentData_11) == 0x000440, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeStruct_FormatArgumentData_11' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, K2Node_MakeArray_Array_6) == 0x000488, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::K2Node_MakeArray_Array_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateAdditionalInfo, CallFunc_Format_ReturnValue_6) == 0x000498, "Member 'WB_EventScreen_C_GenerateAdditionalInfo::CallFunc_Format_ReturnValue_6' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GenerateMapText
-// 0x0198 (0x0198 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct WB_EventScreen_C_GenerateMapText final
 {
 public:
 	TArray<class FText>                           Maps;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FText                                   MapText;                                           // 0x0010(0x0018)(Parm, OutParm)
-	class FText                                   CombinedText;                                      // 0x0028(0x0018)(Edit, BlueprintVisible)
-	class FText                                   Temp_text_Variable;                                // 0x0040(0x0018)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339D[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_1;                              // 0x0060(0x0018)()
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0080(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0098(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339E[0x3];                                     // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339F[0x3];                                     // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A0[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A1[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0108(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0158(0x0010)(ReferenceParm)
-	class FText                                   K2Node_Select_Default;                             // 0x0168(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0180(0x0018)()
+	class FText                                   MapText;                                           // 0x0010(0x0010)(Parm, OutParm)
+	class FText                                   CombinedText;                                      // 0x0020(0x0010)(Edit, BlueprintVisible)
+	class FText                                   Temp_text_Variable;                                // 0x0030(0x0010)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_1;                              // 0x0048(0x0010)()
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Array_Get_Item;                           // 0x0060(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0070(0x0048)(HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
+	class FText                                   K2Node_Select_Default;                             // 0x0130(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0140(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GenerateMapText) == 0x000008, "Wrong alignment on WB_EventScreen_C_GenerateMapText");
-static_assert(sizeof(WB_EventScreen_C_GenerateMapText) == 0x000198, "Wrong size on WB_EventScreen_C_GenerateMapText");
+static_assert(sizeof(WB_EventScreen_C_GenerateMapText) == 0x000150, "Wrong size on WB_EventScreen_C_GenerateMapText");
 static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Maps) == 0x000000, "Member 'WB_EventScreen_C_GenerateMapText::Maps' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_GenerateMapText, MapText) == 0x000010, "Member 'WB_EventScreen_C_GenerateMapText::MapText' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CombinedText) == 0x000028, "Member 'WB_EventScreen_C_GenerateMapText::CombinedText' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_text_Variable) == 0x000040, "Member 'WB_EventScreen_C_GenerateMapText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_text_Variable_1) == 0x000060, "Member 'WB_EventScreen_C_GenerateMapText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_int_Array_Index_Variable) == 0x000078, "Member 'WB_EventScreen_C_GenerateMapText::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_int_Loop_Counter_Variable) == 0x00007C, "Member 'WB_EventScreen_C_GenerateMapText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Array_Get_Item) == 0x000080, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_MakeStruct_FormatArgumentData) == 0x000098, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Less_IntInt_ReturnValue) == 0x0000E8, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Add_IntInt_ReturnValue) == 0x0000EC, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000F0, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000F4, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_bool_Variable) == 0x0000F8, "Member 'WB_EventScreen_C_GenerateMapText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Array_Length_ReturnValue_1) == 0x0000FC, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000100, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000108, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_MakeArray_Array) == 0x000158, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_Select_Default) == 0x000168, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Format_ReturnValue) == 0x000180, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CombinedText) == 0x000020, "Member 'WB_EventScreen_C_GenerateMapText::CombinedText' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_text_Variable) == 0x000030, "Member 'WB_EventScreen_C_GenerateMapText::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_text_Variable_1) == 0x000048, "Member 'WB_EventScreen_C_GenerateMapText::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_int_Array_Index_Variable) == 0x000058, "Member 'WB_EventScreen_C_GenerateMapText::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_int_Loop_Counter_Variable) == 0x00005C, "Member 'WB_EventScreen_C_GenerateMapText::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Array_Get_Item) == 0x000060, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_MakeStruct_FormatArgumentData) == 0x000070, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Add_IntInt_ReturnValue) == 0x0000BC, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000C0, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000C4, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, Temp_bool_Variable) == 0x0000C8, "Member 'WB_EventScreen_C_GenerateMapText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Array_Length_ReturnValue_1) == 0x0000CC, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x0000D0, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D8, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_MakeArray_Array) == 0x000120, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, K2Node_Select_Default) == 0x000130, "Member 'WB_EventScreen_C_GenerateMapText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GenerateMapText, CallFunc_Format_ReturnValue) == 0x000140, "Member 'WB_EventScreen_C_GenerateMapText::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.Get_ChestImage_Brush_0
 // 0x01A0 (0x01A0 - 0x0000)
@@ -576,10 +576,10 @@ public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0000(0x00D0)(Parm, OutParm, ReturnParm)
 	int32                                         CallFunc_Blueprint_GetSizeX_ReturnValue;           // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A2[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Blueprint_GetSizeY_ReturnValue;           // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A3[0x4];                                     // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0100(0x00D0)()
@@ -636,14 +636,14 @@ static_assert(offsetof(WB_EventScreen_C_Get_Gloomkin_bIsEnabled_0, CallFunc_Bool
 static_assert(offsetof(WB_EventScreen_C_Get_Gloomkin_bIsEnabled_0, CallFunc_Not_PreBool_ReturnValue) == 0x000003, "Member 'WB_EventScreen_C_Get_Gloomkin_bIsEnabled_0::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.Get_Headline_Text_0
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_EventScreen_C_Get_Headline_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
 static_assert(alignof(WB_EventScreen_C_Get_Headline_Text_0) == 0x000008, "Wrong alignment on WB_EventScreen_C_Get_Headline_Text_0");
-static_assert(sizeof(WB_EventScreen_C_Get_Headline_Text_0) == 0x000018, "Wrong size on WB_EventScreen_C_Get_Headline_Text_0");
+static_assert(sizeof(WB_EventScreen_C_Get_Headline_Text_0) == 0x000010, "Wrong size on WB_EventScreen_C_Get_Headline_Text_0");
 static_assert(offsetof(WB_EventScreen_C_Get_Headline_Text_0, ReturnValue) == 0x000000, "Member 'WB_EventScreen_C_Get_Headline_Text_0::ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.Get_Headline_Visibility_0
@@ -755,171 +755,171 @@ static_assert(offsetof(WB_EventScreen_C_GetCraftButtonIsEnabled, CallFunc_Boolea
 static_assert(offsetof(WB_EventScreen_C_GetCraftButtonIsEnabled, CallFunc_Not_PreBool_ReturnValue) == 0x000006, "Member 'WB_EventScreen_C_GetCraftButtonIsEnabled::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetCraftButtonText
-// 0x0110 (0x0110 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct WB_EventScreen_C_GetCraftButtonText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A4[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0070(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00D0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00F8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0060(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00D8(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GetCraftButtonText) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetCraftButtonText");
-static_assert(sizeof(WB_EventScreen_C_GetCraftButtonText) == 0x000110, "Wrong size on WB_EventScreen_C_GetCraftButtonText");
+static_assert(sizeof(WB_EventScreen_C_GetCraftButtonText) == 0x0000E8, "Wrong size on WB_EventScreen_C_GetCraftButtonText");
 static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, ReturnValue) == 0x000000, "Member 'WB_EventScreen_C_GetCraftButtonText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Less_IntInt_ReturnValue) == 0x000018, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Less_IntInt_ReturnValue_1) == 0x000019, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00001A, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x00001B, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_BooleanAND_ReturnValue) == 0x00001C, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000070, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeArray_Array) == 0x0000C0, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeArray_Array_1) == 0x0000D0, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Format_ReturnValue) == 0x0000E0, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Format_ReturnValue_1) == 0x0000F8, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Less_IntInt_ReturnValue) == 0x000010, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Less_IntInt_ReturnValue_1) == 0x000011, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000012, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000013, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_BooleanAND_ReturnValue) == 0x000014, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000060, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeArray_Array) == 0x0000A8, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, K2Node_MakeArray_Array_1) == 0x0000B8, "Member 'WB_EventScreen_C_GetCraftButtonText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Format_ReturnValue) == 0x0000C8, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetCraftButtonText, CallFunc_Format_ReturnValue_1) == 0x0000D8, "Member 'WB_EventScreen_C_GetCraftButtonText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetEventGuideText
-// 0x0928 (0x0928 - 0x0000)
+// 0x07F0 (0x07F0 - 0x0000)
 struct WB_EventScreen_C_GetEventGuideText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0028(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0038(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0050(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0068(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0108(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable;                                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A5[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0120(0x0018)()
-	class FText                                   Temp_text_Variable;                                // 0x0138(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0150(0x0050)(HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable_1;                              // 0x01A0(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A6[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_2;                              // 0x01C0(0x0018)()
-	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A7[0x4];                                     // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01E8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GenerateAdditionalInfo_AdditionalInfo;    // 0x0238(0x0018)()
-	class FText                                   CallFunc_GenerateMapText_MapText;                  // 0x0250(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0268(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02B8(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A8[0x4];                                     // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33A9[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0320(0x0050)(HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default;                             // 0x0370(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default_1;                           // 0x0390(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x03A8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x03F8(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0458(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x04A8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x04F8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0548(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0598(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x05A8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x05F8(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0610(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_14;           // 0x0620(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0670(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_15;           // 0x0688(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_16;           // 0x06D8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0728(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_17;           // 0x0738(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0788(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x07A0(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_18;           // 0x07B0(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0800(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_7;                          // 0x0818(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_19;           // 0x0828(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_7;                     // 0x0878(0x0018)()
-	bool                                          Temp_bool_Variable_2;                              // 0x0890(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33AA[0x7];                                     // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0898(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_20;           // 0x08B0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_8;                          // 0x0900(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_8;                     // 0x0910(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0020(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0030(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0040(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0098(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x00E0(0x0010)(ReferenceParm)
+	bool                                          Temp_bool_Variable;                                // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x00F8(0x0010)()
+	class FText                                   Temp_text_Variable;                                // 0x0108(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0118(0x0048)(HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable_1;                              // 0x0160(0x0010)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_2;                              // 0x0178(0x0010)()
+	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0198(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GenerateAdditionalInfo_AdditionalInfo;    // 0x01E0(0x0010)()
+	class FText                                   CallFunc_GenerateMapText_MapText;                  // 0x01F0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0200(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0248(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x02A8(0x0048)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x02F0(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_1;                           // 0x0308(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0318(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0360(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x03B8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0400(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x0448(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0490(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x04D8(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x04E8(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0530(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0540(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_14;           // 0x0550(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0598(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_15;           // 0x05A8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_16;           // 0x05F0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0638(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_17;           // 0x0648(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0690(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x06A0(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_18;           // 0x06B0(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x06F8(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_7;                          // 0x0708(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_19;           // 0x0718(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_7;                     // 0x0760(0x0010)()
+	bool                                          Temp_bool_Variable_2;                              // 0x0770(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_771[0x7];                                      // 0x0771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x0778(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_20;           // 0x0788(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_8;                          // 0x07D0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_8;                     // 0x07E0(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GetEventGuideText) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetEventGuideText");
-static_assert(sizeof(WB_EventScreen_C_GetEventGuideText) == 0x000928, "Wrong size on WB_EventScreen_C_GetEventGuideText");
+static_assert(sizeof(WB_EventScreen_C_GetEventGuideText) == 0x0007F0, "Wrong size on WB_EventScreen_C_GetEventGuideText");
 static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, ReturnValue) == 0x000000, "Member 'WB_EventScreen_C_GetEventGuideText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array) == 0x000018, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_1) == 0x000028, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue) == 0x000038, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_1) == 0x000050, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData) == 0x000068, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_2) == 0x000108, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_bool_Variable) == 0x000118, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_2) == 0x000120, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_text_Variable) == 0x000138, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000150, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_text_Variable_1) == 0x0001A0, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_bool_Variable_1) == 0x0001B8, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_text_Variable_2) == 0x0001C0, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_MakeLiteralInt_ReturnValue) == 0x0001D8, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0001E0, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001E8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_GenerateAdditionalInfo_AdditionalInfo) == 0x000238, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_GenerateAdditionalInfo_AdditionalInfo' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_GenerateMapText_MapText) == 0x000250, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_GenerateMapText_MapText' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000268, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002B8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Array_Length_ReturnValue) == 0x000308, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000310, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000318, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_6) == 0x000320, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_Select_Default) == 0x000370, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000388, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_Select_Default_1) == 0x000390, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_7) == 0x0003A8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_8) == 0x0003F8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x000448, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000450, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_9) == 0x000458, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_10) == 0x0004A8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_10' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_11) == 0x0004F8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_11' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_12) == 0x000548, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_12' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_3) == 0x000598, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_13) == 0x0005A8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_13' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_3) == 0x0005F8, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_4) == 0x000610, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_14) == 0x000620, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_14' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_4) == 0x000670, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_15) == 0x000688, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_15' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_16) == 0x0006D8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_16' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_5) == 0x000728, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_17) == 0x000738, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_17' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_5) == 0x000788, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_6) == 0x0007A0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_18) == 0x0007B0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_18' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_6) == 0x000800, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_7) == 0x000818, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_19) == 0x000828, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_19' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_7) == 0x000878, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_bool_Variable_2) == 0x000890, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_Select_Default_2) == 0x000898, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_20) == 0x0008B0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_20' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_8) == 0x000900, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_8) == 0x000910, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array) == 0x000010, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_1) == 0x000020, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue) == 0x000030, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_1) == 0x000040, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000098, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_2) == 0x0000E0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_bool_Variable) == 0x0000F0, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_2) == 0x0000F8, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_text_Variable) == 0x000108, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000118, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_text_Variable_1) == 0x000160, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_bool_Variable_1) == 0x000170, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_text_Variable_2) == 0x000178, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_MakeLiteralInt_ReturnValue) == 0x000188, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000190, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000198, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_GenerateAdditionalInfo_AdditionalInfo) == 0x0001E0, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_GenerateAdditionalInfo_AdditionalInfo' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_GenerateMapText_MapText) == 0x0001F0, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_GenerateMapText_MapText' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000200, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000248, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Array_Length_ReturnValue) == 0x000290, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000298, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0002A0, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_6) == 0x0002A8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_Select_Default) == 0x0002F0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000300, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_Select_Default_1) == 0x000308, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_7) == 0x000318, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_8) == 0x000360, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x0003A8, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x0003B0, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_9) == 0x0003B8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_10) == 0x000400, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_10' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_11) == 0x000448, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_11' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_12) == 0x000490, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_12' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_3) == 0x0004D8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_13) == 0x0004E8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_13' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_3) == 0x000530, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_4) == 0x000540, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_14) == 0x000550, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_14' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_4) == 0x000598, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_15) == 0x0005A8, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_15' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_16) == 0x0005F0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_16' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_5) == 0x000638, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_17) == 0x000648, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_17' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_5) == 0x000690, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_6) == 0x0006A0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_18) == 0x0006B0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_18' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_6) == 0x0006F8, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_7) == 0x000708, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_19) == 0x000718, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_19' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_7) == 0x000760, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, Temp_bool_Variable_2) == 0x000770, "Member 'WB_EventScreen_C_GetEventGuideText::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_Select_Default_2) == 0x000778, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeStruct_FormatArgumentData_20) == 0x000788, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeStruct_FormatArgumentData_20' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, K2Node_MakeArray_Array_8) == 0x0007D0, "Member 'WB_EventScreen_C_GetEventGuideText::K2Node_MakeArray_Array_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetEventGuideText, CallFunc_Format_ReturnValue_8) == 0x0007E0, "Member 'WB_EventScreen_C_GetEventGuideText::CallFunc_Format_ReturnValue_8' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetEventManager
 // 0x0028 (0x0028 - 0x0000)
@@ -928,7 +928,7 @@ struct WB_EventScreen_C_GetEventManager final
 public:
 	class UB_EventManager_C*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33AB[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -946,7 +946,7 @@ static_assert(offsetof(WB_EventScreen_C_GetEventManager, K2Node_DynamicCast_bSuc
 struct WB_EventScreen_C_GetIngredients final
 {
 public:
-	TArray<struct FBlueprintOnlineItem>           Param_Ingredients;                                 // 0x0000(0x0010)(Parm, OutParm)
+	TArray<struct FBlueprintOnlineItem>           Ingredients_0;                                     // 0x0000(0x0010)(Parm, OutParm)
 	int32                                         CurrentIndex;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ChestCount;                                        // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CandyCount;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -954,20 +954,20 @@ public:
 	struct FBlueprintOnlineItem                   CurrentItem;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	TArray<int32>                                 LocalIngredientIndices;                            // 0x0030(0x0010)(Edit, BlueprintVisible)
 	int32                                         PumpkinCount;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33AC[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FBlueprintOnlineItem>           LocalIngredients;                                  // 0x0048(0x0010)(Edit, BlueprintVisible)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33AD[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33AE[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33AF[0x5];                                     // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -975,7 +975,7 @@ public:
 };
 static_assert(alignof(WB_EventScreen_C_GetIngredients) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetIngredients");
 static_assert(sizeof(WB_EventScreen_C_GetIngredients) == 0x000090, "Wrong size on WB_EventScreen_C_GetIngredients");
-static_assert(offsetof(WB_EventScreen_C_GetIngredients, Param_Ingredients) == 0x000000, "Member 'WB_EventScreen_C_GetIngredients::Param_Ingredients' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetIngredients, Ingredients_0) == 0x000000, "Member 'WB_EventScreen_C_GetIngredients::Ingredients_0' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_GetIngredients, CurrentIndex) == 0x000010, "Member 'WB_EventScreen_C_GetIngredients::CurrentIndex' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_GetIngredients, ChestCount) == 0x000014, "Member 'WB_EventScreen_C_GetIngredients::ChestCount' has a wrong offset!");
 static_assert(offsetof(WB_EventScreen_C_GetIngredients, CandyCount) == 0x000018, "Member 'WB_EventScreen_C_GetIngredients::CandyCount' has a wrong offset!");
@@ -1006,7 +1006,7 @@ public:
 	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B0[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            K2Node_Select_Default;                             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_EventScreen_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetInitialFocusWidget");
@@ -1017,30 +1017,30 @@ static_assert(offsetof(WB_EventScreen_C_GetInitialFocusWidget, CallFunc_GetIsEna
 static_assert(offsetof(WB_EventScreen_C_GetInitialFocusWidget, K2Node_Select_Default) == 0x000010, "Member 'WB_EventScreen_C_GetInitialFocusWidget::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetNumberOfCandiesText
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_EventScreen_C_GetNumberOfCandiesText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GetNumberOfCandiesText) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetNumberOfCandiesText");
-static_assert(sizeof(WB_EventScreen_C_GetNumberOfCandiesText) == 0x000030, "Wrong size on WB_EventScreen_C_GetNumberOfCandiesText");
+static_assert(sizeof(WB_EventScreen_C_GetNumberOfCandiesText) == 0x000020, "Wrong size on WB_EventScreen_C_GetNumberOfCandiesText");
 static_assert(offsetof(WB_EventScreen_C_GetNumberOfCandiesText, ReturnValue) == 0x000000, "Member 'WB_EventScreen_C_GetNumberOfCandiesText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetNumberOfCandiesText, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_EventScreen_C_GetNumberOfCandiesText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetNumberOfCandiesText, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WB_EventScreen_C_GetNumberOfCandiesText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetNumberOfPumpkinsText
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_EventScreen_C_GetNumberOfPumpkinsText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GetNumberOfPumpkinsText) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetNumberOfPumpkinsText");
-static_assert(sizeof(WB_EventScreen_C_GetNumberOfPumpkinsText) == 0x000030, "Wrong size on WB_EventScreen_C_GetNumberOfPumpkinsText");
+static_assert(sizeof(WB_EventScreen_C_GetNumberOfPumpkinsText) == 0x000020, "Wrong size on WB_EventScreen_C_GetNumberOfPumpkinsText");
 static_assert(offsetof(WB_EventScreen_C_GetNumberOfPumpkinsText, ReturnValue) == 0x000000, "Member 'WB_EventScreen_C_GetNumberOfPumpkinsText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetNumberOfPumpkinsText, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_EventScreen_C_GetNumberOfPumpkinsText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetNumberOfPumpkinsText, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WB_EventScreen_C_GetNumberOfPumpkinsText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetOtherButtonsAreEnabled
 // 0x0002 (0x0002 - 0x0000)
@@ -1056,167 +1056,167 @@ static_assert(offsetof(WB_EventScreen_C_GetOtherButtonsAreEnabled, ReturnValue) 
 static_assert(offsetof(WB_EventScreen_C_GetOtherButtonsAreEnabled, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'WB_EventScreen_C_GetOtherButtonsAreEnabled::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.GetTimeRemainungText
-// 0x0578 (0x0578 - 0x0000)
+// 0x04B0 (0x04B0 - 0x0000)
 struct WB_EventScreen_C_GetTimeRemainungText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	EventTime                                     TimeType;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B1[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              Timespan;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Temp_text_Variable;                                // 0x0028(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0040(0x0018)()
-	EventTime                                     Temp_byte_Variable;                                // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B2[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_2;                              // 0x0060(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0078(0x0018)()
-	class FText                                   Temp_text_Variable_4;                              // 0x0090(0x0018)()
-	int32                                         CallFunc_BreakTimespan_Days;                       // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Hours;                      // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Minutes;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Seconds;                    // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Milliseconds;               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EventTime                                     Temp_byte_Variable_1;                              // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B3[0x2];                                     // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_5;                              // 0x00C0(0x0018)()
-	class FText                                   Temp_text_Variable_6;                              // 0x00D8(0x0018)()
-	class FText                                   Temp_text_Variable_7;                              // 0x00F0(0x0018)()
-	class FText                                   Temp_text_Variable_8;                              // 0x0108(0x0018)()
-	int32                                         CallFunc_BreakTimespan_Days_1;                     // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Hours_1;                    // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Minutes_1;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Seconds_1;                  // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Milliseconds_1;             // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Max_ReturnValue;                          // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0148(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0198(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x01F0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0240(0x0010)(ReferenceParm)
-	class FText                                   K2Node_Select_Default;                             // 0x0250(0x0018)()
-	EventTime                                     Temp_byte_Variable_2;                              // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B4[0x3];                                     // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_BreakTimespan_Days_2;                     // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Hours_2;                    // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Minutes_2;                  // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Seconds_2;                  // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Milliseconds_2;             // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default_1;                           // 0x0288(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x02A0(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x02F0(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0310(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0368(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Days_3;                     // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Hours_3;                    // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Minutes_3;                  // 0x03C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Seconds_3;                  // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Milliseconds_3;             // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B5[0x4];                                     // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x03D0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B6[0x7];                                     // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x03E8(0x0018)()
-	int32                                         CallFunc_BreakTimespan_Days_4;                     // 0x0400(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Hours_4;                    // 0x0404(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Minutes_4;                  // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Seconds_4;                  // 0x040C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakTimespan_Milliseconds_4;             // 0x0410(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B7[0x4];                                     // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0418(0x0018)()
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_7;            // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0440(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0490(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_8;            // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_EventManager_C*                      CallFunc_GetEventManager_ReturnValue;              // 0x04E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x04F0(0x0050)(HasGetValueTypeHash)
-	EventTime                                     CallFunc_GetEventTime_EventTimeType;               // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B8[0x7];                                     // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimespan                              CallFunc_GetEventTime_ReturnValue;                 // 0x0548(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0550(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0560(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	EventTime                                     TimeType;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              Timespan;                                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Temp_text_Variable;                                // 0x0020(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0030(0x0010)()
+	EventTime                                     Temp_byte_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_2;                              // 0x0048(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0058(0x0010)()
+	class FText                                   Temp_text_Variable_4;                              // 0x0068(0x0010)()
+	int32                                         CallFunc_BreakTimespan_Days;                       // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Hours;                      // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Minutes;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Seconds;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Milliseconds;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EventTime                                     Temp_byte_Variable_1;                              // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_5;                              // 0x0090(0x0010)()
+	class FText                                   Temp_text_Variable_6;                              // 0x00A0(0x0010)()
+	class FText                                   Temp_text_Variable_7;                              // 0x00B0(0x0010)()
+	class FText                                   Temp_text_Variable_8;                              // 0x00C0(0x0010)()
+	int32                                         CallFunc_BreakTimespan_Days_1;                     // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Hours_1;                    // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Minutes_1;                  // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Seconds_1;                  // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Milliseconds_1;             // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue;                          // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00F8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0140(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_2;            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0190(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01D8(0x0010)(ReferenceParm)
+	class FText                                   K2Node_Select_Default;                             // 0x01E8(0x0010)()
+	EventTime                                     Temp_byte_Variable_2;                              // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_BreakTimespan_Days_2;                     // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Hours_2;                    // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Minutes_2;                  // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Seconds_2;                  // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Milliseconds_2;             // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_3;            // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_1;                           // 0x0218(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0228(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0270(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_4;            // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0288(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_5;            // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02D8(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Days_3;                     // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Hours_3;                    // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Minutes_3;                  // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Seconds_3;                  // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Milliseconds_3;             // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0338(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0350(0x0010)()
+	int32                                         CallFunc_BreakTimespan_Days_4;                     // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Hours_4;                    // 0x0364(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Minutes_4;                  // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Seconds_4;                  // 0x036C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakTimespan_Milliseconds_4;             // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_2;                           // 0x0378(0x0010)()
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_6;            // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_7;            // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0398(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x03E0(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_8;            // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_EventManager_C*                      CallFunc_GetEventManager_ReturnValue;              // 0x0430(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0438(0x0048)(HasGetValueTypeHash)
+	EventTime                                     CallFunc_GetEventTime_EventTimeType;               // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimespan                              CallFunc_GetEventTime_ReturnValue;                 // 0x0488(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0490(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x04A0(0x0010)()
 };
 static_assert(alignof(WB_EventScreen_C_GetTimeRemainungText) == 0x000008, "Wrong alignment on WB_EventScreen_C_GetTimeRemainungText");
-static_assert(sizeof(WB_EventScreen_C_GetTimeRemainungText) == 0x000578, "Wrong size on WB_EventScreen_C_GetTimeRemainungText");
+static_assert(sizeof(WB_EventScreen_C_GetTimeRemainungText) == 0x0004B0, "Wrong size on WB_EventScreen_C_GetTimeRemainungText");
 static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, ReturnValue) == 0x000000, "Member 'WB_EventScreen_C_GetTimeRemainungText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, TimeType) == 0x000018, "Member 'WB_EventScreen_C_GetTimeRemainungText::TimeType' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Timespan) == 0x000020, "Member 'WB_EventScreen_C_GetTimeRemainungText::Timespan' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable) == 0x000028, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_1) == 0x000040, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_byte_Variable) == 0x000058, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_2) == 0x000060, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_3) == 0x000078, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_4) == 0x000090, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days) == 0x0000A8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours) == 0x0000AC, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes) == 0x0000B0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds) == 0x0000B4, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds) == 0x0000B8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_byte_Variable_1) == 0x0000BC, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Greater_IntInt_ReturnValue) == 0x0000BD, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_5) == 0x0000C0, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_6) == 0x0000D8, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_7) == 0x0000F0, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_8) == 0x000108, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_1) == 0x000120, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_1) == 0x000124, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_1) == 0x000128, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_1) == 0x00012C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_1) == 0x000130, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Max_ReturnValue) == 0x000134, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000138, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000140, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData) == 0x000148, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000198, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x0001E8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_2) == 0x0001F0, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeArray_Array) == 0x000240, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_Select_Default) == 0x000250, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_byte_Variable_2) == 0x000268, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_2) == 0x00026C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_2) == 0x000270, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_2) == 0x000274, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_2) == 0x000278, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_2) == 0x00027C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x000280, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_Select_Default_1) == 0x000288, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_3) == 0x0002A0, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Format_ReturnValue) == 0x0002F0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000308, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000310, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x000360, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_5) == 0x000368, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_3) == 0x0003B8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_3) == 0x0003BC, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_3) == 0x0003C0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_3) == 0x0003C4, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_3) == 0x0003C8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_3' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeArray_Array_1) == 0x0003D0, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0003E0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Format_ReturnValue_1) == 0x0003E8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_4) == 0x000400, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_4) == 0x000404, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_4) == 0x000408, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_4) == 0x00040C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_4) == 0x000410, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_4' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_Select_Default_2) == 0x000418, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_6) == 0x000430, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_7) == 0x000438, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_6) == 0x000440, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_7) == 0x000490, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_8) == 0x0004E0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_GetEventManager_ReturnValue) == 0x0004E8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_GetEventManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_8) == 0x0004F0, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_GetEventTime_EventTimeType) == 0x000540, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_GetEventTime_EventTimeType' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_GetEventTime_ReturnValue) == 0x000548, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_GetEventTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeArray_Array_2) == 0x000550, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Format_ReturnValue_2) == 0x000560, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, TimeType) == 0x000010, "Member 'WB_EventScreen_C_GetTimeRemainungText::TimeType' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Timespan) == 0x000018, "Member 'WB_EventScreen_C_GetTimeRemainungText::Timespan' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable) == 0x000020, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_1) == 0x000030, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_byte_Variable) == 0x000040, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_2) == 0x000048, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_3) == 0x000058, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_4) == 0x000068, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days) == 0x000078, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours) == 0x00007C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes) == 0x000080, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds) == 0x000084, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds) == 0x000088, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_byte_Variable_1) == 0x00008C, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Greater_IntInt_ReturnValue) == 0x00008D, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_5) == 0x000090, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_6) == 0x0000A0, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_7) == 0x0000B0, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_text_Variable_8) == 0x0000C0, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_text_Variable_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_1) == 0x0000D0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_1) == 0x0000D4, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_1) == 0x0000D8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_1) == 0x0000DC, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_1) == 0x0000E0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Max_ReturnValue) == 0x0000E4, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Max_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000E8, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0000F0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData) == 0x0000F8, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_1) == 0x000140, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_2) == 0x000188, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_2) == 0x000190, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeArray_Array) == 0x0001D8, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_Select_Default) == 0x0001E8, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, Temp_byte_Variable_2) == 0x0001F8, "Member 'WB_EventScreen_C_GetTimeRemainungText::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_2) == 0x0001FC, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_2) == 0x000200, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_2) == 0x000204, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_2) == 0x000208, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_2) == 0x00020C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_3) == 0x000210, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_Select_Default_1) == 0x000218, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000228, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Format_ReturnValue) == 0x000270, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_4) == 0x000280, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_4) == 0x000288, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_5) == 0x0002D0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002D8, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_3) == 0x000320, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_3) == 0x000324, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_3) == 0x000328, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_3) == 0x00032C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_3) == 0x000330, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_3' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeArray_Array_1) == 0x000338, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000348, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Format_ReturnValue_1) == 0x000350, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Days_4) == 0x000360, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Days_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Hours_4) == 0x000364, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Hours_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Minutes_4) == 0x000368, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Minutes_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Seconds_4) == 0x00036C, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Seconds_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_BreakTimespan_Milliseconds_4) == 0x000370, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_BreakTimespan_Milliseconds_4' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_Select_Default_2) == 0x000378, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_6) == 0x000388, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_7) == 0x000390, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_6) == 0x000398, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_7) == 0x0003E0, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Conv_IntToInt64_ReturnValue_8) == 0x000428, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Conv_IntToInt64_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_GetEventManager_ReturnValue) == 0x000430, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_GetEventManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeStruct_FormatArgumentData_8) == 0x000438, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_GetEventTime_EventTimeType) == 0x000480, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_GetEventTime_EventTimeType' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_GetEventTime_ReturnValue) == 0x000488, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_GetEventTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, K2Node_MakeArray_Array_2) == 0x000490, "Member 'WB_EventScreen_C_GetTimeRemainungText::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_EventScreen_C_GetTimeRemainungText, CallFunc_Format_ReturnValue_2) == 0x0004A0, "Member 'WB_EventScreen_C_GetTimeRemainungText::CallFunc_Format_ReturnValue_2' has a wrong offset!");
 
 // Function WB_EventScreen.WB_EventScreen_C.OnFailure_7D69FC22497393CAF40C7BA40275653A
 // 0x0010 (0x0010 - 0x0000)
@@ -1374,15 +1374,15 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33B9[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33BA[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33BB[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_EventScreen_C_UpdateNumbers) == 0x000008, "Wrong alignment on WB_EventScreen_C_UpdateNumbers");
@@ -1412,12 +1412,12 @@ public:
 	struct FBlueprintOnlineItem                   Item;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIngredient;                                       // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33BC[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue;          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33BD[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlueprintOnlineItem                   CallFunc_Array_Get_Item;                           // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemDefinitionId_ReturnValue_1;        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

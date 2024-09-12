@@ -49,7 +49,7 @@ struct WB_SalvageCategoryButton_C_GetIsActiveCategorySlot final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_488C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SalvageScreen_C*                    K2Node_DynamicCast_AsWB_Salvage_Screen;            // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -68,11 +68,11 @@ static_assert(offsetof(WB_SalvageCategoryButton_C_GetIsActiveCategorySlot, CallF
 struct WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature final
 {
 public:
-	ESalvageCategory                              Param_Category;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESalvageCategory                              Category_0;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature) == 0x000001, "Wrong alignment on WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature");
 static_assert(sizeof(WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature) == 0x000001, "Wrong size on WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature");
-static_assert(offsetof(WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature, Param_Category) == 0x000000, "Member 'WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature::Param_Category' has a wrong offset!");
+static_assert(offsetof(WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature, Category_0) == 0x000000, "Member 'WB_SalvageCategoryButton_C_OnUpdateCategory__DelegateSignature::Category_0' has a wrong offset!");
 
 // Function WB_SalvageCategoryButton.WB_SalvageCategoryButton_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)

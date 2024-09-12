@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function B_ReviveTotem.B_ReviveTotem_C.BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -28,11 +28,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D55[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -58,12 +58,12 @@ static_assert(offsetof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_Compone
 static_assert(offsetof(B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'B_ReviveTotem_C_BndEvt__WitchCheckerSphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
 
 // Function B_ReviveTotem.B_ReviveTotem_C.ExecuteUbergraph_B_ReviveTotem
-// 0x0590 (0x0590 - 0x0000)
+// 0x05A0 (0x05A0 - 0x0000)
 struct B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D56[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -71,20 +71,20 @@ public:
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D57[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ObjectiveGameState_C*                K2Node_DynamicCast_AsB_Objective_Game_State;       // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D58[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D59[0x6];                                     // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F2[0x6];                                       // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ObjectiveGameState_C*                K2Node_DynamicCast_AsB_Objective_Game_State_1;     // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5A[0x3];                                     // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -93,54 +93,54 @@ public:
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp_1;            // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex_1;       // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5B[0x3];                                     // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0140(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class APlayerController*                      CallFunc_GetWitchPlayerController_PlayerController; // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ObjectivePlayerState_C*              K2Node_DynamicCast_AsB_Objective_Player_State;     // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5C[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5D[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5E[0x3];                                     // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Max_ReturnValue;                          // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0260(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0270(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D5F[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue_2;             // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x028A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D60[0x5];                                     // 0x028B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D61[0x7];                                     // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_IntFloat_ReturnValue;            // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RevieWitch_Found;                         // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D62[0x7];                                     // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ObjectiveKillSpectator_C*            CallFunc_RevieWitch_Spectator;                     // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D63[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_GetController_ReturnValue;                // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ObjectivePlayerState_C*              K2Node_DynamicCast_AsB_Objective_Player_State_1;   // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D64[0x7];                                     // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerName_PlayerName;                 // 0x0308(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0318(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D65[0xF];                                     // 0x0331(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0140(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class APlayerController*                      CallFunc_GetWitchPlayerController_PlayerController; // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ObjectivePlayerState_C*              K2Node_DynamicCast_AsB_Objective_Player_State;     // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x3];                                      // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue;                          // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0270(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0280(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue_2;             // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x029A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29B[0x5];                                      // 0x029B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_IntFloat_ReturnValue;            // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RevieWitch_Found;                         // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ObjectiveKillSpectator_C*            CallFunc_RevieWitch_Spectator;                     // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ObjectivePlayerState_C*              K2Node_DynamicCast_AsB_Objective_Player_State_1;   // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerName_PlayerName;                 // 0x0318(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0328(0x0010)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetTransform_ReturnValue_1;               // 0x0340(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -149,7 +149,7 @@ public:
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x03C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D66[0x7];                                     // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x03E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0400(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_2;       // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -157,26 +157,26 @@ public:
 	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0438(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D67[0x4];                                     // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0448(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_RInterpTo_ReturnValue;                    // 0x0460(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0478(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0480(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AB_SeekGameState_C*                     K2Node_DynamicCast_AsB_Seek_Game_State;            // 0x0568(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0571(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0572(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Temp_byte_Variable;                                // 0x0573(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0574(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x0575(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0576(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0577(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_AfterPossess_Rotation_ImplicitCast;       // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RInterpTo_DeltaTime_ImplicitCast;         // 0x0584(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0480(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AB_SeekGameState_C*                     K2Node_DynamicCast_AsB_Seek_Game_State;            // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0581(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0582(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Temp_byte_Variable;                                // 0x0583(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0584(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x0585(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0586(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0587(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_AfterPossess_Rotation_ImplicitCast;       // 0x0588(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RInterpTo_DeltaTime_ImplicitCast;         // 0x0594(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem) == 0x000010, "Wrong alignment on B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem");
-static_assert(sizeof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem) == 0x000590, "Wrong size on B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem");
+static_assert(sizeof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem) == 0x0005A0, "Wrong size on B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, EntryPoint) == 0x000000, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetTransform_ReturnValue) == 0x000010, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_BreakTransform_Location) == 0x000070, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_BreakTransform_Location' has a wrong offset!");
@@ -204,42 +204,42 @@ static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_Co
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherBodyIndex_1) == 0x000138, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherBodyIndex_1' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_bFromSweep) == 0x00013C, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_SweepResult) == 0x000140, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetWitchPlayerController_PlayerController) == 0x000228, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetWitchPlayerController_PlayerController' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_AsB_Objective_Player_State) == 0x000230, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_AsB_Objective_Player_State' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_bSuccess_3) == 0x000238, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetObjectClass_ReturnValue) == 0x000240, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_ClassIsChildOf_ReturnValue) == 0x000248, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Add_IntInt_ReturnValue) == 0x00024C, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x000250, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Add_IntInt_ReturnValue_1) == 0x000254, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_int_Variable) == 0x000258, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Max_ReturnValue) == 0x00025C, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000260, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherActor) == 0x000268, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherComp) == 0x000270, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000278, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetObjectClass_ReturnValue_1) == 0x000280, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetObjectClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_ClassIsChildOf_ReturnValue_2) == 0x000288, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_ClassIsChildOf_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000289, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_IsDedicatedServer_ReturnValue) == 0x00028A, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000290, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000298, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Greater_IntInt_ReturnValue) == 0x0002A0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x0002A8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0002B0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Multiply_IntFloat_ReturnValue) == 0x0002B8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_FMax_ReturnValue) == 0x0002C0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0002C8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0002D0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RevieWitch_Found) == 0x0002D8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RevieWitch_Found' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RevieWitch_Spectator) == 0x0002E0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RevieWitch_Spectator' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_HasAuthority_ReturnValue) == 0x0002E8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetController_ReturnValue) == 0x0002F0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_AsB_Objective_Player_State_1) == 0x0002F8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_AsB_Objective_Player_State_1' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_bSuccess_4) == 0x000300, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetPlayerName_PlayerName) == 0x000308, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetPlayerName_PlayerName' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Conv_StringToText_ReturnValue) == 0x000318, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_bool_Variable_1) == 0x000330, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetWitchPlayerController_PlayerController) == 0x000238, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetWitchPlayerController_PlayerController' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_AsB_Objective_Player_State) == 0x000240, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_AsB_Objective_Player_State' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_bSuccess_3) == 0x000248, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetObjectClass_ReturnValue) == 0x000250, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_ClassIsChildOf_ReturnValue) == 0x000258, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Add_IntInt_ReturnValue) == 0x00025C, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x000260, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Add_IntInt_ReturnValue_1) == 0x000264, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_int_Variable) == 0x000268, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Max_ReturnValue) == 0x00026C, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Max_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000270, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherActor) == 0x000278, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherComp) == 0x000280, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000288, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetObjectClass_ReturnValue_1) == 0x000290, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetObjectClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_ClassIsChildOf_ReturnValue_2) == 0x000298, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_ClassIsChildOf_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000299, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_IsDedicatedServer_ReturnValue) == 0x00029A, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0002A0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x0002A8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Greater_IntInt_ReturnValue) == 0x0002B0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x0002B8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0002C0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Multiply_IntFloat_ReturnValue) == 0x0002C8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_FMax_ReturnValue) == 0x0002D0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0002D8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0002E0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RevieWitch_Found) == 0x0002E8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RevieWitch_Found' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RevieWitch_Spectator) == 0x0002F0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RevieWitch_Spectator' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_HasAuthority_ReturnValue) == 0x0002F8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetController_ReturnValue) == 0x000300, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_AsB_Objective_Player_State_1) == 0x000308, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_AsB_Objective_Player_State_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_bSuccess_4) == 0x000310, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetPlayerName_PlayerName) == 0x000318, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetPlayerName_PlayerName' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_Conv_StringToText_ReturnValue) == 0x000328, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_bool_Variable_1) == 0x000338, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetTransform_ReturnValue_1) == 0x000340, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetTransform_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0003A0, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetGameInstance_ReturnValue_1) == 0x0003A8, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
@@ -259,18 +259,18 @@ static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RInterpTo_ReturnValue) == 0x000460, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RInterpTo_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_GetGameState_ReturnValue_3) == 0x000478, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000480, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_AsB_Seek_Game_State) == 0x000568, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_AsB_Seek_Game_State' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_bSuccess_5) == 0x000570, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_bool_Variable_2) == 0x000571, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000572, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_byte_Variable) == 0x000573, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_HasAuthority_ReturnValue_1) == 0x000574, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_Select_Default) == 0x000575, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_HasAuthority_ReturnValue_2) == 0x000576, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_HasAuthority_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000577, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_AfterPossess_Rotation_ImplicitCast) == 0x000578, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_AfterPossess_Rotation_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000580, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RInterpTo_DeltaTime_ImplicitCast) == 0x000584, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_AsB_Seek_Game_State) == 0x000578, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_AsB_Seek_Game_State' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_DynamicCast_bSuccess_5) == 0x000580, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_bool_Variable_2) == 0x000581, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000582, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, Temp_byte_Variable) == 0x000583, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_HasAuthority_ReturnValue_1) == 0x000584, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, K2Node_Select_Default) == 0x000585, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_HasAuthority_ReturnValue_2) == 0x000586, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_HasAuthority_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000587, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_AfterPossess_Rotation_ImplicitCast) == 0x000588, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_AfterPossess_Rotation_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000590, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem, CallFunc_RInterpTo_DeltaTime_ImplicitCast) == 0x000594, "Member 'B_ReviveTotem_C_ExecuteUbergraph_B_ReviveTotem::CallFunc_RInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
 
 // Function B_ReviveTotem.B_ReviveTotem_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -289,7 +289,7 @@ struct B_ReviveTotem_C_RevieWitch final
 {
 public:
 	bool                                          Found;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D68[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ObjectiveKillSpectator_C*            Spectator;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class AB_ObjectiveKillSpectator_C*>    DeadSpectators;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class AB_ObjectiveKillSpectator_C*>    AllSpectators;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
@@ -300,16 +300,16 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D69[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ObjectiveKillSpectator_C*            CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ObjectiveKillSpectator_C*            CallFunc_Array_Get_Item_1;                         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D6A[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ObjectivePlayerState_C*              K2Node_DynamicCast_AsB_Objective_Player_State;     // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D6B[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_ObjectiveKillSpectator_C*>    CallFunc_GetAllActorsOfClass_OutActors;            // 0x0080(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_ReviveTotem_C_RevieWitch) == 0x000008, "Wrong alignment on B_ReviveTotem_C_RevieWitch");

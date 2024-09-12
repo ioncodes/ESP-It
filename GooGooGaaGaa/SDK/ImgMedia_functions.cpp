@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function ImgMedia.ImgMediaSource.AddGlobalCamera
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UImgMediaSource::AddGlobalCamera(class AActor* InActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImgMediaSource", "AddGlobalCamera");
-
-	Params::ImgMediaSource_AddGlobalCamera Parms{};
-
-	Parms.InActor = InActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ImgMedia.ImgMediaSource.AddTargetObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -55,31 +30,6 @@ void UImgMediaSource::AddTargetObject(class AActor* InActor)
 		Func = Class->GetFunction("ImgMediaSource", "AddTargetObject");
 
 	Params::ImgMediaSource_AddTargetObject Parms{};
-
-	Parms.InActor = InActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ImgMedia.ImgMediaSource.RemoveGlobalCamera
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           InActor                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UImgMediaSource::RemoveGlobalCamera(class AActor* InActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImgMediaSource", "RemoveGlobalCamera");
-
-	Params::ImgMediaSource_RemoveGlobalCamera Parms{};
 
 	Parms.InActor = InActor;
 
@@ -107,31 +57,6 @@ void UImgMediaSource::RemoveTargetObject(class AActor* InActor)
 	Params::ImgMediaSource_RemoveTargetObject Parms{};
 
 	Parms.InActor = InActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ImgMedia.ImgMediaSource.SetMipLevelDistance
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UImgMediaSource::SetMipLevelDistance(float Distance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImgMediaSource", "SetMipLevelDistance");
-
-	Params::ImgMediaSource_SetMipLevelDistance Parms{};
-
-	Parms.Distance = Distance;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

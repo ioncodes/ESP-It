@@ -18,29 +18,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_TextWithIcons.WB_TextWithIcons_C
-// 0x0080 (0x0340 - 0x02C0)
+// 0x0078 (0x0358 - 0x02E0)
 class UWB_TextWithIcons_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWrapBox*                               Wrap;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Format;                                            // 0x02D0(0x0018)(Edit, BlueprintVisible)
-	class UB_LocalizationManager_C*               LocalizationManager;                               // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class UWB_ControllerIcon_C*> ControllerIconsByActionName;                       // 0x02F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWrapBox*                               Wrap;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Format;                                            // 0x02F0(0x0010)(Edit, BlueprintVisible)
+	class UB_LocalizationManager_C*               LocalizationManager;                               // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, class UWB_ControllerIcon_C*> ControllerIconsByActionName;                       // 0x0308(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	class FString GetStringInRange(TArray<class FString>& Array, int32 FirstIndex, int32 LastIndex);
-	void UpdateIcons();
-	void CreateWidgets();
-	class UB_LocalizationManager_C* GetLocalizationManager();
 	void AddControllerIconWidget(const struct FKey& BoundKey, class FName ActionName);
 	class UWB_Text_C* AddTextWidget(const class FString& TextString);
-	void PreConstruct(bool IsDesignTime);
-	void OnGamePadModeChanged(bool bGamePadMode);
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetFormat(const class FText& Param_Format);
+	void CreateWidgets();
 	void ExecuteUbergraph_WB_TextWithIcons(int32 EntryPoint);
+	class UB_LocalizationManager_C* GetLocalizationManager();
+	class FString GetStringInRange(TArray<class FString>& Array, int32 FirstIndex, int32 LastIndex);
+	void OnGamePadModeChanged(bool bGamePadMode);
+	void PreConstruct(bool IsDesignTime);
+	void SetFormat(const class FText& Format_0);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateIcons();
 
 public:
 	static class UClass* StaticClass()
@@ -53,12 +53,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_TextWithIcons_C) == 0x000008, "Wrong alignment on UWB_TextWithIcons_C");
-static_assert(sizeof(UWB_TextWithIcons_C) == 0x000340, "Wrong size on UWB_TextWithIcons_C");
-static_assert(offsetof(UWB_TextWithIcons_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_TextWithIcons_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_TextWithIcons_C, Wrap) == 0x0002C8, "Member 'UWB_TextWithIcons_C::Wrap' has a wrong offset!");
-static_assert(offsetof(UWB_TextWithIcons_C, Format) == 0x0002D0, "Member 'UWB_TextWithIcons_C::Format' has a wrong offset!");
-static_assert(offsetof(UWB_TextWithIcons_C, LocalizationManager) == 0x0002E8, "Member 'UWB_TextWithIcons_C::LocalizationManager' has a wrong offset!");
-static_assert(offsetof(UWB_TextWithIcons_C, ControllerIconsByActionName) == 0x0002F0, "Member 'UWB_TextWithIcons_C::ControllerIconsByActionName' has a wrong offset!");
+static_assert(sizeof(UWB_TextWithIcons_C) == 0x000358, "Wrong size on UWB_TextWithIcons_C");
+static_assert(offsetof(UWB_TextWithIcons_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_TextWithIcons_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_TextWithIcons_C, Wrap) == 0x0002E8, "Member 'UWB_TextWithIcons_C::Wrap' has a wrong offset!");
+static_assert(offsetof(UWB_TextWithIcons_C, Format) == 0x0002F0, "Member 'UWB_TextWithIcons_C::Format' has a wrong offset!");
+static_assert(offsetof(UWB_TextWithIcons_C, LocalizationManager) == 0x000300, "Member 'UWB_TextWithIcons_C::LocalizationManager' has a wrong offset!");
+static_assert(offsetof(UWB_TextWithIcons_C, ControllerIconsByActionName) == 0x000308, "Member 'UWB_TextWithIcons_C::ControllerIconsByActionName' has a wrong offset!");
 
 }
 

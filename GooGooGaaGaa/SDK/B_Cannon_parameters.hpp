@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -25,13 +25,13 @@ public:
 	class AB_CreativeGameState_C*                 CreativeGameState;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37DE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37DF[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37E0[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -104,7 +104,7 @@ static_assert(sizeof(B_Cannon_C_ReceiveTick) == 0x000004, "Wrong size on B_Canno
 static_assert(offsetof(B_Cannon_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'B_Cannon_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function B_Cannon.B_Cannon_C.ExecuteUbergraph_B_Cannon
-// 0x0260 (0x0260 - 0x0000)
+// 0x0270 (0x0270 - 0x0000)
 struct B_Cannon_C_ExecuteUbergraph_B_Cannon final
 {
 public:
@@ -118,26 +118,26 @@ public:
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_TLerp_ReturnValue;                        // 0x0090(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37E1[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00F8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37E2[0x7];                                     // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_FireOverride;                   // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37E3[0x5];                                     // 0x01F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x01F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Delay_Duration_ImplicitCast_1;            // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_TLerp_Alpha_ImplicitCast;                 // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Delay_Duration_ImplicitCast_2;            // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00F8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_FireOverride;                   // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_203[0x5];                                      // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Delay_Duration_ImplicitCast_1;            // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_TLerp_Alpha_ImplicitCast;                 // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Delay_Duration_ImplicitCast_2;            // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_Cannon_C_ExecuteUbergraph_B_Cannon) == 0x000010, "Wrong alignment on B_Cannon_C_ExecuteUbergraph_B_Cannon");
-static_assert(sizeof(B_Cannon_C_ExecuteUbergraph_B_Cannon) == 0x000260, "Wrong size on B_Cannon_C_ExecuteUbergraph_B_Cannon");
+static_assert(sizeof(B_Cannon_C_ExecuteUbergraph_B_Cannon) == 0x000270, "Wrong size on B_Cannon_C_ExecuteUbergraph_B_Cannon");
 static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, EntryPoint) == 0x000000, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000008, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
@@ -149,19 +149,19 @@ static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Divide_Dou
 static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_TLerp_ReturnValue) == 0x000090, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_TLerp_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_HasAuthority_ReturnValue) == 0x0000F0, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x0000F8, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_IsValid_ReturnValue) == 0x0001E0, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0001E8, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_IsValid_ReturnValue_1) == 0x0001F0, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, K2Node_CustomEvent_FireOverride) == 0x0001F1, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::K2Node_CustomEvent_FireOverride' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_BooleanOR_ReturnValue) == 0x0001F2, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x0001F8, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_GetForwardVector_ReturnValue) == 0x000210, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000228, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000240, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Delay_Duration_ImplicitCast) == 0x000248, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Delay_Duration_ImplicitCast_1) == 0x00024C, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Delay_Duration_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_TLerp_Alpha_ImplicitCast) == 0x000250, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_TLerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Delay_Duration_ImplicitCast_2) == 0x000254, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Delay_Duration_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_IsValid_ReturnValue) == 0x0001F0, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0001F8, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_IsValid_ReturnValue_1) == 0x000200, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, K2Node_CustomEvent_FireOverride) == 0x000201, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::K2Node_CustomEvent_FireOverride' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_BooleanOR_ReturnValue) == 0x000202, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000208, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_GetForwardVector_ReturnValue) == 0x000220, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000238, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000250, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Delay_Duration_ImplicitCast) == 0x000258, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Delay_Duration_ImplicitCast_1) == 0x00025C, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Delay_Duration_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_TLerp_Alpha_ImplicitCast) == 0x000260, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_TLerp_Alpha_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_Cannon_C_ExecuteUbergraph_B_Cannon, CallFunc_Delay_Duration_ImplicitCast_2) == 0x000264, "Member 'B_Cannon_C_ExecuteUbergraph_B_Cannon::CallFunc_Delay_Duration_ImplicitCast_2' has a wrong offset!");
 
 }
 

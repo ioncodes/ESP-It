@@ -253,9 +253,9 @@ void UB_ItemManager_C::OnFailure_0E02496B446FDA893CF135AD7FA3391D(int32 AccountI
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           DownloadedString                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Param_QueryID                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   QueryID_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ItemManager_C::OnFailure_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 Param_QueryID)
+void UB_ItemManager_C::OnFailure_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 QueryID_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -265,7 +265,7 @@ void UB_ItemManager_C::OnFailure_565A0A3448D4BE62B5AF18802751C7FC(const class FS
 	Params::B_ItemManager_C_OnFailure_565A0A3448D4BE62B5AF18802751C7FC Parms{};
 
 	Parms.DownloadedString = std::move(DownloadedString);
-	Parms.Param_QueryID = Param_QueryID;
+	Parms.QueryID_0 = QueryID_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -275,9 +275,9 @@ void UB_ItemManager_C::OnFailure_565A0A3448D4BE62B5AF18802751C7FC(const class FS
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           DownloadedString                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Param_QueryID                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   QueryID_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ItemManager_C::OnFailure_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 Param_QueryID)
+void UB_ItemManager_C::OnFailure_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 QueryID_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -287,7 +287,7 @@ void UB_ItemManager_C::OnFailure_ADF414D7455991B344401EAF97D70728(const class FS
 	Params::B_ItemManager_C_OnFailure_ADF414D7455991B344401EAF97D70728 Parms{};
 
 	Parms.DownloadedString = std::move(DownloadedString);
-	Parms.Param_QueryID = Param_QueryID;
+	Parms.QueryID_0 = QueryID_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -327,9 +327,9 @@ void UB_ItemManager_C::OnSuccess_0E02496B446FDA893CF135AD7FA3391D(int32 AccountI
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           DownloadedString                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Param_QueryID                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   QueryID_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ItemManager_C::OnSuccess_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 Param_QueryID)
+void UB_ItemManager_C::OnSuccess_565A0A3448D4BE62B5AF18802751C7FC(const class FString& DownloadedString, int32 QueryID_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -339,7 +339,7 @@ void UB_ItemManager_C::OnSuccess_565A0A3448D4BE62B5AF18802751C7FC(const class FS
 	Params::B_ItemManager_C_OnSuccess_565A0A3448D4BE62B5AF18802751C7FC Parms{};
 
 	Parms.DownloadedString = std::move(DownloadedString);
-	Parms.Param_QueryID = Param_QueryID;
+	Parms.QueryID_0 = QueryID_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -349,9 +349,9 @@ void UB_ItemManager_C::OnSuccess_565A0A3448D4BE62B5AF18802751C7FC(const class FS
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           DownloadedString                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Param_QueryID                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   QueryID_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ItemManager_C::OnSuccess_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 Param_QueryID)
+void UB_ItemManager_C::OnSuccess_ADF414D7455991B344401EAF97D70728(const class FString& DownloadedString, int32 QueryID_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -361,7 +361,7 @@ void UB_ItemManager_C::OnSuccess_ADF414D7455991B344401EAF97D70728(const class FS
 	Params::B_ItemManager_C_OnSuccess_ADF414D7455991B344401EAF97D70728 Parms{};
 
 	Parms.DownloadedString = std::move(DownloadedString);
-	Parms.Param_QueryID = Param_QueryID;
+	Parms.QueryID_0 = QueryID_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

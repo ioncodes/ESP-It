@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "LowEntryJson_structs.hpp"
 
 
@@ -31,9 +31,9 @@ public:
 	void BuildGetUserIdRequest(const class FString& ProductUserId, const class FString& AccountType, const class FString& NativePlatformId, class UVaRestRequestJSON** Request);
 	void BuildQuestProgressJsonString(int32 AccountId, int64 ObjectiveId, const class FString& Value, class FString* JsonString);
 	void ExecuteUbergraph_B_ServerQuestInterface(int32 EntryPoint);
-	void GetObjectiveIdFromName(class FName Param_Name, int64* ObjectiveId);
+	void GetObjectiveIdFromName(class FName Name_0, int64* ObjectiveId);
 	void HandleUserIdCompleted(class UVaRestRequestJSON* Response);
-	void Init(const class UB_NewMasterServerManager_C*& Param_NewMasterServerManager);
+	void Init(const class UB_NewMasterServerManager_C*& NewMasterServerManager_0);
 	void OnGetUserIdCompleted(class UVaRestRequestJSON* Response);
 	void OnPostQuestRequestFailed(class UVaRestRequestJSON* Request);
 	void OnPostQuestUpdateCompleted(class UVaRestRequestJSON* Request);

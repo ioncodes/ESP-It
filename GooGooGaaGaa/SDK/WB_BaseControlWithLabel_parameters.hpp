@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,6 +28,19 @@ public:
 static_assert(alignof(WB_BaseControlWithLabel_C_PreConstruct) == 0x000001, "Wrong alignment on WB_BaseControlWithLabel_C_PreConstruct");
 static_assert(sizeof(WB_BaseControlWithLabel_C_PreConstruct) == 0x000001, "Wrong size on WB_BaseControlWithLabel_C_PreConstruct");
 static_assert(offsetof(WB_BaseControlWithLabel_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WB_BaseControlWithLabel_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WB_BaseControlWithLabel_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_BaseControlWithLabel_C_Tick) == 0x000004, "Wrong alignment on WB_BaseControlWithLabel_C_Tick");
+static_assert(sizeof(WB_BaseControlWithLabel_C_Tick) == 0x00003C, "Wrong size on WB_BaseControlWithLabel_C_Tick");
+static_assert(offsetof(WB_BaseControlWithLabel_C_Tick, MyGeometry) == 0x000000, "Member 'WB_BaseControlWithLabel_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_BaseControlWithLabel_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.OnPreviewKeyDown
 // 0x0208 (0x0208 - 0x0000)
@@ -74,7 +87,7 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52BD[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextBlock*                             CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -88,46 +101,37 @@ static_assert(offsetof(WB_BaseControlWithLabel_C_ChangeTextColor, CallFunc_Array
 static_assert(offsetof(WB_BaseControlWithLabel_C_ChangeTextColor, CallFunc_Array_Get_Item) == 0x000028, "Member 'WB_BaseControlWithLabel_C_ChangeTextColor::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(WB_BaseControlWithLabel_C_ChangeTextColor, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WB_BaseControlWithLabel_C_ChangeTextColor::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
-// Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WB_BaseControlWithLabel_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_BaseControlWithLabel_C_Tick) == 0x000004, "Wrong alignment on WB_BaseControlWithLabel_C_Tick");
-static_assert(sizeof(WB_BaseControlWithLabel_C_Tick) == 0x00003C, "Wrong size on WB_BaseControlWithLabel_C_Tick");
-static_assert(offsetof(WB_BaseControlWithLabel_C_Tick, MyGeometry) == 0x000000, "Member 'WB_BaseControlWithLabel_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_BaseControlWithLabel_C_Tick::InDeltaTime' has a wrong offset!");
-
 // Function WB_BaseControlWithLabel.WB_BaseControlWithLabel_C.ExecuteUbergraph_WB_BaseControlWithLabel
-// 0x0048 (0x0048 - 0x0000)
+// 0x004C (0x004C - 0x0000)
 struct WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsHovered_ReturnValue;                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52BE[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x000C(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsHovered_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0046(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0047(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel) == 0x000004, "Wrong alignment on WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel");
-static_assert(sizeof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel) == 0x000048, "Wrong size on WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel");
+static_assert(sizeof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel) == 0x00004C, "Wrong size on WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel");
 static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, EntryPoint) == 0x000000, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_IsHovered_ReturnValue) == 0x000006, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_IsHovered_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_BooleanAND_ReturnValue) == 0x000007, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_HasAnyUserFocus_ReturnValue) == 0x000008, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_HasAnyUserFocus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, K2Node_Event_IsDesignTime) == 0x000009, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, K2Node_Event_MyGeometry) == 0x00000C, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, K2Node_Event_InDeltaTime) == 0x000044, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_IsHovered_ReturnValue) == 0x000004, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_IsHovered_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_HasAnyUserFocus_ReturnValue) == 0x000005, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_HasAnyUserFocus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, K2Node_Event_IsDesignTime) == 0x000006, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, K2Node_Event_MyGeometry) == 0x000008, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, K2Node_Event_InDeltaTime) == 0x000040, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_IsGamepadMode_ReturnValue) == 0x000044, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_IsConsoleBuild_ReturnValue) == 0x000045, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_Not_PreBool_ReturnValue) == 0x000046, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_BooleanAND_ReturnValue) == 0x000047, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel, CallFunc_BooleanAND_ReturnValue_1) == 0x000048, "Member 'WB_BaseControlWithLabel_C_ExecuteUbergraph_WB_BaseControlWithLabel::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 
 }
 

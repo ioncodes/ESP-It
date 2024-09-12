@@ -17,18 +17,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_MeleeParameters.B_MeleeParameters_C
-// 0x0040 (0x0098 - 0x0058)
+// 0x0040 (0x0090 - 0x0050)
 class UB_MeleeParameters_C final : public USkillParameters
 {
 public:
-	double                                        Cooldown;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ChargeTime;                                        // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageUncharged;                                   // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageCharged;                                     // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ForceUncharged;                                    // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ForceCharged;                                      // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DistanceUncharged;                                 // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DistanceCharged;                                   // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cooldown;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ChargeTime;                                        // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageUncharged;                                   // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageCharged;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ForceUncharged;                                    // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ForceCharged;                                      // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DistanceUncharged;                                 // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DistanceCharged;                                   // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FText GetFormattedTooltip();
@@ -44,15 +44,15 @@ public:
 	}
 };
 static_assert(alignof(UB_MeleeParameters_C) == 0x000008, "Wrong alignment on UB_MeleeParameters_C");
-static_assert(sizeof(UB_MeleeParameters_C) == 0x000098, "Wrong size on UB_MeleeParameters_C");
-static_assert(offsetof(UB_MeleeParameters_C, Cooldown) == 0x000058, "Member 'UB_MeleeParameters_C::Cooldown' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, ChargeTime) == 0x000060, "Member 'UB_MeleeParameters_C::ChargeTime' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, DamageUncharged) == 0x000068, "Member 'UB_MeleeParameters_C::DamageUncharged' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, DamageCharged) == 0x000070, "Member 'UB_MeleeParameters_C::DamageCharged' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, ForceUncharged) == 0x000078, "Member 'UB_MeleeParameters_C::ForceUncharged' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, ForceCharged) == 0x000080, "Member 'UB_MeleeParameters_C::ForceCharged' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, DistanceUncharged) == 0x000088, "Member 'UB_MeleeParameters_C::DistanceUncharged' has a wrong offset!");
-static_assert(offsetof(UB_MeleeParameters_C, DistanceCharged) == 0x000090, "Member 'UB_MeleeParameters_C::DistanceCharged' has a wrong offset!");
+static_assert(sizeof(UB_MeleeParameters_C) == 0x000090, "Wrong size on UB_MeleeParameters_C");
+static_assert(offsetof(UB_MeleeParameters_C, Cooldown) == 0x000050, "Member 'UB_MeleeParameters_C::Cooldown' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, ChargeTime) == 0x000058, "Member 'UB_MeleeParameters_C::ChargeTime' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, DamageUncharged) == 0x000060, "Member 'UB_MeleeParameters_C::DamageUncharged' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, DamageCharged) == 0x000068, "Member 'UB_MeleeParameters_C::DamageCharged' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, ForceUncharged) == 0x000070, "Member 'UB_MeleeParameters_C::ForceUncharged' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, ForceCharged) == 0x000078, "Member 'UB_MeleeParameters_C::ForceCharged' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, DistanceUncharged) == 0x000080, "Member 'UB_MeleeParameters_C::DistanceUncharged' has a wrong offset!");
+static_assert(offsetof(UB_MeleeParameters_C, DistanceCharged) == 0x000088, "Member 'UB_MeleeParameters_C::DistanceCharged' has a wrong offset!");
 
 }
 

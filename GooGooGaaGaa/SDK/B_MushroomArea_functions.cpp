@@ -212,11 +212,11 @@ void AB_MushroomArea_C::ReceiveTick(float DeltaSeconds)
 // Function B_MushroomArea.B_MushroomArea_C.SetNewValuesForTearUp
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTransform                       Param_NewTransform                                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_NewOwner                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_NewInstigator                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FTransform                       NewTransform_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           NewOwner_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            NewInstigator_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomArea_C::SetNewValuesForTearUp(const struct FTransform& Param_NewTransform, class AActor* Param_NewOwner, class APawn* Param_NewInstigator)
+void AB_MushroomArea_C::SetNewValuesForTearUp(const struct FTransform& NewTransform_0, class AActor* NewOwner_0, class APawn* NewInstigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -225,9 +225,9 @@ void AB_MushroomArea_C::SetNewValuesForTearUp(const struct FTransform& Param_New
 
 	Params::B_MushroomArea_C_SetNewValuesForTearUp Parms{};
 
-	Parms.Param_NewTransform = std::move(Param_NewTransform);
-	Parms.Param_NewOwner = Param_NewOwner;
-	Parms.Param_NewInstigator = Param_NewInstigator;
+	Parms.NewTransform_0 = std::move(NewTransform_0);
+	Parms.NewOwner_0 = NewOwner_0;
+	Parms.NewInstigator_0 = NewInstigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -251,10 +251,10 @@ void AB_MushroomArea_C::TearDown()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomArea_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_MushroomArea_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -264,8 +264,8 @@ void AB_MushroomArea_C::TearUp(const struct FTransform& SpawnTransform, class AA
 	Params::B_MushroomArea_C_TearUp Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -295,10 +295,10 @@ void AB_MushroomArea_C::TearUpBySize(double Size)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_MushroomArea_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_MushroomArea_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -308,8 +308,8 @@ void AB_MushroomArea_C::TearUpPoolObject(const struct FTransform& SpawnTransform
 	Params::B_MushroomArea_C_TearUpPoolObject Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

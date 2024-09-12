@@ -18,41 +18,41 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Switch.BP_Switch_C
-// 0x0040 (0x03D0 - 0x0390)
+// 0x0040 (0x03B8 - 0x0378)
 class ABP_Switch_C : public ABP_ActionPlacable_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Switch_C;                        // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        SwitchSound;                                       // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CollisionBox;                                      // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         TargetList;                                        // 0x03A8(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, ExposeOnSpawn)
-	bool                                          BreaksAfterUse;                                    // 0x03B8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          Broken;                                            // 0x03B9(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45EB[0x6];                                     // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Material;                                          // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     BrokenMaterial;                                    // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Switch_C;                        // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        SwitchSound;                                       // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CollisionBox;                                      // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         TargetList;                                        // 0x0390(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, ExposeOnSpawn)
+	bool                                          BreaksAfterUse;                                    // 0x03A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          Broken;                                            // 0x03A1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A2[0x6];                                      // 0x03A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Material;                                          // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     BrokenMaterial;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Action();
-	void BindToMidGamePlayerJoin(const TDelegate<void()>& Event);
-	void BndEvt__BP_ToggleSwitch_CollisionBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void Break();
-	void BreakMulti();
-	void DeleteInvalidTargetFromList();
-	void ExecuteUbergraph_BP_Switch(int32 EntryPoint);
-	void HandleMidGamePlayerJoin();
-	void OnRep_Broken();
-	void PlaySwitchEffects();
-	void PlaySwitchEffectsMulti();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ResetSwitchTargetSleep(class AActor* Target);
-	void ResetSwitchTargetSleepDelayed(class AActor* Target);
 	void TestSwitchActivationCondition(class AActor* OverlappingActor, bool* Activate);
 	void Unbreak();
-	void UnbreakMulti();
 	void UpdateActionPlacable();
+	void BindToMidGamePlayerJoin(const TDelegate<void()>& Event);
+	void OnRep_Broken();
+	void PlaySwitchEffects();
+	void DeleteInvalidTargetFromList();
+	void ResetSwitchTargetSleep(class AActor* Target);
 	void WakeSwitchTargetsTemporarily(bool ActivateTargets);
+	void BndEvt__BP_ToggleSwitch_CollisionBox_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveTick(float DeltaSeconds);
+	void BreakMulti();
+	void UnbreakMulti();
+	void PlaySwitchEffectsMulti();
+	void ReceiveBeginPlay();
+	void ResetSwitchTargetSleepDelayed(class AActor* Target);
+	void HandleMidGamePlayerJoin();
+	void ExecuteUbergraph_BP_Switch(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -65,15 +65,15 @@ public:
 	}
 };
 static_assert(alignof(ABP_Switch_C) == 0x000008, "Wrong alignment on ABP_Switch_C");
-static_assert(sizeof(ABP_Switch_C) == 0x0003D0, "Wrong size on ABP_Switch_C");
-static_assert(offsetof(ABP_Switch_C, UberGraphFrame_BP_Switch_C) == 0x000390, "Member 'ABP_Switch_C::UberGraphFrame_BP_Switch_C' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, SwitchSound) == 0x000398, "Member 'ABP_Switch_C::SwitchSound' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, CollisionBox) == 0x0003A0, "Member 'ABP_Switch_C::CollisionBox' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, TargetList) == 0x0003A8, "Member 'ABP_Switch_C::TargetList' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, BreaksAfterUse) == 0x0003B8, "Member 'ABP_Switch_C::BreaksAfterUse' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, Broken) == 0x0003B9, "Member 'ABP_Switch_C::Broken' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, Material) == 0x0003C0, "Member 'ABP_Switch_C::Material' has a wrong offset!");
-static_assert(offsetof(ABP_Switch_C, BrokenMaterial) == 0x0003C8, "Member 'ABP_Switch_C::BrokenMaterial' has a wrong offset!");
+static_assert(sizeof(ABP_Switch_C) == 0x0003B8, "Wrong size on ABP_Switch_C");
+static_assert(offsetof(ABP_Switch_C, UberGraphFrame_BP_Switch_C) == 0x000378, "Member 'ABP_Switch_C::UberGraphFrame_BP_Switch_C' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, SwitchSound) == 0x000380, "Member 'ABP_Switch_C::SwitchSound' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, CollisionBox) == 0x000388, "Member 'ABP_Switch_C::CollisionBox' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, TargetList) == 0x000390, "Member 'ABP_Switch_C::TargetList' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, BreaksAfterUse) == 0x0003A0, "Member 'ABP_Switch_C::BreaksAfterUse' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, Broken) == 0x0003A1, "Member 'ABP_Switch_C::Broken' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, Material) == 0x0003A8, "Member 'ABP_Switch_C::Material' has a wrong offset!");
+static_assert(offsetof(ABP_Switch_C, BrokenMaterial) == 0x0003B0, "Member 'ABP_Switch_C::BrokenMaterial' has a wrong offset!");
 
 }
 

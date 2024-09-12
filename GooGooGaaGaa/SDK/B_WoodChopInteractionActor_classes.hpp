@@ -10,29 +10,29 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "B_WaitInteractionActor_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_WoodChopInteractionActor.B_WoodChopInteractionActor_C
-// 0x0068 (0x03A0 - 0x0338)
+// 0x0068 (0x0390 - 0x0328)
 class AB_WoodChopInteractionActor_C final : public AB_WaitInteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_WoodChopInteractionActor_C;       // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   WoodLog;                                           // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Wood2;                                             // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Wood1;                                             // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Wood;                                              // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          CameraFocusNeeded;                                 // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E1F[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraComponent*                       PlayerCamera;                                      // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               TargetCameraRotation;                              // 0x0370(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               OriginalCameraRotation;                            // 0x0388(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_WoodChopInteractionActor_C;       // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   WoodLog;                                           // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Wood2;                                             // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Wood1;                                             // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Wood;                                              // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          CameraFocusNeeded;                                 // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraComponent*                       PlayerCamera;                                      // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               TargetCameraRotation;                              // 0x0360(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               OriginalCameraRotation;                            // 0x0378(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void Act();
@@ -53,16 +53,16 @@ public:
 	}
 };
 static_assert(alignof(AB_WoodChopInteractionActor_C) == 0x000008, "Wrong alignment on AB_WoodChopInteractionActor_C");
-static_assert(sizeof(AB_WoodChopInteractionActor_C) == 0x0003A0, "Wrong size on AB_WoodChopInteractionActor_C");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, UberGraphFrame_B_WoodChopInteractionActor_C) == 0x000338, "Member 'AB_WoodChopInteractionActor_C::UberGraphFrame_B_WoodChopInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, WoodLog) == 0x000340, "Member 'AB_WoodChopInteractionActor_C::WoodLog' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, Wood2) == 0x000348, "Member 'AB_WoodChopInteractionActor_C::Wood2' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, Wood1) == 0x000350, "Member 'AB_WoodChopInteractionActor_C::Wood1' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, Wood) == 0x000358, "Member 'AB_WoodChopInteractionActor_C::Wood' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, CameraFocusNeeded) == 0x000360, "Member 'AB_WoodChopInteractionActor_C::CameraFocusNeeded' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, PlayerCamera) == 0x000368, "Member 'AB_WoodChopInteractionActor_C::PlayerCamera' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, TargetCameraRotation) == 0x000370, "Member 'AB_WoodChopInteractionActor_C::TargetCameraRotation' has a wrong offset!");
-static_assert(offsetof(AB_WoodChopInteractionActor_C, OriginalCameraRotation) == 0x000388, "Member 'AB_WoodChopInteractionActor_C::OriginalCameraRotation' has a wrong offset!");
+static_assert(sizeof(AB_WoodChopInteractionActor_C) == 0x000390, "Wrong size on AB_WoodChopInteractionActor_C");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, UberGraphFrame_B_WoodChopInteractionActor_C) == 0x000328, "Member 'AB_WoodChopInteractionActor_C::UberGraphFrame_B_WoodChopInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, WoodLog) == 0x000330, "Member 'AB_WoodChopInteractionActor_C::WoodLog' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, Wood2) == 0x000338, "Member 'AB_WoodChopInteractionActor_C::Wood2' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, Wood1) == 0x000340, "Member 'AB_WoodChopInteractionActor_C::Wood1' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, Wood) == 0x000348, "Member 'AB_WoodChopInteractionActor_C::Wood' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, CameraFocusNeeded) == 0x000350, "Member 'AB_WoodChopInteractionActor_C::CameraFocusNeeded' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, PlayerCamera) == 0x000358, "Member 'AB_WoodChopInteractionActor_C::PlayerCamera' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, TargetCameraRotation) == 0x000360, "Member 'AB_WoodChopInteractionActor_C::TargetCameraRotation' has a wrong offset!");
+static_assert(offsetof(AB_WoodChopInteractionActor_C, OriginalCameraRotation) == 0x000378, "Member 'AB_WoodChopInteractionActor_C::OriginalCameraRotation' has a wrong offset!");
 
 }
 

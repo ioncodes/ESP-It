@@ -55,17 +55,17 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E05[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_MatchRules                          K2Node_MakeStruct_S_MatchRules;                    // 0x0028(0x0018)(HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FS_MatchRules                          K2Node_MakeStruct_S_MatchRules_1;                  // 0x0048(0x0018)(HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E06[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E07[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameRules_C*                         CallFunc_GetGameRules_ReturnValue;                 // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameRules_C*                         CallFunc_GetGameRules_ReturnValue_1;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -102,14 +102,14 @@ struct WB_MatchRules_C_SetMatchRuleParameter final
 {
 public:
 	struct FUIParam                               NewParam;                                          // 0x0000(0x0014)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	uint8                                         Pad_4E08[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParam>                       MatchRuleArray;                                    // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FUIParam                               CallFunc_Array_Get_Item;                           // 0x0034(0x0014)(NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E09[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -128,74 +128,74 @@ static_assert(offsetof(WB_MatchRules_C_SetMatchRuleParameter, CallFunc_Array_Add
 static_assert(offsetof(WB_MatchRules_C_SetMatchRuleParameter, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000054, "Member 'WB_MatchRules_C_SetMatchRuleParameter::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
 
 // Function WB_MatchRules.WB_MatchRules_C.CreateUIParameters
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WB_MatchRules_C_CreateUIParameters final
 {
 public:
 	class UPanelWidget*                           UIContainer;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	E_MatchRuleType                               MatchRuleType;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E0A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CheckBoxWithEditableLabel_C*        CurrentCheckBox;                                   // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_SliderWithEditableLabel_C*          CurrentParamSlider;                                // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FUIParameterData                       CurrentUIParam;                                    // 0x0030(0x0078)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E0B[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E0C[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x00C0(0x0078)()
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UWB_CheckBoxWithEditableLabel_C* Sender, bool IsChecked)> K2Node_CreateDelegate_OutputDelegate;              // 0x013C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E0D[0x4];                                     // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_CheckBoxWithEditableLabel_C*        CallFunc_Create_ReturnValue;                       // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetDefaultMatchParameterValue_DefaultValue; // 0x0168(0x0014)(NoDestructor)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetDefaultMatchParameterValue_DefaultValue_1; // 0x0188(0x0014)(NoDestructor)
-	TDelegate<void(class UWB_SliderWithEditableLabel_C* Sender, double RealValue)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x019C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E0E[0x4];                                     // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_1;                   // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_SliderWithEditableLabel_C*          CallFunc_Create_ReturnValue_1;                     // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FUIParameterData                       CurrentUIParam;                                    // 0x0030(0x0060)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x00A8(0x0060)()
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWB_CheckBoxWithEditableLabel_C* Sender, bool IsChecked)> K2Node_CreateDelegate_OutputDelegate;              // 0x010C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWB_CheckBoxWithEditableLabel_C*        CallFunc_Create_ReturnValue;                       // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetDefaultMatchParameterValue_DefaultValue; // 0x0138(0x0014)(NoDestructor)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetDefaultMatchParameterValue_DefaultValue_1; // 0x0158(0x0014)(NoDestructor)
+	TDelegate<void(class UWB_SliderWithEditableLabel_C* Sender, double RealValue)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x016C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_1;                   // 0x0190(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWB_SliderWithEditableLabel_C*          CallFunc_Create_ReturnValue_1;                     // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MatchRules_C_CreateUIParameters) == 0x000008, "Wrong alignment on WB_MatchRules_C_CreateUIParameters");
-static_assert(sizeof(WB_MatchRules_C_CreateUIParameters) == 0x0001D8, "Wrong size on WB_MatchRules_C_CreateUIParameters");
+static_assert(sizeof(WB_MatchRules_C_CreateUIParameters) == 0x0001A8, "Wrong size on WB_MatchRules_C_CreateUIParameters");
 static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, UIContainer) == 0x000000, "Member 'WB_MatchRules_C_CreateUIParameters::UIContainer' has a wrong offset!");
 static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, UIParameters) == 0x000008, "Member 'WB_MatchRules_C_CreateUIParameters::UIParameters' has a wrong offset!");
 static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, MatchRuleType) == 0x000018, "Member 'WB_MatchRules_C_CreateUIParameters::MatchRuleType' has a wrong offset!");
 static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CurrentCheckBox) == 0x000020, "Member 'WB_MatchRules_C_CreateUIParameters::CurrentCheckBox' has a wrong offset!");
 static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CurrentParamSlider) == 0x000028, "Member 'WB_MatchRules_C_CreateUIParameters::CurrentParamSlider' has a wrong offset!");
 static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CurrentUIParam) == 0x000030, "Member 'WB_MatchRules_C_CreateUIParameters::CurrentUIParam' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, Temp_int_Loop_Counter_Variable) == 0x0000A8, "Member 'WB_MatchRules_C_CreateUIParameters::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Length_ReturnValue) == 0x0000AC, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Less_IntInt_ReturnValue) == 0x0000B4, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, Temp_int_Array_Index_Variable) == 0x0000B8, "Member 'WB_MatchRules_C_CreateUIParameters::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Get_Item) == 0x0000C0, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000138, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, K2Node_CreateDelegate_OutputDelegate) == 0x00013C, "Member 'WB_MatchRules_C_CreateUIParameters::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue) == 0x000150, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Create_ReturnValue) == 0x000158, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000160, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetDefaultMatchParameterValue_DefaultValue) == 0x000168, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetDefaultMatchParameterValue_DefaultValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x00017C, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x000180, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetDefaultMatchParameterValue_DefaultValue_1) == 0x000188, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetDefaultMatchParameterValue_DefaultValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, K2Node_CreateDelegate_OutputDelegate_1) == 0x00019C, "Member 'WB_MatchRules_C_CreateUIParameters::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Add_ReturnValue) == 0x0001AC, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_AddChild_ReturnValue) == 0x0001B0, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Add_ReturnValue_1) == 0x0001B8, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_AddChild_ReturnValue_1) == 0x0001C0, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_AddChild_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0001C8, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Create_ReturnValue_1) == 0x0001D0, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Create_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, Temp_int_Loop_Counter_Variable) == 0x000090, "Member 'WB_MatchRules_C_CreateUIParameters::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Length_ReturnValue) == 0x000094, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Less_IntInt_ReturnValue) == 0x00009C, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, Temp_int_Array_Index_Variable) == 0x0000A0, "Member 'WB_MatchRules_C_CreateUIParameters::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000108, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, K2Node_CreateDelegate_OutputDelegate) == 0x00010C, "Member 'WB_MatchRules_C_CreateUIParameters::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue) == 0x000120, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Create_ReturnValue) == 0x000128, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000130, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetDefaultMatchParameterValue_DefaultValue) == 0x000138, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetDefaultMatchParameterValue_DefaultValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x00014C, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x000150, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetDefaultMatchParameterValue_DefaultValue_1) == 0x000158, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetDefaultMatchParameterValue_DefaultValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, K2Node_CreateDelegate_OutputDelegate_1) == 0x00016C, "Member 'WB_MatchRules_C_CreateUIParameters::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Add_ReturnValue) == 0x00017C, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_AddChild_ReturnValue) == 0x000180, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_AddChild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Array_Add_ReturnValue_1) == 0x000188, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_AddChild_ReturnValue_1) == 0x000190, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_AddChild_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000198, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_CreateUIParameters, CallFunc_Create_ReturnValue_1) == 0x0001A0, "Member 'WB_MatchRules_C_CreateUIParameters::CallFunc_Create_ReturnValue_1' has a wrong offset!");
 
 // Function WB_MatchRules.WB_MatchRules_C.OnCheckBoxValueChanged
 // 0x0038 (0x0038 - 0x0000)
@@ -204,7 +204,7 @@ struct WB_MatchRules_C_OnCheckBoxValueChanged final
 public:
 	class UWB_CheckBoxWithEditableLabel_C*        Sender;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsChecked;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E0F[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUIParam                               NewParam;                                          // 0x000C(0x0014)(Edit, BlueprintVisible, NoDestructor)
 	struct FUIParam                               K2Node_MakeStruct_UIParam;                         // 0x0020(0x0014)(NoDestructor)
 	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -231,14 +231,14 @@ public:
 	struct FUIParam                               NewParam;                                          // 0x0010(0x0014)(Edit, BlueprintVisible, NoDestructor)
 	struct FUIParam                               K2Node_MakeStruct_UIParam;                         // 0x0024(0x0014)(NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E10[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FUIParam                               K2Node_MakeStruct_UIParam_1;                       // 0x0040(0x0014)(NoDestructor)
 	struct FUIParam                               K2Node_Select_Default;                             // 0x0054(0x0014)(NoDestructor)
 	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E11[0x1];                                     // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6B[0x1];                                       // 0x006B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_MakeStruct_FloatValue_ImplicitCast;         // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MatchRules_C_OnParamSliderRealValueChanged) == 0x000008, "Wrong alignment on WB_MatchRules_C_OnParamSliderRealValueChanged");
@@ -257,42 +257,42 @@ static_assert(offsetof(WB_MatchRules_C_OnParamSliderRealValueChanged, K2Node_Swi
 static_assert(offsetof(WB_MatchRules_C_OnParamSliderRealValueChanged, K2Node_MakeStruct_FloatValue_ImplicitCast) == 0x00006C, "Member 'WB_MatchRules_C_OnParamSliderRealValueChanged::K2Node_MakeStruct_FloatValue_ImplicitCast' has a wrong offset!");
 
 // Function WB_MatchRules.WB_MatchRules_C.RefreshMatchRules
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct WB_MatchRules_C_RefreshMatchRules final
 {
 public:
-	struct FUIParameterData                       CurrentUIParam;                                    // 0x0000(0x0078)(Edit, BlueprintVisible)
-	TArray<class FName>                           RowNames;                                          // 0x0078(0x0010)(Edit, BlueprintVisible)
-	class UWB_SliderWithEditableLabel_C*          CurrentParamSlider;                                // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentIndex;                                      // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E12[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters;             // 0x00B8(0x0010)(ReferenceParm)
-	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters_1;           // 0x00D8(0x0010)(ReferenceParm)
-	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters_2;           // 0x00E8(0x0010)(ReferenceParm)
+	struct FUIParameterData                       CurrentUIParam;                                    // 0x0000(0x0060)(Edit, BlueprintVisible)
+	TArray<class FName>                           RowNames;                                          // 0x0060(0x0010)(Edit, BlueprintVisible)
+	class UWB_SliderWithEditableLabel_C*          CurrentParamSlider;                                // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentIndex;                                      // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item_1;                         // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters;             // 0x00A0(0x0010)(ReferenceParm)
+	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters_1;           // 0x00C0(0x0010)(ReferenceParm)
+	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters_2;           // 0x00D0(0x0010)(ReferenceParm)
 };
 static_assert(alignof(WB_MatchRules_C_RefreshMatchRules) == 0x000008, "Wrong alignment on WB_MatchRules_C_RefreshMatchRules");
-static_assert(sizeof(WB_MatchRules_C_RefreshMatchRules) == 0x0000F8, "Wrong size on WB_MatchRules_C_RefreshMatchRules");
+static_assert(sizeof(WB_MatchRules_C_RefreshMatchRules) == 0x0000E0, "Wrong size on WB_MatchRules_C_RefreshMatchRules");
 static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CurrentUIParam) == 0x000000, "Member 'WB_MatchRules_C_RefreshMatchRules::CurrentUIParam' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, RowNames) == 0x000078, "Member 'WB_MatchRules_C_RefreshMatchRules::RowNames' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CurrentParamSlider) == 0x000088, "Member 'WB_MatchRules_C_RefreshMatchRules::CurrentParamSlider' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CurrentIndex) == 0x000090, "Member 'WB_MatchRules_C_RefreshMatchRules::CurrentIndex' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Array_Length_ReturnValue) == 0x000094, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Subtract_IntInt_ReturnValue) == 0x000098, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Array_Get_Item) == 0x0000A0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetWorldSubsystem_ReturnValue) == 0x0000A8, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Array_Get_Item_1) == 0x0000B0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetUIParameters_UIParameters) == 0x0000B8, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetUIParameters_UIParameters' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x0000C8, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetWorldSubsystem_ReturnValue_2) == 0x0000D0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetWorldSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetUIParameters_UIParameters_1) == 0x0000D8, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetUIParameters_UIParameters_1' has a wrong offset!");
-static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetUIParameters_UIParameters_2) == 0x0000E8, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetUIParameters_UIParameters_2' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, RowNames) == 0x000060, "Member 'WB_MatchRules_C_RefreshMatchRules::RowNames' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CurrentParamSlider) == 0x000070, "Member 'WB_MatchRules_C_RefreshMatchRules::CurrentParamSlider' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CurrentIndex) == 0x000078, "Member 'WB_MatchRules_C_RefreshMatchRules::CurrentIndex' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Array_Length_ReturnValue) == 0x00007C, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Subtract_IntInt_ReturnValue) == 0x000080, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Array_Get_Item) == 0x000088, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000090, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_Array_Get_Item_1) == 0x000098, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetUIParameters_UIParameters) == 0x0000A0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetUIParameters_UIParameters' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x0000B0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetWorldSubsystem_ReturnValue_2) == 0x0000B8, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetWorldSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetUIParameters_UIParameters_1) == 0x0000C0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetUIParameters_UIParameters_1' has a wrong offset!");
+static_assert(offsetof(WB_MatchRules_C_RefreshMatchRules, CallFunc_GetUIParameters_UIParameters_2) == 0x0000D0, "Member 'WB_MatchRules_C_RefreshMatchRules::CallFunc_GetUIParameters_UIParameters_2' has a wrong offset!");
 
 // Function WB_MatchRules.WB_MatchRules_C.ExecuteUbergraph_WB_MatchRules
 // 0x0004 (0x0004 - 0x0000)

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "PropWitchHuntModule_structs.hpp"
 #include "E_SkillRuleType_structs.hpp"
 #include "ETeamID_structs.hpp"
-#include "Engine_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "S_SkillRules_structs.hpp"
 
 
@@ -41,7 +41,7 @@ struct B_SkillParametersSubsystem_C_ApplyObjectiveModeOverrides final
 public:
 	E_SkillRuleType                               Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_1;                              // 0x0001(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD4[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MushroomParametersObjective_C*       CallFunc_CreateObject_Object;                      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GarlicParametersObjective_C*         CallFunc_CreateObject_Object_1;                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -62,17 +62,17 @@ public:
 	int32                                         ChangedSkillsCounter;                              // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD5[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FS_SkillRules                          CallFunc_Array_Get_Item;                           // 0x0028(0x0018)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSkillUsingRules_IsUsingRules;           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD6[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD7[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -118,16 +118,16 @@ public:
 	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<E_SkillRuleType>                       CallFunc_Map_Values_Values;                        // 0x0030(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD8[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_SkillRuleType>                       CallFunc_Map_Keys_Keys;                            // 0x0048(0x0010)(ReferenceParm)
 	E_SkillRuleType                               CallFunc_Array_Get_Item;                           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AD9[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ADA[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_ClassDynamicCast_AsB_Base_Skill;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ADB[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SkillParametersSubsystem_C_GetAllSkillClasses) == 0x000008, "Wrong alignment on B_SkillParametersSubsystem_C_GetAllSkillClasses");
@@ -149,32 +149,68 @@ static_assert(offsetof(B_SkillParametersSubsystem_C_GetAllSkillClasses, K2Node_C
 static_assert(offsetof(B_SkillParametersSubsystem_C_GetAllSkillClasses, CallFunc_Array_Add_ReturnValue) == 0x00007C, "Member 'B_SkillParametersSubsystem_C_GetAllSkillClasses::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetDefaultSkillParameterValue
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue final
 {
 public:
 	E_SkillRuleType                               SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ADC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIParameterData                       UIPameter;                                         // 0x0008(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FUIParam                               DefaultValue;                                      // 0x0080(0x0014)(Parm, OutParm, NoDestructor)
-	uint8                                         Pad_4ADD[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ADE[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x00B8(0x0014)(NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       UIPameter;                                         // 0x0008(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIParam                               DefaultValue;                                      // 0x0068(0x0014)(Parm, OutParm, NoDestructor)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x00A0(0x0014)(NoDestructor)
 };
 static_assert(alignof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue) == 0x000008, "Wrong alignment on B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue");
-static_assert(sizeof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue) == 0x0000D0, "Wrong size on B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue");
+static_assert(sizeof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue) == 0x0000B8, "Wrong size on B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue");
 static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, SkillType) == 0x000000, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::SkillType' has a wrong offset!");
 static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, UIPameter) == 0x000008, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::UIPameter' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, DefaultValue) == 0x000080, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::DefaultValue' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_Map_Find_Value) == 0x000098, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_GetObjectClass_ReturnValue) == 0x0000A8, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_GetDefaultObject_ReturnValue) == 0x0000B0, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_GetParameterValue_ReturnValue) == 0x0000B8, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_GetParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, DefaultValue) == 0x000068, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::DefaultValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_Map_Find_Value) == 0x000080, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_Map_Find_ReturnValue) == 0x000088, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_GetObjectClass_ReturnValue) == 0x000090, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_GetDefaultObject_ReturnValue) == 0x000098, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue, CallFunc_GetParameterValue_ReturnValue) == 0x0000A0, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValue::CallFunc_GetParameterValue_ReturnValue' has a wrong offset!");
+
+// Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetDefaultSkillParameterValues
+// 0x00C8 (0x00C8 - 0x0000)
+struct B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues final
+{
+public:
+	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	E_SkillRuleType                               SkillType;                                         // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUIParam>                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm)
+	TArray<struct FUIParam>                       DefaultParams;                                     // 0x0028(0x0010)(Edit, BlueprintVisible)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x0048(0x0060)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetDefaultSkillParameterValue_DefaultValue; // 0x00B0(0x0014)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues) == 0x000008, "Wrong alignment on B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues");
+static_assert(sizeof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues) == 0x0000C8, "Wrong size on B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, UIParameters) == 0x000000, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::UIParameters' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, SkillType) == 0x000010, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::SkillType' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, ReturnValue) == 0x000018, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, DefaultParams) == 0x000028, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::DefaultParams' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, CallFunc_Array_Get_Item) == 0x000048, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, CallFunc_Less_IntInt_ReturnValue) == 0x0000A8, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, CallFunc_Add_IntInt_ReturnValue) == 0x0000AC, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, CallFunc_GetDefaultSkillParameterValue_DefaultValue) == 0x0000B0, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::CallFunc_GetDefaultSkillParameterValue_DefaultValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetFloatValueByName
 // 0x0040 (0x0040 - 0x0000)
@@ -182,13 +218,13 @@ struct B_SkillParametersSubsystem_C_GetFloatValueByName final
 {
 public:
 	E_SkillRuleType                               SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ADF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   FloatName;                                         // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE0[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Value;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE1[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x0024(0x0014)(NoDestructor)
 	double                                        K2Node_FunctionResult_Value_ImplicitCast;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -209,10 +245,10 @@ struct B_SkillParametersSubsystem_C_GetSkillCooldown final
 public:
 	E_SkillRuleType                               SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       PlayerType;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE2[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Cooldown;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE3[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetFloatValueByName_Value;                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable;                                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -234,24 +270,24 @@ static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillCooldown, CallFunc_M
 static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillCooldown, CallFunc_FMax_ReturnValue) == 0x000040, "Member 'B_SkillParametersSubsystem_C_GetSkillCooldown::CallFunc_FMax_ReturnValue' has a wrong offset!");
 
 // Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetSkillTooltip
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct B_SkillParametersSubsystem_C_GetSkillTooltip final
 {
 public:
 	class UB_BaseSkill_C*                         Skill;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ToolTip;                                           // 0x0008(0x0018)(Parm, OutParm)
-	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE4[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetFormattedTooltip_ReturnValue;          // 0x0030(0x0018)()
+	class FText                                   ToolTip;                                           // 0x0008(0x0010)(Parm, OutParm)
+	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetFormattedTooltip_ReturnValue;          // 0x0028(0x0010)()
 };
 static_assert(alignof(B_SkillParametersSubsystem_C_GetSkillTooltip) == 0x000008, "Wrong alignment on B_SkillParametersSubsystem_C_GetSkillTooltip");
-static_assert(sizeof(B_SkillParametersSubsystem_C_GetSkillTooltip) == 0x000048, "Wrong size on B_SkillParametersSubsystem_C_GetSkillTooltip");
+static_assert(sizeof(B_SkillParametersSubsystem_C_GetSkillTooltip) == 0x000038, "Wrong size on B_SkillParametersSubsystem_C_GetSkillTooltip");
 static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, Skill) == 0x000000, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::Skill' has a wrong offset!");
 static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, ToolTip) == 0x000008, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::ToolTip' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, CallFunc_Map_Find_Value) == 0x000020, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, CallFunc_Map_Find_ReturnValue) == 0x000028, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, CallFunc_GetFormattedTooltip_ReturnValue) == 0x000030, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::CallFunc_GetFormattedTooltip_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, CallFunc_Map_Find_Value) == 0x000018, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, CallFunc_Map_Find_ReturnValue) == 0x000020, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_GetSkillTooltip, CallFunc_GetFormattedTooltip_ReturnValue) == 0x000028, "Member 'B_SkillParametersSubsystem_C_GetSkillTooltip::CallFunc_GetFormattedTooltip_ReturnValue' has a wrong offset!");
 
 // Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetUIParameters
 // 0x0038 (0x0038 - 0x0000)
@@ -259,11 +295,11 @@ struct B_SkillParametersSubsystem_C_GetUIParameters final
 {
 public:
 	E_SkillRuleType                               SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0008(0x0010)(Parm, OutParm)
 	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE6[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_ReturnValue;              // 0x0028(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_SkillParametersSubsystem_C_GetUIParameters) == 0x000008, "Wrong alignment on B_SkillParametersSubsystem_C_GetUIParameters");
@@ -288,32 +324,32 @@ public:
 	E_SkillRuleType                               Temp_byte_Variable_6;                              // 0x0006(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_7;                              // 0x0007(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_8;                              // 0x0008(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE7[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MeleeParameters_C*                   CallFunc_CreateObject_Object;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PotatoParameters_C*                  CallFunc_CreateObject_Object_1;                    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_9;                              // 0x0020(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE8[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_TrainParameters_C*                   CallFunc_CreateObject_Object_2;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_10;                             // 0x0030(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE9[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_FlyingEyeParameters_C*               CallFunc_CreateObject_Object_3;                    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PossessParameters_C*                 CallFunc_CreateObject_Object_4;                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_11;                             // 0x0048(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEA[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_JumpScareParameters_C*               CallFunc_CreateObject_Object_5;                    // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_FlyParameters_C*                     CallFunc_CreateObject_Object_6;                    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_12;                             // 0x0060(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEB[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MushroomParameters_C*                CallFunc_CreateObject_Object_7;                    // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_DecoyParameters_C*                   CallFunc_CreateObject_Object_8;                    // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerBallParameters_C*               CallFunc_CreateObject_Object_9;                    // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_TrapParameters_C*                    CallFunc_CreateObject_Object_10;                   // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_13;                             // 0x0088(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEC[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GarlicParameters_C*                  CallFunc_CreateObject_Object_11;                   // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_CannonballParameters_C*              CallFunc_CreateObject_Object_12;                   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_SkillRuleType                               Temp_byte_Variable_14;                             // 0x00A0(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AED[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_HookParameters_C*                    CallFunc_CreateObject_Object_13;                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_ChickenParameters_C*                 CallFunc_CreateObject_Object_14;                   // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -357,11 +393,11 @@ struct B_SkillParametersSubsystem_C_IsSkillListed final
 public:
 	class UClass*                                 Skill;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsListed;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEE[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_BaseSkill_C*                         K2Node_DynamicCast_AsB_Base_Skill;                 // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEF[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -382,10 +418,10 @@ struct B_SkillParametersSubsystem_C_IsSkillUsingRules final
 public:
 	E_SkillRuleType                               SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsingRules;                                      // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF0[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkillParameters*                       CallFunc_Map_Find_Value;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF1[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AreParametersEqual_ReturnValue;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -418,15 +454,15 @@ static_assert(offsetof(B_SkillParametersSubsystem_C_IsUsingCustomRules, CustomRu
 struct B_SkillParametersSubsystem_C_SpawnProjectileSkill final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF2[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESpawnActorCollisionHandlingMethod            CollisionHandlingOverride;                         // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF3[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Owner;                                             // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  Instigator;                                        // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         NumberOfProjectiles;                               // 0x0088(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF4[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ProjectileSpread;                                  // 0x0090(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         ReturnValue;                                       // 0x0098(0x0010)(Parm, OutParm, ReturnParm)
 	TArray<class AActor*>                         SpawnedActors;                                     // 0x00A8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
@@ -439,15 +475,15 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_RandomFloatInRange_ReturnValue_2;         // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF5[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AF6[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4AF7[0x8];                                     // 0x0178(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_178[0x8];                                      // 0x0178(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0180(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_SpawnActorOrTakeFromPool_ReturnValue;     // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -457,7 +493,7 @@ public:
 };
 static_assert(alignof(B_SkillParametersSubsystem_C_SpawnProjectileSkill) == 0x000010, "Wrong alignment on B_SkillParametersSubsystem_C_SpawnProjectileSkill");
 static_assert(sizeof(B_SkillParametersSubsystem_C_SpawnProjectileSkill) == 0x000200, "Wrong size on B_SkillParametersSubsystem_C_SpawnProjectileSkill");
-static_assert(offsetof(B_SkillParametersSubsystem_C_SpawnProjectileSkill, Param_Class) == 0x000000, "Member 'B_SkillParametersSubsystem_C_SpawnProjectileSkill::Param_Class' has a wrong offset!");
+static_assert(offsetof(B_SkillParametersSubsystem_C_SpawnProjectileSkill, Class_0) == 0x000000, "Member 'B_SkillParametersSubsystem_C_SpawnProjectileSkill::Class_0' has a wrong offset!");
 static_assert(offsetof(B_SkillParametersSubsystem_C_SpawnProjectileSkill, SpawnTransform) == 0x000010, "Member 'B_SkillParametersSubsystem_C_SpawnProjectileSkill::SpawnTransform' has a wrong offset!");
 static_assert(offsetof(B_SkillParametersSubsystem_C_SpawnProjectileSkill, CollisionHandlingOverride) == 0x000070, "Member 'B_SkillParametersSubsystem_C_SpawnProjectileSkill::CollisionHandlingOverride' has a wrong offset!");
 static_assert(offsetof(B_SkillParametersSubsystem_C_SpawnProjectileSkill, Owner) == 0x000078, "Member 'B_SkillParametersSubsystem_C_SpawnProjectileSkill::Owner' has a wrong offset!");

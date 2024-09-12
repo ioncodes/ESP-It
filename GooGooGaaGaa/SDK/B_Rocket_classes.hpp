@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "B_ExplosionProp_classes.hpp"
 
 
@@ -25,7 +25,7 @@ class AB_Rocket_C : public AB_ExplosionProp_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_Rocket_C;                         // 0x0620(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	bool                                          Started;                                           // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C3F[0x7];                                     // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_629[0x7];                                      // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             StartTransform;                                    // 0x0630(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

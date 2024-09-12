@@ -215,26 +215,6 @@ void UWB_MapCyclePreview_C::GetTileView(class UTileView** TileView)
 }
 
 
-// Function WB_MapCyclePreview.WB_MapCyclePreview_C.InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0
-// (BlueprintEvent)
-// Parameters:
-// struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UWB_MapCyclePreview_C::InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_MapCyclePreview_C", "InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0");
-
-	Params::WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -290,7 +270,7 @@ void UWB_MapCyclePreview_C::OnMapRemoved__DelegateSignature(bool MapListEmpty)
 
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.ExecuteUbergraph_WB_MapCyclePreview
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

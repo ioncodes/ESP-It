@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_PropVolumeCategory_structs.hpp"
 #include "S_PropData_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,7 +26,7 @@ struct WB_PropTooltipContent_C_ExecuteUbergraph_WB_PropTooltipContent final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AC7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_GetPropIcon_Prop_Data_Icon;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -34,25 +34,25 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AC8[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AC9[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_PropData                            CallFunc_Array_Get_Item;                           // 0x0040(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ACA[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_1;                               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ACB[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ACC[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS_PropData>                    CallFunc_Map_Values_Values;                        // 0x0078(0x0010)(ReferenceParm)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0088(0x0014)()
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ACD[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x00A0(0x00D0)()
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -89,38 +89,35 @@ static_assert(offsetof(WB_PropTooltipContent_C_ExecuteUbergraph_WB_PropTooltipCo
 static_assert(offsetof(WB_PropTooltipContent_C_ExecuteUbergraph_WB_PropTooltipContent, CallFunc_Not_PreBool_ReturnValue) == 0x000180, "Member 'WB_PropTooltipContent_C_ExecuteUbergraph_WB_PropTooltipContent::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_PropTooltipContent.WB_PropTooltipContent_C.Get_HP_Text_0
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct WB_PropTooltipContent_C_Get_HP_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory; // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ACE[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory; // 0x0010(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0010)()
 };
 static_assert(alignof(WB_PropTooltipContent_C_Get_HP_Text_0) == 0x000008, "Wrong alignment on WB_PropTooltipContent_C_Get_HP_Text_0");
-static_assert(sizeof(WB_PropTooltipContent_C_Get_HP_Text_0) == 0x0000B0, "Wrong size on WB_PropTooltipContent_C_Get_HP_Text_0");
+static_assert(sizeof(WB_PropTooltipContent_C_Get_HP_Text_0) == 0x0000A0, "Wrong size on WB_PropTooltipContent_C_Get_HP_Text_0");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, ReturnValue) == 0x000000, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory) == 0x000018, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000028, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory) == 0x000010, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000030, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_HP_Text_0, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0000A8, "Member 'WB_PropTooltipContent_C_Get_HP_Text_0::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 // Function WB_PropTooltipContent.WB_PropTooltipContent_C.Get_Name_Text_0
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_PropTooltipContent_C_Get_Name_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
 static_assert(alignof(WB_PropTooltipContent_C_Get_Name_Text_0) == 0x000008, "Wrong alignment on WB_PropTooltipContent_C_Get_Name_Text_0");
-static_assert(sizeof(WB_PropTooltipContent_C_Get_Name_Text_0) == 0x000018, "Wrong size on WB_PropTooltipContent_C_Get_Name_Text_0");
+static_assert(sizeof(WB_PropTooltipContent_C_Get_Name_Text_0) == 0x000010, "Wrong size on WB_PropTooltipContent_C_Get_Name_Text_0");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_Name_Text_0, ReturnValue) == 0x000000, "Member 'WB_PropTooltipContent_C_Get_Name_Text_0::ReturnValue' has a wrong offset!");
 
 // Function WB_PropTooltipContent.WB_PropTooltipContent_C.Get_Name_Visibility_0
@@ -167,7 +164,7 @@ struct WB_PropTooltipContent_C_Get_SetProgress_Percent_0 final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5ACF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -182,51 +179,48 @@ static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgress_Percent_0, CallFu
 static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgress_Percent_0, K2Node_FunctionResult_ReturnValue_ImplicitCast) == 0x000020, "Member 'WB_PropTooltipContent_C_Get_SetProgress_Percent_0::K2Node_FunctionResult_ReturnValue_ImplicitCast' has a wrong offset!");
 
 // Function WB_PropTooltipContent.WB_PropTooltipContent_C.Get_SetProgressText_Text_0
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct WB_PropTooltipContent_C_Get_SetProgressText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0078(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0068(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0010)()
 };
 static_assert(alignof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0) == 0x000008, "Wrong alignment on WB_PropTooltipContent_C_Get_SetProgressText_Text_0");
-static_assert(sizeof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0) == 0x0000F0, "Wrong size on WB_PropTooltipContent_C_Get_SetProgressText_Text_0");
+static_assert(sizeof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0) == 0x0000D0, "Wrong size on WB_PropTooltipContent_C_Get_SetProgressText_Text_0");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, ReturnValue) == 0x000000, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000018, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000020, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000028, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000078, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, K2Node_MakeArray_Array) == 0x0000C8, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, CallFunc_Format_ReturnValue) == 0x0000D8, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000010, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000018, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000068, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, K2Node_MakeArray_Array) == 0x0000B0, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_SetProgressText_Text_0, CallFunc_Format_ReturnValue) == 0x0000C0, "Member 'WB_PropTooltipContent_C_Get_SetProgressText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_PropTooltipContent.WB_PropTooltipContent_C.Get_Speed_Text_0
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct WB_PropTooltipContent_C_Get_Speed_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory; // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AD0[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory; // 0x0010(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0010)()
 };
 static_assert(alignof(WB_PropTooltipContent_C_Get_Speed_Text_0) == 0x000008, "Wrong alignment on WB_PropTooltipContent_C_Get_Speed_Text_0");
-static_assert(sizeof(WB_PropTooltipContent_C_Get_Speed_Text_0) == 0x0000B0, "Wrong size on WB_PropTooltipContent_C_Get_Speed_Text_0");
+static_assert(sizeof(WB_PropTooltipContent_C_Get_Speed_Text_0) == 0x0000A0, "Wrong size on WB_PropTooltipContent_C_Get_Speed_Text_0");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, ReturnValue) == 0x000000, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory) == 0x000018, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000028, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory) == 0x000010, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000030, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PropTooltipContent_C_Get_Speed_Text_0, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x0000A8, "Member 'WB_PropTooltipContent_C_Get_Speed_Text_0::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 // Function WB_PropTooltipContent.WB_PropTooltipContent_C.GetPropIcon
 // 0x0010 (0x0010 - 0x0000)

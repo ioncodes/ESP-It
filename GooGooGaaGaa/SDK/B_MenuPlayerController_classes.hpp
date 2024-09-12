@@ -30,7 +30,7 @@ public:
 
 public:
 	void ExecuteUbergraph_B_MenuPlayerController(int32 EntryPoint);
-	void GetMasterScreen(class UWB_MasterScreen_C** Param_MasterScreen);
+	void GetMasterScreen(class UWB_MasterScreen_C** MasterScreen_0);
 	void InpActEvt_Fire_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void InpActEvt_Fire_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent_2(const struct FKey& Key);

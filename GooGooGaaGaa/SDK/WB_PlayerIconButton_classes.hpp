@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlayerIconButton.WB_PlayerIconButton_C
-// 0x0008 (0x0400 - 0x03F8)
+// 0x0008 (0x0408 - 0x0400)
 class UWB_PlayerIconButton_C final : public UWB_SkinOrRecipeButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PlayerIconButton_C;              // 0x03F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PlayerIconButton_C;              // 0x0400(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Clicked();
@@ -43,8 +43,8 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlayerIconButton_C) == 0x000008, "Wrong alignment on UWB_PlayerIconButton_C");
-static_assert(sizeof(UWB_PlayerIconButton_C) == 0x000400, "Wrong size on UWB_PlayerIconButton_C");
-static_assert(offsetof(UWB_PlayerIconButton_C, UberGraphFrame_WB_PlayerIconButton_C) == 0x0003F8, "Member 'UWB_PlayerIconButton_C::UberGraphFrame_WB_PlayerIconButton_C' has a wrong offset!");
+static_assert(sizeof(UWB_PlayerIconButton_C) == 0x000408, "Wrong size on UWB_PlayerIconButton_C");
+static_assert(offsetof(UWB_PlayerIconButton_C, UberGraphFrame_WB_PlayerIconButton_C) == 0x000400, "Member 'UWB_PlayerIconButton_C::UberGraphFrame_WB_PlayerIconButton_C' has a wrong offset!");
 
 }
 

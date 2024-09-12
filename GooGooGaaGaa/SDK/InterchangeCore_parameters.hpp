@@ -35,7 +35,7 @@ struct InterchangeSourceData_SetFilename final
 public:
 	class FString                                 InFilename;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2ED5[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceData_SetFilename) == 0x000008, "Wrong alignment on InterchangeSourceData_SetFilename");
 static_assert(sizeof(InterchangeSourceData_SetFilename) == 0x000018, "Wrong size on InterchangeSourceData_SetFilename");
@@ -59,26 +59,12 @@ struct InterchangePipelineBase_FindOrAddPropertyStates final
 {
 public:
 	class FName                                   PropertyPath;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FInterchangePipelinePropertyStates     ReturnValue;                                       // 0x0008(0x0003)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2ED8[0x1];                                     // 0x000B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FInterchangePipelinePropertyStates     ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InterchangePipelineBase_FindOrAddPropertyStates) == 0x000004, "Wrong alignment on InterchangePipelineBase_FindOrAddPropertyStates");
 static_assert(sizeof(InterchangePipelineBase_FindOrAddPropertyStates) == 0x00000C, "Wrong size on InterchangePipelineBase_FindOrAddPropertyStates");
 static_assert(offsetof(InterchangePipelineBase_FindOrAddPropertyStates, PropertyPath) == 0x000000, "Member 'InterchangePipelineBase_FindOrAddPropertyStates::PropertyPath' has a wrong offset!");
 static_assert(offsetof(InterchangePipelineBase_FindOrAddPropertyStates, ReturnValue) == 0x000008, "Member 'InterchangePipelineBase_FindOrAddPropertyStates::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangePipelineBase.ScriptedCanExecuteOnAnyThread
-// 0x0002 (0x0002 - 0x0000)
-struct InterchangePipelineBase_ScriptedCanExecuteOnAnyThread final
-{
-public:
-	EInterchangePipelineTask                      PipelineTask;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(InterchangePipelineBase_ScriptedCanExecuteOnAnyThread) == 0x000001, "Wrong alignment on InterchangePipelineBase_ScriptedCanExecuteOnAnyThread");
-static_assert(sizeof(InterchangePipelineBase_ScriptedCanExecuteOnAnyThread) == 0x000002, "Wrong size on InterchangePipelineBase_ScriptedCanExecuteOnAnyThread");
-static_assert(offsetof(InterchangePipelineBase_ScriptedCanExecuteOnAnyThread, PipelineTask) == 0x000000, "Member 'InterchangePipelineBase_ScriptedCanExecuteOnAnyThread::PipelineTask' has a wrong offset!");
-static_assert(offsetof(InterchangePipelineBase_ScriptedCanExecuteOnAnyThread, ReturnValue) == 0x000001, "Member 'InterchangePipelineBase_ScriptedCanExecuteOnAnyThread::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangePipelineBase.ScriptedExecuteExportPipeline
 // 0x0008 (0x0008 - 0x0000)
@@ -92,17 +78,19 @@ static_assert(sizeof(InterchangePipelineBase_ScriptedExecuteExportPipeline) == 0
 static_assert(offsetof(InterchangePipelineBase_ScriptedExecuteExportPipeline, BaseNodeContainer) == 0x000000, "Member 'InterchangePipelineBase_ScriptedExecuteExportPipeline::BaseNodeContainer' has a wrong offset!");
 
 // Function InterchangeCore.InterchangePipelineBase.ScriptedExecutePipeline
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct InterchangePipelineBase_ScriptedExecutePipeline final
 {
 public:
 	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UInterchangeSourceData*>         SourceDatas;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ContentBasePath;                                   // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InterchangePipelineBase_ScriptedExecutePipeline) == 0x000008, "Wrong alignment on InterchangePipelineBase_ScriptedExecutePipeline");
-static_assert(sizeof(InterchangePipelineBase_ScriptedExecutePipeline) == 0x000018, "Wrong size on InterchangePipelineBase_ScriptedExecutePipeline");
+static_assert(sizeof(InterchangePipelineBase_ScriptedExecutePipeline) == 0x000028, "Wrong size on InterchangePipelineBase_ScriptedExecutePipeline");
 static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePipeline, BaseNodeContainer) == 0x000000, "Member 'InterchangePipelineBase_ScriptedExecutePipeline::BaseNodeContainer' has a wrong offset!");
 static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePipeline, SourceDatas) == 0x000008, "Member 'InterchangePipelineBase_ScriptedExecutePipeline::SourceDatas' has a wrong offset!");
+static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePipeline, ContentBasePath) == 0x000018, "Member 'InterchangePipelineBase_ScriptedExecutePipeline::ContentBasePath' has a wrong offset!");
 
 // Function InterchangeCore.InterchangePipelineBase.ScriptedExecutePostFactoryPipeline
 // 0x0028 (0x0028 - 0x0000)
@@ -113,7 +101,7 @@ public:
 	class FString                                 FactoryNodeKey;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                CreatedAsset;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsAReimport;                                      // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2ED9[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangePipelineBase_ScriptedExecutePostFactoryPipeline) == 0x000008, "Wrong alignment on InterchangePipelineBase_ScriptedExecutePostFactoryPipeline");
 static_assert(sizeof(InterchangePipelineBase_ScriptedExecutePostFactoryPipeline) == 0x000028, "Wrong size on InterchangePipelineBase_ScriptedExecutePostFactoryPipeline");
@@ -131,7 +119,7 @@ public:
 	class FString                                 FactoryNodeKey;                                    // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                CreatedAsset;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsAReimport;                                      // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EDA[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangePipelineBase_ScriptedExecutePostImportPipeline) == 0x000008, "Wrong alignment on InterchangePipelineBase_ScriptedExecutePostImportPipeline");
 static_assert(sizeof(InterchangePipelineBase_ScriptedExecutePostImportPipeline) == 0x000028, "Wrong size on InterchangePipelineBase_ScriptedExecutePostImportPipeline");
@@ -140,19 +128,6 @@ static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePostImportPipeline
 static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePostImportPipeline, CreatedAsset) == 0x000018, "Member 'InterchangePipelineBase_ScriptedExecutePostImportPipeline::CreatedAsset' has a wrong offset!");
 static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePostImportPipeline, bIsAReimport) == 0x000020, "Member 'InterchangePipelineBase_ScriptedExecutePostImportPipeline::bIsAReimport' has a wrong offset!");
 
-// Function InterchangeCore.InterchangePipelineBase.ScriptedExecutePreImportPipeline
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangePipelineBase_ScriptedExecutePreImportPipeline final
-{
-public:
-	class UInterchangeBaseNodeContainer*          BaseNodeContainer;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UInterchangeSourceData*>         SourceDatas;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(InterchangePipelineBase_ScriptedExecutePreImportPipeline) == 0x000008, "Wrong alignment on InterchangePipelineBase_ScriptedExecutePreImportPipeline");
-static_assert(sizeof(InterchangePipelineBase_ScriptedExecutePreImportPipeline) == 0x000018, "Wrong size on InterchangePipelineBase_ScriptedExecutePreImportPipeline");
-static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePreImportPipeline, BaseNodeContainer) == 0x000000, "Member 'InterchangePipelineBase_ScriptedExecutePreImportPipeline::BaseNodeContainer' has a wrong offset!");
-static_assert(offsetof(InterchangePipelineBase_ScriptedExecutePreImportPipeline, SourceDatas) == 0x000008, "Member 'InterchangePipelineBase_ScriptedExecutePreImportPipeline::SourceDatas' has a wrong offset!");
-
 // Function InterchangeCore.InterchangePipelineBase.ScriptedSetReimportSourceIndex
 // 0x0010 (0x0010 - 0x0000)
 struct InterchangePipelineBase_ScriptedSetReimportSourceIndex final
@@ -160,7 +135,7 @@ struct InterchangePipelineBase_ScriptedSetReimportSourceIndex final
 public:
 	class UClass*                                 ReimportObjectClass;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SourceFileIndex;                                   // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EDB[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangePipelineBase_ScriptedSetReimportSourceIndex) == 0x000008, "Wrong alignment on InterchangePipelineBase_ScriptedSetReimportSourceIndex");
 static_assert(sizeof(InterchangePipelineBase_ScriptedSetReimportSourceIndex) == 0x000010, "Wrong size on InterchangePipelineBase_ScriptedSetReimportSourceIndex");
@@ -174,12 +149,23 @@ struct InterchangePipelineBase_DoesPropertyStatesExist final
 public:
 	class FName                                   PropertyPath;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EDC[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangePipelineBase_DoesPropertyStatesExist) == 0x000004, "Wrong alignment on InterchangePipelineBase_DoesPropertyStatesExist");
 static_assert(sizeof(InterchangePipelineBase_DoesPropertyStatesExist) == 0x00000C, "Wrong size on InterchangePipelineBase_DoesPropertyStatesExist");
 static_assert(offsetof(InterchangePipelineBase_DoesPropertyStatesExist, PropertyPath) == 0x000000, "Member 'InterchangePipelineBase_DoesPropertyStatesExist::PropertyPath' has a wrong offset!");
 static_assert(offsetof(InterchangePipelineBase_DoesPropertyStatesExist, ReturnValue) == 0x000008, "Member 'InterchangePipelineBase_DoesPropertyStatesExist::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangePipelineBase.ScriptedGetPipelineDisplayName
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangePipelineBase_ScriptedGetPipelineDisplayName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(InterchangePipelineBase_ScriptedGetPipelineDisplayName) == 0x000008, "Wrong alignment on InterchangePipelineBase_ScriptedGetPipelineDisplayName");
+static_assert(sizeof(InterchangePipelineBase_ScriptedGetPipelineDisplayName) == 0x000010, "Wrong size on InterchangePipelineBase_ScriptedGetPipelineDisplayName");
+static_assert(offsetof(InterchangePipelineBase_ScriptedGetPipelineDisplayName, ReturnValue) == 0x000000, "Member 'InterchangePipelineBase_ScriptedGetPipelineDisplayName::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeBaseNode.AddBooleanAttribute
 // 0x0018 (0x0018 - 0x0000)
@@ -189,7 +175,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Value;                                             // 0x0010(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EDF[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddBooleanAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddBooleanAttribute");
 static_assert(sizeof(InterchangeBaseNode_AddBooleanAttribute) == 0x000018, "Wrong size on InterchangeBaseNode_AddBooleanAttribute");
@@ -205,7 +191,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Value;                                             // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE0[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddDoubleAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddDoubleAttribute");
 static_assert(sizeof(InterchangeBaseNode_AddDoubleAttribute) == 0x000020, "Wrong size on InterchangeBaseNode_AddDoubleAttribute");
@@ -221,7 +207,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE1[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddFloatAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddFloatAttribute");
 static_assert(sizeof(InterchangeBaseNode_AddFloatAttribute) == 0x000018, "Wrong size on InterchangeBaseNode_AddFloatAttribute");
@@ -237,7 +223,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  Value;                                             // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE2[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddGuidAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddGuidAttribute");
 static_assert(sizeof(InterchangeBaseNode_AddGuidAttribute) == 0x000028, "Wrong size on InterchangeBaseNode_AddGuidAttribute");
@@ -253,7 +239,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE3[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddInt32Attribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddInt32Attribute");
 static_assert(sizeof(InterchangeBaseNode_AddInt32Attribute) == 0x000018, "Wrong size on InterchangeBaseNode_AddInt32Attribute");
@@ -269,7 +255,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Value;                                             // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE4[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddLinearColorAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddLinearColorAttribute");
 static_assert(sizeof(InterchangeBaseNode_AddLinearColorAttribute) == 0x000028, "Wrong size on InterchangeBaseNode_AddLinearColorAttribute");
@@ -285,7 +271,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE5[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddStringAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddStringAttribute");
 static_assert(sizeof(InterchangeBaseNode_AddStringAttribute) == 0x000028, "Wrong size on InterchangeBaseNode_AddStringAttribute");
@@ -301,7 +287,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2f                              Value;                                             // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE6[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddVector2Attribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddVector2Attribute");
 static_assert(sizeof(InterchangeBaseNode_AddVector2Attribute) == 0x000020, "Wrong size on InterchangeBaseNode_AddVector2Attribute");
@@ -317,7 +303,7 @@ public:
 	class FString                                 UniqueID;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DisplayLabel;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInterchangeNodeContainerType                 NodeContainerType;                                 // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE7[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_InitializeNode) == 0x000008, "Wrong alignment on InterchangeBaseNode_InitializeNode");
 static_assert(sizeof(InterchangeBaseNode_InitializeNode) == 0x000028, "Wrong size on InterchangeBaseNode_InitializeNode");
@@ -332,7 +318,7 @@ struct InterchangeBaseNode_RemoveAttribute final
 public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE8[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_RemoveAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_RemoveAttribute");
 static_assert(sizeof(InterchangeBaseNode_RemoveAttribute) == 0x000018, "Wrong size on InterchangeBaseNode_RemoveAttribute");
@@ -346,7 +332,7 @@ struct InterchangeBaseNode_SetAssetName final
 public:
 	class FString                                 AssetName;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EE9[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_SetAssetName) == 0x000008, "Wrong alignment on InterchangeBaseNode_SetAssetName");
 static_assert(sizeof(InterchangeBaseNode_SetAssetName) == 0x000018, "Wrong size on InterchangeBaseNode_SetAssetName");
@@ -360,7 +346,7 @@ struct InterchangeBaseNode_SetDisplayLabel final
 public:
 	class FString                                 DisplayName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EEA[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_SetDisplayLabel) == 0x000008, "Wrong alignment on InterchangeBaseNode_SetDisplayLabel");
 static_assert(sizeof(InterchangeBaseNode_SetDisplayLabel) == 0x000018, "Wrong size on InterchangeBaseNode_SetDisplayLabel");
@@ -387,7 +373,7 @@ struct InterchangeBaseNode_SetParentUid final
 public:
 	class FString                                 ParentUid;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EEB[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_SetParentUid) == 0x000008, "Wrong alignment on InterchangeBaseNode_SetParentUid");
 static_assert(sizeof(InterchangeBaseNode_SetParentUid) == 0x000018, "Wrong size on InterchangeBaseNode_SetParentUid");
@@ -401,7 +387,7 @@ struct InterchangeBaseNode_AddTargetNodeUid final
 public:
 	class FString                                 AssetUid;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EEC[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_AddTargetNodeUid) == 0x000008, "Wrong alignment on InterchangeBaseNode_AddTargetNodeUid");
 static_assert(sizeof(InterchangeBaseNode_AddTargetNodeUid) == 0x000018, "Wrong size on InterchangeBaseNode_AddTargetNodeUid");
@@ -427,7 +413,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          OutValue;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EED[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetBooleanAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetBooleanAttribute");
 static_assert(sizeof(InterchangeBaseNode_GetBooleanAttribute) == 0x000018, "Wrong size on InterchangeBaseNode_GetBooleanAttribute");
@@ -454,7 +440,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        OutValue;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EEE[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetDoubleAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetDoubleAttribute");
 static_assert(sizeof(InterchangeBaseNode_GetDoubleAttribute) == 0x000020, "Wrong size on InterchangeBaseNode_GetDoubleAttribute");
@@ -470,7 +456,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OutValue;                                          // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EEF[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetFloatAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetFloatAttribute");
 static_assert(sizeof(InterchangeBaseNode_GetFloatAttribute) == 0x000018, "Wrong size on InterchangeBaseNode_GetFloatAttribute");
@@ -486,7 +472,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  OutValue;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF0[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetGuidAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetGuidAttribute");
 static_assert(sizeof(InterchangeBaseNode_GetGuidAttribute) == 0x000028, "Wrong size on InterchangeBaseNode_GetGuidAttribute");
@@ -502,7 +488,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OutValue;                                          // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF1[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetInt32Attribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetInt32Attribute");
 static_assert(sizeof(InterchangeBaseNode_GetInt32Attribute) == 0x000018, "Wrong size on InterchangeBaseNode_GetInt32Attribute");
@@ -518,7 +504,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           OutValue;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF2[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetLinearColorAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetLinearColorAttribute");
 static_assert(sizeof(InterchangeBaseNode_GetLinearColorAttribute) == 0x000028, "Wrong size on InterchangeBaseNode_GetLinearColorAttribute");
@@ -556,7 +542,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OutValue;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF3[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetStringAttribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetStringAttribute");
 static_assert(sizeof(InterchangeBaseNode_GetStringAttribute) == 0x000028, "Wrong size on InterchangeBaseNode_GetStringAttribute");
@@ -605,7 +591,7 @@ public:
 	class FString                                 NodeAttributeKey;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2f                              OutValue;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF4[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_GetVector2Attribute) == 0x000008, "Wrong alignment on InterchangeBaseNode_GetVector2Attribute");
 static_assert(sizeof(InterchangeBaseNode_GetVector2Attribute) == 0x000020, "Wrong size on InterchangeBaseNode_GetVector2Attribute");
@@ -631,7 +617,7 @@ struct InterchangeBaseNode_RemoveTargetNodeUid final
 public:
 	class FString                                 AssetUid;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF5[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNode_RemoveTargetNodeUid) == 0x000008, "Wrong alignment on InterchangeBaseNode_RemoveTargetNodeUid");
 static_assert(sizeof(InterchangeBaseNode_RemoveTargetNodeUid) == 0x000018, "Wrong size on InterchangeBaseNode_RemoveTargetNodeUid");
@@ -658,7 +644,7 @@ struct InterchangeBaseNodeContainer_GetNodeChildren final
 public:
 	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ChildIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF7[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInterchangeBaseNode*                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InterchangeBaseNodeContainer_GetNodeChildren) == 0x000008, "Wrong alignment on InterchangeBaseNodeContainer_GetNodeChildren");
@@ -710,7 +696,7 @@ public:
 	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 NewParentNodeUid;                                  // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF8[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNodeContainer_SetNodeParentUid) == 0x000008, "Wrong alignment on InterchangeBaseNodeContainer_SetNodeParentUid");
 static_assert(sizeof(InterchangeBaseNodeContainer_SetNodeParentUid) == 0x000028, "Wrong size on InterchangeBaseNodeContainer_SetNodeParentUid");
@@ -751,7 +737,7 @@ struct InterchangeBaseNodeContainer_GetNodeChildrenCount final
 public:
 	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EF9[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNodeContainer_GetNodeChildrenCount) == 0x000008, "Wrong alignment on InterchangeBaseNodeContainer_GetNodeChildrenCount");
 static_assert(sizeof(InterchangeBaseNodeContainer_GetNodeChildrenCount) == 0x000018, "Wrong size on InterchangeBaseNodeContainer_GetNodeChildrenCount");
@@ -802,7 +788,7 @@ struct InterchangeBaseNodeContainer_IsNodeUidValid final
 public:
 	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EFA[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeBaseNodeContainer_IsNodeUidValid) == 0x000008, "Wrong alignment on InterchangeBaseNodeContainer_IsNodeUidValid");
 static_assert(sizeof(InterchangeBaseNodeContainer_IsNodeUidValid) == 0x000018, "Wrong size on InterchangeBaseNodeContainer_IsNodeUidValid");
@@ -816,7 +802,7 @@ struct InterchangeFactoryBaseNode_AddFactoryDependencyUid final
 public:
 	class FString                                 DependencyUid;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EFC[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeFactoryBaseNode_AddFactoryDependencyUid) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_AddFactoryDependencyUid");
 static_assert(sizeof(InterchangeFactoryBaseNode_AddFactoryDependencyUid) == 0x000018, "Wrong size on InterchangeFactoryBaseNode_AddFactoryDependencyUid");
@@ -830,7 +816,7 @@ struct InterchangeFactoryBaseNode_RemoveFactoryDependencyUid final
 public:
 	class FString                                 DependencyUid;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EFD[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeFactoryBaseNode_RemoveFactoryDependencyUid) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_RemoveFactoryDependencyUid");
 static_assert(sizeof(InterchangeFactoryBaseNode_RemoveFactoryDependencyUid) == 0x000018, "Wrong size on InterchangeFactoryBaseNode_RemoveFactoryDependencyUid");
@@ -844,7 +830,7 @@ struct InterchangeFactoryBaseNode_SetCustomReferenceObject final
 public:
 	struct FSoftObjectPath                        AttributeValue;                                    // 0x0000(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EFE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeFactoryBaseNode_SetCustomReferenceObject) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_SetCustomReferenceObject");
 static_assert(sizeof(InterchangeFactoryBaseNode_SetCustomReferenceObject) == 0x000028, "Wrong size on InterchangeFactoryBaseNode_SetCustomReferenceObject");
@@ -858,7 +844,7 @@ struct InterchangeFactoryBaseNode_SetCustomSubPath final
 public:
 	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EFF[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeFactoryBaseNode_SetCustomSubPath) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_SetCustomSubPath");
 static_assert(sizeof(InterchangeFactoryBaseNode_SetCustomSubPath) == 0x000018, "Wrong size on InterchangeFactoryBaseNode_SetCustomSubPath");
@@ -929,7 +915,7 @@ struct InterchangeFactoryBaseNode_GetCustomReferenceObject final
 public:
 	struct FSoftObjectPath                        AttributeValue;                                    // 0x0000(0x0020)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F00[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeFactoryBaseNode_GetCustomReferenceObject) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_GetCustomReferenceObject");
 static_assert(sizeof(InterchangeFactoryBaseNode_GetCustomReferenceObject) == 0x000028, "Wrong size on InterchangeFactoryBaseNode_GetCustomReferenceObject");
@@ -943,7 +929,7 @@ struct InterchangeFactoryBaseNode_GetCustomSubPath final
 public:
 	class FString                                 AttributeValue;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F01[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeFactoryBaseNode_GetCustomSubPath) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_GetCustomSubPath");
 static_assert(sizeof(InterchangeFactoryBaseNode_GetCustomSubPath) == 0x000018, "Wrong size on InterchangeFactoryBaseNode_GetCustomSubPath");
@@ -977,13 +963,13 @@ static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependenciesCount, R
 struct InterchangeFactoryBaseNode_GetFactoryDependency final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F02[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutDependency;                                     // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InterchangeFactoryBaseNode_GetFactoryDependency) == 0x000008, "Wrong alignment on InterchangeFactoryBaseNode_GetFactoryDependency");
 static_assert(sizeof(InterchangeFactoryBaseNode_GetFactoryDependency) == 0x000018, "Wrong size on InterchangeFactoryBaseNode_GetFactoryDependency");
-static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependency, Param_Index) == 0x000000, "Member 'InterchangeFactoryBaseNode_GetFactoryDependency::Param_Index' has a wrong offset!");
+static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependency, Index_0) == 0x000000, "Member 'InterchangeFactoryBaseNode_GetFactoryDependency::Index_0' has a wrong offset!");
 static_assert(offsetof(InterchangeFactoryBaseNode_GetFactoryDependency, OutDependency) == 0x000008, "Member 'InterchangeFactoryBaseNode_GetFactoryDependency::OutDependency' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeFactoryBaseNode.GetReimportStrategyFlags
@@ -1039,7 +1025,7 @@ struct InterchangeSourceNode_SetCustomAnimatedTimeEnd final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F04[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_SetCustomAnimatedTimeEnd) == 0x000008, "Wrong alignment on InterchangeSourceNode_SetCustomAnimatedTimeEnd");
 static_assert(sizeof(InterchangeSourceNode_SetCustomAnimatedTimeEnd) == 0x000010, "Wrong size on InterchangeSourceNode_SetCustomAnimatedTimeEnd");
@@ -1053,7 +1039,7 @@ struct InterchangeSourceNode_SetCustomAnimatedTimeStart final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F05[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_SetCustomAnimatedTimeStart) == 0x000008, "Wrong alignment on InterchangeSourceNode_SetCustomAnimatedTimeStart");
 static_assert(sizeof(InterchangeSourceNode_SetCustomAnimatedTimeStart) == 0x000010, "Wrong size on InterchangeSourceNode_SetCustomAnimatedTimeStart");
@@ -1080,7 +1066,7 @@ struct InterchangeSourceNode_SetCustomSourceFrameRateDenominator final
 public:
 	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F06[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_SetCustomSourceFrameRateDenominator) == 0x000004, "Wrong alignment on InterchangeSourceNode_SetCustomSourceFrameRateDenominator");
 static_assert(sizeof(InterchangeSourceNode_SetCustomSourceFrameRateDenominator) == 0x000008, "Wrong size on InterchangeSourceNode_SetCustomSourceFrameRateDenominator");
@@ -1094,7 +1080,7 @@ struct InterchangeSourceNode_SetCustomSourceFrameRateNumerator final
 public:
 	int32                                         AttributeValue;                                    // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F07[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_SetCustomSourceFrameRateNumerator) == 0x000004, "Wrong alignment on InterchangeSourceNode_SetCustomSourceFrameRateNumerator");
 static_assert(sizeof(InterchangeSourceNode_SetCustomSourceFrameRateNumerator) == 0x000008, "Wrong size on InterchangeSourceNode_SetCustomSourceFrameRateNumerator");
@@ -1108,7 +1094,7 @@ struct InterchangeSourceNode_SetCustomSourceTimelineEnd final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F08[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_SetCustomSourceTimelineEnd) == 0x000008, "Wrong alignment on InterchangeSourceNode_SetCustomSourceTimelineEnd");
 static_assert(sizeof(InterchangeSourceNode_SetCustomSourceTimelineEnd) == 0x000010, "Wrong size on InterchangeSourceNode_SetCustomSourceTimelineEnd");
@@ -1122,7 +1108,7 @@ struct InterchangeSourceNode_SetCustomSourceTimelineStart final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F09[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_SetCustomSourceTimelineStart) == 0x000008, "Wrong alignment on InterchangeSourceNode_SetCustomSourceTimelineStart");
 static_assert(sizeof(InterchangeSourceNode_SetCustomSourceTimelineStart) == 0x000010, "Wrong size on InterchangeSourceNode_SetCustomSourceTimelineStart");
@@ -1136,7 +1122,7 @@ struct InterchangeSourceNode_GetCustomAnimatedTimeEnd final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_GetCustomAnimatedTimeEnd) == 0x000008, "Wrong alignment on InterchangeSourceNode_GetCustomAnimatedTimeEnd");
 static_assert(sizeof(InterchangeSourceNode_GetCustomAnimatedTimeEnd) == 0x000010, "Wrong size on InterchangeSourceNode_GetCustomAnimatedTimeEnd");
@@ -1150,7 +1136,7 @@ struct InterchangeSourceNode_GetCustomAnimatedTimeStart final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_GetCustomAnimatedTimeStart) == 0x000008, "Wrong alignment on InterchangeSourceNode_GetCustomAnimatedTimeStart");
 static_assert(sizeof(InterchangeSourceNode_GetCustomAnimatedTimeStart) == 0x000010, "Wrong size on InterchangeSourceNode_GetCustomAnimatedTimeStart");
@@ -1177,7 +1163,7 @@ struct InterchangeSourceNode_GetCustomSourceFrameRateDenominator final
 public:
 	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0C[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_GetCustomSourceFrameRateDenominator) == 0x000004, "Wrong alignment on InterchangeSourceNode_GetCustomSourceFrameRateDenominator");
 static_assert(sizeof(InterchangeSourceNode_GetCustomSourceFrameRateDenominator) == 0x000008, "Wrong size on InterchangeSourceNode_GetCustomSourceFrameRateDenominator");
@@ -1191,7 +1177,7 @@ struct InterchangeSourceNode_GetCustomSourceFrameRateNumerator final
 public:
 	int32                                         AttributeValue;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0D[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_GetCustomSourceFrameRateNumerator) == 0x000004, "Wrong alignment on InterchangeSourceNode_GetCustomSourceFrameRateNumerator");
 static_assert(sizeof(InterchangeSourceNode_GetCustomSourceFrameRateNumerator) == 0x000008, "Wrong size on InterchangeSourceNode_GetCustomSourceFrameRateNumerator");
@@ -1205,7 +1191,7 @@ struct InterchangeSourceNode_GetCustomSourceTimelineEnd final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0E[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_GetCustomSourceTimelineEnd) == 0x000008, "Wrong alignment on InterchangeSourceNode_GetCustomSourceTimelineEnd");
 static_assert(sizeof(InterchangeSourceNode_GetCustomSourceTimelineEnd) == 0x000010, "Wrong size on InterchangeSourceNode_GetCustomSourceTimelineEnd");
@@ -1219,7 +1205,7 @@ struct InterchangeSourceNode_GetCustomSourceTimelineStart final
 public:
 	double                                        AttributeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F0F[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeSourceNode_GetCustomSourceTimelineStart) == 0x000008, "Wrong alignment on InterchangeSourceNode_GetCustomSourceTimelineStart");
 static_assert(sizeof(InterchangeSourceNode_GetCustomSourceTimelineStart) == 0x000010, "Wrong size on InterchangeSourceNode_GetCustomSourceTimelineStart");
@@ -1234,10 +1220,11 @@ public:
 	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Value;                                             // 0x0018(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F10[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F11[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean");
@@ -1245,7 +1232,8 @@ static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttr
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::UserDefinedAttributeName' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::Value' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::ReturnValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Double
 // 0x0038 (0x0038 - 0x0000)
@@ -1256,8 +1244,9 @@ public:
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Value;                                             // 0x0018(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F12[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double");
@@ -1265,7 +1254,8 @@ static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttr
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::UserDefinedAttributeName' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::Value' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::ReturnValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Float
 // 0x0038 (0x0038 - 0x0000)
@@ -1275,10 +1265,11 @@ public:
 	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F13[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F14[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float");
@@ -1286,7 +1277,8 @@ static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttr
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::UserDefinedAttributeName' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::Value' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::ReturnValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_FString
 // 0x0040 (0x0040 - 0x0000)
@@ -1297,8 +1289,9 @@ public:
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PayloadKey;                                        // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F15[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          RequiresDelegate;                                  // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString) == 0x000040, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString");
@@ -1306,7 +1299,8 @@ static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttr
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::UserDefinedAttributeName' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::Value' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, PayloadKey) == 0x000028, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, ReturnValue) == 0x000038, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::ReturnValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, RequiresDelegate) == 0x000038, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, ReturnValue) == 0x000039, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Int32
 // 0x0038 (0x0038 - 0x0000)
@@ -1316,10 +1310,11 @@ public:
 	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F16[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F17[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32");
@@ -1327,7 +1322,8 @@ static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttr
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::UserDefinedAttributeName' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::Value' has a wrong offset!");
 static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::ReturnValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::ReturnValue' has a wrong offset!");
 
 // Function InterchangeCore.InterchangeUserDefinedAttributesAPI.DuplicateAllUserDefinedAttribute
 // 0x0018 (0x0018 - 0x0000)
@@ -1337,7 +1333,7 @@ public:
 	const class UInterchangeBaseNode*             InterchangeSourceNode;                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UInterchangeBaseNode*                   InterchangeDestinationNode;                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAddSourceNodeName;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F18[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute) == 0x000018, "Wrong size on InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute");
@@ -1353,10 +1349,10 @@ public:
 	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          OutValue;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F19[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1A[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean");
@@ -1376,7 +1372,7 @@ public:
 	double                                        OutValue;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1B[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double");
@@ -1394,10 +1390,10 @@ public:
 	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OutValue;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1C[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1D[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float");
@@ -1417,7 +1413,7 @@ public:
 	class FString                                 OutValue;                                          // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OutPayloadKey;                                     // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1E[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString) == 0x000040, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString");
@@ -1435,10 +1431,10 @@ public:
 	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OutValue;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F1F[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F20[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32");
@@ -1469,7 +1465,7 @@ public:
 	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F21[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute");
 static_assert(sizeof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute) == 0x000020, "Wrong size on InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute");

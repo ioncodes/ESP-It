@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "WB_BaseControl_classes.hpp"
 
 
@@ -19,18 +19,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_BaseButton.WB_BaseButton_C
-// 0x0458 (0x0730 - 0x02D8)
-class UWB_BaseButton_C : public UWB_BaseControl_C
+// 0x0458 (0x0750 - 0x02F8)
+#pragma pack(push, 0x1)
+class alignas(0x10) UWB_BaseButton_C : public UWB_BaseControl_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UButton*                                ButtonRef;                                         // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UTextBlock*>                     LabelRefs;                                         // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UTextBlock*                             LabelRef;                                          // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FButtonStyle                           ButtonStyle;                                       // 0x0300(0x03F0)(Edit, BlueprintVisible)
-	class FText                                   LabelText;                                         // 0x06F0(0x0018)(Edit, BlueprintVisible)
-	struct FSlateColor                            LabelTextColor;                                    // 0x0708(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            LabelTextColorFocused;                             // 0x071C(0x0014)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UButton*                                ButtonRef;                                         // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UTextBlock*>                     LabelRefs;                                         // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UTextBlock*                             LabelRef;                                          // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FButtonStyle                           ButtonStyle;                                       // 0x0320(0x03F0)(Edit, BlueprintVisible)
+	class FText                                   LabelText;                                         // 0x0710(0x0010)(Edit, BlueprintVisible)
+	struct FSlateColor                            LabelTextColor;                                    // 0x0720(0x0014)(Edit, BlueprintVisible)
+	struct FSlateColor                            LabelTextColorFocused;                             // 0x0734(0x0014)(Edit, BlueprintVisible)
 
 public:
 	void PreConstruct(bool IsDesignTime);
@@ -49,16 +50,17 @@ public:
 		return GetDefaultObjImpl<UWB_BaseButton_C>();
 	}
 };
+#pragma pack(pop)
 static_assert(alignof(UWB_BaseButton_C) == 0x000010, "Wrong alignment on UWB_BaseButton_C");
-static_assert(sizeof(UWB_BaseButton_C) == 0x000730, "Wrong size on UWB_BaseButton_C");
-static_assert(offsetof(UWB_BaseButton_C, UberGraphFrame) == 0x0002D8, "Member 'UWB_BaseButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, ButtonRef) == 0x0002E0, "Member 'UWB_BaseButton_C::ButtonRef' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, LabelRefs) == 0x0002E8, "Member 'UWB_BaseButton_C::LabelRefs' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, LabelRef) == 0x0002F8, "Member 'UWB_BaseButton_C::LabelRef' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, ButtonStyle) == 0x000300, "Member 'UWB_BaseButton_C::ButtonStyle' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, LabelText) == 0x0006F0, "Member 'UWB_BaseButton_C::LabelText' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, LabelTextColor) == 0x000708, "Member 'UWB_BaseButton_C::LabelTextColor' has a wrong offset!");
-static_assert(offsetof(UWB_BaseButton_C, LabelTextColorFocused) == 0x00071C, "Member 'UWB_BaseButton_C::LabelTextColorFocused' has a wrong offset!");
+static_assert(sizeof(UWB_BaseButton_C) == 0x000750, "Wrong size on UWB_BaseButton_C");
+static_assert(offsetof(UWB_BaseButton_C, UberGraphFrame) == 0x0002F8, "Member 'UWB_BaseButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, ButtonRef) == 0x000300, "Member 'UWB_BaseButton_C::ButtonRef' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, LabelRefs) == 0x000308, "Member 'UWB_BaseButton_C::LabelRefs' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, LabelRef) == 0x000318, "Member 'UWB_BaseButton_C::LabelRef' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, ButtonStyle) == 0x000320, "Member 'UWB_BaseButton_C::ButtonStyle' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, LabelText) == 0x000710, "Member 'UWB_BaseButton_C::LabelText' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, LabelTextColor) == 0x000720, "Member 'UWB_BaseButton_C::LabelTextColor' has a wrong offset!");
+static_assert(offsetof(UWB_BaseButton_C, LabelTextColorFocused) == 0x000734, "Member 'UWB_BaseButton_C::LabelTextColorFocused' has a wrong offset!");
 
 }
 

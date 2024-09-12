@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_Slot_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "WB_CategoryButton_classes.hpp"
 #include "UMG_structs.hpp"
@@ -21,20 +21,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkinCategoryButton.WB_SkinCategoryButton_C
-// 0x0060 (0x0340 - 0x02E0)
+// 0x0060 (0x0360 - 0x0300)
 class UWB_SkinCategoryButton_C final : public UWB_CategoryButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SkinCategoryButton_C;            // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Background;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Notify;                                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                UpdateCategory;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTexture2D*                             Texture;                                           // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnUpdateCategory;                                  // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWB_SkinCategoryMenuScreen_C*           SkinCategoryMenu;                                  // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FS_ItemInfo>                    SkinItemInfos;                                     // 0x0328(0x0010)(Edit, BlueprintVisible)
-	E_Slot                                        ItemSlot;                                          // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SkinCategoryButton_C;            // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Background;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Notify;                                            // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                UpdateCategory;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTexture2D*                             Texture;                                           // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnUpdateCategory;                                  // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWB_SkinCategoryMenuScreen_C*           SkinCategoryMenu;                                  // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_ItemInfo>                    SkinItemInfos;                                     // 0x0348(0x0010)(Edit, BlueprintVisible)
+	E_Slot                                        ItemSlot;                                          // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__SelectCategory_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
@@ -42,7 +42,7 @@ public:
 	void ExecuteUbergraph_WB_SkinCategoryButton(int32 EntryPoint);
 	struct FSlateBrush Get_Icon_Brush();
 	bool GetIsActiveCategorySlot();
-	void IsNotifyVisible(bool* Param_Visibility);
+	void IsNotifyVisible(bool* Visibility_0);
 	void OnUpdateCategory__DelegateSignature(class UWB_SkinCategoryButton_C* Button);
 
 public:
@@ -56,17 +56,17 @@ public:
 	}
 };
 static_assert(alignof(UWB_SkinCategoryButton_C) == 0x000008, "Wrong alignment on UWB_SkinCategoryButton_C");
-static_assert(sizeof(UWB_SkinCategoryButton_C) == 0x000340, "Wrong size on UWB_SkinCategoryButton_C");
-static_assert(offsetof(UWB_SkinCategoryButton_C, UberGraphFrame_WB_SkinCategoryButton_C) == 0x0002E0, "Member 'UWB_SkinCategoryButton_C::UberGraphFrame_WB_SkinCategoryButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, Background) == 0x0002E8, "Member 'UWB_SkinCategoryButton_C::Background' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, Icon) == 0x0002F0, "Member 'UWB_SkinCategoryButton_C::Icon' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, Notify) == 0x0002F8, "Member 'UWB_SkinCategoryButton_C::Notify' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, UpdateCategory) == 0x000300, "Member 'UWB_SkinCategoryButton_C::UpdateCategory' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, Texture) == 0x000308, "Member 'UWB_SkinCategoryButton_C::Texture' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, OnUpdateCategory) == 0x000310, "Member 'UWB_SkinCategoryButton_C::OnUpdateCategory' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, SkinCategoryMenu) == 0x000320, "Member 'UWB_SkinCategoryButton_C::SkinCategoryMenu' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, SkinItemInfos) == 0x000328, "Member 'UWB_SkinCategoryButton_C::SkinItemInfos' has a wrong offset!");
-static_assert(offsetof(UWB_SkinCategoryButton_C, ItemSlot) == 0x000338, "Member 'UWB_SkinCategoryButton_C::ItemSlot' has a wrong offset!");
+static_assert(sizeof(UWB_SkinCategoryButton_C) == 0x000360, "Wrong size on UWB_SkinCategoryButton_C");
+static_assert(offsetof(UWB_SkinCategoryButton_C, UberGraphFrame_WB_SkinCategoryButton_C) == 0x000300, "Member 'UWB_SkinCategoryButton_C::UberGraphFrame_WB_SkinCategoryButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, Background) == 0x000308, "Member 'UWB_SkinCategoryButton_C::Background' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, Icon) == 0x000310, "Member 'UWB_SkinCategoryButton_C::Icon' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, Notify) == 0x000318, "Member 'UWB_SkinCategoryButton_C::Notify' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, UpdateCategory) == 0x000320, "Member 'UWB_SkinCategoryButton_C::UpdateCategory' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, Texture) == 0x000328, "Member 'UWB_SkinCategoryButton_C::Texture' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, OnUpdateCategory) == 0x000330, "Member 'UWB_SkinCategoryButton_C::OnUpdateCategory' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, SkinCategoryMenu) == 0x000340, "Member 'UWB_SkinCategoryButton_C::SkinCategoryMenu' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, SkinItemInfos) == 0x000348, "Member 'UWB_SkinCategoryButton_C::SkinItemInfos' has a wrong offset!");
+static_assert(offsetof(UWB_SkinCategoryButton_C, ItemSlot) == 0x000358, "Member 'UWB_SkinCategoryButton_C::ItemSlot' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HunterBlockingDoor.BP_HunterBlockingDoor_C
-// 0x0000 (0x03A0 - 0x03A0)
+// 0x0000 (0x0388 - 0x0388)
 class ABP_HunterBlockingDoor_C final : public ABP_UtilityDoor_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_HunterBlockingDoor_C) == 0x000008, "Wrong alignment on ABP_HunterBlockingDoor_C");
-static_assert(sizeof(ABP_HunterBlockingDoor_C) == 0x0003A0, "Wrong size on ABP_HunterBlockingDoor_C");
+static_assert(sizeof(ABP_HunterBlockingDoor_C) == 0x000388, "Wrong size on ABP_HunterBlockingDoor_C");
 
 }
 

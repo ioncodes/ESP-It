@@ -22,7 +22,7 @@ struct FS_MaterialEntry final
 {
 public:
 	E_MapType                                     MapType_2_F6B2413A4D4A121ED88EFE8A71C1411A;        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_370D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     MaterialInterface_5_5E44D0FD4CEE5ED20BA85E8DA1216704; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FS_MaterialEntry) == 0x000008, "Wrong alignment on FS_MaterialEntry");

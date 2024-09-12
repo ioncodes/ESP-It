@@ -205,10 +205,10 @@ void AB_GarlicProjectile_C::TearDownPoolObject()
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GarlicProjectile_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_GarlicProjectile_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -218,8 +218,8 @@ void AB_GarlicProjectile_C::TearUp(const struct FTransform& SpawnTransform, clas
 	Params::B_GarlicProjectile_C_TearUp Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -229,10 +229,10 @@ void AB_GarlicProjectile_C::TearUp(const struct FTransform& SpawnTransform, clas
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GarlicProjectile_C::TearUpMulti(const struct FTransform& Transform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_GarlicProjectile_C::TearUpMulti(const struct FTransform& Transform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -242,8 +242,8 @@ void AB_GarlicProjectile_C::TearUpMulti(const struct FTransform& Transform, clas
 	Params::B_GarlicProjectile_C_TearUpMulti Parms{};
 
 	Parms.Transform = std::move(Transform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -253,10 +253,10 @@ void AB_GarlicProjectile_C::TearUpMulti(const struct FTransform& Transform, clas
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_GarlicProjectile_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_GarlicProjectile_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -266,8 +266,8 @@ void AB_GarlicProjectile_C::TearUpPoolObject(const struct FTransform& SpawnTrans
 	Params::B_GarlicProjectile_C_TearUpPoolObject Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

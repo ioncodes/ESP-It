@@ -426,9 +426,9 @@ void AB_ImpostorPlayerState_C::SabotageServer(class AB_SabotageActor_C* Sabotage
 // Function B_ImpostorPlayerState.B_ImpostorPlayerState_C.SetTasksMulti
 // (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<E_TaskType>                      Param_Tasks                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<E_TaskType>                      Tasks_0                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void AB_ImpostorPlayerState_C::SetTasksMulti(const TArray<E_TaskType>& Param_Tasks)
+void AB_ImpostorPlayerState_C::SetTasksMulti(const TArray<E_TaskType>& Tasks_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -437,7 +437,7 @@ void AB_ImpostorPlayerState_C::SetTasksMulti(const TArray<E_TaskType>& Param_Tas
 
 	Params::B_ImpostorPlayerState_C_SetTasksMulti Parms{};
 
-	Parms.Param_Tasks = std::move(Param_Tasks);
+	Parms.Tasks_0 = std::move(Tasks_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

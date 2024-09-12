@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -23,7 +23,7 @@ struct B_ShootingRangeTask_C_CheckCompletionConditions final
 {
 public:
 	bool                                          ReadyForCompletion;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C35[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -39,7 +39,7 @@ struct B_ShootingRangeTask_C_CheckIfReadyForNextRound final
 {
 public:
 	bool                                          Ready_For_Next_Round;                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C36[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -61,12 +61,12 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C37[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ShootingRangeDummy_C*                CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C38[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_TurnBoards_DeltaSeconds_ImplicitCast;     // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ShootingRangeTask_C_ExecuteUbergraph_B_ShootingRangeTask) == 0x000008, "Wrong alignment on B_ShootingRangeTask_C_ExecuteUbergraph_B_ShootingRangeTask");
@@ -105,7 +105,7 @@ public:
 	TArray<class AB_ShootingRangeField_C*>        CallFunc_GetAllActorsOfClass_OutActors;            // 0x0000(0x0010)(ReferenceParm)
 	class AB_ShootingRangeField_C*                K2Node_DynamicCast_AsB_Shooting_Range_Field;       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C39[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ShootingRangeField_C*                CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
 };
@@ -138,13 +138,13 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRandomStream                          CallFunc_MakeRandomStream_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_5C3A[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_Array_Get_Item;                           // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C3B[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C3C[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ShootingRangeDummy_C*                CallFunc_FinishSpawningActor_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ShootingRangeTask_C_SpawnTargets) == 0x000010, "Wrong alignment on B_ShootingRangeTask_C_SpawnTargets");
@@ -172,14 +172,14 @@ static_assert(sizeof(B_ShootingRangeTask_C_TryToFinishRound) == 0x000001, "Wrong
 static_assert(offsetof(B_ShootingRangeTask_C_TryToFinishRound, CallFunc_CheckIfReadyForNextRound_Ready_For_Next_Round) == 0x000000, "Member 'B_ShootingRangeTask_C_TryToFinishRound::CallFunc_CheckIfReadyForNextRound_Ready_For_Next_Round' has a wrong offset!");
 
 // Function B_ShootingRangeTask.B_ShootingRangeTask_C.TurnBoards
-// 0x02A0 (0x02A0 - 0x0000)
+// 0x02C0 (0x02C0 - 0x0000)
 struct B_ShootingRangeTask_C_TurnBoards final
 {
 public:
 	double                                        DeltaSeconds;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DeltaTimeRotation;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          TargetsGone;                                       // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C3D[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -188,39 +188,39 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C3E[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C3F[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_ShootingRangeShootActor_C*           CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C40[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C41[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ShootingRangeShootActor_C*           CallFunc_Array_Get_Item_1;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C42[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult;    // 0x00A8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C43[0x3];                                     // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C44[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ShootingRangeDummy_C*                CallFunc_Array_Get_Item_2;                         // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C45[0x7];                                     // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult_1;  // 0x01B0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast_1;          // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult;    // 0x00A8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ShootingRangeDummy_C*                CallFunc_Array_Get_Item_2;                         // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult_1;  // 0x01C0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast_1;          // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ShootingRangeTask_C_TurnBoards) == 0x000008, "Wrong alignment on B_ShootingRangeTask_C_TurnBoards");
-static_assert(sizeof(B_ShootingRangeTask_C_TurnBoards) == 0x0002A0, "Wrong size on B_ShootingRangeTask_C_TurnBoards");
+static_assert(sizeof(B_ShootingRangeTask_C_TurnBoards) == 0x0002C0, "Wrong size on B_ShootingRangeTask_C_TurnBoards");
 static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, DeltaSeconds) == 0x000000, "Member 'B_ShootingRangeTask_C_TurnBoards::DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, DeltaTimeRotation) == 0x000008, "Member 'B_ShootingRangeTask_C_TurnBoards::DeltaTimeRotation' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, TargetsGone) == 0x000010, "Member 'B_ShootingRangeTask_C_TurnBoards::TargetsGone' has a wrong offset!");
@@ -246,14 +246,14 @@ static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Array_Get_Item
 static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Array_Length_ReturnValue_1) == 0x0000A0, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_K2_AddRelativeRotation_SweepHitResult) == 0x0000A8, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_K2_AddRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Less_IntInt_ReturnValue_1) == 0x000190, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Add_IntInt_ReturnValue_2) == 0x000194, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Array_Length_ReturnValue_2) == 0x000198, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Array_Get_Item_2) == 0x0001A0, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Less_IntInt_ReturnValue_2) == 0x0001A8, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_K2_AddRelativeRotation_SweepHitResult_1) == 0x0001B0, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_K2_AddRelativeRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000298, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_MakeRotator_Roll_ImplicitCast_1) == 0x00029C, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_MakeRotator_Roll_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001A0, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Add_IntInt_ReturnValue_2) == 0x0001A4, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Array_Length_ReturnValue_2) == 0x0001A8, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Array_Get_Item_2) == 0x0001B0, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_Less_IntInt_ReturnValue_2) == 0x0001B8, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_K2_AddRelativeRotation_SweepHitResult_1) == 0x0001C0, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_K2_AddRelativeRotation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x0002B8, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeTask_C_TurnBoards, CallFunc_MakeRotator_Roll_ImplicitCast_1) == 0x0002BC, "Member 'B_ShootingRangeTask_C_TurnBoards::CallFunc_MakeRotator_Roll_ImplicitCast_1' has a wrong offset!");
 
 }
 

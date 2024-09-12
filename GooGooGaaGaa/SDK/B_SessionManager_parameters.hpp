@@ -11,55 +11,55 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "MasterServerPlugin_structs.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "Engine_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_SessionManager.B_SessionManager_C.AddMatchStartedFlagForUpdate
-// 0x01F8 (0x01F8 - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct B_SessionManager_C_AddMatchStartedFlagForUpdate final
 {
 public:
 	bool                                          MatchStarted;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5069[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 StartTime;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable;                                // 0x0018(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0050)(HasGetValueTypeHash)
-	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0088(0x0028)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
-	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x00C0(0x0030)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00F0(0x0018)()
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0108(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0120(0x0050)(HasGetValueTypeHash)
-	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP_1;                 // 0x0170(0x0028)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0198(0x0010)(ReferenceParm)
-	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP_1;        // 0x01A8(0x0030)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01D8(0x0018)()
-	class FName                                   Temp_name_Variable_1;                              // 0x01F0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0048)(HasGetValueTypeHash)
+	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0078(0x0028)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ReferenceParm)
+	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x00B0(0x0030)()
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0010)()
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x00F0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0100(0x0048)(HasGetValueTypeHash)
+	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP_1;                 // 0x0148(0x0028)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0170(0x0010)(ReferenceParm)
+	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP_1;        // 0x0180(0x0030)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01B0(0x0010)()
+	class FName                                   Temp_name_Variable_1;                              // 0x01C0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SessionManager_C_AddMatchStartedFlagForUpdate) == 0x000008, "Wrong alignment on B_SessionManager_C_AddMatchStartedFlagForUpdate");
-static_assert(sizeof(B_SessionManager_C_AddMatchStartedFlagForUpdate) == 0x0001F8, "Wrong size on B_SessionManager_C_AddMatchStartedFlagForUpdate");
+static_assert(sizeof(B_SessionManager_C_AddMatchStartedFlagForUpdate) == 0x0001C8, "Wrong size on B_SessionManager_C_AddMatchStartedFlagForUpdate");
 static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, MatchStarted) == 0x000000, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::MatchStarted' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, StartTime) == 0x000008, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::StartTime' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, Temp_name_Variable) == 0x000018, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::Temp_name_Variable' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Conv_StringToText_ReturnValue) == 0x000020, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_VariantDataBP) == 0x000088, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_VariantDataBP' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeArray_Array) == 0x0000B0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_OnlineSessionSettingBP) == 0x0000C0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_OnlineSessionSettingBP' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Format_ReturnValue) == 0x0000F0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Conv_BoolToText_ReturnValue) == 0x000108, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Conv_BoolToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_FormatArgumentData_1) == 0x000120, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_VariantDataBP_1) == 0x000170, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_VariantDataBP_1' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeArray_Array_1) == 0x000198, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_OnlineSessionSettingBP_1) == 0x0001A8, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_OnlineSessionSettingBP_1' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Format_ReturnValue_1) == 0x0001D8, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, Temp_name_Variable_1) == 0x0001F0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::Temp_name_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_VariantDataBP) == 0x000078, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_VariantDataBP' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeArray_Array) == 0x0000A0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_OnlineSessionSettingBP) == 0x0000B0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_OnlineSessionSettingBP' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Format_ReturnValue) == 0x0000E0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Conv_BoolToText_ReturnValue) == 0x0000F0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Conv_BoolToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_FormatArgumentData_1) == 0x000100, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_VariantDataBP_1) == 0x000148, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_VariantDataBP_1' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeArray_Array_1) == 0x000170, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, K2Node_MakeStruct_OnlineSessionSettingBP_1) == 0x000180, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::K2Node_MakeStruct_OnlineSessionSettingBP_1' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, CallFunc_Format_ReturnValue_1) == 0x0001B0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_AddMatchStartedFlagForUpdate, Temp_name_Variable_1) == 0x0001C0, "Member 'B_SessionManager_C_AddMatchStartedFlagForUpdate::Temp_name_Variable_1' has a wrong offset!");
 
 // Function B_SessionManager.B_SessionManager_C.AddMatchTimeForUpdate
 // 0x0070 (0x0070 - 0x0000)
@@ -68,7 +68,7 @@ struct B_SessionManager_C_AddMatchTimeForUpdate final
 public:
 	int32                                         MatchTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_506A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0018(0x0028)()
 	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0040(0x0030)()
@@ -104,9 +104,9 @@ struct B_SessionManager_C_AddObjectiveMatchStartedFlagForUpdate final
 {
 public:
 	bool                                          ObjectiveMatchStarted;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_506B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_506C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0010(0x0028)()
 	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0038(0x0030)()
 };
@@ -124,7 +124,7 @@ struct B_SessionManager_C_AddPlayerCountForUpdate final
 public:
 	int32                                         PlayerCount;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_506D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0018(0x0028)()
 	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0040(0x0030)()
@@ -151,7 +151,7 @@ public:
 	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           CallFunc_Map_Values_Values;                        // 0x0100(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_506E[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x0118(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FOnlineSessionSettingBP                CallFunc_Map_Find_Value;                           // 0x0130(0x0030)()
@@ -180,10 +180,10 @@ struct B_SessionManager_C_AddUsingGameRulesForUpdate final
 public:
 	bool                                          UsingCustomRules;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LiveTweakingAllowed;                               // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_506F[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_1;                              // 0x000C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5070[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0018(0x0028)()
 	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0040(0x0030)()
 	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP_1;                 // 0x0070(0x0028)()
@@ -201,7 +201,7 @@ static_assert(offsetof(B_SessionManager_C_AddUsingGameRulesForUpdate, K2Node_Mak
 static_assert(offsetof(B_SessionManager_C_AddUsingGameRulesForUpdate, K2Node_MakeStruct_OnlineSessionSettingBP_1) == 0x000098, "Member 'B_SessionManager_C_AddUsingGameRulesForUpdate::K2Node_MakeStruct_OnlineSessionSettingBP_1' has a wrong offset!");
 
 // Function B_SessionManager.B_SessionManager_C.ExecuteUbergraph_B_SessionManager
-// 0x06F8 (0x06F8 - 0x0000)
+// 0x06F0 (0x06F0 - 0x0000)
 struct B_SessionManager_C_ExecuteUbergraph_B_SessionManager final
 {
 public:
@@ -209,27 +209,27 @@ public:
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class FName SessionName, TArray<struct FUniqueNetIdRepl>& PlayerIds, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_8;                  // 0x0024(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5071[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_PlayerIds_2;                    // 0x0030(0x0010)(ConstParm, ReferenceParm)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_8;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5072[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               Temp_struct_Variable;                              // 0x0048(0x0010)(ReferenceParm)
 	class FName                                   Temp_name_Variable;                                // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_7;                  // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_PlayerIds_1;                    // 0x0070(0x0010)(ConstParm, ReferenceParm)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_7;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5073[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, TArray<struct FUniqueNetIdRepl>& PlayerIds, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0084(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_6;                  // 0x0094(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5074[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_PlayerIds;                      // 0x00A0(0x0010)(ConstParm, ReferenceParm)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_6;               // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5075[0x3];                                     // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, TArray<struct FUniqueNetIdRepl>& PlayerIds, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x00B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5076[0x3];                                     // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               Temp_struct_Variable_1;                            // 0x00C8(0x0010)(ReferenceParm)
 	class FName                                   Temp_name_Variable_1;                              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -237,132 +237,132 @@ public:
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_5;                  // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_5;               // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5077[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0104(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_4;                  // 0x0114(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_4;               // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5078[0x3];                                     // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5079[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable_2;                              // 0x0134(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_507A[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_3;                  // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_3;               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_507B[0x3];                                     // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0154(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_2;                  // 0x0164(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_2;               // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_507C[0x3];                                     // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x0170(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_3;                              // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_507D[0x3];                                     // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_181[0x3];                                      // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable_3;                              // 0x0184(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_507E[0x4];                                     // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_3;   // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_1;                  // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_507F[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x01A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName;                    // 0x01B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5080[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x01C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_4;                              // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5081[0x3];                                     // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable_4;                              // 0x01D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5082[0x4];                                     // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_4;   // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5083[0x6];                                     // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F2[0x6];                                      // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_SessionName_9;                  // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FUniqueNetIdRepl>               K2Node_CustomEvent_PlayerIds_3;                    // 0x0210(0x0010)(ConstParm, ReferenceParm)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_9;               // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5084[0x3];                                     // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_221[0x3];                                      // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_CustomEvent_SessionName_11;                 // 0x0224(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful_11;              // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5085[0x3];                                     // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22D[0x3];                                      // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, TArray<struct FUniqueNetIdRepl>& PlayerIds, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x0230(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5086[0x7];                                     // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       K2Node_CustomEvent_PlayerNetId_1;                  // 0x0250(0x0030)(HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       K2Node_CustomEvent_PlayerNetId;                    // 0x0280(0x0030)(HasGetValueTypeHash)
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_6;   // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5087[0x3];                                     // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EOnlineSessionState_                          CallFunc_GetSessionState_ReturnValue;              // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5088[0x3];                                     // 0x02C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C9[0x3];                                      // 0x02C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x02CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5089[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystemRegisterPlayers* CallFunc_RegisterPlayers_ReturnValue;              // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508A[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E1[0x3];                                      // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508B[0x7];                                     // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_5;         // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508C[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_7;   // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EOnlineSessionState_                          CallFunc_GetSessionState_ReturnValue_1;            // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508D[0x2];                                     // 0x031A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31A[0x2];                                      // 0x031A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class FName SessionName, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x031C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508E[0x4];                                     // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystemUnregisterPlayers* CallFunc_UnregisterPlayers_ReturnValue;            // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x033C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x033D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508F[0x2];                                     // 0x033E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33E[0x2];                                      // 0x033E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_8;   // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5090[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0358(0x0150)()
 	TMap<class FName, struct FOnlineSessionSettingBP> CallFunc_AddUpdatedPropertiesToSessionSettings_UpdatedSessionSettings; // 0x04A8(0x0050)()
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x04F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5091[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_501[0x7];                                      // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnlineSessionSettingsBP               K2Node_MakeStruct_OnlineSessionSettingsBP;         // 0x0508(0x0150)()
 	class UOnlineSessionSubsystemUpdateSession*   CallFunc_UpdateSession_ReturnValue;                // 0x0658(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UOnlineSessionSubsystemStartSession*    CallFunc_StartSession_ReturnValue;                 // 0x0660(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0668(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0669(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5092[0x2];                                     // 0x066A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66A[0x2];                                      // 0x066A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Temp_name_Variable_5;                              // 0x066C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5093[0x4];                                     // 0x0674(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_674[0x4];                                      // 0x0674(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0678(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0680(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_5;                              // 0x0681(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5094[0x6];                                     // 0x0682(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_682[0x6];                                      // 0x0682(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystemEndSession*      CallFunc_EndSession_ReturnValue;                   // 0x0688(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0690(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x06A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x06B0(0x0018)()
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x06C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5095[0x7];                                     // 0x06C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x06D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x06D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5096[0x7];                                     // 0x06D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSubsystemDestroySession*  CallFunc_DestroySession_ReturnValue;               // 0x06E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x06E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5097[0x3];                                     // 0x06E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_CustomEvent_SessionName_10;                 // 0x06EC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_10;              // 0x06F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x06B0(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x06C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C1[0x7];                                      // 0x06C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x06C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x06D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6D1[0x7];                                      // 0x06D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSubsystemDestroySession*  CallFunc_DestroySession_ReturnValue;               // 0x06D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E1[0x3];                                      // 0x06E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_SessionName_10;                 // 0x06E4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_10;              // 0x06EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager) == 0x000008, "Wrong alignment on B_SessionManager_C_ExecuteUbergraph_B_SessionManager");
-static_assert(sizeof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager) == 0x0006F8, "Wrong size on B_SessionManager_C_ExecuteUbergraph_B_SessionManager");
+static_assert(sizeof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager) == 0x0006F0, "Wrong size on B_SessionManager_C_ExecuteUbergraph_B_SessionManager");
 static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, EntryPoint) == 0x000000, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000014, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
@@ -472,13 +472,13 @@ static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, Cal
 static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_Conv_BoolToString_ReturnValue) == 0x000690, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_Concat_StrStr_ReturnValue) == 0x0006A0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_Conv_StringToText_ReturnValue) == 0x0006B0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_IsValid_ReturnValue_7) == 0x0006C8, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_DynamicCast_AsB_Game_Instance_5) == 0x0006D0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_DynamicCast_AsB_Game_Instance_5' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_DynamicCast_bSuccess_5) == 0x0006D8, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_DestroySession_ReturnValue) == 0x0006E0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_DestroySession_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_IsValid_ReturnValue_8) == 0x0006E8, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_CustomEvent_SessionName_10) == 0x0006EC, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_CustomEvent_SessionName_10' has a wrong offset!");
-static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_CustomEvent_bWasSuccessful_10) == 0x0006F4, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_CustomEvent_bWasSuccessful_10' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_IsValid_ReturnValue_7) == 0x0006C0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_DynamicCast_AsB_Game_Instance_5) == 0x0006C8, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_DynamicCast_AsB_Game_Instance_5' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_DynamicCast_bSuccess_5) == 0x0006D0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_DestroySession_ReturnValue) == 0x0006D8, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_DestroySession_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, CallFunc_IsValid_ReturnValue_8) == 0x0006E0, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_CustomEvent_SessionName_10) == 0x0006E4, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_CustomEvent_SessionName_10' has a wrong offset!");
+static_assert(offsetof(B_SessionManager_C_ExecuteUbergraph_B_SessionManager, K2Node_CustomEvent_bWasSuccessful_10) == 0x0006EC, "Member 'B_SessionManager_C_ExecuteUbergraph_B_SessionManager::K2Node_CustomEvent_bWasSuccessful_10' has a wrong offset!");
 
 // Function B_SessionManager.B_SessionManager_C.OnCallFailed_3A9EE90449D09BFAC83E6C9F99AC1DE8
 // 0x000C (0x000C - 0x0000)
@@ -662,7 +662,7 @@ struct B_SessionManager_C_SendCurrentSessionInfo final
 public:
 	class UServerBrowser*                         ServerBrowserInst;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasActiveGameSession_ReturnValue;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5098[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USessionSubsystem*                      CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FBlueprintSessionResult                CallFunc_GetActiveGameSession_ReturnValue;         // 0x0018(0x0120)()
 	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -690,7 +690,7 @@ struct B_SessionManager_C_SendGameServerKeepAlive final
 public:
 	class UServerBrowser*                         ServerBrowserInst;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasActiveGameSession_ReturnValue;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5099[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UServerBrowser*                         CallFunc_GetServerBrowser_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)

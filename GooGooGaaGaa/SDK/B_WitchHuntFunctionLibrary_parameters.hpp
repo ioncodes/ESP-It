@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ETeamID_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ETeamID_structs.hpp"
 
 
 namespace SDK::Params
@@ -44,11 +44,11 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42DB[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetActorFromWitchAsPawn_ReturnValue;      // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Witch_C*                             K2Node_DynamicCast_AsB_Witch;                      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42DC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -72,7 +72,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42DD[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -93,11 +93,12 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42DE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42DF[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_2;             // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -112,8 +113,9 @@ static_assert(sizeof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch) == 0x000038,
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, Actor) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::Actor' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, __WorldContext) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, ReturnValue) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_GetObjectClass_ReturnValue) == 0x000018, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_IsValid_ReturnValue_1) == 0x000020, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_ClassIsChildOf_ReturnValue) == 0x000021, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_GetObjectClass_ReturnValue_1) == 0x000028, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_GetObjectClass_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsActorFromWitch, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x000030, "Member 'B_WitchHuntFunctionLibrary_C_IsActorFromWitch::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
@@ -135,26 +137,26 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E0[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0030(0x0010)(ConstParm, ReferenceParm)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         K2Node_MakeArray_Array_1;                          // 0x0048(0x0010)(ConstParm, ReferenceParm)
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E1[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E2[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E3[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         CallFunc_SphereOverlapActors_OutActors;            // 0x00D0(0x0010)(ReferenceParm)
 	bool                                          CallFunc_SphereOverlapActors_ReturnValue;          // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E4[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SphereOverlapActors_SphereRadius_ImplicitCast; // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -191,7 +193,7 @@ struct B_WitchHuntFunctionLibrary_C_GetTabToSideOfCurrent final
 public:
 	class UWidgetSwitcher*                        Switcher;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          ToTheRight;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E5[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                RightTab;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -199,15 +201,15 @@ public:
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E6[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_1;                               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default;                             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E7[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_MathExpression_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E8[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetWidgetAtIndex_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_GetTabToSideOfCurrent) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_GetTabToSideOfCurrent");
@@ -245,14 +247,14 @@ public:
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42E9[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42EA[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42EB[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                K2Node_Select_Default;                             // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                K2Node_Select_Default_1;                           // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            CallFunc_Array_Get_Item_2;                         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -284,7 +286,7 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetUpGamepadWidgetNavigation
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetUpGamepadWidgetNavigation, CallFunc_Less_IntInt_ReturnValue_1) == 0x00007C, "Member 'B_WitchHuntFunctionLibrary_C_SetUpGamepadWidgetNavigation::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.SetNewPlayerPosForResize
-// 0x0200 (0x0200 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize final
 {
 public:
@@ -312,11 +314,11 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0110(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0110(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize) == 0x000200, "Wrong size on B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize) == 0x000210, "Wrong size on B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, Actor) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::Actor' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, NewScale) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::NewScale' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, __WorldContext) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::__WorldContext' has a wrong offset!");
@@ -342,10 +344,10 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, Ca
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000F0, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, CallFunc_MakeVector_ReturnValue) == 0x0000F8, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000110, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0001F8, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize, CallFunc_K2_SetActorLocation_ReturnValue) == 0x000208, "Member 'B_WitchHuntFunctionLibrary_C_SetNewPlayerPosForResize::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.Show Creative Spectator Names
-// 0x0098 (0x0098 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names final
 {
 public:
@@ -353,29 +355,29 @@ public:
 	class AB_CreativeSpectator_C*                 CurrentSpectator;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42EC[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeSpectator_C*                 K2Node_DynamicCast_AsB_Creative_Spectator;         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42ED[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42EE[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42EF[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0018)()
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0010)()
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names) == 0x000098, "Wrong size on B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names) == 0x000090, "Wrong size on B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, __WorldContext) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, CurrentSpectator) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::CurrentSpectator' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
@@ -393,9 +395,9 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Name
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, CallFunc_GetPlayerOrBotName_Name) == 0x000058, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, CallFunc_Conv_StringToText_ReturnValue) == 0x000068, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000080, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, K2Node_DynamicCast_AsWB_Player_Name) == 0x000088, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, K2Node_DynamicCast_bSuccess_2) == 0x000090, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000078, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, K2Node_DynamicCast_AsWB_Player_Name) == 0x000080, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names, K2Node_DynamicCast_bSuccess_2) == 0x000088, "Member 'B_WitchHuntFunctionLibrary_C_Show_Creative_Spectator_Names::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.ConvertSecondsToMinutesAndSeconds
 // 0x00F0 (0x00F0 - 0x0000)
@@ -403,7 +405,7 @@ struct B_WitchHuntFunctionLibrary_C_ConvertSecondsToMinutesAndSeconds final
 {
 public:
 	int32                                         InSeconds;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 MinutesString;                                     // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 SecondsString;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
@@ -420,10 +422,10 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TArray<class FString>                         CallFunc_GetCharacterArrayFromString_ReturnValue;  // 0x00A8(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F1[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F2[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_GetCharacterArrayFromString_ReturnValue_1; // 0x00D8(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -459,7 +461,7 @@ struct B_WitchHuntFunctionLibrary_C_GetPlayerStartToSpawnAtAndOccupyIt final
 {
 public:
 	ETeamID                                       Team;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 WitchPlayerStartClass;                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 AlternativeWitchPlayerStartClass;                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 HunterPlayerStartClass;                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -472,33 +474,33 @@ public:
 	TArray<class AActor*>                         FreePlayerStarts;                                  // 0x0070(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class AActor*>                         PlayerStarts;                                      // 0x0080(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F4[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_PlayerStarts;             // 0x0098(0x0010)(ReferenceParm)
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_UnoccupiedPlayerStarts;   // 0x00A8(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GetPlayerStarts_HasPlayerStartsOnMap;     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F5[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F6[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomInteger_ReturnValue_1;              // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_PlayerStarts_1;           // 0x00D8(0x0010)(ReferenceParm)
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_UnoccupiedPlayerStarts_1; // 0x00E8(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GetPlayerStarts_HasPlayerStartsOnMap_1;   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F7[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F8[0x4];                                     // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_PlayerStarts_2;           // 0x0110(0x0010)(ReferenceParm)
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_UnoccupiedPlayerStarts_2; // 0x0120(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GetPlayerStarts_HasPlayerStartsOnMap_2;   // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42F9[0x6];                                     // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_PlayerStarts_3;           // 0x0138(0x0010)(ReferenceParm)
 	TArray<class AActor*>                         CallFunc_GetPlayerStarts_UnoccupiedPlayerStarts_3; // 0x0148(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GetPlayerStarts_HasPlayerStartsOnMap_3;   // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42FA[0x7];                                     // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIPlayerStart_C>       K2Node_DynamicCast_AsIPlayer_Start;                // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -550,7 +552,7 @@ public:
 	TArray<class AActor*>                         PlayerStarts;                                      // 0x0010(0x0010)(Parm, OutParm)
 	TArray<class AActor*>                         UnoccupiedPlayerStarts;                            // 0x0020(0x0010)(Parm, OutParm)
 	bool                                          HasPlayerStartsOnMap;                              // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42FB[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         FreePlayerStarts;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class AActor*>                         PlayerStartActors;                                 // 0x0048(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	TArray<class AActor*>                         CallFunc_GetAllActorsOfClass_OutActors;            // 0x0058(0x0010)(ReferenceParm)
@@ -559,16 +561,16 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42FC[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIPlayerStart_C>       K2Node_DynamicCast_AsIPlayer_Start;                // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42FD[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetOccupied_Occupied;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42FE[0x1];                                     // 0x00A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A3[0x1];                                       // 0x00A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_GetPlayerStarts) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_GetPlayerStarts");
@@ -604,7 +606,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      PlayerController;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42FF[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShouldShowWitchOutlines_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -617,7 +619,7 @@ public:
 	bool                                          Temp_bool_Variable_4;                              // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_5;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Temp_byte_Variable_1;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4300[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -664,7 +666,7 @@ public:
 	class APawn*                                  SelfRef;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShouldShowWitchOutlines_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4301[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -685,13 +687,13 @@ struct B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName final
 public:
 	class APlayerState*                           PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Param_Name;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsABot_ReturnValue;                       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4302[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4303[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Select_Default;                             // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
@@ -699,7 +701,7 @@ static_assert(alignof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName) == 0x0000
 static_assert(sizeof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName) == 0x000058, "Wrong size on B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, PlayerState) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, __WorldContext) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::__WorldContext' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, Param_Name) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, Name_0) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::Name_0' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, Temp_bool_Variable) == 0x000020, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, CallFunc_IsABot_ReturnValue) == 0x000021, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::CallFunc_IsABot_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName, K2Node_DynamicCast_AsB_Player_State) == 0x000028, "Member 'B_WitchHuntFunctionLibrary_C_GetPlayerOrBotName::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
@@ -717,7 +719,7 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4304[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_AddToSnowList) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_AddToSnowList");
@@ -736,7 +738,7 @@ struct B_WitchHuntFunctionLibrary_C_ShouldShowWitchOutlines final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4305[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -760,7 +762,7 @@ struct B_WitchHuntFunctionLibrary_C_ShouldShowHunterOutlines final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4306[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -788,10 +790,10 @@ public:
 	bool                                          CallFunc_IsInOutlineRangeTo_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_OutlineTrace_bVisible;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4307[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4308[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_1;             // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -813,7 +815,7 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_EnableOutliningFor, CallFunc
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_EnableOutliningFor, CallFunc_SetHighlight_ForcedBoolean_1) == 0x00004A, "Member 'B_WitchHuntFunctionLibrary_C_EnableOutliningFor::CallFunc_SetHighlight_ForcedBoolean_1' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.OutlineTrace
-// 0x0180 (0x0180 - 0x0000)
+// 0x0190 (0x0190 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_OutlineTrace final
 {
 public:
@@ -821,21 +823,21 @@ public:
 	class APawn*                                  Target;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bVisible;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4309[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0020(0x0010)(ConstParm, ReferenceParm)
 	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_430A[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0090(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0090(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_OutlineTrace) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_OutlineTrace");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_OutlineTrace) == 0x000180, "Wrong size on B_WitchHuntFunctionLibrary_C_OutlineTrace");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_OutlineTrace) == 0x000190, "Wrong size on B_WitchHuntFunctionLibrary_C_OutlineTrace");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, SelfRef) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::SelfRef' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, Target) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::Target' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, __WorldContext) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::__WorldContext' has a wrong offset!");
@@ -849,7 +851,7 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, K2Node_Dynamic
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000068, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, K2Node_MakeArray_Array) == 0x000080, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000090, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000178, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_OutlineTrace, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000188, "Member 'B_WitchHuntFunctionLibrary_C_OutlineTrace::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.IsInOutlineRangeTo
 // 0x0078 (0x0078 - 0x0000)
@@ -860,7 +862,7 @@ public:
 	class APawn*                                  SelfRef;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_430B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -880,7 +882,7 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsInOutlineRangeTo, CallFunc
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_IsInOutlineRangeTo, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000070, "Member 'B_WitchHuntFunctionLibrary_C_IsInOutlineRangeTo::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.TransformTrace
-// 0x0270 (0x0270 - 0x0000)
+// 0x0280 (0x0280 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_TransformTrace final
 {
 public:
@@ -893,41 +895,41 @@ public:
 	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0040(0x0010)(ConstParm, ReferenceParm)
 	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_430C[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_Start; // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_End; // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x0090(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x00A0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_430D[0x1];                                     // 0x018B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_430E[0x4];                                     // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_430F[0x4];                                     // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetDistanceTo_ReturnValue;                // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0265(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4310[0x2];                                     // 0x0266(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x00A0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x019A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19B[0x1];                                      // 0x019B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDistanceTo_ReturnValue;                // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x0274(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0275(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_276[0x2];                                      // 0x0276(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_TransformTrace) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_TransformTrace");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_TransformTrace) == 0x000270, "Wrong size on B_WitchHuntFunctionLibrary_C_TransformTrace");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_TransformTrace) == 0x000280, "Wrong size on B_WitchHuntFunctionLibrary_C_TransformTrace");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, Pawn) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::Pawn' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, Range) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::Range' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, __WorldContext) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::__WorldContext' has a wrong offset!");
@@ -941,32 +943,32 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_Get
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_GetPlayerControllerThirdPersonTraceDirection_End) == 0x000078, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_GetPlayerControllerThirdPersonTraceDirection_End' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, K2Node_MakeArray_Array_1) == 0x000090, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::K2Node_MakeArray_Array_1' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LineTraceSingleForObjects_OutHit) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000188, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_bBlockingHit) == 0x000189, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_bInitialOverlap) == 0x00018A, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Time) == 0x00018C, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Distance) == 0x000190, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Location) == 0x000198, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_ImpactPoint) == 0x0001B0, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Normal) == 0x0001C8, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_ImpactNormal) == 0x0001E0, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_PhysMat) == 0x0001F8, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitActor) == 0x000200, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitComponent) == 0x000208, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitBoneName) == 0x000210, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_BoneName) == 0x000218, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitItem) == 0x000220, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_ElementIndex) == 0x000224, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_FaceIndex) == 0x000228, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_TraceStart) == 0x000230, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_TraceEnd) == 0x000248, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_GetDistanceTo_ReturnValue) == 0x000260, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_GetDistanceTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_DoesImplementInterface_ReturnValue) == 0x000264, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000265, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000268, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000198, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_bBlockingHit) == 0x000199, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_bInitialOverlap) == 0x00019A, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Time) == 0x00019C, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Distance) == 0x0001A0, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Location) == 0x0001A8, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_ImpactPoint) == 0x0001C0, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_Normal) == 0x0001D8, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_ImpactNormal) == 0x0001F0, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_PhysMat) == 0x000208, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitActor) == 0x000210, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitComponent) == 0x000218, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitBoneName) == 0x000220, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_BoneName) == 0x000228, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_HitItem) == 0x000230, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_ElementIndex) == 0x000234, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_FaceIndex) == 0x000238, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_TraceStart) == 0x000240, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_BreakHitResult_TraceEnd) == 0x000258, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_GetDistanceTo_ReturnValue) == 0x000270, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_GetDistanceTo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_DoesImplementInterface_ReturnValue) == 0x000274, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000275, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_TransformTrace, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000278, "Member 'B_WitchHuntFunctionLibrary_C_TransformTrace::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.PossessTrace
-// 0x0268 (0x0268 - 0x0000)
+// 0x0278 (0x0278 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_PossessTrace final
 {
 public:
@@ -975,47 +977,47 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 Prop;                                              // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bHitSomething;                                     // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4311[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4312[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_Start; // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_End; // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ConstParm, ReferenceParm)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x0088(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0098(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4313[0x1];                                     // 0x0183(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4314[0x4];                                     // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0200(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4315[0x4];                                     // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetDistanceTo_ReturnValue;                // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x025D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4316[0x2];                                     // 0x025E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0098(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_193[0x1];                                      // 0x0193(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetDistanceTo_ReturnValue;                // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x026D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26E[0x2];                                      // 0x026E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_PossessTrace) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_PossessTrace");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_PossessTrace) == 0x000268, "Wrong size on B_WitchHuntFunctionLibrary_C_PossessTrace");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_PossessTrace) == 0x000278, "Wrong size on B_WitchHuntFunctionLibrary_C_PossessTrace");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, Pawn) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::Pawn' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, Range) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::Range' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, __WorldContext) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::__WorldContext' has a wrong offset!");
@@ -1030,29 +1032,29 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_GetPl
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, K2Node_MakeArray_Array) == 0x000078, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, K2Node_MakeArray_Array_1) == 0x000088, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::K2Node_MakeArray_Array_1' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000098, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000180, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_bBlockingHit) == 0x000181, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_bInitialOverlap) == 0x000182, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Time) == 0x000184, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Distance) == 0x000188, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Location) == 0x000190, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_ImpactPoint) == 0x0001A8, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Normal) == 0x0001C0, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_ImpactNormal) == 0x0001D8, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_PhysMat) == 0x0001F0, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitActor) == 0x0001F8, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitComponent) == 0x000200, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitBoneName) == 0x000208, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_BoneName) == 0x000210, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitItem) == 0x000218, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_ElementIndex) == 0x00021C, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_FaceIndex) == 0x000220, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_TraceStart) == 0x000228, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_TraceEnd) == 0x000240, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_GetDistanceTo_ReturnValue) == 0x000258, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_GetDistanceTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_DoesImplementInterface_ReturnValue) == 0x00025C, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00025D, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000260, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000190, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_bBlockingHit) == 0x000191, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_bInitialOverlap) == 0x000192, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Time) == 0x000194, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Distance) == 0x000198, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Location) == 0x0001A0, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_ImpactPoint) == 0x0001B8, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_Normal) == 0x0001D0, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_ImpactNormal) == 0x0001E8, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_PhysMat) == 0x000200, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitActor) == 0x000208, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitComponent) == 0x000210, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitBoneName) == 0x000218, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_BoneName) == 0x000220, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_HitItem) == 0x000228, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_ElementIndex) == 0x00022C, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_FaceIndex) == 0x000230, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_TraceStart) == 0x000238, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_BreakHitResult_TraceEnd) == 0x000250, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_GetDistanceTo_ReturnValue) == 0x000268, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_GetDistanceTo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_DoesImplementInterface_ReturnValue) == 0x00026C, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00026D, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_PossessTrace, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x000270, "Member 'B_WitchHuntFunctionLibrary_C_PossessTrace::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.SetHighlightChannel
 // 0x0038 (0x0038 - 0x0000)
@@ -1061,10 +1063,10 @@ struct B_WitchHuntFunctionLibrary_C_SetHighlightChannel final
 public:
 	class UPrimitiveComponent*                    Target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EHighlightChannel                             Channel;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4317[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EHighlightChannel                             Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4318[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_1;                               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_2;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1093,14 +1095,14 @@ public:
 	class APawn*                                  Pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4319[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431B[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetWitchMovementSkill_ReturnValue;        // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetWitchUtilitySkill_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1134,13 +1136,13 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 Numbers;                                           // 0x0020(0x0010)(Parm, OutParm)
 	int32                                         IndexToAdd;                                        // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431C[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 NumbersForRandom;                                  // 0x0038(0x0010)(Edit, BlueprintVisible)
 	TArray<int32>                                 ReturnNumbers;                                     // 0x0048(0x0010)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431D[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item;                           // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1149,10 +1151,10 @@ public:
 	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431E[0x2];                                     // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_431F[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_GetRandomNumbers) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_GetRandomNumbers");
@@ -1192,7 +1194,7 @@ public:
 	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4320[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1224,15 +1226,15 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4321[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4322[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_VSizeSquared_ReturnValue;                 // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4323[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Sqrt_ReturnValue;                         // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1291,10 +1293,10 @@ public:
 	class UCharacterMovementComponent*            MovementComponent;                                 // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4324[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4325[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1307,7 +1309,7 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4326[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -1362,7 +1364,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4327[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1370,11 +1372,11 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4328[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4329[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_UnhighlightHunters) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_UnhighlightHunters");
@@ -1402,22 +1404,22 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_Witch_C*                             K2Node_DynamicCast_AsB_Witch;                      // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432B[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432C[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432D[0x2];                                     // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_UnhighlightWitches) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_UnhighlightWitches");
@@ -1447,17 +1449,17 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_432F[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4330[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1494,13 +1496,13 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 ReturnActor;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPendingKill_ReturnValue;                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4331[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4332[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPendingKill_ReturnValue_1;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4333[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1554,18 +1556,18 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Hunter_Highlights, CallFunc_
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_Hunter_Highlights, CallFunc_IsLocallyControlled_ReturnValue) == 0x000011, "Member 'B_WitchHuntFunctionLibrary_C_Hunter_Highlights::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.HighlightHunters
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_HighlightHunters final
 {
 public:
 	bool                                          HideNames;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bOutline;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4334[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  SelfRef;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            CurrentHunter;                                     // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4335[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1573,26 +1575,26 @@ public:
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4336[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4337[0x5];                                     // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_63[0x5];                                       // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4338[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0018)()
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_HighlightHunters) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_HighlightHunters");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_HighlightHunters) == 0x0000B8, "Wrong size on B_WitchHuntFunctionLibrary_C_HighlightHunters");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_HighlightHunters) == 0x0000B0, "Wrong size on B_WitchHuntFunctionLibrary_C_HighlightHunters");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, HideNames) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::HideNames' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, bOutline) == 0x000001, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::bOutline' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, SelfRef) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::SelfRef' has a wrong offset!");
@@ -1615,51 +1617,51 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, K2Node_Dyn
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_GetPlayerOrBotName_Name) == 0x000078, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_Conv_StringToText_ReturnValue) == 0x000088, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_GetUserWidgetObject_ReturnValue) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, K2Node_DynamicCast_AsWB_Player_Name) == 0x0000A8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, K2Node_DynamicCast_bSuccess_3) == 0x0000B0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000B1, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_Not_PreBool_ReturnValue) == 0x0000B2, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000098, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, K2Node_DynamicCast_AsWB_Player_Name) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, K2Node_DynamicCast_bSuccess_3) == 0x0000A8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000A9, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightHunters, CallFunc_Not_PreBool_ReturnValue) == 0x0000AA, "Member 'B_WitchHuntFunctionLibrary_C_HighlightHunters::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.HighlightWitches
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_HighlightWitches final
 {
 public:
 	bool                                          HideNames;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bOutline;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4339[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  SelfRef;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Witch_C*                             CurrentWitch;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_433A[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_433B[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Witch_C*                             K2Node_DynamicCast_AsB_Witch;                      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_433C[0x1];                                     // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_433D[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_433E[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_433F[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0080(0x0018)()
-	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0080(0x0010)()
+	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_HighlightWitches) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_HighlightWitches");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_HighlightWitches) == 0x0000B0, "Wrong size on B_WitchHuntFunctionLibrary_C_HighlightWitches");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_HighlightWitches) == 0x0000A8, "Wrong size on B_WitchHuntFunctionLibrary_C_HighlightWitches");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, HideNames) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::HideNames' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, bOutline) == 0x000001, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::bOutline' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, SelfRef) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::SelfRef' has a wrong offset!");
@@ -1681,12 +1683,12 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, K2Node_Dyn
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, CallFunc_GetPlayerOrBotName_Name) == 0x000070, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, CallFunc_Conv_StringToText_ReturnValue) == 0x000080, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000098, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, K2Node_DynamicCast_AsWB_Player_Name) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, K2Node_DynamicCast_bSuccess_2) == 0x0000A8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000090, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, K2Node_DynamicCast_AsWB_Player_Name) == 0x000098, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitches, K2Node_DynamicCast_bSuccess_2) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitches::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.HighlightWitchesAsProps
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps final
 {
 public:
@@ -1694,42 +1696,42 @@ public:
 	class AB_PropPawnPhysics_C*                   Prop_Pawn;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4340[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4341[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4342[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4343[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0018)()
-	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4344[0x5];                                     // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4345[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_1;             // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4346[0x5];                                     // 0x00BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4347[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4348[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0010)()
+	class UWB_PlayerName_C*                       K2Node_DynamicCast_AsWB_Player_Name;               // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_1;             // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B3[0x5];                                       // 0x00B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps) == 0x000008, "Wrong alignment on B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps");
-static_assert(sizeof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps) == 0x0000D8, "Wrong size on B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps");
+static_assert(sizeof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps) == 0x0000D0, "Wrong size on B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, __WorldContext) == 0x000000, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::__WorldContext' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, Prop_Pawn) == 0x000008, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::Prop_Pawn' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
@@ -1743,21 +1745,21 @@ static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2N
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_GetPlayerOrBotName_Name) == 0x000050, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_GetUserWidgetObject_ReturnValue) == 0x000060, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_GetUserWidgetObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Conv_StringToText_ReturnValue) == 0x000068, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsWB_Player_Name) == 0x000080, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_2) == 0x000088, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_IsLocallyControlled_ReturnValue) == 0x000089, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Not_PreBool_ReturnValue) == 0x00008A, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsIHighlightable) == 0x000090, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsIHighlightable' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_3) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsIHighlightable_1) == 0x0000A8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsIHighlightable_1' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_4) == 0x0000B8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_IsValid_ReturnValue) == 0x0000B9, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_SetHighlight_ForcedBoolean) == 0x0000BA, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_SetHighlight_ForcedBoolean' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x0000C0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_5) == 0x0000C8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, Temp_int_Loop_Counter_Variable) == 0x0000CC, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Less_IntInt_ReturnValue) == 0x0000D0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Add_IntInt_ReturnValue) == 0x0000D4, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsWB_Player_Name) == 0x000078, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsWB_Player_Name' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_2) == 0x000080, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_IsLocallyControlled_ReturnValue) == 0x000081, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Not_PreBool_ReturnValue) == 0x000082, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsIHighlightable) == 0x000088, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsIHighlightable' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_3) == 0x000098, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsIHighlightable_1) == 0x0000A0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsIHighlightable_1' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_4) == 0x0000B0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_IsValid_ReturnValue) == 0x0000B1, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_SetHighlight_ForcedBoolean) == 0x0000B2, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_SetHighlight_ForcedBoolean' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x0000B8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, K2Node_DynamicCast_bSuccess_5) == 0x0000C0, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, Temp_int_Loop_Counter_Variable) == 0x0000C4, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Less_IntInt_ReturnValue) == 0x0000C8, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps, CallFunc_Add_IntInt_ReturnValue) == 0x0000CC, "Member 'B_WitchHuntFunctionLibrary_C_HighlightWitchesAsProps::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_WitchHuntFunctionLibrary.B_WitchHuntFunctionLibrary_C.WitchHud
 // 0x0128 (0x0128 - 0x0000)
@@ -1768,7 +1770,7 @@ public:
 	class APawn*                                  SelfRef;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Range;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AllowTransformHighlight;                           // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4349[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 OutTargetProp;                                     // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        TransformRange;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1779,7 +1781,7 @@ public:
 	bool                                          CallFunc_CanActivate_ReturnValue;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShouldShowWitchOutlines_ReturnValue;      // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434A[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1787,34 +1789,34 @@ public:
 	bool                                          CallFunc_IsRoundEnd_RoundIsEnd;                    // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434B[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_TransformTrace_Prop;                      // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_TransformTrace_HitLocation;               // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434C[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable;               // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434D[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_1;             // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanNOR_ReturnValue;                   // 0x00CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434E[0x3];                                     // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_2;             // 0x00D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434F[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_3;             // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean_1;             // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4350[0x5];                                     // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_PossessTrace_Prop;                        // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_PossessTrace_bHitSomething;               // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPossessSelected_ReturnValue;            // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4351[0x6];                                     // 0x010A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10A[0x6];                                      // 0x010A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIHighlightable_C>     K2Node_DynamicCast_AsIHighlightable_4;             // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetHighlight_ForcedBoolean_2;             // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1876,19 +1878,19 @@ struct B_WitchHuntFunctionLibrary_C_AreAnyRulesCurrentlyEnabled final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsingCustomRules;                                  // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4352[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         UsingCustomRulesCounter;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4353[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ModParametersSubsystem_C*            CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsingCustomRules_CustomRules;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsingCustomRules_CustomRules_1;         // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4354[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_2;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsingCustomRules_CustomRules_2;         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4355[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable_1;                               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HuntAHagSpectator.B_HuntAHagSpectator_C
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x0480 - 0x0480)
 class AB_HuntAHagSpectator_C final : public AB_Spectator_C
 {
 public:
-	uint8                                         Pad_3DBB[0x6];                                     // 0x0482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagSpectator_C;              // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_472[0x6];                                      // 0x0472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagSpectator_C;              // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_HuntAHagSpectator(int32 EntryPoint);
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(AB_HuntAHagSpectator_C) == 0x000010, "Wrong alignment on AB_HuntAHagSpectator_C");
-static_assert(sizeof(AB_HuntAHagSpectator_C) == 0x000490, "Wrong size on AB_HuntAHagSpectator_C");
-static_assert(offsetof(AB_HuntAHagSpectator_C, UberGraphFrame_B_HuntAHagSpectator_C) == 0x000488, "Member 'AB_HuntAHagSpectator_C::UberGraphFrame_B_HuntAHagSpectator_C' has a wrong offset!");
+static_assert(sizeof(AB_HuntAHagSpectator_C) == 0x000480, "Wrong size on AB_HuntAHagSpectator_C");
+static_assert(offsetof(AB_HuntAHagSpectator_C, UberGraphFrame_B_HuntAHagSpectator_C) == 0x000478, "Member 'AB_HuntAHagSpectator_C::UberGraphFrame_B_HuntAHagSpectator_C' has a wrong offset!");
 
 }
 

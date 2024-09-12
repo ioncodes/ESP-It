@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -41,7 +41,7 @@ public:
 	class UB_Pool_C*                              Pool_To_Add;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_PoolOfClassExists_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E10[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Pool_C*                              CallFunc_CreateObject_Object;                      // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -80,14 +80,14 @@ static_assert(offsetof(B_PoolManager_C_EmptyPools, CallFunc_Less_IntInt_ReturnVa
 struct B_PoolManager_C_GetPoolByClass final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Pool_C*                              Pool;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Pool_C*                              CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PoolManager_C_GetPoolByClass) == 0x000008, "Wrong alignment on B_PoolManager_C_GetPoolByClass");
 static_assert(sizeof(B_PoolManager_C_GetPoolByClass) == 0x000020, "Wrong size on B_PoolManager_C_GetPoolByClass");
-static_assert(offsetof(B_PoolManager_C_GetPoolByClass, Param_Class) == 0x000000, "Member 'B_PoolManager_C_GetPoolByClass::Param_Class' has a wrong offset!");
+static_assert(offsetof(B_PoolManager_C_GetPoolByClass, Class_0) == 0x000000, "Member 'B_PoolManager_C_GetPoolByClass::Class_0' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_GetPoolByClass, Pool) == 0x000008, "Member 'B_PoolManager_C_GetPoolByClass::Pool' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_GetPoolByClass, CallFunc_Map_Find_Value) == 0x000010, "Member 'B_PoolManager_C_GetPoolByClass::CallFunc_Map_Find_Value' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_GetPoolByClass, CallFunc_Map_Find_ReturnValue) == 0x000018, "Member 'B_PoolManager_C_GetPoolByClass::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
@@ -102,7 +102,7 @@ public:
 	class UB_Pool_C*                              CallFunc_GetPoolByClass_Pool;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E11[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIPoolObject_C>        K2Node_DynamicCast_AsIPool_Object;                 // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -121,18 +121,18 @@ static_assert(offsetof(B_PoolManager_C_MoveActorToPoolAndTearDown, K2Node_Dynami
 struct B_PoolManager_C_PoolHasActorReady final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          PoolFilled;                                        // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E12[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Pool_C*                              CallFunc_GetPoolByClass_Pool;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E13[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PoolManager_C_PoolHasActorReady) == 0x000008, "Wrong alignment on B_PoolManager_C_PoolHasActorReady");
 static_assert(sizeof(B_PoolManager_C_PoolHasActorReady) == 0x000028, "Wrong size on B_PoolManager_C_PoolHasActorReady");
-static_assert(offsetof(B_PoolManager_C_PoolHasActorReady, Param_Class) == 0x000000, "Member 'B_PoolManager_C_PoolHasActorReady::Param_Class' has a wrong offset!");
+static_assert(offsetof(B_PoolManager_C_PoolHasActorReady, Class_0) == 0x000000, "Member 'B_PoolManager_C_PoolHasActorReady::Class_0' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_PoolHasActorReady, PoolFilled) == 0x000008, "Member 'B_PoolManager_C_PoolHasActorReady::PoolFilled' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_PoolHasActorReady, CallFunc_GetPoolByClass_Pool) == 0x000010, "Member 'B_PoolManager_C_PoolHasActorReady::CallFunc_GetPoolByClass_Pool' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_PoolHasActorReady, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'B_PoolManager_C_PoolHasActorReady::CallFunc_IsValid_ReturnValue' has a wrong offset!");
@@ -146,7 +146,7 @@ struct B_PoolManager_C_PoolOfClassExists final
 public:
 	const class UClass*                           ClassToFind;                                       // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E14[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         CallFunc_Map_Keys_Keys;                            // 0x0010(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -177,11 +177,11 @@ static_assert(offsetof(B_PoolManager_C_RemoveActorFromPool, CallFunc_Array_Remov
 struct B_PoolManager_C_SpawnActorAndTearUp final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E15[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESpawnActorCollisionHandlingMethod            CollisionHandlingOverride;                         // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E16[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Owner;                                             // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  Instigator;                                        // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
@@ -189,12 +189,12 @@ public:
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIPoolObject_C>        K2Node_DynamicCast_AsIPool_Object;                 // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E17[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PoolManager_C_SpawnActorAndTearUp) == 0x000010, "Wrong alignment on B_PoolManager_C_SpawnActorAndTearUp");
 static_assert(sizeof(B_PoolManager_C_SpawnActorAndTearUp) == 0x0000C0, "Wrong size on B_PoolManager_C_SpawnActorAndTearUp");
-static_assert(offsetof(B_PoolManager_C_SpawnActorAndTearUp, Param_Class) == 0x000000, "Member 'B_PoolManager_C_SpawnActorAndTearUp::Param_Class' has a wrong offset!");
+static_assert(offsetof(B_PoolManager_C_SpawnActorAndTearUp, Class_0) == 0x000000, "Member 'B_PoolManager_C_SpawnActorAndTearUp::Class_0' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_SpawnActorAndTearUp, SpawnTransform) == 0x000010, "Member 'B_PoolManager_C_SpawnActorAndTearUp::SpawnTransform' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_SpawnActorAndTearUp, CollisionHandlingOverride) == 0x000070, "Member 'B_PoolManager_C_SpawnActorAndTearUp::CollisionHandlingOverride' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_SpawnActorAndTearUp, Owner) == 0x000078, "Member 'B_PoolManager_C_SpawnActorAndTearUp::Owner' has a wrong offset!");
@@ -211,11 +211,11 @@ static_assert(offsetof(B_PoolManager_C_SpawnActorAndTearUp, CallFunc_FinishSpawn
 struct B_PoolManager_C_TakeActorFromPoolAndTearUp final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E18[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESpawnActorCollisionHandlingMethod            CollisionHandlingOverride;                         // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E19[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Owner;                                             // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  Instigator;                                        // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
@@ -224,15 +224,15 @@ public:
 	class UB_Pool_C*                              CallFunc_GetPoolByClass_Pool;                      // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_SpawnActorOrTakeFromPool_ReturnValue;     // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1A[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IIPoolObject_C>        K2Node_DynamicCast_AsIPool_Object;                 // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1B[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PoolManager_C_TakeActorFromPoolAndTearUp) == 0x000010, "Wrong alignment on B_PoolManager_C_TakeActorFromPoolAndTearUp");
 static_assert(sizeof(B_PoolManager_C_TakeActorFromPoolAndTearUp) == 0x0000E0, "Wrong size on B_PoolManager_C_TakeActorFromPoolAndTearUp");
-static_assert(offsetof(B_PoolManager_C_TakeActorFromPoolAndTearUp, Param_Class) == 0x000000, "Member 'B_PoolManager_C_TakeActorFromPoolAndTearUp::Param_Class' has a wrong offset!");
+static_assert(offsetof(B_PoolManager_C_TakeActorFromPoolAndTearUp, Class_0) == 0x000000, "Member 'B_PoolManager_C_TakeActorFromPoolAndTearUp::Class_0' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_TakeActorFromPoolAndTearUp, SpawnTransform) == 0x000010, "Member 'B_PoolManager_C_TakeActorFromPoolAndTearUp::SpawnTransform' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_TakeActorFromPoolAndTearUp, CollisionHandlingOverride) == 0x000070, "Member 'B_PoolManager_C_TakeActorFromPoolAndTearUp::CollisionHandlingOverride' has a wrong offset!");
 static_assert(offsetof(B_PoolManager_C_TakeActorFromPoolAndTearUp, Owner) == 0x000078, "Member 'B_PoolManager_C_TakeActorFromPoolAndTearUp::Owner' has a wrong offset!");

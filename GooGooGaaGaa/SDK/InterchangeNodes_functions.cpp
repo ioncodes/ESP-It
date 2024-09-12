@@ -104,10 +104,10 @@ bool UInterchangeAnimationTrackSetNode::SetCustomFrameRate(const float& Attribut
 // Function InterchangeNodes.InterchangeAnimationTrackSetNode.GetCustomAnimationTrackUid
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutAnimationTrackUid                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeAnimationTrackSetNode::GetCustomAnimationTrackUid(const int32 Param_Index, class FString* OutAnimationTrackUid) const
+void UInterchangeAnimationTrackSetNode::GetCustomAnimationTrackUid(const int32 Index_0, class FString* OutAnimationTrackUid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -116,7 +116,7 @@ void UInterchangeAnimationTrackSetNode::GetCustomAnimationTrackUid(const int32 P
 
 	Params::InterchangeAnimationTrackSetNode_GetCustomAnimationTrackUid Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -581,6 +581,34 @@ bool UInterchangeAnimationTrackNode::SetCustomFrameCount(const int32& AttributeV
 }
 
 
+// Function InterchangeNodes.InterchangeAnimationTrackNode.SetCustomPropertyTrack
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             PropertyTrack                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeAnimationTrackNode::SetCustomPropertyTrack(const class FName& PropertyTrack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeAnimationTrackNode", "SetCustomPropertyTrack");
+
+	Params::InterchangeAnimationTrackNode_SetCustomPropertyTrack Parms{};
+
+	Parms.PropertyTrack = PropertyTrack;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeNodes.InterchangeAnimationTrackNode.SetCustomTargetedProperty
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -691,6 +719,35 @@ bool UInterchangeAnimationTrackNode::GetCustomFrameCount(int32* AttributeValue) 
 
 	if (AttributeValue != nullptr)
 		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeAnimationTrackNode.GetCustomPropertyTrack
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             PropertyTrack                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeAnimationTrackNode::GetCustomPropertyTrack(class FName* PropertyTrack) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeAnimationTrackNode", "GetCustomPropertyTrack");
+
+	Params::InterchangeAnimationTrackNode_GetCustomPropertyTrack Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (PropertyTrack != nullptr)
+		*PropertyTrack = Parms.PropertyTrack;
 
 	return Parms.ReturnValue;
 }
@@ -1704,6 +1761,330 @@ bool UInterchangeStandardCameraNode::GetCustomWidth(float* AttributeValue) const
 }
 
 
+// Function InterchangeNodes.InterchangeShaderNode.AddFloatInput
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FString                           InputName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsAParameter                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderNode::AddFloatInput(const class FString& InputName, const float& AttributeValue, bool bIsAParameter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderNode", "AddFloatInput");
+
+	Params::InterchangeShaderNode_AddFloatInput Parms{};
+
+	Parms.InputName = std::move(InputName);
+	Parms.AttributeValue = AttributeValue;
+	Parms.bIsAParameter = bIsAParameter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderNode.AddLinearColorInput
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InputName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsAParameter                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderNode::AddLinearColorInput(const class FString& InputName, const struct FLinearColor& AttributeValue, bool bIsAParameter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderNode", "AddLinearColorInput");
+
+	Params::InterchangeShaderNode_AddLinearColorInput Parms{};
+
+	Parms.InputName = std::move(InputName);
+	Parms.AttributeValue = std::move(AttributeValue);
+	Parms.bIsAParameter = bIsAParameter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderNode.AddStringInput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InputName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           AttributeValue                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsAParameter                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderNode::AddStringInput(const class FString& InputName, const class FString& AttributeValue, bool bIsAParameter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderNode", "AddStringInput");
+
+	Params::InterchangeShaderNode_AddStringInput Parms{};
+
+	Parms.InputName = std::move(InputName);
+	Parms.AttributeValue = std::move(AttributeValue);
+	Parms.bIsAParameter = bIsAParameter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderNode.SetCustomShaderType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           AttributeValue                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderNode::SetCustomShaderType(const class FString& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderNode", "SetCustomShaderType");
+
+	Params::InterchangeShaderNode_SetCustomShaderType Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderNode.GetCustomShaderType
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           AttributeValue                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderNode::GetCustomShaderType(class FString* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderNode", "GetCustomShaderType");
+
+	Params::InterchangeShaderNode_GetCustomShaderType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeDecalNode.SetCustomDecalMaterialPathName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           AttributeValue                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeDecalNode::SetCustomDecalMaterialPathName(const class FString& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeDecalNode", "SetCustomDecalMaterialPathName");
+
+	Params::InterchangeDecalNode_SetCustomDecalMaterialPathName Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeDecalNode.SetCustomDecalSize
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector                          AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeDecalNode::SetCustomDecalSize(const struct FVector& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeDecalNode", "SetCustomDecalSize");
+
+	Params::InterchangeDecalNode_SetCustomDecalSize Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeDecalNode.SetCustomSortOrder
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// int32                                   AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeDecalNode::SetCustomSortOrder(const int32& AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeDecalNode", "SetCustomSortOrder");
+
+	Params::InterchangeDecalNode_SetCustomSortOrder Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeDecalNode.GetCustomDecalMaterialPathName
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           AttributeValue                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeDecalNode::GetCustomDecalMaterialPathName(class FString* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeDecalNode", "GetCustomDecalMaterialPathName");
+
+	Params::InterchangeDecalNode_GetCustomDecalMaterialPathName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeDecalNode.GetCustomDecalSize
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector                          AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeDecalNode::GetCustomDecalSize(struct FVector* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeDecalNode", "GetCustomDecalSize");
+
+	Params::InterchangeDecalNode_GetCustomDecalSize Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeDecalNode.GetCustomSortOrder
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeDecalNode::GetCustomSortOrder(int32* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeDecalNode", "GetCustomSortOrder");
+
+	Params::InterchangeDecalNode_GetCustomSortOrder Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeNodes.InterchangeBaseLightNode.SetCustomIntensity
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1960,6 +2341,36 @@ bool UInterchangeLightNode::SetCustomAttenuationRadius(float AttributeValue)
 }
 
 
+// Function InterchangeNodes.InterchangeLightNode.SetCustomIESBrightnessScale
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// float                                   AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeLightNode::SetCustomIESBrightnessScale(const float& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeLightNode", "SetCustomIESBrightnessScale");
+
+	Params::InterchangeLightNode_SetCustomIESBrightnessScale Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeNodes.InterchangeLightNode.SetCustomIESTexture
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2016,6 +2427,66 @@ bool UInterchangeLightNode::SetCustomIntensityUnits(const EInterchangeLightUnits
 }
 
 
+// Function InterchangeNodes.InterchangeLightNode.SetCustomRotation
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                         AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeLightNode::SetCustomRotation(const struct FRotator& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeLightNode", "SetCustomRotation");
+
+	Params::InterchangeLightNode_SetCustomRotation Parms{};
+
+	Parms.AttributeValue = std::move(AttributeValue);
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeLightNode.SetCustomUseIESBrightness
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// bool                                    AttributeValue                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAddApplyDelegate                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeLightNode::SetCustomUseIESBrightness(const bool& AttributeValue, bool bAddApplyDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeLightNode", "SetCustomUseIESBrightness");
+
+	Params::InterchangeLightNode_SetCustomUseIESBrightness Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+	Parms.bAddApplyDelegate = bAddApplyDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeNodes.InterchangeLightNode.GetCustomAttenuationRadius
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2030,6 +2501,35 @@ bool UInterchangeLightNode::GetCustomAttenuationRadius(float* AttributeValue) co
 		Func = Class->GetFunction("InterchangeLightNode", "GetCustomAttenuationRadius");
 
 	Params::InterchangeLightNode_GetCustomAttenuationRadius Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeLightNode.GetCustomIESBrightnessScale
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeLightNode::GetCustomIESBrightnessScale(float* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeLightNode", "GetCustomIESBrightnessScale");
+
+	Params::InterchangeLightNode_GetCustomIESBrightnessScale Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2088,6 +2588,64 @@ bool UInterchangeLightNode::GetCustomIntensityUnits(EInterchangeLightUnits* Attr
 		Func = Class->GetFunction("InterchangeLightNode", "GetCustomIntensityUnits");
 
 	Params::InterchangeLightNode_GetCustomIntensityUnits Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeLightNode.GetCustomRotation
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRotator                         AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeLightNode::GetCustomRotation(struct FRotator* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeLightNode", "GetCustomRotation");
+
+	Params::InterchangeLightNode_GetCustomRotation Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeLightNode.GetCustomUseIESBrightness
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeLightNode::GetCustomUseIESBrightness(bool* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeLightNode", "GetCustomUseIESBrightness");
+
+	Params::InterchangeLightNode_GetCustomUseIESBrightness Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2756,10 +3314,10 @@ bool UInterchangeVariantSetNode::SetCustomVariantsPayloadKey(const class FString
 // Function InterchangeNodes.InterchangeVariantSetNode.GetCustomDependencyUid
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutDependencyUid                                       (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeVariantSetNode::GetCustomDependencyUid(const int32 Param_Index, class FString* OutDependencyUid) const
+void UInterchangeVariantSetNode::GetCustomDependencyUid(const int32 Index_0, class FString* OutDependencyUid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2768,7 +3326,7 @@ void UInterchangeVariantSetNode::GetCustomDependencyUid(const int32 Param_Index,
 
 	Params::InterchangeVariantSetNode_GetCustomDependencyUid Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2950,10 +3508,10 @@ bool UInterchangeSceneVariantSetsNode::RemoveCustomVariantSetUid(const class FSt
 // Function InterchangeNodes.InterchangeSceneVariantSetsNode.GetCustomVariantSetUid
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutVariantUid                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeSceneVariantSetsNode::GetCustomVariantSetUid(const int32 Param_Index, class FString* OutVariantUid) const
+void UInterchangeSceneVariantSetsNode::GetCustomVariantSetUid(const int32 Index_0, class FString* OutVariantUid) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2962,7 +3520,7 @@ void UInterchangeSceneVariantSetsNode::GetCustomVariantSetUid(const int32 Param_
 
 	Params::InterchangeSceneVariantSetsNode_GetCustomVariantSetUid Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4236,10 +4794,10 @@ void UInterchangeMeshNode::GetMorphTargetDependencies(TArray<class FString>* Out
 // Function InterchangeNodes.InterchangeMeshNode.GetMorphTargetDependency
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutDependency                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeMeshNode::GetMorphTargetDependency(const int32 Param_Index, class FString* OutDependency) const
+void UInterchangeMeshNode::GetMorphTargetDependency(const int32 Index_0, class FString* OutDependency) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -4248,7 +4806,7 @@ void UInterchangeMeshNode::GetMorphTargetDependency(const int32 Param_Index, cla
 
 	Params::InterchangeMeshNode_GetMorphTargetDependency Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4294,10 +4852,10 @@ bool UInterchangeMeshNode::GetMorphTargetName(class FString* OutMorphTargetName)
 // Function InterchangeNodes.InterchangeMeshNode.GetSceneInstanceUid
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutDependency                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeMeshNode::GetSceneInstanceUid(const int32 Param_Index, class FString* OutDependency) const
+void UInterchangeMeshNode::GetSceneInstanceUid(const int32 Index_0, class FString* OutDependency) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -4306,7 +4864,7 @@ void UInterchangeMeshNode::GetSceneInstanceUid(const int32 Param_Index, class FS
 
 	Params::InterchangeMeshNode_GetSceneInstanceUid Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4425,10 +4983,10 @@ void UInterchangeMeshNode::GetSkeletonDependencies(TArray<class FString>* OutDep
 // Function InterchangeNodes.InterchangeMeshNode.GetSkeletonDependency
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutDependency                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeMeshNode::GetSkeletonDependency(const int32 Param_Index, class FString* OutDependency) const
+void UInterchangeMeshNode::GetSkeletonDependency(const int32 Index_0, class FString* OutDependency) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -4437,7 +4995,7 @@ void UInterchangeMeshNode::GetSkeletonDependency(const int32 Param_Index, class 
 
 	Params::InterchangeMeshNode_GetSkeletonDependency Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5252,10 +5810,10 @@ bool UInterchangeSceneNode::GetSlotMaterialDependencyUid(const class FString& Sl
 // Function InterchangeNodes.InterchangeSceneNode.GetSpecializedType
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           OutSpecializedType                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UInterchangeSceneNode::GetSpecializedType(const int32 Param_Index, class FString* OutSpecializedType) const
+void UInterchangeSceneNode::GetSpecializedType(const int32 Index_0, class FString* OutSpecializedType) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -5264,7 +5822,7 @@ void UInterchangeSceneNode::GetSpecializedType(const int32 Param_Index, class FS
 
 	Params::InterchangeSceneNode_GetSpecializedType Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5554,6 +6112,36 @@ bool UInterchangeShaderPortsAPI::HasInput(const class UInterchangeBaseNode* Inte
 }
 
 
+// Function InterchangeNodes.InterchangeShaderPortsAPI.HasParameter
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UInterchangeBaseNode*             InterchangeNode                                        (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InInputName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderPortsAPI::HasParameter(const class UInterchangeBaseNode* InterchangeNode, const class FName& InInputName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InterchangeShaderPortsAPI", "HasParameter");
+
+	Params::InterchangeShaderPortsAPI_HasParameter Parms{};
+
+	Parms.InterchangeNode = InterchangeNode;
+	Parms.InInputName = InInputName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeNodes.InterchangeShaderPortsAPI.IsAnInput
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -5568,6 +6156,34 @@ bool UInterchangeShaderPortsAPI::IsAnInput(const class FString& AttributeKey)
 		Func = StaticClass()->GetFunction("InterchangeShaderPortsAPI", "IsAnInput");
 
 	Params::InterchangeShaderPortsAPI_IsAnInput Parms{};
+
+	Parms.AttributeKey = std::move(AttributeKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderPortsAPI.IsAParameter
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           AttributeKey                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderPortsAPI::IsAParameter(const class FString& AttributeKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InterchangeShaderPortsAPI", "IsAParameter");
+
+	Params::InterchangeShaderPortsAPI_IsAParameter Parms{};
 
 	Parms.AttributeKey = std::move(AttributeKey);
 
@@ -5638,6 +6254,34 @@ class FString UInterchangeShaderPortsAPI::MakeInputName(const class FString& Inp
 }
 
 
+// Function InterchangeNodes.InterchangeShaderPortsAPI.MakeInputParameterKey
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InputName                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UInterchangeShaderPortsAPI::MakeInputParameterKey(const class FString& InputName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InterchangeShaderPortsAPI", "MakeInputParameterKey");
+
+	Params::InterchangeShaderPortsAPI_MakeInputParameterKey Parms{};
+
+	Parms.InputName = std::move(InputName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function InterchangeNodes.InterchangeShaderPortsAPI.MakeInputValueKey
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -5661,63 +6305,6 @@ class FString UInterchangeShaderPortsAPI::MakeInputValueKey(const class FString&
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeNodes.InterchangeShaderNode.SetCustomShaderType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           AttributeValue                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeShaderNode::SetCustomShaderType(const class FString& AttributeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeShaderNode", "SetCustomShaderType");
-
-	Params::InterchangeShaderNode_SetCustomShaderType Parms{};
-
-	Parms.AttributeValue = std::move(AttributeValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InterchangeNodes.InterchangeShaderNode.GetCustomShaderType
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FString                           AttributeValue                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UInterchangeShaderNode::GetCustomShaderType(class FString* AttributeValue) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InterchangeShaderNode", "GetCustomShaderType");
-
-	Params::InterchangeShaderNode_GetCustomShaderType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AttributeValue != nullptr)
-		*AttributeValue = std::move(Parms.AttributeValue);
 
 	return Parms.ReturnValue;
 }
@@ -5775,6 +6362,34 @@ bool UInterchangeFunctionCallShaderNode::GetCustomMaterialFunction(class FString
 
 	if (AttributeValue != nullptr)
 		*AttributeValue = std::move(Parms.AttributeValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderGraphNode.SetCustomBlendMode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   AttributeValue                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderGraphNode::SetCustomBlendMode(int32 AttributeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderGraphNode", "SetCustomBlendMode");
+
+	Params::InterchangeShaderGraphNode_SetCustomBlendMode Parms{};
+
+	Parms.AttributeValue = AttributeValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -5917,6 +6532,35 @@ bool UInterchangeShaderGraphNode::SetCustomTwoSidedTransmission(const bool& Attr
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function InterchangeNodes.InterchangeShaderGraphNode.GetCustomBlendMode
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   AttributeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UInterchangeShaderGraphNode::GetCustomBlendMode(int32* AttributeValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InterchangeShaderGraphNode", "GetCustomBlendMode");
+
+	Params::InterchangeShaderGraphNode_GetCustomBlendMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AttributeValue != nullptr)
+		*AttributeValue = Parms.AttributeValue;
 
 	return Parms.ReturnValue;
 }

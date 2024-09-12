@@ -17,17 +17,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ChickenParameters.B_ChickenParameters_C
-// 0x0038 (0x0090 - 0x0058)
+// 0x0038 (0x0088 - 0x0050)
 class UB_ChickenParameters_C final : public USkillParameters
 {
 public:
-	double                                        Cooldown;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InitialVelocity;                                   // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VelocityAfterLanding;                              // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CheckRadius;                                       // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Duration;                                          // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Pitch;                                             // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cooldown;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InitialVelocity;                                   // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VelocityAfterLanding;                              // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CheckRadius;                                       // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Duration;                                          // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Pitch;                                             // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FText GetFormattedTooltip();
@@ -43,14 +43,14 @@ public:
 	}
 };
 static_assert(alignof(UB_ChickenParameters_C) == 0x000008, "Wrong alignment on UB_ChickenParameters_C");
-static_assert(sizeof(UB_ChickenParameters_C) == 0x000090, "Wrong size on UB_ChickenParameters_C");
-static_assert(offsetof(UB_ChickenParameters_C, Cooldown) == 0x000058, "Member 'UB_ChickenParameters_C::Cooldown' has a wrong offset!");
-static_assert(offsetof(UB_ChickenParameters_C, Scale) == 0x000060, "Member 'UB_ChickenParameters_C::Scale' has a wrong offset!");
-static_assert(offsetof(UB_ChickenParameters_C, InitialVelocity) == 0x000068, "Member 'UB_ChickenParameters_C::InitialVelocity' has a wrong offset!");
-static_assert(offsetof(UB_ChickenParameters_C, VelocityAfterLanding) == 0x000070, "Member 'UB_ChickenParameters_C::VelocityAfterLanding' has a wrong offset!");
-static_assert(offsetof(UB_ChickenParameters_C, CheckRadius) == 0x000078, "Member 'UB_ChickenParameters_C::CheckRadius' has a wrong offset!");
-static_assert(offsetof(UB_ChickenParameters_C, Duration) == 0x000080, "Member 'UB_ChickenParameters_C::Duration' has a wrong offset!");
-static_assert(offsetof(UB_ChickenParameters_C, Pitch) == 0x000088, "Member 'UB_ChickenParameters_C::Pitch' has a wrong offset!");
+static_assert(sizeof(UB_ChickenParameters_C) == 0x000088, "Wrong size on UB_ChickenParameters_C");
+static_assert(offsetof(UB_ChickenParameters_C, Cooldown) == 0x000050, "Member 'UB_ChickenParameters_C::Cooldown' has a wrong offset!");
+static_assert(offsetof(UB_ChickenParameters_C, Scale) == 0x000058, "Member 'UB_ChickenParameters_C::Scale' has a wrong offset!");
+static_assert(offsetof(UB_ChickenParameters_C, InitialVelocity) == 0x000060, "Member 'UB_ChickenParameters_C::InitialVelocity' has a wrong offset!");
+static_assert(offsetof(UB_ChickenParameters_C, VelocityAfterLanding) == 0x000068, "Member 'UB_ChickenParameters_C::VelocityAfterLanding' has a wrong offset!");
+static_assert(offsetof(UB_ChickenParameters_C, CheckRadius) == 0x000070, "Member 'UB_ChickenParameters_C::CheckRadius' has a wrong offset!");
+static_assert(offsetof(UB_ChickenParameters_C, Duration) == 0x000078, "Member 'UB_ChickenParameters_C::Duration' has a wrong offset!");
+static_assert(offsetof(UB_ChickenParameters_C, Pitch) == 0x000080, "Member 'UB_ChickenParameters_C::Pitch' has a wrong offset!");
 
 }
 

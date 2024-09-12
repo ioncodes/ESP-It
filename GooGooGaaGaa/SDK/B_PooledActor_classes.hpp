@@ -18,29 +18,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PooledActor.B_PooledActor_C
-// 0x0030 (0x02C8 - 0x0298)
+// 0x0030 (0x02C0 - 0x0290)
 class AB_PooledActor_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        Lifetime;                                          // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentLifeTime;                                   // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TimerIncrement;                                    // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NeedsPoolTimer;                                    // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        Lifetime;                                          // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentLifeTime;                                   // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TimerIncrement;                                    // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NeedsPoolTimer;                                    // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void InitializeRules();
-	void ReceiveBeginPlay();
-	void TearDown();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
-	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
 	void ExecuteUbergraph_B_PooledActor(int32 EntryPoint);
 	void IncrementLifeTime();
+	void InitializeRules();
+	void ReceiveBeginPlay();
+	void RulesUpdated();
+	void TearDown();
 	void TearDownMulticast();
 	void TearDownPoolObject();
-	void TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
-	void RulesUpdated();
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
+	void TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
+	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 
 public:
 	static class UClass* StaticClass()
@@ -53,13 +53,13 @@ public:
 	}
 };
 static_assert(alignof(AB_PooledActor_C) == 0x000008, "Wrong alignment on AB_PooledActor_C");
-static_assert(sizeof(AB_PooledActor_C) == 0x0002C8, "Wrong size on AB_PooledActor_C");
-static_assert(offsetof(AB_PooledActor_C, UberGraphFrame) == 0x000298, "Member 'AB_PooledActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_PooledActor_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_PooledActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_PooledActor_C, Lifetime) == 0x0002A8, "Member 'AB_PooledActor_C::Lifetime' has a wrong offset!");
-static_assert(offsetof(AB_PooledActor_C, CurrentLifeTime) == 0x0002B0, "Member 'AB_PooledActor_C::CurrentLifeTime' has a wrong offset!");
-static_assert(offsetof(AB_PooledActor_C, TimerIncrement) == 0x0002B8, "Member 'AB_PooledActor_C::TimerIncrement' has a wrong offset!");
-static_assert(offsetof(AB_PooledActor_C, NeedsPoolTimer) == 0x0002C0, "Member 'AB_PooledActor_C::NeedsPoolTimer' has a wrong offset!");
+static_assert(sizeof(AB_PooledActor_C) == 0x0002C0, "Wrong size on AB_PooledActor_C");
+static_assert(offsetof(AB_PooledActor_C, UberGraphFrame) == 0x000290, "Member 'AB_PooledActor_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_PooledActor_C, DefaultSceneRoot) == 0x000298, "Member 'AB_PooledActor_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_PooledActor_C, Lifetime) == 0x0002A0, "Member 'AB_PooledActor_C::Lifetime' has a wrong offset!");
+static_assert(offsetof(AB_PooledActor_C, CurrentLifeTime) == 0x0002A8, "Member 'AB_PooledActor_C::CurrentLifeTime' has a wrong offset!");
+static_assert(offsetof(AB_PooledActor_C, TimerIncrement) == 0x0002B0, "Member 'AB_PooledActor_C::TimerIncrement' has a wrong offset!");
+static_assert(offsetof(AB_PooledActor_C, NeedsPoolTimer) == 0x0002B8, "Member 'AB_PooledActor_C::NeedsPoolTimer' has a wrong offset!");
 
 }
 

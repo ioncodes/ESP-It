@@ -12,8 +12,8 @@
 
 #include "LowEntryJson_structs.hpp"
 #include "QuestObjective_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -50,7 +50,7 @@ struct B_ServerQuestInterface_C_BuildQuestProgressJsonString final
 {
 public:
 	int32                                         AccountId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ABF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         ObjectiveId;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Value;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 JsonString;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ public:
 	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue; // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_DateTime_ToIso8601_String;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC0[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromString_ReturnValue_1; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue; // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonObjectEntry*               CallFunc_ObjectEntry_Pure_CreateFromInteger_ReturnValue_1; // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -86,37 +86,37 @@ static_assert(offsetof(B_ServerQuestInterface_C_BuildQuestProgressJsonString, K2
 static_assert(offsetof(B_ServerQuestInterface_C_BuildQuestProgressJsonString, CallFunc_Object_Pure_ToJsonString_ReturnValue) == 0x000090, "Member 'B_ServerQuestInterface_C_BuildQuestProgressJsonString::CallFunc_Object_Pure_ToJsonString_ReturnValue' has a wrong offset!");
 
 // Function B_ServerQuestInterface.B_ServerQuestInterface_C.ExecuteUbergraph_B_ServerQuestInterface
-// 0x0158 (0x0158 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	const class UB_NewMasterServerManager_C*      K2Node_CustomEvent_NewMasterServerManager;         // 0x0008(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Response;                       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request_1;                      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetResponseCode_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC2[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ParseSuccessFromJsonResponse_Success;     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC3[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC4[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0018)()
-	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request;                        // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetResponseCode_ReturnValue_1;            // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC5[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0130(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0140(0x0018)()
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0088(0x0010)(ReferenceParm)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A0(0x0010)()
+	class UVaRestRequestJSON*                     K2Node_CustomEvent_Request;                        // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetResponseCode_ReturnValue_1;            // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0118(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0128(0x0010)()
 };
 static_assert(alignof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface) == 0x000008, "Wrong alignment on B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface");
-static_assert(sizeof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface) == 0x000158, "Wrong size on B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface");
+static_assert(sizeof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface) == 0x000138, "Wrong size on B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface");
 static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, EntryPoint) == 0x000000, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_CustomEvent_NewMasterServerManager) == 0x000008, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_CustomEvent_NewMasterServerManager' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
@@ -126,23 +126,23 @@ static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestIn
 static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000030, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_ParseSuccessFromJsonResponse_Success) == 0x000038, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_ParseSuccessFromJsonResponse_Success' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeArray_Array) == 0x000090, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_NotEqual_IntInt_ReturnValue) == 0x0000A0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_CustomEvent_Request) == 0x0000C0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_CustomEvent_Request' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x0000C8, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_GetResponseCode_ReturnValue_1) == 0x0000D0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_GetResponseCode_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0000D8, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeArray_Array_1) == 0x000130, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Format_ReturnValue_1) == 0x000140, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeArray_Array) == 0x000088, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000098, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Format_ReturnValue) == 0x0000A0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_CustomEvent_Request) == 0x0000B0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_CustomEvent_Request' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x0000B8, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_GetResponseCode_ReturnValue_1) == 0x0000C0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_GetResponseCode_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x0000C8, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D0, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, K2Node_MakeArray_Array_1) == 0x000118, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface, CallFunc_Format_ReturnValue_1) == 0x000128, "Member 'B_ServerQuestInterface_C_ExecuteUbergraph_B_ServerQuestInterface::CallFunc_Format_ReturnValue_1' has a wrong offset!");
 
 // Function B_ServerQuestInterface.B_ServerQuestInterface_C.GetObjectiveIdFromName
 // 0x0038 (0x0038 - 0x0000)
 struct B_ServerQuestInterface_C_GetObjectiveIdFromName final
 {
 public:
-	class FName                                   Param_Name;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int64                                         ObjectiveId;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int64                                         InvalidObjectiveId;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FQuestObjective                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0018(0x0018)(ZeroConstructor, HasGetValueTypeHash)
@@ -150,7 +150,7 @@ public:
 };
 static_assert(alignof(B_ServerQuestInterface_C_GetObjectiveIdFromName) == 0x000008, "Wrong alignment on B_ServerQuestInterface_C_GetObjectiveIdFromName");
 static_assert(sizeof(B_ServerQuestInterface_C_GetObjectiveIdFromName) == 0x000038, "Wrong size on B_ServerQuestInterface_C_GetObjectiveIdFromName");
-static_assert(offsetof(B_ServerQuestInterface_C_GetObjectiveIdFromName, Param_Name) == 0x000000, "Member 'B_ServerQuestInterface_C_GetObjectiveIdFromName::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_GetObjectiveIdFromName, Name_0) == 0x000000, "Member 'B_ServerQuestInterface_C_GetObjectiveIdFromName::Name_0' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_GetObjectiveIdFromName, ObjectiveId) == 0x000008, "Member 'B_ServerQuestInterface_C_GetObjectiveIdFromName::ObjectiveId' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_GetObjectiveIdFromName, InvalidObjectiveId) == 0x000010, "Member 'B_ServerQuestInterface_C_GetObjectiveIdFromName::InvalidObjectiveId' has a wrong offset!");
 static_assert(offsetof(B_ServerQuestInterface_C_GetObjectiveIdFromName, CallFunc_GetDataTableRowFromName_OutRow) == 0x000018, "Member 'B_ServerQuestInterface_C_GetObjectiveIdFromName::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
@@ -163,23 +163,23 @@ struct B_ServerQuestInterface_C_HandleUserIdCompleted final
 public:
 	class UVaRestRequestJSON*                     Response;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         TempAccountState;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC6[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ServerClientConfig_C*                TempClientConfig;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         TempAccountId;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC7[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 TempRequestedAccountName;                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_ParseIntegerFromJsonResponse_Result;      // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC8[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetResponseContentAsString_ReturnValue;   // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetJsonObject_Branch;              // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC9[0x5];                                     // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObject*                    CallFunc_Object_GetJsonObject_ReturnValue;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ACA[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_ParseIntegerFromJsonResponse_Result_1;    // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_ParseStringFromJsonResponse_Result;       // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UB_ServerClientConfig_C*                CallFunc_SpawnObject_ReturnValue;                  // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -211,11 +211,11 @@ static_assert(offsetof(B_ServerQuestInterface_C_HandleUserIdCompleted, CallFunc_
 struct B_ServerQuestInterface_C_Init final
 {
 public:
-	const class UB_NewMasterServerManager_C*      Param_NewMasterServerManager;                      // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	const class UB_NewMasterServerManager_C*      NewMasterServerManager_0;                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ServerQuestInterface_C_Init) == 0x000008, "Wrong alignment on B_ServerQuestInterface_C_Init");
 static_assert(sizeof(B_ServerQuestInterface_C_Init) == 0x000008, "Wrong size on B_ServerQuestInterface_C_Init");
-static_assert(offsetof(B_ServerQuestInterface_C_Init, Param_NewMasterServerManager) == 0x000000, "Member 'B_ServerQuestInterface_C_Init::Param_NewMasterServerManager' has a wrong offset!");
+static_assert(offsetof(B_ServerQuestInterface_C_Init, NewMasterServerManager_0) == 0x000000, "Member 'B_ServerQuestInterface_C_Init::NewMasterServerManager_0' has a wrong offset!");
 
 // Function B_ServerQuestInterface.B_ServerQuestInterface_C.OnGetUserIdCompleted
 // 0x0008 (0x0008 - 0x0000)
@@ -256,7 +256,7 @@ struct B_ServerQuestInterface_C_OnReceivedAccountIdForAccountName__DelegateSigna
 {
 public:
 	int32                                         AccountId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ACB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RequestedAccountName;                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UB_ServerClientConfig_C*                ClientConfig;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         AccountState;                                      // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -274,7 +274,7 @@ struct B_ServerQuestInterface_C_PostQuestProgress final
 {
 public:
 	int32                                         ForAccount;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4ACC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         ObjectiveId;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Value;                                             // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     TempRequest;                                       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)

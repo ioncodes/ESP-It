@@ -17,11 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PalaceDoor.BP_PalaceDoor_C
-// 0x0008 (0x03A8 - 0x03A0)
+// 0x0010 (0x0398 - 0x0388)
 class ABP_PalaceDoor_C : public ABP_UtilityDoor_C
 {
 public:
-	class UActorSequenceComponent*                DoorOpeningSequence;                               // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UActorSequenceComponent*                DoorOpeningSequence;                               // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        AnimationLength;                                   // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OpenDoor(bool Fast);
@@ -37,8 +38,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_PalaceDoor_C) == 0x000008, "Wrong alignment on ABP_PalaceDoor_C");
-static_assert(sizeof(ABP_PalaceDoor_C) == 0x0003A8, "Wrong size on ABP_PalaceDoor_C");
-static_assert(offsetof(ABP_PalaceDoor_C, DoorOpeningSequence) == 0x0003A0, "Member 'ABP_PalaceDoor_C::DoorOpeningSequence' has a wrong offset!");
+static_assert(sizeof(ABP_PalaceDoor_C) == 0x000398, "Wrong size on ABP_PalaceDoor_C");
+static_assert(offsetof(ABP_PalaceDoor_C, DoorOpeningSequence) == 0x000388, "Member 'ABP_PalaceDoor_C::DoorOpeningSequence' has a wrong offset!");
+static_assert(offsetof(ABP_PalaceDoor_C, AnimationLength) == 0x000390, "Member 'ABP_PalaceDoor_C::AnimationLength' has a wrong offset!");
 
 }
 

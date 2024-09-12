@@ -32,7 +32,7 @@ void UWB_MessageDialog_C::BndEvt__WB_Button_K2Node_ComponentBoundEvent_13_Clicke
 
 
 // Function WB_MessageDialog.WB_MessageDialog_C.ExecuteUbergraph_WB_MessageDialog
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -151,6 +151,28 @@ void UWB_MessageDialog_C::OnSpecialAction()
 		Func = Class->GetFunction("WB_MessageDialog_C", "OnSpecialAction");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_MessageDialog.WB_MessageDialog_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_MessageDialog_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_MessageDialog_C", "Tick");
+
+	Params::WB_MessageDialog_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -10,53 +10,68 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
+
 
 namespace SDK::Params
 {
 
 // Function WB_MessageDialog.WB_MessageDialog_C.ExecuteUbergraph_WB_MessageDialog
-// 0x0020 (0x0020 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_227F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasFocusedDescendants_ReturnValue;        // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog) == 0x000008, "Wrong alignment on WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog");
-static_assert(sizeof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog) == 0x000020, "Wrong size on WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog");
+static_assert(sizeof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog) == 0x000060, "Wrong size on WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog");
 static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, EntryPoint) == 0x000000, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, K2Node_Event_MyGeometry) == 0x00001C, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, K2Node_Event_InDeltaTime) == 0x000054, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, CallFunc_HasAnyUserFocus_ReturnValue) == 0x000058, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::CallFunc_HasAnyUserFocus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, CallFunc_HasFocusedDescendants_ReturnValue) == 0x000059, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::CallFunc_HasFocusedDescendants_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, CallFunc_BooleanOR_ReturnValue) == 0x00005A, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog, CallFunc_Not_PreBool_ReturnValue) == 0x00005B, "Member 'WB_MessageDialog_C_ExecuteUbergraph_WB_MessageDialog::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_MessageDialog.WB_MessageDialog_C.Get_ResolutionTextBlock_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0) == 0x000008, "Wrong alignment on WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0");
-static_assert(sizeof(WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0) == 0x000030, "Wrong size on WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0");
+static_assert(sizeof(WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0) == 0x000020, "Wrong size on WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0");
 static_assert(offsetof(WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0, ReturnValue) == 0x000000, "Member 'WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_MessageDialog_C_Get_ResolutionTextBlock_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_MessageDialog.WB_MessageDialog_C.Get_TitleText_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_MessageDialog_C_Get_TitleText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_MessageDialog_C_Get_TitleText_Text_0) == 0x000008, "Wrong alignment on WB_MessageDialog_C_Get_TitleText_Text_0");
-static_assert(sizeof(WB_MessageDialog_C_Get_TitleText_Text_0) == 0x000030, "Wrong size on WB_MessageDialog_C_Get_TitleText_Text_0");
+static_assert(sizeof(WB_MessageDialog_C_Get_TitleText_Text_0) == 0x000020, "Wrong size on WB_MessageDialog_C_Get_TitleText_Text_0");
 static_assert(offsetof(WB_MessageDialog_C_Get_TitleText_Text_0, ReturnValue) == 0x000000, "Member 'WB_MessageDialog_C_Get_TitleText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MessageDialog_C_Get_TitleText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_MessageDialog_C_Get_TitleText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_Get_TitleText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_MessageDialog_C_Get_TitleText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_MessageDialog.WB_MessageDialog_C.GetInitialFocusWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -68,6 +83,19 @@ public:
 static_assert(alignof(WB_MessageDialog_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_MessageDialog_C_GetInitialFocusWidget");
 static_assert(sizeof(WB_MessageDialog_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_MessageDialog_C_GetInitialFocusWidget");
 static_assert(offsetof(WB_MessageDialog_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_MessageDialog_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
+
+// Function WB_MessageDialog.WB_MessageDialog_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WB_MessageDialog_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_MessageDialog_C_Tick) == 0x000004, "Wrong alignment on WB_MessageDialog_C_Tick");
+static_assert(sizeof(WB_MessageDialog_C_Tick) == 0x00003C, "Wrong size on WB_MessageDialog_C_Tick");
+static_assert(offsetof(WB_MessageDialog_C_Tick, MyGeometry) == 0x000000, "Member 'WB_MessageDialog_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_MessageDialog_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_MessageDialog_C_Tick::InDeltaTime' has a wrong offset!");
 
 }
 

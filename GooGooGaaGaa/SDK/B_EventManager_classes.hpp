@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EventTime_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "S_Event_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EventNames_structs.hpp"
-#include "S_EventInfo_structs.hpp"
-#include "S_Event_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "S_EventInfo_structs.hpp"
 #include "LowEntryJson_structs.hpp"
+#include "EventTime_structs.hpp"
 
 
 namespace SDK
@@ -30,7 +30,7 @@ class UB_EventManager_C final : public UBaseManager
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0030(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	EventNames                                    CurrentEventName;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_565B[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObject*                    JsonRootObject;                                    // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonObject*                    JsonEventObject;                                   // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ULowEntryJsonObject*                    JsonEventInfoObject;                               // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -39,7 +39,7 @@ public:
 	TMap<EventNames, class FString>               EventStringsJSON;                                  // 0x0068(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FString                                 EventDataString;                                   // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          LoadingEventDone;                                  // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_565C[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EventNames, struct FS_EventInfo>         EventInfos;                                        // 0x00D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<EventNames, struct FS_Event>             CurrentEvents;                                     // 0x0120(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<class FString, class FString>            EmptyParams;                                       // 0x0170(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)

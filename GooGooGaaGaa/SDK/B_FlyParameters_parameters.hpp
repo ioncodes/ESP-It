@@ -17,21 +17,21 @@ namespace SDK::Params
 {
 
 // Function B_FlyParameters.B_FlyParameters_C.GetFormattedTooltip
-// 0x0090 (0x0090 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct B_FlyParameters_C_GetFormattedTooltip final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0068(0x0010)()
 };
 static_assert(alignof(B_FlyParameters_C_GetFormattedTooltip) == 0x000008, "Wrong alignment on B_FlyParameters_C_GetFormattedTooltip");
-static_assert(sizeof(B_FlyParameters_C_GetFormattedTooltip) == 0x000090, "Wrong size on B_FlyParameters_C_GetFormattedTooltip");
+static_assert(sizeof(B_FlyParameters_C_GetFormattedTooltip) == 0x000078, "Wrong size on B_FlyParameters_C_GetFormattedTooltip");
 static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, ReturnValue) == 0x000000, "Member 'B_FlyParameters_C_GetFormattedTooltip::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'B_FlyParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, K2Node_MakeArray_Array) == 0x000068, "Member 'B_FlyParameters_C_GetFormattedTooltip::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, CallFunc_Format_ReturnValue) == 0x000078, "Member 'B_FlyParameters_C_GetFormattedTooltip::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'B_FlyParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, K2Node_MakeArray_Array) == 0x000058, "Member 'B_FlyParameters_C_GetFormattedTooltip::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_FlyParameters_C_GetFormattedTooltip, CallFunc_Format_ReturnValue) == 0x000068, "Member 'B_FlyParameters_C_GetFormattedTooltip::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 }
 

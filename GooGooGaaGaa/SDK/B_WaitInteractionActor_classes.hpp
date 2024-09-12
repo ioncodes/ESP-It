@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WaitInteractionActor.B_WaitInteractionActor_C
-// 0x0020 (0x0338 - 0x0318)
+// 0x0020 (0x0328 - 0x0308)
 class AB_WaitInteractionActor_C : public AB_InteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_WaitInteractionActor_C;           // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 AnimatedSkeletalMesh;                              // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWB_WaitTaskScreen_C*                   WaitTaskScreen;                                    // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasWaitTaskScreen;                                 // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReadyToFinish;                                     // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_WaitInteractionActor_C;           // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 AnimatedSkeletalMesh;                              // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWB_WaitTaskScreen_C*                   WaitTaskScreen;                                    // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasWaitTaskScreen;                                 // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReadyToFinish;                                     // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ActDuringAnimation();
@@ -47,12 +47,12 @@ public:
 	}
 };
 static_assert(alignof(AB_WaitInteractionActor_C) == 0x000008, "Wrong alignment on AB_WaitInteractionActor_C");
-static_assert(sizeof(AB_WaitInteractionActor_C) == 0x000338, "Wrong size on AB_WaitInteractionActor_C");
-static_assert(offsetof(AB_WaitInteractionActor_C, UberGraphFrame_B_WaitInteractionActor_C) == 0x000318, "Member 'AB_WaitInteractionActor_C::UberGraphFrame_B_WaitInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_WaitInteractionActor_C, AnimatedSkeletalMesh) == 0x000320, "Member 'AB_WaitInteractionActor_C::AnimatedSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(AB_WaitInteractionActor_C, WaitTaskScreen) == 0x000328, "Member 'AB_WaitInteractionActor_C::WaitTaskScreen' has a wrong offset!");
-static_assert(offsetof(AB_WaitInteractionActor_C, HasWaitTaskScreen) == 0x000330, "Member 'AB_WaitInteractionActor_C::HasWaitTaskScreen' has a wrong offset!");
-static_assert(offsetof(AB_WaitInteractionActor_C, ReadyToFinish) == 0x000331, "Member 'AB_WaitInteractionActor_C::ReadyToFinish' has a wrong offset!");
+static_assert(sizeof(AB_WaitInteractionActor_C) == 0x000328, "Wrong size on AB_WaitInteractionActor_C");
+static_assert(offsetof(AB_WaitInteractionActor_C, UberGraphFrame_B_WaitInteractionActor_C) == 0x000308, "Member 'AB_WaitInteractionActor_C::UberGraphFrame_B_WaitInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_WaitInteractionActor_C, AnimatedSkeletalMesh) == 0x000310, "Member 'AB_WaitInteractionActor_C::AnimatedSkeletalMesh' has a wrong offset!");
+static_assert(offsetof(AB_WaitInteractionActor_C, WaitTaskScreen) == 0x000318, "Member 'AB_WaitInteractionActor_C::WaitTaskScreen' has a wrong offset!");
+static_assert(offsetof(AB_WaitInteractionActor_C, HasWaitTaskScreen) == 0x000320, "Member 'AB_WaitInteractionActor_C::HasWaitTaskScreen' has a wrong offset!");
+static_assert(offsetof(AB_WaitInteractionActor_C, ReadyToFinish) == 0x000321, "Member 'AB_WaitInteractionActor_C::ReadyToFinish' has a wrong offset!");
 
 }
 

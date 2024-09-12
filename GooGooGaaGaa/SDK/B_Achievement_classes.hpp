@@ -21,10 +21,10 @@ namespace SDK
 class UB_Achievement_C final : public UObject
 {
 public:
-	class FName                                   Name_B_Achievement_C;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Name_0;                                            // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsActive;                                          // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NeedsToSurvive;                                    // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B4D[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ValidPropIds;                                      // 0x0038(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class AB_GameMode_C*>                  ValidGameModes;                                    // 0x0048(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	int32                                         Value;                                             // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -33,7 +33,7 @@ public:
 
 public:
 	void Get_Valid_Game_Modes(bool Mobification, bool Hide_and_Seek, bool Hunt_a_Hag, bool Fill_the_Pot, TArray<class AB_GameMode_C*>* Valid_Game_Modes);
-	void Test_Prop_Id_Validity(int32 PropId, bool* IdIsValid);
+	void Test_Prop_Id_Validity(int32 PropID, bool* IdIsValid);
 
 public:
 	static class UClass* StaticClass()
@@ -47,7 +47,7 @@ public:
 };
 static_assert(alignof(UB_Achievement_C) == 0x000008, "Wrong alignment on UB_Achievement_C");
 static_assert(sizeof(UB_Achievement_C) == 0x000068, "Wrong size on UB_Achievement_C");
-static_assert(offsetof(UB_Achievement_C, Name_B_Achievement_C) == 0x000028, "Member 'UB_Achievement_C::Name_B_Achievement_C' has a wrong offset!");
+static_assert(offsetof(UB_Achievement_C, Name_0) == 0x000028, "Member 'UB_Achievement_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UB_Achievement_C, IsActive) == 0x000030, "Member 'UB_Achievement_C::IsActive' has a wrong offset!");
 static_assert(offsetof(UB_Achievement_C, NeedsToSurvive) == 0x000031, "Member 'UB_Achievement_C::NeedsToSurvive' has a wrong offset!");
 static_assert(offsetof(UB_Achievement_C, ValidPropIds) == 0x000038, "Member 'UB_Achievement_C::ValidPropIds' has a wrong offset!");

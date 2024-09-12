@@ -24,7 +24,7 @@ namespace SDK
 class alignas(0x10) AB_BaseInstrumentProp_C : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4C5F[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_BaseInstrumentProp_C;             // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	E_InstrumentTypes                             InstrumentType;                                    // 0x05E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

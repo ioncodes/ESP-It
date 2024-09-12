@@ -462,9 +462,9 @@ void UB_IngameUIManager_C::InitializeStartSpectating()
 // Function B_IngameUIManager.B_IngameUIManager_C.IsUserInterfaceHidden
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_UserInterfaceIsHidden                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UserInterfaceIsHidden_0                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_IngameUIManager_C::IsUserInterfaceHidden(bool* Param_UserInterfaceIsHidden)
+void UB_IngameUIManager_C::IsUserInterfaceHidden(bool* UserInterfaceIsHidden_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -475,8 +475,8 @@ void UB_IngameUIManager_C::IsUserInterfaceHidden(bool* Param_UserInterfaceIsHidd
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_UserInterfaceIsHidden != nullptr)
-		*Param_UserInterfaceIsHidden = Parms.Param_UserInterfaceIsHidden;
+	if (UserInterfaceIsHidden_0 != nullptr)
+		*UserInterfaceIsHidden_0 = Parms.UserInterfaceIsHidden_0;
 }
 
 
@@ -739,9 +739,9 @@ void UB_IngameUIManager_C::Set_Focused_Widget_Input_Mode(class UWidget* InWidget
 // Function B_IngameUIManager.B_IngameUIManager_C.SetWorkshopIdCommand
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           WorkshopId                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           WorkshopID                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_IngameUIManager_C::SetWorkshopIdCommand(const class FString& WorkshopId)
+void UB_IngameUIManager_C::SetWorkshopIdCommand(const class FString& WorkshopID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -750,7 +750,7 @@ void UB_IngameUIManager_C::SetWorkshopIdCommand(const class FString& WorkshopId)
 
 	Params::B_IngameUIManager_C_SetWorkshopIdCommand Parms{};
 
-	Parms.WorkshopId = std::move(WorkshopId);
+	Parms.WorkshopID = std::move(WorkshopID);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

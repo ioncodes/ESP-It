@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -24,11 +24,11 @@ struct B_MenuCamera_C_ForwardInputToMenuPC final
 public:
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetInputAxisKeyValue_ReturnValue;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D3[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_MenuPlayerController_C*              K2Node_DynamicCast_AsB_Menu_Player_Controller;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D4[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_InputRightThumbstickX_Axis_AxisValue_ImplicitCast; // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuCamera_C_ForwardInputToMenuPC) == 0x000008, "Wrong alignment on B_MenuCamera_C_ForwardInputToMenuPC");
@@ -61,7 +61,7 @@ struct B_MenuCamera_C_CalculateDesiredLightPos final
 {
 public:
 	struct FVector                                ImpactPoint;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Param_DesiredLightPos;                             // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DesiredLightPos_0;                                 // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetDirectionUnitVector_ReturnValue;       // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -70,27 +70,27 @@ public:
 static_assert(alignof(B_MenuCamera_C_CalculateDesiredLightPos) == 0x000008, "Wrong alignment on B_MenuCamera_C_CalculateDesiredLightPos");
 static_assert(sizeof(B_MenuCamera_C_CalculateDesiredLightPos) == 0x000090, "Wrong size on B_MenuCamera_C_CalculateDesiredLightPos");
 static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, ImpactPoint) == 0x000000, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, Param_DesiredLightPos) == 0x000018, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::Param_DesiredLightPos' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, DesiredLightPos_0) == 0x000018, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::DesiredLightPos_0' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000030, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, CallFunc_GetDirectionUnitVector_ReturnValue) == 0x000048, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::CallFunc_GetDirectionUnitVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000060, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_CalculateDesiredLightPos, CallFunc_Add_VectorVector_ReturnValue) == 0x000078, "Member 'B_MenuCamera_C_CalculateDesiredLightPos::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
 
 // Function B_MenuCamera.B_MenuCamera_C.UpdateCameraRotation
-// 0x0200 (0x0200 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct B_MenuCamera_C_UpdateCameraRotation final
 {
 public:
 	double                                        DeltaT;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               Rot;                                               // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D5[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetControllerSensivity_ReturnValue;       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetControllerSensivity_ReturnValue_1;     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetInputAxisKeyValue_ReturnValue;         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetInputAxisKeyValue_ReturnValue_1;       // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D6[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Remap_ReturnValue;                        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -100,27 +100,27 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GetMousePositionInPercentages_Success;    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D7[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetMousePositionInPercentages_X;          // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetMousePositionInPercentages_Y;          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x00A8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast_1;     // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast_1;         // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x00A8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_5;      // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_6;      // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x01C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast_1;     // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast_1;         // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuCamera_C_UpdateCameraRotation) == 0x000008, "Wrong alignment on B_MenuCamera_C_UpdateCameraRotation");
-static_assert(sizeof(B_MenuCamera_C_UpdateCameraRotation) == 0x000200, "Wrong size on B_MenuCamera_C_UpdateCameraRotation");
+static_assert(sizeof(B_MenuCamera_C_UpdateCameraRotation) == 0x000210, "Wrong size on B_MenuCamera_C_UpdateCameraRotation");
 static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, DeltaT) == 0x000000, "Member 'B_MenuCamera_C_UpdateCameraRotation::DeltaT' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, Rot) == 0x000008, "Member 'B_MenuCamera_C_UpdateCameraRotation::Rot' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_IsGamepadMode_ReturnValue) == 0x000020, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
@@ -141,39 +141,39 @@ static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_GetMousePos
 static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_GetMousePositionInPercentages_X) == 0x000098, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_GetMousePositionInPercentages_X' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_GetMousePositionInPercentages_Y) == 0x0000A0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_GetMousePositionInPercentages_Y' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x0000A8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000190, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000198, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0001A0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x0001A8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x0001B0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_ReturnValue_1) == 0x0001B8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001D0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x0001D8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0001E0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Divide_DoubleDouble_A_ImplicitCast_1) == 0x0001E8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Divide_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x0001F0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0001F4, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Pitch_ImplicitCast_1) == 0x0001F8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Pitch_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x0001FC, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001A0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0001A8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0001B0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_ReturnValue_5) == 0x0001B8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_ReturnValue_6) == 0x0001C0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_ReturnValue_1) == 0x0001C8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001E0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x0001E8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x0001F0, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_Divide_DoubleDouble_A_ImplicitCast_1) == 0x0001F8, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_Divide_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000200, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000204, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Pitch_ImplicitCast_1) == 0x000208, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Pitch_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UpdateCameraRotation, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x00020C, "Member 'B_MenuCamera_C_UpdateCameraRotation::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
 
 // Function B_MenuCamera.B_MenuCamera_C.UserConstructionScript
-// 0x0110 (0x0110 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct B_MenuCamera_C_UserConstructionScript final
 {
 public:
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0018(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_SetFieldOfView_InFieldOfView_ImplicitCast; // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_TargetArmLength_ImplicitCast;   // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0018(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_SetFieldOfView_InFieldOfView_ImplicitCast; // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_TargetArmLength_ImplicitCast;   // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuCamera_C_UserConstructionScript) == 0x000008, "Wrong alignment on B_MenuCamera_C_UserConstructionScript");
-static_assert(sizeof(B_MenuCamera_C_UserConstructionScript) == 0x000110, "Wrong size on B_MenuCamera_C_UserConstructionScript");
+static_assert(sizeof(B_MenuCamera_C_UserConstructionScript) == 0x000120, "Wrong size on B_MenuCamera_C_UserConstructionScript");
 static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, CallFunc_MakeVector_ReturnValue) == 0x000000, "Member 'B_MenuCamera_C_UserConstructionScript::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000018, "Member 'B_MenuCamera_C_UserConstructionScript::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, CallFunc_SetFieldOfView_InFieldOfView_ImplicitCast) == 0x000100, "Member 'B_MenuCamera_C_UserConstructionScript::CallFunc_SetFieldOfView_InFieldOfView_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, K2Node_VariableSet_TargetArmLength_ImplicitCast) == 0x000104, "Member 'B_MenuCamera_C_UserConstructionScript::K2Node_VariableSet_TargetArmLength_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x000108, "Member 'B_MenuCamera_C_UserConstructionScript::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, CallFunc_SetFieldOfView_InFieldOfView_ImplicitCast) == 0x000110, "Member 'B_MenuCamera_C_UserConstructionScript::CallFunc_SetFieldOfView_InFieldOfView_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, K2Node_VariableSet_TargetArmLength_ImplicitCast) == 0x000114, "Member 'B_MenuCamera_C_UserConstructionScript::K2Node_VariableSet_TargetArmLength_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_UserConstructionScript, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x000118, "Member 'B_MenuCamera_C_UserConstructionScript::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
 
 // Function B_MenuCamera.B_MenuCamera_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -187,118 +187,118 @@ static_assert(sizeof(B_MenuCamera_C_ReceiveTick) == 0x000004, "Wrong size on B_M
 static_assert(offsetof(B_MenuCamera_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'B_MenuCamera_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function B_MenuCamera.B_MenuCamera_C.ExecuteUbergraph_B_MenuCamera
-// 0x03B8 (0x03B8 - 0x0000)
+// 0x03D8 (0x03D8 - 0x0000)
 struct B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable;                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57D9[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_GetHitResultUnderCursorByChannel_HitResult; // 0x0028(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_GetHitResultUnderCursorByChannel_ReturnValue; // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57DA[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57DB[0x2];                                     // 0x0132(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57DC[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57DD[0x4];                                     // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_CalculateDesiredLightPos_DesiredLightPos; // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0232(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57DE[0x5];                                     // 0x0233(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default;                             // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57DF[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ADirectionalLight*>              CallFunc_GetAllActorsOfClass_OutActors;            // 0x0280(0x0010)(ReferenceParm)
-	class ADirectionalLight*                      CallFunc_Array_Get_Item;                           // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x029A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E0[0x5];                                     // 0x029B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_VInterpTo_ReturnValue;                    // 0x02A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x02C8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x03B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VInterpTo_DeltaTime_ImplicitCast;         // 0x03B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_GetHitResultUnderCursorByChannel_HitResult; // 0x0028(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_GetHitResultUnderCursorByChannel_ReturnValue; // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_CalculateDesiredLightPos_DesiredLightPos; // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue_1; // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0242(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_243[0x5];                                      // 0x0243(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Select_Default;                             // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ADirectionalLight*>              CallFunc_GetAllActorsOfClass_OutActors;            // 0x0290(0x0010)(ReferenceParm)
+	class ADirectionalLight*                      CallFunc_Array_Get_Item;                           // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AB[0x5];                                      // 0x02AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VInterpTo_ReturnValue;                    // 0x02B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x02D8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_SetIntensity_NewIntensity_ImplicitCast;   // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VInterpTo_DeltaTime_ImplicitCast;         // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera) == 0x000008, "Wrong alignment on B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera");
-static_assert(sizeof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera) == 0x0003B8, "Wrong size on B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera");
+static_assert(sizeof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera) == 0x0003D8, "Wrong size on B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera");
 static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, EntryPoint) == 0x000000, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, Temp_real_Variable) == 0x000008, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::Temp_real_Variable' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, K2Node_Event_DeltaSeconds) == 0x000010, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x000020, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetHitResultUnderCursorByChannel_HitResult) == 0x000028, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetHitResultUnderCursorByChannel_HitResult' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetHitResultUnderCursorByChannel_ReturnValue) == 0x000110, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetHitResultUnderCursorByChannel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000118, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_bBlockingHit) == 0x000130, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_bInitialOverlap) == 0x000131, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Time) == 0x000134, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Distance) == 0x000138, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Location) == 0x000140, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_ImpactPoint) == 0x000158, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Normal) == 0x000170, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_ImpactNormal) == 0x000188, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_PhysMat) == 0x0001A0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitActor) == 0x0001A8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitComponent) == 0x0001B0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitBoneName) == 0x0001B8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_BoneName) == 0x0001C0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitItem) == 0x0001C8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_ElementIndex) == 0x0001CC, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_FaceIndex) == 0x0001D0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_TraceStart) == 0x0001D8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_TraceEnd) == 0x0001F0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_CalculateDesiredLightPos_DesiredLightPos) == 0x000208, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_CalculateDesiredLightPos_DesiredLightPos' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetGameInstance_ReturnValue_1) == 0x000220, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000228, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsValid_ReturnValue) == 0x000230, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, Temp_bool_Variable) == 0x000231, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsGamepadMode_ReturnValue) == 0x000232, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000238, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000250, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetCameraLocation_ReturnValue) == 0x000258, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, K2Node_Select_Default) == 0x000270, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_EqualEqual_VectorVector_ReturnValue) == 0x000278, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_EqualEqual_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetAllActorsOfClass_OutActors) == 0x000280, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_Array_Get_Item) == 0x000290, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsValid_ReturnValue_1) == 0x000298, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsValid_ReturnValue_2) == 0x000299, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BooleanAND_ReturnValue) == 0x00029A, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x0002A0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_VInterpTo_ReturnValue) == 0x0002A8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_VInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x0002C0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x0002C8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x0003B0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_VInterpTo_DeltaTime_ImplicitCast) == 0x0003B4, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_VInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetHitResultUnderCursorByChannel_ReturnValue) == 0x000120, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetHitResultUnderCursorByChannel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000128, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_bBlockingHit) == 0x000140, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_bInitialOverlap) == 0x000141, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Time) == 0x000144, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Distance) == 0x000148, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Location) == 0x000150, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_ImpactPoint) == 0x000168, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_Normal) == 0x000180, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_ImpactNormal) == 0x000198, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_PhysMat) == 0x0001B0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitActor) == 0x0001B8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitComponent) == 0x0001C0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitBoneName) == 0x0001C8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_BoneName) == 0x0001D0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_HitItem) == 0x0001D8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_ElementIndex) == 0x0001DC, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_FaceIndex) == 0x0001E0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_TraceStart) == 0x0001E8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BreakHitResult_TraceEnd) == 0x000200, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_CalculateDesiredLightPos_DesiredLightPos) == 0x000218, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_CalculateDesiredLightPos_DesiredLightPos' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetGameInstance_ReturnValue_1) == 0x000230, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetFirstLocalPlayerController_ReturnValue_1) == 0x000238, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetFirstLocalPlayerController_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsValid_ReturnValue) == 0x000240, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, Temp_bool_Variable) == 0x000241, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsGamepadMode_ReturnValue) == 0x000242, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000248, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000260, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetCameraLocation_ReturnValue) == 0x000268, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, K2Node_Select_Default) == 0x000280, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_EqualEqual_VectorVector_ReturnValue) == 0x000288, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_EqualEqual_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetAllActorsOfClass_OutActors) == 0x000290, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_Array_Get_Item) == 0x0002A0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsValid_ReturnValue_1) == 0x0002A8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_IsValid_ReturnValue_2) == 0x0002A9, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_BooleanAND_ReturnValue) == 0x0002AA, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x0002B0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_VInterpTo_ReturnValue) == 0x0002B8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_VInterpTo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x0002D0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x0002D8, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_SetIntensity_NewIntensity_ImplicitCast) == 0x0003D0, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_SetIntensity_NewIntensity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera, CallFunc_VInterpTo_DeltaTime_ImplicitCast) == 0x0003D4, "Member 'B_MenuCamera_C_ExecuteUbergraph_B_MenuCamera::CallFunc_VInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
 
 }
 

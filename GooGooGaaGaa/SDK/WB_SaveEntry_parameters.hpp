@@ -63,28 +63,28 @@ static_assert(sizeof(WB_SaveEntry_C_DeselectEntry) == 0x000014, "Wrong size on W
 static_assert(offsetof(WB_SaveEntry_C_DeselectEntry, K2Node_MakeStruct_SlateColor) == 0x000000, "Member 'WB_SaveEntry_C_DeselectEntry::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 
 // Function WB_SaveEntry.WB_SaveEntry_C.ExecuteUbergraph_WB_SaveEntry
-// 0x0188 (0x0188 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsExpanded;                          // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3914[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SaveEntryData_C*                     K2Node_DynamicCast_AsB_Save_Entry_Data;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsSelected;                          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3915[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0018)()
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0038(0x0038)(IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x0070(0x0078)(ConstParm)
-	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00E8(0x0078)(ConstParm)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0160(0x0014)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0174(0x0014)()
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0010)()
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0030(0x0038)(IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x0068(0x0078)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00E0(0x0078)(ConstParm)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0158(0x0014)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x016C(0x0014)()
 };
 static_assert(alignof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry) == 0x000008, "Wrong alignment on WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry");
-static_assert(sizeof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry) == 0x000188, "Wrong size on WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry");
+static_assert(sizeof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry) == 0x000180, "Wrong size on WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry");
 static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, EntryPoint) == 0x000000, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, CallFunc_Not_PreBool_ReturnValue) == 0x000004, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_bIsExpanded) == 0x000005, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_bIsExpanded' has a wrong offset!");
@@ -93,11 +93,11 @@ static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Dyna
 static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_bIsSelected) == 0x000019, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_bIsSelected' has a wrong offset!");
 static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, CallFunc_Conv_StringToText_ReturnValue) == 0x000020, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_MyGeometry) == 0x000038, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_MouseEvent_1) == 0x000070, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_MouseEvent_1' has a wrong offset!");
-static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_MouseEvent) == 0x0000E8, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_MouseEvent' has a wrong offset!");
-static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_MakeStruct_SlateColor) == 0x000160, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_MakeStruct_SlateColor_1) == 0x000174, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_MyGeometry) == 0x000030, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_MouseEvent_1) == 0x000068, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_MouseEvent_1' has a wrong offset!");
+static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_Event_MouseEvent) == 0x0000E0, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_Event_MouseEvent' has a wrong offset!");
+static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_MakeStruct_SlateColor) == 0x000158, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry, K2Node_MakeStruct_SlateColor_1) == 0x00016C, "Member 'WB_SaveEntry_C_ExecuteUbergraph_WB_SaveEntry::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
 
 // Function WB_SaveEntry.WB_SaveEntry_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)

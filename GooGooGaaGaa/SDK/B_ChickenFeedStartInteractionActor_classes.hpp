@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ChickenFeedStartInteractionActor.B_ChickenFeedStartInteractionActor_C
-// 0x0008 (0x0320 - 0x0318)
+// 0x0008 (0x0310 - 0x0308)
 class AB_ChickenFeedStartInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ChickenFeedStartInteractionActor_C; // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ChickenFeedStartInteractionActor_C; // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Act();
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(AB_ChickenFeedStartInteractionActor_C) == 0x000008, "Wrong alignment on AB_ChickenFeedStartInteractionActor_C");
-static_assert(sizeof(AB_ChickenFeedStartInteractionActor_C) == 0x000320, "Wrong size on AB_ChickenFeedStartInteractionActor_C");
-static_assert(offsetof(AB_ChickenFeedStartInteractionActor_C, UberGraphFrame_B_ChickenFeedStartInteractionActor_C) == 0x000318, "Member 'AB_ChickenFeedStartInteractionActor_C::UberGraphFrame_B_ChickenFeedStartInteractionActor_C' has a wrong offset!");
+static_assert(sizeof(AB_ChickenFeedStartInteractionActor_C) == 0x000310, "Wrong size on AB_ChickenFeedStartInteractionActor_C");
+static_assert(offsetof(AB_ChickenFeedStartInteractionActor_C, UberGraphFrame_B_ChickenFeedStartInteractionActor_C) == 0x000308, "Member 'AB_ChickenFeedStartInteractionActor_C::UberGraphFrame_B_ChickenFeedStartInteractionActor_C' has a wrong offset!");
 
 }
 

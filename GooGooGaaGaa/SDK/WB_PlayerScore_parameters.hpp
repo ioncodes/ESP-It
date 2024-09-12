@@ -45,33 +45,33 @@ static_assert(offsetof(WB_PlayerScore_C_Get_1StPlace_Visibility_0, CallFunc_Equa
 static_assert(offsetof(WB_PlayerScore_C_Get_1StPlace_Visibility_0, CallFunc_BooleanAND_ReturnValue) == 0x000003, "Member 'WB_PlayerScore_C_Get_1StPlace_Visibility_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_PlayerScore.WB_PlayerScore_C.Get_Name_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_PlayerScore_C_Get_Name_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_PlayerScore_C_Get_Name_Text_0) == 0x000008, "Wrong alignment on WB_PlayerScore_C_Get_Name_Text_0");
-static_assert(sizeof(WB_PlayerScore_C_Get_Name_Text_0) == 0x000030, "Wrong size on WB_PlayerScore_C_Get_Name_Text_0");
+static_assert(sizeof(WB_PlayerScore_C_Get_Name_Text_0) == 0x000020, "Wrong size on WB_PlayerScore_C_Get_Name_Text_0");
 static_assert(offsetof(WB_PlayerScore_C_Get_Name_Text_0, ReturnValue) == 0x000000, "Member 'WB_PlayerScore_C_Get_Name_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerScore_C_Get_Name_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_PlayerScore_C_Get_Name_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerScore_C_Get_Name_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WB_PlayerScore_C_Get_Name_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_PlayerScore.WB_PlayerScore_C.Get_PlaceText_Text_0
-// 0x0038 (0x0038 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_PlayerScore_C_Get_PlaceText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36DC[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
 };
 static_assert(alignof(WB_PlayerScore_C_Get_PlaceText_Text_0) == 0x000008, "Wrong alignment on WB_PlayerScore_C_Get_PlaceText_Text_0");
-static_assert(sizeof(WB_PlayerScore_C_Get_PlaceText_Text_0) == 0x000038, "Wrong size on WB_PlayerScore_C_Get_PlaceText_Text_0");
+static_assert(sizeof(WB_PlayerScore_C_Get_PlaceText_Text_0) == 0x000028, "Wrong size on WB_PlayerScore_C_Get_PlaceText_Text_0");
 static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Text_0, ReturnValue) == 0x000000, "Member 'WB_PlayerScore_C_Get_PlaceText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Text_0, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'WB_PlayerScore_C_Get_PlaceText_Text_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WB_PlayerScore_C_Get_PlaceText_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Text_0, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WB_PlayerScore_C_Get_PlaceText_Text_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_PlayerScore_C_Get_PlaceText_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_PlayerScore.WB_PlayerScore_C.Get_PlaceText_Visibility_0
 // 0x0006 (0x0006 - 0x0000)
@@ -95,17 +95,17 @@ static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Visibility_0, CallFunc_IsV
 static_assert(offsetof(WB_PlayerScore_C_Get_PlaceText_Visibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_PlayerScore_C_Get_PlaceText_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_PlayerScore.WB_PlayerScore_C.Get_ScoreText_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_PlayerScore_C_Get_ScoreText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_PlayerScore_C_Get_ScoreText_Text_0) == 0x000008, "Wrong alignment on WB_PlayerScore_C_Get_ScoreText_Text_0");
-static_assert(sizeof(WB_PlayerScore_C_Get_ScoreText_Text_0) == 0x000030, "Wrong size on WB_PlayerScore_C_Get_ScoreText_Text_0");
+static_assert(sizeof(WB_PlayerScore_C_Get_ScoreText_Text_0) == 0x000020, "Wrong size on WB_PlayerScore_C_Get_ScoreText_Text_0");
 static_assert(offsetof(WB_PlayerScore_C_Get_ScoreText_Text_0, ReturnValue) == 0x000000, "Member 'WB_PlayerScore_C_Get_ScoreText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerScore_C_Get_ScoreText_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_PlayerScore_C_Get_ScoreText_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerScore_C_Get_ScoreText_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WB_PlayerScore_C_Get_ScoreText_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_PlayerScore.WB_PlayerScore_C.Get_ScoreText_Visibility_0
 // 0x0006 (0x0006 - 0x0000)
@@ -136,7 +136,7 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36DD[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       CallFunc_GetPlayerStateById_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_PlayerScore_C_Update) == 0x000008, "Wrong alignment on WB_PlayerScore_C_Update");

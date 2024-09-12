@@ -40,9 +40,9 @@ void AB_MenuPlayerController_C::ExecuteUbergraph_B_MenuPlayerController(int32 En
 // Function B_MenuPlayerController.B_MenuPlayerController_C.GetMasterScreen
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UWB_MasterScreen_C*               Param_MasterScreen                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWB_MasterScreen_C*               MasterScreen_0                                         (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void AB_MenuPlayerController_C::GetMasterScreen(class UWB_MasterScreen_C** Param_MasterScreen)
+void AB_MenuPlayerController_C::GetMasterScreen(class UWB_MasterScreen_C** MasterScreen_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -53,8 +53,8 @@ void AB_MenuPlayerController_C::GetMasterScreen(class UWB_MasterScreen_C** Param
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_MasterScreen != nullptr)
-		*Param_MasterScreen = Parms.Param_MasterScreen;
+	if (MasterScreen_0 != nullptr)
+		*MasterScreen_0 = Parms.MasterScreen_0;
 }
 
 

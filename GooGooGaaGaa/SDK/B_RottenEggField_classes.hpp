@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenEggField.B_RottenEggField_C
-// 0x0000 (0x0340 - 0x0340)
+// 0x0000 (0x0338 - 0x0338)
 class AB_RottenEggField_C final : public AB_TaskField_C
 {
 public:
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenEggField_C) == 0x000008, "Wrong alignment on AB_RottenEggField_C");
-static_assert(sizeof(AB_RottenEggField_C) == 0x000340, "Wrong size on AB_RottenEggField_C");
+static_assert(sizeof(AB_RottenEggField_C) == 0x000338, "Wrong size on AB_RottenEggField_C");
 
 }
 

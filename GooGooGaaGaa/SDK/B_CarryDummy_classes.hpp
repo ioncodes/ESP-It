@@ -17,17 +17,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CarryDummy.B_CarryDummy_C
-// 0x0038 (0x0338 - 0x0300)
+// 0x0038 (0x0330 - 0x02F8)
 class AB_CarryDummy_C final : public AB_Dummy_C
 {
 public:
-	class UStaticMeshComponent*                   Pillow;                                            // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Contents5;                                         // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Contents2;                                         // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Contents4;                                         // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Contents3;                                         // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Contents1;                                         // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Contents;                                          // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Pillow;                                            // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Contents5;                                         // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Contents2;                                         // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Contents4;                                         // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Contents3;                                         // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Contents1;                                         // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Contents;                                          // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -40,14 +40,14 @@ public:
 	}
 };
 static_assert(alignof(AB_CarryDummy_C) == 0x000008, "Wrong alignment on AB_CarryDummy_C");
-static_assert(sizeof(AB_CarryDummy_C) == 0x000338, "Wrong size on AB_CarryDummy_C");
-static_assert(offsetof(AB_CarryDummy_C, Pillow) == 0x000300, "Member 'AB_CarryDummy_C::Pillow' has a wrong offset!");
-static_assert(offsetof(AB_CarryDummy_C, Contents5) == 0x000308, "Member 'AB_CarryDummy_C::Contents5' has a wrong offset!");
-static_assert(offsetof(AB_CarryDummy_C, Contents2) == 0x000310, "Member 'AB_CarryDummy_C::Contents2' has a wrong offset!");
-static_assert(offsetof(AB_CarryDummy_C, Contents4) == 0x000318, "Member 'AB_CarryDummy_C::Contents4' has a wrong offset!");
-static_assert(offsetof(AB_CarryDummy_C, Contents3) == 0x000320, "Member 'AB_CarryDummy_C::Contents3' has a wrong offset!");
-static_assert(offsetof(AB_CarryDummy_C, Contents1) == 0x000328, "Member 'AB_CarryDummy_C::Contents1' has a wrong offset!");
-static_assert(offsetof(AB_CarryDummy_C, Contents) == 0x000330, "Member 'AB_CarryDummy_C::Contents' has a wrong offset!");
+static_assert(sizeof(AB_CarryDummy_C) == 0x000330, "Wrong size on AB_CarryDummy_C");
+static_assert(offsetof(AB_CarryDummy_C, Pillow) == 0x0002F8, "Member 'AB_CarryDummy_C::Pillow' has a wrong offset!");
+static_assert(offsetof(AB_CarryDummy_C, Contents5) == 0x000300, "Member 'AB_CarryDummy_C::Contents5' has a wrong offset!");
+static_assert(offsetof(AB_CarryDummy_C, Contents2) == 0x000308, "Member 'AB_CarryDummy_C::Contents2' has a wrong offset!");
+static_assert(offsetof(AB_CarryDummy_C, Contents4) == 0x000310, "Member 'AB_CarryDummy_C::Contents4' has a wrong offset!");
+static_assert(offsetof(AB_CarryDummy_C, Contents3) == 0x000318, "Member 'AB_CarryDummy_C::Contents3' has a wrong offset!");
+static_assert(offsetof(AB_CarryDummy_C, Contents1) == 0x000320, "Member 'AB_CarryDummy_C::Contents1' has a wrong offset!");
+static_assert(offsetof(AB_CarryDummy_C, Contents) == 0x000328, "Member 'AB_CarryDummy_C::Contents' has a wrong offset!");
 
 }
 

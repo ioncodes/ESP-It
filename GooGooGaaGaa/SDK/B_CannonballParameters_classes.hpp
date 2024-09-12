@@ -17,29 +17,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CannonballParameters.B_CannonballParameters_C
-// 0x0098 (0x00F0 - 0x0058)
+// 0x0098 (0x00E8 - 0x0050)
 class UB_CannonballParameters_C final : public USkillParameters
 {
 public:
-	double                                        Cooldown;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PassiveJump;                                       // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AirControl;                                        // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GravityScale;                                      // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactSizeSmall;                                   // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactSizeMedium;                                  // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactSizeBig;                                     // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactForceSmall;                                  // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactForceMedium;                                 // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactForceBig;                                    // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactDamageSmall;                                 // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactDamageMedium;                                // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ImpactDamageBig;                                   // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShockwaveSizeSmall;                                // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShockwaveSizeMedium;                               // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShockwaveSizeBig;                                  // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShockwaveForceSmall;                               // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShockwaveForceMedium;                              // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ShockwaveForceBig;                                 // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cooldown;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PassiveJump;                                       // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AirControl;                                        // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GravityScale;                                      // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactSizeSmall;                                   // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactSizeMedium;                                  // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactSizeBig;                                     // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactForceSmall;                                  // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactForceMedium;                                 // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactForceBig;                                    // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactDamageSmall;                                 // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactDamageMedium;                                // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ImpactDamageBig;                                   // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShockwaveSizeSmall;                                // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShockwaveSizeMedium;                               // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShockwaveSizeBig;                                  // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShockwaveForceSmall;                               // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShockwaveForceMedium;                              // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ShockwaveForceBig;                                 // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FText GetFormattedTooltip();
@@ -55,26 +55,26 @@ public:
 	}
 };
 static_assert(alignof(UB_CannonballParameters_C) == 0x000008, "Wrong alignment on UB_CannonballParameters_C");
-static_assert(sizeof(UB_CannonballParameters_C) == 0x0000F0, "Wrong size on UB_CannonballParameters_C");
-static_assert(offsetof(UB_CannonballParameters_C, Cooldown) == 0x000058, "Member 'UB_CannonballParameters_C::Cooldown' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, PassiveJump) == 0x000060, "Member 'UB_CannonballParameters_C::PassiveJump' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, AirControl) == 0x000068, "Member 'UB_CannonballParameters_C::AirControl' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, GravityScale) == 0x000070, "Member 'UB_CannonballParameters_C::GravityScale' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactSizeSmall) == 0x000078, "Member 'UB_CannonballParameters_C::ImpactSizeSmall' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactSizeMedium) == 0x000080, "Member 'UB_CannonballParameters_C::ImpactSizeMedium' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactSizeBig) == 0x000088, "Member 'UB_CannonballParameters_C::ImpactSizeBig' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactForceSmall) == 0x000090, "Member 'UB_CannonballParameters_C::ImpactForceSmall' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactForceMedium) == 0x000098, "Member 'UB_CannonballParameters_C::ImpactForceMedium' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactForceBig) == 0x0000A0, "Member 'UB_CannonballParameters_C::ImpactForceBig' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactDamageSmall) == 0x0000A8, "Member 'UB_CannonballParameters_C::ImpactDamageSmall' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactDamageMedium) == 0x0000B0, "Member 'UB_CannonballParameters_C::ImpactDamageMedium' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ImpactDamageBig) == 0x0000B8, "Member 'UB_CannonballParameters_C::ImpactDamageBig' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ShockwaveSizeSmall) == 0x0000C0, "Member 'UB_CannonballParameters_C::ShockwaveSizeSmall' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ShockwaveSizeMedium) == 0x0000C8, "Member 'UB_CannonballParameters_C::ShockwaveSizeMedium' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ShockwaveSizeBig) == 0x0000D0, "Member 'UB_CannonballParameters_C::ShockwaveSizeBig' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ShockwaveForceSmall) == 0x0000D8, "Member 'UB_CannonballParameters_C::ShockwaveForceSmall' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ShockwaveForceMedium) == 0x0000E0, "Member 'UB_CannonballParameters_C::ShockwaveForceMedium' has a wrong offset!");
-static_assert(offsetof(UB_CannonballParameters_C, ShockwaveForceBig) == 0x0000E8, "Member 'UB_CannonballParameters_C::ShockwaveForceBig' has a wrong offset!");
+static_assert(sizeof(UB_CannonballParameters_C) == 0x0000E8, "Wrong size on UB_CannonballParameters_C");
+static_assert(offsetof(UB_CannonballParameters_C, Cooldown) == 0x000050, "Member 'UB_CannonballParameters_C::Cooldown' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, PassiveJump) == 0x000058, "Member 'UB_CannonballParameters_C::PassiveJump' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, AirControl) == 0x000060, "Member 'UB_CannonballParameters_C::AirControl' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, GravityScale) == 0x000068, "Member 'UB_CannonballParameters_C::GravityScale' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactSizeSmall) == 0x000070, "Member 'UB_CannonballParameters_C::ImpactSizeSmall' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactSizeMedium) == 0x000078, "Member 'UB_CannonballParameters_C::ImpactSizeMedium' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactSizeBig) == 0x000080, "Member 'UB_CannonballParameters_C::ImpactSizeBig' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactForceSmall) == 0x000088, "Member 'UB_CannonballParameters_C::ImpactForceSmall' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactForceMedium) == 0x000090, "Member 'UB_CannonballParameters_C::ImpactForceMedium' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactForceBig) == 0x000098, "Member 'UB_CannonballParameters_C::ImpactForceBig' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactDamageSmall) == 0x0000A0, "Member 'UB_CannonballParameters_C::ImpactDamageSmall' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactDamageMedium) == 0x0000A8, "Member 'UB_CannonballParameters_C::ImpactDamageMedium' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ImpactDamageBig) == 0x0000B0, "Member 'UB_CannonballParameters_C::ImpactDamageBig' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ShockwaveSizeSmall) == 0x0000B8, "Member 'UB_CannonballParameters_C::ShockwaveSizeSmall' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ShockwaveSizeMedium) == 0x0000C0, "Member 'UB_CannonballParameters_C::ShockwaveSizeMedium' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ShockwaveSizeBig) == 0x0000C8, "Member 'UB_CannonballParameters_C::ShockwaveSizeBig' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ShockwaveForceSmall) == 0x0000D0, "Member 'UB_CannonballParameters_C::ShockwaveForceSmall' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ShockwaveForceMedium) == 0x0000D8, "Member 'UB_CannonballParameters_C::ShockwaveForceMedium' has a wrong offset!");
+static_assert(offsetof(UB_CannonballParameters_C, ShockwaveForceBig) == 0x0000E0, "Member 'UB_CannonballParameters_C::ShockwaveForceBig' has a wrong offset!");
 
 }
 

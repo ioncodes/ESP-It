@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "S_AchievementData_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK::Params
 {
 
 // Function WB_AchievementsScreen.WB_AchievementsScreen_C.CreateAchievementItems
-// 0x0320 (0x0320 - 0x0000)
+// 0x0300 (0x0300 - 0x0000)
 struct WB_AchievementsScreen_C_CreateAchievementItems final
 {
 public:
@@ -32,7 +32,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5639[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -41,32 +41,32 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_563A[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_AchievementData_C*                   CallFunc_CreateObject_Object;                      // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_AchievementData                     CallFunc_Array_Get_Item_1;                         // 0x0090(0x0120)(ContainsInstancedReference, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x01B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_563B[0x2];                                     // 0x01B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_563C[0x4];                                     // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_AchievementData                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x01C0(0x0120)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_563D[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x02E8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_GetStat_ResultValue;                      // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetStat_ResultWasFound;                   // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsAchievementVisible_bIsVisible;          // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_563E[0x2];                                     // 0x030A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x030C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default;                             // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_AchievementData                     CallFunc_Array_Get_Item_1;                         // 0x0090(0x0110)(ContainsInstancedReference, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A6[0x2];                                      // 0x01A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_AchievementData                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x01B0(0x0110)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x02C8(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_GetStat_ResultValue;                      // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetStat_ResultWasFound;                   // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsAchievementVisible_bIsVisible;          // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2EA[0x2];                                      // 0x02EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default;                             // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AchievementsScreen_C_CreateAchievementItems) == 0x000010, "Wrong alignment on WB_AchievementsScreen_C_CreateAchievementItems");
-static_assert(sizeof(WB_AchievementsScreen_C_CreateAchievementItems) == 0x000320, "Wrong size on WB_AchievementsScreen_C_CreateAchievementItems");
+static_assert(sizeof(WB_AchievementsScreen_C_CreateAchievementItems) == 0x000300, "Wrong size on WB_AchievementsScreen_C_CreateAchievementItems");
 static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, TempDataObject) == 0x000000, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::TempDataObject' has a wrong offset!");
 static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, UnowendAchievements) == 0x000008, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::UnowendAchievements' has a wrong offset!");
 static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, OwendAchievements) == 0x000018, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::OwendAchievements' has a wrong offset!");
@@ -87,20 +87,20 @@ static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_
 static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, Temp_int_Loop_Counter_Variable_1) == 0x000088, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
 static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Add_IntInt_ReturnValue_1) == 0x00008C, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Get_Item_1) == 0x000090, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Length_ReturnValue_1) == 0x0001B0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, Temp_bool_Variable_1) == 0x0001B4, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001B5, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, Temp_int_Variable) == 0x0001B8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetDataTableRowFromName_OutRow) == 0x0001C0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0002E0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetDataTableRowNames_OutRowNames) == 0x0002E8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Add_ReturnValue) == 0x0002F8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Add_ReturnValue_1) == 0x0002FC, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetStat_ResultValue) == 0x000300, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetStat_ResultValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetStat_ResultWasFound) == 0x000308, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetStat_ResultWasFound' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_IsAchievementVisible_bIsVisible) == 0x000309, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_IsAchievementVisible_bIsVisible' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Conv_Int64ToInt_ReturnValue) == 0x00030C, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Conv_Int64ToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, K2Node_Select_Default) == 0x000310, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Length_ReturnValue_1) == 0x0001A0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, Temp_bool_Variable_1) == 0x0001A4, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001A5, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, Temp_int_Variable) == 0x0001A8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetDataTableRowFromName_OutRow) == 0x0001B0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0002C0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetDataTableRowNames_OutRowNames) == 0x0002C8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Add_ReturnValue) == 0x0002D8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Array_Add_ReturnValue_1) == 0x0002DC, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetStat_ResultValue) == 0x0002E0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetStat_ResultValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_GetStat_ResultWasFound) == 0x0002E8, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_GetStat_ResultWasFound' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_IsAchievementVisible_bIsVisible) == 0x0002E9, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_IsAchievementVisible_bIsVisible' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, CallFunc_Conv_Int64ToInt_ReturnValue) == 0x0002EC, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::CallFunc_Conv_Int64ToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AchievementsScreen_C_CreateAchievementItems, K2Node_Select_Default) == 0x0002F0, "Member 'WB_AchievementsScreen_C_CreateAchievementItems::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_AchievementsScreen.WB_AchievementsScreen_C.ExecuteUbergraph_WB_AchievementsScreen
 // 0x0020 (0x0020 - 0x0000)
@@ -109,7 +109,7 @@ struct WB_AchievementsScreen_C_ExecuteUbergraph_WB_AchievementsScreen final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_563F[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -150,7 +150,7 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x02BB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_3;          // 0x02BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x02BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5640[0x2];                                     // 0x02BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2BE[0x2];                                      // 0x02BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x02C0(0x00B8)()
 };
 static_assert(alignof(WB_AchievementsScreen_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_AchievementsScreen_C_OnPreviewKeyDown");
@@ -176,7 +176,7 @@ struct WB_AchievementsScreen_C_Scroll final
 public:
 	double                                        Offset;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetScrollOffset_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5641[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FMax_ReturnValue;                         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

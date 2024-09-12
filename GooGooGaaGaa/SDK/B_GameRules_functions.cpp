@@ -259,9 +259,9 @@ void UB_GameRules_C::ResetAll()
 // Function B_GameRules.B_GameRules_C.Save
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_GameRules_C::Save(const class FString& Param_Name)
+void UB_GameRules_C::Save(const class FString& Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -270,7 +270,7 @@ void UB_GameRules_C::Save(const class FString& Param_Name)
 
 	Params::B_GameRules_C_Save Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

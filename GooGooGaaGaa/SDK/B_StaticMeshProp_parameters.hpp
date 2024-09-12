@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SRuntimePropData_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EHighlightChannel_structs.hpp"
+#include "SRuntimePropData_structs.hpp"
 #include "S_PropVolumeCategory_structs.hpp"
+#include "EHighlightChannel_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -55,7 +55,7 @@ struct B_StaticMeshProp_C_ApplyTemplateData final
 public:
 	class AActor*                                 Template;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ForcedBoolean;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -178,12 +178,12 @@ static_assert(offsetof(B_StaticMeshProp_C_GetSplashSound, Sound) == 0x000000, "M
 struct B_StaticMeshProp_C_CanTeleport final
 {
 public:
-	bool                                          Param_CanTeleport;                                 // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTeleport_0;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_CanTeleport) == 0x000001, "Wrong alignment on B_StaticMeshProp_C_CanTeleport");
 static_assert(sizeof(B_StaticMeshProp_C_CanTeleport) == 0x000002, "Wrong size on B_StaticMeshProp_C_CanTeleport");
-static_assert(offsetof(B_StaticMeshProp_C_CanTeleport, Param_CanTeleport) == 0x000000, "Member 'B_StaticMeshProp_C_CanTeleport::Param_CanTeleport' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_CanTeleport, CanTeleport_0) == 0x000000, "Member 'B_StaticMeshProp_C_CanTeleport::CanTeleport_0' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_CanTeleport, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'B_StaticMeshProp_C_CanTeleport::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.SetHighlight
@@ -207,12 +207,12 @@ struct B_StaticMeshProp_C_RefreshHighlight final
 {
 public:
 	bool                                          Highlightable;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113E[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUserInterfaceHidden_UserInterfaceIsHidden; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -271,7 +271,7 @@ public:
 	double                                        TargetBoost;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ForcedBoolean;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_113F[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_Fly) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_Fly");
@@ -286,12 +286,12 @@ static_assert(offsetof(B_StaticMeshProp_C_Fly, CallFunc_Multiply_DoubleDouble_Re
 struct B_StaticMeshProp_C_SetRuntimeSpeedMultiplier final
 {
 public:
-	double                                        Param_RuntimeSpeedMultiplier;                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RuntimeSpeedMultiplier_0;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ForcedBoolean;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_SetRuntimeSpeedMultiplier) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_SetRuntimeSpeedMultiplier");
 static_assert(sizeof(B_StaticMeshProp_C_SetRuntimeSpeedMultiplier) == 0x000010, "Wrong size on B_StaticMeshProp_C_SetRuntimeSpeedMultiplier");
-static_assert(offsetof(B_StaticMeshProp_C_SetRuntimeSpeedMultiplier, Param_RuntimeSpeedMultiplier) == 0x000000, "Member 'B_StaticMeshProp_C_SetRuntimeSpeedMultiplier::Param_RuntimeSpeedMultiplier' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_SetRuntimeSpeedMultiplier, RuntimeSpeedMultiplier_0) == 0x000000, "Member 'B_StaticMeshProp_C_SetRuntimeSpeedMultiplier::RuntimeSpeedMultiplier_0' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_SetRuntimeSpeedMultiplier, ForcedBoolean) == 0x000008, "Member 'B_StaticMeshProp_C_SetRuntimeSpeedMultiplier::ForcedBoolean' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.SetWantedRotation
@@ -301,13 +301,13 @@ struct B_StaticMeshProp_C_SetWantedRotation final
 public:
 	struct FRotator                               WantedRotation;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ForcedBoolean;                                     // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1140[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               ClampedWantedRotation;                             // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1141[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -358,11 +358,11 @@ struct B_StaticMeshProp_C_Stop final
 {
 public:
 	bool                                          Start;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1142[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               WantedRotation;                                    // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ForcedOutput;                                      // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetWantedRotation_ForcedBoolean;          // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1143[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -370,7 +370,7 @@ public:
 	float                                         CallFunc_NormalizeAxis_ReturnValue_1;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1144[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	double                                        K2Node_VariableSet_StartYaw_ImplicitCast;          // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_StartPitch_ImplicitCast;        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -423,34 +423,31 @@ static_assert(offsetof(B_StaticMeshProp_C_Move, Vector) == 0x000000, "Member 'B_
 static_assert(offsetof(B_StaticMeshProp_C_Move, ForcedOutput) == 0x000018, "Member 'B_StaticMeshProp_C_Move::ForcedOutput' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetMaxHealth
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct B_StaticMeshProp_C_GetMaxHealth final
 {
 public:
-	double                                        Param_MaxHealth;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategory_PropVolumeCategory;     // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1145[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxHealth_0;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategory_PropVolumeCategory;     // 0x0008(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_GetMaxHealth) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_GetMaxHealth");
-static_assert(sizeof(B_StaticMeshProp_C_GetMaxHealth) == 0x000028, "Wrong size on B_StaticMeshProp_C_GetMaxHealth");
-static_assert(offsetof(B_StaticMeshProp_C_GetMaxHealth, Param_MaxHealth) == 0x000000, "Member 'B_StaticMeshProp_C_GetMaxHealth::Param_MaxHealth' has a wrong offset!");
+static_assert(sizeof(B_StaticMeshProp_C_GetMaxHealth) == 0x000030, "Wrong size on B_StaticMeshProp_C_GetMaxHealth");
+static_assert(offsetof(B_StaticMeshProp_C_GetMaxHealth, MaxHealth_0) == 0x000000, "Member 'B_StaticMeshProp_C_GetMaxHealth::MaxHealth_0' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_GetMaxHealth, CallFunc_GetVolumeCategory_PropVolumeCategory) == 0x000008, "Member 'B_StaticMeshProp_C_GetMaxHealth::CallFunc_GetVolumeCategory_PropVolumeCategory' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_GetMaxHealth, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'B_StaticMeshProp_C_GetMaxHealth::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_GetMaxHealth, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000020, "Member 'B_StaticMeshProp_C_GetMaxHealth::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_GetMaxHealth, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000028, "Member 'B_StaticMeshProp_C_GetMaxHealth::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetName
 // 0x0020 (0x0020 - 0x0000)
 struct B_StaticMeshProp_C_GetName final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_GetName) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_GetName");
 static_assert(sizeof(B_StaticMeshProp_C_GetName) == 0x000020, "Wrong size on B_StaticMeshProp_C_GetName");
-static_assert(offsetof(B_StaticMeshProp_C_GetName, Param_Name) == 0x000000, "Member 'B_StaticMeshProp_C_GetName::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_GetName, Name_0) == 0x000000, "Member 'B_StaticMeshProp_C_GetName::Name_0' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_GetName, CallFunc_Conv_TextToString_ReturnValue) == 0x000010, "Member 'B_StaticMeshProp_C_GetName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetCameraDistance
@@ -458,7 +455,7 @@ static_assert(offsetof(B_StaticMeshProp_C_GetName, CallFunc_Conv_TextToString_Re
 struct B_StaticMeshProp_C_GetCameraDistance final
 {
 public:
-	double                                        Param_CameraDistance;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CameraDistance_0;                                  // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -468,7 +465,7 @@ public:
 };
 static_assert(alignof(B_StaticMeshProp_C_GetCameraDistance) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_GetCameraDistance");
 static_assert(sizeof(B_StaticMeshProp_C_GetCameraDistance) == 0x000048, "Wrong size on B_StaticMeshProp_C_GetCameraDistance");
-static_assert(offsetof(B_StaticMeshProp_C_GetCameraDistance, Param_CameraDistance) == 0x000000, "Member 'B_StaticMeshProp_C_GetCameraDistance::Param_CameraDistance' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_GetCameraDistance, CameraDistance_0) == 0x000000, "Member 'B_StaticMeshProp_C_GetCameraDistance::CameraDistance_0' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_GetCameraDistance, CallFunc_GetActorScale3D_ReturnValue) == 0x000008, "Member 'B_StaticMeshProp_C_GetCameraDistance::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_GetCameraDistance, CallFunc_BreakVector_X) == 0x000020, "Member 'B_StaticMeshProp_C_GetCameraDistance::CallFunc_BreakVector_X' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_GetCameraDistance, CallFunc_BreakVector_Y) == 0x000028, "Member 'B_StaticMeshProp_C_GetCameraDistance::CallFunc_BreakVector_Y' has a wrong offset!");
@@ -523,16 +520,16 @@ static_assert(offsetof(B_StaticMeshProp_C_GetCenter, CallFunc_Add_VectorVector_R
 static_assert(offsetof(B_StaticMeshProp_C_GetCenter, CallFunc_Divide_VectorFloat_ReturnValue) == 0x000060, "Member 'B_StaticMeshProp_C_GetCenter::CallFunc_Divide_VectorFloat_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.OffsetPosition
-// 0x0B70 (0x0B70 - 0x0000)
+// 0x0BA0 (0x0BA0 - 0x0000)
 struct B_StaticMeshProp_C_OffsetPosition final
 {
 public:
 	class AActor*                                 Prop;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1146[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WantedSpawnTransform;                              // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         IgnoreActors;                                      // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ValidTransform;                                    // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1147[0xF];                                     // 0x0081(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0090(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         CurrentIgnoreActors;                               // 0x00F0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	struct FTransform                             CurrentWantedSpawnTransform;                       // 0x0100(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -544,7 +541,7 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1148[0x4];                                     // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x01B8(0x0010)(ConstParm, ReferenceParm)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_2;                          // 0x01C8(0x0010)(ConstParm, ReferenceParm)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -562,7 +559,7 @@ public:
 	struct FRotator                               CallFunc_BreakTransform_Rotation_2;                // 0x0328(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale_2;                   // 0x0340(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TransformTest_ValidTransform;             // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1149[0x7];                                     // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_TransformTest_Transform;                  // 0x0360(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location_3;                // 0x03C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation_3;                // 0x03D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -570,63 +567,63 @@ public:
 	struct FVector                                CallFunc_BreakTransform_Location_4;                // 0x0408(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation_4;                // 0x0420(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale_4;                   // 0x0438(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0450(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114A[0x7];                                     // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         Temp_object_Variable_2;                            // 0x0540(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114B[0x7];                                     // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0558(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_5;                // 0x0570(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_5;                // 0x0588(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_5;                   // 0x05A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_6;                // 0x05B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_6;                // 0x05D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_6;                   // 0x05E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0600(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TransformTest_ValidTransform_1;           // 0x0618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114C[0x7];                                     // 0x0619(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_TransformTest_Transform_1;                // 0x0620(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0680(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TransformTest_ValidTransform_2;           // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114D[0xF];                                     // 0x06E1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_TransformTest_Transform_2;                // 0x06F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_7;                // 0x0750(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_7;                // 0x0768(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_7;                   // 0x0780(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit_1;       // 0x0798(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue_1;  // 0x0880(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0881(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114E[0x6];                                     // 0x0882(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x0888(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetLocalBounds_Min;                       // 0x08A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetLocalBounds_Max;                       // 0x08B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x08D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x08E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x08F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x08F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Array_Get_Item;                           // 0x0900(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorFloat_ReturnValue;              // 0x0920(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue_1;                       // 0x0938(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x0940(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0958(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue_2;              // 0x0960(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TransformTest_ValidTransform_3;           // 0x09C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114F[0xF];                                     // 0x09C1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_TransformTest_Transform_3;                // 0x09D0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0A30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0A34(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1150[0x3];                                     // 0x0A35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location_8;                // 0x0A38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_8;                // 0x0A50(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_8;                   // 0x0A68(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit_2;       // 0x0A80(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue_2;  // 0x0B68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0B69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0450(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0548(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_549[0x7];                                      // 0x0549(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         Temp_object_Variable_2;                            // 0x0550(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0560(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0568(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_5;                // 0x0580(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_5;                // 0x0598(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_5;                   // 0x05B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_6;                // 0x05C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_6;                // 0x05E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_6;                   // 0x05F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0610(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TransformTest_ValidTransform_1;           // 0x0628(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_629[0x7];                                      // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_TransformTest_Transform_1;                // 0x0630(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0690(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TransformTest_ValidTransform_2;           // 0x06F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F1[0xF];                                      // 0x06F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_TransformTest_Transform_2;                // 0x0700(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location_7;                // 0x0760(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_7;                // 0x0778(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_7;                   // 0x0790(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit_1;       // 0x07A8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue_1;  // 0x08A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x08A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A2[0x6];                                      // 0x08A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x08A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetLocalBounds_Min;                       // 0x08C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetLocalBounds_Max;                       // 0x08D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x08F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0908(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Array_Get_Item;                           // 0x0920(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0938(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorFloat_ReturnValue;              // 0x0940(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue_1;                       // 0x0958(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x0960(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0978(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue_2;              // 0x0980(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TransformTest_ValidTransform_3;           // 0x09E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9E1[0xF];                                      // 0x09E1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_TransformTest_Transform_3;                // 0x09F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0A50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0A54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A55[0x3];                                      // 0x0A55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location_8;                // 0x0A58(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_8;                // 0x0A70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_8;                   // 0x0A88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit_2;       // 0x0AA0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue_2;  // 0x0B98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0B99(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_OffsetPosition) == 0x000010, "Wrong alignment on B_StaticMeshProp_C_OffsetPosition");
-static_assert(sizeof(B_StaticMeshProp_C_OffsetPosition) == 0x000B70, "Wrong size on B_StaticMeshProp_C_OffsetPosition");
+static_assert(sizeof(B_StaticMeshProp_C_OffsetPosition) == 0x000BA0, "Wrong size on B_StaticMeshProp_C_OffsetPosition");
 static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, Prop) == 0x000000, "Member 'B_StaticMeshProp_C_OffsetPosition::Prop' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, WantedSpawnTransform) == 0x000010, "Member 'B_StaticMeshProp_C_OffsetPosition::WantedSpawnTransform' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, IgnoreActors) == 0x000070, "Member 'B_StaticMeshProp_C_OffsetPosition::IgnoreActors' has a wrong offset!");
@@ -667,52 +664,63 @@ static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransfor
 static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_4) == 0x000420, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_4' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_4) == 0x000438, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_4' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000450, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000538, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, Temp_object_Variable_2) == 0x000540, "Member 'B_StaticMeshProp_C_OffsetPosition::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Not_PreBool_ReturnValue) == 0x000550, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_MakeVector_ReturnValue_1) == 0x000558, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_5) == 0x000570, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_5' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_5) == 0x000588, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_5' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_5) == 0x0005A0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_5' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_6) == 0x0005B8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_6' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_6) == 0x0005D0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_6' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_6) == 0x0005E8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_6' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000600, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_ValidTransform_1) == 0x000618, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_ValidTransform_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_Transform_1) == 0x000620, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_Transform_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_MakeTransform_ReturnValue_1) == 0x000680, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_ValidTransform_2) == 0x0006E0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_ValidTransform_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_Transform_2) == 0x0006F0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_Transform_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_7) == 0x000750, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_7' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_7) == 0x000768, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_7' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_7) == 0x000780, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_7' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_OutHit_1) == 0x000798, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_OutHit_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_ReturnValue_1) == 0x000880, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Not_PreBool_ReturnValue_1) == 0x000881, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_GetActorScale3D_ReturnValue) == 0x000888, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_GetLocalBounds_Min) == 0x0008A0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_GetLocalBounds_Min' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_GetLocalBounds_Max) == 0x0008B8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_GetLocalBounds_Max' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0008D0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakVector_X) == 0x0008E8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakVector_Y) == 0x0008F0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakVector_Z) == 0x0008F8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Array_Get_Item) == 0x000900, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_FMax_ReturnValue) == 0x000918, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Add_VectorFloat_ReturnValue) == 0x000920, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Add_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_FMax_ReturnValue_1) == 0x000938, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_FMax_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000940, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000958, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_MakeTransform_ReturnValue_2) == 0x000960, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_ValidTransform_3) == 0x0009C0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_ValidTransform_3' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_Transform_3) == 0x0009D0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_Transform_3' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Array_Length_ReturnValue) == 0x000A30, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Less_IntInt_ReturnValue) == 0x000A34, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_8) == 0x000A38, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_8' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_8) == 0x000A50, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_8' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_8) == 0x000A68, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_8' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_OutHit_2) == 0x000A80, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_OutHit_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_ReturnValue_2) == 0x000B68, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Not_PreBool_ReturnValue_2) == 0x000B69, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000548, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, Temp_object_Variable_2) == 0x000550, "Member 'B_StaticMeshProp_C_OffsetPosition::Temp_object_Variable_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Not_PreBool_ReturnValue) == 0x000560, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_MakeVector_ReturnValue_1) == 0x000568, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_5) == 0x000580, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_5' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_5) == 0x000598, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_5' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_5) == 0x0005B0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_5' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_6) == 0x0005C8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_6' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_6) == 0x0005E0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_6' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_6) == 0x0005F8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_6' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000610, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_ValidTransform_1) == 0x000628, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_ValidTransform_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_Transform_1) == 0x000630, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_Transform_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_MakeTransform_ReturnValue_1) == 0x000690, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_ValidTransform_2) == 0x0006F0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_ValidTransform_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_Transform_2) == 0x000700, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_Transform_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_7) == 0x000760, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_7' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_7) == 0x000778, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_7' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_7) == 0x000790, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_7' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_OutHit_1) == 0x0007A8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_OutHit_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_ReturnValue_1) == 0x0008A0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Not_PreBool_ReturnValue_1) == 0x0008A1, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_GetActorScale3D_ReturnValue) == 0x0008A8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_GetLocalBounds_Min) == 0x0008C0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_GetLocalBounds_Min' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_GetLocalBounds_Max) == 0x0008D8, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_GetLocalBounds_Max' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Multiply_VectorVector_ReturnValue) == 0x0008F0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakVector_X) == 0x000908, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakVector_Y) == 0x000910, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakVector_Z) == 0x000918, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Array_Get_Item) == 0x000920, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_FMax_ReturnValue) == 0x000938, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Add_VectorFloat_ReturnValue) == 0x000940, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Add_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_FMax_ReturnValue_1) == 0x000958, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_FMax_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000960, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000978, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_MakeTransform_ReturnValue_2) == 0x000980, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_ValidTransform_3) == 0x0009E0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_ValidTransform_3' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_TransformTest_Transform_3) == 0x0009F0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_TransformTest_Transform_3' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Array_Length_ReturnValue) == 0x000A50, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Less_IntInt_ReturnValue) == 0x000A54, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Location_8) == 0x000A58, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Location_8' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Rotation_8) == 0x000A70, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Rotation_8' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_BreakTransform_Scale_8) == 0x000A88, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_BreakTransform_Scale_8' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_OutHit_2) == 0x000AA0, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_OutHit_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_LineTraceSingleForObjects_ReturnValue_2) == 0x000B98, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_LineTraceSingleForObjects_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_OffsetPosition, CallFunc_Not_PreBool_ReturnValue_2) == 0x000B99, "Member 'B_StaticMeshProp_C_OffsetPosition::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+
+// Function B_StaticMeshProp.B_StaticMeshProp_C.SetPhysicsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct B_StaticMeshProp_C_SetPhysicsEnabled final
+{
+public:
+	bool                                          bIsEnabled;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_StaticMeshProp_C_SetPhysicsEnabled) == 0x000001, "Wrong alignment on B_StaticMeshProp_C_SetPhysicsEnabled");
+static_assert(sizeof(B_StaticMeshProp_C_SetPhysicsEnabled) == 0x000001, "Wrong size on B_StaticMeshProp_C_SetPhysicsEnabled");
+static_assert(offsetof(B_StaticMeshProp_C_SetPhysicsEnabled, bIsEnabled) == 0x000000, "Member 'B_StaticMeshProp_C_SetPhysicsEnabled::bIsEnabled' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.UpdateAfterPlayTestToggle
 // 0x0001 (0x0001 - 0x0000)
@@ -737,15 +745,24 @@ static_assert(sizeof(B_StaticMeshProp_C_UpdateMeshCollision) == 0x000001, "Wrong
 static_assert(offsetof(B_StaticMeshProp_C_UpdateMeshCollision, EnableCollision) == 0x000000, "Member 'B_StaticMeshProp_C_UpdateMeshCollision::EnableCollision' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.HandleWake
-// 0x0001 (0x0001 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct B_StaticMeshProp_C_HandleWake final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_StaticMeshProp_C_HandleWake) == 0x000001, "Wrong alignment on B_StaticMeshProp_C_HandleWake");
-static_assert(sizeof(B_StaticMeshProp_C_HandleWake) == 0x000001, "Wrong size on B_StaticMeshProp_C_HandleWake");
+static_assert(alignof(B_StaticMeshProp_C_HandleWake) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_HandleWake");
+static_assert(sizeof(B_StaticMeshProp_C_HandleWake) == 0x000020, "Wrong size on B_StaticMeshProp_C_HandleWake");
 static_assert(offsetof(B_StaticMeshProp_C_HandleWake, CallFunc_HasAuthority_ReturnValue) == 0x000000, "Member 'B_StaticMeshProp_C_HandleWake::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_HandleWake, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'B_StaticMeshProp_C_HandleWake::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_HandleWake, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'B_StaticMeshProp_C_HandleWake::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_HandleWake, K2Node_DynamicCast_AsB_Game_State) == 0x000010, "Member 'B_StaticMeshProp_C_HandleWake::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_HandleWake, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_StaticMeshProp_C_HandleWake::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.UpdateFadeAndVisualChildForPropPawnPhysics
 // 0x0048 (0x0048 - 0x0000)
@@ -756,13 +773,13 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1151[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1152[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1153[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -793,7 +810,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1154[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UNiagaraComponent*>              CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0028(0x0010)(ReferenceParm, ContainsInstancedReference)
 	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -801,16 +818,16 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Lerp_ReturnValue_1;                       // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1155[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UNiagaraComponent*>              CallFunc_K2_GetComponentsByClass_ReturnValue_1;    // 0x0060(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class UNiagaraComponent*                      CallFunc_Array_Get_Item_1;                         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1156[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1157[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UMeshComponent*>                 CallFunc_K2_GetComponentsByClass_ReturnValue_2;    // 0x00A0(0x0010)(ReferenceParm, ContainsInstancedReference)
@@ -819,7 +836,7 @@ public:
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1158[0x3];                                     // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -828,7 +845,7 @@ public:
 	class UMeshComponent*                         CallFunc_Array_Get_Item_3;                         // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1159[0x3];                                     // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast; // 0x0110(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScalarParameterValueOnMaterials_ParameterValue_ImplicitCast_1; // 0x0114(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -891,7 +908,7 @@ public:
 	class UMeshComponent*                         CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_115A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetLifeSpan_InLifespan_ImplicitCast;      // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -946,20 +963,19 @@ static_assert(offsetof(B_StaticMeshProp_C_GetVolume, CallFunc_Multiply_DoubleDou
 static_assert(offsetof(B_StaticMeshProp_C_GetVolume, CallFunc_Sqrt_ReturnValue) == 0x0000C0, "Member 'B_StaticMeshProp_C_GetVolume::CallFunc_Sqrt_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.GetVolumeCategory
-// 0x0028 (0x0028 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct B_StaticMeshProp_C_GetVolumeCategory final
 {
 public:
-	struct FS_PropVolumeCategory                  PropVolumeCategory;                                // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_115B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetVolume_Volume;                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory; // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_PropVolumeCategory                  PropVolumeCategory;                                // 0x0000(0x0020)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetVolume_Volume;                         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory; // 0x0028(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_GetVolumeCategory) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_GetVolumeCategory");
-static_assert(sizeof(B_StaticMeshProp_C_GetVolumeCategory) == 0x000028, "Wrong size on B_StaticMeshProp_C_GetVolumeCategory");
+static_assert(sizeof(B_StaticMeshProp_C_GetVolumeCategory) == 0x000048, "Wrong size on B_StaticMeshProp_C_GetVolumeCategory");
 static_assert(offsetof(B_StaticMeshProp_C_GetVolumeCategory, PropVolumeCategory) == 0x000000, "Member 'B_StaticMeshProp_C_GetVolumeCategory::PropVolumeCategory' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_GetVolumeCategory, CallFunc_GetVolume_Volume) == 0x000010, "Member 'B_StaticMeshProp_C_GetVolumeCategory::CallFunc_GetVolume_Volume' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_GetVolumeCategory, CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory) == 0x000018, "Member 'B_StaticMeshProp_C_GetVolumeCategory::CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_GetVolumeCategory, CallFunc_GetVolume_Volume) == 0x000020, "Member 'B_StaticMeshProp_C_GetVolumeCategory::CallFunc_GetVolume_Volume' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_GetVolumeCategory, CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory) == 0x000028, "Member 'B_StaticMeshProp_C_GetVolumeCategory::CallFunc_GetVolumeCategoryForStaticMesh_VolumeCategory' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.UpdateIntialSleep
 // 0x0080 (0x0080 - 0x0000)
@@ -967,7 +983,7 @@ struct B_StaticMeshProp_C_UpdateIntialSleep final
 {
 public:
 	bool                                          CallFunc_IsUsingPropReplicationOptimization_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_115C[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -978,20 +994,17 @@ static_assert(offsetof(B_StaticMeshProp_C_UpdateIntialSleep, CallFunc_GetTransfo
 static_assert(offsetof(B_StaticMeshProp_C_UpdateIntialSleep, CallFunc_Not_PreBool_ReturnValue) == 0x000070, "Member 'B_StaticMeshProp_C_UpdateIntialSleep::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.UpdateScaledSpeed
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct B_StaticMeshProp_C_UpdateScaledSpeed final
 {
 public:
-	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategory_PropVolumeCategory;     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_115D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_PropVolumeCategory                  CallFunc_GetVolumeCategory_PropVolumeCategory;     // 0x0000(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_UpdateScaledSpeed) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_UpdateScaledSpeed");
-static_assert(sizeof(B_StaticMeshProp_C_UpdateScaledSpeed) == 0x000020, "Wrong size on B_StaticMeshProp_C_UpdateScaledSpeed");
+static_assert(sizeof(B_StaticMeshProp_C_UpdateScaledSpeed) == 0x000028, "Wrong size on B_StaticMeshProp_C_UpdateScaledSpeed");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateScaledSpeed, CallFunc_GetVolumeCategory_PropVolumeCategory) == 0x000000, "Member 'B_StaticMeshProp_C_UpdateScaledSpeed::CallFunc_GetVolumeCategory_PropVolumeCategory' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_UpdateScaledSpeed, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'B_StaticMeshProp_C_UpdateScaledSpeed::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_UpdateScaledSpeed, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000018, "Member 'B_StaticMeshProp_C_UpdateScaledSpeed::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_UpdateScaledSpeed, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000020, "Member 'B_StaticMeshProp_C_UpdateScaledSpeed::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.UpdateFreezeStatus
 // 0x0020 (0x0020 - 0x0000)
@@ -999,29 +1012,29 @@ struct B_StaticMeshProp_C_UpdateFreezeStatus final
 {
 public:
 	bool                                          IgnorePhysicsSetting;                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_115E[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPhysicsEnabled_ReturnValue;             // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUsingPropReplicationOptimization_ReturnValue; // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsUsingPropReplicationOptimization_ReturnValue; // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_UpdateFreezeStatus) == 0x000008, "Wrong alignment on B_StaticMeshProp_C_UpdateFreezeStatus");
 static_assert(sizeof(B_StaticMeshProp_C_UpdateFreezeStatus) == 0x000020, "Wrong size on B_StaticMeshProp_C_UpdateFreezeStatus");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, IgnorePhysicsSetting) == 0x000000, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::IgnorePhysicsSetting' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_HasAuthority_ReturnValue) == 0x000001, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, K2Node_DynamicCast_AsB_Game_State) == 0x000010, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_IsPhysicsEnabled_ReturnValue) == 0x00001A, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_IsPhysicsEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_IsValid_ReturnValue_1) == 0x00001B, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_IsUsingPropReplicationOptimization_ReturnValue) == 0x00001C, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_IsUsingPropReplicationOptimization_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_BooleanOR_ReturnValue) == 0x00001D, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_IsUsingPropReplicationOptimization_ReturnValue) == 0x00001B, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_IsUsingPropReplicationOptimization_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_HasAuthority_ReturnValue) == 0x00001C, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_IsValid_ReturnValue_1) == 0x00001D, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_UpdateFreezeStatus, CallFunc_BooleanOR_ReturnValue) == 0x00001E, "Member 'B_StaticMeshProp_C_UpdateFreezeStatus::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.UpdateSleepWakeStatus
 // 0x0070 (0x0070 - 0x0000)
@@ -1029,7 +1042,7 @@ struct B_StaticMeshProp_C_UpdateSleepWakeStatus final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_115F[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_UpdateSleepWakeStatus) == 0x000010, "Wrong alignment on B_StaticMeshProp_C_UpdateSleepWakeStatus");
@@ -1057,7 +1070,7 @@ struct B_StaticMeshProp_C_SelectForEditing final
 public:
 	class APlayerState*                           EditingPlayerState;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          KeepOtherPropsSleep;                               // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1160[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_StaticMeshProp_C*>            Props;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RefreshHighlight_Highlightable;           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1111,15 +1124,15 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1161[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0090(0x0010)(ReferenceParm)
 	class UMaterialInterface*                     CallFunc_Array_Get_Item;                           // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1162[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x00B0(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1163[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_VisualIntepolator_C*                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -1170,7 +1183,7 @@ struct B_StaticMeshProp_C_HandleSleepServer final
 public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsingPropReplicationOptimization_ReturnValue; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1164[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1202,7 +1215,7 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1165[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1223,7 +1236,7 @@ public:
 	double                                        DeltaSeconds;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_NegateRotator_ReturnValue;                // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1166[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0100(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1233,7 +1246,7 @@ public:
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1167[0x4];                                     // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1304,12 +1317,12 @@ public:
 	TArray<class AActor*>                         IgnoreActors;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FTransform                             SpawnTransform;                                    // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ValidTransform;                                    // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1168[0xF];                                     // 0x0071(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0080(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1169[0x8];                                     // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ComponentEncroachesGeometry_ReturnValue;  // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1413,106 +1426,123 @@ static_assert(sizeof(B_StaticMeshProp_C_SetHighlightChannel) == 0x000001, "Wrong
 static_assert(offsetof(B_StaticMeshProp_C_SetHighlightChannel, Channel) == 0x000000, "Member 'B_StaticMeshProp_C_SetHighlightChannel::Channel' has a wrong offset!");
 
 // Function B_StaticMeshProp.B_StaticMeshProp_C.ExecuteUbergraph_B_StaticMeshProp
-// 0x0180 (0x0180 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116A[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_SleepingComponent;      // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_ComponentBoundEvent_BoneName_1;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_WakingComponent;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_ComponentBoundEvent_BoneName;               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               K2Node_CustomEvent_WantedRotation;                 // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116B[0xB];                                     // 0x0045(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0050(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116C[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116D[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116E[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_1;              // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_116F[0x6];                                     // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics_1;        // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EHighlightChannel                             K2Node_Event_Channel;                              // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue_3;               // 0x00F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x00F3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1170[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUsingPropReplicationOptimization_ReturnValue; // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1171[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0128(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1172[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool HasPlayTestStarted)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1173[0x7];                                     // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State_1;      // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1174[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_TickJump_Delta_Seconds_ImplicitCast;      // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_TickStop_DeltaSeconds_ImplicitCast;       // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_SleepingComponent;      // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_ComponentBoundEvent_BoneName_1;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_WakingComponent;        // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_ComponentBoundEvent_BoneName;               // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               K2Node_CustomEvent_WantedRotation;                 // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0090(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F2[0x6];                                       // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_1;              // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics_1;        // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHighlightChannel                             K2Node_Event_Channel;                              // 0x0133(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetHighlight_ForcedBoolean;               // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsUsingPropReplicationOptimization_ReturnValue; // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_152[0x6];                                      // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0158(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_3;               // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool HasPlayTestStarted)>      K2Node_CreateDelegate_OutputDelegate;              // 0x017C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State_1;      // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetCullDistance_NewCullDistance_ImplicitCast; // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_TickJump_Delta_Seconds_ImplicitCast;      // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_TickStop_DeltaSeconds_ImplicitCast;       // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp) == 0x000010, "Wrong alignment on B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp");
-static_assert(sizeof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp) == 0x000180, "Wrong size on B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp");
+static_assert(sizeof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp) == 0x0001E0, "Wrong size on B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp");
 static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, EntryPoint) == 0x000000, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue) == 0x000004, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_SleepingComponent) == 0x000008, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_SleepingComponent' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_BoneName_1) == 0x000010, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_BoneName_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_WakingComponent) == 0x000018, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_WakingComponent' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_BoneName) == 0x000020, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_BoneName' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_CustomEvent_WantedRotation) == 0x000028, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_CustomEvent_WantedRotation' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_Event_DeltaSeconds) == 0x000040, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue) == 0x000044, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetTransform_ReturnValue) == 0x000050, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsDedicatedServer_ReturnValue) == 0x0000B0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue_1) == 0x0000B1, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x0000B2, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue_2) == 0x0000B3, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetInstigator_ReturnValue) == 0x0000B8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_1) == 0x0000C0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Prop_Pawn_Physics) == 0x0000C8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Prop_Pawn_Physics' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetInstigator_ReturnValue_1) == 0x0000D8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetInstigator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_2) == 0x0000E0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_3) == 0x0000E1, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Prop_Pawn_Physics_1) == 0x0000E8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Prop_Pawn_Physics_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_1) == 0x0000F0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_Event_Channel) == 0x0000F1, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_Event_Channel' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue_3) == 0x0000F2, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_SetHighlight_ForcedBoolean) == 0x0000F3, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_SetHighlight_ForcedBoolean' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetActorScale3D_ReturnValue) == 0x0000F8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetGameState_ReturnValue) == 0x000110, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x000118, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_2) == 0x000120, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsUsingPropReplicationOptimization_ReturnValue) == 0x000121, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsUsingPropReplicationOptimization_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_K2_SetTimer_ReturnValue) == 0x000128, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_4) == 0x000130, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetGameState_ReturnValue_1) == 0x000138, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_CreateDelegate_OutputDelegate) == 0x000140, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Game_State) == 0x000150, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_3) == 0x000158, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Creative_Game_State_1) == 0x000160, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Creative_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_4) == 0x000168, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_TickJump_Delta_Seconds_ImplicitCast) == 0x000170, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_TickJump_Delta_Seconds_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_TickStop_DeltaSeconds_ImplicitCast) == 0x000178, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_TickStop_DeltaSeconds_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetComponentBounds_Origin) == 0x000008, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetComponentBounds_Origin' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetComponentBounds_BoxExtent) == 0x000020, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetComponentBounds_BoxExtent' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetComponentBounds_SphereRadius) == 0x000038, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetComponentBounds_SphereRadius' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000040, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_SleepingComponent) == 0x000048, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_SleepingComponent' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_BoneName_1) == 0x000050, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_BoneName_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_WakingComponent) == 0x000058, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_WakingComponent' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_ComponentBoundEvent_BoneName) == 0x000060, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_ComponentBoundEvent_BoneName' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue) == 0x000068, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_CustomEvent_WantedRotation) == 0x000070, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_CustomEvent_WantedRotation' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_Event_DeltaSeconds) == 0x000088, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue) == 0x00008C, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetTransform_ReturnValue) == 0x000090, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsDedicatedServer_ReturnValue) == 0x0000F0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue_1) == 0x0000F1, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetInstigator_ReturnValue) == 0x0000F8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetInstigator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_1) == 0x000100, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Prop_Pawn_Physics) == 0x000108, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Prop_Pawn_Physics' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess) == 0x000110, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetInstigator_ReturnValue_1) == 0x000118, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetInstigator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_2) == 0x000120, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Prop_Pawn_Physics_1) == 0x000128, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Prop_Pawn_Physics_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_1) == 0x000130, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue_2) == 0x000131, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_3) == 0x000132, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_Event_Channel) == 0x000133, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_Event_Channel' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_SetHighlight_ForcedBoolean) == 0x000134, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_SetHighlight_ForcedBoolean' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetActorScale3D_ReturnValue) == 0x000138, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000150, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsUsingPropReplicationOptimization_ReturnValue) == 0x000151, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsUsingPropReplicationOptimization_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_K2_SetTimer_ReturnValue) == 0x000158, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_HasAuthority_ReturnValue_3) == 0x000160, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_HasAuthority_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetGameState_ReturnValue) == 0x000168, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x000170, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_2) == 0x000178, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_CreateDelegate_OutputDelegate) == 0x00017C, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_IsValid_ReturnValue_4) == 0x00018C, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_GetGameState_ReturnValue_1) == 0x000190, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Game_State) == 0x000198, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_3) == 0x0001A0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_AsB_Creative_Game_State_1) == 0x0001A8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_AsB_Creative_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, K2Node_DynamicCast_bSuccess_4) == 0x0001B0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x0001B8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_SetCullDistance_NewCullDistance_ImplicitCast) == 0x0001C0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_SetCullDistance_NewCullDistance_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_TickJump_Delta_Seconds_ImplicitCast) == 0x0001C8, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_TickJump_Delta_Seconds_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp, CallFunc_TickStop_DeltaSeconds_ImplicitCast) == 0x0001D0, "Member 'B_StaticMeshProp_C_ExecuteUbergraph_B_StaticMeshProp::CallFunc_TickStop_DeltaSeconds_ImplicitCast' has a wrong offset!");
 
 }
 

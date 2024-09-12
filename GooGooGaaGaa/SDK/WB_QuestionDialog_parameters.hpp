@@ -12,8 +12,8 @@
 
 #include "SlateCore_structs.hpp"
 #include "E_QuestionAnswer_structs.hpp"
-#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,24 +52,24 @@ struct WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue_1;              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue_2;              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue_3;              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue_1;              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue_2;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue_3;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog) == 0x000004, "Wrong alignment on WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog");
 static_assert(sizeof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog) == 0x00000C, "Wrong size on WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog");
 static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, EntryPoint) == 0x000000, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue) == 0x000004, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000005, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue_1) == 0x000006, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue_2) == 0x000007, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000008, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000009, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue_3) == 0x00000A, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue_1) == 0x000005, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000006, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000007, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue_2) == 0x000008, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_GetVisibility_ReturnValue_3) == 0x000009, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_GetVisibility_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00000A, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00000B, "Member 'WB_QuestionDialog_C_ExecuteUbergraph_WB_QuestionDialog::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
 
 // Function WB_QuestionDialog.WB_QuestionDialog_C.GetInitialFocusWidget
@@ -95,7 +95,7 @@ public:
 	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0148(0x00B8)()
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0200(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DE1[0x7];                                     // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0220(0x00B8)()
 };
 static_assert(alignof(WB_QuestionDialog_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_QuestionDialog_C_OnPreviewKeyDown");
@@ -110,57 +110,57 @@ static_assert(offsetof(WB_QuestionDialog_C_OnPreviewKeyDown, CallFunc_EqualEqual
 static_assert(offsetof(WB_QuestionDialog_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000220, "Member 'WB_QuestionDialog_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 // Function WB_QuestionDialog.WB_QuestionDialog_C.SetData
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_QuestionDialog_C_SetData final
 {
 public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   Param_QuestionText;                                // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          OkButton;                                          // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          YesButton;                                         // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NoButton;                                          // 0x0032(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CancelButton;                                      // 0x0033(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_7;                              // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x003F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   QuestionText_0;                                    // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          OkButton;                                          // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          YesButton;                                         // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NoButton;                                          // 0x0022(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CancelButton;                                      // 0x0023(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_7;                              // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_QuestionDialog_C_SetData) == 0x000008, "Wrong alignment on WB_QuestionDialog_C_SetData");
-static_assert(sizeof(WB_QuestionDialog_C_SetData) == 0x000048, "Wrong size on WB_QuestionDialog_C_SetData");
+static_assert(sizeof(WB_QuestionDialog_C_SetData) == 0x000038, "Wrong size on WB_QuestionDialog_C_SetData");
 static_assert(offsetof(WB_QuestionDialog_C_SetData, Title) == 0x000000, "Member 'WB_QuestionDialog_C_SetData::Title' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Param_QuestionText) == 0x000018, "Member 'WB_QuestionDialog_C_SetData::Param_QuestionText' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, OkButton) == 0x000030, "Member 'WB_QuestionDialog_C_SetData::OkButton' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, YesButton) == 0x000031, "Member 'WB_QuestionDialog_C_SetData::YesButton' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, NoButton) == 0x000032, "Member 'WB_QuestionDialog_C_SetData::NoButton' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, CancelButton) == 0x000033, "Member 'WB_QuestionDialog_C_SetData::CancelButton' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable) == 0x000034, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable) == 0x000035, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_1) == 0x000036, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_2) == 0x000037, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable_1) == 0x000038, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_3) == 0x000039, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_4) == 0x00003A, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable_2) == 0x00003B, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_5) == 0x00003C, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_6) == 0x00003D, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_6' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_7) == 0x00003E, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_7' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default) == 0x00003F, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable_3) == 0x000040, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default_1) == 0x000041, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default_2) == 0x000042, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default_3) == 0x000043, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, QuestionText_0) == 0x000010, "Member 'WB_QuestionDialog_C_SetData::QuestionText_0' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, OkButton) == 0x000020, "Member 'WB_QuestionDialog_C_SetData::OkButton' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, YesButton) == 0x000021, "Member 'WB_QuestionDialog_C_SetData::YesButton' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, NoButton) == 0x000022, "Member 'WB_QuestionDialog_C_SetData::NoButton' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, CancelButton) == 0x000023, "Member 'WB_QuestionDialog_C_SetData::CancelButton' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable) == 0x000024, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable) == 0x000025, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_1) == 0x000026, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_2) == 0x000027, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable_1) == 0x000028, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_3) == 0x000029, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_4) == 0x00002A, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable_2) == 0x00002B, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_5) == 0x00002C, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_5' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_6) == 0x00002D, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_6' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_byte_Variable_7) == 0x00002E, "Member 'WB_QuestionDialog_C_SetData::Temp_byte_Variable_7' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default) == 0x00002F, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, Temp_bool_Variable_3) == 0x000030, "Member 'WB_QuestionDialog_C_SetData::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default_1) == 0x000031, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default_2) == 0x000032, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_QuestionDialog_C_SetData, K2Node_Select_Default_3) == 0x000033, "Member 'WB_QuestionDialog_C_SetData::K2Node_Select_Default_3' has a wrong offset!");
 
 }
 

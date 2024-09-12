@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,20 +20,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_RequiredPropIcon.WB_RequiredPropIcon_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_RequiredPropIcon_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Bling;                                             // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Border;                                            // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_0;                                         // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PropIcon;                                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SelectedBorder;                                    // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_ObjectiveCauldron_C*                 Cauldron;                                          // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWitchIsWantedProp;                                // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DF5[0x3];                                     // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            Color;                                             // 0x02FC(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Bling;                                             // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Border;                                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PropIcon;                                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SelectedBorder;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_ObjectiveCauldron_C*                 Cauldron;                                          // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWitchIsWantedProp;                                // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            Color;                                             // 0x031C(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	struct FSlateBrush Get_PropIcon_Brush_0();
@@ -54,16 +54,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_RequiredPropIcon_C) == 0x000008, "Wrong alignment on UWB_RequiredPropIcon_C");
-static_assert(sizeof(UWB_RequiredPropIcon_C) == 0x000310, "Wrong size on UWB_RequiredPropIcon_C");
-static_assert(offsetof(UWB_RequiredPropIcon_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_RequiredPropIcon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, Bling) == 0x0002C8, "Member 'UWB_RequiredPropIcon_C::Bling' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, Border) == 0x0002D0, "Member 'UWB_RequiredPropIcon_C::Border' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, Overlay_0) == 0x0002D8, "Member 'UWB_RequiredPropIcon_C::Overlay_0' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, PropIcon) == 0x0002E0, "Member 'UWB_RequiredPropIcon_C::PropIcon' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, SelectedBorder) == 0x0002E8, "Member 'UWB_RequiredPropIcon_C::SelectedBorder' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, Cauldron) == 0x0002F0, "Member 'UWB_RequiredPropIcon_C::Cauldron' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, bWitchIsWantedProp) == 0x0002F8, "Member 'UWB_RequiredPropIcon_C::bWitchIsWantedProp' has a wrong offset!");
-static_assert(offsetof(UWB_RequiredPropIcon_C, Color) == 0x0002FC, "Member 'UWB_RequiredPropIcon_C::Color' has a wrong offset!");
+static_assert(sizeof(UWB_RequiredPropIcon_C) == 0x000330, "Wrong size on UWB_RequiredPropIcon_C");
+static_assert(offsetof(UWB_RequiredPropIcon_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_RequiredPropIcon_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, Bling) == 0x0002E8, "Member 'UWB_RequiredPropIcon_C::Bling' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, Border) == 0x0002F0, "Member 'UWB_RequiredPropIcon_C::Border' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, Overlay_0) == 0x0002F8, "Member 'UWB_RequiredPropIcon_C::Overlay_0' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, PropIcon) == 0x000300, "Member 'UWB_RequiredPropIcon_C::PropIcon' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, SelectedBorder) == 0x000308, "Member 'UWB_RequiredPropIcon_C::SelectedBorder' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, Cauldron) == 0x000310, "Member 'UWB_RequiredPropIcon_C::Cauldron' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, bWitchIsWantedProp) == 0x000318, "Member 'UWB_RequiredPropIcon_C::bWitchIsWantedProp' has a wrong offset!");
+static_assert(offsetof(UWB_RequiredPropIcon_C, Color) == 0x00031C, "Member 'UWB_RequiredPropIcon_C::Color' has a wrong offset!");
 
 }
 

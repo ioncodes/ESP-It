@@ -10,73 +10,73 @@
 
 #include "Basic.hpp"
 
-#include "WB_ServerListBase_classes.hpp"
-#include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
-#include "EServerFilter_structs.hpp"
 #include "ESortMethod_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
+#include "Engine_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
+#include "EServerFilter_structs.hpp"
+#include "UMG_structs.hpp"
+#include "WB_ServerListBase_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_NewServerList.WB_NewServerList_C
-// 0x02A0 (0x0598 - 0x02F8)
+// 0x02A0 (0x05B8 - 0x0318)
 class UWB_NewServerList_C final : public UWB_ServerListBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        Button_Filter_All;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        Button_Filter_Creative;                            // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        Button_Filter_Custom;                              // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        Button_Filter_Official;                            // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DurationSortImage;                                 // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 GameModeSortImage;                                 // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             GameModeText;                                      // 0x0340(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   LeftShoulderIcon;                                  // 0x0348(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MapSortImage;                                      // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MapText;                                           // 0x0358(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             MatchTimeText;                                     // 0x0360(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PingSortImage;                                     // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             PingText;                                          // 0x0370(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PlayersSortImage;                                  // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             PlayersText;                                       // 0x0380(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Refresh;                                           // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   RightShoulderIcon;                                 // 0x0390(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircularThrobber*                      SearchThrobber;                                    // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ServerListScroll;                                  // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ServerSortImage;                                   // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ServerText;                                        // 0x03B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByGameModeButton;                              // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByMapButton;                                   // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByMatchTime;                                   // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByPingButton;                                  // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByPlayersButton;                               // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByServerButton;                                // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                SortByTournament;                                  // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Status;                                            // 0x03F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TournamentSortImage;                               // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TournamentText;                                    // 0x0400(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ServerRow_C*                        WB_ServerRow;                                      // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 StatusText;                                        // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          bRefreshButtonEnabeled;                            // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55F0[0x7];                                     // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintSessionResult>        FoundServers;                                      // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FSessionsSearchSetting>         CurrentSessionSearchSettings;                      // 0x0438(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	ESortMethod                                   SortMode;                                          // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReverseSort;                                       // 0x0449(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EServerFilter                                 CurrentFilter;                                     // 0x044A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55F1[0x5];                                     // 0x044B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWB_TabButton_C*>                FilterButtons;                                     // 0x0450(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	EBPServerPresenceSearchType                   TempSearchType;                                    // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_55F2[0x7];                                     // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlueprintSessionResult                TempCurrentServer;                                 // 0x0468(0x0120)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWB_ServerRow_C*                        NewServerTemp;                                     // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSearch*                   SessionSearch;                                     // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        Button_Filter_All;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        Button_Filter_Creative;                            // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        Button_Filter_Custom;                              // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        Button_Filter_Official;                            // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DurationSortImage;                                 // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GameModeSortImage;                                 // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             GameModeText;                                      // 0x0360(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   LeftShoulderIcon;                                  // 0x0368(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MapSortImage;                                      // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MapText;                                           // 0x0378(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             MatchTimeText;                                     // 0x0380(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PingSortImage;                                     // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             PingText;                                          // 0x0390(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PlayersSortImage;                                  // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             PlayersText;                                       // 0x03A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Refresh;                                           // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   RightShoulderIcon;                                 // 0x03B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircularThrobber*                      SearchThrobber;                                    // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ServerListScroll;                                  // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ServerSortImage;                                   // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ServerText;                                        // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByGameModeButton;                              // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByMapButton;                                   // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByMatchTime;                                   // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByPingButton;                                  // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByPlayersButton;                               // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByServerButton;                                // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                SortByTournament;                                  // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Status;                                            // 0x0410(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TournamentSortImage;                               // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TournamentText;                                    // 0x0420(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ServerRow_C*                        WB_ServerRow;                                      // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 StatusText;                                        // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          bRefreshButtonEnabeled;                            // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintSessionResult>        FoundServers;                                      // 0x0448(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FSessionsSearchSetting>         CurrentSessionSearchSettings;                      // 0x0458(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	ESortMethod                                   SortMode;                                          // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReverseSort;                                       // 0x0469(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EServerFilter                                 CurrentFilter;                                     // 0x046A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B[0x5];                                      // 0x046B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWB_TabButton_C*>                FilterButtons;                                     // 0x0470(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	EBPServerPresenceSearchType                   TempSearchType;                                    // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlueprintSessionResult                TempCurrentServer;                                 // 0x0488(0x0120)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWB_ServerRow_C*                        NewServerTemp;                                     // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSearch*                   SessionSearch;                                     // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddServerRow(const struct FBlueprintSessionResult& SearchResult, bool IsCustom, bool UserGeneratedContent, class UWB_ServerRow_C** ServerWidget);
@@ -118,7 +118,7 @@ public:
 	ESlateVisibility GetControllerIconVisibility();
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	class FText GetStatusMessage();
-	void GetStatusMessageVisibility(ESlateVisibility* Param_Visibility);
+	void GetStatusMessageVisibility(ESlateVisibility* Visibility_0);
 	void HandleServerFound(const struct FBlueprintSessionResult& CurrentServer, class UWB_ServerRow_C** ServerWidget);
 	void HandleServersFound(TArray<struct FBlueprintSessionResult>& Servers);
 	void NextFilter(int32 Direction);
@@ -154,54 +154,54 @@ public:
 	}
 };
 static_assert(alignof(UWB_NewServerList_C) == 0x000008, "Wrong alignment on UWB_NewServerList_C");
-static_assert(sizeof(UWB_NewServerList_C) == 0x000598, "Wrong size on UWB_NewServerList_C");
-static_assert(offsetof(UWB_NewServerList_C, UberGraphFrame) == 0x0002F8, "Member 'UWB_NewServerList_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Back) == 0x000300, "Member 'UWB_NewServerList_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Button_Filter_All) == 0x000308, "Member 'UWB_NewServerList_C::Button_Filter_All' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Button_Filter_Creative) == 0x000310, "Member 'UWB_NewServerList_C::Button_Filter_Creative' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Button_Filter_Custom) == 0x000318, "Member 'UWB_NewServerList_C::Button_Filter_Custom' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Button_Filter_Official) == 0x000320, "Member 'UWB_NewServerList_C::Button_Filter_Official' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, CanvasPanel_0) == 0x000328, "Member 'UWB_NewServerList_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, DurationSortImage) == 0x000330, "Member 'UWB_NewServerList_C::DurationSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, GameModeSortImage) == 0x000338, "Member 'UWB_NewServerList_C::GameModeSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, GameModeText) == 0x000340, "Member 'UWB_NewServerList_C::GameModeText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, LeftShoulderIcon) == 0x000348, "Member 'UWB_NewServerList_C::LeftShoulderIcon' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, MapSortImage) == 0x000350, "Member 'UWB_NewServerList_C::MapSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, MapText) == 0x000358, "Member 'UWB_NewServerList_C::MapText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, MatchTimeText) == 0x000360, "Member 'UWB_NewServerList_C::MatchTimeText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, PingSortImage) == 0x000368, "Member 'UWB_NewServerList_C::PingSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, PingText) == 0x000370, "Member 'UWB_NewServerList_C::PingText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, PlayersSortImage) == 0x000378, "Member 'UWB_NewServerList_C::PlayersSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, PlayersText) == 0x000380, "Member 'UWB_NewServerList_C::PlayersText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Refresh) == 0x000388, "Member 'UWB_NewServerList_C::Refresh' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, RightShoulderIcon) == 0x000390, "Member 'UWB_NewServerList_C::RightShoulderIcon' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SearchThrobber) == 0x000398, "Member 'UWB_NewServerList_C::SearchThrobber' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, ServerListScroll) == 0x0003A0, "Member 'UWB_NewServerList_C::ServerListScroll' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, ServerSortImage) == 0x0003A8, "Member 'UWB_NewServerList_C::ServerSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, ServerText) == 0x0003B0, "Member 'UWB_NewServerList_C::ServerText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByGameModeButton) == 0x0003B8, "Member 'UWB_NewServerList_C::SortByGameModeButton' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByMapButton) == 0x0003C0, "Member 'UWB_NewServerList_C::SortByMapButton' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByMatchTime) == 0x0003C8, "Member 'UWB_NewServerList_C::SortByMatchTime' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByPingButton) == 0x0003D0, "Member 'UWB_NewServerList_C::SortByPingButton' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByPlayersButton) == 0x0003D8, "Member 'UWB_NewServerList_C::SortByPlayersButton' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByServerButton) == 0x0003E0, "Member 'UWB_NewServerList_C::SortByServerButton' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortByTournament) == 0x0003E8, "Member 'UWB_NewServerList_C::SortByTournament' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, Status) == 0x0003F0, "Member 'UWB_NewServerList_C::Status' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, TournamentSortImage) == 0x0003F8, "Member 'UWB_NewServerList_C::TournamentSortImage' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, TournamentText) == 0x000400, "Member 'UWB_NewServerList_C::TournamentText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, WB_ServerRow) == 0x000408, "Member 'UWB_NewServerList_C::WB_ServerRow' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, StatusText) == 0x000410, "Member 'UWB_NewServerList_C::StatusText' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, bRefreshButtonEnabeled) == 0x000420, "Member 'UWB_NewServerList_C::bRefreshButtonEnabeled' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, FoundServers) == 0x000428, "Member 'UWB_NewServerList_C::FoundServers' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, CurrentSessionSearchSettings) == 0x000438, "Member 'UWB_NewServerList_C::CurrentSessionSearchSettings' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SortMode) == 0x000448, "Member 'UWB_NewServerList_C::SortMode' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, ReverseSort) == 0x000449, "Member 'UWB_NewServerList_C::ReverseSort' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, CurrentFilter) == 0x00044A, "Member 'UWB_NewServerList_C::CurrentFilter' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, FilterButtons) == 0x000450, "Member 'UWB_NewServerList_C::FilterButtons' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, TempSearchType) == 0x000460, "Member 'UWB_NewServerList_C::TempSearchType' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, TempCurrentServer) == 0x000468, "Member 'UWB_NewServerList_C::TempCurrentServer' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, NewServerTemp) == 0x000588, "Member 'UWB_NewServerList_C::NewServerTemp' has a wrong offset!");
-static_assert(offsetof(UWB_NewServerList_C, SessionSearch) == 0x000590, "Member 'UWB_NewServerList_C::SessionSearch' has a wrong offset!");
+static_assert(sizeof(UWB_NewServerList_C) == 0x0005B8, "Wrong size on UWB_NewServerList_C");
+static_assert(offsetof(UWB_NewServerList_C, UberGraphFrame) == 0x000318, "Member 'UWB_NewServerList_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Back) == 0x000320, "Member 'UWB_NewServerList_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Button_Filter_All) == 0x000328, "Member 'UWB_NewServerList_C::Button_Filter_All' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Button_Filter_Creative) == 0x000330, "Member 'UWB_NewServerList_C::Button_Filter_Creative' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Button_Filter_Custom) == 0x000338, "Member 'UWB_NewServerList_C::Button_Filter_Custom' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Button_Filter_Official) == 0x000340, "Member 'UWB_NewServerList_C::Button_Filter_Official' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, CanvasPanel_0) == 0x000348, "Member 'UWB_NewServerList_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, DurationSortImage) == 0x000350, "Member 'UWB_NewServerList_C::DurationSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, GameModeSortImage) == 0x000358, "Member 'UWB_NewServerList_C::GameModeSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, GameModeText) == 0x000360, "Member 'UWB_NewServerList_C::GameModeText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, LeftShoulderIcon) == 0x000368, "Member 'UWB_NewServerList_C::LeftShoulderIcon' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, MapSortImage) == 0x000370, "Member 'UWB_NewServerList_C::MapSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, MapText) == 0x000378, "Member 'UWB_NewServerList_C::MapText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, MatchTimeText) == 0x000380, "Member 'UWB_NewServerList_C::MatchTimeText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, PingSortImage) == 0x000388, "Member 'UWB_NewServerList_C::PingSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, PingText) == 0x000390, "Member 'UWB_NewServerList_C::PingText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, PlayersSortImage) == 0x000398, "Member 'UWB_NewServerList_C::PlayersSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, PlayersText) == 0x0003A0, "Member 'UWB_NewServerList_C::PlayersText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Refresh) == 0x0003A8, "Member 'UWB_NewServerList_C::Refresh' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, RightShoulderIcon) == 0x0003B0, "Member 'UWB_NewServerList_C::RightShoulderIcon' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SearchThrobber) == 0x0003B8, "Member 'UWB_NewServerList_C::SearchThrobber' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, ServerListScroll) == 0x0003C0, "Member 'UWB_NewServerList_C::ServerListScroll' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, ServerSortImage) == 0x0003C8, "Member 'UWB_NewServerList_C::ServerSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, ServerText) == 0x0003D0, "Member 'UWB_NewServerList_C::ServerText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByGameModeButton) == 0x0003D8, "Member 'UWB_NewServerList_C::SortByGameModeButton' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByMapButton) == 0x0003E0, "Member 'UWB_NewServerList_C::SortByMapButton' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByMatchTime) == 0x0003E8, "Member 'UWB_NewServerList_C::SortByMatchTime' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByPingButton) == 0x0003F0, "Member 'UWB_NewServerList_C::SortByPingButton' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByPlayersButton) == 0x0003F8, "Member 'UWB_NewServerList_C::SortByPlayersButton' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByServerButton) == 0x000400, "Member 'UWB_NewServerList_C::SortByServerButton' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortByTournament) == 0x000408, "Member 'UWB_NewServerList_C::SortByTournament' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, Status) == 0x000410, "Member 'UWB_NewServerList_C::Status' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, TournamentSortImage) == 0x000418, "Member 'UWB_NewServerList_C::TournamentSortImage' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, TournamentText) == 0x000420, "Member 'UWB_NewServerList_C::TournamentText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, WB_ServerRow) == 0x000428, "Member 'UWB_NewServerList_C::WB_ServerRow' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, StatusText) == 0x000430, "Member 'UWB_NewServerList_C::StatusText' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, bRefreshButtonEnabeled) == 0x000440, "Member 'UWB_NewServerList_C::bRefreshButtonEnabeled' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, FoundServers) == 0x000448, "Member 'UWB_NewServerList_C::FoundServers' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, CurrentSessionSearchSettings) == 0x000458, "Member 'UWB_NewServerList_C::CurrentSessionSearchSettings' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SortMode) == 0x000468, "Member 'UWB_NewServerList_C::SortMode' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, ReverseSort) == 0x000469, "Member 'UWB_NewServerList_C::ReverseSort' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, CurrentFilter) == 0x00046A, "Member 'UWB_NewServerList_C::CurrentFilter' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, FilterButtons) == 0x000470, "Member 'UWB_NewServerList_C::FilterButtons' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, TempSearchType) == 0x000480, "Member 'UWB_NewServerList_C::TempSearchType' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, TempCurrentServer) == 0x000488, "Member 'UWB_NewServerList_C::TempCurrentServer' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, NewServerTemp) == 0x0005A8, "Member 'UWB_NewServerList_C::NewServerTemp' has a wrong offset!");
+static_assert(offsetof(UWB_NewServerList_C, SessionSearch) == 0x0005B0, "Member 'UWB_NewServerList_C::SessionSearch' has a wrong offset!");
 
 }
 

@@ -119,9 +119,9 @@ void UWB_MaterialListPopup_C::GetTileView(class UTileView** TileView)
 // Function WB_MaterialListPopup.WB_MaterialListPopup_C.UpdateDataByButton
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWB_MaterialButton_C*             Param_StartMaterialButton                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWB_MaterialButton_C*             StartMaterialButton_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MaterialListPopup_C::UpdateDataByButton(class UWB_MaterialButton_C* Param_StartMaterialButton)
+void UWB_MaterialListPopup_C::UpdateDataByButton(class UWB_MaterialButton_C* StartMaterialButton_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -130,7 +130,7 @@ void UWB_MaterialListPopup_C::UpdateDataByButton(class UWB_MaterialButton_C* Par
 
 	Params::WB_MaterialListPopup_C_UpdateDataByButton Parms{};
 
-	Parms.Param_StartMaterialButton = Param_StartMaterialButton;
+	Parms.StartMaterialButton_0 = StartMaterialButton_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

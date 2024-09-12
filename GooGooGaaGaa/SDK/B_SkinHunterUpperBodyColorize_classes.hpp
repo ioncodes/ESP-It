@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinHunterUpperBodyColorize.B_SkinHunterUpperBodyColorize_C
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x02C8 - 0x02C8)
 class AB_SkinHunterUpperBodyColorize_C final : public AB_SkinHunterUpperBodyBase_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinHunterUpperBodyColorize_C) == 0x000008, "Wrong alignment on AB_SkinHunterUpperBodyColorize_C");
-static_assert(sizeof(AB_SkinHunterUpperBodyColorize_C) == 0x0002D0, "Wrong size on AB_SkinHunterUpperBodyColorize_C");
+static_assert(sizeof(AB_SkinHunterUpperBodyColorize_C) == 0x0002C8, "Wrong size on AB_SkinHunterUpperBodyColorize_C");
 
 }
 

@@ -156,6 +156,33 @@ void UB_SkillParametersSubsystem_C::GetDefaultSkillParameterValue(E_SkillRuleTyp
 }
 
 
+// Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetDefaultSkillParameterValues
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FUIParameterData>         UIParameters                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// E_SkillRuleType                         SkillType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FUIParam>                 ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+TArray<struct FUIParam> UB_SkillParametersSubsystem_C::GetDefaultSkillParameterValues(TArray<struct FUIParameterData>& UIParameters, E_SkillRuleType SkillType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SkillParametersSubsystem_C", "GetDefaultSkillParameterValues");
+
+	Params::B_SkillParametersSubsystem_C_GetDefaultSkillParameterValues Parms{};
+
+	Parms.UIParameters = std::move(UIParameters);
+	Parms.SkillType = SkillType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	UIParameters = std::move(Parms.UIParameters);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.GetFloatValueByName
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -356,7 +383,7 @@ void UB_SkillParametersSubsystem_C::IsUsingCustomRules(bool* CustomRules)
 // Function B_SkillParametersSubsystem.B_SkillParametersSubsystem_C.SpawnProjectileSkill
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESpawnActorCollisionHandlingMethod      CollisionHandlingOverride                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -365,7 +392,7 @@ void UB_SkillParametersSubsystem_C::IsUsingCustomRules(bool* CustomRules)
 // double                                  ProjectileSpread                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-TArray<class AActor*> UB_SkillParametersSubsystem_C::SpawnProjectileSkill(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, int32 NumberOfProjectiles, double ProjectileSpread)
+TArray<class AActor*> UB_SkillParametersSubsystem_C::SpawnProjectileSkill(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, int32 NumberOfProjectiles, double ProjectileSpread)
 {
 	static class UFunction* Func = nullptr;
 
@@ -374,7 +401,7 @@ TArray<class AActor*> UB_SkillParametersSubsystem_C::SpawnProjectileSkill(class 
 
 	Params::B_SkillParametersSubsystem_C_SpawnProjectileSkill Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.SpawnTransform = std::move(SpawnTransform);
 	Parms.CollisionHandlingOverride = CollisionHandlingOverride;
 	Parms.Owner = Owner;

@@ -20,7 +20,7 @@ struct WB_StructureTooltip_C_ExecuteUbergraph_WB_StructureTooltip final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C70[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_PlaceableActor_C*                   K2Node_DynamicCast_AsBP_Placeable_Actor;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -33,25 +33,25 @@ static_assert(offsetof(WB_StructureTooltip_C_ExecuteUbergraph_WB_StructureToolti
 static_assert(offsetof(WB_StructureTooltip_C_ExecuteUbergraph_WB_StructureTooltip, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_StructureTooltip_C_ExecuteUbergraph_WB_StructureTooltip::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_StructureTooltip.WB_StructureTooltip_C.Get_Description_Text_0
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_StructureTooltip_C_Get_Description_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
 static_assert(alignof(WB_StructureTooltip_C_Get_Description_Text_0) == 0x000008, "Wrong alignment on WB_StructureTooltip_C_Get_Description_Text_0");
-static_assert(sizeof(WB_StructureTooltip_C_Get_Description_Text_0) == 0x000018, "Wrong size on WB_StructureTooltip_C_Get_Description_Text_0");
+static_assert(sizeof(WB_StructureTooltip_C_Get_Description_Text_0) == 0x000010, "Wrong size on WB_StructureTooltip_C_Get_Description_Text_0");
 static_assert(offsetof(WB_StructureTooltip_C_Get_Description_Text_0, ReturnValue) == 0x000000, "Member 'WB_StructureTooltip_C_Get_Description_Text_0::ReturnValue' has a wrong offset!");
 
 // Function WB_StructureTooltip.WB_StructureTooltip_C.Get_Name_Text_0
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_StructureTooltip_C_Get_Name_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
 static_assert(alignof(WB_StructureTooltip_C_Get_Name_Text_0) == 0x000008, "Wrong alignment on WB_StructureTooltip_C_Get_Name_Text_0");
-static_assert(sizeof(WB_StructureTooltip_C_Get_Name_Text_0) == 0x000018, "Wrong size on WB_StructureTooltip_C_Get_Name_Text_0");
+static_assert(sizeof(WB_StructureTooltip_C_Get_Name_Text_0) == 0x000010, "Wrong size on WB_StructureTooltip_C_Get_Name_Text_0");
 static_assert(offsetof(WB_StructureTooltip_C_Get_Name_Text_0, ReturnValue) == 0x000000, "Member 'WB_StructureTooltip_C_Get_Name_Text_0::ReturnValue' has a wrong offset!");
 
 }

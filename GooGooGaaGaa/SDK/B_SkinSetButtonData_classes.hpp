@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinSetButtonData.B_SkinSetButtonData_C
-// 0x0028 (0x0168 - 0x0140)
+// 0x0020 (0x0148 - 0x0128)
 class UB_SkinSetButtonData_C final : public UB_SkinOrRecipeItemData_C
 {
 public:
-	struct FS_ItemSetInfo                         ItemSetInfo;                                       // 0x0140(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FS_ItemSetInfo                         ItemSetInfo;                                       // 0x0128(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Compare(class UB_TileViewData_C* TargetData, bool* IsMatch);
@@ -38,8 +38,8 @@ public:
 	}
 };
 static_assert(alignof(UB_SkinSetButtonData_C) == 0x000008, "Wrong alignment on UB_SkinSetButtonData_C");
-static_assert(sizeof(UB_SkinSetButtonData_C) == 0x000168, "Wrong size on UB_SkinSetButtonData_C");
-static_assert(offsetof(UB_SkinSetButtonData_C, ItemSetInfo) == 0x000140, "Member 'UB_SkinSetButtonData_C::ItemSetInfo' has a wrong offset!");
+static_assert(sizeof(UB_SkinSetButtonData_C) == 0x000148, "Wrong size on UB_SkinSetButtonData_C");
+static_assert(offsetof(UB_SkinSetButtonData_C, ItemSetInfo) == 0x000128, "Member 'UB_SkinSetButtonData_C::ItemSetInfo' has a wrong offset!");
 
 }
 

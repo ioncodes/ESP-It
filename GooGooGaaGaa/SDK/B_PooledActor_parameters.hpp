@@ -10,63 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function B_PooledActor.B_PooledActor_C.TearDown
-// 0x0018 (0x0018 - 0x0000)
-struct B_PooledActor_C_TearDown final
-{
-public:
-	float                                         CallFunc_NegateFloat_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5900[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_NegateFloat_A_ImplicitCast;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5901[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_CurrentLifeTime_ImplicitCast;   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_PooledActor_C_TearDown) == 0x000008, "Wrong alignment on B_PooledActor_C_TearDown");
-static_assert(sizeof(B_PooledActor_C_TearDown) == 0x000018, "Wrong size on B_PooledActor_C_TearDown");
-static_assert(offsetof(B_PooledActor_C_TearDown, CallFunc_NegateFloat_ReturnValue) == 0x000000, "Member 'B_PooledActor_C_TearDown::CallFunc_NegateFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearDown, CallFunc_HasAuthority_ReturnValue) == 0x000004, "Member 'B_PooledActor_C_TearDown::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearDown, CallFunc_NegateFloat_A_ImplicitCast) == 0x000008, "Member 'B_PooledActor_C_TearDown::CallFunc_NegateFloat_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearDown, K2Node_VariableSet_CurrentLifeTime_ImplicitCast) == 0x000010, "Member 'B_PooledActor_C_TearDown::K2Node_VariableSet_CurrentLifeTime_ImplicitCast' has a wrong offset!");
-
-// Function B_PooledActor.B_PooledActor_C.TearUp
-// 0x0080 (0x0080 - 0x0000)
-struct B_PooledActor_C_TearUp final
-{
-public:
-	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_PooledActor_C_TearUp) == 0x000010, "Wrong alignment on B_PooledActor_C_TearUp");
-static_assert(sizeof(B_PooledActor_C_TearUp) == 0x000080, "Wrong size on B_PooledActor_C_TearUp");
-static_assert(offsetof(B_PooledActor_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_PooledActor_C_TearUp::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUp, Param_Owner) == 0x000060, "Member 'B_PooledActor_C_TearUp::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUp, Param_Instigator) == 0x000068, "Member 'B_PooledActor_C_TearUp::Param_Instigator' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUp, CallFunc_HasAuthority_ReturnValue) == 0x000070, "Member 'B_PooledActor_C_TearUp::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-
-// Function B_PooledActor.B_PooledActor_C.TearUpPoolObject
-// 0x0070 (0x0070 - 0x0000)
-struct B_PooledActor_C_TearUpPoolObject final
-{
-public:
-	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_PooledActor_C_TearUpPoolObject) == 0x000010, "Wrong alignment on B_PooledActor_C_TearUpPoolObject");
-static_assert(sizeof(B_PooledActor_C_TearUpPoolObject) == 0x000070, "Wrong size on B_PooledActor_C_TearUpPoolObject");
-static_assert(offsetof(B_PooledActor_C_TearUpPoolObject, SpawnTransform) == 0x000000, "Member 'B_PooledActor_C_TearUpPoolObject::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUpPoolObject, Param_Owner) == 0x000060, "Member 'B_PooledActor_C_TearUpPoolObject::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUpPoolObject, Param_Instigator) == 0x000068, "Member 'B_PooledActor_C_TearUpPoolObject::Param_Instigator' has a wrong offset!");
 
 // Function B_PooledActor.B_PooledActor_C.ExecuteUbergraph_B_PooledActor
 // 0x0120 (0x0120 - 0x0000)
@@ -75,10 +24,10 @@ struct B_PooledActor_C_ExecuteUbergraph_B_PooledActor final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5902[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5903[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             K2Node_Event_SpawnTransform;                       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_Owner;                                // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  K2Node_Event_Instigator;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -109,7 +58,7 @@ struct B_PooledActor_C_IncrementLifeTime final
 {
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5904[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -119,20 +68,71 @@ static_assert(offsetof(B_PooledActor_C_IncrementLifeTime, CallFunc_HasAuthority_
 static_assert(offsetof(B_PooledActor_C_IncrementLifeTime, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000008, "Member 'B_PooledActor_C_IncrementLifeTime::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_PooledActor_C_IncrementLifeTime, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000010, "Member 'B_PooledActor_C_IncrementLifeTime::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 
+// Function B_PooledActor.B_PooledActor_C.TearDown
+// 0x0018 (0x0018 - 0x0000)
+struct B_PooledActor_C_TearDown final
+{
+public:
+	float                                         CallFunc_NegateFloat_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_NegateFloat_A_ImplicitCast;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_CurrentLifeTime_ImplicitCast;   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_PooledActor_C_TearDown) == 0x000008, "Wrong alignment on B_PooledActor_C_TearDown");
+static_assert(sizeof(B_PooledActor_C_TearDown) == 0x000018, "Wrong size on B_PooledActor_C_TearDown");
+static_assert(offsetof(B_PooledActor_C_TearDown, CallFunc_NegateFloat_ReturnValue) == 0x000000, "Member 'B_PooledActor_C_TearDown::CallFunc_NegateFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearDown, CallFunc_HasAuthority_ReturnValue) == 0x000004, "Member 'B_PooledActor_C_TearDown::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearDown, CallFunc_NegateFloat_A_ImplicitCast) == 0x000008, "Member 'B_PooledActor_C_TearDown::CallFunc_NegateFloat_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearDown, K2Node_VariableSet_CurrentLifeTime_ImplicitCast) == 0x000010, "Member 'B_PooledActor_C_TearDown::K2Node_VariableSet_CurrentLifeTime_ImplicitCast' has a wrong offset!");
+
+// Function B_PooledActor.B_PooledActor_C.TearUp
+// 0x0080 (0x0080 - 0x0000)
+struct B_PooledActor_C_TearUp final
+{
+public:
+	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_PooledActor_C_TearUp) == 0x000010, "Wrong alignment on B_PooledActor_C_TearUp");
+static_assert(sizeof(B_PooledActor_C_TearUp) == 0x000080, "Wrong size on B_PooledActor_C_TearUp");
+static_assert(offsetof(B_PooledActor_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_PooledActor_C_TearUp::SpawnTransform' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUp, Owner_0) == 0x000060, "Member 'B_PooledActor_C_TearUp::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUp, Instigator_0) == 0x000068, "Member 'B_PooledActor_C_TearUp::Instigator_0' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUp, CallFunc_HasAuthority_ReturnValue) == 0x000070, "Member 'B_PooledActor_C_TearUp::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+
 // Function B_PooledActor.B_PooledActor_C.TearUpMulticast
 // 0x0070 (0x0070 - 0x0000)
 struct B_PooledActor_C_TearUpMulticast final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PooledActor_C_TearUpMulticast) == 0x000010, "Wrong alignment on B_PooledActor_C_TearUpMulticast");
 static_assert(sizeof(B_PooledActor_C_TearUpMulticast) == 0x000070, "Wrong size on B_PooledActor_C_TearUpMulticast");
 static_assert(offsetof(B_PooledActor_C_TearUpMulticast, SpawnTransform) == 0x000000, "Member 'B_PooledActor_C_TearUpMulticast::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUpMulticast, Param_Owner) == 0x000060, "Member 'B_PooledActor_C_TearUpMulticast::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_PooledActor_C_TearUpMulticast, Param_Instigator) == 0x000068, "Member 'B_PooledActor_C_TearUpMulticast::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUpMulticast, Owner_0) == 0x000060, "Member 'B_PooledActor_C_TearUpMulticast::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUpMulticast, Instigator_0) == 0x000068, "Member 'B_PooledActor_C_TearUpMulticast::Instigator_0' has a wrong offset!");
+
+// Function B_PooledActor.B_PooledActor_C.TearUpPoolObject
+// 0x0070 (0x0070 - 0x0000)
+struct B_PooledActor_C_TearUpPoolObject final
+{
+public:
+	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_PooledActor_C_TearUpPoolObject) == 0x000010, "Wrong alignment on B_PooledActor_C_TearUpPoolObject");
+static_assert(sizeof(B_PooledActor_C_TearUpPoolObject) == 0x000070, "Wrong size on B_PooledActor_C_TearUpPoolObject");
+static_assert(offsetof(B_PooledActor_C_TearUpPoolObject, SpawnTransform) == 0x000000, "Member 'B_PooledActor_C_TearUpPoolObject::SpawnTransform' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUpPoolObject, Owner_0) == 0x000060, "Member 'B_PooledActor_C_TearUpPoolObject::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_PooledActor_C_TearUpPoolObject, Instigator_0) == 0x000068, "Member 'B_PooledActor_C_TearUpPoolObject::Instigator_0' has a wrong offset!");
 
 }
 

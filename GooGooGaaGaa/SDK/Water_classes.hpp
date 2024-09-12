@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "Water_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "Water_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Niagara_classes.hpp"
 
 
@@ -24,8 +24,9 @@ namespace SDK
 {
 
 // Class Water.WaterBodyMeshComponent
-// 0x0000 (0x0630 - 0x0630)
-class UWaterBodyMeshComponent : public UStaticMeshComponent
+// 0x0000 (0x05E0 - 0x05E0)
+#pragma pack(push, 0x1)
+class alignas(0x10) UWaterBodyMeshComponent : public UStaticMeshComponent
 {
 public:
 	static class UClass* StaticClass()
@@ -37,11 +38,12 @@ public:
 		return GetDefaultObjImpl<UWaterBodyMeshComponent>();
 	}
 };
+#pragma pack(pop)
 static_assert(alignof(UWaterBodyMeshComponent) == 0x000010, "Wrong alignment on UWaterBodyMeshComponent");
-static_assert(sizeof(UWaterBodyMeshComponent) == 0x000630, "Wrong size on UWaterBodyMeshComponent");
+static_assert(sizeof(UWaterBodyMeshComponent) == 0x0005E0, "Wrong size on UWaterBodyMeshComponent");
 
 // Class Water.WaterBodyStaticMeshComponent
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x05E0 - 0x05E0)
 class UWaterBodyStaticMeshComponent final : public UWaterBodyMeshComponent
 {
 public:
@@ -55,7 +57,7 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyStaticMeshComponent) == 0x000010, "Wrong alignment on UWaterBodyStaticMeshComponent");
-static_assert(sizeof(UWaterBodyStaticMeshComponent) == 0x000630, "Wrong size on UWaterBodyStaticMeshComponent");
+static_assert(sizeof(UWaterBodyStaticMeshComponent) == 0x0005E0, "Wrong size on UWaterBodyStaticMeshComponent");
 
 // Class Water.BuoyancyComponent
 // 0x0168 (0x0208 - 0x00A0)
@@ -68,7 +70,7 @@ public:
 	struct FBuoyancyData                          BuoyancyData;                                      // 0x00D0(0x0090)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<class UWaterBodyComponent*>            CurrentWaterBodyComponents;                        // 0x0160(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	class UPrimitiveComponent*                    SimulatingComponent;                               // 0x0170(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23EF[0x90];                                    // 0x0178(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_178[0x90];                                     // 0x0178(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void GetLastWaterSurfaceInfo(struct FVector* OutWaterPlaneLocation, struct FVector* OutWaterPlaneNormal, struct FVector* OutWaterSurfacePosition, float* OutWaterDepth, int32* OutWaterBodyIdx, struct FVector* OutWaterVelocity);
@@ -99,13 +101,13 @@ static_assert(offsetof(UBuoyancyComponent, CurrentWaterBodyComponents) == 0x0001
 static_assert(offsetof(UBuoyancyComponent, SimulatingComponent) == 0x000170, "Member 'UBuoyancyComponent::SimulatingComponent' has a wrong offset!");
 
 // Class Water.BuoyancyManager
-// 0x00C8 (0x0360 - 0x0298)
+// 0x00C8 (0x0358 - 0x0290)
 class ABuoyancyManager final : public AActor
 {
 public:
-	uint8                                         Pad_23F0[0x50];                                    // 0x0298(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBuoyancyComponent*>             BuoyancyComponents;                                // 0x02E8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_23F1[0x68];                                    // 0x02F8(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_290[0x50];                                     // 0x0290(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBuoyancyComponent*>             BuoyancyComponents;                                // 0x02E0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2F0[0x68];                                     // 0x02F0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool GetBuoyancyComponentManager(const class UObject* WorldContextObject, class ABuoyancyManager** Manager);
@@ -121,8 +123,8 @@ public:
 	}
 };
 static_assert(alignof(ABuoyancyManager) == 0x000008, "Wrong alignment on ABuoyancyManager");
-static_assert(sizeof(ABuoyancyManager) == 0x000360, "Wrong size on ABuoyancyManager");
-static_assert(offsetof(ABuoyancyManager, BuoyancyComponents) == 0x0002E8, "Member 'ABuoyancyManager::BuoyancyComponents' has a wrong offset!");
+static_assert(sizeof(ABuoyancyManager) == 0x000358, "Wrong size on ABuoyancyManager");
+static_assert(offsetof(ABuoyancyManager, BuoyancyComponents) == 0x0002E0, "Member 'ABuoyancyManager::BuoyancyComponents' has a wrong offset!");
 
 // Class Water.EnvQueryTest_InsideWaterBody
 // 0x0008 (0x0200 - 0x01F8)
@@ -132,7 +134,7 @@ public:
 	bool                                          bIncludeWaves;                                     // 0x01F8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSimpleWaves;                                      // 0x01F9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreExclusionVolumes;                           // 0x01FA(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23F3[0x5];                                     // 0x01FB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1FB[0x5];                                      // 0x01FB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -223,7 +225,7 @@ class UGerstnerWaterWaveGeneratorSpectrum final : public UGerstnerWaterWaveGener
 {
 public:
 	EWaveSpectrumType                             SpectrumType;                                      // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23F4[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGerstnerWaveOctave>            Octaves;                                           // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
@@ -283,7 +285,7 @@ public:
 	class UGerstnerWaterWaveGeneratorBase*        GerstnerWaveGenerator;                             // 0x0028(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FGerstnerWave>                  GerstnerWaves;                                     // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	float                                         MaxWaveHeight;                                     // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23F5[0x4];                                     // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -306,7 +308,7 @@ static_assert(offsetof(UGerstnerWaterWaves, MaxWaveHeight) == 0x000040, "Member 
 class UGerstnerWaterWaveSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_23F6[0x18];                                    // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -322,12 +324,13 @@ static_assert(alignof(UGerstnerWaterWaveSubsystem) == 0x000008, "Wrong alignment
 static_assert(sizeof(UGerstnerWaterWaveSubsystem) == 0x000048, "Wrong size on UGerstnerWaterWaveSubsystem");
 
 // Class Water.LakeCollisionComponent
-// 0x0020 (0x0590 - 0x0570)
+// 0x0020 (0x0540 - 0x0520)
 class ULakeCollisionComponent final : public UPrimitiveComponent
 {
 public:
-	class UBodySetup*                             CachedBodySetup;                                   // 0x0570(0x0008)(ZeroConstructor, NoDestructor, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector                                BoxExtent;                                         // 0x0578(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBodySetup*                             CachedBodySetup;                                   // 0x0518(0x0008)(ZeroConstructor, NoDestructor, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector                                BoxExtent;                                         // 0x0520(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_538[0x8];                                      // 0x0538(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -340,9 +343,9 @@ public:
 	}
 };
 static_assert(alignof(ULakeCollisionComponent) == 0x000010, "Wrong alignment on ULakeCollisionComponent");
-static_assert(sizeof(ULakeCollisionComponent) == 0x000590, "Wrong size on ULakeCollisionComponent");
-static_assert(offsetof(ULakeCollisionComponent, CachedBodySetup) == 0x000570, "Member 'ULakeCollisionComponent::CachedBodySetup' has a wrong offset!");
-static_assert(offsetof(ULakeCollisionComponent, BoxExtent) == 0x000578, "Member 'ULakeCollisionComponent::BoxExtent' has a wrong offset!");
+static_assert(sizeof(ULakeCollisionComponent) == 0x000540, "Wrong size on ULakeCollisionComponent");
+static_assert(offsetof(ULakeCollisionComponent, CachedBodySetup) == 0x000518, "Member 'ULakeCollisionComponent::CachedBodySetup' has a wrong offset!");
+static_assert(offsetof(ULakeCollisionComponent, BoxExtent) == 0x000520, "Member 'ULakeCollisionComponent::BoxExtent' has a wrong offset!");
 
 // Class Water.NiagaraDataInterfaceWater
 // 0x0008 (0x0040 - 0x0038)
@@ -387,12 +390,12 @@ static_assert(alignof(UNiagaraWaterFunctionLibrary) == 0x000008, "Wrong alignmen
 static_assert(sizeof(UNiagaraWaterFunctionLibrary) == 0x000028, "Wrong size on UNiagaraWaterFunctionLibrary");
 
 // Class Water.OceanCollisionComponent
-// 0x0040 (0x05B0 - 0x0570)
+// 0x0040 (0x0560 - 0x0520)
 class UOceanCollisionComponent final : public UPrimitiveComponent
 {
 public:
-	class UBodySetup*                             CachedBodySetup;                                   // 0x0570(0x0008)(ZeroConstructor, NoDestructor, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_23F7[0x38];                                    // 0x0578(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             CachedBodySetup;                                   // 0x0518(0x0008)(ZeroConstructor, NoDestructor, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_520[0x40];                                     // 0x0520(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -405,11 +408,11 @@ public:
 	}
 };
 static_assert(alignof(UOceanCollisionComponent) == 0x000010, "Wrong alignment on UOceanCollisionComponent");
-static_assert(sizeof(UOceanCollisionComponent) == 0x0005B0, "Wrong size on UOceanCollisionComponent");
-static_assert(offsetof(UOceanCollisionComponent, CachedBodySetup) == 0x000570, "Member 'UOceanCollisionComponent::CachedBodySetup' has a wrong offset!");
+static_assert(sizeof(UOceanCollisionComponent) == 0x000560, "Wrong size on UOceanCollisionComponent");
+static_assert(offsetof(UOceanCollisionComponent, CachedBodySetup) == 0x000518, "Member 'UOceanCollisionComponent::CachedBodySetup' has a wrong offset!");
 
 // Class Water.OceanBoxCollisionComponent
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0000 (0x0560 - 0x0560)
 class UOceanBoxCollisionComponent final : public UBoxComponent
 {
 public:
@@ -423,24 +426,28 @@ public:
 	}
 };
 static_assert(alignof(UOceanBoxCollisionComponent) == 0x000010, "Wrong alignment on UOceanBoxCollisionComponent");
-static_assert(sizeof(UOceanBoxCollisionComponent) == 0x0005B0, "Wrong size on UOceanBoxCollisionComponent");
+static_assert(sizeof(UOceanBoxCollisionComponent) == 0x000560, "Wrong size on UOceanBoxCollisionComponent");
 
 // Class Water.WaterBody
-// 0x0050 (0x02E8 - 0x0298)
+// 0x0070 (0x0300 - 0x0290)
 class AWaterBody : public AActor
 {
 public:
-	uint8                                         Pad_23F8[0x8];                                     // 0x0298(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWaterSplineComponent*                  SplineComp;                                        // 0x02A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWaterSplineMetadata*                   WaterSplineMetadata;                               // 0x02A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWaterBodyComponent*                    WaterBodyComponent;                                // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         WaterBodyIndex;                                    // 0x02B8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EWaterBodyType                                WaterBodyType;                                     // 0x02BC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23F9[0x3];                                     // 0x02BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWaterWavesBase*                        WaterWaves;                                        // 0x02C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWaterBodyInfoMeshComponent*            WaterInfoMeshComponent;                            // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWaterBodyInfoMeshComponent*            DilatedWaterInfoMeshComponent;                     // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UWaterBodyStaticMeshComponent*>  WaterBodyStaticMeshComponents;                     // 0x02D8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWaterSplineComponent*                  SplineComp;                                        // 0x0298(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWaterSplineMetadata*                   WaterSplineMetadata;                               // 0x02A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWaterBodyComponent*                    WaterBodyComponent;                                // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         WaterBodyIndex;                                    // 0x02B0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EWaterBodyType                                WaterBodyType;                                     // 0x02B4(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2B5[0x3];                                      // 0x02B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWaterWavesBase*                        WaterWaves;                                        // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWaterBodyInfoMeshComponent*            WaterInfoMeshComponent;                            // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWaterBodyInfoMeshComponent*            DilatedWaterInfoMeshComponent;                     // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UWaterBodyStaticMeshComponent*>  WaterBodyStaticMeshComponents;                     // 0x02D0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyRiverComponent>   WaterBodyRiverComponentClass;                      // 0x02E0(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyLakeComponent>    WaterBodyLakeComponentClass;                       // 0x02E8(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyOceanComponent>   WaterBodyOceanComponentClass;                      // 0x02F0(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UWaterBodyCustomComponent>  WaterBodyCustomComponentClass;                     // 0x02F8(0x0008)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	class UMaterialInstanceDynamic* GetRiverToLakeTransitionMaterialInstance();
@@ -470,16 +477,20 @@ public:
 	}
 };
 static_assert(alignof(AWaterBody) == 0x000008, "Wrong alignment on AWaterBody");
-static_assert(sizeof(AWaterBody) == 0x0002E8, "Wrong size on AWaterBody");
-static_assert(offsetof(AWaterBody, SplineComp) == 0x0002A0, "Member 'AWaterBody::SplineComp' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterSplineMetadata) == 0x0002A8, "Member 'AWaterBody::WaterSplineMetadata' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterBodyComponent) == 0x0002B0, "Member 'AWaterBody::WaterBodyComponent' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterBodyIndex) == 0x0002B8, "Member 'AWaterBody::WaterBodyIndex' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterBodyType) == 0x0002BC, "Member 'AWaterBody::WaterBodyType' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterWaves) == 0x0002C0, "Member 'AWaterBody::WaterWaves' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterInfoMeshComponent) == 0x0002C8, "Member 'AWaterBody::WaterInfoMeshComponent' has a wrong offset!");
-static_assert(offsetof(AWaterBody, DilatedWaterInfoMeshComponent) == 0x0002D0, "Member 'AWaterBody::DilatedWaterInfoMeshComponent' has a wrong offset!");
-static_assert(offsetof(AWaterBody, WaterBodyStaticMeshComponents) == 0x0002D8, "Member 'AWaterBody::WaterBodyStaticMeshComponents' has a wrong offset!");
+static_assert(sizeof(AWaterBody) == 0x000300, "Wrong size on AWaterBody");
+static_assert(offsetof(AWaterBody, SplineComp) == 0x000298, "Member 'AWaterBody::SplineComp' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterSplineMetadata) == 0x0002A0, "Member 'AWaterBody::WaterSplineMetadata' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyComponent) == 0x0002A8, "Member 'AWaterBody::WaterBodyComponent' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyIndex) == 0x0002B0, "Member 'AWaterBody::WaterBodyIndex' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyType) == 0x0002B4, "Member 'AWaterBody::WaterBodyType' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterWaves) == 0x0002B8, "Member 'AWaterBody::WaterWaves' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterInfoMeshComponent) == 0x0002C0, "Member 'AWaterBody::WaterInfoMeshComponent' has a wrong offset!");
+static_assert(offsetof(AWaterBody, DilatedWaterInfoMeshComponent) == 0x0002C8, "Member 'AWaterBody::DilatedWaterInfoMeshComponent' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyStaticMeshComponents) == 0x0002D0, "Member 'AWaterBody::WaterBodyStaticMeshComponents' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyRiverComponentClass) == 0x0002E0, "Member 'AWaterBody::WaterBodyRiverComponentClass' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyLakeComponentClass) == 0x0002E8, "Member 'AWaterBody::WaterBodyLakeComponentClass' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyOceanComponentClass) == 0x0002F0, "Member 'AWaterBody::WaterBodyOceanComponentClass' has a wrong offset!");
+static_assert(offsetof(AWaterBody, WaterBodyCustomComponentClass) == 0x0002F8, "Member 'AWaterBody::WaterBodyCustomComponentClass' has a wrong offset!");
 
 // Class Water.WaterBodyGenerator
 // 0x0000 (0x0028 - 0x0028)
@@ -499,45 +510,46 @@ static_assert(alignof(UWaterBodyGenerator) == 0x000008, "Wrong alignment on UWat
 static_assert(sizeof(UWaterBodyGenerator) == 0x000028, "Wrong size on UWaterBodyGenerator");
 
 // Class Water.WaterBodyComponent
-// 0x0FA0 (0x1510 - 0x0570)
+// 0x0FC0 (0x14E0 - 0x0520)
 class UWaterBodyComponent : public UPrimitiveComponent
 {
 public:
-	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x0570(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetWaveMaskDepth;                               // 0x0578(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxWaveHeightOffset;                               // 0x057C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUnderwaterPostProcessSettings         UnderwaterPostProcessSettings;                     // 0x0580(0x0700)(Edit, BlueprintVisible, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FWaterCurveSettings                    CurveSettings;                                     // 0x0C80(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     WaterMaterial;                                     // 0x0CA0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     WaterHLODMaterial;                                 // 0x0CA8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     WaterStaticMeshMaterial;                           // 0x0CB0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     UnderwaterPostProcessMaterial;                     // 0x0CB8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     WaterInfoMaterial;                                 // 0x0CC0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FWaterBodyHeightmapSettings            WaterHeightmapSettings;                            // 0x0CC8(0x0080)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ShapeDilation;                                     // 0x0D48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CollisionHeightOffset;                             // 0x0D4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectsLandscape;                                 // 0x0D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23FB[0x7];                                     // 0x0D51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWaterBodyStaticMeshSettings           StaticMeshSettings;                                // 0x0D58(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         WaterBodyIndex;                                    // 0x0D68(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23FC[0x4];                                     // 0x0D6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            WaterMeshOverride;                                 // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAlwaysGenerateWaterMeshTiles;                     // 0x0D78(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_23FD[0x3];                                     // 0x0D79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OverlapMaterialPriority;                           // 0x0D7C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWaterSplineMetadata*                   WaterSplineMetadata;                               // 0x0D80(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               WaterMID;                                          // 0x0D88(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               WaterStaticMeshMID;                                // 0x0D90(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               UnderwaterPostProcessMID;                          // 0x0D98(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               WaterInfoMID;                                      // 0x0DA0(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class AWaterBodyIsland>> WaterBodyIslands;                                  // 0x0DA8(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class AWaterBodyExclusionVolume>> WaterBodyExclusionVolumes;                         // 0x0DB8(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TWeakObjectPtr<class ALandscapeProxy>         Landscape;                                         // 0x0DC8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class AWaterZone>              OwningWaterZone;                                   // 0x0DD0(0x0028)(Edit, DisableEditOnTemplate, EditConst, AdvancedDisplay, Protected, TextExportTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class AWaterZone>              WaterZoneOverride;                                 // 0x0DF8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, AdvancedDisplay, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FPostProcessSettings                   CurrentPostProcessSettings;                        // 0x0E20(0x06E0)(Transient, Protected, NativeAccessSpecifierProtected)
-	TSubclassOf<class UNavAreaBase>               WaterNavAreaClass;                                 // 0x1500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        FixedWaterDepth;                                   // 0x1508(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x0518(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetWaveMaskDepth;                               // 0x0520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxWaveHeightOffset;                               // 0x0524(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_528[0x8];                                      // 0x0528(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUnderwaterPostProcessSettings         UnderwaterPostProcessSettings;                     // 0x0530(0x0710)(Edit, BlueprintVisible, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FWaterCurveSettings                    CurveSettings;                                     // 0x0C40(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     WaterMaterial;                                     // 0x0C60(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     WaterHLODMaterial;                                 // 0x0C68(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     WaterStaticMeshMaterial;                           // 0x0C70(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     UnderwaterPostProcessMaterial;                     // 0x0C78(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     WaterInfoMaterial;                                 // 0x0C80(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWaterBodyHeightmapSettings            WaterHeightmapSettings;                            // 0x0C88(0x0080)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ShapeDilation;                                     // 0x0D08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CollisionHeightOffset;                             // 0x0D0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectsLandscape;                                 // 0x0D10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D11[0x7];                                      // 0x0D11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWaterBodyStaticMeshSettings           StaticMeshSettings;                                // 0x0D18(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         WaterBodyIndex;                                    // 0x0D28(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D2C[0x4];                                      // 0x0D2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            WaterMeshOverride;                                 // 0x0D30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAlwaysGenerateWaterMeshTiles;                     // 0x0D38(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D39[0x3];                                      // 0x0D39(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OverlapMaterialPriority;                           // 0x0D3C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWaterSplineMetadata*                   WaterSplineMetadata;                               // 0x0D40(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInstanceDynamic*               WaterMID;                                          // 0x0D48(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInstanceDynamic*               WaterStaticMeshMID;                                // 0x0D50(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInstanceDynamic*               UnderwaterPostProcessMID;                          // 0x0D58(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInstanceDynamic*               WaterInfoMID;                                      // 0x0D60(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class AWaterBodyIsland>> WaterBodyIslands;                                  // 0x0D68(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class AWaterBodyExclusionVolume>> WaterBodyExclusionVolumes;                         // 0x0D78(0x0010)(Edit, ZeroConstructor, EditConst, AdvancedDisplay, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TWeakObjectPtr<class ALandscapeProxy>         Landscape;                                         // 0x0D88(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class AWaterZone>              OwningWaterZone;                                   // 0x0D90(0x0028)(Edit, DisableEditOnTemplate, EditConst, AdvancedDisplay, Protected, TextExportTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class AWaterZone>              WaterZoneOverride;                                 // 0x0DB8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, AdvancedDisplay, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FPostProcessSettings                   CurrentPostProcessSettings;                        // 0x0DE0(0x06F0)(Transient, Protected, NativeAccessSpecifierProtected)
+	TSubclassOf<class UNavAreaBase>               WaterNavAreaClass;                                 // 0x14D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        FixedWaterDepth;                                   // 0x14D8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	class UMaterialInstanceDynamic* GetRiverToLakeTransitionMaterialInstance();
@@ -547,14 +559,19 @@ public:
 	class UMaterialInstanceDynamic* GetWaterLODMaterialInstance();
 	class UMaterialInstanceDynamic* GetWaterMaterialInstance();
 	class UMaterialInstanceDynamic* GetWaterStaticMeshMaterialInstance();
-	void OnWaterBodyChanged(bool bShapeOrPositionChanged, bool bWeightmapSettingsChanged);
+	void OnWaterBodyChanged(bool bShapeOrPositionChanged, bool bWeightmapSettingsChanged, bool bUserTriggeredChanged);
+	void SetUnderwaterPostProcessMaterial(class UMaterialInterface* InMaterial);
 	void SetWaterAndUnderWaterPostProcessMaterial(class UMaterialInterface* InWaterMaterial, class UMaterialInterface* InUnderWaterPostProcessMaterial);
+	void SetWaterMaterial(class UMaterialInterface* InMaterial);
+	void SetWaterStaticMeshMaterial(class UMaterialInterface* InMaterial);
 	void SetWaterZoneOverride(const TSoftObjectPtr<class AWaterZone>& InWaterZoneOverride);
 
 	TArray<class UPrimitiveComponent*> GetCollisionComponents(bool bInOnlyEnabledComponents) const;
 	TArray<class AWaterBodyExclusionVolume*> GetExclusionVolumes() const;
 	TArray<class AWaterBodyIsland*> GetIslands() const;
 	float GetMaxWaveHeight() const;
+	class UMaterialInterface* GetRiverToLakeTransitionMaterial() const;
+	class UMaterialInterface* GetRiverToOceanTransitionMaterial() const;
 	TArray<class UPrimitiveComponent*> GetStandardRenderableComponents() const;
 	class AWaterBody* GetWaterBodyActor() const;
 	class UMaterialInterface* GetWaterMaterial() const;
@@ -574,39 +591,39 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyComponent) == 0x000010, "Wrong alignment on UWaterBodyComponent");
-static_assert(sizeof(UWaterBodyComponent) == 0x001510, "Wrong size on UWaterBodyComponent");
-static_assert(offsetof(UWaterBodyComponent, PhysicalMaterial) == 0x000570, "Member 'UWaterBodyComponent::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, TargetWaveMaskDepth) == 0x000578, "Member 'UWaterBodyComponent::TargetWaveMaskDepth' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, MaxWaveHeightOffset) == 0x00057C, "Member 'UWaterBodyComponent::MaxWaveHeightOffset' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, UnderwaterPostProcessSettings) == 0x000580, "Member 'UWaterBodyComponent::UnderwaterPostProcessSettings' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, CurveSettings) == 0x000C80, "Member 'UWaterBodyComponent::CurveSettings' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterMaterial) == 0x000CA0, "Member 'UWaterBodyComponent::WaterMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterHLODMaterial) == 0x000CA8, "Member 'UWaterBodyComponent::WaterHLODMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterStaticMeshMaterial) == 0x000CB0, "Member 'UWaterBodyComponent::WaterStaticMeshMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, UnderwaterPostProcessMaterial) == 0x000CB8, "Member 'UWaterBodyComponent::UnderwaterPostProcessMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterInfoMaterial) == 0x000CC0, "Member 'UWaterBodyComponent::WaterInfoMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterHeightmapSettings) == 0x000CC8, "Member 'UWaterBodyComponent::WaterHeightmapSettings' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, ShapeDilation) == 0x000D48, "Member 'UWaterBodyComponent::ShapeDilation' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, CollisionHeightOffset) == 0x000D4C, "Member 'UWaterBodyComponent::CollisionHeightOffset' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, bAffectsLandscape) == 0x000D50, "Member 'UWaterBodyComponent::bAffectsLandscape' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, StaticMeshSettings) == 0x000D58, "Member 'UWaterBodyComponent::StaticMeshSettings' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterBodyIndex) == 0x000D68, "Member 'UWaterBodyComponent::WaterBodyIndex' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterMeshOverride) == 0x000D70, "Member 'UWaterBodyComponent::WaterMeshOverride' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, bAlwaysGenerateWaterMeshTiles) == 0x000D78, "Member 'UWaterBodyComponent::bAlwaysGenerateWaterMeshTiles' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, OverlapMaterialPriority) == 0x000D7C, "Member 'UWaterBodyComponent::OverlapMaterialPriority' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterSplineMetadata) == 0x000D80, "Member 'UWaterBodyComponent::WaterSplineMetadata' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterMID) == 0x000D88, "Member 'UWaterBodyComponent::WaterMID' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterStaticMeshMID) == 0x000D90, "Member 'UWaterBodyComponent::WaterStaticMeshMID' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, UnderwaterPostProcessMID) == 0x000D98, "Member 'UWaterBodyComponent::UnderwaterPostProcessMID' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterInfoMID) == 0x000DA0, "Member 'UWaterBodyComponent::WaterInfoMID' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterBodyIslands) == 0x000DA8, "Member 'UWaterBodyComponent::WaterBodyIslands' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterBodyExclusionVolumes) == 0x000DB8, "Member 'UWaterBodyComponent::WaterBodyExclusionVolumes' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, Landscape) == 0x000DC8, "Member 'UWaterBodyComponent::Landscape' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, OwningWaterZone) == 0x000DD0, "Member 'UWaterBodyComponent::OwningWaterZone' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterZoneOverride) == 0x000DF8, "Member 'UWaterBodyComponent::WaterZoneOverride' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, CurrentPostProcessSettings) == 0x000E20, "Member 'UWaterBodyComponent::CurrentPostProcessSettings' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, WaterNavAreaClass) == 0x001500, "Member 'UWaterBodyComponent::WaterNavAreaClass' has a wrong offset!");
-static_assert(offsetof(UWaterBodyComponent, FixedWaterDepth) == 0x001508, "Member 'UWaterBodyComponent::FixedWaterDepth' has a wrong offset!");
+static_assert(sizeof(UWaterBodyComponent) == 0x0014E0, "Wrong size on UWaterBodyComponent");
+static_assert(offsetof(UWaterBodyComponent, PhysicalMaterial) == 0x000518, "Member 'UWaterBodyComponent::PhysicalMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, TargetWaveMaskDepth) == 0x000520, "Member 'UWaterBodyComponent::TargetWaveMaskDepth' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, MaxWaveHeightOffset) == 0x000524, "Member 'UWaterBodyComponent::MaxWaveHeightOffset' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, UnderwaterPostProcessSettings) == 0x000530, "Member 'UWaterBodyComponent::UnderwaterPostProcessSettings' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, CurveSettings) == 0x000C40, "Member 'UWaterBodyComponent::CurveSettings' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterMaterial) == 0x000C60, "Member 'UWaterBodyComponent::WaterMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterHLODMaterial) == 0x000C68, "Member 'UWaterBodyComponent::WaterHLODMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterStaticMeshMaterial) == 0x000C70, "Member 'UWaterBodyComponent::WaterStaticMeshMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, UnderwaterPostProcessMaterial) == 0x000C78, "Member 'UWaterBodyComponent::UnderwaterPostProcessMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterInfoMaterial) == 0x000C80, "Member 'UWaterBodyComponent::WaterInfoMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterHeightmapSettings) == 0x000C88, "Member 'UWaterBodyComponent::WaterHeightmapSettings' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, ShapeDilation) == 0x000D08, "Member 'UWaterBodyComponent::ShapeDilation' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, CollisionHeightOffset) == 0x000D0C, "Member 'UWaterBodyComponent::CollisionHeightOffset' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, bAffectsLandscape) == 0x000D10, "Member 'UWaterBodyComponent::bAffectsLandscape' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, StaticMeshSettings) == 0x000D18, "Member 'UWaterBodyComponent::StaticMeshSettings' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterBodyIndex) == 0x000D28, "Member 'UWaterBodyComponent::WaterBodyIndex' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterMeshOverride) == 0x000D30, "Member 'UWaterBodyComponent::WaterMeshOverride' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, bAlwaysGenerateWaterMeshTiles) == 0x000D38, "Member 'UWaterBodyComponent::bAlwaysGenerateWaterMeshTiles' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, OverlapMaterialPriority) == 0x000D3C, "Member 'UWaterBodyComponent::OverlapMaterialPriority' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterSplineMetadata) == 0x000D40, "Member 'UWaterBodyComponent::WaterSplineMetadata' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterMID) == 0x000D48, "Member 'UWaterBodyComponent::WaterMID' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterStaticMeshMID) == 0x000D50, "Member 'UWaterBodyComponent::WaterStaticMeshMID' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, UnderwaterPostProcessMID) == 0x000D58, "Member 'UWaterBodyComponent::UnderwaterPostProcessMID' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterInfoMID) == 0x000D60, "Member 'UWaterBodyComponent::WaterInfoMID' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterBodyIslands) == 0x000D68, "Member 'UWaterBodyComponent::WaterBodyIslands' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterBodyExclusionVolumes) == 0x000D78, "Member 'UWaterBodyComponent::WaterBodyExclusionVolumes' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, Landscape) == 0x000D88, "Member 'UWaterBodyComponent::Landscape' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, OwningWaterZone) == 0x000D90, "Member 'UWaterBodyComponent::OwningWaterZone' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterZoneOverride) == 0x000DB8, "Member 'UWaterBodyComponent::WaterZoneOverride' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, CurrentPostProcessSettings) == 0x000DE0, "Member 'UWaterBodyComponent::CurrentPostProcessSettings' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, WaterNavAreaClass) == 0x0014D0, "Member 'UWaterBodyComponent::WaterNavAreaClass' has a wrong offset!");
+static_assert(offsetof(UWaterBodyComponent, FixedWaterDepth) == 0x0014D8, "Member 'UWaterBodyComponent::FixedWaterDepth' has a wrong offset!");
 
 // Class Water.CustomMeshGenerator
 // 0x0008 (0x0030 - 0x0028)
@@ -630,7 +647,7 @@ static_assert(sizeof(UCustomMeshGenerator) == 0x000030, "Wrong size on UCustomMe
 static_assert(offsetof(UCustomMeshGenerator, MeshComp) == 0x000028, "Member 'UCustomMeshGenerator::MeshComp' has a wrong offset!");
 
 // Class Water.WaterBodyCustom
-// 0x0000 (0x02E8 - 0x02E8)
+// 0x0000 (0x0300 - 0x0300)
 class AWaterBodyCustom final : public AWaterBody
 {
 public:
@@ -644,15 +661,15 @@ public:
 	}
 };
 static_assert(alignof(AWaterBodyCustom) == 0x000008, "Wrong alignment on AWaterBodyCustom");
-static_assert(sizeof(AWaterBodyCustom) == 0x0002E8, "Wrong size on AWaterBodyCustom");
+static_assert(sizeof(AWaterBodyCustom) == 0x000300, "Wrong size on AWaterBodyCustom");
 
 // Class Water.WaterBodyCustomComponent
-// 0x0010 (0x1520 - 0x1510)
+// 0x0010 (0x14F0 - 0x14E0)
 class UWaterBodyCustomComponent final : public UWaterBodyComponent
 {
 public:
-	class UStaticMeshComponent*                   MeshComp;                                          // 0x1510(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2400[0x8];                                     // 0x1518(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   MeshComp;                                          // 0x14E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_14E8[0x8];                                     // 0x14E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -665,17 +682,17 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyCustomComponent) == 0x000010, "Wrong alignment on UWaterBodyCustomComponent");
-static_assert(sizeof(UWaterBodyCustomComponent) == 0x001520, "Wrong size on UWaterBodyCustomComponent");
-static_assert(offsetof(UWaterBodyCustomComponent, MeshComp) == 0x001510, "Member 'UWaterBodyCustomComponent::MeshComp' has a wrong offset!");
+static_assert(sizeof(UWaterBodyCustomComponent) == 0x0014F0, "Wrong size on UWaterBodyCustomComponent");
+static_assert(offsetof(UWaterBodyCustomComponent, MeshComp) == 0x0014E0, "Member 'UWaterBodyCustomComponent::MeshComp' has a wrong offset!");
 
 // Class Water.WaterBodyExclusionVolume
-// 0x0018 (0x02F8 - 0x02E0)
+// 0x0018 (0x02F0 - 0x02D8)
 class AWaterBodyExclusionVolume final : public APhysicsVolume
 {
 public:
-	bool                                          bExcludeAllOverlappingWaterBodies;                 // 0x02E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2401[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AWaterBody*>                     WaterBodiesToExclude;                              // 0x02E8(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, UObjectWrapper, NativeAccessSpecifierPublic)
+	EWaterExclusionMode                           ExclusionMode;                                     // 0x02D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class AWaterBody>>      WaterBodies;                                       // 0x02E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, UObjectWrapper, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -688,9 +705,9 @@ public:
 	}
 };
 static_assert(alignof(AWaterBodyExclusionVolume) == 0x000008, "Wrong alignment on AWaterBodyExclusionVolume");
-static_assert(sizeof(AWaterBodyExclusionVolume) == 0x0002F8, "Wrong size on AWaterBodyExclusionVolume");
-static_assert(offsetof(AWaterBodyExclusionVolume, bExcludeAllOverlappingWaterBodies) == 0x0002E0, "Member 'AWaterBodyExclusionVolume::bExcludeAllOverlappingWaterBodies' has a wrong offset!");
-static_assert(offsetof(AWaterBodyExclusionVolume, WaterBodiesToExclude) == 0x0002E8, "Member 'AWaterBodyExclusionVolume::WaterBodiesToExclude' has a wrong offset!");
+static_assert(sizeof(AWaterBodyExclusionVolume) == 0x0002F0, "Wrong size on AWaterBodyExclusionVolume");
+static_assert(offsetof(AWaterBodyExclusionVolume, ExclusionMode) == 0x0002D8, "Member 'AWaterBodyExclusionVolume::ExclusionMode' has a wrong offset!");
+static_assert(offsetof(AWaterBodyExclusionVolume, WaterBodies) == 0x0002E0, "Member 'AWaterBodyExclusionVolume::WaterBodies' has a wrong offset!");
 
 // Class Water.WaterBodyHLODBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -710,9 +727,14 @@ static_assert(alignof(UWaterBodyHLODBuilder) == 0x000008, "Wrong alignment on UW
 static_assert(sizeof(UWaterBodyHLODBuilder) == 0x000028, "Wrong size on UWaterBodyHLODBuilder");
 
 // Class Water.WaterBodyInfoMeshComponent
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x05E0 - 0x05E0)
 class UWaterBodyInfoMeshComponent final : public UWaterBodyMeshComponent
 {
+public:
+	bool                                          bIsDilatedMesh;                                    // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsConservativeRasterCompatible;                   // 0x05D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5DA[0x6];                                      // 0x05DA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -724,15 +746,17 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyInfoMeshComponent) == 0x000010, "Wrong alignment on UWaterBodyInfoMeshComponent");
-static_assert(sizeof(UWaterBodyInfoMeshComponent) == 0x000630, "Wrong size on UWaterBodyInfoMeshComponent");
+static_assert(sizeof(UWaterBodyInfoMeshComponent) == 0x0005E0, "Wrong size on UWaterBodyInfoMeshComponent");
+static_assert(offsetof(UWaterBodyInfoMeshComponent, bIsDilatedMesh) == 0x0005D8, "Member 'UWaterBodyInfoMeshComponent::bIsDilatedMesh' has a wrong offset!");
+static_assert(offsetof(UWaterBodyInfoMeshComponent, bIsConservativeRasterCompatible) == 0x0005D9, "Member 'UWaterBodyInfoMeshComponent::bIsConservativeRasterCompatible' has a wrong offset!");
 
 // Class Water.WaterBodyIsland
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0010 (0x02A0 - 0x0290)
 class AWaterBodyIsland final : public AActor
 {
 public:
-	uint8                                         Pad_2402[0x8];                                     // 0x0298(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWaterSplineComponent*                  SplineComp;                                        // 0x02A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_290[0x8];                                      // 0x0290(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWaterSplineComponent*                  SplineComp;                                        // 0x0298(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	class UWaterSplineComponent* GetWaterSpline() const;
@@ -748,8 +772,8 @@ public:
 	}
 };
 static_assert(alignof(AWaterBodyIsland) == 0x000008, "Wrong alignment on AWaterBodyIsland");
-static_assert(sizeof(AWaterBodyIsland) == 0x0002A8, "Wrong size on AWaterBodyIsland");
-static_assert(offsetof(AWaterBodyIsland, SplineComp) == 0x0002A0, "Member 'AWaterBodyIsland::SplineComp' has a wrong offset!");
+static_assert(sizeof(AWaterBodyIsland) == 0x0002A0, "Wrong size on AWaterBodyIsland");
+static_assert(offsetof(AWaterBodyIsland, SplineComp) == 0x000298, "Member 'AWaterBodyIsland::SplineComp' has a wrong offset!");
 
 // Class Water.LakeGenerator
 // 0x0018 (0x0040 - 0x0028)
@@ -777,7 +801,7 @@ static_assert(offsetof(ULakeGenerator, LakeCollisionComp) == 0x000030, "Member '
 static_assert(offsetof(ULakeGenerator, LakeCollision) == 0x000038, "Member 'ULakeGenerator::LakeCollision' has a wrong offset!");
 
 // Class Water.WaterBodyLake
-// 0x0000 (0x02E8 - 0x02E8)
+// 0x0000 (0x0300 - 0x0300)
 class AWaterBodyLake final : public AWaterBody
 {
 public:
@@ -791,15 +815,15 @@ public:
 	}
 };
 static_assert(alignof(AWaterBodyLake) == 0x000008, "Wrong alignment on AWaterBodyLake");
-static_assert(sizeof(AWaterBodyLake) == 0x0002E8, "Wrong size on AWaterBodyLake");
+static_assert(sizeof(AWaterBodyLake) == 0x000300, "Wrong size on AWaterBodyLake");
 
 // Class Water.WaterBodyLakeComponent
-// 0x0010 (0x1520 - 0x1510)
+// 0x0010 (0x14F0 - 0x14E0)
 class UWaterBodyLakeComponent final : public UWaterBodyComponent
 {
 public:
-	class UStaticMeshComponent*                   LakeMeshComp;                                      // 0x1510(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ULakeCollisionComponent*                LakeCollision;                                     // 0x1518(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UStaticMeshComponent*                   LakeMeshComp;                                      // 0x14E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULakeCollisionComponent*                LakeCollision;                                     // 0x14E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -812,9 +836,9 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyLakeComponent) == 0x000010, "Wrong alignment on UWaterBodyLakeComponent");
-static_assert(sizeof(UWaterBodyLakeComponent) == 0x001520, "Wrong size on UWaterBodyLakeComponent");
-static_assert(offsetof(UWaterBodyLakeComponent, LakeMeshComp) == 0x001510, "Member 'UWaterBodyLakeComponent::LakeMeshComp' has a wrong offset!");
-static_assert(offsetof(UWaterBodyLakeComponent, LakeCollision) == 0x001518, "Member 'UWaterBodyLakeComponent::LakeCollision' has a wrong offset!");
+static_assert(sizeof(UWaterBodyLakeComponent) == 0x0014F0, "Wrong size on UWaterBodyLakeComponent");
+static_assert(offsetof(UWaterBodyLakeComponent, LakeMeshComp) == 0x0014E0, "Member 'UWaterBodyLakeComponent::LakeMeshComp' has a wrong offset!");
+static_assert(offsetof(UWaterBodyLakeComponent, LakeCollision) == 0x0014E8, "Member 'UWaterBodyLakeComponent::LakeCollision' has a wrong offset!");
 
 // Class Water.OceanGenerator
 // 0x0020 (0x0048 - 0x0028)
@@ -840,7 +864,7 @@ static_assert(offsetof(UOceanGenerator, CollisionBoxes) == 0x000028, "Member 'UO
 static_assert(offsetof(UOceanGenerator, CollisionHullSets) == 0x000038, "Member 'UOceanGenerator::CollisionHullSets' has a wrong offset!");
 
 // Class Water.WaterBodyOcean
-// 0x0000 (0x02E8 - 0x02E8)
+// 0x0000 (0x0300 - 0x0300)
 class AWaterBodyOcean final : public AWaterBody
 {
 public:
@@ -854,20 +878,21 @@ public:
 	}
 };
 static_assert(alignof(AWaterBodyOcean) == 0x000008, "Wrong alignment on AWaterBodyOcean");
-static_assert(sizeof(AWaterBodyOcean) == 0x0002E8, "Wrong size on AWaterBodyOcean");
+static_assert(sizeof(AWaterBodyOcean) == 0x000300, "Wrong size on AWaterBodyOcean");
 
 // Class Water.WaterBodyOceanComponent
-// 0x0060 (0x1570 - 0x1510)
+// 0x0060 (0x1540 - 0x14E0)
 class UWaterBodyOceanComponent final : public UWaterBodyComponent
 {
 public:
-	TArray<class UOceanBoxCollisionComponent*>    CollisionBoxes;                                    // 0x1510(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<class UOceanCollisionComponent*>       CollisionHullSets;                                 // 0x1520(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
-	struct FVector                                CollisionExtents;                                  // 0x1530(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector2D                              OceanExtents;                                      // 0x1548(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVector2D                              SavedZoneLocation;                                 // 0x1558(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         HeightOffset;                                      // 0x1568(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2403[0x4];                                     // 0x156C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UOceanBoxCollisionComponent*>    CollisionBoxes;                                    // 0x14E0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UOceanCollisionComponent*>       CollisionHullSets;                                 // 0x14F0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
+	struct FVector                                CollisionExtents;                                  // 0x1500(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector2D                              OceanExtents;                                      // 0x1518(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVector2D                              SavedZoneLocation;                                 // 0x1528(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCenterOnWaterZone;                                // 0x1538(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1539[0x3];                                     // 0x1539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HeightOffset;                                      // 0x153C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -880,13 +905,14 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyOceanComponent) == 0x000010, "Wrong alignment on UWaterBodyOceanComponent");
-static_assert(sizeof(UWaterBodyOceanComponent) == 0x001570, "Wrong size on UWaterBodyOceanComponent");
-static_assert(offsetof(UWaterBodyOceanComponent, CollisionBoxes) == 0x001510, "Member 'UWaterBodyOceanComponent::CollisionBoxes' has a wrong offset!");
-static_assert(offsetof(UWaterBodyOceanComponent, CollisionHullSets) == 0x001520, "Member 'UWaterBodyOceanComponent::CollisionHullSets' has a wrong offset!");
-static_assert(offsetof(UWaterBodyOceanComponent, CollisionExtents) == 0x001530, "Member 'UWaterBodyOceanComponent::CollisionExtents' has a wrong offset!");
-static_assert(offsetof(UWaterBodyOceanComponent, OceanExtents) == 0x001548, "Member 'UWaterBodyOceanComponent::OceanExtents' has a wrong offset!");
-static_assert(offsetof(UWaterBodyOceanComponent, SavedZoneLocation) == 0x001558, "Member 'UWaterBodyOceanComponent::SavedZoneLocation' has a wrong offset!");
-static_assert(offsetof(UWaterBodyOceanComponent, HeightOffset) == 0x001568, "Member 'UWaterBodyOceanComponent::HeightOffset' has a wrong offset!");
+static_assert(sizeof(UWaterBodyOceanComponent) == 0x001540, "Wrong size on UWaterBodyOceanComponent");
+static_assert(offsetof(UWaterBodyOceanComponent, CollisionBoxes) == 0x0014E0, "Member 'UWaterBodyOceanComponent::CollisionBoxes' has a wrong offset!");
+static_assert(offsetof(UWaterBodyOceanComponent, CollisionHullSets) == 0x0014F0, "Member 'UWaterBodyOceanComponent::CollisionHullSets' has a wrong offset!");
+static_assert(offsetof(UWaterBodyOceanComponent, CollisionExtents) == 0x001500, "Member 'UWaterBodyOceanComponent::CollisionExtents' has a wrong offset!");
+static_assert(offsetof(UWaterBodyOceanComponent, OceanExtents) == 0x001518, "Member 'UWaterBodyOceanComponent::OceanExtents' has a wrong offset!");
+static_assert(offsetof(UWaterBodyOceanComponent, SavedZoneLocation) == 0x001528, "Member 'UWaterBodyOceanComponent::SavedZoneLocation' has a wrong offset!");
+static_assert(offsetof(UWaterBodyOceanComponent, bCenterOnWaterZone) == 0x001538, "Member 'UWaterBodyOceanComponent::bCenterOnWaterZone' has a wrong offset!");
+static_assert(offsetof(UWaterBodyOceanComponent, HeightOffset) == 0x00153C, "Member 'UWaterBodyOceanComponent::HeightOffset' has a wrong offset!");
 
 // Class Water.RiverGenerator
 // 0x0010 (0x0038 - 0x0028)
@@ -910,7 +936,7 @@ static_assert(sizeof(URiverGenerator) == 0x000038, "Wrong size on URiverGenerato
 static_assert(offsetof(URiverGenerator, SplineMeshComponents) == 0x000028, "Member 'URiverGenerator::SplineMeshComponents' has a wrong offset!");
 
 // Class Water.WaterBodyRiver
-// 0x0000 (0x02E8 - 0x02E8)
+// 0x0000 (0x0300 - 0x0300)
 class AWaterBodyRiver final : public AWaterBody
 {
 public:
@@ -924,18 +950,23 @@ public:
 	}
 };
 static_assert(alignof(AWaterBodyRiver) == 0x000008, "Wrong alignment on AWaterBodyRiver");
-static_assert(sizeof(AWaterBodyRiver) == 0x0002E8, "Wrong size on AWaterBodyRiver");
+static_assert(sizeof(AWaterBodyRiver) == 0x000300, "Wrong size on AWaterBodyRiver");
 
 // Class Water.WaterBodyRiverComponent
-// 0x0030 (0x1540 - 0x1510)
+// 0x0030 (0x1510 - 0x14E0)
 class UWaterBodyRiverComponent final : public UWaterBodyComponent
 {
 public:
-	TArray<class USplineMeshComponent*>           SplineMeshComponents;                              // 0x1510(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     LakeTransitionMaterial;                            // 0x1520(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               LakeTransitionMID;                                 // 0x1528(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     OceanTransitionMaterial;                           // 0x1530(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInstanceDynamic*               OceanTransitionMID;                                // 0x1538(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class USplineMeshComponent*>           SplineMeshComponents;                              // 0x14E0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     LakeTransitionMaterial;                            // 0x14F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInstanceDynamic*               LakeTransitionMID;                                 // 0x14F8(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     OceanTransitionMaterial;                           // 0x1500(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInstanceDynamic*               OceanTransitionMID;                                // 0x1508(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, EditConst, NoDestructor, Protected, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void SetLakeAndOceanTransitionMaterials(class UMaterialInterface* InLakeTransition, class UMaterialInterface* InOceanTransition);
+	void SetLakeTransitionMaterial(class UMaterialInterface* InMat);
+	void SetOceanTransitionMaterial(class UMaterialInterface* InMat);
 
 public:
 	static class UClass* StaticClass()
@@ -948,12 +979,12 @@ public:
 	}
 };
 static_assert(alignof(UWaterBodyRiverComponent) == 0x000010, "Wrong alignment on UWaterBodyRiverComponent");
-static_assert(sizeof(UWaterBodyRiverComponent) == 0x001540, "Wrong size on UWaterBodyRiverComponent");
-static_assert(offsetof(UWaterBodyRiverComponent, SplineMeshComponents) == 0x001510, "Member 'UWaterBodyRiverComponent::SplineMeshComponents' has a wrong offset!");
-static_assert(offsetof(UWaterBodyRiverComponent, LakeTransitionMaterial) == 0x001520, "Member 'UWaterBodyRiverComponent::LakeTransitionMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyRiverComponent, LakeTransitionMID) == 0x001528, "Member 'UWaterBodyRiverComponent::LakeTransitionMID' has a wrong offset!");
-static_assert(offsetof(UWaterBodyRiverComponent, OceanTransitionMaterial) == 0x001530, "Member 'UWaterBodyRiverComponent::OceanTransitionMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterBodyRiverComponent, OceanTransitionMID) == 0x001538, "Member 'UWaterBodyRiverComponent::OceanTransitionMID' has a wrong offset!");
+static_assert(sizeof(UWaterBodyRiverComponent) == 0x001510, "Wrong size on UWaterBodyRiverComponent");
+static_assert(offsetof(UWaterBodyRiverComponent, SplineMeshComponents) == 0x0014E0, "Member 'UWaterBodyRiverComponent::SplineMeshComponents' has a wrong offset!");
+static_assert(offsetof(UWaterBodyRiverComponent, LakeTransitionMaterial) == 0x0014F0, "Member 'UWaterBodyRiverComponent::LakeTransitionMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyRiverComponent, LakeTransitionMID) == 0x0014F8, "Member 'UWaterBodyRiverComponent::LakeTransitionMID' has a wrong offset!");
+static_assert(offsetof(UWaterBodyRiverComponent, OceanTransitionMaterial) == 0x001500, "Member 'UWaterBodyRiverComponent::OceanTransitionMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterBodyRiverComponent, OceanTransitionMID) == 0x001508, "Member 'UWaterBodyRiverComponent::OceanTransitionMID' has a wrong offset!");
 
 // Class Water.WaterBrushActorInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -973,23 +1004,24 @@ static_assert(alignof(IWaterBrushActorInterface) == 0x000008, "Wrong alignment o
 static_assert(sizeof(IWaterBrushActorInterface) == 0x000028, "Wrong size on IWaterBrushActorInterface");
 
 // Class Water.WaterMeshComponent
-// 0x0120 (0x06D0 - 0x05B0)
+// 0x01E0 (0x0730 - 0x0550)
 class UWaterMeshComponent final : public UMeshComponent
 {
 public:
-	int32                                         ForceCollapseDensityLevel;                         // 0x05A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2404[0x4];                                     // 0x05AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     FarDistanceMaterial;                               // 0x05B0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FarDistanceMeshExtent;                             // 0x05B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TileSize;                                          // 0x05BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FIntPoint                              ExtentInTiles;                                     // 0x05C0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2405[0x98];                                    // 0x05C8(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UMaterialInterface*>               UsedMaterials;                                     // 0x0660(0x0050)(Transient, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	bool                                          bUseFarMeshWithoutOcean;                           // 0x06B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2406[0xF];                                     // 0x06B1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TessellationFactor;                                // 0x06C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         LODScale;                                          // 0x06C4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2407[0x8];                                     // 0x06C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ForceCollapseDensityLevel;                         // 0x0550(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_554[0x4];                                      // 0x0554(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     FarDistanceMaterial;                               // 0x0558(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FarDistanceMeshExtent;                             // 0x0560(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TileSize;                                          // 0x0564(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FIntPoint                              QuadTreeResolution;                                // 0x0568(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_570[0x100];                                    // 0x0570(0x0100)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UMaterialInterface*>               UsedMaterials;                                     // 0x0670(0x0050)(Transient, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<class UMaterialInterface*, class UMaterialInstanceDynamic*> MaterialToMID;                                     // 0x06C0(0x0050)(Transient, TextExportTransient, NonPIEDuplicateTransient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	bool                                          bUseFarMeshWithoutOcean;                           // 0x0710(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_711[0xF];                                      // 0x0711(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TessellationFactor;                                // 0x0720(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         LODScale;                                          // 0x0724(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_728[0x8];                                      // 0x0728(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsEnabled() const;
@@ -1005,16 +1037,17 @@ public:
 	}
 };
 static_assert(alignof(UWaterMeshComponent) == 0x000010, "Wrong alignment on UWaterMeshComponent");
-static_assert(sizeof(UWaterMeshComponent) == 0x0006D0, "Wrong size on UWaterMeshComponent");
-static_assert(offsetof(UWaterMeshComponent, ForceCollapseDensityLevel) == 0x0005A8, "Member 'UWaterMeshComponent::ForceCollapseDensityLevel' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, FarDistanceMaterial) == 0x0005B0, "Member 'UWaterMeshComponent::FarDistanceMaterial' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, FarDistanceMeshExtent) == 0x0005B8, "Member 'UWaterMeshComponent::FarDistanceMeshExtent' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, TileSize) == 0x0005BC, "Member 'UWaterMeshComponent::TileSize' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, ExtentInTiles) == 0x0005C0, "Member 'UWaterMeshComponent::ExtentInTiles' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, UsedMaterials) == 0x000660, "Member 'UWaterMeshComponent::UsedMaterials' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, bUseFarMeshWithoutOcean) == 0x0006B0, "Member 'UWaterMeshComponent::bUseFarMeshWithoutOcean' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, TessellationFactor) == 0x0006C0, "Member 'UWaterMeshComponent::TessellationFactor' has a wrong offset!");
-static_assert(offsetof(UWaterMeshComponent, LODScale) == 0x0006C4, "Member 'UWaterMeshComponent::LODScale' has a wrong offset!");
+static_assert(sizeof(UWaterMeshComponent) == 0x000730, "Wrong size on UWaterMeshComponent");
+static_assert(offsetof(UWaterMeshComponent, ForceCollapseDensityLevel) == 0x000550, "Member 'UWaterMeshComponent::ForceCollapseDensityLevel' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, FarDistanceMaterial) == 0x000558, "Member 'UWaterMeshComponent::FarDistanceMaterial' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, FarDistanceMeshExtent) == 0x000560, "Member 'UWaterMeshComponent::FarDistanceMeshExtent' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, TileSize) == 0x000564, "Member 'UWaterMeshComponent::TileSize' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, QuadTreeResolution) == 0x000568, "Member 'UWaterMeshComponent::QuadTreeResolution' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, UsedMaterials) == 0x000670, "Member 'UWaterMeshComponent::UsedMaterials' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, MaterialToMID) == 0x0006C0, "Member 'UWaterMeshComponent::MaterialToMID' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, bUseFarMeshWithoutOcean) == 0x000710, "Member 'UWaterMeshComponent::bUseFarMeshWithoutOcean' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, TessellationFactor) == 0x000720, "Member 'UWaterMeshComponent::TessellationFactor' has a wrong offset!");
+static_assert(offsetof(UWaterMeshComponent, LODScale) == 0x000724, "Member 'UWaterMeshComponent::LODScale' has a wrong offset!");
 
 // Class Water.WaterRuntimeSettings
 // 0x0090 (0x00C8 - 0x0038)
@@ -1022,18 +1055,18 @@ class UWaterRuntimeSettings final : public UDeveloperSettings
 {
 public:
 	ECollisionChannel                             CollisionChannelForWaterTraces;                    // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2408[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UMaterialParameterCollection> MaterialParameterCollection;                       // 0x0040(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WaterBodyIconWorldZOffset;                         // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   DefaultWaterCollisionProfileName;                  // 0x006C(0x0008)(Edit, ZeroConstructor, Config, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2409[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UMaterialInterface>      DefaultWaterInfoMaterial;                          // 0x0078(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UWaterBodyRiverComponent>   WaterBodyRiverComponentClass;                      // 0x00A0(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UWaterBodyLakeComponent>    WaterBodyLakeComponentClass;                       // 0x00A8(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UWaterBodyOceanComponent>   WaterBodyOceanComponentClass;                      // 0x00B0(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UWaterBodyCustomComponent>  WaterBodyCustomComponentClass;                     // 0x00B8(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UWaterBodyRiverComponent>   WaterBodyRiverComponentClass;                      // 0x00A0(0x0008)(ZeroConstructor, Config, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UWaterBodyLakeComponent>    WaterBodyLakeComponentClass;                       // 0x00A8(0x0008)(ZeroConstructor, Config, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UWaterBodyOceanComponent>   WaterBodyOceanComponentClass;                      // 0x00B0(0x0008)(ZeroConstructor, Config, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UWaterBodyCustomComponent>  WaterBodyCustomComponentClass;                     // 0x00B8(0x0008)(ZeroConstructor, Config, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bWarnOnMismatchOceanExtent;                        // 0x00C0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_240A[0x7];                                     // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1059,12 +1092,13 @@ static_assert(offsetof(UWaterRuntimeSettings, WaterBodyCustomComponentClass) == 
 static_assert(offsetof(UWaterRuntimeSettings, bWarnOnMismatchOceanExtent) == 0x0000C0, "Member 'UWaterRuntimeSettings::bWarnOnMismatchOceanExtent' has a wrong offset!");
 
 // Class Water.WaterSplineComponent
-// 0x0020 (0x0690 - 0x0670)
+// 0x0020 (0x0640 - 0x0620)
 class UWaterSplineComponent final : public USplineComponent
 {
 public:
-	struct FWaterSplineCurveDefaults              WaterSplineDefaults;                               // 0x0670(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWaterSplineCurveDefaults              PreviousWaterSplineDefaults;                       // 0x0680(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaterSplineCurveDefaults              WaterSplineDefaults;                               // 0x0618(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWaterSplineCurveDefaults              PreviousWaterSplineDefaults;                       // 0x0628(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_638[0x8];                                      // 0x0638(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void K2_SynchronizeAndBroadcastDataChange();
@@ -1080,9 +1114,9 @@ public:
 	}
 };
 static_assert(alignof(UWaterSplineComponent) == 0x000010, "Wrong alignment on UWaterSplineComponent");
-static_assert(sizeof(UWaterSplineComponent) == 0x000690, "Wrong size on UWaterSplineComponent");
-static_assert(offsetof(UWaterSplineComponent, WaterSplineDefaults) == 0x000670, "Member 'UWaterSplineComponent::WaterSplineDefaults' has a wrong offset!");
-static_assert(offsetof(UWaterSplineComponent, PreviousWaterSplineDefaults) == 0x000680, "Member 'UWaterSplineComponent::PreviousWaterSplineDefaults' has a wrong offset!");
+static_assert(sizeof(UWaterSplineComponent) == 0x000640, "Wrong size on UWaterSplineComponent");
+static_assert(offsetof(UWaterSplineComponent, WaterSplineDefaults) == 0x000618, "Member 'UWaterSplineComponent::WaterSplineDefaults' has a wrong offset!");
+static_assert(offsetof(UWaterSplineComponent, PreviousWaterSplineDefaults) == 0x000628, "Member 'UWaterSplineComponent::PreviousWaterSplineDefaults' has a wrong offset!");
 
 // Class Water.WaterSplineMetadata
 // 0x0078 (0x00A0 - 0x0028)
@@ -1114,19 +1148,18 @@ static_assert(offsetof(UWaterSplineMetadata, AudioIntensity) == 0x000070, "Membe
 static_assert(offsetof(UWaterSplineMetadata, WaterVelocity) == 0x000088, "Member 'UWaterSplineMetadata::WaterVelocity' has a wrong offset!");
 
 // Class Water.WaterSubsystem
-// 0x00D0 (0x0110 - 0x0040)
+// 0x0140 (0x0180 - 0x0040)
 class UWaterSubsystem final : public UTickableWorldSubsystem
 {
 public:
-	uint8                                         Pad_240B[0x38];                                    // 0x0040(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABuoyancyManager*                       BuoyancyManager;                                   // 0x0078(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnCameraUnderwaterStateChanged;                    // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnWaterScalabilityChanged;                         // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            DefaultRiverMesh;                                  // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            DefaultLakeMesh;                                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_240C[0x28];                                    // 0x00B0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialParameterCollection*           MaterialParameterCollection;                       // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_240D[0x30];                                    // 0x00E0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ABuoyancyManager*                       BuoyancyManager;                                   // 0x0040(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnCameraUnderwaterStateChanged;                    // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnWaterScalabilityChanged;                         // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            DefaultRiverMesh;                                  // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            DefaultLakeMesh;                                   // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x28];                                      // 0x0078(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           MaterialParameterCollection;                       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A8[0xD8];                                      // 0x00A8(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static int32 GetShallowWaterMaxDynamicForces();
@@ -1157,13 +1190,13 @@ public:
 	}
 };
 static_assert(alignof(UWaterSubsystem) == 0x000008, "Wrong alignment on UWaterSubsystem");
-static_assert(sizeof(UWaterSubsystem) == 0x000110, "Wrong size on UWaterSubsystem");
-static_assert(offsetof(UWaterSubsystem, BuoyancyManager) == 0x000078, "Member 'UWaterSubsystem::BuoyancyManager' has a wrong offset!");
-static_assert(offsetof(UWaterSubsystem, OnCameraUnderwaterStateChanged) == 0x000080, "Member 'UWaterSubsystem::OnCameraUnderwaterStateChanged' has a wrong offset!");
-static_assert(offsetof(UWaterSubsystem, OnWaterScalabilityChanged) == 0x000090, "Member 'UWaterSubsystem::OnWaterScalabilityChanged' has a wrong offset!");
-static_assert(offsetof(UWaterSubsystem, DefaultRiverMesh) == 0x0000A0, "Member 'UWaterSubsystem::DefaultRiverMesh' has a wrong offset!");
-static_assert(offsetof(UWaterSubsystem, DefaultLakeMesh) == 0x0000A8, "Member 'UWaterSubsystem::DefaultLakeMesh' has a wrong offset!");
-static_assert(offsetof(UWaterSubsystem, MaterialParameterCollection) == 0x0000D8, "Member 'UWaterSubsystem::MaterialParameterCollection' has a wrong offset!");
+static_assert(sizeof(UWaterSubsystem) == 0x000180, "Wrong size on UWaterSubsystem");
+static_assert(offsetof(UWaterSubsystem, BuoyancyManager) == 0x000040, "Member 'UWaterSubsystem::BuoyancyManager' has a wrong offset!");
+static_assert(offsetof(UWaterSubsystem, OnCameraUnderwaterStateChanged) == 0x000048, "Member 'UWaterSubsystem::OnCameraUnderwaterStateChanged' has a wrong offset!");
+static_assert(offsetof(UWaterSubsystem, OnWaterScalabilityChanged) == 0x000058, "Member 'UWaterSubsystem::OnWaterScalabilityChanged' has a wrong offset!");
+static_assert(offsetof(UWaterSubsystem, DefaultRiverMesh) == 0x000068, "Member 'UWaterSubsystem::DefaultRiverMesh' has a wrong offset!");
+static_assert(offsetof(UWaterSubsystem, DefaultLakeMesh) == 0x000070, "Member 'UWaterSubsystem::DefaultLakeMesh' has a wrong offset!");
+static_assert(offsetof(UWaterSubsystem, MaterialParameterCollection) == 0x0000A0, "Member 'UWaterSubsystem::MaterialParameterCollection' has a wrong offset!");
 
 // Class Water.WaterWavesAsset
 // 0x0008 (0x0030 - 0x0028)
@@ -1208,24 +1241,32 @@ static_assert(sizeof(UWaterWavesAssetReference) == 0x000030, "Wrong size on UWat
 static_assert(offsetof(UWaterWavesAssetReference, WaterWavesAsset) == 0x000028, "Member 'UWaterWavesAssetReference::WaterWavesAsset' has a wrong offset!");
 
 // Class Water.WaterZone
-// 0x0090 (0x0328 - 0x0298)
+// 0x00A8 (0x0338 - 0x0290)
 class AWaterZone final : public AActor
 {
 public:
-	class UTextureRenderTarget2D*                 WaterInfoTexture;                                  // 0x0298(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class UWaterBodyComponent>> OwnedWaterBodies;                                  // 0x02A0(0x0010)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	struct FIntPoint                              RenderTargetResolution;                            // 0x02B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UWaterMeshComponent*                    WaterMesh;                                         // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector2D                              ZoneExtent;                                        // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         CaptureZOffset;                                    // 0x02D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bHalfPrecisionTexture;                             // 0x02D4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_240F[0x3];                                     // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         VelocityBlurRadius;                                // 0x02D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         OverlapPriority;                                   // 0x02DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bEnableLocalOnlyTessellation;                      // 0x02E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2410[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LocalTessellationExtent;                           // 0x02E8(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2411[0x28];                                    // 0x0300(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 WaterInfoTexture;                                  // 0x0290(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class UWaterBodyComponent>> OwnedWaterBodies;                                  // 0x0298(0x0010)(Edit, ExportObject, ZeroConstructor, Transient, EditConst, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	struct FIntPoint                              RenderTargetResolution;                            // 0x02A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UWaterMeshComponent*                    WaterMesh;                                         // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector2D                              ZoneExtent;                                        // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         CaptureZOffset;                                    // 0x02C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bHalfPrecisionTexture;                             // 0x02CC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2CD[0x3];                                      // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         VelocityBlurRadius;                                // 0x02D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         OverlapPriority;                                   // 0x02D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bEnableLocalOnlyTessellation;                      // 0x02D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LocalTessellationExtent;                           // 0x02E0(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2F8[0x28];                                     // 0x02F8(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         WaterZoneIndex;                                    // 0x0320(0x0004)(Edit, ZeroConstructor, Transient, EditConst, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_324[0x4];                                      // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnWaterInfoTextureCreated;                         // 0x0328(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+
+public:
+	void SetFarMeshMaterial(class UMaterialInterface* InFarMaterial);
+
+	int32 GetWaterZoneIndex() const;
 
 public:
 	static class UClass* StaticClass()
@@ -1238,18 +1279,20 @@ public:
 	}
 };
 static_assert(alignof(AWaterZone) == 0x000008, "Wrong alignment on AWaterZone");
-static_assert(sizeof(AWaterZone) == 0x000328, "Wrong size on AWaterZone");
-static_assert(offsetof(AWaterZone, WaterInfoTexture) == 0x000298, "Member 'AWaterZone::WaterInfoTexture' has a wrong offset!");
-static_assert(offsetof(AWaterZone, OwnedWaterBodies) == 0x0002A0, "Member 'AWaterZone::OwnedWaterBodies' has a wrong offset!");
-static_assert(offsetof(AWaterZone, RenderTargetResolution) == 0x0002B0, "Member 'AWaterZone::RenderTargetResolution' has a wrong offset!");
-static_assert(offsetof(AWaterZone, WaterMesh) == 0x0002B8, "Member 'AWaterZone::WaterMesh' has a wrong offset!");
-static_assert(offsetof(AWaterZone, ZoneExtent) == 0x0002C0, "Member 'AWaterZone::ZoneExtent' has a wrong offset!");
-static_assert(offsetof(AWaterZone, CaptureZOffset) == 0x0002D0, "Member 'AWaterZone::CaptureZOffset' has a wrong offset!");
-static_assert(offsetof(AWaterZone, bHalfPrecisionTexture) == 0x0002D4, "Member 'AWaterZone::bHalfPrecisionTexture' has a wrong offset!");
-static_assert(offsetof(AWaterZone, VelocityBlurRadius) == 0x0002D8, "Member 'AWaterZone::VelocityBlurRadius' has a wrong offset!");
-static_assert(offsetof(AWaterZone, OverlapPriority) == 0x0002DC, "Member 'AWaterZone::OverlapPriority' has a wrong offset!");
-static_assert(offsetof(AWaterZone, bEnableLocalOnlyTessellation) == 0x0002E0, "Member 'AWaterZone::bEnableLocalOnlyTessellation' has a wrong offset!");
-static_assert(offsetof(AWaterZone, LocalTessellationExtent) == 0x0002E8, "Member 'AWaterZone::LocalTessellationExtent' has a wrong offset!");
+static_assert(sizeof(AWaterZone) == 0x000338, "Wrong size on AWaterZone");
+static_assert(offsetof(AWaterZone, WaterInfoTexture) == 0x000290, "Member 'AWaterZone::WaterInfoTexture' has a wrong offset!");
+static_assert(offsetof(AWaterZone, OwnedWaterBodies) == 0x000298, "Member 'AWaterZone::OwnedWaterBodies' has a wrong offset!");
+static_assert(offsetof(AWaterZone, RenderTargetResolution) == 0x0002A8, "Member 'AWaterZone::RenderTargetResolution' has a wrong offset!");
+static_assert(offsetof(AWaterZone, WaterMesh) == 0x0002B0, "Member 'AWaterZone::WaterMesh' has a wrong offset!");
+static_assert(offsetof(AWaterZone, ZoneExtent) == 0x0002B8, "Member 'AWaterZone::ZoneExtent' has a wrong offset!");
+static_assert(offsetof(AWaterZone, CaptureZOffset) == 0x0002C8, "Member 'AWaterZone::CaptureZOffset' has a wrong offset!");
+static_assert(offsetof(AWaterZone, bHalfPrecisionTexture) == 0x0002CC, "Member 'AWaterZone::bHalfPrecisionTexture' has a wrong offset!");
+static_assert(offsetof(AWaterZone, VelocityBlurRadius) == 0x0002D0, "Member 'AWaterZone::VelocityBlurRadius' has a wrong offset!");
+static_assert(offsetof(AWaterZone, OverlapPriority) == 0x0002D4, "Member 'AWaterZone::OverlapPriority' has a wrong offset!");
+static_assert(offsetof(AWaterZone, bEnableLocalOnlyTessellation) == 0x0002D8, "Member 'AWaterZone::bEnableLocalOnlyTessellation' has a wrong offset!");
+static_assert(offsetof(AWaterZone, LocalTessellationExtent) == 0x0002E0, "Member 'AWaterZone::LocalTessellationExtent' has a wrong offset!");
+static_assert(offsetof(AWaterZone, WaterZoneIndex) == 0x000320, "Member 'AWaterZone::WaterZoneIndex' has a wrong offset!");
+static_assert(offsetof(AWaterZone, OnWaterInfoTextureCreated) == 0x000328, "Member 'AWaterZone::OnWaterInfoTextureCreated' has a wrong offset!");
 
 }
 

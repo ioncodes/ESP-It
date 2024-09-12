@@ -24,7 +24,7 @@ struct AdvancedExternalUILibrary_ShowAccountUpgradeUI final
 public:
 	struct FBPUniqueNetId                         PlayerRequestingAccountUpgradeUI;                  // 0x0000(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19CA[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedExternalUILibrary_ShowAccountUpgradeUI) == 0x000008, "Wrong alignment on AdvancedExternalUILibrary_ShowAccountUpgradeUI");
 static_assert(sizeof(AdvancedExternalUILibrary_ShowAccountUpgradeUI) == 0x000028, "Wrong size on AdvancedExternalUILibrary_ShowAccountUpgradeUI");
@@ -38,7 +38,7 @@ struct AdvancedExternalUILibrary_ShowFriendsUI final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19CB[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedExternalUILibrary_ShowFriendsUI) == 0x000008, "Wrong alignment on AdvancedExternalUILibrary_ShowFriendsUI");
 static_assert(sizeof(AdvancedExternalUILibrary_ShowFriendsUI) == 0x000010, "Wrong size on AdvancedExternalUILibrary_ShowFriendsUI");
@@ -52,7 +52,7 @@ struct AdvancedExternalUILibrary_ShowInviteUI final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19CC[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedExternalUILibrary_ShowInviteUI) == 0x000008, "Wrong alignment on AdvancedExternalUILibrary_ShowInviteUI");
 static_assert(sizeof(AdvancedExternalUILibrary_ShowInviteUI) == 0x000010, "Wrong size on AdvancedExternalUILibrary_ShowInviteUI");
@@ -66,7 +66,7 @@ struct AdvancedExternalUILibrary_ShowLeaderBoardUI final
 public:
 	class FString                                 LeaderboardName;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19CD[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedExternalUILibrary_ShowLeaderBoardUI) == 0x000008, "Wrong alignment on AdvancedExternalUILibrary_ShowLeaderBoardUI");
 static_assert(sizeof(AdvancedExternalUILibrary_ShowLeaderBoardUI) == 0x000018, "Wrong size on AdvancedExternalUILibrary_ShowLeaderBoardUI");
@@ -81,7 +81,7 @@ public:
 	struct FBPUniqueNetId                         PlayerViewingProfile;                              // 0x0000(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         PlayerToViewProfileOf;                             // 0x0020(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19CE[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedExternalUILibrary_ShowProfileUI) == 0x000008, "Wrong alignment on AdvancedExternalUILibrary_ShowProfileUI");
 static_assert(sizeof(AdvancedExternalUILibrary_ShowProfileUI) == 0x000048, "Wrong size on AdvancedExternalUILibrary_ShowProfileUI");
@@ -96,17 +96,17 @@ struct AdvancedExternalUILibrary_ShowWebURLUI final
 public:
 	class FString                                 URLToShow;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19CF[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         AllowedDomains;                                    // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEmbedded;                                         // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowBackground;                                   // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowCloseButton;                                  // 0x002A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D0[0x1];                                     // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OffsetX;                                           // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OffsetY;                                           // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SizeX;                                             // 0x0034(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SizeY;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D1[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedExternalUILibrary_ShowWebURLUI) == 0x000008, "Wrong alignment on AdvancedExternalUILibrary_ShowWebURLUI");
 static_assert(sizeof(AdvancedExternalUILibrary_ShowWebURLUI) == 0x000040, "Wrong size on AdvancedExternalUILibrary_ShowWebURLUI");
@@ -140,7 +140,7 @@ public:
 	int32                                         PlayerNum;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBPLoginStatus                                PreviousStatus;                                    // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBPLoginStatus                                NewStatus;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D3[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         NewPlayerUniqueNetID;                              // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedFriendsGameInstance_OnPlayerLoginStatusChanged) == 0x000008, "Wrong alignment on AdvancedFriendsGameInstance_OnPlayerLoginStatusChanged");
@@ -157,7 +157,7 @@ struct AdvancedFriendsGameInstance_OnPlayerTalkingStateChanged final
 public:
 	struct FBPUniqueNetId                         PlayerId;                                          // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bIsTalking;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D4[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedFriendsGameInstance_OnPlayerTalkingStateChanged) == 0x000008, "Wrong alignment on AdvancedFriendsGameInstance_OnPlayerTalkingStateChanged");
 static_assert(sizeof(AdvancedFriendsGameInstance_OnPlayerTalkingStateChanged) == 0x000028, "Wrong size on AdvancedFriendsGameInstance_OnPlayerTalkingStateChanged");
@@ -170,7 +170,7 @@ struct AdvancedFriendsGameInstance_OnSessionInviteAccepted final
 {
 public:
 	int32                                         LocalPlayerNum;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         PersonInvited;                                     // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
 	struct FBlueprintSessionResult                SessionToJoin;                                     // 0x0028(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
@@ -186,7 +186,7 @@ struct AdvancedFriendsGameInstance_OnSessionInviteReceived final
 {
 public:
 	int32                                         LocalPlayerNum;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         PersonInviting;                                    // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
 	class FString                                 AppId;                                             // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlueprintSessionResult                SessionToJoin;                                     // 0x0038(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -216,7 +216,7 @@ struct AdvancedFriendsInterface_OnPlayerLoginStatusChanged final
 public:
 	EBPLoginStatus                                PreviousStatus;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBPLoginStatus                                NewStatus;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D7[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         PlayerUniqueNetID;                                 // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedFriendsInterface_OnPlayerLoginStatusChanged) == 0x000008, "Wrong alignment on AdvancedFriendsInterface_OnPlayerLoginStatusChanged");
@@ -232,7 +232,7 @@ struct AdvancedFriendsInterface_OnPlayerVoiceStateChanged final
 public:
 	struct FBPUniqueNetId                         PlayerId;                                          // 0x0000(0x0020)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bIsTalking;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D8[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedFriendsInterface_OnPlayerVoiceStateChanged) == 0x000008, "Wrong alignment on AdvancedFriendsInterface_OnPlayerVoiceStateChanged");
 static_assert(sizeof(AdvancedFriendsInterface_OnPlayerVoiceStateChanged) == 0x000028, "Wrong size on AdvancedFriendsInterface_OnPlayerVoiceStateChanged");
@@ -314,7 +314,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0008(0x0020)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	bool                                          IsFriend;                                          // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D9[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedFriendsLibrary_IsAFriend) == 0x000008, "Wrong alignment on AdvancedFriendsLibrary_IsAFriend");
 static_assert(sizeof(AdvancedFriendsLibrary_IsAFriend) == 0x000030, "Wrong size on AdvancedFriendsLibrary_IsAFriend");
@@ -330,7 +330,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         FriendUniqueNetId;                                 // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DA[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedFriendsLibrary_SendSessionInviteToFriend) == 0x000008, "Wrong alignment on AdvancedFriendsLibrary_SendSessionInviteToFriend");
 static_assert(sizeof(AdvancedFriendsLibrary_SendSessionInviteToFriend) == 0x000030, "Wrong size on AdvancedFriendsLibrary_SendSessionInviteToFriend");
@@ -346,7 +346,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FBPUniqueNetId>                 Friends;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DB[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedFriendsLibrary_SendSessionInviteToFriends) == 0x000008, "Wrong alignment on AdvancedFriendsLibrary_SendSessionInviteToFriends");
 static_assert(sizeof(AdvancedFriendsLibrary_SendSessionInviteToFriends) == 0x000020, "Wrong size on AdvancedFriendsLibrary_SendSessionInviteToFriends");
@@ -361,7 +361,7 @@ struct AdvancedIdentityLibrary_GetAllUserAccounts final
 public:
 	TArray<struct FBPUserOnlineAccount>           AccountInfos;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DC[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_GetAllUserAccounts) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_GetAllUserAccounts");
 static_assert(sizeof(AdvancedIdentityLibrary_GetAllUserAccounts) == 0x000018, "Wrong size on AdvancedIdentityLibrary_GetAllUserAccounts");
@@ -376,7 +376,7 @@ public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EBPLoginStatus                                LoginStatus;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DD[0x6];                                     // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_GetLoginStatus) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_GetLoginStatus");
 static_assert(sizeof(AdvancedIdentityLibrary_GetLoginStatus) == 0x000028, "Wrong size on AdvancedIdentityLibrary_GetLoginStatus");
@@ -392,7 +392,7 @@ public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AuthToken;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DE[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_GetPlayerAuthToken) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_GetPlayerAuthToken");
 static_assert(sizeof(AdvancedIdentityLibrary_GetPlayerAuthToken) == 0x000020, "Wrong size on AdvancedIdentityLibrary_GetPlayerAuthToken");
@@ -421,7 +421,7 @@ public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FBPUserOnlineAccount                   AccountInfo;                                       // 0x0020(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DF[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_GetUserAccount) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_GetUserAccount");
 static_assert(sizeof(AdvancedIdentityLibrary_GetUserAccount) == 0x000038, "Wrong size on AdvancedIdentityLibrary_GetUserAccount");
@@ -451,7 +451,7 @@ public:
 	class FString                                 AttributeName;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AttributeValue;                                    // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E0[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_GetUserAccountAttribute) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_GetUserAccountAttribute");
 static_assert(sizeof(AdvancedIdentityLibrary_GetUserAccountAttribute) == 0x000038, "Wrong size on AdvancedIdentityLibrary_GetUserAccountAttribute");
@@ -469,7 +469,7 @@ public:
 	class FString                                 AttributeName;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AuthAttribute;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E1[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_GetUserAccountAuthAttribute) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_GetUserAccountAuthAttribute");
 static_assert(sizeof(AdvancedIdentityLibrary_GetUserAccountAuthAttribute) == 0x000038, "Wrong size on AdvancedIdentityLibrary_GetUserAccountAuthAttribute");
@@ -526,7 +526,7 @@ public:
 	class FString                                 AttributeName;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 NewAttributeValue;                                 // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E2[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedIdentityLibrary_SetUserAccountAttribute) == 0x000008, "Wrong alignment on AdvancedIdentityLibrary_SetUserAccountAttribute");
 static_assert(sizeof(AdvancedIdentityLibrary_SetUserAccountAttribute) == 0x000038, "Wrong size on AdvancedIdentityLibrary_SetUserAccountAttribute");
@@ -551,22 +551,22 @@ static_assert(offsetof(AdvancedSessionsLibrary_AddOrModifyExtraSettings, NewOrCh
 static_assert(offsetof(AdvancedSessionsLibrary_AddOrModifyExtraSettings, ModifiedSettingsArray) == 0x000020, "Member 'AdvancedSessionsLibrary_AddOrModifyExtraSettings::ModifiedSettingsArray' has a wrong offset!");
 
 // Function AdvancedSessions.AdvancedSessionsLibrary.BanPlayer
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AdvancedSessionsLibrary_BanPlayer final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      PlayerToBan;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   BanReason;                                         // 0x0010(0x0018)(Parm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E3[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   BanReason;                                         // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_BanPlayer) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_BanPlayer");
-static_assert(sizeof(AdvancedSessionsLibrary_BanPlayer) == 0x000030, "Wrong size on AdvancedSessionsLibrary_BanPlayer");
+static_assert(sizeof(AdvancedSessionsLibrary_BanPlayer) == 0x000028, "Wrong size on AdvancedSessionsLibrary_BanPlayer");
 static_assert(offsetof(AdvancedSessionsLibrary_BanPlayer, WorldContextObject) == 0x000000, "Member 'AdvancedSessionsLibrary_BanPlayer::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(AdvancedSessionsLibrary_BanPlayer, PlayerToBan) == 0x000008, "Member 'AdvancedSessionsLibrary_BanPlayer::PlayerToBan' has a wrong offset!");
 static_assert(offsetof(AdvancedSessionsLibrary_BanPlayer, BanReason) == 0x000010, "Member 'AdvancedSessionsLibrary_BanPlayer::BanReason' has a wrong offset!");
-static_assert(offsetof(AdvancedSessionsLibrary_BanPlayer, ReturnValue) == 0x000028, "Member 'AdvancedSessionsLibrary_BanPlayer::ReturnValue' has a wrong offset!");
+static_assert(offsetof(AdvancedSessionsLibrary_BanPlayer, ReturnValue) == 0x000020, "Member 'AdvancedSessionsLibrary_BanPlayer::ReturnValue' has a wrong offset!");
 
 // Function AdvancedSessions.AdvancedSessionsLibrary.EqualEqual_UNetIDUnetID
 // 0x0048 (0x0048 - 0x0000)
@@ -576,7 +576,7 @@ public:
 	struct FBPUniqueNetId                         A;                                                 // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         B;                                                 // 0x0020(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E4[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_EqualEqual_UNetIDUnetID) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_EqualEqual_UNetIDUnetID");
 static_assert(sizeof(AdvancedSessionsLibrary_EqualEqual_UNetIDUnetID) == 0x000048, "Wrong size on AdvancedSessionsLibrary_EqualEqual_UNetIDUnetID");
@@ -592,7 +592,7 @@ public:
 	TArray<struct FSessionPropertyKeyPair>        ExtraSettings;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   SettingsName;                                      // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E5[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSessionPropertyKeyPair                OutProperty;                                       // 0x0020(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_FindSessionPropertyByName) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_FindSessionPropertyByName");
@@ -610,7 +610,7 @@ public:
 	TArray<struct FSessionPropertyKeyPair>        ExtraSettings;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   SettingName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E6[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OutIndex;                                          // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_FindSessionPropertyIndexByName) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_FindSessionPropertyIndexByName");
@@ -664,7 +664,7 @@ struct AdvancedSessionsLibrary_GetNetPlayerIndex final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NetPlayerIndex;                                    // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E7[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetNetPlayerIndex) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetNetPlayerIndex");
 static_assert(sizeof(AdvancedSessionsLibrary_GetNetPlayerIndex) == 0x000010, "Wrong size on AdvancedSessionsLibrary_GetNetPlayerIndex");
@@ -678,7 +678,7 @@ struct AdvancedSessionsLibrary_GetNumberOfNetworkPlayers final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumNetPlayers;                                     // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E8[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetNumberOfNetworkPlayers) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetNumberOfNetworkPlayers");
 static_assert(sizeof(AdvancedSessionsLibrary_GetNumberOfNetworkPlayers) == 0x000010, "Wrong size on AdvancedSessionsLibrary_GetNumberOfNetworkPlayers");
@@ -720,7 +720,7 @@ public:
 	class FName                                   SettingName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESessionSettingSearchResult                   SearchResult;                                      // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SettingValue;                                      // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19E9[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionPropertyBool) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionPropertyBool");
 static_assert(sizeof(AdvancedSessionsLibrary_GetSessionPropertyBool) == 0x000020, "Wrong size on AdvancedSessionsLibrary_GetSessionPropertyBool");
@@ -738,7 +738,7 @@ public:
 	class FName                                   SettingName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESessionSettingSearchResult                   SearchResult;                                      // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         SettingValue;                                      // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19EA[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionPropertyByte) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionPropertyByte");
 static_assert(sizeof(AdvancedSessionsLibrary_GetSessionPropertyByte) == 0x000020, "Wrong size on AdvancedSessionsLibrary_GetSessionPropertyByte");
@@ -755,7 +755,7 @@ public:
 	TArray<struct FSessionPropertyKeyPair>        ExtraSettings;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   SettingName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESessionSettingSearchResult                   SearchResult;                                      // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19EB[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SettingValue;                                      // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionPropertyFloat) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionPropertyFloat");
@@ -773,7 +773,7 @@ public:
 	TArray<struct FSessionPropertyKeyPair>        ExtraSettings;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   SettingName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESessionSettingSearchResult                   SearchResult;                                      // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19EC[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SettingValue;                                      // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionPropertyInt) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionPropertyInt");
@@ -804,7 +804,7 @@ public:
 	TArray<struct FSessionPropertyKeyPair>        ExtraSettings;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   SettingName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESessionSettingSearchResult                   SearchResult;                                      // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19ED[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SettingValue;                                      // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionPropertyString) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionPropertyString");
@@ -827,12 +827,12 @@ public:
 	bool                                          bAllowInvites;                                     // 0x0012(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowJoinInProgress;                              // 0x0013(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsAnticheatEnabled;                               // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19EE[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BuildUniqueId;                                     // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19EF[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSessionPropertyKeyPair>        ExtraSettings;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F0[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionSettings) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionSettings");
 static_assert(sizeof(AdvancedSessionsLibrary_GetSessionSettings) == 0x000038, "Wrong size on AdvancedSessionsLibrary_GetSessionSettings");
@@ -855,7 +855,7 @@ struct AdvancedSessionsLibrary_GetSessionState final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBPOnlineSessionState                         SessionState;                                      // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F1[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetSessionState) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetSessionState");
 static_assert(sizeof(AdvancedSessionsLibrary_GetSessionState) == 0x000010, "Wrong size on AdvancedSessionsLibrary_GetSessionState");
@@ -869,7 +869,7 @@ struct AdvancedSessionsLibrary_GetUniqueBuildID final
 public:
 	struct FBlueprintSessionResult                SessionResult;                                     // 0x0000(0x0120)(Parm, NativeAccessSpecifierPublic)
 	int32                                         UniqueBuildId;                                     // 0x0120(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F2[0x4];                                     // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_GetUniqueBuildID) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_GetUniqueBuildID");
 static_assert(sizeof(AdvancedSessionsLibrary_GetUniqueBuildID) == 0x000128, "Wrong size on AdvancedSessionsLibrary_GetUniqueBuildID");
@@ -909,7 +909,7 @@ struct AdvancedSessionsLibrary_HasOnlineSubsystem final
 public:
 	class FName                                   SubSystemName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F3[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_HasOnlineSubsystem) == 0x000004, "Wrong alignment on AdvancedSessionsLibrary_HasOnlineSubsystem");
 static_assert(sizeof(AdvancedSessionsLibrary_HasOnlineSubsystem) == 0x00000C, "Wrong size on AdvancedSessionsLibrary_HasOnlineSubsystem");
@@ -924,7 +924,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         PlayerToCheck;                                     // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bIsInSession;                                      // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F4[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_IsPlayerInSession) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_IsPlayerInSession");
 static_assert(sizeof(AdvancedSessionsLibrary_IsPlayerInSession) == 0x000030, "Wrong size on AdvancedSessionsLibrary_IsPlayerInSession");
@@ -939,7 +939,7 @@ struct AdvancedSessionsLibrary_IsValidSession final
 public:
 	struct FBlueprintSessionResult                SessionResult;                                     // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0120(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F5[0x7];                                     // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_IsValidSession) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_IsValidSession");
 static_assert(sizeof(AdvancedSessionsLibrary_IsValidSession) == 0x000128, "Wrong size on AdvancedSessionsLibrary_IsValidSession");
@@ -953,7 +953,7 @@ struct AdvancedSessionsLibrary_IsValidUniqueNetID final
 public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F6[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_IsValidUniqueNetID) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_IsValidUniqueNetID");
 static_assert(sizeof(AdvancedSessionsLibrary_IsValidUniqueNetID) == 0x000028, "Wrong size on AdvancedSessionsLibrary_IsValidUniqueNetID");
@@ -961,22 +961,22 @@ static_assert(offsetof(AdvancedSessionsLibrary_IsValidUniqueNetID, UniqueNetId) 
 static_assert(offsetof(AdvancedSessionsLibrary_IsValidUniqueNetID, ReturnValue) == 0x000020, "Member 'AdvancedSessionsLibrary_IsValidUniqueNetID::ReturnValue' has a wrong offset!");
 
 // Function AdvancedSessions.AdvancedSessionsLibrary.KickPlayer
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct AdvancedSessionsLibrary_KickPlayer final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      PlayerToKick;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   KickReason;                                        // 0x0010(0x0018)(Parm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F7[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   KickReason;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_KickPlayer) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_KickPlayer");
-static_assert(sizeof(AdvancedSessionsLibrary_KickPlayer) == 0x000030, "Wrong size on AdvancedSessionsLibrary_KickPlayer");
+static_assert(sizeof(AdvancedSessionsLibrary_KickPlayer) == 0x000028, "Wrong size on AdvancedSessionsLibrary_KickPlayer");
 static_assert(offsetof(AdvancedSessionsLibrary_KickPlayer, WorldContextObject) == 0x000000, "Member 'AdvancedSessionsLibrary_KickPlayer::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(AdvancedSessionsLibrary_KickPlayer, PlayerToKick) == 0x000008, "Member 'AdvancedSessionsLibrary_KickPlayer::PlayerToKick' has a wrong offset!");
 static_assert(offsetof(AdvancedSessionsLibrary_KickPlayer, KickReason) == 0x000010, "Member 'AdvancedSessionsLibrary_KickPlayer::KickReason' has a wrong offset!");
-static_assert(offsetof(AdvancedSessionsLibrary_KickPlayer, ReturnValue) == 0x000028, "Member 'AdvancedSessionsLibrary_KickPlayer::ReturnValue' has a wrong offset!");
+static_assert(offsetof(AdvancedSessionsLibrary_KickPlayer, ReturnValue) == 0x000020, "Member 'AdvancedSessionsLibrary_KickPlayer::ReturnValue' has a wrong offset!");
 
 // Function AdvancedSessions.AdvancedSessionsLibrary.MakeLiteralSessionPropertyBool
 // 0x0038 (0x0038 - 0x0000)
@@ -985,7 +985,7 @@ struct AdvancedSessionsLibrary_MakeLiteralSessionPropertyBool final
 public:
 	class FName                                   Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Value;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F8[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSessionPropertyKeyPair                ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_MakeLiteralSessionPropertyBool) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_MakeLiteralSessionPropertyBool");
@@ -1001,7 +1001,7 @@ struct AdvancedSessionsLibrary_MakeLiteralSessionPropertyByte final
 public:
 	class FName                                   Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Value;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSessionPropertyKeyPair                ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_MakeLiteralSessionPropertyByte) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_MakeLiteralSessionPropertyByte");
@@ -1017,7 +1017,7 @@ struct AdvancedSessionsLibrary_MakeLiteralSessionPropertyFloat final
 public:
 	class FName                                   Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19FA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSessionPropertyKeyPair                ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_MakeLiteralSessionPropertyFloat) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_MakeLiteralSessionPropertyFloat");
@@ -1033,7 +1033,7 @@ struct AdvancedSessionsLibrary_MakeLiteralSessionPropertyInt final
 public:
 	class FName                                   Key;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19FB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSessionPropertyKeyPair                ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_MakeLiteralSessionPropertyInt) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_MakeLiteralSessionPropertyInt");
@@ -1064,7 +1064,7 @@ struct AdvancedSessionsLibrary_MakeLiteralSessionSearchProperty final
 public:
 	struct FSessionPropertyKeyPair                SessionSearchProperty;                             // 0x0000(0x0028)(Parm, NativeAccessSpecifierPublic)
 	EOnlineComparisonOpRedux                      ComparisonOp;                                      // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19FC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSessionsSearchSetting                 ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedSessionsLibrary_MakeLiteralSessionSearchProperty) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_MakeLiteralSessionSearchProperty");
@@ -1083,7 +1083,7 @@ public:
 	bool                                          bAbsolute;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSkipGameNotify;                             // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19FD[0x5];                                     // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedSessionsLibrary_ServerTravel) == 0x000008, "Wrong alignment on AdvancedSessionsLibrary_ServerTravel");
 static_assert(sizeof(AdvancedSessionsLibrary_ServerTravel) == 0x000020, "Wrong size on AdvancedSessionsLibrary_ServerTravel");
@@ -1162,10 +1162,10 @@ struct AdvancedVoiceLibrary_IsPlayerMuted final
 {
 public:
 	uint8                                         LocalUserNumChecking;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19FE[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19FF[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedVoiceLibrary_IsPlayerMuted) == 0x000008, "Wrong alignment on AdvancedVoiceLibrary_IsPlayerMuted");
 static_assert(sizeof(AdvancedVoiceLibrary_IsPlayerMuted) == 0x000030, "Wrong size on AdvancedVoiceLibrary_IsPlayerMuted");
@@ -1180,7 +1180,7 @@ struct AdvancedVoiceLibrary_IsRemotePlayerTalking final
 public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A00[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedVoiceLibrary_IsRemotePlayerTalking) == 0x000008, "Wrong alignment on AdvancedVoiceLibrary_IsRemotePlayerTalking");
 static_assert(sizeof(AdvancedVoiceLibrary_IsRemotePlayerTalking) == 0x000028, "Wrong size on AdvancedVoiceLibrary_IsRemotePlayerTalking");
@@ -1193,11 +1193,11 @@ struct AdvancedVoiceLibrary_MuteRemoteTalker final
 {
 public:
 	uint8                                         LocalUserNum;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A01[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bIsSystemWide;                                     // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A02[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedVoiceLibrary_MuteRemoteTalker) == 0x000008, "Wrong alignment on AdvancedVoiceLibrary_MuteRemoteTalker");
 static_assert(sizeof(AdvancedVoiceLibrary_MuteRemoteTalker) == 0x000030, "Wrong size on AdvancedVoiceLibrary_MuteRemoteTalker");
@@ -1226,7 +1226,7 @@ struct AdvancedVoiceLibrary_RegisterRemoteTalker final
 public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A03[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedVoiceLibrary_RegisterRemoteTalker) == 0x000008, "Wrong alignment on AdvancedVoiceLibrary_RegisterRemoteTalker");
 static_assert(sizeof(AdvancedVoiceLibrary_RegisterRemoteTalker) == 0x000028, "Wrong size on AdvancedVoiceLibrary_RegisterRemoteTalker");
@@ -1261,11 +1261,11 @@ struct AdvancedVoiceLibrary_UnMuteRemoteTalker final
 {
 public:
 	uint8                                         LocalUserNum;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A04[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bIsSystemWide;                                     // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A05[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedVoiceLibrary_UnMuteRemoteTalker) == 0x000008, "Wrong alignment on AdvancedVoiceLibrary_UnMuteRemoteTalker");
 static_assert(sizeof(AdvancedVoiceLibrary_UnMuteRemoteTalker) == 0x000030, "Wrong size on AdvancedVoiceLibrary_UnMuteRemoteTalker");
@@ -1292,7 +1292,7 @@ struct AdvancedVoiceLibrary_UnRegisterRemoteTalker final
 public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A06[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedVoiceLibrary_UnRegisterRemoteTalker) == 0x000008, "Wrong alignment on AdvancedVoiceLibrary_UnRegisterRemoteTalker");
 static_assert(sizeof(AdvancedVoiceLibrary_UnRegisterRemoteTalker) == 0x000028, "Wrong size on AdvancedVoiceLibrary_UnRegisterRemoteTalker");
@@ -1306,7 +1306,7 @@ struct AutoLoginUserCallbackProxy_AutoLoginUser final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A08[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAutoLoginUserCallbackProxy*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AutoLoginUserCallbackProxy_AutoLoginUser) == 0x000008, "Wrong alignment on AutoLoginUserCallbackProxy_AutoLoginUser");
@@ -1352,7 +1352,7 @@ public:
 	bool                                          bShouldAdvertise;                                  // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLobbiesVoiceChatIfAvailable;                   // 0x0032(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bStartAfterCreate;                                 // 0x0033(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A0B[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCreateSessionCallbackProxyAdvanced*    ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CreateSessionCallbackProxyAdvanced_CreateAdvancedSession) == 0x000008, "Wrong alignment on CreateSessionCallbackProxyAdvanced_CreateAdvancedSession");
@@ -1433,7 +1433,7 @@ public:
 	int32                                         MaxResults;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLAN;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBPServerPresenceSearchType                   ServerTypeToSearch;                                // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A0F[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSessionsSearchSetting>         Filters;                                           // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bEmptyServersOnly;                                 // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bNonEmptyServersOnly;                              // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1494,7 +1494,7 @@ struct GetUserPrivilegeCallbackProxy_GetUserPrivilege final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBPUserPrivileges                             PrivilegeToCheck;                                  // 0x0008(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A13[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         PlayerUniqueNetID;                                 // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class UGetUserPrivilegeCallbackProxy*         ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1585,7 +1585,7 @@ public:
 	bool                                          bAllowJoinInProgress;                              // 0x0022(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRefreshOnlineData;                                // 0x0023(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsDedicatedServer;                                // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A19[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUpdateSessionCallbackProxyAdvanced*    ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(UpdateSessionCallbackProxyAdvanced_UpdateSession) == 0x000008, "Wrong alignment on UpdateSessionCallbackProxyAdvanced_UpdateSession");

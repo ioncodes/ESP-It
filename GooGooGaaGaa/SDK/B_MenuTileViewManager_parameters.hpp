@@ -10,14 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
-#include "S_RecipeInfo_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
+#include "ETeamID_structs.hpp"
+#include "SMapData_structs.hpp"
+#include "E_GameModifierType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
-#include "ETeamID_structs.hpp"
-#include "E_GameModifierType_structs.hpp"
-#include "SMapData_structs.hpp"
 
 
 namespace SDK::Params
@@ -50,31 +51,31 @@ static_assert(sizeof(B_MenuTileViewManager_C_ClearTileView) == 0x000008, "Wrong 
 static_assert(offsetof(B_MenuTileViewManager_C_ClearTileView, TileView) == 0x000000, "Member 'B_MenuTileViewManager_C_ClearTileView::TileView' has a wrong offset!");
 
 // Function B_MenuTileViewManager.B_MenuTileViewManager_C.GetMapButtonData
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct B_MenuTileViewManager_C_GetMapButtonData final
 {
 public:
 	bool                                          HasInitialFocusOrSelection;                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46B9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            Parent;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FSMapData                              MapData;                                           // 0x0010(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      LayoutData;                                        // 0x0060(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          MapCycleIsEditable;                                // 0x00A8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46BA[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_MapButtonData_C*                     Data;                                              // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_MapButtonData_C*                     TempData;                                          // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_MapButtonData_C*                     CallFunc_CreateObject_Object;                      // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              MapData;                                           // 0x0010(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      LayoutData;                                        // 0x0050(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          MapCycleIsEditable;                                // 0x0098(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_MapButtonData_C*                     Data;                                              // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_MapButtonData_C*                     TempData;                                          // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_MapButtonData_C*                     CallFunc_CreateObject_Object;                      // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuTileViewManager_C_GetMapButtonData) == 0x000008, "Wrong alignment on B_MenuTileViewManager_C_GetMapButtonData");
-static_assert(sizeof(B_MenuTileViewManager_C_GetMapButtonData) == 0x0000C8, "Wrong size on B_MenuTileViewManager_C_GetMapButtonData");
+static_assert(sizeof(B_MenuTileViewManager_C_GetMapButtonData) == 0x0000B8, "Wrong size on B_MenuTileViewManager_C_GetMapButtonData");
 static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, HasInitialFocusOrSelection) == 0x000000, "Member 'B_MenuTileViewManager_C_GetMapButtonData::HasInitialFocusOrSelection' has a wrong offset!");
 static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, Parent) == 0x000008, "Member 'B_MenuTileViewManager_C_GetMapButtonData::Parent' has a wrong offset!");
 static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, MapData) == 0x000010, "Member 'B_MenuTileViewManager_C_GetMapButtonData::MapData' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, LayoutData) == 0x000060, "Member 'B_MenuTileViewManager_C_GetMapButtonData::LayoutData' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, MapCycleIsEditable) == 0x0000A8, "Member 'B_MenuTileViewManager_C_GetMapButtonData::MapCycleIsEditable' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, Data) == 0x0000B0, "Member 'B_MenuTileViewManager_C_GetMapButtonData::Data' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, TempData) == 0x0000B8, "Member 'B_MenuTileViewManager_C_GetMapButtonData::TempData' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, CallFunc_CreateObject_Object) == 0x0000C0, "Member 'B_MenuTileViewManager_C_GetMapButtonData::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, LayoutData) == 0x000050, "Member 'B_MenuTileViewManager_C_GetMapButtonData::LayoutData' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, MapCycleIsEditable) == 0x000098, "Member 'B_MenuTileViewManager_C_GetMapButtonData::MapCycleIsEditable' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, Data) == 0x0000A0, "Member 'B_MenuTileViewManager_C_GetMapButtonData::Data' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, TempData) == 0x0000A8, "Member 'B_MenuTileViewManager_C_GetMapButtonData::TempData' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetMapButtonData, CallFunc_CreateObject_Object) == 0x0000B0, "Member 'B_MenuTileViewManager_C_GetMapButtonData::CallFunc_CreateObject_Object' has a wrong offset!");
 
 // Function B_MenuTileViewManager.B_MenuTileViewManager_C.GetMaterialButtonData
 // 0x0040 (0x0040 - 0x0000)
@@ -83,11 +84,11 @@ struct B_MenuTileViewManager_C_GetMaterialButtonData final
 public:
 	class UUserWidget*                            Parent;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitial;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46BB[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Material;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_BasePlaceableMaterialOverwrite_C*    MaterialOverwrite;                                 // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         SlotIndex;                                         // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46BC[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MaterialButtonData_C*                MaterialButtonData;                                // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MaterialButtonData_C*                ItemData;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MaterialButtonData_C*                CallFunc_CreateObject_Object;                      // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -110,7 +111,7 @@ struct B_MenuTileViewManager_C_GetModButtonData final
 public:
 	E_GameModifierType                            Modifier;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasInitialFocus;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46BD[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            Parent;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_ModButtonData_C*                     ButtonData;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_ModButtonData_C*                     TempData;                                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -132,7 +133,7 @@ struct B_MenuTileViewManager_C_GetPowerupButtonData final
 public:
 	E_PowerupRuleType                             Powerup;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasInitialFocus;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46BE[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            Parent;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerupButtonData_C*                 ButtonData;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_PowerupButtonData_C*                 PowerupButtonData;                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -152,10 +153,10 @@ static_assert(offsetof(B_MenuTileViewManager_C_GetPowerupButtonData, CallFunc_Cr
 struct B_MenuTileViewManager_C_GetPropButtonData final
 {
 public:
-	int32                                         PropId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PropID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UnlockedByDefault;                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInitial;                                         // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46BF[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 Structure;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            Parent;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FPrefabToSave                          Prefab;                                            // 0x0018(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
@@ -165,7 +166,7 @@ public:
 };
 static_assert(alignof(B_MenuTileViewManager_C_GetPropButtonData) == 0x000008, "Wrong alignment on B_MenuTileViewManager_C_GetPropButtonData");
 static_assert(sizeof(B_MenuTileViewManager_C_GetPropButtonData) == 0x000070, "Wrong size on B_MenuTileViewManager_C_GetPropButtonData");
-static_assert(offsetof(B_MenuTileViewManager_C_GetPropButtonData, PropId) == 0x000000, "Member 'B_MenuTileViewManager_C_GetPropButtonData::PropId' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetPropButtonData, PropID) == 0x000000, "Member 'B_MenuTileViewManager_C_GetPropButtonData::PropID' has a wrong offset!");
 static_assert(offsetof(B_MenuTileViewManager_C_GetPropButtonData, UnlockedByDefault) == 0x000004, "Member 'B_MenuTileViewManager_C_GetPropButtonData::UnlockedByDefault' has a wrong offset!");
 static_assert(offsetof(B_MenuTileViewManager_C_GetPropButtonData, IsInitial) == 0x000005, "Member 'B_MenuTileViewManager_C_GetPropButtonData::IsInitial' has a wrong offset!");
 static_assert(offsetof(B_MenuTileViewManager_C_GetPropButtonData, Structure) == 0x000008, "Member 'B_MenuTileViewManager_C_GetPropButtonData::Structure' has a wrong offset!");
@@ -181,7 +182,7 @@ struct B_MenuTileViewManager_C_GetSkillButtonData final
 {
 public:
 	bool                                          HasInitialFocus;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 SkillClass;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            Parent;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillButtonData_C*                   ButtonData;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -203,10 +204,10 @@ struct B_MenuTileViewManager_C_GetSkinConfigButtonData final
 {
 public:
 	bool                                          HasInitialFocusOrSelection;                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            Parent;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         SkinConfigNr;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C2[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkinConfigButtonData_C*              Data;                                              // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkinConfigButtonData_C*              TempData;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkinConfigButtonData_C*              CallFunc_CreateObject_Object;                      // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -221,28 +222,54 @@ static_assert(offsetof(B_MenuTileViewManager_C_GetSkinConfigButtonData, TempData
 static_assert(offsetof(B_MenuTileViewManager_C_GetSkinConfigButtonData, CallFunc_CreateObject_Object) == 0x000028, "Member 'B_MenuTileViewManager_C_GetSkinConfigButtonData::CallFunc_CreateObject_Object' has a wrong offset!");
 
 // Function B_MenuTileViewManager.B_MenuTileViewManager_C.GetSkinOrRecipeData
-// 0x0130 (0x0130 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_MenuTileViewManager_C_GetSkinOrRecipeData final
 {
 public:
-	struct FS_ItemInfo                            SkinInfo;                                          // 0x0000(0x0080)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FS_RecipeInfo                          RecipeInfo;                                        // 0x0080(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	bool                                          HasInitialFocusOrSelection;                        // 0x0108(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C3[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            Parent;                                            // 0x0110(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_SkinOrRecipeItemData_C*              Data;                                              // 0x0118(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_SkinOrRecipeItemData_C*              TempData;                                          // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_SkinOrRecipeItemData_C*              CallFunc_CreateObject_Object;                      // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FS_ItemInfo                            SkinInfo;                                          // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          RecipeInfo;                                        // 0x0078(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          HasInitialFocusOrSelection;                        // 0x00F0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            Parent;                                            // 0x00F8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_SkinOrRecipeItemData_C*              Data;                                              // 0x0100(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_SkinOrRecipeItemData_C*              TempData;                                          // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_SkinOrRecipeItemData_C*              CallFunc_CreateObject_Object;                      // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuTileViewManager_C_GetSkinOrRecipeData) == 0x000008, "Wrong alignment on B_MenuTileViewManager_C_GetSkinOrRecipeData");
-static_assert(sizeof(B_MenuTileViewManager_C_GetSkinOrRecipeData) == 0x000130, "Wrong size on B_MenuTileViewManager_C_GetSkinOrRecipeData");
+static_assert(sizeof(B_MenuTileViewManager_C_GetSkinOrRecipeData) == 0x000118, "Wrong size on B_MenuTileViewManager_C_GetSkinOrRecipeData");
 static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, SkinInfo) == 0x000000, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::SkinInfo' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, RecipeInfo) == 0x000080, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::RecipeInfo' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, HasInitialFocusOrSelection) == 0x000108, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::HasInitialFocusOrSelection' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, Parent) == 0x000110, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::Parent' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, Data) == 0x000118, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::Data' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, TempData) == 0x000120, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::TempData' has a wrong offset!");
-static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, CallFunc_CreateObject_Object) == 0x000128, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::CallFunc_CreateObject_Object' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, RecipeInfo) == 0x000078, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::RecipeInfo' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, HasInitialFocusOrSelection) == 0x0000F0, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::HasInitialFocusOrSelection' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, Parent) == 0x0000F8, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::Parent' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, Data) == 0x000100, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::Data' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, TempData) == 0x000108, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::TempData' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetSkinOrRecipeData, CallFunc_CreateObject_Object) == 0x000110, "Member 'B_MenuTileViewManager_C_GetSkinOrRecipeData::CallFunc_CreateObject_Object' has a wrong offset!");
+
+// Function B_MenuTileViewManager.B_MenuTileViewManager_C.GetTradingButtonData
+// 0x0120 (0x0120 - 0x0000)
+struct B_MenuTileViewManager_C_GetTradingButtonData final
+{
+public:
+	struct FTradingItem                           Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FS_ItemInfo                            SkinItem;                                          // 0x0008(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FS_RecipeInfo                          RecipeItem;                                        // 0x0080(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          HasInitialFocus;                                   // 0x00F8(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            Parent;                                            // 0x0100(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_TradingItemData_C*                   Data;                                              // 0x0108(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_TradingItemData_C*                   TempData;                                          // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_TradingItemData_C*                   CallFunc_CreateObject_Object;                      // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_MenuTileViewManager_C_GetTradingButtonData) == 0x000008, "Wrong alignment on B_MenuTileViewManager_C_GetTradingButtonData");
+static_assert(sizeof(B_MenuTileViewManager_C_GetTradingButtonData) == 0x000120, "Wrong size on B_MenuTileViewManager_C_GetTradingButtonData");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, Item) == 0x000000, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::Item' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, SkinItem) == 0x000008, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::SkinItem' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, RecipeItem) == 0x000080, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::RecipeItem' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, HasInitialFocus) == 0x0000F8, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::HasInitialFocus' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, Parent) == 0x000100, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::Parent' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, Data) == 0x000108, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::Data' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, TempData) == 0x000110, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::TempData' has a wrong offset!");
+static_assert(offsetof(B_MenuTileViewManager_C_GetTradingButtonData, CallFunc_CreateObject_Object) == 0x000118, "Member 'B_MenuTileViewManager_C_GetTradingButtonData::CallFunc_CreateObject_Object' has a wrong offset!");
 
 // Function B_MenuTileViewManager.B_MenuTileViewManager_C.SetGeneralData
 // 0x0018 (0x0018 - 0x0000)
@@ -251,7 +278,7 @@ struct B_MenuTileViewManager_C_SetGeneralData final
 public:
 	class UB_TileViewData_C*                      TileViewData;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasInitialFocusOrSelection;                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C4[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            Parent;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_MenuTileViewManager_C_SetGeneralData) == 0x000008, "Wrong alignment on B_MenuTileViewManager_C_SetGeneralData");
@@ -267,7 +294,7 @@ struct B_MenuTileViewManager_C_TileViewIsEmpty final
 public:
 	class UListViewBase*                          TileView;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsEmpty;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C5[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0010(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -288,52 +315,52 @@ public:
 	class UTileView*                              TileView;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_SkinSelection_C*                     SkinSaves;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Team;                                              // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C6[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            Parent;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsActiveSkin;                                      // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSelected;                                        // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C7[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NrOfConfigs;                                       // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C8[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkinConfigMenu_C*                   K2Node_DynamicCast_AsWB_Skin_Config_Menu;          // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C9[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46CA[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkinConfigButtonData_C*              CallFunc_GetSkinConfigButtonData_Data;             // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TileViewIsEmpty_IsEmpty;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46CB[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkinConfigButtonData_C*              CallFunc_GetSkinConfigButtonData_Data_1;           // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWB_SkinConfigPopup_C*                  K2Node_DynamicCast_AsWB_Skin_Config_Popup;         // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0083(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46CC[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkinConfigPopup_C*                  K2Node_DynamicCast_AsWB_Skin_Config_Popup_1;       // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46CD[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkinConfigPopup_C*                  K2Node_DynamicCast_AsWB_Skin_Config_Popup_2;       // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46CE[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHunterSkin                            CallFunc_Array_Get_Item;                           // 0x00A8(0x0038)(NoDestructor)
 	struct FWitchSkin                             CallFunc_Array_Get_Item_1;                         // 0x00E0(0x0028)(NoDestructor)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidClass_ReturnValue_1;               // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46CF[0x2];                                     // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10A[0x2];                                      // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

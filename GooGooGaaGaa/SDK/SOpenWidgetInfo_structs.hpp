@@ -23,7 +23,7 @@ struct FSOpenWidgetInfo final
 public:
 	class UUserWidget*                            OpenedWidget_3_4ACF54C34C03E2DB3A8C3B809C094569;   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasFocus_6_6498D26743BF4852BC28D8AD83C97448;       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3508[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ZOrder_9_DDCF9F12404EF3AB8CA66A843D23A1CC;         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Visibility_12_B0AE31E24D69DE997FDBF0B92828C07E;    // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

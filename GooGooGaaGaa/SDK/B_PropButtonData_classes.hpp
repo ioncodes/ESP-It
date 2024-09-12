@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "B_TileViewData_classes.hpp"
 
 
@@ -23,9 +23,9 @@ namespace SDK
 class UB_PropButtonData_C final : public UB_TileViewData_C
 {
 public:
-	int32                                         PropId;                                            // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PropID;                                            // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UnlockedByDefault;                                 // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4889[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 StructureClass;                                    // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UClass*>                         PrefabClasses;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FTransform>                     PrefabTransforms;                                  // 0x0058(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -46,7 +46,7 @@ public:
 };
 static_assert(alignof(UB_PropButtonData_C) == 0x000008, "Wrong alignment on UB_PropButtonData_C");
 static_assert(sizeof(UB_PropButtonData_C) == 0x0000A8, "Wrong size on UB_PropButtonData_C");
-static_assert(offsetof(UB_PropButtonData_C, PropId) == 0x000038, "Member 'UB_PropButtonData_C::PropId' has a wrong offset!");
+static_assert(offsetof(UB_PropButtonData_C, PropID) == 0x000038, "Member 'UB_PropButtonData_C::PropID' has a wrong offset!");
 static_assert(offsetof(UB_PropButtonData_C, UnlockedByDefault) == 0x00003C, "Member 'UB_PropButtonData_C::UnlockedByDefault' has a wrong offset!");
 static_assert(offsetof(UB_PropButtonData_C, StructureClass) == 0x000040, "Member 'UB_PropButtonData_C::StructureClass' has a wrong offset!");
 static_assert(offsetof(UB_PropButtonData_C, PrefabClasses) == 0x000048, "Member 'UB_PropButtonData_C::PrefabClasses' has a wrong offset!");

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "MasterServerPlugin_structs.hpp"
-#include "E_Slot_structs.hpp"
-#include "B_SteamItemDef_structs.hpp"
 #include "Engine_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
-#include "S_RecipeInfo_structs.hpp"
-#include "S_ItemInfo_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "B_SteamItemDef_structs.hpp"
+#include "E_Slot_structs.hpp"
+#include "S_ItemInfo_structs.hpp"
+#include "S_RecipeInfo_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 #include "EventNames_structs.hpp"
 #include "EItemCraftResult_structs.hpp"
 
@@ -34,7 +34,7 @@ public:
 	TSet<int32>                                   SteamDefIDs;                                       // 0x0038(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          UpdatedFromSteam;                                  // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EditorWithoutSteam;                                // 0x0089(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3984[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<int32, struct FS_ItemInfo>               ItemInfoById;                                      // 0x0090(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<int32, struct FS_RecipeInfo>             RecipeInfoById;                                    // 0x00E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<TSoftClassPtr<class UClass>, int32>      ItemIdsBySoft;                                     // 0x0130(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -42,7 +42,7 @@ public:
 	TSet<int32>                                   GrantedSteamDefIDs;                                // 0x01D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsUpdatingUnlocks;                                 // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUpdatingItemDrops;                               // 0x0221(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3985[0x6];                                     // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<int32, struct FB_SteamItemDef>           SteamItemDefs;                                     // 0x0228(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FBlueprintOnlineItem>           OwnedSteamItems;                                   // 0x0278(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<int32, int32>                            ItemQuantity;                                      // 0x0288(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -54,17 +54,17 @@ public:
 	TArray<struct FBlueprintOnlineItem>           ItemsToConsume;                                    // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<int32>                                 ItemDefinitionsFromOldEventsToConsume;             // 0x0378(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         AmountToCraft;                                     // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3986[0x4];                                     // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ItemsToCraft;                                      // 0x0390(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 ReagentIds;                                        // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 ReagentIDs;                                        // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UDataTable*                             ItemsDataTable;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UDataTable*                             RecipesDataTable;                                  // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UDataTable*                             WitchSetsDataTable;                                // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UDataTable*                             HunterSetsDataTable;                               // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnItemCrafted__DelegateSignature(EItemCraftResult ItemCraftResult);
 	void OnUpdatedFromSteam__DelegateSignature();
+	void OnItemCrafted__DelegateSignature(EItemCraftResult ItemCraftResult);
 	void AddGrantedItems(TArray<struct FBlueprintOnlineItem>& NewItems);
 	void CheckAndConsumeAfterEventItems();
 	void CheckItemValidity(int32 ItemId, bool* IsValid);
@@ -73,7 +73,7 @@ public:
 	void CollectSkinUnlocks(TArray<int32>* UnlockedItemIds);
 	void ConsumeNextEventItem();
 	void CountItemToQuantity(struct FBlueprintOnlineItem& Item);
-	void CraftItem(const TArray<int32>& Param_ItemsToCraft, const TArray<int32>& Param_ReagentIds, int32 Param_AmountToCraft);
+	void CraftItem(const TArray<int32>& ItemsToCraft_0, const TArray<int32>& ReagentIDs_0, int32 AmountToCraft_0);
 	void DevGrantAllItems();
 	void ExecuteUbergraph_B_InventoryManager(int32 EntryPoint);
 	void FastReloadItems(TArray<struct FBlueprintOnlineItem>& UpdatedItems, TArray<struct FBlueprintOnlineItem>* NewItems);
@@ -100,7 +100,7 @@ public:
 	void IsNewItem(int32 ItemId, bool* New);
 	bool IsRecipeIdValid(int32 RecipeId);
 	bool IsSteamValid();
-	void IsUpdating(bool* Param_IsUpdating);
+	void IsUpdating(bool* IsUpdating_0);
 	void OnFailure_0AD4911A4B4941B8D52F1FA4362F425C(const TArray<struct FBlueprintOnlineItem>& Items);
 	void OnFailure_1D916844485D6967DF5F0B9383799404(const TArray<struct FBlueprintOnlineItem>& Items);
 	void OnFailure_5EC28FB942A3EDA48879C180300AF41E(const TArray<struct FBlueprintOnlineItem>& Items);
@@ -170,7 +170,7 @@ static_assert(offsetof(UB_InventoryManager_C, ItemsToConsume) == 0x000368, "Memb
 static_assert(offsetof(UB_InventoryManager_C, ItemDefinitionsFromOldEventsToConsume) == 0x000378, "Member 'UB_InventoryManager_C::ItemDefinitionsFromOldEventsToConsume' has a wrong offset!");
 static_assert(offsetof(UB_InventoryManager_C, AmountToCraft) == 0x000388, "Member 'UB_InventoryManager_C::AmountToCraft' has a wrong offset!");
 static_assert(offsetof(UB_InventoryManager_C, ItemsToCraft) == 0x000390, "Member 'UB_InventoryManager_C::ItemsToCraft' has a wrong offset!");
-static_assert(offsetof(UB_InventoryManager_C, ReagentIds) == 0x0003A0, "Member 'UB_InventoryManager_C::ReagentIds' has a wrong offset!");
+static_assert(offsetof(UB_InventoryManager_C, ReagentIDs) == 0x0003A0, "Member 'UB_InventoryManager_C::ReagentIDs' has a wrong offset!");
 static_assert(offsetof(UB_InventoryManager_C, ItemsDataTable) == 0x0003B0, "Member 'UB_InventoryManager_C::ItemsDataTable' has a wrong offset!");
 static_assert(offsetof(UB_InventoryManager_C, RecipesDataTable) == 0x0003B8, "Member 'UB_InventoryManager_C::RecipesDataTable' has a wrong offset!");
 static_assert(offsetof(UB_InventoryManager_C, WitchSetsDataTable) == 0x0003C0, "Member 'UB_InventoryManager_C::WitchSetsDataTable' has a wrong offset!");

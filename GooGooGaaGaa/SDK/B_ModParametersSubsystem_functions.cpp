@@ -99,6 +99,33 @@ void UB_ModParametersSubsystem_C::GetDefaultModParameterValue(E_GameModifierType
 }
 
 
+// Function B_ModParametersSubsystem.B_ModParametersSubsystem_C.GetDefaultModParameterValues
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FUIParameterData>         UIParameters                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// E_GameModifierType                      ModType                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FUIParam>                 ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+TArray<struct FUIParam> UB_ModParametersSubsystem_C::GetDefaultModParameterValues(TArray<struct FUIParameterData>& UIParameters, E_GameModifierType ModType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ModParametersSubsystem_C", "GetDefaultModParameterValues");
+
+	Params::B_ModParametersSubsystem_C_GetDefaultModParameterValues Parms{};
+
+	Parms.UIParameters = std::move(UIParameters);
+	Parms.ModType = ModType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	UIParameters = std::move(Parms.UIParameters);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function B_ModParametersSubsystem.B_ModParametersSubsystem_C.GetModParameters
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

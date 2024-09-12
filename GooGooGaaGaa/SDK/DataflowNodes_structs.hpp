@@ -10,12 +10,28 @@
 
 #include "Basic.hpp"
 
+#include "Chaos_structs.hpp"
 #include "DataflowCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
+
+// ScriptStruct DataflowNodes.DataflowCollectionAddScalarVertexPropertyNode
+// 0x00D0 (0x01B8 - 0x00E8)
+struct FDataflowCollectionAddScalarVertexPropertyNode final : public FDataflowNode
+{
+public:
+	struct FManagedArrayCollection                Collection;                                        // 0x00E8(0x00B0)(NativeAccessSpecifierPublic)
+	class FString                                 Name;                                              // 0x0198(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 VertexWeights;                                     // 0x01A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDataflowCollectionAddScalarVertexPropertyNode) == 0x000008, "Wrong alignment on FDataflowCollectionAddScalarVertexPropertyNode");
+static_assert(sizeof(FDataflowCollectionAddScalarVertexPropertyNode) == 0x0001B8, "Wrong size on FDataflowCollectionAddScalarVertexPropertyNode");
+static_assert(offsetof(FDataflowCollectionAddScalarVertexPropertyNode, Collection) == 0x0000E8, "Member 'FDataflowCollectionAddScalarVertexPropertyNode::Collection' has a wrong offset!");
+static_assert(offsetof(FDataflowCollectionAddScalarVertexPropertyNode, Name) == 0x000198, "Member 'FDataflowCollectionAddScalarVertexPropertyNode::Name' has a wrong offset!");
+static_assert(offsetof(FDataflowCollectionAddScalarVertexPropertyNode, VertexWeights) == 0x0001A8, "Member 'FDataflowCollectionAddScalarVertexPropertyNode::VertexWeights' has a wrong offset!");
 
 // ScriptStruct DataflowNodes.FloatOverrideDataflowNode
 // 0x0018 (0x0100 - 0x00E8)
@@ -25,7 +41,7 @@ public:
 	class FName                                   PropertyName;                                      // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   KeyName;                                           // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ValueOut;                                          // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3505[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FFloatOverrideDataflowNode) == 0x000008, "Wrong alignment on FFloatOverrideDataflowNode");
 static_assert(sizeof(FFloatOverrideDataflowNode) == 0x000100, "Wrong size on FFloatOverrideDataflowNode");
@@ -81,7 +97,7 @@ public:
 	class USkeletalMesh*                          SkeletalMesh;                                      // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BoneIndexOut;                                      // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   PropertyName;                                      // 0x00FC(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3506[0x4];                                     // 0x0104(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSkeletalMeshBoneDataflowNode) == 0x000008, "Wrong alignment on FSkeletalMeshBoneDataflowNode");
 static_assert(sizeof(FSkeletalMeshBoneDataflowNode) == 0x000108, "Wrong size on FSkeletalMeshBoneDataflowNode");
@@ -97,7 +113,7 @@ struct FSkeletalMeshReferenceTransformDataflowNode final : public FDataflowNode
 public:
 	class USkeletalMesh*                          SkeletalMeshIn;                                    // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BoneIndexIn;                                       // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3507[0xC];                                     // 0x00F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F4[0xC];                                       // 0x00F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TransformOut;                                      // 0x0100(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSkeletalMeshReferenceTransformDataflowNode) == 0x000010, "Wrong alignment on FSkeletalMeshReferenceTransformDataflowNode");

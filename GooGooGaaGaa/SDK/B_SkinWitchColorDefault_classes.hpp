@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinWitchColorDefault.B_SkinWitchColorDefault_C
-// 0x0000 (0x02E8 - 0x02E8)
+// 0x0000 (0x02E0 - 0x02E0)
 class AB_SkinWitchColorDefault_C final : public AB_SkinWitchColorBase_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinWitchColorDefault_C) == 0x000008, "Wrong alignment on AB_SkinWitchColorDefault_C");
-static_assert(sizeof(AB_SkinWitchColorDefault_C) == 0x0002E8, "Wrong size on AB_SkinWitchColorDefault_C");
+static_assert(sizeof(AB_SkinWitchColorDefault_C) == 0x0002E0, "Wrong size on AB_SkinWitchColorDefault_C");
 
 }
 

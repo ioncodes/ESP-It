@@ -20,21 +20,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_UploadPropLayout.WB_UploadPropLayout_C
-// 0x0058 (0x0318 - 0x02C0)
+// 0x0058 (0x0338 - 0x02E0)
 class UWB_UploadPropLayout_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Button_Back;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Button_Create;                                     // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMultiLineEditableTextBox*              ChangeNotes;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ChangeNotesHorizontalBox;                          // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMultiLineEditableTextBox*              Description;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             LayoutName;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ComboBoxWithLabel_C*                LayoutVisibility;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                OpenWorkshopLegalAgreements;                       // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 PreviewImage;                                      // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Title;                                             // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Button_Back;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Button_Create;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMultiLineEditableTextBox*              ChangeNotes;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ChangeNotesHorizontalBox;                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMultiLineEditableTextBox*              Description;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             LayoutName;                                        // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ComboBoxWithLabel_C*                LayoutVisibility;                                  // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                OpenWorkshopLegalAgreements;                       // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 PreviewImage;                                      // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Title;                                             // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Button_Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -67,18 +67,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_UploadPropLayout_C) == 0x000008, "Wrong alignment on UWB_UploadPropLayout_C");
-static_assert(sizeof(UWB_UploadPropLayout_C) == 0x000318, "Wrong size on UWB_UploadPropLayout_C");
-static_assert(offsetof(UWB_UploadPropLayout_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_UploadPropLayout_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, Button_Back) == 0x0002C8, "Member 'UWB_UploadPropLayout_C::Button_Back' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, Button_Create) == 0x0002D0, "Member 'UWB_UploadPropLayout_C::Button_Create' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, ChangeNotes) == 0x0002D8, "Member 'UWB_UploadPropLayout_C::ChangeNotes' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, ChangeNotesHorizontalBox) == 0x0002E0, "Member 'UWB_UploadPropLayout_C::ChangeNotesHorizontalBox' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, Description) == 0x0002E8, "Member 'UWB_UploadPropLayout_C::Description' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, LayoutName) == 0x0002F0, "Member 'UWB_UploadPropLayout_C::LayoutName' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, LayoutVisibility) == 0x0002F8, "Member 'UWB_UploadPropLayout_C::LayoutVisibility' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, OpenWorkshopLegalAgreements) == 0x000300, "Member 'UWB_UploadPropLayout_C::OpenWorkshopLegalAgreements' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, PreviewImage) == 0x000308, "Member 'UWB_UploadPropLayout_C::PreviewImage' has a wrong offset!");
-static_assert(offsetof(UWB_UploadPropLayout_C, Title) == 0x000310, "Member 'UWB_UploadPropLayout_C::Title' has a wrong offset!");
+static_assert(sizeof(UWB_UploadPropLayout_C) == 0x000338, "Wrong size on UWB_UploadPropLayout_C");
+static_assert(offsetof(UWB_UploadPropLayout_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_UploadPropLayout_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, Button_Back) == 0x0002E8, "Member 'UWB_UploadPropLayout_C::Button_Back' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, Button_Create) == 0x0002F0, "Member 'UWB_UploadPropLayout_C::Button_Create' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, ChangeNotes) == 0x0002F8, "Member 'UWB_UploadPropLayout_C::ChangeNotes' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, ChangeNotesHorizontalBox) == 0x000300, "Member 'UWB_UploadPropLayout_C::ChangeNotesHorizontalBox' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, Description) == 0x000308, "Member 'UWB_UploadPropLayout_C::Description' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, LayoutName) == 0x000310, "Member 'UWB_UploadPropLayout_C::LayoutName' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, LayoutVisibility) == 0x000318, "Member 'UWB_UploadPropLayout_C::LayoutVisibility' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, OpenWorkshopLegalAgreements) == 0x000320, "Member 'UWB_UploadPropLayout_C::OpenWorkshopLegalAgreements' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, PreviewImage) == 0x000328, "Member 'UWB_UploadPropLayout_C::PreviewImage' has a wrong offset!");
+static_assert(offsetof(UWB_UploadPropLayout_C, Title) == 0x000330, "Member 'UWB_UploadPropLayout_C::Title' has a wrong offset!");
 
 }
 

@@ -20,10 +20,10 @@ namespace SDK
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.RealValueToValue
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  Param_RealValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RealValue_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithLabel_C::RealValueToValue(double Param_RealValue, double* Value)
+void UWB_SliderWithLabel_C::RealValueToValue(double RealValue_0, double* Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -32,7 +32,7 @@ void UWB_SliderWithLabel_C::RealValueToValue(double Param_RealValue, double* Val
 
 	Params::WB_SliderWithLabel_C_RealValueToValue Parms{};
 
-	Parms.Param_RealValue = Param_RealValue;
+	Parms.RealValue_0 = RealValue_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -45,9 +45,9 @@ void UWB_SliderWithLabel_C::RealValueToValue(double Param_RealValue, double* Val
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_RealValue                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RealValue_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithLabel_C::ValueToRealValue(double Value, double* Param_RealValue)
+void UWB_SliderWithLabel_C::ValueToRealValue(double Value, double* RealValue_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -60,8 +60,8 @@ void UWB_SliderWithLabel_C::ValueToRealValue(double Value, double* Param_RealVal
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_RealValue != nullptr)
-		*Param_RealValue = Parms.Param_RealValue;
+	if (RealValue_0 != nullptr)
+		*RealValue_0 = Parms.RealValue_0;
 }
 
 
@@ -132,9 +132,9 @@ double UWB_SliderWithLabel_C::RoundToStepSize(double Value)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithLabel_C::GetOptionsOverrideIndex(double Value, double* Param_Index)
+void UWB_SliderWithLabel_C::GetOptionsOverrideIndex(double Value, double* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -147,8 +147,8 @@ void UWB_SliderWithLabel_C::GetOptionsOverrideIndex(double Value, double* Param_
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
@@ -482,9 +482,9 @@ void UWB_SliderWithLabel_C::OnMouseCaptureBegin__DelegateSignature()
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.OnRealValueChanged__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_RealValue                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  RealValue_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SliderWithLabel_C::OnRealValueChanged__DelegateSignature(double Param_RealValue)
+void UWB_SliderWithLabel_C::OnRealValueChanged__DelegateSignature(double RealValue_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -493,7 +493,7 @@ void UWB_SliderWithLabel_C::OnRealValueChanged__DelegateSignature(double Param_R
 
 	Params::WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature Parms{};
 
-	Parms.Param_RealValue = Param_RealValue;
+	Parms.RealValue_0 = RealValue_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

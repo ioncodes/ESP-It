@@ -37,19 +37,199 @@ void UBaseUserBehaviorTrackingManager::BPTick(float DeltaTime)
 }
 
 
+// Function MasterServerPlugin.GetAllWorkshopMapDetailsProxy.GetAllWorkshopMapDetails
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGetAllWorkshopMapDetailsProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGetAllWorkshopMapDetailsProxy* UGetAllWorkshopMapDetailsProxy::GetAllWorkshopMapDetails(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GetAllWorkshopMapDetailsProxy", "GetAllWorkshopMapDetails");
+
+	Params::GetAllWorkshopMapDetailsProxy_GetAllWorkshopMapDetails Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.DownloadWorkshopMapProxy.DownloadWorkshopMap
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   WorkshopID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDownloadWorkshopMapProxy*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDownloadWorkshopMapProxy* UDownloadWorkshopMapProxy::DownloadWorkshopMap(class UObject* WorldContextObject, int64 WorkshopID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DownloadWorkshopMapProxy", "DownloadWorkshopMap");
+
+	Params::DownloadWorkshopMapProxy_DownloadWorkshopMap Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.WorkshopID = WorkshopID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.DeleteWorkshopMapProxy.DeleteWorkshopMap
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   WorkshopID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDeleteWorkshopMapProxy*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDeleteWorkshopMapProxy* UDeleteWorkshopMapProxy::DeleteWorkshopMap(class UObject* WorldContextObject, int64 WorkshopID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DeleteWorkshopMapProxy", "DeleteWorkshopMap");
+
+	Params::DeleteWorkshopMapProxy_DeleteWorkshopMap Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.WorkshopID = WorkshopID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.UploadWorkshopMapProxy.UpdateWorkshopMap
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FCreativeWorkshopMapLayout       MapLayout                                              (Parm, NativeAccessSpecifierPublic)
+// class UUploadWorkshopMapProxy*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUploadWorkshopMapProxy* UUploadWorkshopMapProxy::UpdateWorkshopMap(class UObject* WorldContextObject, const struct FCreativeWorkshopMapLayout& MapLayout)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("UploadWorkshopMapProxy", "UpdateWorkshopMap");
+
+	Params::UploadWorkshopMapProxy_UpdateWorkshopMap Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.MapLayout = std::move(MapLayout);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.UploadWorkshopMapProxy.UploadNewWorkshopMap
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FCreativeWorkshopMapLayout       MapLayout                                              (Parm, NativeAccessSpecifierPublic)
+// class UUploadWorkshopMapProxy*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UUploadWorkshopMapProxy* UUploadWorkshopMapProxy::UploadNewWorkshopMap(class UObject* WorldContextObject, const struct FCreativeWorkshopMapLayout& MapLayout)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("UploadWorkshopMapProxy", "UploadNewWorkshopMap");
+
+	Params::UploadWorkshopMapProxy_UploadNewWorkshopMap Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.MapLayout = std::move(MapLayout);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.SubmitMapRatingProxy.SubmitMapRating
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   WorkshopID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rating                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USubmitMapRatingProxy*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USubmitMapRatingProxy* USubmitMapRatingProxy::SubmitMapRating(class UObject* WorldContextObject, int64 WorkshopID, int32 Rating)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SubmitMapRatingProxy", "SubmitMapRating");
+
+	Params::SubmitMapRatingProxy_SubmitMapRating Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.WorkshopID = WorkshopID;
+	Parms.Rating = Rating;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MasterServerPlugin.GrantItemsCallbackProxy.GrantItems
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                          Param_WorldContextObject                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          WorldContextObject_0                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AccountId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           Param_ItemDefIds                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<int32>                           ItemDefIds_0                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    bNotify                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsDrop                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsExtraItem                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     Param_PlayerState                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerState*                     PlayerState_0                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGrantItemsCallbackProxy*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UGrantItemsCallbackProxy* UGrantItemsCallbackProxy::GrantItems(class UObject* Param_WorldContextObject, int32 AccountId, const TArray<int32>& Param_ItemDefIds, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* Param_PlayerState)
+class UGrantItemsCallbackProxy* UGrantItemsCallbackProxy::GrantItems(class UObject* WorldContextObject_0, int32 AccountId, const TArray<int32>& ItemDefIds_0, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -58,13 +238,13 @@ class UGrantItemsCallbackProxy* UGrantItemsCallbackProxy::GrantItems(class UObje
 
 	Params::GrantItemsCallbackProxy_GrantItems Parms{};
 
-	Parms.Param_WorldContextObject = Param_WorldContextObject;
+	Parms.WorldContextObject_0 = WorldContextObject_0;
 	Parms.AccountId = AccountId;
-	Parms.Param_ItemDefIds = std::move(Param_ItemDefIds);
+	Parms.ItemDefIds_0 = std::move(ItemDefIds_0);
 	Parms.bNotify = bNotify;
 	Parms.bIsDrop = bIsDrop;
 	Parms.bIsExtraItem = bIsExtraItem;
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -575,666 +755,12 @@ void UInventorySubsystem::RequestInventory()
 }
 
 
-// Function MasterServerPlugin.MasterServerLoginCallbackProxy.MasterServerLogin
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerManager*             MasterServerManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           UserName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Password                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerLoginCallbackProxy*  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMasterServerLoginCallbackProxy* UMasterServerLoginCallbackProxy::MasterServerLogin(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, const class FString& UserName, const class FString& Password)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MasterServerLoginCallbackProxy", "MasterServerLogin");
-
-	Params::MasterServerLoginCallbackProxy_MasterServerLogin Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.MasterServerManager = MasterServerManager;
-	Parms.UserName = std::move(UserName);
-	Parms.Password = std::move(Password);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerLoginCallbackProxy.MasterServerRegisterAndLogin
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerManager*             MasterServerManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           UserName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Password                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerLoginCallbackProxy*  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMasterServerLoginCallbackProxy* UMasterServerLoginCallbackProxy::MasterServerRegisterAndLogin(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, const class FString& UserName, const class FString& Password)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MasterServerLoginCallbackProxy", "MasterServerRegisterAndLogin");
-
-	Params::MasterServerLoginCallbackProxy_MasterServerRegisterAndLogin Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.MasterServerManager = MasterServerManager;
-	Parms.UserName = std::move(UserName);
-	Parms.Password = std::move(Password);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerPingCallbackProxy.MasterServerPing
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerManager*             MasterServerManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerPingCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMasterServerPingCallbackProxy* UMasterServerPingCallbackProxy::MasterServerPing(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MasterServerPingCallbackProxy", "MasterServerPing");
-
-	Params::MasterServerPingCallbackProxy_MasterServerPing Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.MasterServerManager = MasterServerManager;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy.MatchFillAPot
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerManager*             MasterServerManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   WantedRegion                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerMatchFillAPotCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMasterServerMatchFillAPotCallbackProxy* UMasterServerMatchFillAPotCallbackProxy::MatchFillAPot(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, int32 WantedRegion)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MasterServerMatchFillAPotCallbackProxy", "MatchFillAPot");
-
-	Params::MasterServerMatchFillAPotCallbackProxy_MatchFillAPot Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.MasterServerManager = MasterServerManager;
-	Parms.WantedRegion = WantedRegion;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy.MatchFillAPotJoinFriend
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerManager*             MasterServerManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerMatchFillAPotCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMasterServerMatchFillAPotCallbackProxy* UMasterServerMatchFillAPotCallbackProxy::MatchFillAPotJoinFriend(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MasterServerMatchFillAPotCallbackProxy", "MatchFillAPotJoinFriend");
-
-	Params::MasterServerMatchFillAPotCallbackProxy_MatchFillAPotJoinFriend Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.MasterServerManager = MasterServerManager;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy.MatchFillAPotWithFriend
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerManager*             MasterServerManager                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   WantedRegion                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   FriendAccountId                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMasterServerMatchFillAPotCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMasterServerMatchFillAPotCallbackProxy* UMasterServerMatchFillAPotCallbackProxy::MatchFillAPotWithFriend(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, int32 WantedRegion, int32 FriendAccountId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MasterServerMatchFillAPotCallbackProxy", "MatchFillAPotWithFriend");
-
-	Params::MasterServerMatchFillAPotCallbackProxy_MatchFillAPotWithFriend Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.MasterServerManager = MasterServerManager;
-	Parms.WantedRegion = WantedRegion;
-	Parms.FriendAccountId = FriendAccountId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.CancelMatchFillAPot
-// (Final, Native, Public, BlueprintCallable)
-
-void UMasterServerManager::CancelMatchFillAPot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "CancelMatchFillAPot");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.Connect
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   InA                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InB                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InC                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InD                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Port                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::Connect(int32 InA, int32 InB, int32 InC, int32 InD, int32 Port)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "Connect");
-
-	Params::MasterServerManager_Connect Parms{};
-
-	Parms.InA = InA;
-	Parms.InB = InB;
-	Parms.InC = InC;
-	Parms.InD = InD;
-	Parms.Port = Port;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.ConnectHost
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           HostName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Port                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMasterServerManager::ConnectHost(const class FString& HostName, int32 Port)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "ConnectHost");
-
-	Params::MasterServerManager_ConnectHost Parms{};
-
-	Parms.HostName = std::move(HostName);
-	Parms.Port = Port;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.Disconnect
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    AutomaticalReconnectWhenKeepAlive                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::Disconnect(bool AutomaticalReconnectWhenKeepAlive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "Disconnect");
-
-	Params::MasterServerManager_Disconnect Parms{};
-
-	Parms.AutomaticalReconnectWhenKeepAlive = AutomaticalReconnectWhenKeepAlive;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.GetAccountId
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMasterServerManager::GetAccountId()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "GetAccountId");
-
-	Params::MasterServerManager_GetAccountId Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.GetIsInMatchmaking
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMasterServerManager::GetIsInMatchmaking()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "GetIsInMatchmaking");
-
-	Params::MasterServerManager_GetIsInMatchmaking Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.GetTestSessionSearchResult
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FBlueprintSessionResult          ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FBlueprintSessionResult UMasterServerManager::GetTestSessionSearchResult()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "GetTestSessionSearchResult");
-
-	Params::MasterServerManager_GetTestSessionSearchResult Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// DelegateFunction MasterServerPlugin.MasterServerManager.InitializeClientsForMatchMaking__DelegateSignature
-// (MulticastDelegate, Public, Delegate, HasOutParams)
-// Parameters:
-// TArray<class FString>                   UserIds                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<int32>                           ObjectiveTeam                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::InitializeClientsForMatchMaking__DelegateSignature(const TArray<class FString>& UserIds, const TArray<int32>& ObjectiveTeam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "InitializeClientsForMatchMaking__DelegateSignature");
-
-	Params::MasterServerManager_InitializeClientsForMatchMaking__DelegateSignature Parms{};
-
-	Parms.UserIds = std::move(UserIds);
-	Parms.ObjectiveTeam = std::move(ObjectiveTeam);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.InitializeInstanceId
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   InstanceId                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   IsStaticInstance                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::InitializeInstanceId(int32 InstanceId, uint8 IsStaticInstance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "InitializeInstanceId");
-
-	Params::MasterServerManager_InitializeInstanceId Parms{};
-
-	Parms.InstanceId = InstanceId;
-	Parms.IsStaticInstance = IsStaticInstance;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.InitializeUnsecureUserId
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           UnsecureUserId                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Language                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::InitializeUnsecureUserId(const class FString& UnsecureUserId, const class FString& Language)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "InitializeUnsecureUserId");
-
-	Params::MasterServerManager_InitializeUnsecureUserId Parms{};
-
-	Parms.UnsecureUserId = std::move(UnsecureUserId);
-	Parms.Language = std::move(Language);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.InvalidateAccessToken
-// (Final, Native, Public, BlueprintCallable)
-
-void UMasterServerManager::InvalidateAccessToken()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "InvalidateAccessToken");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.IsConnected
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMasterServerManager::IsConnected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "IsConnected");
-
-	Params::MasterServerManager_IsConnected Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.IsTearingDown
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMasterServerManager::IsTearingDown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "IsTearingDown");
-
-	Params::MasterServerManager_IsTearingDown Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// DelegateFunction MasterServerPlugin.MasterServerManager.NotifyQuestChange__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-// Parameters:
-// EQuestChangeReason                      Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   AccountQuestId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::NotifyQuestChange__DelegateSignature(EQuestChangeReason Reason, int64 AccountQuestId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "NotifyQuestChange__DelegateSignature");
-
-	Params::MasterServerManager_NotifyQuestChange__DelegateSignature Parms{};
-
-	Parms.Reason = Reason;
-	Parms.AccountQuestId = AccountQuestId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.OnConnectionEstablished
-// (Event, Public, BlueprintEvent)
-
-void UMasterServerManager::OnConnectionEstablished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "OnConnectionEstablished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.OnDisconnected
-// (Event, Public, BlueprintEvent)
-
-void UMasterServerManager::OnDisconnected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "OnDisconnected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// DelegateFunction MasterServerPlugin.MasterServerManager.PlayersFoundForMatchMaking__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-
-void UMasterServerManager::PlayersFoundForMatchMaking__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "PlayersFoundForMatchMaking__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.RequestEarlyAccessItem
-// (Final, Native, Public, BlueprintCallable)
-
-void UMasterServerManager::RequestEarlyAccessItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "RequestEarlyAccessItem");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.SendServerSystemMessage
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::SendServerSystemMessage(const class FString& Message)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "SendServerSystemMessage");
-
-	Params::MasterServerManager_SendServerSystemMessage Parms{};
-
-	Parms.Message = std::move(Message);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MasterServerPlugin.MasterServerManager.SetAccessToken
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           Param_SetAccessToken                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMasterServerManager::SetAccessToken(const class FString& Param_SetAccessToken)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MasterServerManager", "SetAccessToken");
-
-	Params::MasterServerManager_SetAccessToken Parms{};
-
-	Parms.Param_SetAccessToken = std::move(Param_SetAccessToken);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function MasterServerPlugin.MasterServerSubsystem.SetNewMasterServerManager
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UNewMasterServerManager*          Param_SetNewMasterServerManager                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNewMasterServerManager*          SetNewMasterServerManager_0                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMasterServerSubsystem::SetNewMasterServerManager(class UNewMasterServerManager* Param_SetNewMasterServerManager)
+void UMasterServerSubsystem::SetNewMasterServerManager(class UNewMasterServerManager* SetNewMasterServerManager_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1243,7 +769,7 @@ void UMasterServerSubsystem::SetNewMasterServerManager(class UNewMasterServerMan
 
 	Params::MasterServerSubsystem_SetNewMasterServerManager Parms{};
 
-	Parms.Param_SetNewMasterServerManager = Param_SetNewMasterServerManager;
+	Parms.SetNewMasterServerManager_0 = SetNewMasterServerManager_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2085,6 +1611,391 @@ void UServerBrowser::SendGameServerKeepAlive() const
 }
 
 
+// Function MasterServerPlugin.RequestPlayerInventoryProxy.RequestPlayerInventory
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 TargetPlayerId                                         (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class URequestPlayerInventoryProxy*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class URequestPlayerInventoryProxy* URequestPlayerInventoryProxy::RequestPlayerInventory(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& TargetPlayerId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RequestPlayerInventoryProxy", "RequestPlayerInventory");
+
+	Params::RequestPlayerInventoryProxy_RequestPlayerInventory Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TargetPlayerId = std::move(TargetPlayerId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.RequestPlayerInventoryProxy.RequestPlayerInventoryResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URequestPlayerInventoryProxy::RequestPlayerInventoryResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RequestPlayerInventoryProxy", "RequestPlayerInventoryResponse");
+
+	Params::RequestPlayerInventoryProxy_RequestPlayerInventoryResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MasterServerPlugin.SendTradeRequestProxy.SendTradeRequest
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 TargetPlayerId                                         (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FTradingItem>             SendingItems                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTradingItem>             TargetItems                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class USendTradeRequestProxy*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USendTradeRequestProxy* USendTradeRequestProxy::SendTradeRequest(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& TargetPlayerId, const TArray<struct FTradingItem>& SendingItems, const TArray<struct FTradingItem>& TargetItems)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("SendTradeRequestProxy", "SendTradeRequest");
+
+	Params::SendTradeRequestProxy_SendTradeRequest Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TargetPlayerId = std::move(TargetPlayerId);
+	Parms.SendingItems = std::move(SendingItems);
+	Parms.TargetItems = std::move(TargetItems);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.SendTradeRequestProxy.SendTradeRequestResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USendTradeRequestProxy::SendTradeRequestResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SendTradeRequestProxy", "SendTradeRequestResponse");
+
+	Params::SendTradeRequestProxy_SendTradeRequestResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MasterServerPlugin.AcceptTradeRequestProxy.AcceptTradeRequest
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   TradeRequestId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAcceptTradeRequestProxy*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAcceptTradeRequestProxy* UAcceptTradeRequestProxy::AcceptTradeRequest(class UObject* WorldContextObject, int64 TradeRequestId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AcceptTradeRequestProxy", "AcceptTradeRequest");
+
+	Params::AcceptTradeRequestProxy_AcceptTradeRequest Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TradeRequestId = TradeRequestId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.AcceptTradeRequestProxy.AcceptTradeRequestResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAcceptTradeRequestProxy::AcceptTradeRequestResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AcceptTradeRequestProxy", "AcceptTradeRequestResponse");
+
+	Params::AcceptTradeRequestProxy_AcceptTradeRequestResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MasterServerPlugin.RejectTradeRequestProxy.RejectTradeRequest
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   TradeRequestId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class URejectTradeRequestProxy*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class URejectTradeRequestProxy* URejectTradeRequestProxy::RejectTradeRequest(class UObject* WorldContextObject, int64 TradeRequestId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RejectTradeRequestProxy", "RejectTradeRequest");
+
+	Params::RejectTradeRequestProxy_RejectTradeRequest Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TradeRequestId = TradeRequestId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.RejectTradeRequestProxy.RejectTradeRequestResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URejectTradeRequestProxy::RejectTradeRequestResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RejectTradeRequestProxy", "RejectTradeRequestResponse");
+
+	Params::RejectTradeRequestProxy_RejectTradeRequestResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MasterServerPlugin.CancelTradeRequestProxy.CancelTradeRequest
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   TradeRequestId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UCancelTradeRequestProxy*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCancelTradeRequestProxy* UCancelTradeRequestProxy::CancelTradeRequest(class UObject* WorldContextObject, int64 TradeRequestId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CancelTradeRequestProxy", "CancelTradeRequest");
+
+	Params::CancelTradeRequestProxy_CancelTradeRequest Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TradeRequestId = TradeRequestId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.CancelTradeRequestProxy.CancelTradeRequestResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCancelTradeRequestProxy::CancelTradeRequestResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CancelTradeRequestProxy", "CancelTradeRequestResponse");
+
+	Params::CancelTradeRequestProxy_CancelTradeRequestResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MasterServerPlugin.GetIncomingTradeRequestsProxy.GetIncomingTradeRequests
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGetIncomingTradeRequestsProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGetIncomingTradeRequestsProxy* UGetIncomingTradeRequestsProxy::GetIncomingTradeRequests(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GetIncomingTradeRequestsProxy", "GetIncomingTradeRequests");
+
+	Params::GetIncomingTradeRequestsProxy_GetIncomingTradeRequests Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.GetIncomingTradeRequestsProxy.GetIncomingTradeRequestsResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGetIncomingTradeRequestsProxy::GetIncomingTradeRequestsResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GetIncomingTradeRequestsProxy", "GetIncomingTradeRequestsResponse");
+
+	Params::GetIncomingTradeRequestsProxy_GetIncomingTradeRequestsResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MasterServerPlugin.GetOutgoingTradeRequestsProxy.GetOutgoingTradeRequests
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGetOutgoingTradeRequestsProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGetOutgoingTradeRequestsProxy* UGetOutgoingTradeRequestsProxy::GetOutgoingTradeRequests(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GetOutgoingTradeRequestsProxy", "GetOutgoingTradeRequests");
+
+	Params::GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequests Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MasterServerPlugin.GetOutgoingTradeRequestsProxy.GetOutgoingTradeRequestsResponse
+// (Final, Native, Private)
+// Parameters:
+// class UVaRestRequestJSON*               Request                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGetOutgoingTradeRequestsProxy::GetOutgoingTradeRequestsResponse(class UVaRestRequestJSON* Request)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GetOutgoingTradeRequestsProxy", "GetOutgoingTradeRequestsResponse");
+
+	Params::GetOutgoingTradeRequestsProxy_GetOutgoingTradeRequestsResponse Parms{};
+
+	Parms.Request = Request;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MasterServerPlugin.WitchItPacket.ParseFromBytes
 // (Final, Native, Public, HasOutParams)
 // Parameters:
@@ -2117,10 +2028,10 @@ bool UWitchItPacket::ParseFromBytes(const TArray<uint8>& Bytes)
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // TArray<uint8>                           Bytes                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutArray(const TArray<uint8>& Bytes, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutArray(const TArray<uint8>& Bytes, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2130,7 +2041,7 @@ void UWitchItPacket::PutArray(const TArray<uint8>& Bytes, int32 Param_Index, int
 	Params::WitchItPacket_PutArray Parms{};
 
 	Parms.Bytes = std::move(Bytes);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2148,10 +2059,10 @@ void UWitchItPacket::PutArray(const TArray<uint8>& Bytes, int32 Param_Index, int
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutFloat32(float Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutFloat32(float Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2161,7 +2072,7 @@ void UWitchItPacket::PutFloat32(float Value, int32 Param_Index, int32* AdvancedP
 	Params::WitchItPacket_PutFloat32 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2179,10 +2090,10 @@ void UWitchItPacket::PutFloat32(float Value, int32 Param_Index, int32* AdvancedP
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // int16                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutInt16(int16 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutInt16(int16 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2192,7 +2103,7 @@ void UWitchItPacket::PutInt16(int16 Value, int32 Param_Index, int32* AdvancedPos
 	Params::WitchItPacket_PutInt16 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2210,10 +2121,10 @@ void UWitchItPacket::PutInt16(int16 Value, int32 Param_Index, int32* AdvancedPos
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutInt32(int32 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutInt32(int32 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2223,7 +2134,7 @@ void UWitchItPacket::PutInt32(int32 Value, int32 Param_Index, int32* AdvancedPos
 	Params::WitchItPacket_PutInt32 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2241,10 +2152,10 @@ void UWitchItPacket::PutInt32(int32 Value, int32 Param_Index, int32* AdvancedPos
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutInt64(int64 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutInt64(int64 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2254,7 +2165,7 @@ void UWitchItPacket::PutInt64(int64 Value, int32 Param_Index, int32* AdvancedPos
 	Params::WitchItPacket_PutInt64 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2272,10 +2183,10 @@ void UWitchItPacket::PutInt64(int64 Value, int32 Param_Index, int32* AdvancedPos
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // int8                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutInt8(int8 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutInt8(int8 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2285,7 +2196,7 @@ void UWitchItPacket::PutInt8(int8 Value, int32 Param_Index, int32* AdvancedPosit
 	Params::WitchItPacket_PutInt8 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2303,10 +2214,10 @@ void UWitchItPacket::PutInt8(int8 Value, int32 Param_Index, int32* AdvancedPosit
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutString(const class FString& Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutString(const class FString& Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2316,7 +2227,7 @@ void UWitchItPacket::PutString(const class FString& Value, int32 Param_Index, in
 	Params::WitchItPacket_PutString Parms{};
 
 	Parms.Value = std::move(Value);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2334,10 +2245,10 @@ void UWitchItPacket::PutString(const class FString& Value, int32 Param_Index, in
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // uint16                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutUInt16(uint16 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutUInt16(uint16 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2347,7 +2258,7 @@ void UWitchItPacket::PutUInt16(uint16 Value, int32 Param_Index, int32* AdvancedP
 	Params::WitchItPacket_PutUInt16 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2365,10 +2276,10 @@ void UWitchItPacket::PutUInt16(uint16 Value, int32 Param_Index, int32* AdvancedP
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // uint32                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutUInt32(uint32 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutUInt32(uint32 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2378,7 +2289,7 @@ void UWitchItPacket::PutUInt32(uint32 Value, int32 Param_Index, int32* AdvancedP
 	Params::WitchItPacket_PutUInt32 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2396,10 +2307,10 @@ void UWitchItPacket::PutUInt32(uint32 Value, int32 Param_Index, int32* AdvancedP
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // uint64                                  Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutUInt64(uint64 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutUInt64(uint64 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2409,7 +2320,7 @@ void UWitchItPacket::PutUInt64(uint64 Value, int32 Param_Index, int32* AdvancedP
 	Params::WitchItPacket_PutUInt64 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2427,10 +2338,10 @@ void UWitchItPacket::PutUInt64(uint64 Value, int32 Param_Index, int32* AdvancedP
 // (Final, Native, Public, HasOutParams)
 // Parameters:
 // uint8                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWitchItPacket::PutUInt8(uint8 Value, int32 Param_Index, int32* AdvancedPosition)
+void UWitchItPacket::PutUInt8(uint8 Value, int32 Index_0, int32* AdvancedPosition)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2440,7 +2351,7 @@ void UWitchItPacket::PutUInt8(uint8 Value, int32 Param_Index, int32* AdvancedPos
 	Params::WitchItPacket_PutUInt8 Parms{};
 
 	Parms.Value = Value;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2457,11 +2368,11 @@ void UWitchItPacket::PutUInt8(uint8 Value, int32 Param_Index, int32* AdvancedPos
 // Function MasterServerPlugin.WitchItPacket.ReadBytes
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<uint8>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-TArray<uint8> UWitchItPacket::ReadBytes(int32 Param_Index, int32* AdvancedPosition) const
+TArray<uint8> UWitchItPacket::ReadBytes(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2470,7 +2381,7 @@ TArray<uint8> UWitchItPacket::ReadBytes(int32 Param_Index, int32* AdvancedPositi
 
 	Params::WitchItPacket_ReadBytes Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2489,11 +2400,11 @@ TArray<uint8> UWitchItPacket::ReadBytes(int32 Param_Index, int32* AdvancedPositi
 // Function MasterServerPlugin.WitchItPacket.ReadFloat32
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UWitchItPacket::ReadFloat32(int32 Param_Index, int32* AdvancedPosition) const
+float UWitchItPacket::ReadFloat32(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2502,7 +2413,7 @@ float UWitchItPacket::ReadFloat32(int32 Param_Index, int32* AdvancedPosition) co
 
 	Params::WitchItPacket_ReadFloat32 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2521,11 +2432,11 @@ float UWitchItPacket::ReadFloat32(int32 Param_Index, int32* AdvancedPosition) co
 // Function MasterServerPlugin.WitchItPacket.ReadInt16
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int16                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int16 UWitchItPacket::ReadInt16(int32 Param_Index, int32* AdvancedPosition) const
+int16 UWitchItPacket::ReadInt16(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2534,7 +2445,7 @@ int16 UWitchItPacket::ReadInt16(int32 Param_Index, int32* AdvancedPosition) cons
 
 	Params::WitchItPacket_ReadInt16 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2553,11 +2464,11 @@ int16 UWitchItPacket::ReadInt16(int32 Param_Index, int32* AdvancedPosition) cons
 // Function MasterServerPlugin.WitchItPacket.ReadInt32
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UWitchItPacket::ReadInt32(int32 Param_Index, int32* AdvancedPosition) const
+int32 UWitchItPacket::ReadInt32(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2566,7 +2477,7 @@ int32 UWitchItPacket::ReadInt32(int32 Param_Index, int32* AdvancedPosition) cons
 
 	Params::WitchItPacket_ReadInt32 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2585,11 +2496,11 @@ int32 UWitchItPacket::ReadInt32(int32 Param_Index, int32* AdvancedPosition) cons
 // Function MasterServerPlugin.WitchItPacket.ReadInt64
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int64 UWitchItPacket::ReadInt64(int32 Param_Index, int32* AdvancedPosition) const
+int64 UWitchItPacket::ReadInt64(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2598,7 +2509,7 @@ int64 UWitchItPacket::ReadInt64(int32 Param_Index, int32* AdvancedPosition) cons
 
 	Params::WitchItPacket_ReadInt64 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2617,11 +2528,11 @@ int64 UWitchItPacket::ReadInt64(int32 Param_Index, int32* AdvancedPosition) cons
 // Function MasterServerPlugin.WitchItPacket.ReadInt8
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int8                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int8 UWitchItPacket::ReadInt8(int32 Param_Index, int32* AdvancedPosition) const
+int8 UWitchItPacket::ReadInt8(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2630,7 +2541,7 @@ int8 UWitchItPacket::ReadInt8(int32 Param_Index, int32* AdvancedPosition) const
 
 	Params::WitchItPacket_ReadInt8 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2649,11 +2560,11 @@ int8 UWitchItPacket::ReadInt8(int32 Param_Index, int32* AdvancedPosition) const
 // Function MasterServerPlugin.WitchItPacket.ReadString
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UWitchItPacket::ReadString(int32 Param_Index, int32* AdvancedPosition) const
+class FString UWitchItPacket::ReadString(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2662,7 +2573,7 @@ class FString UWitchItPacket::ReadString(int32 Param_Index, int32* AdvancedPosit
 
 	Params::WitchItPacket_ReadString Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2681,11 +2592,11 @@ class FString UWitchItPacket::ReadString(int32 Param_Index, int32* AdvancedPosit
 // Function MasterServerPlugin.WitchItPacket.ReadUInt16
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint16                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-uint16 UWitchItPacket::ReadUInt16(int32 Param_Index, int32* AdvancedPosition) const
+uint16 UWitchItPacket::ReadUInt16(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2694,7 +2605,7 @@ uint16 UWitchItPacket::ReadUInt16(int32 Param_Index, int32* AdvancedPosition) co
 
 	Params::WitchItPacket_ReadUInt16 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2713,11 +2624,11 @@ uint16 UWitchItPacket::ReadUInt16(int32 Param_Index, int32* AdvancedPosition) co
 // Function MasterServerPlugin.WitchItPacket.ReadUInt32
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint32                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-uint32 UWitchItPacket::ReadUInt32(int32 Param_Index, int32* AdvancedPosition) const
+uint32 UWitchItPacket::ReadUInt32(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2726,7 +2637,7 @@ uint32 UWitchItPacket::ReadUInt32(int32 Param_Index, int32* AdvancedPosition) co
 
 	Params::WitchItPacket_ReadUInt32 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2745,11 +2656,11 @@ uint32 UWitchItPacket::ReadUInt32(int32 Param_Index, int32* AdvancedPosition) co
 // Function MasterServerPlugin.WitchItPacket.ReadUInt64
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint64                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-uint64 UWitchItPacket::ReadUInt64(int32 Param_Index, int32* AdvancedPosition) const
+uint64 UWitchItPacket::ReadUInt64(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2758,7 +2669,7 @@ uint64 UWitchItPacket::ReadUInt64(int32 Param_Index, int32* AdvancedPosition) co
 
 	Params::WitchItPacket_ReadUInt64 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2777,11 +2688,11 @@ uint64 UWitchItPacket::ReadUInt64(int32 Param_Index, int32* AdvancedPosition) co
 // Function MasterServerPlugin.WitchItPacket.ReadUInt8
 // (Final, Native, Public, HasOutParams, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   AdvancedPosition                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint8                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-uint8 UWitchItPacket::ReadUInt8(int32 Param_Index, int32* AdvancedPosition) const
+uint8 UWitchItPacket::ReadUInt8(int32 Index_0, int32* AdvancedPosition) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -2790,7 +2701,7 @@ uint8 UWitchItPacket::ReadUInt8(int32 Param_Index, int32* AdvancedPosition) cons
 
 	Params::WitchItPacket_ReadUInt8 Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

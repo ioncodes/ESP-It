@@ -10,160 +10,196 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_FriendScreen.WB_FriendScreen_C.ExecuteUbergraph_WB_FriendScreen
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x03D0 (0x03D0 - 0x0000)
 struct WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window;              // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA2[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x0040(0x0030)(HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA3[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA4[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA5[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_ShowDialog_Widget;                        // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate;              // 0x00A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable;                              // 0x00C0(0x0030)(HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA6[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_1;                       // 0x0100(0x0030)(HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA7[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0134(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA8[0x4];                                     // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EA9[0x6];                                     // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWB_AccountCategoryButton_C*>    K2Node_MakeArray_Array;                            // 0x0160(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TArray<class UUserWidget*>                    K2Node_MakeArray_Array_1;                          // 0x0170(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsCurrentlyInMatch_IsCurrentlyInMatch; // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EAA[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0190(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UOnlinePresenceSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EAB[0x7];                                     // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EAC[0x3];                                     // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x01BC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x01CC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EAD[0x4];                                     // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x01E0(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_1;           // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x01F8(0x0030)(HasGetValueTypeHash)
-	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue;                // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EAE[0x6];                                     // 0x0242(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_1;            // 0x0248(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_1;            // 0x0250(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EAF[0x3];                                     // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0264(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB0[0x4];                                     // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_2;            // 0x0278(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_2;            // 0x0280(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB1[0x7];                                     // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetCurrentlyFocusedWidget_FocusedWidget;  // 0x0298(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_3;            // 0x02A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_3;            // 0x02A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x02B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_1;                       // 0x0020(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate;              // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId;                         // 0x0068(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x009C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Temp_struct_Variable;                              // 0x00B0(0x0030)(HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_2;                       // 0x00E8(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_2;               // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            CallFunc_ShowDialog_Widget;                        // 0x0148(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0164(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_174[0x4];                                      // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_UserId_3;                       // 0x0178(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bWasSuccessful_3;               // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x01B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x01D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D2[0x6];                                      // 0x01D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWB_AccountCategoryButton_C*>    K2Node_MakeArray_Array;                            // 0x01D8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UUserWidget*>                    K2Node_MakeArray_Array_1;                          // 0x01E8(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue;             // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsCurrentlyInMatch_IsCurrentlyInMatch; // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x0218(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_5;            // 0x0234(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0248(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_1;           // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0260(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       Temp_struct_Variable_1;                            // 0x0290(0x0030)(HasGetValueTypeHash)
+	class UOnlinePresenceSubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue;                // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x02E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window;              // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0301(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_302[0x2];                                      // 0x0302(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_6;            // 0x0304(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0314(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_315[0x3];                                      // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_1;            // 0x0318(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_1;            // 0x0320(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetCurrentlyFocusedWidget_FocusedWidget;  // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_2;            // 0x0340(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_2;            // 0x0348(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_3;            // 0x0360(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_3;            // 0x0368(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0379(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37A[0x6];                                      // 0x037A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      CallFunc_GetBGameInstance_ReturnValue_2;           // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_2;            // 0x0388(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue_1;   // 0x0390(0x0030)(HasGetValueTypeHash)
+	class UOnlinePresenceSubsystemQueryPresence*  CallFunc_QueryPresence_ReturnValue_1;              // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen) == 0x000008, "Wrong alignment on WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen");
-static_assert(sizeof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen) == 0x0002C0, "Wrong size on WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen");
+static_assert(sizeof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen) == 0x0003D0, "Wrong size on WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen");
 static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, EntryPoint) == 0x000000, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue) == 0x000008, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window) == 0x000018, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000030, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue) == 0x000038, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_UserId) == 0x000040, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_UserId' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_bWasSuccessful) == 0x000070, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000078, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_1) == 0x000080, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x000088, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000090, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_2) == 0x000098, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_ShowDialog_Widget) == 0x0000A0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_ShowDialog_Widget' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate) == 0x0000A8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue_2) == 0x0000B8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, Temp_struct_Variable) == 0x0000C0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x0000F0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_3) == 0x0000F8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_UserId_1) == 0x000100, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_UserId_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_bWasSuccessful_1) == 0x000130, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x000134, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue_3) == 0x000148, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000150, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_4) == 0x000158, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_Event_IsDesignTime) == 0x000159, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_MakeArray_Array) == 0x000160, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_MakeArray_Array_1) == 0x000170, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetBGameInstance_ReturnValue) == 0x000180, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetIsCurrentlyInMatch_IsCurrentlyInMatch) == 0x000188, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetIsCurrentlyInMatch_IsCurrentlyInMatch' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000190, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000198, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetOwningPlayer_ReturnValue) == 0x0001A0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, Temp_bool_Variable) == 0x0001A8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Creative_Player_Controller) == 0x0001B0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Creative_Player_Controller' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_5) == 0x0001B8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001BC, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001CC, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x0001E0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetBGameInstance_ReturnValue_1) == 0x0001E8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetBGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0001F0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x0001F8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_QueryPresence_ReturnValue) == 0x000228, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_QueryPresence_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000230, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000238, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_IsValid_ReturnValue) == 0x000240, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_MakeLiteralByte_ReturnValue) == 0x000241, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue_1) == 0x000248, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window_1) == 0x000250, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window_1' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_6) == 0x000260, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_4) == 0x000264, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue_2) == 0x000278, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window_2) == 0x000280, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window_2' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_7) == 0x000290, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetCurrentlyFocusedWidget_FocusedWidget) == 0x000298, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetCurrentlyFocusedWidget_FocusedWidget' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue_3) == 0x0002A0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window_3) == 0x0002A8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window_3' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_8) == 0x0002B8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x0002B9, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_SwitchPlatform_ReturnValue) == 0x000004, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000008, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000010, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000018, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_UserId_1) == 0x000020, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_UserId_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_bWasSuccessful_1) == 0x000050, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate) == 0x000054, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_UserId) == 0x000068, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_UserId' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_bWasSuccessful) == 0x000098, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_1) == 0x00009C, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, Temp_bool_Variable) == 0x0000AC, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, Temp_struct_Variable) == 0x0000B0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue) == 0x0000E0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_UserId_2) == 0x0000E8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_UserId_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_bWasSuccessful_2) == 0x000118, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_bWasSuccessful_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance) == 0x000120, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess) == 0x000128, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue_1) == 0x000130, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000138, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_1) == 0x000140, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_ShowDialog_Widget) == 0x000148, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_ShowDialog_Widget' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue_2) == 0x000150, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000158, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_2) == 0x000160, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_2) == 0x000164, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_UserId_3) == 0x000178, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_UserId_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CustomEvent_bWasSuccessful_3) == 0x0001A8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CustomEvent_bWasSuccessful_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstance_ReturnValue_3) == 0x0001B0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001B8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0001C8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_3) == 0x0001D0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_Event_IsDesignTime) == 0x0001D1, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_MakeArray_Array) == 0x0001D8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_MakeArray_Array_1) == 0x0001E8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetBGameInstance_ReturnValue) == 0x0001F8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetBGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetIsCurrentlyInMatch_IsCurrentlyInMatch) == 0x000200, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetIsCurrentlyInMatch_IsCurrentlyInMatch' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000208, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetOwningPlayer_ReturnValue) == 0x000210, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_4) == 0x000218, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsB_Creative_Player_Controller) == 0x000228, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsB_Creative_Player_Controller' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_4) == 0x000230, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_5) == 0x000234, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000248, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetBGameInstance_ReturnValue_1) == 0x000250, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetBGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000258, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000260, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, Temp_struct_Variable_1) == 0x000290, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::Temp_struct_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x0002C0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_QueryPresence_ReturnValue) == 0x0002C8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_QueryPresence_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_IsValid_ReturnValue) == 0x0002D0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x0002D8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue) == 0x0002E0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x0002E8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window) == 0x0002F0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_5) == 0x000300, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, Temp_bool_Variable_1) == 0x000301, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_CreateDelegate_OutputDelegate_6) == 0x000304, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_MakeLiteralByte_ReturnValue) == 0x000314, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue_1) == 0x000318, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window_1) == 0x000320, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_6) == 0x000330, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetCurrentlyFocusedWidget_FocusedWidget) == 0x000338, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetCurrentlyFocusedWidget_FocusedWidget' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue_2) == 0x000340, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window_2) == 0x000348, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_7) == 0x000358, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetActiveWidget_ReturnValue_3) == 0x000360, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetActiveWidget_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_AsI_Friend_Window_3) == 0x000368, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_AsI_Friend_Window_3' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, K2Node_DynamicCast_bSuccess_8) == 0x000378, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x000379, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetBGameInstance_ReturnValue_2) == 0x000380, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetBGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetOwningPlayer_ReturnValue_2) == 0x000388, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetOwningPlayer_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_GetControllerUniqueNetId_ReturnValue_1) == 0x000390, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_GetControllerUniqueNetId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_QueryPresence_ReturnValue_1) == 0x0003C0, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_QueryPresence_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen, CallFunc_IsValid_ReturnValue_1) == 0x0003C8, "Member 'WB_FriendScreen_C_ExecuteUbergraph_WB_FriendScreen::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function WB_FriendScreen.WB_FriendScreen_C.GetInitialFocusWidget
 // 0x0030 (0x0030 - 0x0000)
@@ -173,7 +209,7 @@ public:
 	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB2[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window;              // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -194,12 +230,12 @@ public:
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumWidgets_ReturnValue;                // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB3[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_MathExpression_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB4[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetWidgetAtIndex_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_FriendScreen_C_GetWidgetLeftToCurrent) == 0x000008, "Wrong alignment on WB_FriendScreen_C_GetWidgetLeftToCurrent");
@@ -223,12 +259,12 @@ public:
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumWidgets_ReturnValue;                // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB5[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_MathExpression_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB6[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetWidgetAtIndex_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_FriendScreen_C_GetWidgetRightToCurrent) == 0x000008, "Wrong alignment on WB_FriendScreen_C_GetWidgetRightToCurrent");
@@ -256,6 +292,19 @@ static_assert(sizeof(WB_FriendScreen_C_OnCallFailed_2BBDE9ED47F12DAA1726459057F0
 static_assert(offsetof(WB_FriendScreen_C_OnCallFailed_2BBDE9ED47F12DAA1726459057F076D6, UserId) == 0x000000, "Member 'WB_FriendScreen_C_OnCallFailed_2BBDE9ED47F12DAA1726459057F076D6::UserId' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnCallFailed_2BBDE9ED47F12DAA1726459057F076D6, bWasSuccessful) == 0x000030, "Member 'WB_FriendScreen_C_OnCallFailed_2BBDE9ED47F12DAA1726459057F076D6::bWasSuccessful' has a wrong offset!");
 
+// Function WB_FriendScreen.WB_FriendScreen_C.OnCallFailed_762987554731BDE0AC7371A51AC5EEEB
+// 0x0038 (0x0038 - 0x0000)
+struct WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB) == 0x000008, "Wrong alignment on WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB");
+static_assert(sizeof(WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB) == 0x000038, "Wrong size on WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB");
+static_assert(offsetof(WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB, UserId) == 0x000000, "Member 'WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB::UserId' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB, bWasSuccessful) == 0x000030, "Member 'WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB::bWasSuccessful' has a wrong offset!");
+
 // Function WB_FriendScreen.WB_FriendScreen_C.OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6
 // 0x0038 (0x0038 - 0x0000)
 struct WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6 final
@@ -269,38 +318,59 @@ static_assert(sizeof(WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA17
 static_assert(offsetof(WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6, UserId) == 0x000000, "Member 'WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6::UserId' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6, bWasSuccessful) == 0x000030, "Member 'WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6::bWasSuccessful' has a wrong offset!");
 
+// Function WB_FriendScreen.WB_FriendScreen_C.OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB
+// 0x0038 (0x0038 - 0x0000)
+struct WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB) == 0x000008, "Wrong alignment on WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB");
+static_assert(sizeof(WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB) == 0x000038, "Wrong size on WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB");
+static_assert(offsetof(WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB, UserId) == 0x000000, "Member 'WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB::UserId' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB, bWasSuccessful) == 0x000030, "Member 'WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB::bWasSuccessful' has a wrong offset!");
+
 // Function WB_FriendScreen.WB_FriendScreen_C.OnPreviewKeyDown
-// 0x0398 (0x0398 - 0x0000)
+// 0x03A8 (0x03A8 - 0x0000)
 struct WB_FriendScreen_C_OnPreviewKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0130(0x00B8)()
-	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x01E8(0x00B8)()
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x02A0(0x0018)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x02B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB7[0x6];                                     // 0x02BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0130(0x00B8)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x01E8(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_202[0x6];                                      // 0x0202(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0208(0x00B8)()
 	struct FKey                                   CallFunc_GetGamepadAcceptKey_ReturnValue;          // 0x02C0(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB8[0x7];                                     // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x02E0(0x00B8)()
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0398(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x03A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x03A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_FriendScreen_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_FriendScreen_C_OnPreviewKeyDown");
-static_assert(sizeof(WB_FriendScreen_C_OnPreviewKeyDown) == 0x000398, "Wrong size on WB_FriendScreen_C_OnPreviewKeyDown");
+static_assert(sizeof(WB_FriendScreen_C_OnPreviewKeyDown) == 0x0003A8, "Wrong size on WB_FriendScreen_C_OnPreviewKeyDown");
 static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000130, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_OnPreviewKeyDown_ReturnValue) == 0x0001E8, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_OnPreviewKeyDown_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0002A0, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x0002B8, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x0002B9, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_OnPreviewKeyDown_ReturnValue) == 0x000130, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_OnPreviewKeyDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0001E8, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000200, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x000201, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000208, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_GetGamepadAcceptKey_ReturnValue) == 0x0002C0, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_GetGamepadAcceptKey_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue_2) == 0x0002D8, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue_1) == 0x0002E0, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_GetActiveWidget_ReturnValue) == 0x000398, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0003A0, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_Not_PreBool_ReturnValue) == 0x0003A1, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_FriendScreen_C_OnPreviewKeyDown, CallFunc_BooleanAND_ReturnValue) == 0x0003A2, "Member 'WB_FriendScreen_C_OnPreviewKeyDown::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_FriendScreen.WB_FriendScreen_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -323,12 +393,12 @@ public:
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EB9[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window;              // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EBA[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class II_FriendWindow_C>     K2Node_DynamicCast_AsI_Friend_Window_1;            // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -377,12 +447,12 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EBB[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_AccountCategoryButton_C*            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            CallFunc_Array_Get_Item_1;                         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EBC[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

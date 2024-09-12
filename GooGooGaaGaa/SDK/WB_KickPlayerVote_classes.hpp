@@ -20,22 +20,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_KickPlayerVote.WB_KickPlayerVote_C
-// 0x0060 (0x0320 - 0x02C0)
+// 0x0060 (0x0340 - 0x02E0)
 class UWB_KickPlayerVote_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           KickNoButton;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             KickPlayerText;                                    // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           KickYesButton;                                     // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ReasonText;                                        // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UProgressBar*                           TimeProgress;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWrapBox*                               VoteBlocks;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         VoteButtons;                                       // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VoteTextIngame;                                    // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcherVoteInput;                           // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             YouAreKickTargetText;                              // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           KickNoButton;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             KickPlayerText;                                    // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           KickYesButton;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ReasonText;                                        // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           TimeProgress;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWrapBox*                               VoteBlocks;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         VoteButtons;                                       // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VoteTextIngame;                                    // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcherVoteInput;                           // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             YouAreKickTargetText;                              // 0x0338(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_KickPlayerVote_KickNoButton_1_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -63,19 +63,19 @@ public:
 	}
 };
 static_assert(alignof(UWB_KickPlayerVote_C) == 0x000008, "Wrong alignment on UWB_KickPlayerVote_C");
-static_assert(sizeof(UWB_KickPlayerVote_C) == 0x000320, "Wrong size on UWB_KickPlayerVote_C");
-static_assert(offsetof(UWB_KickPlayerVote_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_KickPlayerVote_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, CanvasPanel_0) == 0x0002C8, "Member 'UWB_KickPlayerVote_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, KickNoButton) == 0x0002D0, "Member 'UWB_KickPlayerVote_C::KickNoButton' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, KickPlayerText) == 0x0002D8, "Member 'UWB_KickPlayerVote_C::KickPlayerText' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, KickYesButton) == 0x0002E0, "Member 'UWB_KickPlayerVote_C::KickYesButton' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, ReasonText) == 0x0002E8, "Member 'UWB_KickPlayerVote_C::ReasonText' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, TimeProgress) == 0x0002F0, "Member 'UWB_KickPlayerVote_C::TimeProgress' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, VoteBlocks) == 0x0002F8, "Member 'UWB_KickPlayerVote_C::VoteBlocks' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, VoteButtons) == 0x000300, "Member 'UWB_KickPlayerVote_C::VoteButtons' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, VoteTextIngame) == 0x000308, "Member 'UWB_KickPlayerVote_C::VoteTextIngame' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, WidgetSwitcherVoteInput) == 0x000310, "Member 'UWB_KickPlayerVote_C::WidgetSwitcherVoteInput' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerVote_C, YouAreKickTargetText) == 0x000318, "Member 'UWB_KickPlayerVote_C::YouAreKickTargetText' has a wrong offset!");
+static_assert(sizeof(UWB_KickPlayerVote_C) == 0x000340, "Wrong size on UWB_KickPlayerVote_C");
+static_assert(offsetof(UWB_KickPlayerVote_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_KickPlayerVote_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_KickPlayerVote_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, KickNoButton) == 0x0002F0, "Member 'UWB_KickPlayerVote_C::KickNoButton' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, KickPlayerText) == 0x0002F8, "Member 'UWB_KickPlayerVote_C::KickPlayerText' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, KickYesButton) == 0x000300, "Member 'UWB_KickPlayerVote_C::KickYesButton' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, ReasonText) == 0x000308, "Member 'UWB_KickPlayerVote_C::ReasonText' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, TimeProgress) == 0x000310, "Member 'UWB_KickPlayerVote_C::TimeProgress' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, VoteBlocks) == 0x000318, "Member 'UWB_KickPlayerVote_C::VoteBlocks' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, VoteButtons) == 0x000320, "Member 'UWB_KickPlayerVote_C::VoteButtons' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, VoteTextIngame) == 0x000328, "Member 'UWB_KickPlayerVote_C::VoteTextIngame' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, WidgetSwitcherVoteInput) == 0x000330, "Member 'UWB_KickPlayerVote_C::WidgetSwitcherVoteInput' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerVote_C, YouAreKickTargetText) == 0x000338, "Member 'UWB_KickPlayerVote_C::YouAreKickTargetText' has a wrong offset!");
 
 }
 

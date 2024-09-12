@@ -94,9 +94,9 @@ void UWB_PropCollectionWidgetParent_C::FulfillsFilterConditions(class UB_TileVie
 // Function WB_PropCollectionWidgetParent.WB_PropCollectionWidgetParent_C.UpdateSelectedCategoryButton
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Param_SelectedCategoryButton                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          SelectedCategoryButton_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropCollectionWidgetParent_C::UpdateSelectedCategoryButton(class UObject* Param_SelectedCategoryButton)
+void UWB_PropCollectionWidgetParent_C::UpdateSelectedCategoryButton(class UObject* SelectedCategoryButton_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -105,7 +105,7 @@ void UWB_PropCollectionWidgetParent_C::UpdateSelectedCategoryButton(class UObjec
 
 	Params::WB_PropCollectionWidgetParent_C_UpdateSelectedCategoryButton Parms{};
 
-	Parms.Param_SelectedCategoryButton = Param_SelectedCategoryButton;
+	Parms.SelectedCategoryButton_0 = SelectedCategoryButton_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -217,10 +217,10 @@ void UWB_PropCollectionWidgetParent_C::GetIndividualCategoryButtonData(class UWB
 // Function WB_PropCollectionWidgetParent.WB_PropCollectionWidgetParent_C.IsPropOwnedByPlayer
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsOwned                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropCollectionWidgetParent_C::IsPropOwnedByPlayer(int32 PropId, bool* IsOwned)
+void UWB_PropCollectionWidgetParent_C::IsPropOwnedByPlayer(int32 PropID, bool* IsOwned)
 {
 	static class UFunction* Func = nullptr;
 
@@ -229,7 +229,7 @@ void UWB_PropCollectionWidgetParent_C::IsPropOwnedByPlayer(int32 PropId, bool* I
 
 	Params::WB_PropCollectionWidgetParent_C_IsPropOwnedByPlayer Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -239,7 +239,7 @@ void UWB_PropCollectionWidgetParent_C::IsPropOwnedByPlayer(int32 PropId, bool* I
 
 
 // Function WB_PropCollectionWidgetParent.WB_PropCollectionWidgetParent_C.GetCategoryTitleText
-// (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 

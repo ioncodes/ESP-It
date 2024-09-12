@@ -16,70 +16,70 @@
 namespace SDK::Params
 {
 
+// Function WB_VersionNumber.WB_VersionNumber_C.Get_UnrealVersionText_Text_0
+// 0x0040 (0x0040 - 0x0000)
+struct WB_VersionNumber_C_Get_UnrealVersionText_Text_0 final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FString                                 CallFunc_GetEngineVersion_ReturnValue;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_AppendMultiple_ReturnValue;               // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0010)()
+};
+static_assert(alignof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0) == 0x000008, "Wrong alignment on WB_VersionNumber_C_Get_UnrealVersionText_Text_0");
+static_assert(sizeof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0) == 0x000040, "Wrong size on WB_VersionNumber_C_Get_UnrealVersionText_Text_0");
+static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, ReturnValue) == 0x000000, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, CallFunc_GetEngineVersion_ReturnValue) == 0x000010, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::CallFunc_GetEngineVersion_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, CallFunc_AppendMultiple_ReturnValue) == 0x000020, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::CallFunc_AppendMultiple_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+
+// Function WB_VersionNumber.WB_VersionNumber_C.Get_VersionText_Text_0
+// 0x0010 (0x0010 - 0x0000)
+struct WB_VersionNumber_C_Get_VersionText_Text_0 final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+};
+static_assert(alignof(WB_VersionNumber_C_Get_VersionText_Text_0) == 0x000008, "Wrong alignment on WB_VersionNumber_C_Get_VersionText_Text_0");
+static_assert(sizeof(WB_VersionNumber_C_Get_VersionText_Text_0) == 0x000010, "Wrong size on WB_VersionNumber_C_Get_VersionText_Text_0");
+static_assert(offsetof(WB_VersionNumber_C_Get_VersionText_Text_0, ReturnValue) == 0x000000, "Member 'WB_VersionNumber_C_Get_VersionText_Text_0::ReturnValue' has a wrong offset!");
+
 // Function WB_VersionNumber.WB_VersionNumber_C.ExecuteUbergraph_WB_VersionNumber
-// 0x0190 (0x0190 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShippingBuild_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49D0[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetProjectVersion_ReturnValue;            // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	int32                                         CallFunc_GetRevisionNumber_Out;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49D1[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0018)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x00B0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00C8(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0118(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0168(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0178(0x0018)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
+	int32                                         CallFunc_GetRevisionNumber_Out;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0088(0x0010)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0098(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00A8(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00F0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0138(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0148(0x0010)()
 };
 static_assert(alignof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber) == 0x000008, "Wrong alignment on WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber");
-static_assert(sizeof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber) == 0x000190, "Wrong size on WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber");
+static_assert(sizeof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber) == 0x000158, "Wrong size on WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber");
 static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, EntryPoint) == 0x000000, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_ShippingBuild_ReturnValue) == 0x000004, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_ShippingBuild_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_GetProjectVersion_ReturnValue) == 0x000008, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_GetProjectVersion_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Conv_StringToText_ReturnValue) == 0x000018, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_GetRevisionNumber_Out) == 0x000090, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_GetRevisionNumber_Out' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Format_ReturnValue) == 0x000098, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Conv_IntToText_ReturnValue) == 0x0000B0, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000C8, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeStruct_FormatArgumentData_2) == 0x000118, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeArray_Array_1) == 0x000168, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Format_ReturnValue_1) == 0x000178, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-
-// Function WB_VersionNumber.WB_VersionNumber_C.Get_UnrealVersionText_Text_0
-// 0x0050 (0x0050 - 0x0000)
-struct WB_VersionNumber_C_Get_UnrealVersionText_Text_0 final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FString                                 CallFunc_GetEngineVersion_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_AppendMultiple_ReturnValue;               // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0018)()
-};
-static_assert(alignof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0) == 0x000008, "Wrong alignment on WB_VersionNumber_C_Get_UnrealVersionText_Text_0");
-static_assert(sizeof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0) == 0x000050, "Wrong size on WB_VersionNumber_C_Get_UnrealVersionText_Text_0");
-static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, ReturnValue) == 0x000000, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, CallFunc_GetEngineVersion_ReturnValue) == 0x000018, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::CallFunc_GetEngineVersion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, CallFunc_AppendMultiple_ReturnValue) == 0x000028, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::CallFunc_AppendMultiple_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_VersionNumber_C_Get_UnrealVersionText_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000038, "Member 'WB_VersionNumber_C_Get_UnrealVersionText_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-
-// Function WB_VersionNumber.WB_VersionNumber_C.Get_VersionText_Text_0
-// 0x0018 (0x0018 - 0x0000)
-struct WB_VersionNumber_C_Get_VersionText_Text_0 final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-};
-static_assert(alignof(WB_VersionNumber_C_Get_VersionText_Text_0) == 0x000008, "Wrong alignment on WB_VersionNumber_C_Get_VersionText_Text_0");
-static_assert(sizeof(WB_VersionNumber_C_Get_VersionText_Text_0) == 0x000018, "Wrong size on WB_VersionNumber_C_Get_VersionText_Text_0");
-static_assert(offsetof(WB_VersionNumber_C_Get_VersionText_Text_0, ReturnValue) == 0x000000, "Member 'WB_VersionNumber_C_Get_VersionText_Text_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeStruct_FormatArgumentData) == 0x000028, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeArray_Array) == 0x000070, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_GetRevisionNumber_Out) == 0x000080, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_GetRevisionNumber_Out' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Format_ReturnValue) == 0x000088, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Conv_IntToText_ReturnValue) == 0x000098, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000A8, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000F0, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, K2Node_MakeArray_Array_1) == 0x000138, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber, CallFunc_Format_ReturnValue_1) == 0x000148, "Member 'WB_VersionNumber_C_ExecuteUbergraph_WB_VersionNumber::CallFunc_Format_ReturnValue_1' has a wrong offset!");
 
 // Function WB_VersionNumber.WB_VersionNumber_C.GetRevisionNumber
 // 0x0020 (0x0020 - 0x0000)
@@ -87,7 +87,7 @@ struct WB_VersionNumber_C_GetRevisionNumber final
 {
 public:
 	int32                                         Out;                                               // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49D2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

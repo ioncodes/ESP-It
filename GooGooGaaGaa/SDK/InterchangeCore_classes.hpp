@@ -47,7 +47,7 @@ class UInterchangeSourceData final : public UObject
 {
 public:
 	class FString                                 Filename;                                          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2ED4[0x18];                                    // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetFilename(const class FString& InFilename);
@@ -86,26 +86,25 @@ static_assert(alignof(UInterchangeWriterBase) == 0x000008, "Wrong alignment on U
 static_assert(sizeof(UInterchangeWriterBase) == 0x000028, "Wrong size on UInterchangeWriterBase");
 
 // Class InterchangeCore.InterchangePipelineBase
-// 0x00C0 (0x00E8 - 0x0028)
+// 0x00E0 (0x0108 - 0x0028)
 class UInterchangePipelineBase : public UObject
 {
 public:
-	uint8                                         Pad_2ED6[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeResultsContainer*           Results;                                           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FInterchangePipelinePropertyStates> PropertiesStates;                                  // 0x0038(0x0050)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2ED7[0x60];                                    // 0x0088(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInterchangeResultsContainer*           Results;                                           // 0x0040(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FInterchangePipelinePropertyStates> PropertiesStates;                                  // 0x0048(0x0050)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_98[0x70];                                      // 0x0098(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FInterchangePipelinePropertyStates FindOrAddPropertyStates(const class FName PropertyPath);
-	bool ScriptedCanExecuteOnAnyThread(EInterchangePipelineTask PipelineTask);
 	void ScriptedExecuteExportPipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer);
-	void ScriptedExecutePipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas);
+	void ScriptedExecutePipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas, const class FString& ContentBasePath);
 	void ScriptedExecutePostFactoryPipeline(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const class FString& FactoryNodeKey, class UObject* CreatedAsset, bool bIsAReimport);
 	void ScriptedExecutePostImportPipeline(const class UInterchangeBaseNodeContainer* BaseNodeContainer, const class FString& FactoryNodeKey, class UObject* CreatedAsset, bool bIsAReimport);
-	void ScriptedExecutePreImportPipeline(class UInterchangeBaseNodeContainer* BaseNodeContainer, const TArray<class UInterchangeSourceData*>& SourceDatas);
 	void ScriptedSetReimportSourceIndex(class UClass* ReimportObjectClass, const int32 SourceFileIndex);
 
 	bool DoesPropertyStatesExist(const class FName PropertyPath) const;
+	class FString ScriptedGetPipelineDisplayName() const;
 
 public:
 	static class UClass* StaticClass()
@@ -118,19 +117,20 @@ public:
 	}
 };
 static_assert(alignof(UInterchangePipelineBase) == 0x000008, "Wrong alignment on UInterchangePipelineBase");
-static_assert(sizeof(UInterchangePipelineBase) == 0x0000E8, "Wrong size on UInterchangePipelineBase");
-static_assert(offsetof(UInterchangePipelineBase, Results) == 0x000030, "Member 'UInterchangePipelineBase::Results' has a wrong offset!");
-static_assert(offsetof(UInterchangePipelineBase, PropertiesStates) == 0x000038, "Member 'UInterchangePipelineBase::PropertiesStates' has a wrong offset!");
+static_assert(sizeof(UInterchangePipelineBase) == 0x000108, "Wrong size on UInterchangePipelineBase");
+static_assert(offsetof(UInterchangePipelineBase, Results) == 0x000040, "Member 'UInterchangePipelineBase::Results' has a wrong offset!");
+static_assert(offsetof(UInterchangePipelineBase, PropertiesStates) == 0x000048, "Member 'UInterchangePipelineBase::PropertiesStates' has a wrong offset!");
 
 // Class InterchangeCore.InterchangeResult
-// 0x0038 (0x0060 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UInterchangeResult : public UObject
 {
 public:
 	class FString                                 SourceAssetName;                                   // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DestinationAssetName;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UObject>                    AssetType;                                         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InterchangeKey;                                    // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AssetFriendlyName;                                 // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UObject>                    AssetType;                                         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InterchangeKey;                                    // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -143,14 +143,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResult) == 0x000008, "Wrong alignment on UInterchangeResult");
-static_assert(sizeof(UInterchangeResult) == 0x000060, "Wrong size on UInterchangeResult");
+static_assert(sizeof(UInterchangeResult) == 0x000070, "Wrong size on UInterchangeResult");
 static_assert(offsetof(UInterchangeResult, SourceAssetName) == 0x000028, "Member 'UInterchangeResult::SourceAssetName' has a wrong offset!");
 static_assert(offsetof(UInterchangeResult, DestinationAssetName) == 0x000038, "Member 'UInterchangeResult::DestinationAssetName' has a wrong offset!");
-static_assert(offsetof(UInterchangeResult, AssetType) == 0x000048, "Member 'UInterchangeResult::AssetType' has a wrong offset!");
-static_assert(offsetof(UInterchangeResult, InterchangeKey) == 0x000050, "Member 'UInterchangeResult::InterchangeKey' has a wrong offset!");
+static_assert(offsetof(UInterchangeResult, AssetFriendlyName) == 0x000048, "Member 'UInterchangeResult::AssetFriendlyName' has a wrong offset!");
+static_assert(offsetof(UInterchangeResult, AssetType) == 0x000058, "Member 'UInterchangeResult::AssetType' has a wrong offset!");
+static_assert(offsetof(UInterchangeResult, InterchangeKey) == 0x000060, "Member 'UInterchangeResult::InterchangeKey' has a wrong offset!");
 
 // Class InterchangeCore.InterchangeResultSuccess
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0070 - 0x0070)
 class UInterchangeResultSuccess : public UInterchangeResult
 {
 public:
@@ -164,10 +165,10 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultSuccess) == 0x000008, "Wrong alignment on UInterchangeResultSuccess");
-static_assert(sizeof(UInterchangeResultSuccess) == 0x000060, "Wrong size on UInterchangeResultSuccess");
+static_assert(sizeof(UInterchangeResultSuccess) == 0x000070, "Wrong size on UInterchangeResultSuccess");
 
 // Class InterchangeCore.InterchangeResultWarning
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0070 - 0x0070)
 class UInterchangeResultWarning : public UInterchangeResult
 {
 public:
@@ -181,10 +182,10 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultWarning) == 0x000008, "Wrong alignment on UInterchangeResultWarning");
-static_assert(sizeof(UInterchangeResultWarning) == 0x000060, "Wrong size on UInterchangeResultWarning");
+static_assert(sizeof(UInterchangeResultWarning) == 0x000070, "Wrong size on UInterchangeResultWarning");
 
 // Class InterchangeCore.InterchangeResultError
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0070 - 0x0070)
 class UInterchangeResultError : public UInterchangeResult
 {
 public:
@@ -198,14 +199,14 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultError) == 0x000008, "Wrong alignment on UInterchangeResultError");
-static_assert(sizeof(UInterchangeResultError) == 0x000060, "Wrong size on UInterchangeResultError");
+static_assert(sizeof(UInterchangeResultError) == 0x000070, "Wrong size on UInterchangeResultError");
 
 // Class InterchangeCore.InterchangeResultWarning_Generic
-// 0x0018 (0x0078 - 0x0060)
+// 0x0010 (0x0080 - 0x0070)
 class UInterchangeResultWarning_Generic final : public UInterchangeResultWarning
 {
 public:
-	class FText                                   Text;                                              // 0x0060(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0070(0x0010)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -218,15 +219,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultWarning_Generic) == 0x000008, "Wrong alignment on UInterchangeResultWarning_Generic");
-static_assert(sizeof(UInterchangeResultWarning_Generic) == 0x000078, "Wrong size on UInterchangeResultWarning_Generic");
-static_assert(offsetof(UInterchangeResultWarning_Generic, Text) == 0x000060, "Member 'UInterchangeResultWarning_Generic::Text' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultWarning_Generic) == 0x000080, "Wrong size on UInterchangeResultWarning_Generic");
+static_assert(offsetof(UInterchangeResultWarning_Generic, Text) == 0x000070, "Member 'UInterchangeResultWarning_Generic::Text' has a wrong offset!");
 
 // Class InterchangeCore.InterchangeResultError_Generic
-// 0x0018 (0x0078 - 0x0060)
+// 0x0010 (0x0080 - 0x0070)
 class UInterchangeResultError_Generic final : public UInterchangeResultError
 {
 public:
-	class FText                                   Text;                                              // 0x0060(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0070(0x0010)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -239,11 +240,11 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultError_Generic) == 0x000008, "Wrong alignment on UInterchangeResultError_Generic");
-static_assert(sizeof(UInterchangeResultError_Generic) == 0x000078, "Wrong size on UInterchangeResultError_Generic");
-static_assert(offsetof(UInterchangeResultError_Generic, Text) == 0x000060, "Member 'UInterchangeResultError_Generic::Text' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultError_Generic) == 0x000080, "Wrong size on UInterchangeResultError_Generic");
+static_assert(offsetof(UInterchangeResultError_Generic, Text) == 0x000070, "Member 'UInterchangeResultError_Generic::Text' has a wrong offset!");
 
 // Class InterchangeCore.InterchangeResultError_ReimportFail
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0070 - 0x0070)
 class UInterchangeResultError_ReimportFail final : public UInterchangeResultError
 {
 public:
@@ -257,14 +258,14 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultError_ReimportFail) == 0x000008, "Wrong alignment on UInterchangeResultError_ReimportFail");
-static_assert(sizeof(UInterchangeResultError_ReimportFail) == 0x000060, "Wrong size on UInterchangeResultError_ReimportFail");
+static_assert(sizeof(UInterchangeResultError_ReimportFail) == 0x000070, "Wrong size on UInterchangeResultError_ReimportFail");
 
 // Class InterchangeCore.InterchangeResultDisplay_Generic
-// 0x0018 (0x0078 - 0x0060)
+// 0x0010 (0x0080 - 0x0070)
 class UInterchangeResultDisplay_Generic final : public UInterchangeResultSuccess
 {
 public:
-	class FText                                   Text;                                              // 0x0060(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0070(0x0010)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -277,15 +278,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultDisplay_Generic) == 0x000008, "Wrong alignment on UInterchangeResultDisplay_Generic");
-static_assert(sizeof(UInterchangeResultDisplay_Generic) == 0x000078, "Wrong size on UInterchangeResultDisplay_Generic");
-static_assert(offsetof(UInterchangeResultDisplay_Generic, Text) == 0x000060, "Member 'UInterchangeResultDisplay_Generic::Text' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultDisplay_Generic) == 0x000080, "Wrong size on UInterchangeResultDisplay_Generic");
+static_assert(offsetof(UInterchangeResultDisplay_Generic, Text) == 0x000070, "Member 'UInterchangeResultDisplay_Generic::Text' has a wrong offset!");
 
 // Class InterchangeCore.InterchangeResultsContainer
 // 0x0038 (0x0060 - 0x0028)
 class UInterchangeResultsContainer final : public UObject
 {
 public:
-	uint8                                         Pad_2EDD[0x28];                                    // 0x0028(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x28];                                      // 0x0028(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UInterchangeResult*>             Results;                                           // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
@@ -301,6 +302,23 @@ public:
 static_assert(alignof(UInterchangeResultsContainer) == 0x000008, "Wrong alignment on UInterchangeResultsContainer");
 static_assert(sizeof(UInterchangeResultsContainer) == 0x000060, "Wrong size on UInterchangeResultsContainer");
 static_assert(offsetof(UInterchangeResultsContainer, Results) == 0x000050, "Member 'UInterchangeResultsContainer::Results' has a wrong offset!");
+
+// Class InterchangeCore.InterchangeTranslatorSettings
+// 0x0000 (0x0028 - 0x0028)
+class UInterchangeTranslatorSettings : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InterchangeTranslatorSettings">();
+	}
+	static class UInterchangeTranslatorSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeTranslatorSettings>();
+	}
+};
+static_assert(alignof(UInterchangeTranslatorSettings) == 0x000008, "Wrong alignment on UInterchangeTranslatorSettings");
+static_assert(sizeof(UInterchangeTranslatorSettings) == 0x000028, "Wrong size on UInterchangeTranslatorSettings");
 
 // Class InterchangeCore.InterchangeTranslatorBase
 // 0x0010 (0x0038 - 0x0028)
@@ -330,7 +348,7 @@ static_assert(offsetof(UInterchangeTranslatorBase, SourceData) == 0x000030, "Mem
 class UInterchangeBaseNode : public UObject
 {
 public:
-	uint8                                         Pad_2EDE[0x38];                                    // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddBooleanAttribute(const class FString& NodeAttributeKey, const bool& Value);
@@ -386,7 +404,7 @@ class UInterchangeBaseNodeContainer final : public UObject
 {
 public:
 	TMap<class FString, class UInterchangeBaseNode*> Nodes;                                             // 0x0028(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2EF6[0x50];                                    // 0x0078(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString AddNode(class UInterchangeBaseNode* Node);
@@ -394,6 +412,7 @@ public:
 	class UInterchangeBaseNode* GetNodeChildren(const class FString& NodeUniqueID, int32 ChildIndex);
 	void LoadFromFile(const class FString& Filename);
 	void ReplaceNode(const class FString& NodeUniqueID, class UInterchangeFactoryBaseNode* NewNode);
+	void Reset();
 	void ResetChildrenCache();
 	void SaveToFile(const class FString& Filename);
 	bool SetNodeParentUid(const class FString& NodeUniqueID, const class FString& NewParentNodeUid);
@@ -425,7 +444,7 @@ static_assert(offsetof(UInterchangeBaseNodeContainer, Nodes) == 0x000028, "Membe
 class UInterchangeFactoryBaseNode : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_2EFB[0xE0];                                    // 0x0060(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0xE0];                                      // 0x0060(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddFactoryDependencyUid(const class FString& DependencyUid);
@@ -442,7 +461,7 @@ public:
 	bool GetCustomSubPath(class FString* AttributeValue) const;
 	void GetFactoryDependencies(TArray<class FString>* OutDependencies) const;
 	int32 GetFactoryDependenciesCount() const;
-	void GetFactoryDependency(const int32 Param_Index, class FString* OutDependency) const;
+	void GetFactoryDependency(const int32 Index_0, class FString* OutDependency) const;
 	EReimportStrategyFlags GetReimportStrategyFlags() const;
 	bool ShouldForceNodeReimport() const;
 	bool ShouldSkipNodeImport() const;
@@ -465,7 +484,7 @@ static_assert(sizeof(UInterchangeFactoryBaseNode) == 0x000140, "Wrong size on UI
 class UInterchangeSourceNode final : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_2F03[0x70];                                    // 0x0060(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60[0x70];                                      // 0x0060(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitializeSourceNode(const class FString& UniqueID, const class FString& DisplayLabel);
@@ -503,11 +522,11 @@ static_assert(sizeof(UInterchangeSourceNode) == 0x0000D0, "Wrong size on UInterc
 class UInterchangeUserDefinedAttributesAPI final : public UObject
 {
 public:
-	static bool CreateUserDefinedAttribute_Boolean(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const bool& Value, const class FString& PayloadKey);
-	static bool CreateUserDefinedAttribute_Double(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const double& Value, const class FString& PayloadKey);
-	static bool CreateUserDefinedAttribute_Float(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const float& Value, const class FString& PayloadKey);
-	static bool CreateUserDefinedAttribute_FString(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const class FString& Value, const class FString& PayloadKey);
-	static bool CreateUserDefinedAttribute_Int32(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const int32& Value, const class FString& PayloadKey);
+	static bool CreateUserDefinedAttribute_Boolean(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const bool& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_Double(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const double& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_Float(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const float& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_FString(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const class FString& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_Int32(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const int32& Value, const class FString& PayloadKey, bool RequiresDelegate);
 	static void DuplicateAllUserDefinedAttribute(const class UInterchangeBaseNode* InterchangeSourceNode, class UInterchangeBaseNode* InterchangeDestinationNode, bool bAddSourceNodeName);
 	static bool GetUserDefinedAttribute_Boolean(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, bool* OutValue, class FString* OutPayloadKey);
 	static bool GetUserDefinedAttribute_Double(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, double* OutValue, class FString* OutPayloadKey);

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchStudyInteractionActor.B_WitchStudyInteractionActor_C
-// 0x0008 (0x0340 - 0x0338)
+// 0x0008 (0x0330 - 0x0328)
 class AB_WitchStudyInteractionActor_C final : public AB_WaitInteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_WitchStudyInteractionActor_C;     // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_WitchStudyInteractionActor_C;     // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Act();
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchStudyInteractionActor_C) == 0x000008, "Wrong alignment on AB_WitchStudyInteractionActor_C");
-static_assert(sizeof(AB_WitchStudyInteractionActor_C) == 0x000340, "Wrong size on AB_WitchStudyInteractionActor_C");
-static_assert(offsetof(AB_WitchStudyInteractionActor_C, UberGraphFrame_B_WitchStudyInteractionActor_C) == 0x000338, "Member 'AB_WitchStudyInteractionActor_C::UberGraphFrame_B_WitchStudyInteractionActor_C' has a wrong offset!");
+static_assert(sizeof(AB_WitchStudyInteractionActor_C) == 0x000330, "Wrong size on AB_WitchStudyInteractionActor_C");
+static_assert(offsetof(AB_WitchStudyInteractionActor_C, UberGraphFrame_B_WitchStudyInteractionActor_C) == 0x000328, "Member 'AB_WitchStudyInteractionActor_C::UberGraphFrame_B_WitchStudyInteractionActor_C' has a wrong offset!");
 
 }
 

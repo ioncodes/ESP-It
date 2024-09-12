@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EChatType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -22,32 +22,32 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Chat.WB_Chat_C
-// 0x0090 (0x0350 - 0x02C0)
+// 0x0090 (0x0370 - 0x02E0)
 class UWB_Chat_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         AllChatRow;                                        // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                ChatBorder;                                        // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ChatEntryList;                                     // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       ChatTextBoxAll;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        ChatTextBoxSwitcher;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       ChatTextBoxTeam;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         TeamChatRow;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_0;                                       // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_1;                                       // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_0;                                     // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWB_ChatEntry_C*>                ChatEntries;                                       // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          IsDirty;                                           // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ChatIsOpen;                                        // 0x0329(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F63[0x2];                                     // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxChatMessages;                                   // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EChatType                                     CurrentChatType;                                   // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F64[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         FocusedChatEntryIndex;                             // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FadeInput;                                         // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FadeSpeed;                                         // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ScrollSpeed;                                       // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalBox*                         AllChatRow;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                ChatBorder;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ChatEntryList;                                     // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       ChatTextBoxAll;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        ChatTextBoxSwitcher;                               // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       ChatTextBoxTeam;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         TeamChatRow;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_0;                                       // 0x0320(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_1;                                       // 0x0328(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_0;                                     // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWB_ChatEntry_C*>                ChatEntries;                                       // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          IsDirty;                                           // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChatIsOpen;                                        // 0x0349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34A[0x2];                                      // 0x034A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxChatMessages;                                   // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EChatType                                     CurrentChatType;                                   // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_351[0x3];                                      // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FocusedChatEntryIndex;                             // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FadeInput;                                         // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FadeSpeed;                                         // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ScrollSpeed;                                       // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddChatMessage(const class FText& PlayerName, const class FText& ChatMessage, EChatType ChatType, ETeamID Team, const struct FLinearColor& PlayerColor);
@@ -90,27 +90,27 @@ public:
 	}
 };
 static_assert(alignof(UWB_Chat_C) == 0x000008, "Wrong alignment on UWB_Chat_C");
-static_assert(sizeof(UWB_Chat_C) == 0x000350, "Wrong size on UWB_Chat_C");
-static_assert(offsetof(UWB_Chat_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Chat_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, AllChatRow) == 0x0002C8, "Member 'UWB_Chat_C::AllChatRow' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatBorder) == 0x0002D0, "Member 'UWB_Chat_C::ChatBorder' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatEntryList) == 0x0002D8, "Member 'UWB_Chat_C::ChatEntryList' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatTextBoxAll) == 0x0002E0, "Member 'UWB_Chat_C::ChatTextBoxAll' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatTextBoxSwitcher) == 0x0002E8, "Member 'UWB_Chat_C::ChatTextBoxSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatTextBoxTeam) == 0x0002F0, "Member 'UWB_Chat_C::ChatTextBoxTeam' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, TeamChatRow) == 0x0002F8, "Member 'UWB_Chat_C::TeamChatRow' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, TextBlock_0) == 0x000300, "Member 'UWB_Chat_C::TextBlock_0' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, TextBlock_1) == 0x000308, "Member 'UWB_Chat_C::TextBlock_1' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, VerticalBox_0) == 0x000310, "Member 'UWB_Chat_C::VerticalBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatEntries) == 0x000318, "Member 'UWB_Chat_C::ChatEntries' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, IsDirty) == 0x000328, "Member 'UWB_Chat_C::IsDirty' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ChatIsOpen) == 0x000329, "Member 'UWB_Chat_C::ChatIsOpen' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, MaxChatMessages) == 0x00032C, "Member 'UWB_Chat_C::MaxChatMessages' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, CurrentChatType) == 0x000330, "Member 'UWB_Chat_C::CurrentChatType' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, FocusedChatEntryIndex) == 0x000334, "Member 'UWB_Chat_C::FocusedChatEntryIndex' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, FadeInput) == 0x000338, "Member 'UWB_Chat_C::FadeInput' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, FadeSpeed) == 0x000340, "Member 'UWB_Chat_C::FadeSpeed' has a wrong offset!");
-static_assert(offsetof(UWB_Chat_C, ScrollSpeed) == 0x000348, "Member 'UWB_Chat_C::ScrollSpeed' has a wrong offset!");
+static_assert(sizeof(UWB_Chat_C) == 0x000370, "Wrong size on UWB_Chat_C");
+static_assert(offsetof(UWB_Chat_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Chat_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, AllChatRow) == 0x0002E8, "Member 'UWB_Chat_C::AllChatRow' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatBorder) == 0x0002F0, "Member 'UWB_Chat_C::ChatBorder' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatEntryList) == 0x0002F8, "Member 'UWB_Chat_C::ChatEntryList' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatTextBoxAll) == 0x000300, "Member 'UWB_Chat_C::ChatTextBoxAll' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatTextBoxSwitcher) == 0x000308, "Member 'UWB_Chat_C::ChatTextBoxSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatTextBoxTeam) == 0x000310, "Member 'UWB_Chat_C::ChatTextBoxTeam' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, TeamChatRow) == 0x000318, "Member 'UWB_Chat_C::TeamChatRow' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, TextBlock_0) == 0x000320, "Member 'UWB_Chat_C::TextBlock_0' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, TextBlock_1) == 0x000328, "Member 'UWB_Chat_C::TextBlock_1' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, VerticalBox_0) == 0x000330, "Member 'UWB_Chat_C::VerticalBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatEntries) == 0x000338, "Member 'UWB_Chat_C::ChatEntries' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, IsDirty) == 0x000348, "Member 'UWB_Chat_C::IsDirty' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ChatIsOpen) == 0x000349, "Member 'UWB_Chat_C::ChatIsOpen' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, MaxChatMessages) == 0x00034C, "Member 'UWB_Chat_C::MaxChatMessages' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, CurrentChatType) == 0x000350, "Member 'UWB_Chat_C::CurrentChatType' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, FocusedChatEntryIndex) == 0x000354, "Member 'UWB_Chat_C::FocusedChatEntryIndex' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, FadeInput) == 0x000358, "Member 'UWB_Chat_C::FadeInput' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, FadeSpeed) == 0x000360, "Member 'UWB_Chat_C::FadeSpeed' has a wrong offset!");
+static_assert(offsetof(UWB_Chat_C, ScrollSpeed) == 0x000368, "Member 'UWB_Chat_C::ScrollSpeed' has a wrong offset!");
 
 }
 

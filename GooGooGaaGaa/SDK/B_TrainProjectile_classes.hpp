@@ -18,32 +18,32 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_TrainProjectile.B_TrainProjectile_C
-// 0x00C0 (0x0358 - 0x0298)
+// 0x00C0 (0x0350 - 0x0290)
 class AB_TrainProjectile_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   SM_Smog;                                           // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_WoodArc04;                                      // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Board1;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_WoodArc03;                                      // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Board;                                          // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present07;                                      // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present05;                                      // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present04;                                      // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_SantaBoot02;                                    // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present03;                                      // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present02;                                      // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present06;                                      // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Present01;                                      // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SC_Train;                                          // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cylinder;                                          // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UProjectileMovementComponent*           ProjectileMovement;                                // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        LastDistanceToClient;                              // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         HitWitches;                                        // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         HitProps;                                          // 0x0348(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   SM_Smog;                                           // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_WoodArc04;                                      // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Board1;                                         // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_WoodArc03;                                      // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Board;                                          // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present07;                                      // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present05;                                      // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present04;                                      // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_SantaBoot02;                                    // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present03;                                      // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present02;                                      // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present06;                                      // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Present01;                                      // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SC_Train;                                          // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cylinder;                                          // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UProjectileMovementComponent*           ProjectileMovement;                                // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        LastDistanceToClient;                              // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         HitWitches;                                        // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         HitProps;                                          // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -66,29 +66,29 @@ public:
 	}
 };
 static_assert(alignof(AB_TrainProjectile_C) == 0x000008, "Wrong alignment on AB_TrainProjectile_C");
-static_assert(sizeof(AB_TrainProjectile_C) == 0x000358, "Wrong size on AB_TrainProjectile_C");
-static_assert(offsetof(AB_TrainProjectile_C, UberGraphFrame) == 0x000298, "Member 'AB_TrainProjectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Smog) == 0x0002A0, "Member 'AB_TrainProjectile_C::SM_Smog' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_WoodArc04) == 0x0002A8, "Member 'AB_TrainProjectile_C::SM_WoodArc04' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Board1) == 0x0002B0, "Member 'AB_TrainProjectile_C::SM_Board1' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_WoodArc03) == 0x0002B8, "Member 'AB_TrainProjectile_C::SM_WoodArc03' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Board) == 0x0002C0, "Member 'AB_TrainProjectile_C::SM_Board' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present07) == 0x0002C8, "Member 'AB_TrainProjectile_C::SM_Present07' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present05) == 0x0002D0, "Member 'AB_TrainProjectile_C::SM_Present05' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present04) == 0x0002D8, "Member 'AB_TrainProjectile_C::SM_Present04' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_SantaBoot02) == 0x0002E0, "Member 'AB_TrainProjectile_C::SM_SantaBoot02' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present03) == 0x0002E8, "Member 'AB_TrainProjectile_C::SM_Present03' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present02) == 0x0002F0, "Member 'AB_TrainProjectile_C::SM_Present02' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present06) == 0x0002F8, "Member 'AB_TrainProjectile_C::SM_Present06' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SM_Present01) == 0x000300, "Member 'AB_TrainProjectile_C::SM_Present01' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, SC_Train) == 0x000308, "Member 'AB_TrainProjectile_C::SC_Train' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, StaticMesh) == 0x000310, "Member 'AB_TrainProjectile_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, Cylinder) == 0x000318, "Member 'AB_TrainProjectile_C::Cylinder' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, Scene) == 0x000320, "Member 'AB_TrainProjectile_C::Scene' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, ProjectileMovement) == 0x000328, "Member 'AB_TrainProjectile_C::ProjectileMovement' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, LastDistanceToClient) == 0x000330, "Member 'AB_TrainProjectile_C::LastDistanceToClient' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, HitWitches) == 0x000338, "Member 'AB_TrainProjectile_C::HitWitches' has a wrong offset!");
-static_assert(offsetof(AB_TrainProjectile_C, HitProps) == 0x000348, "Member 'AB_TrainProjectile_C::HitProps' has a wrong offset!");
+static_assert(sizeof(AB_TrainProjectile_C) == 0x000350, "Wrong size on AB_TrainProjectile_C");
+static_assert(offsetof(AB_TrainProjectile_C, UberGraphFrame) == 0x000290, "Member 'AB_TrainProjectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Smog) == 0x000298, "Member 'AB_TrainProjectile_C::SM_Smog' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_WoodArc04) == 0x0002A0, "Member 'AB_TrainProjectile_C::SM_WoodArc04' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Board1) == 0x0002A8, "Member 'AB_TrainProjectile_C::SM_Board1' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_WoodArc03) == 0x0002B0, "Member 'AB_TrainProjectile_C::SM_WoodArc03' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Board) == 0x0002B8, "Member 'AB_TrainProjectile_C::SM_Board' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present07) == 0x0002C0, "Member 'AB_TrainProjectile_C::SM_Present07' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present05) == 0x0002C8, "Member 'AB_TrainProjectile_C::SM_Present05' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present04) == 0x0002D0, "Member 'AB_TrainProjectile_C::SM_Present04' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_SantaBoot02) == 0x0002D8, "Member 'AB_TrainProjectile_C::SM_SantaBoot02' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present03) == 0x0002E0, "Member 'AB_TrainProjectile_C::SM_Present03' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present02) == 0x0002E8, "Member 'AB_TrainProjectile_C::SM_Present02' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present06) == 0x0002F0, "Member 'AB_TrainProjectile_C::SM_Present06' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SM_Present01) == 0x0002F8, "Member 'AB_TrainProjectile_C::SM_Present01' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, SC_Train) == 0x000300, "Member 'AB_TrainProjectile_C::SC_Train' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, StaticMesh) == 0x000308, "Member 'AB_TrainProjectile_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, Cylinder) == 0x000310, "Member 'AB_TrainProjectile_C::Cylinder' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, Scene) == 0x000318, "Member 'AB_TrainProjectile_C::Scene' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, ProjectileMovement) == 0x000320, "Member 'AB_TrainProjectile_C::ProjectileMovement' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, LastDistanceToClient) == 0x000328, "Member 'AB_TrainProjectile_C::LastDistanceToClient' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, HitWitches) == 0x000330, "Member 'AB_TrainProjectile_C::HitWitches' has a wrong offset!");
+static_assert(offsetof(AB_TrainProjectile_C, HitProps) == 0x000340, "Member 'AB_TrainProjectile_C::HitProps' has a wrong offset!");
 
 }
 

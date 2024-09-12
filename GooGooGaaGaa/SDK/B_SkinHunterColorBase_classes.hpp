@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinHunterColorBase.B_SkinHunterColorBase_C
-// 0x0038 (0x02E8 - 0x02B0)
+// 0x0038 (0x02E0 - 0x02A8)
 class AB_SkinHunterColorBase_C : public AB_SkinItem_C
 {
 public:
-	struct FB_SkinColor                           SkinColor;                                         // 0x02B0(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FB_SkinColor                           SkinColor;                                         // 0x02A8(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,8 +35,8 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinHunterColorBase_C) == 0x000008, "Wrong alignment on AB_SkinHunterColorBase_C");
-static_assert(sizeof(AB_SkinHunterColorBase_C) == 0x0002E8, "Wrong size on AB_SkinHunterColorBase_C");
-static_assert(offsetof(AB_SkinHunterColorBase_C, SkinColor) == 0x0002B0, "Member 'AB_SkinHunterColorBase_C::SkinColor' has a wrong offset!");
+static_assert(sizeof(AB_SkinHunterColorBase_C) == 0x0002E0, "Wrong size on AB_SkinHunterColorBase_C");
+static_assert(offsetof(AB_SkinHunterColorBase_C, SkinColor) == 0x0002A8, "Member 'AB_SkinHunterColorBase_C::SkinColor' has a wrong offset!");
 
 }
 

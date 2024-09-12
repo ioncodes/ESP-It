@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MarkerMapEntry.WB_MarkerMapEntry_C
-// 0x0008 (0x02C8 - 0x02C0)
+// 0x0008 (0x02E8 - 0x02E0)
 class UWB_MarkerMapEntry_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Icon;                                              // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UWB_MarkerMapEntry_C) == 0x000008, "Wrong alignment on UWB_MarkerMapEntry_C");
-static_assert(sizeof(UWB_MarkerMapEntry_C) == 0x0002C8, "Wrong size on UWB_MarkerMapEntry_C");
-static_assert(offsetof(UWB_MarkerMapEntry_C, Icon) == 0x0002C0, "Member 'UWB_MarkerMapEntry_C::Icon' has a wrong offset!");
+static_assert(sizeof(UWB_MarkerMapEntry_C) == 0x0002E8, "Wrong size on UWB_MarkerMapEntry_C");
+static_assert(offsetof(UWB_MarkerMapEntry_C, Icon) == 0x0002E0, "Member 'UWB_MarkerMapEntry_C::Icon' has a wrong offset!");
 
 }
 

@@ -22,20 +22,22 @@ struct WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue_1;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog) == 0x000004, "Wrong alignment on WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog");
 static_assert(sizeof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog) == 0x00000C, "Wrong size on WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog");
 static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, EntryPoint) == 0x000000, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, Temp_bool_Variable) == 0x000005, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, Temp_byte_Variable) == 0x000006, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, Temp_byte_Variable_1) == 0x000007, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, K2Node_Select_Default) == 0x000008, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, Temp_bool_Variable) == 0x000004, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, Temp_byte_Variable) == 0x000005, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, Temp_byte_Variable_1) == 0x000006, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, CallFunc_IsConsoleBuild_ReturnValue) == 0x000007, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, CallFunc_IsConsoleBuild_ReturnValue_1) == 0x000008, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::CallFunc_IsConsoleBuild_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog, K2Node_Select_Default) == 0x000009, "Member 'WB_LoginLockedDialog_C_ExecuteUbergraph_WB_LoginLockedDialog::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_LoginLockedDialog.WB_LoginLockedDialog_C.GetInitialFocusWidget
 // 0x0008 (0x0008 - 0x0000)

@@ -92,13 +92,5 @@ struct FPolygonID final : public FElementID
 static_assert(alignof(FPolygonID) == 0x000004, "Wrong alignment on FPolygonID");
 static_assert(sizeof(FPolygonID) == 0x000004, "Wrong size on FPolygonID");
 
-// ScriptStruct MeshDescription.BoneID
-// 0x0000 (0x0004 - 0x0004)
-struct FBoneID final : public FElementID
-{
-};
-static_assert(alignof(FBoneID) == 0x000004, "Wrong alignment on FBoneID");
-static_assert(sizeof(FBoneID) == 0x000004, "Wrong size on FBoneID");
-
 }
 

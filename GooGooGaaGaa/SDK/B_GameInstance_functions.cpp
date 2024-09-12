@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function B_GameInstance.B_GameInstance_C.OnBackendLoginFailed__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UB_GameInstance_C::OnBackendLoginFailed__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnBackendLoginFailed__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.OnEOSLoginStarted__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
@@ -130,20 +144,6 @@ void UB_GameInstance_C::CallUpdateFromOnlineSystem()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_GameInstance_C", "CallUpdateFromOnlineSystem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_GameInstance.B_GameInstance_C.ConnectUsingRawTcp
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UB_GameInstance_C::ConnectUsingRawTcp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "ConnectUsingRawTcp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -400,6 +400,27 @@ void UB_GameInstance_C::GetBRGLoginCredentials(class FString* UserName, class FS
 }
 
 
+// Function B_GameInstance.B_GameInstance_C.GetCanCommunicateOnline
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    CanCommunicate                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::GetCanCommunicateOnline(bool* CanCommunicate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "GetCanCommunicateOnline");
+
+	Params::B_GameInstance_C_GetCanCommunicateOnline Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CanCommunicate != nullptr)
+		*CanCommunicate = Parms.CanCommunicate;
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.GetDedicatedServerLoginCredentials
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -465,9 +486,9 @@ void UB_GameInstance_C::GetFirstLocalPlayerController(class APlayerController** 
 // Function B_GameInstance.B_GameInstance_C.GetIsCurrentlyInMatch
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsCurrentlyInMatch                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsCurrentlyInMatch_0                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::GetIsCurrentlyInMatch(bool* Param_IsCurrentlyInMatch)
+void UB_GameInstance_C::GetIsCurrentlyInMatch(bool* IsCurrentlyInMatch_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -478,8 +499,8 @@ void UB_GameInstance_C::GetIsCurrentlyInMatch(bool* Param_IsCurrentlyInMatch)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsCurrentlyInMatch != nullptr)
-		*Param_IsCurrentlyInMatch = Parms.Param_IsCurrentlyInMatch;
+	if (IsCurrentlyInMatch_0 != nullptr)
+		*IsCurrentlyInMatch_0 = Parms.IsCurrentlyInMatch_0;
 }
 
 
@@ -1099,20 +1120,6 @@ void UB_GameInstance_C::InitializeSkins()
 }
 
 
-// Function B_GameInstance.B_GameInstance_C.InitMasterServerManager
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UB_GameInstance_C::InitMasterServerManager()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "InitMasterServerManager");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_GameInstance.B_GameInstance_C.InitMatchOptions
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -1362,10 +1369,10 @@ void UB_GameInstance_C::OnAllSaveGamesLoaded_Event()
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_24DC469A4EBBEE2F2FB50CB0893FEC02
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_24DC469A4EBBEE2F2FB50CB0893FEC02(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_24DC469A4EBBEE2F2FB50CB0893FEC02(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1374,7 +1381,7 @@ void UB_GameInstance_C::OnCallFailed_24DC469A4EBBEE2F2FB50CB0893FEC02(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_24DC469A4EBBEE2F2FB50CB0893FEC02 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1432,10 +1439,10 @@ void UB_GameInstance_C::OnCallFailed_7C305E754DE72D5DACD2528392A524FF(bool bWasS
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1444,8 +1451,32 @@ void UB_GameInstance_C::OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_GameInstance.B_GameInstance_C.OnCallFailed_B545086C456FDBD8DF9F59BBE8B95516
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnCallFailed_B545086C456FDBD8DF9F59BBE8B95516(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnCallFailed_B545086C456FDBD8DF9F59BBE8B95516");
+
+	Params::B_GameInstance_C_OnCallFailed_B545086C456FDBD8DF9F59BBE8B95516 Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1454,10 +1485,10 @@ void UB_GameInstance_C::OnCallFailed_8BB34145411B8BA94B10A59EFF71E0CF(class FNam
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1466,7 +1497,7 @@ void UB_GameInstance_C::OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1476,10 +1507,10 @@ void UB_GameInstance_C::OnCallFailed_BED0C0C544BDA84E192C8B8C5BB82F72(class FNam
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EOnJoinSessionCompleteResult_           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6(class FName Param_SessionName, EOnJoinSessionCompleteResult_ Result)
+void UB_GameInstance_C::OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6(class FName SessionName_0, EOnJoinSessionCompleteResult_ Result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1488,7 +1519,7 @@ void UB_GameInstance_C::OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.Result = Result;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1498,10 +1529,10 @@ void UB_GameInstance_C::OnCallFailed_CB75E000453710ACAA45C2ADD0B80AC6(class FNam
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_D7D987824E029A67C28C27A7944576BA
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_D7D987824E029A67C28C27A7944576BA(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_D7D987824E029A67C28C27A7944576BA(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1510,7 +1541,7 @@ void UB_GameInstance_C::OnCallFailed_D7D987824E029A67C28C27A7944576BA(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_D7D987824E029A67C28C27A7944576BA Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1580,10 +1611,10 @@ void UB_GameInstance_C::OnCallFailed_F3E97BAF4ED76190FAED77A87373C204(bool bWasS
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_F48D3023411050490BA5D192B95E2377
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_F48D3023411050490BA5D192B95E2377(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_F48D3023411050490BA5D192B95E2377(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1592,7 +1623,7 @@ void UB_GameInstance_C::OnCallFailed_F48D3023411050490BA5D192B95E2377(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_F48D3023411050490BA5D192B95E2377 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1602,10 +1633,10 @@ void UB_GameInstance_C::OnCallFailed_F48D3023411050490BA5D192B95E2377(class FNam
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1614,7 +1645,7 @@ void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1624,10 +1655,10 @@ void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FNam
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1636,7 +1667,7 @@ void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1646,10 +1677,10 @@ void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8B6D11725B(class FNam
 // Function B_GameInstance.B_GameInstance_C.OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1658,7 +1689,7 @@ void UB_GameInstance_C::OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D(class FNam
 
 	Params::B_GameInstance_C_OnCallFailed_FA9075FE47ED7DF7A837BC8BC027921D Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1685,35 +1716,13 @@ void UB_GameInstance_C::OnCancelFindSessionsComplete_F3E97BAF4ED76190FAED77A8737
 }
 
 
-// Function B_GameInstance.B_GameInstance_C.OnClientsInitializedForMatchMaking
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class FString>                   UserIds                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<int32>                           ObjectiveTeam                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UB_GameInstance_C::OnClientsInitializedForMatchMaking(const TArray<class FString>& UserIds, const TArray<int32>& ObjectiveTeam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "OnClientsInitializedForMatchMaking");
-
-	Params::B_GameInstance_C_OnClientsInitializedForMatchMaking Parms{};
-
-	Parms.UserIds = std::move(UserIds);
-	Parms.ObjectiveTeam = std::move(ObjectiveTeam);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_GameInstance.B_GameInstance_C.OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1722,7 +1731,7 @@ void UB_GameInstance_C::OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF
 
 	Params::B_GameInstance_C_OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1732,10 +1741,10 @@ void UB_GameInstance_C::OnCreateSessionComplete_8BB34145411B8BA94B10A59EFF71E0CF
 // Function B_GameInstance.B_GameInstance_C.OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1744,7 +1753,7 @@ void UB_GameInstance_C::OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72
 
 	Params::B_GameInstance_C_OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1754,10 +1763,10 @@ void UB_GameInstance_C::OnCreateSessionComplete_BED0C0C544BDA84E192C8B8C5BB82F72
 // Function B_GameInstance.B_GameInstance_C.OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC02
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC02(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC02(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1766,7 +1775,7 @@ void UB_GameInstance_C::OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC0
 
 	Params::B_GameInstance_C_OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC02 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1776,10 +1785,10 @@ void UB_GameInstance_C::OnDestroySessionComplete_24DC469A4EBBEE2F2FB50CB0893FEC0
 // Function B_GameInstance.B_GameInstance_C.OnDestroySessionComplete_D7D987824E029A67C28C27A7944576BA
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnDestroySessionComplete_D7D987824E029A67C28C27A7944576BA(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnDestroySessionComplete_D7D987824E029A67C28C27A7944576BA(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1788,7 +1797,7 @@ void UB_GameInstance_C::OnDestroySessionComplete_D7D987824E029A67C28C27A7944576B
 
 	Params::B_GameInstance_C_OnDestroySessionComplete_D7D987824E029A67C28C27A7944576BA Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1798,10 +1807,10 @@ void UB_GameInstance_C::OnDestroySessionComplete_D7D987824E029A67C28C27A7944576B
 // Function B_GameInstance.B_GameInstance_C.OnDestroySessionComplete_F48D3023411050490BA5D192B95E2377
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnDestroySessionComplete_F48D3023411050490BA5D192B95E2377(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnDestroySessionComplete_F48D3023411050490BA5D192B95E2377(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1810,7 +1819,7 @@ void UB_GameInstance_C::OnDestroySessionComplete_F48D3023411050490BA5D192B95E237
 
 	Params::B_GameInstance_C_OnDestroySessionComplete_F48D3023411050490BA5D192B95E2377 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1820,10 +1829,10 @@ void UB_GameInstance_C::OnDestroySessionComplete_F48D3023411050490BA5D192B95E237
 // Function B_GameInstance.B_GameInstance_C.OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B69A6DEB7
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B69A6DEB7(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1832,7 +1841,7 @@ void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B69A6DEB
 
 	Params::B_GameInstance_C_OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B69A6DEB7 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1842,10 +1851,10 @@ void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B69A6DEB
 // Function B_GameInstance.B_GameInstance_C.OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B6D11725B
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B6D11725B(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B6D11725B(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1854,7 +1863,7 @@ void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B6D11725
 
 	Params::B_GameInstance_C_OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B6D11725B Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -1864,10 +1873,10 @@ void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8B6D11725
 // Function B_GameInstance.B_GameInstance_C.OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8BC027921D
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8BC027921D(class FName Param_SessionName, bool bWasSuccessful)
+void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8BC027921D(class FName SessionName_0, bool bWasSuccessful)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1876,7 +1885,7 @@ void UB_GameInstance_C::OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8BC027921
 
 	Params::B_GameInstance_C_OnDestroySessionComplete_FA9075FE47ED7DF7A837BC8BC027921D Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.bWasSuccessful = bWasSuccessful;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -2075,6 +2084,30 @@ void UB_GameInstance_C::OnGameStateLoaded_Event()
 }
 
 
+// Function B_GameInstance.B_GameInstance_C.OnGetUserPrivilegeComplete_B545086C456FDBD8DF9F59BBE8B95516
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 LocalUserId                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EOnlineUserPrivilege                    Privilege                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   PrivilegeResult                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_GameInstance_C::OnGetUserPrivilegeComplete_B545086C456FDBD8DF9F59BBE8B95516(const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, int64 PrivilegeResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_GameInstance_C", "OnGetUserPrivilegeComplete_B545086C456FDBD8DF9F59BBE8B95516");
+
+	Params::B_GameInstance_C_OnGetUserPrivilegeComplete_B545086C456FDBD8DF9F59BBE8B95516 Parms{};
+
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.PrivilegeResult = PrivilegeResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_GameInstance.B_GameInstance_C.OnInitCompleted
 // (BlueprintCallable, BlueprintEvent)
 
@@ -2112,10 +2145,10 @@ void UB_GameInstance_C::OnInventoryDefinitionsLoaded(bool Success)
 // Function B_GameInstance.B_GameInstance_C.OnJoinSessionComplete_CB75E000453710ACAA45C2ADD0B80AC6
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             Param_SessionName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SessionName_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EOnJoinSessionCompleteResult_           Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnJoinSessionComplete_CB75E000453710ACAA45C2ADD0B80AC6(class FName Param_SessionName, EOnJoinSessionCompleteResult_ Result)
+void UB_GameInstance_C::OnJoinSessionComplete_CB75E000453710ACAA45C2ADD0B80AC6(class FName SessionName_0, EOnJoinSessionCompleteResult_ Result)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2124,7 +2157,7 @@ void UB_GameInstance_C::OnJoinSessionComplete_CB75E000453710ACAA45C2ADD0B80AC6(c
 
 	Params::B_GameInstance_C_OnJoinSessionComplete_CB75E000453710ACAA45C2ADD0B80AC6 Parms{};
 
-	Parms.Param_SessionName = Param_SessionName;
+	Parms.SessionName_0 = SessionName_0;
 	Parms.Result = Result;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -2293,28 +2326,6 @@ void UB_GameInstance_C::OnNewUserEstablished()
 }
 
 
-// Function B_GameInstance.B_GameInstance_C.OnNotifyQuestChange
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EQuestChangeReason                      Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int64                                   AccountQuestId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UB_GameInstance_C::OnNotifyQuestChange(EQuestChangeReason Reason, int64 AccountQuestId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_GameInstance_C", "OnNotifyQuestChange");
-
-	Params::B_GameInstance_C_OnNotifyQuestChange Parms{};
-
-	Parms.Reason = Reason;
-	Parms.AccountQuestId = AccountQuestId;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_GameInstance.B_GameInstance_C.OnNotifyQuestChangeNew
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2428,9 +2439,9 @@ void UB_GameInstance_C::OnPending_DBB036634F4016BA5FA6068CB9BCFA38(const class F
 // Function B_GameInstance.B_GameInstance_C.OnReceiveRuntimeAccountInfo
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ERuntimeAccountFlags                    Param_Flags                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ERuntimeAccountFlags                    Flags_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_GameInstance_C::OnReceiveRuntimeAccountInfo(ERuntimeAccountFlags Param_Flags)
+void UB_GameInstance_C::OnReceiveRuntimeAccountInfo(ERuntimeAccountFlags Flags_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2439,7 +2450,7 @@ void UB_GameInstance_C::OnReceiveRuntimeAccountInfo(ERuntimeAccountFlags Param_F
 
 	Params::B_GameInstance_C_OnReceiveRuntimeAccountInfo Parms{};
 
-	Parms.Param_Flags = Param_Flags;
+	Parms.Flags_0 = Flags_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

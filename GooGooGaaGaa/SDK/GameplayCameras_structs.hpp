@@ -16,6 +16,16 @@
 namespace SDK
 {
 
+// Enum GameplayCameras.ECameraNodeInstantiationState
+// NumValues: 0x0004
+enum class ECameraNodeInstantiationState : uint8
+{
+	None                                     = 0,
+	HasInstantiations                        = 1,
+	IsInstantiated                           = 2,
+	ECameraNodeInstantiationState_MAX        = 3,
+};
+
 // Enum GameplayCameras.EOscillatorWaveform
 // NumValues: 0x0003
 enum class EOscillatorWaveform : uint8
@@ -59,6 +69,38 @@ enum class ECameraAnimationEasingType : uint8
 	ECameraAnimationEasingType_MAX           = 8,
 };
 
+// Enum GameplayCameras.ECameraNodeFlags
+// NumValues: 0x0003
+enum class ECameraNodeFlags : uint8
+{
+	None                                     = 0,
+	RequiresReset                            = 1,
+	ECameraNodeFlags_MAX                     = 2,
+};
+
+// Enum GameplayCameras.ECameraModeLayer
+// NumValues: 0x0008
+enum class ECameraModeLayer : uint8
+{
+	Base                                     = 0,
+	Main                                     = 1,
+	Global                                   = 2,
+	Visual                                   = 3,
+	User0                                    = 4,
+	User1                                    = 5,
+	User2                                    = 6,
+	ECameraModeLayer_MAX                     = 7,
+};
+
+// Enum GameplayCameras.ESmoothCameraBlendType
+// NumValues: 0x0003
+enum class ESmoothCameraBlendType : uint32
+{
+	SmoothStep                               = 0,
+	SmootherStep                             = 1,
+	ESmoothCameraBlendType_MAX               = 2,
+};
+
 // Enum GameplayCameras.EInitialWaveOscillatorOffsetType
 // NumValues: 0x0003
 enum class EInitialWaveOscillatorOffsetType : uint8
@@ -77,7 +119,7 @@ public:
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInitialOscillatorOffset                      InitialOffset;                                     // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOscillatorWaveform                           Waveform;                                          // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DD7[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FFOscillator) == 0x000004, "Wrong alignment on FFOscillator");
 static_assert(sizeof(FFOscillator) == 0x00000C, "Wrong size on FFOscillator");
@@ -124,19 +166,19 @@ public:
 	float                                         PlayRate;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Scale;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraAnimationEasingType                    EaseInType;                                        // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DD8[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EaseInDuration;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraAnimationEasingType                    EaseOutType;                                       // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DD9[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         EaseOutDuration;                                   // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DDA[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StartOffset;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRandomStartTime;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DDB[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DurationOverride;                                  // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraAnimationPlaySpace                     PlaySpace;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DDC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               UserPlaySpaceRot;                                  // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FCameraAnimationParams) == 0x000008, "Wrong alignment on FCameraAnimationParams");
@@ -159,7 +201,7 @@ static_assert(offsetof(FCameraAnimationParams, UserPlaySpaceRot) == 0x000030, "M
 struct alignas(0x02) FCameraAnimationHandle final
 {
 public:
-	uint8                                         Pad_2DDD[0x4];                                     // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCameraAnimationHandle) == 0x000002, "Wrong alignment on FCameraAnimationHandle");
 static_assert(sizeof(FCameraAnimationHandle) == 0x000004, "Wrong size on FCameraAnimationHandle");
@@ -172,14 +214,14 @@ public:
 	class UCameraAnimationSequence*               Sequence;                                          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraAnimationParams                 Params;                                            // 0x0008(0x0048)(NoDestructor, NativeAccessSpecifierPublic)
 	struct FCameraAnimationHandle                 Handle;                                            // 0x0050(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DDE[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraAnimationSequencePlayer*         Player;                                            // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraAnimationSequenceCameraStandIn*  CameraStandIn;                                     // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EaseInCurrentTime;                                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EaseOutCurrentTime;                                // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsEasingIn;                                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsEasingOut;                                      // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DDF[0x6];                                     // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FActiveCameraAnimationInfo) == 0x000008, "Wrong alignment on FActiveCameraAnimationInfo");
 static_assert(sizeof(FActiveCameraAnimationInfo) == 0x000078, "Wrong size on FActiveCameraAnimationInfo");
@@ -192,6 +234,57 @@ static_assert(offsetof(FActiveCameraAnimationInfo, EaseInCurrentTime) == 0x00006
 static_assert(offsetof(FActiveCameraAnimationInfo, EaseOutCurrentTime) == 0x00006C, "Member 'FActiveCameraAnimationInfo::EaseOutCurrentTime' has a wrong offset!");
 static_assert(offsetof(FActiveCameraAnimationInfo, bIsEasingIn) == 0x000070, "Member 'FActiveCameraAnimationInfo::bIsEasingIn' has a wrong offset!");
 static_assert(offsetof(FActiveCameraAnimationInfo, bIsEasingOut) == 0x000071, "Member 'FActiveCameraAnimationInfo::bIsEasingOut' has a wrong offset!");
+
+// ScriptStruct GameplayCameras.CameraModeTransition
+// 0x0018 (0x0018 - 0x0000)
+struct FCameraModeTransition final
+{
+public:
+	TArray<class UCameraModeTransitionCondition*> Conditions;                                        // 0x0000(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	class UBlendCameraNode*                       Blend;                                             // 0x0010(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCameraModeTransition) == 0x000008, "Wrong alignment on FCameraModeTransition");
+static_assert(sizeof(FCameraModeTransition) == 0x000018, "Wrong size on FCameraModeTransition");
+static_assert(offsetof(FCameraModeTransition, Conditions) == 0x000000, "Member 'FCameraModeTransition::Conditions' has a wrong offset!");
+static_assert(offsetof(FCameraModeTransition, Blend) == 0x000010, "Member 'FCameraModeTransition::Blend' has a wrong offset!");
+
+// ScriptStruct GameplayCameras.CameraPose
+// 0x0070 (0x0070 - 0x0000)
+struct FCameraPose final
+{
+public:
+	struct FVector3d                              Location;                                          // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FRotator3d                             Rotation;                                          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	double                                        TargetDistance;                                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         FieldOfView;                                       // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         AspectRatio;                                       // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         FocalLength;                                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Aperture;                                          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         FocusDistance;                                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         SensorWidth;                                       // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         SensorHeight;                                      // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         SqueezeFactor;                                     // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         NearClippingPlane;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         FarClippingPlane;                                  // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bConstrainAspectRatio;                             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FCameraPose) == 0x000008, "Wrong alignment on FCameraPose");
+static_assert(sizeof(FCameraPose) == 0x000070, "Wrong size on FCameraPose");
+static_assert(offsetof(FCameraPose, Location) == 0x000000, "Member 'FCameraPose::Location' has a wrong offset!");
+static_assert(offsetof(FCameraPose, Rotation) == 0x000018, "Member 'FCameraPose::Rotation' has a wrong offset!");
+static_assert(offsetof(FCameraPose, TargetDistance) == 0x000030, "Member 'FCameraPose::TargetDistance' has a wrong offset!");
+static_assert(offsetof(FCameraPose, FieldOfView) == 0x000038, "Member 'FCameraPose::FieldOfView' has a wrong offset!");
+static_assert(offsetof(FCameraPose, AspectRatio) == 0x00003C, "Member 'FCameraPose::AspectRatio' has a wrong offset!");
+static_assert(offsetof(FCameraPose, FocalLength) == 0x000040, "Member 'FCameraPose::FocalLength' has a wrong offset!");
+static_assert(offsetof(FCameraPose, Aperture) == 0x000044, "Member 'FCameraPose::Aperture' has a wrong offset!");
+static_assert(offsetof(FCameraPose, FocusDistance) == 0x000048, "Member 'FCameraPose::FocusDistance' has a wrong offset!");
+static_assert(offsetof(FCameraPose, SensorWidth) == 0x00004C, "Member 'FCameraPose::SensorWidth' has a wrong offset!");
+static_assert(offsetof(FCameraPose, SensorHeight) == 0x000050, "Member 'FCameraPose::SensorHeight' has a wrong offset!");
+static_assert(offsetof(FCameraPose, SqueezeFactor) == 0x000054, "Member 'FCameraPose::SqueezeFactor' has a wrong offset!");
+static_assert(offsetof(FCameraPose, NearClippingPlane) == 0x000058, "Member 'FCameraPose::NearClippingPlane' has a wrong offset!");
+static_assert(offsetof(FCameraPose, FarClippingPlane) == 0x00005C, "Member 'FCameraPose::FarClippingPlane' has a wrong offset!");
+static_assert(offsetof(FCameraPose, bConstrainAspectRatio) == 0x000060, "Member 'FCameraPose::bConstrainAspectRatio' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.PerlinNoiseShaker
 // 0x0008 (0x0008 - 0x0000)
@@ -214,7 +307,7 @@ public:
 	float                                         Amplitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInitialWaveOscillatorOffsetType              InitialOffsetType;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DE0[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWaveOscillator) == 0x000004, "Wrong alignment on FWaveOscillator");
 static_assert(sizeof(FWaveOscillator) == 0x00000C, "Wrong size on FWaveOscillator");

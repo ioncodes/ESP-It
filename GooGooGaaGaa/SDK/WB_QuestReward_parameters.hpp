@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -41,7 +41,7 @@ static_assert(offsetof(WB_QuestReward_C_Get_CountText_Visibility_0, CallFunc_Gre
 static_assert(offsetof(WB_QuestReward_C_Get_CountText_Visibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_QuestReward_C_Get_CountText_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_QuestReward.WB_QuestReward_C.Get_Icon_Brush_0
-// 0x0250 (0x0250 - 0x0000)
+// 0x0240 (0x0240 - 0x0000)
 struct WB_QuestReward_C_Get_Icon_Brush_0 final
 {
 public:
@@ -49,27 +49,26 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59EF[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x00E8(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F0[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F1[0x8];                                     // 0x0178(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0180(0x00D0)()
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x00E8(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0170(0x00D0)()
 };
 static_assert(alignof(WB_QuestReward_C_Get_Icon_Brush_0) == 0x000010, "Wrong alignment on WB_QuestReward_C_Get_Icon_Brush_0");
-static_assert(sizeof(WB_QuestReward_C_Get_Icon_Brush_0) == 0x000250, "Wrong size on WB_QuestReward_C_Get_Icon_Brush_0");
+static_assert(sizeof(WB_QuestReward_C_Get_Icon_Brush_0) == 0x000240, "Wrong size on WB_QuestReward_C_Get_Icon_Brush_0");
 static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, ReturnValue) == 0x000000, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, CallFunc_GetGameInstance_ReturnValue) == 0x0000D0, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000D8, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, K2Node_DynamicCast_bSuccess) == 0x0000E0, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, CallFunc_GetSkinItem_ReturnValue) == 0x0000E8, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, CallFunc_GetSkinItem_Found) == 0x000168, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000170, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, K2Node_MakeStruct_SlateBrush) == 0x000180, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
+static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, CallFunc_GetSkinItem_Found) == 0x000160, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000168, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_QuestReward_C_Get_Icon_Brush_0, K2Node_MakeStruct_SlateBrush) == 0x000170, "Member 'WB_QuestReward_C_Get_Icon_Brush_0::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
 
 // Function WB_QuestReward.WB_QuestReward_C.Get_IconBorder_BrushColor_0
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct WB_QuestReward_C_Get_IconBorder_BrushColor_0 final
 {
 public:
@@ -77,23 +76,23 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F2[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0028(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59F3[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x00B0(0x0018)()
-	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0028(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x00A8(0x0010)()
+	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_QuestReward_C_Get_IconBorder_BrushColor_0) == 0x000008, "Wrong alignment on WB_QuestReward_C_Get_IconBorder_BrushColor_0");
-static_assert(sizeof(WB_QuestReward_C_Get_IconBorder_BrushColor_0) == 0x0000D8, "Wrong size on WB_QuestReward_C_Get_IconBorder_BrushColor_0");
+static_assert(sizeof(WB_QuestReward_C_Get_IconBorder_BrushColor_0) == 0x0000C8, "Wrong size on WB_QuestReward_C_Get_IconBorder_BrushColor_0");
 static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, ReturnValue) == 0x000000, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetSkinItem_ReturnValue) == 0x000028, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetSkinItem_Found) == 0x0000A8, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetRarityInfo_Name) == 0x0000B0, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetRarityInfo_Name' has a wrong offset!");
-static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetRarityInfo_Color) == 0x0000C8, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
+static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetSkinItem_Found) == 0x0000A0, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetRarityInfo_Name) == 0x0000A8, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetRarityInfo_Name' has a wrong offset!");
+static_assert(offsetof(WB_QuestReward_C_Get_IconBorder_BrushColor_0, CallFunc_GetRarityInfo_Color) == 0x0000B8, "Member 'WB_QuestReward_C_Get_IconBorder_BrushColor_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
 
 }
 

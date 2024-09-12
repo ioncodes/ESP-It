@@ -10,45 +10,45 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_Barrow.B_Barrow_C.ExecuteUbergraph_B_Barrow
-// 0x03B0 (0x03B0 - 0x0000)
+// 0x03D0 (0x03D0 - 0x0000)
 struct B_Barrow_C_ExecuteUbergraph_B_Barrow final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F5D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_VectorVector_ReturnValue;        // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F5E[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x00F0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_4F5F[0x8];                                     // 0x01D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_TInterpTo_ReturnValue;                    // 0x01E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerState*                           K2Node_Event_EditingPlayerState;                   // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_KeepOtherPropsSleep;                  // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F60[0x7];                                     // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0250(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F61[0x4];                                     // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue_1;     // 0x0340(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x03A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F62[0x3];                                     // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_TInterpTo_DeltaTime_ImplicitCast;         // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x00F0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_TInterpTo_ReturnValue;                    // 0x01F0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerState*                           K2Node_Event_EditingPlayerState;                   // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_KeepOtherPropsSleep;                  // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0260(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35C[0x4];                                      // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue_1;     // 0x0360(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C1[0x3];                                      // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_TInterpTo_DeltaTime_ImplicitCast;         // 0x03C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_Barrow_C_ExecuteUbergraph_B_Barrow) == 0x000010, "Wrong alignment on B_Barrow_C_ExecuteUbergraph_B_Barrow");
-static_assert(sizeof(B_Barrow_C_ExecuteUbergraph_B_Barrow) == 0x0003B0, "Wrong size on B_Barrow_C_ExecuteUbergraph_B_Barrow");
+static_assert(sizeof(B_Barrow_C_ExecuteUbergraph_B_Barrow) == 0x0003D0, "Wrong size on B_Barrow_C_ExecuteUbergraph_B_Barrow");
 static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, EntryPoint) == 0x000000, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_BreakTransform_Location) == 0x000008, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_BreakTransform_Location' has a wrong offset!");
 static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_BreakTransform_Rotation) == 0x000020, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_BreakTransform_Rotation' has a wrong offset!");
@@ -59,14 +59,14 @@ static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_K2_GetActo
 static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_Add_VectorVector_ReturnValue) == 0x0000D0, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x0000E8, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x0000F0, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_TInterpTo_ReturnValue) == 0x0001E0, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_TInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, K2Node_Event_EditingPlayerState) == 0x000240, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::K2Node_Event_EditingPlayerState' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, K2Node_Event_KeepOtherPropsSleep) == 0x000248, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::K2Node_Event_KeepOtherPropsSleep' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x000250, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, K2Node_Event_DeltaSeconds) == 0x000338, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_K2_GetComponentToWorld_ReturnValue_1) == 0x000340, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_K2_GetComponentToWorld_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_HasAuthority_ReturnValue) == 0x0003A0, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_TInterpTo_DeltaTime_ImplicitCast) == 0x0003A4, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_TInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_TInterpTo_ReturnValue) == 0x0001F0, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_TInterpTo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, K2Node_Event_EditingPlayerState) == 0x000250, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::K2Node_Event_EditingPlayerState' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, K2Node_Event_KeepOtherPropsSleep) == 0x000258, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::K2Node_Event_KeepOtherPropsSleep' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x000260, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, K2Node_Event_DeltaSeconds) == 0x000358, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_K2_GetComponentToWorld_ReturnValue_1) == 0x000360, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_K2_GetComponentToWorld_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_HasAuthority_ReturnValue) == 0x0003C0, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Barrow_C_ExecuteUbergraph_B_Barrow, CallFunc_TInterpTo_DeltaTime_ImplicitCast) == 0x0003C4, "Member 'B_Barrow_C_ExecuteUbergraph_B_Barrow::CallFunc_TInterpTo_DeltaTime_ImplicitCast' has a wrong offset!");
 
 // Function B_Barrow.B_Barrow_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

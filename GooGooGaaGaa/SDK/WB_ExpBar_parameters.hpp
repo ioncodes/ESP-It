@@ -18,90 +18,90 @@ namespace SDK::Params
 {
 
 // Function WB_ExpBar.WB_ExpBar_C.ExecuteUbergraph_WB_ExpBar
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A83[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A84[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A85[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A86[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A87[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetMaxExpPrestige_MaxExp;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMaxExpLocal_MaxExp;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetLevel_Level;                           // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A88[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A89[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A8A[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A8B[0x6];                                     // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_5;            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A8C[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_5;            // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A8D[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x00CC(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A8E[0x5];                                     // 0x010B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10B[0x5];                                      // 0x010B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A8F[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ExpProgressionCounter_C*             CallFunc_CreateObject_Object;                      // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A90[0x3];                                     // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAudioComponent*                        CallFunc_CreateSound2D_ReturnValue;                // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetCurrentPercentValue_Percent;           // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_NoValueGranted;                 // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A91[0x3];                                     // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_ValueName;                      // 0x0150(0x0018)()
-	int32                                         K2Node_CustomEvent_TotalAmount;                    // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A92[0x3];                                     // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select_Default;                             // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A93[0x4];                                     // 0x0174(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default_1;                           // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default_2;                           // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A94[0x4];                                     // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A95[0x3];                                     // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_CreateSound2D_PitchMultiplier_ImplicitCast; // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_CustomEvent_ValueName;                      // 0x0150(0x0010)()
+	int32                                         K2Node_CustomEvent_TotalAmount;                    // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_165[0x3];                                      // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default;                             // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_1;                           // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_2;           // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_2;                           // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_CreateSound2D_PitchMultiplier_ImplicitCast; // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar) == 0x000008, "Wrong alignment on WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar");
-static_assert(sizeof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar) == 0x0001B0, "Wrong size on WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar");
+static_assert(sizeof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar) == 0x0001A8, "Wrong size on WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar");
 static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, EntryPoint) == 0x000000, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Not_PreBool_ReturnValue) == 0x000004, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -148,18 +148,18 @@ static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_GetCurre
 static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Round_ReturnValue) == 0x000148, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Round_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_CustomEvent_NoValueGranted) == 0x00014C, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_CustomEvent_NoValueGranted' has a wrong offset!");
 static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_CustomEvent_ValueName) == 0x000150, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_CustomEvent_ValueName' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_CustomEvent_TotalAmount) == 0x000168, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_CustomEvent_TotalAmount' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Not_PreBool_ReturnValue_2) == 0x00016C, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_Select_Default) == 0x000170, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000178, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_Select_Default_1) == 0x000180, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Subtract_IntInt_ReturnValue) == 0x000184, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000188, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_Select_Default_2) == 0x000190, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_GetOwningPlayer_ReturnValue) == 0x000198, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_DynamicCast_AsB_Player_State) == 0x0001A0, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_DynamicCast_bSuccess_7) == 0x0001A8, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_CreateSound2D_PitchMultiplier_ImplicitCast) == 0x0001AC, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_CreateSound2D_PitchMultiplier_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_CustomEvent_TotalAmount) == 0x000160, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_CustomEvent_TotalAmount' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Not_PreBool_ReturnValue_2) == 0x000164, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_Select_Default) == 0x000168, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000170, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_Select_Default_1) == 0x000178, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Subtract_IntInt_ReturnValue) == 0x00017C, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_Conv_IntToDouble_ReturnValue_2) == 0x000180, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_Conv_IntToDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_Select_Default_2) == 0x000188, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_GetOwningPlayer_ReturnValue) == 0x000190, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_DynamicCast_AsB_Player_State) == 0x000198, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, K2Node_DynamicCast_bSuccess_7) == 0x0001A0, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar, CallFunc_CreateSound2D_PitchMultiplier_ImplicitCast) == 0x0001A4, "Member 'WB_ExpBar_C_ExecuteUbergraph_WB_ExpBar::CallFunc_CreateSound2D_PitchMultiplier_ImplicitCast' has a wrong offset!");
 
 // Function WB_ExpBar.WB_ExpBar_C.Get_MaxLevelText_Visibility_0
 // 0x0048 (0x0048 - 0x0000)
@@ -167,17 +167,17 @@ struct WB_ExpBar_C_Get_MaxLevelText_Visibility_0 final
 {
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A96[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A97[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A98[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A99[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetLevel_Level;                           // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -236,19 +236,19 @@ struct WB_ExpBar_C_SetupVisibility final
 {
 public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9B[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9C[0x1];                                     // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetLevel_Level;                           // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -271,17 +271,17 @@ static_assert(offsetof(WB_ExpBar_C_SetupVisibility, CallFunc_GreaterEqual_IntInt
 static_assert(offsetof(WB_ExpBar_C_SetupVisibility, CallFunc_BooleanAND_ReturnValue) == 0x000039, "Member 'WB_ExpBar_C_SetupVisibility::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_ExpBar.WB_ExpBar_C.StartGranting
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct WB_ExpBar_C_StartGranting final
 {
 public:
-	class FText                                   ValueName;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         TotalAmount;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ValueName;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         TotalAmount;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ExpBar_C_StartGranting) == 0x000008, "Wrong alignment on WB_ExpBar_C_StartGranting");
-static_assert(sizeof(WB_ExpBar_C_StartGranting) == 0x000020, "Wrong size on WB_ExpBar_C_StartGranting");
+static_assert(sizeof(WB_ExpBar_C_StartGranting) == 0x000018, "Wrong size on WB_ExpBar_C_StartGranting");
 static_assert(offsetof(WB_ExpBar_C_StartGranting, ValueName) == 0x000000, "Member 'WB_ExpBar_C_StartGranting::ValueName' has a wrong offset!");
-static_assert(offsetof(WB_ExpBar_C_StartGranting, TotalAmount) == 0x000018, "Member 'WB_ExpBar_C_StartGranting::TotalAmount' has a wrong offset!");
+static_assert(offsetof(WB_ExpBar_C_StartGranting, TotalAmount) == 0x000010, "Member 'WB_ExpBar_C_StartGranting::TotalAmount' has a wrong offset!");
 
 // Function WB_ExpBar.WB_ExpBar_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -305,7 +305,7 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A9D[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetPitchMultiplier_NewPitchMultiplier_ImplicitCast; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ExpBar_C_UpdateSoundPitch) == 0x000008, "Wrong alignment on WB_ExpBar_C_UpdateSoundPitch");

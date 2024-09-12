@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "EResultType_structs.hpp"
 #include "ESkillCategory_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SOpenWidgetInfo_structs.hpp"
-#include "EChatType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
 #include "ETeamID_structs.hpp"
 #include "E_RememberAfterSaveLayoutAction_structs.hpp"
+#include "EResultType_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "EChatType_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -27,7 +27,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_IngameUIManager.B_IngameUIManager_C
-// 0x0138 (0x0168 - 0x0030)
+// 0x0130 (0x0160 - 0x0030)
 class UB_IngameUIManager_C final : public UBaseManager
 {
 public:
@@ -45,31 +45,31 @@ public:
 	class UWB_GameMessages_C*                     GameMessagesWidget;                                // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          HUDIsVisible;                                      // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UserInterfaceIsHidden;                             // 0x0099(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D63[0x6];                                     // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            TeamSelectionWidget;                               // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_PlayerCustomization_C*              CustomizationWidget;                               // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            RandomSelectionWidget;                             // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            MedalsWidget;                                      // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            RewardsWidget;                                     // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         LocalZOrder;                                       // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D64[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            TopMostFocusedWidget;                              // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            VoteKickWidget;                                    // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_KickPlayerVote_C*                   KickPlayerVoteWidget;                              // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            KickReasonWidget;                                  // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSupordinateMenuOpen;                             // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D65[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TipOfTheGame;                                      // 0x00F8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UUserWidget*                            MutePlayerWidget;                                  // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            MapVoteWidget;                                     // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            ServerInfoWidget;                                  // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            ReportReasonWidget;                                // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            TeamSelectionObjectiveWidget;                      // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            TeamSelectionObjectiveCoopWidget;                  // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            ObjectiveResultWidget;                             // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            SkillListPopupWidget;                              // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            SkinConfigListPopupWidget;                         // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnInputModeChanged;                                // 0x0158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   TipOfTheGame;                                      // 0x00F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UUserWidget*                            MutePlayerWidget;                                  // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            MapVoteWidget;                                     // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ServerInfoWidget;                                  // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ReportReasonWidget;                                // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            TeamSelectionObjectiveWidget;                      // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            TeamSelectionObjectiveCoopWidget;                  // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ObjectiveResultWidget;                             // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            SkillListPopupWidget;                              // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            SkinConfigListPopupWidget;                         // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnInputModeChanged;                                // 0x0150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void OnInputModeChanged__DelegateSignature();
@@ -96,7 +96,7 @@ public:
 	void IncreaseLevelCommand();
 	void Initialize(class UGameInstance* InGameInstance);
 	void InitializeStartSpectating();
-	void IsUserInterfaceHidden(bool* Param_UserInterfaceIsHidden);
+	void IsUserInterfaceHidden(bool* UserInterfaceIsHidden_0);
 	void IsWidgetAlreadyOpen(class UClass* WidgetClass, bool* IsAlreadyOpen);
 	void JumpAllWitchesCommand();
 	void OpenScreen(class UUserWidget* UserWidget, bool HasFocus, int32 ZOrder);
@@ -111,7 +111,7 @@ public:
 	void ResetAllStatsCommand();
 	void RunCommand(const class FString& ConsoleCommand);
 	void Set_Focused_Widget_Input_Mode(class UWidget* InWidgetToFocus);
-	void SetWorkshopIdCommand(const class FString& WorkshopId);
+	void SetWorkshopIdCommand(const class FString& WorkshopID);
 	bool ShouldInputModeBeGameAndUI(const class UObject* Object);
 	void ShowChat();
 	void ShowCustomization(ETeamID SelectedTeam, bool OpenViaWardrobe);
@@ -163,7 +163,7 @@ public:
 	}
 };
 static_assert(alignof(UB_IngameUIManager_C) == 0x000008, "Wrong alignment on UB_IngameUIManager_C");
-static_assert(sizeof(UB_IngameUIManager_C) == 0x000168, "Wrong size on UB_IngameUIManager_C");
+static_assert(sizeof(UB_IngameUIManager_C) == 0x000160, "Wrong size on UB_IngameUIManager_C");
 static_assert(offsetof(UB_IngameUIManager_C, UberGraphFrame) == 0x000030, "Member 'UB_IngameUIManager_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UB_IngameUIManager_C, MenuWidget) == 0x000038, "Member 'UB_IngameUIManager_C::MenuWidget' has a wrong offset!");
 static_assert(offsetof(UB_IngameUIManager_C, PlayerListWidget) == 0x000040, "Member 'UB_IngameUIManager_C::PlayerListWidget' has a wrong offset!");
@@ -190,16 +190,16 @@ static_assert(offsetof(UB_IngameUIManager_C, KickPlayerVoteWidget) == 0x0000E0, 
 static_assert(offsetof(UB_IngameUIManager_C, KickReasonWidget) == 0x0000E8, "Member 'UB_IngameUIManager_C::KickReasonWidget' has a wrong offset!");
 static_assert(offsetof(UB_IngameUIManager_C, IsSupordinateMenuOpen) == 0x0000F0, "Member 'UB_IngameUIManager_C::IsSupordinateMenuOpen' has a wrong offset!");
 static_assert(offsetof(UB_IngameUIManager_C, TipOfTheGame) == 0x0000F8, "Member 'UB_IngameUIManager_C::TipOfTheGame' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, MutePlayerWidget) == 0x000110, "Member 'UB_IngameUIManager_C::MutePlayerWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, MapVoteWidget) == 0x000118, "Member 'UB_IngameUIManager_C::MapVoteWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, ServerInfoWidget) == 0x000120, "Member 'UB_IngameUIManager_C::ServerInfoWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, ReportReasonWidget) == 0x000128, "Member 'UB_IngameUIManager_C::ReportReasonWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, TeamSelectionObjectiveWidget) == 0x000130, "Member 'UB_IngameUIManager_C::TeamSelectionObjectiveWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, TeamSelectionObjectiveCoopWidget) == 0x000138, "Member 'UB_IngameUIManager_C::TeamSelectionObjectiveCoopWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, ObjectiveResultWidget) == 0x000140, "Member 'UB_IngameUIManager_C::ObjectiveResultWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, SkillListPopupWidget) == 0x000148, "Member 'UB_IngameUIManager_C::SkillListPopupWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, SkinConfigListPopupWidget) == 0x000150, "Member 'UB_IngameUIManager_C::SkinConfigListPopupWidget' has a wrong offset!");
-static_assert(offsetof(UB_IngameUIManager_C, OnInputModeChanged) == 0x000158, "Member 'UB_IngameUIManager_C::OnInputModeChanged' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, MutePlayerWidget) == 0x000108, "Member 'UB_IngameUIManager_C::MutePlayerWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, MapVoteWidget) == 0x000110, "Member 'UB_IngameUIManager_C::MapVoteWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, ServerInfoWidget) == 0x000118, "Member 'UB_IngameUIManager_C::ServerInfoWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, ReportReasonWidget) == 0x000120, "Member 'UB_IngameUIManager_C::ReportReasonWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, TeamSelectionObjectiveWidget) == 0x000128, "Member 'UB_IngameUIManager_C::TeamSelectionObjectiveWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, TeamSelectionObjectiveCoopWidget) == 0x000130, "Member 'UB_IngameUIManager_C::TeamSelectionObjectiveCoopWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, ObjectiveResultWidget) == 0x000138, "Member 'UB_IngameUIManager_C::ObjectiveResultWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, SkillListPopupWidget) == 0x000140, "Member 'UB_IngameUIManager_C::SkillListPopupWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, SkinConfigListPopupWidget) == 0x000148, "Member 'UB_IngameUIManager_C::SkinConfigListPopupWidget' has a wrong offset!");
+static_assert(offsetof(UB_IngameUIManager_C, OnInputModeChanged) == 0x000150, "Member 'UB_IngameUIManager_C::OnInputModeChanged' has a wrong offset!");
 
 }
 

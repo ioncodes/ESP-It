@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ACLPlugin_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class ACLPlugin.AnimationCompressionLibraryDatabase
-// 0x0140 (0x0168 - 0x0028)
+// 0x0100 (0x0128 - 0x0028)
 class UAnimationCompressionLibraryDatabase final : public UObject
 {
 public:
 	TArray<uint8>                                 CookedCompressedBytes;                             // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<uint64>                                CookedAnimSequenceMappings;                        // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_27B7[0x118];                                   // 0x0048(0x0118)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxStreamRequestSizeKB;                            // 0x0160(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_27B8[0x4];                                     // 0x0164(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0xD8];                                      // 0x0048(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxStreamRequestSizeKB;                            // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static EACLVisualFidelity GetVisualFidelity(class UAnimationCompressionLibraryDatabase* DatabaseAsset);
@@ -44,10 +44,10 @@ public:
 	}
 };
 static_assert(alignof(UAnimationCompressionLibraryDatabase) == 0x000008, "Wrong alignment on UAnimationCompressionLibraryDatabase");
-static_assert(sizeof(UAnimationCompressionLibraryDatabase) == 0x000168, "Wrong size on UAnimationCompressionLibraryDatabase");
+static_assert(sizeof(UAnimationCompressionLibraryDatabase) == 0x000128, "Wrong size on UAnimationCompressionLibraryDatabase");
 static_assert(offsetof(UAnimationCompressionLibraryDatabase, CookedCompressedBytes) == 0x000028, "Member 'UAnimationCompressionLibraryDatabase::CookedCompressedBytes' has a wrong offset!");
 static_assert(offsetof(UAnimationCompressionLibraryDatabase, CookedAnimSequenceMappings) == 0x000038, "Member 'UAnimationCompressionLibraryDatabase::CookedAnimSequenceMappings' has a wrong offset!");
-static_assert(offsetof(UAnimationCompressionLibraryDatabase, MaxStreamRequestSizeKB) == 0x000160, "Member 'UAnimationCompressionLibraryDatabase::MaxStreamRequestSizeKB' has a wrong offset!");
+static_assert(offsetof(UAnimationCompressionLibraryDatabase, MaxStreamRequestSizeKB) == 0x000120, "Member 'UAnimationCompressionLibraryDatabase::MaxStreamRequestSizeKB' has a wrong offset!");
 
 // Class ACLPlugin.AnimBoneCompressionCodec_ACLBase
 // 0x0000 (0x0038 - 0x0038)
@@ -83,23 +83,6 @@ public:
 static_assert(alignof(UAnimBoneCompressionCodec_ACL) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACL");
 static_assert(sizeof(UAnimBoneCompressionCodec_ACL) == 0x000038, "Wrong size on UAnimBoneCompressionCodec_ACL");
 
-// Class ACLPlugin.AnimBoneCompressionCodec_ACLCustom
-// 0x0000 (0x0038 - 0x0038)
-class UAnimBoneCompressionCodec_ACLCustom final : public UAnimBoneCompressionCodec_ACLBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimBoneCompressionCodec_ACLCustom">();
-	}
-	static class UAnimBoneCompressionCodec_ACLCustom* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimBoneCompressionCodec_ACLCustom>();
-	}
-};
-static_assert(alignof(UAnimBoneCompressionCodec_ACLCustom) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACLCustom");
-static_assert(sizeof(UAnimBoneCompressionCodec_ACLCustom) == 0x000038, "Wrong size on UAnimBoneCompressionCodec_ACLCustom");
-
 // Class ACLPlugin.AnimBoneCompressionCodec_ACLDatabase
 // 0x0008 (0x0040 - 0x0038)
 class UAnimBoneCompressionCodec_ACLDatabase final : public UAnimBoneCompressionCodec_ACLBase
@@ -121,6 +104,23 @@ static_assert(alignof(UAnimBoneCompressionCodec_ACLDatabase) == 0x000008, "Wrong
 static_assert(sizeof(UAnimBoneCompressionCodec_ACLDatabase) == 0x000040, "Wrong size on UAnimBoneCompressionCodec_ACLDatabase");
 static_assert(offsetof(UAnimBoneCompressionCodec_ACLDatabase, DatabaseAsset) == 0x000038, "Member 'UAnimBoneCompressionCodec_ACLDatabase::DatabaseAsset' has a wrong offset!");
 
+// Class ACLPlugin.AnimBoneCompressionCodec_ACLCustom
+// 0x0000 (0x0038 - 0x0038)
+class UAnimBoneCompressionCodec_ACLCustom final : public UAnimBoneCompressionCodec_ACLBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimBoneCompressionCodec_ACLCustom">();
+	}
+	static class UAnimBoneCompressionCodec_ACLCustom* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimBoneCompressionCodec_ACLCustom>();
+	}
+};
+static_assert(alignof(UAnimBoneCompressionCodec_ACLCustom) == 0x000008, "Wrong alignment on UAnimBoneCompressionCodec_ACLCustom");
+static_assert(sizeof(UAnimBoneCompressionCodec_ACLCustom) == 0x000038, "Wrong size on UAnimBoneCompressionCodec_ACLCustom");
+
 // Class ACLPlugin.AnimBoneCompressionCodec_ACLSafe
 // 0x0000 (0x0038 - 0x0038)
 class UAnimBoneCompressionCodec_ACLSafe final : public UAnimBoneCompressionCodec_ACLBase
@@ -139,7 +139,7 @@ static_assert(alignof(UAnimBoneCompressionCodec_ACLSafe) == 0x000008, "Wrong ali
 static_assert(sizeof(UAnimBoneCompressionCodec_ACLSafe) == 0x000038, "Wrong size on UAnimBoneCompressionCodec_ACLSafe");
 
 // Class ACLPlugin.AnimCurveCompressionCodec_ACL
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0028 - 0x0028)
 class UAnimCurveCompressionCodec_ACL final : public UAnimCurveCompressionCodec
 {
 public:
@@ -153,7 +153,7 @@ public:
 	}
 };
 static_assert(alignof(UAnimCurveCompressionCodec_ACL) == 0x000008, "Wrong alignment on UAnimCurveCompressionCodec_ACL");
-static_assert(sizeof(UAnimCurveCompressionCodec_ACL) == 0x000038, "Wrong size on UAnimCurveCompressionCodec_ACL");
+static_assert(sizeof(UAnimCurveCompressionCodec_ACL) == 0x000028, "Wrong size on UAnimCurveCompressionCodec_ACL");
 
 }
 

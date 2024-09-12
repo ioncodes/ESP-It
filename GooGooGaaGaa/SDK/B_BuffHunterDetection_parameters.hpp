@@ -23,7 +23,7 @@ struct B_BuffHunterDetection_C_BuffEnd final
 public:
 	class AB_Hunter_C*                            Hunter;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -41,16 +41,16 @@ static_assert(offsetof(B_BuffHunterDetection_C_BuffEnd, K2Node_DynamicCast_bSucc
 struct B_BuffHunterDetection_C_BuffStart final
 {
 public:
-	class AB_PlayerState_C*                       Param_PlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            Hunter;                                            // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7F[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PowerupParametersSubsystem_C*        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B80[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_SpawnActorOrTakeFromPool_ReturnValue;     // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PickupChicken_C*                     K2Node_DynamicCast_AsB_Pickup_Chicken;             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ public:
 };
 static_assert(alignof(B_BuffHunterDetection_C_BuffStart) == 0x000010, "Wrong alignment on B_BuffHunterDetection_C_BuffStart");
 static_assert(sizeof(B_BuffHunterDetection_C_BuffStart) == 0x0000C0, "Wrong size on B_BuffHunterDetection_C_BuffStart");
-static_assert(offsetof(B_BuffHunterDetection_C_BuffStart, Param_PlayerState) == 0x000000, "Member 'B_BuffHunterDetection_C_BuffStart::Param_PlayerState' has a wrong offset!");
+static_assert(offsetof(B_BuffHunterDetection_C_BuffStart, PlayerState_0) == 0x000000, "Member 'B_BuffHunterDetection_C_BuffStart::PlayerState_0' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterDetection_C_BuffStart, Hunter) == 0x000008, "Member 'B_BuffHunterDetection_C_BuffStart::Hunter' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterDetection_C_BuffStart, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'B_BuffHunterDetection_C_BuffStart::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_BuffHunterDetection_C_BuffStart, CallFunc_K2_GetPawn_ReturnValue) == 0x000018, "Member 'B_BuffHunterDetection_C_BuffStart::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
@@ -102,7 +102,7 @@ struct B_BuffHunterDetection_C_ExecuteUbergraph_B_BuffHunterDetection final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B81[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_CustomEvent_ParentHunter;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BuffHunterDetection_C_ExecuteUbergraph_B_BuffHunterDetection) == 0x000008, "Wrong alignment on B_BuffHunterDetection_C_ExecuteUbergraph_B_BuffHunterDetection");

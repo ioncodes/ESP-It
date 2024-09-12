@@ -188,6 +188,27 @@ void UWB_SalvageScreen_C::GetIndividualItemDataAndFocus(class UUserWidget* Categ
 }
 
 
+// Function WB_SalvageScreen.WB_SalvageScreen_C.GetInitialFocusWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InitialFocusWidget                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWB_SalvageScreen_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SalvageScreen_C", "GetInitialFocusWidget");
+
+	Params::WB_SalvageScreen_C_GetInitialFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (InitialFocusWidget != nullptr)
+		*InitialFocusWidget = Parms.InitialFocusWidget;
+}
+
+
 // Function WB_SalvageScreen.WB_SalvageScreen_C.GetRecipeQuantity
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -430,10 +451,10 @@ void UWB_SalvageScreen_C::IsSalvagableRarity(EB_Rarity Rarity, bool* IsSalvagabl
 // Function WB_SalvageScreen.WB_SalvageScreen_C.IsSalvagableSlot
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// E_Slot                                  Param_Slot                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Slot                                  Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsSalvagable                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SalvageScreen_C::IsSalvagableSlot(E_Slot Param_Slot, bool* IsSalvagable)
+void UWB_SalvageScreen_C::IsSalvagableSlot(E_Slot Slot_0, bool* IsSalvagable)
 {
 	static class UFunction* Func = nullptr;
 
@@ -442,7 +463,7 @@ void UWB_SalvageScreen_C::IsSalvagableSlot(E_Slot Param_Slot, bool* IsSalvagable
 
 	Params::WB_SalvageScreen_C_IsSalvagableSlot Parms{};
 
-	Parms.Param_Slot = Param_Slot;
+	Parms.Slot_0 = Slot_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

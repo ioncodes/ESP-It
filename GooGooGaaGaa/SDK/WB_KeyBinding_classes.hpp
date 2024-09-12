@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SAxisToEdit_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,26 +19,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_KeyBinding.WB_KeyBinding_C
-// 0x0168 (0x0428 - 0x02C0)
+// 0x0158 (0x0438 - 0x02E0)
 class UWB_KeyBinding_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_KeyBindingButton_C*                 Binding_0;                                         // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_KeyBindingButton_C*                 Binding_1;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             BindingName;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             SetInputBinding;                                   // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<struct FInputActionKeyMapping>         ActionInputs;                                      // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FInputAxisKeyMapping>           AxisInputs;                                        // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FName                                   ActionName;                                        // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSAxisToEdit                           AxisName;                                          // 0x0318(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class FText                                   ActionNameLocalized;                               // 0x0340(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UWB_KeyBindingButton_C*>         Bindings;                                          // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<int32, int32>                            IndexMapping;                                      // 0x0368(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	FMulticastInlineDelegateProperty_             OnKeyBindingButtonClicked;                         // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UWB_KeyBindingList_C*                   KeyBindingList;                                    // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UB_InputMappingsManager_C*              InputMappingsManager;                              // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class FText>                BindingNameToLocaText;                             // 0x03D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_KeyBindingButton_C*                 Binding_0;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_KeyBindingButton_C*                 Binding_1;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             BindingName;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             SetInputBinding;                                   // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<struct FInputActionKeyMapping>         ActionInputs;                                      // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FInputAxisKeyMapping>           AxisInputs;                                        // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FName                                   ActionName;                                        // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSAxisToEdit                           AxisName;                                          // 0x0338(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FText                                   ActionNameLocalized;                               // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UWB_KeyBindingButton_C*>         Bindings;                                          // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<int32, int32>                            IndexMapping;                                      // 0x0378(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	FMulticastInlineDelegateProperty_             OnKeyBindingButtonClicked;                         // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWB_KeyBindingList_C*                   KeyBindingList;                                    // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UB_InputMappingsManager_C*              InputMappingsManager;                              // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, class FText>                BindingNameToLocaText;                             // 0x03E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BndEvt__Binding_0_K2Node_ComponentBoundEvent_0_OnClicked__DelegateSignature();
@@ -48,20 +48,20 @@ public:
 	int32 CountNonGamepadActions(const TArray<struct FInputActionKeyMapping>& ActionMappings);
 	int32 CountNonGamepadAxis(const TArray<struct FInputAxisKeyMapping>& AxisMappings);
 	void ExecuteUbergraph_WB_KeyBinding(int32 EntryPoint);
-	int32 FindRemappedIndex(int32 Param_Index, bool* FoundIndex);
-	void OnKeyBindingButtonClicked__DelegateSignature(class UWB_KeyBinding_C* KeyBindingWidget, class UWB_KeyBindingButton_C* KeyBindingButton, int32 Param_Index);
+	int32 FindRemappedIndex(int32 Index_0, bool* FoundIndex);
+	void OnKeyBindingButtonClicked__DelegateSignature(class UWB_KeyBinding_C* KeyBindingWidget, class UWB_KeyBindingButton_C* KeyBindingButton, int32 Index_0);
 	void Refresh();
-	void RemoveAction(int32 Param_Index);
-	void RemoveAxis(int32 Param_Index);
-	void RemoveBinding(int32 Param_Index);
-	void SetAction(class FName Param_ActionName);
+	void RemoveAction(int32 Index_0);
+	void RemoveAxis(int32 Index_0);
+	void RemoveBinding(int32 Index_0);
+	void SetAction(class FName ActionName_0);
 	void SetAxis(const struct FSAxisToEdit& Axis);
 	void SetBindingName(class FName InText);
-	void SetBoundKeyForIndex(int32 Param_Index, const struct FKey& Key);
-	void SetInputBinding__DelegateSignature(class UWB_KeyBinding_C* KeyBindingWidget, class UButton* Button, int32 Param_Index);
-	void UpdateAction(int32 Param_Index, const struct FKey& NewKey);
-	void UpdateAxis(int32 Param_Index, const struct FKey& NewKey);
-	void UpdateBinding(int32 Param_Index, const struct FKey& NewKey);
+	void SetBoundKeyForIndex(int32 Index_0, const struct FKey& Key);
+	void SetInputBinding__DelegateSignature(class UWB_KeyBinding_C* KeyBindingWidget, class UButton* Button, int32 Index_0);
+	void UpdateAction(int32 Index_0, const struct FKey& NewKey);
+	void UpdateAxis(int32 Index_0, const struct FKey& NewKey);
+	void UpdateBinding(int32 Index_0, const struct FKey& NewKey);
 
 public:
 	static class UClass* StaticClass()
@@ -74,23 +74,23 @@ public:
 	}
 };
 static_assert(alignof(UWB_KeyBinding_C) == 0x000008, "Wrong alignment on UWB_KeyBinding_C");
-static_assert(sizeof(UWB_KeyBinding_C) == 0x000428, "Wrong size on UWB_KeyBinding_C");
-static_assert(offsetof(UWB_KeyBinding_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_KeyBinding_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, Binding_0) == 0x0002C8, "Member 'UWB_KeyBinding_C::Binding_0' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, Binding_1) == 0x0002D0, "Member 'UWB_KeyBinding_C::Binding_1' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, BindingName) == 0x0002D8, "Member 'UWB_KeyBinding_C::BindingName' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, SetInputBinding) == 0x0002E0, "Member 'UWB_KeyBinding_C::SetInputBinding' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, ActionInputs) == 0x0002F0, "Member 'UWB_KeyBinding_C::ActionInputs' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, AxisInputs) == 0x000300, "Member 'UWB_KeyBinding_C::AxisInputs' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, ActionName) == 0x000310, "Member 'UWB_KeyBinding_C::ActionName' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, AxisName) == 0x000318, "Member 'UWB_KeyBinding_C::AxisName' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, ActionNameLocalized) == 0x000340, "Member 'UWB_KeyBinding_C::ActionNameLocalized' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, Bindings) == 0x000358, "Member 'UWB_KeyBinding_C::Bindings' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, IndexMapping) == 0x000368, "Member 'UWB_KeyBinding_C::IndexMapping' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, OnKeyBindingButtonClicked) == 0x0003B8, "Member 'UWB_KeyBinding_C::OnKeyBindingButtonClicked' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, KeyBindingList) == 0x0003C8, "Member 'UWB_KeyBinding_C::KeyBindingList' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, InputMappingsManager) == 0x0003D0, "Member 'UWB_KeyBinding_C::InputMappingsManager' has a wrong offset!");
-static_assert(offsetof(UWB_KeyBinding_C, BindingNameToLocaText) == 0x0003D8, "Member 'UWB_KeyBinding_C::BindingNameToLocaText' has a wrong offset!");
+static_assert(sizeof(UWB_KeyBinding_C) == 0x000438, "Wrong size on UWB_KeyBinding_C");
+static_assert(offsetof(UWB_KeyBinding_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_KeyBinding_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, Binding_0) == 0x0002E8, "Member 'UWB_KeyBinding_C::Binding_0' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, Binding_1) == 0x0002F0, "Member 'UWB_KeyBinding_C::Binding_1' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, BindingName) == 0x0002F8, "Member 'UWB_KeyBinding_C::BindingName' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, SetInputBinding) == 0x000300, "Member 'UWB_KeyBinding_C::SetInputBinding' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, ActionInputs) == 0x000310, "Member 'UWB_KeyBinding_C::ActionInputs' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, AxisInputs) == 0x000320, "Member 'UWB_KeyBinding_C::AxisInputs' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, ActionName) == 0x000330, "Member 'UWB_KeyBinding_C::ActionName' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, AxisName) == 0x000338, "Member 'UWB_KeyBinding_C::AxisName' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, ActionNameLocalized) == 0x000358, "Member 'UWB_KeyBinding_C::ActionNameLocalized' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, Bindings) == 0x000368, "Member 'UWB_KeyBinding_C::Bindings' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, IndexMapping) == 0x000378, "Member 'UWB_KeyBinding_C::IndexMapping' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, OnKeyBindingButtonClicked) == 0x0003C8, "Member 'UWB_KeyBinding_C::OnKeyBindingButtonClicked' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, KeyBindingList) == 0x0003D8, "Member 'UWB_KeyBinding_C::KeyBindingList' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, InputMappingsManager) == 0x0003E0, "Member 'UWB_KeyBinding_C::InputMappingsManager' has a wrong offset!");
+static_assert(offsetof(UWB_KeyBinding_C, BindingNameToLocaText) == 0x0003E8, "Member 'UWB_KeyBinding_C::BindingNameToLocaText' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "E_MapSize_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -27,7 +27,7 @@ public:
 	TSoftObjectPtr<class UObject>                 ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E3[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Select_Default;                             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UObject>                 CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue; // 0x0038(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 };
@@ -62,10 +62,10 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E4[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_GetTextureForCustomMap_Texture;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E5[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MapButtonData_C*                     K2Node_DynamicCast_AsB_Map_Button_Data;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -80,17 +80,17 @@ static_assert(offsetof(WB_MapButton_C_SetIndividualParameters, K2Node_DynamicCas
 static_assert(offsetof(WB_MapButton_C_SetIndividualParameters, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_MapButton_C_SetIndividualParameters::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 
 // Function WB_MapButton.WB_MapButton_C.GetQuantityText
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_MapButton_C_GetQuantityText final
 {
 public:
-	class FText                                   Quantity;                                          // 0x0000(0x0018)(Parm, OutParm)
-	class FText                                   CallFunc_GetPlayernumberText_ReturnValue;          // 0x0018(0x0018)()
+	class FText                                   Quantity;                                          // 0x0000(0x0010)(Parm, OutParm)
+	class FText                                   CallFunc_GetPlayernumberText_ReturnValue;          // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_MapButton_C_GetQuantityText) == 0x000008, "Wrong alignment on WB_MapButton_C_GetQuantityText");
-static_assert(sizeof(WB_MapButton_C_GetQuantityText) == 0x000030, "Wrong size on WB_MapButton_C_GetQuantityText");
+static_assert(sizeof(WB_MapButton_C_GetQuantityText) == 0x000020, "Wrong size on WB_MapButton_C_GetQuantityText");
 static_assert(offsetof(WB_MapButton_C_GetQuantityText, Quantity) == 0x000000, "Member 'WB_MapButton_C_GetQuantityText::Quantity' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetQuantityText, CallFunc_GetPlayernumberText_ReturnValue) == 0x000018, "Member 'WB_MapButton_C_GetQuantityText::CallFunc_GetPlayernumberText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetQuantityText, CallFunc_GetPlayernumberText_ReturnValue) == 0x000010, "Member 'WB_MapButton_C_GetQuantityText::CallFunc_GetPlayernumberText_ReturnValue' has a wrong offset!");
 
 // Function WB_MapButton.WB_MapButton_C.GetBorderColor
 // 0x0020 (0x0020 - 0x0000)
@@ -106,34 +106,34 @@ static_assert(offsetof(WB_MapButton_C_GetBorderColor, Color) == 0x000000, "Membe
 static_assert(offsetof(WB_MapButton_C_GetBorderColor, BorderColor) == 0x000010, "Member 'WB_MapButton_C_GetBorderColor::BorderColor' has a wrong offset!");
 
 // Function WB_MapButton.WB_MapButton_C.GetPlayernumberText
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_MapButton_C_GetPlayernumberText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E6[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	E_MapSize                                     Temp_byte_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E7[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_1;                              // 0x0040(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0058(0x0018)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57E8[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0078(0x0018)()
-	class FText                                   K2Node_Select_Default_1;                           // 0x0090(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	E_MapSize                                     Temp_byte_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_1;                              // 0x0030(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0010)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0010)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x0068(0x0010)()
 };
 static_assert(alignof(WB_MapButton_C_GetPlayernumberText) == 0x000008, "Wrong alignment on WB_MapButton_C_GetPlayernumberText");
-static_assert(sizeof(WB_MapButton_C_GetPlayernumberText) == 0x0000A8, "Wrong size on WB_MapButton_C_GetPlayernumberText");
+static_assert(sizeof(WB_MapButton_C_GetPlayernumberText) == 0x000078, "Wrong size on WB_MapButton_C_GetPlayernumberText");
 static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, ReturnValue) == 0x000000, "Member 'WB_MapButton_C_GetPlayernumberText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_bool_Variable) == 0x000018, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_text_Variable) == 0x000020, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_byte_Variable) == 0x000038, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_text_Variable_1) == 0x000040, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_text_Variable_2) == 0x000058, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'WB_MapButton_C_GetPlayernumberText::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, K2Node_Select_Default) == 0x000078, "Member 'WB_MapButton_C_GetPlayernumberText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, K2Node_Select_Default_1) == 0x000090, "Member 'WB_MapButton_C_GetPlayernumberText::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_bool_Variable) == 0x000010, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_text_Variable) == 0x000018, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_byte_Variable) == 0x000028, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_text_Variable_1) == 0x000030, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, Temp_text_Variable_2) == 0x000040, "Member 'WB_MapButton_C_GetPlayernumberText::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'WB_MapButton_C_GetPlayernumberText::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, K2Node_Select_Default) == 0x000058, "Member 'WB_MapButton_C_GetPlayernumberText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MapButton_C_GetPlayernumberText, K2Node_Select_Default_1) == 0x000068, "Member 'WB_MapButton_C_GetPlayernumberText::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function WB_MapButton.WB_MapButton_C.OnFocusReceived
 // 0x01B8 (0x01B8 - 0x0000)

@@ -699,12 +699,12 @@ void UWB_Custommatch_C::LoadGameRules()
 
 
 // Function WB_Custommatch.WB_Custommatch_C.NavigateList
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_Custommatch_C::NavigateList(EUINavigation Param_Navigation)
+class UWidget* UWB_Custommatch_C::NavigateList(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -713,7 +713,7 @@ class UWidget* UWB_Custommatch_C::NavigateList(EUINavigation Param_Navigation)
 
 	Params::WB_Custommatch_C_NavigateList Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -800,9 +800,9 @@ void UWB_Custommatch_C::SetGameRulesButtonVisibilityAndText()
 // Function WB_Custommatch.WB_Custommatch_C.SetHideAndSeekTimes
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bObjectiveMode                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bObjectiveMode_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Custommatch_C::SetHideAndSeekTimes(bool Param_bObjectiveMode)
+void UWB_Custommatch_C::SetHideAndSeekTimes(bool bObjectiveMode_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -811,7 +811,7 @@ void UWB_Custommatch_C::SetHideAndSeekTimes(bool Param_bObjectiveMode)
 
 	Params::WB_Custommatch_C_SetHideAndSeekTimes Parms{};
 
-	Parms.Param_bObjectiveMode = Param_bObjectiveMode;
+	Parms.bObjectiveMode_0 = bObjectiveMode_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -820,9 +820,9 @@ void UWB_Custommatch_C::SetHideAndSeekTimes(bool Param_bObjectiveMode)
 // Function WB_Custommatch.WB_Custommatch_C.SetIsIngame
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_InGame                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    InGame_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Custommatch_C::SetIsIngame(bool Param_InGame)
+void UWB_Custommatch_C::SetIsIngame(bool InGame_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -831,7 +831,7 @@ void UWB_Custommatch_C::SetIsIngame(bool Param_InGame)
 
 	Params::WB_Custommatch_C_SetIsIngame Parms{};
 
-	Parms.Param_InGame = Param_InGame;
+	Parms.InGame_0 = InGame_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkinButton.WB_SkinButton_C
-// 0x0008 (0x0400 - 0x03F8)
+// 0x0008 (0x0408 - 0x0400)
 class UWB_SkinButton_C : public UWB_SkinOrRecipeButton_C
 {
 public:
-	class UWB_SkinCategoryMenuScreen_C*           ParentSkinCategoryScreen;                          // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_SkinCategoryMenuScreen_C*           ParentSkinCategoryScreen;                          // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(UWB_SkinButton_C) == 0x000008, "Wrong alignment on UWB_SkinButton_C");
-static_assert(sizeof(UWB_SkinButton_C) == 0x000400, "Wrong size on UWB_SkinButton_C");
-static_assert(offsetof(UWB_SkinButton_C, ParentSkinCategoryScreen) == 0x0003F8, "Member 'UWB_SkinButton_C::ParentSkinCategoryScreen' has a wrong offset!");
+static_assert(sizeof(UWB_SkinButton_C) == 0x000408, "Wrong size on UWB_SkinButton_C");
+static_assert(offsetof(UWB_SkinButton_C, ParentSkinCategoryScreen) == 0x000400, "Member 'UWB_SkinButton_C::ParentSkinCategoryScreen' has a wrong offset!");
 
 }
 

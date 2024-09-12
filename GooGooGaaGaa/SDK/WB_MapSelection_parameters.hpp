@@ -18,24 +18,24 @@ namespace SDK::Params
 {
 
 // Function WB_MapSelection.WB_MapSelection_C.UpdateDisplayedMapSelectionInfo
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_MapSelection_C_UpdateDisplayedMapSelectionInfo final
 {
 public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E96[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetMapName_ReturnValue;                   // 0x0018(0x0018)()
-	TSoftObjectPtr<class UTexture2D>              CallFunc_GetMapImage_ReturnValue;                  // 0x0030(0x0028)(HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetMapName_ReturnValue;                   // 0x0018(0x0010)()
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetMapImage_ReturnValue;                  // 0x0028(0x0028)(HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo) == 0x000008, "Wrong alignment on WB_MapSelection_C_UpdateDisplayedMapSelectionInfo");
-static_assert(sizeof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo) == 0x000058, "Wrong size on WB_MapSelection_C_UpdateDisplayedMapSelectionInfo");
+static_assert(sizeof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo) == 0x000050, "Wrong size on WB_MapSelection_C_UpdateDisplayedMapSelectionInfo");
 static_assert(offsetof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo, CallFunc_GetGameInstance_ReturnValue) == 0x000000, "Member 'WB_MapSelection_C_UpdateDisplayedMapSelectionInfo::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo, K2Node_DynamicCast_AsB_Game_Instance) == 0x000008, "Member 'WB_MapSelection_C_UpdateDisplayedMapSelectionInfo::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WB_MapSelection_C_UpdateDisplayedMapSelectionInfo::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo, CallFunc_GetMapName_ReturnValue) == 0x000018, "Member 'WB_MapSelection_C_UpdateDisplayedMapSelectionInfo::CallFunc_GetMapName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo, CallFunc_GetMapImage_ReturnValue) == 0x000030, "Member 'WB_MapSelection_C_UpdateDisplayedMapSelectionInfo::CallFunc_GetMapImage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_UpdateDisplayedMapSelectionInfo, CallFunc_GetMapImage_ReturnValue) == 0x000028, "Member 'WB_MapSelection_C_UpdateDisplayedMapSelectionInfo::CallFunc_GetMapImage_ReturnValue' has a wrong offset!");
 
 // Function WB_MapSelection.WB_MapSelection_C.GetMapImage
 // 0x00B0 (0x00B0 - 0x0000)
@@ -45,14 +45,14 @@ public:
 	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0000(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UseMapCycleInfo_UseMapCycleInfo;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E97[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E98[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue; // 0x0048(0x0028)(UObjectWrapper, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E99[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_GetTextureForCustomMap_Texture;           // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_Select_Default;                             // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UTexture2D>              CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue_1; // 0x0088(0x0028)(UObjectWrapper, HasGetValueTypeHash)
@@ -72,35 +72,35 @@ static_assert(offsetof(WB_MapSelection_C_GetMapImage, K2Node_Select_Default) == 
 static_assert(offsetof(WB_MapSelection_C_GetMapImage, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue_1) == 0x000088, "Member 'WB_MapSelection_C_GetMapImage::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue_1' has a wrong offset!");
 
 // Function WB_MapSelection.WB_MapSelection_C.GetMapName
-// 0x0088 (0x0088 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WB_MapSelection_C_GetMapName final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class UB_MapCycleObject_C*                    MapCycle;                                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UseMapCycleInfo_UseMapCycleInfo;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9B[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetSuitableMapCycleName_Name;             // 0x0040(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0070(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class UB_MapCycleObject_C*                    MapCycle;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UseMapCycleInfo_UseMapCycleInfo;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetSuitableMapCycleName_Name;             // 0x0038(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0010)()
 };
 static_assert(alignof(WB_MapSelection_C_GetMapName) == 0x000008, "Wrong alignment on WB_MapSelection_C_GetMapName");
-static_assert(sizeof(WB_MapSelection_C_GetMapName) == 0x000088, "Wrong size on WB_MapSelection_C_GetMapName");
+static_assert(sizeof(WB_MapSelection_C_GetMapName) == 0x000068, "Wrong size on WB_MapSelection_C_GetMapName");
 static_assert(offsetof(WB_MapSelection_C_GetMapName, ReturnValue) == 0x000000, "Member 'WB_MapSelection_C_GetMapName::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, MapCycle) == 0x000018, "Member 'WB_MapSelection_C_GetMapName::MapCycle' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_GetGameInstance_ReturnValue) == 0x000020, "Member 'WB_MapSelection_C_GetMapName::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, Temp_bool_Variable) == 0x000028, "Member 'WB_MapSelection_C_GetMapName::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, K2Node_DynamicCast_AsB_Game_Instance) == 0x000030, "Member 'WB_MapSelection_C_GetMapName::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WB_MapSelection_C_GetMapName::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_UseMapCycleInfo_UseMapCycleInfo) == 0x000039, "Member 'WB_MapSelection_C_GetMapName::CallFunc_UseMapCycleInfo_UseMapCycleInfo' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_GetSuitableMapCycleName_Name) == 0x000040, "Member 'WB_MapSelection_C_GetMapName::CallFunc_GetSuitableMapCycleName_Name' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'WB_MapSelection_C_GetMapName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapSelection_C_GetMapName, K2Node_Select_Default) == 0x000070, "Member 'WB_MapSelection_C_GetMapName::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, MapCycle) == 0x000010, "Member 'WB_MapSelection_C_GetMapName::MapCycle' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_MapSelection_C_GetMapName::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, Temp_bool_Variable) == 0x000020, "Member 'WB_MapSelection_C_GetMapName::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, K2Node_DynamicCast_AsB_Game_Instance) == 0x000028, "Member 'WB_MapSelection_C_GetMapName::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WB_MapSelection_C_GetMapName::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_UseMapCycleInfo_UseMapCycleInfo) == 0x000031, "Member 'WB_MapSelection_C_GetMapName::CallFunc_UseMapCycleInfo_UseMapCycleInfo' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_GetSuitableMapCycleName_Name) == 0x000038, "Member 'WB_MapSelection_C_GetMapName::CallFunc_GetSuitableMapCycleName_Name' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, CallFunc_Conv_StringToText_ReturnValue) == 0x000048, "Member 'WB_MapSelection_C_GetMapName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_GetMapName, K2Node_Select_Default) == 0x000058, "Member 'WB_MapSelection_C_GetMapName::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_MapSelection.WB_MapSelection_C.OnFocusReceived
 // 0x01B8 (0x01B8 - 0x0000)
@@ -139,7 +139,7 @@ struct WB_MapSelection_C_ExecuteUbergraph_WB_MapSelection final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UTextBlock*>                     K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(WB_MapSelection_C_ExecuteUbergraph_WB_MapSelection) == 0x000008, "Wrong alignment on WB_MapSelection_C_ExecuteUbergraph_WB_MapSelection");
@@ -153,8 +153,8 @@ static_assert(offsetof(WB_MapSelection_C_ExecuteUbergraph_WB_MapSelection, K2Nod
 struct WB_MapSelection_C_UseMapCycleInfo final
 {
 public:
-	bool                                          Param_UseMapCycleInfo;                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          UseMapCycleInfo_0;                                 // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -165,7 +165,7 @@ public:
 };
 static_assert(alignof(WB_MapSelection_C_UseMapCycleInfo) == 0x000008, "Wrong alignment on WB_MapSelection_C_UseMapCycleInfo");
 static_assert(sizeof(WB_MapSelection_C_UseMapCycleInfo) == 0x000020, "Wrong size on WB_MapSelection_C_UseMapCycleInfo");
-static_assert(offsetof(WB_MapSelection_C_UseMapCycleInfo, Param_UseMapCycleInfo) == 0x000000, "Member 'WB_MapSelection_C_UseMapCycleInfo::Param_UseMapCycleInfo' has a wrong offset!");
+static_assert(offsetof(WB_MapSelection_C_UseMapCycleInfo, UseMapCycleInfo_0) == 0x000000, "Member 'WB_MapSelection_C_UseMapCycleInfo::UseMapCycleInfo_0' has a wrong offset!");
 static_assert(offsetof(WB_MapSelection_C_UseMapCycleInfo, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_MapSelection_C_UseMapCycleInfo::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapSelection_C_UseMapCycleInfo, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_MapSelection_C_UseMapCycleInfo::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_MapSelection_C_UseMapCycleInfo, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_MapSelection_C_UseMapCycleInfo::K2Node_DynamicCast_bSuccess' has a wrong offset!");

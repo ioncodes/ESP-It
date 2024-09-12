@@ -65,11 +65,11 @@ void UB_DecoySkill_C::GetDecoyLocation(struct FVector* Location, bool* IsValid)
 // Function B_DecoySkill.B_DecoySkill_C.GetNearestDecoyTarget
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Param_TargetLocation                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Param_TargetNormal                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          TargetLocation_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          TargetNormal_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    FoundLocation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_DecoySkill_C::GetNearestDecoyTarget(struct FVector* Param_TargetLocation, struct FVector* Param_TargetNormal, bool* FoundLocation)
+void UB_DecoySkill_C::GetNearestDecoyTarget(struct FVector* TargetLocation_0, struct FVector* TargetNormal_0, bool* FoundLocation)
 {
 	static class UFunction* Func = nullptr;
 
@@ -80,11 +80,11 @@ void UB_DecoySkill_C::GetNearestDecoyTarget(struct FVector* Param_TargetLocation
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_TargetLocation != nullptr)
-		*Param_TargetLocation = std::move(Parms.Param_TargetLocation);
+	if (TargetLocation_0 != nullptr)
+		*TargetLocation_0 = std::move(Parms.TargetLocation_0);
 
-	if (Param_TargetNormal != nullptr)
-		*Param_TargetNormal = std::move(Parms.Param_TargetNormal);
+	if (TargetNormal_0 != nullptr)
+		*TargetNormal_0 = std::move(Parms.TargetNormal_0);
 
 	if (FoundLocation != nullptr)
 		*FoundLocation = Parms.FoundLocation;

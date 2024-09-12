@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function B_InventoryManager.B_InventoryManager_C.OnUpdatedFromSteam__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UB_InventoryManager_C::OnUpdatedFromSteam__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_InventoryManager_C", "OnUpdatedFromSteam__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_InventoryManager.B_InventoryManager_C.OnItemCrafted__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -34,20 +48,6 @@ void UB_InventoryManager_C::OnItemCrafted__DelegateSignature(EItemCraftResult It
 	Parms.ItemCraftResult = ItemCraftResult;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_InventoryManager.B_InventoryManager_C.OnUpdatedFromSteam__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UB_InventoryManager_C::OnUpdatedFromSteam__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_InventoryManager_C", "OnUpdatedFromSteam__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -235,11 +235,11 @@ void UB_InventoryManager_C::CountItemToQuantity(struct FBlueprintOnlineItem& Ite
 // Function B_InventoryManager.B_InventoryManager_C.CraftItem
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<int32>                           Param_ItemsToCraft                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<int32>                           Param_ReagentIds                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int32                                   Param_AmountToCraft                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<int32>                           ItemsToCraft_0                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<int32>                           ReagentIDs_0                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   AmountToCraft_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_InventoryManager_C::CraftItem(const TArray<int32>& Param_ItemsToCraft, const TArray<int32>& Param_ReagentIds, int32 Param_AmountToCraft)
+void UB_InventoryManager_C::CraftItem(const TArray<int32>& ItemsToCraft_0, const TArray<int32>& ReagentIDs_0, int32 AmountToCraft_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -248,9 +248,9 @@ void UB_InventoryManager_C::CraftItem(const TArray<int32>& Param_ItemsToCraft, c
 
 	Params::B_InventoryManager_C_CraftItem Parms{};
 
-	Parms.Param_ItemsToCraft = std::move(Param_ItemsToCraft);
-	Parms.Param_ReagentIds = std::move(Param_ReagentIds);
-	Parms.Param_AmountToCraft = Param_AmountToCraft;
+	Parms.ItemsToCraft_0 = std::move(ItemsToCraft_0);
+	Parms.ReagentIDs_0 = std::move(ReagentIDs_0);
+	Parms.AmountToCraft_0 = AmountToCraft_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -827,9 +827,9 @@ bool UB_InventoryManager_C::IsSteamValid()
 // Function B_InventoryManager.B_InventoryManager_C.IsUpdating
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsUpdating                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsUpdating_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_InventoryManager_C::IsUpdating(bool* Param_IsUpdating)
+void UB_InventoryManager_C::IsUpdating(bool* IsUpdating_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -840,8 +840,8 @@ void UB_InventoryManager_C::IsUpdating(bool* Param_IsUpdating)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsUpdating != nullptr)
-		*Param_IsUpdating = Parms.Param_IsUpdating;
+	if (IsUpdating_0 != nullptr)
+		*IsUpdating_0 = Parms.IsUpdating_0;
 }
 
 

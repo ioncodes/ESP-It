@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_Slot_structs.hpp"
 #include "Engine_classes.hpp"
 #include "B_Rarity_structs.hpp"
+#include "E_Slot_structs.hpp"
 #include "E_Ingredients_structs.hpp"
 
 
@@ -24,12 +24,12 @@ namespace SDK
 class UB_SkinFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetRarityInfo(EB_Rarity Rarity, class UObject* __WorldContext, class FText* Param_Name, struct FLinearColor* Color);
+	static void GetRarityInfo(EB_Rarity Rarity, class UObject* __WorldContext, class FText* Name_0, struct FLinearColor* Color);
 	static TArray<class UClass*> GetWitchSkinClasses(const struct FWitchSkin& WitchSkin, class UObject* __WorldContext);
 	static bool IsIconSlot(E_Slot Slot, class UObject* __WorldContext);
 	static bool IsHunterSlot(E_Slot Slot, class UObject* __WorldContext);
 	static bool IsWitchSlot(E_Slot Slot, class UObject* __WorldContext);
-	static void GetSteamItemNameFromID(int32 DefinitionId, class UObject* __WorldContext, class FText* Param_Name);
+	static void GetSteamItemNameFromID(int32 DefinitionId, class UObject* __WorldContext, class FText* Name_0);
 	static void SortSkinClassArrayByRarity(TArray<struct FS_ItemInfo>& ItemInfos, class UObject* __WorldContext, TArray<struct FS_ItemInfo>* SortedItemInfos);
 	static void SortRecipeClassArrayByRarity(TArray<struct FS_RecipeInfo>& RecipeInfos, class UObject* __WorldContext, TArray<struct FS_RecipeInfo>* SortedRecipeInfos);
 	static int32 GetRaritySortingValue(EB_Rarity Rarity, class UObject* __WorldContext);

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenFoodTask.B_RottenFoodTask_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x0318 - 0x0318)
 class AB_RottenFoodTask_C final : public AB_CollectTask_C
 {
 public:
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenFoodTask_C) == 0x000008, "Wrong alignment on AB_RottenFoodTask_C");
-static_assert(sizeof(AB_RottenFoodTask_C) == 0x000320, "Wrong size on AB_RottenFoodTask_C");
+static_assert(sizeof(AB_RottenFoodTask_C) == 0x000318, "Wrong size on AB_RottenFoodTask_C");
 
 }
 

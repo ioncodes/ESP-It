@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_SkillRuleType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "S_SkillRules_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_SkillRuleType_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,15 +28,15 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5571[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5572[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameRules_C*                         CallFunc_GetGameRules_ReturnValue;                 // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5573[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_SkillRules                          K2Node_MakeStruct_S_SkillRules;                    // 0x0050(0x0018)(HasGetValueTypeHash)
 	class UB_GameRules_C*                         CallFunc_GetGameRules_ReturnValue_1;               // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -68,7 +68,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5574[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CheckBoxWithEditableLabel_C*        K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -85,66 +85,68 @@ static_assert(offsetof(WB_SkillRules_C_CheckForShouldEnable, K2Node_DynamicCast_
 static_assert(offsetof(WB_SkillRules_C_CheckForShouldEnable, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_SkillRules_C_CheckForShouldEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_SkillRules_C_CheckForShouldEnable, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000029, "Member 'WB_SkillRules_C_CheckForShouldEnable::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
 
+// Function WB_SkillRules.WB_SkillRules_C.CreateEventBindings
+// 0x0060 (0x0060 - 0x0000)
+struct WB_SkillRules_C_CreateEventBindings final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWB_SliderWithEditableLabel_C* Sender, double RealValue)> K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWB_CheckBoxWithEditableLabel_C* Sender, bool IsChecked)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SliderWithEditableLabel_C*          K2Node_DynamicCast_AsWB_Slider_with_Editable_Label; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_CheckBoxWithEditableLabel_C*        K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label; // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsChecked_IsChecked;                   // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_SkillRules_C_CreateEventBindings) == 0x000008, "Wrong alignment on WB_SkillRules_C_CreateEventBindings");
+static_assert(sizeof(WB_SkillRules_C_CreateEventBindings) == 0x000060, "Wrong size on WB_SkillRules_C_CreateEventBindings");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WB_SkillRules_C_CreateEventBindings::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WB_SkillRules_C_CreateEventBindings::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WB_SkillRules_C_CreateEventBindings::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'WB_SkillRules_C_CreateEventBindings::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, K2Node_CreateDelegate_OutputDelegate_1) == 0x00001C, "Member 'WB_SkillRules_C_CreateEventBindings::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'WB_SkillRules_C_CreateEventBindings::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, CallFunc_Array_Get_Item) == 0x000030, "Member 'WB_SkillRules_C_CreateEventBindings::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'WB_SkillRules_C_CreateEventBindings::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, K2Node_DynamicCast_AsWB_Slider_with_Editable_Label) == 0x000040, "Member 'WB_SkillRules_C_CreateEventBindings::K2Node_DynamicCast_AsWB_Slider_with_Editable_Label' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WB_SkillRules_C_CreateEventBindings::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label) == 0x000050, "Member 'WB_SkillRules_C_CreateEventBindings::K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'WB_SkillRules_C_CreateEventBindings::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateEventBindings, CallFunc_GetIsChecked_IsChecked) == 0x000059, "Member 'WB_SkillRules_C_CreateEventBindings::CallFunc_GetIsChecked_IsChecked' has a wrong offset!");
+
 // Function WB_SkillRules.WB_SkillRules_C.CreateUIParameters
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct WB_SkillRules_C_CreateUIParameters final
 {
 public:
 	TArray<struct FUIParameterData>               UIParams;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UWB_SliderWithEditableLabel_C*          CurrentParamSlider;                                // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FUIParameterData                       CurrentUIParam;                                    // 0x0018(0x0078)(Edit, BlueprintVisible)
-	class UWB_CheckBoxWithEditableLabel_C*        CurrentCheckBox;                                   // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5575[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x00A8(0x0078)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UWB_CheckBoxWithEditableLabel_C* Sender, bool IsChecked)> K2Node_CreateDelegate_OutputDelegate;              // 0x012C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5576[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_CheckBoxWithEditableLabel_C*        CallFunc_Create_ReturnValue;                       // 0x0148(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetDefaultSkillParameterValue_DefaultValue; // 0x0158(0x0014)(NoDestructor)
-	uint8                                         Pad_5577[0x4];                                     // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetDefaultSkillParameterValue_DefaultValue_1; // 0x0178(0x0014)(NoDestructor)
-	TDelegate<void(class UWB_SliderWithEditableLabel_C* Sender, double RealValue)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x018C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5578[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UWB_SliderWithEditableLabel_C*          CallFunc_Create_ReturnValue_1;                     // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_1;                   // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FUIParam>                       DefaultValues;                                     // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FUIParam                               CurrentDefaultValue;                               // 0x0020(0x0014)(Edit, BlueprintVisible, NoDestructor)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SliderWithEditableLabel_C*          CurrentParamSlider;                                // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FUIParameterData                       CurrentUIParam;                                    // 0x0040(0x0060)(Edit, BlueprintVisible)
+	class UWB_CheckBoxWithEditableLabel_C*        CurrentCheckBox;                                   // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWB_BaseControlWithLabel_C*>     CallFunc_CreateUIParameters_ReturningUIElements;   // 0x00B0(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(WB_SkillRules_C_CreateUIParameters) == 0x000008, "Wrong alignment on WB_SkillRules_C_CreateUIParameters");
-static_assert(sizeof(WB_SkillRules_C_CreateUIParameters) == 0x0001C0, "Wrong size on WB_SkillRules_C_CreateUIParameters");
+static_assert(sizeof(WB_SkillRules_C_CreateUIParameters) == 0x0000C0, "Wrong size on WB_SkillRules_C_CreateUIParameters");
 static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, UIParams) == 0x000000, "Member 'WB_SkillRules_C_CreateUIParameters::UIParams' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentParamSlider) == 0x000010, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentParamSlider' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentUIParam) == 0x000018, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentUIParam' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentCheckBox) == 0x000090, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentCheckBox' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Array_Length_ReturnValue) == 0x000098, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, Temp_int_Loop_Counter_Variable) == 0x00009C, "Member 'WB_SkillRules_C_CreateUIParameters::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, Temp_int_Array_Index_Variable) == 0x0000A0, "Member 'WB_SkillRules_C_CreateUIParameters::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Add_IntInt_ReturnValue) == 0x000120, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Array_Add_ReturnValue) == 0x000124, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Array_Add_ReturnValue_1) == 0x000128, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, K2Node_CreateDelegate_OutputDelegate) == 0x00012C, "Member 'WB_SkillRules_C_CreateUIParameters::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue) == 0x000140, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Create_ReturnValue) == 0x000148, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000150, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetDefaultSkillParameterValue_DefaultValue) == 0x000158, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetDefaultSkillParameterValue_DefaultValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x000170, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetDefaultSkillParameterValue_DefaultValue_1) == 0x000178, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetDefaultSkillParameterValue_DefaultValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, K2Node_CreateDelegate_OutputDelegate_1) == 0x00018C, "Member 'WB_SkillRules_C_CreateUIParameters::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_AddChild_ReturnValue) == 0x0001A0, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x0001A8, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_Create_ReturnValue_1) == 0x0001B0, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_Create_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_AddChild_ReturnValue_1) == 0x0001B8, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_AddChild_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, DefaultValues) == 0x000010, "Member 'WB_SkillRules_C_CreateUIParameters::DefaultValues' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentDefaultValue) == 0x000020, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentDefaultValue' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentParamSlider) == 0x000038, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentParamSlider' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentUIParam) == 0x000040, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentUIParam' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CurrentCheckBox) == 0x0000A0, "Member 'WB_SkillRules_C_CreateUIParameters::CurrentCheckBox' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_GetOwningPlayer_ReturnValue) == 0x0000A8, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_CreateUIParameters, CallFunc_CreateUIParameters_ReturningUIElements) == 0x0000B0, "Member 'WB_SkillRules_C_CreateUIParameters::CallFunc_CreateUIParameters_ReturningUIElements' has a wrong offset!");
 
 // Function WB_SkillRules.WB_SkillRules_C.ExecuteUbergraph_WB_SkillRules
 // 0x0060 (0x0060 - 0x0000)
@@ -152,19 +154,19 @@ struct WB_SkillRules_C_ExecuteUbergraph_WB_SkillRules final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5579[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557A[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            K2Node_DynamicCast_AsUser_Widget;                  // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557B[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557C[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameRules_C*                         CallFunc_GetGameRules_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -208,7 +210,7 @@ public:
 	class UWB_CheckBoxWithEditableLabel_C*        Sender;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsChecked;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557D[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUIParam                               K2Node_MakeStruct_UIParam;                         // 0x000C(0x0014)(NoDestructor)
 };
 static_assert(alignof(WB_SkillRules_C_OnCheckBoxValueChanged) == 0x000008, "Wrong alignment on WB_SkillRules_C_OnCheckBoxValueChanged");
@@ -227,7 +229,7 @@ public:
 	double                                        RealValue;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   ParameterName;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557E[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUIParam                               K2Node_MakeStruct_UIParam;                         // 0x001C(0x0014)(NoDestructor)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FUIParam                               K2Node_MakeStruct_UIParam_1;                       // 0x0034(0x0014)(NoDestructor)
@@ -252,17 +254,18 @@ struct WB_SkillRules_C_RefreshSkillRuleUI final
 {
 public:
 	E_SkillRuleType                               SkillRuleType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_557F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 SkillClass;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item_1;                         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
-	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters;             // 0x00A8(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0088(0x0010)()
+	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_UIParameters;             // 0x0098(0x0010)(ReferenceParm)
+	TArray<struct FUIParam>                       CallFunc_GetDefaultSkillParameterValues_ReturnValue; // 0x00A8(0x0010)(ReferenceParm)
 };
 static_assert(alignof(WB_SkillRules_C_RefreshSkillRuleUI) == 0x000008, "Wrong alignment on WB_SkillRules_C_RefreshSkillRuleUI");
 static_assert(sizeof(WB_SkillRules_C_RefreshSkillRuleUI) == 0x0000B8, "Wrong size on WB_SkillRules_C_RefreshSkillRuleUI");
@@ -274,9 +277,10 @@ static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_Array_Get_It
 static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_Array_Get_Item_1) == 0x000020, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_Array_Get_Item_1' has a wrong offset!");
 static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000028, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_GetUIParameters_UIParameters) == 0x0000A8, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_GetUIParameters_UIParameters' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, K2Node_MakeArray_Array) == 0x000078, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_Format_ReturnValue) == 0x000088, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_GetUIParameters_UIParameters) == 0x000098, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_GetUIParameters_UIParameters' has a wrong offset!");
+static_assert(offsetof(WB_SkillRules_C_RefreshSkillRuleUI, CallFunc_GetDefaultSkillParameterValues_ReturnValue) == 0x0000A8, "Member 'WB_SkillRules_C_RefreshSkillRuleUI::CallFunc_GetDefaultSkillParameterValues_ReturnValue' has a wrong offset!");
 
 // Function WB_SkillRules.WB_SkillRules_C.SetSkillRuleParameter
 // 0x0044 (0x0044 - 0x0000)
@@ -290,7 +294,7 @@ public:
 	struct FUIParam                               CallFunc_Array_Get_Item;                           // 0x0020(0x0014)(NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5580[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -313,12 +317,12 @@ struct WB_SkillRules_C_ToggleEnabledParameterElements final
 public:
 	class UWB_BaseControlWithLabel_C*             ElementToIgnore;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          SetEnabled;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5581[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5582[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

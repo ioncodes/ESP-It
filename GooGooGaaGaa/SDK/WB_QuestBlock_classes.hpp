@@ -21,24 +21,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_QuestBlock.WB_QuestBlock_C
-// 0x0080 (0x0340 - 0x02C0)
+// 0x0080 (0x0360 - 0x02E0)
 class UWB_QuestBlock_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeIn;                                            // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeInFast;                                        // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           bLock;                                             // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           DailyQuestList;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 DailyRewardIcon;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           WeeklyQuestList;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 WeeklyRewardIcon;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FClientQuest>                   DailyClientQuests;                                 // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UB_ClientQuestInterface_C*              ClientQuestInterface;                              // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FClientQuest>                   WeeklyClientQuests;                                // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          ShouldFadeIn;                                      // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_588E[0x7];                                     // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnNoQuestToFocusFound;                             // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeIn;                                            // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeInFast;                                        // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UVerticalBox*                           bLock;                                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           DailyQuestList;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 DailyRewardIcon;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           WeeklyQuestList;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 WeeklyRewardIcon;                                  // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FClientQuest>                   DailyClientQuests;                                 // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UB_ClientQuestInterface_C*              ClientQuestInterface;                              // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FClientQuest>                   WeeklyClientQuests;                                // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          ShouldFadeIn;                                      // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnNoQuestToFocusFound;                             // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void OnNoQuestToFocusFound__DelegateSignature();
@@ -66,20 +66,20 @@ public:
 	}
 };
 static_assert(alignof(UWB_QuestBlock_C) == 0x000008, "Wrong alignment on UWB_QuestBlock_C");
-static_assert(sizeof(UWB_QuestBlock_C) == 0x000340, "Wrong size on UWB_QuestBlock_C");
-static_assert(offsetof(UWB_QuestBlock_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_QuestBlock_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, FadeIn) == 0x0002C8, "Member 'UWB_QuestBlock_C::FadeIn' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, FadeInFast) == 0x0002D0, "Member 'UWB_QuestBlock_C::FadeInFast' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, bLock) == 0x0002D8, "Member 'UWB_QuestBlock_C::bLock' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, DailyQuestList) == 0x0002E0, "Member 'UWB_QuestBlock_C::DailyQuestList' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, DailyRewardIcon) == 0x0002E8, "Member 'UWB_QuestBlock_C::DailyRewardIcon' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, WeeklyQuestList) == 0x0002F0, "Member 'UWB_QuestBlock_C::WeeklyQuestList' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, WeeklyRewardIcon) == 0x0002F8, "Member 'UWB_QuestBlock_C::WeeklyRewardIcon' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, DailyClientQuests) == 0x000300, "Member 'UWB_QuestBlock_C::DailyClientQuests' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, ClientQuestInterface) == 0x000310, "Member 'UWB_QuestBlock_C::ClientQuestInterface' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, WeeklyClientQuests) == 0x000318, "Member 'UWB_QuestBlock_C::WeeklyClientQuests' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, ShouldFadeIn) == 0x000328, "Member 'UWB_QuestBlock_C::ShouldFadeIn' has a wrong offset!");
-static_assert(offsetof(UWB_QuestBlock_C, OnNoQuestToFocusFound) == 0x000330, "Member 'UWB_QuestBlock_C::OnNoQuestToFocusFound' has a wrong offset!");
+static_assert(sizeof(UWB_QuestBlock_C) == 0x000360, "Wrong size on UWB_QuestBlock_C");
+static_assert(offsetof(UWB_QuestBlock_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_QuestBlock_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, FadeIn) == 0x0002E8, "Member 'UWB_QuestBlock_C::FadeIn' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, FadeInFast) == 0x0002F0, "Member 'UWB_QuestBlock_C::FadeInFast' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, bLock) == 0x0002F8, "Member 'UWB_QuestBlock_C::bLock' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, DailyQuestList) == 0x000300, "Member 'UWB_QuestBlock_C::DailyQuestList' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, DailyRewardIcon) == 0x000308, "Member 'UWB_QuestBlock_C::DailyRewardIcon' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, WeeklyQuestList) == 0x000310, "Member 'UWB_QuestBlock_C::WeeklyQuestList' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, WeeklyRewardIcon) == 0x000318, "Member 'UWB_QuestBlock_C::WeeklyRewardIcon' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, DailyClientQuests) == 0x000320, "Member 'UWB_QuestBlock_C::DailyClientQuests' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, ClientQuestInterface) == 0x000330, "Member 'UWB_QuestBlock_C::ClientQuestInterface' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, WeeklyClientQuests) == 0x000338, "Member 'UWB_QuestBlock_C::WeeklyClientQuests' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, ShouldFadeIn) == 0x000348, "Member 'UWB_QuestBlock_C::ShouldFadeIn' has a wrong offset!");
+static_assert(offsetof(UWB_QuestBlock_C, OnNoQuestToFocusFound) == 0x000350, "Member 'UWB_QuestBlock_C::OnNoQuestToFocusFound' has a wrong offset!");
 
 }
 

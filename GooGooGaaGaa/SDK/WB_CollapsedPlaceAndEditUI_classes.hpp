@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_CollapsedPlaceAndEditUI.WB_CollapsedPlaceAndEditUI_C
-// 0x0008 (0x0368 - 0x0360)
+// 0x0008 (0x0388 - 0x0380)
 class UWB_CollapsedPlaceAndEditUI_C final : public UWB_TargetActorDisplay_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_CollapsedPlaceAndEditUI_C;       // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_CollapsedPlaceAndEditUI_C;       // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void Construct();
@@ -31,7 +31,7 @@ public:
 	void UpdateGroupInfo(class AActor* AddedOrRemovedActor, bool WasAdded);
 
 	void CanContentBeInitialized(bool* CanBeInitialized) const;
-	void GetFullName(class AActor* Param_TargetActor, class FText* FullName) const;
+	void GetFullName(class AActor* TargetActor_0, class FText* FullName) const;
 
 public:
 	static class UClass* StaticClass()
@@ -44,8 +44,8 @@ public:
 	}
 };
 static_assert(alignof(UWB_CollapsedPlaceAndEditUI_C) == 0x000008, "Wrong alignment on UWB_CollapsedPlaceAndEditUI_C");
-static_assert(sizeof(UWB_CollapsedPlaceAndEditUI_C) == 0x000368, "Wrong size on UWB_CollapsedPlaceAndEditUI_C");
-static_assert(offsetof(UWB_CollapsedPlaceAndEditUI_C, UberGraphFrame_WB_CollapsedPlaceAndEditUI_C) == 0x000360, "Member 'UWB_CollapsedPlaceAndEditUI_C::UberGraphFrame_WB_CollapsedPlaceAndEditUI_C' has a wrong offset!");
+static_assert(sizeof(UWB_CollapsedPlaceAndEditUI_C) == 0x000388, "Wrong size on UWB_CollapsedPlaceAndEditUI_C");
+static_assert(offsetof(UWB_CollapsedPlaceAndEditUI_C, UberGraphFrame_WB_CollapsedPlaceAndEditUI_C) == 0x000380, "Member 'UWB_CollapsedPlaceAndEditUI_C::UberGraphFrame_WB_CollapsedPlaceAndEditUI_C' has a wrong offset!");
 
 }
 

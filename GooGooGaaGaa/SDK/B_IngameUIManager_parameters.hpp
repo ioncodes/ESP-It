@@ -12,11 +12,11 @@
 
 #include "ETeamID_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "EResultType_structs.hpp"
 #include "ESkillCategory_structs.hpp"
 #include "E_RememberAfterSaveLayoutAction_structs.hpp"
 #include "SOpenWidgetInfo_structs.hpp"
+#include "EResultType_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "EChatType_structs.hpp"
 #include "UMG_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
@@ -27,30 +27,30 @@ namespace SDK::Params
 {
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ChatTextCommitted
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct B_IngameUIManager_C_ChatTextCommitted final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ChatTextCommitted) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ChatTextCommitted");
-static_assert(sizeof(B_IngameUIManager_C_ChatTextCommitted) == 0x000020, "Wrong size on B_IngameUIManager_C_ChatTextCommitted");
+static_assert(sizeof(B_IngameUIManager_C_ChatTextCommitted) == 0x000018, "Wrong size on B_IngameUIManager_C_ChatTextCommitted");
 static_assert(offsetof(B_IngameUIManager_C_ChatTextCommitted, Text) == 0x000000, "Member 'B_IngameUIManager_C_ChatTextCommitted::Text' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ChatTextCommitted, CommitMethod) == 0x000018, "Member 'B_IngameUIManager_C_ChatTextCommitted::CommitMethod' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ChatTextCommitted, CommitMethod) == 0x000010, "Member 'B_IngameUIManager_C_ChatTextCommitted::CommitMethod' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ChatTextCommittedTeam
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct B_IngameUIManager_C_ChatTextCommittedTeam final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ChatTextCommittedTeam) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ChatTextCommittedTeam");
-static_assert(sizeof(B_IngameUIManager_C_ChatTextCommittedTeam) == 0x000020, "Wrong size on B_IngameUIManager_C_ChatTextCommittedTeam");
+static_assert(sizeof(B_IngameUIManager_C_ChatTextCommittedTeam) == 0x000018, "Wrong size on B_IngameUIManager_C_ChatTextCommittedTeam");
 static_assert(offsetof(B_IngameUIManager_C_ChatTextCommittedTeam, Text) == 0x000000, "Member 'B_IngameUIManager_C_ChatTextCommittedTeam::Text' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ChatTextCommittedTeam, CommitMethod) == 0x000018, "Member 'B_IngameUIManager_C_ChatTextCommittedTeam::CommitMethod' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ChatTextCommittedTeam, CommitMethod) == 0x000010, "Member 'B_IngameUIManager_C_ChatTextCommittedTeam::CommitMethod' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ClearChatAndGameMessage
 // 0x0002 (0x0002 - 0x0000)
@@ -71,12 +71,12 @@ struct B_IngameUIManager_C_CloseAllScreens final
 {
 public:
 	bool                                          RefreshFocus;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D66[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D67[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSOpenWidgetInfo                       CallFunc_Array_Get_Item;                           // 0x0018(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -99,11 +99,11 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D68[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D69[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSOpenWidgetInfo                       CallFunc_Array_Get_Item;                           // 0x0030(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -132,10 +132,10 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D6A[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D6B[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_CloseScreens) == 0x000008, "Wrong alignment on B_IngameUIManager_C_CloseScreens");
@@ -156,7 +156,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D6C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSOpenWidgetInfo                       CallFunc_Array_Get_Item;                           // 0x0010(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -171,48 +171,48 @@ static_assert(offsetof(B_IngameUIManager_C_CloseSubordinateMenu, CallFunc_Array_
 static_assert(offsetof(B_IngameUIManager_C_CloseSubordinateMenu, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'B_IngameUIManager_C_CloseSubordinateMenu::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.DevGrantAllItemsCommand
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct B_IngameUIManager_C_DevGrantAllItemsCommand final
 {
 public:
 	TArray<int32>                                 CallFunc_GetUnownedItemIDs_Unowned_Item_IDs;       // 0x0000(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D6D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0018)()
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_DevGrantAllItemsCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_DevGrantAllItemsCommand");
-static_assert(sizeof(B_IngameUIManager_C_DevGrantAllItemsCommand) == 0x000030, "Wrong size on B_IngameUIManager_C_DevGrantAllItemsCommand");
+static_assert(sizeof(B_IngameUIManager_C_DevGrantAllItemsCommand) == 0x000028, "Wrong size on B_IngameUIManager_C_DevGrantAllItemsCommand");
 static_assert(offsetof(B_IngameUIManager_C_DevGrantAllItemsCommand, CallFunc_GetUnownedItemIDs_Unowned_Item_IDs) == 0x000000, "Member 'B_IngameUIManager_C_DevGrantAllItemsCommand::CallFunc_GetUnownedItemIDs_Unowned_Item_IDs' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_DevGrantAllItemsCommand, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'B_IngameUIManager_C_DevGrantAllItemsCommand::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_DevGrantAllItemsCommand, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'B_IngameUIManager_C_DevGrantAllItemsCommand::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ExecuteUbergraph_B_IngameUIManager
-// 0x0060 (0x0060 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D6E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_Text;                           // 0x0008(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_CustomEvent_CommitMethod;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D6F[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_CustomEvent_Text_1;                         // 0x0028(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_CustomEvent_CommitMethod_1;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D70[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_CustomEvent_Text;                           // 0x0008(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_CustomEvent_CommitMethod;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_CustomEvent_Text_1;                         // 0x0020(0x0010)(ConstParm)
+	ETextCommit                                   K2Node_CustomEvent_CommitMethod_1;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager");
-static_assert(sizeof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager) == 0x000060, "Wrong size on B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager");
+static_assert(sizeof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager) == 0x000050, "Wrong size on B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager");
 static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, EntryPoint) == 0x000000, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_Text) == 0x000008, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_Text' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_CommitMethod) == 0x000020, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_CommitMethod' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_Text_1) == 0x000028, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_CommitMethod_1) == 0x000040, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_CommitMethod_1' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_Event_InGameInstance) == 0x000048, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_Event_InGameInstance' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000050, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_CommitMethod) == 0x000018, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_CommitMethod' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_Text_1) == 0x000020, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_Text_1' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_CustomEvent_CommitMethod_1) == 0x000030, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_CustomEvent_CommitMethod_1' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_Event_InGameInstance) == 0x000038, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_Event_InGameInstance' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000040, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'B_IngameUIManager_C_ExecuteUbergraph_B_IngameUIManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.FocusChatForTyping
 // 0x0001 (0x0001 - 0x0000)
@@ -243,29 +243,29 @@ static_assert(offsetof(B_IngameUIManager_C_GetFirstLocalPlayerController, K2Node
 static_assert(offsetof(B_IngameUIManager_C_GetFirstLocalPlayerController, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_IngameUIManager_C_GetFirstLocalPlayerController::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.GetKeyBinding
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct B_IngameUIManager_C_GetKeyBinding final
 {
 public:
 	class FName                                   TypeChatMessage;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   Text;                                              // 0x0008(0x0018)(Parm, OutParm)
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0028(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0038(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0050(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0018)()
+	class FText                                   Text;                                              // 0x0008(0x0010)(Parm, OutParm)
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0020(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Key_GetDisplayName_ReturnValue;           // 0x0030(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0088(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_GetKeyBinding) == 0x000008, "Wrong alignment on B_IngameUIManager_C_GetKeyBinding");
-static_assert(sizeof(B_IngameUIManager_C_GetKeyBinding) == 0x0000C8, "Wrong size on B_IngameUIManager_C_GetKeyBinding");
+static_assert(sizeof(B_IngameUIManager_C_GetKeyBinding) == 0x0000A8, "Wrong size on B_IngameUIManager_C_GetKeyBinding");
 static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, TypeChatMessage) == 0x000000, "Member 'B_IngameUIManager_C_GetKeyBinding::TypeChatMessage' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, Text) == 0x000008, "Member 'B_IngameUIManager_C_GetKeyBinding::Text' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_MakeLiteralName_ReturnValue) == 0x000020, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_GetKeyBindingsForAction_Bindings) == 0x000028, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_GetKeyBindingsForAction_Bindings' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_Key_GetDisplayName_ReturnValue) == 0x000038, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_Key_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, K2Node_MakeStruct_FormatArgumentData) == 0x000050, "Member 'B_IngameUIManager_C_GetKeyBinding::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, K2Node_MakeArray_Array) == 0x0000A0, "Member 'B_IngameUIManager_C_GetKeyBinding::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_Format_ReturnValue) == 0x0000B0, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_MakeLiteralName_ReturnValue) == 0x000018, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_GetKeyBindingsForAction_Bindings) == 0x000020, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_GetKeyBindingsForAction_Bindings' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_Key_GetDisplayName_ReturnValue) == 0x000030, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_Key_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'B_IngameUIManager_C_GetKeyBinding::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, K2Node_MakeArray_Array) == 0x000088, "Member 'B_IngameUIManager_C_GetKeyBinding::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_GetKeyBinding, CallFunc_Format_ReturnValue) == 0x000098, "Member 'B_IngameUIManager_C_GetKeyBinding::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.GetOwningPlayer
 // 0x0010 (0x0010 - 0x0000)
@@ -281,99 +281,99 @@ static_assert(offsetof(B_IngameUIManager_C_GetOwningPlayer, PlayerController) ==
 static_assert(offsetof(B_IngameUIManager_C_GetOwningPlayer, CallFunc_GetFirstLocalPlayerController_PlayerController) == 0x000008, "Member 'B_IngameUIManager_C_GetOwningPlayer::CallFunc_GetFirstLocalPlayerController_PlayerController' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.GrantDropExpCommand
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct B_IngameUIManager_C_GrantDropExpCommand final
 {
 public:
 	int32                                         Exp;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D71[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerController_C*                  CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_GrantDropExpCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_GrantDropExpCommand");
-static_assert(sizeof(B_IngameUIManager_C_GrantDropExpCommand) == 0x000028, "Wrong size on B_IngameUIManager_C_GrantDropExpCommand");
+static_assert(sizeof(B_IngameUIManager_C_GrantDropExpCommand) == 0x000020, "Wrong size on B_IngameUIManager_C_GrantDropExpCommand");
 static_assert(offsetof(B_IngameUIManager_C_GrantDropExpCommand, Exp) == 0x000000, "Member 'B_IngameUIManager_C_GrantDropExpCommand::Exp' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GrantDropExpCommand, CallFunc_GetFirstLocalPlayerController_PlayerController) == 0x000008, "Member 'B_IngameUIManager_C_GrantDropExpCommand::CallFunc_GetFirstLocalPlayerController_PlayerController' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GrantDropExpCommand, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'B_IngameUIManager_C_GrantDropExpCommand::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.GrantItemCommand
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct B_IngameUIManager_C_GrantItemCommand final
 {
 public:
 	int32                                         Item;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D72[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerController_C*                  CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_GrantItemCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_GrantItemCommand");
-static_assert(sizeof(B_IngameUIManager_C_GrantItemCommand) == 0x000028, "Wrong size on B_IngameUIManager_C_GrantItemCommand");
+static_assert(sizeof(B_IngameUIManager_C_GrantItemCommand) == 0x000020, "Wrong size on B_IngameUIManager_C_GrantItemCommand");
 static_assert(offsetof(B_IngameUIManager_C_GrantItemCommand, Item) == 0x000000, "Member 'B_IngameUIManager_C_GrantItemCommand::Item' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GrantItemCommand, CallFunc_GetFirstLocalPlayerController_PlayerController) == 0x000008, "Member 'B_IngameUIManager_C_GrantItemCommand::CallFunc_GetFirstLocalPlayerController_PlayerController' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GrantItemCommand, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'B_IngameUIManager_C_GrantItemCommand::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.GrantPrestigeExpCommand
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct B_IngameUIManager_C_GrantPrestigeExpCommand final
 {
 public:
 	int32                                         Exp;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D73[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerController_C*                  CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_GrantPrestigeExpCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_GrantPrestigeExpCommand");
-static_assert(sizeof(B_IngameUIManager_C_GrantPrestigeExpCommand) == 0x000028, "Wrong size on B_IngameUIManager_C_GrantPrestigeExpCommand");
+static_assert(sizeof(B_IngameUIManager_C_GrantPrestigeExpCommand) == 0x000020, "Wrong size on B_IngameUIManager_C_GrantPrestigeExpCommand");
 static_assert(offsetof(B_IngameUIManager_C_GrantPrestigeExpCommand, Exp) == 0x000000, "Member 'B_IngameUIManager_C_GrantPrestigeExpCommand::Exp' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GrantPrestigeExpCommand, CallFunc_GetFirstLocalPlayerController_PlayerController) == 0x000008, "Member 'B_IngameUIManager_C_GrantPrestigeExpCommand::CallFunc_GetFirstLocalPlayerController_PlayerController' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_GrantPrestigeExpCommand, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'B_IngameUIManager_C_GrantPrestigeExpCommand::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.HandleChatCommand
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct B_IngameUIManager_C_HandleChatCommand final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EChatType                                     ChatType;                                          // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D74[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerController_C*                  CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D75[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D76[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A0(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ParseChatCommand_IsChatCommand;           // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D77[0x6];                                     // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00D0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00E0(0x0018)()
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EChatType                                     ChatType;                                          // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerController_C*                  CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ParseChatCommand_IsChatCommand;           // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00C8(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_HandleChatCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_HandleChatCommand");
-static_assert(sizeof(B_IngameUIManager_C_HandleChatCommand) == 0x0000F8, "Wrong size on B_IngameUIManager_C_HandleChatCommand");
+static_assert(sizeof(B_IngameUIManager_C_HandleChatCommand) == 0x0000D8, "Wrong size on B_IngameUIManager_C_HandleChatCommand");
 static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, Text) == 0x000000, "Member 'B_IngameUIManager_C_HandleChatCommand::Text' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CommitMethod) == 0x000018, "Member 'B_IngameUIManager_C_HandleChatCommand::CommitMethod' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, ChatType) == 0x000019, "Member 'B_IngameUIManager_C_HandleChatCommand::ChatType' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00001A, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_GetFirstLocalPlayerController_PlayerController) == 0x000020, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_GetFirstLocalPlayerController_PlayerController' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Not_PreBool_ReturnValue) == 0x000028, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_FCeil_ReturnValue) == 0x00002C, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_FCeil_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000030, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000038, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'B_IngameUIManager_C_HandleChatCommand::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, K2Node_MakeArray_Array) == 0x000090, "Member 'B_IngameUIManager_C_HandleChatCommand::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Format_ReturnValue) == 0x0000A0, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Conv_TextToString_ReturnValue) == 0x0000B8, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_ParseChatCommand_IsChatCommand) == 0x0000C8, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_ParseChatCommand_IsChatCommand' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_TextIsEmpty_ReturnValue) == 0x0000C9, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, K2Node_MakeArray_Array_1) == 0x0000D0, "Member 'B_IngameUIManager_C_HandleChatCommand::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Format_ReturnValue_1) == 0x0000E0, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CommitMethod) == 0x000010, "Member 'B_IngameUIManager_C_HandleChatCommand::CommitMethod' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, ChatType) == 0x000011, "Member 'B_IngameUIManager_C_HandleChatCommand::ChatType' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000012, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_GetFirstLocalPlayerController_PlayerController) == 0x000018, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_GetFirstLocalPlayerController_PlayerController' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Not_PreBool_ReturnValue) == 0x000020, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_FCeil_ReturnValue) == 0x000024, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_FCeil_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000028, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000030, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'B_IngameUIManager_C_HandleChatCommand::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, K2Node_MakeArray_Array) == 0x000080, "Member 'B_IngameUIManager_C_HandleChatCommand::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Format_ReturnValue) == 0x000090, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Conv_TextToString_ReturnValue) == 0x0000A0, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_ParseChatCommand_IsChatCommand) == 0x0000B0, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_ParseChatCommand_IsChatCommand' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_TextIsEmpty_ReturnValue) == 0x0000B1, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, K2Node_MakeArray_Array_1) == 0x0000B8, "Member 'B_IngameUIManager_C_HandleChatCommand::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_HandleChatCommand, CallFunc_Format_ReturnValue_1) == 0x0000C8, "Member 'B_IngameUIManager_C_HandleChatCommand::CallFunc_Format_ReturnValue_1' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.HidePlayerList
 // 0x0001 (0x0001 - 0x0000)
@@ -419,11 +419,11 @@ static_assert(offsetof(B_IngameUIManager_C_Initialize, InGameInstance) == 0x0000
 struct B_IngameUIManager_C_IsUserInterfaceHidden final
 {
 public:
-	bool                                          Param_UserInterfaceIsHidden;                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UserInterfaceIsHidden_0;                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_IsUserInterfaceHidden) == 0x000001, "Wrong alignment on B_IngameUIManager_C_IsUserInterfaceHidden");
 static_assert(sizeof(B_IngameUIManager_C_IsUserInterfaceHidden) == 0x000001, "Wrong size on B_IngameUIManager_C_IsUserInterfaceHidden");
-static_assert(offsetof(B_IngameUIManager_C_IsUserInterfaceHidden, Param_UserInterfaceIsHidden) == 0x000000, "Member 'B_IngameUIManager_C_IsUserInterfaceHidden::Param_UserInterfaceIsHidden' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_IsUserInterfaceHidden, UserInterfaceIsHidden_0) == 0x000000, "Member 'B_IngameUIManager_C_IsUserInterfaceHidden::UserInterfaceIsHidden_0' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.IsWidgetAlreadyOpen
 // 0x0048 (0x0048 - 0x0000)
@@ -432,14 +432,14 @@ struct B_IngameUIManager_C_IsWidgetAlreadyOpen final
 public:
 	class UClass*                                 WidgetClass;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsAlreadyOpen;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D78[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSOpenWidgetInfo                       CallFunc_Array_Get_Item;                           // 0x0018(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D79[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -474,23 +474,23 @@ struct B_IngameUIManager_C_OpenScreen final
 public:
 	class UUserWidget*                            UserWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasFocus;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7A[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ZOrder;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            WidgetToOpen;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7B[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsWidgetAlreadyOpen_IsAlreadyOpen;        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7C[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7D[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7E[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSOpenWidgetInfo                       K2Node_MakeStruct_SOpenWidgetInfo;                 // 0x0058(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FAnchors                               K2Node_MakeStruct_Anchors;                         // 0x0080(0x0020)(NoDestructor)
@@ -523,7 +523,7 @@ struct B_IngameUIManager_C_OpenSubordinateMenu final
 {
 public:
 	bool                                          HideCurrentlyOpenedWidgets;                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D7F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -548,21 +548,21 @@ struct B_IngameUIManager_C_ParseChatCommand final
 public:
 	class FString                                 ChatMessage;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          IsChatCommand;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D80[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Parameter;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Command;                                           // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_StartsWith_ReturnValue;                   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D81[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue_2;           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue_3;           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D82[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Split_LeftS;                              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D83[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ParseChatCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ParseChatCommand");
@@ -583,77 +583,77 @@ static_assert(offsetof(B_IngameUIManager_C_ParseChatCommand, CallFunc_Split_Retu
 static_assert(offsetof(B_IngameUIManager_C_ParseChatCommand, CallFunc_SelectString_ReturnValue) == 0x000078, "Member 'B_IngameUIManager_C_ParseChatCommand::CallFunc_SelectString_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.PickRandomTip
-// 0x0458 (0x0458 - 0x0000)
+// 0x03B0 (0x03B0 - 0x0000)
 struct B_IngameUIManager_C_PickRandomTip final
 {
 public:
-	class FText                                   CallFunc_GetKeyBinding_Text;                       // 0x0000(0x0018)()
-	class FText                                   CallFunc_GetKeyBinding_Text_1;                     // 0x0018(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0080(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00D0(0x0018)()
-	class FText                                   CallFunc_GetKeyBinding_Text_2;                     // 0x00E8(0x0018)()
-	class FName                                   CallFunc_StringTableIdAndKeyFromText_OutTableId;   // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_StringTableIdAndKeyFromText_OutKey;       // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_StringTableIdAndKeyFromText_ReturnValue;  // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D84[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0120(0x0050)(HasGetValueTypeHash)
-	TArray<class FString>                         CallFunc_GetKeysFromStringTable_ReturnValue;       // 0x0170(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_GetKeyBinding_Text_3;                     // 0x0180(0x0018)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D85[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01A0(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D86[0x4];                                     // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetKeyBinding_Text_4;                     // 0x01F8(0x0018)()
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0220(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_FindTextInLocalizationTable_OutText;      // 0x0270(0x0018)()
-	bool                                          CallFunc_FindTextInLocalizationTable_ReturnValue;  // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D87[0x7];                                     // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetKeyBinding_Text_5;                     // 0x0290(0x0018)()
-	class FText                                   CallFunc_GetKeyBinding_Text_6;                     // 0x02A8(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02C0(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0310(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GetKeyBinding_Text_7;                     // 0x0360(0x0018)()
-	class FText                                   CallFunc_GetKeyBinding_Text_8;                     // 0x0378(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0390(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x03E0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0430(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0440(0x0018)()
+	class FText                                   CallFunc_GetKeyBinding_Text;                       // 0x0000(0x0010)()
+	class FText                                   CallFunc_GetKeyBinding_Text_1;                     // 0x0010(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0068(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00B0(0x0010)()
+	class FText                                   CallFunc_GetKeyBinding_Text_2;                     // 0x00C0(0x0010)()
+	class FName                                   CallFunc_StringTableIdAndKeyFromText_OutTableId;   // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_StringTableIdAndKeyFromText_OutKey;       // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_StringTableIdAndKeyFromText_ReturnValue;  // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00F0(0x0048)(HasGetValueTypeHash)
+	TArray<class FString>                         CallFunc_GetKeysFromStringTable_ReturnValue;       // 0x0138(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_GetKeyBinding_Text_3;                     // 0x0148(0x0010)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0160(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetKeyBinding_Text_4;                     // 0x01B0(0x0010)()
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x01C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x01D0(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_FindTextInLocalizationTable_OutText;      // 0x0218(0x0010)()
+	bool                                          CallFunc_FindTextInLocalizationTable_ReturnValue;  // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetKeyBinding_Text_5;                     // 0x0230(0x0010)()
+	class FText                                   CallFunc_GetKeyBinding_Text_6;                     // 0x0240(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0250(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0298(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetKeyBinding_Text_7;                     // 0x02E0(0x0010)()
+	class FText                                   CallFunc_GetKeyBinding_Text_8;                     // 0x02F0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0300(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0348(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0390(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x03A0(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_PickRandomTip) == 0x000008, "Wrong alignment on B_IngameUIManager_C_PickRandomTip");
-static_assert(sizeof(B_IngameUIManager_C_PickRandomTip) == 0x000458, "Wrong size on B_IngameUIManager_C_PickRandomTip");
+static_assert(sizeof(B_IngameUIManager_C_PickRandomTip) == 0x0003B0, "Wrong size on B_IngameUIManager_C_PickRandomTip");
 static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text) == 0x000000, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_1) == 0x000018, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_1' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_1) == 0x000080, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_MakeLiteralText_ReturnValue) == 0x0000D0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_2) == 0x0000E8, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_2' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_StringTableIdAndKeyFromText_OutTableId) == 0x000100, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_StringTableIdAndKeyFromText_OutTableId' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_StringTableIdAndKeyFromText_OutKey) == 0x000108, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_StringTableIdAndKeyFromText_OutKey' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_StringTableIdAndKeyFromText_ReturnValue) == 0x000118, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_StringTableIdAndKeyFromText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_2) == 0x000120, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeysFromStringTable_ReturnValue) == 0x000170, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeysFromStringTable_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_3) == 0x000180, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_3' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_Array_Length_ReturnValue) == 0x000198, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001A0, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_RandomInteger_ReturnValue) == 0x0001F0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_4) == 0x0001F8, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_4' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_Array_Get_Item) == 0x000210, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_4) == 0x000220, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_FindTextInLocalizationTable_OutText) == 0x000270, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_FindTextInLocalizationTable_OutText' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_FindTextInLocalizationTable_ReturnValue) == 0x000288, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_FindTextInLocalizationTable_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_5) == 0x000290, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_5' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_6) == 0x0002A8, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_6' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002C0, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_6) == 0x000310, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_7) == 0x000360, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_7' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_8) == 0x000378, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_8' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_7) == 0x000390, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_8) == 0x0003E0, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeArray_Array) == 0x000430, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_Format_ReturnValue) == 0x000440, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_1) == 0x000010, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_1' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_1) == 0x000068, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_MakeLiteralText_ReturnValue) == 0x0000B0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_2) == 0x0000C0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_2' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_StringTableIdAndKeyFromText_OutTableId) == 0x0000D0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_StringTableIdAndKeyFromText_OutTableId' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_StringTableIdAndKeyFromText_OutKey) == 0x0000D8, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_StringTableIdAndKeyFromText_OutKey' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_StringTableIdAndKeyFromText_ReturnValue) == 0x0000E8, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_StringTableIdAndKeyFromText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000F0, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeysFromStringTable_ReturnValue) == 0x000138, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeysFromStringTable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_3) == 0x000148, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_3' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_Array_Length_ReturnValue) == 0x000158, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_3) == 0x000160, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_RandomInteger_ReturnValue) == 0x0001A8, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_4) == 0x0001B0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_4' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_Array_Get_Item) == 0x0001C0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_4) == 0x0001D0, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_FindTextInLocalizationTable_OutText) == 0x000218, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_FindTextInLocalizationTable_OutText' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_FindTextInLocalizationTable_ReturnValue) == 0x000228, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_FindTextInLocalizationTable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_5) == 0x000230, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_5' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_6) == 0x000240, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_6' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_5) == 0x000250, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_6) == 0x000298, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_7) == 0x0002E0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_7' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_GetKeyBinding_Text_8) == 0x0002F0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_GetKeyBinding_Text_8' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_7) == 0x000300, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeStruct_FormatArgumentData_8) == 0x000348, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, K2Node_MakeArray_Array) == 0x000390, "Member 'B_IngameUIManager_C_PickRandomTip::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_PickRandomTip, CallFunc_Format_ReturnValue) == 0x0003A0, "Member 'B_IngameUIManager_C_PickRandomTip::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.RefreshFocus
 // 0x0060 (0x0060 - 0x0000)
@@ -661,16 +661,16 @@ struct B_IngameUIManager_C_RefreshFocus final
 {
 public:
 	bool                                          Force;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D88[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      FirstPlayerController;                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D89[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSOpenWidgetInfo                       CallFunc_Array_Get_Item;                           // 0x0030(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -679,7 +679,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EInputMode                                    CallFunc_GetInputMode_ReturnValue;                 // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8B[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -746,31 +746,31 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8D[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUserInterfaceHidden_UserInterfaceIsHidden; // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUserInterfaceHidden_UserInterfaceIsHidden_1; // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8E[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D8F[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D90[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWB_PlayerName_C*>               CallFunc_GetAllWidgetsOfClass_FoundWidgets;        // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
 	TArray<class UWB_EarlyVersionWatermark_C*>    CallFunc_GetAllWidgetsOfClass_FoundWidgets_1;      // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class UWB_PlayerName_C*                       CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_EarlyVersionWatermark_C*            CallFunc_Array_Get_Item_1;                         // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D91[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D92[0x2];                                     // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -856,23 +856,23 @@ static_assert(offsetof(B_IngameUIManager_C_Set_Focused_Widget_Input_Mode, CallFu
 static_assert(offsetof(B_IngameUIManager_C_Set_Focused_Widget_Input_Mode, CallFunc_ShouldInputModeBeGameAndUI_ReturnValue) == 0x000010, "Member 'B_IngameUIManager_C_Set_Focused_Widget_Input_Mode::CallFunc_ShouldInputModeBeGameAndUI_ReturnValue' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.SetWorkshopIdCommand
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct B_IngameUIManager_C_SetWorkshopIdCommand final
 {
 public:
-	class FString                                 WorkshopId;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0018)()
-	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_CreativeGameMode_C*                  K2Node_DynamicCast_AsB_Creative_Game_Mode;         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 WorkshopID;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
+	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_CreativeGameMode_C*                  K2Node_DynamicCast_AsB_Creative_Game_Mode;         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_SetWorkshopIdCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_SetWorkshopIdCommand");
-static_assert(sizeof(B_IngameUIManager_C_SetWorkshopIdCommand) == 0x000040, "Wrong size on B_IngameUIManager_C_SetWorkshopIdCommand");
-static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, WorkshopId) == 0x000000, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::WorkshopId' has a wrong offset!");
+static_assert(sizeof(B_IngameUIManager_C_SetWorkshopIdCommand) == 0x000038, "Wrong size on B_IngameUIManager_C_SetWorkshopIdCommand");
+static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, WorkshopID) == 0x000000, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::WorkshopID' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, CallFunc_GetGameMode_ReturnValue) == 0x000028, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, K2Node_DynamicCast_AsB_Creative_Game_Mode) == 0x000030, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::K2Node_DynamicCast_AsB_Creative_Game_Mode' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, CallFunc_GetGameMode_ReturnValue) == 0x000020, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, K2Node_DynamicCast_AsB_Creative_Game_Mode) == 0x000028, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::K2Node_DynamicCast_AsB_Creative_Game_Mode' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_SetWorkshopIdCommand, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'B_IngameUIManager_C_SetWorkshopIdCommand::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ShouldInputModeBeGameAndUI
 // 0x0020 (0x0020 - 0x0000)
@@ -882,7 +882,7 @@ public:
 	const class UObject*                          Object;                                            // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D93[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -907,7 +907,7 @@ public:
 	TDelegate<void(class FText& Text, ETextCommit CommitMethod)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsInViewport_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D94[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_Chat_C*                             K2Node_DynamicCast_AsWB_Chat;                      // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -931,7 +931,7 @@ struct B_IngameUIManager_C_ShowCustomization final
 public:
 	ETeamID                                       SelectedTeam;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OpenViaWardrobe;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D95[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_PlayerCustomization_C*              K2Node_DynamicCast_AsWB_Player_Customization;      // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -945,16 +945,16 @@ static_assert(offsetof(B_IngameUIManager_C_ShowCustomization, K2Node_DynamicCast
 static_assert(offsetof(B_IngameUIManager_C_ShowCustomization, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'B_IngameUIManager_C_ShowCustomization::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ShowDebugMedalCommand
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct B_IngameUIManager_C_ShowDebugMedalCommand final
 {
 public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D96[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0008(0x0018)()
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_BoolToText_ReturnValue;              // 0x0008(0x0010)()
 };
 static_assert(alignof(B_IngameUIManager_C_ShowDebugMedalCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowDebugMedalCommand");
-static_assert(sizeof(B_IngameUIManager_C_ShowDebugMedalCommand) == 0x000020, "Wrong size on B_IngameUIManager_C_ShowDebugMedalCommand");
+static_assert(sizeof(B_IngameUIManager_C_ShowDebugMedalCommand) == 0x000018, "Wrong size on B_IngameUIManager_C_ShowDebugMedalCommand");
 static_assert(offsetof(B_IngameUIManager_C_ShowDebugMedalCommand, CallFunc_Not_PreBool_ReturnValue) == 0x000000, "Member 'B_IngameUIManager_C_ShowDebugMedalCommand::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_IngameUIManager_C_ShowDebugMedalCommand, CallFunc_Conv_BoolToText_ReturnValue) == 0x000008, "Member 'B_IngameUIManager_C_ShowDebugMedalCommand::CallFunc_Conv_BoolToText_ReturnValue' has a wrong offset!");
 
@@ -986,10 +986,10 @@ struct B_IngameUIManager_C_ShowGameMessages final
 {
 public:
 	bool                                          CallFunc_IsInViewport_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D97[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D98[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_GameMessages_C*                     K2Node_DynamicCast_AsWB_Game_Messages;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1023,21 +1023,21 @@ struct B_IngameUIManager_C_ShowHUD final
 public:
 	class UClass*                                 Temp_class_Variable;                               // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D99[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 Temp_class_Variable_1;                             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 Temp_class_Variable_2;                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9A[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue_1;      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9B[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_Select_Default;                             // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9C[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_Select_Default_1;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
@@ -1066,7 +1066,7 @@ struct B_IngameUIManager_C_ShowKickPlayerVote final
 public:
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsInViewport_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_KickPlayerVote_C*                   K2Node_DynamicCast_AsWB_Kick_Player_Vote;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1090,7 +1090,7 @@ public:
 	class UWB_KickReason_C*                       K2Node_DynamicCast_AsWB_Kick_Reason;               // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9E[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowKickReason) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowKickReason");
@@ -1108,7 +1108,7 @@ struct B_IngameUIManager_C_ShowLayoutList final
 public:
 	bool                                          SaveMode;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_RememberAfterSaveLayoutAction               RememberAfterSaveAction;                           // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D9F[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_SaveLoadLayout_C*                   K2Node_DynamicCast_AsWB_Save_Load_Layout;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1129,7 +1129,7 @@ public:
 	class UWB_MapVoteScreen_C*                    K2Node_DynamicCast_AsWB_Map_Vote_Screen;           // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA0[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowMapVote) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowMapVote");
@@ -1175,7 +1175,7 @@ struct B_IngameUIManager_C_ShowMutePlayer final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowMutePlayer) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowMutePlayer");
@@ -1202,12 +1202,12 @@ struct B_IngameUIManager_C_ShowPlayerList final
 {
 public:
 	bool                                          StopAction;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA3[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget_1;                // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowPlayerList) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowPlayerList");
@@ -1242,34 +1242,34 @@ static_assert(sizeof(B_IngameUIManager_C_ShowPropCollection) == 0x000008, "Wrong
 static_assert(offsetof(B_IngameUIManager_C_ShowPropCollection, CallFunc_CreateWidget_UserWidget) == 0x000000, "Member 'B_IngameUIManager_C_ShowPropCollection::CallFunc_CreateWidget_UserWidget' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ShowQuestionDialog
-// 0x0058 (0x0058 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct B_IngameUIManager_C_ShowQuestionDialog final
 {
 public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   Question;                                          // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          OkButton;                                          // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          YesButton;                                         // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NoButton;                                          // 0x0032(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CancelButton;                                      // 0x0033(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA4[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_QuestionDialog_C*                   QuestionDialog;                                    // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_QuestionDialog_C*                   K2Node_DynamicCast_AsWB_Question_Dialog;           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   Question;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          OkButton;                                          // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          YesButton;                                         // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NoButton;                                          // 0x0022(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CancelButton;                                      // 0x0023(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_QuestionDialog_C*                   QuestionDialog;                                    // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_QuestionDialog_C*                   K2Node_DynamicCast_AsWB_Question_Dialog;           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowQuestionDialog) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowQuestionDialog");
-static_assert(sizeof(B_IngameUIManager_C_ShowQuestionDialog) == 0x000058, "Wrong size on B_IngameUIManager_C_ShowQuestionDialog");
+static_assert(sizeof(B_IngameUIManager_C_ShowQuestionDialog) == 0x000048, "Wrong size on B_IngameUIManager_C_ShowQuestionDialog");
 static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, Title) == 0x000000, "Member 'B_IngameUIManager_C_ShowQuestionDialog::Title' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, Question) == 0x000018, "Member 'B_IngameUIManager_C_ShowQuestionDialog::Question' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, OkButton) == 0x000030, "Member 'B_IngameUIManager_C_ShowQuestionDialog::OkButton' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, YesButton) == 0x000031, "Member 'B_IngameUIManager_C_ShowQuestionDialog::YesButton' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, NoButton) == 0x000032, "Member 'B_IngameUIManager_C_ShowQuestionDialog::NoButton' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, CancelButton) == 0x000033, "Member 'B_IngameUIManager_C_ShowQuestionDialog::CancelButton' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, QuestionDialog) == 0x000038, "Member 'B_IngameUIManager_C_ShowQuestionDialog::QuestionDialog' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, CallFunc_CreateWidget_UserWidget) == 0x000040, "Member 'B_IngameUIManager_C_ShowQuestionDialog::CallFunc_CreateWidget_UserWidget' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, K2Node_DynamicCast_AsWB_Question_Dialog) == 0x000048, "Member 'B_IngameUIManager_C_ShowQuestionDialog::K2Node_DynamicCast_AsWB_Question_Dialog' has a wrong offset!");
-static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'B_IngameUIManager_C_ShowQuestionDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, Question) == 0x000010, "Member 'B_IngameUIManager_C_ShowQuestionDialog::Question' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, OkButton) == 0x000020, "Member 'B_IngameUIManager_C_ShowQuestionDialog::OkButton' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, YesButton) == 0x000021, "Member 'B_IngameUIManager_C_ShowQuestionDialog::YesButton' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, NoButton) == 0x000022, "Member 'B_IngameUIManager_C_ShowQuestionDialog::NoButton' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, CancelButton) == 0x000023, "Member 'B_IngameUIManager_C_ShowQuestionDialog::CancelButton' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, QuestionDialog) == 0x000028, "Member 'B_IngameUIManager_C_ShowQuestionDialog::QuestionDialog' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, CallFunc_CreateWidget_UserWidget) == 0x000030, "Member 'B_IngameUIManager_C_ShowQuestionDialog::CallFunc_CreateWidget_UserWidget' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, K2Node_DynamicCast_AsWB_Question_Dialog) == 0x000038, "Member 'B_IngameUIManager_C_ShowQuestionDialog::K2Node_DynamicCast_AsWB_Question_Dialog' has a wrong offset!");
+static_assert(offsetof(B_IngameUIManager_C_ShowQuestionDialog, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'B_IngameUIManager_C_ShowQuestionDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_IngameUIManager.B_IngameUIManager_C.ShowRandomSelection
 // 0x0008 (0x0008 - 0x0000)
@@ -1290,7 +1290,7 @@ public:
 	class APlayerState*                           PlayerToReport;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWB_ReportReason_C*                     K2Node_DynamicCast_AsWB_Report_Reason;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA5[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1308,7 +1308,7 @@ struct B_IngameUIManager_C_ShowResult final
 {
 public:
 	EResultType                                   ResultType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_ResultScreen_C*                     K2Node_DynamicCast_AsWB_Result_Screen;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1362,11 +1362,11 @@ struct B_IngameUIManager_C_ShowSkillListPopup final
 public:
 	ETeamID                                       Team;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESkillCategory                                SkillCategory;                                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA7[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkillSelectionBlock_C*              SkillSelectionBlock;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_SkillListPopup_C*                   K2Node_DynamicCast_AsWB_Skill_List_Popup;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA8[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowSkillListPopup) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowSkillListPopup");
@@ -1386,7 +1386,7 @@ public:
 	class UWB_IngameSkinConfigMenu_C*             Parent;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_SkinConfigPopup_C*                  K2Node_DynamicCast_AsWB_Skin_Config_Popup;         // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA9[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowSkinConfigListPopup) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowSkinConfigListPopup");
@@ -1405,7 +1405,7 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DAA[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1476,7 +1476,7 @@ struct B_IngameUIManager_C_ShowVoteKick final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DAB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_CreateWidget_UserWidget;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ShowVoteKick) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ShowVoteKick");
@@ -1490,7 +1490,7 @@ struct B_IngameUIManager_C_ToggleWitchJiggleCommand final
 {
 public:
 	int32                                         Force;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DAC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerController_C*                  CallFunc_GetFirstLocalPlayerController_PlayerController; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_IngameUIManager_C_ToggleWitchJiggleCommand) == 0x000008, "Wrong alignment on B_IngameUIManager_C_ToggleWitchJiggleCommand");

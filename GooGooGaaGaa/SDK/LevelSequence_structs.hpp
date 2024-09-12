@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
 
 
@@ -23,9 +23,9 @@ namespace SDK
 struct FLevelSequenceBindingReference final
 {
 public:
-	class FString                                 PackageName;                                       // 0x0000(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FSoftObjectPath                        ExternalObjectPath;                                // 0x0010(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 ObjectPath;                                        // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 PackageName;                                       // 0x0000(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ExternalObjectPath;                                // 0x0010(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ObjectPath;                                        // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FLevelSequenceBindingReference) == 0x000008, "Wrong alignment on FLevelSequenceBindingReference");
 static_assert(sizeof(FLevelSequenceBindingReference) == 0x000040, "Wrong size on FLevelSequenceBindingReference");
@@ -44,21 +44,6 @@ static_assert(alignof(FLevelSequenceBindingReferenceArray) == 0x000008, "Wrong a
 static_assert(sizeof(FLevelSequenceBindingReferenceArray) == 0x000010, "Wrong size on FLevelSequenceBindingReferenceArray");
 static_assert(offsetof(FLevelSequenceBindingReferenceArray, References) == 0x000000, "Member 'FLevelSequenceBindingReferenceArray::References' has a wrong offset!");
 
-// ScriptStruct LevelSequence.LevelSequenceBindingReferences
-// 0x00F0 (0x00F0 - 0x0000)
-struct FLevelSequenceBindingReferences final
-{
-public:
-	TMap<struct FGuid, struct FLevelSequenceBindingReferenceArray> BindingIdToReferences;                             // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
-	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(NativeAccessSpecifierPrivate)
-	TSet<struct FGuid>                            PostProcessInstances;                              // 0x00A0(0x0050)(NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FLevelSequenceBindingReferences) == 0x000008, "Wrong alignment on FLevelSequenceBindingReferences");
-static_assert(sizeof(FLevelSequenceBindingReferences) == 0x0000F0, "Wrong size on FLevelSequenceBindingReferences");
-static_assert(offsetof(FLevelSequenceBindingReferences, BindingIdToReferences) == 0x000000, "Member 'FLevelSequenceBindingReferences::BindingIdToReferences' has a wrong offset!");
-static_assert(offsetof(FLevelSequenceBindingReferences, AnimSequenceInstances) == 0x000050, "Member 'FLevelSequenceBindingReferences::AnimSequenceInstances' has a wrong offset!");
-static_assert(offsetof(FLevelSequenceBindingReferences, PostProcessInstances) == 0x0000A0, "Member 'FLevelSequenceBindingReferences::PostProcessInstances' has a wrong offset!");
-
 // ScriptStruct LevelSequence.LevelSequenceCameraSettings
 // 0x0002 (0x0002 - 0x0000)
 struct FLevelSequenceCameraSettings final
@@ -72,12 +57,23 @@ static_assert(sizeof(FLevelSequenceCameraSettings) == 0x000002, "Wrong size on F
 static_assert(offsetof(FLevelSequenceCameraSettings, bOverrideAspectRatioAxisConstraint) == 0x000000, "Member 'FLevelSequenceCameraSettings::bOverrideAspectRatioAxisConstraint' has a wrong offset!");
 static_assert(offsetof(FLevelSequenceCameraSettings, AspectRatioAxisConstraint) == 0x000001, "Member 'FLevelSequenceCameraSettings::AspectRatioAxisConstraint' has a wrong offset!");
 
+// ScriptStruct LevelSequence.LegacyLazyObjectPtrFragment
+// 0x0010 (0x0010 - 0x0000)
+struct FLegacyLazyObjectPtrFragment final
+{
+public:
+	struct FGuid                                  LazyObjectId;                                      // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FLegacyLazyObjectPtrFragment) == 0x000004, "Wrong alignment on FLegacyLazyObjectPtrFragment");
+static_assert(sizeof(FLegacyLazyObjectPtrFragment) == 0x000010, "Wrong size on FLegacyLazyObjectPtrFragment");
+static_assert(offsetof(FLegacyLazyObjectPtrFragment, LazyObjectId) == 0x000000, "Member 'FLegacyLazyObjectPtrFragment::LazyObjectId' has a wrong offset!");
+
 // ScriptStruct LevelSequence.LevelSequenceLegacyObjectReference
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FLevelSequenceLegacyObjectReference final
 {
 public:
-	uint8                                         Pad_173D[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FLevelSequenceLegacyObjectReference) == 0x000008, "Wrong alignment on FLevelSequenceLegacyObjectReference");
 static_assert(sizeof(FLevelSequenceLegacyObjectReference) == 0x000020, "Wrong size on FLevelSequenceLegacyObjectReference");
@@ -87,7 +83,7 @@ static_assert(sizeof(FLevelSequenceLegacyObjectReference) == 0x000020, "Wrong si
 struct alignas(0x08) FLevelSequenceObjectReferenceMap final
 {
 public:
-	uint8                                         Pad_173E[0x50];                                    // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FLevelSequenceObjectReferenceMap) == 0x000008, "Wrong alignment on FLevelSequenceObjectReferenceMap");
 static_assert(sizeof(FLevelSequenceObjectReferenceMap) == 0x000050, "Wrong size on FLevelSequenceObjectReferenceMap");
@@ -97,7 +93,7 @@ static_assert(sizeof(FLevelSequenceObjectReferenceMap) == 0x000050, "Wrong size 
 struct FBoundActorProxy final
 {
 public:
-	uint8                                         Pad_173F[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBoundActorProxy) == 0x000001, "Wrong alignment on FBoundActorProxy");
 static_assert(sizeof(FBoundActorProxy) == 0x000001, "Wrong size on FBoundActorProxy");
@@ -131,6 +127,29 @@ static_assert(offsetof(FLevelSequenceAnimSequenceLinkItem, CurveInterpolation) =
 static_assert(offsetof(FLevelSequenceAnimSequenceLinkItem, bRecordInWorldSpace) == 0x000036, "Member 'FLevelSequenceAnimSequenceLinkItem::bRecordInWorldSpace' has a wrong offset!");
 static_assert(offsetof(FLevelSequenceAnimSequenceLinkItem, bEvaluateAllSkeletalMeshComponents) == 0x000037, "Member 'FLevelSequenceAnimSequenceLinkItem::bEvaluateAllSkeletalMeshComponents' has a wrong offset!");
 
+// ScriptStruct LevelSequence.UpgradedLevelSequenceBindingReferences
+// 0x0000 (0x0010 - 0x0010)
+struct FUpgradedLevelSequenceBindingReferences final : public FMovieSceneBindingReferences
+{
+};
+static_assert(alignof(FUpgradedLevelSequenceBindingReferences) == 0x000008, "Wrong alignment on FUpgradedLevelSequenceBindingReferences");
+static_assert(sizeof(FUpgradedLevelSequenceBindingReferences) == 0x000010, "Wrong size on FUpgradedLevelSequenceBindingReferences");
+
+// ScriptStruct LevelSequence.LevelSequenceBindingReferences
+// 0x00F0 (0x00F0 - 0x0000)
+struct FLevelSequenceBindingReferences final
+{
+public:
+	TMap<struct FGuid, struct FLevelSequenceBindingReferenceArray> BindingIdToReferences;                             // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(NativeAccessSpecifierPublic)
+	TSet<struct FGuid>                            PostProcessInstances;                              // 0x00A0(0x0050)(NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FLevelSequenceBindingReferences) == 0x000008, "Wrong alignment on FLevelSequenceBindingReferences");
+static_assert(sizeof(FLevelSequenceBindingReferences) == 0x0000F0, "Wrong size on FLevelSequenceBindingReferences");
+static_assert(offsetof(FLevelSequenceBindingReferences, BindingIdToReferences) == 0x000000, "Member 'FLevelSequenceBindingReferences::BindingIdToReferences' has a wrong offset!");
+static_assert(offsetof(FLevelSequenceBindingReferences, AnimSequenceInstances) == 0x000050, "Member 'FLevelSequenceBindingReferences::AnimSequenceInstances' has a wrong offset!");
+static_assert(offsetof(FLevelSequenceBindingReferences, PostProcessInstances) == 0x0000A0, "Member 'FLevelSequenceBindingReferences::PostProcessInstances' has a wrong offset!");
+
 // ScriptStruct LevelSequence.LevelSequenceObject
 // 0x0030 (0x0030 - 0x0000)
 struct FLevelSequenceObject final
@@ -161,7 +180,7 @@ public:
 	TSoftObjectPtr<class UCameraComponent>        CameraComponent;                                   // 0x0070(0x0028)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, EditConst, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULevelSequence*                         ActiveShot;                                        // 0x0098(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneSequenceID                  ShotID;                                            // 0x00A0(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1740[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MasterName;                                        // 0x00A8(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FQualifiedFrameTime                    MasterTime;                                        // 0x00B8(0x0010)(Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };

@@ -20,7 +20,7 @@ struct FB_SteamItemDef final
 {
 public:
 	int32                                         ItemID_12_A744055C4B81961E7F0066A94D4A03C4;        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3520[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Name_2_547B5642460628FF28C4FBA38A48250F;           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 DisplayType_15_C7EF03494A6390DD21C1BE8A728847A8;   // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Description_4_B1F3A2074126F05FC25AAE918E71834A;    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)

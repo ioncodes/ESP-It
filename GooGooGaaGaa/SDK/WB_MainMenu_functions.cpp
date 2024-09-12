@@ -143,6 +143,20 @@ void UWB_MainMenu_C::BndEvt__WB_MainMenu_DevModeBtn_K2Node_ComponentBoundEvent_0
 }
 
 
+// Function WB_MainMenu.WB_MainMenu_C.BndEvt__WB_MainMenu_Trading_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_MainMenu_C::BndEvt__WB_MainMenu_Trading_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_MainMenu_C", "BndEvt__WB_MainMenu_Trading_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_MainMenu.WB_MainMenu_C.BndEvt__WB_PlayerInformation_K2Node_ComponentBoundEvent_20_OnClicked__DelegateSignature
 // (BlueprintEvent)
 
@@ -250,10 +264,10 @@ void UWB_MainMenu_C::Construct()
 // Function WB_MainMenu.WB_MainMenu_C.CustomizeCustomNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_MainMenu_C::CustomizeCustomNav(EUINavigation Param_Navigation)
+class UWidget* UWB_MainMenu_C::CustomizeCustomNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -262,7 +276,30 @@ class UWidget* UWB_MainMenu_C::CustomizeCustomNav(EUINavigation Param_Navigation
 
 	Params::WB_MainMenu_C_CustomizeCustomNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WB_MainMenu.WB_MainMenu_C.DownTimeBlockCustomNav
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_MainMenu_C::DownTimeBlockCustomNav(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_MainMenu_C", "DownTimeBlockCustomNav");
+
+	Params::WB_MainMenu_C_DownTimeBlockCustomNav Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -310,22 +347,22 @@ void UWB_MainMenu_C::ExecuteUbergraph_WB_MainMenu(int32 EntryPoint)
 }
 
 
-// Function WB_MainMenu.WB_MainMenu_C.ExitCustomNav
+// Function WB_MainMenu.WB_MainMenu_C.Exit Custom Nav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_MainMenu_C::ExitCustomNav(EUINavigation Param_Navigation)
+class UWidget* UWB_MainMenu_C::Exit_Custom_Nav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_MainMenu_C", "ExitCustomNav");
+		Func = Class->GetFunction("WB_MainMenu_C", "Exit Custom Nav");
 
-	Params::WB_MainMenu_C_ExitCustomNav Parms{};
+	Params::WB_MainMenu_C_Exit_Custom_Nav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -394,6 +431,49 @@ ESlateVisibility UWB_MainMenu_C::GetPCOnlyButtonVisibility()
 }
 
 
+// Function WB_MainMenu.WB_MainMenu_C.HasIncomingTradeRequestEvent
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    HasIncomingTradeRequests                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_MainMenu_C::HasIncomingTradeRequestEvent(bool HasIncomingTradeRequests)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_MainMenu_C", "HasIncomingTradeRequestEvent");
+
+	Params::WB_MainMenu_C_HasIncomingTradeRequestEvent Parms{};
+
+	Parms.HasIncomingTradeRequests = HasIncomingTradeRequests;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_MainMenu.WB_MainMenu_C.InformationCustomNav
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UWB_MainMenu_C::InformationCustomNav(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_MainMenu_C", "InformationCustomNav");
+
+	Params::WB_MainMenu_C_InformationCustomNav Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_MainMenu.WB_MainMenu_C.InitializeEventButtons
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -425,10 +505,10 @@ void UWB_MainMenu_C::ItemsCheckNotify()
 // Function WB_MainMenu.WB_MainMenu_C.NavigateToPlayerIcon
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_MainMenu_C::NavigateToPlayerIcon(EUINavigation Param_Navigation)
+class UWidget* UWB_MainMenu_C::NavigateToPlayerIcon(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -437,7 +517,7 @@ class UWidget* UWB_MainMenu_C::NavigateToPlayerIcon(EUINavigation Param_Navigati
 
 	Params::WB_MainMenu_C_NavigateToPlayerIcon Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -448,10 +528,10 @@ class UWidget* UWB_MainMenu_C::NavigateToPlayerIcon(EUINavigation Param_Navigati
 // Function WB_MainMenu.WB_MainMenu_C.NavigateToQuests
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_MainMenu_C::NavigateToQuests(EUINavigation Param_Navigation)
+class UWidget* UWB_MainMenu_C::NavigateToQuests(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -460,7 +540,7 @@ class UWidget* UWB_MainMenu_C::NavigateToQuests(EUINavigation Param_Navigation)
 
 	Params::WB_MainMenu_C_NavigateToQuests Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -664,10 +744,10 @@ void UWB_MainMenu_C::OnUpdatedFromSteam_Event()
 // Function WB_MainMenu.WB_MainMenu_C.PlayCustomNav
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_MainMenu_C::PlayCustomNav(EUINavigation Param_Navigation)
+class UWidget* UWB_MainMenu_C::PlayCustomNav(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -676,7 +756,7 @@ class UWidget* UWB_MainMenu_C::PlayCustomNav(EUINavigation Param_Navigation)
 
 	Params::WB_MainMenu_C_PlayCustomNav Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

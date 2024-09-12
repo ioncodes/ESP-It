@@ -115,6 +115,20 @@ void UWB_Play_C::BndEvt__WB_Button_K2Node_ComponentBoundEvent_114_Clicked__Deleg
 }
 
 
+// Function WB_Play.WB_Play_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_Play_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Play_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_Play.WB_Play_C.ExecuteUbergraph_WB_Play
 // (Final, UbergraphFunction)
 // Parameters:
@@ -213,26 +227,6 @@ void UWB_Play_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget)
 
 	if (InitialFocusWidget != nullptr)
 		*InitialFocusWidget = Parms.InitialFocusWidget;
-}
-
-
-// Function WB_Play.WB_Play_C.GetVisibility_0
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-ESlateVisibility UWB_Play_C::GetVisibility_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_Play_C", "GetVisibility_0");
-
-	Params::WB_Play_C_GetVisibility_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 

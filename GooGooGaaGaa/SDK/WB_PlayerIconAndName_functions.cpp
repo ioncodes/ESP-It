@@ -57,12 +57,57 @@ void UWB_PlayerIconAndName_C::OnLoaded_4B73E0CD4D20971D3FCDF99F63624BC6(TSubclas
 }
 
 
+// Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWB_PlayerIconAndName_C::OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PlayerIconAndName_C", "OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF");
+
+	Params::WB_PlayerIconAndName_C_OnMessageProcessed_32B7D77C4ED208666207D89F0D8013CF Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.OnCallFailed_32B7D77C4ED208666207D89F0D8013CF
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWB_PlayerIconAndName_C::OnCallFailed_32B7D77C4ED208666207D89F0D8013CF(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PlayerIconAndName_C", "OnCallFailed_32B7D77C4ED208666207D89F0D8013CF");
+
+	Params::WB_PlayerIconAndName_C_OnCallFailed_32B7D77C4ED208666207D89F0D8013CF Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_PlayerIconAndName.WB_PlayerIconAndName_C.SetUserInfo
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UOnlineUserRef*                   UserInfo                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString                           AdditionalText_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWB_PlayerIconAndName_C::SetUserInfo(class UOnlineUserRef* UserInfo)
+void UWB_PlayerIconAndName_C::SetUserInfo(class UOnlineUserRef* UserInfo, const class FString& AdditionalText_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -72,6 +117,7 @@ void UWB_PlayerIconAndName_C::SetUserInfo(class UOnlineUserRef* UserInfo)
 	Params::WB_PlayerIconAndName_C_SetUserInfo Parms{};
 
 	Parms.UserInfo = UserInfo;
+	Parms.AdditionalText_0 = std::move(AdditionalText_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

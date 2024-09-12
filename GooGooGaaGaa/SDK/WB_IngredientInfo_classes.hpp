@@ -20,20 +20,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_IngredientInfo.WB_IngredientInfo_C
-// 0x0038 (0x02F8 - 0x02C0)
+// 0x0038 (0x0318 - 0x02E0)
 class UWB_IngredientInfo_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 IngredientIcon;                                    // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             QuantityLabel;                                     // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	E_Ingredients                                 Ingredient;                                        // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F1[0x3];                                     // 0x02D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Quantity;                                          // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MinQuantity;                                       // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47F2[0x4];                                     // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_CraftingScene_C*                     CraftingScene;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         CountQuantity;                                     // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 IngredientIcon;                                    // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             QuantityLabel;                                     // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	E_Ingredients                                 Ingredient;                                        // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x3];                                      // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Quantity;                                          // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MinQuantity;                                       // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_304[0x4];                                      // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_CraftingScene_C*                     CraftingScene;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         CountQuantity;                                     // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ForceIngredientCountFromInventoryManagerDisplay();
@@ -41,7 +41,7 @@ public:
 	struct FSlateColor Get_QuantityLabel_ColorAndOpacity_0();
 	struct FSlateBrush Get_IngredientIcon_Brush_0();
 	class FText Get_Quantity_Text_0();
-	void CountIngredient(E_Ingredients Param_Ingredient);
+	void CountIngredient(E_Ingredients Ingredient_0);
 	void IncredientsSpawned();
 	void ExecuteUbergraph_WB_IngredientInfo(int32 EntryPoint);
 
@@ -56,15 +56,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_IngredientInfo_C) == 0x000008, "Wrong alignment on UWB_IngredientInfo_C");
-static_assert(sizeof(UWB_IngredientInfo_C) == 0x0002F8, "Wrong size on UWB_IngredientInfo_C");
-static_assert(offsetof(UWB_IngredientInfo_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_IngredientInfo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, IngredientIcon) == 0x0002C8, "Member 'UWB_IngredientInfo_C::IngredientIcon' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, QuantityLabel) == 0x0002D0, "Member 'UWB_IngredientInfo_C::QuantityLabel' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, Ingredient) == 0x0002D8, "Member 'UWB_IngredientInfo_C::Ingredient' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, Quantity) == 0x0002DC, "Member 'UWB_IngredientInfo_C::Quantity' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, MinQuantity) == 0x0002E0, "Member 'UWB_IngredientInfo_C::MinQuantity' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, CraftingScene) == 0x0002E8, "Member 'UWB_IngredientInfo_C::CraftingScene' has a wrong offset!");
-static_assert(offsetof(UWB_IngredientInfo_C, CountQuantity) == 0x0002F0, "Member 'UWB_IngredientInfo_C::CountQuantity' has a wrong offset!");
+static_assert(sizeof(UWB_IngredientInfo_C) == 0x000318, "Wrong size on UWB_IngredientInfo_C");
+static_assert(offsetof(UWB_IngredientInfo_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_IngredientInfo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, IngredientIcon) == 0x0002E8, "Member 'UWB_IngredientInfo_C::IngredientIcon' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, QuantityLabel) == 0x0002F0, "Member 'UWB_IngredientInfo_C::QuantityLabel' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, Ingredient) == 0x0002F8, "Member 'UWB_IngredientInfo_C::Ingredient' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, Quantity) == 0x0002FC, "Member 'UWB_IngredientInfo_C::Quantity' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, MinQuantity) == 0x000300, "Member 'UWB_IngredientInfo_C::MinQuantity' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, CraftingScene) == 0x000308, "Member 'UWB_IngredientInfo_C::CraftingScene' has a wrong offset!");
+static_assert(offsetof(UWB_IngredientInfo_C, CountQuantity) == 0x000310, "Member 'UWB_IngredientInfo_C::CountQuantity' has a wrong offset!");
 
 }
 

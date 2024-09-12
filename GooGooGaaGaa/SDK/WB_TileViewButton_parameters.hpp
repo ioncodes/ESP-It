@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -28,29 +28,29 @@ public:
 	class UTileView*                              TileView;                                          // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404A[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404B[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        CallFunc_GetListItems_ReturnValue;                 // 0x0050(0x0010)(ConstParm, ReferenceParm)
 	class UWB_TileViewButton_C*                   K2Node_DynamicCast_AsWB_Tile_View_Button;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404C[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404D[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTileView*                              CallFunc_GetTileView_TileView;                     // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsButtonEnabled_IsEnabled;             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404E[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_Array_Get_Item_1;                         // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0090(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
 	class UB_TileViewData_C*                      K2Node_DynamicCast_AsB_Tile_View_Data;             // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_404F[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -101,17 +101,17 @@ public:
 	class UTileView*                              ActiveTileview;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_PlayerIconSelection_C*              K2Node_DynamicCast_AsWB_Player_Icon_Selection;     // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4050[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CategoryMenuScreen_C*               K2Node_DynamicCast_AsWB_Category_Menu_Screen;      // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4051[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTileView*                              CallFunc_GetTileView_TileView;                     // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_SkinConfigPopup_C*                  K2Node_DynamicCast_AsWB_Skin_Config_Popup;         // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4052[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkinConfigMenu_C*                   K2Node_DynamicCast_AsWB_Skin_Config_Menu;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4053[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CraftingScreen_C*                   K2Node_DynamicCast_AsWB_Crafting_Screen;           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -131,6 +131,17 @@ static_assert(offsetof(WB_TileViewButton_C_GetTileView, K2Node_DynamicCast_bSucc
 static_assert(offsetof(WB_TileViewButton_C_GetTileView, K2Node_DynamicCast_AsWB_Crafting_Screen) == 0x000058, "Member 'WB_TileViewButton_C_GetTileView::K2Node_DynamicCast_AsWB_Crafting_Screen' has a wrong offset!");
 static_assert(offsetof(WB_TileViewButton_C_GetTileView, K2Node_DynamicCast_bSuccess_4) == 0x000060, "Member 'WB_TileViewButton_C_GetTileView::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
 
+// Function WB_TileViewButton.WB_TileViewButton_C.GetDangerIconVisbility
+// 0x0001 (0x0001 - 0x0000)
+struct WB_TileViewButton_C_GetDangerIconVisbility final
+{
+public:
+	bool                                          ShowIcon;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_TileViewButton_C_GetDangerIconVisbility) == 0x000001, "Wrong alignment on WB_TileViewButton_C_GetDangerIconVisbility");
+static_assert(sizeof(WB_TileViewButton_C_GetDangerIconVisbility) == 0x000001, "Wrong size on WB_TileViewButton_C_GetDangerIconVisbility");
+static_assert(offsetof(WB_TileViewButton_C_GetDangerIconVisbility, ShowIcon) == 0x000000, "Member 'WB_TileViewButton_C_GetDangerIconVisbility::ShowIcon' has a wrong offset!");
+
 // Function WB_TileViewButton.WB_TileViewButton_C.GetSwitchIconVisibilty
 // 0x0001 (0x0001 - 0x0000)
 struct WB_TileViewButton_C_GetSwitchIconVisibilty final
@@ -147,11 +158,11 @@ static_assert(offsetof(WB_TileViewButton_C_GetSwitchIconVisibilty, Show_Switch_I
 struct WB_TileViewButton_C_GetNotifyButtonVisibility final
 {
 public:
-	bool                                          Param_IsVisible;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsVisible_0;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_TileViewButton_C_GetNotifyButtonVisibility) == 0x000001, "Wrong alignment on WB_TileViewButton_C_GetNotifyButtonVisibility");
 static_assert(sizeof(WB_TileViewButton_C_GetNotifyButtonVisibility) == 0x000001, "Wrong size on WB_TileViewButton_C_GetNotifyButtonVisibility");
-static_assert(offsetof(WB_TileViewButton_C_GetNotifyButtonVisibility, Param_IsVisible) == 0x000000, "Member 'WB_TileViewButton_C_GetNotifyButtonVisibility::Param_IsVisible' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_GetNotifyButtonVisibility, IsVisible_0) == 0x000000, "Member 'WB_TileViewButton_C_GetNotifyButtonVisibility::IsVisible_0' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.GetRecipeIconVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -176,14 +187,14 @@ static_assert(sizeof(WB_TileViewButton_C_GetQuantityVisibility) == 0x000001, "Wr
 static_assert(offsetof(WB_TileViewButton_C_GetQuantityVisibility, ShowQuantity) == 0x000000, "Member 'WB_TileViewButton_C_GetQuantityVisibility::ShowQuantity' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.GetQuantityText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_TileViewButton_C_GetQuantityText final
 {
 public:
-	class FText                                   Quantity;                                          // 0x0000(0x0018)(Parm, OutParm)
+	class FText                                   Quantity;                                          // 0x0000(0x0010)(Parm, OutParm)
 };
 static_assert(alignof(WB_TileViewButton_C_GetQuantityText) == 0x000008, "Wrong alignment on WB_TileViewButton_C_GetQuantityText");
-static_assert(sizeof(WB_TileViewButton_C_GetQuantityText) == 0x000018, "Wrong size on WB_TileViewButton_C_GetQuantityText");
+static_assert(sizeof(WB_TileViewButton_C_GetQuantityText) == 0x000010, "Wrong size on WB_TileViewButton_C_GetQuantityText");
 static_assert(offsetof(WB_TileViewButton_C_GetQuantityText, Quantity) == 0x000000, "Member 'WB_TileViewButton_C_GetQuantityText::Quantity' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.GetBorderColor
@@ -211,39 +222,41 @@ static_assert(offsetof(WB_TileViewButton_C_GetIsSelected, Is_Selected) == 0x0000
 static_assert(offsetof(WB_TileViewButton_C_GetIsSelected, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'WB_TileViewButton_C_GetIsSelected::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.SetButtonParameters
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WB_TileViewButton_C_SetButtonParameters final
 {
 public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSwitchIconVisibilty_Show_Switch_Icon;  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsInitial_IsInitial;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetQuantityVisibility_ShowQuantity;       // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4054[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetQuantityText_Quantity;                 // 0x0008(0x0018)()
-	bool                                          CallFunc_GetIsButtonEnabled_IsEnabled;             // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetRecipeIconVisibility_ShowIcon;         // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetIsSelected_Is_Selected;                // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetNotifyButtonVisibility_IsVisible;      // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetBorderColor_Color;                     // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4055[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 CallFunc_GetIcon_ReturnValue;                      // 0x0038(0x0028)(HasGetValueTypeHash)
-	class UUserWidget*                            CallFunc_GetTooltip_Tooltip;                       // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDangerIconVisbility_ShowIcon;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSwitchIconVisibilty_Show_Switch_Icon;  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsInitial_IsInitial;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetQuantityVisibility_ShowQuantity;       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetQuantityText_Quantity;                 // 0x0008(0x0010)()
+	bool                                          CallFunc_GetIsButtonEnabled_IsEnabled;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetRecipeIconVisibility_ShowIcon;         // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsSelected_Is_Selected;                // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNotifyButtonVisibility_IsVisible;      // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetBorderColor_Color;                     // 0x001C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UObject>                 CallFunc_GetIcon_ReturnValue;                      // 0x0030(0x0028)(HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_GetTooltip_Tooltip;                       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_TileViewButton_C_SetButtonParameters) == 0x000008, "Wrong alignment on WB_TileViewButton_C_SetButtonParameters");
-static_assert(sizeof(WB_TileViewButton_C_SetButtonParameters) == 0x000068, "Wrong size on WB_TileViewButton_C_SetButtonParameters");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetSwitchIconVisibilty_Show_Switch_Icon) == 0x000001, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetSwitchIconVisibilty_Show_Switch_Icon' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIsInitial_IsInitial) == 0x000002, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIsInitial_IsInitial' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetQuantityVisibility_ShowQuantity) == 0x000003, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetQuantityVisibility_ShowQuantity' has a wrong offset!");
+static_assert(sizeof(WB_TileViewButton_C_SetButtonParameters) == 0x000060, "Wrong size on WB_TileViewButton_C_SetButtonParameters");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetDangerIconVisbility_ShowIcon) == 0x000000, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetDangerIconVisbility_ShowIcon' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetSwitchIconVisibilty_Show_Switch_Icon) == 0x000002, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetSwitchIconVisibilty_Show_Switch_Icon' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIsInitial_IsInitial) == 0x000003, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIsInitial_IsInitial' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetQuantityVisibility_ShowQuantity) == 0x000004, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetQuantityVisibility_ShowQuantity' has a wrong offset!");
 static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetQuantityText_Quantity) == 0x000008, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetQuantityText_Quantity' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIsButtonEnabled_IsEnabled) == 0x000020, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIsButtonEnabled_IsEnabled' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetRecipeIconVisibility_ShowIcon) == 0x000021, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetRecipeIconVisibility_ShowIcon' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIsSelected_Is_Selected) == 0x000022, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIsSelected_Is_Selected' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetNotifyButtonVisibility_IsVisible) == 0x000023, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetNotifyButtonVisibility_IsVisible' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetBorderColor_Color) == 0x000024, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetBorderColor_Color' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIcon_ReturnValue) == 0x000038, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIcon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetTooltip_Tooltip) == 0x000060, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetTooltip_Tooltip' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIsButtonEnabled_IsEnabled) == 0x000018, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIsButtonEnabled_IsEnabled' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetRecipeIconVisibility_ShowIcon) == 0x000019, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetRecipeIconVisibility_ShowIcon' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIsSelected_Is_Selected) == 0x00001A, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIsSelected_Is_Selected' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetNotifyButtonVisibility_IsVisible) == 0x00001B, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetNotifyButtonVisibility_IsVisible' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetBorderColor_Color) == 0x00001C, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetBorderColor_Color' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetIcon_ReturnValue) == 0x000030, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetIcon_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_SetButtonParameters, CallFunc_GetTooltip_Tooltip) == 0x000058, "Member 'WB_TileViewButton_C_SetButtonParameters::CallFunc_GetTooltip_Tooltip' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.Initialize
 // 0x0018 (0x0018 - 0x0000)
@@ -265,23 +278,23 @@ static_assert(offsetof(WB_TileViewButton_C_Initialize, K2Node_DynamicCast_bSucce
 struct WB_TileViewButton_C_GetIsInitial final
 {
 public:
-	bool                                          Param_IsInitial;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInitial_0;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_TileViewButton_C_GetIsInitial) == 0x000001, "Wrong alignment on WB_TileViewButton_C_GetIsInitial");
 static_assert(sizeof(WB_TileViewButton_C_GetIsInitial) == 0x000001, "Wrong size on WB_TileViewButton_C_GetIsInitial");
-static_assert(offsetof(WB_TileViewButton_C_GetIsInitial, Param_IsInitial) == 0x000000, "Member 'WB_TileViewButton_C_GetIsInitial::Param_IsInitial' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_GetIsInitial, IsInitial_0) == 0x000000, "Member 'WB_TileViewButton_C_GetIsInitial::IsInitial_0' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.GetTooltip
 // 0x0010 (0x0010 - 0x0000)
 struct WB_TileViewButton_C_GetTooltip final
 {
 public:
-	class UUserWidget*                            Param_ToolTip;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ToolTip_0;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            CurrrentToolTip;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_TileViewButton_C_GetTooltip) == 0x000008, "Wrong alignment on WB_TileViewButton_C_GetTooltip");
 static_assert(sizeof(WB_TileViewButton_C_GetTooltip) == 0x000010, "Wrong size on WB_TileViewButton_C_GetTooltip");
-static_assert(offsetof(WB_TileViewButton_C_GetTooltip, Param_ToolTip) == 0x000000, "Member 'WB_TileViewButton_C_GetTooltip::Param_ToolTip' has a wrong offset!");
+static_assert(offsetof(WB_TileViewButton_C_GetTooltip, ToolTip_0) == 0x000000, "Member 'WB_TileViewButton_C_GetTooltip::ToolTip_0' has a wrong offset!");
 static_assert(offsetof(WB_TileViewButton_C_GetTooltip, CurrrentToolTip) == 0x000008, "Member 'WB_TileViewButton_C_GetTooltip::CurrrentToolTip' has a wrong offset!");
 
 // Function WB_TileViewButton.WB_TileViewButton_C.OnFocusReceived
@@ -355,7 +368,7 @@ struct WB_TileViewButton_C_ExecuteUbergraph_WB_TileViewButton final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4056[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsExpanded;                          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsSelected;                          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

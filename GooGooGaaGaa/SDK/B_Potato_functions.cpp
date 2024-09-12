@@ -56,13 +56,13 @@ void AB_Potato_C::AddScoreStats()
 // Function B_Potato.B_Potato_C.ApplyPointDamage
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_HitActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           HitActor_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          HitFromDirection                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FHitResult                       HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::ApplyPointDamage(class AActor* Param_HitActor, const struct FVector& HitFromDirection, const struct FHitResult& HitInfo, class AController* EventInstigator, class AActor* DamageCauser)
+void AB_Potato_C::ApplyPointDamage(class AActor* HitActor_0, const struct FVector& HitFromDirection, const struct FHitResult& HitInfo, class AController* EventInstigator, class AActor* DamageCauser)
 {
 	static class UFunction* Func = nullptr;
 
@@ -71,7 +71,7 @@ void AB_Potato_C::ApplyPointDamage(class AActor* Param_HitActor, const struct FV
 
 	Params::B_Potato_C_ApplyPointDamage Parms{};
 
-	Parms.Param_HitActor = Param_HitActor;
+	Parms.HitActor_0 = HitActor_0;
 	Parms.HitFromDirection = std::move(HitFromDirection);
 	Parms.HitInfo = std::move(HitInfo);
 	Parms.EventInstigator = EventInstigator;
@@ -244,11 +244,11 @@ void AB_Potato_C::GetSplashSound(class USoundCue** Sound)
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                          HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_HitActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           HitActor_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FHitResult                       HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::HandleHit(const struct FVector& HitNormal, class AActor* Param_HitActor, const struct FHitResult& HitInfo, class UPrimitiveComponent* HitComponent)
+void AB_Potato_C::HandleHit(const struct FVector& HitNormal, class AActor* HitActor_0, const struct FHitResult& HitInfo, class UPrimitiveComponent* HitComponent)
 {
 	static class UFunction* Func = nullptr;
 
@@ -258,7 +258,7 @@ void AB_Potato_C::HandleHit(const struct FVector& HitNormal, class AActor* Param
 	Params::B_Potato_C_HandleHit Parms{};
 
 	Parms.HitNormal = std::move(HitNormal);
-	Parms.Param_HitActor = Param_HitActor;
+	Parms.HitActor_0 = HitActor_0;
 	Parms.HitInfo = std::move(HitInfo);
 	Parms.HitComponent = HitComponent;
 
@@ -311,9 +311,9 @@ void AB_Potato_C::InitializeRules()
 // Function B_Potato.B_Potato_C.LowStaminaTearUp
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_Stamina                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Stamina_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::LowStaminaTearUp(double Param_Stamina)
+void AB_Potato_C::LowStaminaTearUp(double Stamina_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -322,7 +322,7 @@ void AB_Potato_C::LowStaminaTearUp(double Param_Stamina)
 
 	Params::B_Potato_C_LowStaminaTearUp Parms{};
 
-	Parms.Param_Stamina = Param_Stamina;
+	Parms.Stamina_0 = Stamina_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -447,11 +447,11 @@ void AB_Potato_C::RotateMesh()
 // Function B_Potato.B_Potato_C.SetNewValuesForTearUp
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTransform                       Param_NewTransform                                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_NewOwner                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_NewInstigator                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FTransform                       NewTransform_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           NewOwner_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            NewInstigator_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::SetNewValuesForTearUp(const struct FTransform& Param_NewTransform, class AActor* Param_NewOwner, class APawn* Param_NewInstigator)
+void AB_Potato_C::SetNewValuesForTearUp(const struct FTransform& NewTransform_0, class AActor* NewOwner_0, class APawn* NewInstigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -460,9 +460,9 @@ void AB_Potato_C::SetNewValuesForTearUp(const struct FTransform& Param_NewTransf
 
 	Params::B_Potato_C_SetNewValuesForTearUp Parms{};
 
-	Parms.Param_NewTransform = std::move(Param_NewTransform);
-	Parms.Param_NewOwner = Param_NewOwner;
-	Parms.Param_NewInstigator = Param_NewInstigator;
+	Parms.NewTransform_0 = std::move(NewTransform_0);
+	Parms.NewOwner_0 = NewOwner_0;
+	Parms.NewInstigator_0 = NewInstigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -514,10 +514,10 @@ void AB_Potato_C::TearDownPoolObject()
 // (Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_Potato_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -527,8 +527,8 @@ void AB_Potato_C::TearUp(const struct FTransform& SpawnTransform, class AActor* 
 	Params::B_Potato_C_TearUp Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -537,9 +537,9 @@ void AB_Potato_C::TearUp(const struct FTransform& SpawnTransform, class AActor* 
 // Function B_Potato.B_Potato_C.TearUpByStamina
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Param_Stamina                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Stamina_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::TearUpByStamina(double Param_Stamina)
+void AB_Potato_C::TearUpByStamina(double Stamina_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -548,7 +548,7 @@ void AB_Potato_C::TearUpByStamina(double Param_Stamina)
 
 	Params::B_Potato_C_TearUpByStamina Parms{};
 
-	Parms.Param_Stamina = Param_Stamina;
+	Parms.Stamina_0 = Stamina_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -558,11 +558,11 @@ void AB_Potato_C::TearUpByStamina(double Param_Stamina)
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Velocity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator, const struct FVector& Velocity)
+void AB_Potato_C::TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0, const struct FVector& Velocity)
 {
 	static class UFunction* Func = nullptr;
 
@@ -572,8 +572,8 @@ void AB_Potato_C::TearUpMulticast(const struct FTransform& SpawnTransform, class
 	Params::B_Potato_C_TearUpMulticast Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 	Parms.Velocity = std::move(Velocity);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -584,10 +584,10 @@ void AB_Potato_C::TearUpMulticast(const struct FTransform& SpawnTransform, class
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Potato_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_Potato_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -597,8 +597,8 @@ void AB_Potato_C::TearUpPoolObject(const struct FTransform& SpawnTransform, clas
 	Params::B_Potato_C_TearUpPoolObject Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

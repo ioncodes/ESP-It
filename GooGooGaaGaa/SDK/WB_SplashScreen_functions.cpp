@@ -128,6 +128,20 @@ void UWB_SplashScreen_C::OnBack()
 }
 
 
+// Function WB_SplashScreen.WB_SplashScreen_C.OnBackendLoginFailed_Event
+// (BlueprintCallable, BlueprintEvent)
+
+void UWB_SplashScreen_C::OnBackendLoginFailed_Event()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SplashScreen_C", "OnBackendLoginFailed_Event");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_SplashScreen.WB_SplashScreen_C.OnEOSLoginStarted_Event
 // (BlueprintCallable, BlueprintEvent)
 

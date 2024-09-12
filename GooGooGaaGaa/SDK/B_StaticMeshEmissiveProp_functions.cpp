@@ -48,9 +48,9 @@ void AB_StaticMeshEmissiveProp_C::UpdateActionProp()
 // Function B_StaticMeshEmissiveProp.B_StaticMeshEmissiveProp_C.GetVisualInterpolators
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class AB_VisualIntepolator_C*>   Param_VisualInterpolators                              (Parm, OutParm)
+// TArray<class AB_VisualIntepolator_C*>   VisualInterpolators_0                                  (Parm, OutParm)
 
-void AB_StaticMeshEmissiveProp_C::GetVisualInterpolators(TArray<class AB_VisualIntepolator_C*>* Param_VisualInterpolators)
+void AB_StaticMeshEmissiveProp_C::GetVisualInterpolators(TArray<class AB_VisualIntepolator_C*>* VisualInterpolators_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -61,8 +61,8 @@ void AB_StaticMeshEmissiveProp_C::GetVisualInterpolators(TArray<class AB_VisualI
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_VisualInterpolators != nullptr)
-		*Param_VisualInterpolators = std::move(Parms.Param_VisualInterpolators);
+	if (VisualInterpolators_0 != nullptr)
+		*VisualInterpolators_0 = std::move(Parms.VisualInterpolators_0);
 }
 
 }

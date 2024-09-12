@@ -20,58 +20,58 @@ struct B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49BE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_Name_2;                         // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49BF[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              K2Node_CustomEvent_SaveGame_2;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 K2Node_CustomEvent_Name_1;                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C0[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              K2Node_CustomEvent_SaveGame_1;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SettingsSave_C*                      K2Node_DynamicCast_AsB_Settings_Save;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C1[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_NotificationSave_C*                  K2Node_DynamicCast_AsB_Notification_Save;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C2[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate;              // 0x0064(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0084(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C3[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_Name_3;                         // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bSuccess_2;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C4[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              K2Node_CustomEvent_SaveGame_3;                     // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MutedPlayersSave_C*                  K2Node_DynamicCast_AsB_Muted_Players_Save;         // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C5[0x5];                                     // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_Name;                           // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_Success;                        // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C6[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              K2Node_CustomEvent_SaveGame;                       // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_UserMessagesSave_C*                  K2Node_DynamicCast_AsB_User_Messages_Save;         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C7[0x3];                                     // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x00F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0105(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C8[0x2];                                     // 0x0106(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_106[0x2];                                      // 0x0106(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              CallFunc_LoadSaveGame_Savegame;                    // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              CallFunc_LoadSaveGame_Savegame_1;                  // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MutedPlayersSave_C*                  K2Node_DynamicCast_AsB_Muted_Players_Save_1;       // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C9[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SettingsSave_C*                      K2Node_DynamicCast_AsB_Settings_Save_1;            // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49CA[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              CallFunc_LoadSaveGame_Savegame_2;                  // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              CallFunc_LoadSaveGame_Savegame_3;                  // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_UserMessagesSave_C*                  K2Node_DynamicCast_AsB_User_Messages_Save_1;       // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49CB[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_NotificationSave_C*                  K2Node_DynamicCast_AsB_Notification_Save_1;        // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -124,14 +124,14 @@ static_assert(offsetof(B_SaveGameManager_C_ExecuteUbergraph_B_SaveGameManager, K
 struct B_SaveGameManager_C_OnMutedPlayersSaveLoaded final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          bSuccess;                                          // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49CC[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              SaveGame;                                          // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded) == 0x000008, "Wrong alignment on B_SaveGameManager_C_OnMutedPlayersSaveLoaded");
 static_assert(sizeof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded) == 0x000020, "Wrong size on B_SaveGameManager_C_OnMutedPlayersSaveLoaded");
-static_assert(offsetof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded, Param_Name) == 0x000000, "Member 'B_SaveGameManager_C_OnMutedPlayersSaveLoaded::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded, Name_0) == 0x000000, "Member 'B_SaveGameManager_C_OnMutedPlayersSaveLoaded::Name_0' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded, bSuccess) == 0x000010, "Member 'B_SaveGameManager_C_OnMutedPlayersSaveLoaded::bSuccess' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded, SaveGame) == 0x000018, "Member 'B_SaveGameManager_C_OnMutedPlayersSaveLoaded::SaveGame' has a wrong offset!");
 
@@ -140,14 +140,14 @@ static_assert(offsetof(B_SaveGameManager_C_OnMutedPlayersSaveLoaded, SaveGame) =
 struct B_SaveGameManager_C_OnNotificationsSaveLoaded final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          bSuccess;                                          // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49CD[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              SaveGame;                                          // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SaveGameManager_C_OnNotificationsSaveLoaded) == 0x000008, "Wrong alignment on B_SaveGameManager_C_OnNotificationsSaveLoaded");
 static_assert(sizeof(B_SaveGameManager_C_OnNotificationsSaveLoaded) == 0x000020, "Wrong size on B_SaveGameManager_C_OnNotificationsSaveLoaded");
-static_assert(offsetof(B_SaveGameManager_C_OnNotificationsSaveLoaded, Param_Name) == 0x000000, "Member 'B_SaveGameManager_C_OnNotificationsSaveLoaded::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_OnNotificationsSaveLoaded, Name_0) == 0x000000, "Member 'B_SaveGameManager_C_OnNotificationsSaveLoaded::Name_0' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnNotificationsSaveLoaded, bSuccess) == 0x000010, "Member 'B_SaveGameManager_C_OnNotificationsSaveLoaded::bSuccess' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnNotificationsSaveLoaded, SaveGame) == 0x000018, "Member 'B_SaveGameManager_C_OnNotificationsSaveLoaded::SaveGame' has a wrong offset!");
 
@@ -156,14 +156,14 @@ static_assert(offsetof(B_SaveGameManager_C_OnNotificationsSaveLoaded, SaveGame) 
 struct B_SaveGameManager_C_OnSettingsSaveLoaded final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          bSuccess;                                          // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49CE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              SaveGame;                                          // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SaveGameManager_C_OnSettingsSaveLoaded) == 0x000008, "Wrong alignment on B_SaveGameManager_C_OnSettingsSaveLoaded");
 static_assert(sizeof(B_SaveGameManager_C_OnSettingsSaveLoaded) == 0x000020, "Wrong size on B_SaveGameManager_C_OnSettingsSaveLoaded");
-static_assert(offsetof(B_SaveGameManager_C_OnSettingsSaveLoaded, Param_Name) == 0x000000, "Member 'B_SaveGameManager_C_OnSettingsSaveLoaded::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_OnSettingsSaveLoaded, Name_0) == 0x000000, "Member 'B_SaveGameManager_C_OnSettingsSaveLoaded::Name_0' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnSettingsSaveLoaded, bSuccess) == 0x000010, "Member 'B_SaveGameManager_C_OnSettingsSaveLoaded::bSuccess' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnSettingsSaveLoaded, SaveGame) == 0x000018, "Member 'B_SaveGameManager_C_OnSettingsSaveLoaded::SaveGame' has a wrong offset!");
 
@@ -172,14 +172,14 @@ static_assert(offsetof(B_SaveGameManager_C_OnSettingsSaveLoaded, SaveGame) == 0x
 struct B_SaveGameManager_C_OnUserMessagesSaveLoaded final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49CF[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USaveGame*                              SaveGame;                                          // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SaveGameManager_C_OnUserMessagesSaveLoaded) == 0x000008, "Wrong alignment on B_SaveGameManager_C_OnUserMessagesSaveLoaded");
 static_assert(sizeof(B_SaveGameManager_C_OnUserMessagesSaveLoaded) == 0x000020, "Wrong size on B_SaveGameManager_C_OnUserMessagesSaveLoaded");
-static_assert(offsetof(B_SaveGameManager_C_OnUserMessagesSaveLoaded, Param_Name) == 0x000000, "Member 'B_SaveGameManager_C_OnUserMessagesSaveLoaded::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_SaveGameManager_C_OnUserMessagesSaveLoaded, Name_0) == 0x000000, "Member 'B_SaveGameManager_C_OnUserMessagesSaveLoaded::Name_0' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnUserMessagesSaveLoaded, Success) == 0x000010, "Member 'B_SaveGameManager_C_OnUserMessagesSaveLoaded::Success' has a wrong offset!");
 static_assert(offsetof(B_SaveGameManager_C_OnUserMessagesSaveLoaded, SaveGame) == 0x000018, "Member 'B_SaveGameManager_C_OnUserMessagesSaveLoaded::SaveGame' has a wrong offset!");
 

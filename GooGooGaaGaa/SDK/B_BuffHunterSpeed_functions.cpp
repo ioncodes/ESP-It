@@ -48,9 +48,9 @@ void AB_BuffHunterSpeed_C::BuffEnd()
 // Function B_BuffHunterSpeed.B_BuffHunterSpeed_C.BuffStart
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterSpeed_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
+void AB_BuffHunterSpeed_C::BuffStart(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -59,7 +59,7 @@ void AB_BuffHunterSpeed_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
 
 	Params::B_BuffHunterSpeed_C_BuffStart Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -116,11 +116,11 @@ void AB_BuffHunterSpeed_C::RemoveTrailMulti()
 // Function B_BuffHunterSpeed.B_BuffHunterSpeed_C.SetMovementMulti
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCharacterMovementComponent*      Param_CharacterMovementComp                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UCharacterMovementComponent*      CharacterMovementComp_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  MoveSpeed                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  CrouchSpeed                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterSpeed_C::SetMovementMulti(class UCharacterMovementComponent* Param_CharacterMovementComp, double MoveSpeed, double CrouchSpeed)
+void AB_BuffHunterSpeed_C::SetMovementMulti(class UCharacterMovementComponent* CharacterMovementComp_0, double MoveSpeed, double CrouchSpeed)
 {
 	static class UFunction* Func = nullptr;
 
@@ -129,7 +129,7 @@ void AB_BuffHunterSpeed_C::SetMovementMulti(class UCharacterMovementComponent* P
 
 	Params::B_BuffHunterSpeed_C_SetMovementMulti Parms{};
 
-	Parms.Param_CharacterMovementComp = Param_CharacterMovementComp;
+	Parms.CharacterMovementComp_0 = CharacterMovementComp_0;
 	Parms.MoveSpeed = MoveSpeed;
 	Parms.CrouchSpeed = CrouchSpeed;
 

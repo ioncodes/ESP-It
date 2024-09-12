@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "B_PlayerController_classes.hpp"
 #include "EChatType_structs.hpp"
+#include "B_PlayerController_classes.hpp"
 #include "E_TaskType_structs.hpp"
 
 
@@ -20,12 +20,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ImpostorPlayerController.B_ImpostorPlayerController_C
-// 0x0010 (0x0B38 - 0x0B28)
+// 0x0010 (0x0B28 - 0x0B18)
 class AB_ImpostorPlayerController_C final : public AB_PlayerController_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorPlayerController_C;       // 0x0B28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AB_ImpostorPlayerState_C*               ImpostorPlayerState;                               // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorPlayerController_C;       // 0x0B18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AB_ImpostorPlayerState_C*               ImpostorPlayerState;                               // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_ImpostorPlayerController(int32 EntryPoint);
@@ -53,9 +53,9 @@ public:
 	}
 };
 static_assert(alignof(AB_ImpostorPlayerController_C) == 0x000008, "Wrong alignment on AB_ImpostorPlayerController_C");
-static_assert(sizeof(AB_ImpostorPlayerController_C) == 0x000B38, "Wrong size on AB_ImpostorPlayerController_C");
-static_assert(offsetof(AB_ImpostorPlayerController_C, UberGraphFrame_B_ImpostorPlayerController_C) == 0x000B28, "Member 'AB_ImpostorPlayerController_C::UberGraphFrame_B_ImpostorPlayerController_C' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorPlayerController_C, ImpostorPlayerState) == 0x000B30, "Member 'AB_ImpostorPlayerController_C::ImpostorPlayerState' has a wrong offset!");
+static_assert(sizeof(AB_ImpostorPlayerController_C) == 0x000B28, "Wrong size on AB_ImpostorPlayerController_C");
+static_assert(offsetof(AB_ImpostorPlayerController_C, UberGraphFrame_B_ImpostorPlayerController_C) == 0x000B18, "Member 'AB_ImpostorPlayerController_C::UberGraphFrame_B_ImpostorPlayerController_C' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorPlayerController_C, ImpostorPlayerState) == 0x000B20, "Member 'AB_ImpostorPlayerController_C::ImpostorPlayerState' has a wrong offset!");
 
 }
 

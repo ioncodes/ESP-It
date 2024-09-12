@@ -15,19 +15,21 @@ namespace SDK
 {
 
 // UserDefinedStruct S_PropVolumeCategory.S_PropVolumeCategory
-// 0x000C (0x000C - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FS_PropVolumeCategory final
 {
 public:
-	float                                         Volume_2_9EF5132E429AB08C0AA931B968B962CF;         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxHealth_4_573229DD48F186E1C6BBBC8CD32B3E21;      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Speed_6_DA405A8B4486054685BBE98A1831184F;          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Volume_2_9EF5132E429AB08C0AA931B968B962CF;         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxHealth_4_573229DD48F186E1C6BBBC8CD32B3E21;      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Speed_6_DA405A8B4486054685BBE98A1831184F;          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AimAssistScale_9_FFE0D87F4619A434B88FCD97D408410D; // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FS_PropVolumeCategory) == 0x000004, "Wrong alignment on FS_PropVolumeCategory");
-static_assert(sizeof(FS_PropVolumeCategory) == 0x00000C, "Wrong size on FS_PropVolumeCategory");
+static_assert(alignof(FS_PropVolumeCategory) == 0x000008, "Wrong alignment on FS_PropVolumeCategory");
+static_assert(sizeof(FS_PropVolumeCategory) == 0x000020, "Wrong size on FS_PropVolumeCategory");
 static_assert(offsetof(FS_PropVolumeCategory, Volume_2_9EF5132E429AB08C0AA931B968B962CF) == 0x000000, "Member 'FS_PropVolumeCategory::Volume_2_9EF5132E429AB08C0AA931B968B962CF' has a wrong offset!");
-static_assert(offsetof(FS_PropVolumeCategory, MaxHealth_4_573229DD48F186E1C6BBBC8CD32B3E21) == 0x000004, "Member 'FS_PropVolumeCategory::MaxHealth_4_573229DD48F186E1C6BBBC8CD32B3E21' has a wrong offset!");
-static_assert(offsetof(FS_PropVolumeCategory, Speed_6_DA405A8B4486054685BBE98A1831184F) == 0x000008, "Member 'FS_PropVolumeCategory::Speed_6_DA405A8B4486054685BBE98A1831184F' has a wrong offset!");
+static_assert(offsetof(FS_PropVolumeCategory, MaxHealth_4_573229DD48F186E1C6BBBC8CD32B3E21) == 0x000008, "Member 'FS_PropVolumeCategory::MaxHealth_4_573229DD48F186E1C6BBBC8CD32B3E21' has a wrong offset!");
+static_assert(offsetof(FS_PropVolumeCategory, Speed_6_DA405A8B4486054685BBE98A1831184F) == 0x000010, "Member 'FS_PropVolumeCategory::Speed_6_DA405A8B4486054685BBE98A1831184F' has a wrong offset!");
+static_assert(offsetof(FS_PropVolumeCategory, AimAssistScale_9_FFE0D87F4619A434B88FCD97D408410D) == 0x000018, "Member 'FS_PropVolumeCategory::AimAssistScale_9_FFE0D87F4619A434B88FCD97D408410D' has a wrong offset!");
 
 }
 

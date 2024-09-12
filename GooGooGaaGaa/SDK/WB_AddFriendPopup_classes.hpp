@@ -11,23 +11,26 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_AddFriendPopup.WB_AddFriendPopup_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0038 (0x0318 - 0x02E0)
 class UWB_AddFriendPopup_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Add;                                               // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Back;                                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       InputField;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SquareButtonWithIcon_C*             Paste;                                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Add;                                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Back;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionIcon_C*                       ControllerFocusIcon;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       InputField;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SquareButtonWithIcon_C*             Paste;                                             // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_0;                                         // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void AcceptFriendInvite(const struct FUniqueNetIdRepl& PlayerId);
@@ -37,15 +40,13 @@ public:
 	void CheckForUniqueNetIDValidity(const struct FUniqueNetIdRepl& InNetId);
 	void CloseDialog();
 	void Construct();
-	void CreateToolTip();
+	void CreateTooltip();
 	void ExecuteUbergraph_WB_AddFriendPopup(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
-	void OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
+	ESlateVisibility GetVisibility_0();
 	void OnApply();
 	void OnBack();
-	void OnCallFailed_3FAB678D48D68FCB1B4029A289214264(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
-	void OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
-	void OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr);
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void OnSpecialAction();
 	void SendFriendInvite(const struct FUniqueNetIdRepl& PlayerId);
 
@@ -60,12 +61,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_AddFriendPopup_C) == 0x000008, "Wrong alignment on UWB_AddFriendPopup_C");
-static_assert(sizeof(UWB_AddFriendPopup_C) == 0x0002E8, "Wrong size on UWB_AddFriendPopup_C");
-static_assert(offsetof(UWB_AddFriendPopup_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_AddFriendPopup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_AddFriendPopup_C, Add) == 0x0002C8, "Member 'UWB_AddFriendPopup_C::Add' has a wrong offset!");
-static_assert(offsetof(UWB_AddFriendPopup_C, Back) == 0x0002D0, "Member 'UWB_AddFriendPopup_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_AddFriendPopup_C, InputField) == 0x0002D8, "Member 'UWB_AddFriendPopup_C::InputField' has a wrong offset!");
-static_assert(offsetof(UWB_AddFriendPopup_C, Paste) == 0x0002E0, "Member 'UWB_AddFriendPopup_C::Paste' has a wrong offset!");
+static_assert(sizeof(UWB_AddFriendPopup_C) == 0x000318, "Wrong size on UWB_AddFriendPopup_C");
+static_assert(offsetof(UWB_AddFriendPopup_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_AddFriendPopup_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_AddFriendPopup_C, Add) == 0x0002E8, "Member 'UWB_AddFriendPopup_C::Add' has a wrong offset!");
+static_assert(offsetof(UWB_AddFriendPopup_C, Back) == 0x0002F0, "Member 'UWB_AddFriendPopup_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_AddFriendPopup_C, ControllerFocusIcon) == 0x0002F8, "Member 'UWB_AddFriendPopup_C::ControllerFocusIcon' has a wrong offset!");
+static_assert(offsetof(UWB_AddFriendPopup_C, InputField) == 0x000300, "Member 'UWB_AddFriendPopup_C::InputField' has a wrong offset!");
+static_assert(offsetof(UWB_AddFriendPopup_C, Paste) == 0x000308, "Member 'UWB_AddFriendPopup_C::Paste' has a wrong offset!");
+static_assert(offsetof(UWB_AddFriendPopup_C, SizeBox_0) == 0x000310, "Member 'UWB_AddFriendPopup_C::SizeBox_0' has a wrong offset!");
 
 }
 

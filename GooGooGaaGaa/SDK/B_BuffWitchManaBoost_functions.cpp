@@ -34,9 +34,9 @@ void AB_BuffWitchManaBoost_C::BuffEnd()
 // Function B_BuffWitchManaBoost.B_BuffWitchManaBoost_C.BuffStart
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffWitchManaBoost_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
+void AB_BuffWitchManaBoost_C::BuffStart(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -45,7 +45,7 @@ void AB_BuffWitchManaBoost_C::BuffStart(class AB_PlayerState_C* Param_PlayerStat
 
 	Params::B_BuffWitchManaBoost_C_BuffStart Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -114,11 +114,11 @@ void AB_BuffWitchManaBoost_C::ReceiveTick(float DeltaSeconds)
 // Function B_BuffWitchManaBoost.B_BuffWitchManaBoost_C.SetManaRegen
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UB_ManaComponent_C*               Param_ManaComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_ManaComponent_C*               ManaComponent_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  ManaRegen                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-double AB_BuffWitchManaBoost_C::SetManaRegen(class UB_ManaComponent_C* Param_ManaComponent, double ManaRegen)
+double AB_BuffWitchManaBoost_C::SetManaRegen(class UB_ManaComponent_C* ManaComponent_0, double ManaRegen)
 {
 	static class UFunction* Func = nullptr;
 
@@ -127,7 +127,7 @@ double AB_BuffWitchManaBoost_C::SetManaRegen(class UB_ManaComponent_C* Param_Man
 
 	Params::B_BuffWitchManaBoost_C_SetManaRegen Parms{};
 
-	Parms.Param_ManaComponent = Param_ManaComponent;
+	Parms.ManaComponent_0 = ManaComponent_0;
 	Parms.ManaRegen = ManaRegen;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -139,10 +139,10 @@ double AB_BuffWitchManaBoost_C::SetManaRegen(class UB_ManaComponent_C* Param_Man
 // Function B_BuffWitchManaBoost.B_BuffWitchManaBoost_C.SetManaRegenMulti
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UB_ManaComponent_C*               Param_ManaComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_ManaComponent_C*               ManaComponent_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  ManaRegen                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffWitchManaBoost_C::SetManaRegenMulti(class UB_ManaComponent_C* Param_ManaComponent, double ManaRegen)
+void AB_BuffWitchManaBoost_C::SetManaRegenMulti(class UB_ManaComponent_C* ManaComponent_0, double ManaRegen)
 {
 	static class UFunction* Func = nullptr;
 
@@ -151,7 +151,7 @@ void AB_BuffWitchManaBoost_C::SetManaRegenMulti(class UB_ManaComponent_C* Param_
 
 	Params::B_BuffWitchManaBoost_C_SetManaRegenMulti Parms{};
 
-	Parms.Param_ManaComponent = Param_ManaComponent;
+	Parms.ManaComponent_0 = ManaComponent_0;
 	Parms.ManaRegen = ManaRegen;
 
 	UObject::ProcessEvent(Func, &Parms);

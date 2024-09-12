@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PossessParameters.B_PossessParameters_C
-// 0x0018 (0x0070 - 0x0058)
+// 0x0018 (0x0068 - 0x0050)
 class UB_PossessParameters_C final : public USkillParameters
 {
 public:
-	double                                        Cooldown;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ActivationManaCost;                                // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Range;                                             // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Cooldown;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ActivationManaCost;                                // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Range;                                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FText GetFormattedTooltip();
@@ -39,10 +39,10 @@ public:
 	}
 };
 static_assert(alignof(UB_PossessParameters_C) == 0x000008, "Wrong alignment on UB_PossessParameters_C");
-static_assert(sizeof(UB_PossessParameters_C) == 0x000070, "Wrong size on UB_PossessParameters_C");
-static_assert(offsetof(UB_PossessParameters_C, Cooldown) == 0x000058, "Member 'UB_PossessParameters_C::Cooldown' has a wrong offset!");
-static_assert(offsetof(UB_PossessParameters_C, ActivationManaCost) == 0x000060, "Member 'UB_PossessParameters_C::ActivationManaCost' has a wrong offset!");
-static_assert(offsetof(UB_PossessParameters_C, Range) == 0x000068, "Member 'UB_PossessParameters_C::Range' has a wrong offset!");
+static_assert(sizeof(UB_PossessParameters_C) == 0x000068, "Wrong size on UB_PossessParameters_C");
+static_assert(offsetof(UB_PossessParameters_C, Cooldown) == 0x000050, "Member 'UB_PossessParameters_C::Cooldown' has a wrong offset!");
+static_assert(offsetof(UB_PossessParameters_C, ActivationManaCost) == 0x000058, "Member 'UB_PossessParameters_C::ActivationManaCost' has a wrong offset!");
+static_assert(offsetof(UB_PossessParameters_C, Range) == 0x000060, "Member 'UB_PossessParameters_C::Range' has a wrong offset!");
 
 }
 

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativeHunter.B_CreativeHunter_C
-// 0x0000 (0x0A30 - 0x0A30)
+// 0x0000 (0x0A20 - 0x0A20)
 class AB_CreativeHunter_C final : public AB_Hunter_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeHunter_C;                 // 0x0A28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeHunter_C;                 // 0x0A18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_CreativeHunter(int32 EntryPoint);
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativeHunter_C) == 0x000010, "Wrong alignment on AB_CreativeHunter_C");
-static_assert(sizeof(AB_CreativeHunter_C) == 0x000A30, "Wrong size on AB_CreativeHunter_C");
-static_assert(offsetof(AB_CreativeHunter_C, UberGraphFrame_B_CreativeHunter_C) == 0x000A28, "Member 'AB_CreativeHunter_C::UberGraphFrame_B_CreativeHunter_C' has a wrong offset!");
+static_assert(sizeof(AB_CreativeHunter_C) == 0x000A20, "Wrong size on AB_CreativeHunter_C");
+static_assert(offsetof(AB_CreativeHunter_C, UberGraphFrame_B_CreativeHunter_C) == 0x000A18, "Member 'AB_CreativeHunter_C::UberGraphFrame_B_CreativeHunter_C' has a wrong offset!");
 
 }
 

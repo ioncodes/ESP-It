@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ImpostorWitchPortal.B_ImpostorWitchPortal_C
-// 0x0038 (0x02D0 - 0x0298)
+// 0x0038 (0x02C8 - 0x0290)
 class AB_ImpostorWitchPortal_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_Timer_C*                             AvoidPortalSpamTimer;                              // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        Arrow;                                             // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      Niagara;                                           // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanBeUsed;                                         // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_472C[0x3];                                     // 0x02C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AvoidPortalSpamTime;                               // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_Timer_C*                             AvoidPortalSpamTimer;                              // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        Arrow;                                             // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      Niagara;                                           // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanBeUsed;                                         // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AvoidPortalSpamTime;                               // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__B_ImpostorWitchPortal_AvoidPortalSpamTimer_K2Node_ComponentBoundEvent_0_OnFinished__DelegateSignature();
@@ -50,15 +50,15 @@ public:
 	}
 };
 static_assert(alignof(AB_ImpostorWitchPortal_C) == 0x000008, "Wrong alignment on AB_ImpostorWitchPortal_C");
-static_assert(sizeof(AB_ImpostorWitchPortal_C) == 0x0002D0, "Wrong size on AB_ImpostorWitchPortal_C");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, UberGraphFrame) == 0x000298, "Member 'AB_ImpostorWitchPortal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, AvoidPortalSpamTimer) == 0x0002A0, "Member 'AB_ImpostorWitchPortal_C::AvoidPortalSpamTimer' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, Arrow) == 0x0002A8, "Member 'AB_ImpostorWitchPortal_C::Arrow' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, Niagara) == 0x0002B0, "Member 'AB_ImpostorWitchPortal_C::Niagara' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, StaticMesh) == 0x0002B8, "Member 'AB_ImpostorWitchPortal_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, DefaultSceneRoot) == 0x0002C0, "Member 'AB_ImpostorWitchPortal_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, CanBeUsed) == 0x0002C8, "Member 'AB_ImpostorWitchPortal_C::CanBeUsed' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorWitchPortal_C, AvoidPortalSpamTime) == 0x0002CC, "Member 'AB_ImpostorWitchPortal_C::AvoidPortalSpamTime' has a wrong offset!");
+static_assert(sizeof(AB_ImpostorWitchPortal_C) == 0x0002C8, "Wrong size on AB_ImpostorWitchPortal_C");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, UberGraphFrame) == 0x000290, "Member 'AB_ImpostorWitchPortal_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, AvoidPortalSpamTimer) == 0x000298, "Member 'AB_ImpostorWitchPortal_C::AvoidPortalSpamTimer' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, Arrow) == 0x0002A0, "Member 'AB_ImpostorWitchPortal_C::Arrow' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, Niagara) == 0x0002A8, "Member 'AB_ImpostorWitchPortal_C::Niagara' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, StaticMesh) == 0x0002B0, "Member 'AB_ImpostorWitchPortal_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, DefaultSceneRoot) == 0x0002B8, "Member 'AB_ImpostorWitchPortal_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, CanBeUsed) == 0x0002C0, "Member 'AB_ImpostorWitchPortal_C::CanBeUsed' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorWitchPortal_C, AvoidPortalSpamTime) == 0x0002C4, "Member 'AB_ImpostorWitchPortal_C::AvoidPortalSpamTime' has a wrong offset!");
 
 }
 

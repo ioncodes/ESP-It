@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MasterServerPlugin_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
+#include "Engine_classes.hpp"
+#include "MasterServerPlugin_structs.hpp"
 
 
 namespace SDK
@@ -25,9 +25,9 @@ namespace SDK
 class UBaseUserBehaviorTrackingManager : public UObject
 {
 public:
-	uint8                                         Pad_1DFD[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          CallBlueprintTickFunction;                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DFE[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BPTick(float DeltaTime);
@@ -51,7 +51,7 @@ static_assert(offsetof(UBaseUserBehaviorTrackingManager, CallBlueprintTickFuncti
 class UByteDataWriter final : public UObject
 {
 public:
-	uint8                                         Pad_1DFF[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -66,6 +66,142 @@ public:
 static_assert(alignof(UByteDataWriter) == 0x000008, "Wrong alignment on UByteDataWriter");
 static_assert(sizeof(UByteDataWriter) == 0x000038, "Wrong size on UByteDataWriter");
 
+// Class MasterServerPlugin.GetAllWorkshopMapDetailsProxy
+// 0x0028 (0x0058 - 0x0030)
+class UGetAllWorkshopMapDetailsProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UGetAllWorkshopMapDetailsProxy* GetAllWorkshopMapDetails(class UObject* WorldContextObject);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GetAllWorkshopMapDetailsProxy">();
+	}
+	static class UGetAllWorkshopMapDetailsProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGetAllWorkshopMapDetailsProxy>();
+	}
+};
+static_assert(alignof(UGetAllWorkshopMapDetailsProxy) == 0x000008, "Wrong alignment on UGetAllWorkshopMapDetailsProxy");
+static_assert(sizeof(UGetAllWorkshopMapDetailsProxy) == 0x000058, "Wrong size on UGetAllWorkshopMapDetailsProxy");
+static_assert(offsetof(UGetAllWorkshopMapDetailsProxy, OnSuccess) == 0x000030, "Member 'UGetAllWorkshopMapDetailsProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UGetAllWorkshopMapDetailsProxy, OnFailure) == 0x000040, "Member 'UGetAllWorkshopMapDetailsProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.DownloadWorkshopMapProxy
+// 0x0030 (0x0060 - 0x0030)
+class UDownloadWorkshopMapProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UDownloadWorkshopMapProxy* DownloadWorkshopMap(class UObject* WorldContextObject, int64 WorkshopID);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DownloadWorkshopMapProxy">();
+	}
+	static class UDownloadWorkshopMapProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDownloadWorkshopMapProxy>();
+	}
+};
+static_assert(alignof(UDownloadWorkshopMapProxy) == 0x000008, "Wrong alignment on UDownloadWorkshopMapProxy");
+static_assert(sizeof(UDownloadWorkshopMapProxy) == 0x000060, "Wrong size on UDownloadWorkshopMapProxy");
+static_assert(offsetof(UDownloadWorkshopMapProxy, OnSuccess) == 0x000030, "Member 'UDownloadWorkshopMapProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UDownloadWorkshopMapProxy, OnFailure) == 0x000040, "Member 'UDownloadWorkshopMapProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.DeleteWorkshopMapProxy
+// 0x0030 (0x0060 - 0x0030)
+class UDeleteWorkshopMapProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UDeleteWorkshopMapProxy* DeleteWorkshopMap(class UObject* WorldContextObject, int64 WorkshopID);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DeleteWorkshopMapProxy">();
+	}
+	static class UDeleteWorkshopMapProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDeleteWorkshopMapProxy>();
+	}
+};
+static_assert(alignof(UDeleteWorkshopMapProxy) == 0x000008, "Wrong alignment on UDeleteWorkshopMapProxy");
+static_assert(sizeof(UDeleteWorkshopMapProxy) == 0x000060, "Wrong size on UDeleteWorkshopMapProxy");
+static_assert(offsetof(UDeleteWorkshopMapProxy, OnSuccess) == 0x000030, "Member 'UDeleteWorkshopMapProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UDeleteWorkshopMapProxy, OnFailure) == 0x000040, "Member 'UDeleteWorkshopMapProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.UploadWorkshopMapProxy
+// 0x00E0 (0x0110 - 0x0030)
+class UUploadWorkshopMapProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0xC0];                                      // 0x0050(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UUploadWorkshopMapProxy* UpdateWorkshopMap(class UObject* WorldContextObject, const struct FCreativeWorkshopMapLayout& MapLayout);
+	static class UUploadWorkshopMapProxy* UploadNewWorkshopMap(class UObject* WorldContextObject, const struct FCreativeWorkshopMapLayout& MapLayout);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"UploadWorkshopMapProxy">();
+	}
+	static class UUploadWorkshopMapProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUploadWorkshopMapProxy>();
+	}
+};
+static_assert(alignof(UUploadWorkshopMapProxy) == 0x000008, "Wrong alignment on UUploadWorkshopMapProxy");
+static_assert(sizeof(UUploadWorkshopMapProxy) == 0x000110, "Wrong size on UUploadWorkshopMapProxy");
+static_assert(offsetof(UUploadWorkshopMapProxy, OnSuccess) == 0x000030, "Member 'UUploadWorkshopMapProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UUploadWorkshopMapProxy, OnFailure) == 0x000040, "Member 'UUploadWorkshopMapProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.SubmitMapRatingProxy
+// 0x0030 (0x0060 - 0x0030)
+class USubmitMapRatingProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class USubmitMapRatingProxy* SubmitMapRating(class UObject* WorldContextObject, int64 WorkshopID, int32 Rating);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SubmitMapRatingProxy">();
+	}
+	static class USubmitMapRatingProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USubmitMapRatingProxy>();
+	}
+};
+static_assert(alignof(USubmitMapRatingProxy) == 0x000008, "Wrong alignment on USubmitMapRatingProxy");
+static_assert(sizeof(USubmitMapRatingProxy) == 0x000060, "Wrong size on USubmitMapRatingProxy");
+static_assert(offsetof(USubmitMapRatingProxy, OnSuccess) == 0x000030, "Member 'USubmitMapRatingProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(USubmitMapRatingProxy, OnFailure) == 0x000040, "Member 'USubmitMapRatingProxy::OnFailure' has a wrong offset!");
+
 // Class MasterServerPlugin.GrantItemsCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
 class UGrantItemsCallbackProxy final : public UOnlineBlueprintCallProxyBase
@@ -73,13 +209,13 @@ class UGrantItemsCallbackProxy final : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E00[0x8];                                     // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           PlayerState;                                       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<int32>                                 ItemDefIds;                                        // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class UObject*                                WorldContextObject;                                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	static class UGrantItemsCallbackProxy* GrantItems(class UObject* Param_WorldContextObject, int32 AccountId, const TArray<int32>& Param_ItemDefIds, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* Param_PlayerState);
+	static class UGrantItemsCallbackProxy* GrantItems(class UObject* WorldContextObject_0, int32 AccountId, const TArray<int32>& ItemDefIds_0, bool bNotify, bool bIsDrop, bool bIsExtraItem, class APlayerState* PlayerState_0);
 
 	void GrantItemsResponse(class UVaRestRequestJSON* Request);
 
@@ -106,11 +242,11 @@ static_assert(offsetof(UGrantItemsCallbackProxy, WorldContextObject) == 0x000070
 class UInstanceManagerConnSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1E03[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ConnectionTimeout;                                 // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OwnDedicatedServerId;                              // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnReceiveTeardownPacket;                           // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E04[0x40];                                    // 0x0050(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x40];                                      // 0x0050(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool Connect(int32 InA, int32 InB, int32 InC, int32 InD, int32 Port);
@@ -147,10 +283,10 @@ public:
 	struct FDateTime                              LastTimestamp;                                     // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ComputedHash;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CompressionType;                                   // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0A[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 Blob;                                              // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         UncompressedLength;                                // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0B[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -171,23 +307,21 @@ static_assert(offsetof(UItemDatabaseCache, Blob) == 0x000048, "Member 'UItemData
 static_assert(offsetof(UItemDatabaseCache, UncompressedLength) == 0x000058, "Member 'UItemDatabaseCache::UncompressedLength' has a wrong offset!");
 
 // Class MasterServerPlugin.InventorySubsystem
-// 0x00E8 (0x0118 - 0x0030)
+// 0x00E0 (0x0110 - 0x0030)
 class UInventorySubsystem final : public UEngineSubsystem
 {
 public:
-	bool                                          bUseNewInventorySystem;                            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0C[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ServerHostname;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ServerPort;                                        // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0D[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AccessToken;                                       // 0x0050(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AccountId;                                         // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0E[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnInventoryDefinitionsLoaded;                      // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0F[0x30];                                    // 0x0078(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FDatabaseItem>             ItemDatabase;                                      // 0x00A8(0x0050)(NativeAccessSpecifierPrivate)
-	TArray<struct FAddedItem>                     AddedItems;                                        // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E10[0x10];                                    // 0x0108(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ServerHostname;                                    // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ServerPort;                                        // 0x0040(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AccessToken;                                       // 0x0048(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AccountId;                                         // 0x0058(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnInventoryDefinitionsLoaded;                      // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x30];                                      // 0x0070(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, struct FDatabaseItem>             ItemDatabase;                                      // 0x00A0(0x0050)(NativeAccessSpecifierPrivate)
+	TArray<struct FAddedItem>                     AddedItems;                                        // 0x00F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_100[0x10];                                     // 0x0100(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddAddedItem(EItemChangeReason Reason, const struct FBlueprintOnlineItem& Item, const class FString& Payload);
@@ -211,180 +345,17 @@ public:
 	}
 };
 static_assert(alignof(UInventorySubsystem) == 0x000008, "Wrong alignment on UInventorySubsystem");
-static_assert(sizeof(UInventorySubsystem) == 0x000118, "Wrong size on UInventorySubsystem");
-static_assert(offsetof(UInventorySubsystem, bUseNewInventorySystem) == 0x000030, "Member 'UInventorySubsystem::bUseNewInventorySystem' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, ServerHostname) == 0x000038, "Member 'UInventorySubsystem::ServerHostname' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, ServerPort) == 0x000048, "Member 'UInventorySubsystem::ServerPort' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, AccessToken) == 0x000050, "Member 'UInventorySubsystem::AccessToken' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, AccountId) == 0x000060, "Member 'UInventorySubsystem::AccountId' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, OnInventoryDefinitionsLoaded) == 0x000068, "Member 'UInventorySubsystem::OnInventoryDefinitionsLoaded' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, ItemDatabase) == 0x0000A8, "Member 'UInventorySubsystem::ItemDatabase' has a wrong offset!");
-static_assert(offsetof(UInventorySubsystem, AddedItems) == 0x0000F8, "Member 'UInventorySubsystem::AddedItems' has a wrong offset!");
-
-// Class MasterServerPlugin.MasterServerLoginCallbackProxy
-// 0x0070 (0x00A0 - 0x0030)
-class UMasterServerLoginCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E16[0x50];                                    // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UMasterServerLoginCallbackProxy* MasterServerLogin(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, const class FString& UserName, const class FString& Password);
-	static class UMasterServerLoginCallbackProxy* MasterServerRegisterAndLogin(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, const class FString& UserName, const class FString& Password);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MasterServerLoginCallbackProxy">();
-	}
-	static class UMasterServerLoginCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMasterServerLoginCallbackProxy>();
-	}
-};
-static_assert(alignof(UMasterServerLoginCallbackProxy) == 0x000008, "Wrong alignment on UMasterServerLoginCallbackProxy");
-static_assert(sizeof(UMasterServerLoginCallbackProxy) == 0x0000A0, "Wrong size on UMasterServerLoginCallbackProxy");
-static_assert(offsetof(UMasterServerLoginCallbackProxy, OnSuccess) == 0x000030, "Member 'UMasterServerLoginCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(UMasterServerLoginCallbackProxy, OnFailure) == 0x000040, "Member 'UMasterServerLoginCallbackProxy::OnFailure' has a wrong offset!");
-
-// Class MasterServerPlugin.MasterServerPingCallbackProxy
-// 0x0060 (0x0090 - 0x0030)
-class UMasterServerPingCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnTimeout;                                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E17[0x30];                                    // 0x0060(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UMasterServerPingCallbackProxy* MasterServerPing(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MasterServerPingCallbackProxy">();
-	}
-	static class UMasterServerPingCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMasterServerPingCallbackProxy>();
-	}
-};
-static_assert(alignof(UMasterServerPingCallbackProxy) == 0x000008, "Wrong alignment on UMasterServerPingCallbackProxy");
-static_assert(sizeof(UMasterServerPingCallbackProxy) == 0x000090, "Wrong size on UMasterServerPingCallbackProxy");
-static_assert(offsetof(UMasterServerPingCallbackProxy, OnSuccess) == 0x000030, "Member 'UMasterServerPingCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(UMasterServerPingCallbackProxy, OnFailure) == 0x000040, "Member 'UMasterServerPingCallbackProxy::OnFailure' has a wrong offset!");
-static_assert(offsetof(UMasterServerPingCallbackProxy, OnTimeout) == 0x000050, "Member 'UMasterServerPingCallbackProxy::OnTimeout' has a wrong offset!");
-
-// Class MasterServerPlugin.MasterServerMatchFillAPotCallbackProxy
-// 0x00F0 (0x0120 - 0x0030)
-class UMasterServerMatchFillAPotCallbackProxy final : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnNoServerFound;                                   // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnNoAuthentication;                                // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnCancelled;                                       // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnNotConnectedToServer;                            // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnConnectionLost;                                  // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFriendCancelled;                                 // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFriendAlreadyInMatchMaking;                      // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFriendNotConnectedToServer;                      // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFriendConnectionLost;                            // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPlayerLeft;                                      // 0x00E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E18[0x30];                                    // 0x00F0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UMasterServerMatchFillAPotCallbackProxy* MatchFillAPot(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, int32 WantedRegion);
-	static class UMasterServerMatchFillAPotCallbackProxy* MatchFillAPotJoinFriend(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager);
-	static class UMasterServerMatchFillAPotCallbackProxy* MatchFillAPotWithFriend(class UObject* WorldContextObject, class UMasterServerManager* MasterServerManager, int32 WantedRegion, int32 FriendAccountId);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MasterServerMatchFillAPotCallbackProxy">();
-	}
-	static class UMasterServerMatchFillAPotCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMasterServerMatchFillAPotCallbackProxy>();
-	}
-};
-static_assert(alignof(UMasterServerMatchFillAPotCallbackProxy) == 0x000008, "Wrong alignment on UMasterServerMatchFillAPotCallbackProxy");
-static_assert(sizeof(UMasterServerMatchFillAPotCallbackProxy) == 0x000120, "Wrong size on UMasterServerMatchFillAPotCallbackProxy");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnSuccess) == 0x000030, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnFailure) == 0x000040, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnFailure' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnNoServerFound) == 0x000050, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnNoServerFound' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnNoAuthentication) == 0x000060, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnNoAuthentication' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnCancelled) == 0x000070, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnCancelled' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnNotConnectedToServer) == 0x000080, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnNotConnectedToServer' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnConnectionLost) == 0x000090, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnConnectionLost' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnFriendCancelled) == 0x0000A0, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnFriendCancelled' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnFriendAlreadyInMatchMaking) == 0x0000B0, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnFriendAlreadyInMatchMaking' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnFriendNotConnectedToServer) == 0x0000C0, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnFriendNotConnectedToServer' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnFriendConnectionLost) == 0x0000D0, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnFriendConnectionLost' has a wrong offset!");
-static_assert(offsetof(UMasterServerMatchFillAPotCallbackProxy, OnPlayerLeft) == 0x0000E0, "Member 'UMasterServerMatchFillAPotCallbackProxy::OnPlayerLeft' has a wrong offset!");
-
-// Class MasterServerPlugin.MasterServerManager
-// 0x01A0 (0x01C8 - 0x0028)
-class UMasterServerManager : public UObject
-{
-public:
-	uint8                                         Pad_1E1A[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          KeepAlive;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E1B[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ConnectionTimeout;                                 // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CurrentSystemMessage;                              // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnClientsInitializedForMatchMaking;                // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPlayersFoundForMatchMaking;                      // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnNotifyQuestChange;                               // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E1C[0x150];                                   // 0x0078(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void CancelMatchFillAPot();
-	void Connect(int32 InA, int32 InB, int32 InC, int32 InD, int32 Port);
-	bool ConnectHost(const class FString& HostName, int32 Port);
-	void Disconnect(bool AutomaticalReconnectWhenKeepAlive);
-	int32 GetAccountId();
-	bool GetIsInMatchmaking();
-	struct FBlueprintSessionResult GetTestSessionSearchResult();
-	void InitializeClientsForMatchMaking__DelegateSignature(const TArray<class FString>& UserIds, const TArray<int32>& ObjectiveTeam);
-	void InitializeInstanceId(int32 InstanceId, uint8 IsStaticInstance);
-	void InitializeUnsecureUserId(const class FString& UnsecureUserId, const class FString& Language);
-	void InvalidateAccessToken();
-	bool IsConnected();
-	bool IsTearingDown();
-	void NotifyQuestChange__DelegateSignature(EQuestChangeReason Reason, int64 AccountQuestId);
-	void OnConnectionEstablished();
-	void OnDisconnected();
-	void PlayersFoundForMatchMaking__DelegateSignature();
-	void RequestEarlyAccessItem();
-	void SendServerSystemMessage(const class FString& Message);
-	void SetAccessToken(const class FString& Param_SetAccessToken);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MasterServerManager">();
-	}
-	static class UMasterServerManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMasterServerManager>();
-	}
-};
-static_assert(alignof(UMasterServerManager) == 0x000008, "Wrong alignment on UMasterServerManager");
-static_assert(sizeof(UMasterServerManager) == 0x0001C8, "Wrong size on UMasterServerManager");
-static_assert(offsetof(UMasterServerManager, KeepAlive) == 0x000030, "Member 'UMasterServerManager::KeepAlive' has a wrong offset!");
-static_assert(offsetof(UMasterServerManager, ConnectionTimeout) == 0x000034, "Member 'UMasterServerManager::ConnectionTimeout' has a wrong offset!");
-static_assert(offsetof(UMasterServerManager, CurrentSystemMessage) == 0x000038, "Member 'UMasterServerManager::CurrentSystemMessage' has a wrong offset!");
-static_assert(offsetof(UMasterServerManager, OnClientsInitializedForMatchMaking) == 0x000048, "Member 'UMasterServerManager::OnClientsInitializedForMatchMaking' has a wrong offset!");
-static_assert(offsetof(UMasterServerManager, OnPlayersFoundForMatchMaking) == 0x000058, "Member 'UMasterServerManager::OnPlayersFoundForMatchMaking' has a wrong offset!");
-static_assert(offsetof(UMasterServerManager, OnNotifyQuestChange) == 0x000068, "Member 'UMasterServerManager::OnNotifyQuestChange' has a wrong offset!");
+static_assert(sizeof(UInventorySubsystem) == 0x000110, "Wrong size on UInventorySubsystem");
+static_assert(offsetof(UInventorySubsystem, ServerHostname) == 0x000030, "Member 'UInventorySubsystem::ServerHostname' has a wrong offset!");
+static_assert(offsetof(UInventorySubsystem, ServerPort) == 0x000040, "Member 'UInventorySubsystem::ServerPort' has a wrong offset!");
+static_assert(offsetof(UInventorySubsystem, AccessToken) == 0x000048, "Member 'UInventorySubsystem::AccessToken' has a wrong offset!");
+static_assert(offsetof(UInventorySubsystem, AccountId) == 0x000058, "Member 'UInventorySubsystem::AccountId' has a wrong offset!");
+static_assert(offsetof(UInventorySubsystem, OnInventoryDefinitionsLoaded) == 0x000060, "Member 'UInventorySubsystem::OnInventoryDefinitionsLoaded' has a wrong offset!");
+static_assert(offsetof(UInventorySubsystem, ItemDatabase) == 0x0000A0, "Member 'UInventorySubsystem::ItemDatabase' has a wrong offset!");
+static_assert(offsetof(UInventorySubsystem, AddedItems) == 0x0000F0, "Member 'UInventorySubsystem::AddedItems' has a wrong offset!");
 
 // Class MasterServerPlugin.MasterServerPluginGameModeBase
-// 0x0000 (0x0338 - 0x0338)
+// 0x0000 (0x0328 - 0x0328)
 class AMasterServerPluginGameModeBase final : public AGameModeBase
 {
 public:
@@ -398,18 +369,18 @@ public:
 	}
 };
 static_assert(alignof(AMasterServerPluginGameModeBase) == 0x000008, "Wrong alignment on AMasterServerPluginGameModeBase");
-static_assert(sizeof(AMasterServerPluginGameModeBase) == 0x000338, "Wrong size on AMasterServerPluginGameModeBase");
+static_assert(sizeof(AMasterServerPluginGameModeBase) == 0x000328, "Wrong size on AMasterServerPluginGameModeBase");
 
 // Class MasterServerPlugin.MasterServerSubsystem
 // 0x0018 (0x0048 - 0x0030)
 class UMasterServerSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_1E20[0x10];                                    // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNewMasterServerManager*                NewMasterServerManager;                            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	void SetNewMasterServerManager(class UNewMasterServerManager* Param_SetNewMasterServerManager);
+	void SetNewMasterServerManager(class UNewMasterServerManager* SetNewMasterServerManager_0);
 
 	class UNewMasterServerManager* GetNewMasterServerManager() const;
 
@@ -428,37 +399,38 @@ static_assert(sizeof(UMasterServerSubsystem) == 0x000048, "Wrong size on UMaster
 static_assert(offsetof(UMasterServerSubsystem, NewMasterServerManager) == 0x000040, "Member 'UMasterServerSubsystem::NewMasterServerManager' has a wrong offset!");
 
 // Class MasterServerPlugin.NewMasterServerManager
-// 0x0240 (0x0268 - 0x0028)
+// 0x0250 (0x0278 - 0x0028)
 class UNewMasterServerManager : public UObject
 {
 public:
-	uint8                                         Pad_1E21[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          IsActive;                                          // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AutoReconnect;                                     // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E22[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnNotifyQuestChange;                               // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnNotifyStatChange;                                // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnNotifyItemChange;                                // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceiveRuntimeAccountInfo;                       // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnLogHelper;                                       // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	ERuntimeAccountFlags                          RuntimeFlags;                                      // 0x0088(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E23[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnReceivedShowLocalMessageCommand;                 // 0x0090(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceivedShowSystemMessageCommand;                // 0x00A0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceivedDisconnectFromGameCommand;               // 0x00B0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceivedGenericCommand;                          // 0x00C0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceivedKickPlayerCommand;                       // 0x00D0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceivedShowAccountAction;                       // 0x00E0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceiveTeardownPacketDedicatedServer;            // 0x00F0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E24[0x60];                                    // 0x0100(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnReceivedAccountPresenceUpdate;                   // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReceivedAccountSettings;                         // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E25[0x18];                                    // 0x0180(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UServerBrowser*                         _serverBrowser;                                    // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FString, struct FAccountPresenceEntry> AccountPresenceMap;                                // 0x01A0(0x0050)(NativeAccessSpecifierPrivate)
-	class FString                                 _serverUrl;                                        // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         _remainingReconnectTimeout;                        // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E26[0x64];                                    // 0x0204(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnNotifyTrade;                                     // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceiveRuntimeAccountInfo;                       // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnLogHelper;                                       // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	ERuntimeAccountFlags                          RuntimeFlags;                                      // 0x0098(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnReceivedShowLocalMessageCommand;                 // 0x00A0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceivedShowSystemMessageCommand;                // 0x00B0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceivedDisconnectFromGameCommand;               // 0x00C0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceivedGenericCommand;                          // 0x00D0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceivedKickPlayerCommand;                       // 0x00E0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceivedShowAccountAction;                       // 0x00F0(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceiveTeardownPacketDedicatedServer;            // 0x0100(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0x60];                                     // 0x0110(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnReceivedAccountPresenceUpdate;                   // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReceivedAccountSettings;                         // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_190[0x18];                                     // 0x0190(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UServerBrowser*                         _serverBrowser;                                    // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FString, struct FAccountPresenceEntry> AccountPresenceMap;                                // 0x01B0(0x0050)(NativeAccessSpecifierPrivate)
+	class FString                                 _serverUrl;                                        // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         _remainingReconnectTimeout;                        // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_214[0x64];                                     // 0x0214(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BPTick(float DeltaTime);
@@ -495,35 +467,36 @@ public:
 	}
 };
 static_assert(alignof(UNewMasterServerManager) == 0x000008, "Wrong alignment on UNewMasterServerManager");
-static_assert(sizeof(UNewMasterServerManager) == 0x000268, "Wrong size on UNewMasterServerManager");
+static_assert(sizeof(UNewMasterServerManager) == 0x000278, "Wrong size on UNewMasterServerManager");
 static_assert(offsetof(UNewMasterServerManager, IsActive) == 0x000030, "Member 'UNewMasterServerManager::IsActive' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, AutoReconnect) == 0x000031, "Member 'UNewMasterServerManager::AutoReconnect' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, OnNotifyQuestChange) == 0x000038, "Member 'UNewMasterServerManager::OnNotifyQuestChange' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, OnNotifyStatChange) == 0x000048, "Member 'UNewMasterServerManager::OnNotifyStatChange' has a wrong offset!");
 static_assert(offsetof(UNewMasterServerManager, OnNotifyItemChange) == 0x000058, "Member 'UNewMasterServerManager::OnNotifyItemChange' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceiveRuntimeAccountInfo) == 0x000068, "Member 'UNewMasterServerManager::OnReceiveRuntimeAccountInfo' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnLogHelper) == 0x000078, "Member 'UNewMasterServerManager::OnLogHelper' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, RuntimeFlags) == 0x000088, "Member 'UNewMasterServerManager::RuntimeFlags' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedShowLocalMessageCommand) == 0x000090, "Member 'UNewMasterServerManager::OnReceivedShowLocalMessageCommand' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedShowSystemMessageCommand) == 0x0000A0, "Member 'UNewMasterServerManager::OnReceivedShowSystemMessageCommand' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedDisconnectFromGameCommand) == 0x0000B0, "Member 'UNewMasterServerManager::OnReceivedDisconnectFromGameCommand' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedGenericCommand) == 0x0000C0, "Member 'UNewMasterServerManager::OnReceivedGenericCommand' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedKickPlayerCommand) == 0x0000D0, "Member 'UNewMasterServerManager::OnReceivedKickPlayerCommand' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedShowAccountAction) == 0x0000E0, "Member 'UNewMasterServerManager::OnReceivedShowAccountAction' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceiveTeardownPacketDedicatedServer) == 0x0000F0, "Member 'UNewMasterServerManager::OnReceiveTeardownPacketDedicatedServer' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountPresenceUpdate) == 0x000160, "Member 'UNewMasterServerManager::OnReceivedAccountPresenceUpdate' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountSettings) == 0x000170, "Member 'UNewMasterServerManager::OnReceivedAccountSettings' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, _serverBrowser) == 0x000198, "Member 'UNewMasterServerManager::_serverBrowser' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, AccountPresenceMap) == 0x0001A0, "Member 'UNewMasterServerManager::AccountPresenceMap' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, _serverUrl) == 0x0001F0, "Member 'UNewMasterServerManager::_serverUrl' has a wrong offset!");
-static_assert(offsetof(UNewMasterServerManager, _remainingReconnectTimeout) == 0x000200, "Member 'UNewMasterServerManager::_remainingReconnectTimeout' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnNotifyTrade) == 0x000068, "Member 'UNewMasterServerManager::OnNotifyTrade' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceiveRuntimeAccountInfo) == 0x000078, "Member 'UNewMasterServerManager::OnReceiveRuntimeAccountInfo' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnLogHelper) == 0x000088, "Member 'UNewMasterServerManager::OnLogHelper' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, RuntimeFlags) == 0x000098, "Member 'UNewMasterServerManager::RuntimeFlags' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedShowLocalMessageCommand) == 0x0000A0, "Member 'UNewMasterServerManager::OnReceivedShowLocalMessageCommand' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedShowSystemMessageCommand) == 0x0000B0, "Member 'UNewMasterServerManager::OnReceivedShowSystemMessageCommand' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedDisconnectFromGameCommand) == 0x0000C0, "Member 'UNewMasterServerManager::OnReceivedDisconnectFromGameCommand' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedGenericCommand) == 0x0000D0, "Member 'UNewMasterServerManager::OnReceivedGenericCommand' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedKickPlayerCommand) == 0x0000E0, "Member 'UNewMasterServerManager::OnReceivedKickPlayerCommand' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedShowAccountAction) == 0x0000F0, "Member 'UNewMasterServerManager::OnReceivedShowAccountAction' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceiveTeardownPacketDedicatedServer) == 0x000100, "Member 'UNewMasterServerManager::OnReceiveTeardownPacketDedicatedServer' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountPresenceUpdate) == 0x000170, "Member 'UNewMasterServerManager::OnReceivedAccountPresenceUpdate' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, OnReceivedAccountSettings) == 0x000180, "Member 'UNewMasterServerManager::OnReceivedAccountSettings' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, _serverBrowser) == 0x0001A8, "Member 'UNewMasterServerManager::_serverBrowser' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, AccountPresenceMap) == 0x0001B0, "Member 'UNewMasterServerManager::AccountPresenceMap' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, _serverUrl) == 0x000200, "Member 'UNewMasterServerManager::_serverUrl' has a wrong offset!");
+static_assert(offsetof(UNewMasterServerManager, _remainingReconnectTimeout) == 0x000210, "Member 'UNewMasterServerManager::_remainingReconnectTimeout' has a wrong offset!");
 
 // Class MasterServerPlugin.ServerBrowser
 // 0x00F0 (0x0118 - 0x0028)
 class UServerBrowser final : public UObject
 {
 public:
-	uint8                                         Pad_1E2F[0x18];                                    // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, float>                    PingResults;                                       // 0x0040(0x0050)(NativeAccessSpecifierPrivate)
 	TArray<struct FBlueprintSessionResult>        _serverListCache;                                  // 0x0090(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class UNewMasterServerManager*                _masterServerManager;                              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -574,40 +547,243 @@ static_assert(offsetof(UServerBrowser, OnGameServerPingResult) == 0x0000E8, "Mem
 static_assert(offsetof(UServerBrowser, OnLogHelper) == 0x0000F8, "Member 'UServerBrowser::OnLogHelper' has a wrong offset!");
 static_assert(offsetof(UServerBrowser, OnGameServerListUpdated) == 0x000108, "Member 'UServerBrowser::OnGameServerListUpdated' has a wrong offset!");
 
+// Class MasterServerPlugin.RequestPlayerInventoryProxy
+// 0x0068 (0x0098 - 0x0030)
+class URequestPlayerInventoryProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class URequestPlayerInventoryProxy* RequestPlayerInventory(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& TargetPlayerId);
+
+	void RequestPlayerInventoryResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RequestPlayerInventoryProxy">();
+	}
+	static class URequestPlayerInventoryProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URequestPlayerInventoryProxy>();
+	}
+};
+static_assert(alignof(URequestPlayerInventoryProxy) == 0x000008, "Wrong alignment on URequestPlayerInventoryProxy");
+static_assert(sizeof(URequestPlayerInventoryProxy) == 0x000098, "Wrong size on URequestPlayerInventoryProxy");
+static_assert(offsetof(URequestPlayerInventoryProxy, OnSuccess) == 0x000030, "Member 'URequestPlayerInventoryProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(URequestPlayerInventoryProxy, OnFailure) == 0x000040, "Member 'URequestPlayerInventoryProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.SendTradeRequestProxy
+// 0x0088 (0x00B8 - 0x0030)
+class USendTradeRequestProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x68];                                      // 0x0050(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class USendTradeRequestProxy* SendTradeRequest(class UObject* WorldContextObject, const struct FUniqueNetIdRepl& TargetPlayerId, const TArray<struct FTradingItem>& SendingItems, const TArray<struct FTradingItem>& TargetItems);
+
+	void SendTradeRequestResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SendTradeRequestProxy">();
+	}
+	static class USendTradeRequestProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USendTradeRequestProxy>();
+	}
+};
+static_assert(alignof(USendTradeRequestProxy) == 0x000008, "Wrong alignment on USendTradeRequestProxy");
+static_assert(sizeof(USendTradeRequestProxy) == 0x0000B8, "Wrong size on USendTradeRequestProxy");
+static_assert(offsetof(USendTradeRequestProxy, OnSuccess) == 0x000030, "Member 'USendTradeRequestProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(USendTradeRequestProxy, OnFailure) == 0x000040, "Member 'USendTradeRequestProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.AcceptTradeRequestProxy
+// 0x0040 (0x0070 - 0x0030)
+class UAcceptTradeRequestProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x20];                                      // 0x0050(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAcceptTradeRequestProxy* AcceptTradeRequest(class UObject* WorldContextObject, int64 TradeRequestId);
+
+	void AcceptTradeRequestResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AcceptTradeRequestProxy">();
+	}
+	static class UAcceptTradeRequestProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAcceptTradeRequestProxy>();
+	}
+};
+static_assert(alignof(UAcceptTradeRequestProxy) == 0x000008, "Wrong alignment on UAcceptTradeRequestProxy");
+static_assert(sizeof(UAcceptTradeRequestProxy) == 0x000070, "Wrong size on UAcceptTradeRequestProxy");
+static_assert(offsetof(UAcceptTradeRequestProxy, OnSuccess) == 0x000030, "Member 'UAcceptTradeRequestProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UAcceptTradeRequestProxy, OnFailure) == 0x000040, "Member 'UAcceptTradeRequestProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.RejectTradeRequestProxy
+// 0x0040 (0x0070 - 0x0030)
+class URejectTradeRequestProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x20];                                      // 0x0050(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class URejectTradeRequestProxy* RejectTradeRequest(class UObject* WorldContextObject, int64 TradeRequestId);
+
+	void RejectTradeRequestResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RejectTradeRequestProxy">();
+	}
+	static class URejectTradeRequestProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URejectTradeRequestProxy>();
+	}
+};
+static_assert(alignof(URejectTradeRequestProxy) == 0x000008, "Wrong alignment on URejectTradeRequestProxy");
+static_assert(sizeof(URejectTradeRequestProxy) == 0x000070, "Wrong size on URejectTradeRequestProxy");
+static_assert(offsetof(URejectTradeRequestProxy, OnSuccess) == 0x000030, "Member 'URejectTradeRequestProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(URejectTradeRequestProxy, OnFailure) == 0x000040, "Member 'URejectTradeRequestProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.CancelTradeRequestProxy
+// 0x0040 (0x0070 - 0x0030)
+class UCancelTradeRequestProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x20];                                      // 0x0050(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UCancelTradeRequestProxy* CancelTradeRequest(class UObject* WorldContextObject, int64 TradeRequestId);
+
+	void CancelTradeRequestResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"CancelTradeRequestProxy">();
+	}
+	static class UCancelTradeRequestProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCancelTradeRequestProxy>();
+	}
+};
+static_assert(alignof(UCancelTradeRequestProxy) == 0x000008, "Wrong alignment on UCancelTradeRequestProxy");
+static_assert(sizeof(UCancelTradeRequestProxy) == 0x000070, "Wrong size on UCancelTradeRequestProxy");
+static_assert(offsetof(UCancelTradeRequestProxy, OnSuccess) == 0x000030, "Member 'UCancelTradeRequestProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UCancelTradeRequestProxy, OnFailure) == 0x000040, "Member 'UCancelTradeRequestProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.GetIncomingTradeRequestsProxy
+// 0x0038 (0x0068 - 0x0030)
+class UGetIncomingTradeRequestsProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x18];                                      // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UGetIncomingTradeRequestsProxy* GetIncomingTradeRequests(class UObject* WorldContextObject);
+
+	void GetIncomingTradeRequestsResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GetIncomingTradeRequestsProxy">();
+	}
+	static class UGetIncomingTradeRequestsProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGetIncomingTradeRequestsProxy>();
+	}
+};
+static_assert(alignof(UGetIncomingTradeRequestsProxy) == 0x000008, "Wrong alignment on UGetIncomingTradeRequestsProxy");
+static_assert(sizeof(UGetIncomingTradeRequestsProxy) == 0x000068, "Wrong size on UGetIncomingTradeRequestsProxy");
+static_assert(offsetof(UGetIncomingTradeRequestsProxy, OnSuccess) == 0x000030, "Member 'UGetIncomingTradeRequestsProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UGetIncomingTradeRequestsProxy, OnFailure) == 0x000040, "Member 'UGetIncomingTradeRequestsProxy::OnFailure' has a wrong offset!");
+
+// Class MasterServerPlugin.GetOutgoingTradeRequestsProxy
+// 0x0038 (0x0068 - 0x0030)
+class UGetOutgoingTradeRequestsProxy final : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x18];                                      // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UGetOutgoingTradeRequestsProxy* GetOutgoingTradeRequests(class UObject* WorldContextObject);
+
+	void GetOutgoingTradeRequestsResponse(class UVaRestRequestJSON* Request);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GetOutgoingTradeRequestsProxy">();
+	}
+	static class UGetOutgoingTradeRequestsProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGetOutgoingTradeRequestsProxy>();
+	}
+};
+static_assert(alignof(UGetOutgoingTradeRequestsProxy) == 0x000008, "Wrong alignment on UGetOutgoingTradeRequestsProxy");
+static_assert(sizeof(UGetOutgoingTradeRequestsProxy) == 0x000068, "Wrong size on UGetOutgoingTradeRequestsProxy");
+static_assert(offsetof(UGetOutgoingTradeRequestsProxy, OnSuccess) == 0x000030, "Member 'UGetOutgoingTradeRequestsProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UGetOutgoingTradeRequestsProxy, OnFailure) == 0x000040, "Member 'UGetOutgoingTradeRequestsProxy::OnFailure' has a wrong offset!");
+
 // Class MasterServerPlugin.WitchItPacket
 // 0x0018 (0x0040 - 0x0028)
 class UWitchItPacket final : public UObject
 {
 public:
 	int32                                         PacketType;                                        // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E30[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 Payload;                                           // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	bool ParseFromBytes(const TArray<uint8>& Bytes);
-	void PutArray(const TArray<uint8>& Bytes, int32 Param_Index, int32* AdvancedPosition);
-	void PutFloat32(float Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutInt16(int16 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutInt32(int32 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutInt64(int64 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutInt8(int8 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutString(const class FString& Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutUInt16(uint16 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutUInt32(uint32 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutUInt64(uint64 Value, int32 Param_Index, int32* AdvancedPosition);
-	void PutUInt8(uint8 Value, int32 Param_Index, int32* AdvancedPosition);
+	void PutArray(const TArray<uint8>& Bytes, int32 Index_0, int32* AdvancedPosition);
+	void PutFloat32(float Value, int32 Index_0, int32* AdvancedPosition);
+	void PutInt16(int16 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutInt32(int32 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutInt64(int64 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutInt8(int8 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutString(const class FString& Value, int32 Index_0, int32* AdvancedPosition);
+	void PutUInt16(uint16 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutUInt32(uint32 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutUInt64(uint64 Value, int32 Index_0, int32* AdvancedPosition);
+	void PutUInt8(uint8 Value, int32 Index_0, int32* AdvancedPosition);
 
-	TArray<uint8> ReadBytes(int32 Param_Index, int32* AdvancedPosition) const;
-	float ReadFloat32(int32 Param_Index, int32* AdvancedPosition) const;
-	int16 ReadInt16(int32 Param_Index, int32* AdvancedPosition) const;
-	int32 ReadInt32(int32 Param_Index, int32* AdvancedPosition) const;
-	int64 ReadInt64(int32 Param_Index, int32* AdvancedPosition) const;
-	int8 ReadInt8(int32 Param_Index, int32* AdvancedPosition) const;
-	class FString ReadString(int32 Param_Index, int32* AdvancedPosition) const;
-	uint16 ReadUInt16(int32 Param_Index, int32* AdvancedPosition) const;
-	uint32 ReadUInt32(int32 Param_Index, int32* AdvancedPosition) const;
-	uint64 ReadUInt64(int32 Param_Index, int32* AdvancedPosition) const;
-	uint8 ReadUInt8(int32 Param_Index, int32* AdvancedPosition) const;
+	TArray<uint8> ReadBytes(int32 Index_0, int32* AdvancedPosition) const;
+	float ReadFloat32(int32 Index_0, int32* AdvancedPosition) const;
+	int16 ReadInt16(int32 Index_0, int32* AdvancedPosition) const;
+	int32 ReadInt32(int32 Index_0, int32* AdvancedPosition) const;
+	int64 ReadInt64(int32 Index_0, int32* AdvancedPosition) const;
+	int8 ReadInt8(int32 Index_0, int32* AdvancedPosition) const;
+	class FString ReadString(int32 Index_0, int32* AdvancedPosition) const;
+	uint16 ReadUInt16(int32 Index_0, int32* AdvancedPosition) const;
+	uint32 ReadUInt32(int32 Index_0, int32* AdvancedPosition) const;
+	uint64 ReadUInt64(int32 Index_0, int32* AdvancedPosition) const;
+	uint8 ReadUInt8(int32 Index_0, int32* AdvancedPosition) const;
 	TArray<uint8> SerializeToBytes() const;
 
 public:

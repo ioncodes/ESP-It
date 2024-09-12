@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WhirlwindVolume.B_WhirlwindVolume_C
-// 0x00F0 (0x0388 - 0x0298)
+// 0x00F0 (0x0380 - 0x0290)
 class AB_WhirlwindVolume_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cube;                                              // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        Destination;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       InnerSphere;                                       // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TMap<class AActor*, double>                   CharactersOutSideTime;                             // 0x02C8(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	double                                        MoveInZDelta;                                      // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         OverlapActors;                                     // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TMap<class AActor*, class UNiagaraComponent*> Trails;                                            // 0x0330(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, ContainsInstancedReference)
-	class UNiagaraSystem*                         TrailEffect;                                       // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Cube;                                              // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        Destination;                                       // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       InnerSphere;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TMap<class AActor*, double>                   CharactersOutSideTime;                             // 0x02C0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	double                                        MoveInZDelta;                                      // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         OverlapActors;                                     // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TMap<class AActor*, class UNiagaraComponent*> Trails;                                            // 0x0328(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, ContainsInstancedReference)
+	class UNiagaraSystem*                         TrailEffect;                                       // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__B_WhirlwindVolume_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -58,18 +58,18 @@ public:
 	}
 };
 static_assert(alignof(AB_WhirlwindVolume_C) == 0x000008, "Wrong alignment on AB_WhirlwindVolume_C");
-static_assert(sizeof(AB_WhirlwindVolume_C) == 0x000388, "Wrong size on AB_WhirlwindVolume_C");
-static_assert(offsetof(AB_WhirlwindVolume_C, UberGraphFrame) == 0x000298, "Member 'AB_WhirlwindVolume_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, Cube) == 0x0002A0, "Member 'AB_WhirlwindVolume_C::Cube' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, Box) == 0x0002A8, "Member 'AB_WhirlwindVolume_C::Box' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, Destination) == 0x0002B0, "Member 'AB_WhirlwindVolume_C::Destination' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, InnerSphere) == 0x0002B8, "Member 'AB_WhirlwindVolume_C::InnerSphere' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, DefaultSceneRoot) == 0x0002C0, "Member 'AB_WhirlwindVolume_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, CharactersOutSideTime) == 0x0002C8, "Member 'AB_WhirlwindVolume_C::CharactersOutSideTime' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, MoveInZDelta) == 0x000318, "Member 'AB_WhirlwindVolume_C::MoveInZDelta' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, OverlapActors) == 0x000320, "Member 'AB_WhirlwindVolume_C::OverlapActors' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, Trails) == 0x000330, "Member 'AB_WhirlwindVolume_C::Trails' has a wrong offset!");
-static_assert(offsetof(AB_WhirlwindVolume_C, TrailEffect) == 0x000380, "Member 'AB_WhirlwindVolume_C::TrailEffect' has a wrong offset!");
+static_assert(sizeof(AB_WhirlwindVolume_C) == 0x000380, "Wrong size on AB_WhirlwindVolume_C");
+static_assert(offsetof(AB_WhirlwindVolume_C, UberGraphFrame) == 0x000290, "Member 'AB_WhirlwindVolume_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, Cube) == 0x000298, "Member 'AB_WhirlwindVolume_C::Cube' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, Box) == 0x0002A0, "Member 'AB_WhirlwindVolume_C::Box' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, Destination) == 0x0002A8, "Member 'AB_WhirlwindVolume_C::Destination' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, InnerSphere) == 0x0002B0, "Member 'AB_WhirlwindVolume_C::InnerSphere' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, DefaultSceneRoot) == 0x0002B8, "Member 'AB_WhirlwindVolume_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, CharactersOutSideTime) == 0x0002C0, "Member 'AB_WhirlwindVolume_C::CharactersOutSideTime' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, MoveInZDelta) == 0x000310, "Member 'AB_WhirlwindVolume_C::MoveInZDelta' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, OverlapActors) == 0x000318, "Member 'AB_WhirlwindVolume_C::OverlapActors' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, Trails) == 0x000328, "Member 'AB_WhirlwindVolume_C::Trails' has a wrong offset!");
+static_assert(offsetof(AB_WhirlwindVolume_C, TrailEffect) == 0x000378, "Member 'AB_WhirlwindVolume_C::TrailEffect' has a wrong offset!");
 
 }
 

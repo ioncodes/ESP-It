@@ -34,9 +34,9 @@ void AB_BuffHunterCooldown_C::BuffEnd()
 // Function B_BuffHunterCooldown.B_BuffHunterCooldown_C.BuffStart
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterCooldown_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
+void AB_BuffHunterCooldown_C::BuffStart(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -45,7 +45,7 @@ void AB_BuffHunterCooldown_C::BuffStart(class AB_PlayerState_C* Param_PlayerStat
 
 	Params::B_BuffHunterCooldown_C_BuffStart Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -114,12 +114,12 @@ void AB_BuffHunterCooldown_C::SetSkillCooldownValues(class UB_BaseSkill_C* Movem
 // Function B_BuffHunterCooldown.B_BuffHunterCooldown_C.SetSkillCooldownValuesMulti
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UB_BaseSkill_C*                   Param_MovementSkill                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_BaseSkill_C*                   MovementSkill_0                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  MovementSkillCooldown                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UB_BaseSkill_C*                   Param_UtilitySkill                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_BaseSkill_C*                   UtilitySkill_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // double                                  UtilitySkillCooldown                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_BuffHunterCooldown_C::SetSkillCooldownValuesMulti(const class UB_BaseSkill_C* Param_MovementSkill, const double MovementSkillCooldown, class UB_BaseSkill_C* Param_UtilitySkill, double UtilitySkillCooldown)
+void AB_BuffHunterCooldown_C::SetSkillCooldownValuesMulti(const class UB_BaseSkill_C* MovementSkill_0, const double MovementSkillCooldown, class UB_BaseSkill_C* UtilitySkill_0, double UtilitySkillCooldown)
 {
 	static class UFunction* Func = nullptr;
 
@@ -128,9 +128,9 @@ void AB_BuffHunterCooldown_C::SetSkillCooldownValuesMulti(const class UB_BaseSki
 
 	Params::B_BuffHunterCooldown_C_SetSkillCooldownValuesMulti Parms{};
 
-	Parms.Param_MovementSkill = Param_MovementSkill;
+	Parms.MovementSkill_0 = MovementSkill_0;
 	Parms.MovementSkillCooldown = MovementSkillCooldown;
-	Parms.Param_UtilitySkill = Param_UtilitySkill;
+	Parms.UtilitySkill_0 = UtilitySkill_0;
 	Parms.UtilitySkillCooldown = UtilitySkillCooldown;
 
 	UObject::ProcessEvent(Func, &Parms);

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_VoodooEndInteractionActor.B_VoodooEndInteractionActor_C
-// 0x0028 (0x0340 - 0x0318)
+// 0x0028 (0x0330 - 0x0308)
 class AB_VoodooEndInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_VoodooEndInteractionActor_C;      // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_Timer_C*                             FireTimer;                                         // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        FireAudio;                                         // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               FireParticles;                                     // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReadyForCompletion;                                // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_VoodooEndInteractionActor_C;      // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_Timer_C*                             FireTimer;                                         // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        FireAudio;                                         // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               FireParticles;                                     // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReadyForCompletion;                                // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -47,12 +47,12 @@ public:
 	}
 };
 static_assert(alignof(AB_VoodooEndInteractionActor_C) == 0x000008, "Wrong alignment on AB_VoodooEndInteractionActor_C");
-static_assert(sizeof(AB_VoodooEndInteractionActor_C) == 0x000340, "Wrong size on AB_VoodooEndInteractionActor_C");
-static_assert(offsetof(AB_VoodooEndInteractionActor_C, UberGraphFrame_B_VoodooEndInteractionActor_C) == 0x000318, "Member 'AB_VoodooEndInteractionActor_C::UberGraphFrame_B_VoodooEndInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_VoodooEndInteractionActor_C, FireTimer) == 0x000320, "Member 'AB_VoodooEndInteractionActor_C::FireTimer' has a wrong offset!");
-static_assert(offsetof(AB_VoodooEndInteractionActor_C, FireAudio) == 0x000328, "Member 'AB_VoodooEndInteractionActor_C::FireAudio' has a wrong offset!");
-static_assert(offsetof(AB_VoodooEndInteractionActor_C, FireParticles) == 0x000330, "Member 'AB_VoodooEndInteractionActor_C::FireParticles' has a wrong offset!");
-static_assert(offsetof(AB_VoodooEndInteractionActor_C, ReadyForCompletion) == 0x000338, "Member 'AB_VoodooEndInteractionActor_C::ReadyForCompletion' has a wrong offset!");
+static_assert(sizeof(AB_VoodooEndInteractionActor_C) == 0x000330, "Wrong size on AB_VoodooEndInteractionActor_C");
+static_assert(offsetof(AB_VoodooEndInteractionActor_C, UberGraphFrame_B_VoodooEndInteractionActor_C) == 0x000308, "Member 'AB_VoodooEndInteractionActor_C::UberGraphFrame_B_VoodooEndInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_VoodooEndInteractionActor_C, FireTimer) == 0x000310, "Member 'AB_VoodooEndInteractionActor_C::FireTimer' has a wrong offset!");
+static_assert(offsetof(AB_VoodooEndInteractionActor_C, FireAudio) == 0x000318, "Member 'AB_VoodooEndInteractionActor_C::FireAudio' has a wrong offset!");
+static_assert(offsetof(AB_VoodooEndInteractionActor_C, FireParticles) == 0x000320, "Member 'AB_VoodooEndInteractionActor_C::FireParticles' has a wrong offset!");
+static_assert(offsetof(AB_VoodooEndInteractionActor_C, ReadyForCompletion) == 0x000328, "Member 'AB_VoodooEndInteractionActor_C::ReadyForCompletion' has a wrong offset!");
 
 }
 

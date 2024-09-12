@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 #include "S_PowerupRules_structs.hpp"
 
 
@@ -27,17 +27,17 @@ public:
 	int32                                         ChangedRulesCounter;                               // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3902[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3903[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_PowerupRules                        CallFunc_Array_Get_Item;                           // 0x0030(0x0018)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPowerupUsingRules_IsUsingRules;         // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3904[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPowerupParameters*                     CallFunc_Map_Find_Value;                           // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -70,32 +70,68 @@ static_assert(sizeof(B_PowerupParametersSubsystem_C_ExecuteUbergraph_B_PowerupPa
 static_assert(offsetof(B_PowerupParametersSubsystem_C_ExecuteUbergraph_B_PowerupParametersSubsystem, EntryPoint) == 0x000000, "Member 'B_PowerupParametersSubsystem_C_ExecuteUbergraph_B_PowerupParametersSubsystem::EntryPoint' has a wrong offset!");
 
 // Function B_PowerupParametersSubsystem.B_PowerupParametersSubsystem_C.GetDefaultPowerupParameterValue
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue final
 {
 public:
 	E_PowerupRuleType                             PowerupType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3905[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIParameterData                       UIParameter;                                       // 0x0008(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FUIParam                               DefaultValue;                                      // 0x0080(0x0014)(Parm, OutParm, NoDestructor)
-	uint8                                         Pad_3906[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPowerupParameters*                     CallFunc_Map_Find_Value;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3907[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x00B8(0x0014)(NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       UIParameter;                                       // 0x0008(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIParam                               DefaultValue;                                      // 0x0068(0x0014)(Parm, OutParm, NoDestructor)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPowerupParameters*                     CallFunc_Map_Find_Value;                           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x00A0(0x0014)(NoDestructor)
 };
 static_assert(alignof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue) == 0x000008, "Wrong alignment on B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue");
-static_assert(sizeof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue) == 0x0000D0, "Wrong size on B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue");
+static_assert(sizeof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue) == 0x0000B8, "Wrong size on B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue");
 static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, PowerupType) == 0x000000, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::PowerupType' has a wrong offset!");
 static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, UIParameter) == 0x000008, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::UIParameter' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, DefaultValue) == 0x000080, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::DefaultValue' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_Map_Find_Value) == 0x000098, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_GetObjectClass_ReturnValue) == 0x0000A8, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_GetDefaultObject_ReturnValue) == 0x0000B0, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_GetParameterValue_ReturnValue) == 0x0000B8, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_GetParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, DefaultValue) == 0x000068, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::DefaultValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_Map_Find_Value) == 0x000080, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_Map_Find_ReturnValue) == 0x000088, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_GetObjectClass_ReturnValue) == 0x000090, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_GetDefaultObject_ReturnValue) == 0x000098, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue, CallFunc_GetParameterValue_ReturnValue) == 0x0000A0, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValue::CallFunc_GetParameterValue_ReturnValue' has a wrong offset!");
+
+// Function B_PowerupParametersSubsystem.B_PowerupParametersSubsystem_C.GetDefaultPowerupParameterValues
+// 0x00C8 (0x00C8 - 0x0000)
+struct B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues final
+{
+public:
+	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	E_PowerupRuleType                             PowerupType;                                       // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUIParam>                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm)
+	TArray<struct FUIParam>                       DefaultParams;                                     // 0x0028(0x0010)(Edit, BlueprintVisible)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x0048(0x0060)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetDefaultPowerupParameterValue_DefaultValue; // 0x00B0(0x0014)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues) == 0x000008, "Wrong alignment on B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues");
+static_assert(sizeof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues) == 0x0000C8, "Wrong size on B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, UIParameters) == 0x000000, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::UIParameters' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, PowerupType) == 0x000010, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::PowerupType' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, ReturnValue) == 0x000018, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, DefaultParams) == 0x000028, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::DefaultParams' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, CallFunc_Array_Get_Item) == 0x000048, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, CallFunc_Less_IntInt_ReturnValue) == 0x0000A8, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, CallFunc_Add_IntInt_ReturnValue) == 0x0000AC, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, CallFunc_GetDefaultPowerupParameterValue_DefaultValue) == 0x0000B0, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::CallFunc_GetDefaultPowerupParameterValue_DefaultValue' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'B_PowerupParametersSubsystem_C_GetDefaultPowerupParameterValues::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_PowerupParametersSubsystem.B_PowerupParametersSubsystem_C.GetPowerupParameters
 // 0x0020 (0x0020 - 0x0000)
@@ -103,15 +139,15 @@ struct B_PowerupParametersSubsystem_C_GetPowerupParameters final
 {
 public:
 	E_PowerupRuleType                             Powerup;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3908[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPowerupParameters*                     Param_PowerupParameters;                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPowerupParameters*                     PowerupParameters_0;                               // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPowerupParameters*                     CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PowerupParametersSubsystem_C_GetPowerupParameters) == 0x000008, "Wrong alignment on B_PowerupParametersSubsystem_C_GetPowerupParameters");
 static_assert(sizeof(B_PowerupParametersSubsystem_C_GetPowerupParameters) == 0x000020, "Wrong size on B_PowerupParametersSubsystem_C_GetPowerupParameters");
 static_assert(offsetof(B_PowerupParametersSubsystem_C_GetPowerupParameters, Powerup) == 0x000000, "Member 'B_PowerupParametersSubsystem_C_GetPowerupParameters::Powerup' has a wrong offset!");
-static_assert(offsetof(B_PowerupParametersSubsystem_C_GetPowerupParameters, Param_PowerupParameters) == 0x000008, "Member 'B_PowerupParametersSubsystem_C_GetPowerupParameters::Param_PowerupParameters' has a wrong offset!");
+static_assert(offsetof(B_PowerupParametersSubsystem_C_GetPowerupParameters, PowerupParameters_0) == 0x000008, "Member 'B_PowerupParametersSubsystem_C_GetPowerupParameters::PowerupParameters_0' has a wrong offset!");
 static_assert(offsetof(B_PowerupParametersSubsystem_C_GetPowerupParameters, CallFunc_Map_Find_Value) == 0x000010, "Member 'B_PowerupParametersSubsystem_C_GetPowerupParameters::CallFunc_Map_Find_Value' has a wrong offset!");
 static_assert(offsetof(B_PowerupParametersSubsystem_C_GetPowerupParameters, CallFunc_Map_Find_ReturnValue) == 0x000018, "Member 'B_PowerupParametersSubsystem_C_GetPowerupParameters::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
@@ -121,11 +157,11 @@ struct B_PowerupParametersSubsystem_C_GetUIParameters final
 {
 public:
 	E_PowerupRuleType                             PowerupType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3909[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0008(0x0010)(Parm, OutParm)
 	class UPowerupParameters*                     CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_390A[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_ReturnValue;              // 0x0028(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_PowerupParametersSubsystem_C_GetUIParameters) == 0x000008, "Wrong alignment on B_PowerupParametersSubsystem_C_GetUIParameters");
@@ -146,20 +182,20 @@ public:
 	E_PowerupRuleType                             Temp_byte_Variable_2;                              // 0x0002(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_PowerupRuleType                             Temp_byte_Variable_3;                              // 0x0003(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_PowerupRuleType                             Temp_byte_Variable_4;                              // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_390B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_WitchConfusionWaveParameters_C*      CallFunc_CreateObject_Object;                      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_PowerupRuleType                             Temp_byte_Variable_5;                              // 0x0010(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_390C[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_WitchInvisibleParameters_C*          CallFunc_CreateObject_Object_1;                    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_WitchHealParameters_C*               CallFunc_CreateObject_Object_2;                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_WitchManaBoostParameters_C*          CallFunc_CreateObject_Object_3;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_PowerupRuleType                             Temp_byte_Variable_6;                              // 0x0030(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_390D[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_HunterDetectionParameters_C*         CallFunc_CreateObject_Object_4;                    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_HunterSpeedboostParameters_C*        CallFunc_CreateObject_Object_5;                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_HunterRapidFireParameters_C*         CallFunc_CreateObject_Object_6;                    // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_PowerupRuleType                             Temp_byte_Variable_7;                              // 0x0050(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_390E[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_HunterCooldownReductionParameters_C* CallFunc_CreateObject_Object_7;                    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PowerupParametersSubsystem_C_InitializeDefaultPowerups) == 0x000008, "Wrong alignment on B_PowerupParametersSubsystem_C_InitializeDefaultPowerups");
@@ -188,10 +224,10 @@ struct B_PowerupParametersSubsystem_C_IsPowerupUsingRules final
 public:
 	E_PowerupRuleType                             PowerupType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsingRules;                                      // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_390F[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPowerupParameters*                     CallFunc_Map_Find_Value;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3910[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AreParametersEqual_ReturnValue;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

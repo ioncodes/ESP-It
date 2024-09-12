@@ -55,9 +55,9 @@ void AB_ObjectiveGameMode_C::CheckEndMatchWitchesDead()
 // Function B_ObjectiveGameMode.B_ObjectiveGameMode_C.CheckForOverTime
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_OverTime                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    OverTime_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_ObjectiveGameMode_C::CheckForOverTime(bool* Param_OverTime)
+void AB_ObjectiveGameMode_C::CheckForOverTime(bool* OverTime_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -68,8 +68,8 @@ void AB_ObjectiveGameMode_C::CheckForOverTime(bool* Param_OverTime)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_OverTime != nullptr)
-		*Param_OverTime = Parms.Param_OverTime;
+	if (OverTime_0 != nullptr)
+		*OverTime_0 = Parms.OverTime_0;
 }
 
 
@@ -374,7 +374,7 @@ void AB_ObjectiveGameMode_C::HandleEndMatchOverride(ETeamID WinnerTeam, bool For
 
 
 // Function B_ObjectiveGameMode.B_ObjectiveGameMode_C.HandleGrantExp
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AB_PlayerState_C*                 CurrentPlayerState                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   TotalGrantedXp                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -721,9 +721,9 @@ void AB_ObjectiveGameMode_C::StartNewGame(bool RestartByPlayerJoin)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    RestartByPlayerJoin                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_StartNewGame                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    StartNewGame_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_ObjectiveGameMode_C::StartNewGameOverride(bool RestartByPlayerJoin, bool* Param_StartNewGame)
+void AB_ObjectiveGameMode_C::StartNewGameOverride(bool RestartByPlayerJoin, bool* StartNewGame_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -736,8 +736,8 @@ void AB_ObjectiveGameMode_C::StartNewGameOverride(bool RestartByPlayerJoin, bool
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_StartNewGame != nullptr)
-		*Param_StartNewGame = Parms.Param_StartNewGame;
+	if (StartNewGame_0 != nullptr)
+		*StartNewGame_0 = Parms.StartNewGame_0;
 }
 
 
@@ -745,9 +745,9 @@ void AB_ObjectiveGameMode_C::StartNewGameOverride(bool RestartByPlayerJoin, bool
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // E_ObjectiveTeam                         SurrenderObjectiveTeam                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ETeamID                                 Param_SurrenderTeam                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 SurrenderTeam_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_ObjectiveGameMode_C::SurrenderTeam(E_ObjectiveTeam SurrenderObjectiveTeam, ETeamID Param_SurrenderTeam)
+void AB_ObjectiveGameMode_C::SurrenderTeam(E_ObjectiveTeam SurrenderObjectiveTeam, ETeamID SurrenderTeam_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -757,7 +757,7 @@ void AB_ObjectiveGameMode_C::SurrenderTeam(E_ObjectiveTeam SurrenderObjectiveTea
 	Params::B_ObjectiveGameMode_C_SurrenderTeam Parms{};
 
 	Parms.SurrenderObjectiveTeam = SurrenderObjectiveTeam;
-	Parms.Param_SurrenderTeam = Param_SurrenderTeam;
+	Parms.SurrenderTeam_0 = SurrenderTeam_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

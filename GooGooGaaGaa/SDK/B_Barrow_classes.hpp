@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "B_MultiStaticMeshProp_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_Barrow_C;                         // 0x05B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UPhysicsConstraintComponent*            PhysicsConstraint;                                 // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   Wheel;                                             // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F5C[0x8];                                     // 0x05C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C8[0x8];                                      // 0x05C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             LocalTransform;                                    // 0x05D0(0x0060)(Edit, BlueprintVisible, Net, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

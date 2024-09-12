@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "MovieScene_structs.hpp"
-#include "MovieSceneTracks_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "MovieScene_structs.hpp"
+#include "Engine_structs.hpp"
+#include "MovieSceneTracks_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,28 +52,6 @@ public:
 static_assert(alignof(MovieScene3DConstraintSection_GetConstraintBindingID) == 0x000004, "Wrong alignment on MovieScene3DConstraintSection_GetConstraintBindingID");
 static_assert(sizeof(MovieScene3DConstraintSection_GetConstraintBindingID) == 0x000018, "Wrong size on MovieScene3DConstraintSection_GetConstraintBindingID");
 static_assert(offsetof(MovieScene3DConstraintSection_GetConstraintBindingID, ReturnValue) == 0x000000, "Member 'MovieScene3DConstraintSection_GetConstraintBindingID::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneCVarSection.SetFromString
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneCVarSection_SetFromString final
-{
-public:
-	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneCVarSection_SetFromString) == 0x000008, "Wrong alignment on MovieSceneCVarSection_SetFromString");
-static_assert(sizeof(MovieSceneCVarSection_SetFromString) == 0x000010, "Wrong size on MovieSceneCVarSection_SetFromString");
-static_assert(offsetof(MovieSceneCVarSection_SetFromString, InString) == 0x000000, "Member 'MovieSceneCVarSection_SetFromString::InString' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneCVarSection.GetString
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneCVarSection_GetString final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneCVarSection_GetString) == 0x000008, "Wrong alignment on MovieSceneCVarSection_GetString");
-static_assert(sizeof(MovieSceneCVarSection_GetString) == 0x000010, "Wrong size on MovieSceneCVarSection_GetString");
-static_assert(offsetof(MovieSceneCVarSection_GetString, ReturnValue) == 0x000000, "Member 'MovieSceneCVarSection_GetString::ReturnValue' has a wrong offset!");
 
 // Function MovieSceneTracks.MovieSceneAudioSection.SetAttenuationSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -251,6 +229,284 @@ static_assert(alignof(MovieSceneCinematicShotSection_GetShotDisplayName) == 0x00
 static_assert(sizeof(MovieSceneCinematicShotSection_GetShotDisplayName) == 0x000010, "Wrong size on MovieSceneCinematicShotSection_GetShotDisplayName");
 static_assert(offsetof(MovieSceneCinematicShotSection_GetShotDisplayName, ReturnValue) == 0x000000, "Member 'MovieSceneCinematicShotSection_GetShotDisplayName::ReturnValue' has a wrong offset!");
 
+// Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.AddColorParameterKey
+// 0x0048 (0x0048 - 0x0000)
+struct MovieSceneComponentMaterialParameterSection_AddColorParameterKey final
+{
+public:
+	struct FMaterialParameterInfo                 InParameterInfo;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0010(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           InValue;                                           // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 InLayerName;                                       // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InAssetName;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey) == 0x000008, "Wrong alignment on MovieSceneComponentMaterialParameterSection_AddColorParameterKey");
+static_assert(sizeof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey) == 0x000048, "Wrong size on MovieSceneComponentMaterialParameterSection_AddColorParameterKey");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey, InParameterInfo) == 0x000000, "Member 'MovieSceneComponentMaterialParameterSection_AddColorParameterKey::InParameterInfo' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey, InTime) == 0x000010, "Member 'MovieSceneComponentMaterialParameterSection_AddColorParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey, InValue) == 0x000014, "Member 'MovieSceneComponentMaterialParameterSection_AddColorParameterKey::InValue' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey, InLayerName) == 0x000028, "Member 'MovieSceneComponentMaterialParameterSection_AddColorParameterKey::InLayerName' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddColorParameterKey, InAssetName) == 0x000038, "Member 'MovieSceneComponentMaterialParameterSection_AddColorParameterKey::InAssetName' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.AddScalarParameterKey
+// 0x0038 (0x0038 - 0x0000)
+struct MovieSceneComponentMaterialParameterSection_AddScalarParameterKey final
+{
+public:
+	struct FMaterialParameterInfo                 InParameterInfo;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0010(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InLayerName;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InAssetName;                                       // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey) == 0x000008, "Wrong alignment on MovieSceneComponentMaterialParameterSection_AddScalarParameterKey");
+static_assert(sizeof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey) == 0x000038, "Wrong size on MovieSceneComponentMaterialParameterSection_AddScalarParameterKey");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey, InParameterInfo) == 0x000000, "Member 'MovieSceneComponentMaterialParameterSection_AddScalarParameterKey::InParameterInfo' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey, InTime) == 0x000010, "Member 'MovieSceneComponentMaterialParameterSection_AddScalarParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey, InValue) == 0x000014, "Member 'MovieSceneComponentMaterialParameterSection_AddScalarParameterKey::InValue' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey, InLayerName) == 0x000018, "Member 'MovieSceneComponentMaterialParameterSection_AddScalarParameterKey::InLayerName' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_AddScalarParameterKey, InAssetName) == 0x000028, "Member 'MovieSceneComponentMaterialParameterSection_AddScalarParameterKey::InAssetName' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.RemoveColorParameter
+// 0x0014 (0x0014 - 0x0000)
+struct MovieSceneComponentMaterialParameterSection_RemoveColorParameter final
+{
+public:
+	struct FMaterialParameterInfo                 InParameterInfo;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneComponentMaterialParameterSection_RemoveColorParameter) == 0x000004, "Wrong alignment on MovieSceneComponentMaterialParameterSection_RemoveColorParameter");
+static_assert(sizeof(MovieSceneComponentMaterialParameterSection_RemoveColorParameter) == 0x000014, "Wrong size on MovieSceneComponentMaterialParameterSection_RemoveColorParameter");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_RemoveColorParameter, InParameterInfo) == 0x000000, "Member 'MovieSceneComponentMaterialParameterSection_RemoveColorParameter::InParameterInfo' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_RemoveColorParameter, ReturnValue) == 0x000010, "Member 'MovieSceneComponentMaterialParameterSection_RemoveColorParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneComponentMaterialParameterSection.RemoveScalarParameter
+// 0x0014 (0x0014 - 0x0000)
+struct MovieSceneComponentMaterialParameterSection_RemoveScalarParameter final
+{
+public:
+	struct FMaterialParameterInfo                 InParameterInfo;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneComponentMaterialParameterSection_RemoveScalarParameter) == 0x000004, "Wrong alignment on MovieSceneComponentMaterialParameterSection_RemoveScalarParameter");
+static_assert(sizeof(MovieSceneComponentMaterialParameterSection_RemoveScalarParameter) == 0x000014, "Wrong size on MovieSceneComponentMaterialParameterSection_RemoveScalarParameter");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_RemoveScalarParameter, InParameterInfo) == 0x000000, "Member 'MovieSceneComponentMaterialParameterSection_RemoveScalarParameter::InParameterInfo' has a wrong offset!");
+static_assert(offsetof(MovieSceneComponentMaterialParameterSection_RemoveScalarParameter, ReturnValue) == 0x000010, "Member 'MovieSceneComponentMaterialParameterSection_RemoveScalarParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneParameterSection_AddBoolParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InValue;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_AddBoolParameterKey) == 0x000004, "Wrong alignment on MovieSceneParameterSection_AddBoolParameterKey");
+static_assert(sizeof(MovieSceneParameterSection_AddBoolParameterKey) == 0x000010, "Wrong size on MovieSceneParameterSection_AddBoolParameterKey");
+static_assert(offsetof(MovieSceneParameterSection_AddBoolParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddBoolParameterKey::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddBoolParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddBoolParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddBoolParameterKey, InValue) == 0x00000C, "Member 'MovieSceneParameterSection_AddBoolParameterKey::InValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.AddColorParameterKey
+// 0x001C (0x001C - 0x0000)
+struct MovieSceneParameterSection_AddColorParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           InValue;                                           // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneParameterSection_AddColorParameterKey) == 0x000004, "Wrong alignment on MovieSceneParameterSection_AddColorParameterKey");
+static_assert(sizeof(MovieSceneParameterSection_AddColorParameterKey) == 0x00001C, "Wrong size on MovieSceneParameterSection_AddColorParameterKey");
+static_assert(offsetof(MovieSceneParameterSection_AddColorParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddColorParameterKey::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddColorParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddColorParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddColorParameterKey, InValue) == 0x00000C, "Member 'MovieSceneParameterSection_AddColorParameterKey::InValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.AddScalarParameterKey
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneParameterSection_AddScalarParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneParameterSection_AddScalarParameterKey) == 0x000004, "Wrong alignment on MovieSceneParameterSection_AddScalarParameterKey");
+static_assert(sizeof(MovieSceneParameterSection_AddScalarParameterKey) == 0x000010, "Wrong size on MovieSceneParameterSection_AddScalarParameterKey");
+static_assert(offsetof(MovieSceneParameterSection_AddScalarParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddScalarParameterKey::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddScalarParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddScalarParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddScalarParameterKey, InValue) == 0x00000C, "Member 'MovieSceneParameterSection_AddScalarParameterKey::InValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.AddTransformParameterKey
+// 0x0070 (0x0070 - 0x0000)
+struct MovieSceneParameterSection_AddTransformParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InValue;                                           // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneParameterSection_AddTransformParameterKey) == 0x000010, "Wrong alignment on MovieSceneParameterSection_AddTransformParameterKey");
+static_assert(sizeof(MovieSceneParameterSection_AddTransformParameterKey) == 0x000070, "Wrong size on MovieSceneParameterSection_AddTransformParameterKey");
+static_assert(offsetof(MovieSceneParameterSection_AddTransformParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddTransformParameterKey::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddTransformParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddTransformParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddTransformParameterKey, InValue) == 0x000010, "Member 'MovieSceneParameterSection_AddTransformParameterKey::InValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.AddVector2DParameterKey
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneParameterSection_AddVector2DParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              InValue;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneParameterSection_AddVector2DParameterKey) == 0x000008, "Wrong alignment on MovieSceneParameterSection_AddVector2DParameterKey");
+static_assert(sizeof(MovieSceneParameterSection_AddVector2DParameterKey) == 0x000020, "Wrong size on MovieSceneParameterSection_AddVector2DParameterKey");
+static_assert(offsetof(MovieSceneParameterSection_AddVector2DParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddVector2DParameterKey::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddVector2DParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddVector2DParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddVector2DParameterKey, InValue) == 0x000010, "Member 'MovieSceneParameterSection_AddVector2DParameterKey::InValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.AddVectorParameterKey
+// 0x0028 (0x0028 - 0x0000)
+struct MovieSceneParameterSection_AddVectorParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InValue;                                           // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneParameterSection_AddVectorParameterKey) == 0x000008, "Wrong alignment on MovieSceneParameterSection_AddVectorParameterKey");
+static_assert(sizeof(MovieSceneParameterSection_AddVectorParameterKey) == 0x000028, "Wrong size on MovieSceneParameterSection_AddVectorParameterKey");
+static_assert(offsetof(MovieSceneParameterSection_AddVectorParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddVectorParameterKey::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddVectorParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddVectorParameterKey::InTime' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_AddVectorParameterKey, InValue) == 0x000010, "Member 'MovieSceneParameterSection_AddVectorParameterKey::InValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.RemoveBoolParameter
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneParameterSection_RemoveBoolParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_RemoveBoolParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveBoolParameter");
+static_assert(sizeof(MovieSceneParameterSection_RemoveBoolParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveBoolParameter");
+static_assert(offsetof(MovieSceneParameterSection_RemoveBoolParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveBoolParameter::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_RemoveBoolParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveBoolParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.RemoveColorParameter
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneParameterSection_RemoveColorParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_RemoveColorParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveColorParameter");
+static_assert(sizeof(MovieSceneParameterSection_RemoveColorParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveColorParameter");
+static_assert(offsetof(MovieSceneParameterSection_RemoveColorParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveColorParameter::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_RemoveColorParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveColorParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.RemoveScalarParameter
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneParameterSection_RemoveScalarParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_RemoveScalarParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveScalarParameter");
+static_assert(sizeof(MovieSceneParameterSection_RemoveScalarParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveScalarParameter");
+static_assert(offsetof(MovieSceneParameterSection_RemoveScalarParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveScalarParameter::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_RemoveScalarParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveScalarParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.RemoveTransformParameter
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneParameterSection_RemoveTransformParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_RemoveTransformParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveTransformParameter");
+static_assert(sizeof(MovieSceneParameterSection_RemoveTransformParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveTransformParameter");
+static_assert(offsetof(MovieSceneParameterSection_RemoveTransformParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveTransformParameter::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_RemoveTransformParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveTransformParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.RemoveVector2DParameter
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneParameterSection_RemoveVector2DParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_RemoveVector2DParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveVector2DParameter");
+static_assert(sizeof(MovieSceneParameterSection_RemoveVector2DParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveVector2DParameter");
+static_assert(offsetof(MovieSceneParameterSection_RemoveVector2DParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveVector2DParameter::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_RemoveVector2DParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveVector2DParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.RemoveVectorParameter
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneParameterSection_RemoveVectorParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MovieSceneParameterSection_RemoveVectorParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveVectorParameter");
+static_assert(sizeof(MovieSceneParameterSection_RemoveVectorParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveVectorParameter");
+static_assert(offsetof(MovieSceneParameterSection_RemoveVectorParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveVectorParameter::InParameterName' has a wrong offset!");
+static_assert(offsetof(MovieSceneParameterSection_RemoveVectorParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveVectorParameter::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneParameterSection.GetParameterNames
+// 0x0050 (0x0050 - 0x0000)
+struct MovieSceneParameterSection_GetParameterNames final
+{
+public:
+	TSet<class FName>                             ParameterNames;                                    // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneParameterSection_GetParameterNames) == 0x000008, "Wrong alignment on MovieSceneParameterSection_GetParameterNames");
+static_assert(sizeof(MovieSceneParameterSection_GetParameterNames) == 0x000050, "Wrong size on MovieSceneParameterSection_GetParameterNames");
+static_assert(offsetof(MovieSceneParameterSection_GetParameterNames, ParameterNames) == 0x000000, "Member 'MovieSceneParameterSection_GetParameterNames::ParameterNames' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneCVarSection.SetFromString
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneCVarSection_SetFromString final
+{
+public:
+	class FString                                 InString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneCVarSection_SetFromString) == 0x000008, "Wrong alignment on MovieSceneCVarSection_SetFromString");
+static_assert(sizeof(MovieSceneCVarSection_SetFromString) == 0x000010, "Wrong size on MovieSceneCVarSection_SetFromString");
+static_assert(offsetof(MovieSceneCVarSection_SetFromString, InString) == 0x000000, "Member 'MovieSceneCVarSection_SetFromString::InString' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneCVarSection.GetString
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneCVarSection_GetString final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneCVarSection_GetString) == 0x000008, "Wrong alignment on MovieSceneCVarSection_GetString");
+static_assert(sizeof(MovieSceneCVarSection_GetString) == 0x000010, "Wrong size on MovieSceneCVarSection_GetString");
+static_assert(offsetof(MovieSceneCVarSection_GetString, ReturnValue) == 0x000000, "Member 'MovieSceneCVarSection_GetString::ReturnValue' has a wrong offset!");
+
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetDataLayerAssets
 // 0x0010 (0x0010 - 0x0000)
 struct MovieSceneDataLayerSection_SetDataLayerAssets final
@@ -284,16 +540,38 @@ static_assert(alignof(MovieSceneDataLayerSection_SetDesiredState) == 0x000001, "
 static_assert(sizeof(MovieSceneDataLayerSection_SetDesiredState) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetDesiredState");
 static_assert(offsetof(MovieSceneDataLayerSection_SetDesiredState, InDesiredState) == 0x000000, "Member 'MovieSceneDataLayerSection_SetDesiredState::InDesiredState' has a wrong offset!");
 
+// Function MovieSceneTracks.MovieSceneDataLayerSection.SetFlushOnActivated
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneDataLayerSection_SetFlushOnActivated final
+{
+public:
+	bool                                          bFlushOnActivated_0;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneDataLayerSection_SetFlushOnActivated) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_SetFlushOnActivated");
+static_assert(sizeof(MovieSceneDataLayerSection_SetFlushOnActivated) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetFlushOnActivated");
+static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnActivated, bFlushOnActivated_0) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnActivated::bFlushOnActivated_0' has a wrong offset!");
+
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetFlushOnUnload
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneDataLayerSection_SetFlushOnUnload final
 {
 public:
-	bool                                          Param_bFlushOnUnload;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlushOnUnload_0;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneDataLayerSection_SetFlushOnUnload) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_SetFlushOnUnload");
 static_assert(sizeof(MovieSceneDataLayerSection_SetFlushOnUnload) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetFlushOnUnload");
-static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnUnload, Param_bFlushOnUnload) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnUnload::Param_bFlushOnUnload' has a wrong offset!");
+static_assert(offsetof(MovieSceneDataLayerSection_SetFlushOnUnload, bFlushOnUnload_0) == 0x000000, "Member 'MovieSceneDataLayerSection_SetFlushOnUnload::bFlushOnUnload_0' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneDataLayerSection.SetPerformGCOnUnload
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneDataLayerSection_SetPerformGCOnUnload final
+{
+public:
+	bool                                          bPerformGCOnUnload_0;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneDataLayerSection_SetPerformGCOnUnload) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_SetPerformGCOnUnload");
+static_assert(sizeof(MovieSceneDataLayerSection_SetPerformGCOnUnload) == 0x000001, "Wrong size on MovieSceneDataLayerSection_SetPerformGCOnUnload");
+static_assert(offsetof(MovieSceneDataLayerSection_SetPerformGCOnUnload, bPerformGCOnUnload_0) == 0x000000, "Member 'MovieSceneDataLayerSection_SetPerformGCOnUnload::bPerformGCOnUnload_0' has a wrong offset!");
 
 // Function MovieSceneTracks.MovieSceneDataLayerSection.SetPrerollState
 // 0x0001 (0x0001 - 0x0000)
@@ -339,6 +617,17 @@ static_assert(alignof(MovieSceneDataLayerSection_GetDesiredState) == 0x000001, "
 static_assert(sizeof(MovieSceneDataLayerSection_GetDesiredState) == 0x000001, "Wrong size on MovieSceneDataLayerSection_GetDesiredState");
 static_assert(offsetof(MovieSceneDataLayerSection_GetDesiredState, ReturnValue) == 0x000000, "Member 'MovieSceneDataLayerSection_GetDesiredState::ReturnValue' has a wrong offset!");
 
+// Function MovieSceneTracks.MovieSceneDataLayerSection.GetFlushOnActivated
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneDataLayerSection_GetFlushOnActivated final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneDataLayerSection_GetFlushOnActivated) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_GetFlushOnActivated");
+static_assert(sizeof(MovieSceneDataLayerSection_GetFlushOnActivated) == 0x000001, "Wrong size on MovieSceneDataLayerSection_GetFlushOnActivated");
+static_assert(offsetof(MovieSceneDataLayerSection_GetFlushOnActivated, ReturnValue) == 0x000000, "Member 'MovieSceneDataLayerSection_GetFlushOnActivated::ReturnValue' has a wrong offset!");
+
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetFlushOnUnload
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneDataLayerSection_GetFlushOnUnload final
@@ -350,6 +639,17 @@ static_assert(alignof(MovieSceneDataLayerSection_GetFlushOnUnload) == 0x000001, 
 static_assert(sizeof(MovieSceneDataLayerSection_GetFlushOnUnload) == 0x000001, "Wrong size on MovieSceneDataLayerSection_GetFlushOnUnload");
 static_assert(offsetof(MovieSceneDataLayerSection_GetFlushOnUnload, ReturnValue) == 0x000000, "Member 'MovieSceneDataLayerSection_GetFlushOnUnload::ReturnValue' has a wrong offset!");
 
+// Function MovieSceneTracks.MovieSceneDataLayerSection.GetPerformGCOnUnload
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneDataLayerSection_GetPerformGCOnUnload final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneDataLayerSection_GetPerformGCOnUnload) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_GetPerformGCOnUnload");
+static_assert(sizeof(MovieSceneDataLayerSection_GetPerformGCOnUnload) == 0x000001, "Wrong size on MovieSceneDataLayerSection_GetPerformGCOnUnload");
+static_assert(offsetof(MovieSceneDataLayerSection_GetPerformGCOnUnload, ReturnValue) == 0x000000, "Member 'MovieSceneDataLayerSection_GetPerformGCOnUnload::ReturnValue' has a wrong offset!");
+
 // Function MovieSceneTracks.MovieSceneDataLayerSection.GetPrerollState
 // 0x0001 (0x0001 - 0x0000)
 struct MovieSceneDataLayerSection_GetPrerollState final
@@ -360,6 +660,17 @@ public:
 static_assert(alignof(MovieSceneDataLayerSection_GetPrerollState) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_GetPrerollState");
 static_assert(sizeof(MovieSceneDataLayerSection_GetPrerollState) == 0x000001, "Wrong size on MovieSceneDataLayerSection_GetPrerollState");
 static_assert(offsetof(MovieSceneDataLayerSection_GetPrerollState, ReturnValue) == 0x000000, "Member 'MovieSceneDataLayerSection_GetPrerollState::ReturnValue' has a wrong offset!");
+
+// Function MovieSceneTracks.MovieSceneDataLayerSection.HasPreRoll
+// 0x0001 (0x0001 - 0x0000)
+struct MovieSceneDataLayerSection_HasPreRoll final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MovieSceneDataLayerSection_HasPreRoll) == 0x000001, "Wrong alignment on MovieSceneDataLayerSection_HasPreRoll");
+static_assert(sizeof(MovieSceneDataLayerSection_HasPreRoll) == 0x000001, "Wrong size on MovieSceneDataLayerSection_HasPreRoll");
+static_assert(offsetof(MovieSceneDataLayerSection_HasPreRoll, ReturnValue) == 0x000000, "Member 'MovieSceneDataLayerSection_HasPreRoll::ReturnValue' has a wrong offset!");
 
 // Function MovieSceneTracks.MovieSceneLevelVisibilitySection.SetLevelNames
 // 0x0010 (0x0010 - 0x0000)
@@ -405,195 +716,6 @@ static_assert(alignof(MovieSceneLevelVisibilitySection_GetVisibility) == 0x00000
 static_assert(sizeof(MovieSceneLevelVisibilitySection_GetVisibility) == 0x000001, "Wrong size on MovieSceneLevelVisibilitySection_GetVisibility");
 static_assert(offsetof(MovieSceneLevelVisibilitySection_GetVisibility, ReturnValue) == 0x000000, "Member 'MovieSceneLevelVisibilitySection_GetVisibility::ReturnValue' has a wrong offset!");
 
-// Function MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneParameterSection_AddBoolParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InValue;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_147B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_AddBoolParameterKey) == 0x000004, "Wrong alignment on MovieSceneParameterSection_AddBoolParameterKey");
-static_assert(sizeof(MovieSceneParameterSection_AddBoolParameterKey) == 0x000010, "Wrong size on MovieSceneParameterSection_AddBoolParameterKey");
-static_assert(offsetof(MovieSceneParameterSection_AddBoolParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddBoolParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddBoolParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddBoolParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddBoolParameterKey, InValue) == 0x00000C, "Member 'MovieSceneParameterSection_AddBoolParameterKey::InValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.AddColorParameterKey
-// 0x001C (0x001C - 0x0000)
-struct MovieSceneParameterSection_AddColorParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           InValue;                                           // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneParameterSection_AddColorParameterKey) == 0x000004, "Wrong alignment on MovieSceneParameterSection_AddColorParameterKey");
-static_assert(sizeof(MovieSceneParameterSection_AddColorParameterKey) == 0x00001C, "Wrong size on MovieSceneParameterSection_AddColorParameterKey");
-static_assert(offsetof(MovieSceneParameterSection_AddColorParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddColorParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddColorParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddColorParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddColorParameterKey, InValue) == 0x00000C, "Member 'MovieSceneParameterSection_AddColorParameterKey::InValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.AddScalarParameterKey
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneParameterSection_AddScalarParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneParameterSection_AddScalarParameterKey) == 0x000004, "Wrong alignment on MovieSceneParameterSection_AddScalarParameterKey");
-static_assert(sizeof(MovieSceneParameterSection_AddScalarParameterKey) == 0x000010, "Wrong size on MovieSceneParameterSection_AddScalarParameterKey");
-static_assert(offsetof(MovieSceneParameterSection_AddScalarParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddScalarParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddScalarParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddScalarParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddScalarParameterKey, InValue) == 0x00000C, "Member 'MovieSceneParameterSection_AddScalarParameterKey::InValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.AddTransformParameterKey
-// 0x0070 (0x0070 - 0x0000)
-struct MovieSceneParameterSection_AddTransformParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_147C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InValue;                                           // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneParameterSection_AddTransformParameterKey) == 0x000010, "Wrong alignment on MovieSceneParameterSection_AddTransformParameterKey");
-static_assert(sizeof(MovieSceneParameterSection_AddTransformParameterKey) == 0x000070, "Wrong size on MovieSceneParameterSection_AddTransformParameterKey");
-static_assert(offsetof(MovieSceneParameterSection_AddTransformParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddTransformParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddTransformParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddTransformParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddTransformParameterKey, InValue) == 0x000010, "Member 'MovieSceneParameterSection_AddTransformParameterKey::InValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.AddVector2DParameterKey
-// 0x0020 (0x0020 - 0x0000)
-struct MovieSceneParameterSection_AddVector2DParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_147D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              InValue;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneParameterSection_AddVector2DParameterKey) == 0x000008, "Wrong alignment on MovieSceneParameterSection_AddVector2DParameterKey");
-static_assert(sizeof(MovieSceneParameterSection_AddVector2DParameterKey) == 0x000020, "Wrong size on MovieSceneParameterSection_AddVector2DParameterKey");
-static_assert(offsetof(MovieSceneParameterSection_AddVector2DParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddVector2DParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddVector2DParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddVector2DParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddVector2DParameterKey, InValue) == 0x000010, "Member 'MovieSceneParameterSection_AddVector2DParameterKey::InValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.AddVectorParameterKey
-// 0x0028 (0x0028 - 0x0000)
-struct MovieSceneParameterSection_AddVectorParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0008(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_147E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                InValue;                                           // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneParameterSection_AddVectorParameterKey) == 0x000008, "Wrong alignment on MovieSceneParameterSection_AddVectorParameterKey");
-static_assert(sizeof(MovieSceneParameterSection_AddVectorParameterKey) == 0x000028, "Wrong size on MovieSceneParameterSection_AddVectorParameterKey");
-static_assert(offsetof(MovieSceneParameterSection_AddVectorParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_AddVectorParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddVectorParameterKey, InTime) == 0x000008, "Member 'MovieSceneParameterSection_AddVectorParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_AddVectorParameterKey, InValue) == 0x000010, "Member 'MovieSceneParameterSection_AddVectorParameterKey::InValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.RemoveBoolParameter
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneParameterSection_RemoveBoolParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_147F[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_RemoveBoolParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveBoolParameter");
-static_assert(sizeof(MovieSceneParameterSection_RemoveBoolParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveBoolParameter");
-static_assert(offsetof(MovieSceneParameterSection_RemoveBoolParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveBoolParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_RemoveBoolParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveBoolParameter::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.RemoveColorParameter
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneParameterSection_RemoveColorParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1480[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_RemoveColorParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveColorParameter");
-static_assert(sizeof(MovieSceneParameterSection_RemoveColorParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveColorParameter");
-static_assert(offsetof(MovieSceneParameterSection_RemoveColorParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveColorParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_RemoveColorParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveColorParameter::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.RemoveScalarParameter
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneParameterSection_RemoveScalarParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1481[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_RemoveScalarParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveScalarParameter");
-static_assert(sizeof(MovieSceneParameterSection_RemoveScalarParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveScalarParameter");
-static_assert(offsetof(MovieSceneParameterSection_RemoveScalarParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveScalarParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_RemoveScalarParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveScalarParameter::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.RemoveTransformParameter
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneParameterSection_RemoveTransformParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1482[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_RemoveTransformParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveTransformParameter");
-static_assert(sizeof(MovieSceneParameterSection_RemoveTransformParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveTransformParameter");
-static_assert(offsetof(MovieSceneParameterSection_RemoveTransformParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveTransformParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_RemoveTransformParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveTransformParameter::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.RemoveVector2DParameter
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneParameterSection_RemoveVector2DParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1483[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_RemoveVector2DParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveVector2DParameter");
-static_assert(sizeof(MovieSceneParameterSection_RemoveVector2DParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveVector2DParameter");
-static_assert(offsetof(MovieSceneParameterSection_RemoveVector2DParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveVector2DParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_RemoveVector2DParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveVector2DParameter::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.RemoveVectorParameter
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneParameterSection_RemoveVectorParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1484[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneParameterSection_RemoveVectorParameter) == 0x000004, "Wrong alignment on MovieSceneParameterSection_RemoveVectorParameter");
-static_assert(sizeof(MovieSceneParameterSection_RemoveVectorParameter) == 0x00000C, "Wrong size on MovieSceneParameterSection_RemoveVectorParameter");
-static_assert(offsetof(MovieSceneParameterSection_RemoveVectorParameter, InParameterName) == 0x000000, "Member 'MovieSceneParameterSection_RemoveVectorParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneParameterSection_RemoveVectorParameter, ReturnValue) == 0x000008, "Member 'MovieSceneParameterSection_RemoveVectorParameter::ReturnValue' has a wrong offset!");
-
-// Function MovieSceneTracks.MovieSceneParameterSection.GetParameterNames
-// 0x0050 (0x0050 - 0x0000)
-struct MovieSceneParameterSection_GetParameterNames final
-{
-public:
-	TSet<class FName>                             ParameterNames;                                    // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneParameterSection_GetParameterNames) == 0x000008, "Wrong alignment on MovieSceneParameterSection_GetParameterNames");
-static_assert(sizeof(MovieSceneParameterSection_GetParameterNames) == 0x000050, "Wrong size on MovieSceneParameterSection_GetParameterNames");
-static_assert(offsetof(MovieSceneParameterSection_GetParameterNames, ParameterNames) == 0x000000, "Member 'MovieSceneParameterSection_GetParameterNames::ParameterNames' has a wrong offset!");
-
 // Function MovieSceneTracks.MovieSceneAsyncAction_SequencePrediction.PredictLocalTransformAtFrame
 // 0x0020 (0x0020 - 0x0000)
 struct MovieSceneAsyncAction_SequencePrediction_PredictLocalTransformAtFrame final
@@ -619,7 +741,7 @@ public:
 	class UMovieSceneSequencePlayer*              Player;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        TargetComponent;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeInSeconds;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14A0[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneAsyncAction_SequencePrediction* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneAsyncAction_SequencePrediction_PredictLocalTransformAtTime) == 0x000008, "Wrong alignment on MovieSceneAsyncAction_SequencePrediction_PredictLocalTransformAtTime");
@@ -654,7 +776,7 @@ public:
 	class UMovieSceneSequencePlayer*              Player;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        TargetComponent;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeInSeconds;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14A1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneAsyncAction_SequencePrediction* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MovieSceneAsyncAction_SequencePrediction_PredictWorldTransformAtTime) == 0x000008, "Wrong alignment on MovieSceneAsyncAction_SequencePrediction_PredictWorldTransformAtTime");

@@ -17,6 +17,284 @@
 namespace SDK
 {
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.ApproximateConvexHullsWithSimplerCollisionShapes
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptConvexHullApproximationOptionsApproximateOptions                                     (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bHasApproximated                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_CollisionFunctions::ApproximateConvexHullsWithSimplerCollisionShapes(struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptConvexHullApproximationOptions& ApproximateOptions, bool* bHasApproximated, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "ApproximateConvexHullsWithSimplerCollisionShapes");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_ApproximateConvexHullsWithSimplerCollisionShapes Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.ApproximateOptions = std::move(ApproximateOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	SimpleCollision = std::move(Parms.SimpleCollision);
+
+	if (bHasApproximated != nullptr)
+		*bHasApproximated = Parms.bHasApproximated;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.CombineSimpleCollision
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   CollisionToUpdate                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollision   AppendCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_CollisionFunctions::CombineSimpleCollision(struct FGeometryScriptSimpleCollision& CollisionToUpdate, const struct FGeometryScriptSimpleCollision& AppendCollision, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "CombineSimpleCollision");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_CombineSimpleCollision Parms{};
+
+	Parms.CollisionToUpdate = std::move(CollisionToUpdate);
+	Parms.AppendCollision = std::move(AppendCollision);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	CollisionToUpdate = std::move(Parms.CollisionToUpdate);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.ComputeNegativeSpace
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptDynamicMeshBVH    MeshBVH                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FComputeNegativeSpaceOptions     NegativeSpaceOptions                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSphereCovering    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptSphereCovering UGeometryScriptLibrary_CollisionFunctions::ComputeNegativeSpace(const struct FGeometryScriptDynamicMeshBVH& MeshBVH, const struct FComputeNegativeSpaceOptions& NegativeSpaceOptions, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "ComputeNegativeSpace");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_ComputeNegativeSpace Parms{};
+
+	Parms.MeshBVH = std::move(MeshBVH);
+	Parms.NegativeSpaceOptions = std::move(NegativeSpaceOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.Conv_GeometryScriptSphereCoveringToSphereArray
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FGeometryScriptSphereCovering    SphereCovering                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FSphere>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FSphere> UGeometryScriptLibrary_CollisionFunctions::Conv_GeometryScriptSphereCoveringToSphereArray(const struct FGeometryScriptSphereCovering& SphereCovering)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "Conv_GeometryScriptSphereCoveringToSphereArray");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_Conv_GeometryScriptSphereCoveringToSphereArray Parms{};
+
+	Parms.SphereCovering = std::move(SphereCovering);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.Conv_SphereArrayToGeometryScriptSphereCovering
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<struct FSphere>                  Spheres                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSphereCovering    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptSphereCovering UGeometryScriptLibrary_CollisionFunctions::Conv_SphereArrayToGeometryScriptSphereCovering(const TArray<struct FSphere>& Spheres)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "Conv_SphereArrayToGeometryScriptSphereCovering");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_Conv_SphereArrayToGeometryScriptSphereCovering Parms{};
+
+	Parms.Spheres = std::move(Spheres);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.GetSimpleCollisionFromComponent
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent*              Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollision   ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptSimpleCollision UGeometryScriptLibrary_CollisionFunctions::GetSimpleCollisionFromComponent(class UPrimitiveComponent* Component, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "GetSimpleCollisionFromComponent");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_GetSimpleCollisionFromComponent Parms{};
+
+	Parms.Component = Component;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.GetSimpleCollisionFromStaticMesh
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*                      StaticMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollision   ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptSimpleCollision UGeometryScriptLibrary_CollisionFunctions::GetSimpleCollisionFromStaticMesh(class UStaticMesh* StaticMesh, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "GetSimpleCollisionFromStaticMesh");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_GetSimpleCollisionFromStaticMesh Parms{};
+
+	Parms.StaticMesh = StaticMesh;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.GetSimpleCollisionShapeCount
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGeometryScriptLibrary_CollisionFunctions::GetSimpleCollisionShapeCount(const struct FGeometryScriptSimpleCollision& SimpleCollision)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "GetSimpleCollisionShapeCount");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_GetSimpleCollisionShapeCount Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.MergeSimpleCollisionShapes
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptMergeSimpleCollisionOptionsMergeOptions                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bHasMerged                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollision   ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptSimpleCollision UGeometryScriptLibrary_CollisionFunctions::MergeSimpleCollisionShapes(const struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptMergeSimpleCollisionOptions& MergeOptions, bool* bHasMerged, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "MergeSimpleCollisionShapes");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_MergeSimpleCollisionShapes Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.MergeOptions = std::move(MergeOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bHasMerged != nullptr)
+		*bHasMerged = Parms.bHasMerged;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.ResetDynamicMeshCollision
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -80,15 +358,80 @@ class UDynamicMesh* UGeometryScriptLibrary_CollisionFunctions::SetDynamicMeshCol
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.SetSimpleCollisionOfDynamicMeshComponent
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UDynamicMeshComponent*            DynamicMeshComponent                                   (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSetSimpleCollisionOptionsOptions                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_CollisionFunctions::SetSimpleCollisionOfDynamicMeshComponent(const struct FGeometryScriptSimpleCollision& SimpleCollision, class UDynamicMeshComponent* DynamicMeshComponent, const struct FGeometryScriptSetSimpleCollisionOptions& Options, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "SetSimpleCollisionOfDynamicMeshComponent");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_SetSimpleCollisionOfDynamicMeshComponent Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.DynamicMeshComponent = DynamicMeshComponent;
+	Parms.Options = std::move(Options);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.SetSimpleCollisionOfStaticMesh
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UStaticMesh*                      StaticMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSetSimpleCollisionOptionsOptions                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSetStaticMeshCollisionOptionsStaticMeshCollisionOptions                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_CollisionFunctions::SetSimpleCollisionOfStaticMesh(const struct FGeometryScriptSimpleCollision& SimpleCollision, class UStaticMesh* StaticMesh, const struct FGeometryScriptSetSimpleCollisionOptions& Options, const struct FGeometryScriptSetStaticMeshCollisionOptions& StaticMeshCollisionOptions, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "SetSimpleCollisionOfStaticMesh");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_SetSimpleCollisionOfStaticMesh Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.StaticMesh = StaticMesh;
+	Parms.Options = std::move(Options);
+	Parms.StaticMeshCollisionOptions = std::move(StaticMeshCollisionOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.SetStaticMeshCollisionFromComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UStaticMesh*                      StaticMeshAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPrimitiveComponent*              SourceComponent                                        (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGeometryScriptSetSimpleCollisionOptionsOptions                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSetStaticMeshCollisionOptionsStaticMeshCollisionOptions                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshCollisionFromComponent(class UStaticMesh* StaticMeshAsset, class UPrimitiveComponent* SourceComponent, const struct FGeometryScriptSetSimpleCollisionOptions& Options, class UGeometryScriptDebug* Debug)
+void UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshCollisionFromComponent(class UStaticMesh* StaticMeshAsset, class UPrimitiveComponent* SourceComponent, const struct FGeometryScriptSetSimpleCollisionOptions& Options, const struct FGeometryScriptSetStaticMeshCollisionOptions& StaticMeshCollisionOptions, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -100,6 +443,7 @@ void UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshCollisionFromCompon
 	Parms.StaticMeshAsset = StaticMeshAsset;
 	Parms.SourceComponent = SourceComponent;
 	Parms.Options = std::move(Options);
+	Parms.StaticMeshCollisionOptions = std::move(StaticMeshCollisionOptions);
 	Parms.Debug = Debug;
 
 	auto Flgs = Func->FunctionFlags;
@@ -117,10 +461,11 @@ void UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshCollisionFromCompon
 // class UDynamicMesh*                     FromDynamicMesh                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UStaticMesh*                      ToStaticMeshAsset                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGeometryScriptCollisionFromMeshOptionsOptions                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSetStaticMeshCollisionOptionsStaticMeshCollisionOptions                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UDynamicMesh* UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshCollisionFromMesh(class UDynamicMesh* FromDynamicMesh, class UStaticMesh* ToStaticMeshAsset, const struct FGeometryScriptCollisionFromMeshOptions& Options, class UGeometryScriptDebug* Debug)
+class UDynamicMesh* UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshCollisionFromMesh(class UDynamicMesh* FromDynamicMesh, class UStaticMesh* ToStaticMeshAsset, const struct FGeometryScriptCollisionFromMeshOptions& Options, const struct FGeometryScriptSetStaticMeshCollisionOptions& StaticMeshCollisionOptions, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -132,6 +477,7 @@ class UDynamicMesh* UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshColl
 	Parms.FromDynamicMesh = FromDynamicMesh;
 	Parms.ToStaticMeshAsset = ToStaticMeshAsset;
 	Parms.Options = std::move(Options);
+	Parms.StaticMeshCollisionOptions = std::move(StaticMeshCollisionOptions);
 	Parms.Debug = Debug;
 
 	auto Flgs = Func->FunctionFlags;
@@ -140,6 +486,107 @@ class UDynamicMesh* UGeometryScriptLibrary_CollisionFunctions::SetStaticMeshColl
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.SimplifyConvexHulls
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptConvexHullSimplificationOptionsSimplifyOptions                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bHasSimplified                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_CollisionFunctions::SimplifyConvexHulls(struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptConvexHullSimplificationOptions& SimplifyOptions, bool* bHasSimplified, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "SimplifyConvexHulls");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_SimplifyConvexHulls Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.SimplifyOptions = std::move(SimplifyOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	SimpleCollision = std::move(Parms.SimpleCollision);
+
+	if (bHasSimplified != nullptr)
+		*bHasSimplified = Parms.bHasSimplified;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.StaticMeshHasCustomizedCollision
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*                      StaticMeshAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGeometryScriptLibrary_CollisionFunctions::StaticMeshHasCustomizedCollision(class UStaticMesh* StaticMeshAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "StaticMeshHasCustomizedCollision");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_StaticMeshHasCustomizedCollision Parms{};
+
+	Parms.StaticMeshAsset = StaticMeshAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.TransformSimpleCollisionShapes
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptTransformCollisionOptionsTransformOptions                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bSuccess                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollision   ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptSimpleCollision UGeometryScriptLibrary_CollisionFunctions::TransformSimpleCollisionShapes(const struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FTransform& Transform, const struct FGeometryScriptTransformCollisionOptions& TransformOptions, bool* bSuccess, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_CollisionFunctions", "TransformSimpleCollisionShapes");
+
+	Params::GeometryScriptLibrary_CollisionFunctions_TransformSimpleCollisionShapes Parms{};
+
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.Transform = std::move(Transform);
+	Parms.TransformOptions = std::move(TransformOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bSuccess != nullptr)
+		*bSuccess = Parms.bSuccess;
 
 	return Parms.ReturnValue;
 }
@@ -979,11 +1426,11 @@ void UGeometryScriptLibrary_ListUtilityFunctions::ExtractColorListChannels(const
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptColorList         ColorList                                              (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FLinearColor UGeometryScriptLibrary_ListUtilityFunctions::GetColorListItem(const struct FGeometryScriptColorList& ColorList, int32 Param_Index, bool* bIsValidIndex)
+struct FLinearColor UGeometryScriptLibrary_ListUtilityFunctions::GetColorListItem(const struct FGeometryScriptColorList& ColorList, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -993,7 +1440,7 @@ struct FLinearColor UGeometryScriptLibrary_ListUtilityFunctions::GetColorListIte
 	Params::GeometryScriptLibrary_ListUtilityFunctions_GetColorListItem Parms{};
 
 	Parms.ColorList = std::move(ColorList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1069,11 +1516,11 @@ int32 UGeometryScriptLibrary_ListUtilityFunctions::GetColorListLength(const stru
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptIndexList         IndexList                                              (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UGeometryScriptLibrary_ListUtilityFunctions::GetIndexListItem(const struct FGeometryScriptIndexList& IndexList, int32 Param_Index, bool* bIsValidIndex)
+int32 UGeometryScriptLibrary_ListUtilityFunctions::GetIndexListItem(const struct FGeometryScriptIndexList& IndexList, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1083,7 +1530,7 @@ int32 UGeometryScriptLibrary_ListUtilityFunctions::GetIndexListItem(const struct
 	Params::GeometryScriptLibrary_ListUtilityFunctions_GetIndexListItem Parms{};
 
 	Parms.IndexList = std::move(IndexList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1159,11 +1606,11 @@ int32 UGeometryScriptLibrary_ListUtilityFunctions::GetIndexListLength(const stru
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptScalarList        ScalarList                                             (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-double UGeometryScriptLibrary_ListUtilityFunctions::GetScalarListItem(const struct FGeometryScriptScalarList& ScalarList, int32 Param_Index, bool* bIsValidIndex)
+double UGeometryScriptLibrary_ListUtilityFunctions::GetScalarListItem(const struct FGeometryScriptScalarList& ScalarList, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1173,7 +1620,7 @@ double UGeometryScriptLibrary_ListUtilityFunctions::GetScalarListItem(const stru
 	Params::GeometryScriptLibrary_ListUtilityFunctions_GetScalarListItem Parms{};
 
 	Parms.ScalarList = std::move(ScalarList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1339,11 +1786,11 @@ int32 UGeometryScriptLibrary_ListUtilityFunctions::GetTriangleListLength(const s
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptUVList            UVList                                                 (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector2D UGeometryScriptLibrary_ListUtilityFunctions::GetUVListItem(const struct FGeometryScriptUVList& UVList, int32 Param_Index, bool* bIsValidIndex)
+struct FVector2D UGeometryScriptLibrary_ListUtilityFunctions::GetUVListItem(const struct FGeometryScriptUVList& UVList, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1353,7 +1800,7 @@ struct FVector2D UGeometryScriptLibrary_ListUtilityFunctions::GetUVListItem(cons
 	Params::GeometryScriptLibrary_ListUtilityFunctions_GetUVListItem Parms{};
 
 	Parms.UVList = std::move(UVList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1429,11 +1876,11 @@ int32 UGeometryScriptLibrary_ListUtilityFunctions::GetUVListLength(const struct 
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptVectorList        VectorList                                             (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UGeometryScriptLibrary_ListUtilityFunctions::GetVectorListItem(const struct FGeometryScriptVectorList& VectorList, int32 Param_Index, bool* bIsValidIndex)
+struct FVector UGeometryScriptLibrary_ListUtilityFunctions::GetVectorListItem(const struct FGeometryScriptVectorList& VectorList, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1443,7 +1890,7 @@ struct FVector UGeometryScriptLibrary_ListUtilityFunctions::GetVectorListItem(co
 	Params::GeometryScriptLibrary_ListUtilityFunctions_GetVectorListItem Parms{};
 
 	Parms.VectorList = std::move(VectorList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1519,11 +1966,11 @@ int32 UGeometryScriptLibrary_ListUtilityFunctions::GetVectorListLength(const str
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FGeometryScriptColorList         ColorList                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     NewColor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_ListUtilityFunctions::SetColorListItem(struct FGeometryScriptColorList& ColorList, int32 Param_Index, const struct FLinearColor& NewColor, bool* bIsValidIndex)
+void UGeometryScriptLibrary_ListUtilityFunctions::SetColorListItem(struct FGeometryScriptColorList& ColorList, int32 Index_0, const struct FLinearColor& NewColor, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1533,7 +1980,7 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetColorListItem(struct FGeome
 	Params::GeometryScriptLibrary_ListUtilityFunctions_SetColorListItem Parms{};
 
 	Parms.ColorList = std::move(ColorList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.NewColor = std::move(NewColor);
 
 	auto Flgs = Func->FunctionFlags;
@@ -1554,11 +2001,11 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetColorListItem(struct FGeome
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FGeometryScriptIndexList         IndexList                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_ListUtilityFunctions::SetIndexListItem(struct FGeometryScriptIndexList& IndexList, int32 Param_Index, int32 NewValue, bool* bIsValidIndex)
+void UGeometryScriptLibrary_ListUtilityFunctions::SetIndexListItem(struct FGeometryScriptIndexList& IndexList, int32 Index_0, int32 NewValue, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1568,7 +2015,7 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetIndexListItem(struct FGeome
 	Params::GeometryScriptLibrary_ListUtilityFunctions_SetIndexListItem Parms{};
 
 	Parms.IndexList = std::move(IndexList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.NewValue = NewValue;
 
 	auto Flgs = Func->FunctionFlags;
@@ -1589,11 +2036,11 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetIndexListItem(struct FGeome
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FGeometryScriptScalarList        ScalarList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // double                                  NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_ListUtilityFunctions::SetScalarListItem(struct FGeometryScriptScalarList& ScalarList, int32 Param_Index, double NewValue, bool* bIsValidIndex)
+void UGeometryScriptLibrary_ListUtilityFunctions::SetScalarListItem(struct FGeometryScriptScalarList& ScalarList, int32 Index_0, double NewValue, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1603,7 +2050,7 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetScalarListItem(struct FGeom
 	Params::GeometryScriptLibrary_ListUtilityFunctions_SetScalarListItem Parms{};
 
 	Parms.ScalarList = std::move(ScalarList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.NewValue = NewValue;
 
 	auto Flgs = Func->FunctionFlags;
@@ -1624,11 +2071,11 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetScalarListItem(struct FGeom
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FGeometryScriptUVList            UVList                                                 (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        NewUV                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_ListUtilityFunctions::SetUVListItem(struct FGeometryScriptUVList& UVList, int32 Param_Index, const struct FVector2D& NewUV, bool* bIsValidIndex)
+void UGeometryScriptLibrary_ListUtilityFunctions::SetUVListItem(struct FGeometryScriptUVList& UVList, int32 Index_0, const struct FVector2D& NewUV, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1638,7 +2085,7 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetUVListItem(struct FGeometry
 	Params::GeometryScriptLibrary_ListUtilityFunctions_SetUVListItem Parms{};
 
 	Parms.UVList = std::move(UVList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.NewUV = std::move(NewUV);
 
 	auto Flgs = Func->FunctionFlags;
@@ -1659,11 +2106,11 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetUVListItem(struct FGeometry
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FGeometryScriptVectorList        VectorList                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_ListUtilityFunctions::SetVectorListItem(struct FGeometryScriptVectorList& VectorList, int32 Param_Index, const struct FVector& NewValue, bool* bIsValidIndex)
+void UGeometryScriptLibrary_ListUtilityFunctions::SetVectorListItem(struct FGeometryScriptVectorList& VectorList, int32 Index_0, const struct FVector& NewValue, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1673,7 +2120,7 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetVectorListItem(struct FGeom
 	Params::GeometryScriptLibrary_ListUtilityFunctions_SetVectorListItem Parms{};
 
 	Parms.VectorList = std::move(VectorList);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.NewValue = std::move(NewValue);
 
 	auto Flgs = Func->FunctionFlags;
@@ -1687,6 +2134,42 @@ void UGeometryScriptLibrary_ListUtilityFunctions::SetVectorListItem(struct FGeom
 
 	if (bIsValidIndex != nullptr)
 		*bIsValidIndex = Parms.bIsValidIndex;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.CheckStaticMeshHasAvailableLOD
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*                      StaticMeshAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptMeshReadLOD       RequestedLOD                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// EGeometryScriptSearchOutcomePins        Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGeometryScriptLibrary_StaticMeshFunctions::CheckStaticMeshHasAvailableLOD(class UStaticMesh* StaticMeshAsset, const struct FGeometryScriptMeshReadLOD& RequestedLOD, EGeometryScriptSearchOutcomePins* Outcome, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_StaticMeshFunctions", "CheckStaticMeshHasAvailableLOD");
+
+	Params::GeometryScriptLibrary_StaticMeshFunctions_CheckStaticMeshHasAvailableLOD Parms{};
+
+	Parms.StaticMeshAsset = StaticMeshAsset;
+	Parms.RequestedLOD = std::move(RequestedLOD);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Outcome != nullptr)
+		*Outcome = Parms.Outcome;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1850,6 +2333,36 @@ class UDynamicMesh* UGeometryScriptLibrary_StaticMeshFunctions::CopyMeshToStatic
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.GetNumStaticMeshLODsOfType
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*                      StaticMeshAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGeometryScriptLODType                  LODType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGeometryScriptLibrary_StaticMeshFunctions::GetNumStaticMeshLODsOfType(class UStaticMesh* StaticMeshAsset, EGeometryScriptLODType LODType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_StaticMeshFunctions", "GetNumStaticMeshLODsOfType");
+
+	Params::GeometryScriptLibrary_StaticMeshFunctions_GetNumStaticMeshLODsOfType Parms{};
+
+	Parms.StaticMeshAsset = StaticMeshAsset;
+	Parms.LODType = LODType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.GetSectionMaterialListFromStaticMesh
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -1857,10 +2370,11 @@ class UDynamicMesh* UGeometryScriptLibrary_StaticMeshFunctions::CopyMeshToStatic
 // struct FGeometryScriptMeshReadLOD       RequestedLOD                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // TArray<class UMaterialInterface*>       MaterialList                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<int32>                           MaterialIndex                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FName>                     MaterialSlotNames                                      (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // EGeometryScriptOutcomePins              Outcome                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_StaticMeshFunctions::GetSectionMaterialListFromStaticMesh(class UStaticMesh* FromStaticMeshAsset, const struct FGeometryScriptMeshReadLOD& RequestedLOD, TArray<class UMaterialInterface*>* MaterialList, TArray<int32>* MaterialIndex, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug)
+void UGeometryScriptLibrary_StaticMeshFunctions::GetSectionMaterialListFromStaticMesh(class UStaticMesh* FromStaticMeshAsset, const struct FGeometryScriptMeshReadLOD& RequestedLOD, TArray<class UMaterialInterface*>* MaterialList, TArray<int32>* MaterialIndex, TArray<class FName>* MaterialSlotNames, EGeometryScriptOutcomePins* Outcome, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1885,6 +2399,9 @@ void UGeometryScriptLibrary_StaticMeshFunctions::GetSectionMaterialListFromStati
 
 	if (MaterialIndex != nullptr)
 		*MaterialIndex = std::move(Parms.MaterialIndex);
+
+	if (MaterialSlotNames != nullptr)
+		*MaterialSlotNames = std::move(Parms.MaterialSlotNames);
 
 	if (Outcome != nullptr)
 		*Outcome = Parms.Outcome;
@@ -1942,7 +2459,7 @@ TArray<class UTexture2D*> UGeometryScriptLibrary_MeshBakeFunctions::BakeTexture(
 // struct FTransform                       TargetLocalToWorld                                     (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGeometryScriptBakeTargetMeshOptionsTargetOptions                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // TArray<class AActor*>                   SourceActors                                           (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// struct FGeometryScriptBakeRenderCaptureOptionsBakeOptions                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptBakeRenderCaptureOptionsBakeOptions                                            (Parm, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGeometryScriptRenderCaptureTexturesReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2017,6 +2534,34 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshBakeFunctions::BakeVertex(class U
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions.ConvertBakeResolutionToInt
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// EGeometryScriptBakeResolution           BakeResolution                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGeometryScriptLibrary_MeshBakeFunctions::ConvertBakeResolutionToInt(EGeometryScriptBakeResolution BakeResolution)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshBakeFunctions", "ConvertBakeResolutionToInt");
+
+	Params::GeometryScriptLibrary_MeshBakeFunctions_ConvertBakeResolutionToInt Parms{};
+
+	Parms.BakeResolution = BakeResolution;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions.MakeBakeTypeAmbientOcclusion
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -2071,6 +2616,34 @@ struct FGeometryScriptBakeTypeOptions UGeometryScriptLibrary_MeshBakeFunctions::
 	Parms.OcclusionRays = OcclusionRays;
 	Parms.MaxDistance = MaxDistance;
 	Parms.SpreadAngle = SpreadAngle;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions.MakeBakeTypeConstant
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptBakeTypeOptions   ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FGeometryScriptBakeTypeOptions UGeometryScriptLibrary_MeshBakeFunctions::MakeBakeTypeConstant(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshBakeFunctions", "MakeBakeTypeConstant");
+
+	Params::GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeConstant Parms{};
+
+	Parms.Value = Value;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2525,14 +3098,14 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshBasicEditFunctions::AppendBuffers
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDynamicMesh*                     Param_AppendMesh                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     AppendMesh_0                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       AppendTransform                                        (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDeferChangeNotifications                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGeometryScriptAppendMeshOptions AppendOptions                                          (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UDynamicMesh* UGeometryScriptLibrary_MeshBasicEditFunctions::AppendMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* Param_AppendMesh, const struct FTransform& AppendTransform, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug)
+class UDynamicMesh* UGeometryScriptLibrary_MeshBasicEditFunctions::AppendMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* AppendMesh_0, const struct FTransform& AppendTransform, bool bDeferChangeNotifications, const struct FGeometryScriptAppendMeshOptions& AppendOptions, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2542,7 +3115,7 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshBasicEditFunctions::AppendMesh(cl
 	Params::GeometryScriptLibrary_MeshBasicEditFunctions_AppendMesh Parms{};
 
 	Parms.TargetMesh = TargetMesh;
-	Parms.Param_AppendMesh = Param_AppendMesh;
+	Parms.AppendMesh_0 = AppendMesh_0;
 	Parms.AppendTransform = std::move(AppendTransform);
 	Parms.bDeferChangeNotifications = bDeferChangeNotifications;
 	Parms.AppendOptions = std::move(AppendOptions);
@@ -4804,6 +5377,42 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshMaterialFunctions::RemapMaterialI
 	Parms.TargetMesh = TargetMesh;
 	Parms.FromMaterialID = FromMaterialID;
 	Parms.ToMaterialID = ToMaterialID;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshMaterialFunctions.RemapToNewMaterialIDsByMaterial
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UMaterialInterface*>       FromMaterialList                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class UMaterialInterface*>       ToMaterialList                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   MissingMaterialID                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshMaterialFunctions::RemapToNewMaterialIDsByMaterial(class UDynamicMesh* TargetMesh, const TArray<class UMaterialInterface*>& FromMaterialList, const TArray<class UMaterialInterface*>& ToMaterialList, int32 MissingMaterialID, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshMaterialFunctions", "RemapToNewMaterialIDsByMaterial");
+
+	Params::GeometryScriptLibrary_MeshMaterialFunctions_RemapToNewMaterialIDsByMaterial Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.FromMaterialList = std::move(FromMaterialList);
+	Parms.ToMaterialList = std::move(ToMaterialList);
+	Parms.MissingMaterialID = MissingMaterialID;
 	Parms.Debug = Debug;
 
 	auto Flgs = Func->FunctionFlags;
@@ -7111,6 +7720,44 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshPrimitiveFunctions::AppendRoundRe
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendSimpleCollisionShapes
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPrimitiveOptions  PrimitiveOptions                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollision   SimpleCollision                                        (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSimpleCollisionTriangulationOptionsTriangulationOptions                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshPrimitiveFunctions::AppendSimpleCollisionShapes(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FGeometryScriptSimpleCollision& SimpleCollision, const struct FGeometryScriptSimpleCollisionTriangulationOptions& TriangulationOptions, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshPrimitiveFunctions", "AppendSimpleCollisionShapes");
+
+	Params::GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSimpleCollisionShapes Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.PrimitiveOptions = std::move(PrimitiveOptions);
+	Parms.Transform = std::move(Transform);
+	Parms.SimpleCollision = std::move(SimpleCollision);
+	Parms.TriangulationOptions = std::move(TriangulationOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendSimpleExtrudePolygon
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -7232,6 +7879,48 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshPrimitiveFunctions::AppendSphereB
 	Parms.StepsY = StepsY;
 	Parms.StepsZ = StepsZ;
 	Parms.Origin = Origin;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendSphereCovering
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPrimitiveOptions  PrimitiveOptions                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptSphereCovering    SphereCovering                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   StepsX                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   StepsY                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   StepsZ                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshPrimitiveFunctions::AppendSphereCovering(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FGeometryScriptSphereCovering& SphereCovering, int32 StepsX, int32 StepsY, int32 StepsZ, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshPrimitiveFunctions", "AppendSphereCovering");
+
+	Params::GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereCovering Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.PrimitiveOptions = std::move(PrimitiveOptions);
+	Parms.Transform = std::move(Transform);
+	Parms.SphereCovering = std::move(SphereCovering);
+	Parms.StepsX = StepsX;
+	Parms.StepsY = StepsY;
+	Parms.StepsZ = StepsZ;
 	Parms.Debug = Debug;
 
 	auto Flgs = Func->FunctionFlags;
@@ -7500,6 +8189,42 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshPrimitiveFunctions::AppendTriangu
 	Parms.Transform = std::move(Transform);
 	Parms.PolygonVertices = std::move(PolygonVertices);
 	Parms.bAllowSelfIntersections = bAllowSelfIntersections;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendTriangulatedPolygon3D
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPrimitiveOptions  PrimitiveOptions                                       (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  PolygonVertices3D                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshPrimitiveFunctions::AppendTriangulatedPolygon3D(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const TArray<struct FVector>& PolygonVertices3D, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshPrimitiveFunctions", "AppendTriangulatedPolygon3D");
+
+	Params::GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTriangulatedPolygon3D Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.PrimitiveOptions = std::move(PrimitiveOptions);
+	Parms.Transform = std::move(Transform);
+	Parms.PolygonVertices3D = std::move(PolygonVertices3D);
 	Parms.Debug = Debug;
 
 	auto Flgs = Func->FunctionFlags;
@@ -9275,6 +10000,36 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshRepairFunctions::RemoveSmallCompo
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshRepairFunctions.RemoveUnusedVertices
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshRepairFunctions::RemoveUnusedVertices(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshRepairFunctions", "RemoveUnusedVertices");
+
+	Params::GeometryScriptLibrary_MeshRepairFunctions_RemoveUnusedVertices Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshRepairFunctions.RepairMeshDegenerateGeometry
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -9488,6 +10243,72 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshSamplingFunctions::ComputePointSa
 		*TriangleIDs = std::move(Parms.TriangleIDs);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions.ComputeRenderCaptureCamerasForBox
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<struct FGeometryScriptRenderCaptureCamera>Cameras                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// struct FBox                             Box                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptRenderCaptureCamerasForBoxOptionsOptions                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_MeshSamplingFunctions::ComputeRenderCaptureCamerasForBox(TArray<struct FGeometryScriptRenderCaptureCamera>* Cameras, const struct FBox& Box, const struct FGeometryScriptRenderCaptureCamerasForBoxOptions& Options, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshSamplingFunctions", "ComputeRenderCaptureCamerasForBox");
+
+	Params::GeometryScriptLibrary_MeshSamplingFunctions_ComputeRenderCaptureCamerasForBox Parms{};
+
+	Parms.Box = std::move(Box);
+	Parms.Options = std::move(Options);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Cameras != nullptr)
+		*Cameras = std::move(Parms.Cameras);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions.ComputeRenderCapturePointSampling
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FTransform>               Samples                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   Actors                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FGeometryScriptRenderCaptureCamera>Cameras                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_MeshSamplingFunctions::ComputeRenderCapturePointSampling(TArray<struct FTransform>* Samples, const TArray<class AActor*>& Actors, const TArray<struct FGeometryScriptRenderCaptureCamera>& Cameras, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshSamplingFunctions", "ComputeRenderCapturePointSampling");
+
+	Params::GeometryScriptLibrary_MeshSamplingFunctions_ComputeRenderCapturePointSampling Parms{};
+
+	Parms.Actors = std::move(Actors);
+	Parms.Cameras = std::move(Cameras);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Samples != nullptr)
+		*Samples = std::move(Parms.Samples);
 }
 
 
@@ -10713,9 +11534,9 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshSpatial::RebuildBVHForMesh(class 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial.ResetBVH
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FGeometryScriptDynamicMeshBVH    Param_ResetBVH                                         (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptDynamicMeshBVH    ResetBVH_0                                             (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_MeshSpatial::ResetBVH(struct FGeometryScriptDynamicMeshBVH& Param_ResetBVH)
+void UGeometryScriptLibrary_MeshSpatial::ResetBVH(struct FGeometryScriptDynamicMeshBVH& ResetBVH_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -10724,7 +11545,7 @@ void UGeometryScriptLibrary_MeshSpatial::ResetBVH(struct FGeometryScriptDynamicM
 
 	Params::GeometryScriptLibrary_MeshSpatial_ResetBVH Parms{};
 
-	Parms.Param_ResetBVH = std::move(Param_ResetBVH);
+	Parms.ResetBVH_0 = std::move(ResetBVH_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10733,7 +11554,7 @@ void UGeometryScriptLibrary_MeshSpatial::ResetBVH(struct FGeometryScriptDynamicM
 
 	Func->FunctionFlags = Flgs;
 
-	Param_ResetBVH = std::move(Parms.Param_ResetBVH);
+	ResetBVH_0 = std::move(Parms.ResetBVH_0);
 }
 
 
@@ -11193,6 +12014,48 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshTransformFunctions::TranslatePivo
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AddUVElementToMesh
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   UvSetIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        NewUVPosition                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewUVElementID                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsValidUVSet                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDeferChangeNotifications                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::AddUVElementToMesh(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FVector2D& NewUVPosition, int32* NewUVElementID, bool* bIsValidUVSet, bool bDeferChangeNotifications)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshUVFunctions", "AddUVElementToMesh");
+
+	Params::GeometryScriptLibrary_MeshUVFunctions_AddUVElementToMesh Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.UvSetIndex = UvSetIndex;
+	Parms.NewUVPosition = std::move(NewUVPosition);
+	Parms.bDeferChangeNotifications = bDeferChangeNotifications;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (NewUVElementID != nullptr)
+		*NewUVElementID = Parms.NewUVElementID;
+
+	if (bIsValidUVSet != nullptr)
+		*bIsValidUVSet = Parms.bIsValidUVSet;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AutoGeneratePatchBuilderMeshUVs
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -11491,6 +12354,86 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::GetMeshPerVertexUVs(
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshTriangleUVElementIDs
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   UvSetIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TriangleID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FIntVector                       TriangleUVElements                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bHaveValidUVs                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::GetMeshTriangleUVElementIDs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, struct FIntVector* TriangleUVElements, bool* bHaveValidUVs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshUVFunctions", "GetMeshTriangleUVElementIDs");
+
+	Params::GeometryScriptLibrary_MeshUVFunctions_GetMeshTriangleUVElementIDs Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.UvSetIndex = UvSetIndex;
+	Parms.TriangleID = TriangleID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (TriangleUVElements != nullptr)
+		*TriangleUVElements = std::move(Parms.TriangleUVElements);
+
+	if (bHaveValidUVs != nullptr)
+		*bHaveValidUVs = Parms.bHaveValidUVs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshUVElementPosition
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   UvSetIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ElementID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        UVPosition                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsValidElementID                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::GetMeshUVElementPosition(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 ElementID, struct FVector2D* UVPosition, bool* bIsValidElementID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshUVFunctions", "GetMeshUVElementPosition");
+
+	Params::GeometryScriptLibrary_MeshUVFunctions_GetMeshUVElementPosition Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.UvSetIndex = UvSetIndex;
+	Parms.ElementID = ElementID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (UVPosition != nullptr)
+		*UVPosition = std::move(Parms.UVPosition);
+
+	if (bIsValidElementID != nullptr)
+		*bIsValidElementID = Parms.bIsValidElementID;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshUVSizeInfo
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -11697,6 +12640,46 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::ScaleMeshUVs(class U
 }
 
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshTriangleUVElementIDs
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   UvSetIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TriangleID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FIntVector                       TriangleUVElements                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsValidTriangle                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDeferChangeNotifications                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::SetMeshTriangleUVElementIDs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, const struct FIntVector& TriangleUVElements, bool* bIsValidTriangle, bool bDeferChangeNotifications)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshUVFunctions", "SetMeshTriangleUVElementIDs");
+
+	Params::GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVElementIDs Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.UvSetIndex = UvSetIndex;
+	Parms.TriangleID = TriangleID;
+	Parms.TriangleUVElements = std::move(TriangleUVElements);
+	Parms.bDeferChangeNotifications = bDeferChangeNotifications;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bIsValidTriangle != nullptr)
+		*bIsValidTriangle = Parms.bIsValidTriangle;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshTriangleUVs
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -11732,6 +12715,46 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::SetMeshTriangleUVs(c
 
 	if (bIsValidTriangle != nullptr)
 		*bIsValidTriangle = Parms.bIsValidTriangle;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVElementPosition
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   UvSetIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ElementID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        NewUVPosition                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsValidElementID                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDeferChangeNotifications                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDynamicMesh* UGeometryScriptLibrary_MeshUVFunctions::SetMeshUVElementPosition(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 ElementID, const struct FVector2D& NewUVPosition, bool* bIsValidElementID, bool bDeferChangeNotifications)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_MeshUVFunctions", "SetMeshUVElementPosition");
+
+	Params::GeometryScriptLibrary_MeshUVFunctions_SetMeshUVElementPosition Parms{};
+
+	Parms.TargetMesh = TargetMesh;
+	Parms.UvSetIndex = UvSetIndex;
+	Parms.ElementID = ElementID;
+	Parms.NewUVPosition = std::move(NewUVPosition);
+	Parms.bDeferChangeNotifications = bDeferChangeNotifications;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bIsValidElementID != nullptr)
+		*bIsValidElementID = Parms.bIsValidElementID;
 
 	return Parms.ReturnValue;
 }
@@ -12064,12 +13087,12 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::GetMeshPerV
 // Parameters:
 // class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptColorFlags        Param_Flags                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptColorFlags        Flags_0                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bClearExisting                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshConstantVertexColor(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bClearExisting, class UGeometryScriptDebug* Debug)
+class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshConstantVertexColor(class UDynamicMesh* TargetMesh, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bClearExisting, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -12080,7 +13103,7 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshCons
 
 	Parms.TargetMesh = TargetMesh;
 	Parms.Color = std::move(Color);
-	Parms.Param_Flags = std::move(Param_Flags);
+	Parms.Flags_0 = std::move(Flags_0);
 	Parms.bClearExisting = bClearExisting;
 	Parms.Debug = Debug;
 
@@ -12133,12 +13156,12 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshPerV
 // class UDynamicMesh*                     TargetMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FGeometryScriptMeshSelection     Selection                                              (Parm, NativeAccessSpecifierPublic)
 // struct FLinearColor                     Color                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGeometryScriptColorFlags        Param_Flags                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptColorFlags        Flags_0                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bCreateColorSeam                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshSelectionVertexColor(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Param_Flags, bool bCreateColorSeam, class UGeometryScriptDebug* Debug)
+class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshSelectionVertexColor(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FLinearColor& Color, const struct FGeometryScriptColorFlags& Flags_0, bool bCreateColorSeam, class UGeometryScriptDebug* Debug)
 {
 	static class UFunction* Func = nullptr;
 
@@ -12150,7 +13173,7 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshVertexColorFunctions::SetMeshSele
 	Parms.TargetMesh = TargetMesh;
 	Parms.Selection = std::move(Selection);
 	Parms.Color = std::move(Color);
-	Parms.Param_Flags = std::move(Param_Flags);
+	Parms.Flags_0 = std::move(Flags_0);
 	Parms.bCreateColorSeam = bCreateColorSeam;
 	Parms.Debug = Debug;
 
@@ -12226,6 +13249,290 @@ class UDynamicMesh* UGeometryScriptLibrary_MeshVoxelFunctions::ApplyMeshSolidify
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.DownsamplePoints
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>                  Points                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPointPriorityOptionsOptions                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptIndexList         DownsampledIndices                                     (Parm, OutParm, NativeAccessSpecifierPublic)
+// int32                                   KeepNumPoints                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::DownsamplePoints(const TArray<struct FVector>& Points, const struct FGeometryScriptPointPriorityOptions& Options, struct FGeometryScriptIndexList* DownsampledIndices, int32 KeepNumPoints, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "DownsamplePoints");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_DownsamplePoints Parms{};
+
+	Parms.Points = std::move(Points);
+	Parms.Options = std::move(Options);
+	Parms.KeepNumPoints = KeepNumPoints;
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (DownsampledIndices != nullptr)
+		*DownsampledIndices = std::move(Parms.DownsampledIndices);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.FlattenPoints
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>                  PointsIn3D                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector2D>                PointsIn2D                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPointFlatteningOptionsOptions                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::FlattenPoints(const TArray<struct FVector>& PointsIn3D, TArray<struct FVector2D>* PointsIn2D, const struct FGeometryScriptPointFlatteningOptions& Options)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "FlattenPoints");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_FlattenPoints Parms{};
+
+	Parms.PointsIn3D = std::move(PointsIn3D);
+	Parms.Options = std::move(Options);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (PointsIn2D != nullptr)
+		*PointsIn2D = std::move(Parms.PointsIn2D);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.GetPointsFromIndexList
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>                  AllPoints                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptIndexList         Indices                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  SelectedPoints                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::GetPointsFromIndexList(const TArray<struct FVector>& AllPoints, const struct FGeometryScriptIndexList& Indices, TArray<struct FVector>* SelectedPoints)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "GetPointsFromIndexList");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_GetPointsFromIndexList Parms{};
+
+	Parms.AllPoints = std::move(AllPoints);
+	Parms.Indices = std::move(Indices);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SelectedPoints != nullptr)
+		*SelectedPoints = std::move(Parms.SelectedPoints);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.KMeansClusterToArrays
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>                  Points                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPointClusteringOptionsOptions                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FGeometryScriptIndexList> ClusterIDToLists                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::KMeansClusterToArrays(const TArray<struct FVector>& Points, const struct FGeometryScriptPointClusteringOptions& Options, TArray<struct FGeometryScriptIndexList>* ClusterIDToLists)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "KMeansClusterToArrays");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_KMeansClusterToArrays Parms{};
+
+	Parms.Points = std::move(Points);
+	Parms.Options = std::move(Options);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ClusterIDToLists != nullptr)
+		*ClusterIDToLists = std::move(Parms.ClusterIDToLists);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.KMeansClusterToIDs
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>                  Points                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPointClusteringOptionsOptions                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<int32>                           PointClusterIndices                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::KMeansClusterToIDs(const TArray<struct FVector>& Points, const struct FGeometryScriptPointClusteringOptions& Options, TArray<int32>* PointClusterIndices)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "KMeansClusterToIDs");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_KMeansClusterToIDs Parms{};
+
+	Parms.Points = std::move(Points);
+	Parms.Options = std::move(Options);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (PointClusterIndices != nullptr)
+		*PointClusterIndices = std::move(Parms.PointClusterIndices);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.MakeBoundingBoxFromPoints
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>                  Points                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  ExpandBy                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBox UGeometryScriptLibrary_PointSetSamplingFunctions::MakeBoundingBoxFromPoints(const TArray<struct FVector>& Points, double ExpandBy)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "MakeBoundingBoxFromPoints");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_MakeBoundingBoxFromPoints Parms{};
+
+	Parms.Points = std::move(Points);
+	Parms.ExpandBy = ExpandBy;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.OffsetTransforms
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<struct FTransform>               Transforms                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// double                                  Offset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Direction                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EGeometryScriptCoordinateSpace          Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::OffsetTransforms(TArray<struct FTransform>& Transforms, double Offset, const struct FVector& Direction, EGeometryScriptCoordinateSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "OffsetTransforms");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_OffsetTransforms Parms{};
+
+	Parms.Transforms = std::move(Transforms);
+	Parms.Offset = Offset;
+	Parms.Direction = std::move(Direction);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Transforms = std::move(Parms.Transforms);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.TransformsToPoints
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FTransform>               Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  Points                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::TransformsToPoints(const TArray<struct FTransform>& Transforms, TArray<struct FVector>* Points)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "TransformsToPoints");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_TransformsToPoints Parms{};
+
+	Parms.Transforms = std::move(Transforms);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Points != nullptr)
+		*Points = std::move(Parms.Points);
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.UnflattenPoints
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector2D>                PointsIn2D                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  PointsIn3D                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// struct FGeometryScriptPointFlatteningOptionsOptions                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// double                                  Height                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_PointSetSamplingFunctions::UnflattenPoints(const TArray<struct FVector2D>& PointsIn2D, TArray<struct FVector>* PointsIn3D, const struct FGeometryScriptPointFlatteningOptions& Options, double Height)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_PointSetSamplingFunctions", "UnflattenPoints");
+
+	Params::GeometryScriptLibrary_PointSetSamplingFunctions_UnflattenPoints Parms{};
+
+	Parms.PointsIn2D = std::move(PointsIn2D);
+	Parms.Options = std::move(Options);
+	Parms.Height = Height;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (PointsIn3D != nullptr)
+		*PointsIn3D = std::move(Parms.PointsIn3D);
 }
 
 
@@ -13972,11 +15279,11 @@ int32 UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathNumVertices(const str
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptPolyPath          PolyPath                                               (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Param_Index, bool* bIsValidIndex)
+struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -13986,7 +15293,7 @@ struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathTangent(cons
 	Params::GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent Parms{};
 
 	Parms.PolyPath = std::move(PolyPath);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -14006,11 +15313,11 @@ struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathTangent(cons
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometryScriptPolyPath          PolyPath                                               (Parm, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsValidIndex                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Param_Index, bool* bIsValidIndex)
+struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -14020,7 +15327,7 @@ struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathVertex(const
 	Params::GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex Parms{};
 
 	Parms.PolyPath = std::move(PolyPath);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -14045,8 +15352,9 @@ struct FVector UGeometryScriptLibrary_PolyPathFunctions::GetPolyPathVertex(const
 // struct FGeometryScriptSplineSamplingOptionsSamplingOptions                                        (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FTransform                       RelativeTransform                                      (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIncludeScale                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryScriptLibrary_PolyPathFunctions::SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale)
+bool UGeometryScriptLibrary_PolyPathFunctions::SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale)
 {
 	static class UFunction* Func = nullptr;
 
@@ -14072,6 +15380,8 @@ void UGeometryScriptLibrary_PolyPathFunctions::SampleSplineToTransforms(const cl
 
 	if (FrameTimes != nullptr)
 		*FrameTimes = std::move(Parms.FrameTimes);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -14187,6 +15497,53 @@ class UDynamicMeshPool* UGeometryScriptLibrary_SceneUtilityFunctions::CreateDyna
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.DetermineMeshOcclusion
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UDynamicMesh*>             SourceMeshes                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTransform>               SourceMeshTransforms                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<bool>                            OutMeshIsHidden                                        (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class UDynamicMesh*>             TransparentMeshes                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTransform>               TransparentMeshTransforms                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<bool>                            OutTransparentMeshIsHidden                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class UDynamicMesh*>             OccludeMeshes                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FTransform>               OccludeMeshTransforms                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FGeometryScriptDetermineMeshOcclusionOptionsOcclusionOptions                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UGeometryScriptDebug*             Debug                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryScriptLibrary_SceneUtilityFunctions::DetermineMeshOcclusion(const TArray<class UDynamicMesh*>& SourceMeshes, const TArray<struct FTransform>& SourceMeshTransforms, TArray<bool>* OutMeshIsHidden, const TArray<class UDynamicMesh*>& TransparentMeshes, const TArray<struct FTransform>& TransparentMeshTransforms, TArray<bool>* OutTransparentMeshIsHidden, const TArray<class UDynamicMesh*>& OccludeMeshes, const TArray<struct FTransform>& OccludeMeshTransforms, const struct FGeometryScriptDetermineMeshOcclusionOptions& OcclusionOptions, class UGeometryScriptDebug* Debug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GeometryScriptLibrary_SceneUtilityFunctions", "DetermineMeshOcclusion");
+
+	Params::GeometryScriptLibrary_SceneUtilityFunctions_DetermineMeshOcclusion Parms{};
+
+	Parms.SourceMeshes = std::move(SourceMeshes);
+	Parms.SourceMeshTransforms = std::move(SourceMeshTransforms);
+	Parms.TransparentMeshes = std::move(TransparentMeshes);
+	Parms.TransparentMeshTransforms = std::move(TransparentMeshTransforms);
+	Parms.OccludeMeshes = std::move(OccludeMeshes);
+	Parms.OccludeMeshTransforms = std::move(OccludeMeshTransforms);
+	Parms.OcclusionOptions = std::move(OcclusionOptions);
+	Parms.Debug = Debug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMeshIsHidden != nullptr)
+		*OutMeshIsHidden = std::move(Parms.OutMeshIsHidden);
+
+	if (OutTransparentMeshIsHidden != nullptr)
+		*OutTransparentMeshIsHidden = std::move(Parms.OutTransparentMeshIsHidden);
 }
 
 

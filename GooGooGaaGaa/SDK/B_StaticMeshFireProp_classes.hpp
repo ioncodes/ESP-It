@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "B_StaticMeshLightProp_classes.hpp"
 #include "Engine_structs.hpp"
+#include "B_StaticMeshLightProp_classes.hpp"
 
 
 namespace SDK
@@ -22,12 +22,12 @@ namespace SDK
 class AB_StaticMeshFireProp_C : public AB_StaticMeshLightProp_C
 {
 public:
-	uint8                                         Pad_18F4[0x7];                                     // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_StaticMeshFireProp_C;             // 0x05F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   Fire;                                              // 0x0600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         FireFlickerTimeline_Light_37BE88AA4DE7EB644660EC81F16F9A77; // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            FireFlickerTimeline__Direction_37BE88AA4DE7EB644660EC81F16F9A77; // 0x060C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18F5[0x3];                                     // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60D[0x3];                                      // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     FireFlickerTimeline;                               // 0x0610(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               FireMaterial;                                      // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UStaticMeshComponent*>           Fires;                                             // 0x0620(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)

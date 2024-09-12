@@ -24,16 +24,17 @@ public:
 	class UB_SettingsSave_C*                      SettingsSave;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B4[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_ByteToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue_1;        // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetColorVisionDeficiencyType_Severity_ImplicitCast; // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetGamma_gamma_ImplicitCast;              // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SavegameFunctionLibrary_C_Set_Setting_Commands) == 0x000008, "Wrong alignment on B_SavegameFunctionLibrary_C_Set_Setting_Commands");
 static_assert(sizeof(B_SavegameFunctionLibrary_C_Set_Setting_Commands) == 0x000098, "Wrong size on B_SavegameFunctionLibrary_C_Set_Setting_Commands");
@@ -43,12 +44,13 @@ static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFun
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000018, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Conv_ByteToString_ReturnValue) == 0x000020, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Conv_ByteToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Conv_IntToString_ReturnValue) == 0x000030, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Conv_DoubleToString_ReturnValue) == 0x000040, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Concat_StrStr_ReturnValue) == 0x000050, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Concat_StrStr_ReturnValue) == 0x000040, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Conv_DoubleToString_ReturnValue) == 0x000050, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000060, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Conv_DoubleToString_ReturnValue_1) == 0x000070, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Conv_DoubleToString_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000080, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_SetColorVisionDeficiencyType_Severity_ImplicitCast) == 0x000090, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_SetColorVisionDeficiencyType_Severity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_SavegameFunctionLibrary_C_Set_Setting_Commands, CallFunc_SetGamma_gamma_ImplicitCast) == 0x000094, "Member 'B_SavegameFunctionLibrary_C_Set_Setting_Commands::CallFunc_SetGamma_gamma_ImplicitCast' has a wrong offset!");
 
 // Function B_SavegameFunctionLibrary.B_SavegameFunctionLibrary_C.SaveSaveGameAsync
 // 0x0030 (0x0030 - 0x0000)
@@ -57,7 +59,7 @@ struct B_SavegameFunctionLibrary_C_SaveSaveGameAsync final
 public:
 	class USaveGame*                              SaveGame;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Savegame                                    SaveGameType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B5[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -76,9 +78,9 @@ struct B_SavegameFunctionLibrary_C_LoadSaveGameAsync final
 {
 public:
 	E_Savegame                                    SaveGameType;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const class FString& Name, bool Success, class USaveGame* SaveGame)> Callback;                                          // 0x0004(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B7[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 SaveFile;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class UClass*                                 Temp_class_Variable;                               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -88,7 +90,7 @@ public:
 	class UClass*                                 Temp_class_Variable_3;                             // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 Temp_class_Variable_4;                             // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Savegame                                    Temp_byte_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B8[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_Select_Default;                             // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              CallFunc_CreateSaveGameObject_ReturnValue;         // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSaveGameAnyBytes_ReturnValue;          // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -121,7 +123,7 @@ struct B_SavegameFunctionLibrary_C_SaveSaveGame final
 public:
 	class USaveGame*                              SaveGame;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Savegame                                    SaveGameType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49B9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 SaveFile;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -142,12 +144,12 @@ struct B_SavegameFunctionLibrary_C_LoadSaveGame final
 {
 public:
 	E_Savegame                                    SaveGameType;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49BA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              SaveGame;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 SaveFile;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	E_Savegame                                    Temp_byte_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49BB[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UClass*                                 Temp_class_Variable;                               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 Temp_class_Variable_1;                             // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)

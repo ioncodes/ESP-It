@@ -41,9 +41,9 @@ void AB_CookingRecipeSign_C::PickMesh(class UStaticMesh** Static_Mesh)
 // Function B_CookingRecipeSign.B_CookingRecipeSign_C.UpdateIngredientMesh
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UStaticMesh*                      Param_Ingredient                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh*                      Ingredient_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_CookingRecipeSign_C::UpdateIngredientMesh(class UStaticMesh* Param_Ingredient)
+void AB_CookingRecipeSign_C::UpdateIngredientMesh(class UStaticMesh* Ingredient_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,7 +52,7 @@ void AB_CookingRecipeSign_C::UpdateIngredientMesh(class UStaticMesh* Param_Ingre
 
 	Params::B_CookingRecipeSign_C_UpdateIngredientMesh Parms{};
 
-	Parms.Param_Ingredient = Param_Ingredient;
+	Parms.Ingredient_0 = Ingredient_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

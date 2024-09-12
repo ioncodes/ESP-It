@@ -24,9 +24,9 @@ struct B_AchievementManager_C_Achievement_Is_Not_Owned final
 {
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Param_Name;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Name_0;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsNotOwned;                                        // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5005[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchievementsManager_Result;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetGSAchievement_HasAchievement;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetGSAchievement_Result;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -35,7 +35,7 @@ public:
 static_assert(alignof(B_AchievementManager_C_Achievement_Is_Not_Owned) == 0x000008, "Wrong alignment on B_AchievementManager_C_Achievement_Is_Not_Owned");
 static_assert(sizeof(B_AchievementManager_C_Achievement_Is_Not_Owned) == 0x000028, "Wrong size on B_AchievementManager_C_Achievement_Is_Not_Owned");
 static_assert(offsetof(B_AchievementManager_C_Achievement_Is_Not_Owned, PlayerState) == 0x000000, "Member 'B_AchievementManager_C_Achievement_Is_Not_Owned::PlayerState' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Achievement_Is_Not_Owned, Param_Name) == 0x000008, "Member 'B_AchievementManager_C_Achievement_Is_Not_Owned::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Achievement_Is_Not_Owned, Name_0) == 0x000008, "Member 'B_AchievementManager_C_Achievement_Is_Not_Owned::Name_0' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Achievement_Is_Not_Owned, IsNotOwned) == 0x000010, "Member 'B_AchievementManager_C_Achievement_Is_Not_Owned::IsNotOwned' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Achievement_Is_Not_Owned, CallFunc_GetStatsAndAchievementsManager_Result) == 0x000018, "Member 'B_AchievementManager_C_Achievement_Is_Not_Owned::CallFunc_GetStatsAndAchievementsManager_Result' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Achievement_Is_Not_Owned, CallFunc_GetGSAchievement_HasAchievement) == 0x000020, "Member 'B_AchievementManager_C_Achievement_Is_Not_Owned::CallFunc_GetGSAchievement_HasAchievement' has a wrong offset!");
@@ -49,7 +49,7 @@ struct B_AchievementManager_C_Activate_Achievement final
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                AchievementType;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5006[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       Achievement;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -71,8 +71,8 @@ struct B_AchievementManager_C_Activate_By_Id final
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                Achievement_Type;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5007[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PropId;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       Achievement;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -83,7 +83,7 @@ static_assert(alignof(B_AchievementManager_C_Activate_By_Id) == 0x000008, "Wrong
 static_assert(sizeof(B_AchievementManager_C_Activate_By_Id) == 0x000028, "Wrong size on B_AchievementManager_C_Activate_By_Id");
 static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, PlayerState) == 0x000000, "Member 'B_AchievementManager_C_Activate_By_Id::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, Achievement_Type) == 0x000008, "Member 'B_AchievementManager_C_Activate_By_Id::Achievement_Type' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, PropId) == 0x00000C, "Member 'B_AchievementManager_C_Activate_By_Id::PropId' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, PropID) == 0x00000C, "Member 'B_AchievementManager_C_Activate_By_Id::PropID' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, Achievement) == 0x000010, "Member 'B_AchievementManager_C_Activate_By_Id::Achievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, CallFunc_Get_Player_Achievement_Achievement) == 0x000018, "Member 'B_AchievementManager_C_Activate_By_Id::CallFunc_Get_Player_Achievement_Achievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Activate_By_Id, CallFunc_Get_Player_Achievement_Success) == 0x000020, "Member 'B_AchievementManager_C_Activate_By_Id::CallFunc_Get_Player_Achievement_Success' has a wrong offset!");
@@ -99,14 +99,14 @@ public:
 	class UB_Achievement_C*                       Achievement;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsValid;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Valid;                                             // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5008[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5009[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameMode_C*                          CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_500A[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Achievement_Is_Not_Owned_IsNotOwned;      // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -131,8 +131,8 @@ static_assert(offsetof(B_AchievementManager_C_Check_Achievement_Validity, CallFu
 struct B_AchievementManager_C_Check_Prop_Achievements final
 {
 public:
-	int32                                         PropId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_500B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_SeekGameState_C*                     SeekGameState;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       ControllingPlayer;                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
@@ -141,7 +141,7 @@ public:
 };
 static_assert(alignof(B_AchievementManager_C_Check_Prop_Achievements) == 0x000008, "Wrong alignment on B_AchievementManager_C_Check_Prop_Achievements");
 static_assert(sizeof(B_AchievementManager_C_Check_Prop_Achievements) == 0x000028, "Wrong size on B_AchievementManager_C_Check_Prop_Achievements");
-static_assert(offsetof(B_AchievementManager_C_Check_Prop_Achievements, PropId) == 0x000000, "Member 'B_AchievementManager_C_Check_Prop_Achievements::PropId' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Check_Prop_Achievements, PropID) == 0x000000, "Member 'B_AchievementManager_C_Check_Prop_Achievements::PropID' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Check_Prop_Achievements, PlayerState) == 0x000008, "Member 'B_AchievementManager_C_Check_Prop_Achievements::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Check_Prop_Achievements, SeekGameState) == 0x000010, "Member 'B_AchievementManager_C_Check_Prop_Achievements::SeekGameState' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Check_Prop_Achievements, ControllingPlayer) == 0x000018, "Member 'B_AchievementManager_C_Check_Prop_Achievements::ControllingPlayer' has a wrong offset!");
@@ -154,11 +154,11 @@ struct B_AchievementManager_C_CheckDefaultNrOfActivePlayers final
 {
 public:
 	bool                                          Sufficient_Players;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_500C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetDefaultCompletionRequiredAmountOfPlayers_DefaultRequiredAmount; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetHuntersCount_HuntersCount;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetWitchesCount_WitchesCount;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_500D[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -181,7 +181,7 @@ struct B_AchievementManager_C_CheckNrOfActivePlayers final
 {
 public:
 	bool                                          Sufficient_Players;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_500E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetDefaultCompletionRequiredAmountOfPlayers_DefaultRequiredAmount; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumberOfActivePlayers_ActiveCount;     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -201,7 +201,7 @@ public:
 	class UB_Achievement_C*                       Model;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       Achievement;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_500F[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       TempAchievement;                                   // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       CallFunc_CreateObject_Object;                      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -220,7 +220,7 @@ struct B_AchievementManager_C_Deactivate_Achievement final
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                AchievementType;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5010[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       Achievement;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -408,14 +408,14 @@ struct B_AchievementManager_C_Get_Achievement_Key final
 public:
 	class UB_Achievement_C*                       Achievement;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                Key;                                               // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5011[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<E_Achievements>                        CallFunc_Map_Keys_Keys;                            // 0x0018(0x0010)(ReferenceParm)
 	TArray<class FName>                           CallFunc_Map_Values_Values;                        // 0x0028(0x0010)(ReferenceParm)
 	E_Achievements                                CallFunc_Array_Get_Item;                           // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5012[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -456,7 +456,7 @@ static_assert(offsetof(B_AchievementManager_C_Get_AchPhoto_Ids, K2Node_MakeArray
 struct B_AchievementManager_C_Get_Divider final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Divider;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TempDivider;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -467,7 +467,7 @@ public:
 };
 static_assert(alignof(B_AchievementManager_C_Get_Divider) == 0x000004, "Wrong alignment on B_AchievementManager_C_Get_Divider");
 static_assert(sizeof(B_AchievementManager_C_Get_Divider) == 0x000020, "Wrong size on B_AchievementManager_C_Get_Divider");
-static_assert(offsetof(B_AchievementManager_C_Get_Divider, Param_Index) == 0x000000, "Member 'B_AchievementManager_C_Get_Divider::Param_Index' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Get_Divider, Index_0) == 0x000000, "Member 'B_AchievementManager_C_Get_Divider::Index_0' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Get_Divider, Divider) == 0x000004, "Member 'B_AchievementManager_C_Get_Divider::Divider' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Get_Divider, TempDivider) == 0x000008, "Member 'B_AchievementManager_C_Get_Divider::TempDivider' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Get_Divider, Temp_int_Variable) == 0x00000C, "Member 'B_AchievementManager_C_Get_Divider::Temp_int_Variable' has a wrong offset!");
@@ -483,22 +483,22 @@ struct B_AchievementManager_C_Get_Player_Achievement final
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                Achievement_Type;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5013[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       Achievement;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Found;                                             // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5014[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       Match;                                             // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5015[0x1];                                     // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Map_Find_Value;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5016[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -536,9 +536,9 @@ struct B_AchievementManager_C_Give_Achievement final
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                Achievement_Type;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5017[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Param_Name;                                        // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5018[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Name_0;                                            // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCustomLogSubsystem*                    CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetProductUserId_ProductUserId;           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -555,13 +555,13 @@ public:
 	bool                                          CallFunc_WithEditor_ReturnValue;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckNrOfActivePlayers_Sufficient_Players; // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetGSAchievement_Result;                  // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5019[0x5];                                     // 0x00DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DB[0x5];                                       // 0x00DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_501A[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_501B[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -575,7 +575,7 @@ static_assert(alignof(B_AchievementManager_C_Give_Achievement) == 0x000008, "Wro
 static_assert(sizeof(B_AchievementManager_C_Give_Achievement) == 0x000178, "Wrong size on B_AchievementManager_C_Give_Achievement");
 static_assert(offsetof(B_AchievementManager_C_Give_Achievement, PlayerState) == 0x000000, "Member 'B_AchievementManager_C_Give_Achievement::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Give_Achievement, Achievement_Type) == 0x000008, "Member 'B_AchievementManager_C_Give_Achievement::Achievement_Type' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Give_Achievement, Param_Name) == 0x00000C, "Member 'B_AchievementManager_C_Give_Achievement::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Give_Achievement, Name_0) == 0x00000C, "Member 'B_AchievementManager_C_Give_Achievement::Name_0' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Give_Achievement, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000018, "Member 'B_AchievementManager_C_Give_Achievement::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Give_Achievement, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000020, "Member 'B_AchievementManager_C_Give_Achievement::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Give_Achievement, CallFunc_GetProductUserId_ProductUserId) == 0x000030, "Member 'B_AchievementManager_C_Give_Achievement::CallFunc_GetProductUserId_ProductUserId' has a wrong offset!");
@@ -617,7 +617,7 @@ public:
 	class UB_Achievement_C*                       CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_501C[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Check_Achievement_Validity_IsValid;       // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -646,14 +646,14 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_501D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_501E[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       CallFunc_Create_New_Achievement_Instance_Achievement; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Create_New_Achievement_Instance_Success;  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_501F[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AchievementManager_C_Initialize_Player_Achievement_List) == 0x000008, "Wrong alignment on B_AchievementManager_C_Initialize_Player_Achievement_List");
@@ -674,8 +674,8 @@ static_assert(offsetof(B_AchievementManager_C_Initialize_Player_Achievement_List
 struct B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements final
 {
 public:
-	int32                                         PropId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5020[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_SeekGameState_C*                     SeekGameState;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -688,7 +688,7 @@ public:
 };
 static_assert(alignof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements) == 0x000008, "Wrong alignment on B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements");
 static_assert(sizeof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements) == 0x000020, "Wrong size on B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements");
-static_assert(offsetof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements, PropId) == 0x000000, "Member 'B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements::PropId' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements, PropID) == 0x000000, "Member 'B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements::PropID' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements, PlayerState) == 0x000008, "Member 'B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements::PlayerState' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements, SeekGameState) == 0x000010, "Member 'B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements::SeekGameState' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements, K2Node_SwitchEnum_CmpSuccess) == 0x000018, "Member 'B_AchievementManager_C_Reset_Or_Disable_Prop_Achievements::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
@@ -723,23 +723,23 @@ public:
 	bool                                          Hide_and_Seek;                                     // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Hunt_a_Hag;                                        // 0x000D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Fill_the_Pot;                                      // 0x000E(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5021[0x1];                                     // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Target_Value;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Required_Player_Amount;                            // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int32>                                 CallFunc_Get_AchPhoto_Ids_Ids;                     // 0x0018(0x0010)(ReferenceParm)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5022[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Map_Find_Value;                           // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5023[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5024[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_GameMode_C*>                  CallFunc_Get_Valid_Game_Modes_Valid_Game_Modes;    // 0x0040(0x0010)(ReferenceParm)
 	TArray<int32>                                 CallFunc_Get_AchBig_Ids_Ids;                       // 0x0050(0x0010)(ReferenceParm)
 	TArray<int32>                                 CallFunc_Get_AchBarrelRoll_Ids_Ids;                // 0x0060(0x0010)(ReferenceParm)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_2;    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5025[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 CallFunc_Get_AchFruitSalad_Ids_Ids;                // 0x0078(0x0010)(ReferenceParm)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_3;    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -769,7 +769,7 @@ static_assert(offsetof(B_AchievementManager_C_Set_Individual_Achievement_Content
 static_assert(offsetof(B_AchievementManager_C_Set_Individual_Achievement_Content, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x000088, "Member 'B_AchievementManager_C_Set_Individual_Achievement_Content::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
 
 // Function B_AchievementManager.B_AchievementManager_C.Set Level Name List
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct B_AchievementManager_C_Set_Level_Name_List final
 {
 public:
@@ -777,18 +777,18 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5026[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      CallFunc_GetOfficialMaps_OfficialMaps;             // 0x0020(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5027[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0038(0x0050)(HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5028[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetLevelNameFromFileName_MapName;         // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0038(0x0040)(HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetLevelNameFromFileName_MapName;         // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AchievementManager_C_Set_Level_Name_List) == 0x000008, "Wrong alignment on B_AchievementManager_C_Set_Level_Name_List");
-static_assert(sizeof(B_AchievementManager_C_Set_Level_Name_List) == 0x0000A8, "Wrong size on B_AchievementManager_C_Set_Level_Name_List");
+static_assert(sizeof(B_AchievementManager_C_Set_Level_Name_List) == 0x000098, "Wrong size on B_AchievementManager_C_Set_Level_Name_List");
 static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, Map_Name) == 0x000000, "Member 'B_AchievementManager_C_Set_Level_Name_List::Map_Name' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, Temp_int_Array_Index_Variable) == 0x000010, "Member 'B_AchievementManager_C_Set_Level_Name_List::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'B_AchievementManager_C_Set_Level_Name_List::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -796,9 +796,9 @@ static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Add_
 static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_GetOfficialMaps_OfficialMaps) == 0x000020, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_GetOfficialMaps_OfficialMaps' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Array_Get_Item) == 0x000038, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_GetLevelNameFromFileName_MapName) == 0x000090, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_GetLevelNameFromFileName_MapName' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Array_Add_ReturnValue) == 0x0000A0, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_GetLevelNameFromFileName_MapName) == 0x000080, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_GetLevelNameFromFileName_MapName' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Set_Level_Name_List, CallFunc_Array_Add_ReturnValue) == 0x000090, "Member 'B_AchievementManager_C_Set_Level_Name_List::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_AchievementManager.B_AchievementManager_C.Set Name Conversion Map
 // 0x0050 (0x0050 - 0x0000)
@@ -821,10 +821,10 @@ public:
 	bool                                          Hide_and_Seek;                                     // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Hunt_a_Hag;                                        // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Fill_the_Pot;                                      // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5029[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ObjectiveGameMode_C*                 CallFunc_CreateObject_Object;                      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_502A[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_HuntAHagGameMode_C*                  CallFunc_CreateObject_Object_1;                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_HideAndSeekGameMode_C*               CallFunc_CreateObject_Object_2;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -853,25 +853,25 @@ static_assert(offsetof(B_AchievementManager_C_Set_Valid_Game_Modes, CallFunc_Arr
 struct B_AchievementManager_C_SetAchievementContent final
 {
 public:
-	class UB_GameInstance_C*                      Param_GameInstance;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameMode_C*                          Param_GameMode;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      GameInstance_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameMode_C*                          GameMode_0;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AchievementManager_C_SetAchievementContent) == 0x000008, "Wrong alignment on B_AchievementManager_C_SetAchievementContent");
 static_assert(sizeof(B_AchievementManager_C_SetAchievementContent) == 0x000010, "Wrong size on B_AchievementManager_C_SetAchievementContent");
-static_assert(offsetof(B_AchievementManager_C_SetAchievementContent, Param_GameInstance) == 0x000000, "Member 'B_AchievementManager_C_SetAchievementContent::Param_GameInstance' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_SetAchievementContent, Param_GameMode) == 0x000008, "Member 'B_AchievementManager_C_SetAchievementContent::Param_GameMode' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_SetAchievementContent, GameInstance_0) == 0x000000, "Member 'B_AchievementManager_C_SetAchievementContent::GameInstance_0' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_SetAchievementContent, GameMode_0) == 0x000008, "Member 'B_AchievementManager_C_SetAchievementContent::GameMode_0' has a wrong offset!");
 
 // Function B_AchievementManager.B_AchievementManager_C.Test AchFruitSalad Ids
 // 0x0028 (0x0028 - 0x0000)
 struct B_AchievementManager_C_Test_AchFruitSalad_Ids final
 {
 public:
-	int32                                         PropId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_502B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       Achievement;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Give_Achievement;                                  // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Test_Prop_Id_Validity_IdIsValid;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_502C[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -880,7 +880,7 @@ public:
 };
 static_assert(alignof(B_AchievementManager_C_Test_AchFruitSalad_Ids) == 0x000008, "Wrong alignment on B_AchievementManager_C_Test_AchFruitSalad_Ids");
 static_assert(sizeof(B_AchievementManager_C_Test_AchFruitSalad_Ids) == 0x000028, "Wrong size on B_AchievementManager_C_Test_AchFruitSalad_Ids");
-static_assert(offsetof(B_AchievementManager_C_Test_AchFruitSalad_Ids, PropId) == 0x000000, "Member 'B_AchievementManager_C_Test_AchFruitSalad_Ids::PropId' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Test_AchFruitSalad_Ids, PropID) == 0x000000, "Member 'B_AchievementManager_C_Test_AchFruitSalad_Ids::PropID' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_AchFruitSalad_Ids, Achievement) == 0x000008, "Member 'B_AchievementManager_C_Test_AchFruitSalad_Ids::Achievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_AchFruitSalad_Ids, Give_Achievement) == 0x000010, "Member 'B_AchievementManager_C_Test_AchFruitSalad_Ids::Give_Achievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_AchFruitSalad_Ids, CallFunc_Test_Prop_Id_Validity_IdIsValid) == 0x000011, "Member 'B_AchievementManager_C_Test_AchFruitSalad_Ids::CallFunc_Test_Prop_Id_Validity_IdIsValid' has a wrong offset!");
@@ -897,23 +897,23 @@ struct B_AchievementManager_C_Test_Amount_Of_Won_Maps final
 public:
 	int32                                         AllMapsCode;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          GiveAchievement;                                   // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_502D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WonMaps;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NeccessaryDigits;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FString>                         IntToCharArray;                                    // 0x0010(0x0010)(Edit, BlueprintVisible)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_502E[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_GetCharacterArrayFromString_ReturnValue;  // 0x0038(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_502F[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5030[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -962,7 +962,7 @@ public:
 	class UB_Achievement_C*                       Achievement;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Give_Achievement;                                  // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DateTimeDateTime_ReturnValue;     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5031[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakTimespan_Days;                       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakTimespan_Hours;                      // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -970,16 +970,16 @@ public:
 	int32                                         CallFunc_BreakTimespan_Seconds;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakTimespan_Milliseconds;               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DateTimeDateTime_ReturnValue;        // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5032[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5033[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5034[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1013,11 +1013,11 @@ static_assert(offsetof(B_AchievementManager_C_Test_Hunter_Catch_in_Air, CallFunc
 struct B_AchievementManager_C_Test_Luaq_Statue_Photo final
 {
 public:
-	class AActor*                                 Param_PhotoTarget;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 PhotoTarget_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       Player_State;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_Achievement_C*                       Achievement;                                       // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Give_Achievement;                                  // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5035[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1025,7 +1025,7 @@ public:
 };
 static_assert(alignof(B_AchievementManager_C_Test_Luaq_Statue_Photo) == 0x000008, "Wrong alignment on B_AchievementManager_C_Test_Luaq_Statue_Photo");
 static_assert(sizeof(B_AchievementManager_C_Test_Luaq_Statue_Photo) == 0x000028, "Wrong size on B_AchievementManager_C_Test_Luaq_Statue_Photo");
-static_assert(offsetof(B_AchievementManager_C_Test_Luaq_Statue_Photo, Param_PhotoTarget) == 0x000000, "Member 'B_AchievementManager_C_Test_Luaq_Statue_Photo::Param_PhotoTarget' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Test_Luaq_Statue_Photo, PhotoTarget_0) == 0x000000, "Member 'B_AchievementManager_C_Test_Luaq_Statue_Photo::PhotoTarget_0' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_Luaq_Statue_Photo, Player_State) == 0x000008, "Member 'B_AchievementManager_C_Test_Luaq_Statue_Photo::Player_State' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_Luaq_Statue_Photo, Achievement) == 0x000010, "Member 'B_AchievementManager_C_Test_Luaq_Statue_Photo::Achievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_Luaq_Statue_Photo, Give_Achievement) == 0x000018, "Member 'B_AchievementManager_C_Test_Luaq_Statue_Photo::Give_Achievement' has a wrong offset!");
@@ -1041,10 +1041,10 @@ struct B_AchievementManager_C_Test_Match_Value final
 public:
 	class UB_Achievement_C*                       Achievement;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Give_Achievement;                                  // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5036[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5037[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AchievementManager_C_Test_Match_Value) == 0x000008, "Wrong alignment on B_AchievementManager_C_Test_Match_Value");
@@ -1061,23 +1061,23 @@ struct B_AchievementManager_C_Test_NonMinusSurvival_Achievement final
 {
 public:
 	E_Achievements                                AchievementType;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5038[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         PropId;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5039[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PropID;                                            // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        TravelDistance;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 ControlledProp;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              StartHunterInAir;                                  // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              EndHunterInAir;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_PhotoTarget;                                 // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 PhotoTarget_0;                                     // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          GiveAchievement;                                   // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_503A[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       Achievement;                                       // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Test_Match_Value_Give_Achievement;        // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Test_Hunter_Catch_in_Air_Give_Achievement; // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_503B[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_Achievement_C*                       CallFunc_Get_Player_Achievement_Achievement;       // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Player_Achievement_Success;           // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1091,12 +1091,12 @@ static_assert(alignof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement) 
 static_assert(sizeof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement) == 0x000068, "Wrong size on B_AchievementManager_C_Test_NonMinusSurvival_Achievement");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, AchievementType) == 0x000000, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::AchievementType' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, PlayerState) == 0x000008, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::PlayerState' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, PropId) == 0x000010, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::PropId' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, PropID) == 0x000010, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::PropID' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, TravelDistance) == 0x000018, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::TravelDistance' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, ControlledProp) == 0x000020, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::ControlledProp' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, StartHunterInAir) == 0x000028, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::StartHunterInAir' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, EndHunterInAir) == 0x000030, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::EndHunterInAir' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, Param_PhotoTarget) == 0x000038, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::Param_PhotoTarget' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, PhotoTarget_0) == 0x000038, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::PhotoTarget_0' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, GiveAchievement) == 0x000040, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::GiveAchievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, Achievement) == 0x000048, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::Achievement' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Test_NonMinusSurvival_Achievement, CallFunc_Test_Match_Value_Give_Achievement) == 0x000050, "Member 'B_AchievementManager_C_Test_NonMinusSurvival_Achievement::CallFunc_Test_Match_Value_Give_Achievement' has a wrong offset!");
@@ -1142,45 +1142,45 @@ public:
 	double                                        NewTravelDistance;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 Barrel;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          GiveAchievement;                                   // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_503C[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_NegateRotator_ReturnValue;                // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_503D[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_503E[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_503F[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5040[0x8];                                     // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue_1;              // 0x0110(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_ComposeTransforms_ReturnValue;            // 0x0170(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5041[0x7];                                     // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5042[0x4];                                     // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5043[0x4];                                     // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector_X;                            // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Y;                            // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_Z;                            // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5044[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Abs_ReturnValue;                          // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5045[0x7];                                     // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_MakeVector_X_ImplicitCast;                // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1231,7 +1231,7 @@ struct B_AchievementManager_C_Update_Map_Stat final
 public:
 	class FString                                 Current_Level;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       Player_State;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_Index;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MapCode;                                           // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         NewDigitEntry;                                     // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Divider;                                           // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1239,39 +1239,39 @@ public:
 	int32                                         OldDigitEntry;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   StatName;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Test_Amount_Of_Won_Maps_GiveAchievement;  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5046[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Get_Divider_Divider;                      // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5047[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchievementsManager_Result;    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchievementsManager_Result_1;  // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetGSStat_Result;                         // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetGSStat_ReturnValue;                    // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5048[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         CallFunc_GetGSStat_ResultValue;                    // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetGSStat_ResultWasFound;                 // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckNrOfActivePlayers_Sufficient_Players; // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5049[0x2];                                     // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Find_ReturnValue_1;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_Achievements                                Temp_byte_Variable;                                // 0x0085(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504A[0x2];                                     // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_86[0x2];                                       // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Map_Find_Value;                           // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Achievement_Is_Not_Owned_IsNotOwned;      // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504B[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_92[0x2];                                       // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504C[0x2];                                     // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue_1;            // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504D[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1279,7 +1279,7 @@ static_assert(alignof(B_AchievementManager_C_Update_Map_Stat) == 0x000008, "Wron
 static_assert(sizeof(B_AchievementManager_C_Update_Map_Stat) == 0x0000B8, "Wrong size on B_AchievementManager_C_Update_Map_Stat");
 static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, Current_Level) == 0x000000, "Member 'B_AchievementManager_C_Update_Map_Stat::Current_Level' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, Player_State) == 0x000010, "Member 'B_AchievementManager_C_Update_Map_Stat::Player_State' has a wrong offset!");
-static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, Param_Index) == 0x000018, "Member 'B_AchievementManager_C_Update_Map_Stat::Param_Index' has a wrong offset!");
+static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, Index_0) == 0x000018, "Member 'B_AchievementManager_C_Update_Map_Stat::Index_0' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, MapCode) == 0x00001C, "Member 'B_AchievementManager_C_Update_Map_Stat::MapCode' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, NewDigitEntry) == 0x000020, "Member 'B_AchievementManager_C_Update_Map_Stat::NewDigitEntry' has a wrong offset!");
 static_assert(offsetof(B_AchievementManager_C_Update_Map_Stat, Divider) == 0x000024, "Member 'B_AchievementManager_C_Update_Map_Stat::Divider' has a wrong offset!");
@@ -1325,12 +1325,12 @@ public:
 	class FName                                   StatName;                                          // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CheckNrOfActivePlayers_Sufficient_Players; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchievementsManager_Result;    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_NewStatsAndAchievementsManager_C*    CallFunc_GetStatsAndAchievementsManager_Result_1;  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_GetGSStat_ResultValue;                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetGSStat_ResultWasFound;                 // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504F[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Conv_Int64ToInt_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Achievement_Is_Not_Owned_IsNotOwned;      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1364,7 +1364,7 @@ struct B_AchievementManager_C_GetDefaultCompletionRequiredAmountOfPlayers final
 {
 public:
 	int32                                         DefaultRequiredAmount;                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5050[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

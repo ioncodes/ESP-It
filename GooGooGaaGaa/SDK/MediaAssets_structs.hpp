@@ -48,6 +48,15 @@ enum class EMediaPlayerTrack : uint8
 	EMediaPlayerTrack_MAX                    = 7,
 };
 
+// Enum MediaAssets.EMediaTimeRangeBPType
+// NumValues: 0x0003
+enum class EMediaTimeRangeBPType : uint8
+{
+	Absolute                                 = 0,
+	Current                                  = 1,
+	EMediaTimeRangeBPType_MAX                = 2,
+};
+
 // Enum MediaAssets.EMediaSoundChannels
 // NumValues: 0x0004
 enum class EMediaSoundChannels : uint32
@@ -162,7 +171,7 @@ struct FMediaSourceCacheSettings final
 {
 public:
 	bool                                          bOverride;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16D7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimeToLookAhead;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMediaSourceCacheSettings) == 0x000004, "Wrong alignment on FMediaSourceCacheSettings");
@@ -171,17 +180,17 @@ static_assert(offsetof(FMediaSourceCacheSettings, bOverride) == 0x000000, "Membe
 static_assert(offsetof(FMediaSourceCacheSettings, TimeToLookAhead) == 0x000004, "Member 'FMediaSourceCacheSettings::TimeToLookAhead' has a wrong offset!");
 
 // ScriptStruct MediaAssets.MediaCaptureDevice
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct FMediaCaptureDevice final
 {
 public:
-	class FText                                   DisplayName;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
-	class FString                                 URL;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   DisplayName;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
+	class FString                                 URL;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMediaCaptureDevice) == 0x000008, "Wrong alignment on FMediaCaptureDevice");
-static_assert(sizeof(FMediaCaptureDevice) == 0x000028, "Wrong size on FMediaCaptureDevice");
+static_assert(sizeof(FMediaCaptureDevice) == 0x000020, "Wrong size on FMediaCaptureDevice");
 static_assert(offsetof(FMediaCaptureDevice, DisplayName) == 0x000000, "Member 'FMediaCaptureDevice::DisplayName' has a wrong offset!");
-static_assert(offsetof(FMediaCaptureDevice, URL) == 0x000018, "Member 'FMediaCaptureDevice::URL' has a wrong offset!");
+static_assert(offsetof(FMediaCaptureDevice, URL) == 0x000010, "Member 'FMediaCaptureDevice::URL' has a wrong offset!");
 
 }
 

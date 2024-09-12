@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ClosePortalDummy.B_ClosePortalDummy_C
-// 0x0008 (0x0308 - 0x0300)
+// 0x0008 (0x0300 - 0x02F8)
 class AB_ClosePortalDummy_C final : public AB_Dummy_C
 {
 public:
-	class UAudioComponent*                        WoodAudio;                                         // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        WoodAudio;                                         // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AB_ClosePortalDummy_C) == 0x000008, "Wrong alignment on AB_ClosePortalDummy_C");
-static_assert(sizeof(AB_ClosePortalDummy_C) == 0x000308, "Wrong size on AB_ClosePortalDummy_C");
-static_assert(offsetof(AB_ClosePortalDummy_C, WoodAudio) == 0x000300, "Member 'AB_ClosePortalDummy_C::WoodAudio' has a wrong offset!");
+static_assert(sizeof(AB_ClosePortalDummy_C) == 0x000300, "Wrong size on AB_ClosePortalDummy_C");
+static_assert(offsetof(AB_ClosePortalDummy_C, WoodAudio) == 0x0002F8, "Member 'AB_ClosePortalDummy_C::WoodAudio' has a wrong offset!");
 
 }
 

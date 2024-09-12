@@ -19,29 +19,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlaceAndEditUI.WB_PlaceAndEditUI_C
-// 0x0080 (0x0360 - 0x02E0)
+// 0x0080 (0x0380 - 0x0300)
 class UWB_PlaceAndEditUI_C final : public UWB_CategoryMenuScreen_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PlaceAndEditUI_C;                // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_CollapsedPlaceAndEditUI_C*          CollapsedPlaceAndEditUI;                           // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                CollapsedUiBorder;                                 // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                EditBorder;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           EditBox;                                           // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PropCollectionWidgetCreative_C*     EmbeddedPropCollectionWidgetCreative;              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                OuterBorder;                                       // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                PropCollectionBorder;                              // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TargetActorDisplay_C*               TargetActorDisplay;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        UiSwitcher;                                        // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_WorldSettingsTab_C*                 WorldSettingsTab;                                  // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AActor*                                 TargetActor;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          IsMouseOverUi;                                     // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4752[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         AmountOfLights;                                    // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         AmountOfProps;                                     // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         AmountOfActionActors;                              // 0x0358(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMinimized;                                       // 0x035C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PlaceAndEditUI_C;                // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_CollapsedPlaceAndEditUI_C*          CollapsedPlaceAndEditUI;                           // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                CollapsedUiBorder;                                 // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                EditBorder;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           EditBox;                                           // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PropCollectionWidgetCreative_C*     EmbeddedPropCollectionWidgetCreative;              // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                OuterBorder;                                       // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                PropCollectionBorder;                              // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TargetActorDisplay_C*               TargetActorDisplay;                                // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        UiSwitcher;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_WorldSettingsTab_C*                 WorldSettingsTab;                                  // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AActor*                                 TargetActor;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          IsMouseOverUi;                                     // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         AmountOfLights;                                    // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AmountOfProps;                                     // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AmountOfActionActors;                              // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMinimized;                                       // 0x037C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -73,25 +73,25 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlaceAndEditUI_C) == 0x000008, "Wrong alignment on UWB_PlaceAndEditUI_C");
-static_assert(sizeof(UWB_PlaceAndEditUI_C) == 0x000360, "Wrong size on UWB_PlaceAndEditUI_C");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, UberGraphFrame_WB_PlaceAndEditUI_C) == 0x0002E0, "Member 'UWB_PlaceAndEditUI_C::UberGraphFrame_WB_PlaceAndEditUI_C' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, CollapsedPlaceAndEditUI) == 0x0002E8, "Member 'UWB_PlaceAndEditUI_C::CollapsedPlaceAndEditUI' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, CollapsedUiBorder) == 0x0002F0, "Member 'UWB_PlaceAndEditUI_C::CollapsedUiBorder' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, EditBorder) == 0x0002F8, "Member 'UWB_PlaceAndEditUI_C::EditBorder' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, EditBox) == 0x000300, "Member 'UWB_PlaceAndEditUI_C::EditBox' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, EmbeddedPropCollectionWidgetCreative) == 0x000308, "Member 'UWB_PlaceAndEditUI_C::EmbeddedPropCollectionWidgetCreative' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, OuterBorder) == 0x000310, "Member 'UWB_PlaceAndEditUI_C::OuterBorder' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, PropCollectionBorder) == 0x000318, "Member 'UWB_PlaceAndEditUI_C::PropCollectionBorder' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, TargetActorDisplay) == 0x000320, "Member 'UWB_PlaceAndEditUI_C::TargetActorDisplay' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, UiSwitcher) == 0x000328, "Member 'UWB_PlaceAndEditUI_C::UiSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, WorldSettingsTab) == 0x000330, "Member 'UWB_PlaceAndEditUI_C::WorldSettingsTab' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, TargetActor) == 0x000338, "Member 'UWB_PlaceAndEditUI_C::TargetActor' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, IsMouseOverUi) == 0x000340, "Member 'UWB_PlaceAndEditUI_C::IsMouseOverUi' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, OwningCreativePlayerController) == 0x000348, "Member 'UWB_PlaceAndEditUI_C::OwningCreativePlayerController' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, AmountOfLights) == 0x000350, "Member 'UWB_PlaceAndEditUI_C::AmountOfLights' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, AmountOfProps) == 0x000354, "Member 'UWB_PlaceAndEditUI_C::AmountOfProps' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, AmountOfActionActors) == 0x000358, "Member 'UWB_PlaceAndEditUI_C::AmountOfActionActors' has a wrong offset!");
-static_assert(offsetof(UWB_PlaceAndEditUI_C, IsMinimized) == 0x00035C, "Member 'UWB_PlaceAndEditUI_C::IsMinimized' has a wrong offset!");
+static_assert(sizeof(UWB_PlaceAndEditUI_C) == 0x000380, "Wrong size on UWB_PlaceAndEditUI_C");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, UberGraphFrame_WB_PlaceAndEditUI_C) == 0x000300, "Member 'UWB_PlaceAndEditUI_C::UberGraphFrame_WB_PlaceAndEditUI_C' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, CollapsedPlaceAndEditUI) == 0x000308, "Member 'UWB_PlaceAndEditUI_C::CollapsedPlaceAndEditUI' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, CollapsedUiBorder) == 0x000310, "Member 'UWB_PlaceAndEditUI_C::CollapsedUiBorder' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, EditBorder) == 0x000318, "Member 'UWB_PlaceAndEditUI_C::EditBorder' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, EditBox) == 0x000320, "Member 'UWB_PlaceAndEditUI_C::EditBox' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, EmbeddedPropCollectionWidgetCreative) == 0x000328, "Member 'UWB_PlaceAndEditUI_C::EmbeddedPropCollectionWidgetCreative' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, OuterBorder) == 0x000330, "Member 'UWB_PlaceAndEditUI_C::OuterBorder' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, PropCollectionBorder) == 0x000338, "Member 'UWB_PlaceAndEditUI_C::PropCollectionBorder' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, TargetActorDisplay) == 0x000340, "Member 'UWB_PlaceAndEditUI_C::TargetActorDisplay' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, UiSwitcher) == 0x000348, "Member 'UWB_PlaceAndEditUI_C::UiSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, WorldSettingsTab) == 0x000350, "Member 'UWB_PlaceAndEditUI_C::WorldSettingsTab' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, TargetActor) == 0x000358, "Member 'UWB_PlaceAndEditUI_C::TargetActor' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, IsMouseOverUi) == 0x000360, "Member 'UWB_PlaceAndEditUI_C::IsMouseOverUi' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, OwningCreativePlayerController) == 0x000368, "Member 'UWB_PlaceAndEditUI_C::OwningCreativePlayerController' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, AmountOfLights) == 0x000370, "Member 'UWB_PlaceAndEditUI_C::AmountOfLights' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, AmountOfProps) == 0x000374, "Member 'UWB_PlaceAndEditUI_C::AmountOfProps' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, AmountOfActionActors) == 0x000378, "Member 'UWB_PlaceAndEditUI_C::AmountOfActionActors' has a wrong offset!");
+static_assert(offsetof(UWB_PlaceAndEditUI_C, IsMinimized) == 0x00037C, "Member 'UWB_PlaceAndEditUI_C::IsMinimized' has a wrong offset!");
 
 }
 

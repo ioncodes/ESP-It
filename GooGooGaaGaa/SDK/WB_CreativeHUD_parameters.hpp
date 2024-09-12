@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "E_ModifyMode_structs.hpp"
-#include "E_SwitchConnectionsVisibility_structs.hpp"
-#include "E_CreativePlayerMode_structs.hpp"
-#include "E_PossessNotWorkingReason_structs.hpp"
 #include "E_HudMode_structs.hpp"
-#include "Engine_structs.hpp"
+#include "E_CreativePlayerMode_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "E_SwitchConnectionsVisibility_structs.hpp"
+#include "E_ModifyMode_structs.hpp"
+#include "E_PossessNotWorkingReason_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "E_RotationMode_structs.hpp"
 #include "InputCore_structs.hpp"
 
@@ -33,7 +33,7 @@ struct WB_CreativeHUD_C_ExecuteUbergraph_WB_CreativeHUD final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_PossessNotWorkingReason                     K2Node_Event_Reason;                               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33D6[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -42,32 +42,32 @@ public:
 	class UB_LocalizationManager_C*               CallFunc_GetLocalizationManager_ReturnValue_1;     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue;              // 0x0038(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetKeyForAction_bKeyFound;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33D7[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue_1;            // 0x0058(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetKeyForAction_bKeyFound_1;              // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33D8[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_LocalizationManager_C*               CallFunc_GetLocalizationManager_ReturnValue_2;     // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue_2;            // 0x0090(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetKeyForAction_bKeyFound_2;              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33D9[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33DA[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33DB[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33DC[0x4];                                     // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_LocalizationManager_C*               CallFunc_GetLocalizationManager_ReturnValue_3;     // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           K2Node_Event_Killer;                               // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_PlayerWasHunter;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33DD[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue_3;            // 0x0100(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetKeyForAction_bKeyFound_3;              // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33DE[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x011C(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -136,10 +136,10 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33DF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E0[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeSpectator_C*                 K2Node_DynamicCast_AsB_Creative_Spectator;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -187,15 +187,15 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E1[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E2[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetAnchorActor_AnchorActor;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E3[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableActor_C*                   K2Node_DynamicCast_AsBP_Placeable_Actor;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -312,12 +312,12 @@ struct WB_CreativeHUD_C_Get_LocalModeText_ColorAndOpacity_0 final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E4[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E5[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0034(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_LocalModeText_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_LocalModeText_ColorAndOpacity_0");
@@ -337,13 +337,13 @@ struct WB_CreativeHUD_C_Get_MoveModeText_ColorAndOpacity_0 final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E6[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E7[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0034(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_MoveModeText_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_MoveModeText_ColorAndOpacity_0");
@@ -383,27 +383,27 @@ static_assert(offsetof(WB_CreativeHUD_C_Get_NotPlayTestOrScreenshot_Visibility, 
 static_assert(offsetof(WB_CreativeHUD_C_Get_NotPlayTestOrScreenshot_Visibility, K2Node_Select_Default) == 0x000007, "Member 'WB_CreativeHUD_C_Get_NotPlayTestOrScreenshot_Visibility::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_PlaceModeText_Text
-// 0x0070 (0x0070 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_CreativeHUD_C_Get_PlaceModeText_Text final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E8[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	bool                                          CallFunc_IsPlacing_IsPlacing;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33E9[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	bool                                          CallFunc_IsPlacing_IsPlacing;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0040(0x0010)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_PlaceModeText_Text) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_PlaceModeText_Text");
-static_assert(sizeof(WB_CreativeHUD_C_Get_PlaceModeText_Text) == 0x000070, "Wrong size on WB_CreativeHUD_C_Get_PlaceModeText_Text");
+static_assert(sizeof(WB_CreativeHUD_C_Get_PlaceModeText_Text) == 0x000050, "Wrong size on WB_CreativeHUD_C_Get_PlaceModeText_Text");
 static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, ReturnValue) == 0x000000, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, Temp_bool_Variable) == 0x000018, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, Temp_text_Variable) == 0x000020, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, Temp_text_Variable_1) == 0x000038, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, CallFunc_IsPlacing_IsPlacing) == 0x000050, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::CallFunc_IsPlacing_IsPlacing' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, K2Node_Select_Default) == 0x000058, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, Temp_bool_Variable) == 0x000010, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, Temp_text_Variable) == 0x000018, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, Temp_text_Variable_1) == 0x000028, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, CallFunc_IsPlacing_IsPlacing) == 0x000038, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::CallFunc_IsPlacing_IsPlacing' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_PlaceModeText_Text, K2Node_Select_Default) == 0x000040, "Member 'WB_CreativeHUD_C_Get_PlaceModeText_Text::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_PlacingScalableActor_Visibility
 // 0x0028 (0x0028 - 0x0000)
@@ -414,10 +414,10 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33EA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetAnchorActor_AnchorActor;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPlacing_IsPlacing;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33EB[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableActor_C*                   K2Node_DynamicCast_AsBP_Placeable_Actor;           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -496,33 +496,33 @@ static_assert(offsetof(WB_CreativeHUD_C_Get_RemoveMode_Visibility_0, CallFunc_Eq
 static_assert(offsetof(WB_CreativeHUD_C_Get_RemoveMode_Visibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_CreativeHUD_C_Get_RemoveMode_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_ResetText_Text_0
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_CreativeHUD_C_Get_ResetText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	E_ModifyMode                                  Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33EC[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0050(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0068(0x0018)()
-	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33ED[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0090(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	E_ModifyMode                                  Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0038(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0048(0x0010)()
+	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0068(0x0010)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_ResetText_Text_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_ResetText_Text_0");
-static_assert(sizeof(WB_CreativeHUD_C_Get_ResetText_Text_0) == 0x0000A8, "Wrong size on WB_CreativeHUD_C_Get_ResetText_Text_0");
+static_assert(sizeof(WB_CreativeHUD_C_Get_ResetText_Text_0) == 0x000078, "Wrong size on WB_CreativeHUD_C_Get_ResetText_Text_0");
 static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, ReturnValue) == 0x000000, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_byte_Variable) == 0x000018, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable) == 0x000020, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable_1) == 0x000038, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable_2) == 0x000050, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable_3) == 0x000068, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, K2Node_DynamicCast_AsB_Creative_Player_Controller) == 0x000080, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::K2Node_DynamicCast_AsB_Creative_Player_Controller' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, K2Node_Select_Default) == 0x000090, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_byte_Variable) == 0x000010, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable) == 0x000018, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable_1) == 0x000028, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable_2) == 0x000038, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, Temp_text_Variable_3) == 0x000048, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, K2Node_DynamicCast_AsB_Creative_Player_Controller) == 0x000058, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::K2Node_DynamicCast_AsB_Creative_Player_Controller' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_ResetText_Text_0, K2Node_Select_Default) == 0x000068, "Member 'WB_CreativeHUD_C_Get_ResetText_Text_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_RotateModeText_ColorAndOpacity_0
 // 0x0048 (0x0048 - 0x0000)
@@ -531,13 +531,13 @@ struct WB_CreativeHUD_C_Get_RotateModeText_ColorAndOpacity_0 final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33EE[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33EF[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0034(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_RotateModeText_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_RotateModeText_ColorAndOpacity_0");
@@ -552,43 +552,43 @@ static_assert(offsetof(WB_CreativeHUD_C_Get_RotateModeText_ColorAndOpacity_0, Ca
 static_assert(offsetof(WB_CreativeHUD_C_Get_RotateModeText_ColorAndOpacity_0, K2Node_Select_Default) == 0x000034, "Member 'WB_CreativeHUD_C_Get_RotateModeText_ColorAndOpacity_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_Scale_Text_0
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct WB_CreativeHUD_C_Get_Scale_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F0[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetAnchorActor_AnchorActor;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F1[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0078(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetAnchorActor_AnchorActor;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_StaticMeshProp_C*                    K2Node_DynamicCast_AsB_Static_Mesh_Prop;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0070(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C8(0x0010)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_Scale_Text_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_Scale_Text_0");
-static_assert(sizeof(WB_CreativeHUD_C_Get_Scale_Text_0) == 0x0000F0, "Wrong size on WB_CreativeHUD_C_Get_Scale_Text_0");
+static_assert(sizeof(WB_CreativeHUD_C_Get_Scale_Text_0) == 0x0000D8, "Wrong size on WB_CreativeHUD_C_Get_Scale_Text_0");
 static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, ReturnValue) == 0x000000, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_AsB_Creative_Player_Controller) == 0x000018, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_AsB_Creative_Player_Controller' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_GetAnchorActor_AnchorActor) == 0x000028, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_GetAnchorActor_AnchorActor' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000030, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_GetActorScale3D_ReturnValue) == 0x000040, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_BreakVector_X) == 0x000058, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_BreakVector_Y) == 0x000060, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_BreakVector_Z) == 0x000068, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000070, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000078, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_MakeArray_Array) == 0x0000C8, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_Format_ReturnValue) == 0x0000D8, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_AsB_Creative_Player_Controller) == 0x000010, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_AsB_Creative_Player_Controller' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_GetAnchorActor_AnchorActor) == 0x000020, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_GetAnchorActor_AnchorActor' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_AsB_Static_Mesh_Prop) == 0x000028, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_AsB_Static_Mesh_Prop' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_GetActorScale3D_ReturnValue) == 0x000038, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_GetActorScale3D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_BreakVector_X) == 0x000050, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_BreakVector_Y) == 0x000058, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_BreakVector_Z) == 0x000060, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000068, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000070, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, K2Node_MakeArray_Array) == 0x0000B8, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_Scale_Text_0, CallFunc_Format_ReturnValue) == 0x0000C8, "Member 'WB_CreativeHUD_C_Get_Scale_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_ScaleModeText_ColorAndOpacity_0
 // 0x0048 (0x0048 - 0x0000)
@@ -597,13 +597,13 @@ struct WB_CreativeHUD_C_Get_ScaleModeText_ColorAndOpacity_0 final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F2[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F3[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0034(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_ScaleModeText_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_ScaleModeText_ColorAndOpacity_0");
@@ -654,27 +654,27 @@ static_assert(offsetof(WB_CreativeHUD_C_Get_SelectGroup_Visibility, CallFunc_IsP
 static_assert(offsetof(WB_CreativeHUD_C_Get_SelectGroup_Visibility, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'WB_CreativeHUD_C_Get_SelectGroup_Visibility::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_SelectPropText_Text
-// 0x0070 (0x0070 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_CreativeHUD_C_Get_SelectPropText_Text final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F4[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	bool                                          CallFunc_HasSelectedSomething_HasSelectedActor;    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F5[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	bool                                          CallFunc_HasSelectedSomething_HasSelectedActor;    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0040(0x0010)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_SelectPropText_Text) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_SelectPropText_Text");
-static_assert(sizeof(WB_CreativeHUD_C_Get_SelectPropText_Text) == 0x000070, "Wrong size on WB_CreativeHUD_C_Get_SelectPropText_Text");
+static_assert(sizeof(WB_CreativeHUD_C_Get_SelectPropText_Text) == 0x000050, "Wrong size on WB_CreativeHUD_C_Get_SelectPropText_Text");
 static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, ReturnValue) == 0x000000, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, Temp_bool_Variable) == 0x000018, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, Temp_text_Variable) == 0x000020, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, Temp_text_Variable_1) == 0x000038, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, CallFunc_HasSelectedSomething_HasSelectedActor) == 0x000050, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::CallFunc_HasSelectedSomething_HasSelectedActor' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, K2Node_Select_Default) == 0x000058, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, Temp_bool_Variable) == 0x000010, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, Temp_text_Variable) == 0x000018, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, Temp_text_Variable_1) == 0x000028, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, CallFunc_HasSelectedSomething_HasSelectedActor) == 0x000038, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::CallFunc_HasSelectedSomething_HasSelectedActor' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_Get_SelectPropText_Text, K2Node_Select_Default) == 0x000040, "Member 'WB_CreativeHUD_C_Get_SelectPropText_Text::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.Get_Submitting_Visibility_0
 // 0x0020 (0x0020 - 0x0000)
@@ -685,7 +685,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameMode_C*                  K2Node_DynamicCast_AsB_Creative_Game_Mode;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -708,16 +708,16 @@ struct WB_CreativeHUD_C_Get_UtilitySkillIcon_bIsEnabled_0 final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Witch_C*                             K2Node_DynamicCast_AsB_Witch;                      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F8[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33F9[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PropPawnPhysics_C*                   K2Node_DynamicCast_AsB_Prop_Pawn_Physics;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -768,7 +768,7 @@ struct WB_CreativeHUD_C_Get_WiresAllText_ColorAndOpacity final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	E_SwitchConnectionsVisibility                 Temp_byte_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33FA[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0018(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_WiresAllText_ColorAndOpacity) == 0x000004, "Wrong alignment on WB_CreativeHUD_C_Get_WiresAllText_ColorAndOpacity");
@@ -784,7 +784,7 @@ struct WB_CreativeHUD_C_Get_WiresOffText_ColorAndOpacity final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	E_SwitchConnectionsVisibility                 Temp_byte_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33FB[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0018(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_WiresOffText_ColorAndOpacity) == 0x000004, "Wrong alignment on WB_CreativeHUD_C_Get_WiresOffText_ColorAndOpacity");
@@ -800,7 +800,7 @@ struct WB_CreativeHUD_C_Get_WiresOnText_ColorAndOpacity final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	E_SwitchConnectionsVisibility                 Temp_byte_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33FC[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0018(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_WiresOnText_ColorAndOpacity) == 0x000004, "Wrong alignment on WB_CreativeHUD_C_Get_WiresOnText_ColorAndOpacity");
@@ -816,12 +816,12 @@ struct WB_CreativeHUD_C_Get_WorldModeText_ColorAndOpacity_0 final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33FD[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativePlayerController_C*          K2Node_DynamicCast_AsB_Creative_Player_Controller; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33FE[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0034(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_Get_WorldModeText_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_Get_WorldModeText_ColorAndOpacity_0");
@@ -845,20 +845,20 @@ public:
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0034(0x0014)()
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0048(0x0014)()
 	bool                                          Temp_bool_Variable;                                // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33FF[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3400[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State_1;      // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3401[0x1];                                     // 0x008B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8B[0x1];                                       // 0x008B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x008C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3402[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x00A0(0x0014)()
 };
 static_assert(alignof(WB_CreativeHUD_C_GetColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_GetColorAndOpacity_0");
@@ -891,13 +891,13 @@ public:
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0034(0x0014)()
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0048(0x0014)()
-	uint8                                         Pad_3403[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3404[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3405[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State_1;      // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -947,7 +947,7 @@ struct WB_CreativeHUD_C_GetLocalizationManager final
 public:
 	class UB_LocalizationManager_C*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3406[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -961,72 +961,72 @@ static_assert(offsetof(WB_CreativeHUD_C_GetLocalizationManager, K2Node_DynamicCa
 static_assert(offsetof(WB_CreativeHUD_C_GetLocalizationManager, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_CreativeHUD_C_GetLocalizationManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.GetText_0
-// 0x0148 (0x0148 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct WB_CreativeHUD_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3407[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0050(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0068(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0080(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0130(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0058(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0068(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0108(0x0010)()
 };
 static_assert(alignof(WB_CreativeHUD_C_GetText_0) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_GetText_0");
-static_assert(sizeof(WB_CreativeHUD_C_GetText_0) == 0x000148, "Wrong size on WB_CreativeHUD_C_GetText_0");
+static_assert(sizeof(WB_CreativeHUD_C_GetText_0) == 0x000118, "Wrong size on WB_CreativeHUD_C_GetText_0");
 static_assert(offsetof(WB_CreativeHUD_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_CreativeHUD_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x000020, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_IntToString_ReturnValue) == 0x000030, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000040, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000050, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000068, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_MakeStruct_FormatArgumentData) == 0x000080, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D0, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_MakeArray_Array) == 0x000120, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Format_ReturnValue) == 0x000130, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x000018, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_IntToString_ReturnValue) == 0x000028, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000038, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000048, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000058, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_MakeStruct_FormatArgumentData) == 0x000068, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B0, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, K2Node_MakeArray_Array) == 0x0000F8, "Member 'WB_CreativeHUD_C_GetText_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_0, CallFunc_Format_ReturnValue) == 0x000108, "Member 'WB_CreativeHUD_C_GetText_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.GetText_1
-// 0x0148 (0x0148 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct WB_CreativeHUD_C_GetText_1 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3408[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0050(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0068(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0080(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0130(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0058(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0068(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0108(0x0010)()
 };
 static_assert(alignof(WB_CreativeHUD_C_GetText_1) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_GetText_1");
-static_assert(sizeof(WB_CreativeHUD_C_GetText_1) == 0x000148, "Wrong size on WB_CreativeHUD_C_GetText_1");
+static_assert(sizeof(WB_CreativeHUD_C_GetText_1) == 0x000118, "Wrong size on WB_CreativeHUD_C_GetText_1");
 static_assert(offsetof(WB_CreativeHUD_C_GetText_1, ReturnValue) == 0x000000, "Member 'WB_CreativeHUD_C_GetText_1::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x000020, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_IntToString_ReturnValue) == 0x000030, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000040, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_StringToText_ReturnValue) == 0x000050, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000068, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_MakeStruct_FormatArgumentData) == 0x000080, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D0, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_MakeArray_Array) == 0x000120, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Format_ReturnValue) == 0x000130, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_GetGameState_ReturnValue) == 0x000010, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_DynamicCast_AsB_Creative_Game_State) == 0x000018, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_DynamicCast_AsB_Creative_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_IntToString_ReturnValue) == 0x000028, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000038, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_StringToText_ReturnValue) == 0x000048, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000058, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_MakeStruct_FormatArgumentData) == 0x000068, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B0, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, K2Node_MakeArray_Array) == 0x0000F8, "Member 'WB_CreativeHUD_C_GetText_1::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_CreativeHUD_C_GetText_1, CallFunc_Format_ReturnValue) == 0x000108, "Member 'WB_CreativeHUD_C_GetText_1::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_CreativeHUD.WB_CreativeHUD_C.GetVisibility_1
 // 0x0020 (0x0020 - 0x0000)
@@ -1034,7 +1034,7 @@ struct WB_CreativeHUD_C_GetVisibility_1 final
 {
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3409[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1076,12 +1076,12 @@ struct WB_CreativeHUD_C_SetHUDMode final
 {
 public:
 	E_HudMode                                     Mode;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_340A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               PreviewMaterial;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               PropLayoutPreviewMaterial;                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTextureRenderTarget2D*                 SmallTexture;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_340B[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_CreativeHUD_C_SetHUDMode) == 0x000008, "Wrong alignment on WB_CreativeHUD_C_SetHUDMode");
@@ -1116,7 +1116,7 @@ public:
 	class UTexture2D*                             Temp_object_Variable_2;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             Temp_object_Variable_3;                            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_340C[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_1;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CreativePlayerMode                          Temp_byte_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1125,10 +1125,10 @@ public:
 	E_HudMode                                     Temp_byte_Variable_3;                              // 0x002F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_HudMode                                     Temp_byte_Variable_4;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_CreativePlayerMode                          Temp_byte_Variable_5;                              // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_340D[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             K2Node_Select_Default;                             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_340E[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default_1;                           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_HudMode                                     K2Node_Select_Default_2;                           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1159,14 +1159,14 @@ struct WB_CreativeHUD_C_OnPaint final
 public:
 	struct FPaintContext                          Context;                                           // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	E_RotationMode                                Temp_byte_Variable;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_340F[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable;                                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1;                              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_2;                              // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_3;                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_4;                              // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_RotationMode                                Temp_byte_Variable_1;                              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3410[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0064(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0074(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_2;                            // 0x0084(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1175,12 +1175,12 @@ public:
 	float                                         CallFunc_Viewport__GetCenterOfViewport_PosX;       // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Viewport__GetCenterOfViewport_PosY;       // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Viewport__GetCenterOfViewport_ReturnValue; // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3411[0x3];                                     // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetViewportScale_ReturnValue;             // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3412[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetViewportSize_ReturnValue;              // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetViewportScale_ReturnValue_1;           // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3413[0x4];                                     // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_Divide_Vector2DFloat_ReturnValue;         // 0x00E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X;                          // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1193,14 +1193,14 @@ public:
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0123(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0125(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3414[0x2];                                     // 0x0126(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126[0x2];                                      // 0x0126(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_Select_Default;                             // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3415[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default_1;                           // 0x0134(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetViewportScale_ReturnValue_2;           // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetViewportScale_ReturnValue_3;           // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3416[0x4];                                     // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_Divide_Vector2DFloat_ReturnValue_2;       // 0x0150(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Add_Vector2DVector2D_ReturnValue;         // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Divide_Vector2DFloat_ReturnValue_3;       // 0x0170(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1218,7 +1218,7 @@ public:
 	double                                        CallFunc_Divide_Vector2DFloat_B_ImplicitCast;      // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_Vector2DFloat_B_ImplicitCast_1;    // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_DrawLine_Thickness_ImplicitCast;          // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3417[0x4];                                     // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Divide_Vector2DFloat_B_ImplicitCast_2;    // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_Vector2DFloat_B_ImplicitCast_3;    // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_Vector2DFloat_B_ImplicitCast_4;    // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

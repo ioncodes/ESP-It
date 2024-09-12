@@ -17,6 +17,49 @@
 namespace SDK
 {
 
+// Function B_SeekGameMode.B_SeekGameMode_C.GetRoundEndTimerUntilRestart
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   Seconds                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_SeekGameMode_C::GetRoundEndTimerUntilRestart(int32* Seconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SeekGameMode_C", "GetRoundEndTimerUntilRestart");
+
+	Params::B_SeekGameMode_C_GetRoundEndTimerUntilRestart Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Seconds != nullptr)
+		*Seconds = Parms.Seconds;
+}
+
+
+// Function B_SeekGameMode.B_SeekGameMode_C.HandleEndMatch
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETeamID                                 WinnerTeam                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ForceRegardlessOfEnd                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_SeekGameMode_C::HandleEndMatch(ETeamID WinnerTeam, bool ForceRegardlessOfEnd)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SeekGameMode_C", "HandleEndMatch");
+
+	Params::B_SeekGameMode_C_HandleEndMatch Parms{};
+
+	Parms.WinnerTeam = WinnerTeam;
+	Parms.ForceRegardlessOfEnd = ForceRegardlessOfEnd;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_SeekGameMode.B_SeekGameMode_C.HandleEndMatchByTime
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -26,6 +69,34 @@ void AB_SeekGameMode_C::HandleEndMatchByTime()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_SeekGameMode_C", "HandleEndMatchByTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_SeekGameMode.B_SeekGameMode_C.HandleStartMatch
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_SeekGameMode_C::HandleStartMatch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SeekGameMode_C", "HandleStartMatch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_SeekGameMode.B_SeekGameMode_C.HandleStartSeek
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void AB_SeekGameMode_C::HandleStartSeek()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SeekGameMode_C", "HandleStartSeek");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -42,6 +113,40 @@ void AB_SeekGameMode_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("B_SeekGameMode_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_SeekGameMode.B_SeekGameMode_C.TimerFinished
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_SeekGameMode_C::TimerFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SeekGameMode_C", "TimerFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_SeekGameMode.B_SeekGameMode_C.ExecuteUbergraph_B_SeekGameMode
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_SeekGameMode_C::ExecuteUbergraph_B_SeekGameMode(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_SeekGameMode_C", "ExecuteUbergraph_B_SeekGameMode");
+
+	Params::B_SeekGameMode_C_ExecuteUbergraph_B_SeekGameMode Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -138,111 +243,6 @@ void AB_SeekGameMode_C::InitializeSeekTime()
 		Func = Class->GetFunction("B_SeekGameMode_C", "InitializeSeekTime");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_SeekGameMode.B_SeekGameMode_C.GetRoundEndTimerUntilRestart
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   Seconds                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_SeekGameMode_C::GetRoundEndTimerUntilRestart(int32* Seconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SeekGameMode_C", "GetRoundEndTimerUntilRestart");
-
-	Params::B_SeekGameMode_C_GetRoundEndTimerUntilRestart Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Seconds != nullptr)
-		*Seconds = Parms.Seconds;
-}
-
-
-// Function B_SeekGameMode.B_SeekGameMode_C.HandleStartSeek
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AB_SeekGameMode_C::HandleStartSeek()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SeekGameMode_C", "HandleStartSeek");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_SeekGameMode.B_SeekGameMode_C.HandleStartMatch
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_SeekGameMode_C::HandleStartMatch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SeekGameMode_C", "HandleStartMatch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_SeekGameMode.B_SeekGameMode_C.HandleEndMatch
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ETeamID                                 WinnerTeam                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ForceRegardlessOfEnd                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_SeekGameMode_C::HandleEndMatch(ETeamID WinnerTeam, bool ForceRegardlessOfEnd)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SeekGameMode_C", "HandleEndMatch");
-
-	Params::B_SeekGameMode_C_HandleEndMatch Parms{};
-
-	Parms.WinnerTeam = WinnerTeam;
-	Parms.ForceRegardlessOfEnd = ForceRegardlessOfEnd;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_SeekGameMode.B_SeekGameMode_C.TimerFinished
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_SeekGameMode_C::TimerFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SeekGameMode_C", "TimerFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_SeekGameMode.B_SeekGameMode_C.ExecuteUbergraph_B_SeekGameMode
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_SeekGameMode_C::ExecuteUbergraph_B_SeekGameMode(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SeekGameMode_C", "ExecuteUbergraph_B_SeekGameMode");
-
-	Params::B_SeekGameMode_C_ExecuteUbergraph_B_SeekGameMode Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

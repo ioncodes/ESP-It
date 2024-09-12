@@ -29,7 +29,7 @@ public:
 	class UWB_Replay_C*                           MyUI;                                              // 0x0878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class UClass*>                         TrackingUIClasses;                                 // 0x0880(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bUIHidden;                                         // 0x0890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1780[0x7];                                     // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_891[0x7];                                      // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    DefaultUI;                                         // 0x0898(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:

@@ -14,13 +14,32 @@
 namespace SDK
 {
 
-// Enum MeshModelingTools.EMakeMeshPlacementType
+// Enum MeshModelingTools.EPolyEditExtrudeEdgeDirectionMode
 // NumValues: 0x0003
+enum class EPolyEditExtrudeEdgeDirectionMode : uint32
+{
+	LocalExtrudeFrames                       = 0,
+	SingleDirection                          = 1,
+	EPolyEditExtrudeEdgeDirectionMode_MAX    = 2,
+};
+
+// Enum MeshModelingTools.EPolyEditExtrudeEdgeDistanceMode
+// NumValues: 0x0003
+enum class EPolyEditExtrudeEdgeDistanceMode : uint32
+{
+	Fixed                                    = 0,
+	Gizmo                                    = 1,
+	EPolyEditExtrudeEdgeDistanceMode_MAX     = 2,
+};
+
+// Enum MeshModelingTools.EMakeMeshPlacementType
+// NumValues: 0x0004
 enum class EMakeMeshPlacementType : uint8
 {
 	GroundPlane                              = 0,
 	OnScene                                  = 1,
-	EMakeMeshPlacementType_MAX               = 2,
+	AtOrigin                                 = 2,
+	EMakeMeshPlacementType_MAX               = 3,
 };
 
 // Enum MeshModelingTools.EMakeMeshPivotLocation
@@ -114,7 +133,7 @@ enum class ELocalFrameMode : uint32
 };
 
 // Enum MeshModelingTools.EEditMeshPolygonsToolActions
-// NumValues: 0x0026
+// NumValues: 0x0027
 enum class EEditMeshPolygonsToolActions : uint8
 {
 	NoAction                                 = 0,
@@ -144,17 +163,18 @@ enum class EEditMeshPolygonsToolActions : uint8
 	StraightenEdge                           = 24,
 	FillHole                                 = 25,
 	BridgeEdges                              = 26,
-	BevelEdges                               = 27,
-	SimplifyAlongEdges                       = 28,
-	PlanarProjectionUV                       = 29,
-	SimplifyByGroups                         = 30,
-	RegenerateExtraCorners                   = 31,
-	PokeSingleFace                           = 32,
-	SplitSingleEdge                          = 33,
-	FlipSingleEdge                           = 34,
-	CollapseSingleEdge                       = 35,
-	BevelAuto                                = 36,
-	EEditMeshPolygonsToolActions_MAX         = 37,
+	ExtrudeEdges                             = 27,
+	BevelEdges                               = 28,
+	SimplifyAlongEdges                       = 29,
+	PlanarProjectionUV                       = 30,
+	SimplifyByGroups                         = 31,
+	RegenerateExtraCorners                   = 32,
+	PokeSingleFace                           = 33,
+	SplitSingleEdge                          = 34,
+	FlipSingleEdge                           = 35,
+	CollapseSingleEdge                       = 36,
+	BevelAuto                                = 37,
+	EEditMeshPolygonsToolActions_MAX         = 38,
 };
 
 // Enum MeshModelingTools.EEditMeshPolygonsToolSelectionMode

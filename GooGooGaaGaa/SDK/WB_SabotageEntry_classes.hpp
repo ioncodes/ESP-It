@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SabotageEntry.WB_SabotageEntry_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0028 (0x0308 - 0x02E0)
 class UWB_SabotageEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UProgressBar*                           CooldownProgressBar;                               // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_GridButton_C*                       WB_GridButton;                                     // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_SabotageActor_C*                     SabotageActor;                                     // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UB_SabotageManager_C*                   SabotageManager;                                   // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UProgressBar*                           CooldownProgressBar;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_GridButton_C*                       WB_GridButton;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_SabotageActor_C*                     SabotageActor;                                     // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UB_SabotageManager_C*                   SabotageManager;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_GridButton_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
@@ -53,12 +53,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_SabotageEntry_C) == 0x000008, "Wrong alignment on UWB_SabotageEntry_C");
-static_assert(sizeof(UWB_SabotageEntry_C) == 0x0002E8, "Wrong size on UWB_SabotageEntry_C");
-static_assert(offsetof(UWB_SabotageEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SabotageEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SabotageEntry_C, CooldownProgressBar) == 0x0002C8, "Member 'UWB_SabotageEntry_C::CooldownProgressBar' has a wrong offset!");
-static_assert(offsetof(UWB_SabotageEntry_C, WB_GridButton) == 0x0002D0, "Member 'UWB_SabotageEntry_C::WB_GridButton' has a wrong offset!");
-static_assert(offsetof(UWB_SabotageEntry_C, SabotageActor) == 0x0002D8, "Member 'UWB_SabotageEntry_C::SabotageActor' has a wrong offset!");
-static_assert(offsetof(UWB_SabotageEntry_C, SabotageManager) == 0x0002E0, "Member 'UWB_SabotageEntry_C::SabotageManager' has a wrong offset!");
+static_assert(sizeof(UWB_SabotageEntry_C) == 0x000308, "Wrong size on UWB_SabotageEntry_C");
+static_assert(offsetof(UWB_SabotageEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SabotageEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SabotageEntry_C, CooldownProgressBar) == 0x0002E8, "Member 'UWB_SabotageEntry_C::CooldownProgressBar' has a wrong offset!");
+static_assert(offsetof(UWB_SabotageEntry_C, WB_GridButton) == 0x0002F0, "Member 'UWB_SabotageEntry_C::WB_GridButton' has a wrong offset!");
+static_assert(offsetof(UWB_SabotageEntry_C, SabotageActor) == 0x0002F8, "Member 'UWB_SabotageEntry_C::SabotageActor' has a wrong offset!");
+static_assert(offsetof(UWB_SabotageEntry_C, SabotageManager) == 0x000300, "Member 'UWB_SabotageEntry_C::SabotageManager' has a wrong offset!");
 
 }
 

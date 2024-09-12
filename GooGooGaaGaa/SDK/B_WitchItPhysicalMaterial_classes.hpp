@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchItPhysicalMaterial.B_WitchItPhysicalMaterial_C
-// 0x0000 (0x0088 - 0x0088)
+// 0x0000 (0x0098 - 0x0098)
 class UB_WitchItPhysicalMaterial_C final : public UPhysicalMaterial
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UB_WitchItPhysicalMaterial_C) == 0x000008, "Wrong alignment on UB_WitchItPhysicalMaterial_C");
-static_assert(sizeof(UB_WitchItPhysicalMaterial_C) == 0x000088, "Wrong size on UB_WitchItPhysicalMaterial_C");
+static_assert(sizeof(UB_WitchItPhysicalMaterial_C) == 0x000098, "Wrong size on UB_WitchItPhysicalMaterial_C");
 
 }
 

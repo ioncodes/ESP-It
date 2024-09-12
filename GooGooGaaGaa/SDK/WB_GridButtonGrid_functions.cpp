@@ -20,10 +20,10 @@ namespace SDK
 // Function WB_GridButtonGrid.WB_GridButtonGrid_C.GetChildAt
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWB_GridButton_C*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWB_GridButton_C* UWB_GridButtonGrid_C::GetChildAt(int32 Param_Index)
+class UWB_GridButton_C* UWB_GridButtonGrid_C::GetChildAt(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -32,7 +32,7 @@ class UWB_GridButton_C* UWB_GridButtonGrid_C::GetChildAt(int32 Param_Index)
 
 	Params::WB_GridButtonGrid_C_GetChildAt Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

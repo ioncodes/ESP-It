@@ -21,9 +21,9 @@ namespace SDK
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FString                           Filename                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class USaveGame*                        Param_SaveFile                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USaveGame*                        SaveFile_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SaveLoadScreen_C::OnFileLoaded__DelegateSignature(const class FString& Filename, class USaveGame* Param_SaveFile)
+void UWB_SaveLoadScreen_C::OnFileLoaded__DelegateSignature(const class FString& Filename, class USaveGame* SaveFile_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +33,7 @@ void UWB_SaveLoadScreen_C::OnFileLoaded__DelegateSignature(const class FString& 
 	Params::WB_SaveLoadScreen_C_OnFileLoaded__DelegateSignature Parms{};
 
 	Parms.Filename = std::move(Filename);
-	Parms.Param_SaveFile = Param_SaveFile;
+	Parms.SaveFile_0 = SaveFile_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -331,11 +331,11 @@ void UWB_SaveLoadScreen_C::SetUITexts()
 // Function WB_SaveLoadScreen.WB_SaveLoadScreen_C.InitializeSaveLoadUI
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_SaveLocation                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           SaveLocation_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    AllowFileEditing                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USaveGame*                        Param_FileToSave                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USaveGame*                        FileToSave_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SaveLoadScreen_C::InitializeSaveLoadUI(const class FString& Param_SaveLocation, bool AllowFileEditing, class USaveGame* Param_FileToSave)
+void UWB_SaveLoadScreen_C::InitializeSaveLoadUI(const class FString& SaveLocation_0, bool AllowFileEditing, class USaveGame* FileToSave_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -344,9 +344,9 @@ void UWB_SaveLoadScreen_C::InitializeSaveLoadUI(const class FString& Param_SaveL
 
 	Params::WB_SaveLoadScreen_C_InitializeSaveLoadUI Parms{};
 
-	Parms.Param_SaveLocation = std::move(Param_SaveLocation);
+	Parms.SaveLocation_0 = std::move(SaveLocation_0);
 	Parms.AllowFileEditing = AllowFileEditing;
-	Parms.Param_FileToSave = Param_FileToSave;
+	Parms.FileToSave_0 = FileToSave_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

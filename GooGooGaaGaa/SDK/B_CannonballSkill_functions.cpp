@@ -68,9 +68,9 @@ void UB_CannonballSkill_C::ExecuteUbergraph_B_CannonballSkill(int32 EntryPoint)
 // Function B_CannonballSkill.B_CannonballSkill_C.GetGroundLocation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                          Param_GroundLocation                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          GroundLocation_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_CannonballSkill_C::GetGroundLocation(struct FVector* Param_GroundLocation)
+void UB_CannonballSkill_C::GetGroundLocation(struct FVector* GroundLocation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -81,8 +81,8 @@ void UB_CannonballSkill_C::GetGroundLocation(struct FVector* Param_GroundLocatio
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_GroundLocation != nullptr)
-		*Param_GroundLocation = std::move(Parms.Param_GroundLocation);
+	if (GroundLocation_0 != nullptr)
+		*GroundLocation_0 = std::move(Parms.GroundLocation_0);
 }
 
 

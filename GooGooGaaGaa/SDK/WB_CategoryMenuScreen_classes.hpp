@@ -19,13 +19,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_CategoryMenuScreen.WB_CategoryMenuScreen_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_CategoryMenuScreen_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_MenuTileViewManager_C*               TileViewManager;                                   // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWB_CategoryButton_C*>           CategoryButtons;                                   // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_MenuTileViewManager_C*               TileViewManager;                                   // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWB_CategoryButton_C*>           CategoryButtons;                                   // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void GetIndividualItemDataAndFocus(class UUserWidget* CategoryButton, ESalvageCategory SalvageCategory, TArray<class UB_TileViewData_C*>* Data, TArray<bool>* FocusNeeded);
@@ -58,10 +58,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_CategoryMenuScreen_C) == 0x000008, "Wrong alignment on UWB_CategoryMenuScreen_C");
-static_assert(sizeof(UWB_CategoryMenuScreen_C) == 0x0002E0, "Wrong size on UWB_CategoryMenuScreen_C");
-static_assert(offsetof(UWB_CategoryMenuScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_CategoryMenuScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_CategoryMenuScreen_C, TileViewManager) == 0x0002C8, "Member 'UWB_CategoryMenuScreen_C::TileViewManager' has a wrong offset!");
-static_assert(offsetof(UWB_CategoryMenuScreen_C, CategoryButtons) == 0x0002D0, "Member 'UWB_CategoryMenuScreen_C::CategoryButtons' has a wrong offset!");
+static_assert(sizeof(UWB_CategoryMenuScreen_C) == 0x000300, "Wrong size on UWB_CategoryMenuScreen_C");
+static_assert(offsetof(UWB_CategoryMenuScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_CategoryMenuScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_CategoryMenuScreen_C, TileViewManager) == 0x0002E8, "Member 'UWB_CategoryMenuScreen_C::TileViewManager' has a wrong offset!");
+static_assert(offsetof(UWB_CategoryMenuScreen_C, CategoryButtons) == 0x0002F0, "Member 'UWB_CategoryMenuScreen_C::CategoryButtons' has a wrong offset!");
 
 }
 

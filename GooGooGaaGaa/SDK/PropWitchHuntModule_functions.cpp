@@ -2121,38 +2121,6 @@ void UCustomLogSubsystem::LogString(const class FString& StringToLog, class FNam
 }
 
 
-// Function PropWitchHuntModule.DeserializeItemsCallbackProxy.DeserializeItems
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlueprintItemSerialization      ItemSerialization                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UDeserializeItemsCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UDeserializeItemsCallbackProxy* UDeserializeItemsCallbackProxy::DeserializeItems(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintItemSerialization& ItemSerialization)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("DeserializeItemsCallbackProxy", "DeserializeItems");
-
-	Params::DeserializeItemsCallbackProxy_DeserializeItems Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-	Parms.ItemSerialization = std::move(ItemSerialization);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PropWitchHuntModule.DeveloperModeSubsystem.CouldEnableDeveloperMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -2237,6 +2205,38 @@ bool UDeveloperModeSubsystem::GetBoolSetting(class FName SettingName, bool* bHas
 		Func = Class->GetFunction("DeveloperModeSubsystem", "GetBoolSetting");
 
 	Params::DeveloperModeSubsystem_GetBoolSetting Parms{};
+
+	Parms.SettingName = SettingName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bHasValue != nullptr)
+		*bHasValue = Parms.bHasValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.DeveloperModeSubsystem.GetFloatSetting
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             SettingName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bHasValue                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UDeveloperModeSubsystem::GetFloatSetting(class FName SettingName, bool* bHasValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DeveloperModeSubsystem", "GetFloatSetting");
+
+	Params::DeveloperModeSubsystem_GetFloatSetting Parms{};
 
 	Parms.SettingName = SettingName;
 
@@ -2363,6 +2363,33 @@ void UDeveloperModeSubsystem::SetBoolSetting(class FName SettingName, bool bValu
 
 	Parms.SettingName = SettingName;
 	Parms.bValue = bValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.DeveloperModeSubsystem.SetFloatSetting
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             SettingName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDeveloperModeSubsystem::SetFloatSetting(class FName SettingName, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DeveloperModeSubsystem", "SetFloatSetting");
+
+	Params::DeveloperModeSubsystem_SetFloatSetting Parms{};
+
+	Parms.SettingName = SettingName;
+	Parms.Value = Value;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2856,9 +2883,9 @@ void UGetAllItemsCallbackProxy::SetItemDefinitionId(struct FBlueprintOnlineItem&
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FBlueprintOnlineItem             Item                                                   (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// int32                                   Param_Flags                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGetAllItemsCallbackProxy::SetItemFlags(struct FBlueprintOnlineItem& Item, int32 Param_Flags)
+void UGetAllItemsCallbackProxy::SetItemFlags(struct FBlueprintOnlineItem& Item, int32 Flags_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2868,7 +2895,7 @@ void UGetAllItemsCallbackProxy::SetItemFlags(struct FBlueprintOnlineItem& Item, 
 	Params::GetAllItemsCallbackProxy_SetItemFlags Parms{};
 
 	Parms.Item = std::move(Item);
-	Parms.Param_Flags = Param_Flags;
+	Parms.Flags_0 = Flags_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2995,11 +3022,11 @@ void UGetAllItemsCallbackProxy::RequestItemExchangeResponse(class UVaRestRequest
 // Function PropWitchHuntModule.ImageLoader.LoadImageFromDisk
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                          Param_Outer                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Outer_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ImagePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UTexture2D*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UTexture2D* UImageLoader::LoadImageFromDisk(class UObject* Param_Outer, const class FString& ImagePath)
+class UTexture2D* UImageLoader::LoadImageFromDisk(class UObject* Outer_0, const class FString& ImagePath)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3008,7 +3035,7 @@ class UTexture2D* UImageLoader::LoadImageFromDisk(class UObject* Param_Outer, co
 
 	Params::ImageLoader_LoadImageFromDisk Parms{};
 
-	Parms.Param_Outer = Param_Outer;
+	Parms.Outer_0 = Outer_0;
 	Parms.ImagePath = std::move(ImagePath);
 
 	auto Flgs = Func->FunctionFlags;
@@ -3736,68 +3763,6 @@ void UProjectVersionBlueprint::BanPlayer(class AGameModeBase* GameMode, class AP
 }
 
 
-// Function PropWitchHuntModule.ProjectVersionBlueprint.ClearAchievement
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::ClearAchievement(class UGameInstance* GameInstance, const class FName& Param_Name)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "ClearAchievement");
-
-	Params::ProjectVersionBlueprint_ClearAchievement Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.ClearGSAchievement
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::ClearGSAchievement(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "ClearGSAchievement");
-
-	Params::ProjectVersionBlueprint_ClearGSAchievement Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PropWitchHuntModule.ProjectVersionBlueprint.ComponentEncroachesGeometry
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -3827,40 +3792,6 @@ bool UProjectVersionBlueprint::ComponentEncroachesGeometry(class AActor* Actor, 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetAchievement
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Achieved                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::GetAchievement(class UGameInstance* GameInstance, const class FName& Param_Name, bool* Achieved)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetAchievement");
-
-	Params::ProjectVersionBlueprint_GetAchievement Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Achieved != nullptr)
-		*Achieved = Parms.Achieved;
 
 	return Parms.ReturnValue;
 }
@@ -4119,114 +4050,6 @@ class APlayerController* UProjectVersionBlueprint::GetFirstLocalPlayerController
 }
 
 
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetGSAchievement
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Achieved                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::GetGSAchievement(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, bool* Achieved)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetGSAchievement");
-
-	Params::ProjectVersionBlueprint_GetGSAchievement Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Achieved != nullptr)
-		*Achieved = Parms.Achieved;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetGSOnlineStatFloat
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::GetGSOnlineStatFloat(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, float* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetGSOnlineStatFloat");
-
-	Params::ProjectVersionBlueprint_GetGSOnlineStatFloat Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetGSOnlineStatInt
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::GetGSOnlineStatInt(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, int32* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetGSOnlineStatInt");
-
-	Params::ProjectVersionBlueprint_GetGSOnlineStatInt Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PropWitchHuntModule.ProjectVersionBlueprint.GetItemProperty
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -4335,74 +4158,6 @@ void UProjectVersionBlueprint::GetMemoryStats(float* UsedPhysical, float* PeakUs
 
 	if (TotalVirtual != nullptr)
 		*TotalVirtual = Parms.TotalVirtual;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetOnlineStatFloat
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::GetOnlineStatFloat(class UGameInstance* GameInstance, const class FName& Param_Name, float* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetOnlineStatFloat");
-
-	Params::ProjectVersionBlueprint_GetOnlineStatFloat Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.GetOnlineStatInt
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::GetOnlineStatInt(class UGameInstance* GameInstance, const class FName& Param_Name, int32* Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "GetOnlineStatInt");
-
-	Params::ProjectVersionBlueprint_GetOnlineStatInt Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -4913,14 +4668,14 @@ bool UProjectVersionBlueprint::LoadItemDefinitions(class UGameInstance* GameInst
 // Parameters:
 // class FString                           AbsoluteFileName                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPropToSave>              PropsToLoad                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class FString                           WorkshopId                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           WorkshopID                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableStaticToSave>   PlaceableStaticsToLoad                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableLightToSave>    PlaceableLightsToLoad                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FSwitchToSave>            SwitchesToLoad                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPrefabToSave>            PrefabsToLoad                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UProjectVersionBlueprint::LoadPropLayoutFromFile(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopId, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad)
+bool UProjectVersionBlueprint::LoadPropLayoutFromFile(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopID, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4941,8 +4696,8 @@ bool UProjectVersionBlueprint::LoadPropLayoutFromFile(const class FString& Absol
 	if (PropsToLoad != nullptr)
 		*PropsToLoad = std::move(Parms.PropsToLoad);
 
-	if (WorkshopId != nullptr)
-		*WorkshopId = std::move(Parms.WorkshopId);
+	if (WorkshopID != nullptr)
+		*WorkshopID = std::move(Parms.WorkshopID);
 
 	if (PlaceableStaticsToLoad != nullptr)
 		*PlaceableStaticsToLoad = std::move(Parms.PlaceableStaticsToLoad);
@@ -4965,14 +4720,14 @@ bool UProjectVersionBlueprint::LoadPropLayoutFromFile(const class FString& Absol
 // Parameters:
 // class FString                           AbsoluteFileName                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPropToSave>              PropsToLoad                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class FString                           WorkshopId                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           WorkshopID                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableStaticToSave>   PlaceableStaticsToLoad                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableLightToSave>    PlaceableLightsToLoad                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FSwitchToSave>            SwitchesToLoad                                         (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPrefabToSave>            PrefabsToLoad                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UProjectVersionBlueprint::LoadPropLayoutFromFileCompressed(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopId, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad)
+bool UProjectVersionBlueprint::LoadPropLayoutFromFileCompressed(const class FString& AbsoluteFileName, TArray<struct FPropToSave>* PropsToLoad, class FString* WorkshopID, TArray<struct FPlaceableStaticToSave>* PlaceableStaticsToLoad, TArray<struct FPlaceableLightToSave>* PlaceableLightsToLoad, TArray<struct FSwitchToSave>* SwitchesToLoad, TArray<struct FPrefabToSave>* PrefabsToLoad)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4993,8 +4748,8 @@ bool UProjectVersionBlueprint::LoadPropLayoutFromFileCompressed(const class FStr
 	if (PropsToLoad != nullptr)
 		*PropsToLoad = std::move(Parms.PropsToLoad);
 
-	if (WorkshopId != nullptr)
-		*WorkshopId = std::move(Parms.WorkshopId);
+	if (WorkshopID != nullptr)
+		*WorkshopID = std::move(Parms.WorkshopID);
 
 	if (PlaceableStaticsToLoad != nullptr)
 		*PlaceableStaticsToLoad = std::move(Parms.PlaceableStaticsToLoad);
@@ -5016,9 +4771,9 @@ bool UProjectVersionBlueprint::LoadPropLayoutFromFileCompressed(const class FStr
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UProjectVersionBlueprint::PlayReplay(class UGameInstance* GameInstance, const class FString& Param_Name)
+void UProjectVersionBlueprint::PlayReplay(class UGameInstance* GameInstance, const class FString& Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5028,7 +4783,7 @@ void UProjectVersionBlueprint::PlayReplay(class UGameInstance* GameInstance, con
 	Params::ProjectVersionBlueprint_PlayReplay Parms{};
 
 	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5075,10 +4830,10 @@ bool UProjectVersionBlueprint::ReadStringFromFile(class FString* Result, const c
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           FriendlyName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UProjectVersionBlueprint::RecordReplay(class UGameInstance* GameInstance, const class FString& Param_Name, const class FString& FriendlyName)
+void UProjectVersionBlueprint::RecordReplay(class UGameInstance* GameInstance, const class FString& Name_0, const class FString& FriendlyName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5088,7 +4843,7 @@ void UProjectVersionBlueprint::RecordReplay(class UGameInstance* GameInstance, c
 	Params::ProjectVersionBlueprint_RecordReplay Parms{};
 
 	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.FriendlyName = std::move(FriendlyName);
 
 	auto Flgs = Func->FunctionFlags;
@@ -5097,36 +4852,6 @@ void UProjectVersionBlueprint::RecordReplay(class UGameInstance* GameInstance, c
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.ResetAllOnlineStats
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    AchievementsToo                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::ResetAllOnlineStats(class UGameInstance* GameInstance, bool AchievementsToo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "ResetAllOnlineStats");
-
-	Params::ProjectVersionBlueprint_ResetAllOnlineStats Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.AchievementsToo = AchievementsToo;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -5186,14 +4911,14 @@ bool UProjectVersionBlueprint::SaveGameToFile(class USaveGame* SaveGameObject, c
 // Parameters:
 // class FString                           AbsoluteFileName                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPropToSave>              PropsToSave                                            (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class FString                           WorkshopId                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           WorkshopID                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableStaticToSave>   PlaceableStaticsToSave                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableLightToSave>    PlaceableLightsToSave                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FSwitchToSave>            SwitchesToSave                                         (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPrefabToSave>            PrefabsToSave                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UProjectVersionBlueprint::SavePropLayoutToFile(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopId, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave)
+bool UProjectVersionBlueprint::SavePropLayoutToFile(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopID, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5204,7 +4929,7 @@ bool UProjectVersionBlueprint::SavePropLayoutToFile(const class FString& Absolut
 
 	Parms.AbsoluteFileName = std::move(AbsoluteFileName);
 	Parms.PropsToSave = std::move(PropsToSave);
-	Parms.WorkshopId = std::move(WorkshopId);
+	Parms.WorkshopID = std::move(WorkshopID);
 	Parms.PlaceableStaticsToSave = std::move(PlaceableStaticsToSave);
 	Parms.PlaceableLightsToSave = std::move(PlaceableLightsToSave);
 	Parms.SwitchesToSave = std::move(SwitchesToSave);
@@ -5226,14 +4951,14 @@ bool UProjectVersionBlueprint::SavePropLayoutToFile(const class FString& Absolut
 // Parameters:
 // class FString                           AbsoluteFileName                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPropToSave>              PropsToSave                                            (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class FString                           WorkshopId                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           WorkshopID                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableStaticToSave>   PlaceableStaticsToSave                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPlaceableLightToSave>    PlaceableLightsToSave                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FSwitchToSave>            SwitchesToSave                                         (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // TArray<struct FPrefabToSave>            PrefabsToSave                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UProjectVersionBlueprint::SavePropLayoutToFileCompressed(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopId, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave)
+bool UProjectVersionBlueprint::SavePropLayoutToFileCompressed(const class FString& AbsoluteFileName, const TArray<struct FPropToSave>& PropsToSave, const class FString& WorkshopID, const TArray<struct FPlaceableStaticToSave>& PlaceableStaticsToSave, const TArray<struct FPlaceableLightToSave>& PlaceableLightsToSave, const TArray<struct FSwitchToSave>& SwitchesToSave, const TArray<struct FPrefabToSave>& PrefabsToSave)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5244,66 +4969,11 @@ bool UProjectVersionBlueprint::SavePropLayoutToFileCompressed(const class FStrin
 
 	Parms.AbsoluteFileName = std::move(AbsoluteFileName);
 	Parms.PropsToSave = std::move(PropsToSave);
-	Parms.WorkshopId = std::move(WorkshopId);
+	Parms.WorkshopID = std::move(WorkshopID);
 	Parms.PlaceableStaticsToSave = std::move(PlaceableStaticsToSave);
 	Parms.PlaceableLightsToSave = std::move(PlaceableLightsToSave);
 	Parms.SwitchesToSave = std::move(SwitchesToSave);
 	Parms.PrefabsToSave = std::move(PrefabsToSave);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SendItemDropHeartbeat
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UProjectVersionBlueprint::SendItemDropHeartbeat(class UGameInstance* GameInstance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SendItemDropHeartbeat");
-
-	Params::ProjectVersionBlueprint_SendItemDropHeartbeat Parms{};
-
-	Parms.GameInstance = GameInstance;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetAchievement
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::SetAchievement(class UGameInstance* GameInstance, const class FName& Param_Name)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SetAchievement");
-
-	Params::ProjectVersionBlueprint_SetAchievement Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5343,106 +5013,6 @@ void UProjectVersionBlueprint::SetCCDEnabled(class UPrimitiveComponent* Primitiv
 }
 
 
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetGSAchievement
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::SetGSAchievement(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SetGSAchievement");
-
-	Params::ProjectVersionBlueprint_SetGSAchievement Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetGSOnlineStatFloat
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::SetGSOnlineStatFloat(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SetGSOnlineStatFloat");
-
-	Params::ProjectVersionBlueprint_SetGSOnlineStatFloat Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetGSOnlineStatInt
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::SetGSOnlineStatInt(class UGameInstance* GameInstance, class APlayerState* PlayerState, const class FName& Param_Name, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SetGSOnlineStatInt");
-
-	Params::ProjectVersionBlueprint_SetGSOnlineStatInt Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.PlayerState = PlayerState;
-	Parms.Param_Name = Param_Name;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PropWitchHuntModule.ProjectVersionBlueprint.SetHiddenShadow
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -5467,70 +5037,6 @@ void UProjectVersionBlueprint::SetHiddenShadow(class UPrimitiveComponent* Primit
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetOnlineStatFloat
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::SetOnlineStatFloat(class UGameInstance* GameInstance, const class FName& Param_Name, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SetOnlineStatFloat");
-
-	Params::ProjectVersionBlueprint_SetOnlineStatFloat Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.ProjectVersionBlueprint.SetOnlineStatInt
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UGameInstance*                    GameInstance                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UProjectVersionBlueprint::SetOnlineStatInt(class UGameInstance* GameInstance, const class FName& Param_Name, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ProjectVersionBlueprint", "SetOnlineStatInt");
-
-	Params::ProjectVersionBlueprint_SetOnlineStatInt Parms{};
-
-	Parms.GameInstance = GameInstance;
-	Parms.Param_Name = Param_Name;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -5611,12 +5117,12 @@ void UProjectVersionBlueprint::Shutdown()
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UClass*                           Param_Class                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           Class_0                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ESpawnActorCollisionHandlingMethod      CollisionHandling                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class AActor* UProjectVersionBlueprint::SpawnActorByWorldContextObject(class UObject* WorldContextObject, class UClass* Param_Class, const struct FTransform& Transform, ESpawnActorCollisionHandlingMethod CollisionHandling)
+class AActor* UProjectVersionBlueprint::SpawnActorByWorldContextObject(class UObject* WorldContextObject, class UClass* Class_0, const struct FTransform& Transform, ESpawnActorCollisionHandlingMethod CollisionHandling)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5626,7 +5132,7 @@ class AActor* UProjectVersionBlueprint::SpawnActorByWorldContextObject(class UOb
 	Params::ProjectVersionBlueprint_SpawnActorByWorldContextObject Parms{};
 
 	Parms.WorldContextObject = WorldContextObject;
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.CollisionHandling = CollisionHandling;
 
@@ -5900,124 +5406,6 @@ float URealTimeClock::GetCurrentUtcTimeInSeconds(int32 MyTimezone)
 }
 
 
-// Function PropWitchHuntModule.RequestCurrentStatsCallbackProxy.RequestCurrentOnlineStats
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class URequestCurrentStatsCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class URequestCurrentStatsCallbackProxy* URequestCurrentStatsCallbackProxy::RequestCurrentOnlineStats(class UObject* WorldContextObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("RequestCurrentStatsCallbackProxy", "RequestCurrentOnlineStats");
-
-	Params::RequestCurrentStatsCallbackProxy_RequestCurrentOnlineStats Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.RequestCurrentStatsCallbackProxy.RequestGSOnlineStats
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class URequestCurrentStatsCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class URequestCurrentStatsCallbackProxy* URequestCurrentStatsCallbackProxy::RequestGSOnlineStats(class UObject* WorldContextObject, class APlayerState* PlayerState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("RequestCurrentStatsCallbackProxy", "RequestGSOnlineStats");
-
-	Params::RequestCurrentStatsCallbackProxy_RequestGSOnlineStats Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerState = PlayerState;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.SerializeItemsCallbackProxy.GetSerializationBuffer
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FBlueprintItemSerialization      ItemSerialization                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<uint8>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<uint8> USerializeItemsCallbackProxy::GetSerializationBuffer(const struct FBlueprintItemSerialization& ItemSerialization)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SerializeItemsCallbackProxy", "GetSerializationBuffer");
-
-	Params::SerializeItemsCallbackProxy_GetSerializationBuffer Parms{};
-
-	Parms.ItemSerialization = std::move(ItemSerialization);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.SerializeItemsCallbackProxy.SerializeItems
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FBlueprintOnlineItem>     ItemsToSerialize                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class USerializeItemsCallbackProxy*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class USerializeItemsCallbackProxy* USerializeItemsCallbackProxy::SerializeItems(class UObject* WorldContextObject, class APlayerController* PlayerController, const TArray<struct FBlueprintOnlineItem>& ItemsToSerialize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("SerializeItemsCallbackProxy", "SerializeItems");
-
-	Params::SerializeItemsCallbackProxy_SerializeItems Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-	Parms.ItemsToSerialize = std::move(ItemsToSerialize);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PropWitchHuntModule.SessionSubsystem.GetActiveGameSession
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -6154,6 +5542,20 @@ void AStaticMeshProp::CallHandleWake()
 }
 
 
+// Function PropWitchHuntModule.StaticMeshProp.CallHit
+// (Event, Public, BlueprintEvent)
+
+void AStaticMeshProp::CallHit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StaticMeshProp", "CallHit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PropWitchHuntModule.StaticMeshProp.CheckClientSleep
 // (Final, Native, Public, BlueprintCallable)
 
@@ -6222,64 +5624,6 @@ void AStaticMeshProp::SetActorSubComponentsTickState(bool bTickEnabled)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PropWitchHuntModule.StoreStatsCallbackProxy.StoreGSOnlineStats
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerState*                     PlayerState                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStoreStatsCallbackProxy*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UStoreStatsCallbackProxy* UStoreStatsCallbackProxy::StoreGSOnlineStats(class UObject* WorldContextObject, class APlayerState* PlayerState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("StoreStatsCallbackProxy", "StoreGSOnlineStats");
-
-	Params::StoreStatsCallbackProxy_StoreGSOnlineStats Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerState = PlayerState;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PropWitchHuntModule.StoreStatsCallbackProxy.StoreOnlineStats
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStoreStatsCallbackProxy*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UStoreStatsCallbackProxy* UStoreStatsCallbackProxy::StoreOnlineStats(class UObject* WorldContextObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("StoreStatsCallbackProxy", "StoreOnlineStats");
-
-	Params::StoreStatsCallbackProxy_StoreOnlineStats Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -6478,9 +5822,9 @@ void UTljhUserControllerSystem::HideUserReestablishMessageSignature__DelegateSig
 // Function PropWitchHuntModule.TljhUserControllerSystem.Initialize
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UGameInstance*                    Param_GameInstance                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGameInstance*                    GameInstance_0                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UTljhUserControllerSystem::Initialize(class UGameInstance* Param_GameInstance)
+void UTljhUserControllerSystem::Initialize(class UGameInstance* GameInstance_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6489,7 +5833,7 @@ void UTljhUserControllerSystem::Initialize(class UGameInstance* Param_GameInstan
 
 	Params::TljhUserControllerSystem_Initialize Parms{};
 
-	Parms.Param_GameInstance = Param_GameInstance;
+	Parms.GameInstance_0 = GameInstance_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6870,6 +6214,56 @@ bool UWitchItGameInstance::AddPlayerLookupEntry(const struct FUniqueNetIdRepl& U
 }
 
 
+// Function PropWitchHuntModule.WitchItGameInstance.BeginLoadingScreen
+// (Final, Native, Private)
+// Parameters:
+// class FString                           String                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWitchItGameInstance::BeginLoadingScreen(const class FString& String)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WitchItGameInstance", "BeginLoadingScreen");
+
+	Params::WitchItGameInstance_BeginLoadingScreen Parms{};
+
+	Parms.String = std::move(String);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PropWitchHuntModule.WitchItGameInstance.EndLoadingScreen
+// (Final, Native, Private)
+// Parameters:
+// class UWorld*                           World                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWitchItGameInstance::EndLoadingScreen(class UWorld* World)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WitchItGameInstance", "EndLoadingScreen");
+
+	Params::WitchItGameInstance_EndLoadingScreen Parms{};
+
+	Parms.World = World;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PropWitchHuntModule.WitchItGameInstance.OnNetworkFailure
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
@@ -6927,6 +6321,31 @@ bool UWitchItGameInstance::RemovePlayerLookupEntry(const struct FUniqueNetIdRepl
 }
 
 
+// Function PropWitchHuntModule.WitchItGameInstance.SetSuspendInBackground
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ShouldSuspend                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWitchItGameInstance::SetSuspendInBackground(bool ShouldSuspend)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WitchItGameInstance", "SetSuspendInBackground");
+
+	Params::WitchItGameInstance_SetSuspendInBackground Parms{};
+
+	Parms.ShouldSuspend = ShouldSuspend;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PropWitchHuntModule.WitchItGameInstance.GetNativePlatformInfo
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -6960,6 +6379,51 @@ bool UWitchItGameInstance::GetNativePlatformInfo(const struct FUniqueNetIdRepl& 
 		*NativePlatform = std::move(Parms.NativePlatform);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function PropWitchHuntModule.WitchItPlayerState.PostOnRepPlayerName
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class FString                           NewPlayerName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AWitchItPlayerState::PostOnRepPlayerName(const class FString& NewPlayerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WitchItPlayerState", "PostOnRepPlayerName");
+
+	Params::WitchItPlayerState_PostOnRepPlayerName Parms{};
+
+	Parms.NewPlayerName = std::move(NewPlayerName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PropWitchHuntModule.WitchItPlayerState.SetSafePlayerName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           SafePlayerName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AWitchItPlayerState::SetSafePlayerName(const class FString& SafePlayerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WitchItPlayerState", "SetSafePlayerName");
+
+	Params::WitchItPlayerState_SetSafePlayerName Parms{};
+
+	Parms.SafePlayerName = std::move(SafePlayerName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

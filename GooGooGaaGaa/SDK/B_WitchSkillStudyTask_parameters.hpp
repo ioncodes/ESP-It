@@ -34,7 +34,7 @@ static_assert(offsetof(B_WitchSkillStudyTask_C_InitializeIndividualTaskParameter
 struct B_WitchSkillStudyTask_C_SpawnTargets final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -42,12 +42,12 @@ public:
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C86[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_WitchSkillStudyTask_C_SpawnTargets) == 0x000008, "Wrong alignment on B_WitchSkillStudyTask_C_SpawnTargets");
 static_assert(sizeof(B_WitchSkillStudyTask_C_SpawnTargets) == 0x000028, "Wrong size on B_WitchSkillStudyTask_C_SpawnTargets");
-static_assert(offsetof(B_WitchSkillStudyTask_C_SpawnTargets, Param_Index) == 0x000000, "Member 'B_WitchSkillStudyTask_C_SpawnTargets::Param_Index' has a wrong offset!");
+static_assert(offsetof(B_WitchSkillStudyTask_C_SpawnTargets, Index_0) == 0x000000, "Member 'B_WitchSkillStudyTask_C_SpawnTargets::Index_0' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyTask_C_SpawnTargets, Temp_int_Variable) == 0x000004, "Member 'B_WitchSkillStudyTask_C_SpawnTargets::Temp_int_Variable' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyTask_C_SpawnTargets, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'B_WitchSkillStudyTask_C_SpawnTargets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_WitchSkillStudyTask_C_SpawnTargets, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'B_WitchSkillStudyTask_C_SpawnTargets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
@@ -65,7 +65,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C87[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_WitchSkillStudyInteractionActor_C*> CallFunc_GetAllActorsOfClass_OutActors;            // 0x0010(0x0010)(ReferenceParm)
 	class AB_WitchSkillStudyInteractionActor_C*   CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

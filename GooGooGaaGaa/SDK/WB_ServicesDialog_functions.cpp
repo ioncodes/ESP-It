@@ -51,6 +51,69 @@ void UWB_ServicesDialog_C::ExecuteUbergraph_WB_ServicesDialog(int32 EntryPoint)
 }
 
 
+// Function WB_ServicesDialog.WB_ServicesDialog_C.GetInitialFocusWidget
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      InitialFocusWidget                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWB_ServicesDialog_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServicesDialog_C", "GetInitialFocusWidget");
+
+	Params::WB_ServicesDialog_C_GetInitialFocusWidget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (InitialFocusWidget != nullptr)
+		*InitialFocusWidget = Parms.InitialFocusWidget;
+}
+
+
+// Function WB_ServicesDialog.WB_ServicesDialog_C.OnApply
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_ServicesDialog_C::OnApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServicesDialog_C", "OnApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ServicesDialog.WB_ServicesDialog_C.OnBack
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_ServicesDialog_C::OnBack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServicesDialog_C", "OnBack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ServicesDialog.WB_ServicesDialog_C.OnSpecialAction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_ServicesDialog_C::OnSpecialAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServicesDialog_C", "OnSpecialAction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_ServicesDialog.WB_ServicesDialog_C.ParseSystemMessage
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -106,9 +169,9 @@ void UWB_ServicesDialog_C::SetTimeTexts()
 // Function WB_ServicesDialog.WB_ServicesDialog_C.UpdateMessage
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FS_SystemMessage                 Param_Message                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// struct FS_SystemMessage                 Message_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWB_ServicesDialog_C::UpdateMessage(const struct FS_SystemMessage& Param_Message)
+void UWB_ServicesDialog_C::UpdateMessage(const struct FS_SystemMessage& Message_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -117,7 +180,7 @@ void UWB_ServicesDialog_C::UpdateMessage(const struct FS_SystemMessage& Param_Me
 
 	Params::WB_ServicesDialog_C_UpdateMessage Parms{};
 
-	Parms.Param_Message = std::move(Param_Message);
+	Parms.Message_0 = std::move(Message_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

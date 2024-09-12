@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "LowEntryFileManager_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "LowEntryFileManager_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -24,10 +24,10 @@ class ULowEntryFileManagerDirectory final : public UObject
 {
 public:
 	class FString                                 Directory;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Name_LowEntryFileManagerDirectory;                 // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Path;                                              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsRoot;                                           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2280[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Clear();
@@ -64,7 +64,7 @@ public:
 static_assert(alignof(ULowEntryFileManagerDirectory) == 0x000008, "Wrong alignment on ULowEntryFileManagerDirectory");
 static_assert(sizeof(ULowEntryFileManagerDirectory) == 0x000060, "Wrong size on ULowEntryFileManagerDirectory");
 static_assert(offsetof(ULowEntryFileManagerDirectory, Directory) == 0x000028, "Member 'ULowEntryFileManagerDirectory::Directory' has a wrong offset!");
-static_assert(offsetof(ULowEntryFileManagerDirectory, Name_LowEntryFileManagerDirectory) == 0x000038, "Member 'ULowEntryFileManagerDirectory::Name_LowEntryFileManagerDirectory' has a wrong offset!");
+static_assert(offsetof(ULowEntryFileManagerDirectory, Name_0) == 0x000038, "Member 'ULowEntryFileManagerDirectory::Name_0' has a wrong offset!");
 static_assert(offsetof(ULowEntryFileManagerDirectory, Path) == 0x000048, "Member 'ULowEntryFileManagerDirectory::Path' has a wrong offset!");
 static_assert(offsetof(ULowEntryFileManagerDirectory, bIsRoot) == 0x000058, "Member 'ULowEntryFileManagerDirectory::bIsRoot' has a wrong offset!");
 
@@ -74,7 +74,7 @@ class ULowEntryFileManagerFile final : public UObject
 {
 public:
 	class FString                                 Directory;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Name_LowEntryFileManagerFile;                      // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Path;                                              // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -122,7 +122,7 @@ public:
 static_assert(alignof(ULowEntryFileManagerFile) == 0x000008, "Wrong alignment on ULowEntryFileManagerFile");
 static_assert(sizeof(ULowEntryFileManagerFile) == 0x000058, "Wrong size on ULowEntryFileManagerFile");
 static_assert(offsetof(ULowEntryFileManagerFile, Directory) == 0x000028, "Member 'ULowEntryFileManagerFile::Directory' has a wrong offset!");
-static_assert(offsetof(ULowEntryFileManagerFile, Name_LowEntryFileManagerFile) == 0x000038, "Member 'ULowEntryFileManagerFile::Name_LowEntryFileManagerFile' has a wrong offset!");
+static_assert(offsetof(ULowEntryFileManagerFile, Name_0) == 0x000038, "Member 'ULowEntryFileManagerFile::Name_0' has a wrong offset!");
 static_assert(offsetof(ULowEntryFileManagerFile, Path) == 0x000048, "Member 'ULowEntryFileManagerFile::Path' has a wrong offset!");
 
 // Class LowEntryFileManager.LowEntryFileManagerLibrary
@@ -189,7 +189,7 @@ public:
 	static void SetFileData(const class FString& File, const TArray<uint8>& Data);
 	static void SetFileReadOnly(const class FString& File, const bool ReadOnly);
 	static void SetFileTimestamp(const class FString& File, const struct FDateTime& Timestamp);
-	static void SplitName(const class FString& Param_Name, class FString* NamePart, class FString* ExtensionPart);
+	static void SplitName(const class FString& Name_0, class FString* NamePart, class FString* ExtensionPart);
 	static void SplitPath(const class FString& Path, class FString* PathPart, class FString* NamePart);
 
 public:

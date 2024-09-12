@@ -23,7 +23,7 @@ struct FS_Event final
 {
 public:
 	EventNames                                    EventName_2_7009BD24494A92F5D06BC1989680A9C3;      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              StartTime_5_D3D0BDAE4E542161AD5656A32C4EC12F;      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              EndTime_7_C9C644D54882E35A07850EBB4EF413B9;        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };

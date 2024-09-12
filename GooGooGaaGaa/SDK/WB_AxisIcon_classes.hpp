@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_AxisIcon.WB_AxisIcon_C
-// 0x0030 (0x02F0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_AxisIcon_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_ControllerIcon_C*                   WB_ControllerIcon;                                 // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FName                                   AxisName;                                          // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture*                               PreviewImage;                                      // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_LocalizationManager_C*               LocalizationManager;                               // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_ControllerIcon_C*                   WB_ControllerIcon;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FName                                   AxisName;                                          // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               PreviewImage;                                      // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_LocalizationManager_C*               LocalizationManager;                               // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class UB_LocalizationManager_C* GetLocalizationManager();
@@ -47,13 +47,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_AxisIcon_C) == 0x000008, "Wrong alignment on UWB_AxisIcon_C");
-static_assert(sizeof(UWB_AxisIcon_C) == 0x0002F0, "Wrong size on UWB_AxisIcon_C");
-static_assert(offsetof(UWB_AxisIcon_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_AxisIcon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_AxisIcon_C, WB_ControllerIcon) == 0x0002C8, "Member 'UWB_AxisIcon_C::WB_ControllerIcon' has a wrong offset!");
-static_assert(offsetof(UWB_AxisIcon_C, AxisName) == 0x0002D0, "Member 'UWB_AxisIcon_C::AxisName' has a wrong offset!");
-static_assert(offsetof(UWB_AxisIcon_C, Scale) == 0x0002D8, "Member 'UWB_AxisIcon_C::Scale' has a wrong offset!");
-static_assert(offsetof(UWB_AxisIcon_C, PreviewImage) == 0x0002E0, "Member 'UWB_AxisIcon_C::PreviewImage' has a wrong offset!");
-static_assert(offsetof(UWB_AxisIcon_C, LocalizationManager) == 0x0002E8, "Member 'UWB_AxisIcon_C::LocalizationManager' has a wrong offset!");
+static_assert(sizeof(UWB_AxisIcon_C) == 0x000310, "Wrong size on UWB_AxisIcon_C");
+static_assert(offsetof(UWB_AxisIcon_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_AxisIcon_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_AxisIcon_C, WB_ControllerIcon) == 0x0002E8, "Member 'UWB_AxisIcon_C::WB_ControllerIcon' has a wrong offset!");
+static_assert(offsetof(UWB_AxisIcon_C, AxisName) == 0x0002F0, "Member 'UWB_AxisIcon_C::AxisName' has a wrong offset!");
+static_assert(offsetof(UWB_AxisIcon_C, Scale) == 0x0002F8, "Member 'UWB_AxisIcon_C::Scale' has a wrong offset!");
+static_assert(offsetof(UWB_AxisIcon_C, PreviewImage) == 0x000300, "Member 'UWB_AxisIcon_C::PreviewImage' has a wrong offset!");
+static_assert(offsetof(UWB_AxisIcon_C, LocalizationManager) == 0x000308, "Member 'UWB_AxisIcon_C::LocalizationManager' has a wrong offset!");
 
 }
 

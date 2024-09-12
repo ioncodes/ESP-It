@@ -46,27 +46,6 @@ enum class EGLTFMaterialBakeMode : uint8
 	EGLTFMaterialBakeMode_MAX                = 3,
 };
 
-// Enum GLTFExporter.EGLTFMaterialBakeSizePOT
-// NumValues: 0x000F
-enum class EGLTFMaterialBakeSizePOT : uint8
-{
-	POT_1                                    = 0,
-	POT_2                                    = 1,
-	POT_4                                    = 2,
-	POT_8                                    = 3,
-	POT_16                                   = 4,
-	POT_32                                   = 5,
-	POT_64                                   = 6,
-	POT_128                                  = 7,
-	POT_256                                  = 8,
-	POT_512                                  = 9,
-	POT_1024                                 = 10,
-	POT_2048                                 = 11,
-	POT_4096                                 = 12,
-	POT_8192                                 = 13,
-	POT_MAX                                  = 14,
-};
-
 // Enum GLTFExporter.EGLTFMaterialPropertyGroup
 // NumValues: 0x0009
 enum class EGLTFMaterialPropertyGroup : uint8
@@ -97,26 +76,43 @@ static_assert(offsetof(FGLTFExportMessages, Suggestions) == 0x000000, "Member 'F
 static_assert(offsetof(FGLTFExportMessages, Warnings) == 0x000010, "Member 'FGLTFExportMessages::Warnings' has a wrong offset!");
 static_assert(offsetof(FGLTFExportMessages, Errors) == 0x000020, "Member 'FGLTFExportMessages::Errors' has a wrong offset!");
 
+// ScriptStruct GLTFExporter.GLTFMaterialBakeSize
+// 0x000C (0x000C - 0x0000)
+struct FGLTFMaterialBakeSize final
+{
+public:
+	int32                                         X;                                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoDetect;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGLTFMaterialBakeSize) == 0x000004, "Wrong alignment on FGLTFMaterialBakeSize");
+static_assert(sizeof(FGLTFMaterialBakeSize) == 0x00000C, "Wrong size on FGLTFMaterialBakeSize");
+static_assert(offsetof(FGLTFMaterialBakeSize, X) == 0x000000, "Member 'FGLTFMaterialBakeSize::X' has a wrong offset!");
+static_assert(offsetof(FGLTFMaterialBakeSize, Y) == 0x000004, "Member 'FGLTFMaterialBakeSize::Y' has a wrong offset!");
+static_assert(offsetof(FGLTFMaterialBakeSize, bAutoDetect) == 0x000008, "Member 'FGLTFMaterialBakeSize::bAutoDetect' has a wrong offset!");
+
 // ScriptStruct GLTFExporter.GLTFOverrideMaterialBakeSettings
-// 0x0006 (0x0006 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FGLTFOverrideMaterialBakeSettings final
 {
 public:
 	bool                                          bOverrideSize;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGLTFMaterialBakeSizePOT                      Size;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideFilter;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureFilter                                Filter;                                            // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideTiling;                                   // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureAddress                               Tiling;                                            // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGLTFMaterialBakeSize                  Size;                                              // 0x0004(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bOverrideFilter;                                   // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureFilter                                Filter;                                            // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideTiling;                                   // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureAddress                               Tiling;                                            // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGLTFOverrideMaterialBakeSettings) == 0x000001, "Wrong alignment on FGLTFOverrideMaterialBakeSettings");
-static_assert(sizeof(FGLTFOverrideMaterialBakeSettings) == 0x000006, "Wrong size on FGLTFOverrideMaterialBakeSettings");
+static_assert(alignof(FGLTFOverrideMaterialBakeSettings) == 0x000004, "Wrong alignment on FGLTFOverrideMaterialBakeSettings");
+static_assert(sizeof(FGLTFOverrideMaterialBakeSettings) == 0x000014, "Wrong size on FGLTFOverrideMaterialBakeSettings");
 static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, bOverrideSize) == 0x000000, "Member 'FGLTFOverrideMaterialBakeSettings::bOverrideSize' has a wrong offset!");
-static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, Size) == 0x000001, "Member 'FGLTFOverrideMaterialBakeSettings::Size' has a wrong offset!");
-static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, bOverrideFilter) == 0x000002, "Member 'FGLTFOverrideMaterialBakeSettings::bOverrideFilter' has a wrong offset!");
-static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, Filter) == 0x000003, "Member 'FGLTFOverrideMaterialBakeSettings::Filter' has a wrong offset!");
-static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, bOverrideTiling) == 0x000004, "Member 'FGLTFOverrideMaterialBakeSettings::bOverrideTiling' has a wrong offset!");
-static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, Tiling) == 0x000005, "Member 'FGLTFOverrideMaterialBakeSettings::Tiling' has a wrong offset!");
+static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, Size) == 0x000004, "Member 'FGLTFOverrideMaterialBakeSettings::Size' has a wrong offset!");
+static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, bOverrideFilter) == 0x000010, "Member 'FGLTFOverrideMaterialBakeSettings::bOverrideFilter' has a wrong offset!");
+static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, Filter) == 0x000011, "Member 'FGLTFOverrideMaterialBakeSettings::Filter' has a wrong offset!");
+static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, bOverrideTiling) == 0x000012, "Member 'FGLTFOverrideMaterialBakeSettings::bOverrideTiling' has a wrong offset!");
+static_assert(offsetof(FGLTFOverrideMaterialBakeSettings, Tiling) == 0x000013, "Member 'FGLTFOverrideMaterialBakeSettings::Tiling' has a wrong offset!");
 
 }
 

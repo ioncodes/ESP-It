@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "WB_PlayerListBlock_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PLayerListBlockCreative.WB_PLayerListBlockCreative_C
-// 0x0008 (0x0338 - 0x0330)
+// 0x0008 (0x0358 - 0x0350)
 class UWB_PLayerListBlockCreative_C final : public UWB_PlayerListBlock_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PLayerListBlockCreative_C;       // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PLayerListBlockCreative_C;       // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void IsPlayerShown(class AB_PlayerState_C* PlayerState, bool* IsShown);
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(UWB_PLayerListBlockCreative_C) == 0x000008, "Wrong alignment on UWB_PLayerListBlockCreative_C");
-static_assert(sizeof(UWB_PLayerListBlockCreative_C) == 0x000338, "Wrong size on UWB_PLayerListBlockCreative_C");
-static_assert(offsetof(UWB_PLayerListBlockCreative_C, UberGraphFrame_WB_PLayerListBlockCreative_C) == 0x000330, "Member 'UWB_PLayerListBlockCreative_C::UberGraphFrame_WB_PLayerListBlockCreative_C' has a wrong offset!");
+static_assert(sizeof(UWB_PLayerListBlockCreative_C) == 0x000358, "Wrong size on UWB_PLayerListBlockCreative_C");
+static_assert(offsetof(UWB_PLayerListBlockCreative_C, UberGraphFrame_WB_PLayerListBlockCreative_C) == 0x000350, "Member 'UWB_PLayerListBlockCreative_C::UberGraphFrame_WB_PLayerListBlockCreative_C' has a wrong offset!");
 
 }
 

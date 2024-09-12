@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_QuestionAnswer_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
-#include "E_QuestionAnswer_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -21,20 +21,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_LayoutEntry.WB_LayoutEntry_C
-// 0x0090 (0x0350 - 0x02C0)
+// 0x0090 (0x0370 - 0x02E0)
 class UWB_LayoutEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Delete;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Layout;                                            // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Load;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Save;                                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          SaveMode;                                          // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_5B60[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             ButtonClicked;                                     // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FS_PropLayoutData                      LayoutData;                                        // 0x0300(0x0048)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          UseCompression;                                    // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Delete;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Layout;                                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Load;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Save;                                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          SaveMode;                                          // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             ButtonClicked;                                     // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FS_PropLayoutData                      LayoutData;                                        // 0x0320(0x0048)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          UseCompression;                                    // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature();
@@ -60,16 +60,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_LayoutEntry_C) == 0x000008, "Wrong alignment on UWB_LayoutEntry_C");
-static_assert(sizeof(UWB_LayoutEntry_C) == 0x000350, "Wrong size on UWB_LayoutEntry_C");
-static_assert(offsetof(UWB_LayoutEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_LayoutEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, Delete) == 0x0002C8, "Member 'UWB_LayoutEntry_C::Delete' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, Layout) == 0x0002D0, "Member 'UWB_LayoutEntry_C::Layout' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, Load) == 0x0002D8, "Member 'UWB_LayoutEntry_C::Load' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, Save) == 0x0002E0, "Member 'UWB_LayoutEntry_C::Save' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, SaveMode) == 0x0002E8, "Member 'UWB_LayoutEntry_C::SaveMode' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, ButtonClicked) == 0x0002F0, "Member 'UWB_LayoutEntry_C::ButtonClicked' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, LayoutData) == 0x000300, "Member 'UWB_LayoutEntry_C::LayoutData' has a wrong offset!");
-static_assert(offsetof(UWB_LayoutEntry_C, UseCompression) == 0x000348, "Member 'UWB_LayoutEntry_C::UseCompression' has a wrong offset!");
+static_assert(sizeof(UWB_LayoutEntry_C) == 0x000370, "Wrong size on UWB_LayoutEntry_C");
+static_assert(offsetof(UWB_LayoutEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_LayoutEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, Delete) == 0x0002E8, "Member 'UWB_LayoutEntry_C::Delete' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, Layout) == 0x0002F0, "Member 'UWB_LayoutEntry_C::Layout' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, Load) == 0x0002F8, "Member 'UWB_LayoutEntry_C::Load' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, Save) == 0x000300, "Member 'UWB_LayoutEntry_C::Save' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, SaveMode) == 0x000308, "Member 'UWB_LayoutEntry_C::SaveMode' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, ButtonClicked) == 0x000310, "Member 'UWB_LayoutEntry_C::ButtonClicked' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, LayoutData) == 0x000320, "Member 'UWB_LayoutEntry_C::LayoutData' has a wrong offset!");
+static_assert(offsetof(UWB_LayoutEntry_C, UseCompression) == 0x000368, "Member 'UWB_LayoutEntry_C::UseCompression' has a wrong offset!");
 
 }
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "MasterServerPlugin_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -45,81 +45,108 @@ static_assert(sizeof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_CB_Mirrorin
 static_assert(offsetof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_CB_MirroringEnabled_K2Node_ComponentBoundEvent_3_OnCheckStateChanged__DelegateSignature, Sender) == 0x000000, "Member 'WB_AccountSettings_C_BndEvt__WB_AccountSettings_CB_MirroringEnabled_K2Node_ComponentBoundEvent_3_OnCheckStateChanged__DelegateSignature::Sender' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_CB_MirroringEnabled_K2Node_ComponentBoundEvent_3_OnCheckStateChanged__DelegateSignature, IsChecked) == 0x000008, "Member 'WB_AccountSettings_C_BndEvt__WB_AccountSettings_CB_MirroringEnabled_K2Node_ComponentBoundEvent_3_OnCheckStateChanged__DelegateSignature::IsChecked' has a wrong offset!");
 
-// Function WB_AccountSettings.WB_AccountSettings_C.CreateToolTip
+// Function WB_AccountSettings.WB_AccountSettings_C.BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature final
+{
+public:
+	class UWB_CheckBoxWithLabel_C*                Sender;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsChecked;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature) == 0x000008, "Wrong alignment on WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature");
+static_assert(sizeof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature) == 0x000010, "Wrong size on WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature");
+static_assert(offsetof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature, Sender) == 0x000000, "Member 'WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature::Sender' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature, IsChecked) == 0x000008, "Member 'WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature::IsChecked' has a wrong offset!");
+
+// Function WB_AccountSettings.WB_AccountSettings_C.CreateTooltip
 // 0x0008 (0x0008 - 0x0000)
-struct WB_AccountSettings_C_CreateToolTip final
+struct WB_AccountSettings_C_CreateTooltip final
 {
 public:
 	class UUserWidget*                            CallFunc_CreateTextTooltip_Tooltip;                // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WB_AccountSettings_C_CreateToolTip) == 0x000008, "Wrong alignment on WB_AccountSettings_C_CreateToolTip");
-static_assert(sizeof(WB_AccountSettings_C_CreateToolTip) == 0x000008, "Wrong size on WB_AccountSettings_C_CreateToolTip");
-static_assert(offsetof(WB_AccountSettings_C_CreateToolTip, CallFunc_CreateTextTooltip_Tooltip) == 0x000000, "Member 'WB_AccountSettings_C_CreateToolTip::CallFunc_CreateTextTooltip_Tooltip' has a wrong offset!");
+static_assert(alignof(WB_AccountSettings_C_CreateTooltip) == 0x000008, "Wrong alignment on WB_AccountSettings_C_CreateTooltip");
+static_assert(sizeof(WB_AccountSettings_C_CreateTooltip) == 0x000008, "Wrong size on WB_AccountSettings_C_CreateTooltip");
+static_assert(offsetof(WB_AccountSettings_C_CreateTooltip, CallFunc_CreateTextTooltip_Tooltip) == 0x000000, "Member 'WB_AccountSettings_C_CreateTooltip::CallFunc_CreateTextTooltip_Tooltip' has a wrong offset!");
 
 // Function WB_AccountSettings.WB_AccountSettings_C.ExecuteUbergraph_WB_AccountSettings
-// 0x0150 (0x0150 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3703[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam; // 0x0018(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1; // 0x0048(0x0030)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1; // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0018)()
-	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender_1;               // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_IsChecked_1;            // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3704[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3705[0x6];                                     // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAccountSetting>                K2Node_CustomEvent_Settings;                       // 0x00D8(0x0010)(ConstParm, ReferenceParm)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue;           // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm)
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(TArray<struct FAccountSetting>& Settings)> K2Node_CreateDelegate_OutputDelegate;              // 0x0108(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3706[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue;    // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0010)()
+	struct FUniqueNetIdRepl                       CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1; // 0x0078(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1; // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender_2;               // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_IsChecked_2;            // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA[0x6];                                       // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAccountSetting>                K2Node_CustomEvent_Settings;                       // 0x00E0(0x0010)(ConstParm, ReferenceParm)
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x00F8(0x0010)(ReferenceParm)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_1;  // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(TArray<struct FAccountSetting>& Settings)> K2Node_CreateDelegate_OutputDelegate;              // 0x0110(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMasterServerSubsystem*                 CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNewMasterServerManager*                CallFunc_GetNewMasterServerManager_ReturnValue_2;  // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender_1;               // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_IsChecked_1;            // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender;                 // 0x0140(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_IsChecked;              // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0158(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAccountSetting                        K2Node_MakeStruct_AccountSetting;                  // 0x0168(0x0030)()
+	TArray<struct FAccountSetting>                K2Node_MakeArray_Array_1;                          // 0x0198(0x0010)(ReferenceParm)
 };
 static_assert(alignof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings) == 0x000008, "Wrong alignment on WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings");
-static_assert(sizeof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings) == 0x000150, "Wrong size on WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings");
+static_assert(sizeof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings) == 0x0001A8, "Wrong size on WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings");
 static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, EntryPoint) == 0x000000, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000010, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam) == 0x000018, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1) == 0x000048, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x000078, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1) == 0x000088, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_Conv_StringToText_ReturnValue) == 0x000098, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_Sender_1) == 0x0000B0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_Sender_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_IsChecked_1) == 0x0000B8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_IsChecked_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetGameInstance_ReturnValue) == 0x0000C0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000C8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_IsValid_ReturnValue) == 0x0000D1, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_CustomEvent_Settings) == 0x0000D8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_CustomEvent_Settings' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetEngineSubsystem_ReturnValue) == 0x0000E8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_MakeArray_Array) == 0x0000F0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000100, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_CreateDelegate_OutputDelegate) == 0x000108, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetGameInstance_ReturnValue_1) == 0x000118, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000120, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000128, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_bSuccess_1) == 0x000130, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000138, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetNewMasterServerManager_ReturnValue) == 0x000048, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetNewMasterServerManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x000050, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetOwningPlayer_ReturnValue_1) == 0x000060, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetOwningPlayer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_Conv_StringToText_ReturnValue) == 0x000068, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1) == 0x000078, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetUniqueNetIdFromFirstLocalPlayer_NewParam_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1) == 0x0000A8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_Sender_2) == 0x0000B8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_Sender_2' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_IsChecked_2) == 0x0000C0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_IsChecked_2' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetGameInstance_ReturnValue) == 0x0000C8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_AsB_Game_Instance) == 0x0000D0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_bSuccess) == 0x0000D8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_IsValid_ReturnValue) == 0x0000D9, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_CustomEvent_Settings) == 0x0000E0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_CustomEvent_Settings' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x0000F0, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_MakeArray_Array) == 0x0000F8, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetNewMasterServerManager_ReturnValue_1) == 0x000108, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetNewMasterServerManager_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_CreateDelegate_OutputDelegate) == 0x000110, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetEngineSubsystem_ReturnValue_2) == 0x000120, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetEngineSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetNewMasterServerManager_ReturnValue_2) == 0x000128, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetNewMasterServerManager_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_Sender_1) == 0x000130, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_Sender_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_IsChecked_1) == 0x000138, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_IsChecked_1' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_Sender) == 0x000140, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_Sender' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_ComponentBoundEvent_IsChecked) == 0x000148, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_ComponentBoundEvent_IsChecked' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, CallFunc_GetGameInstance_ReturnValue_1) == 0x000150, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000158, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_DynamicCast_bSuccess_1) == 0x000160, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_MakeStruct_AccountSetting) == 0x000168, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_MakeStruct_AccountSetting' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings, K2Node_MakeArray_Array_1) == 0x000198, "Member 'WB_AccountSettings_C_ExecuteUbergraph_WB_AccountSettings::K2Node_MakeArray_Array_1' has a wrong offset!");
 
 // Function WB_AccountSettings.WB_AccountSettings_C.FocusFirstElement
 // 0x0038 (0x0038 - 0x0000)
@@ -129,10 +156,10 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3707[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3708[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -176,6 +203,17 @@ static_assert(alignof(WB_AccountSettings_C_OnReceiveAccountSettings) == 0x000008
 static_assert(sizeof(WB_AccountSettings_C_OnReceiveAccountSettings) == 0x000010, "Wrong size on WB_AccountSettings_C_OnReceiveAccountSettings");
 static_assert(offsetof(WB_AccountSettings_C_OnReceiveAccountSettings, Settings) == 0x000000, "Member 'WB_AccountSettings_C_OnReceiveAccountSettings::Settings' has a wrong offset!");
 
+// Function WB_AccountSettings.WB_AccountSettings_C.ProcessInventoryPrivateSetting
+// 0x0030 (0x0030 - 0x0000)
+struct WB_AccountSettings_C_ProcessInventoryPrivateSetting final
+{
+public:
+	struct FAccountSetting                        Setting;                                           // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WB_AccountSettings_C_ProcessInventoryPrivateSetting) == 0x000008, "Wrong alignment on WB_AccountSettings_C_ProcessInventoryPrivateSetting");
+static_assert(sizeof(WB_AccountSettings_C_ProcessInventoryPrivateSetting) == 0x000030, "Wrong size on WB_AccountSettings_C_ProcessInventoryPrivateSetting");
+static_assert(offsetof(WB_AccountSettings_C_ProcessInventoryPrivateSetting, Setting) == 0x000000, "Member 'WB_AccountSettings_C_ProcessInventoryPrivateSetting::Setting' has a wrong offset!");
+
 // Function WB_AccountSettings.WB_AccountSettings_C.ProcessMirrorInventorySetting
 // 0x0030 (0x0030 - 0x0000)
 struct WB_AccountSettings_C_ProcessMirrorInventorySetting final
@@ -197,10 +235,10 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAccountSetting                        CallFunc_Array_Get_Item;                           // 0x0018(0x0030)()
 	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3709[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_370A[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AccountSettings_C_ProcessSettingsArray) == 0x000008, "Wrong alignment on WB_AccountSettings_C_ProcessSettingsArray");
@@ -219,8 +257,8 @@ static_assert(offsetof(WB_AccountSettings_C_ProcessSettingsArray, CallFunc_Add_I
 struct WB_AccountSettings_C_SelectLastListElement final
 {
 public:
-	EUINavigation                                 Param_Navigation;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_370B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -233,7 +271,7 @@ public:
 };
 static_assert(alignof(WB_AccountSettings_C_SelectLastListElement) == 0x000008, "Wrong alignment on WB_AccountSettings_C_SelectLastListElement");
 static_assert(sizeof(WB_AccountSettings_C_SelectLastListElement) == 0x000040, "Wrong size on WB_AccountSettings_C_SelectLastListElement");
-static_assert(offsetof(WB_AccountSettings_C_SelectLastListElement, Param_Navigation) == 0x000000, "Member 'WB_AccountSettings_C_SelectLastListElement::Param_Navigation' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_SelectLastListElement, Navigation_0) == 0x000000, "Member 'WB_AccountSettings_C_SelectLastListElement::Navigation_0' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_SelectLastListElement, ReturnValue) == 0x000008, "Member 'WB_AccountSettings_C_SelectLastListElement::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_SelectLastListElement, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'WB_AccountSettings_C_SelectLastListElement::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_SelectLastListElement, CallFunc_Subtract_IntInt_ReturnValue) == 0x000014, "Member 'WB_AccountSettings_C_SelectLastListElement::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
@@ -249,14 +287,14 @@ static_assert(offsetof(WB_AccountSettings_C_SelectLastListElement, CallFunc_Grea
 struct WB_AccountSettings_C_SelectRevealIfPossible final
 {
 public:
-	EUINavigation                                 Param_Navigation;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_370C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AccountSettings_C_SelectRevealIfPossible) == 0x000008, "Wrong alignment on WB_AccountSettings_C_SelectRevealIfPossible");
 static_assert(sizeof(WB_AccountSettings_C_SelectRevealIfPossible) == 0x000018, "Wrong size on WB_AccountSettings_C_SelectRevealIfPossible");
-static_assert(offsetof(WB_AccountSettings_C_SelectRevealIfPossible, Param_Navigation) == 0x000000, "Member 'WB_AccountSettings_C_SelectRevealIfPossible::Param_Navigation' has a wrong offset!");
+static_assert(offsetof(WB_AccountSettings_C_SelectRevealIfPossible, Navigation_0) == 0x000000, "Member 'WB_AccountSettings_C_SelectRevealIfPossible::Navigation_0' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_SelectRevealIfPossible, ReturnValue) == 0x000008, "Member 'WB_AccountSettings_C_SelectRevealIfPossible::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AccountSettings_C_SelectRevealIfPossible, CallFunc_IsVisible_ReturnValue) == 0x000010, "Member 'WB_AccountSettings_C_SelectRevealIfPossible::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
 

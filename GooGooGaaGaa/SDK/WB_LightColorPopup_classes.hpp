@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "WB_CategoryMenuScreen_classes.hpp"
 #include "ESalvageCategory_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "WB_CategoryMenuScreen_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_LightColorPopup.WB_LightColorPopup_C
-// 0x0030 (0x0310 - 0x02E0)
+// 0x0030 (0x0330 - 0x0300)
 class UWB_LightColorPopup_C final : public UWB_CategoryMenuScreen_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_LightColorPopup_C;               // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTileView*                              LightColorTileView;                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FVector>                        LightColorOptions;                                 // 0x02F8(0x0010)(Edit, BlueprintVisible)
-	class UWB_WorldSettingsTab_C*                 WorldsettingsTabParent;                            // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_LightColorPopup_C;               // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTileView*                              LightColorTileView;                                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        LightColorOptions;                                 // 0x0318(0x0010)(Edit, BlueprintVisible)
+	class UWB_WorldSettingsTab_C*                 WorldsettingsTabParent;                            // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_LightColorPopup_Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -50,12 +50,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_LightColorPopup_C) == 0x000008, "Wrong alignment on UWB_LightColorPopup_C");
-static_assert(sizeof(UWB_LightColorPopup_C) == 0x000310, "Wrong size on UWB_LightColorPopup_C");
-static_assert(offsetof(UWB_LightColorPopup_C, UberGraphFrame_WB_LightColorPopup_C) == 0x0002E0, "Member 'UWB_LightColorPopup_C::UberGraphFrame_WB_LightColorPopup_C' has a wrong offset!");
-static_assert(offsetof(UWB_LightColorPopup_C, Back) == 0x0002E8, "Member 'UWB_LightColorPopup_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_LightColorPopup_C, LightColorTileView) == 0x0002F0, "Member 'UWB_LightColorPopup_C::LightColorTileView' has a wrong offset!");
-static_assert(offsetof(UWB_LightColorPopup_C, LightColorOptions) == 0x0002F8, "Member 'UWB_LightColorPopup_C::LightColorOptions' has a wrong offset!");
-static_assert(offsetof(UWB_LightColorPopup_C, WorldsettingsTabParent) == 0x000308, "Member 'UWB_LightColorPopup_C::WorldsettingsTabParent' has a wrong offset!");
+static_assert(sizeof(UWB_LightColorPopup_C) == 0x000330, "Wrong size on UWB_LightColorPopup_C");
+static_assert(offsetof(UWB_LightColorPopup_C, UberGraphFrame_WB_LightColorPopup_C) == 0x000300, "Member 'UWB_LightColorPopup_C::UberGraphFrame_WB_LightColorPopup_C' has a wrong offset!");
+static_assert(offsetof(UWB_LightColorPopup_C, Back) == 0x000308, "Member 'UWB_LightColorPopup_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_LightColorPopup_C, LightColorTileView) == 0x000310, "Member 'UWB_LightColorPopup_C::LightColorTileView' has a wrong offset!");
+static_assert(offsetof(UWB_LightColorPopup_C, LightColorOptions) == 0x000318, "Member 'UWB_LightColorPopup_C::LightColorOptions' has a wrong offset!");
+static_assert(offsetof(UWB_LightColorPopup_C, WorldsettingsTabParent) == 0x000328, "Member 'UWB_LightColorPopup_C::WorldsettingsTabParent' has a wrong offset!");
 
 }
 

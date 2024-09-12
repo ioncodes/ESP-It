@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_BaseHunterSkill.B_BaseHunterSkill_C
-// 0x0010 (0x0108 - 0x00F8)
+// 0x0010 (0x0100 - 0x00F0)
 class UB_BaseHunterSkill_C : public UB_BaseSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_BaseHunterSkill_C;                // 0x00F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          CountSkillUsageScoreStat;                          // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_BaseHunterSkill_C;                // 0x00F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          CountSkillUsageScoreStat;                          // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanActivate();
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(UB_BaseHunterSkill_C) == 0x000008, "Wrong alignment on UB_BaseHunterSkill_C");
-static_assert(sizeof(UB_BaseHunterSkill_C) == 0x000108, "Wrong size on UB_BaseHunterSkill_C");
-static_assert(offsetof(UB_BaseHunterSkill_C, UberGraphFrame_B_BaseHunterSkill_C) == 0x0000F8, "Member 'UB_BaseHunterSkill_C::UberGraphFrame_B_BaseHunterSkill_C' has a wrong offset!");
-static_assert(offsetof(UB_BaseHunterSkill_C, CountSkillUsageScoreStat) == 0x000100, "Member 'UB_BaseHunterSkill_C::CountSkillUsageScoreStat' has a wrong offset!");
+static_assert(sizeof(UB_BaseHunterSkill_C) == 0x000100, "Wrong size on UB_BaseHunterSkill_C");
+static_assert(offsetof(UB_BaseHunterSkill_C, UberGraphFrame_B_BaseHunterSkill_C) == 0x0000F0, "Member 'UB_BaseHunterSkill_C::UberGraphFrame_B_BaseHunterSkill_C' has a wrong offset!");
+static_assert(offsetof(UB_BaseHunterSkill_C, CountSkillUsageScoreStat) == 0x0000F8, "Member 'UB_BaseHunterSkill_C::CountSkillUsageScoreStat' has a wrong offset!");
 
 }
 

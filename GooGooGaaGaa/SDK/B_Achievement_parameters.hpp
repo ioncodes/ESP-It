@@ -23,11 +23,11 @@ public:
 	bool                                          Hide_and_Seek;                                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Hunt_a_Hag;                                        // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Fill_the_Pot;                                      // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B4E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_GameMode_C*>                  Valid_Game_Modes;                                  // 0x0008(0x0010)(Parm, OutParm)
 	class AB_ObjectiveGameMode_C*                 CallFunc_CreateObject_Object;                      // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B4F[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_HuntAHagGameMode_C*                  CallFunc_CreateObject_Object_1;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_HideAndSeekGameMode_C*               CallFunc_CreateObject_Object_2;                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -56,16 +56,16 @@ static_assert(offsetof(B_Achievement_C_Get_Valid_Game_Modes, CallFunc_Array_Add_
 struct B_Achievement_C_Test_Prop_Id_Validity final
 {
 public:
-	int32                                         PropId;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PropID;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IdIsValid;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B50[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_Achievement_C_Test_Prop_Id_Validity) == 0x000004, "Wrong alignment on B_Achievement_C_Test_Prop_Id_Validity");
 static_assert(sizeof(B_Achievement_C_Test_Prop_Id_Validity) == 0x000010, "Wrong size on B_Achievement_C_Test_Prop_Id_Validity");
-static_assert(offsetof(B_Achievement_C_Test_Prop_Id_Validity, PropId) == 0x000000, "Member 'B_Achievement_C_Test_Prop_Id_Validity::PropId' has a wrong offset!");
+static_assert(offsetof(B_Achievement_C_Test_Prop_Id_Validity, PropID) == 0x000000, "Member 'B_Achievement_C_Test_Prop_Id_Validity::PropID' has a wrong offset!");
 static_assert(offsetof(B_Achievement_C_Test_Prop_Id_Validity, IdIsValid) == 0x000004, "Member 'B_Achievement_C_Test_Prop_Id_Validity::IdIsValid' has a wrong offset!");
 static_assert(offsetof(B_Achievement_C_Test_Prop_Id_Validity, CallFunc_Array_Contains_ReturnValue) == 0x000005, "Member 'B_Achievement_C_Test_Prop_Id_Validity::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Achievement_C_Test_Prop_Id_Validity, CallFunc_Array_Length_ReturnValue) == 0x000008, "Member 'B_Achievement_C_Test_Prop_Id_Validity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");

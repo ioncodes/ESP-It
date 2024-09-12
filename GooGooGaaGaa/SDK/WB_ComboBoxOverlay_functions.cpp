@@ -145,9 +145,9 @@ void UWB_ComboBoxOverlay_C::SetBaseWidget(class UWidget* Widget)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FText                             Option                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ComboBoxOverlay_C::SetOption(const class FText& Option, int32 Param_Index)
+void UWB_ComboBoxOverlay_C::SetOption(const class FText& Option, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -157,7 +157,7 @@ void UWB_ComboBoxOverlay_C::SetOption(const class FText& Option, int32 Param_Ind
 	Params::WB_ComboBoxOverlay_C_SetOption Parms{};
 
 	Parms.Option = std::move(Option);
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

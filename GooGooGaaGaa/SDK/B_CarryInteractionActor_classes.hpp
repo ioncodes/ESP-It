@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CarryInteractionActor.B_CarryInteractionActor_C
-// 0x0010 (0x0328 - 0x0318)
+// 0x0010 (0x0318 - 0x0308)
 class AB_CarryInteractionActor_C final : public AB_InteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CarryInteractionActor_C;          // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          PlayerHasCargo;                                    // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CarryInteractionActor_C;          // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          PlayerHasCargo;                                    // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -43,9 +43,9 @@ public:
 	}
 };
 static_assert(alignof(AB_CarryInteractionActor_C) == 0x000008, "Wrong alignment on AB_CarryInteractionActor_C");
-static_assert(sizeof(AB_CarryInteractionActor_C) == 0x000328, "Wrong size on AB_CarryInteractionActor_C");
-static_assert(offsetof(AB_CarryInteractionActor_C, UberGraphFrame_B_CarryInteractionActor_C) == 0x000318, "Member 'AB_CarryInteractionActor_C::UberGraphFrame_B_CarryInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_CarryInteractionActor_C, PlayerHasCargo) == 0x000320, "Member 'AB_CarryInteractionActor_C::PlayerHasCargo' has a wrong offset!");
+static_assert(sizeof(AB_CarryInteractionActor_C) == 0x000318, "Wrong size on AB_CarryInteractionActor_C");
+static_assert(offsetof(AB_CarryInteractionActor_C, UberGraphFrame_B_CarryInteractionActor_C) == 0x000308, "Member 'AB_CarryInteractionActor_C::UberGraphFrame_B_CarryInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_CarryInteractionActor_C, PlayerHasCargo) == 0x000310, "Member 'AB_CarryInteractionActor_C::PlayerHasCargo' has a wrong offset!");
 
 }
 

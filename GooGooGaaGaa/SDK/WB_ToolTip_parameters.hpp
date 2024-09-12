@@ -20,7 +20,7 @@ struct WB_ToolTip_C_ExecuteUbergraph_WB_ToolTip final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            K2Node_CustomEvent_TooltipContent;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -37,11 +37,11 @@ static_assert(offsetof(WB_ToolTip_C_ExecuteUbergraph_WB_ToolTip, CallFunc_AddChi
 struct WB_ToolTip_C_SetTooltipContent final
 {
 public:
-	class UUserWidget*                            Param_TooltipContent;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ToolTipContent_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ToolTip_C_SetTooltipContent) == 0x000008, "Wrong alignment on WB_ToolTip_C_SetTooltipContent");
 static_assert(sizeof(WB_ToolTip_C_SetTooltipContent) == 0x000008, "Wrong size on WB_ToolTip_C_SetTooltipContent");
-static_assert(offsetof(WB_ToolTip_C_SetTooltipContent, Param_TooltipContent) == 0x000000, "Member 'WB_ToolTip_C_SetTooltipContent::Param_TooltipContent' has a wrong offset!");
+static_assert(offsetof(WB_ToolTip_C_SetTooltipContent, ToolTipContent_0) == 0x000000, "Member 'WB_ToolTip_C_SetTooltipContent::ToolTipContent_0' has a wrong offset!");
 
 }
 

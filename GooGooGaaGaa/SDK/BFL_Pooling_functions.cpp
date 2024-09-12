@@ -94,7 +94,7 @@ void UBFL_Pooling_C::MoveActorToPoolOrDestroy(class AActor* Actor, class UObject
 // Function BFL_Pooling.BFL_Pooling_C.SpawnActorOrTakeFromPool
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESpawnActorCollisionHandlingMethod      CollisionHandlingOverride                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -102,7 +102,7 @@ void UBFL_Pooling_C::MoveActorToPoolOrDestroy(class AActor* Actor, class UObject
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-class AActor* UBFL_Pooling_C::SpawnActorOrTakeFromPool(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, class UObject* __WorldContext)
+class AActor* UBFL_Pooling_C::SpawnActorOrTakeFromPool(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -111,7 +111,7 @@ class AActor* UBFL_Pooling_C::SpawnActorOrTakeFromPool(class UClass* Param_Class
 
 	Params::BFL_Pooling_C_SpawnActorOrTakeFromPool Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.SpawnTransform = std::move(SpawnTransform);
 	Parms.CollisionHandlingOverride = CollisionHandlingOverride;
 	Parms.Owner = Owner;

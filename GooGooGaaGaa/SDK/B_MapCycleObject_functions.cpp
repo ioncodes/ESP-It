@@ -62,9 +62,9 @@ void UB_MapCycleObject_C::ClearMapCycle()
 // Parameters:
 // class FString                           Filename                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UB_MapCycleObject_C::MapCycleContainsItem(const class FString& Filename, int32* Param_Index)
+bool UB_MapCycleObject_C::MapCycleContainsItem(const class FString& Filename, int32* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -77,8 +77,8 @@ bool UB_MapCycleObject_C::MapCycleContainsItem(const class FString& Filename, in
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 
 	return Parms.ReturnValue;
 }

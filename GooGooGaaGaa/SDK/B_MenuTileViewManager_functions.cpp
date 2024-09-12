@@ -184,7 +184,7 @@ void UB_MenuTileViewManager_C::GetPowerupButtonData(E_PowerupRuleType Powerup, b
 // Function B_MenuTileViewManager.B_MenuTileViewManager_C.GetPropButtonData
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    UnlockedByDefault                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsInitial                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           Structure                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -192,7 +192,7 @@ void UB_MenuTileViewManager_C::GetPowerupButtonData(E_PowerupRuleType Powerup, b
 // struct FPrefabToSave                    Prefab                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UB_PropButtonData_C*              Data                                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_MenuTileViewManager_C::GetPropButtonData(int32 PropId, bool UnlockedByDefault, bool IsInitial, class UClass* Structure, class UUserWidget* Parent, const struct FPrefabToSave& Prefab, class UB_PropButtonData_C** Data)
+void UB_MenuTileViewManager_C::GetPropButtonData(int32 PropID, bool UnlockedByDefault, bool IsInitial, class UClass* Structure, class UUserWidget* Parent, const struct FPrefabToSave& Prefab, class UB_PropButtonData_C** Data)
 {
 	static class UFunction* Func = nullptr;
 
@@ -201,7 +201,7 @@ void UB_MenuTileViewManager_C::GetPropButtonData(int32 PropId, bool UnlockedByDe
 
 	Params::B_MenuTileViewManager_C_GetPropButtonData Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 	Parms.UnlockedByDefault = UnlockedByDefault;
 	Parms.IsInitial = IsInitial;
 	Parms.Structure = Structure;
@@ -292,6 +292,38 @@ void UB_MenuTileViewManager_C::GetSkinOrRecipeData(const struct FS_ItemInfo& Ski
 	Parms.SkinInfo = std::move(SkinInfo);
 	Parms.RecipeInfo = std::move(RecipeInfo);
 	Parms.HasInitialFocusOrSelection = HasInitialFocusOrSelection;
+	Parms.Parent = Parent;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Data != nullptr)
+		*Data = Parms.Data;
+}
+
+
+// Function B_MenuTileViewManager.B_MenuTileViewManager_C.GetTradingButtonData
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FTradingItem                     Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FS_ItemInfo                      SkinItem                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// struct FS_RecipeInfo                    RecipeItem                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    HasInitialFocus                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      Parent                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UB_TradingItemData_C*             Data                                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UB_MenuTileViewManager_C::GetTradingButtonData(const struct FTradingItem& Item, const struct FS_ItemInfo& SkinItem, const struct FS_RecipeInfo& RecipeItem, bool HasInitialFocus, class UUserWidget* Parent, class UB_TradingItemData_C** Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_MenuTileViewManager_C", "GetTradingButtonData");
+
+	Params::B_MenuTileViewManager_C_GetTradingButtonData Parms{};
+
+	Parms.Item = std::move(Item);
+	Parms.SkinItem = std::move(SkinItem);
+	Parms.RecipeItem = std::move(RecipeItem);
+	Parms.HasInitialFocus = HasInitialFocus;
 	Parms.Parent = Parent;
 
 	UObject::ProcessEvent(Func, &Parms);

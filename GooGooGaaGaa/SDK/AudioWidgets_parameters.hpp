@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "AudioWidgets_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -127,6 +127,17 @@ public:
 static_assert(alignof(AudioMeter_GetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_GetMeterChannelInfo");
 static_assert(sizeof(AudioMeter_GetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_GetMeterChannelInfo");
 static_assert(offsetof(AudioMeter_GetMeterChannelInfo, ReturnValue) == 0x000000, "Member 'AudioMeter_GetMeterChannelInfo::ReturnValue' has a wrong offset!");
+
+// DelegateFunction AudioWidgets.AudioOscilloscope.GetOscilloscopeAudioSamples__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature final
+{
+public:
+	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature) == 0x000008, "Wrong alignment on AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature");
+static_assert(sizeof(AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature) == 0x000010, "Wrong size on AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature");
+static_assert(offsetof(AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature, ReturnValue) == 0x000000, "Member 'AudioOscilloscope_GetOscilloscopeAudioSamples__DelegateSignature::ReturnValue' has a wrong offset!");
 
 // Function AudioWidgets.AudioRadialSlider.GetOutputValue
 // 0x0008 (0x0008 - 0x0000)
@@ -254,14 +265,14 @@ static_assert(sizeof(AudioRadialSlider_SetTextLabelBackgroundColor) == 0x000014,
 static_assert(offsetof(AudioRadialSlider_SetTextLabelBackgroundColor, InColor) == 0x000000, "Member 'AudioRadialSlider_SetTextLabelBackgroundColor::InColor' has a wrong offset!");
 
 // Function AudioWidgets.AudioRadialSlider.SetUnitsText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct AudioRadialSlider_SetUnitsText final
 {
 public:
-	class FText                                   Units;                                             // 0x0000(0x0018)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	class FText                                   Units;                                             // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AudioRadialSlider_SetUnitsText) == 0x000008, "Wrong alignment on AudioRadialSlider_SetUnitsText");
-static_assert(sizeof(AudioRadialSlider_SetUnitsText) == 0x000018, "Wrong size on AudioRadialSlider_SetUnitsText");
+static_assert(sizeof(AudioRadialSlider_SetUnitsText) == 0x000010, "Wrong size on AudioRadialSlider_SetUnitsText");
 static_assert(offsetof(AudioRadialSlider_SetUnitsText, Units) == 0x000000, "Member 'AudioRadialSlider_SetUnitsText::Units' has a wrong offset!");
 
 // Function AudioWidgets.AudioRadialSlider.SetUnitsTextReadOnly
@@ -403,14 +414,14 @@ static_assert(sizeof(AudioSliderBase_SetTextLabelBackgroundColor) == 0x000014, "
 static_assert(offsetof(AudioSliderBase_SetTextLabelBackgroundColor, InColor) == 0x000000, "Member 'AudioSliderBase_SetTextLabelBackgroundColor::InColor' has a wrong offset!");
 
 // Function AudioWidgets.AudioSliderBase.SetUnitsText
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct AudioSliderBase_SetUnitsText final
 {
 public:
-	class FText                                   Units;                                             // 0x0000(0x0018)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	class FText                                   Units;                                             // 0x0000(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AudioSliderBase_SetUnitsText) == 0x000008, "Wrong alignment on AudioSliderBase_SetUnitsText");
-static_assert(sizeof(AudioSliderBase_SetUnitsText) == 0x000018, "Wrong size on AudioSliderBase_SetUnitsText");
+static_assert(sizeof(AudioSliderBase_SetUnitsText) == 0x000010, "Wrong size on AudioSliderBase_SetUnitsText");
 static_assert(offsetof(AudioSliderBase_SetUnitsText, Units) == 0x000000, "Member 'AudioSliderBase_SetUnitsText::Units' has a wrong offset!");
 
 // Function AudioWidgets.AudioSliderBase.SetUnitsTextReadOnly
@@ -445,6 +456,17 @@ public:
 static_assert(alignof(AudioSliderBase_SetWidgetBackgroundColor) == 0x000004, "Wrong alignment on AudioSliderBase_SetWidgetBackgroundColor");
 static_assert(sizeof(AudioSliderBase_SetWidgetBackgroundColor) == 0x000010, "Wrong size on AudioSliderBase_SetWidgetBackgroundColor");
 static_assert(offsetof(AudioSliderBase_SetWidgetBackgroundColor, InValue) == 0x000000, "Member 'AudioSliderBase_SetWidgetBackgroundColor::InValue' has a wrong offset!");
+
+// DelegateFunction AudioWidgets.AudioVectorscope.GetVectorscopeAudioSamples__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature final
+{
+public:
+	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature) == 0x000008, "Wrong alignment on AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature");
+static_assert(sizeof(AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature) == 0x000010, "Wrong size on AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature");
+static_assert(offsetof(AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature, ReturnValue) == 0x000000, "Member 'AudioVectorscope_GetVectorscopeAudioSamples__DelegateSignature::ReturnValue' has a wrong offset!");
 
 }
 

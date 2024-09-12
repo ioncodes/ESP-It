@@ -17,83 +17,6 @@
 namespace SDK
 {
 
-// Function WB_TextWithIcons.WB_TextWithIcons_C.GetStringInRange
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<class FString>                   Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// int32                                   FirstIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   LastIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UWB_TextWithIcons_C::GetStringInRange(TArray<class FString>& Array, int32 FirstIndex, int32 LastIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "GetStringInRange");
-
-	Params::WB_TextWithIcons_C_GetStringInRange Parms{};
-
-	Parms.Array = std::move(Array);
-	Parms.FirstIndex = FirstIndex;
-	Parms.LastIndex = LastIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Array = std::move(Parms.Array);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WB_TextWithIcons.WB_TextWithIcons_C.UpdateIcons
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWB_TextWithIcons_C::UpdateIcons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "UpdateIcons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TextWithIcons.WB_TextWithIcons_C.CreateWidgets
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWB_TextWithIcons_C::CreateWidgets()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "CreateWidgets");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_TextWithIcons.WB_TextWithIcons_C.GetLocalizationManager
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UB_LocalizationManager_C*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-
-class UB_LocalizationManager_C* UWB_TextWithIcons_C::GetLocalizationManager()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "GetLocalizationManager");
-
-	Params::WB_TextWithIcons_C_GetLocalizationManager Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WB_TextWithIcons.WB_TextWithIcons_C.AddControllerIconWidget
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -139,23 +62,100 @@ class UWB_Text_C* UWB_TextWithIcons_C::AddTextWidget(const class FString& TextSt
 }
 
 
-// Function WB_TextWithIcons.WB_TextWithIcons_C.PreConstruct
+// Function WB_TextWithIcons.WB_TextWithIcons_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TextWithIcons_C::PreConstruct(bool IsDesignTime)
+void UWB_TextWithIcons_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "PreConstruct");
+		Func = Class->GetFunction("WB_TextWithIcons_C", "Construct");
 
-	Params::WB_TextWithIcons_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime = IsDesignTime;
+
+// Function WB_TextWithIcons.WB_TextWithIcons_C.CreateWidgets
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWB_TextWithIcons_C::CreateWidgets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TextWithIcons_C", "CreateWidgets");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_TextWithIcons.WB_TextWithIcons_C.ExecuteUbergraph_WB_TextWithIcons
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TextWithIcons_C::ExecuteUbergraph_WB_TextWithIcons(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TextWithIcons_C", "ExecuteUbergraph_WB_TextWithIcons");
+
+	Params::WB_TextWithIcons_C_ExecuteUbergraph_WB_TextWithIcons Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_TextWithIcons.WB_TextWithIcons_C.GetLocalizationManager
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UB_LocalizationManager_C*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class UB_LocalizationManager_C* UWB_TextWithIcons_C::GetLocalizationManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TextWithIcons_C", "GetLocalizationManager");
+
+	Params::WB_TextWithIcons_C_GetLocalizationManager Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WB_TextWithIcons.WB_TextWithIcons_C.GetStringInRange
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class FString>                   Array                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   FirstIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LastIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UWB_TextWithIcons_C::GetStringInRange(TArray<class FString>& Array, int32 FirstIndex, int32 LastIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TextWithIcons_C", "GetStringInRange");
+
+	Params::WB_TextWithIcons_C_GetStringInRange Parms{};
+
+	Parms.Array = std::move(Array);
+	Parms.FirstIndex = FirstIndex;
+	Parms.LastIndex = LastIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Array = std::move(Parms.Array);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -179,17 +179,43 @@ void UWB_TextWithIcons_C::OnGamePadModeChanged(bool bGamePadMode)
 }
 
 
-// Function WB_TextWithIcons.WB_TextWithIcons_C.Construct
+// Function WB_TextWithIcons.WB_TextWithIcons_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TextWithIcons_C::Construct()
+void UWB_TextWithIcons_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "Construct");
+		Func = Class->GetFunction("WB_TextWithIcons_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WB_TextWithIcons_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_TextWithIcons.WB_TextWithIcons_C.SetFormat
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             Format_0                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWB_TextWithIcons_C::SetFormat(const class FText& Format_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TextWithIcons_C", "SetFormat");
+
+	Params::WB_TextWithIcons_C_SetFormat Parms{};
+
+	Parms.Format_0 = std::move(Format_0);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -215,43 +241,17 @@ void UWB_TextWithIcons_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 }
 
 
-// Function WB_TextWithIcons.WB_TextWithIcons_C.SetFormat
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             Param_Format                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// Function WB_TextWithIcons.WB_TextWithIcons_C.UpdateIcons
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UWB_TextWithIcons_C::SetFormat(const class FText& Param_Format)
+void UWB_TextWithIcons_C::UpdateIcons()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "SetFormat");
+		Func = Class->GetFunction("WB_TextWithIcons_C", "UpdateIcons");
 
-	Params::WB_TextWithIcons_C_SetFormat Parms{};
-
-	Parms.Param_Format = std::move(Param_Format);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_TextWithIcons.WB_TextWithIcons_C.ExecuteUbergraph_WB_TextWithIcons
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_TextWithIcons_C::ExecuteUbergraph_WB_TextWithIcons(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TextWithIcons_C", "ExecuteUbergraph_WB_TextWithIcons");
-
-	Params::WB_TextWithIcons_C_ExecuteUbergraph_WB_TextWithIcons Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

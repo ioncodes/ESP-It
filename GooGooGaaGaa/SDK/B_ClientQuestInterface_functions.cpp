@@ -263,9 +263,9 @@ void UB_ClientQuestInterface_C::GamemodeNameHelper(bool Win, class UClass* GameM
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.GetCachedQuests
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<struct FClientQuest>             Param_CurrentAssignedQuests                            (Parm, OutParm)
+// TArray<struct FClientQuest>             CurrentAssignedQuests_0                                (Parm, OutParm)
 
-void UB_ClientQuestInterface_C::GetCachedQuests(TArray<struct FClientQuest>* Param_CurrentAssignedQuests)
+void UB_ClientQuestInterface_C::GetCachedQuests(TArray<struct FClientQuest>* CurrentAssignedQuests_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -276,8 +276,8 @@ void UB_ClientQuestInterface_C::GetCachedQuests(TArray<struct FClientQuest>* Par
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CurrentAssignedQuests != nullptr)
-		*Param_CurrentAssignedQuests = std::move(Parms.Param_CurrentAssignedQuests);
+	if (CurrentAssignedQuests_0 != nullptr)
+		*CurrentAssignedQuests_0 = std::move(Parms.CurrentAssignedQuests_0);
 }
 
 
@@ -406,9 +406,9 @@ void UB_ClientQuestInterface_C::HandleQuestDidChange(EQuestChangeReason Reason, 
 // Function B_ClientQuestInterface.B_ClientQuestInterface_C.Init
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UB_NewMasterServerManager_C*      Param_NewMasterServerManager                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UB_NewMasterServerManager_C*      NewMasterServerManager_0                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
-void UB_ClientQuestInterface_C::Init(const class UB_NewMasterServerManager_C*& Param_NewMasterServerManager)
+void UB_ClientQuestInterface_C::Init(const class UB_NewMasterServerManager_C*& NewMasterServerManager_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -417,7 +417,7 @@ void UB_ClientQuestInterface_C::Init(const class UB_NewMasterServerManager_C*& P
 
 	Params::B_ClientQuestInterface_C_Init Parms{};
 
-	Parms.Param_NewMasterServerManager = Param_NewMasterServerManager;
+	Parms.NewMasterServerManager_0 = NewMasterServerManager_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

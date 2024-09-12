@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SClientItemUnlock_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "UMG_structs.hpp"
@@ -59,7 +59,7 @@ public:
 	struct FVector2D                              ViewportPosition;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetViewportScale_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              CallFunc_GetCachedGeometry_ReturnValue;            // 0x0014(0x0038)(ConstParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5649[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_LocalToViewport_PixelPosition;            // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_LocalToViewport_ViewportPosition;         // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue;       // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -81,12 +81,12 @@ struct WB_Unlock_C_SetTooltipPosition final
 {
 public:
 	bool                                          bWouldExceedTopViewportBorderAfterFlip;            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        VerticalTopTooltipBorderAfterFlip;                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DesiredVerticalPositionAfterFlip;                  // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bExceedsBottomViewportBorder;                      // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bExceedsRightViewportBorder;                       // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564B[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        DesiredVerticalPosition;                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DesiredHorizontalPosition;                         // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              ViewportSize;                                      // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -111,16 +111,16 @@ public:
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable;                                // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564C[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              CallFunc_GetAlignmentInViewport_ReturnValue;       // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X_5;                        // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_5;                        // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564D[0x6];                                     // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_1;                              // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564E[0x7];                                     // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_6;                        // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_6;                        // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -131,7 +131,7 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_564F[0x7];                                     // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_9;                        // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_9;                        // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Select_Default;                             // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -142,14 +142,14 @@ public:
 	double                                        CallFunc_BreakVector2D_Y_11;                       // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5650[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_12;                       // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_12;                       // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X_13;                       // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_13;                       // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5651[0x7];                                     // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_14;                       // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_14;                       // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_X_15;                       // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -275,7 +275,7 @@ public:
 	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5652[0xF];                                     // 0x00E1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0xF];                                       // 0x00E1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x00F0(0x00D0)()
 };
 static_assert(alignof(WB_Unlock_C_Get_CustomRecipe_Brush_0) == 0x000010, "Wrong alignment on WB_Unlock_C_Get_CustomRecipe_Brush_0");
@@ -287,67 +287,67 @@ static_assert(offsetof(WB_Unlock_C_Get_CustomRecipe_Brush_0, K2Node_DynamicCast_
 static_assert(offsetof(WB_Unlock_C_Get_CustomRecipe_Brush_0, CallFunc_MakeBrushFromTexture_ReturnValue) == 0x0000F0, "Member 'WB_Unlock_C_Get_CustomRecipe_Brush_0::CallFunc_MakeBrushFromTexture_ReturnValue' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.UpdateUnlockName
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_Unlock_C_UpdateUnlockName final
 {
 public:
-	class FText                                   ItemName;                                          // 0x0000(0x0018)(Edit, BlueprintVisible)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5653[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0080(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0018)()
-	class FText                                   CallFunc_GetSteamItemNameFromID_Name;              // 0x00B0(0x0018)()
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5654[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x00D0(0x0018)()
+	class FText                                   ItemName;                                          // 0x0000(0x0010)(Edit, BlueprintVisible)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0070(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0080(0x0010)()
+	class FText                                   CallFunc_GetSteamItemNameFromID_Name;              // 0x0090(0x0010)()
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x00A8(0x0010)()
 };
 static_assert(alignof(WB_Unlock_C_UpdateUnlockName) == 0x000008, "Wrong alignment on WB_Unlock_C_UpdateUnlockName");
-static_assert(sizeof(WB_Unlock_C_UpdateUnlockName) == 0x0000E8, "Wrong size on WB_Unlock_C_UpdateUnlockName");
+static_assert(sizeof(WB_Unlock_C_UpdateUnlockName) == 0x0000B8, "Wrong size on WB_Unlock_C_UpdateUnlockName");
 static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, ItemName) == 0x000000, "Member 'WB_Unlock_C_UpdateUnlockName::ItemName' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, Temp_bool_Variable) == 0x000018, "Member 'WB_Unlock_C_UpdateUnlockName::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_Unlock_C_UpdateUnlockName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, K2Node_MakeArray_Array) == 0x000070, "Member 'WB_Unlock_C_UpdateUnlockName::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_Conv_NameToText_ReturnValue) == 0x000080, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_Format_ReturnValue) == 0x000098, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_GetSteamItemNameFromID_Name) == 0x0000B0, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_GetSteamItemNameFromID_Name' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_TextIsEmpty_ReturnValue) == 0x0000C8, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, K2Node_Select_Default) == 0x0000D0, "Member 'WB_Unlock_C_UpdateUnlockName::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, Temp_bool_Variable) == 0x000010, "Member 'WB_Unlock_C_UpdateUnlockName::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'WB_Unlock_C_UpdateUnlockName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, K2Node_MakeArray_Array) == 0x000060, "Member 'WB_Unlock_C_UpdateUnlockName::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_Conv_NameToText_ReturnValue) == 0x000070, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_Format_ReturnValue) == 0x000080, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_GetSteamItemNameFromID_Name) == 0x000090, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_GetSteamItemNameFromID_Name' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, CallFunc_TextIsEmpty_ReturnValue) == 0x0000A0, "Member 'WB_Unlock_C_UpdateUnlockName::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_UpdateUnlockName, K2Node_Select_Default) == 0x0000A8, "Member 'WB_Unlock_C_UpdateUnlockName::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.SetItemInfo
-// 0x0080 (0x0080 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_Unlock_C_SetItemInfo final
 {
 public:
-	struct FS_ItemInfo                            Param_SetItemInfo;                                 // 0x0000(0x0080)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FS_ItemInfo                            SetItemInfo_0;                                     // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Unlock_C_SetItemInfo) == 0x000008, "Wrong alignment on WB_Unlock_C_SetItemInfo");
-static_assert(sizeof(WB_Unlock_C_SetItemInfo) == 0x000080, "Wrong size on WB_Unlock_C_SetItemInfo");
-static_assert(offsetof(WB_Unlock_C_SetItemInfo, Param_SetItemInfo) == 0x000000, "Member 'WB_Unlock_C_SetItemInfo::Param_SetItemInfo' has a wrong offset!");
+static_assert(sizeof(WB_Unlock_C_SetItemInfo) == 0x000078, "Wrong size on WB_Unlock_C_SetItemInfo");
+static_assert(offsetof(WB_Unlock_C_SetItemInfo, SetItemInfo_0) == 0x000000, "Member 'WB_Unlock_C_SetItemInfo::SetItemInfo_0' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.SetUnlock
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct WB_Unlock_C_SetUnlock final
 {
 public:
-	struct FSClientItemUnlock                     Param_ClientItemUnlock;                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSClientItemUnlock                     ClientItemUnlock_0;                                // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FBlueprintOnlineItem                   TempItem;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_BaseSkill_C*                         K2Node_DynamicCast_AsB_Base_Skill;                 // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5655[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5656[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0058(0x0080)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ItemInfo                            CallFunc_GetSkinItem_ReturnValue;                  // 0x0058(0x0078)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetSkinItem_Found;                        // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Unlock_C_SetUnlock) == 0x000008, "Wrong alignment on WB_Unlock_C_SetUnlock");
-static_assert(sizeof(WB_Unlock_C_SetUnlock) == 0x0000E0, "Wrong size on WB_Unlock_C_SetUnlock");
-static_assert(offsetof(WB_Unlock_C_SetUnlock, Param_ClientItemUnlock) == 0x000000, "Member 'WB_Unlock_C_SetUnlock::Param_ClientItemUnlock' has a wrong offset!");
+static_assert(sizeof(WB_Unlock_C_SetUnlock) == 0x0000D8, "Wrong size on WB_Unlock_C_SetUnlock");
+static_assert(offsetof(WB_Unlock_C_SetUnlock, ClientItemUnlock_0) == 0x000000, "Member 'WB_Unlock_C_SetUnlock::ClientItemUnlock_0' has a wrong offset!");
 static_assert(offsetof(WB_Unlock_C_SetUnlock, TempItem) == 0x000018, "Member 'WB_Unlock_C_SetUnlock::TempItem' has a wrong offset!");
 static_assert(offsetof(WB_Unlock_C_SetUnlock, CallFunc_GetDefaultObject_ReturnValue) == 0x000028, "Member 'WB_Unlock_C_SetUnlock::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Unlock_C_SetUnlock, CallFunc_GetGameInstance_ReturnValue) == 0x000030, "Member 'WB_Unlock_C_SetUnlock::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -356,8 +356,8 @@ static_assert(offsetof(WB_Unlock_C_SetUnlock, K2Node_DynamicCast_bSuccess) == 0x
 static_assert(offsetof(WB_Unlock_C_SetUnlock, K2Node_DynamicCast_AsB_Game_Instance) == 0x000048, "Member 'WB_Unlock_C_SetUnlock::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_Unlock_C_SetUnlock, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'WB_Unlock_C_SetUnlock::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(WB_Unlock_C_SetUnlock, CallFunc_GetSkinItem_ReturnValue) == 0x000058, "Member 'WB_Unlock_C_SetUnlock::CallFunc_GetSkinItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_SetUnlock, CallFunc_GetSkinItem_Found) == 0x0000D8, "Member 'WB_Unlock_C_SetUnlock::CallFunc_GetSkinItem_Found' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_SetUnlock, K2Node_SwitchEnum_CmpSuccess) == 0x0000D9, "Member 'WB_Unlock_C_SetUnlock::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_SetUnlock, CallFunc_GetSkinItem_Found) == 0x0000D0, "Member 'WB_Unlock_C_SetUnlock::CallFunc_GetSkinItem_Found' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_SetUnlock, K2Node_SwitchEnum_CmpSuccess) == 0x0000D1, "Member 'WB_Unlock_C_SetUnlock::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.Get_CustomRecipe_Visibility_0
 // 0x0005 (0x0005 - 0x0000)
@@ -379,58 +379,58 @@ static_assert(offsetof(WB_Unlock_C_Get_CustomRecipe_Visibility_0, Temp_byte_Vari
 static_assert(offsetof(WB_Unlock_C_Get_CustomRecipe_Visibility_0, K2Node_Select_Default) == 0x000004, "Member 'WB_Unlock_C_Get_CustomRecipe_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.GetText_0
-// 0x0038 (0x0038 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_Unlock_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5657[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
 };
 static_assert(alignof(WB_Unlock_C_GetText_0) == 0x000008, "Wrong alignment on WB_Unlock_C_GetText_0");
-static_assert(sizeof(WB_Unlock_C_GetText_0) == 0x000038, "Wrong size on WB_Unlock_C_GetText_0");
+static_assert(sizeof(WB_Unlock_C_GetText_0) == 0x000028, "Wrong size on WB_Unlock_C_GetText_0");
 static_assert(offsetof(WB_Unlock_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_Unlock_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_GetText_0, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000018, "Member 'WB_Unlock_C_GetText_0::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_GetText_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WB_Unlock_C_GetText_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_GetText_0, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000010, "Member 'WB_Unlock_C_GetText_0::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_GetText_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_Unlock_C_GetText_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.Get_Slotname_Text_0
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_Unlock_C_Get_Slotname_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0018)()
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0010)()
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Unlock_C_Get_Slotname_Text_0) == 0x000008, "Wrong alignment on WB_Unlock_C_Get_Slotname_Text_0");
-static_assert(sizeof(WB_Unlock_C_Get_Slotname_Text_0) == 0x000048, "Wrong size on WB_Unlock_C_Get_Slotname_Text_0");
+static_assert(sizeof(WB_Unlock_C_Get_Slotname_Text_0) == 0x000038, "Wrong size on WB_Unlock_C_Get_Slotname_Text_0");
 static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, ReturnValue) == 0x000000, "Member 'WB_Unlock_C_Get_Slotname_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000018, "Member 'WB_Unlock_C_Get_Slotname_Text_0::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'WB_Unlock_C_Get_Slotname_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000040, "Member 'WB_Unlock_C_Get_Slotname_Text_0::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000010, "Member 'WB_Unlock_C_Get_Slotname_Text_0::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000020, "Member 'WB_Unlock_C_Get_Slotname_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_Slotname_Text_0, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000030, "Member 'WB_Unlock_C_Get_Slotname_Text_0::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.Get_RaretyColor_BrushColor_0
-// 0x0068 (0x0068 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct WB_Unlock_C_Get_RaretyColor_BrushColor_0 final
 {
 public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x0010(0x0018)()
-	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetRarityInfo_Name_1;                     // 0x0038(0x0018)()
-	struct FLinearColor                           CallFunc_GetRarityInfo_Color_1;                    // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetRarityInfo_Name;                       // 0x0010(0x0010)()
+	struct FLinearColor                           CallFunc_GetRarityInfo_Color;                      // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetRarityInfo_Name_1;                     // 0x0030(0x0010)()
+	struct FLinearColor                           CallFunc_GetRarityInfo_Color_1;                    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Unlock_C_Get_RaretyColor_BrushColor_0) == 0x000008, "Wrong alignment on WB_Unlock_C_Get_RaretyColor_BrushColor_0");
-static_assert(sizeof(WB_Unlock_C_Get_RaretyColor_BrushColor_0) == 0x000068, "Wrong size on WB_Unlock_C_Get_RaretyColor_BrushColor_0");
+static_assert(sizeof(WB_Unlock_C_Get_RaretyColor_BrushColor_0) == 0x000058, "Wrong size on WB_Unlock_C_Get_RaretyColor_BrushColor_0");
 static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, ReturnValue) == 0x000000, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Name) == 0x000010, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Name' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Color) == 0x000028, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Name_1) == 0x000038, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Name_1' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Color_1) == 0x000050, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Color_1' has a wrong offset!");
-static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000060, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Color) == 0x000020, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Color' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Name_1) == 0x000030, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Name_1' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_GetRarityInfo_Color_1) == 0x000040, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_GetRarityInfo_Color_1' has a wrong offset!");
+static_assert(offsetof(WB_Unlock_C_Get_RaretyColor_BrushColor_0, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000050, "Member 'WB_Unlock_C_Get_RaretyColor_BrushColor_0::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_Unlock.WB_Unlock_C.Get_RewardImage_Background_0
 // 0x0EE0 (0x0EE0 - 0x0000)
@@ -449,19 +449,19 @@ public:
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_1;       // 0x0750(0x00D0)()
 	struct FSlateBrush                            Temp_struct_Variable_7;                            // 0x0820(0x00D0)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x08F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5658[0xF];                                     // 0x08F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F1[0xF];                                      // 0x08F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_2;       // 0x0900(0x00D0)()
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_3;       // 0x09D0(0x00D0)()
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_4;       // 0x0AA0(0x00D0)()
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_5;       // 0x0B70(0x00D0)()
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_6;       // 0x0C40(0x00D0)()
 	EB_Rarity                                     Temp_byte_Variable;                                // 0x0D10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5659[0x7];                                     // 0x0D11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D11[0x7];                                      // 0x0D11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0D18(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSlateBrush                            K2Node_Select_Default;                             // 0x0D20(0x00D0)()
 	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0DF0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0DF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_565A[0x7];                                     // 0x0DF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DF9[0x7];                                      // 0x0DF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue_7;       // 0x0E00(0x00D0)()
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0ED0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

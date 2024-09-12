@@ -20,16 +20,16 @@ namespace SDK
 {
 
 // Class TakeMovieScene.MovieSceneTakeSection
-// 0x0620 (0x0710 - 0x00F0)
+// 0x0640 (0x0730 - 0x00F0)
 class UMovieSceneTakeSection final : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneIntegerChannel              HoursCurve;                                        // 0x00F0(0x0100)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              MinutesCurve;                                      // 0x01F0(0x0100)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              SecondsCurve;                                      // 0x02F0(0x0100)(NativeAccessSpecifierPublic)
-	struct FMovieSceneIntegerChannel              FramesCurve;                                       // 0x03F0(0x0100)(NativeAccessSpecifierPublic)
-	struct FMovieSceneFloatChannel                SubFramesCurve;                                    // 0x04F0(0x0110)(NativeAccessSpecifierPublic)
-	struct FMovieSceneStringChannel               Slate;                                             // 0x0600(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              HoursCurve;                                        // 0x00F0(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              MinutesCurve;                                      // 0x01F8(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              SecondsCurve;                                      // 0x0300(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneIntegerChannel              FramesCurve;                                       // 0x0408(0x0108)(NativeAccessSpecifierPublic)
+	struct FMovieSceneFloatChannel                SubFramesCurve;                                    // 0x0510(0x0110)(NativeAccessSpecifierPublic)
+	struct FMovieSceneStringChannel               Slate;                                             // 0x0620(0x0110)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -42,13 +42,13 @@ public:
 	}
 };
 static_assert(alignof(UMovieSceneTakeSection) == 0x000008, "Wrong alignment on UMovieSceneTakeSection");
-static_assert(sizeof(UMovieSceneTakeSection) == 0x000710, "Wrong size on UMovieSceneTakeSection");
+static_assert(sizeof(UMovieSceneTakeSection) == 0x000730, "Wrong size on UMovieSceneTakeSection");
 static_assert(offsetof(UMovieSceneTakeSection, HoursCurve) == 0x0000F0, "Member 'UMovieSceneTakeSection::HoursCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, MinutesCurve) == 0x0001F0, "Member 'UMovieSceneTakeSection::MinutesCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, SecondsCurve) == 0x0002F0, "Member 'UMovieSceneTakeSection::SecondsCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, FramesCurve) == 0x0003F0, "Member 'UMovieSceneTakeSection::FramesCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, SubFramesCurve) == 0x0004F0, "Member 'UMovieSceneTakeSection::SubFramesCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneTakeSection, Slate) == 0x000600, "Member 'UMovieSceneTakeSection::Slate' has a wrong offset!");
+static_assert(offsetof(UMovieSceneTakeSection, MinutesCurve) == 0x0001F8, "Member 'UMovieSceneTakeSection::MinutesCurve' has a wrong offset!");
+static_assert(offsetof(UMovieSceneTakeSection, SecondsCurve) == 0x000300, "Member 'UMovieSceneTakeSection::SecondsCurve' has a wrong offset!");
+static_assert(offsetof(UMovieSceneTakeSection, FramesCurve) == 0x000408, "Member 'UMovieSceneTakeSection::FramesCurve' has a wrong offset!");
+static_assert(offsetof(UMovieSceneTakeSection, SubFramesCurve) == 0x000510, "Member 'UMovieSceneTakeSection::SubFramesCurve' has a wrong offset!");
+static_assert(offsetof(UMovieSceneTakeSection, Slate) == 0x000620, "Member 'UMovieSceneTakeSection::Slate' has a wrong offset!");
 
 // Class TakeMovieScene.MovieSceneTakeSettings
 // 0x0060 (0x0088 - 0x0028)

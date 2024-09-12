@@ -98,11 +98,11 @@ static_assert(alignof(IAssetRegistry) == 0x000008, "Wrong alignment on IAssetReg
 static_assert(sizeof(IAssetRegistry) == 0x000028, "Wrong size on IAssetRegistry");
 
 // Class AssetRegistry.AssetRegistryImpl
-// 0x0D50 (0x0D78 - 0x0028)
+// 0x0E20 (0x0E48 - 0x0028)
 class UAssetRegistryImpl final : public UObject
 {
 public:
-	uint8                                         Pad_204[0xD50];                                    // 0x0028(0x0D50)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0xE20];                                     // 0x0028(0x0E20)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -115,7 +115,7 @@ public:
 	}
 };
 static_assert(alignof(UAssetRegistryImpl) == 0x000008, "Wrong alignment on UAssetRegistryImpl");
-static_assert(sizeof(UAssetRegistryImpl) == 0x000D78, "Wrong size on UAssetRegistryImpl");
+static_assert(sizeof(UAssetRegistryImpl) == 0x000E48, "Wrong size on UAssetRegistryImpl");
 
 }
 

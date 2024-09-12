@@ -507,6 +507,50 @@ void UWB_ServerRow_C::OnSuccess_7E31FBC146D6B1AC1BE93AA7265B325E(const class FSt
 }
 
 
+// Function WB_ServerRow.WB_ServerRow_C.OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWB_ServerRow_C::OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerRow_C", "OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA");
+
+	Params::WB_ServerRow_C_OnMessageProcessed_54AF84DB49DF6BABE9EDD4894EE19CFA Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_ServerRow.WB_ServerRow_C.OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           SanitizedMessage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWB_ServerRow_C::OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA(bool bSuccess, const class FString& SanitizedMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerRow_C", "OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA");
+
+	Params::WB_ServerRow_C_OnCallFailed_54AF84DB49DF6BABE9EDD4894EE19CFA Parms{};
+
+	Parms.bSuccess = bSuccess;
+	Parms.SanitizedMessage = std::move(SanitizedMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_ServerRow.WB_ServerRow_C.BndEvt__Button_534_K2Node_ComponentBoundEvent_280_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 

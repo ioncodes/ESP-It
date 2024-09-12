@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchPickup.B_WitchPickup_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x0310 - 0x0310)
 class AB_WitchPickup_C : public AB_BasePickup_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchPickup_C) == 0x000008, "Wrong alignment on AB_WitchPickup_C");
-static_assert(sizeof(AB_WitchPickup_C) == 0x000320, "Wrong size on AB_WitchPickup_C");
+static_assert(sizeof(AB_WitchPickup_C) == 0x000310, "Wrong size on AB_WitchPickup_C");
 
 }
 

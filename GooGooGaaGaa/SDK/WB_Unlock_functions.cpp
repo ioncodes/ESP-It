@@ -163,9 +163,9 @@ void UWB_Unlock_C::UpdateUnlockName()
 // Function WB_Unlock.WB_Unlock_C.SetItemInfo
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FS_ItemInfo                      Param_SetItemInfo                                      (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// struct FS_ItemInfo                      SetItemInfo_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWB_Unlock_C::SetItemInfo(const struct FS_ItemInfo& Param_SetItemInfo)
+void UWB_Unlock_C::SetItemInfo(const struct FS_ItemInfo& SetItemInfo_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -174,7 +174,7 @@ void UWB_Unlock_C::SetItemInfo(const struct FS_ItemInfo& Param_SetItemInfo)
 
 	Params::WB_Unlock_C_SetItemInfo Parms{};
 
-	Parms.Param_SetItemInfo = std::move(Param_SetItemInfo);
+	Parms.SetItemInfo_0 = std::move(SetItemInfo_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -183,9 +183,9 @@ void UWB_Unlock_C::SetItemInfo(const struct FS_ItemInfo& Param_SetItemInfo)
 // Function WB_Unlock.WB_Unlock_C.SetUnlock
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSClientItemUnlock               Param_ClientItemUnlock                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FSClientItemUnlock               ClientItemUnlock_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_Unlock_C::SetUnlock(const struct FSClientItemUnlock& Param_ClientItemUnlock)
+void UWB_Unlock_C::SetUnlock(const struct FSClientItemUnlock& ClientItemUnlock_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,7 +194,7 @@ void UWB_Unlock_C::SetUnlock(const struct FSClientItemUnlock& Param_ClientItemUn
 
 	Params::WB_Unlock_C_SetUnlock Parms{};
 
-	Parms.Param_ClientItemUnlock = std::move(Param_ClientItemUnlock);
+	Parms.ClientItemUnlock_0 = std::move(ClientItemUnlock_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

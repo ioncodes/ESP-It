@@ -22,7 +22,7 @@ struct WB_MapVoteBar_C_ExecuteUbergraph_WB_MapVoteBar final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_350F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWB_MapVote_C*>                  CallFunc_GetAllWidgetsOfClass_FoundWidgets;        // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(WB_MapVoteBar_C_ExecuteUbergraph_WB_MapVoteBar) == 0x000008, "Wrong alignment on WB_MapVoteBar_C_ExecuteUbergraph_WB_MapVoteBar");

@@ -40,9 +40,9 @@ void UWB_BigText_C::ExecuteUbergraph_WB_BigText(int32 EntryPoint)
 // Function WB_BigText.WB_BigText_C.Play
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_Text                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             Text_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWB_BigText_C::Play(const class FText& Param_Text)
+void UWB_BigText_C::Play(const class FText& Text_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,7 +51,7 @@ void UWB_BigText_C::Play(const class FText& Param_Text)
 
 	Params::WB_BigText_C_Play Parms{};
 
-	Parms.Param_Text = std::move(Param_Text);
+	Parms.Text_0 = std::move(Text_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

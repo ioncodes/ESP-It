@@ -11,43 +11,43 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "EChatType_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_ChatEntry.WB_ChatEntry_C.ExecuteUbergraph_WB_ChatEntry
-// 0x0100 (0x0100 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EE3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EE4[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_1;      // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EE5[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0088(0x0014)()
-	uint8                                         Pad_5EE6[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x00A0(0x0058)(HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x00A0(0x0060)(HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry) == 0x000008, "Wrong alignment on WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry");
-static_assert(sizeof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry) == 0x000100, "Wrong size on WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry");
+static_assert(sizeof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry) == 0x000108, "Wrong size on WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry");
 static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, EntryPoint) == 0x000000, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, CallFunc_GetGameState_ReturnValue) == 0x000008, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000010, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
@@ -62,50 +62,50 @@ static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, K2Node_Make
 static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000080, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, K2Node_MakeStruct_SlateColor) == 0x000088, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, K2Node_MakeStruct_SlateFontInfo) == 0x0000A0, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, K2Node_MakeStruct_Size_ImplicitCast) == 0x0000F8, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::K2Node_MakeStruct_Size_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry, K2Node_MakeStruct_Size_ImplicitCast) == 0x000100, "Member 'WB_ChatEntry_C_ExecuteUbergraph_WB_ChatEntry::K2Node_MakeStruct_Size_ImplicitCast' has a wrong offset!");
 
 // Function WB_ChatEntry.WB_ChatEntry_C.Get_ChatName_Text_0
-// 0x0050 (0x0050 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct WB_ChatEntry_C_Get_ChatName_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_AppendMultiple_ReturnValue;               // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_AppendMultiple_ReturnValue;               // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0010)()
 };
 static_assert(alignof(WB_ChatEntry_C_Get_ChatName_Text_0) == 0x000008, "Wrong alignment on WB_ChatEntry_C_Get_ChatName_Text_0");
-static_assert(sizeof(WB_ChatEntry_C_Get_ChatName_Text_0) == 0x000050, "Wrong size on WB_ChatEntry_C_Get_ChatName_Text_0");
+static_assert(sizeof(WB_ChatEntry_C_Get_ChatName_Text_0) == 0x000040, "Wrong size on WB_ChatEntry_C_Get_ChatName_Text_0");
 static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, ReturnValue) == 0x000000, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, CallFunc_Conv_TextToString_ReturnValue) == 0x000018, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, CallFunc_AppendMultiple_ReturnValue) == 0x000028, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::CallFunc_AppendMultiple_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000038, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, CallFunc_Conv_TextToString_ReturnValue) == 0x000010, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, CallFunc_AppendMultiple_ReturnValue) == 0x000020, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::CallFunc_AppendMultiple_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatName_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000030, "Member 'WB_ChatEntry_C_Get_ChatName_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_ChatEntry.WB_ChatEntry_C.Get_ChatText_Text_0
-// 0x0118 (0x0118 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct WB_ChatEntry_C_Get_ChatText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	EChatType                                     Temp_byte_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EE7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0020(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0088(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00D8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E8(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0100(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	EChatType                                     Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0070(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C8(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x00D8(0x0010)()
 };
 static_assert(alignof(WB_ChatEntry_C_Get_ChatText_Text_0) == 0x000008, "Wrong alignment on WB_ChatEntry_C_Get_ChatText_Text_0");
-static_assert(sizeof(WB_ChatEntry_C_Get_ChatText_Text_0) == 0x000118, "Wrong size on WB_ChatEntry_C_Get_ChatText_Text_0");
+static_assert(sizeof(WB_ChatEntry_C_Get_ChatText_Text_0) == 0x0000E8, "Wrong size on WB_ChatEntry_C_Get_ChatText_Text_0");
 static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, ReturnValue) == 0x000000, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, Temp_byte_Variable) == 0x000018, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, CallFunc_MakeLiteralText_ReturnValue) == 0x000020, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000088, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_MakeArray_Array) == 0x0000D8, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, CallFunc_Format_ReturnValue) == 0x0000E8, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_Select_Default) == 0x000100, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, Temp_byte_Variable) == 0x000010, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, CallFunc_MakeLiteralText_ReturnValue) == 0x000018, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000028, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000070, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_MakeArray_Array) == 0x0000B8, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, CallFunc_Format_ReturnValue) == 0x0000C8, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_Get_ChatText_Text_0, K2Node_Select_Default) == 0x0000D8, "Member 'WB_ChatEntry_C_Get_ChatText_Text_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_ChatEntry.WB_ChatEntry_C.Get_ChatText_Visibility_0
 // 0x0028 (0x0028 - 0x0000)
@@ -127,7 +127,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_10;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Temp_byte_Variable_11;                             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EE8[0x1];                                     // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -168,7 +168,7 @@ struct WB_ChatEntry_C_Get_ChatTime_Visibility_0 final
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EE9[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -188,81 +188,81 @@ static_assert(offsetof(WB_ChatEntry_C_Get_ChatTime_Visibility_0, Temp_bool_Varia
 static_assert(offsetof(WB_ChatEntry_C_Get_ChatTime_Visibility_0, K2Node_Select_Default) == 0x00001B, "Member 'WB_ChatEntry_C_Get_ChatTime_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_ChatEntry.WB_ChatEntry_C.GetText_0
-// 0x0348 (0x0348 - 0x0000)
+// 0x02C8 (0x02C8 - 0x0000)
 struct WB_ChatEntry_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   Temp_text_Variable;                                // 0x0018(0x0018)()
-	bool                                          Temp_bool_Variable;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EEA[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0050(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0068(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EEB[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_BreakDateTime_Year;                       // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakDateTime_Month;                      // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakDateTime_Day;                        // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakDateTime_Hour;                       // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakDateTime_Minute;                     // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakDateTime_Second;                     // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakDateTime_Millisecond;                // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EEC[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00B0(0x0050)(HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default;                             // 0x0100(0x0018)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EED[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0120(0x0050)(HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default_1;                           // 0x0178(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0190(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01E0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0230(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0240(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0250(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0268(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0280(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x02D0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0320(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0330(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   Temp_text_Variable;                                // 0x0010(0x0010)()
+	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0038(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0048(0x0010)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_BreakDateTime_Year;                       // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakDateTime_Month;                      // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakDateTime_Day;                        // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakDateTime_Hour;                       // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakDateTime_Minute;                     // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakDateTime_Second;                     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakDateTime_Millisecond;                // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0088(0x0048)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x00D0(0x0010)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E8(0x0048)(HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_1;                           // 0x0138(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0148(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0190(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01D8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01E8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x01F8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0208(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0218(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0260(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02A8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x02B8(0x0010)()
 };
 static_assert(alignof(WB_ChatEntry_C_GetText_0) == 0x000008, "Wrong alignment on WB_ChatEntry_C_GetText_0");
-static_assert(sizeof(WB_ChatEntry_C_GetText_0) == 0x000348, "Wrong size on WB_ChatEntry_C_GetText_0");
+static_assert(sizeof(WB_ChatEntry_C_GetText_0) == 0x0002C8, "Wrong size on WB_ChatEntry_C_GetText_0");
 static_assert(offsetof(WB_ChatEntry_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_ChatEntry_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable) == 0x000018, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_bool_Variable) == 0x000030, "Member 'WB_ChatEntry_C_GetText_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable_1) == 0x000038, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable_2) == 0x000050, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable_3) == 0x000068, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_bool_Variable_1) == 0x000080, "Member 'WB_ChatEntry_C_GetText_0::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Year) == 0x000084, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Year' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Month) == 0x000088, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Month' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Day) == 0x00008C, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Day' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Hour) == 0x000090, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Hour' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Minute) == 0x000094, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Minute' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Second) == 0x000098, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Second' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Millisecond) == 0x00009C, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Millisecond' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Less_IntInt_ReturnValue) == 0x0000A0, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x0000A8, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData) == 0x0000B0, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_Select_Default) == 0x000100, "Member 'WB_ChatEntry_C_GetText_0::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Less_IntInt_ReturnValue_1) == 0x000118, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000120, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000170, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_Select_Default_1) == 0x000178, "Member 'WB_ChatEntry_C_GetText_0::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_2) == 0x000190, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001E0, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeArray_Array) == 0x000230, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeArray_Array_1) == 0x000240, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Format_ReturnValue) == 0x000250, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Format_ReturnValue_1) == 0x000268, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_4) == 0x000280, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_5) == 0x0002D0, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeArray_Array_2) == 0x000320, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Format_ReturnValue_2) == 0x000330, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable) == 0x000010, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_bool_Variable) == 0x000020, "Member 'WB_ChatEntry_C_GetText_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable_1) == 0x000028, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable_2) == 0x000038, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_text_Variable_3) == 0x000048, "Member 'WB_ChatEntry_C_GetText_0::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, Temp_bool_Variable_1) == 0x000058, "Member 'WB_ChatEntry_C_GetText_0::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Year) == 0x00005C, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Year' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Month) == 0x000060, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Month' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Day) == 0x000064, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Day' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Hour) == 0x000068, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Hour' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Minute) == 0x00006C, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Minute' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Second) == 0x000070, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Second' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_BreakDateTime_Millisecond) == 0x000074, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_BreakDateTime_Millisecond' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000080, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData) == 0x000088, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_Select_Default) == 0x0000D0, "Member 'WB_ChatEntry_C_GetText_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000E0, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E8, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000130, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_Select_Default_1) == 0x000138, "Member 'WB_ChatEntry_C_GetText_0::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_2) == 0x000148, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_3) == 0x000190, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeArray_Array) == 0x0001D8, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeArray_Array_1) == 0x0001E8, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Format_ReturnValue) == 0x0001F8, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Format_ReturnValue_1) == 0x000208, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_4) == 0x000218, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeStruct_FormatArgumentData_5) == 0x000260, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, K2Node_MakeArray_Array_2) == 0x0002A8, "Member 'WB_ChatEntry_C_GetText_0::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_ChatEntry_C_GetText_0, CallFunc_Format_ReturnValue_2) == 0x0002B8, "Member 'WB_ChatEntry_C_GetText_0::CallFunc_Format_ReturnValue_2' has a wrong offset!");
 
 // Function WB_ChatEntry.WB_ChatEntry_C.Tick
 // 0x003C (0x003C - 0x0000)

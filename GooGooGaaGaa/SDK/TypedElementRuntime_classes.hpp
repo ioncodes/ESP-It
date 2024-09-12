@@ -42,14 +42,14 @@ static_assert(alignof(UTypedElementSelectionSetLibrary) == 0x000008, "Wrong alig
 static_assert(sizeof(UTypedElementSelectionSetLibrary) == 0x000028, "Wrong size on UTypedElementSelectionSetLibrary");
 
 // Class TypedElementRuntime.TypedElementSelectionSet
-// 0x0870 (0x0898 - 0x0028)
+// 0x0878 (0x08A0 - 0x0028)
 class UTypedElementSelectionSet final : public UObject
 {
 public:
-	uint8                                         Pad_1B3[0x800];                                    // 0x0028(0x0800)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x800];                                     // 0x0028(0x0800)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnPreSelectionChange;                              // 0x0828(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSelectionChange;                                 // 0x0838(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4[0x50];                                     // 0x0848(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_848[0x58];                                     // 0x0848(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool ClearSelection(const struct FTypedElementSelectionOptions& InSelectionOptions);
@@ -89,7 +89,7 @@ public:
 	}
 };
 static_assert(alignof(UTypedElementSelectionSet) == 0x000008, "Wrong alignment on UTypedElementSelectionSet");
-static_assert(sizeof(UTypedElementSelectionSet) == 0x000898, "Wrong size on UTypedElementSelectionSet");
+static_assert(sizeof(UTypedElementSelectionSet) == 0x0008A0, "Wrong size on UTypedElementSelectionSet");
 static_assert(offsetof(UTypedElementSelectionSet, OnPreSelectionChange) == 0x000828, "Member 'UTypedElementSelectionSet::OnPreSelectionChange' has a wrong offset!");
 static_assert(offsetof(UTypedElementSelectionSet, OnSelectionChange) == 0x000838, "Member 'UTypedElementSelectionSet::OnSelectionChange' has a wrong offset!");
 

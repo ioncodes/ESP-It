@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_WinAnimationHunter.WB_WinAnimationHunter_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0010 (0x02F0 - 0x02E0)
 class UWB_WinAnimationHunter_C final : public UUserWidget
 {
 public:
-	class UWidgetAnimation*                       Win;                                               // 0x02C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Border;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Win;                                               // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Border;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_WinAnimationHunter_C) == 0x000008, "Wrong alignment on UWB_WinAnimationHunter_C");
-static_assert(sizeof(UWB_WinAnimationHunter_C) == 0x0002D0, "Wrong size on UWB_WinAnimationHunter_C");
-static_assert(offsetof(UWB_WinAnimationHunter_C, Win) == 0x0002C0, "Member 'UWB_WinAnimationHunter_C::Win' has a wrong offset!");
-static_assert(offsetof(UWB_WinAnimationHunter_C, Border) == 0x0002C8, "Member 'UWB_WinAnimationHunter_C::Border' has a wrong offset!");
+static_assert(sizeof(UWB_WinAnimationHunter_C) == 0x0002F0, "Wrong size on UWB_WinAnimationHunter_C");
+static_assert(offsetof(UWB_WinAnimationHunter_C, Win) == 0x0002E0, "Member 'UWB_WinAnimationHunter_C::Win' has a wrong offset!");
+static_assert(offsetof(UWB_WinAnimationHunter_C, Border) == 0x0002E8, "Member 'UWB_WinAnimationHunter_C::Border' has a wrong offset!");
 
 }
 

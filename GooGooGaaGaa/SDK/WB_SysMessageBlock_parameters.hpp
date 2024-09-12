@@ -28,16 +28,16 @@ static_assert(sizeof(WB_SysMessageBlock_C_ExecuteUbergraph_WB_SysMessageBlock) =
 static_assert(offsetof(WB_SysMessageBlock_C_ExecuteUbergraph_WB_SysMessageBlock, EntryPoint) == 0x000000, "Member 'WB_SysMessageBlock_C_ExecuteUbergraph_WB_SysMessageBlock::EntryPoint' has a wrong offset!");
 
 // Function WB_SysMessageBlock.WB_SysMessageBlock_C.ShowSystemMessage
-// 0x0050 (0x0050 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WB_SysMessageBlock_C_ShowSystemMessage final
 {
 public:
 	struct FS_SystemMessage                       NewMessage;                                        // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0018)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0010)()
 };
 static_assert(alignof(WB_SysMessageBlock_C_ShowSystemMessage) == 0x000008, "Wrong alignment on WB_SysMessageBlock_C_ShowSystemMessage");
-static_assert(sizeof(WB_SysMessageBlock_C_ShowSystemMessage) == 0x000050, "Wrong size on WB_SysMessageBlock_C_ShowSystemMessage");
+static_assert(sizeof(WB_SysMessageBlock_C_ShowSystemMessage) == 0x000048, "Wrong size on WB_SysMessageBlock_C_ShowSystemMessage");
 static_assert(offsetof(WB_SysMessageBlock_C_ShowSystemMessage, NewMessage) == 0x000000, "Member 'WB_SysMessageBlock_C_ShowSystemMessage::NewMessage' has a wrong offset!");
 static_assert(offsetof(WB_SysMessageBlock_C_ShowSystemMessage, CallFunc_Replace_ReturnValue) == 0x000028, "Member 'WB_SysMessageBlock_C_ShowSystemMessage::CallFunc_Replace_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SysMessageBlock_C_ShowSystemMessage, CallFunc_Conv_StringToText_ReturnValue) == 0x000038, "Member 'WB_SysMessageBlock_C_ShowSystemMessage::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");

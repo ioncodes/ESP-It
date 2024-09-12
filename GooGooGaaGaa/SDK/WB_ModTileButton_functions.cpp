@@ -96,9 +96,9 @@ void UWB_ModTileButton_C::GetIsButtonEnabled(bool* IsEnabled)
 // Function WB_ModTileButton.WB_ModTileButton_C.GetTooltip
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UUserWidget*                      Param_ToolTip                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTip_0                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ModTileButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
+void UWB_ModTileButton_C::GetTooltip(class UUserWidget** ToolTip_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -109,8 +109,8 @@ void UWB_ModTileButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ToolTip != nullptr)
-		*Param_ToolTip = Parms.Param_ToolTip;
+	if (ToolTip_0 != nullptr)
+		*ToolTip_0 = Parms.ToolTip_0;
 }
 
 

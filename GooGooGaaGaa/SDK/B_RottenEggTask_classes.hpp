@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenEggTask.B_RottenEggTask_C
-// 0x0008 (0x0328 - 0x0320)
+// 0x0008 (0x0320 - 0x0318)
 class AB_RottenEggTask_C final : public AB_CollectTask_C
 {
 public:
-	uint8                                         Pad_35D1[0x4];                                     // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_RottenEggTask_C;                  // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_RottenEggTask_C;                  // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void CheckCompletionConditions(bool* ReadyForCompletion);
@@ -44,8 +44,8 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenEggTask_C) == 0x000008, "Wrong alignment on AB_RottenEggTask_C");
-static_assert(sizeof(AB_RottenEggTask_C) == 0x000328, "Wrong size on AB_RottenEggTask_C");
-static_assert(offsetof(AB_RottenEggTask_C, UberGraphFrame_B_RottenEggTask_C) == 0x000320, "Member 'AB_RottenEggTask_C::UberGraphFrame_B_RottenEggTask_C' has a wrong offset!");
+static_assert(sizeof(AB_RottenEggTask_C) == 0x000320, "Wrong size on AB_RottenEggTask_C");
+static_assert(offsetof(AB_RottenEggTask_C, UberGraphFrame_B_RottenEggTask_C) == 0x000318, "Member 'AB_RottenEggTask_C::UberGraphFrame_B_RottenEggTask_C' has a wrong offset!");
 
 }
 

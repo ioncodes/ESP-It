@@ -11,101 +11,104 @@
 #include "Basic.hpp"
 
 #include "ETeamID_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "E_GameMode_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_Help.WB_Help_C.ExecuteUbergraph_WB_Help
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct WB_Help_C_ExecuteUbergraph_WB_Help final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_66[0x2];                                       // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_67[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetWitchMovementSkill_ReturnValue;        // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetHunterMovementSkill_ReturnValue;       // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetWitchUtilitySkill_ReturnValue;         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetHunterUtilitySkill_ReturnValue;        // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0078(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_GameMode                                    Temp_byte_Variable_6;                              // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x1];                                       // 0x00A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           Temp_struct_Variable;                              // 0x00A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B[0x2];                                       // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_GetTeamColor_ReturnValue;                 // 0x00C4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Temp_byte_Variable_7;                              // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6D[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default_2;                           // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0034(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetWitchMovementSkill_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetHunterMovementSkill_ReturnValue;       // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetWitchUtilitySkill_ReturnValue;         // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetHunterUtilitySkill_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_GameMode                                    Temp_byte_Variable_7;                              // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9B[0x5];                                       // 0x009B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x00AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default;                             // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetTeamColor_ReturnValue;                 // 0x00C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Temp_struct_Variable;                              // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_Select_Default_1;                           // 0x00EC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Help_C_ExecuteUbergraph_WB_Help) == 0x000008, "Wrong alignment on WB_Help_C_ExecuteUbergraph_WB_Help");
-static_assert(sizeof(WB_Help_C_ExecuteUbergraph_WB_Help) == 0x000108, "Wrong size on WB_Help_C_ExecuteUbergraph_WB_Help");
+static_assert(sizeof(WB_Help_C_ExecuteUbergraph_WB_Help) == 0x000118, "Wrong size on WB_Help_C_ExecuteUbergraph_WB_Help");
 static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, EntryPoint) == 0x000000, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable) == 0x000004, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_1) == 0x000005, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_2) == 0x000006, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_2' has a wrong offset!");
 static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetOwningPlayer_ReturnValue) == 0x000008, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_DynamicCast_AsB_Player_State) == 0x000010, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
 static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_2) == 0x000019, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_3) == 0x00001A, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Event_MyGeometry) == 0x00001C, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Event_InDeltaTime) == 0x000054, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetWitchMovementSkill_ReturnValue) == 0x000058, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetWitchMovementSkill_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetHunterMovementSkill_ReturnValue) == 0x000060, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetHunterMovementSkill_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetWitchUtilitySkill_ReturnValue) == 0x000068, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetWitchUtilitySkill_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetHunterUtilitySkill_ReturnValue) == 0x000070, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetHunterUtilitySkill_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_CreateDelegate_OutputDelegate) == 0x000078, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_4) == 0x000088, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetGameInstance_ReturnValue) == 0x000090, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_DynamicCast_AsB_Game_Instance) == 0x000098, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_5) == 0x0000A1, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_6) == 0x0000A2, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_6' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_struct_Variable) == 0x0000A4, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_SwitchEnum_CmpSuccess) == 0x0000B4, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetGameState_ReturnValue) == 0x0000B8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_ClassIsChildOf_ReturnValue) == 0x0000C0, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000C1, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetTeamColor_ReturnValue) == 0x0000C4, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetTeamColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_bool_Variable) == 0x0000D4, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Select_Default) == 0x0000D8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_MakeStruct_LinearColor) == 0x0000E8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Select_Default_1) == 0x0000F8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_IsGamepadMode_ReturnValue) == 0x0000F9, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_7) == 0x0000FA, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_7' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x0000FB, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Select_Default_2) == 0x000100, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_3) == 0x000019, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetGameInstance_ReturnValue) == 0x000020, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_DynamicCast_AsB_Game_Instance) == 0x000028, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Event_MyGeometry) == 0x000034, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Event_InDeltaTime) == 0x00006C, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_4) == 0x000070, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetWitchMovementSkill_ReturnValue) == 0x000078, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetWitchMovementSkill_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetHunterMovementSkill_ReturnValue) == 0x000080, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetHunterMovementSkill_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetWitchUtilitySkill_ReturnValue) == 0x000088, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetWitchUtilitySkill_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetHunterUtilitySkill_ReturnValue) == 0x000090, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetHunterUtilitySkill_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_5) == 0x000098, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_5' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_6) == 0x000099, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_6' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_byte_Variable_7) == 0x00009A, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_byte_Variable_7' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetGameState_ReturnValue) == 0x0000A0, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_SwitchEnum_CmpSuccess) == 0x0000A8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_ClassIsChildOf_ReturnValue) == 0x0000A9, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_CreateDelegate_OutputDelegate) == 0x0000AC, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000BC, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Select_Default) == 0x0000C0, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_GetTeamColor_ReturnValue) == 0x0000C8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_GetTeamColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_struct_Variable) == 0x0000D8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, Temp_bool_Variable) == 0x0000E8, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Select_Default_1) == 0x0000EC, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_Select_Default_2) == 0x0000FC, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, K2Node_MakeStruct_LinearColor) == 0x000100, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_IsGamepadMode_ReturnValue) == 0x000110, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000111, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_ExecuteUbergraph_WB_Help, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000112, "Member 'WB_Help_C_ExecuteUbergraph_WB_Help::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
 
 // Function WB_Help.WB_Help_C.GetGameMode
 // 0x0010 (0x0010 - 0x0000)
@@ -129,40 +132,40 @@ static_assert(offsetof(WB_Help_C_GetGameMode, CallFunc_ClassIsChildOf_ReturnValu
 static_assert(offsetof(WB_Help_C_GetGameMode, CallFunc_ClassIsChildOf_ReturnValue_4) == 0x00000C, "Member 'WB_Help_C_GetGameMode::CallFunc_ClassIsChildOf_ReturnValue_4' has a wrong offset!");
 
 // Function WB_Help.WB_Help_C.GetObjectiveText
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct WB_Help_C_GetObjectiveText final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6E[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0038(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6F[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_2;                              // 0x0058(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0070(0x0018)()
-	ETeamID                                       Temp_byte_Variable;                                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_70[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_4;                              // 0x0090(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x00A8(0x0018)()
-	class FText                                   K2Node_Select_Default_1;                           // 0x00C0(0x0018)()
-	class FText                                   K2Node_Select_Default_2;                           // 0x00D8(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0018(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0028(0x0010)()
+	bool                                          Temp_bool_Variable_1;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_2;                              // 0x0040(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0050(0x0010)()
+	ETeamID                                       Temp_byte_Variable;                                // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_4;                              // 0x0068(0x0010)()
+	class FText                                   K2Node_Select_Default;                             // 0x0078(0x0010)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x0088(0x0010)()
+	class FText                                   K2Node_Select_Default_2;                           // 0x0098(0x0010)()
 };
 static_assert(alignof(WB_Help_C_GetObjectiveText) == 0x000008, "Wrong alignment on WB_Help_C_GetObjectiveText");
-static_assert(sizeof(WB_Help_C_GetObjectiveText) == 0x0000F0, "Wrong size on WB_Help_C_GetObjectiveText");
+static_assert(sizeof(WB_Help_C_GetObjectiveText) == 0x0000A8, "Wrong size on WB_Help_C_GetObjectiveText");
 static_assert(offsetof(WB_Help_C_GetObjectiveText, ReturnValue) == 0x000000, "Member 'WB_Help_C_GetObjectiveText::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_bool_Variable) == 0x000018, "Member 'WB_Help_C_GetObjectiveText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable) == 0x000020, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_1) == 0x000038, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_bool_Variable_1) == 0x000050, "Member 'WB_Help_C_GetObjectiveText::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_2) == 0x000058, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_3) == 0x000070, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_byte_Variable) == 0x000088, "Member 'WB_Help_C_GetObjectiveText::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_4) == 0x000090, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, K2Node_Select_Default) == 0x0000A8, "Member 'WB_Help_C_GetObjectiveText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, K2Node_Select_Default_1) == 0x0000C0, "Member 'WB_Help_C_GetObjectiveText::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_Help_C_GetObjectiveText, K2Node_Select_Default_2) == 0x0000D8, "Member 'WB_Help_C_GetObjectiveText::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_bool_Variable) == 0x000010, "Member 'WB_Help_C_GetObjectiveText::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable) == 0x000018, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_1) == 0x000028, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_bool_Variable_1) == 0x000038, "Member 'WB_Help_C_GetObjectiveText::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_2) == 0x000040, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_3) == 0x000050, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_byte_Variable) == 0x000060, "Member 'WB_Help_C_GetObjectiveText::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, Temp_text_Variable_4) == 0x000068, "Member 'WB_Help_C_GetObjectiveText::Temp_text_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, K2Node_Select_Default) == 0x000078, "Member 'WB_Help_C_GetObjectiveText::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, K2Node_Select_Default_1) == 0x000088, "Member 'WB_Help_C_GetObjectiveText::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_Help_C_GetObjectiveText, K2Node_Select_Default_2) == 0x000098, "Member 'WB_Help_C_GetObjectiveText::K2Node_Select_Default_2' has a wrong offset!");
 
 // Function WB_Help.WB_Help_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -184,7 +187,7 @@ struct WB_Help_C_UpdateControllerMode final
 public:
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x6];                                       // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                K2Node_Select_Default;                             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Help_C_UpdateControllerMode) == 0x000008, "Wrong alignment on WB_Help_C_UpdateControllerMode");

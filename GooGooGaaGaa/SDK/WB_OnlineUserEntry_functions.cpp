@@ -113,15 +113,15 @@ void UWB_OnlineUserEntry_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function WB_OnlineUserEntry.WB_OnlineUserEntry_C.CreateToolTips
+// Function WB_OnlineUserEntry.WB_OnlineUserEntry_C.CreateTooltips
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_OnlineUserEntry_C::CreateToolTips()
+void UWB_OnlineUserEntry_C::CreateTooltips()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_OnlineUserEntry_C", "CreateToolTips");
+		Func = Class->GetFunction("WB_OnlineUserEntry_C", "CreateTooltips");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -160,26 +160,6 @@ ESlateVisibility UWB_OnlineUserEntry_C::Get_Reject_Visibility()
 		Func = Class->GetFunction("WB_OnlineUserEntry_C", "Get_Reject_Visibility");
 
 	Params::WB_OnlineUserEntry_C_Get_Reject_Visibility Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WB_OnlineUserEntry.WB_OnlineUserEntry_C.GetFriendName
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWB_OnlineUserEntry_C::GetFriendName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_OnlineUserEntry_C", "GetFriendName");
-
-	Params::WB_OnlineUserEntry_C_GetFriendName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -130,9 +130,9 @@ void UWB_PropButton_C::GetIsSelected(bool* Is_Selected)
 // Function WB_PropButton.WB_PropButton_C.GetTooltip
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UUserWidget*                      Param_ToolTip                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTip_0                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
+void UWB_PropButton_C::GetTooltip(class UUserWidget** ToolTip_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -143,8 +143,8 @@ void UWB_PropButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ToolTip != nullptr)
-		*Param_ToolTip = Parms.Param_ToolTip;
+	if (ToolTip_0 != nullptr)
+		*ToolTip_0 = Parms.ToolTip_0;
 }
 
 
@@ -193,9 +193,9 @@ void UWB_PropButton_C::GetBorderColor(struct FLinearColor* Color)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_Owned                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Owned_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropButton_C::PropIdIsOwnedByPlayer(int32 ID, bool* Param_Owned)
+void UWB_PropButton_C::PropIdIsOwnedByPlayer(int32 ID, bool* Owned_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -208,17 +208,17 @@ void UWB_PropButton_C::PropIdIsOwnedByPlayer(int32 ID, bool* Param_Owned)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Owned != nullptr)
-		*Param_Owned = Parms.Param_Owned;
+	if (Owned_0 != nullptr)
+		*Owned_0 = Parms.Owned_0;
 }
 
 
 // Function WB_PropButton.WB_PropButton_C.SetProp
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_PropId                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropButton_C::SetProp(int32 Param_PropId)
+void UWB_PropButton_C::SetProp(int32 PropID_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -227,7 +227,7 @@ void UWB_PropButton_C::SetProp(int32 Param_PropId)
 
 	Params::WB_PropButton_C_SetProp Parms{};
 
-	Parms.Param_PropId = Param_PropId;
+	Parms.PropID_0 = PropID_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -236,9 +236,9 @@ void UWB_PropButton_C::SetProp(int32 Param_PropId)
 // Function WB_PropButton.WB_PropButton_C.Clicked_0__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_PropButton_C::Clicked_0__DelegateSignature(class UClass* Param_Class)
+void UWB_PropButton_C::Clicked_0__DelegateSignature(class UClass* Class_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -247,7 +247,7 @@ void UWB_PropButton_C::Clicked_0__DelegateSignature(class UClass* Param_Class)
 
 	Params::WB_PropButton_C_Clicked_0__DelegateSignature Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

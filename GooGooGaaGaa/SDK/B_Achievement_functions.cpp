@@ -50,10 +50,10 @@ void UB_Achievement_C::Get_Valid_Game_Modes(bool Mobification, bool Hide_and_See
 // Function B_Achievement.B_Achievement_C.Test Prop Id Validity
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   PropId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PropID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IdIsValid                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_Achievement_C::Test_Prop_Id_Validity(int32 PropId, bool* IdIsValid)
+void UB_Achievement_C::Test_Prop_Id_Validity(int32 PropID, bool* IdIsValid)
 {
 	static class UFunction* Func = nullptr;
 
@@ -62,7 +62,7 @@ void UB_Achievement_C::Test_Prop_Id_Validity(int32 PropId, bool* IdIsValid)
 
 	Params::B_Achievement_C_Test_Prop_Id_Validity Parms{};
 
-	Parms.PropId = PropId;
+	Parms.PropID = PropID;
 
 	UObject::ProcessEvent(Func, &Parms);
 

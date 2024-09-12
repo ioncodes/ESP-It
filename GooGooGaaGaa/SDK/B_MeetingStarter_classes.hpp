@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_MeetingStarter.B_MeetingStarter_C
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0010 (0x02A0 - 0x0290)
 class AB_MeetingStarter_C final : public AActor
 {
 public:
-	class UStaticMeshComponent*                   Sphere;                                            // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(AB_MeetingStarter_C) == 0x000008, "Wrong alignment on AB_MeetingStarter_C");
-static_assert(sizeof(AB_MeetingStarter_C) == 0x0002A8, "Wrong size on AB_MeetingStarter_C");
-static_assert(offsetof(AB_MeetingStarter_C, Sphere) == 0x000298, "Member 'AB_MeetingStarter_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_MeetingStarter_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_MeetingStarter_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AB_MeetingStarter_C) == 0x0002A0, "Wrong size on AB_MeetingStarter_C");
+static_assert(offsetof(AB_MeetingStarter_C, Sphere) == 0x000290, "Member 'AB_MeetingStarter_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_MeetingStarter_C, DefaultSceneRoot) == 0x000298, "Member 'AB_MeetingStarter_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

@@ -10,33 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_CatchLuaqShootActor.B_CatchLuaqShootActor_C.ExecuteUbergraph_B_CatchLuaqShootActor
-// 0x0158 (0x0158 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E13[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E14[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_CatchLuaqTask_C*                     K2Node_DynamicCast_AsB_Catch_Luaq_Task;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E15[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0070(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0070(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor) == 0x000008, "Wrong alignment on B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor");
-static_assert(sizeof(B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor) == 0x000158, "Wrong size on B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor");
+static_assert(sizeof(B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor) == 0x000168, "Wrong size on B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor");
 static_assert(offsetof(B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor, EntryPoint) == 0x000000, "Member 'B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000008, "Member 'B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor, CallFunc_GetOwner_ReturnValue) == 0x000020, "Member 'B_CatchLuaqShootActor_C_ExecuteUbergraph_B_CatchLuaqShootActor::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
@@ -53,12 +53,12 @@ struct B_CatchLuaqShootActor_C_React final
 {
 public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E16[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E17[0x8];                                     // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CatchLuaqInteractionActor_C*         CallFunc_FinishSpawningActor_ReturnValue;          // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)

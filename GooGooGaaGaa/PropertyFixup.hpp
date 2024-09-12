@@ -37,6 +37,11 @@ class alignas(0x01) FMulticastSparseDelegateProperty_
 	unsigned __int8 Pad[0x1];
 };
 
+class alignas(0x01) EShowPrivilegeResolveUI_
+{
+	unsigned __int8 Pad[0x1];
+};
+
 class alignas(0x01) EPurchaseTransactionState_
 {
 	unsigned __int8 Pad[0x1];
@@ -57,17 +62,17 @@ class alignas(0x01) EOnlineDataAdvertisementType_
 	unsigned __int8 Pad[0x1];
 };
 
-class alignas(0x01) EJoinPartyCompletionResult_
-{
-	unsigned __int8 Pad[0x1];
-};
-
 class alignas(0x01) EJoinRequestAction_
 {
 	unsigned __int8 Pad[0x1];
 };
 
 class alignas(0x01) EOnlineKeyValuePairDataType_
+{
+	unsigned __int8 Pad[0x1];
+};
+
+class alignas(0x01) EJoinPartyCompletionResult_
 {
 	unsigned __int8 Pad[0x1];
 };

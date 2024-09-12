@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EWitchScoreStat_structs.hpp"
 #include "EHunterScoreStat_structs.hpp"
+#include "EWitchScoreStat_structs.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	EHunterScoreStat                              HunterStatType_10_D43D2AD14CDC147AA5E438BCD004879D; // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OriginalValue_13_F5D772C44A30F05237EFCA98D5D25D6C; // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Score_17_38989E5A42B65CEBF6AFA3B482B5EBC0;         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A33[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       PlayerState_22_255763A64D318A8870AC56BCBB85E1EE;   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSCalculatedScoreStat) == 0x000008, "Wrong alignment on FSCalculatedScoreStat");

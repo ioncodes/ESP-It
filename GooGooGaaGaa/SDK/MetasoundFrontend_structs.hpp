@@ -128,12 +128,12 @@ static_assert(offsetof(FMetasoundFrontendVertex, VertexID) == 0x000010, "Member 
 struct FMetasoundFrontendVertexHandle
 {
 public:
-	struct FGuid                                  NodeId;                                            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  NodeID;                                            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  VertexID;                                          // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendVertexHandle) == 0x000004, "Wrong alignment on FMetasoundFrontendVertexHandle");
 static_assert(sizeof(FMetasoundFrontendVertexHandle) == 0x000020, "Wrong size on FMetasoundFrontendVertexHandle");
-static_assert(offsetof(FMetasoundFrontendVertexHandle, NodeId) == 0x000000, "Member 'FMetasoundFrontendVertexHandle::NodeId' has a wrong offset!");
+static_assert(offsetof(FMetasoundFrontendVertexHandle, NodeID) == 0x000000, "Member 'FMetasoundFrontendVertexHandle::NodeID' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendVertexHandle, VertexID) == 0x000010, "Member 'FMetasoundFrontendVertexHandle::VertexID' has a wrong offset!");
 
 // ScriptStruct MetasoundFrontend.MetasoundFrontendLiteral
@@ -142,7 +142,7 @@ struct FMetasoundFrontendLiteral final
 {
 public:
 	EMetasoundFrontendLiteralType                 Type;                                              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_31E5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AsNumDefault;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<bool>                                  AsBoolean;                                         // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<int32>                                 AsInteger;                                         // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
@@ -218,7 +218,7 @@ static_assert(offsetof(FMetasoundFrontendNodeInterface, Environment) == 0x000020
 struct FMetasoundFrontendNodeStyleDisplay final
 {
 public:
-	uint8                                         Pad_31E6[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendNodeStyleDisplay) == 0x000001, "Wrong alignment on FMetasoundFrontendNodeStyleDisplay");
 static_assert(sizeof(FMetasoundFrontendNodeStyleDisplay) == 0x000001, "Wrong size on FMetasoundFrontendNodeStyleDisplay");
@@ -228,7 +228,7 @@ static_assert(sizeof(FMetasoundFrontendNodeStyleDisplay) == 0x000001, "Wrong siz
 struct FMetasoundFrontendNodeStyle final
 {
 public:
-	uint8                                         Pad_31E7[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendNodeStyle) == 0x000001, "Wrong alignment on FMetasoundFrontendNodeStyle");
 static_assert(sizeof(FMetasoundFrontendNodeStyle) == 0x000001, "Wrong size on FMetasoundFrontendNodeStyle");
@@ -287,13 +287,13 @@ static_assert(offsetof(FMetasoundFrontendEdgeStyleLiteralColorPair, Color) == 0x
 struct FMetasoundFrontendEdgeStyle final
 {
 public:
-	struct FGuid                                  NodeId;                                            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  NodeID;                                            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   OutputName;                                        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FMetasoundFrontendEdgeStyleLiteralColorPair> LiteralColorPairs;                                 // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendEdgeStyle) == 0x000008, "Wrong alignment on FMetasoundFrontendEdgeStyle");
 static_assert(sizeof(FMetasoundFrontendEdgeStyle) == 0x000028, "Wrong size on FMetasoundFrontendEdgeStyle");
-static_assert(offsetof(FMetasoundFrontendEdgeStyle, NodeId) == 0x000000, "Member 'FMetasoundFrontendEdgeStyle::NodeId' has a wrong offset!");
+static_assert(offsetof(FMetasoundFrontendEdgeStyle, NodeID) == 0x000000, "Member 'FMetasoundFrontendEdgeStyle::NodeID' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendEdgeStyle, OutputName) == 0x000010, "Member 'FMetasoundFrontendEdgeStyle::OutputName' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendEdgeStyle, LiteralColorPairs) == 0x000018, "Member 'FMetasoundFrontendEdgeStyle::LiteralColorPairs' has a wrong offset!");
 
@@ -303,7 +303,7 @@ struct FMetasoundFrontendGraphStyle final
 {
 public:
 	bool                                          bIsGraphEditable;                                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31E8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetasoundFrontendEdgeStyle>    EdgeStyles;                                        // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendGraphStyle) == 0x000008, "Wrong alignment on FMetasoundFrontendGraphStyle");
@@ -331,7 +331,7 @@ static_assert(offsetof(FMetasoundFrontendGraph, Variables) == 0x000020, "Member 
 struct FMetasoundFrontendVertexMetadata final
 {
 public:
-	uint8                                         Pad_31E9[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendVertexMetadata) == 0x000001, "Wrong alignment on FMetasoundFrontendVertexMetadata");
 static_assert(sizeof(FMetasoundFrontendVertexMetadata) == 0x000001, "Wrong size on FMetasoundFrontendVertexMetadata");
@@ -341,12 +341,12 @@ static_assert(sizeof(FMetasoundFrontendVertexMetadata) == 0x000001, "Wrong size 
 struct FMetasoundFrontendClassVertex : public FMetasoundFrontendVertex
 {
 public:
-	struct FGuid                                  NodeId;                                            // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  NodeID;                                            // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMetasoundFrontendVertexAccessType            AccessType;                                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendClassVertex) == 0x000004, "Wrong alignment on FMetasoundFrontendClassVertex");
 static_assert(sizeof(FMetasoundFrontendClassVertex) == 0x000034, "Wrong size on FMetasoundFrontendClassVertex");
-static_assert(offsetof(FMetasoundFrontendClassVertex, NodeId) == 0x000020, "Member 'FMetasoundFrontendClassVertex::NodeId' has a wrong offset!");
+static_assert(offsetof(FMetasoundFrontendClassVertex, NodeID) == 0x000020, "Member 'FMetasoundFrontendClassVertex::NodeID' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendClassVertex, AccessType) == 0x000030, "Member 'FMetasoundFrontendClassVertex::AccessType' has a wrong offset!");
 
 // ScriptStruct MetasoundFrontend.MetasoundFrontendClassStyleDisplay
@@ -354,7 +354,7 @@ static_assert(offsetof(FMetasoundFrontendClassVertex, AccessType) == 0x000030, "
 struct FMetasoundFrontendClassStyleDisplay final
 {
 public:
-	uint8                                         Pad_31EA[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendClassStyleDisplay) == 0x000001, "Wrong alignment on FMetasoundFrontendClassStyleDisplay");
 static_assert(sizeof(FMetasoundFrontendClassStyleDisplay) == 0x000001, "Wrong size on FMetasoundFrontendClassStyleDisplay");
@@ -364,7 +364,7 @@ static_assert(sizeof(FMetasoundFrontendClassStyleDisplay) == 0x000001, "Wrong si
 struct FMetasoundFrontendClassInput final : public FMetasoundFrontendClassVertex
 {
 public:
-	uint8                                         Pad_31EB[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              DefaultLiteral;                                    // 0x0038(0x0058)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendClassInput) == 0x000008, "Wrong alignment on FMetasoundFrontendClassInput");
@@ -376,7 +376,7 @@ static_assert(offsetof(FMetasoundFrontendClassInput, DefaultLiteral) == 0x000038
 struct FMetasoundFrontendClassVariable final : public FMetasoundFrontendClassVertex
 {
 public:
-	uint8                                         Pad_31EC[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendLiteral              DefaultLiteral;                                    // 0x0038(0x0058)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendClassVariable) == 0x000008, "Wrong alignment on FMetasoundFrontendClassVariable");
@@ -399,7 +399,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TypeName;                                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsRequired;                                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31ED[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendClassEnvironmentVariable) == 0x000004, "Wrong alignment on FMetasoundFrontendClassEnvironmentVariable");
 static_assert(sizeof(FMetasoundFrontendClassEnvironmentVariable) == 0x000014, "Wrong size on FMetasoundFrontendClassEnvironmentVariable");
@@ -412,7 +412,7 @@ static_assert(offsetof(FMetasoundFrontendClassEnvironmentVariable, bIsRequired) 
 struct FMetasoundFrontendInterfaceStyle final
 {
 public:
-	uint8                                         Pad_31EE[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendInterfaceStyle) == 0x000001, "Wrong alignment on FMetasoundFrontendInterfaceStyle");
 static_assert(sizeof(FMetasoundFrontendInterfaceStyle) == 0x000001, "Wrong size on FMetasoundFrontendInterfaceStyle");
@@ -425,7 +425,7 @@ public:
 	TArray<struct FMetasoundFrontendClassInput>   Inputs;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FMetasoundFrontendClassOutput>  Outputs;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FMetasoundFrontendClassEnvironmentVariable> Environment;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	struct FGuid                                  ChangeID;                                          // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGuid                                  ChangeID;                                          // 0x0030(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 static_assert(alignof(FMetasoundFrontendClassInterface) == 0x000008, "Wrong alignment on FMetasoundFrontendClassInterface");
 static_assert(sizeof(FMetasoundFrontendClassInterface) == 0x000040, "Wrong size on FMetasoundFrontendClassInterface");
@@ -455,7 +455,7 @@ public:
 	struct FMetasoundFrontendVersion              OutputInterfaceVersion;                            // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendVersion              InputInterfaceVersion;                             // 0x0010(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BindingPriority;                                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31EF[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetasoundFrontendInterfaceVertexBinding> VertexBindings;                                    // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendInterfaceBinding) == 0x000008, "Wrong alignment on FMetasoundFrontendInterfaceBinding");
@@ -473,7 +473,7 @@ public:
 	struct FTopLevelAssetPath                     ClassPath;                                         // 0x0000(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsModifiable;                                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsDefault;                                        // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31F0[0x2];                                     // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendInterfaceUClassOptions) == 0x000004, "Wrong alignment on FMetasoundFrontendInterfaceUClassOptions");
 static_assert(sizeof(FMetasoundFrontendInterfaceUClassOptions) == 0x000014, "Wrong size on FMetasoundFrontendInterfaceUClassOptions");
@@ -499,13 +499,13 @@ static_assert(offsetof(FMetasoundFrontendInterface, UClassOptions) == 0x000050, 
 struct FMetasoundFrontendClassName final
 {
 public:
-	class FName                                   Namespace;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NameSpace;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Name;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Variant;                                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendClassName) == 0x000004, "Wrong alignment on FMetasoundFrontendClassName");
 static_assert(sizeof(FMetasoundFrontendClassName) == 0x000018, "Wrong size on FMetasoundFrontendClassName");
-static_assert(offsetof(FMetasoundFrontendClassName, Namespace) == 0x000000, "Member 'FMetasoundFrontendClassName::Namespace' has a wrong offset!");
+static_assert(offsetof(FMetasoundFrontendClassName, NameSpace) == 0x000000, "Member 'FMetasoundFrontendClassName::NameSpace' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendClassName, Name) == 0x000008, "Member 'FMetasoundFrontendClassName::Name' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendClassName, Variant) == 0x000010, "Member 'FMetasoundFrontendClassName::Variant' has a wrong offset!");
 
@@ -519,8 +519,8 @@ public:
 	EMetasoundFrontendClassType                   Type;                                              // 0x0020(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bIsDeprecated;                                     // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bAutoUpdateManagesInterface;                       // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_31F1[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  ChangeID;                                          // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  ChangeID;                                          // 0x0024(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
 static_assert(alignof(FMetasoundFrontendClassMetadata) == 0x000004, "Wrong alignment on FMetasoundFrontendClassMetadata");
 static_assert(sizeof(FMetasoundFrontendClassMetadata) == 0x000034, "Wrong size on FMetasoundFrontendClassMetadata");
@@ -536,7 +536,7 @@ static_assert(offsetof(FMetasoundFrontendClassMetadata, ChangeID) == 0x000024, "
 struct FMetasoundFrontendClassStyle final
 {
 public:
-	uint8                                         Pad_31F2[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendClassStyle) == 0x000001, "Wrong alignment on FMetasoundFrontendClassStyle");
 static_assert(sizeof(FMetasoundFrontendClassStyle) == 0x000001, "Wrong size on FMetasoundFrontendClassStyle");
@@ -546,10 +546,10 @@ static_assert(sizeof(FMetasoundFrontendClassStyle) == 0x000001, "Wrong size on F
 struct FMetasoundFrontendClass
 {
 public:
-	uint8                                         Pad_31F3[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  ID;                                                // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendClassMetadata        MetaData;                                          // 0x0018(0x0034)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31F4[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendClassInterface       Interface;                                         // 0x0050(0x0040)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendClass) == 0x000008, "Wrong alignment on FMetasoundFrontendClass");
@@ -564,7 +564,7 @@ struct FMetasoundFrontendGraphClassPresetOptions final
 {
 public:
 	bool                                          bIsPreset;                                         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31F5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class FName>                             InputsInheritingDefault;                           // 0x0008(0x0050)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMetasoundFrontendGraphClassPresetOptions) == 0x000008, "Wrong alignment on FMetasoundFrontendGraphClassPresetOptions");
@@ -597,11 +597,11 @@ static_assert(sizeof(FMetasoundFrontendDocumentMetadata) == 0x000010, "Wrong siz
 static_assert(offsetof(FMetasoundFrontendDocumentMetadata, Version) == 0x000000, "Member 'FMetasoundFrontendDocumentMetadata::Version' has a wrong offset!");
 
 // ScriptStruct MetasoundFrontend.MetasoundFrontendDocument
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct FMetasoundFrontendDocument final
 {
 public:
-	uint8                                         Pad_31F6[0x10];                                    // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMetasoundFrontendDocumentMetadata     MetaData;                                          // 0x0010(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	TSet<struct FMetasoundFrontendVersion>        Interfaces;                                        // 0x0020(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendGraphClass           RootGraph;                                         // 0x0070(0x0118)(Edit, NativeAccessSpecifierPublic)
@@ -609,9 +609,10 @@ public:
 	TArray<struct FMetasoundFrontendClass>        Dependencies;                                      // 0x0198(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FMetasoundFrontendVersion              ArchetypeVersion;                                  // 0x01A8(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FMetasoundFrontendVersion>      InterfaceVersions;                                 // 0x01B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetasoundFrontendDocument) == 0x000008, "Wrong alignment on FMetasoundFrontendDocument");
-static_assert(sizeof(FMetasoundFrontendDocument) == 0x0001C8, "Wrong size on FMetasoundFrontendDocument");
+static_assert(sizeof(FMetasoundFrontendDocument) == 0x0001D0, "Wrong size on FMetasoundFrontendDocument");
 static_assert(offsetof(FMetasoundFrontendDocument, MetaData) == 0x000010, "Member 'FMetasoundFrontendDocument::MetaData' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendDocument, Interfaces) == 0x000020, "Member 'FMetasoundFrontendDocument::Interfaces' has a wrong offset!");
 static_assert(offsetof(FMetasoundFrontendDocument, RootGraph) == 0x000070, "Member 'FMetasoundFrontendDocument::RootGraph' has a wrong offset!");
@@ -621,16 +622,17 @@ static_assert(offsetof(FMetasoundFrontendDocument, ArchetypeVersion) == 0x0001A8
 static_assert(offsetof(FMetasoundFrontendDocument, InterfaceVersions) == 0x0001B8, "Member 'FMetasoundFrontendDocument::InterfaceVersions' has a wrong offset!");
 
 // ScriptStruct MetasoundFrontend.MetaSoundFrontendDocumentBuilder
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FMetaSoundFrontendDocumentBuilder final
 {
 public:
-	TScriptInterface<class IMetaSoundDocumentInterface> DocumentInterface;                                 // 0x0000(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_31F7[0x20];                                    // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IMetaSoundDocumentInterface> DocumentInterface;                                 // 0x0008(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_18[0x20];                                      // 0x0018(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMetaSoundFrontendDocumentBuilder) == 0x000008, "Wrong alignment on FMetaSoundFrontendDocumentBuilder");
-static_assert(sizeof(FMetaSoundFrontendDocumentBuilder) == 0x000030, "Wrong size on FMetaSoundFrontendDocumentBuilder");
-static_assert(offsetof(FMetaSoundFrontendDocumentBuilder, DocumentInterface) == 0x000000, "Member 'FMetaSoundFrontendDocumentBuilder::DocumentInterface' has a wrong offset!");
+static_assert(sizeof(FMetaSoundFrontendDocumentBuilder) == 0x000038, "Wrong size on FMetaSoundFrontendDocumentBuilder");
+static_assert(offsetof(FMetaSoundFrontendDocumentBuilder, DocumentInterface) == 0x000008, "Member 'FMetaSoundFrontendDocumentBuilder::DocumentInterface' has a wrong offset!");
 
 }
 

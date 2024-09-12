@@ -226,19 +226,5 @@ ESlateVisibility UWB_MatchFillAPot_C::GetVisibility_0()
 	return Parms.ReturnValue;
 }
 
-
-// Function WB_MatchFillAPot.WB_MatchFillAPot_C.OnPlayersFound
-// (BlueprintCallable, BlueprintEvent)
-
-void UWB_MatchFillAPot_C::OnPlayersFound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_MatchFillAPot_C", "OnPlayersFound");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
 }
 

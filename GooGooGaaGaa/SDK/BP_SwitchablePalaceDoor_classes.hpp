@@ -18,19 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SwitchablePalaceDoor.BP_SwitchablePalaceDoor_C
-// 0x0018 (0x03C0 - 0x03A8)
+// 0x0018 (0x03B0 - 0x0398)
 class ABP_SwitchablePalaceDoor_C final : public ABP_PalaceDoor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SwitchablePalaceDoor_C;          // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          BottomCollisionBox;                                // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBottomBlocked;                                   // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SwitchablePalaceDoor_C;          // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          BottomCollisionBox;                                // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBottomBlocked;                                   // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CloseDoor(bool Fast);
 	void ExecuteUbergraph_BP_SwitchablePalaceDoor(int32 EntryPoint);
 	void InitialUpdate();
 	void OpenDoor(bool Fast);
+	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void TestForBlockedStatus();
 
@@ -47,10 +48,10 @@ public:
 	}
 };
 static_assert(alignof(ABP_SwitchablePalaceDoor_C) == 0x000008, "Wrong alignment on ABP_SwitchablePalaceDoor_C");
-static_assert(sizeof(ABP_SwitchablePalaceDoor_C) == 0x0003C0, "Wrong size on ABP_SwitchablePalaceDoor_C");
-static_assert(offsetof(ABP_SwitchablePalaceDoor_C, UberGraphFrame_BP_SwitchablePalaceDoor_C) == 0x0003A8, "Member 'ABP_SwitchablePalaceDoor_C::UberGraphFrame_BP_SwitchablePalaceDoor_C' has a wrong offset!");
-static_assert(offsetof(ABP_SwitchablePalaceDoor_C, BottomCollisionBox) == 0x0003B0, "Member 'ABP_SwitchablePalaceDoor_C::BottomCollisionBox' has a wrong offset!");
-static_assert(offsetof(ABP_SwitchablePalaceDoor_C, IsBottomBlocked) == 0x0003B8, "Member 'ABP_SwitchablePalaceDoor_C::IsBottomBlocked' has a wrong offset!");
+static_assert(sizeof(ABP_SwitchablePalaceDoor_C) == 0x0003B0, "Wrong size on ABP_SwitchablePalaceDoor_C");
+static_assert(offsetof(ABP_SwitchablePalaceDoor_C, UberGraphFrame_BP_SwitchablePalaceDoor_C) == 0x000398, "Member 'ABP_SwitchablePalaceDoor_C::UberGraphFrame_BP_SwitchablePalaceDoor_C' has a wrong offset!");
+static_assert(offsetof(ABP_SwitchablePalaceDoor_C, BottomCollisionBox) == 0x0003A0, "Member 'ABP_SwitchablePalaceDoor_C::BottomCollisionBox' has a wrong offset!");
+static_assert(offsetof(ABP_SwitchablePalaceDoor_C, IsBottomBlocked) == 0x0003A8, "Member 'ABP_SwitchablePalaceDoor_C::IsBottomBlocked' has a wrong offset!");
 
 }
 

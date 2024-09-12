@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchPickupBuffInvisible.B_WitchPickupBuffInvisible_C
-// 0x0000 (0x0330 - 0x0330)
+// 0x0000 (0x0320 - 0x0320)
 class AB_WitchPickupBuffInvisible_C final : public AB_WitchPickupBuff_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchPickupBuffInvisible_C) == 0x000008, "Wrong alignment on AB_WitchPickupBuffInvisible_C");
-static_assert(sizeof(AB_WitchPickupBuffInvisible_C) == 0x000330, "Wrong size on AB_WitchPickupBuffInvisible_C");
+static_assert(sizeof(AB_WitchPickupBuffInvisible_C) == 0x000320, "Wrong size on AB_WitchPickupBuffInvisible_C");
 
 }
 

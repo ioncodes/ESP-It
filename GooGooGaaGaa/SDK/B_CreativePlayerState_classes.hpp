@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativePlayerState.B_CreativePlayerState_C
-// 0x0020 (0x0658 - 0x0638)
+// 0x0020 (0x0650 - 0x0630)
 class AB_CreativePlayerState_C final : public AB_PlayerState_C
 {
 public:
-	struct FSSelectedSkills                       CreativeSelectedSkills;                            // 0x0638(0x0020)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FSSelectedSkills                       CreativeSelectedSkills;                            // 0x0630(0x0020)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class UClass* GetHunterMovementSkill();
@@ -45,8 +45,8 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativePlayerState_C) == 0x000008, "Wrong alignment on AB_CreativePlayerState_C");
-static_assert(sizeof(AB_CreativePlayerState_C) == 0x000658, "Wrong size on AB_CreativePlayerState_C");
-static_assert(offsetof(AB_CreativePlayerState_C, CreativeSelectedSkills) == 0x000638, "Member 'AB_CreativePlayerState_C::CreativeSelectedSkills' has a wrong offset!");
+static_assert(sizeof(AB_CreativePlayerState_C) == 0x000650, "Wrong size on AB_CreativePlayerState_C");
+static_assert(offsetof(AB_CreativePlayerState_C, CreativeSelectedSkills) == 0x000630, "Member 'AB_CreativePlayerState_C::CreativeSelectedSkills' has a wrong offset!");
 
 }
 

@@ -28,7 +28,7 @@ public:
 	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391D[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -94,55 +94,55 @@ static_assert(sizeof(B_PickupChicken_C_ReceiveTick) == 0x000004, "Wrong size on 
 static_assert(offsetof(B_PickupChicken_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'B_PickupChicken_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function B_PickupChicken.B_PickupChicken_C.TearUp
-// 0x0330 (0x0330 - 0x0000)
+// 0x0350 (0x0350 - 0x0000)
 struct B_PickupChicken_C_TearUp final
 {
 public:
 	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Param_Owner;                                       // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  Param_Instigator;                                  // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  Instigator_0;                                      // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_Hunter_C*                            ParentHunter;                                      // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetScale_ReturnValue;                     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0110(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391E[0x6];                                     // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    CallFunc_GetClassFromPrimaryAssetId_ReturnValue;   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391F[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 K2Node_ClassDynamicCast_AsB_Skin_Hunter_Head_Base; // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3920[0x7];                                     // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3921[0x7];                                     // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorRelativeLocation_SweepHitResult; // 0x0248(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x0110(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    CallFunc_GetClassFromPrimaryAssetId_ReturnValue;   // 0x0210(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 K2Node_ClassDynamicCast_AsB_Skin_Hunter_Head_Base; // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_Hunter_C*                            K2Node_DynamicCast_AsB_Hunter;                     // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorRelativeLocation_SweepHitResult; // 0x0258(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_PickupChicken_C_TearUp) == 0x000010, "Wrong alignment on B_PickupChicken_C_TearUp");
-static_assert(sizeof(B_PickupChicken_C_TearUp) == 0x000330, "Wrong size on B_PickupChicken_C_TearUp");
+static_assert(sizeof(B_PickupChicken_C_TearUp) == 0x000350, "Wrong size on B_PickupChicken_C_TearUp");
 static_assert(offsetof(B_PickupChicken_C_TearUp, SpawnTransform) == 0x000000, "Member 'B_PickupChicken_C_TearUp::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, Param_Owner) == 0x000060, "Member 'B_PickupChicken_C_TearUp::Param_Owner' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, Param_Instigator) == 0x000068, "Member 'B_PickupChicken_C_TearUp::Param_Instigator' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, Owner_0) == 0x000060, "Member 'B_PickupChicken_C_TearUp::Owner_0' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, Instigator_0) == 0x000068, "Member 'B_PickupChicken_C_TearUp::Instigator_0' has a wrong offset!");
 static_assert(offsetof(B_PickupChicken_C_TearUp, ParentHunter) == 0x000070, "Member 'B_PickupChicken_C_TearUp::ParentHunter' has a wrong offset!");
 static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_GetScale_ReturnValue) == 0x000078, "Member 'B_PickupChicken_C_TearUp::CallFunc_GetScale_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000080, "Member 'B_PickupChicken_C_TearUp::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000098, "Member 'B_PickupChicken_C_TearUp::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_GetSocketTransform_ReturnValue) == 0x0000B0, "Member 'B_PickupChicken_C_TearUp::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x000110, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_SetActorTransform_ReturnValue) == 0x0001F8, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_IsValid_ReturnValue) == 0x0001F9, "Member 'B_PickupChicken_C_TearUp::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_GetClassFromPrimaryAssetId_ReturnValue) == 0x000200, "Member 'B_PickupChicken_C_TearUp::CallFunc_GetClassFromPrimaryAssetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000208, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_ClassDynamicCast_AsB_Skin_Hunter_Head_Base) == 0x000210, "Member 'B_PickupChicken_C_TearUp::K2Node_ClassDynamicCast_AsB_Skin_Hunter_Head_Base' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_ClassDynamicCast_bSuccess) == 0x000218, "Member 'B_PickupChicken_C_TearUp::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_DynamicCast_AsB_Hunter) == 0x000220, "Member 'B_PickupChicken_C_TearUp::K2Node_DynamicCast_AsB_Hunter' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_DynamicCast_bSuccess) == 0x000228, "Member 'B_PickupChicken_C_TearUp::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_Add_VectorVector_ReturnValue) == 0x000230, "Member 'B_PickupChicken_C_TearUp::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_SetActorRelativeLocation_SweepHitResult) == 0x000248, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_SetActorRelativeLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_SetActorTransform_ReturnValue) == 0x000208, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_IsValid_ReturnValue) == 0x000209, "Member 'B_PickupChicken_C_TearUp::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_GetClassFromPrimaryAssetId_ReturnValue) == 0x000210, "Member 'B_PickupChicken_C_TearUp::CallFunc_GetClassFromPrimaryAssetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000218, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_ClassDynamicCast_AsB_Skin_Hunter_Head_Base) == 0x000220, "Member 'B_PickupChicken_C_TearUp::K2Node_ClassDynamicCast_AsB_Skin_Hunter_Head_Base' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_ClassDynamicCast_bSuccess) == 0x000228, "Member 'B_PickupChicken_C_TearUp::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_DynamicCast_AsB_Hunter) == 0x000230, "Member 'B_PickupChicken_C_TearUp::K2Node_DynamicCast_AsB_Hunter' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, K2Node_DynamicCast_bSuccess) == 0x000238, "Member 'B_PickupChicken_C_TearUp::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_Add_VectorVector_ReturnValue) == 0x000240, "Member 'B_PickupChicken_C_TearUp::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PickupChicken_C_TearUp, CallFunc_K2_SetActorRelativeLocation_SweepHitResult) == 0x000258, "Member 'B_PickupChicken_C_TearUp::CallFunc_K2_SetActorRelativeLocation_SweepHitResult' has a wrong offset!");
 
 }
 

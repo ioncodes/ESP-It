@@ -20,12 +20,12 @@ namespace SDK
 // Function IMapLayoutLoading.IMapLayoutLoading_C.SpawnActionPlaceableStatic
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableStaticProp_C*        SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IIMapLayoutLoading_C::SpawnActionPlaceableStatic(class UClass* Param_Class, const struct FTransform& Transform, bool Activated, class ABP_PlaceableStaticProp_C** SpawnedActor)
+void IIMapLayoutLoading_C::SpawnActionPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, bool Activated, class ABP_PlaceableStaticProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -34,7 +34,7 @@ void IIMapLayoutLoading_C::SpawnActionPlaceableStatic(class UClass* Param_Class,
 
 	Params::IMapLayoutLoading_C_SpawnActionPlaceableStatic Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.Activated = Activated;
 
@@ -48,14 +48,14 @@ void IIMapLayoutLoading_C::SpawnActionPlaceableStatic(class UClass* Param_Class,
 // Function IMapLayoutLoading.IMapLayoutLoading_C.SpawnActionProp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    StartAwake                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsFrozen                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_StaticMeshProp_C*              SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IIMapLayoutLoading_C::SpawnActionProp(class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor)
+void IIMapLayoutLoading_C::SpawnActionProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -64,7 +64,7 @@ void IIMapLayoutLoading_C::SpawnActionProp(class UClass* Param_Class, const stru
 
 	Params::IMapLayoutLoading_C_SpawnActionProp Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.StartAwake = StartAwake;
 	Parms.IsFrozen = IsFrozen;
@@ -80,13 +80,13 @@ void IIMapLayoutLoading_C::SpawnActionProp(class UClass* Param_Class, const stru
 // Function IMapLayoutLoading.IMapLayoutLoading_C.SpawnPlaceableLight
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Activated                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableLight_C*             SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IIMapLayoutLoading_C::SpawnPlaceableLight(class UClass* Param_Class, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor)
+void IIMapLayoutLoading_C::SpawnPlaceableLight(class UClass* Class_0, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -95,7 +95,7 @@ void IIMapLayoutLoading_C::SpawnPlaceableLight(class UClass* Param_Class, const 
 
 	Params::IMapLayoutLoading_C_SpawnPlaceableLight Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.Color = std::move(Color);
 	Parms.Activated = Activated;
@@ -110,11 +110,11 @@ void IIMapLayoutLoading_C::SpawnPlaceableLight(class UClass* Param_Class, const 
 // Function IMapLayoutLoading.IMapLayoutLoading_C.SpawnPlaceableStatic
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_PlaceableStaticProp_C*        SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IIMapLayoutLoading_C::SpawnPlaceableStatic(class UClass* Param_Class, const struct FTransform& Transform, class ABP_PlaceableStaticProp_C** SpawnedActor)
+void IIMapLayoutLoading_C::SpawnPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, class ABP_PlaceableStaticProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -123,7 +123,7 @@ void IIMapLayoutLoading_C::SpawnPlaceableStatic(class UClass* Param_Class, const
 
 	Params::IMapLayoutLoading_C_SpawnPlaceableStatic Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -136,13 +136,13 @@ void IIMapLayoutLoading_C::SpawnPlaceableStatic(class UClass* Param_Class, const
 // Function IMapLayoutLoading.IMapLayoutLoading_C.SpawnProp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    StartAwake                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsFrozen                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_StaticMeshProp_C*              SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IIMapLayoutLoading_C::SpawnProp(class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, class AB_StaticMeshProp_C** SpawnedActor)
+void IIMapLayoutLoading_C::SpawnProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, class AB_StaticMeshProp_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -151,7 +151,7 @@ void IIMapLayoutLoading_C::SpawnProp(class UClass* Param_Class, const struct FTr
 
 	Params::IMapLayoutLoading_C_SpawnProp Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.StartAwake = StartAwake;
 	Parms.IsFrozen = IsFrozen;
@@ -166,12 +166,12 @@ void IIMapLayoutLoading_C::SpawnProp(class UClass* Param_Class, const struct FTr
 // Function IMapLayoutLoading.IMapLayoutLoading_C.SpawnSwitch
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    BreaksAfterUse                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_Switch_C*                     SpawnedActor                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IIMapLayoutLoading_C::SpawnSwitch(class UClass* Param_Class, const struct FTransform& Transform, bool BreaksAfterUse, class ABP_Switch_C** SpawnedActor)
+void IIMapLayoutLoading_C::SpawnSwitch(class UClass* Class_0, const struct FTransform& Transform, bool BreaksAfterUse, class ABP_Switch_C** SpawnedActor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -180,7 +180,7 @@ void IIMapLayoutLoading_C::SpawnSwitch(class UClass* Param_Class, const struct F
 
 	Params::IMapLayoutLoading_C_SpawnSwitch Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Transform = std::move(Transform);
 	Parms.BreaksAfterUse = BreaksAfterUse;
 

@@ -23,7 +23,7 @@ struct FS_SystemMessage final
 public:
 	int64                                         Id_2_51DEEC114E1B358F7DD18EB79EEA559F;             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_SystemMessageType                           Type_11_29874AAC4F2CF0A39FF7BA808504342F;          // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35B0[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Text_13_82D8EA3F4B035CF6F76FCC89846CA98A;          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class UVaRestJsonObject*                      Payload_14_69D9009843A064D636CC678C2F29DD65;       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };

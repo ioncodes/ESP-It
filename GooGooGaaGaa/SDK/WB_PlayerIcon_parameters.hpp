@@ -23,12 +23,12 @@ struct WB_PlayerIcon_C_Get_Levelabel_ColorAndOpacity_0 final
 public:
 	struct FSlateColor                            ReturnValue;                                       // 0x0000(0x0014)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3726[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3727[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x002C(0x0014)()
 };
 static_assert(alignof(WB_PlayerIcon_C_Get_Levelabel_ColorAndOpacity_0) == 0x000008, "Wrong alignment on WB_PlayerIcon_C_Get_Levelabel_ColorAndOpacity_0");
@@ -42,17 +42,17 @@ static_assert(offsetof(WB_PlayerIcon_C_Get_Levelabel_ColorAndOpacity_0, CallFunc
 static_assert(offsetof(WB_PlayerIcon_C_Get_Levelabel_ColorAndOpacity_0, K2Node_Select_Default) == 0x00002C, "Member 'WB_PlayerIcon_C_Get_Levelabel_ColorAndOpacity_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_PlayerIcon.WB_PlayerIcon_C.Get_Levelabel_Text_0
-// 0x0030 (0x0030 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_PlayerIcon_C_Get_Levelabel_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0010)()
 };
 static_assert(alignof(WB_PlayerIcon_C_Get_Levelabel_Text_0) == 0x000008, "Wrong alignment on WB_PlayerIcon_C_Get_Levelabel_Text_0");
-static_assert(sizeof(WB_PlayerIcon_C_Get_Levelabel_Text_0) == 0x000030, "Wrong size on WB_PlayerIcon_C_Get_Levelabel_Text_0");
+static_assert(sizeof(WB_PlayerIcon_C_Get_Levelabel_Text_0) == 0x000020, "Wrong size on WB_PlayerIcon_C_Get_Levelabel_Text_0");
 static_assert(offsetof(WB_PlayerIcon_C_Get_Levelabel_Text_0, ReturnValue) == 0x000000, "Member 'WB_PlayerIcon_C_Get_Levelabel_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_PlayerIcon_C_Get_Levelabel_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_PlayerIcon_C_Get_Levelabel_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_PlayerIcon_C_Get_Levelabel_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WB_PlayerIcon_C_Get_Levelabel_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 }
 

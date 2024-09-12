@@ -22,29 +22,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Unlock.WB_Unlock_C
-// 0x0118 (0x03D8 - 0x02C0)
+// 0x0108 (0x03E8 - 0x02E0)
 class UWB_Unlock_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 BorderImage;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CustomRecipe;                                      // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_WB_Unlock_C;                                  // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             QuantityText;                                      // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                RaretyColor;                                       // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                RewardImage;                                       // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SlotName;                                          // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UB_BaseSkill_C*                         SkillDefaultObject;                                // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWB_ToolTip_C*                          ToolTip;                                           // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Quantity;                                          // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsRecipe;                                          // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5647[0x3];                                     // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ItemTooltipContent_C*               TooltipContent;                                    // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bTooltipVisible;                                   // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5648[0x7];                                     // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSClientItemUnlock                     ClientItemUnlock;                                  // 0x0328(0x0018)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class FText                                   UnlockName;                                        // 0x0340(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FS_ItemInfo                            ItemInfo;                                          // 0x0358(0x0080)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 BorderImage;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CustomRecipe;                                      // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             QuantityText;                                      // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                RaretyColor;                                       // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                RewardImage;                                       // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SlotName;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UB_BaseSkill_C*                         SkillDefaultObject;                                // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_ToolTip_C*                          ToolTip;                                           // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Quantity;                                          // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRecipe;                                          // 0x0334(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_335[0x3];                                      // 0x0335(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_ItemTooltipContent_C*               ToolTipContent;                                    // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bTooltipVisible;                                   // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSClientItemUnlock                     ClientItemUnlock;                                  // 0x0348(0x0018)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class FText                                   UnlockName;                                        // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FS_ItemInfo                            ItemInfo;                                          // 0x0370(0x0078)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void RemoveTooltip();
@@ -55,8 +55,8 @@ public:
 	bool HasUserFocusOrIsHovered();
 	struct FSlateBrush Get_CustomRecipe_Brush_0();
 	void UpdateUnlockName();
-	void SetItemInfo(const struct FS_ItemInfo& Param_SetItemInfo);
-	void SetUnlock(const struct FSClientItemUnlock& Param_ClientItemUnlock);
+	void SetItemInfo(const struct FS_ItemInfo& SetItemInfo_0);
+	void SetUnlock(const struct FSClientItemUnlock& ClientItemUnlock_0);
 	ESlateVisibility Get_CustomRecipe_Visibility_0();
 	class FText GetText_0();
 	class FText Get_Slotname_Text_0();
@@ -80,24 +80,24 @@ public:
 	}
 };
 static_assert(alignof(UWB_Unlock_C) == 0x000008, "Wrong alignment on UWB_Unlock_C");
-static_assert(sizeof(UWB_Unlock_C) == 0x0003D8, "Wrong size on UWB_Unlock_C");
-static_assert(offsetof(UWB_Unlock_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Unlock_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, BorderImage) == 0x0002C8, "Member 'UWB_Unlock_C::BorderImage' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, CustomRecipe) == 0x0002D0, "Member 'UWB_Unlock_C::CustomRecipe' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, Name_WB_Unlock_C) == 0x0002D8, "Member 'UWB_Unlock_C::Name_WB_Unlock_C' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, QuantityText) == 0x0002E0, "Member 'UWB_Unlock_C::QuantityText' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, RaretyColor) == 0x0002E8, "Member 'UWB_Unlock_C::RaretyColor' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, RewardImage) == 0x0002F0, "Member 'UWB_Unlock_C::RewardImage' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, SlotName) == 0x0002F8, "Member 'UWB_Unlock_C::SlotName' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, SkillDefaultObject) == 0x000300, "Member 'UWB_Unlock_C::SkillDefaultObject' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, ToolTip) == 0x000308, "Member 'UWB_Unlock_C::ToolTip' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, Quantity) == 0x000310, "Member 'UWB_Unlock_C::Quantity' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, IsRecipe) == 0x000314, "Member 'UWB_Unlock_C::IsRecipe' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, TooltipContent) == 0x000318, "Member 'UWB_Unlock_C::TooltipContent' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, bTooltipVisible) == 0x000320, "Member 'UWB_Unlock_C::bTooltipVisible' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, ClientItemUnlock) == 0x000328, "Member 'UWB_Unlock_C::ClientItemUnlock' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, UnlockName) == 0x000340, "Member 'UWB_Unlock_C::UnlockName' has a wrong offset!");
-static_assert(offsetof(UWB_Unlock_C, ItemInfo) == 0x000358, "Member 'UWB_Unlock_C::ItemInfo' has a wrong offset!");
+static_assert(sizeof(UWB_Unlock_C) == 0x0003E8, "Wrong size on UWB_Unlock_C");
+static_assert(offsetof(UWB_Unlock_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Unlock_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, BorderImage) == 0x0002E8, "Member 'UWB_Unlock_C::BorderImage' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, CustomRecipe) == 0x0002F0, "Member 'UWB_Unlock_C::CustomRecipe' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, Name_0) == 0x0002F8, "Member 'UWB_Unlock_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, QuantityText) == 0x000300, "Member 'UWB_Unlock_C::QuantityText' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, RaretyColor) == 0x000308, "Member 'UWB_Unlock_C::RaretyColor' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, RewardImage) == 0x000310, "Member 'UWB_Unlock_C::RewardImage' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, SlotName) == 0x000318, "Member 'UWB_Unlock_C::SlotName' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, SkillDefaultObject) == 0x000320, "Member 'UWB_Unlock_C::SkillDefaultObject' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, ToolTip) == 0x000328, "Member 'UWB_Unlock_C::ToolTip' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, Quantity) == 0x000330, "Member 'UWB_Unlock_C::Quantity' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, IsRecipe) == 0x000334, "Member 'UWB_Unlock_C::IsRecipe' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, ToolTipContent) == 0x000338, "Member 'UWB_Unlock_C::ToolTipContent' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, bTooltipVisible) == 0x000340, "Member 'UWB_Unlock_C::bTooltipVisible' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, ClientItemUnlock) == 0x000348, "Member 'UWB_Unlock_C::ClientItemUnlock' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, UnlockName) == 0x000360, "Member 'UWB_Unlock_C::UnlockName' has a wrong offset!");
+static_assert(offsetof(UWB_Unlock_C, ItemInfo) == 0x000370, "Member 'UWB_Unlock_C::ItemInfo' has a wrong offset!");
 
 }
 

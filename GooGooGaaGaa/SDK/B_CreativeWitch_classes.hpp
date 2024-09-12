@@ -18,20 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativeWitch.B_CreativeWitch_C
-// 0x0010 (0x0980 - 0x0970)
+// 0x0010 (0x0970 - 0x0960)
 class AB_CreativeWitch_C final : public AB_Witch_C
 {
 public:
-	uint8                                         Pad_37C9[0x7];                                     // 0x0961(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeWitch_C;                  // 0x0968(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_CreativeHUD_C*                      CreativeHUD;                                       // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativeWitch_C;                  // 0x0960(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_CreativeHUD_C*                      CreativeHUD;                                       // 0x0968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ClientPossessed();
 	void ExecuteUbergraph_B_CreativeWitch(int32 EntryPoint);
 	void ReceivePossessed(class AController* NewController);
 	void ReceiveUnpossessed(class AController* OldController);
-	void SetProp(class AB_PropPawnPhysics_C** Param_SpawnedProp);
+	void SetProp(class AB_PropPawnPhysics_C** SpawnedProp_0);
 	void SetupHealthAndMana();
 	void TickVisuals();
 
@@ -46,9 +45,9 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativeWitch_C) == 0x000010, "Wrong alignment on AB_CreativeWitch_C");
-static_assert(sizeof(AB_CreativeWitch_C) == 0x000980, "Wrong size on AB_CreativeWitch_C");
-static_assert(offsetof(AB_CreativeWitch_C, UberGraphFrame_B_CreativeWitch_C) == 0x000968, "Member 'AB_CreativeWitch_C::UberGraphFrame_B_CreativeWitch_C' has a wrong offset!");
-static_assert(offsetof(AB_CreativeWitch_C, CreativeHUD) == 0x000970, "Member 'AB_CreativeWitch_C::CreativeHUD' has a wrong offset!");
+static_assert(sizeof(AB_CreativeWitch_C) == 0x000970, "Wrong size on AB_CreativeWitch_C");
+static_assert(offsetof(AB_CreativeWitch_C, UberGraphFrame_B_CreativeWitch_C) == 0x000960, "Member 'AB_CreativeWitch_C::UberGraphFrame_B_CreativeWitch_C' has a wrong offset!");
+static_assert(offsetof(AB_CreativeWitch_C, CreativeHUD) == 0x000968, "Member 'AB_CreativeWitch_C::CreativeHUD' has a wrong offset!");
 
 }
 

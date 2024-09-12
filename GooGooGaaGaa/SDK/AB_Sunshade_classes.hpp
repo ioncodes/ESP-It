@@ -18,29 +18,29 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_Sunshade.AB_Sunshade_C
-// 0x02C0 (0x0610 - 0x0350)
+// 0x02C0 (0x0630 - 0x0370)
 class UAB_Sunshade_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_4EC1[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0358(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0360(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0368(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0388(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x03B0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x03D8(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0400(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0448(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0468(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x04B0(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x04D0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0518(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0538(0x00C8)()
-	bool                                          OpenShade;                                         // 0x0600(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0378(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0380(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0388(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x03A8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x03D0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x03F8(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0420(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0468(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0488(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x04D0(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x04F0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0538(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0558(0x00C8)()
+	bool                                          OpenShade;                                         // 0x0620(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Sunshade_AnimGraphNode_TransitionResult_357013FA412996D5235EE8955486A339();
 	void ExecuteUbergraph_AB_Sunshade(int32 EntryPoint);
@@ -56,22 +56,22 @@ public:
 	}
 };
 static_assert(alignof(UAB_Sunshade_C) == 0x000010, "Wrong alignment on UAB_Sunshade_C");
-static_assert(sizeof(UAB_Sunshade_C) == 0x000610, "Wrong size on UAB_Sunshade_C");
-static_assert(offsetof(UAB_Sunshade_C, UberGraphFrame) == 0x000350, "Member 'UAB_Sunshade_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimBlueprintExtension_PropertyAccess) == 0x000358, "Member 'UAB_Sunshade_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimBlueprintExtension_Base) == 0x000360, "Member 'UAB_Sunshade_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_Root) == 0x000368, "Member 'UAB_Sunshade_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_TransitionResult_2) == 0x000388, "Member 'UAB_Sunshade_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_TransitionResult_1) == 0x0003B0, "Member 'UAB_Sunshade_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_TransitionResult) == 0x0003D8, "Member 'UAB_Sunshade_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_SequencePlayer_2) == 0x000400, "Member 'UAB_Sunshade_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateResult_2) == 0x000448, "Member 'UAB_Sunshade_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_SequencePlayer_1) == 0x000468, "Member 'UAB_Sunshade_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateResult_1) == 0x0004B0, "Member 'UAB_Sunshade_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_SequencePlayer) == 0x0004D0, "Member 'UAB_Sunshade_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateResult) == 0x000518, "Member 'UAB_Sunshade_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateMachine) == 0x000538, "Member 'UAB_Sunshade_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UAB_Sunshade_C, OpenShade) == 0x000600, "Member 'UAB_Sunshade_C::OpenShade' has a wrong offset!");
+static_assert(sizeof(UAB_Sunshade_C) == 0x000630, "Wrong size on UAB_Sunshade_C");
+static_assert(offsetof(UAB_Sunshade_C, UberGraphFrame) == 0x000370, "Member 'UAB_Sunshade_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimBlueprintExtension_PropertyAccess) == 0x000378, "Member 'UAB_Sunshade_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimBlueprintExtension_Base) == 0x000380, "Member 'UAB_Sunshade_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_Root) == 0x000388, "Member 'UAB_Sunshade_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_TransitionResult_2) == 0x0003A8, "Member 'UAB_Sunshade_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_TransitionResult_1) == 0x0003D0, "Member 'UAB_Sunshade_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_TransitionResult) == 0x0003F8, "Member 'UAB_Sunshade_C::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_SequencePlayer_2) == 0x000420, "Member 'UAB_Sunshade_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateResult_2) == 0x000468, "Member 'UAB_Sunshade_C::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_SequencePlayer_1) == 0x000488, "Member 'UAB_Sunshade_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateResult_1) == 0x0004D0, "Member 'UAB_Sunshade_C::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_SequencePlayer) == 0x0004F0, "Member 'UAB_Sunshade_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateResult) == 0x000538, "Member 'UAB_Sunshade_C::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, AnimGraphNode_StateMachine) == 0x000558, "Member 'UAB_Sunshade_C::AnimGraphNode_StateMachine' has a wrong offset!");
+static_assert(offsetof(UAB_Sunshade_C, OpenShade) == 0x000620, "Member 'UAB_Sunshade_C::OpenShade' has a wrong offset!");
 
 }
 

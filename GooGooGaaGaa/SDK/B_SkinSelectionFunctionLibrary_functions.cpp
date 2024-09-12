@@ -24,9 +24,9 @@ namespace SDK
 // ETeamID                                 Team                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ConfigNr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FString                           Param_Name                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_SkinSelectionFunctionLibrary_C::Get_Skin_Config_Save_Name(class UB_SkinSelection_C* SkinSelection, ETeamID Team, int32 ConfigNr, class UObject* __WorldContext, class FString* Param_Name)
+void UB_SkinSelectionFunctionLibrary_C::Get_Skin_Config_Save_Name(class UB_SkinSelection_C* SkinSelection, ETeamID Team, int32 ConfigNr, class UObject* __WorldContext, class FString* Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -42,8 +42,8 @@ void UB_SkinSelectionFunctionLibrary_C::Get_Skin_Config_Save_Name(class UB_SkinS
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 }
 
 

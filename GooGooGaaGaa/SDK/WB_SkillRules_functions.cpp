@@ -73,12 +73,27 @@ void UWB_SkillRules_C::CheckForShouldEnable()
 }
 
 
+// Function WB_SkillRules.WB_SkillRules_C.CreateEventBindings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SkillRules_C::CreateEventBindings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkillRules_C", "CreateEventBindings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_SkillRules.WB_SkillRules_C.CreateUIParameters
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FUIParameterData>         UIParams                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FUIParam>                 DefaultValues                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_SkillRules_C::CreateUIParameters(TArray<struct FUIParameterData>& UIParams)
+void UWB_SkillRules_C::CreateUIParameters(TArray<struct FUIParameterData>& UIParams, TArray<struct FUIParam>& DefaultValues)
 {
 	static class UFunction* Func = nullptr;
 
@@ -88,10 +103,12 @@ void UWB_SkillRules_C::CreateUIParameters(TArray<struct FUIParameterData>& UIPar
 	Params::WB_SkillRules_C_CreateUIParameters Parms{};
 
 	Parms.UIParams = std::move(UIParams);
+	Parms.DefaultValues = std::move(DefaultValues);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	UIParams = std::move(Parms.UIParams);
+	DefaultValues = std::move(Parms.DefaultValues);
 }
 
 

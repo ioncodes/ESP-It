@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -42,7 +42,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIProp_C>              K2Node_DynamicCast_AsIProp;                        // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C96[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetCameraDistance_CameraDistance;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -74,7 +74,7 @@ public:
 	class UB_MatchParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIProp_C>              K2Node_DynamicCast_AsIProp;                        // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C97[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetMaxHealth_MaxHealth;                   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetMaxHealth_ReturnMaxHealth;             // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -106,7 +106,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIProp_C>              K2Node_DynamicCast_AsIProp;                        // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C98[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetName_Name;                             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_BasePropLibrary_C_UpdateName) == 0x000008, "Wrong alignment on B_BasePropLibrary_C_UpdateName");
@@ -119,7 +119,7 @@ static_assert(offsetof(B_BasePropLibrary_C_UpdateName, K2Node_DynamicCast_bSucce
 static_assert(offsetof(B_BasePropLibrary_C_UpdateName, CallFunc_GetName_Name) == 0x000030, "Member 'B_BasePropLibrary_C_UpdateName::CallFunc_GetName_Name' has a wrong offset!");
 
 // Function B_BasePropLibrary.B_BasePropLibrary_C.UpdateSpringArmLocation
-// 0x0130 (0x0130 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct B_BasePropLibrary_C_UpdateSpringArmLocation final
 {
 public:
@@ -128,12 +128,12 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IIProp_C>              K2Node_DynamicCast_AsIProp;                        // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C99[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetCenter_Center;                         // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0048(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0048(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_BasePropLibrary_C_UpdateSpringArmLocation) == 0x000008, "Wrong alignment on B_BasePropLibrary_C_UpdateSpringArmLocation");
-static_assert(sizeof(B_BasePropLibrary_C_UpdateSpringArmLocation) == 0x000130, "Wrong size on B_BasePropLibrary_C_UpdateSpringArmLocation");
+static_assert(sizeof(B_BasePropLibrary_C_UpdateSpringArmLocation) == 0x000140, "Wrong size on B_BasePropLibrary_C_UpdateSpringArmLocation");
 static_assert(offsetof(B_BasePropLibrary_C_UpdateSpringArmLocation, SpringArm) == 0x000000, "Member 'B_BasePropLibrary_C_UpdateSpringArmLocation::SpringArm' has a wrong offset!");
 static_assert(offsetof(B_BasePropLibrary_C_UpdateSpringArmLocation, Prop) == 0x000008, "Member 'B_BasePropLibrary_C_UpdateSpringArmLocation::Prop' has a wrong offset!");
 static_assert(offsetof(B_BasePropLibrary_C_UpdateSpringArmLocation, __WorldContext) == 0x000010, "Member 'B_BasePropLibrary_C_UpdateSpringArmLocation::__WorldContext' has a wrong offset!");

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -23,14 +23,14 @@ namespace SDK::Params
 struct WB_SliderWithLabel_C_RealValueToValue final
 {
 public:
-	double                                        Param_RealValue;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RealValue_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Value;                                             // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3580[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3581[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MapRangeClamped_ReturnValue_1;            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,7 +40,7 @@ public:
 };
 static_assert(alignof(WB_SliderWithLabel_C_RealValueToValue) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_RealValueToValue");
 static_assert(sizeof(WB_SliderWithLabel_C_RealValueToValue) == 0x000050, "Wrong size on WB_SliderWithLabel_C_RealValueToValue");
-static_assert(offsetof(WB_SliderWithLabel_C_RealValueToValue, Param_RealValue) == 0x000000, "Member 'WB_SliderWithLabel_C_RealValueToValue::Param_RealValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_RealValueToValue, RealValue_0) == 0x000000, "Member 'WB_SliderWithLabel_C_RealValueToValue::RealValue_0' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_RealValueToValue, Value) == 0x000008, "Member 'WB_SliderWithLabel_C_RealValueToValue::Value' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_RealValueToValue, CallFunc_Round_ReturnValue) == 0x000010, "Member 'WB_SliderWithLabel_C_RealValueToValue::CallFunc_Round_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_RealValueToValue, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_RealValueToValue::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
@@ -59,7 +59,7 @@ struct WB_SliderWithLabel_C_ValueToRealValue final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_RealValue;                                   // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RealValue_0;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetOptionsOverrideIndex_Index;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_RoundToStepSize_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -69,7 +69,7 @@ public:
 static_assert(alignof(WB_SliderWithLabel_C_ValueToRealValue) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_ValueToRealValue");
 static_assert(sizeof(WB_SliderWithLabel_C_ValueToRealValue) == 0x000030, "Wrong size on WB_SliderWithLabel_C_ValueToRealValue");
 static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, Value) == 0x000000, "Member 'WB_SliderWithLabel_C_ValueToRealValue::Value' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, Param_RealValue) == 0x000008, "Member 'WB_SliderWithLabel_C_ValueToRealValue::Param_RealValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, RealValue_0) == 0x000008, "Member 'WB_SliderWithLabel_C_ValueToRealValue::RealValue_0' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, CallFunc_GetOptionsOverrideIndex_Index) == 0x000010, "Member 'WB_SliderWithLabel_C_ValueToRealValue::CallFunc_GetOptionsOverrideIndex_Index' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, CallFunc_MapRangeClamped_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_ValueToRealValue::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, CallFunc_RoundToStepSize_ReturnValue) == 0x000020, "Member 'WB_SliderWithLabel_C_ValueToRealValue::CallFunc_RoundToStepSize_ReturnValue' has a wrong offset!");
@@ -77,61 +77,61 @@ static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, CallFunc_Array_Len
 static_assert(offsetof(WB_SliderWithLabel_C_ValueToRealValue, CallFunc_Greater_IntInt_ReturnValue) == 0x00002C, "Member 'WB_SliderWithLabel_C_ValueToRealValue::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.GetMinutes
-// 0x0038 (0x0038 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_SliderWithLabel_C_GetMinutes final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
 };
 static_assert(alignof(WB_SliderWithLabel_C_GetMinutes) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_GetMinutes");
-static_assert(sizeof(WB_SliderWithLabel_C_GetMinutes) == 0x000038, "Wrong size on WB_SliderWithLabel_C_GetMinutes");
+static_assert(sizeof(WB_SliderWithLabel_C_GetMinutes) == 0x000028, "Wrong size on WB_SliderWithLabel_C_GetMinutes");
 static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, ReturnValue) == 0x000000, "Member 'WB_SliderWithLabel_C_GetMinutes::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, CallFunc_Round_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_GetMinutes::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, CallFunc_Divide_IntInt_ReturnValue) == 0x00001C, "Member 'WB_SliderWithLabel_C_GetMinutes::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WB_SliderWithLabel_C_GetMinutes::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, CallFunc_Round_ReturnValue) == 0x000010, "Member 'WB_SliderWithLabel_C_GetMinutes::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, CallFunc_Divide_IntInt_ReturnValue) == 0x000014, "Member 'WB_SliderWithLabel_C_GetMinutes::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetMinutes, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_GetMinutes::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.GetSeconds
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct WB_SliderWithLabel_C_GetSeconds final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int32                                         FullSeconds;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3582[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0018)()
-	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3583[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3584[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0018)()
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3585[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Percent_IntInt_ReturnValue_1;             // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3586[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0090(0x0018)()
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int32                                         FullSeconds;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0018(0x0010)()
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
+	int32                                         CallFunc_Len_ReturnValue;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Percent_IntInt_ReturnValue_1;             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0078(0x0010)()
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SliderWithLabel_C_GetSeconds) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_GetSeconds");
-static_assert(sizeof(WB_SliderWithLabel_C_GetSeconds) == 0x0000B0, "Wrong size on WB_SliderWithLabel_C_GetSeconds");
+static_assert(sizeof(WB_SliderWithLabel_C_GetSeconds) == 0x000090, "Wrong size on WB_SliderWithLabel_C_GetSeconds");
 static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, ReturnValue) == 0x000000, "Member 'WB_SliderWithLabel_C_GetSeconds::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, FullSeconds) == 0x000018, "Member 'WB_SliderWithLabel_C_GetSeconds::FullSeconds' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Percent_IntInt_ReturnValue) == 0x000038, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_IntToString_ReturnValue) == 0x000040, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Concat_StrStr_ReturnValue) == 0x000050, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_StringToText_ReturnValue) == 0x000068, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Len_ReturnValue) == 0x000080, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Len_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000084, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Percent_IntInt_ReturnValue_1) == 0x000088, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Percent_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000090, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Round_ReturnValue) == 0x0000A8, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, FullSeconds) == 0x000010, "Member 'WB_SliderWithLabel_C_GetSeconds::FullSeconds' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_IntToText_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Percent_IntInt_ReturnValue) == 0x000028, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_IntToString_ReturnValue) == 0x000030, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Concat_StrStr_ReturnValue) == 0x000040, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Len_ReturnValue) == 0x000068, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Len_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00006C, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Percent_IntInt_ReturnValue_1) == 0x000070, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Percent_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000078, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetSeconds, CallFunc_Round_ReturnValue) == 0x000088, "Member 'WB_SliderWithLabel_C_GetSeconds::CallFunc_Round_ReturnValue' has a wrong offset!");
 
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.RoundToStepSize
 // 0x0058 (0x0058 - 0x0000)
@@ -148,7 +148,7 @@ public:
 	double                                        CallFunc_Multiply_IntFloat_ReturnValue_1;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_RoundDecimals_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3587[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -173,19 +173,19 @@ struct WB_SliderWithLabel_C_GetOptionsOverrideIndex final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_Index;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Index_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3588[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SliderWithLabel_C_GetOptionsOverrideIndex) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_GetOptionsOverrideIndex");
 static_assert(sizeof(WB_SliderWithLabel_C_GetOptionsOverrideIndex) == 0x000038, "Wrong size on WB_SliderWithLabel_C_GetOptionsOverrideIndex");
 static_assert(offsetof(WB_SliderWithLabel_C_GetOptionsOverrideIndex, Value) == 0x000000, "Member 'WB_SliderWithLabel_C_GetOptionsOverrideIndex::Value' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_GetOptionsOverrideIndex, Param_Index) == 0x000008, "Member 'WB_SliderWithLabel_C_GetOptionsOverrideIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_GetOptionsOverrideIndex, Index_0) == 0x000008, "Member 'WB_SliderWithLabel_C_GetOptionsOverrideIndex::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_GetOptionsOverrideIndex, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WB_SliderWithLabel_C_GetOptionsOverrideIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_GetOptionsOverrideIndex, CallFunc_Subtract_IntInt_ReturnValue) == 0x000014, "Member 'WB_SliderWithLabel_C_GetOptionsOverrideIndex::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SliderWithLabel_C_GetOptionsOverrideIndex, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_GetOptionsOverrideIndex::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
@@ -231,7 +231,7 @@ struct WB_SliderWithLabel_C_Get_ValueSlider_Value_0 final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3589[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_RealValueToValue_Value;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_FunctionResult_ReturnValue_ImplicitCast;    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -242,93 +242,93 @@ static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueSlider_Value_0, CallFunc_Re
 static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueSlider_Value_0, K2Node_FunctionResult_ReturnValue_ImplicitCast) == 0x000010, "Member 'WB_SliderWithLabel_C_Get_ValueSlider_Value_0::K2Node_FunctionResult_ReturnValue_ImplicitCast' has a wrong offset!");
 
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.Get_ValueLabel_Text_0
-// 0x04A0 (0x04A0 - 0x0000)
+// 0x03F0 (0x03F0 - 0x0000)
 struct WB_SliderWithLabel_C_Get_ValueLabel_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358A[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0020(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0038(0x0018)()
-	class FText                                   CallFunc_GetMinutes_ReturnValue;                   // 0x0050(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0068(0x0050)(HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default;                             // 0x00B8(0x0018)()
-	class FText                                   CallFunc_GetSeconds_ReturnValue;                   // 0x00D0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E8(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358B[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0140(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358C[0x4];                                     // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0158(0x0018)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358D[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0178(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x01C8(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x01D8(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0228(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0240(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0290(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358E[0x4];                                     // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_RoundDecimals_ReturnValue;                // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x02F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0300(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0350(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0368(0x0010)(ReferenceParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0378(0x0050)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x03C8(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x03E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x03F0(0x0018)()
-	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0408(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_358F[0x4];                                     // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0410(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0428(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0478(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0488(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0010)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0028(0x0010)()
+	class FText                                   CallFunc_GetMinutes_ReturnValue;                   // 0x0038(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0048)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default;                             // 0x0090(0x0010)()
+	class FText                                   CallFunc_GetSeconds_ReturnValue;                   // 0x00A0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00B0(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0100(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0118(0x0010)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0130(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0178(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0188(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x01D0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x01E0(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0228(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_RoundDecimals_ReturnValue;                // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0290(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x02D8(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02E8(0x0010)(ReferenceParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x02F8(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0340(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0350(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0360(0x0010)()
+	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_374[0x4];                                      // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0378(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0388(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x03D0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x03E0(0x0010)()
 };
 static_assert(alignof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_Get_ValueLabel_Text_0");
-static_assert(sizeof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0) == 0x0004A0, "Wrong size on WB_SliderWithLabel_C_Get_ValueLabel_Text_0");
+static_assert(sizeof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0) == 0x0003F0, "Wrong size on WB_SliderWithLabel_C_Get_ValueLabel_Text_0");
 static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, ReturnValue) == 0x000000, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Greater_IntInt_ReturnValue) == 0x00001C, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, Temp_bool_Variable) == 0x00001D, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_MakeLiteralText_ReturnValue) == 0x000020, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000038, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_GetMinutes_ReturnValue) == 0x000050, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_GetMinutes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000068, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_Select_Default) == 0x0000B8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_GetSeconds_ReturnValue) == 0x0000D0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_GetSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Round_ReturnValue) == 0x000138, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array) == 0x000140, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Divide_IntInt_ReturnValue) == 0x000150, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue) == 0x000158, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000170, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_2) == 0x000178, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_1) == 0x0001C8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_3) == 0x0001D8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_1) == 0x000228, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_4) == 0x000240, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_5) == 0x000290, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Round_ReturnValue_1) == 0x0002E0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Round_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_RoundDecimals_ReturnValue) == 0x0002E8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_RoundDecimals_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Conv_DoubleToString_ReturnValue) == 0x0002F0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_6) == 0x000300, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000350, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_2) == 0x000368, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_7) == 0x000378, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_2) == 0x0003C8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_3) == 0x0003E0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_3) == 0x0003F0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Round_ReturnValue_2) == 0x000408, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Round_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000410, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_8) == 0x000428, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_4) == 0x000478, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_4) == 0x000488, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Greater_IntInt_ReturnValue) == 0x000014, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, Temp_bool_Variable) == 0x000015, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_MakeLiteralText_ReturnValue) == 0x000018, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000028, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_GetMinutes_ReturnValue) == 0x000038, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_GetMinutes_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_Select_Default) == 0x000090, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_GetSeconds_ReturnValue) == 0x0000A0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_GetSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000B0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Round_ReturnValue) == 0x0000F8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Round_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array) == 0x000100, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Divide_IntInt_ReturnValue) == 0x000110, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue) == 0x000118, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000128, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_2) == 0x000130, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_1) == 0x000178, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_3) == 0x000188, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_1) == 0x0001D0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_4) == 0x0001E0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_5) == 0x000228, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Round_ReturnValue_1) == 0x000270, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Round_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_RoundDecimals_ReturnValue) == 0x000278, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_RoundDecimals_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Conv_DoubleToString_ReturnValue) == 0x000280, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Conv_DoubleToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_6) == 0x000290, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x0002D8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_2) == 0x0002E8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_7) == 0x0002F8, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_2) == 0x000340, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_3) == 0x000350, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_3) == 0x000360, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Round_ReturnValue_2) == 0x000370, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Round_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Conv_IntToText_ReturnValue) == 0x000378, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeStruct_FormatArgumentData_8) == 0x000388, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, K2Node_MakeArray_Array_4) == 0x0003D0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_Get_ValueLabel_Text_0, CallFunc_Format_ReturnValue_4) == 0x0003E0, "Member 'WB_SliderWithLabel_C_Get_ValueLabel_Text_0::CallFunc_Format_ReturnValue_4' has a wrong offset!");
 
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.ChangeRealValue
 // 0x0008 (0x0008 - 0x0000)
@@ -392,11 +392,11 @@ static_assert(offsetof(WB_SliderWithLabel_C_OnFocusLost, InFocusEvent) == 0x0000
 struct WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature final
 {
 public:
-	double                                        Param_RealValue;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RealValue_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature) == 0x000008, "Wrong alignment on WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature");
 static_assert(sizeof(WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature) == 0x000008, "Wrong size on WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature");
-static_assert(offsetof(WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature, Param_RealValue) == 0x000000, "Member 'WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature::Param_RealValue' has a wrong offset!");
+static_assert(offsetof(WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature, RealValue_0) == 0x000000, "Member 'WB_SliderWithLabel_C_OnRealValueChanged__DelegateSignature::RealValue_0' has a wrong offset!");
 
 // Function WB_SliderWithLabel.WB_SliderWithLabel_C.ExecuteUbergraph_WB_SliderWithLabel
 // 0x0100 (0x0100 - 0x0000)
@@ -404,36 +404,36 @@ struct WB_SliderWithLabel_C_ExecuteUbergraph_WB_SliderWithLabel final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3590[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_CustomEvent_ValueChange;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_ComponentBoundEvent_Value;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3591[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_ValueToRealValue_RealValue;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0030(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3592[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3593[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3594[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3595[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UTextBlock*>                     K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3596[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3597[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetValue_ReturnValue;                     // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3598[0x4];                                     // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_ReturnValue_2;                     // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x00F0(0x0008)(NoDestructor)

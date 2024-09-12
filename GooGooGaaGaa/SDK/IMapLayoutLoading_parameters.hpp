@@ -21,16 +21,16 @@ namespace SDK::Params
 struct IMapLayoutLoading_C_SpawnActionPlaceableStatic final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_175D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Activated;                                         // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_175E[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableStaticProp_C*              SpawnedActor;                                      // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IMapLayoutLoading_C_SpawnActionPlaceableStatic) == 0x000010, "Wrong alignment on IMapLayoutLoading_C_SpawnActionPlaceableStatic");
 static_assert(sizeof(IMapLayoutLoading_C_SpawnActionPlaceableStatic) == 0x000080, "Wrong size on IMapLayoutLoading_C_SpawnActionPlaceableStatic");
-static_assert(offsetof(IMapLayoutLoading_C_SpawnActionPlaceableStatic, Param_Class) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnActionPlaceableStatic::Param_Class' has a wrong offset!");
+static_assert(offsetof(IMapLayoutLoading_C_SpawnActionPlaceableStatic, Class_0) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnActionPlaceableStatic::Class_0' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnActionPlaceableStatic, Transform) == 0x000010, "Member 'IMapLayoutLoading_C_SpawnActionPlaceableStatic::Transform' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnActionPlaceableStatic, Activated) == 0x000070, "Member 'IMapLayoutLoading_C_SpawnActionPlaceableStatic::Activated' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnActionPlaceableStatic, SpawnedActor) == 0x000078, "Member 'IMapLayoutLoading_C_SpawnActionPlaceableStatic::SpawnedActor' has a wrong offset!");
@@ -40,18 +40,18 @@ static_assert(offsetof(IMapLayoutLoading_C_SpawnActionPlaceableStatic, SpawnedAc
 struct IMapLayoutLoading_C_SpawnActionProp final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_175F[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          StartAwake;                                        // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFrozen;                                          // 0x0071(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Activated;                                         // 0x0072(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1760[0x5];                                     // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    SpawnedActor;                                      // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IMapLayoutLoading_C_SpawnActionProp) == 0x000010, "Wrong alignment on IMapLayoutLoading_C_SpawnActionProp");
 static_assert(sizeof(IMapLayoutLoading_C_SpawnActionProp) == 0x000080, "Wrong size on IMapLayoutLoading_C_SpawnActionProp");
-static_assert(offsetof(IMapLayoutLoading_C_SpawnActionProp, Param_Class) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnActionProp::Param_Class' has a wrong offset!");
+static_assert(offsetof(IMapLayoutLoading_C_SpawnActionProp, Class_0) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnActionProp::Class_0' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnActionProp, Transform) == 0x000010, "Member 'IMapLayoutLoading_C_SpawnActionProp::Transform' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnActionProp, StartAwake) == 0x000070, "Member 'IMapLayoutLoading_C_SpawnActionProp::StartAwake' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnActionProp, IsFrozen) == 0x000071, "Member 'IMapLayoutLoading_C_SpawnActionProp::IsFrozen' has a wrong offset!");
@@ -63,17 +63,17 @@ static_assert(offsetof(IMapLayoutLoading_C_SpawnActionProp, SpawnedActor) == 0x0
 struct IMapLayoutLoading_C_SpawnPlaceableLight final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1761[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Color;                                             // 0x0070(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Activated;                                         // 0x0088(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1762[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_PlaceableLight_C*                   SpawnedActor;                                      // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IMapLayoutLoading_C_SpawnPlaceableLight) == 0x000010, "Wrong alignment on IMapLayoutLoading_C_SpawnPlaceableLight");
 static_assert(sizeof(IMapLayoutLoading_C_SpawnPlaceableLight) == 0x0000A0, "Wrong size on IMapLayoutLoading_C_SpawnPlaceableLight");
-static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableLight, Param_Class) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnPlaceableLight::Param_Class' has a wrong offset!");
+static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableLight, Class_0) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnPlaceableLight::Class_0' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableLight, Transform) == 0x000010, "Member 'IMapLayoutLoading_C_SpawnPlaceableLight::Transform' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableLight, Color) == 0x000070, "Member 'IMapLayoutLoading_C_SpawnPlaceableLight::Color' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableLight, Activated) == 0x000088, "Member 'IMapLayoutLoading_C_SpawnPlaceableLight::Activated' has a wrong offset!");
@@ -84,14 +84,14 @@ static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableLight, SpawnedActor) ==
 struct IMapLayoutLoading_C_SpawnPlaceableStatic final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1763[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_PlaceableStaticProp_C*              SpawnedActor;                                      // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IMapLayoutLoading_C_SpawnPlaceableStatic) == 0x000010, "Wrong alignment on IMapLayoutLoading_C_SpawnPlaceableStatic");
 static_assert(sizeof(IMapLayoutLoading_C_SpawnPlaceableStatic) == 0x000080, "Wrong size on IMapLayoutLoading_C_SpawnPlaceableStatic");
-static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableStatic, Param_Class) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnPlaceableStatic::Param_Class' has a wrong offset!");
+static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableStatic, Class_0) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnPlaceableStatic::Class_0' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableStatic, Transform) == 0x000010, "Member 'IMapLayoutLoading_C_SpawnPlaceableStatic::Transform' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableStatic, SpawnedActor) == 0x000070, "Member 'IMapLayoutLoading_C_SpawnPlaceableStatic::SpawnedActor' has a wrong offset!");
 
@@ -100,17 +100,17 @@ static_assert(offsetof(IMapLayoutLoading_C_SpawnPlaceableStatic, SpawnedActor) =
 struct IMapLayoutLoading_C_SpawnProp final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1764[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          StartAwake;                                        // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFrozen;                                          // 0x0071(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1765[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_StaticMeshProp_C*                    SpawnedActor;                                      // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IMapLayoutLoading_C_SpawnProp) == 0x000010, "Wrong alignment on IMapLayoutLoading_C_SpawnProp");
 static_assert(sizeof(IMapLayoutLoading_C_SpawnProp) == 0x000080, "Wrong size on IMapLayoutLoading_C_SpawnProp");
-static_assert(offsetof(IMapLayoutLoading_C_SpawnProp, Param_Class) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnProp::Param_Class' has a wrong offset!");
+static_assert(offsetof(IMapLayoutLoading_C_SpawnProp, Class_0) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnProp::Class_0' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnProp, Transform) == 0x000010, "Member 'IMapLayoutLoading_C_SpawnProp::Transform' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnProp, StartAwake) == 0x000070, "Member 'IMapLayoutLoading_C_SpawnProp::StartAwake' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnProp, IsFrozen) == 0x000071, "Member 'IMapLayoutLoading_C_SpawnProp::IsFrozen' has a wrong offset!");
@@ -121,16 +121,16 @@ static_assert(offsetof(IMapLayoutLoading_C_SpawnProp, SpawnedActor) == 0x000078,
 struct IMapLayoutLoading_C_SpawnSwitch final
 {
 public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1766[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BreaksAfterUse;                                    // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1767[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Switch_C*                           SpawnedActor;                                      // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IMapLayoutLoading_C_SpawnSwitch) == 0x000010, "Wrong alignment on IMapLayoutLoading_C_SpawnSwitch");
 static_assert(sizeof(IMapLayoutLoading_C_SpawnSwitch) == 0x000080, "Wrong size on IMapLayoutLoading_C_SpawnSwitch");
-static_assert(offsetof(IMapLayoutLoading_C_SpawnSwitch, Param_Class) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnSwitch::Param_Class' has a wrong offset!");
+static_assert(offsetof(IMapLayoutLoading_C_SpawnSwitch, Class_0) == 0x000000, "Member 'IMapLayoutLoading_C_SpawnSwitch::Class_0' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnSwitch, Transform) == 0x000010, "Member 'IMapLayoutLoading_C_SpawnSwitch::Transform' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnSwitch, BreaksAfterUse) == 0x000070, "Member 'IMapLayoutLoading_C_SpawnSwitch::BreaksAfterUse' has a wrong offset!");
 static_assert(offsetof(IMapLayoutLoading_C_SpawnSwitch, SpawnedActor) == 0x000078, "Member 'IMapLayoutLoading_C_SpawnSwitch::SpawnedActor' has a wrong offset!");

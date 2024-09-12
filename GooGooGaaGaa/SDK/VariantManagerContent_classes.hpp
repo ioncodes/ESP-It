@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 #include "VariantManagerContent_structs.hpp"
 
 
@@ -26,7 +26,7 @@ class ULevelVariantSets final : public UObject
 public:
 	TSubclassOf<class UObject>                    DirectorClass;                                     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UVariantSet*>                    VariantSets;                                       // 0x0030(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E30[0x50];                                    // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetNumVariantSets();
@@ -49,12 +49,12 @@ static_assert(offsetof(ULevelVariantSets, DirectorClass) == 0x000028, "Member 'U
 static_assert(offsetof(ULevelVariantSets, VariantSets) == 0x000030, "Member 'ULevelVariantSets::VariantSets' has a wrong offset!");
 
 // Class VariantManagerContent.LevelVariantSetsActor
-// 0x0070 (0x0308 - 0x0298)
+// 0x0070 (0x0300 - 0x0290)
 class ALevelVariantSetsActor final : public AActor
 {
 public:
-	struct FSoftObjectPath                        LevelVariantSets;                                  // 0x0298(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<TSubclassOf<class UObject>, class ULevelVariantSetsFunctionDirector*> DirectorInstances;                                 // 0x02B8(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	struct FSoftObjectPath                        LevelVariantSets;                                  // 0x0290(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<TSubclassOf<class UObject>, class ULevelVariantSetsFunctionDirector*> DirectorInstances;                                 // 0x02B0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	class ULevelVariantSets* GetLevelVariantSets(bool bLoad);
@@ -73,16 +73,16 @@ public:
 	}
 };
 static_assert(alignof(ALevelVariantSetsActor) == 0x000008, "Wrong alignment on ALevelVariantSetsActor");
-static_assert(sizeof(ALevelVariantSetsActor) == 0x000308, "Wrong size on ALevelVariantSetsActor");
-static_assert(offsetof(ALevelVariantSetsActor, LevelVariantSets) == 0x000298, "Member 'ALevelVariantSetsActor::LevelVariantSets' has a wrong offset!");
-static_assert(offsetof(ALevelVariantSetsActor, DirectorInstances) == 0x0002B8, "Member 'ALevelVariantSetsActor::DirectorInstances' has a wrong offset!");
+static_assert(sizeof(ALevelVariantSetsActor) == 0x000300, "Wrong size on ALevelVariantSetsActor");
+static_assert(offsetof(ALevelVariantSetsActor, LevelVariantSets) == 0x000290, "Member 'ALevelVariantSetsActor::LevelVariantSets' has a wrong offset!");
+static_assert(offsetof(ALevelVariantSetsActor, DirectorInstances) == 0x0002B0, "Member 'ALevelVariantSetsActor::DirectorInstances' has a wrong offset!");
 
 // Class VariantManagerContent.LevelVariantSetsFunctionDirector
 // 0x0018 (0x0040 - 0x0028)
 class ULevelVariantSetsFunctionDirector final : public UObject
 {
 public:
-	uint8                                         Pad_2E35[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -98,11 +98,11 @@ static_assert(alignof(ULevelVariantSetsFunctionDirector) == 0x000008, "Wrong ali
 static_assert(sizeof(ULevelVariantSetsFunctionDirector) == 0x000040, "Wrong size on ULevelVariantSetsFunctionDirector");
 
 // Class VariantManagerContent.PropertyValue
-// 0x0190 (0x01B8 - 0x0028)
+// 0x0188 (0x01B0 - 0x0028)
 class UPropertyValue : public UObject
 {
 public:
-	uint8                                         Pad_2E36[0x60];                                    // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TFieldPath<struct FProperty>>          Properties;                                        // 0x0088(0x0010)(ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected)
 	TArray<int32>                                 PropertyIndices;                                   // 0x0098(0x0010)(ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FCapturedPropSegment>           CapturedPropSegments;                              // 0x00A8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
@@ -110,12 +110,12 @@ public:
 	class FName                                   PropertySetterName;                                // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<class FString, class FString>            PropertySetterParameterDefaults;                   // 0x00D0(0x0050)(Protected, NativeAccessSpecifierProtected)
 	bool                                          bHasRecordedData;                                  // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E37[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UObject>                    LeafPropertyClass;                                 // 0x0128(0x0008)(ZeroConstructor, Deprecated, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E38[0x8];                                     // 0x0130(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_130[0x8];                                      // 0x0130(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 ValueBytes;                                        // 0x0138(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	EPropertyValueCategory                        PropCategory;                                      // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E39[0x6F];                                    // 0x0149(0x006F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149[0x67];                                     // 0x0149(0x0067)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetFullDisplayString() const;
@@ -133,7 +133,7 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValue) == 0x000008, "Wrong alignment on UPropertyValue");
-static_assert(sizeof(UPropertyValue) == 0x0001B8, "Wrong size on UPropertyValue");
+static_assert(sizeof(UPropertyValue) == 0x0001B0, "Wrong size on UPropertyValue");
 static_assert(offsetof(UPropertyValue, Properties) == 0x000088, "Member 'UPropertyValue::Properties' has a wrong offset!");
 static_assert(offsetof(UPropertyValue, PropertyIndices) == 0x000098, "Member 'UPropertyValue::PropertyIndices' has a wrong offset!");
 static_assert(offsetof(UPropertyValue, CapturedPropSegments) == 0x0000A8, "Member 'UPropertyValue::CapturedPropSegments' has a wrong offset!");
@@ -146,7 +146,7 @@ static_assert(offsetof(UPropertyValue, ValueBytes) == 0x000138, "Member 'UProper
 static_assert(offsetof(UPropertyValue, PropCategory) == 0x000148, "Member 'UPropertyValue::PropCategory' has a wrong offset!");
 
 // Class VariantManagerContent.PropertyValueTransform
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01B0 - 0x01B0)
 class UPropertyValueTransform final : public UPropertyValue
 {
 public:
@@ -160,10 +160,10 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValueTransform) == 0x000008, "Wrong alignment on UPropertyValueTransform");
-static_assert(sizeof(UPropertyValueTransform) == 0x0001B8, "Wrong size on UPropertyValueTransform");
+static_assert(sizeof(UPropertyValueTransform) == 0x0001B0, "Wrong size on UPropertyValueTransform");
 
 // Class VariantManagerContent.PropertyValueVisibility
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01B0 - 0x01B0)
 class UPropertyValueVisibility final : public UPropertyValue
 {
 public:
@@ -177,10 +177,10 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValueVisibility) == 0x000008, "Wrong alignment on UPropertyValueVisibility");
-static_assert(sizeof(UPropertyValueVisibility) == 0x0001B8, "Wrong size on UPropertyValueVisibility");
+static_assert(sizeof(UPropertyValueVisibility) == 0x0001B0, "Wrong size on UPropertyValueVisibility");
 
 // Class VariantManagerContent.PropertyValueColor
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01B0 - 0x01B0)
 class UPropertyValueColor final : public UPropertyValue
 {
 public:
@@ -194,10 +194,10 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValueColor) == 0x000008, "Wrong alignment on UPropertyValueColor");
-static_assert(sizeof(UPropertyValueColor) == 0x0001B8, "Wrong size on UPropertyValueColor");
+static_assert(sizeof(UPropertyValueColor) == 0x0001B0, "Wrong size on UPropertyValueColor");
 
 // Class VariantManagerContent.PropertyValueMaterial
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01B0 - 0x01B0)
 class UPropertyValueMaterial final : public UPropertyValue
 {
 public:
@@ -211,10 +211,10 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValueMaterial) == 0x000008, "Wrong alignment on UPropertyValueMaterial");
-static_assert(sizeof(UPropertyValueMaterial) == 0x0001B8, "Wrong size on UPropertyValueMaterial");
+static_assert(sizeof(UPropertyValueMaterial) == 0x0001B0, "Wrong size on UPropertyValueMaterial");
 
 // Class VariantManagerContent.PropertyValueOption
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01B0 - 0x01B0)
 class UPropertyValueOption final : public UPropertyValue
 {
 public:
@@ -228,10 +228,10 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValueOption) == 0x000008, "Wrong alignment on UPropertyValueOption");
-static_assert(sizeof(UPropertyValueOption) == 0x0001B8, "Wrong size on UPropertyValueOption");
+static_assert(sizeof(UPropertyValueOption) == 0x0001B0, "Wrong size on UPropertyValueOption");
 
 // Class VariantManagerContent.PropertyValueSoftObject
-// 0x0000 (0x01B8 - 0x01B8)
+// 0x0000 (0x01B0 - 0x01B0)
 class UPropertyValueSoftObject final : public UPropertyValue
 {
 public:
@@ -245,17 +245,17 @@ public:
 	}
 };
 static_assert(alignof(UPropertyValueSoftObject) == 0x000008, "Wrong alignment on UPropertyValueSoftObject");
-static_assert(sizeof(UPropertyValueSoftObject) == 0x0001B8, "Wrong size on UPropertyValueSoftObject");
+static_assert(sizeof(UPropertyValueSoftObject) == 0x0001B0, "Wrong size on UPropertyValueSoftObject");
 
 // Class VariantManagerContent.SwitchActor
-// 0x0028 (0x02C0 - 0x0298)
+// 0x0028 (0x02B8 - 0x0290)
 class ASwitchActor final : public AActor
 {
 public:
-	uint8                                         Pad_2E3A[0x18];                                    // 0x0298(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        SceneComponent;                                    // 0x02B0(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         LastSelectedOption;                                // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E3B[0x4];                                     // 0x02BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_290[0x18];                                     // 0x0290(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        SceneComponent;                                    // 0x02A8(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         LastSelectedOption;                                // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SelectOption(int32 OptionIndex);
@@ -274,33 +274,33 @@ public:
 	}
 };
 static_assert(alignof(ASwitchActor) == 0x000008, "Wrong alignment on ASwitchActor");
-static_assert(sizeof(ASwitchActor) == 0x0002C0, "Wrong size on ASwitchActor");
-static_assert(offsetof(ASwitchActor, SceneComponent) == 0x0002B0, "Member 'ASwitchActor::SceneComponent' has a wrong offset!");
-static_assert(offsetof(ASwitchActor, LastSelectedOption) == 0x0002B8, "Member 'ASwitchActor::LastSelectedOption' has a wrong offset!");
+static_assert(sizeof(ASwitchActor) == 0x0002B8, "Wrong size on ASwitchActor");
+static_assert(offsetof(ASwitchActor, SceneComponent) == 0x0002A8, "Member 'ASwitchActor::SceneComponent' has a wrong offset!");
+static_assert(offsetof(ASwitchActor, LastSelectedOption) == 0x0002B0, "Member 'ASwitchActor::LastSelectedOption' has a wrong offset!");
 
 // Class VariantManagerContent.Variant
-// 0x0058 (0x0080 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UVariant final : public UObject
 {
 public:
 	TArray<struct FVariantDependency>             Dependencies;                                      // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class FText                                   DisplayText;                                       // 0x0038(0x0018)(Deprecated, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E3C[0x18];                                    // 0x0050(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UVariantObjectBinding*>          ObjectBindings;                                    // 0x0068(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             Thumbnail;                                         // 0x0078(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FText                                   DisplayText;                                       // 0x0038(0x0010)(Deprecated, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UVariantObjectBinding*>          ObjectBindings;                                    // 0x0058(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             Thumbnail;                                         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	int32 AddDependency(struct FVariantDependency* Dependency);
-	void DeleteDependency(int32 Param_Index);
+	void DeleteDependency(int32 Index_0);
 	class AActor* GetActor(int32 ActorIndex);
-	struct FVariantDependency GetDependency(int32 Param_Index);
+	struct FVariantDependency GetDependency(int32 Index_0);
 	TArray<class UVariant*> GetDependents(class ULevelVariantSets* LevelVariantSets, bool bOnlyEnabledDependencies);
 	int32 GetNumActors();
 	int32 GetNumDependencies();
 	class UVariantSet* GetParent();
 	class UTexture2D* GetThumbnail();
 	bool IsActive();
-	void SetDependency(int32 Param_Index, struct FVariantDependency* Dependency);
+	void SetDependency(int32 Index_0, struct FVariantDependency* Dependency);
 	void SetDisplayText(const class FText& NewDisplayText);
 	void SetThumbnailFromCamera(class UObject* WorldContextObject, const struct FTransform& CameraTransform, float FOVDegrees, float MinZ, float Gamma);
 	void SetThumbnailFromEditorViewport();
@@ -321,11 +321,11 @@ public:
 	}
 };
 static_assert(alignof(UVariant) == 0x000008, "Wrong alignment on UVariant");
-static_assert(sizeof(UVariant) == 0x000080, "Wrong size on UVariant");
+static_assert(sizeof(UVariant) == 0x000070, "Wrong size on UVariant");
 static_assert(offsetof(UVariant, Dependencies) == 0x000028, "Member 'UVariant::Dependencies' has a wrong offset!");
 static_assert(offsetof(UVariant, DisplayText) == 0x000038, "Member 'UVariant::DisplayText' has a wrong offset!");
-static_assert(offsetof(UVariant, ObjectBindings) == 0x000068, "Member 'UVariant::ObjectBindings' has a wrong offset!");
-static_assert(offsetof(UVariant, Thumbnail) == 0x000078, "Member 'UVariant::Thumbnail' has a wrong offset!");
+static_assert(offsetof(UVariant, ObjectBindings) == 0x000058, "Member 'UVariant::ObjectBindings' has a wrong offset!");
+static_assert(offsetof(UVariant, Thumbnail) == 0x000068, "Member 'UVariant::Thumbnail' has a wrong offset!");
 
 // Class VariantManagerContent.VariantObjectBinding
 // 0x0068 (0x0090 - 0x0028)
@@ -357,16 +357,16 @@ static_assert(offsetof(UVariantObjectBinding, CapturedProperties) == 0x000070, "
 static_assert(offsetof(UVariantObjectBinding, FunctionCallers) == 0x000080, "Member 'UVariantObjectBinding::FunctionCallers' has a wrong offset!");
 
 // Class VariantManagerContent.VariantSet
-// 0x0050 (0x0078 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UVariantSet final : public UObject
 {
 public:
-	class FText                                   DisplayText;                                       // 0x0028(0x0018)(Deprecated, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E44[0x18];                                    // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bExpanded;                                         // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2E45[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UVariant*>                       Variants;                                          // 0x0060(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             Thumbnail;                                         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FText                                   DisplayText;                                       // 0x0028(0x0010)(Deprecated, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bExpanded;                                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UVariant*>                       Variants;                                          // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             Thumbnail;                                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	class ULevelVariantSets* GetParent();
@@ -393,11 +393,11 @@ public:
 	}
 };
 static_assert(alignof(UVariantSet) == 0x000008, "Wrong alignment on UVariantSet");
-static_assert(sizeof(UVariantSet) == 0x000078, "Wrong size on UVariantSet");
+static_assert(sizeof(UVariantSet) == 0x000068, "Wrong size on UVariantSet");
 static_assert(offsetof(UVariantSet, DisplayText) == 0x000028, "Member 'UVariantSet::DisplayText' has a wrong offset!");
-static_assert(offsetof(UVariantSet, bExpanded) == 0x000058, "Member 'UVariantSet::bExpanded' has a wrong offset!");
-static_assert(offsetof(UVariantSet, Variants) == 0x000060, "Member 'UVariantSet::Variants' has a wrong offset!");
-static_assert(offsetof(UVariantSet, Thumbnail) == 0x000070, "Member 'UVariantSet::Thumbnail' has a wrong offset!");
+static_assert(offsetof(UVariantSet, bExpanded) == 0x000048, "Member 'UVariantSet::bExpanded' has a wrong offset!");
+static_assert(offsetof(UVariantSet, Variants) == 0x000050, "Member 'UVariantSet::Variants' has a wrong offset!");
+static_assert(offsetof(UVariantSet, Thumbnail) == 0x000060, "Member 'UVariantSet::Thumbnail' has a wrong offset!");
 
 }
 

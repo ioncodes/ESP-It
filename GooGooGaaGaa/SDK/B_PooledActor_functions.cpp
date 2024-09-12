@@ -17,96 +17,6 @@
 namespace SDK
 {
 
-// Function B_PooledActor.B_PooledActor_C.InitializeRules
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_PooledActor_C::InitializeRules()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PooledActor_C", "InitializeRules");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_PooledActor.B_PooledActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_PooledActor_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PooledActor_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_PooledActor.B_PooledActor_C.TearDown
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_PooledActor_C::TearDown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PooledActor_C", "TearDown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_PooledActor.B_PooledActor_C.TearUp
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_PooledActor_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PooledActor_C", "TearUp");
-
-	Params::B_PooledActor_C_TearUp Parms{};
-
-	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_PooledActor.B_PooledActor_C.TearUpPoolObject
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_PooledActor_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_PooledActor_C", "TearUpPoolObject");
-
-	Params::B_PooledActor_C_TearUpPoolObject Parms{};
-
-	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_PooledActor.B_PooledActor_C.ExecuteUbergraph_B_PooledActor
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -141,6 +51,62 @@ void AB_PooledActor_C::IncrementLifeTime()
 }
 
 
+// Function B_PooledActor.B_PooledActor_C.InitializeRules
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_PooledActor_C::InitializeRules()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PooledActor_C", "InitializeRules");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_PooledActor.B_PooledActor_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_PooledActor_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PooledActor_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_PooledActor.B_PooledActor_C.RulesUpdated
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_PooledActor_C::RulesUpdated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PooledActor_C", "RulesUpdated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_PooledActor.B_PooledActor_C.TearDown
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_PooledActor_C::TearDown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PooledActor_C", "TearDown");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_PooledActor.B_PooledActor_C.TearDownMulticast
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 
@@ -169,14 +135,38 @@ void AB_PooledActor_C::TearDownPoolObject()
 }
 
 
+// Function B_PooledActor.B_PooledActor_C.TearUp
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_PooledActor_C::TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_PooledActor_C", "TearUp");
+
+	Params::B_PooledActor_C_TearUp Parms{};
+
+	Parms.SpawnTransform = std::move(SpawnTransform);
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_PooledActor.B_PooledActor_C.TearUpMulticast
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            Param_Instigator                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PooledActor_C::TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator)
+void AB_PooledActor_C::TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -186,24 +176,34 @@ void AB_PooledActor_C::TearUpMulticast(const struct FTransform& SpawnTransform, 
 	Params::B_PooledActor_C_TearUpMulticast Parms{};
 
 	Parms.SpawnTransform = std::move(SpawnTransform);
-	Parms.Param_Owner = Param_Owner;
-	Parms.Param_Instigator = Param_Instigator;
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function B_PooledActor.B_PooledActor_C.RulesUpdated
-// (BlueprintCallable, BlueprintEvent)
+// Function B_PooledActor.B_PooledActor_C.TearUpPoolObject
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            Instigator_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_PooledActor_C::RulesUpdated()
+void AB_PooledActor_C::TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_PooledActor_C", "RulesUpdated");
+		Func = Class->GetFunction("B_PooledActor_C", "TearUpPoolObject");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_PooledActor_C_TearUpPoolObject Parms{};
+
+	Parms.SpawnTransform = std::move(SpawnTransform);
+	Parms.Owner_0 = Owner_0;
+	Parms.Instigator_0 = Instigator_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

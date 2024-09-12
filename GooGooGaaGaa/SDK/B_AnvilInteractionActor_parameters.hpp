@@ -20,11 +20,11 @@ struct B_AnvilInteractionActor_C_ActOnAnimationFinished final
 {
 public:
 	int32                                         Temp_int_Variable;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35FE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CollectTask_C*                       K2Node_DynamicCast_AsB_Collect_Task;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35FF[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AnvilInteractionActor_C_ActOnAnimationFinished) == 0x000008, "Wrong alignment on B_AnvilInteractionActor_C_ActOnAnimationFinished");
@@ -57,9 +57,9 @@ struct B_AnvilInteractionActor_C_ExecuteUbergraph_B_AnvilInteractionActor final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3600[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3601[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AB_AnvilDummy_C*>                CallFunc_GetAllActorsOfClass_OutActors;            // 0x0010(0x0010)(ReferenceParm)
 	class AB_AnvilDummy_C*                        CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -83,15 +83,15 @@ struct B_AnvilInteractionActor_C_OpenWaitTaskScreen final
 {
 public:
 	bool                                          WithProgressBar;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3602[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3603[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CollectTask_C*                       K2Node_DynamicCast_AsB_Collect_Task;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3604[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_AnvilTaskOverlay_C*                 CallFunc_Create_ReturnValue;                       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AnvilInteractionActor_C_OpenWaitTaskScreen) == 0x000008, "Wrong alignment on B_AnvilInteractionActor_C_OpenWaitTaskScreen");
@@ -121,25 +121,25 @@ static_assert(offsetof(B_AnvilInteractionActor_C_React, CallFunc_LessEqual_IntIn
 static_assert(offsetof(B_AnvilInteractionActor_C_React, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'B_AnvilInteractionActor_C_React::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_AnvilInteractionActor.B_AnvilInteractionActor_C.SetAnvilToolTip
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct B_AnvilInteractionActor_C_SetAnvilToolTip final
 {
 public:
-	class FText                                   ToolTip_Text;                                      // 0x0000(0x0018)(Edit, BlueprintVisible)
+	class FText                                   ToolTip_Text;                                      // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(B_AnvilInteractionActor_C_SetAnvilToolTip) == 0x000008, "Wrong alignment on B_AnvilInteractionActor_C_SetAnvilToolTip");
-static_assert(sizeof(B_AnvilInteractionActor_C_SetAnvilToolTip) == 0x000018, "Wrong size on B_AnvilInteractionActor_C_SetAnvilToolTip");
+static_assert(sizeof(B_AnvilInteractionActor_C_SetAnvilToolTip) == 0x000010, "Wrong size on B_AnvilInteractionActor_C_SetAnvilToolTip");
 static_assert(offsetof(B_AnvilInteractionActor_C_SetAnvilToolTip, ToolTip_Text) == 0x000000, "Member 'B_AnvilInteractionActor_C_SetAnvilToolTip::ToolTip_Text' has a wrong offset!");
 
 // Function B_AnvilInteractionActor.B_AnvilInteractionActor_C.UpdateTootlipWithDummy
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct B_AnvilInteractionActor_C_UpdateTootlipWithDummy final
 {
 public:
-	class FText                                   ToolTip_Text;                                      // 0x0000(0x0018)(Edit, BlueprintVisible)
+	class FText                                   ToolTip_Text;                                      // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(B_AnvilInteractionActor_C_UpdateTootlipWithDummy) == 0x000008, "Wrong alignment on B_AnvilInteractionActor_C_UpdateTootlipWithDummy");
-static_assert(sizeof(B_AnvilInteractionActor_C_UpdateTootlipWithDummy) == 0x000018, "Wrong size on B_AnvilInteractionActor_C_UpdateTootlipWithDummy");
+static_assert(sizeof(B_AnvilInteractionActor_C_UpdateTootlipWithDummy) == 0x000010, "Wrong size on B_AnvilInteractionActor_C_UpdateTootlipWithDummy");
 static_assert(offsetof(B_AnvilInteractionActor_C_UpdateTootlipWithDummy, ToolTip_Text) == 0x000000, "Member 'B_AnvilInteractionActor_C_UpdateTootlipWithDummy::ToolTip_Text' has a wrong offset!");
 
 // Function B_AnvilInteractionActor.B_AnvilInteractionActor_C.UserConstructionScript

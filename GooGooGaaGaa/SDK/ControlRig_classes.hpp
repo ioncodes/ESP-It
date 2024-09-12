@@ -10,16 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "RigVM_classes.hpp"
-#include "Constraints_structs.hpp"
-#include "Constraints_classes.hpp"
-#include "ControlRig_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
-#include "AnimationCore_structs.hpp"
+#include "RigVM_structs.hpp"
+#include "RigVM_classes.hpp"
 #include "MovieSceneTracks_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
+#include "AnimationCore_structs.hpp"
+#include "ControlRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "Constraints_structs.hpp"
+#include "Constraints_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
@@ -29,17 +31,18 @@ namespace SDK
 {
 
 // Class ControlRig.ControlRigShapeLibraryLink
-// 0x0018 (0x0118 - 0x0100)
+// 0x0040 (0x0140 - 0x0100)
 class UControlRigShapeLibraryLink final : public UNameSpacedUserData
 {
 public:
-	class UControlRigShapeLibrary*                ShapeLibrary;                                      // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           ShapeNames;                                        // 0x0108(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UControlRigShapeLibrary> ShapeLibrary;                                      // 0x0100(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           ShapeNames;                                        // 0x0128(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	class UControlRigShapeLibrary*                ShapeLibraryCached;                                // 0x0138(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void SetShapeLibrary(class UControlRigShapeLibrary* InShapeLibrary);
+	void SetShapeLibrary(TSoftObjectPtr<class UControlRigShapeLibrary> InShapeLibrary);
 
-	class UControlRigShapeLibrary* GetShapeLibrary() const;
+	TSoftObjectPtr<class UControlRigShapeLibrary> GetShapeLibrary() const;
 
 public:
 	static class UClass* StaticClass()
@@ -52,31 +55,139 @@ public:
 	}
 };
 static_assert(alignof(UControlRigShapeLibraryLink) == 0x000008, "Wrong alignment on UControlRigShapeLibraryLink");
-static_assert(sizeof(UControlRigShapeLibraryLink) == 0x000118, "Wrong size on UControlRigShapeLibraryLink");
+static_assert(sizeof(UControlRigShapeLibraryLink) == 0x000140, "Wrong size on UControlRigShapeLibraryLink");
 static_assert(offsetof(UControlRigShapeLibraryLink, ShapeLibrary) == 0x000100, "Member 'UControlRigShapeLibraryLink::ShapeLibrary' has a wrong offset!");
-static_assert(offsetof(UControlRigShapeLibraryLink, ShapeNames) == 0x000108, "Member 'UControlRigShapeLibraryLink::ShapeNames' has a wrong offset!");
+static_assert(offsetof(UControlRigShapeLibraryLink, ShapeNames) == 0x000128, "Member 'UControlRigShapeLibraryLink::ShapeNames' has a wrong offset!");
+static_assert(offsetof(UControlRigShapeLibraryLink, ShapeLibraryCached) == 0x000138, "Member 'UControlRigShapeLibraryLink::ShapeLibraryCached' has a wrong offset!");
+
+// Class ControlRig.ControlRig
+// 0x0830 (0x0AA8 - 0x0278)
+class UControlRig : public URigVMHost
+{
+public:
+	uint8                                         Pad_278[0x10];                                     // 0x0278(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	ERigExecutionType                             ExecutionType;                                     // 0x0288(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigHierarchySettings                  HierarchySettings;                                 // 0x028C(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
+	TMap<struct FRigElementKey, struct FRigControlElementCustomization> ControlCustomizations;                             // 0x0290(0x0050)(Protected, NativeAccessSpecifierProtected)
+	class URigHierarchy*                          DynamicHierarchy;                                  // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class UControlRigShapeLibrary>> ShapeLibraries;                                    // 0x02E8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TMap<class FString, class FString>            ShapeLibraryNameMap;                               // 0x02F8(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_348[0x10];                                     // 0x0348(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigVMExtendedExecuteContext           RigVMExtendedExecuteContext;                       // 0x0358(0x0228)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_580[0x8];                                      // 0x0580(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimationDataSourceRegistry*           DataSourceRegistry;                                // 0x0588(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_590[0xA8];                                     // 0x0590(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigInfluenceMapPerEvent               Influences;                                        // 0x0638(0x0060)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_698[0xB8];                                     // 0x0698(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, class UDataAssetLink*>      ExternalVariableDataAssetLinks;                    // 0x0750(0x0050)(ExportObject, Transient, DuplicateTransient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_7A0[0xD0];                                     // 0x07A0(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastSparseDelegateProperty_             OnControlSelected_BP;                              // 0x0870(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_871[0x17];                                     // 0x0871(0x0017)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsAdditive;                                       // 0x0888(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_889[0x18F];                                    // 0x0889(0x018F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigModuleSettings                     RigModuleSettings;                                 // 0x0A18(0x0080)(NativeAccessSpecifierPrivate)
+	class FString                                 RigModuleNameSpace;                                // 0x0A98(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static TArray<class UControlRig*> FindControlRigs(class UObject* Outer_0, TSubclassOf<class UControlRig> OptionalClass);
+
+	bool ClearControlSelection();
+	class URigHierarchy* GetHierarchy();
+	void OnControlSelectedBP__DelegateSignature(class UControlRig* Rig, const struct FRigControlElement& Control, bool bSelected);
+	void RequestConstruction();
+	void SelectControl(const class FName& InControlName, bool bSelect);
+	void SetInteractionRig(class UControlRig* InInteractionRig);
+	void SetInteractionRigClass(TSubclassOf<class UControlRig> InInteractionRigClass);
+
+	class UTransformableControlHandle* CreateTransformableControlHandle(const class FName& ControlName) const;
+	TArray<class FName> CurrentControlSelection() const;
+	class AActor* GetHostingActor() const;
+	class UControlRig* GetInteractionRig() const;
+	TSubclassOf<class UControlRig> GetInteractionRigClass() const;
+	bool IsControlSelected(const class FName& InControlName) const;
+	bool SupportsBackwardsSolve() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ControlRig">();
+	}
+	static class UControlRig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UControlRig>();
+	}
+};
+static_assert(alignof(UControlRig) == 0x000008, "Wrong alignment on UControlRig");
+static_assert(sizeof(UControlRig) == 0x000AA8, "Wrong size on UControlRig");
+static_assert(offsetof(UControlRig, ExecutionType) == 0x000288, "Member 'UControlRig::ExecutionType' has a wrong offset!");
+static_assert(offsetof(UControlRig, HierarchySettings) == 0x00028C, "Member 'UControlRig::HierarchySettings' has a wrong offset!");
+static_assert(offsetof(UControlRig, ControlCustomizations) == 0x000290, "Member 'UControlRig::ControlCustomizations' has a wrong offset!");
+static_assert(offsetof(UControlRig, DynamicHierarchy) == 0x0002E0, "Member 'UControlRig::DynamicHierarchy' has a wrong offset!");
+static_assert(offsetof(UControlRig, ShapeLibraries) == 0x0002E8, "Member 'UControlRig::ShapeLibraries' has a wrong offset!");
+static_assert(offsetof(UControlRig, ShapeLibraryNameMap) == 0x0002F8, "Member 'UControlRig::ShapeLibraryNameMap' has a wrong offset!");
+static_assert(offsetof(UControlRig, RigVMExtendedExecuteContext) == 0x000358, "Member 'UControlRig::RigVMExtendedExecuteContext' has a wrong offset!");
+static_assert(offsetof(UControlRig, DataSourceRegistry) == 0x000588, "Member 'UControlRig::DataSourceRegistry' has a wrong offset!");
+static_assert(offsetof(UControlRig, Influences) == 0x000638, "Member 'UControlRig::Influences' has a wrong offset!");
+static_assert(offsetof(UControlRig, ExternalVariableDataAssetLinks) == 0x000750, "Member 'UControlRig::ExternalVariableDataAssetLinks' has a wrong offset!");
+static_assert(offsetof(UControlRig, OnControlSelected_BP) == 0x000870, "Member 'UControlRig::OnControlSelected_BP' has a wrong offset!");
+static_assert(offsetof(UControlRig, bIsAdditive) == 0x000888, "Member 'UControlRig::bIsAdditive' has a wrong offset!");
+static_assert(offsetof(UControlRig, RigModuleSettings) == 0x000A18, "Member 'UControlRig::RigModuleSettings' has a wrong offset!");
+static_assert(offsetof(UControlRig, RigModuleNameSpace) == 0x000A98, "Member 'UControlRig::RigModuleNameSpace' has a wrong offset!");
+
+// Class ControlRig.ModularRig
+// 0x0190 (0x0C38 - 0x0AA8)
+class UModularRig final : public UControlRig
+{
+public:
+	TArray<struct FRigModuleInstance>             Modules;                                           // 0x0AA8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AB8[0x20];                                     // 0x0AB8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModularRigSettings                    ModularRigSettings;                                // 0x0AD8(0x0001)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AD9[0x7];                                      // 0x0AD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModularRigModel                       ModularRigModel;                                   // 0x0AE0(0x00A0)(NativeAccessSpecifierPublic)
+	TArray<struct FRigModuleExecutionElement>     ExecutionQueue;                                    // 0x0B80(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B90[0xA8];                                     // 0x0B90(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ModularRig">();
+	}
+	static class UModularRig* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModularRig>();
+	}
+};
+static_assert(alignof(UModularRig) == 0x000008, "Wrong alignment on UModularRig");
+static_assert(sizeof(UModularRig) == 0x000C38, "Wrong size on UModularRig");
+static_assert(offsetof(UModularRig, Modules) == 0x000AA8, "Member 'UModularRig::Modules' has a wrong offset!");
+static_assert(offsetof(UModularRig, ModularRigSettings) == 0x000AD8, "Member 'UModularRig::ModularRigSettings' has a wrong offset!");
+static_assert(offsetof(UModularRig, ModularRigModel) == 0x000AE0, "Member 'UModularRig::ModularRigModel' has a wrong offset!");
+static_assert(offsetof(UModularRig, ExecutionQueue) == 0x000B80, "Member 'UModularRig::ExecutionQueue' has a wrong offset!");
 
 // Class ControlRig.RigHierarchy
-// 0x0358 (0x0380 - 0x0028)
+// 0x04A8 (0x04D0 - 0x0028)
 class alignas(0x10) URigHierarchy final : public UObject
 {
 public:
-	uint8                                         Pad_2BEF[0x18];                                    // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             ModifiedEventDynamic;                              // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2BF0[0x48];                                    // 0x0050(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	uint16                                        TopologyVersion;                                   // 0x0098(0x0002)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint16                                        MetadataVersion;                                   // 0x009A(0x0002)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint16                                        MetadataTagVersion;                                // 0x009C(0x0002)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bEnableDirtyPropagation;                           // 0x009E(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2BF1[0x99];                                    // 0x009F(0x0099)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TransformStackIndex;                               // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2BF2[0x74];                                    // 0x013C(0x0074)(Fixing Size After Last Property [ Dumper-7 ])
-	class URigHierarchyController*                HierarchyController;                               // 0x01B0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2BF3[0x58];                                    // 0x01B8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FRigElementKey, struct FRigElementKey> PreviousNameMap;                                   // 0x0210(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2BF4[0x80];                                    // 0x0260(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
-	class URigHierarchy*                          HierarchyForCacheValidation;                       // 0x02E0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2BF5[0x98];                                    // 0x02E8(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_50[0x48];                                      // 0x0050(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        TopologyVersion;                                   // 0x0098(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        MetadataVersion;                                   // 0x009C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        MetadataTagVersion;                                // 0x00A0(0x0002)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bEnableDirtyPropagation;                           // 0x00A2(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A3[0x131];                                     // 0x00A3(0x0131)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TransformStackIndex;                               // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1D8[0x78];                                     // 0x01D8(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	class URigHierarchyController*                HierarchyController;                               // 0x0250(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UModularRigRuleManager*                 RuleManager;                                       // 0x0260(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_268[0x50];                                     // 0x0268(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FRigElementKey, struct FRigElementKey> PreviousNameMap;                                   // 0x02B8(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_308[0xF8];                                     // 0x0308(0x00F8)(Fixing Size After Last Property [ Dumper-7 ])
+	class URigHierarchy*                          HierarchyForCacheValidation;                       // 0x0400(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_408[0xC8];                                     // 0x0408(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static struct FEulerTransform GetEulerTransformFromControlValue(const struct FRigControlValue& InValue);
@@ -100,17 +211,20 @@ public:
 	void CopyHierarchy(class URigHierarchy* InHierarchy);
 	void CopyPose(class URigHierarchy* InHierarchy, bool bCurrent, bool bInitial, bool bWeights, bool bMatchPoseInGlobalIfNeeded);
 	class URigHierarchyController* GetController(bool bCreateIfNeeded);
-	TArray<class FName> GetMetadataNames(const struct FRigElementKey& InItem);
-	ERigMetadataType GetMetadataType(const struct FRigElementKey& InItem, class FName InMetadataName);
+	class UModularRigRuleManager* GetRuleManager(bool bCreateIfNeeded);
 	bool RemoveAllMetadata(const struct FRigElementKey& InItem);
 	bool RemoveMetadata(const struct FRigElementKey& InItem, class FName InMetadataName);
 	void Reset();
 	void ResetCurveValues();
 	void ResetPoseToInitial(ERigElementType InTypeFilter);
 	void ResetToDefault();
+	TArray<struct FRigElementKey> RestoreConnectorsFromStates(const TArray<struct FRigConnectorState>& InStates, bool bSetupUndoRedo);
+	TArray<struct FRigElementKey> RestoreSocketsFromStates(const TArray<struct FRigSocketState>& InStates, bool bSetupUndoRedo);
 	void SendAutoKeyEvent(const struct FRigElementKey& InElement, float InOffsetInSeconds, bool bAsynchronous);
 	bool SetBoolArrayMetadata(const struct FRigElementKey& InItem, class FName InMetadataName, const TArray<bool>& InValue);
 	bool SetBoolMetadata(const struct FRigElementKey& InItem, class FName InMetadataName, bool InValue);
+	void SetConnectorSettings(const struct FRigElementKey& InKey, const struct FRigConnectorSettings& InSettings, bool bSetupUndo, bool bForce, bool bPrintPythonCommands);
+	void SetConnectorSettingsByIndex(int32 InElementIndex, const struct FRigConnectorSettings& InSettings, bool bSetupUndo, bool bForce, bool bPrintPythonCommands);
 	void SetControlOffsetTransform(const struct FRigElementKey& InKey, const struct FTransform& InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommands);
 	void SetControlOffsetTransformByIndex(int32 InElementIndex, const struct FTransform& InTransform, bool bInitial, bool bAffectChildren, bool bSetupUndo, bool bPrintPythonCommands);
 	void SetControlPreferredEulerAngles(const struct FRigElementKey& InKey, const struct FVector& InEulerAngles, EEulerRotationOrder InRotationOrder, bool bInitial, bool bFixEulerFlips);
@@ -170,6 +284,8 @@ public:
 	TArray<bool> GetBoolArrayMetadata(const struct FRigElementKey& InItem, class FName InMetadataName) const;
 	bool GetBoolMetadata(const struct FRigElementKey& InItem, class FName InMetadataName, bool DefaultValue) const;
 	TArray<struct FRigElementKey> GetChildren(const struct FRigElementKey& InKey, bool bRecursive) const;
+	TArray<struct FRigElementKey> GetConnectorKeys(bool bTraverse) const;
+	TArray<struct FRigConnectorState> GetConnectorStates() const;
 	TArray<struct FRigElementKey> GetControlKeys(bool bTraverse) const;
 	struct FVector GetControlPreferredEulerAngles(const struct FRigElementKey& InKey, EEulerRotationOrder InRotationOrder, bool bInitial) const;
 	struct FVector GetControlPreferredEulerAnglesByIndex(int32 InElementIndex, EEulerRotationOrder InRotationOrder, bool bInitial) const;
@@ -204,8 +320,14 @@ public:
 	int32 GetLocalIndex_ForBlueprint(const struct FRigElementKey& InKey) const;
 	struct FTransform GetLocalTransform(const struct FRigElementKey& InKey, bool bInitial) const;
 	struct FTransform GetLocalTransformByIndex(int32 InElementIndex, bool bInitial) const;
+	TArray<class FName> GetMetadataNames(const struct FRigElementKey& InItem) const;
+	ERigMetadataType GetMetadataType(const struct FRigElementKey& InItem, class FName InMetadataName) const;
+	class FString GetModulePath(const struct FRigElementKey& InItem) const;
+	class FName GetModulePathFName(const struct FRigElementKey& InItem) const;
 	TArray<class FName> GetNameArrayMetadata(const struct FRigElementKey& InItem, class FName InMetadataName) const;
 	class FName GetNameMetadata(const struct FRigElementKey& InItem, class FName InMetadataName, class FName DefaultValue) const;
+	class FString GetNamespace(const struct FRigElementKey& InItem) const;
+	class FName GetNameSpaceFName(const struct FRigElementKey& InItem) const;
 	TArray<struct FRigElementKey> GetNullKeys(bool bTraverse) const;
 	int32 GetNumberOfParents(const struct FRigElementKey& InKey) const;
 	TArray<struct FRigElementKey> GetParents(const struct FRigElementKey& InKey, bool bRecursive) const;
@@ -213,7 +335,7 @@ public:
 	struct FTransform GetParentTransformByIndex(int32 InElementIndex, bool bInitial) const;
 	struct FRigElementWeight GetParentWeight(const struct FRigElementKey& InChild, const struct FRigElementKey& InParent, bool bInitial) const;
 	TArray<struct FRigElementWeight> GetParentWeightArray(const struct FRigElementKey& InChild, bool bInitial) const;
-	struct FRigPose GetPose(bool bInitial) const;
+	struct FRigPose GetPose(bool bInitial, bool bIncludeTransientControls) const;
 	class FName GetPreviousName(const struct FRigElementKey& InKey) const;
 	struct FRigElementKey GetPreviousParent(const struct FRigElementKey& InKey) const;
 	TArray<struct FQuat> GetQuatArrayMetadata(const struct FRigElementKey& InItem, class FName InMetadataName) const;
@@ -226,6 +348,8 @@ public:
 	TArray<struct FRotator> GetRotatorArrayMetadata(const struct FRigElementKey& InItem, class FName InMetadataName) const;
 	struct FRotator GetRotatorMetadata(const struct FRigElementKey& InItem, class FName InMetadataName, const struct FRotator& DefaultValue) const;
 	TArray<struct FRigElementKey> GetSelectedKeys(ERigElementType InTypeFilter) const;
+	TArray<struct FRigElementKey> GetSocketKeys(bool bTraverse) const;
+	TArray<struct FRigSocketState> GetSocketStates() const;
 	TArray<class FName> GetTags(const struct FRigElementKey& InItem) const;
 	TArray<struct FTransform> GetTransformArrayMetadata(const struct FRigElementKey& InItem, class FName InMetadataName) const;
 	struct FTransform GetTransformMetadata(const struct FRigElementKey& InItem, class FName InMetadataName, const struct FTransform& DefaultValue) const;
@@ -254,24 +378,64 @@ public:
 	}
 };
 static_assert(alignof(URigHierarchy) == 0x000010, "Wrong alignment on URigHierarchy");
-static_assert(sizeof(URigHierarchy) == 0x000380, "Wrong size on URigHierarchy");
+static_assert(sizeof(URigHierarchy) == 0x0004D0, "Wrong size on URigHierarchy");
 static_assert(offsetof(URigHierarchy, ModifiedEventDynamic) == 0x000040, "Member 'URigHierarchy::ModifiedEventDynamic' has a wrong offset!");
 static_assert(offsetof(URigHierarchy, TopologyVersion) == 0x000098, "Member 'URigHierarchy::TopologyVersion' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, MetadataVersion) == 0x00009A, "Member 'URigHierarchy::MetadataVersion' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, MetadataTagVersion) == 0x00009C, "Member 'URigHierarchy::MetadataTagVersion' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, bEnableDirtyPropagation) == 0x00009E, "Member 'URigHierarchy::bEnableDirtyPropagation' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, TransformStackIndex) == 0x000138, "Member 'URigHierarchy::TransformStackIndex' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, HierarchyController) == 0x0001B0, "Member 'URigHierarchy::HierarchyController' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, PreviousNameMap) == 0x000210, "Member 'URigHierarchy::PreviousNameMap' has a wrong offset!");
-static_assert(offsetof(URigHierarchy, HierarchyForCacheValidation) == 0x0002E0, "Member 'URigHierarchy::HierarchyForCacheValidation' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, MetadataVersion) == 0x00009C, "Member 'URigHierarchy::MetadataVersion' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, MetadataTagVersion) == 0x0000A0, "Member 'URigHierarchy::MetadataTagVersion' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, bEnableDirtyPropagation) == 0x0000A2, "Member 'URigHierarchy::bEnableDirtyPropagation' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, TransformStackIndex) == 0x0001D4, "Member 'URigHierarchy::TransformStackIndex' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, HierarchyController) == 0x000250, "Member 'URigHierarchy::HierarchyController' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, RuleManager) == 0x000260, "Member 'URigHierarchy::RuleManager' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, PreviousNameMap) == 0x0002B8, "Member 'URigHierarchy::PreviousNameMap' has a wrong offset!");
+static_assert(offsetof(URigHierarchy, HierarchyForCacheValidation) == 0x000400, "Member 'URigHierarchy::HierarchyForCacheValidation' has a wrong offset!");
+
+// Class ControlRig.RigHierarchyProvider
+// 0x0000 (0x0028 - 0x0028)
+class IRigHierarchyProvider final : public IInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RigHierarchyProvider">();
+	}
+	static class IRigHierarchyProvider* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IRigHierarchyProvider>();
+	}
+};
+static_assert(alignof(IRigHierarchyProvider) == 0x000008, "Wrong alignment on IRigHierarchyProvider");
+static_assert(sizeof(IRigHierarchyProvider) == 0x000028, "Wrong size on IRigHierarchyProvider");
+
+// Class ControlRig.AnimNodeControlRigLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAnimNodeControlRigLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FControlRigReference ConvertToControlRig(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToControlRigPure(const struct FAnimNodeReference& Node, struct FControlRigReference* ControlRig, bool* Result);
+	static struct FControlRigReference SetControlRigClass(const struct FControlRigReference& Node, TSubclassOf<class UControlRig> ControlRigClass);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimNodeControlRigLibrary">();
+	}
+	static class UAnimNodeControlRigLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNodeControlRigLibrary>();
+	}
+};
+static_assert(alignof(UAnimNodeControlRigLibrary) == 0x000008, "Wrong alignment on UAnimNodeControlRigLibrary");
+static_assert(sizeof(UAnimNodeControlRigLibrary) == 0x000028, "Wrong size on UAnimNodeControlRigLibrary");
 
 // Class ControlRig.TransformableControlHandle
-// 0x0030 (0x0088 - 0x0058)
+// 0x0030 (0x0090 - 0x0060)
 class UTransformableControlHandle final : public UTransformableHandle
 {
 public:
-	TSoftObjectPtr<class UControlRig>             ControlRig;                                        // 0x0058(0x0028)(BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ControlName;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UControlRig>             ControlRig;                                        // 0x0060(0x0028)(BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ControlName;                                       // 0x0088(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -284,77 +448,12 @@ public:
 	}
 };
 static_assert(alignof(UTransformableControlHandle) == 0x000008, "Wrong alignment on UTransformableControlHandle");
-static_assert(sizeof(UTransformableControlHandle) == 0x000088, "Wrong size on UTransformableControlHandle");
-static_assert(offsetof(UTransformableControlHandle, ControlRig) == 0x000058, "Member 'UTransformableControlHandle::ControlRig' has a wrong offset!");
-static_assert(offsetof(UTransformableControlHandle, ControlName) == 0x000080, "Member 'UTransformableControlHandle::ControlName' has a wrong offset!");
-
-// Class ControlRig.ControlRig
-// 0x02D8 (0x0610 - 0x0338)
-class UControlRig : public URigVMHost
-{
-public:
-	uint8                                         Pad_2C95[0x8];                                     // 0x0338(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	ERigExecutionType                             ExecutionType;                                     // 0x0340(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C96[0x3];                                     // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigHierarchySettings                  HierarchySettings;                                 // 0x0344(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
-	TMap<struct FRigElementKey, struct FRigControlElementCustomization> ControlCustomizations;                             // 0x0348(0x0050)(Protected, NativeAccessSpecifierProtected)
-	class URigHierarchy*                          DynamicHierarchy;                                  // 0x0398(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class UControlRigShapeLibrary>> ShapeLibraries;                                    // 0x03A0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TMap<class FString, class FString>            ShapeLibraryNameMap;                               // 0x03B0(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C97[0x18];                                    // 0x0400(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimationDataSourceRegistry*           DataSourceRegistry;                                // 0x0418(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2C98[0x90];                                    // 0x0420(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigInfluenceMapPerEvent               Influences;                                        // 0x04B0(0x0060)(NativeAccessSpecifierPrivate)
-	class UControlRig*                            InteractionRig;                                    // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSubclassOf<class UControlRig>                InteractionRigClass;                               // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2C99[0xD0];                                    // 0x0520(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastSparseDelegateProperty_             OnControlSelected_BP;                              // 0x05F0(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C9A[0x1F];                                    // 0x05F1(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static TArray<class UControlRig*> FindControlRigs(class UObject* Param_Outer, TSubclassOf<class UControlRig> OptionalClass);
-
-	bool ClearControlSelection();
-	class URigHierarchy* GetHierarchy();
-	void OnControlSelectedBP__DelegateSignature(class UControlRig* Rig, const struct FRigControlElement& Control, bool bSelected);
-	void RequestConstruction();
-	void SelectControl(const class FName& InControlName, bool bSelect);
-	void SetInteractionRig(class UControlRig* InInteractionRig);
-	void SetInteractionRigClass(TSubclassOf<class UControlRig> InInteractionRigClass);
-
-	class UTransformableControlHandle* CreateTransformableControlHandle(class UObject* Param_Outer, const class FName& ControlName) const;
-	TArray<class FName> CurrentControlSelection() const;
-	class AActor* GetHostingActor() const;
-	class UControlRig* GetInteractionRig() const;
-	TSubclassOf<class UControlRig> GetInteractionRigClass() const;
-	bool IsControlSelected(const class FName& InControlName) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ControlRig">();
-	}
-	static class UControlRig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UControlRig>();
-	}
-};
-static_assert(alignof(UControlRig) == 0x000008, "Wrong alignment on UControlRig");
-static_assert(sizeof(UControlRig) == 0x000610, "Wrong size on UControlRig");
-static_assert(offsetof(UControlRig, ExecutionType) == 0x000340, "Member 'UControlRig::ExecutionType' has a wrong offset!");
-static_assert(offsetof(UControlRig, HierarchySettings) == 0x000344, "Member 'UControlRig::HierarchySettings' has a wrong offset!");
-static_assert(offsetof(UControlRig, ControlCustomizations) == 0x000348, "Member 'UControlRig::ControlCustomizations' has a wrong offset!");
-static_assert(offsetof(UControlRig, DynamicHierarchy) == 0x000398, "Member 'UControlRig::DynamicHierarchy' has a wrong offset!");
-static_assert(offsetof(UControlRig, ShapeLibraries) == 0x0003A0, "Member 'UControlRig::ShapeLibraries' has a wrong offset!");
-static_assert(offsetof(UControlRig, ShapeLibraryNameMap) == 0x0003B0, "Member 'UControlRig::ShapeLibraryNameMap' has a wrong offset!");
-static_assert(offsetof(UControlRig, DataSourceRegistry) == 0x000418, "Member 'UControlRig::DataSourceRegistry' has a wrong offset!");
-static_assert(offsetof(UControlRig, Influences) == 0x0004B0, "Member 'UControlRig::Influences' has a wrong offset!");
-static_assert(offsetof(UControlRig, InteractionRig) == 0x000510, "Member 'UControlRig::InteractionRig' has a wrong offset!");
-static_assert(offsetof(UControlRig, InteractionRigClass) == 0x000518, "Member 'UControlRig::InteractionRigClass' has a wrong offset!");
-static_assert(offsetof(UControlRig, OnControlSelected_BP) == 0x0005F0, "Member 'UControlRig::OnControlSelected_BP' has a wrong offset!");
+static_assert(sizeof(UTransformableControlHandle) == 0x000090, "Wrong size on UTransformableControlHandle");
+static_assert(offsetof(UTransformableControlHandle, ControlRig) == 0x000060, "Member 'UTransformableControlHandle::ControlRig' has a wrong offset!");
+static_assert(offsetof(UTransformableControlHandle, ControlName) == 0x000088, "Member 'UTransformableControlHandle::ControlName' has a wrong offset!");
 
 // Class ControlRig.ControlRigAnimInstance
-// 0x0000 (0x0350 - 0x0350)
+// 0x0000 (0x0370 - 0x0370)
 class UControlRigAnimInstance final : public UAnimInstance
 {
 public:
@@ -368,10 +467,10 @@ public:
 	}
 };
 static_assert(alignof(UControlRigAnimInstance) == 0x000010, "Wrong alignment on UControlRigAnimInstance");
-static_assert(sizeof(UControlRigAnimInstance) == 0x000350, "Wrong size on UControlRigAnimInstance");
+static_assert(sizeof(UControlRigAnimInstance) == 0x000370, "Wrong size on UControlRigAnimInstance");
 
 // Class ControlRig.ControlRigBlueprintGeneratedClass
-// 0x0000 (0x0390 - 0x0390)
+// 0x0000 (0x0388 - 0x0388)
 class UControlRigBlueprintGeneratedClass final : public URigVMBlueprintGeneratedClass
 {
 public:
@@ -385,45 +484,45 @@ public:
 	}
 };
 static_assert(alignof(UControlRigBlueprintGeneratedClass) == 0x000008, "Wrong alignment on UControlRigBlueprintGeneratedClass");
-static_assert(sizeof(UControlRigBlueprintGeneratedClass) == 0x000390, "Wrong size on UControlRigBlueprintGeneratedClass");
+static_assert(sizeof(UControlRigBlueprintGeneratedClass) == 0x000388, "Wrong size on UControlRigBlueprintGeneratedClass");
 
 // Class ControlRig.ControlRigComponent
-// 0x0160 (0x06D0 - 0x0570)
+// 0x0160 (0x0680 - 0x0520)
 class UControlRigComponent final : public UPrimitiveComponent
 {
 public:
-	TSubclassOf<class UControlRig>                ControlRigClass;                                   // 0x0570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPreInitializeDelegate;                           // 0x0578(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPostInitializeDelegate;                          // 0x0588(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPreConstructionDelegate;                         // 0x0598(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPostConstructionDelegate;                        // 0x05A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPreForwardsSolveDelegate;                        // 0x05B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPostForwardsSolveDelegate;                       // 0x05C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TArray<struct FControlRigComponentMappedElement> UserDefinedElements;                               // 0x05D8(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<struct FControlRigComponentMappedElement> MappedElements;                                    // 0x05E8(0x0010)(Edit, ZeroConstructor, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bEnableLazyEvaluation;                             // 0x05F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C9F[0x3];                                     // 0x05F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LazyEvaluationPositionThreshold;                   // 0x05FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LazyEvaluationRotationThreshold;                   // 0x0600(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LazyEvaluationScaleThreshold;                      // 0x0604(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResetTransformBeforeTick;                         // 0x0608(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResetInitialsBeforeConstruction;                  // 0x0609(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateRigOnTick;                                  // 0x060A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateInEditor;                                   // 0x060B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawBones;                                        // 0x060C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowDebugDrawing;                                 // 0x060D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CA0[0x2];                                     // 0x060E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UControlRig*                            ControlRig;                                        // 0x0610(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2CA1[0xB8];                                    // 0x0618(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UControlRig>                ControlRigClass;                                   // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPreInitializeDelegate;                           // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPostInitializeDelegate;                          // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPreConstructionDelegate;                         // 0x0540(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPostConstructionDelegate;                        // 0x0550(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPreForwardsSolveDelegate;                        // 0x0560(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPostForwardsSolveDelegate;                       // 0x0570(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TArray<struct FControlRigComponentMappedElement> UserDefinedElements;                               // 0x0580(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FControlRigComponentMappedElement> MappedElements;                                    // 0x0590(0x0010)(Edit, ZeroConstructor, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bEnableLazyEvaluation;                             // 0x05A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A1[0x3];                                      // 0x05A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LazyEvaluationPositionThreshold;                   // 0x05A4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LazyEvaluationRotationThreshold;                   // 0x05A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LazyEvaluationScaleThreshold;                      // 0x05AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResetTransformBeforeTick;                         // 0x05B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResetInitialsBeforeConstruction;                  // 0x05B1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateRigOnTick;                                  // 0x05B2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateInEditor;                                   // 0x05B3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawBones;                                        // 0x05B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowDebugDrawing;                                 // 0x05B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5B6[0x2];                                      // 0x05B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UControlRig*                            ControlRig;                                        // 0x05B8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5C0[0xC0];                                     // 0x05C0(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void AddMappedCompleteSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent);
+	void AddMappedCompleteSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent, const EControlRigComponentMapDirection InDirection);
 	void AddMappedComponents(const TArray<struct FControlRigComponentMappedComponent>& Components);
 	void AddMappedElements(const TArray<struct FControlRigComponentMappedElement>& NewMappedElements);
-	void AddMappedSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent, const TArray<struct FControlRigComponentMappedBone>& Bones, const TArray<struct FControlRigComponentMappedCurve>& Curves);
+	void AddMappedSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent, const TArray<struct FControlRigComponentMappedBone>& Bones, const TArray<struct FControlRigComponentMappedCurve>& Curves, const EControlRigComponentMapDirection InDirection);
 	bool CanExecute();
 	void ClearMappedElements();
-	bool DoesElementExist(class FName Param_Name, ERigElementType ElementType);
+	bool DoesElementExist(class FName Name_0, ERigElementType ElementType);
 	struct FTransform GetBoneTransform(class FName BoneName, EControlRigComponentSpace Space);
 	bool GetControlBool(class FName ControlName);
 	float GetControlFloat(class FName ControlName);
@@ -477,49 +576,49 @@ public:
 	}
 };
 static_assert(alignof(UControlRigComponent) == 0x000010, "Wrong alignment on UControlRigComponent");
-static_assert(sizeof(UControlRigComponent) == 0x0006D0, "Wrong size on UControlRigComponent");
-static_assert(offsetof(UControlRigComponent, ControlRigClass) == 0x000570, "Member 'UControlRigComponent::ControlRigClass' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPreInitializeDelegate) == 0x000578, "Member 'UControlRigComponent::OnPreInitializeDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPostInitializeDelegate) == 0x000588, "Member 'UControlRigComponent::OnPostInitializeDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPreConstructionDelegate) == 0x000598, "Member 'UControlRigComponent::OnPreConstructionDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPostConstructionDelegate) == 0x0005A8, "Member 'UControlRigComponent::OnPostConstructionDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPreForwardsSolveDelegate) == 0x0005B8, "Member 'UControlRigComponent::OnPreForwardsSolveDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPostForwardsSolveDelegate) == 0x0005C8, "Member 'UControlRigComponent::OnPostForwardsSolveDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, UserDefinedElements) == 0x0005D8, "Member 'UControlRigComponent::UserDefinedElements' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, MappedElements) == 0x0005E8, "Member 'UControlRigComponent::MappedElements' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bEnableLazyEvaluation) == 0x0005F8, "Member 'UControlRigComponent::bEnableLazyEvaluation' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, LazyEvaluationPositionThreshold) == 0x0005FC, "Member 'UControlRigComponent::LazyEvaluationPositionThreshold' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, LazyEvaluationRotationThreshold) == 0x000600, "Member 'UControlRigComponent::LazyEvaluationRotationThreshold' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, LazyEvaluationScaleThreshold) == 0x000604, "Member 'UControlRigComponent::LazyEvaluationScaleThreshold' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bResetTransformBeforeTick) == 0x000608, "Member 'UControlRigComponent::bResetTransformBeforeTick' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bResetInitialsBeforeConstruction) == 0x000609, "Member 'UControlRigComponent::bResetInitialsBeforeConstruction' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bUpdateRigOnTick) == 0x00060A, "Member 'UControlRigComponent::bUpdateRigOnTick' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bUpdateInEditor) == 0x00060B, "Member 'UControlRigComponent::bUpdateInEditor' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bDrawBones) == 0x00060C, "Member 'UControlRigComponent::bDrawBones' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bShowDebugDrawing) == 0x00060D, "Member 'UControlRigComponent::bShowDebugDrawing' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, ControlRig) == 0x000610, "Member 'UControlRigComponent::ControlRig' has a wrong offset!");
+static_assert(sizeof(UControlRigComponent) == 0x000680, "Wrong size on UControlRigComponent");
+static_assert(offsetof(UControlRigComponent, ControlRigClass) == 0x000518, "Member 'UControlRigComponent::ControlRigClass' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, OnPreInitializeDelegate) == 0x000520, "Member 'UControlRigComponent::OnPreInitializeDelegate' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, OnPostInitializeDelegate) == 0x000530, "Member 'UControlRigComponent::OnPostInitializeDelegate' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, OnPreConstructionDelegate) == 0x000540, "Member 'UControlRigComponent::OnPreConstructionDelegate' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, OnPostConstructionDelegate) == 0x000550, "Member 'UControlRigComponent::OnPostConstructionDelegate' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, OnPreForwardsSolveDelegate) == 0x000560, "Member 'UControlRigComponent::OnPreForwardsSolveDelegate' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, OnPostForwardsSolveDelegate) == 0x000570, "Member 'UControlRigComponent::OnPostForwardsSolveDelegate' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, UserDefinedElements) == 0x000580, "Member 'UControlRigComponent::UserDefinedElements' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, MappedElements) == 0x000590, "Member 'UControlRigComponent::MappedElements' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bEnableLazyEvaluation) == 0x0005A0, "Member 'UControlRigComponent::bEnableLazyEvaluation' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, LazyEvaluationPositionThreshold) == 0x0005A4, "Member 'UControlRigComponent::LazyEvaluationPositionThreshold' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, LazyEvaluationRotationThreshold) == 0x0005A8, "Member 'UControlRigComponent::LazyEvaluationRotationThreshold' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, LazyEvaluationScaleThreshold) == 0x0005AC, "Member 'UControlRigComponent::LazyEvaluationScaleThreshold' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bResetTransformBeforeTick) == 0x0005B0, "Member 'UControlRigComponent::bResetTransformBeforeTick' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bResetInitialsBeforeConstruction) == 0x0005B1, "Member 'UControlRigComponent::bResetInitialsBeforeConstruction' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bUpdateRigOnTick) == 0x0005B2, "Member 'UControlRigComponent::bUpdateRigOnTick' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bUpdateInEditor) == 0x0005B3, "Member 'UControlRigComponent::bUpdateInEditor' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bDrawBones) == 0x0005B4, "Member 'UControlRigComponent::bDrawBones' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, bShowDebugDrawing) == 0x0005B5, "Member 'UControlRigComponent::bShowDebugDrawing' has a wrong offset!");
+static_assert(offsetof(UControlRigComponent, ControlRig) == 0x0005B8, "Member 'UControlRigComponent::ControlRig' has a wrong offset!");
 
 // Class ControlRig.ControlRigControlActor
-// 0x00B0 (0x0348 - 0x0298)
+// 0x00B0 (0x0340 - 0x0290)
 class AControlRigControlActor final : public AActor
 {
 public:
-	class AActor*                                 ActorToTrack;                                      // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Interp, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UControlRig>                ControlRigClass;                                   // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Interp, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRefreshOnTick;                                    // 0x02A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSelectable;                                     // 0x02A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBD[0x6];                                     // 0x02AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     MaterialOverride;                                  // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Interp, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ColorParameter;                                    // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCastShadows;                                      // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBE[0x7];                                     // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        ActorRootComponent;                                // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UControlRig>             ControlRig;                                        // 0x02D8(0x0028)(Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class FName>                           ControlNames;                                      // 0x0300(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<struct FTransform>                     ShapeTransforms;                                   // 0x0310(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	TArray<class UStaticMeshComponent*>           Components;                                        // 0x0320(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
-	TArray<class UMaterialInstanceDynamic*>       Materials;                                         // 0x0330(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class FName                                   ColorParameterName;                                // 0x0340(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class AActor*                                 ActorToTrack;                                      // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Interp, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UControlRig>                ControlRigClass;                                   // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Interp, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRefreshOnTick;                                    // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSelectable;                                     // 0x02A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A2[0x6];                                      // 0x02A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     MaterialOverride;                                  // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Interp, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ColorParameter;                                    // 0x02B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCastShadows;                                      // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        ActorRootComponent;                                // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UControlRig>             ControlRig;                                        // 0x02D0(0x0028)(Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class FName>                           ControlNames;                                      // 0x02F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<struct FTransform>                     ShapeTransforms;                                   // 0x0308(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	TArray<class UStaticMeshComponent*>           Components;                                        // 0x0318(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
+	TArray<class UMaterialInstanceDynamic*>       Materials;                                         // 0x0328(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class FName                                   ColorParameterName;                                // 0x0338(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void Clear();
@@ -537,38 +636,38 @@ public:
 	}
 };
 static_assert(alignof(AControlRigControlActor) == 0x000008, "Wrong alignment on AControlRigControlActor");
-static_assert(sizeof(AControlRigControlActor) == 0x000348, "Wrong size on AControlRigControlActor");
-static_assert(offsetof(AControlRigControlActor, ActorToTrack) == 0x000298, "Member 'AControlRigControlActor::ActorToTrack' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ControlRigClass) == 0x0002A0, "Member 'AControlRigControlActor::ControlRigClass' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, bRefreshOnTick) == 0x0002A8, "Member 'AControlRigControlActor::bRefreshOnTick' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, bIsSelectable) == 0x0002A9, "Member 'AControlRigControlActor::bIsSelectable' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, MaterialOverride) == 0x0002B0, "Member 'AControlRigControlActor::MaterialOverride' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ColorParameter) == 0x0002B8, "Member 'AControlRigControlActor::ColorParameter' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, bCastShadows) == 0x0002C8, "Member 'AControlRigControlActor::bCastShadows' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ActorRootComponent) == 0x0002D0, "Member 'AControlRigControlActor::ActorRootComponent' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ControlRig) == 0x0002D8, "Member 'AControlRigControlActor::ControlRig' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ControlNames) == 0x000300, "Member 'AControlRigControlActor::ControlNames' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ShapeTransforms) == 0x000310, "Member 'AControlRigControlActor::ShapeTransforms' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, Components) == 0x000320, "Member 'AControlRigControlActor::Components' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, Materials) == 0x000330, "Member 'AControlRigControlActor::Materials' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ColorParameterName) == 0x000340, "Member 'AControlRigControlActor::ColorParameterName' has a wrong offset!");
+static_assert(sizeof(AControlRigControlActor) == 0x000340, "Wrong size on AControlRigControlActor");
+static_assert(offsetof(AControlRigControlActor, ActorToTrack) == 0x000290, "Member 'AControlRigControlActor::ActorToTrack' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ControlRigClass) == 0x000298, "Member 'AControlRigControlActor::ControlRigClass' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, bRefreshOnTick) == 0x0002A0, "Member 'AControlRigControlActor::bRefreshOnTick' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, bIsSelectable) == 0x0002A1, "Member 'AControlRigControlActor::bIsSelectable' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, MaterialOverride) == 0x0002A8, "Member 'AControlRigControlActor::MaterialOverride' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ColorParameter) == 0x0002B0, "Member 'AControlRigControlActor::ColorParameter' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, bCastShadows) == 0x0002C0, "Member 'AControlRigControlActor::bCastShadows' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ActorRootComponent) == 0x0002C8, "Member 'AControlRigControlActor::ActorRootComponent' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ControlRig) == 0x0002D0, "Member 'AControlRigControlActor::ControlRig' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ControlNames) == 0x0002F8, "Member 'AControlRigControlActor::ControlNames' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ShapeTransforms) == 0x000308, "Member 'AControlRigControlActor::ShapeTransforms' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, Components) == 0x000318, "Member 'AControlRigControlActor::Components' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, Materials) == 0x000328, "Member 'AControlRigControlActor::Materials' has a wrong offset!");
+static_assert(offsetof(AControlRigControlActor, ColorParameterName) == 0x000338, "Member 'AControlRigControlActor::ColorParameterName' has a wrong offset!");
 
 // Class ControlRig.ControlRigShapeActor
-// 0x0048 (0x02E0 - 0x0298)
-class AControlRigShapeActor final : public AActor
+// 0x00C0 (0x0350 - 0x0290)
+class alignas(0x10) AControlRigShapeActor final : public AActor
 {
 public:
-	class USceneComponent*                        ActorRootComponent;                                // 0x0298(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x02A0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        ControlRigIndex;                                   // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UControlRig>             ControlRig;                                        // 0x02AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ControlName;                                       // 0x02B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ShapeName;                                         // 0x02BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ColorParameterName;                                // 0x02C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBF[0x10];                                    // 0x02CC(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bSelected : 1;                                     // 0x02DC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bHovered : 1;                                      // 0x02DC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_2CC0[0x3];                                     // 0x02DD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        ActorRootComponent;                                // 0x0290(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0298(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        ControlRigIndex;                                   // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UControlRig>             ControlRig;                                        // 0x02A4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ControlName;                                       // 0x02AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ShapeName;                                         // 0x02B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ColorParameterName;                                // 0x02BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4[0x7C];                                     // 0x02C4(0x007C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bSelected : 1;                                     // 0x0340(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bHovered : 1;                                      // 0x0340(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_341[0xF];                                      // 0x0341(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnEnabledChanged(bool bIsEnabled);
@@ -597,28 +696,28 @@ public:
 		return GetDefaultObjImpl<AControlRigShapeActor>();
 	}
 };
-static_assert(alignof(AControlRigShapeActor) == 0x000008, "Wrong alignment on AControlRigShapeActor");
-static_assert(sizeof(AControlRigShapeActor) == 0x0002E0, "Wrong size on AControlRigShapeActor");
-static_assert(offsetof(AControlRigShapeActor, ActorRootComponent) == 0x000298, "Member 'AControlRigShapeActor::ActorRootComponent' has a wrong offset!");
-static_assert(offsetof(AControlRigShapeActor, StaticMeshComponent) == 0x0002A0, "Member 'AControlRigShapeActor::StaticMeshComponent' has a wrong offset!");
-static_assert(offsetof(AControlRigShapeActor, ControlRigIndex) == 0x0002A8, "Member 'AControlRigShapeActor::ControlRigIndex' has a wrong offset!");
-static_assert(offsetof(AControlRigShapeActor, ControlRig) == 0x0002AC, "Member 'AControlRigShapeActor::ControlRig' has a wrong offset!");
-static_assert(offsetof(AControlRigShapeActor, ControlName) == 0x0002B4, "Member 'AControlRigShapeActor::ControlName' has a wrong offset!");
-static_assert(offsetof(AControlRigShapeActor, ShapeName) == 0x0002BC, "Member 'AControlRigShapeActor::ShapeName' has a wrong offset!");
-static_assert(offsetof(AControlRigShapeActor, ColorParameterName) == 0x0002C4, "Member 'AControlRigShapeActor::ColorParameterName' has a wrong offset!");
+static_assert(alignof(AControlRigShapeActor) == 0x000010, "Wrong alignment on AControlRigShapeActor");
+static_assert(sizeof(AControlRigShapeActor) == 0x000350, "Wrong size on AControlRigShapeActor");
+static_assert(offsetof(AControlRigShapeActor, ActorRootComponent) == 0x000290, "Member 'AControlRigShapeActor::ActorRootComponent' has a wrong offset!");
+static_assert(offsetof(AControlRigShapeActor, StaticMeshComponent) == 0x000298, "Member 'AControlRigShapeActor::StaticMeshComponent' has a wrong offset!");
+static_assert(offsetof(AControlRigShapeActor, ControlRigIndex) == 0x0002A0, "Member 'AControlRigShapeActor::ControlRigIndex' has a wrong offset!");
+static_assert(offsetof(AControlRigShapeActor, ControlRig) == 0x0002A4, "Member 'AControlRigShapeActor::ControlRig' has a wrong offset!");
+static_assert(offsetof(AControlRigShapeActor, ControlName) == 0x0002AC, "Member 'AControlRigShapeActor::ControlName' has a wrong offset!");
+static_assert(offsetof(AControlRigShapeActor, ShapeName) == 0x0002B4, "Member 'AControlRigShapeActor::ShapeName' has a wrong offset!");
+static_assert(offsetof(AControlRigShapeActor, ColorParameterName) == 0x0002BC, "Member 'AControlRigShapeActor::ColorParameterName' has a wrong offset!");
 
 // Class ControlRig.ControlRigShapeLibrary
 // 0x0128 (0x0150 - 0x0028)
 class UControlRigShapeLibrary final : public UObject
 {
 public:
-	uint8                                         Pad_2CC1[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FControlRigShapeDefinition             DefaultShape;                                      // 0x0030(0x00A0)(Edit, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMaterial>               DefaultMaterial;                                   // 0x00D0(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMaterial>               XRayMaterial;                                      // 0x00F8(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   MaterialColorParameter;                            // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FControlRigShapeDefinition>     Shapes;                                            // 0x0128(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC2[0x18];                                    // 0x0138(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_138[0x18];                                     // 0x0138(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -649,7 +748,7 @@ public:
 	TArray<struct FControlRigTestDataFrame>       OutputFrames;                                      // 0x00E8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<int32>                                 FramesToSkip;                                      // 0x00F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	double                                        Tolerance;                                         // 0x0108(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC3[0x40];                                    // 0x0110(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_110[0x40];                                     // 0x0110(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UControlRigTestData* CreateNewAsset(const class FString& InDesiredPackagePath, const class FString& InBlueprintPathName);
@@ -689,7 +788,7 @@ class UControlRigValidator final : public UObject
 {
 public:
 	TArray<class UControlRigValidationPass*>      Passes;                                            // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2CC8[0x30];                                    // 0x0038(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x30];                                      // 0x0038(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -722,12 +821,69 @@ public:
 static_assert(alignof(UControlRigValidationPass) == 0x000008, "Wrong alignment on UControlRigValidationPass");
 static_assert(sizeof(UControlRigValidationPass) == 0x000028, "Wrong size on UControlRigValidationPass");
 
+// Class ControlRig.ModularRigController
+// 0x0028 (0x0050 - 0x0028)
+class UModularRigController final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x28];                                      // 0x0028(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class FString AddModule(const class FName& InModuleName, TSubclassOf<class UControlRig> InClass, const class FString& InParentModulePath, bool bSetupUndo);
+	bool AutoConnectModules(const TArray<class FString>& InModulePaths, bool bReplaceExistingConnections, bool bSetupUndo);
+	bool AutoConnectSecondaryConnectors(const TArray<struct FRigElementKey>& InConnectorKeys, bool bReplaceExistingConnections, bool bSetupUndo);
+	bool BindModuleVariable(const class FString& InModulePath, const class FName& InVariableName, const class FString& InSourcePath, bool bSetupUndo);
+	bool CanConnectConnectorToElement(const struct FRigElementKey& InConnectorKey, const struct FRigElementKey& InTargetKey, class FText* OutErrorMessage);
+	bool ConnectConnectorToElement(const struct FRigElementKey& InConnectorKey, const struct FRigElementKey& InTargetKey, bool bSetupUndo, bool bAutoResolveOtherConnectors, bool bCheckValidConnection);
+	bool DeleteModule(const class FString& InModulePath, bool bSetupUndo);
+	bool DisconnectConnector(const struct FRigElementKey& InConnectorKey, bool bDisconnectSubModules, bool bSetupUndo);
+	TArray<struct FRigElementKey> DisconnectCyclicConnectors(bool bSetupUndo);
+	class FString MirrorModule(const class FString& InModulePath, const struct FRigVMMirrorSettings& InSettings, bool bSetupUndo);
+	class FString RenameModule(const class FString& InModulePath, const class FName& InNewName, bool bSetupUndo);
+	class FString ReparentModule(const class FString& InModulePath, const class FString& InNewParentModulePath, bool bSetupUndo);
+	bool SetConfigValueInModule(const class FString& InModulePath, const class FName& InVariableName, const class FString& InValue, bool bSetupUndo);
+	bool SetModuleShortName(const class FString& InModulePath, const class FString& InNewShortName, bool bSetupUndo);
+	bool UnBindModuleVariable(const class FString& InModulePath, const class FName& InVariableName, bool bSetupUndo);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ModularRigController">();
+	}
+	static class UModularRigController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModularRigController>();
+	}
+};
+static_assert(alignof(UModularRigController) == 0x000008, "Wrong alignment on UModularRigController");
+static_assert(sizeof(UModularRigController) == 0x000050, "Wrong size on UModularRigController");
+
+// Class ControlRig.ModularRigRuleManager
+// 0x0008 (0x0030 - 0x0028)
+class UModularRigRuleManager final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ModularRigRuleManager">();
+	}
+	static class UModularRigRuleManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModularRigRuleManager>();
+	}
+};
+static_assert(alignof(UModularRigRuleManager) == 0x000008, "Wrong alignment on UModularRigRuleManager");
+static_assert(sizeof(UModularRigRuleManager) == 0x000030, "Wrong size on UModularRigRuleManager");
+
 // Class ControlRig.AdditiveControlRig
-// 0x0010 (0x0620 - 0x0610)
+// 0x0010 (0x0AB8 - 0x0AA8)
 class UAdditiveControlRig final : public UControlRig
 {
 public:
-	uint8                                         Pad_2CC9[0x10];                                    // 0x0610(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AA8[0x10];                                     // 0x0AA8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -740,16 +896,16 @@ public:
 	}
 };
 static_assert(alignof(UAdditiveControlRig) == 0x000008, "Wrong alignment on UAdditiveControlRig");
-static_assert(sizeof(UAdditiveControlRig) == 0x000620, "Wrong size on UAdditiveControlRig");
+static_assert(sizeof(UAdditiveControlRig) == 0x000AB8, "Wrong size on UAdditiveControlRig");
 
 // Class ControlRig.FKControlRig
-// 0x0040 (0x0650 - 0x0610)
+// 0x0040 (0x0AE8 - 0x0AA8)
 class UFKControlRig final : public UControlRig
 {
 public:
-	TArray<bool>                                  IsControlActive;                                   // 0x0610(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	EControlRigFKRigExecuteMode                   ApplyMode;                                         // 0x0620(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2CCA[0x2F];                                    // 0x0621(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  IsControlActive;                                   // 0x0AA8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	EControlRigFKRigExecuteMode                   ApplyMode;                                         // 0x0AB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_AB9[0x2F];                                     // 0x0AB9(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -762,28 +918,28 @@ public:
 	}
 };
 static_assert(alignof(UFKControlRig) == 0x000008, "Wrong alignment on UFKControlRig");
-static_assert(sizeof(UFKControlRig) == 0x000650, "Wrong size on UFKControlRig");
-static_assert(offsetof(UFKControlRig, IsControlActive) == 0x000610, "Member 'UFKControlRig::IsControlActive' has a wrong offset!");
-static_assert(offsetof(UFKControlRig, ApplyMode) == 0x000620, "Member 'UFKControlRig::ApplyMode' has a wrong offset!");
+static_assert(sizeof(UFKControlRig) == 0x000AE8, "Wrong size on UFKControlRig");
+static_assert(offsetof(UFKControlRig, IsControlActive) == 0x000AA8, "Member 'UFKControlRig::IsControlActive' has a wrong offset!");
+static_assert(offsetof(UFKControlRig, ApplyMode) == 0x000AB8, "Member 'UFKControlRig::ApplyMode' has a wrong offset!");
 
 // Class ControlRig.RigHierarchyController
-// 0x0078 (0x00A0 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class URigHierarchyController final : public UObject
 {
 public:
 	bool                                          bReportWarningsAndErrors;                          // 0x0028(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CCB[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class URigHierarchy>           Hierarchy;                                         // 0x002C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2CCC[0x6C];                                    // 0x0034(0x006C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x67];                                      // 0x0029(0x0067)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FRigElementKey AddAnimationChannel_ForBlueprint(class FName InName, const struct FRigElementKey& InParentControl, const struct FRigControlSettings& InSettings, bool bSetupUndo, bool bPrintPythonCommand);
 	struct FRigElementKey AddBone(class FName InName, const struct FRigElementKey& InParent, const struct FTransform& InTransform, bool bTransformInGlobal, ERigBoneType InBoneType, bool bSetupUndo, bool bPrintPythonCommand);
+	struct FRigElementKey AddConnector(class FName InName, const struct FRigConnectorSettings& InSettings, bool bSetupUndo, bool bPrintPythonCommand);
 	struct FRigElementKey AddControl_ForBlueprint(class FName InName, const struct FRigElementKey& InParent, const struct FRigControlSettings& InSettings, const struct FRigControlValue& InValue, bool bSetupUndo, bool bPrintPythonCommand);
 	struct FRigElementKey AddCurve(class FName InName, float InValue, bool bSetupUndo, bool bPrintPythonCommand);
 	struct FRigElementKey AddNull(class FName InName, const struct FRigElementKey& InParent, const struct FTransform& InTransform, bool bTransformInGlobal, bool bSetupUndo, bool bPrintPythonCommand);
 	bool AddParent(const struct FRigElementKey& InChild, const struct FRigElementKey& InParent, float InWeight, bool bMaintainGlobalTransform, bool bSetupUndo);
 	struct FRigElementKey AddRigidBody(class FName InName, const struct FRigElementKey& InParent, const struct FRigRigidBodySettings& InSettings, const struct FTransform& InLocalTransform, bool bSetupUndo, bool bPrintPythonCommand);
+	struct FRigElementKey AddSocket(class FName InName, const struct FRigElementKey& InParent, const struct FTransform& InTransform, bool bTransformInGlobal, const struct FLinearColor& InColor, const class FString& InDescription, bool bSetupUndo, bool bPrintPythonCommand);
 	bool ClearSelection();
 	bool DeselectElement(const struct FRigElementKey& InKey);
 	TArray<struct FRigElementKey> DuplicateElements(const TArray<struct FRigElementKey>& InKeys, bool bSelectNewElements, bool bSetupUndo, bool bPrintPythonCommands);
@@ -819,12 +975,11 @@ public:
 	}
 };
 static_assert(alignof(URigHierarchyController) == 0x000008, "Wrong alignment on URigHierarchyController");
-static_assert(sizeof(URigHierarchyController) == 0x0000A0, "Wrong size on URigHierarchyController");
+static_assert(sizeof(URigHierarchyController) == 0x000090, "Wrong size on URigHierarchyController");
 static_assert(offsetof(URigHierarchyController, bReportWarningsAndErrors) == 0x000028, "Member 'URigHierarchyController::bReportWarningsAndErrors' has a wrong offset!");
-static_assert(offsetof(URigHierarchyController, Hierarchy) == 0x00002C, "Member 'URigHierarchyController::Hierarchy' has a wrong offset!");
 
 // Class ControlRig.ControlRigLayerInstance
-// 0x0000 (0x0350 - 0x0350)
+// 0x0000 (0x0370 - 0x0370)
 class UControlRigLayerInstance final : public UAnimInstance
 {
 public:
@@ -838,47 +993,26 @@ public:
 	}
 };
 static_assert(alignof(UControlRigLayerInstance) == 0x000010, "Wrong alignment on UControlRigLayerInstance");
-static_assert(sizeof(UControlRigLayerInstance) == 0x000350, "Wrong size on UControlRigLayerInstance");
-
-// Class ControlRig.ControlRigObjectHolder
-// 0x0010 (0x0038 - 0x0028)
-class UControlRigObjectHolder final : public UObject
-{
-public:
-	TArray<class UObject*>                        Objects;                                           // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ControlRigObjectHolder">();
-	}
-	static class UControlRigObjectHolder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UControlRigObjectHolder>();
-	}
-};
-static_assert(alignof(UControlRigObjectHolder) == 0x000008, "Wrong alignment on UControlRigObjectHolder");
-static_assert(sizeof(UControlRigObjectHolder) == 0x000038, "Wrong size on UControlRigObjectHolder");
-static_assert(offsetof(UControlRigObjectHolder, Objects) == 0x000028, "Member 'UControlRigObjectHolder::Objects' has a wrong offset!");
+static_assert(sizeof(UControlRigLayerInstance) == 0x000370, "Wrong size on UControlRigLayerInstance");
 
 // Class ControlRig.MovieSceneControlRigParameterSection
 // 0x0278 (0x03D0 - 0x0158)
 class UMovieSceneControlRigParameterSection final : public UMovieSceneParameterSection
 {
 public:
-	uint8                                         Pad_2CE8[0x48];                                    // 0x0158(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_158[0x48];                                     // 0x0158(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
 	class UControlRig*                            ControlRig;                                        // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSubclassOf<class UControlRig>                ControlRigClass;                                   // 0x01A8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<bool>                                  ControlsMask;                                      // 0x01B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FMovieSceneTransformMask               TransformMask;                                     // 0x01C0(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CE9[0x4];                                     // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneFloatChannel                Weight;                                            // 0x01C8(0x0110)(NativeAccessSpecifierPublic)
 	TMap<class FName, struct FChannelMapInfo>     ControlChannelMap;                                 // 0x02D8(0x0050)(NativeAccessSpecifierPublic)
 	TArray<struct FEnumParameterNameAndCurve>     EnumParameterNamesAndCurves;                       // 0x0328(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FIntegerParameterNameAndCurve>  IntegerParameterNamesAndCurves;                    // 0x0338(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FSpaceControlNameAndChannel>    SpaceChannels;                                     // 0x0348(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FConstraintAndActiveChannel>    ConstraintsChannels;                               // 0x0358(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2CEA[0x68];                                    // 0x0368(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_368[0x68];                                     // 0x0368(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -904,16 +1038,19 @@ static_assert(offsetof(UMovieSceneControlRigParameterSection, SpaceChannels) == 
 static_assert(offsetof(UMovieSceneControlRigParameterSection, ConstraintsChannels) == 0x000358, "Member 'UMovieSceneControlRigParameterSection::ConstraintsChannels' has a wrong offset!");
 
 // Class ControlRig.MovieSceneControlRigParameterTrack
-// 0x00B8 (0x0150 - 0x0098)
+// 0x0110 (0x01A8 - 0x0098)
 class UMovieSceneControlRigParameterTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_2CEB[0x40];                                    // 0x0098(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x40];                                      // 0x0098(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	class UControlRig*                            ControlRig;                                        // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UMovieSceneSection*                     SectionToKey;                                      // 0x00E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00E8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate)
 	class FName                                   TrackName;                                         // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<class FName, struct FControlRotationOrder> ControlsRotationOrder;                             // 0x0100(0x0050)(NativeAccessSpecifierPrivate)
+	int32                                         PriorityOrder;                                     // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<TWeakObjectPtr<class UWorld>, class UControlRig*> GameWorldControlRigs;                              // 0x0158(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -926,12 +1063,14 @@ public:
 	}
 };
 static_assert(alignof(UMovieSceneControlRigParameterTrack) == 0x000008, "Wrong alignment on UMovieSceneControlRigParameterTrack");
-static_assert(sizeof(UMovieSceneControlRigParameterTrack) == 0x000150, "Wrong size on UMovieSceneControlRigParameterTrack");
+static_assert(sizeof(UMovieSceneControlRigParameterTrack) == 0x0001A8, "Wrong size on UMovieSceneControlRigParameterTrack");
 static_assert(offsetof(UMovieSceneControlRigParameterTrack, ControlRig) == 0x0000D8, "Member 'UMovieSceneControlRigParameterTrack::ControlRig' has a wrong offset!");
 static_assert(offsetof(UMovieSceneControlRigParameterTrack, SectionToKey) == 0x0000E0, "Member 'UMovieSceneControlRigParameterTrack::SectionToKey' has a wrong offset!");
 static_assert(offsetof(UMovieSceneControlRigParameterTrack, Sections) == 0x0000E8, "Member 'UMovieSceneControlRigParameterTrack::Sections' has a wrong offset!");
 static_assert(offsetof(UMovieSceneControlRigParameterTrack, TrackName) == 0x0000F8, "Member 'UMovieSceneControlRigParameterTrack::TrackName' has a wrong offset!");
 static_assert(offsetof(UMovieSceneControlRigParameterTrack, ControlsRotationOrder) == 0x000100, "Member 'UMovieSceneControlRigParameterTrack::ControlsRotationOrder' has a wrong offset!");
+static_assert(offsetof(UMovieSceneControlRigParameterTrack, PriorityOrder) == 0x000150, "Member 'UMovieSceneControlRigParameterTrack::PriorityOrder' has a wrong offset!");
+static_assert(offsetof(UMovieSceneControlRigParameterTrack, GameWorldControlRigs) == 0x000158, "Member 'UMovieSceneControlRigParameterTrack::GameWorldControlRigs' has a wrong offset!");
 
 // Class ControlRig.ControlRigSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -1007,7 +1146,7 @@ public:
 	class FString                                 LeftSide;                                          // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAxis                                         MirrorAxis;                                        // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAxis                                         AxisToFlip;                                        // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CF0[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1079,7 +1218,7 @@ class UControlRigTransformWorkflowOptions final : public UControlRigWorkflowOpti
 {
 public:
 	ERigTransformType                             TransformType;                                     // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CF1[0x7];                                     // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	TArray<struct FRigVMUserWorkflow> ProvideWorkflows(const class UObject* InSubject);
@@ -1106,14 +1245,14 @@ public:
 	bool                                          bCheckControls;                                    // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCheckBones;                                       // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCheckCurves;                                      // 0x002A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CF2[0x1];                                     // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TranslationPrecision;                              // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotationPrecision;                                 // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ScalePrecision;                                    // 0x0034(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CurvePrecision;                                    // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   EventNameA;                                        // 0x003C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                   EventNameB;                                        // 0x0044(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2CF3[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigPose                               Pose;                                              // 0x0050(0x0070)(Transient, NativeAccessSpecifierPrivate)
 
 public:

@@ -37,6 +37,26 @@ class UWB_GridButton_C* UWB_GridButton_C::GetGridButton()
 }
 
 
+// Function WB_GridButton.WB_GridButton_C.Get_Danger_Visibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_GridButton_C::Get_Danger_Visibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_GridButton_C", "Get_Danger_Visibility");
+
+	Params::WB_GridButton_C_Get_Danger_Visibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_GridButton.WB_GridButton_C.Get_SwitchIcon_Visibility_0
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -197,9 +217,9 @@ void UWB_GridButton_C::RemoveTooltip()
 // Function WB_GridButton.WB_GridButton_C.IsGamepadMode
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsGamepadMode                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsGamepadMode_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_GridButton_C::IsGamepadMode(bool* Param_IsGamepadMode)
+void UWB_GridButton_C::IsGamepadMode(bool* IsGamepadMode_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -210,8 +230,8 @@ void UWB_GridButton_C::IsGamepadMode(bool* Param_IsGamepadMode)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsGamepadMode != nullptr)
-		*Param_IsGamepadMode = Parms.Param_IsGamepadMode;
+	if (IsGamepadMode_0 != nullptr)
+		*IsGamepadMode_0 = Parms.IsGamepadMode_0;
 }
 
 
@@ -219,18 +239,19 @@ void UWB_GridButton_C::IsGamepadMode(bool* Param_IsGamepadMode)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TSoftObjectPtr<class UObject>           BrushImage                                             (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// struct FLinearColor                     Param_IconBorderColor                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_bShowRecipeIcon                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_bShowNotifyIcon                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_bShowQuantity                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             Param_QuantityText                                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    Param_bSelected                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_bButtonEnabled                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      Param_TooltipContent                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     IconBorderColor_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShowRecipeIcon_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShowNotifyIcon_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShowQuantity_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             QuantityText_0                                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    bSelected_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bButtonEnabled_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTipContent_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsFocused                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_ShowSwitchIcon                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShowSwitchIcon_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ShowDangerIcon_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_GridButton_C::SetInitialValues(TSoftObjectPtr<class UObject> BrushImage, const struct FLinearColor& Param_IconBorderColor, bool Param_bShowRecipeIcon, bool Param_bShowNotifyIcon, bool Param_bShowQuantity, const class FText& Param_QuantityText, bool Param_bSelected, bool Param_bButtonEnabled, class UUserWidget* Param_TooltipContent, bool IsFocused, bool Param_ShowSwitchIcon)
+void UWB_GridButton_C::SetInitialValues(TSoftObjectPtr<class UObject> BrushImage, const struct FLinearColor& IconBorderColor_0, bool bShowRecipeIcon_0, bool bShowNotifyIcon_0, bool bShowQuantity_0, const class FText& QuantityText_0, bool bSelected_0, bool bButtonEnabled_0, class UUserWidget* ToolTipContent_0, bool IsFocused, bool ShowSwitchIcon_0, bool ShowDangerIcon_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -240,16 +261,17 @@ void UWB_GridButton_C::SetInitialValues(TSoftObjectPtr<class UObject> BrushImage
 	Params::WB_GridButton_C_SetInitialValues Parms{};
 
 	Parms.BrushImage = BrushImage;
-	Parms.Param_IconBorderColor = std::move(Param_IconBorderColor);
-	Parms.Param_bShowRecipeIcon = Param_bShowRecipeIcon;
-	Parms.Param_bShowNotifyIcon = Param_bShowNotifyIcon;
-	Parms.Param_bShowQuantity = Param_bShowQuantity;
-	Parms.Param_QuantityText = std::move(Param_QuantityText);
-	Parms.Param_bSelected = Param_bSelected;
-	Parms.Param_bButtonEnabled = Param_bButtonEnabled;
-	Parms.Param_TooltipContent = Param_TooltipContent;
+	Parms.IconBorderColor_0 = std::move(IconBorderColor_0);
+	Parms.bShowRecipeIcon_0 = bShowRecipeIcon_0;
+	Parms.bShowNotifyIcon_0 = bShowNotifyIcon_0;
+	Parms.bShowQuantity_0 = bShowQuantity_0;
+	Parms.QuantityText_0 = std::move(QuantityText_0);
+	Parms.bSelected_0 = bSelected_0;
+	Parms.bButtonEnabled_0 = bButtonEnabled_0;
+	Parms.ToolTipContent_0 = ToolTipContent_0;
 	Parms.IsFocused = IsFocused;
-	Parms.Param_ShowSwitchIcon = Param_ShowSwitchIcon;
+	Parms.ShowSwitchIcon_0 = ShowSwitchIcon_0;
+	Parms.ShowDangerIcon_0 = ShowDangerIcon_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -278,9 +300,9 @@ void UWB_GridButton_C::SetIconImage(class UObject* BrushImage)
 // Function WB_GridButton.WB_GridButton_C.SetIconAndBorderZOrder
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bIconOverIconBorder                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIconOverIconBorder_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_GridButton_C::SetIconAndBorderZOrder(bool Param_bIconOverIconBorder)
+void UWB_GridButton_C::SetIconAndBorderZOrder(bool bIconOverIconBorder_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -289,7 +311,7 @@ void UWB_GridButton_C::SetIconAndBorderZOrder(bool Param_bIconOverIconBorder)
 
 	Params::WB_GridButton_C_SetIconAndBorderZOrder Parms{};
 
-	Parms.Param_bIconOverIconBorder = Param_bIconOverIconBorder;
+	Parms.bIconOverIconBorder_0 = bIconOverIconBorder_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

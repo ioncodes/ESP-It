@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ChickenFeedDummy.B_ChickenFeedDummy_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x02F8 - 0x02F8)
 class AB_ChickenFeedDummy_C : public AB_Dummy_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_ChickenFeedDummy_C) == 0x000008, "Wrong alignment on AB_ChickenFeedDummy_C");
-static_assert(sizeof(AB_ChickenFeedDummy_C) == 0x000300, "Wrong size on AB_ChickenFeedDummy_C");
+static_assert(sizeof(AB_ChickenFeedDummy_C) == 0x0002F8, "Wrong size on AB_ChickenFeedDummy_C");
 
 }
 

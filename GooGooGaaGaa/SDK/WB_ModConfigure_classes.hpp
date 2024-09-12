@@ -20,26 +20,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ModConfigure.WB_ModConfigure_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_ModConfigure_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Button_Back;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Button_Reset;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ConfigureSkillText;                                // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ParamSliderList;                                   // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FUIParam>                       CurrentModParameters;                              // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	E_GameModifierType                            CurrentModType;                                    // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DDA[0x7];                                     // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Button_Back;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Button_Reset;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ConfigureSkillText;                                // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ParamSliderList;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FUIParam>                       CurrentModParameters;                              // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	E_GameModifierType                            CurrentModType;                                    // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x7];                                      // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void ApplyRules();
 	void BndEvt__WB_GameRules_Button_Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
 	void BndEvt__WB_ModConfigure_Button_Reset_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
 	void CheckForShouldEnable();
-	void CreateUIParameters(TArray<struct FUIParameterData>& UIParameters);
+	void CreateEventBindings();
+	void CreateUIParameters(TArray<struct FUIParameterData>& UIParameters, TArray<struct FUIParam>& DefaultValues);
 	void ExecuteUbergraph_WB_ModConfigure(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	void OnApply();
@@ -63,15 +64,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_ModConfigure_C) == 0x000008, "Wrong alignment on UWB_ModConfigure_C");
-static_assert(sizeof(UWB_ModConfigure_C) == 0x000310, "Wrong size on UWB_ModConfigure_C");
-static_assert(offsetof(UWB_ModConfigure_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ModConfigure_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, Button_Back) == 0x0002C8, "Member 'UWB_ModConfigure_C::Button_Back' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, Button_Reset) == 0x0002D0, "Member 'UWB_ModConfigure_C::Button_Reset' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, ConfigureSkillText) == 0x0002D8, "Member 'UWB_ModConfigure_C::ConfigureSkillText' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, ParamSliderList) == 0x0002E0, "Member 'UWB_ModConfigure_C::ParamSliderList' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, CurrentModParameters) == 0x0002E8, "Member 'UWB_ModConfigure_C::CurrentModParameters' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, CurrentModType) == 0x0002F8, "Member 'UWB_ModConfigure_C::CurrentModType' has a wrong offset!");
-static_assert(offsetof(UWB_ModConfigure_C, UIElements) == 0x000300, "Member 'UWB_ModConfigure_C::UIElements' has a wrong offset!");
+static_assert(sizeof(UWB_ModConfigure_C) == 0x000330, "Wrong size on UWB_ModConfigure_C");
+static_assert(offsetof(UWB_ModConfigure_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ModConfigure_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, Button_Back) == 0x0002E8, "Member 'UWB_ModConfigure_C::Button_Back' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, Button_Reset) == 0x0002F0, "Member 'UWB_ModConfigure_C::Button_Reset' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, ConfigureSkillText) == 0x0002F8, "Member 'UWB_ModConfigure_C::ConfigureSkillText' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, ParamSliderList) == 0x000300, "Member 'UWB_ModConfigure_C::ParamSliderList' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, CurrentModParameters) == 0x000308, "Member 'UWB_ModConfigure_C::CurrentModParameters' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, CurrentModType) == 0x000318, "Member 'UWB_ModConfigure_C::CurrentModType' has a wrong offset!");
+static_assert(offsetof(UWB_ModConfigure_C, UIElements) == 0x000320, "Member 'UWB_ModConfigure_C::UIElements' has a wrong offset!");
 
 }
 

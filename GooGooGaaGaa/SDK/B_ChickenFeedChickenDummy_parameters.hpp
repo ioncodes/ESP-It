@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_ChickenFeedChickenDummy.B_ChickenFeedChickenDummy_C.ExecuteUbergraph_B_ChickenFeedChickenDummy
-// 0x0198 (0x0198 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C69[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C6A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_ChickenFeedInteractionActor_C*       K2Node_CustomEvent_Barrel;                         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -35,17 +35,17 @@ public:
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C6B[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0098(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C6C[0x4];                                     // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0098(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy) == 0x000008, "Wrong alignment on B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy");
-static_assert(sizeof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy) == 0x000198, "Wrong size on B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy");
+static_assert(sizeof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy) == 0x0001A8, "Wrong size on B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy");
 static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, EntryPoint) == 0x000000, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_IsPlaying_ReturnValue) == 0x000004, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_IsPlaying_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::K2Node_Event_DeltaSeconds' has a wrong offset!");
@@ -60,9 +60,9 @@ static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFee
 static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000078, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_MakeRotator_ReturnValue) == 0x000080, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000098, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_Delay_Duration_ImplicitCast) == 0x000180, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000188, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000190, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_Delay_Duration_ImplicitCast) == 0x000190, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000198, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0001A0, "Member 'B_ChickenFeedChickenDummy_C_ExecuteUbergraph_B_ChickenFeedChickenDummy::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
 
 // Function B_ChickenFeedChickenDummy.B_ChickenFeedChickenDummy_C.ReactToFood
 // 0x0008 (0x0008 - 0x0000)

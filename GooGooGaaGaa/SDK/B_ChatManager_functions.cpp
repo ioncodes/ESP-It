@@ -354,9 +354,9 @@ void UB_ChatManager_C::OnPushToTalkChanged_Event(bool bIsTalking)
 // Function B_ChatManager.B_ChatManager_C.OnVoiceChatToggled
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bVoiceChatEnabled                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bVoiceChatEnabled_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ChatManager_C::OnVoiceChatToggled(bool Param_bVoiceChatEnabled)
+void UB_ChatManager_C::OnVoiceChatToggled(bool bVoiceChatEnabled_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -365,7 +365,7 @@ void UB_ChatManager_C::OnVoiceChatToggled(bool Param_bVoiceChatEnabled)
 
 	Params::B_ChatManager_C_OnVoiceChatToggled Parms{};
 
-	Parms.Param_bVoiceChatEnabled = Param_bVoiceChatEnabled;
+	Parms.bVoiceChatEnabled_0 = bVoiceChatEnabled_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -454,9 +454,9 @@ void UB_ChatManager_C::SetMyPlayerState(class APlayerState* PlayerState)
 // Function B_ChatManager.B_ChatManager_C.SetVoiceChatStatus
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_bVoiceChatEnabled                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bVoiceChatEnabled_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ChatManager_C::SetVoiceChatStatus(bool Param_bVoiceChatEnabled)
+void UB_ChatManager_C::SetVoiceChatStatus(bool bVoiceChatEnabled_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -465,7 +465,7 @@ void UB_ChatManager_C::SetVoiceChatStatus(bool Param_bVoiceChatEnabled)
 
 	Params::B_ChatManager_C_SetVoiceChatStatus Parms{};
 
-	Parms.Param_bVoiceChatEnabled = Param_bVoiceChatEnabled;
+	Parms.bVoiceChatEnabled_0 = bVoiceChatEnabled_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

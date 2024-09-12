@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "BP_UtilityDoor_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_UtilityDoor_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SwitchableDoor.BP_SwitchableDoor_C
-// 0x0030 (0x03D0 - 0x03A0)
+// 0x0030 (0x03B8 - 0x0388)
 class ABP_SwitchableDoor_C final : public ABP_UtilityDoor_C
 {
 public:
-	class UStaticMeshComponent*                   Door;                                              // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DoorRotationPoint;                                 // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               TargetRotation;                                    // 0x03B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class UStaticMeshComponent*                   RealActorDoor;                                     // 0x03C8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Door;                                              // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DoorRotationPoint;                                 // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               TargetRotation;                                    // 0x0398(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class UStaticMeshComponent*                   RealActorDoor;                                     // 0x03B0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CloseDoor(bool Fast);
@@ -43,11 +43,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_SwitchableDoor_C) == 0x000008, "Wrong alignment on ABP_SwitchableDoor_C");
-static_assert(sizeof(ABP_SwitchableDoor_C) == 0x0003D0, "Wrong size on ABP_SwitchableDoor_C");
-static_assert(offsetof(ABP_SwitchableDoor_C, Door) == 0x0003A0, "Member 'ABP_SwitchableDoor_C::Door' has a wrong offset!");
-static_assert(offsetof(ABP_SwitchableDoor_C, DoorRotationPoint) == 0x0003A8, "Member 'ABP_SwitchableDoor_C::DoorRotationPoint' has a wrong offset!");
-static_assert(offsetof(ABP_SwitchableDoor_C, TargetRotation) == 0x0003B0, "Member 'ABP_SwitchableDoor_C::TargetRotation' has a wrong offset!");
-static_assert(offsetof(ABP_SwitchableDoor_C, RealActorDoor) == 0x0003C8, "Member 'ABP_SwitchableDoor_C::RealActorDoor' has a wrong offset!");
+static_assert(sizeof(ABP_SwitchableDoor_C) == 0x0003B8, "Wrong size on ABP_SwitchableDoor_C");
+static_assert(offsetof(ABP_SwitchableDoor_C, Door) == 0x000388, "Member 'ABP_SwitchableDoor_C::Door' has a wrong offset!");
+static_assert(offsetof(ABP_SwitchableDoor_C, DoorRotationPoint) == 0x000390, "Member 'ABP_SwitchableDoor_C::DoorRotationPoint' has a wrong offset!");
+static_assert(offsetof(ABP_SwitchableDoor_C, TargetRotation) == 0x000398, "Member 'ABP_SwitchableDoor_C::TargetRotation' has a wrong offset!");
+static_assert(offsetof(ABP_SwitchableDoor_C, RealActorDoor) == 0x0003B0, "Member 'ABP_SwitchableDoor_C::RealActorDoor' has a wrong offset!");
 
 }
 

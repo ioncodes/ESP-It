@@ -68,9 +68,9 @@ void AB_HuntAHagWitch_C::Fire()
 // Function B_HuntAHagWitch.B_HuntAHagWitch_C.LoadSkills
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_HuntAHagWitch_C::LoadSkills(class AController* Param_Controller)
+void AB_HuntAHagWitch_C::LoadSkills(class AController* Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -79,7 +79,7 @@ void AB_HuntAHagWitch_C::LoadSkills(class AController* Param_Controller)
 
 	Params::B_HuntAHagWitch_C_LoadSkills Parms{};
 
-	Parms.Param_Controller = Param_Controller;
+	Parms.Controller_0 = Controller_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

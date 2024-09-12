@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinHunterMeleeWeaponBase.B_SkinHunterMeleeWeaponBase_C
-// 0x0010 (0x02C0 - 0x02B0)
+// 0x0010 (0x02B8 - 0x02A8)
 class AB_SkinHunterMeleeWeaponBase_C : public AB_SkinItem_C
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          SelfShadowOnly;                                    // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          SelfShadowOnly;                                    // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -38,9 +38,9 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinHunterMeleeWeaponBase_C) == 0x000008, "Wrong alignment on AB_SkinHunterMeleeWeaponBase_C");
-static_assert(sizeof(AB_SkinHunterMeleeWeaponBase_C) == 0x0002C0, "Wrong size on AB_SkinHunterMeleeWeaponBase_C");
-static_assert(offsetof(AB_SkinHunterMeleeWeaponBase_C, StaticMesh) == 0x0002B0, "Member 'AB_SkinHunterMeleeWeaponBase_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_SkinHunterMeleeWeaponBase_C, SelfShadowOnly) == 0x0002B8, "Member 'AB_SkinHunterMeleeWeaponBase_C::SelfShadowOnly' has a wrong offset!");
+static_assert(sizeof(AB_SkinHunterMeleeWeaponBase_C) == 0x0002B8, "Wrong size on AB_SkinHunterMeleeWeaponBase_C");
+static_assert(offsetof(AB_SkinHunterMeleeWeaponBase_C, StaticMesh) == 0x0002A8, "Member 'AB_SkinHunterMeleeWeaponBase_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_SkinHunterMeleeWeaponBase_C, SelfShadowOnly) == 0x0002B0, "Member 'AB_SkinHunterMeleeWeaponBase_C::SelfShadowOnly' has a wrong offset!");
 
 }
 

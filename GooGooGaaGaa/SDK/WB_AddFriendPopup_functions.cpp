@@ -127,15 +127,15 @@ void UWB_AddFriendPopup_C::Construct()
 }
 
 
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.CreateToolTip
+// Function WB_AddFriendPopup.WB_AddFriendPopup_C.CreateTooltip
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_AddFriendPopup_C::CreateToolTip()
+void UWB_AddFriendPopup_C::CreateTooltip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_AddFriendPopup_C", "CreateToolTip");
+		Func = Class->GetFunction("WB_AddFriendPopup_C", "CreateTooltip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -182,31 +182,23 @@ void UWB_AddFriendPopup_C::GetInitialFocusWidget(class UUserWidget** InitialFocu
 }
 
 
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8
-// (BlueprintCallable, BlueprintEvent)
+// Function WB_AddFriendPopup.WB_AddFriendPopup_C.GetVisibility_0
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FUniqueNetIdRepl                 FriendId                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_AddFriendPopup_C::OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)
+ESlateVisibility UWB_AddFriendPopup_C::GetVisibility_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_AddFriendPopup_C", "OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8");
+		Func = Class->GetFunction("WB_AddFriendPopup_C", "GetVisibility_0");
 
-	Params::WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8 Parms{};
-
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.bWasSuccessful = bWasSuccessful;
-	Parms.FriendId = std::move(FriendId);
-	Parms.ListName = std::move(ListName);
-	Parms.ErrorStr = std::move(ErrorStr);
+	Params::WB_AddFriendPopup_C_GetVisibility_0 Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -238,87 +230,28 @@ void UWB_AddFriendPopup_C::OnBack()
 }
 
 
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnCallFailed_3FAB678D48D68FCB1B4029A289214264
-// (BlueprintCallable, BlueprintEvent)
+// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnPreviewKeyDown
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FUniqueNetIdRepl                 FriendId                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// struct FKeyEvent                        InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWB_AddFriendPopup_C::OnCallFailed_3FAB678D48D68FCB1B4029A289214264(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)
+struct FEventReply UWB_AddFriendPopup_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_AddFriendPopup_C", "OnCallFailed_3FAB678D48D68FCB1B4029A289214264");
+		Func = Class->GetFunction("WB_AddFriendPopup_C", "OnPreviewKeyDown");
 
-	Params::WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264 Parms{};
+	Params::WB_AddFriendPopup_C_OnPreviewKeyDown Parms{};
 
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.bWasSuccessful = bWasSuccessful;
-	Parms.FriendId = std::move(FriendId);
-	Parms.ListName = std::move(ListName);
-	Parms.ErrorStr = std::move(ErrorStr);
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FUniqueNetIdRepl                 FriendId                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWB_AddFriendPopup_C::OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_AddFriendPopup_C", "OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8");
-
-	Params::WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8 Parms{};
-
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.bWasSuccessful = bWasSuccessful;
-	Parms.FriendId = std::move(FriendId);
-	Parms.ListName = std::move(ListName);
-	Parms.ErrorStr = std::move(ErrorStr);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FUniqueNetIdRepl                 FriendId                                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class FString                           ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWB_AddFriendPopup_C::OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_AddFriendPopup_C", "OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264");
-
-	Params::WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264 Parms{};
-
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.bWasSuccessful = bWasSuccessful;
-	Parms.FriendId = std::move(FriendId);
-	Parms.ListName = std::move(ListName);
-	Parms.ErrorStr = std::move(ErrorStr);
-
-	UObject::ProcessEvent(Func, &Parms);
+	return Parms.ReturnValue;
 }
 
 

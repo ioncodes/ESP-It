@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "PropWitchHuntModule_classes.hpp"
 #include "E_SkillRuleType_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -52,6 +52,7 @@ public:
 	void ExecuteUbergraph_B_SkillParametersSubsystem(int32 EntryPoint);
 	void GetAllSkillClasses(TArray<class UClass*>* SkillClasses);
 	void GetDefaultSkillParameterValue(E_SkillRuleType SkillType, const struct FUIParameterData& UIPameter, struct FUIParam* DefaultValue);
+	TArray<struct FUIParam> GetDefaultSkillParameterValues(TArray<struct FUIParameterData>& UIParameters, E_SkillRuleType SkillType);
 	void GetFloatValueByName(E_SkillRuleType SkillType, class FName FloatName, double* Value);
 	void GetSkillCooldown(E_SkillRuleType SkillType, ETeamID PlayerType, double* Cooldown);
 	void GetSkillTooltip(class UB_BaseSkill_C* Skill, class FText* ToolTip);
@@ -61,7 +62,7 @@ public:
 	void IsSkillListed(class UClass* Skill, bool* IsListed);
 	void IsSkillUsingRules(E_SkillRuleType SkillType, bool* IsUsingRules);
 	void IsUsingCustomRules(bool* CustomRules);
-	TArray<class AActor*> SpawnProjectileSkill(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, int32 NumberOfProjectiles, double ProjectileSpread);
+	TArray<class AActor*> SpawnProjectileSkill(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator, int32 NumberOfProjectiles, double ProjectileSpread);
 
 public:
 	static class UClass* StaticClass()

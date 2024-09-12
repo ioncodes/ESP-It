@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Wardrobe.BP_Wardrobe_C
-// 0x0048 (0x03D8 - 0x0390)
+// 0x0048 (0x03C0 - 0x0378)
 class ABP_Wardrobe_C final : public ABP_BaseUtilityPlaceable_C
 {
 public:
-	uint8                                         Pad_46D0[0x6];                                     // 0x038A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Wardrobe_C;                      // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          Collision;                                         // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Suitcase;                                          // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          InteractionArea;                                   // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       UI;                                                // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Open;                                              // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46D1[0x7];                                     // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VaraintMinTime;                                    // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VaraintMaxTime;                                    // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFadingOut;                                       // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_372[0x6];                                      // 0x0372(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Wardrobe_C;                      // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          Collision;                                         // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Suitcase;                                          // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          InteractionArea;                                   // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       UI;                                                // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Open;                                              // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VaraintMinTime;                                    // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VaraintMaxTime;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFadingOut;                                       // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BeginOverlap(class UObject* Object);
@@ -63,16 +63,16 @@ public:
 	}
 };
 static_assert(alignof(ABP_Wardrobe_C) == 0x000008, "Wrong alignment on ABP_Wardrobe_C");
-static_assert(sizeof(ABP_Wardrobe_C) == 0x0003D8, "Wrong size on ABP_Wardrobe_C");
-static_assert(offsetof(ABP_Wardrobe_C, UberGraphFrame_BP_Wardrobe_C) == 0x000390, "Member 'ABP_Wardrobe_C::UberGraphFrame_BP_Wardrobe_C' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, Collision) == 0x000398, "Member 'ABP_Wardrobe_C::Collision' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, Suitcase) == 0x0003A0, "Member 'ABP_Wardrobe_C::Suitcase' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, InteractionArea) == 0x0003A8, "Member 'ABP_Wardrobe_C::InteractionArea' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, UI) == 0x0003B0, "Member 'ABP_Wardrobe_C::UI' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, Open) == 0x0003B8, "Member 'ABP_Wardrobe_C::Open' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, VaraintMinTime) == 0x0003C0, "Member 'ABP_Wardrobe_C::VaraintMinTime' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, VaraintMaxTime) == 0x0003C8, "Member 'ABP_Wardrobe_C::VaraintMaxTime' has a wrong offset!");
-static_assert(offsetof(ABP_Wardrobe_C, IsFadingOut) == 0x0003D0, "Member 'ABP_Wardrobe_C::IsFadingOut' has a wrong offset!");
+static_assert(sizeof(ABP_Wardrobe_C) == 0x0003C0, "Wrong size on ABP_Wardrobe_C");
+static_assert(offsetof(ABP_Wardrobe_C, UberGraphFrame_BP_Wardrobe_C) == 0x000378, "Member 'ABP_Wardrobe_C::UberGraphFrame_BP_Wardrobe_C' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, Collision) == 0x000380, "Member 'ABP_Wardrobe_C::Collision' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, Suitcase) == 0x000388, "Member 'ABP_Wardrobe_C::Suitcase' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, InteractionArea) == 0x000390, "Member 'ABP_Wardrobe_C::InteractionArea' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, UI) == 0x000398, "Member 'ABP_Wardrobe_C::UI' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, Open) == 0x0003A0, "Member 'ABP_Wardrobe_C::Open' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, VaraintMinTime) == 0x0003A8, "Member 'ABP_Wardrobe_C::VaraintMinTime' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, VaraintMaxTime) == 0x0003B0, "Member 'ABP_Wardrobe_C::VaraintMaxTime' has a wrong offset!");
+static_assert(offsetof(ABP_Wardrobe_C, IsFadingOut) == 0x0003B8, "Member 'ABP_Wardrobe_C::IsFadingOut' has a wrong offset!");
 
 }
 

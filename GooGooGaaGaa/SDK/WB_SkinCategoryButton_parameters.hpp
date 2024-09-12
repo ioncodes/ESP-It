@@ -24,7 +24,7 @@ struct WB_SkinCategoryButton_C_ExecuteUbergraph_WB_SkinCategoryButton final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C4[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkinCategoryMenuScreen_C*           K2Node_DynamicCast_AsWB_Skin_Category_Menu_Screen; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -44,7 +44,7 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C5[0xD];                                     // 0x00D3(0x000D)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D3[0xD];                                       // 0x00D3(0x000D)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x00E0(0x00D0)()
 };
 static_assert(alignof(WB_SkinCategoryButton_C_Get_Icon_Brush) == 0x000010, "Wrong alignment on WB_SkinCategoryButton_C_Get_Icon_Brush");
@@ -61,7 +61,7 @@ struct WB_SkinCategoryButton_C_GetIsActiveCategorySlot final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SkinCategoryMenuScreen_C*           K2Node_DynamicCast_AsWB_Skin_Category_Menu_Screen; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -80,13 +80,13 @@ static_assert(offsetof(WB_SkinCategoryButton_C_GetIsActiveCategorySlot, CallFunc
 struct WB_SkinCategoryButton_C_IsNotifyVisible final
 {
 public:
-	bool                                          Param_Visibility;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Visibility_0;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_SkinCategoryButton_C_IsNotifyVisible) == 0x000001, "Wrong alignment on WB_SkinCategoryButton_C_IsNotifyVisible");
 static_assert(sizeof(WB_SkinCategoryButton_C_IsNotifyVisible) == 0x000003, "Wrong size on WB_SkinCategoryButton_C_IsNotifyVisible");
-static_assert(offsetof(WB_SkinCategoryButton_C_IsNotifyVisible, Param_Visibility) == 0x000000, "Member 'WB_SkinCategoryButton_C_IsNotifyVisible::Param_Visibility' has a wrong offset!");
+static_assert(offsetof(WB_SkinCategoryButton_C_IsNotifyVisible, Visibility_0) == 0x000000, "Member 'WB_SkinCategoryButton_C_IsNotifyVisible::Visibility_0' has a wrong offset!");
 static_assert(offsetof(WB_SkinCategoryButton_C_IsNotifyVisible, CallFunc_GetVisibility_ReturnValue) == 0x000001, "Member 'WB_SkinCategoryButton_C_IsNotifyVisible::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_SkinCategoryButton_C_IsNotifyVisible, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'WB_SkinCategoryButton_C_IsNotifyVisible::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 

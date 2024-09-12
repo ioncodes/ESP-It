@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CauldronPawn.B_CauldronPawn_C
-// 0x0030 (0x0350 - 0x0320)
+// 0x0030 (0x0348 - 0x0318)
 class AB_CauldronPawn_C final : public APawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       Camera;                                            // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpringArmComponent*                    SpringArm;                                         // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseTurnRate;                                      // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseLookUpRate;                                    // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       Camera;                                            // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpringArmComponent*                    SpringArm;                                         // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseTurnRate;                                      // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseLookUpRate;                                    // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_CauldronPawn(int32 EntryPoint);
@@ -49,13 +49,13 @@ public:
 	}
 };
 static_assert(alignof(AB_CauldronPawn_C) == 0x000008, "Wrong alignment on AB_CauldronPawn_C");
-static_assert(sizeof(AB_CauldronPawn_C) == 0x000350, "Wrong size on AB_CauldronPawn_C");
-static_assert(offsetof(AB_CauldronPawn_C, UberGraphFrame) == 0x000320, "Member 'AB_CauldronPawn_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_CauldronPawn_C, Camera) == 0x000328, "Member 'AB_CauldronPawn_C::Camera' has a wrong offset!");
-static_assert(offsetof(AB_CauldronPawn_C, SpringArm) == 0x000330, "Member 'AB_CauldronPawn_C::SpringArm' has a wrong offset!");
-static_assert(offsetof(AB_CauldronPawn_C, DefaultSceneRoot) == 0x000338, "Member 'AB_CauldronPawn_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_CauldronPawn_C, BaseTurnRate) == 0x000340, "Member 'AB_CauldronPawn_C::BaseTurnRate' has a wrong offset!");
-static_assert(offsetof(AB_CauldronPawn_C, BaseLookUpRate) == 0x000348, "Member 'AB_CauldronPawn_C::BaseLookUpRate' has a wrong offset!");
+static_assert(sizeof(AB_CauldronPawn_C) == 0x000348, "Wrong size on AB_CauldronPawn_C");
+static_assert(offsetof(AB_CauldronPawn_C, UberGraphFrame) == 0x000318, "Member 'AB_CauldronPawn_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_CauldronPawn_C, Camera) == 0x000320, "Member 'AB_CauldronPawn_C::Camera' has a wrong offset!");
+static_assert(offsetof(AB_CauldronPawn_C, SpringArm) == 0x000328, "Member 'AB_CauldronPawn_C::SpringArm' has a wrong offset!");
+static_assert(offsetof(AB_CauldronPawn_C, DefaultSceneRoot) == 0x000330, "Member 'AB_CauldronPawn_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_CauldronPawn_C, BaseTurnRate) == 0x000338, "Member 'AB_CauldronPawn_C::BaseTurnRate' has a wrong offset!");
+static_assert(offsetof(AB_CauldronPawn_C, BaseLookUpRate) == 0x000340, "Member 'AB_CauldronPawn_C::BaseLookUpRate' has a wrong offset!");
 
 }
 

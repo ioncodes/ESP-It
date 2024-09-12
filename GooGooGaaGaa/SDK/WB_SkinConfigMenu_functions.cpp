@@ -17,6 +17,110 @@
 namespace SDK
 {
 
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.AddNewConfigButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::AddNewConfigButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "AddNewConfigButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.DeleteConfigButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::DeleteConfigButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "DeleteConfigButton");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.ExecuteUbergraph_WB_SkinConfigMenu
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_SkinConfigMenu_C::ExecuteUbergraph_WB_SkinConfigMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "ExecuteUbergraph_WB_SkinConfigMenu");
+
+	Params::WB_SkinConfigMenu_C_ExecuteUbergraph_WB_SkinConfigMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -38,6 +142,68 @@ void UWB_SkinConfigMenu_C::GetInitialFocusWidget(class UUserWidget** InitialFocu
 }
 
 
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.Initialize
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWB_SkinCategoryMenuScreen_C*     SkinCategoryMenu                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWB_SkinConfigMenu_C::Initialize(class UWB_SkinCategoryMenuScreen_C* SkinCategoryMenu)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "Initialize");
+
+	Params::WB_SkinConfigMenu_C_Initialize Parms{};
+
+	Parms.SkinCategoryMenu = SkinCategoryMenu;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.OnApply
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::OnApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "OnApply");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.OnBack
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::OnBack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "OnBack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.OnSpecialAction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_SkinConfigMenu_C::OnSpecialAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "OnSpecialAction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.RandomizeSkinConfig
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -49,6 +215,30 @@ void UWB_SkinConfigMenu_C::RandomizeSkinConfig()
 		Func = Class->GetFunction("WB_SkinConfigMenu_C", "RandomizeSkinConfig");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.RemoveSkinConfigFromSave
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UB_SkinSelection_C*               SkinSlots                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   ActiveConfigNr                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Team_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_SkinConfigMenu_C::RemoveSkinConfigFromSave(class UB_SkinSelection_C* SkinSlots, int32 ActiveConfigNr, ETeamID Team_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_SkinConfigMenu_C", "RemoveSkinConfigFromSave");
+
+	Params::WB_SkinConfigMenu_C_RemoveSkinConfigFromSave Parms{};
+
+	Parms.SkinSlots = SkinSlots;
+	Parms.ActiveConfigNr = ActiveConfigNr;
+	Parms.Team_0 = Team_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -73,58 +263,6 @@ void UWB_SkinConfigMenu_C::ToggleActiveConfigNrInGamepadMode(int32* ToggledConfi
 }
 
 
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.RemoveSkinConfigFromSave
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UB_SkinSelection_C*               SkinSlots                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   ActiveConfigNr                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ETeamID                                 Param_Team                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_SkinConfigMenu_C::RemoveSkinConfigFromSave(class UB_SkinSelection_C* SkinSlots, int32 ActiveConfigNr, ETeamID Param_Team)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "RemoveSkinConfigFromSave");
-
-	Params::WB_SkinConfigMenu_C_RemoveSkinConfigFromSave Parms{};
-
-	Parms.SkinSlots = SkinSlots;
-	Parms.ActiveConfigNr = ActiveConfigNr;
-	Parms.Param_Team = Param_Team;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.DeleteConfigButton
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::DeleteConfigButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "DeleteConfigButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.AddNewConfigButton
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::AddNewConfigButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "AddNewConfigButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.UpdateSkinConfigTileView
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -136,144 +274,6 @@ void UWB_SkinConfigMenu_C::UpdateSkinConfigTileView()
 		Func = Class->GetFunction("WB_SkinConfigMenu_C", "UpdateSkinConfigTileView");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "BndEvt__Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.Initialize
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWB_SkinCategoryMenuScreen_C*     SkinCategoryMenu                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWB_SkinConfigMenu_C::Initialize(class UWB_SkinCategoryMenuScreen_C* SkinCategoryMenu)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "Initialize");
-
-	Params::WB_SkinConfigMenu_C_Initialize Parms{};
-
-	Parms.SkinCategoryMenu = SkinCategoryMenu;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.OnSpecialAction
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::OnSpecialAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "OnSpecialAction");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.OnApply
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::OnApply()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "OnApply");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "BndEvt__Delete_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.OnBack
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::OnBack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "OnBack");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWB_SkinConfigMenu_C::BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "BndEvt__Randomize_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_SkinConfigMenu.WB_SkinConfigMenu_C.ExecuteUbergraph_WB_SkinConfigMenu
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_SkinConfigMenu_C::ExecuteUbergraph_WB_SkinConfigMenu(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_SkinConfigMenu_C", "ExecuteUbergraph_WB_SkinConfigMenu");
-
-	Params::WB_SkinConfigMenu_C_ExecuteUbergraph_WB_SkinConfigMenu Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

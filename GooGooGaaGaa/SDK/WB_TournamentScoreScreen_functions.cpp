@@ -17,29 +17,37 @@
 namespace SDK
 {
 
-// Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.WB_TournamentScoreScreen_AutoGenFunc
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          ObjectA                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          ObjectB                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWB_TournamentScoreScreen_C::WB_TournamentScoreScreen_AutoGenFunc(class UObject* ObjectA, class UObject* ObjectB, bool* Result)
+void UWB_TournamentScoreScreen_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TournamentScoreScreen_C", "WB_TournamentScoreScreen_AutoGenFunc");
+		Func = Class->GetFunction("WB_TournamentScoreScreen_C", "Construct");
 
-	Params::WB_TournamentScoreScreen_C_WB_TournamentScoreScreen_AutoGenFunc Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.ObjectA = ObjectA;
-	Parms.ObjectB = ObjectB;
+
+// Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.ExecuteUbergraph_WB_TournamentScoreScreen
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_TournamentScoreScreen_C::ExecuteUbergraph_WB_TournamentScoreScreen(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_TournamentScoreScreen_C", "ExecuteUbergraph_WB_TournamentScoreScreen");
+
+	Params::WB_TournamentScoreScreen_C_ExecuteUbergraph_WB_TournamentScoreScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
 }
 
 
@@ -77,20 +85,6 @@ void UWB_TournamentScoreScreen_C::RefreshPlayerList()
 }
 
 
-// Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWB_TournamentScoreScreen_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TournamentScoreScreen_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -113,23 +107,29 @@ void UWB_TournamentScoreScreen_C::Tick(const struct FGeometry& MyGeometry, float
 }
 
 
-// Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.ExecuteUbergraph_WB_TournamentScoreScreen
-// (Final, UbergraphFunction, HasDefaults)
+// Function WB_TournamentScoreScreen.WB_TournamentScoreScreen_C.WB_TournamentScoreScreen_AutoGenFunc
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ObjectA                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ObjectB                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_TournamentScoreScreen_C::ExecuteUbergraph_WB_TournamentScoreScreen(int32 EntryPoint)
+void UWB_TournamentScoreScreen_C::WB_TournamentScoreScreen_AutoGenFunc(class UObject* ObjectA, class UObject* ObjectB, bool* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_TournamentScoreScreen_C", "ExecuteUbergraph_WB_TournamentScoreScreen");
+		Func = Class->GetFunction("WB_TournamentScoreScreen_C", "WB_TournamentScoreScreen_AutoGenFunc");
 
-	Params::WB_TournamentScoreScreen_C_ExecuteUbergraph_WB_TournamentScoreScreen Parms{};
+	Params::WB_TournamentScoreScreen_C_WB_TournamentScoreScreen_AutoGenFunc Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.ObjectA = ObjectA;
+	Parms.ObjectB = ObjectB;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
 }
 
 }

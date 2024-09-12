@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "B_StaticMeshLightProp_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -22,7 +22,7 @@ namespace SDK
 class AB_Camera_C final : public AB_StaticMeshLightProp_C
 {
 public:
-	uint8                                         Pad_335A[0x7];                                     // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      NS_CameraPhoto;                                    // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        FlashEffectLocation;                               // 0x0600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USpotLightComponent*                    SpotLight;                                         // 0x0608(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "MediaAssets_structs.hpp"
 #include "AudioMixer_classes.hpp"
 
@@ -26,7 +26,7 @@ namespace SDK
 class UMediaPlayer final : public UObject
 {
 public:
-	uint8                                         Pad_16D8[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnEndReached;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnMediaClosed;                                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnMediaOpened;                                     // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -41,29 +41,30 @@ public:
 	struct FTimespan                              CacheBehindGame;                                   // 0x00D0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          NativeAudioOut;                                    // 0x00D8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          PlayOnOpen;                                        // 0x00D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16D9[0x2];                                     // 0x00DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DA[0x2];                                       // 0x00DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         Shuffle : 1;                                       // 0x00DC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Loop : 1;                                          // 0x00DC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_16DA[0x3];                                     // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMediaPlaylist*                         Playlist;                                          // 0x00E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         PlaylistIndex;                                     // 0x00E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_16DB[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              TimeDelay;                                         // 0x00F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         HorizontalFieldOfView;                             // 0x00F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         VerticalFieldOfView;                               // 0x00FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FRotator                               ViewRotation;                                      // 0x0100(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_16DC[0x28];                                    // 0x0118(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_118[0x28];                                     // 0x0118(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  PlayerGuid;                                        // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_16DD[0x18];                                    // 0x0150(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_150[0x18];                                     // 0x0150(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CanPlaySource(class UMediaSource* MediaSource);
 	bool CanPlayUrl(const class FString& URL);
 	void Close();
+	struct FFloatInterval GetPlaybackTimeRange(EMediaTimeRangeBPType InRangeToGet);
 	bool Next();
 	bool OpenFile(const class FString& FilePath);
 	bool OpenPlaylist(class UMediaPlaylist* InPlaylist);
-	bool OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32 Param_Index);
+	bool OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32 Index_0);
 	bool OpenSource(class UMediaSource* MediaSource);
 	void OpenSourceLatent(const class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options, bool* bSuccess);
 	bool OpenSourceWithOptions(class UMediaSource* MediaSource, const struct FMediaPlayerOptions& Options);
@@ -81,8 +82,9 @@ public:
 	bool SetLooping(bool Looping);
 	void SetMediaOptions(const class UMediaSource* Options);
 	bool SetNativeVolume(float Volume);
+	bool SetPlaybackTimeRange(const struct FFloatInterval& InTimeRange);
 	bool SetRate(float Rate);
-	void SetTimeDelay(const struct FTimespan& Param_TimeDelay);
+	void SetTimeDelay(const struct FTimespan& TimeDelay_0);
 	bool SetTrackFormat(EMediaPlayerTrack TrackType, int32 TrackIndex, int32 FormatIndex);
 	bool SetVideoTrackFrameRate(int32 TrackIndex, int32 FormatIndex, float FrameRate);
 	bool SetViewField(float Horizontal, float Vertical, bool Absolute);
@@ -130,6 +132,7 @@ public:
 	bool IsPlaying() const;
 	bool IsPreparing() const;
 	bool IsReady() const;
+	bool SupportsPlaybackTimeRange() const;
 	bool SupportsRate(float Rate, bool Unthinned) const;
 	bool SupportsScrubbing() const;
 	bool SupportsSeeking() const;
@@ -186,24 +189,24 @@ static_assert(alignof(IMediaSourceRendererInterface) == 0x000008, "Wrong alignme
 static_assert(sizeof(IMediaSourceRendererInterface) == 0x000028, "Wrong size on IMediaSourceRendererInterface");
 
 // Class MediaAssets.MediaTexture
-// 0x00E0 (0x02B0 - 0x01D0)
+// 0x00E8 (0x0218 - 0x0130)
 class UMediaTexture final : public UTexture
 {
 public:
-	ETextureAddress                               AddressX;                                          // 0x01C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextureAddress                               AddressY;                                          // 0x01C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AutoClear;                                         // 0x01CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16F9[0x1];                                     // 0x01CB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ClearColor;                                        // 0x01CC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableGenMips;                                     // 0x01DC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         NumMips;                                           // 0x01DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          NewStyleOutput;                                    // 0x01DE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaTextureOutputFormat                     OutputFormat;                                      // 0x01DF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentAspectRatio;                                // 0x01E0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMediaTextureOrientation                      CurrentOrientation;                                // 0x01E4(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16FA[0x3];                                     // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaPlayer*                           MediaPlayer;                                       // 0x01E8(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_16FB[0xC0];                                    // 0x01F0(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ETextureAddress                               AddressX;                                          // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextureAddress                               AddressY;                                          // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AutoClear;                                         // 0x0132(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_133[0x1];                                      // 0x0133(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ClearColor;                                        // 0x0134(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableGenMips;                                     // 0x0144(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         NumMips;                                           // 0x0145(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NewStyleOutput;                                    // 0x0146(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_147[0x1];                                      // 0x0147(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurrentAspectRatio;                                // 0x0148(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMediaTextureOrientation                      CurrentOrientation;                                // 0x014C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, TextExportTransient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMediaPlayer*                           MediaPlayer;                                       // 0x0150(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_158[0xC0];                                     // 0x0158(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetMediaPlayer(class UMediaPlayer* NewMediaPlayer);
@@ -225,26 +228,25 @@ public:
 		return GetDefaultObjImpl<UMediaTexture>();
 	}
 };
-static_assert(alignof(UMediaTexture) == 0x000010, "Wrong alignment on UMediaTexture");
-static_assert(sizeof(UMediaTexture) == 0x0002B0, "Wrong size on UMediaTexture");
-static_assert(offsetof(UMediaTexture, AddressX) == 0x0001C8, "Member 'UMediaTexture::AddressX' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, AddressY) == 0x0001C9, "Member 'UMediaTexture::AddressY' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, AutoClear) == 0x0001CA, "Member 'UMediaTexture::AutoClear' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, ClearColor) == 0x0001CC, "Member 'UMediaTexture::ClearColor' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, EnableGenMips) == 0x0001DC, "Member 'UMediaTexture::EnableGenMips' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, NumMips) == 0x0001DD, "Member 'UMediaTexture::NumMips' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, NewStyleOutput) == 0x0001DE, "Member 'UMediaTexture::NewStyleOutput' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, OutputFormat) == 0x0001DF, "Member 'UMediaTexture::OutputFormat' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, CurrentAspectRatio) == 0x0001E0, "Member 'UMediaTexture::CurrentAspectRatio' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, CurrentOrientation) == 0x0001E4, "Member 'UMediaTexture::CurrentOrientation' has a wrong offset!");
-static_assert(offsetof(UMediaTexture, MediaPlayer) == 0x0001E8, "Member 'UMediaTexture::MediaPlayer' has a wrong offset!");
+static_assert(alignof(UMediaTexture) == 0x000008, "Wrong alignment on UMediaTexture");
+static_assert(sizeof(UMediaTexture) == 0x000218, "Wrong size on UMediaTexture");
+static_assert(offsetof(UMediaTexture, AddressX) == 0x000130, "Member 'UMediaTexture::AddressX' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, AddressY) == 0x000131, "Member 'UMediaTexture::AddressY' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, AutoClear) == 0x000132, "Member 'UMediaTexture::AutoClear' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, ClearColor) == 0x000134, "Member 'UMediaTexture::ClearColor' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, EnableGenMips) == 0x000144, "Member 'UMediaTexture::EnableGenMips' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, NumMips) == 0x000145, "Member 'UMediaTexture::NumMips' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, NewStyleOutput) == 0x000146, "Member 'UMediaTexture::NewStyleOutput' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, CurrentAspectRatio) == 0x000148, "Member 'UMediaTexture::CurrentAspectRatio' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, CurrentOrientation) == 0x00014C, "Member 'UMediaTexture::CurrentOrientation' has a wrong offset!");
+static_assert(offsetof(UMediaTexture, MediaPlayer) == 0x000150, "Member 'UMediaTexture::MediaPlayer' has a wrong offset!");
 
 // Class MediaAssets.MediaSource
 // 0x0058 (0x0080 - 0x0028)
 class UMediaSource : public UObject
 {
 public:
-	uint8                                         Pad_16FC[0x58];                                    // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x58];                                      // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetMediaOptionBool(const class FName& Key, bool Value);
@@ -296,7 +298,7 @@ class UFileMediaSource final : public UBaseMediaSource
 public:
 	class FString                                 FilePath;                                          // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          PrecacheFile;                                      // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16FE[0x17];                                    // 0x0099(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x17];                                      // 0x0099(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetFilePath(const class FString& Path);
@@ -394,15 +396,15 @@ public:
 	bool Add(class UMediaSource* MediaSource);
 	bool AddFile(const class FString& FilePath);
 	bool AddUrl(const class FString& URL);
-	class UMediaSource* Get(int32 Param_Index);
+	class UMediaSource* Get(int32 Index_0);
 	class UMediaSource* GetNext(int32* InOutIndex);
 	class UMediaSource* GetPrevious(int32* InOutIndex);
 	class UMediaSource* GetRandom(int32* OutIndex);
-	void Insert(class UMediaSource* MediaSource, int32 Param_Index);
+	void Insert(class UMediaSource* MediaSource, int32 Index_0);
 	int32 Num();
 	bool Remove(class UMediaSource* MediaSource);
-	bool RemoveAt(int32 Param_Index);
-	bool Replace(int32 Param_Index, class UMediaSource* Replacement);
+	bool RemoveAt(int32 Index_0);
+	bool Replace(int32 Index_0, class UMediaSource* Replacement);
 
 public:
 	static class UClass* StaticClass()
@@ -419,18 +421,18 @@ static_assert(sizeof(UMediaPlaylist) == 0x000038, "Wrong size on UMediaPlaylist"
 static_assert(offsetof(UMediaPlaylist, Items) == 0x000028, "Member 'UMediaPlaylist::Items' has a wrong offset!");
 
 // Class MediaAssets.MediaSoundComponent
-// 0x00E0 (0x09E0 - 0x0900)
+// 0x00E0 (0x0970 - 0x0890)
 class UMediaSoundComponent final : public USynthComponent
 {
 public:
-	EMediaSoundChannels                           Channels;                                          // 0x0900(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DynamicRateAdjustment;                             // 0x0904(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_170B[0x3];                                     // 0x0905(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RateAdjustmentFactor;                              // 0x0908(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFloatRange                            RateAdjustmentRange;                               // 0x090C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_170C[0x4];                                     // 0x091C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaPlayer*                           MediaPlayer;                                       // 0x0920(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_170D[0xB8];                                    // 0x0928(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EMediaSoundChannels                           Channels;                                          // 0x0890(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DynamicRateAdjustment;                             // 0x0894(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_895[0x3];                                      // 0x0895(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RateAdjustmentFactor;                              // 0x0898(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFloatRange                            RateAdjustmentRange;                               // 0x089C(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8AC[0x4];                                      // 0x08AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMediaPlayer*                           MediaPlayer;                                       // 0x08B0(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_8B8[0xB8];                                     // 0x08B8(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings);
@@ -456,12 +458,12 @@ public:
 	}
 };
 static_assert(alignof(UMediaSoundComponent) == 0x000010, "Wrong alignment on UMediaSoundComponent");
-static_assert(sizeof(UMediaSoundComponent) == 0x0009E0, "Wrong size on UMediaSoundComponent");
-static_assert(offsetof(UMediaSoundComponent, Channels) == 0x000900, "Member 'UMediaSoundComponent::Channels' has a wrong offset!");
-static_assert(offsetof(UMediaSoundComponent, DynamicRateAdjustment) == 0x000904, "Member 'UMediaSoundComponent::DynamicRateAdjustment' has a wrong offset!");
-static_assert(offsetof(UMediaSoundComponent, RateAdjustmentFactor) == 0x000908, "Member 'UMediaSoundComponent::RateAdjustmentFactor' has a wrong offset!");
-static_assert(offsetof(UMediaSoundComponent, RateAdjustmentRange) == 0x00090C, "Member 'UMediaSoundComponent::RateAdjustmentRange' has a wrong offset!");
-static_assert(offsetof(UMediaSoundComponent, MediaPlayer) == 0x000920, "Member 'UMediaSoundComponent::MediaPlayer' has a wrong offset!");
+static_assert(sizeof(UMediaSoundComponent) == 0x000970, "Wrong size on UMediaSoundComponent");
+static_assert(offsetof(UMediaSoundComponent, Channels) == 0x000890, "Member 'UMediaSoundComponent::Channels' has a wrong offset!");
+static_assert(offsetof(UMediaSoundComponent, DynamicRateAdjustment) == 0x000894, "Member 'UMediaSoundComponent::DynamicRateAdjustment' has a wrong offset!");
+static_assert(offsetof(UMediaSoundComponent, RateAdjustmentFactor) == 0x000898, "Member 'UMediaSoundComponent::RateAdjustmentFactor' has a wrong offset!");
+static_assert(offsetof(UMediaSoundComponent, RateAdjustmentRange) == 0x00089C, "Member 'UMediaSoundComponent::RateAdjustmentRange' has a wrong offset!");
+static_assert(offsetof(UMediaSoundComponent, MediaPlayer) == 0x0008B0, "Member 'UMediaSoundComponent::MediaPlayer' has a wrong offset!");
 
 // Class MediaAssets.PlatformMediaSource
 // 0x0008 (0x0088 - 0x0080)
@@ -511,11 +513,11 @@ class UTimeSynchronizableMediaSource final : public UBaseMediaSource
 {
 public:
 	bool                                          bUseTimeSynchronization;                           // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1710[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FrameDelay;                                        // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        TimeDelay;                                         // 0x0090(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoDetectInput;                                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1711[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

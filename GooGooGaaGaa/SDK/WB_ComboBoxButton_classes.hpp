@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "WB_BaseControl_classes.hpp"
 
 
@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ComboBoxButton.WB_ComboBoxButton_C
-// 0x0458 (0x0730 - 0x02D8)
+// 0x0458 (0x0750 - 0x02F8)
 class UWB_ComboBoxButton_C final : public UWB_BaseControl_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Label;                                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MyButton;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FSlateColor                            TextColor;                                         // 0x02F0(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateColor                            TextColorFocus;                                    // 0x0304(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         Pad_2317[0x8];                                     // 0x0318(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FButtonStyle                           ButtonStyle;                                       // 0x0320(0x03F0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   Text;                                              // 0x0710(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	int32                                         Index_WB_ComboBoxButton_C;                         // 0x0728(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Label;                                             // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MyButton;                                          // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FSlateColor                            TextColor;                                         // 0x0310(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateColor                            TextColorFocus;                                    // 0x0324(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
+	uint8                                         Pad_338[0x8];                                      // 0x0338(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FButtonStyle                           ButtonStyle;                                       // 0x0340(0x03F0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   Text;                                              // 0x0730(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	int32                                         Index_0;                                           // 0x0740(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void BndEvt__MyButton_K2Node_ComponentBoundEvent_55_OnButtonClickedEvent__DelegateSignature();
@@ -53,15 +53,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_ComboBoxButton_C) == 0x000010, "Wrong alignment on UWB_ComboBoxButton_C");
-static_assert(sizeof(UWB_ComboBoxButton_C) == 0x000730, "Wrong size on UWB_ComboBoxButton_C");
-static_assert(offsetof(UWB_ComboBoxButton_C, UberGraphFrame) == 0x0002D8, "Member 'UWB_ComboBoxButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, Label) == 0x0002E0, "Member 'UWB_ComboBoxButton_C::Label' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, MyButton) == 0x0002E8, "Member 'UWB_ComboBoxButton_C::MyButton' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, TextColor) == 0x0002F0, "Member 'UWB_ComboBoxButton_C::TextColor' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, TextColorFocus) == 0x000304, "Member 'UWB_ComboBoxButton_C::TextColorFocus' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, ButtonStyle) == 0x000320, "Member 'UWB_ComboBoxButton_C::ButtonStyle' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, Text) == 0x000710, "Member 'UWB_ComboBoxButton_C::Text' has a wrong offset!");
-static_assert(offsetof(UWB_ComboBoxButton_C, Index_WB_ComboBoxButton_C) == 0x000728, "Member 'UWB_ComboBoxButton_C::Index_WB_ComboBoxButton_C' has a wrong offset!");
+static_assert(sizeof(UWB_ComboBoxButton_C) == 0x000750, "Wrong size on UWB_ComboBoxButton_C");
+static_assert(offsetof(UWB_ComboBoxButton_C, UberGraphFrame) == 0x0002F8, "Member 'UWB_ComboBoxButton_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, Label) == 0x000300, "Member 'UWB_ComboBoxButton_C::Label' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, MyButton) == 0x000308, "Member 'UWB_ComboBoxButton_C::MyButton' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, TextColor) == 0x000310, "Member 'UWB_ComboBoxButton_C::TextColor' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, TextColorFocus) == 0x000324, "Member 'UWB_ComboBoxButton_C::TextColorFocus' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, ButtonStyle) == 0x000340, "Member 'UWB_ComboBoxButton_C::ButtonStyle' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, Text) == 0x000730, "Member 'UWB_ComboBoxButton_C::Text' has a wrong offset!");
+static_assert(offsetof(UWB_ComboBoxButton_C, Index_0) == 0x000740, "Member 'UWB_ComboBoxButton_C::Index_0' has a wrong offset!");
 
 }
 

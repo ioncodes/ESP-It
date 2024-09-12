@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ShootActor.B_ShootActor_C
-// 0x0008 (0x0300 - 0x02F8)
+// 0x0008 (0x02F8 - 0x02F0)
 class AB_ShootActor_C : public AB_TaskTargetActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ShootActor_C;                     // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ShootActor_C;                     // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void CheckIfShot(class AActor* InActor);
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(AB_ShootActor_C) == 0x000008, "Wrong alignment on AB_ShootActor_C");
-static_assert(sizeof(AB_ShootActor_C) == 0x000300, "Wrong size on AB_ShootActor_C");
-static_assert(offsetof(AB_ShootActor_C, UberGraphFrame_B_ShootActor_C) == 0x0002F8, "Member 'AB_ShootActor_C::UberGraphFrame_B_ShootActor_C' has a wrong offset!");
+static_assert(sizeof(AB_ShootActor_C) == 0x0002F8, "Wrong size on AB_ShootActor_C");
+static_assert(offsetof(AB_ShootActor_C, UberGraphFrame_B_ShootActor_C) == 0x0002F0, "Member 'AB_ShootActor_C::UberGraphFrame_B_ShootActor_C' has a wrong offset!");
 
 }
 

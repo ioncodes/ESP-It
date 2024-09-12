@@ -10,61 +10,132 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WP_FriendEntry.WP_FriendEntry_C.ExecuteUbergraph_WP_FriendEntry
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B0D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0010(0x0030)(HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0040(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B0E[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B0F[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x00A0(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_SendSessionInviteToFriend_ReturnValue;    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool bSuccess, const class FString& SanitizedMessage)> K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bSuccess_1;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_SanitizedMessage_1;             // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 K2Node_CustomEvent_SanitizedMessage;               // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(bool bSuccess, const class FString& SanitizedMessage)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0048(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0088(0x0030)(HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x00B8(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineMessageSanitizerSubsystem*       CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0108(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UOnlineFriendRef*                       K2Node_CustomEvent_FriendRef;                      // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UOnlineMessageSanitizerSubsystemSanitizeDisplayName* CallFunc_SanitizeDisplayName_ReturnValue;          // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SendSessionInviteToFriend_ReturnValue;    // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry) == 0x000008, "Wrong alignment on WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry");
-static_assert(sizeof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry) == 0x0000D8, "Wrong size on WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry");
+static_assert(sizeof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry) == 0x000180, "Wrong size on WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry");
 static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, EntryPoint) == 0x000000, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetUserId_ReturnValue) == 0x000010, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_Event_MyGeometry) == 0x000040, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_Event_InDeltaTime) == 0x000078, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetGameInstance_ReturnValue) == 0x000080, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetOwningPlayer_ReturnValue) == 0x000088, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_DynamicCast_AsB_Game_Instance) == 0x000090, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x0000A0, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_SendSessionInviteToFriend_ReturnValue) == 0x0000D0, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_SendSessionInviteToFriend_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CustomEvent_bSuccess_1) == 0x000018, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CustomEvent_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CustomEvent_SanitizedMessage_1) == 0x000020, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CustomEvent_SanitizedMessage_1' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CustomEvent_bSuccess) == 0x000030, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CustomEvent_bSuccess' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CustomEvent_SanitizedMessage) == 0x000038, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CustomEvent_SanitizedMessage' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CreateDelegate_OutputDelegate_1) == 0x000048, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, Temp_string_Variable) == 0x000058, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, Temp_bool_Variable) == 0x000068, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetGameInstance_ReturnValue) == 0x000070, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_DynamicCast_AsB_Game_Instance) == 0x000078, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetUserId_ReturnValue) == 0x000088, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_Event_MyGeometry) == 0x0000B8, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_Event_InDeltaTime) == 0x0000F0, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x0000F8, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetOwningPlayer_ReturnValue) == 0x000100, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000108, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetDisplayName_ReturnValue) == 0x000138, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, K2Node_CustomEvent_FriendRef) == 0x000148, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::K2Node_CustomEvent_FriendRef' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_SanitizeDisplayName_ReturnValue) == 0x000150, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_SanitizeDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_IsValid_ReturnValue) == 0x000158, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000160, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_MakeLiteralString_ReturnValue) == 0x000168, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_MakeLiteralString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry, CallFunc_SendSessionInviteToFriend_ReturnValue) == 0x000178, "Member 'WP_FriendEntry_C_ExecuteUbergraph_WP_FriendEntry::CallFunc_SendSessionInviteToFriend_ReturnValue' has a wrong offset!");
 
 // Function WP_FriendEntry.WP_FriendEntry_C.GetFriendName
-// 0x0040 (0x0040 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WP_FriendEntry_C_GetFriendName final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
 static_assert(alignof(WP_FriendEntry_C_GetFriendName) == 0x000008, "Wrong alignment on WP_FriendEntry_C_GetFriendName");
-static_assert(sizeof(WP_FriendEntry_C_GetFriendName) == 0x000040, "Wrong size on WP_FriendEntry_C_GetFriendName");
+static_assert(sizeof(WP_FriendEntry_C_GetFriendName) == 0x000020, "Wrong size on WP_FriendEntry_C_GetFriendName");
 static_assert(offsetof(WP_FriendEntry_C_GetFriendName, ReturnValue) == 0x000000, "Member 'WP_FriendEntry_C_GetFriendName::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_GetFriendName, CallFunc_GetDisplayName_ReturnValue) == 0x000018, "Member 'WP_FriendEntry_C_GetFriendName::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WP_FriendEntry_C_GetFriendName, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'WP_FriendEntry_C_GetFriendName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_GetFriendName, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'WP_FriendEntry_C_GetFriendName::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+
+// Function WP_FriendEntry.WP_FriendEntry_C.OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C
+// 0x0018 (0x0018 - 0x0000)
+struct WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C final
+{
+public:
+	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SanitizedMessage;                                  // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C) == 0x000008, "Wrong alignment on WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C");
+static_assert(sizeof(WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C) == 0x000018, "Wrong size on WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C");
+static_assert(offsetof(WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C, bSuccess) == 0x000000, "Member 'WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C::bSuccess' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C, SanitizedMessage) == 0x000008, "Member 'WP_FriendEntry_C_OnCallFailed_AAA0D2DB4317489A8AAFF9A295C6BE7C::SanitizedMessage' has a wrong offset!");
+
+// Function WP_FriendEntry.WP_FriendEntry_C.OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C
+// 0x0018 (0x0018 - 0x0000)
+struct WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C final
+{
+public:
+	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SanitizedMessage;                                  // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C) == 0x000008, "Wrong alignment on WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C");
+static_assert(sizeof(WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C) == 0x000018, "Wrong size on WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C");
+static_assert(offsetof(WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C, bSuccess) == 0x000000, "Member 'WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C::bSuccess' has a wrong offset!");
+static_assert(offsetof(WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C, SanitizedMessage) == 0x000008, "Member 'WP_FriendEntry_C_OnMessageProcessed_AAA0D2DB4317489A8AAFF9A295C6BE7C::SanitizedMessage' has a wrong offset!");
+
+// Function WP_FriendEntry.WP_FriendEntry_C.SetFriendInfoValue
+// 0x0008 (0x0008 - 0x0000)
+struct WP_FriendEntry_C_SetFriendInfoValue final
+{
+public:
+	class UOnlineFriendRef*                       FriendRef;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WP_FriendEntry_C_SetFriendInfoValue) == 0x000008, "Wrong alignment on WP_FriendEntry_C_SetFriendInfoValue");
+static_assert(sizeof(WP_FriendEntry_C_SetFriendInfoValue) == 0x000008, "Wrong size on WP_FriendEntry_C_SetFriendInfoValue");
+static_assert(offsetof(WP_FriendEntry_C_SetFriendInfoValue, FriendRef) == 0x000000, "Member 'WP_FriendEntry_C_SetFriendInfoValue::FriendRef' has a wrong offset!");
 
 // Function WP_FriendEntry.WP_FriendEntry_C.Tick
 // 0x003C (0x003C - 0x0000)

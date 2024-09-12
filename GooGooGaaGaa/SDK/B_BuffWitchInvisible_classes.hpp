@@ -22,17 +22,17 @@ namespace SDK
 class AB_BuffWitchInvisible_C final : public AB_Buff_C
 {
 public:
-	uint8                                         Pad_4B29[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_BuffWitchInvisible_C;             // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class AB_Witch_C*                             Witch;                                             // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bManaBoostActive;                                  // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B2A[0x7];                                     // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_ManaComponent_C*                     ManaComponent;                                     // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerController_C*                  PlayerController;                                  // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BuffEnd();
-	void BuffStart(class AB_PlayerState_C* Param_PlayerState);
+	void BuffStart(class AB_PlayerState_C* PlayerState_0);
 	void ExecuteUbergraph_B_BuffWitchInvisible(int32 EntryPoint);
 	void HideMulti(class AActor* Actor);
 	void UnhideMulti(class AActor* Actor);

@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HunterDetectionParameters.B_HunterDetectionParameters_C
-// 0x0020 (0x0098 - 0x0078)
+// 0x0020 (0x0088 - 0x0068)
 class UB_HunterDetectionParameters_C final : public UPowerupParameters
 {
 public:
-	double                                        BuffLength;                                        // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CheckRadius;                                       // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Pitch;                                             // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BuffLength;                                        // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CheckRadius;                                       // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Pitch;                                             // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,11 @@ public:
 	}
 };
 static_assert(alignof(UB_HunterDetectionParameters_C) == 0x000008, "Wrong alignment on UB_HunterDetectionParameters_C");
-static_assert(sizeof(UB_HunterDetectionParameters_C) == 0x000098, "Wrong size on UB_HunterDetectionParameters_C");
-static_assert(offsetof(UB_HunterDetectionParameters_C, BuffLength) == 0x000078, "Member 'UB_HunterDetectionParameters_C::BuffLength' has a wrong offset!");
-static_assert(offsetof(UB_HunterDetectionParameters_C, Scale) == 0x000080, "Member 'UB_HunterDetectionParameters_C::Scale' has a wrong offset!");
-static_assert(offsetof(UB_HunterDetectionParameters_C, CheckRadius) == 0x000088, "Member 'UB_HunterDetectionParameters_C::CheckRadius' has a wrong offset!");
-static_assert(offsetof(UB_HunterDetectionParameters_C, Pitch) == 0x000090, "Member 'UB_HunterDetectionParameters_C::Pitch' has a wrong offset!");
+static_assert(sizeof(UB_HunterDetectionParameters_C) == 0x000088, "Wrong size on UB_HunterDetectionParameters_C");
+static_assert(offsetof(UB_HunterDetectionParameters_C, BuffLength) == 0x000068, "Member 'UB_HunterDetectionParameters_C::BuffLength' has a wrong offset!");
+static_assert(offsetof(UB_HunterDetectionParameters_C, Scale) == 0x000070, "Member 'UB_HunterDetectionParameters_C::Scale' has a wrong offset!");
+static_assert(offsetof(UB_HunterDetectionParameters_C, CheckRadius) == 0x000078, "Member 'UB_HunterDetectionParameters_C::CheckRadius' has a wrong offset!");
+static_assert(offsetof(UB_HunterDetectionParameters_C, Pitch) == 0x000080, "Member 'UB_HunterDetectionParameters_C::Pitch' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PropCategory_structs.hpp"
 #include "E_PropSet_structs.hpp"
+#include "E_PropCategory_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
@@ -28,17 +28,17 @@ public:
 	TArray<int32>                                 CollectedPropsStatList;                            // 0x0038(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TSet<int32>                                   OwnedPropIds;                                      // 0x0048(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         PropStatCount;                                     // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_239F[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<E_PropCategory, int32>                   OwnedPropsInCategory;                              // 0x00A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<E_PropSet, int32>                        OwnedPropsInSet;                                   // 0x00F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void CheckAndSetOwnedPropsCount(TArray<struct FS_PropData>& PropDatas, const TMap<E_PropCategory, class FName>& PropCategoryStats, const TMap<E_PropSet, class FName>& PropSetStats);
-	void CollectProp(int32 PropId, bool Local, bool* IsNewProp);
+	void CollectProp(int32 PropID, bool Local, bool* IsNewProp);
 	void CountCollectedPropsPerCategory(TArray<struct FS_PropData>& PropDatas, const TMap<E_PropCategory, class FName>& PropCategoryStats, const TMap<E_PropSet, class FName>& PropSetStats);
 	void HandleNewPropCategoryAndSets(int32 NewPropId, const TMap<int32, struct FS_PropData>& PropDatas, const TMap<E_PropCategory, class FName>& PropCategoryStats, const TMap<E_PropSet, class FName>& PropSetStats, bool Local, int32* CountInCategory, int32* CountInSet, int32* TotalCategory, int32* TotalSet);
-	void Initialize(class UGameInstance* Param_GameInstance);
-	void InitializeGS(class UGameInstance* Param_GameInstance, class APlayerState* Param_PlayerState);
+	void Initialize(class UGameInstance* GameInstance_0);
+	void InitializeGS(class UGameInstance* GameInstance_0, class APlayerState* PlayerState_0);
 	void LoadOwnedPropIds();
 
 	void GetStatsAndAchievementsManager(class UB_NewStatsAndAchievementsManager_C** Result) const;

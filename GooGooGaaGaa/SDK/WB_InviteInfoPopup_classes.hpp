@@ -11,25 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "S_InviteInfo_structs.hpp"
 #include "UMG_classes.hpp"
+#include "S_InviteInfo_structs.hpp"
+#include "E_PopupType_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_InviteInfoPopup.WB_InviteInfoPopup_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0048 (0x0328 - 0x02E0)
 class UWB_InviteInfoPopup_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       PopupAnimation;                                    // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Frame;                                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             FromDescription;                                   // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             InviteTitle;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PlayerIcon_C*                       WB_PlayerIcon;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FS_InviteInfo                          InviteInfo;                                        // 0x02F0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       PopupAnimation;                                    // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Frame;                                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             InviteTitle;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PlayerIcon_C*                       WB_PlayerIcon;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FS_InviteInfo                          InviteInfo;                                        // 0x0308(0x0020)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -48,14 +48,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_InviteInfoPopup_C) == 0x000008, "Wrong alignment on UWB_InviteInfoPopup_C");
-static_assert(sizeof(UWB_InviteInfoPopup_C) == 0x000310, "Wrong size on UWB_InviteInfoPopup_C");
-static_assert(offsetof(UWB_InviteInfoPopup_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_InviteInfoPopup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_InviteInfoPopup_C, PopupAnimation) == 0x0002C8, "Member 'UWB_InviteInfoPopup_C::PopupAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_InviteInfoPopup_C, Frame) == 0x0002D0, "Member 'UWB_InviteInfoPopup_C::Frame' has a wrong offset!");
-static_assert(offsetof(UWB_InviteInfoPopup_C, FromDescription) == 0x0002D8, "Member 'UWB_InviteInfoPopup_C::FromDescription' has a wrong offset!");
-static_assert(offsetof(UWB_InviteInfoPopup_C, InviteTitle) == 0x0002E0, "Member 'UWB_InviteInfoPopup_C::InviteTitle' has a wrong offset!");
-static_assert(offsetof(UWB_InviteInfoPopup_C, WB_PlayerIcon) == 0x0002E8, "Member 'UWB_InviteInfoPopup_C::WB_PlayerIcon' has a wrong offset!");
-static_assert(offsetof(UWB_InviteInfoPopup_C, InviteInfo) == 0x0002F0, "Member 'UWB_InviteInfoPopup_C::InviteInfo' has a wrong offset!");
+static_assert(sizeof(UWB_InviteInfoPopup_C) == 0x000328, "Wrong size on UWB_InviteInfoPopup_C");
+static_assert(offsetof(UWB_InviteInfoPopup_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_InviteInfoPopup_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_InviteInfoPopup_C, PopupAnimation) == 0x0002E8, "Member 'UWB_InviteInfoPopup_C::PopupAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_InviteInfoPopup_C, Frame) == 0x0002F0, "Member 'UWB_InviteInfoPopup_C::Frame' has a wrong offset!");
+static_assert(offsetof(UWB_InviteInfoPopup_C, InviteTitle) == 0x0002F8, "Member 'UWB_InviteInfoPopup_C::InviteTitle' has a wrong offset!");
+static_assert(offsetof(UWB_InviteInfoPopup_C, WB_PlayerIcon) == 0x000300, "Member 'UWB_InviteInfoPopup_C::WB_PlayerIcon' has a wrong offset!");
+static_assert(offsetof(UWB_InviteInfoPopup_C, InviteInfo) == 0x000308, "Member 'UWB_InviteInfoPopup_C::InviteInfo' has a wrong offset!");
 
 }
 

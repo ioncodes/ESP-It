@@ -75,9 +75,9 @@ void UWB_KeyBindingList_C::CreateKeyBindingWidgetFromAction(class FName ActionNa
 // Function WB_KeyBindingList.WB_KeyBindingList_C.CreateKeyBindingWidgetFromAxis
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSAxisToEdit                     Param_AxisToEdit                                       (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// struct FSAxisToEdit                     AxisToEdit_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWB_KeyBindingList_C::CreateKeyBindingWidgetFromAxis(const struct FSAxisToEdit& Param_AxisToEdit)
+void UWB_KeyBindingList_C::CreateKeyBindingWidgetFromAxis(const struct FSAxisToEdit& AxisToEdit_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,7 +86,7 @@ void UWB_KeyBindingList_C::CreateKeyBindingWidgetFromAxis(const struct FSAxisToE
 
 	Params::WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis Parms{};
 
-	Parms.Param_AxisToEdit = std::move(Param_AxisToEdit);
+	Parms.AxisToEdit_0 = std::move(AxisToEdit_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -194,9 +194,9 @@ void UWB_KeyBindingList_C::OnBack()
 // Parameters:
 // class UWB_KeyBinding_C*                 KeyBindingWidget                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UWB_KeyBindingButton_C*           KeyBindingButton                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_KeyBindingList_C::OnKeyBindingButtonClicked(class UWB_KeyBinding_C* KeyBindingWidget, class UWB_KeyBindingButton_C* KeyBindingButton, int32 Param_Index)
+void UWB_KeyBindingList_C::OnKeyBindingButtonClicked(class UWB_KeyBinding_C* KeyBindingWidget, class UWB_KeyBindingButton_C* KeyBindingButton, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -207,7 +207,7 @@ void UWB_KeyBindingList_C::OnKeyBindingButtonClicked(class UWB_KeyBinding_C* Key
 
 	Parms.KeyBindingWidget = KeyBindingWidget;
 	Parms.KeyBindingButton = KeyBindingButton;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

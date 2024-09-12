@@ -105,6 +105,26 @@ ESlateVisibility UWB_ServerStateInfo_C::GetVisibility_0()
 }
 
 
+// Function WB_ServerStateInfo.WB_ServerStateInfo_C.GetVisibility_1
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_ServerStateInfo_C::GetVisibility_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ServerStateInfo_C", "GetVisibility_1");
+
+	Params::WB_ServerStateInfo_C_GetVisibility_1 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_ServerStateInfo.WB_ServerStateInfo_C.IsAnyNotConnected
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_HelpWitch.WB_HelpWitch_C
-// 0x0050 (0x0328 - 0x02D8)
+// 0x0050 (0x0348 - 0x02F8)
 class UWB_HelpWitch_C final : public UWB_HelpTabBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_HelpWitch_C;                     // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           BackButton;                                        // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           ControlsButton;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           GameplayButton;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           SkillsButton;                                      // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        SubSwitcher;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_BinkMoviePlayer_C*                  WB_BinkMoviePlayer;                                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Controls_C*                         WB_Controls;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HelpWitchSkill_C*                   WB_HelpWitchSkill;                                 // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_HelpWitch_C;                     // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           BackButton;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           ControlsButton;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           GameplayButton;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           SkillsButton;                                      // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        SubSwitcher;                                       // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_BinkMoviePlayer_C*                  WB_BinkMoviePlayer;                                // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Controls_C*                         WB_Controls;                                       // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HelpWitchSkill_C*                   WB_WitchSkill;                                     // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void Activate();
@@ -54,17 +54,17 @@ public:
 	}
 };
 static_assert(alignof(UWB_HelpWitch_C) == 0x000008, "Wrong alignment on UWB_HelpWitch_C");
-static_assert(sizeof(UWB_HelpWitch_C) == 0x000328, "Wrong size on UWB_HelpWitch_C");
-static_assert(offsetof(UWB_HelpWitch_C, UberGraphFrame_WB_HelpWitch_C) == 0x0002D8, "Member 'UWB_HelpWitch_C::UberGraphFrame_WB_HelpWitch_C' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, BackButton) == 0x0002E0, "Member 'UWB_HelpWitch_C::BackButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_HelpWitch_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, ControlsButton) == 0x0002F0, "Member 'UWB_HelpWitch_C::ControlsButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, GameplayButton) == 0x0002F8, "Member 'UWB_HelpWitch_C::GameplayButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, SkillsButton) == 0x000300, "Member 'UWB_HelpWitch_C::SkillsButton' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, SubSwitcher) == 0x000308, "Member 'UWB_HelpWitch_C::SubSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, WB_BinkMoviePlayer) == 0x000310, "Member 'UWB_HelpWitch_C::WB_BinkMoviePlayer' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, WB_Controls) == 0x000318, "Member 'UWB_HelpWitch_C::WB_Controls' has a wrong offset!");
-static_assert(offsetof(UWB_HelpWitch_C, WB_HelpWitchSkill) == 0x000320, "Member 'UWB_HelpWitch_C::WB_HelpWitchSkill' has a wrong offset!");
+static_assert(sizeof(UWB_HelpWitch_C) == 0x000348, "Wrong size on UWB_HelpWitch_C");
+static_assert(offsetof(UWB_HelpWitch_C, UberGraphFrame_WB_HelpWitch_C) == 0x0002F8, "Member 'UWB_HelpWitch_C::UberGraphFrame_WB_HelpWitch_C' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, BackButton) == 0x000300, "Member 'UWB_HelpWitch_C::BackButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, CanvasPanel_0) == 0x000308, "Member 'UWB_HelpWitch_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, ControlsButton) == 0x000310, "Member 'UWB_HelpWitch_C::ControlsButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, GameplayButton) == 0x000318, "Member 'UWB_HelpWitch_C::GameplayButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, SkillsButton) == 0x000320, "Member 'UWB_HelpWitch_C::SkillsButton' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, SubSwitcher) == 0x000328, "Member 'UWB_HelpWitch_C::SubSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, WB_BinkMoviePlayer) == 0x000330, "Member 'UWB_HelpWitch_C::WB_BinkMoviePlayer' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, WB_Controls) == 0x000338, "Member 'UWB_HelpWitch_C::WB_Controls' has a wrong offset!");
+static_assert(offsetof(UWB_HelpWitch_C, WB_WitchSkill) == 0x000340, "Member 'UWB_HelpWitch_C::WB_WitchSkill' has a wrong offset!");
 
 }
 

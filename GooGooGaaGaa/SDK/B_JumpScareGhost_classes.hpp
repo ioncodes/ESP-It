@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_PooledActor_classes.hpp"
 
 
@@ -19,24 +19,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_JumpScareGhost.B_JumpScareGhost_C
-// 0x0060 (0x0328 - 0x02C8)
+// 0x0060 (0x0320 - 0x02C0)
 class AB_JumpScareGhost_C final : public AB_PooledActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_JumpScareGhost_C;                 // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 SK_Luaq;                                           // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio;                                             // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Mesh;                                              // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       SphereCollision;                                   // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UProjectileMovementComponent*           ProjectileMovement;                                // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                InitialSize;                                       // 0x02F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0310(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BlindDuration;                                     // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TeleportOnCooldown;                                // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_JumpScareGhost_C;                 // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 SK_Luaq;                                           // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio;                                             // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Mesh;                                              // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       SphereCollision;                                   // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UProjectileMovementComponent*           ProjectileMovement;                                // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                InitialSize;                                       // 0x02F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0308(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BlindDuration;                                     // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TeleportOnCooldown;                                // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__SphereCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void CanTeleport(bool* Param_CanTeleport);
+	void CanTeleport(bool* CanTeleport_0);
 	void ExecuteUbergraph_B_JumpScareGhost(int32 EntryPoint);
 	void HandleOverlap(class UObject* Overlapping_Actor);
 	void InitializeRules();
@@ -46,7 +46,7 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void SetLuaqVisibilityForHunters();
 	void TearDown();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 	void UpdateScaleVelocityAndBlindDuration();
 	void UpdateVelocityVector();
 
@@ -61,17 +61,17 @@ public:
 	}
 };
 static_assert(alignof(AB_JumpScareGhost_C) == 0x000008, "Wrong alignment on AB_JumpScareGhost_C");
-static_assert(sizeof(AB_JumpScareGhost_C) == 0x000328, "Wrong size on AB_JumpScareGhost_C");
-static_assert(offsetof(AB_JumpScareGhost_C, UberGraphFrame_B_JumpScareGhost_C) == 0x0002C8, "Member 'AB_JumpScareGhost_C::UberGraphFrame_B_JumpScareGhost_C' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, SK_Luaq) == 0x0002D0, "Member 'AB_JumpScareGhost_C::SK_Luaq' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, Audio) == 0x0002D8, "Member 'AB_JumpScareGhost_C::Audio' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, Mesh) == 0x0002E0, "Member 'AB_JumpScareGhost_C::Mesh' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, SphereCollision) == 0x0002E8, "Member 'AB_JumpScareGhost_C::SphereCollision' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, ProjectileMovement) == 0x0002F0, "Member 'AB_JumpScareGhost_C::ProjectileMovement' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, InitialSize) == 0x0002F8, "Member 'AB_JumpScareGhost_C::InitialSize' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, Scale) == 0x000310, "Member 'AB_JumpScareGhost_C::Scale' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, BlindDuration) == 0x000318, "Member 'AB_JumpScareGhost_C::BlindDuration' has a wrong offset!");
-static_assert(offsetof(AB_JumpScareGhost_C, TeleportOnCooldown) == 0x000320, "Member 'AB_JumpScareGhost_C::TeleportOnCooldown' has a wrong offset!");
+static_assert(sizeof(AB_JumpScareGhost_C) == 0x000320, "Wrong size on AB_JumpScareGhost_C");
+static_assert(offsetof(AB_JumpScareGhost_C, UberGraphFrame_B_JumpScareGhost_C) == 0x0002C0, "Member 'AB_JumpScareGhost_C::UberGraphFrame_B_JumpScareGhost_C' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, SK_Luaq) == 0x0002C8, "Member 'AB_JumpScareGhost_C::SK_Luaq' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, Audio) == 0x0002D0, "Member 'AB_JumpScareGhost_C::Audio' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, Mesh) == 0x0002D8, "Member 'AB_JumpScareGhost_C::Mesh' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, SphereCollision) == 0x0002E0, "Member 'AB_JumpScareGhost_C::SphereCollision' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, ProjectileMovement) == 0x0002E8, "Member 'AB_JumpScareGhost_C::ProjectileMovement' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, InitialSize) == 0x0002F0, "Member 'AB_JumpScareGhost_C::InitialSize' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, Scale) == 0x000308, "Member 'AB_JumpScareGhost_C::Scale' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, BlindDuration) == 0x000310, "Member 'AB_JumpScareGhost_C::BlindDuration' has a wrong offset!");
+static_assert(offsetof(AB_JumpScareGhost_C, TeleportOnCooldown) == 0x000318, "Member 'AB_JumpScareGhost_C::TeleportOnCooldown' has a wrong offset!");
 
 }
 

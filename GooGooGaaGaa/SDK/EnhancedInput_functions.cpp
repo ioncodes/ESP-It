@@ -2096,6 +2096,60 @@ void IEnhancedInputSubsystemInterface::StopContinuousInputInjectionForPlayerMapp
 }
 
 
+// Function EnhancedInput.EnhancedInputSubsystemInterface.UpdateValueOfContinuousInputInjectionForAction
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UInputAction*                     Action                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FInputActionValue                RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void IEnhancedInputSubsystemInterface::UpdateValueOfContinuousInputInjectionForAction(const class UInputAction* Action, const struct FInputActionValue& RawValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnhancedInputSubsystemInterface", "UpdateValueOfContinuousInputInjectionForAction");
+
+	Params::EnhancedInputSubsystemInterface_UpdateValueOfContinuousInputInjectionForAction Parms{};
+
+	Parms.Action = Action;
+	Parms.RawValue = std::move(RawValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.UpdateValueOfContinuousInputInjectionForPlayerMapping
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             MappingName                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FInputActionValue                RawValue                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void IEnhancedInputSubsystemInterface::UpdateValueOfContinuousInputInjectionForPlayerMapping(const class FName MappingName, const struct FInputActionValue& RawValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnhancedInputSubsystemInterface", "UpdateValueOfContinuousInputInjectionForPlayerMapping");
+
+	Params::EnhancedInputSubsystemInterface_UpdateValueOfContinuousInputInjectionForPlayerMapping Parms{};
+
+	Parms.MappingName = MappingName;
+	Parms.RawValue = std::move(RawValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function EnhancedInput.EnhancedInputSubsystemInterface.GetAllPlayerMappableActionKeyMappings
 // (BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -2261,6 +2315,20 @@ TArray<struct FKey> IEnhancedInputSubsystemInterface::QueryKeysMappedToAction(co
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// DelegateFunction EnhancedInput.EnhancedInputLocalPlayerSubsystem.OnControlMappingsRebuilt__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+
+void UEnhancedInputLocalPlayerSubsystem::OnControlMappingsRebuilt__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnhancedInputLocalPlayerSubsystem", "OnControlMappingsRebuilt__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

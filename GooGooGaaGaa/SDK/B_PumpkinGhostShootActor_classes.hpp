@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "B_ShootActor_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_PumpkinGhostShootActor.B_PumpkinGhostShootActor_C
-// 0x0078 (0x0378 - 0x0300)
+// 0x0078 (0x0370 - 0x02F8)
 class AB_PumpkinGhostShootActor_C final : public AB_ShootActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_PumpkinGhostShootActor_C;         // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        GhostAudio;                                        // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_PumkinGhostHit;                                 // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       PumpkinGhostSphere;                                // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 PumpkinGhost;                                      // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHealthy;                                         // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GhostIsTravelling;                                 // 0x0329(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9E[0x6];                                     // 0x032A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                GhostDeltaLocation;                                // 0x0330(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NextTargetLocation;                                // 0x0348(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_PumpkinGhostDummy_C*                 HealthyPumpkinDummy;                               // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_PumpkinGhostShootActor_C*            NextTarget;                                        // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Speed;                                             // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_PumpkinGhostShootActor_C;         // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        GhostAudio;                                        // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_PumkinGhostHit;                                 // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       PumpkinGhostSphere;                                // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 PumpkinGhost;                                      // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHealthy;                                         // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GhostIsTravelling;                                 // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_322[0x6];                                      // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                GhostDeltaLocation;                                // 0x0328(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NextTargetLocation;                                // 0x0340(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_PumpkinGhostDummy_C*                 HealthyPumpkinDummy;                               // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_PumpkinGhostShootActor_C*            NextTarget;                                        // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Speed;                                             // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -59,19 +59,19 @@ public:
 	}
 };
 static_assert(alignof(AB_PumpkinGhostShootActor_C) == 0x000008, "Wrong alignment on AB_PumpkinGhostShootActor_C");
-static_assert(sizeof(AB_PumpkinGhostShootActor_C) == 0x000378, "Wrong size on AB_PumpkinGhostShootActor_C");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, UberGraphFrame_B_PumpkinGhostShootActor_C) == 0x000300, "Member 'AB_PumpkinGhostShootActor_C::UberGraphFrame_B_PumpkinGhostShootActor_C' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, GhostAudio) == 0x000308, "Member 'AB_PumpkinGhostShootActor_C::GhostAudio' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, NS_PumkinGhostHit) == 0x000310, "Member 'AB_PumpkinGhostShootActor_C::NS_PumkinGhostHit' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, PumpkinGhostSphere) == 0x000318, "Member 'AB_PumpkinGhostShootActor_C::PumpkinGhostSphere' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, PumpkinGhost) == 0x000320, "Member 'AB_PumpkinGhostShootActor_C::PumpkinGhost' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, IsHealthy) == 0x000328, "Member 'AB_PumpkinGhostShootActor_C::IsHealthy' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, GhostIsTravelling) == 0x000329, "Member 'AB_PumpkinGhostShootActor_C::GhostIsTravelling' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, GhostDeltaLocation) == 0x000330, "Member 'AB_PumpkinGhostShootActor_C::GhostDeltaLocation' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, NextTargetLocation) == 0x000348, "Member 'AB_PumpkinGhostShootActor_C::NextTargetLocation' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, HealthyPumpkinDummy) == 0x000360, "Member 'AB_PumpkinGhostShootActor_C::HealthyPumpkinDummy' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, NextTarget) == 0x000368, "Member 'AB_PumpkinGhostShootActor_C::NextTarget' has a wrong offset!");
-static_assert(offsetof(AB_PumpkinGhostShootActor_C, Speed) == 0x000370, "Member 'AB_PumpkinGhostShootActor_C::Speed' has a wrong offset!");
+static_assert(sizeof(AB_PumpkinGhostShootActor_C) == 0x000370, "Wrong size on AB_PumpkinGhostShootActor_C");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, UberGraphFrame_B_PumpkinGhostShootActor_C) == 0x0002F8, "Member 'AB_PumpkinGhostShootActor_C::UberGraphFrame_B_PumpkinGhostShootActor_C' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, GhostAudio) == 0x000300, "Member 'AB_PumpkinGhostShootActor_C::GhostAudio' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, NS_PumkinGhostHit) == 0x000308, "Member 'AB_PumpkinGhostShootActor_C::NS_PumkinGhostHit' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, PumpkinGhostSphere) == 0x000310, "Member 'AB_PumpkinGhostShootActor_C::PumpkinGhostSphere' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, PumpkinGhost) == 0x000318, "Member 'AB_PumpkinGhostShootActor_C::PumpkinGhost' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, IsHealthy) == 0x000320, "Member 'AB_PumpkinGhostShootActor_C::IsHealthy' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, GhostIsTravelling) == 0x000321, "Member 'AB_PumpkinGhostShootActor_C::GhostIsTravelling' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, GhostDeltaLocation) == 0x000328, "Member 'AB_PumpkinGhostShootActor_C::GhostDeltaLocation' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, NextTargetLocation) == 0x000340, "Member 'AB_PumpkinGhostShootActor_C::NextTargetLocation' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, HealthyPumpkinDummy) == 0x000358, "Member 'AB_PumpkinGhostShootActor_C::HealthyPumpkinDummy' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, NextTarget) == 0x000360, "Member 'AB_PumpkinGhostShootActor_C::NextTarget' has a wrong offset!");
+static_assert(offsetof(AB_PumpkinGhostShootActor_C, Speed) == 0x000368, "Member 'AB_PumpkinGhostShootActor_C::Speed' has a wrong offset!");
 
 }
 

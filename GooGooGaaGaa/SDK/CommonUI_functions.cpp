@@ -17,32 +17,6 @@
 namespace SDK
 {
 
-// Function CommonUI.CommonBorderStyle.GetBackgroundBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonBorderStyle::GetBackgroundBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonBorderStyle", "GetBackgroundBrush");
-
-	Params::CommonBorderStyle_GetBackgroundBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
 // DelegateFunction CommonUI.CommonActionWidget.OnInputMethodChanged__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
@@ -238,6 +212,31 @@ bool UCommonActionWidget::IsHeldAction() const
 }
 
 
+// Function CommonUI.CommonUserWidget.RegisterScrollRecipientExternal
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                          AnalogScrollRecipient                                  (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonUserWidget::RegisterScrollRecipientExternal(const class UWidget* AnalogScrollRecipient)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonUserWidget", "RegisterScrollRecipientExternal");
+
+	Params::CommonUserWidget_RegisterScrollRecipientExternal Parms{};
+
+	Parms.AnalogScrollRecipient = AnalogScrollRecipient;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CommonUI.CommonUserWidget.SetConsumePointerInput
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -260,6 +259,885 @@ void UCommonUserWidget::SetConsumePointerInput(bool bInConsumePointerInput)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonUserWidget.UnregisterScrollRecipientExternal
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                          AnalogScrollRecipient                                  (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonUserWidget::UnregisterScrollRecipientExternal(const class UWidget* AnalogScrollRecipient)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonUserWidget", "UnregisterScrollRecipientExternal");
+
+	Params::CommonUserWidget_UnregisterScrollRecipientExternal Parms{};
+
+	Parms.AnalogScrollRecipient = AnalogScrollRecipient;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.ActivateWidget
+// (Final, Native, Public, BlueprintCallable)
+
+void UCommonActivatableWidget::ActivateWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "ActivateWidget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.BindVisibilityToActivation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UCommonActivatableWidget*         ActivatableWidget                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonActivatableWidget::BindVisibilityToActivation(class UCommonActivatableWidget* ActivatableWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "BindVisibilityToActivation");
+
+	Params::CommonActivatableWidget_BindVisibilityToActivation Parms{};
+
+	Parms.ActivatableWidget = ActivatableWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UCommonActivatableWidget::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CommonUI.CommonActivatableWidget.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UCommonActivatableWidget::BP_OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "BP_OnDeactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CommonUI.CommonActivatableWidget.BP_OnHandleBackAction
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonActivatableWidget::BP_OnHandleBackAction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "BP_OnHandleBackAction");
+
+	Params::CommonActivatableWidget_BP_OnHandleBackAction Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.ClearFocusRestorationTarget
+// (Final, Native, Public, BlueprintCallable)
+
+void UCommonActivatableWidget::ClearFocusRestorationTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "ClearFocusRestorationTarget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.DeactivateWidget
+// (Final, Native, Public, BlueprintCallable)
+
+void UCommonActivatableWidget::DeactivateWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "DeactivateWidget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.RequestRefreshFocus
+// (Final, Native, Protected, BlueprintCallable)
+
+void UCommonActivatableWidget::RequestRefreshFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "RequestRefreshFocus");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.SetBindVisibilities
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// ESlateVisibility                        OnActivatedVisibility                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESlateVisibility                        OnDeactivatedVisibility                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInAllActive                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonActivatableWidget::SetBindVisibilities(ESlateVisibility OnActivatedVisibility, ESlateVisibility OnDeactivatedVisibility, bool bInAllActive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "SetBindVisibilities");
+
+	Params::CommonActivatableWidget_SetBindVisibilities Parms{};
+
+	Parms.OnActivatedVisibility = OnActivatedVisibility;
+	Parms.OnDeactivatedVisibility = OnDeactivatedVisibility;
+	Parms.bInAllActive = bInAllActive;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.BP_GetDesiredFocusTarget
+// (Event, Protected, BlueprintEvent, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWidget* UCommonActivatableWidget::BP_GetDesiredFocusTarget() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "BP_GetDesiredFocusTarget");
+
+	Params::CommonActivatableWidget_BP_GetDesiredFocusTarget Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.BP_GetDesiredInputConfig
+// (Event, Protected, BlueprintEvent, Const)
+// Parameters:
+// struct FUIInputConfig                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FUIInputConfig UCommonActivatableWidget::BP_GetDesiredInputConfig() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "BP_GetDesiredInputConfig");
+
+	Params::CommonActivatableWidget_BP_GetDesiredInputConfig Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.GetDesiredFocusTarget
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWidget* UCommonActivatableWidget::GetDesiredFocusTarget() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "GetDesiredFocusTarget");
+
+	Params::CommonActivatableWidget_GetDesiredFocusTarget Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonActivatableWidget.IsActivated
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonActivatableWidget::IsActivated() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonActivatableWidget", "IsActivated");
+
+	Params::CommonActivatableWidget_IsActivated Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonAnimatedSwitcher.ActivateNextWidget
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bCanWrap                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonAnimatedSwitcher::ActivateNextWidget(bool bCanWrap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonAnimatedSwitcher", "ActivateNextWidget");
+
+	Params::CommonAnimatedSwitcher_ActivateNextWidget Parms{};
+
+	Parms.bCanWrap = bCanWrap;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonAnimatedSwitcher.ActivatePreviousWidget
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bCanWrap                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonAnimatedSwitcher::ActivatePreviousWidget(bool bCanWrap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonAnimatedSwitcher", "ActivatePreviousWidget");
+
+	Params::CommonAnimatedSwitcher_ActivatePreviousWidget Parms{};
+
+	Parms.bCanWrap = bCanWrap;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonAnimatedSwitcher.SetDisableTransitionAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bDisableAnimation                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonAnimatedSwitcher::SetDisableTransitionAnimation(bool bDisableAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonAnimatedSwitcher", "SetDisableTransitionAnimation");
+
+	Params::CommonAnimatedSwitcher_SetDisableTransitionAnimation Parms{};
+
+	Parms.bDisableAnimation = bDisableAnimation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonAnimatedSwitcher.HasWidgets
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonAnimatedSwitcher::HasWidgets() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonAnimatedSwitcher", "HasWidgets");
+
+	Params::CommonAnimatedSwitcher_HasWidgets Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonAnimatedSwitcher.IsCurrentlySwitching
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonAnimatedSwitcher::IsCurrentlySwitching() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonAnimatedSwitcher", "IsCurrentlySwitching");
+
+	Params::CommonAnimatedSwitcher_IsCurrentlySwitching Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonAnimatedSwitcher.IsTransitionPlaying
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonAnimatedSwitcher::IsTransitionPlaying() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonAnimatedSwitcher", "IsTransitionPlaying");
+
+	Params::CommonAnimatedSwitcher_IsTransitionPlaying Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonBorderStyle.GetBackgroundBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonBorderStyle::GetBackgroundBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonBorderStyle", "GetBackgroundBrush");
+
+	Params::CommonBorderStyle_GetBackgroundBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonBorder.SetStyle
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UCommonBorderStyle>   InStyle                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonBorder::SetStyle(TSubclassOf<class UCommonBorderStyle> InStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonBorder", "SetStyle");
+
+	Params::CommonBorder_SetStyle Parms{};
+
+	Parms.InStyle = InStyle;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetButtonPadding
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FMargin                          OutButtonPadding                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetButtonPadding(struct FMargin* OutButtonPadding) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetButtonPadding");
+
+	Params::CommonButtonStyle_GetButtonPadding Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutButtonPadding != nullptr)
+		*OutButtonPadding = std::move(Parms.OutButtonPadding);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetCustomPadding
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FMargin                          OutCustomPadding                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetCustomPadding(struct FMargin* OutCustomPadding) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetCustomPadding");
+
+	Params::CommonButtonStyle_GetCustomPadding Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutCustomPadding != nullptr)
+		*OutCustomPadding = std::move(Parms.OutCustomPadding);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetDisabledBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetDisabledBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetDisabledBrush");
+
+	Params::CommonButtonStyle_GetDisabledBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetDisabledTextStyle
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCommonTextStyle* UCommonButtonStyle::GetDisabledTextStyle() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetDisabledTextStyle");
+
+	Params::CommonButtonStyle_GetDisabledTextStyle Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetMaterialBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetMaterialBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetMaterialBrush");
+
+	Params::CommonButtonStyle_GetMaterialBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetNormalBaseBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetNormalBaseBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetNormalBaseBrush");
+
+	Params::CommonButtonStyle_GetNormalBaseBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetNormalHoveredBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetNormalHoveredBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetNormalHoveredBrush");
+
+	Params::CommonButtonStyle_GetNormalHoveredBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetNormalHoveredTextStyle
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCommonTextStyle* UCommonButtonStyle::GetNormalHoveredTextStyle() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetNormalHoveredTextStyle");
+
+	Params::CommonButtonStyle_GetNormalHoveredTextStyle Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetNormalPressedBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetNormalPressedBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetNormalPressedBrush");
+
+	Params::CommonButtonStyle_GetNormalPressedBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetNormalTextStyle
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCommonTextStyle* UCommonButtonStyle::GetNormalTextStyle() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetNormalTextStyle");
+
+	Params::CommonButtonStyle_GetNormalTextStyle Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetSelectedBaseBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetSelectedBaseBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedBaseBrush");
+
+	Params::CommonButtonStyle_GetSelectedBaseBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetSelectedHoveredBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetSelectedHoveredBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedHoveredBrush");
+
+	Params::CommonButtonStyle_GetSelectedHoveredBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetSelectedHoveredTextStyle
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCommonTextStyle* UCommonButtonStyle::GetSelectedHoveredTextStyle() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedHoveredTextStyle");
+
+	Params::CommonButtonStyle_GetSelectedHoveredTextStyle Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetSelectedPressedBrush
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UCommonButtonStyle::GetSelectedPressedBrush(struct FSlateBrush* Brush) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedPressedBrush");
+
+	Params::CommonButtonStyle_GetSelectedPressedBrush Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Brush != nullptr)
+		*Brush = std::move(Parms.Brush);
+}
+
+
+// Function CommonUI.CommonButtonStyle.GetSelectedTextStyle
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCommonTextStyle* UCommonButtonStyle::GetSelectedTextStyle() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedTextStyle");
+
+	Params::CommonButtonStyle_GetSelectedTextStyle Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -370,6 +1248,20 @@ void UCommonButtonBase::BP_OnHovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("CommonButtonBase", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CommonUI.CommonButtonBase.BP_OnInputActionTriggered
+// (Event, Protected, BlueprintEvent)
+
+void UCommonButtonBase::BP_OnInputActionTriggered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonButtonBase", "BP_OnInputActionTriggered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2001,791 +2893,24 @@ bool UCommonButtonBase::IsPressed() const
 }
 
 
-// Function CommonUI.CommonActivatableWidget.ActivateWidget
-// (Final, Native, Public, BlueprintCallable)
-
-void UCommonActivatableWidget::ActivateWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "ActivateWidget");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.BindVisibilityToActivation
-// (Final, Native, Public, BlueprintCallable)
+// DelegateFunction CommonUI.CommonCustomNavigation.OnCustomNavigationEvent__DelegateSignature
+// (Public, Delegate)
 // Parameters:
-// class UCommonActivatableWidget*         ActivatableWidget                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCommonActivatableWidget::BindVisibilityToActivation(class UCommonActivatableWidget* ActivatableWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "BindVisibilityToActivation");
-
-	Params::CommonActivatableWidget_BindVisibilityToActivation Parms{};
-
-	Parms.ActivatableWidget = ActivatableWidget;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.BP_OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UCommonActivatableWidget::BP_OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "BP_OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CommonUI.CommonActivatableWidget.BP_OnDeactivated
-// (Event, Protected, BlueprintEvent)
-
-void UCommonActivatableWidget::BP_OnDeactivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "BP_OnDeactivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CommonUI.CommonActivatableWidget.BP_OnHandleBackAction
-// (Event, Protected, BlueprintEvent)
-// Parameters:
+// EUINavigation                           NavigationType                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UCommonActivatableWidget::BP_OnHandleBackAction()
+bool UCommonCustomNavigation::OnCustomNavigationEvent__DelegateSignature(EUINavigation NavigationType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "BP_OnHandleBackAction");
+		Func = Class->GetFunction("CommonCustomNavigation", "OnCustomNavigationEvent__DelegateSignature");
 
-	Params::CommonActivatableWidget_BP_OnHandleBackAction Parms{};
+	Params::CommonCustomNavigation_OnCustomNavigationEvent__DelegateSignature Parms{};
+
+	Parms.NavigationType = NavigationType;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.DeactivateWidget
-// (Final, Native, Public, BlueprintCallable)
-
-void UCommonActivatableWidget::DeactivateWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "DeactivateWidget");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.SetBindVisibilities
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// ESlateVisibility                        OnActivatedVisibility                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ESlateVisibility                        OnDeactivatedVisibility                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bInAllActive                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCommonActivatableWidget::SetBindVisibilities(ESlateVisibility OnActivatedVisibility, ESlateVisibility OnDeactivatedVisibility, bool bInAllActive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "SetBindVisibilities");
-
-	Params::CommonActivatableWidget_SetBindVisibilities Parms{};
-
-	Parms.OnActivatedVisibility = OnActivatedVisibility;
-	Parms.OnDeactivatedVisibility = OnDeactivatedVisibility;
-	Parms.bInAllActive = bInAllActive;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.BP_GetDesiredFocusTarget
-// (Event, Protected, BlueprintEvent, Const)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UWidget* UCommonActivatableWidget::BP_GetDesiredFocusTarget() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "BP_GetDesiredFocusTarget");
-
-	Params::CommonActivatableWidget_BP_GetDesiredFocusTarget Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.BP_GetDesiredInputConfig
-// (Event, Protected, BlueprintEvent, Const)
-// Parameters:
-// struct FUIInputConfig                   ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FUIInputConfig UCommonActivatableWidget::BP_GetDesiredInputConfig() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "BP_GetDesiredInputConfig");
-
-	Params::CommonActivatableWidget_BP_GetDesiredInputConfig Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.GetDesiredFocusTarget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UWidget* UCommonActivatableWidget::GetDesiredFocusTarget() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "GetDesiredFocusTarget");
-
-	Params::CommonActivatableWidget_GetDesiredFocusTarget Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonActivatableWidget.IsActivated
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UCommonActivatableWidget::IsActivated() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonActivatableWidget", "IsActivated");
-
-	Params::CommonActivatableWidget_IsActivated Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonAnimatedSwitcher.ActivateNextWidget
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bCanWrap                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCommonAnimatedSwitcher::ActivateNextWidget(bool bCanWrap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonAnimatedSwitcher", "ActivateNextWidget");
-
-	Params::CommonAnimatedSwitcher_ActivateNextWidget Parms{};
-
-	Parms.bCanWrap = bCanWrap;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonAnimatedSwitcher.ActivatePreviousWidget
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bCanWrap                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCommonAnimatedSwitcher::ActivatePreviousWidget(bool bCanWrap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonAnimatedSwitcher", "ActivatePreviousWidget");
-
-	Params::CommonAnimatedSwitcher_ActivatePreviousWidget Parms{};
-
-	Parms.bCanWrap = bCanWrap;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonAnimatedSwitcher.SetDisableTransitionAnimation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bDisableAnimation                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCommonAnimatedSwitcher::SetDisableTransitionAnimation(bool bDisableAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonAnimatedSwitcher", "SetDisableTransitionAnimation");
-
-	Params::CommonAnimatedSwitcher_SetDisableTransitionAnimation Parms{};
-
-	Parms.bDisableAnimation = bDisableAnimation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonAnimatedSwitcher.HasWidgets
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UCommonAnimatedSwitcher::HasWidgets() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonAnimatedSwitcher", "HasWidgets");
-
-	Params::CommonAnimatedSwitcher_HasWidgets Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonAnimatedSwitcher.IsCurrentlySwitching
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UCommonAnimatedSwitcher::IsCurrentlySwitching() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonAnimatedSwitcher", "IsCurrentlySwitching");
-
-	Params::CommonAnimatedSwitcher_IsCurrentlySwitching Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonAnimatedSwitcher.IsTransitionPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UCommonAnimatedSwitcher::IsTransitionPlaying() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonAnimatedSwitcher", "IsTransitionPlaying");
-
-	Params::CommonAnimatedSwitcher_IsTransitionPlaying Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonBorder.SetStyle
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UCommonBorderStyle>   InStyle                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UCommonBorder::SetStyle(TSubclassOf<class UCommonBorderStyle> InStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonBorder", "SetStyle");
-
-	Params::CommonBorder_SetStyle Parms{};
-
-	Parms.InStyle = InStyle;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetButtonPadding
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FMargin                          OutButtonPadding                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetButtonPadding(struct FMargin* OutButtonPadding) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetButtonPadding");
-
-	Params::CommonButtonStyle_GetButtonPadding Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutButtonPadding != nullptr)
-		*OutButtonPadding = std::move(Parms.OutButtonPadding);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetCustomPadding
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FMargin                          OutCustomPadding                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetCustomPadding(struct FMargin* OutCustomPadding) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetCustomPadding");
-
-	Params::CommonButtonStyle_GetCustomPadding Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutCustomPadding != nullptr)
-		*OutCustomPadding = std::move(Parms.OutCustomPadding);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetDisabledBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetDisabledBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetDisabledBrush");
-
-	Params::CommonButtonStyle_GetDisabledBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetDisabledTextStyle
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UCommonTextStyle* UCommonButtonStyle::GetDisabledTextStyle() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetDisabledTextStyle");
-
-	Params::CommonButtonStyle_GetDisabledTextStyle Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetMaterialBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetMaterialBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetMaterialBrush");
-
-	Params::CommonButtonStyle_GetMaterialBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetNormalBaseBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetNormalBaseBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetNormalBaseBrush");
-
-	Params::CommonButtonStyle_GetNormalBaseBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetNormalHoveredBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetNormalHoveredBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetNormalHoveredBrush");
-
-	Params::CommonButtonStyle_GetNormalHoveredBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetNormalHoveredTextStyle
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UCommonTextStyle* UCommonButtonStyle::GetNormalHoveredTextStyle() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetNormalHoveredTextStyle");
-
-	Params::CommonButtonStyle_GetNormalHoveredTextStyle Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetNormalPressedBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetNormalPressedBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetNormalPressedBrush");
-
-	Params::CommonButtonStyle_GetNormalPressedBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetNormalTextStyle
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UCommonTextStyle* UCommonButtonStyle::GetNormalTextStyle() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetNormalTextStyle");
-
-	Params::CommonButtonStyle_GetNormalTextStyle Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetSelectedBaseBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetSelectedBaseBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedBaseBrush");
-
-	Params::CommonButtonStyle_GetSelectedBaseBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetSelectedHoveredBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetSelectedHoveredBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedHoveredBrush");
-
-	Params::CommonButtonStyle_GetSelectedHoveredBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetSelectedHoveredTextStyle
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UCommonTextStyle* UCommonButtonStyle::GetSelectedHoveredTextStyle() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedHoveredTextStyle");
-
-	Params::CommonButtonStyle_GetSelectedHoveredTextStyle Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetSelectedPressedBrush
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FSlateBrush                      Brush                                                  (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UCommonButtonStyle::GetSelectedPressedBrush(struct FSlateBrush* Brush) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedPressedBrush");
-
-	Params::CommonButtonStyle_GetSelectedPressedBrush Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Brush != nullptr)
-		*Brush = std::move(Parms.Brush);
-}
-
-
-// Function CommonUI.CommonButtonStyle.GetSelectedTextStyle
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UCommonTextStyle*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UCommonTextStyle* UCommonButtonStyle::GetSelectedTextStyle() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CommonButtonStyle", "GetSelectedTextStyle");
-
-	Params::CommonButtonStyle_GetSelectedTextStyle Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -2830,6 +2955,31 @@ void UCommonTextBlock::ResetScrollState()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonTextBlock.SetApplyLineHeightToBottomLine
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    InApplyLineHeightToBottomLine                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonTextBlock::SetApplyLineHeightToBottomLine(bool InApplyLineHeightToBottomLine)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonTextBlock", "SetApplyLineHeightToBottomLine");
+
+	Params::CommonTextBlock_SetApplyLineHeightToBottomLine Parms{};
+
+	Parms.InApplyLineHeightToBottomLine = InApplyLineHeightToBottomLine;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -3848,9 +3998,9 @@ void UCommonRichTextBlock::SetScrollingEnabled(bool bInIsScrollingEnabled)
 // Function CommonUI.CommonRotator.BP_OnOptionSelected
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCommonRotator::BP_OnOptionSelected(int32 Param_Index)
+void UCommonRotator::BP_OnOptionSelected(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3859,7 +4009,7 @@ void UCommonRotator::BP_OnOptionSelected(int32 Param_Index)
 
 	Params::CommonRotator_BP_OnOptionSelected Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -4662,10 +4812,10 @@ int32 UCommonTabListWidgetBase::GetTabCount() const
 // Function CommonUI.CommonTabListWidgetBase.GetTabIdAtIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FName UCommonTabListWidgetBase::GetTabIdAtIndex(int32 Param_Index) const
+class FName UCommonTabListWidgetBase::GetTabIdAtIndex(int32 Index_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -4674,7 +4824,32 @@ class FName UCommonTabListWidgetBase::GetTabIdAtIndex(int32 Param_Index) const
 
 	Params::CommonTabListWidgetBase_GetTabIdAtIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonTextStyle.GetApplyLineHeightToBottomLine
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonTextStyle::GetApplyLineHeightToBottomLine() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonTextStyle", "GetApplyLineHeightToBottomLine");
+
+	Params::CommonTextStyle_GetApplyLineHeightToBottomLine Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5076,9 +5251,9 @@ void UCommonVisibilitySwitcher::SetActiveWidget(const class UWidget* Widget)
 // Function CommonUI.CommonVisibilitySwitcher.SetActiveWidgetIndex
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCommonVisibilitySwitcher::SetActiveWidgetIndex(int32 Param_Index)
+void UCommonVisibilitySwitcher::SetActiveWidgetIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5087,7 +5262,7 @@ void UCommonVisibilitySwitcher::SetActiveWidgetIndex(int32 Param_Index)
 
 	Params::CommonVisibilitySwitcher_SetActiveWidgetIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5136,6 +5311,31 @@ int32 UCommonVisibilitySwitcher::GetActiveWidgetIndex() const
 		Func = Class->GetFunction("CommonVisibilitySwitcher", "GetActiveWidgetIndex");
 
 	Params::CommonVisibilitySwitcher_GetActiveWidgetIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CommonUI.CommonVisibilitySwitcher.IsCurrentlySwitching
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonVisibilitySwitcher::IsCurrentlySwitching() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonVisibilitySwitcher", "IsCurrentlySwitching");
+
+	Params::CommonVisibilitySwitcher_IsCurrentlySwitching Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5283,9 +5483,9 @@ void UCommonWidgetCarousel::SetActiveWidget(class UWidget* Widget)
 // Function CommonUI.CommonWidgetCarousel.SetActiveWidgetIndex
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UCommonWidgetCarousel::SetActiveWidgetIndex(int32 Param_Index)
+void UCommonWidgetCarousel::SetActiveWidgetIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5294,7 +5494,32 @@ void UCommonWidgetCarousel::SetActiveWidgetIndex(int32 Param_Index)
 
 	Params::CommonWidgetCarousel_SetActiveWidgetIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonWidgetCarousel.SetMoveSpeed
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InMoveSpeed                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCommonWidgetCarousel::SetMoveSpeed(float InMoveSpeed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonWidgetCarousel", "SetMoveSpeed");
+
+	Params::CommonWidgetCarousel_SetMoveSpeed Parms{};
+
+	Parms.InMoveSpeed = InMoveSpeed;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5330,13 +5555,38 @@ int32 UCommonWidgetCarousel::GetActiveWidgetIndex() const
 }
 
 
+// Function CommonUI.CommonWidgetCarousel.GetMoveSpeed
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UCommonWidgetCarousel::GetMoveSpeed() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonWidgetCarousel", "GetMoveSpeed");
+
+	Params::CommonWidgetCarousel_GetMoveSpeed Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CommonUI.CommonWidgetCarousel.GetWidgetAtIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UWidget* UCommonWidgetCarousel::GetWidgetAtIndex(int32 Param_Index) const
+class UWidget* UCommonWidgetCarousel::GetWidgetAtIndex(int32 Index_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -5345,7 +5595,7 @@ class UWidget* UCommonWidgetCarousel::GetWidgetAtIndex(int32 Param_Index) const
 
 	Params::CommonWidgetCarousel_GetWidgetAtIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5452,6 +5702,31 @@ void UCommonWidgetGroupBase::AddWidget(class UWidget* InWidget)
 	Params::CommonWidgetGroupBase_AddWidget Parms{};
 
 	Parms.InWidget = InWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CommonUI.CommonWidgetGroupBase.AddWidgets
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UWidget*>                  Widgets                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UCommonWidgetGroupBase::AddWidgets(const TArray<class UWidget*>& Widgets)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonWidgetGroupBase", "AddWidgets");
+
+	Params::CommonWidgetGroupBase_AddWidgets Parms{};
+
+	Parms.Widgets = std::move(Widgets);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5785,10 +6060,10 @@ int32 UCommonButtonGroupBase::FindButtonIndex(const class UCommonButtonBase* But
 // Function CommonUI.CommonButtonGroupBase.GetButtonBaseAtIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCommonButtonBase*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UCommonButtonBase* UCommonButtonGroupBase::GetButtonBaseAtIndex(int32 Param_Index) const
+class UCommonButtonBase* UCommonButtonGroupBase::GetButtonBaseAtIndex(int32 Index_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -5797,7 +6072,7 @@ class UCommonButtonBase* UCommonButtonGroupBase::GetButtonBaseAtIndex(int32 Para
 
 	Params::CommonButtonGroupBase_GetButtonBaseAtIndex Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

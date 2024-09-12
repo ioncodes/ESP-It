@@ -82,9 +82,9 @@ void AB_ObjectivePlayerState_C::InitializeFromMatchPlayerState()
 // Function B_ObjectivePlayerState.B_ObjectivePlayerState_C.IsLocalReady
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsLocalReady                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_IsLocalReady_0                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_ObjectivePlayerState_C::IsLocalReady(bool* Param_IsLocalReady)
+void AB_ObjectivePlayerState_C::IsLocalReady(bool* Param_IsLocalReady_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -95,8 +95,8 @@ void AB_ObjectivePlayerState_C::IsLocalReady(bool* Param_IsLocalReady)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsLocalReady != nullptr)
-		*Param_IsLocalReady = Parms.Param_IsLocalReady;
+	if (Param_IsLocalReady_0 != nullptr)
+		*Param_IsLocalReady_0 = Parms.Param_IsLocalReady_0;
 }
 
 

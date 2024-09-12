@@ -10,101 +10,101 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "STauntAnimation_structs.hpp"
-#include "B_BasicCharacter_classes.hpp"
-#include "PropWitchHuntModule_structs.hpp"
 #include "EHighlightChannel_structs.hpp"
+#include "B_BasicCharacter_classes.hpp"
+#include "Engine_structs.hpp"
+#include "STauntAnimation_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Witch.B_Witch_C
-// 0x02B0 (0x0970 - 0x06C0)
-#pragma pack(push, 0x1)
-class alignas(0x10) AB_Witch_C : public AB_BasicCharacter_C
+// 0x02B0 (0x0960 - 0x06B0)
+class AB_Witch_C : public AB_BasicCharacter_C
 {
 public:
-	uint8                                         Pad_3EAF[0x7];                                     // 0x06B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Witch_C;                          // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   AimAssistTarget;                                   // 0x06C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_ManaComponent_C*                     B_ManaComponent;                                   // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       FirstPersonCamera;                                 // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_KillRelictDropper_C*                 B_KillRelictDropper;                               // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CommunicationSound;                                // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_TrailEffect_C*                       B_TrailEffect;                                     // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_ActorEvents_C*                       ActorEvents;                                       // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_DamageHandler_C*                     DamageHandler;                                     // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_KillPlayerGameModeHandler_C*         KillWitchGameModeHandler;                          // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_KillRagdoll_C*                       KillEffect;                                        // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_DamageEffect_C*                      DamageEffect;                                      // 0x0710(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UB_DamageSound_C*                       DamageSound;                                       // 0x0718(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       PlayerName;                                        // 0x0720(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TargetProp;                                        // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        TransformRange;                                    // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseWitchSkill_C*                    SpecialUtilitySkill;                               // 0x0738(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_BaseWitchSkill_C*                    SpecialMovementSkill;                              // 0x0740(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         DispelDebuff;                                      // 0x0748(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SwitchToProp;                                      // 0x074C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB0[0x3];                                     // 0x074D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        AliveTime;                                         // 0x0750(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TransformTime;                                     // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_VisualIntepolator_C*                 VisualChild;                                       // 0x0760(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LastTravelLocation;                                // 0x0768(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TauntBudget;                                       // 0x0780(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB1[0x4];                                     // 0x0784(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundCue*                              QuestionSound;                                     // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              SpeakSound;                                        // 0x0790(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxTaunts;                                         // 0x0798(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB2[0x4];                                     // 0x079C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PropPawnPhysics_C*                   SpawnedProp;                                       // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 PropTemplate;                                      // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          TeleportOnCooldown;                                // 0x07B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB3[0x7];                                     // 0x07B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                FloatingPositionOne;                               // 0x07B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FloatingPositionTwo;                               // 0x07D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Stuck;                                             // 0x07E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB4[0x3];                                     // 0x07E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ManaDrainDebuff;                                   // 0x07EC(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SlowTime;                                          // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMeshComponent*>                 FirstPersonMeshes;                                 // 0x07F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UMeshComponent*>                 ThirdPersonMeshes;                                 // 0x0808(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FWitchSkin                             Skin;                                              // 0x0818(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FVector                                CurrentVelocity;                                   // 0x0840(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                StartVelocity;                                     // 0x0858(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        HeadSkin;                                          // 0x0870(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        BodySkin;                                          // 0x0880(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        HatSkin;                                           // 0x0890(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        BroomSkin;                                         // 0x08A0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FPrimaryAssetId                        ColorSkin;                                         // 0x08B0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsTranforming;                                     // 0x08C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHighlighted;                                      // 0x08C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB5[0x6];                                     // 0x08C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        InvisibleTime;                                     // 0x08C8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	TArray<struct FSTauntAnimation>               Speaksounds;                                       // 0x08D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          SkinContentInitialized;                            // 0x08E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableFire;                                       // 0x08E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB6[0x6];                                     // 0x08E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CurrentAcceleration;                               // 0x08E8(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WantsToCrouch;                                     // 0x0900(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3EB7[0x7];                                     // 0x0901(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MaxWalkSpeed;                                      // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxWalkSpeedCrouched;                              // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultMaxWalkSpeed;                               // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultMaxWalkSpeedCrouched;                       // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultMaxHealth;                                  // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultJumpHeight;                                 // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultCameraBoomLength;                           // 0x0938(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DefaultCameraBoomOffset;                           // 0x0940(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultCameraBoomProbeSize;                        // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HiddenToHunters;                                   // 0x0960(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_6A1[0x7];                                      // 0x06A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Witch_C;                          // 0x06A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   AimAssistTarget;                                   // 0x06B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_AimAssistTargetComponent_C*          B_AimAssistTargetComponent;                        // 0x06B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_ManaComponent_C*                     B_ManaComponent;                                   // 0x06C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       FirstPersonCamera;                                 // 0x06C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_KillRelictDropper_C*                 B_KillRelictDropper;                               // 0x06D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CommunicationSound;                                // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_TrailEffect_C*                       B_TrailEffect;                                     // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_ActorEvents_C*                       ActorEvents;                                       // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_DamageHandler_C*                     DamageHandler;                                     // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_KillPlayerGameModeHandler_C*         KillWitchGameModeHandler;                          // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_KillRagdoll_C*                       KillEffect;                                        // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_DamageEffect_C*                      DamageEffect;                                      // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UB_DamageSound_C*                       DamageSound;                                       // 0x0710(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       PlayerName;                                        // 0x0718(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetProp;                                        // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        TransformRange;                                    // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseWitchSkill_C*                    SpecialUtilitySkill;                               // 0x0730(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_BaseWitchSkill_C*                    SpecialMovementSkill;                              // 0x0738(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         DispelDebuff;                                      // 0x0740(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SwitchToProp;                                      // 0x0744(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_745[0x3];                                      // 0x0745(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        AliveTime;                                         // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TransformTime;                                     // 0x0750(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_VisualIntepolator_C*                 VisualChild;                                       // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LastTravelLocation;                                // 0x0760(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TauntBudget;                                       // 0x0778(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_77C[0x4];                                      // 0x077C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundCue*                              QuestionSound;                                     // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              SpeakSound;                                        // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxTaunts;                                         // 0x0790(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_794[0x4];                                      // 0x0794(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PropPawnPhysics_C*                   SpawnedProp;                                       // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 PropTemplate;                                      // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          TeleportOnCooldown;                                // 0x07A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A9[0x7];                                      // 0x07A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                FloatingPositionOne;                               // 0x07B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FloatingPositionTwo;                               // 0x07C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Stuck;                                             // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7E1[0x3];                                      // 0x07E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ManaDrainDebuff;                                   // 0x07E4(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SlowTime;                                          // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMeshComponent*>                 FirstPersonMeshes;                                 // 0x07F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UMeshComponent*>                 ThirdPersonMeshes;                                 // 0x0800(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FWitchSkin                             Skin;                                              // 0x0810(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FVector                                CurrentVelocity;                                   // 0x0838(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                StartVelocity;                                     // 0x0850(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        HeadSkin;                                          // 0x0868(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        BodySkin;                                          // 0x0878(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        HatSkin;                                           // 0x0888(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        BroomSkin;                                         // 0x0898(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPrimaryAssetId                        ColorSkin;                                         // 0x08A8(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsTranforming;                                     // 0x08B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHighlighted;                                      // 0x08B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8BA[0x6];                                      // 0x08BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InvisibleTime;                                     // 0x08C0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	TArray<struct FSTauntAnimation>               Speaksounds;                                       // 0x08C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          SkinContentInitialized;                            // 0x08D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableFire;                                       // 0x08D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8DA[0x6];                                      // 0x08DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CurrentAcceleration;                               // 0x08E0(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WantsToCrouch;                                     // 0x08F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8F9[0x7];                                      // 0x08F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MaxWalkSpeed;                                      // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxWalkSpeedCrouched;                              // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultMaxWalkSpeed;                               // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultMaxWalkSpeedCrouched;                       // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultMaxHealth;                                  // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultJumpHeight;                                 // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultCameraBoomLength;                           // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DefaultCameraBoomOffset;                           // 0x0938(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultCameraBoomProbeSize;                        // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HiddenToHunters;                                   // 0x0958(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ClientPossessed();
 	void ReceivePossessed(class AController* NewController);
-	void SetProp(class AB_PropPawnPhysics_C** Param_SpawnedProp);
+	void SetProp(class AB_PropPawnPhysics_C** SpawnedProp_0);
 	void TickVisuals();
 	void ExecuteUbergraph_B_Witch(int32 EntryPoint);
 	void RefreshHighlight(bool* Highlightable);
@@ -114,8 +114,8 @@ public:
 	void GetRippleScale(struct FVector* Scale);
 	void GetSplashScale(struct FVector* Scale);
 	void GetSplashSound(class USoundCue** Sound);
-	void CanTeleport(bool* Param_CanTeleport);
-	void GetCurrentController(class AController** Param_Controller);
+	void CanTeleport(bool* CanTeleport_0);
+	void GetCurrentController(class AController** Controller_0);
 	void GetAttachComponent(class USceneComponent** Component);
 	void UnhideFromHunters();
 	void HideToHunters();
@@ -140,7 +140,7 @@ public:
 	void IsAnySkillActive(bool* AnySkillActive);
 	void TickSurvivalTime();
 	void RecalculateHP();
-	void VerifySkinSlots(const struct FWitchSkin& Param_Skin, struct FWitchSkin* VerifiedSkin);
+	void VerifySkinSlots(const struct FWitchSkin& Skin_0, struct FWitchSkin* VerifiedSkin);
 	void PlayCommunicationSound(class USoundCue* SoundToPlay);
 	void DecreaseTauntBudget();
 	void GetIgnoreActors(TArray<class AActor*>* Actors);
@@ -151,12 +151,12 @@ public:
 	void SetupVisualChild();
 	void InitDissolve();
 	void Dissolve();
-	void UpdateSkinColor(class UClass* Param_Class);
-	void AttachToSocket(class UClass* Param_Class, class FName InSocketName, class AActor** ActorRef);
+	void UpdateSkinColor(class UClass* Class_0);
+	void AttachToSocket(class UClass* Class_0, class FName InSocketName, class AActor** ActorRef);
 	void AttachBodyPart(class UClass* BodyPartClass, class USkeletalMeshComponent* Parent, bool SelfShadowOnly, class AB_SkinBodypart_C** BodyPart);
 	void InitializeSkinContent();
 	void TryInitializeSkinContent();
-	void LoadSkills(class AController* Param_Controller);
+	void LoadSkills(class AController* Controller_0);
 	void InitializePlayername();
 	void Fire();
 	void InpActEvt_Fire_K2Node_InputActionEvent_9(const struct FKey& Key);
@@ -220,73 +220,73 @@ public:
 		return GetDefaultObjImpl<AB_Witch_C>();
 	}
 };
-#pragma pack(pop)
 static_assert(alignof(AB_Witch_C) == 0x000010, "Wrong alignment on AB_Witch_C");
-static_assert(sizeof(AB_Witch_C) == 0x000970, "Wrong size on AB_Witch_C");
-static_assert(offsetof(AB_Witch_C, UberGraphFrame_B_Witch_C) == 0x0006B8, "Member 'AB_Witch_C::UberGraphFrame_B_Witch_C' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, AimAssistTarget) == 0x0006C0, "Member 'AB_Witch_C::AimAssistTarget' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, B_ManaComponent) == 0x0006C8, "Member 'AB_Witch_C::B_ManaComponent' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, FirstPersonCamera) == 0x0006D0, "Member 'AB_Witch_C::FirstPersonCamera' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, B_KillRelictDropper) == 0x0006D8, "Member 'AB_Witch_C::B_KillRelictDropper' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, CommunicationSound) == 0x0006E0, "Member 'AB_Witch_C::CommunicationSound' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, B_TrailEffect) == 0x0006E8, "Member 'AB_Witch_C::B_TrailEffect' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, ActorEvents) == 0x0006F0, "Member 'AB_Witch_C::ActorEvents' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DamageHandler) == 0x0006F8, "Member 'AB_Witch_C::DamageHandler' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, KillWitchGameModeHandler) == 0x000700, "Member 'AB_Witch_C::KillWitchGameModeHandler' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, KillEffect) == 0x000708, "Member 'AB_Witch_C::KillEffect' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DamageEffect) == 0x000710, "Member 'AB_Witch_C::DamageEffect' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DamageSound) == 0x000718, "Member 'AB_Witch_C::DamageSound' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, PlayerName) == 0x000720, "Member 'AB_Witch_C::PlayerName' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, TargetProp) == 0x000728, "Member 'AB_Witch_C::TargetProp' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, TransformRange) == 0x000730, "Member 'AB_Witch_C::TransformRange' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SpecialUtilitySkill) == 0x000738, "Member 'AB_Witch_C::SpecialUtilitySkill' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SpecialMovementSkill) == 0x000740, "Member 'AB_Witch_C::SpecialMovementSkill' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DispelDebuff) == 0x000748, "Member 'AB_Witch_C::DispelDebuff' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SwitchToProp) == 0x00074C, "Member 'AB_Witch_C::SwitchToProp' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, AliveTime) == 0x000750, "Member 'AB_Witch_C::AliveTime' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, TransformTime) == 0x000758, "Member 'AB_Witch_C::TransformTime' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, VisualChild) == 0x000760, "Member 'AB_Witch_C::VisualChild' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, LastTravelLocation) == 0x000768, "Member 'AB_Witch_C::LastTravelLocation' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, TauntBudget) == 0x000780, "Member 'AB_Witch_C::TauntBudget' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, QuestionSound) == 0x000788, "Member 'AB_Witch_C::QuestionSound' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SpeakSound) == 0x000790, "Member 'AB_Witch_C::SpeakSound' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, MaxTaunts) == 0x000798, "Member 'AB_Witch_C::MaxTaunts' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SpawnedProp) == 0x0007A0, "Member 'AB_Witch_C::SpawnedProp' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, PropTemplate) == 0x0007A8, "Member 'AB_Witch_C::PropTemplate' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, TeleportOnCooldown) == 0x0007B0, "Member 'AB_Witch_C::TeleportOnCooldown' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, FloatingPositionOne) == 0x0007B8, "Member 'AB_Witch_C::FloatingPositionOne' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, FloatingPositionTwo) == 0x0007D0, "Member 'AB_Witch_C::FloatingPositionTwo' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, Stuck) == 0x0007E8, "Member 'AB_Witch_C::Stuck' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, ManaDrainDebuff) == 0x0007EC, "Member 'AB_Witch_C::ManaDrainDebuff' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SlowTime) == 0x0007F0, "Member 'AB_Witch_C::SlowTime' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, FirstPersonMeshes) == 0x0007F8, "Member 'AB_Witch_C::FirstPersonMeshes' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, ThirdPersonMeshes) == 0x000808, "Member 'AB_Witch_C::ThirdPersonMeshes' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, Skin) == 0x000818, "Member 'AB_Witch_C::Skin' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, CurrentVelocity) == 0x000840, "Member 'AB_Witch_C::CurrentVelocity' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, StartVelocity) == 0x000858, "Member 'AB_Witch_C::StartVelocity' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, HeadSkin) == 0x000870, "Member 'AB_Witch_C::HeadSkin' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, BodySkin) == 0x000880, "Member 'AB_Witch_C::BodySkin' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, HatSkin) == 0x000890, "Member 'AB_Witch_C::HatSkin' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, BroomSkin) == 0x0008A0, "Member 'AB_Witch_C::BroomSkin' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, ColorSkin) == 0x0008B0, "Member 'AB_Witch_C::ColorSkin' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, IsTranforming) == 0x0008C0, "Member 'AB_Witch_C::IsTranforming' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, bHighlighted) == 0x0008C1, "Member 'AB_Witch_C::bHighlighted' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, InvisibleTime) == 0x0008C8, "Member 'AB_Witch_C::InvisibleTime' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, Speaksounds) == 0x0008D0, "Member 'AB_Witch_C::Speaksounds' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, SkinContentInitialized) == 0x0008E0, "Member 'AB_Witch_C::SkinContentInitialized' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DisableFire) == 0x0008E1, "Member 'AB_Witch_C::DisableFire' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, CurrentAcceleration) == 0x0008E8, "Member 'AB_Witch_C::CurrentAcceleration' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, WantsToCrouch) == 0x000900, "Member 'AB_Witch_C::WantsToCrouch' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, MaxWalkSpeed) == 0x000908, "Member 'AB_Witch_C::MaxWalkSpeed' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, MaxWalkSpeedCrouched) == 0x000910, "Member 'AB_Witch_C::MaxWalkSpeedCrouched' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultMaxWalkSpeed) == 0x000918, "Member 'AB_Witch_C::DefaultMaxWalkSpeed' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultMaxWalkSpeedCrouched) == 0x000920, "Member 'AB_Witch_C::DefaultMaxWalkSpeedCrouched' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultMaxHealth) == 0x000928, "Member 'AB_Witch_C::DefaultMaxHealth' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultJumpHeight) == 0x000930, "Member 'AB_Witch_C::DefaultJumpHeight' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultCameraBoomLength) == 0x000938, "Member 'AB_Witch_C::DefaultCameraBoomLength' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultCameraBoomOffset) == 0x000940, "Member 'AB_Witch_C::DefaultCameraBoomOffset' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, DefaultCameraBoomProbeSize) == 0x000958, "Member 'AB_Witch_C::DefaultCameraBoomProbeSize' has a wrong offset!");
-static_assert(offsetof(AB_Witch_C, HiddenToHunters) == 0x000960, "Member 'AB_Witch_C::HiddenToHunters' has a wrong offset!");
+static_assert(sizeof(AB_Witch_C) == 0x000960, "Wrong size on AB_Witch_C");
+static_assert(offsetof(AB_Witch_C, UberGraphFrame_B_Witch_C) == 0x0006A8, "Member 'AB_Witch_C::UberGraphFrame_B_Witch_C' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, AimAssistTarget) == 0x0006B0, "Member 'AB_Witch_C::AimAssistTarget' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, B_AimAssistTargetComponent) == 0x0006B8, "Member 'AB_Witch_C::B_AimAssistTargetComponent' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, B_ManaComponent) == 0x0006C0, "Member 'AB_Witch_C::B_ManaComponent' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, FirstPersonCamera) == 0x0006C8, "Member 'AB_Witch_C::FirstPersonCamera' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, B_KillRelictDropper) == 0x0006D0, "Member 'AB_Witch_C::B_KillRelictDropper' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, CommunicationSound) == 0x0006D8, "Member 'AB_Witch_C::CommunicationSound' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, B_TrailEffect) == 0x0006E0, "Member 'AB_Witch_C::B_TrailEffect' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, ActorEvents) == 0x0006E8, "Member 'AB_Witch_C::ActorEvents' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DamageHandler) == 0x0006F0, "Member 'AB_Witch_C::DamageHandler' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, KillWitchGameModeHandler) == 0x0006F8, "Member 'AB_Witch_C::KillWitchGameModeHandler' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, KillEffect) == 0x000700, "Member 'AB_Witch_C::KillEffect' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DamageEffect) == 0x000708, "Member 'AB_Witch_C::DamageEffect' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DamageSound) == 0x000710, "Member 'AB_Witch_C::DamageSound' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, PlayerName) == 0x000718, "Member 'AB_Witch_C::PlayerName' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, TargetProp) == 0x000720, "Member 'AB_Witch_C::TargetProp' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, TransformRange) == 0x000728, "Member 'AB_Witch_C::TransformRange' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SpecialUtilitySkill) == 0x000730, "Member 'AB_Witch_C::SpecialUtilitySkill' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SpecialMovementSkill) == 0x000738, "Member 'AB_Witch_C::SpecialMovementSkill' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DispelDebuff) == 0x000740, "Member 'AB_Witch_C::DispelDebuff' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SwitchToProp) == 0x000744, "Member 'AB_Witch_C::SwitchToProp' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, AliveTime) == 0x000748, "Member 'AB_Witch_C::AliveTime' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, TransformTime) == 0x000750, "Member 'AB_Witch_C::TransformTime' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, VisualChild) == 0x000758, "Member 'AB_Witch_C::VisualChild' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, LastTravelLocation) == 0x000760, "Member 'AB_Witch_C::LastTravelLocation' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, TauntBudget) == 0x000778, "Member 'AB_Witch_C::TauntBudget' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, QuestionSound) == 0x000780, "Member 'AB_Witch_C::QuestionSound' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SpeakSound) == 0x000788, "Member 'AB_Witch_C::SpeakSound' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, MaxTaunts) == 0x000790, "Member 'AB_Witch_C::MaxTaunts' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SpawnedProp) == 0x000798, "Member 'AB_Witch_C::SpawnedProp' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, PropTemplate) == 0x0007A0, "Member 'AB_Witch_C::PropTemplate' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, TeleportOnCooldown) == 0x0007A8, "Member 'AB_Witch_C::TeleportOnCooldown' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, FloatingPositionOne) == 0x0007B0, "Member 'AB_Witch_C::FloatingPositionOne' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, FloatingPositionTwo) == 0x0007C8, "Member 'AB_Witch_C::FloatingPositionTwo' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, Stuck) == 0x0007E0, "Member 'AB_Witch_C::Stuck' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, ManaDrainDebuff) == 0x0007E4, "Member 'AB_Witch_C::ManaDrainDebuff' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SlowTime) == 0x0007E8, "Member 'AB_Witch_C::SlowTime' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, FirstPersonMeshes) == 0x0007F0, "Member 'AB_Witch_C::FirstPersonMeshes' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, ThirdPersonMeshes) == 0x000800, "Member 'AB_Witch_C::ThirdPersonMeshes' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, Skin) == 0x000810, "Member 'AB_Witch_C::Skin' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, CurrentVelocity) == 0x000838, "Member 'AB_Witch_C::CurrentVelocity' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, StartVelocity) == 0x000850, "Member 'AB_Witch_C::StartVelocity' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, HeadSkin) == 0x000868, "Member 'AB_Witch_C::HeadSkin' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, BodySkin) == 0x000878, "Member 'AB_Witch_C::BodySkin' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, HatSkin) == 0x000888, "Member 'AB_Witch_C::HatSkin' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, BroomSkin) == 0x000898, "Member 'AB_Witch_C::BroomSkin' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, ColorSkin) == 0x0008A8, "Member 'AB_Witch_C::ColorSkin' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, IsTranforming) == 0x0008B8, "Member 'AB_Witch_C::IsTranforming' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, bHighlighted) == 0x0008B9, "Member 'AB_Witch_C::bHighlighted' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, InvisibleTime) == 0x0008C0, "Member 'AB_Witch_C::InvisibleTime' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, Speaksounds) == 0x0008C8, "Member 'AB_Witch_C::Speaksounds' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, SkinContentInitialized) == 0x0008D8, "Member 'AB_Witch_C::SkinContentInitialized' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DisableFire) == 0x0008D9, "Member 'AB_Witch_C::DisableFire' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, CurrentAcceleration) == 0x0008E0, "Member 'AB_Witch_C::CurrentAcceleration' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, WantsToCrouch) == 0x0008F8, "Member 'AB_Witch_C::WantsToCrouch' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, MaxWalkSpeed) == 0x000900, "Member 'AB_Witch_C::MaxWalkSpeed' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, MaxWalkSpeedCrouched) == 0x000908, "Member 'AB_Witch_C::MaxWalkSpeedCrouched' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultMaxWalkSpeed) == 0x000910, "Member 'AB_Witch_C::DefaultMaxWalkSpeed' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultMaxWalkSpeedCrouched) == 0x000918, "Member 'AB_Witch_C::DefaultMaxWalkSpeedCrouched' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultMaxHealth) == 0x000920, "Member 'AB_Witch_C::DefaultMaxHealth' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultJumpHeight) == 0x000928, "Member 'AB_Witch_C::DefaultJumpHeight' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultCameraBoomLength) == 0x000930, "Member 'AB_Witch_C::DefaultCameraBoomLength' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultCameraBoomOffset) == 0x000938, "Member 'AB_Witch_C::DefaultCameraBoomOffset' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, DefaultCameraBoomProbeSize) == 0x000950, "Member 'AB_Witch_C::DefaultCameraBoomProbeSize' has a wrong offset!");
+static_assert(offsetof(AB_Witch_C, HiddenToHunters) == 0x000958, "Member 'AB_Witch_C::HiddenToHunters' has a wrong offset!");
 
 }
 

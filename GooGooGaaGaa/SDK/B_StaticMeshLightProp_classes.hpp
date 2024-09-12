@@ -22,7 +22,7 @@ namespace SDK
 class alignas(0x10) AB_StaticMeshLightProp_C : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4B9C[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPointLightComponent*                   PointLight;                                        // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class UPointLightComponent*>           Lights;                                            // 0x05E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          IsInterpolated;                                    // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

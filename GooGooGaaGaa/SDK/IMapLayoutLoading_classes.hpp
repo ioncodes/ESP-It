@@ -21,12 +21,12 @@ namespace SDK
 class IIMapLayoutLoading_C final : public IInterface
 {
 public:
-	void SpawnActionPlaceableStatic(class UClass* Param_Class, const struct FTransform& Transform, bool Activated, class ABP_PlaceableStaticProp_C** SpawnedActor);
-	void SpawnActionProp(class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor);
-	void SpawnPlaceableLight(class UClass* Param_Class, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor);
-	void SpawnPlaceableStatic(class UClass* Param_Class, const struct FTransform& Transform, class ABP_PlaceableStaticProp_C** SpawnedActor);
-	void SpawnProp(class UClass* Param_Class, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, class AB_StaticMeshProp_C** SpawnedActor);
-	void SpawnSwitch(class UClass* Param_Class, const struct FTransform& Transform, bool BreaksAfterUse, class ABP_Switch_C** SpawnedActor);
+	void SpawnActionPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, bool Activated, class ABP_PlaceableStaticProp_C** SpawnedActor);
+	void SpawnActionProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, bool Activated, class AB_StaticMeshProp_C** SpawnedActor);
+	void SpawnPlaceableLight(class UClass* Class_0, const struct FTransform& Transform, const struct FVector& Color, bool Activated, class ABP_PlaceableLight_C** SpawnedActor);
+	void SpawnPlaceableStatic(class UClass* Class_0, const struct FTransform& Transform, class ABP_PlaceableStaticProp_C** SpawnedActor);
+	void SpawnProp(class UClass* Class_0, const struct FTransform& Transform, bool StartAwake, bool IsFrozen, class AB_StaticMeshProp_C** SpawnedActor);
+	void SpawnSwitch(class UClass* Class_0, const struct FTransform& Transform, bool BreaksAfterUse, class ABP_Switch_C** SpawnedActor);
 
 public:
 	static class UClass* StaticClass()

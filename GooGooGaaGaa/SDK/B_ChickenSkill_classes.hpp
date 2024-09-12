@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ChickenSkill.B_ChickenSkill_C
-// 0x0010 (0x0170 - 0x0160)
+// 0x0010 (0x0168 - 0x0158)
 class UB_ChickenSkill_C final : public UB_ProjectileSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ChickenSkill_C;                   // 0x0160(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          Ready;                                             // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ChickenSkill_C;                   // 0x0158(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          Ready;                                             // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_ChickenSkill(int32 EntryPoint);
@@ -43,9 +43,9 @@ public:
 	}
 };
 static_assert(alignof(UB_ChickenSkill_C) == 0x000008, "Wrong alignment on UB_ChickenSkill_C");
-static_assert(sizeof(UB_ChickenSkill_C) == 0x000170, "Wrong size on UB_ChickenSkill_C");
-static_assert(offsetof(UB_ChickenSkill_C, UberGraphFrame_B_ChickenSkill_C) == 0x000160, "Member 'UB_ChickenSkill_C::UberGraphFrame_B_ChickenSkill_C' has a wrong offset!");
-static_assert(offsetof(UB_ChickenSkill_C, Ready) == 0x000168, "Member 'UB_ChickenSkill_C::Ready' has a wrong offset!");
+static_assert(sizeof(UB_ChickenSkill_C) == 0x000168, "Wrong size on UB_ChickenSkill_C");
+static_assert(offsetof(UB_ChickenSkill_C, UberGraphFrame_B_ChickenSkill_C) == 0x000158, "Member 'UB_ChickenSkill_C::UberGraphFrame_B_ChickenSkill_C' has a wrong offset!");
+static_assert(offsetof(UB_ChickenSkill_C, Ready) == 0x000160, "Member 'UB_ChickenSkill_C::Ready' has a wrong offset!");
 
 }
 

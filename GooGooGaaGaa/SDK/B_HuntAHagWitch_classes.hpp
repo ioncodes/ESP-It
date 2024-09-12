@@ -18,18 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HuntAHagWitch.B_HuntAHagWitch_C
-// 0x0000 (0x0970 - 0x0970)
+// 0x0010 (0x0970 - 0x0960)
 class AB_HuntAHagWitch_C final : public AB_Witch_C
 {
 public:
-	uint8                                         Pad_5DA7[0x7];                                     // 0x0961(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagWitch_C;                  // 0x0968(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagWitch_C;                  // 0x0960(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ClientPossessed();
 	void ExecuteUbergraph_B_HuntAHagWitch(int32 EntryPoint);
 	void Fire();
-	void LoadSkills(class AController* Param_Controller);
+	void LoadSkills(class AController* Controller_0);
 	void ReceiveTick(float DeltaSeconds);
 
 public:
@@ -44,7 +43,7 @@ public:
 };
 static_assert(alignof(AB_HuntAHagWitch_C) == 0x000010, "Wrong alignment on AB_HuntAHagWitch_C");
 static_assert(sizeof(AB_HuntAHagWitch_C) == 0x000970, "Wrong size on AB_HuntAHagWitch_C");
-static_assert(offsetof(AB_HuntAHagWitch_C, UberGraphFrame_B_HuntAHagWitch_C) == 0x000968, "Member 'AB_HuntAHagWitch_C::UberGraphFrame_B_HuntAHagWitch_C' has a wrong offset!");
+static_assert(offsetof(AB_HuntAHagWitch_C, UberGraphFrame_B_HuntAHagWitch_C) == 0x000960, "Member 'AB_HuntAHagWitch_C::UberGraphFrame_B_HuntAHagWitch_C' has a wrong offset!");
 
 }
 

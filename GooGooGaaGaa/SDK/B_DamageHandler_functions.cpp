@@ -41,9 +41,9 @@ void UB_DamageHandler_C::ShouldHandleDamage(bool* ShouldHandle)
 // Function B_DamageHandler.B_DamageHandler_C.IsDead
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsDead                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDead_0                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_DamageHandler_C::IsDead(bool* Param_IsDead)
+void UB_DamageHandler_C::IsDead(bool* IsDead_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -54,8 +54,8 @@ void UB_DamageHandler_C::IsDead(bool* Param_IsDead)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsDead != nullptr)
-		*Param_IsDead = Parms.Param_IsDead;
+	if (IsDead_0 != nullptr)
+		*IsDead_0 = Parms.IsDead_0;
 }
 
 

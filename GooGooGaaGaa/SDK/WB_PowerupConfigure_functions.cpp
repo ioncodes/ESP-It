@@ -73,12 +73,27 @@ void UWB_PowerupConfigure_C::CheckForShouldEnable()
 }
 
 
+// Function WB_PowerupConfigure.WB_PowerupConfigure_C.CreateEventBindings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_PowerupConfigure_C::CreateEventBindings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_PowerupConfigure_C", "CreateEventBindings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_PowerupConfigure.WB_PowerupConfigure_C.CreateUIParameters
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FUIParameterData>         UIParameters                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FUIParam>                 DefaultValues                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_PowerupConfigure_C::CreateUIParameters(TArray<struct FUIParameterData>& UIParameters)
+void UWB_PowerupConfigure_C::CreateUIParameters(TArray<struct FUIParameterData>& UIParameters, TArray<struct FUIParam>& DefaultValues)
 {
 	static class UFunction* Func = nullptr;
 
@@ -88,10 +103,12 @@ void UWB_PowerupConfigure_C::CreateUIParameters(TArray<struct FUIParameterData>&
 	Params::WB_PowerupConfigure_C_CreateUIParameters Parms{};
 
 	Parms.UIParameters = std::move(UIParameters);
+	Parms.DefaultValues = std::move(DefaultValues);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	UIParameters = std::move(Parms.UIParameters);
+	DefaultValues = std::move(Parms.DefaultValues);
 }
 
 

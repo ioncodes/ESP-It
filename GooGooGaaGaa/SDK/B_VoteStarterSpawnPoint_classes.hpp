@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_VoteStarterSpawnPoint.B_VoteStarterSpawnPoint_C
-// 0x0008 (0x02A0 - 0x0298)
+// 0x0008 (0x0298 - 0x0290)
 class AB_VoteStarterSpawnPoint_C final : public AActor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(AB_VoteStarterSpawnPoint_C) == 0x000008, "Wrong alignment on AB_VoteStarterSpawnPoint_C");
-static_assert(sizeof(AB_VoteStarterSpawnPoint_C) == 0x0002A0, "Wrong size on AB_VoteStarterSpawnPoint_C");
-static_assert(offsetof(AB_VoteStarterSpawnPoint_C, DefaultSceneRoot) == 0x000298, "Member 'AB_VoteStarterSpawnPoint_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AB_VoteStarterSpawnPoint_C) == 0x000298, "Wrong size on AB_VoteStarterSpawnPoint_C");
+static_assert(offsetof(AB_VoteStarterSpawnPoint_C, DefaultSceneRoot) == 0x000290, "Member 'AB_VoteStarterSpawnPoint_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

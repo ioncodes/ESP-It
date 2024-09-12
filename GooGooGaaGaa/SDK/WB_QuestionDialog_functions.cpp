@@ -121,6 +121,20 @@ void UWB_QuestionDialog_C::CloseDialog()
 }
 
 
+// Function WB_QuestionDialog.WB_QuestionDialog_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWB_QuestionDialog_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_QuestionDialog_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_QuestionDialog.WB_QuestionDialog_C.ExecuteUbergraph_WB_QuestionDialog
 // (Final, UbergraphFunction)
 // Parameters:
@@ -233,13 +247,13 @@ void UWB_QuestionDialog_C::OnSpecialAction()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FText                             Title                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText                             Param_QuestionText                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             QuestionText_0                                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    OkButton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    YesButton                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    NoButton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CancelButton                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_QuestionDialog_C::SetData(const class FText& Title, const class FText& Param_QuestionText, bool OkButton, bool YesButton, bool NoButton, bool CancelButton)
+void UWB_QuestionDialog_C::SetData(const class FText& Title, const class FText& QuestionText_0, bool OkButton, bool YesButton, bool NoButton, bool CancelButton)
 {
 	static class UFunction* Func = nullptr;
 
@@ -249,7 +263,7 @@ void UWB_QuestionDialog_C::SetData(const class FText& Title, const class FText& 
 	Params::WB_QuestionDialog_C_SetData Parms{};
 
 	Parms.Title = std::move(Title);
-	Parms.Param_QuestionText = std::move(Param_QuestionText);
+	Parms.QuestionText_0 = std::move(QuestionText_0);
 	Parms.OkButton = OkButton;
 	Parms.YesButton = YesButton;
 	Parms.NoButton = NoButton;

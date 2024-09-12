@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_AimAssistTester.B_AimAssistTester_C.ExecuteUbergraph_B_AimAssistTester
-// 0x0190 (0x0190 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3869[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_386A[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -34,15 +34,15 @@ public:
 	float                                         CallFunc_BreakRotator_Roll;                        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_386B[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0098(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0098(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester) == 0x000008, "Wrong alignment on B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester");
-static_assert(sizeof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester) == 0x000190, "Wrong size on B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester");
+static_assert(sizeof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester) == 0x0001A0, "Wrong size on B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester");
 static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, EntryPoint) == 0x000000, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000008, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, K2Node_Event_DeltaSeconds) == 0x000020, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::K2Node_Event_DeltaSeconds' has a wrong offset!");
@@ -56,8 +56,8 @@ static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, C
 static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000078, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_MakeRotator_ReturnValue) == 0x000080, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000098, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000180, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000188, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000190, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000198, "Member 'B_AimAssistTester_C_ExecuteUbergraph_B_AimAssistTester::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
 
 // Function B_AimAssistTester.B_AimAssistTester_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

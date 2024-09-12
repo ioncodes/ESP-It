@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RandomHunterSkill.B_RandomHunterSkill_C
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0100 - 0x0100)
 class UB_RandomHunterSkill_C final : public UB_BaseHunterSkill_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UB_RandomHunterSkill_C) == 0x000008, "Wrong alignment on UB_RandomHunterSkill_C");
-static_assert(sizeof(UB_RandomHunterSkill_C) == 0x000108, "Wrong size on UB_RandomHunterSkill_C");
+static_assert(sizeof(UB_RandomHunterSkill_C) == 0x000100, "Wrong size on UB_RandomHunterSkill_C");
 
 }
 

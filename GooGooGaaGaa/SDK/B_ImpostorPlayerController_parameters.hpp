@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EChatType_structs.hpp"
 #include "E_TaskType_structs.hpp"
 
@@ -29,71 +29,71 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_377C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_377D[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_1;      // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_377E[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameMode_C*                          K2Node_DynamicCast_AsB_Game_Mode;                  // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_377F[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3780[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue_1;                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameMode_C*                          K2Node_DynamicCast_AsB_Game_Mode_1;                // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3781[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ImpostorHUD_C*                      K2Node_DynamicCast_AsWB_Impostor_HUD;              // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3782[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x0098(0x0018)(HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3783[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3784[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3785[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   Temp_struct_Variable;                              // 0x00D0(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3786[0x6];                                     // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   K2Node_InputActionEvent_Key;                       // 0x00F0(0x0018)(HasGetValueTypeHash)
 	TArray<E_TaskType>                            CallFunc_Map_Keys_Keys;                            // 0x0108(0x0010)(ReferenceParm)
 	E_TaskType                                    CallFunc_Array_Get_Item;                           // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3787[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_Value;                           // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0133(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3788[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_WantsToSpectate;                      // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_Ready;                                // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3789[0x5];                                     // 0x014B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14B[0x5];                                      // 0x014B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ImpostorHUD_C*                      K2Node_DynamicCast_AsWB_Impostor_HUD_1;            // 0x0150(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_378A[0x6];                                     // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   K2Node_InputActionEvent_Key_1;                     // 0x0160(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_378B[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_SpawnNewPlayerPawn_PlayerPawn;            // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_378C[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_SpawnNewPlayerPawn_PlayerPawn_1;          // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ImpostorPlayerController_C_ExecuteUbergraph_B_ImpostorPlayerController) == 0x000008, "Wrong alignment on B_ImpostorPlayerController_C_ExecuteUbergraph_B_ImpostorPlayerController");
@@ -197,67 +197,67 @@ static_assert(sizeof(B_ImpostorPlayerController_C_ReceiveTick) == 0x000004, "Wro
 static_assert(offsetof(B_ImpostorPlayerController_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'B_ImpostorPlayerController_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function B_ImpostorPlayerController.B_ImpostorPlayerController_C.SendChatMessageServerFunc
-// 0x0088 (0x0088 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct B_ImpostorPlayerController_C_SendChatMessageServerFunc final
 {
 public:
 	EChatType                                     ChatType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_378D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   InText;                                            // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_378E[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_1;      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_378F[0x5];                                     // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_2;      // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3790[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_3;      // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x007E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x007F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   InText;                                            // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_1;      // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_2;      // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_3;      // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0076(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0077(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ImpostorPlayerController_C_SendChatMessageServerFunc) == 0x000008, "Wrong alignment on B_ImpostorPlayerController_C_SendChatMessageServerFunc");
-static_assert(sizeof(B_ImpostorPlayerController_C_SendChatMessageServerFunc) == 0x000088, "Wrong size on B_ImpostorPlayerController_C_SendChatMessageServerFunc");
+static_assert(sizeof(B_ImpostorPlayerController_C_SendChatMessageServerFunc) == 0x000080, "Wrong size on B_ImpostorPlayerController_C_SendChatMessageServerFunc");
 static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, ChatType) == 0x000000, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::ChatType' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, InText) == 0x000008, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::InText' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue) == 0x000020, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue_1) == 0x000028, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000030, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State_1) == 0x000040, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State_1' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000049, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00004A, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue_2) == 0x000050, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue_3) == 0x000058, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State_2) == 0x000060, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State_2' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess_2) == 0x000068, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State_3) == 0x000070, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State_3' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess_3) == 0x000078, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000079, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00007A, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanOR_ReturnValue) == 0x00007B, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanOR_ReturnValue_1) == 0x00007C, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00007D, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_Not_PreBool_ReturnValue) == 0x00007E, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanAND_ReturnValue) == 0x00007F, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanAND_ReturnValue_1) == 0x000080, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanOR_ReturnValue_2) == 0x000081, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue_1) == 0x000020, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000028, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State_1) == 0x000038, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State_1' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000041, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000042, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue_2) == 0x000048, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_GetGameState_ReturnValue_3) == 0x000050, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_GetGameState_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State_2) == 0x000058, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State_2' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess_2) == 0x000060, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_AsB_Impostor_Game_State_3) == 0x000068, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_AsB_Impostor_Game_State_3' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, K2Node_DynamicCast_bSuccess_3) == 0x000070, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000071, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000072, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanOR_ReturnValue) == 0x000073, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanOR_ReturnValue_1) == 0x000074, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x000075, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_Not_PreBool_ReturnValue) == 0x000076, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanAND_ReturnValue) == 0x000077, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanAND_ReturnValue_1) == 0x000078, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_SendChatMessageServerFunc, CallFunc_BooleanOR_ReturnValue_2) == 0x000079, "Member 'B_ImpostorPlayerController_C_SendChatMessageServerFunc::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
 
 // Function B_ImpostorPlayerController.B_ImpostorPlayerController_C.SetReadyServer
 // 0x0002 (0x0002 - 0x0000)
@@ -278,25 +278,25 @@ struct B_ImpostorPlayerController_C_ShowPlayerListMenu final
 {
 public:
 	bool                                          WasRelease;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3791[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3792[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasRoundStarted_RoundHasStarted;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3793[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ImpostorHUD_C*                      K2Node_DynamicCast_AsWB_Impostor_HUD;              // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3794[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3795[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ImpostorTeamSelectionScreen_C*      CallFunc_Create_ReturnValue;                       // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ImpostorPlayerController_C_ShowPlayerListMenu) == 0x000008, "Wrong alignment on B_ImpostorPlayerController_C_ShowPlayerListMenu");
@@ -319,33 +319,33 @@ static_assert(offsetof(B_ImpostorPlayerController_C_ShowPlayerListMenu, CallFunc
 static_assert(offsetof(B_ImpostorPlayerController_C_ShowPlayerListMenu, CallFunc_Create_ReturnValue) == 0x000060, "Member 'B_ImpostorPlayerController_C_ShowPlayerListMenu::CallFunc_Create_ReturnValue' has a wrong offset!");
 
 // Function B_ImpostorPlayerController.B_ImpostorPlayerController_C.TraceForTask
-// 0x02D0 (0x02D0 - 0x0000)
+// 0x02E0 (0x02E0 - 0x0000)
 struct B_ImpostorPlayerController_C_TraceForTask final
 {
 public:
 	class AActor*                                 HitActor;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable;                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3796[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_1;                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3797[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_SabotageBombCauldron_C*              K2Node_DynamicCast_AsB_Sabotage_Bomb_Cauldron;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3798[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_HunterFrog_C*                        K2Node_DynamicCast_AsB_Hunter_Frog;                // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3799[0x5];                                     // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_InteractionActor_C*                  K2Node_DynamicCast_AsB_Interaction_Actor;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379A[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_MeetingStarter_C*                    K2Node_DynamicCast_AsB_Meeting_Starter;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379B[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ConstParm, ReferenceParm)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x0080(0x0010)(ConstParm, ReferenceParm)
@@ -355,40 +355,40 @@ public:
 	class AB_TaskStarter_C*                       K2Node_DynamicCast_AsB_Task_Starter;               // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379C[0x6];                                     // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue_1;                 // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379D[0x6];                                     // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_2;                          // 0x00E8(0x0010)(ConstParm, ReferenceParm)
 	TArray<EObjectTypeQuery>                      K2Node_Select_Default_1;                           // 0x00F8(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0108(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379E[0x1];                                     // 0x01F3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379F[0x4];                                     // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0270(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A0[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0108(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_203[0x1];                                      // 0x0203(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0280(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A4[0x4];                                      // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ImpostorPlayerController_C_TraceForTask) == 0x000008, "Wrong alignment on B_ImpostorPlayerController_C_TraceForTask");
-static_assert(sizeof(B_ImpostorPlayerController_C_TraceForTask) == 0x0002D0, "Wrong size on B_ImpostorPlayerController_C_TraceForTask");
+static_assert(sizeof(B_ImpostorPlayerController_C_TraceForTask) == 0x0002E0, "Wrong size on B_ImpostorPlayerController_C_TraceForTask");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, HitActor) == 0x000000, "Member 'B_ImpostorPlayerController_C_TraceForTask::HitActor' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, Temp_real_Variable) == 0x000008, "Member 'B_ImpostorPlayerController_C_TraceForTask::Temp_real_Variable' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, Temp_bool_Variable) == 0x000010, "Member 'B_ImpostorPlayerController_C_TraceForTask::Temp_bool_Variable' has a wrong offset!");
@@ -421,84 +421,84 @@ static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_IsLoc
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, K2Node_MakeArray_Array_2) == 0x0000E8, "Member 'B_ImpostorPlayerController_C_TraceForTask::K2Node_MakeArray_Array_2' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, K2Node_Select_Default_1) == 0x0000F8, "Member 'B_ImpostorPlayerController_C_TraceForTask::K2Node_Select_Default_1' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000108, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0001F0, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_bBlockingHit) == 0x0001F1, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001F2, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Time) == 0x0001F4, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Distance) == 0x0001F8, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Location) == 0x000200, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_ImpactPoint) == 0x000218, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Normal) == 0x000230, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_ImpactNormal) == 0x000248, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_PhysMat) == 0x000260, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitActor) == 0x000268, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitComponent) == 0x000270, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitBoneName) == 0x000278, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_BoneName) == 0x000280, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitItem) == 0x000288, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_ElementIndex) == 0x00028C, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_FaceIndex) == 0x000290, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_TraceStart) == 0x000298, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_TraceEnd) == 0x0002B0, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_DoesImplementInterface_ReturnValue) == 0x0002C8, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000200, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_bBlockingHit) == 0x000201, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_bInitialOverlap) == 0x000202, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Time) == 0x000204, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Distance) == 0x000208, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Location) == 0x000210, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_ImpactPoint) == 0x000228, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_Normal) == 0x000240, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_ImpactNormal) == 0x000258, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_PhysMat) == 0x000270, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitActor) == 0x000278, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitComponent) == 0x000280, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitBoneName) == 0x000288, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_BoneName) == 0x000290, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_HitItem) == 0x000298, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_ElementIndex) == 0x00029C, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_FaceIndex) == 0x0002A0, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_TraceStart) == 0x0002A8, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_BreakHitResult_TraceEnd) == 0x0002C0, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTask, CallFunc_DoesImplementInterface_ReturnValue) == 0x0002D8, "Member 'B_ImpostorPlayerController_C_TraceForTask::CallFunc_DoesImplementInterface_ReturnValue' has a wrong offset!");
 
 // Function B_ImpostorPlayerController.B_ImpostorPlayerController_C.TraceForTransform
-// 0x0270 (0x0270 - 0x0000)
+// 0x0280 (0x0280 - 0x0000)
 struct B_ImpostorPlayerController_C_TraceForTransform final
 {
 public:
 	TArray<class AActor*>                         IgnoreHunters;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A2[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A3[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A4[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A5[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ConstParm, ReferenceParm)
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_Start; // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_End; // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0098(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A6[0x1];                                     // 0x0183(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A7[0x4];                                     // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0200(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A8[0x4];                                     // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorHunter_C*                    K2Node_DynamicCast_AsB_Impostor_Hunter;            // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x026A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0098(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_193[0x1];                                      // 0x0193(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorHunter_C*                    K2Node_DynamicCast_AsB_Impostor_Hunter;            // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x027A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ImpostorPlayerController_C_TraceForTransform) == 0x000008, "Wrong alignment on B_ImpostorPlayerController_C_TraceForTransform");
-static_assert(sizeof(B_ImpostorPlayerController_C_TraceForTransform) == 0x000270, "Wrong size on B_ImpostorPlayerController_C_TraceForTransform");
+static_assert(sizeof(B_ImpostorPlayerController_C_TraceForTransform) == 0x000280, "Wrong size on B_ImpostorPlayerController_C_TraceForTransform");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, IgnoreHunters) == 0x000000, "Member 'B_ImpostorPlayerController_C_TraceForTransform::IgnoreHunters' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, Temp_int_Array_Index_Variable) == 0x000010, "Member 'B_ImpostorPlayerController_C_TraceForTransform::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_GetGameState_ReturnValue) == 0x000018, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
@@ -516,33 +516,33 @@ static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, K2Node_Ma
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_GetPlayerControllerThirdPersonTraceDirection_Start) == 0x000068, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_GetPlayerControllerThirdPersonTraceDirection_Start' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_GetPlayerControllerThirdPersonTraceDirection_End) == 0x000080, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_GetPlayerControllerThirdPersonTraceDirection_End' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000098, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000180, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_bBlockingHit) == 0x000181, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_bInitialOverlap) == 0x000182, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Time) == 0x000184, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Distance) == 0x000188, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Location) == 0x000190, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_ImpactPoint) == 0x0001A8, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Normal) == 0x0001C0, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_ImpactNormal) == 0x0001D8, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_PhysMat) == 0x0001F0, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitActor) == 0x0001F8, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitComponent) == 0x000200, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitBoneName) == 0x000208, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_BoneName) == 0x000210, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitItem) == 0x000218, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_ElementIndex) == 0x00021C, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_FaceIndex) == 0x000220, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_TraceStart) == 0x000228, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_TraceEnd) == 0x000240, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_K2_GetPawn_ReturnValue) == 0x000258, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, K2Node_DynamicCast_AsB_Impostor_Hunter) == 0x000260, "Member 'B_ImpostorPlayerController_C_TraceForTransform::K2Node_DynamicCast_AsB_Impostor_Hunter' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, K2Node_DynamicCast_bSuccess_2) == 0x000268, "Member 'B_ImpostorPlayerController_C_TraceForTransform::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_IsValid_ReturnValue) == 0x000269, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_IsLocalPlayerController_ReturnValue) == 0x00026A, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000190, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_bBlockingHit) == 0x000191, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_bInitialOverlap) == 0x000192, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Time) == 0x000194, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Distance) == 0x000198, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Location) == 0x0001A0, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_ImpactPoint) == 0x0001B8, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_Normal) == 0x0001D0, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_ImpactNormal) == 0x0001E8, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_PhysMat) == 0x000200, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitActor) == 0x000208, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitComponent) == 0x000210, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitBoneName) == 0x000218, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_BoneName) == 0x000220, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_HitItem) == 0x000228, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_ElementIndex) == 0x00022C, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_FaceIndex) == 0x000230, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_TraceStart) == 0x000238, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_BreakHitResult_TraceEnd) == 0x000250, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_K2_GetPawn_ReturnValue) == 0x000268, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, K2Node_DynamicCast_AsB_Impostor_Hunter) == 0x000270, "Member 'B_ImpostorPlayerController_C_TraceForTransform::K2Node_DynamicCast_AsB_Impostor_Hunter' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, K2Node_DynamicCast_bSuccess_2) == 0x000278, "Member 'B_ImpostorPlayerController_C_TraceForTransform::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_IsValid_ReturnValue) == 0x000279, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForTransform, CallFunc_IsLocalPlayerController_ReturnValue) == 0x00027A, "Member 'B_ImpostorPlayerController_C_TraceForTransform::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
 
 // Function B_ImpostorPlayerController.B_ImpostorPlayerController_C.TraceForVoteStart
-// 0x0230 (0x0230 - 0x0000)
+// 0x0240 (0x0240 - 0x0000)
 struct B_ImpostorPlayerController_C_TraceForVoteStart final
 {
 public:
@@ -550,39 +550,39 @@ public:
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37A9[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_Start; // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetPlayerControllerThirdPersonTraceDirection_End; // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0050(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0060(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AA[0x1];                                     // 0x014B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AB[0x4];                                     // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AC[0x4];                                     // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_VoteStarter_C*                       K2Node_DynamicCast_AsB_Vote_Starter;               // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0060(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15B[0x1];                                      // 0x015B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_VoteStarter_C*                       K2Node_DynamicCast_AsB_Vote_Starter;               // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ImpostorPlayerController_C_TraceForVoteStart) == 0x000008, "Wrong alignment on B_ImpostorPlayerController_C_TraceForVoteStart");
-static_assert(sizeof(B_ImpostorPlayerController_C_TraceForVoteStart) == 0x000230, "Wrong size on B_ImpostorPlayerController_C_TraceForVoteStart");
+static_assert(sizeof(B_ImpostorPlayerController_C_TraceForVoteStart) == 0x000240, "Wrong size on B_ImpostorPlayerController_C_TraceForVoteStart");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, Temp_object_Variable) == 0x000000, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_K2_GetPawn_ReturnValue) == 0x000010, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_IsValid_ReturnValue' has a wrong offset!");
@@ -591,28 +591,28 @@ static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_GetPlayerControllerThirdPersonTraceDirection_End) == 0x000038, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_GetPlayerControllerThirdPersonTraceDirection_End' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, K2Node_MakeArray_Array) == 0x000050, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000060, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000148, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_bBlockingHit) == 0x000149, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_bInitialOverlap) == 0x00014A, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Time) == 0x00014C, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Distance) == 0x000150, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Location) == 0x000158, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_ImpactPoint) == 0x000170, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Normal) == 0x000188, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_ImpactNormal) == 0x0001A0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_PhysMat) == 0x0001B8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitActor) == 0x0001C0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitComponent) == 0x0001C8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitBoneName) == 0x0001D0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_BoneName) == 0x0001D8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitItem) == 0x0001E0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_ElementIndex) == 0x0001E4, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_FaceIndex) == 0x0001E8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_TraceStart) == 0x0001F0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_TraceEnd) == 0x000208, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, K2Node_DynamicCast_AsB_Vote_Starter) == 0x000220, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::K2Node_DynamicCast_AsB_Vote_Starter' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, K2Node_DynamicCast_bSuccess) == 0x000228, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000229, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000158, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_bBlockingHit) == 0x000159, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_bInitialOverlap) == 0x00015A, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Time) == 0x00015C, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Distance) == 0x000160, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Location) == 0x000168, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_ImpactPoint) == 0x000180, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_Normal) == 0x000198, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_ImpactNormal) == 0x0001B0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_PhysMat) == 0x0001C8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitActor) == 0x0001D0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitComponent) == 0x0001D8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitBoneName) == 0x0001E0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_BoneName) == 0x0001E8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_HitItem) == 0x0001F0, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_ElementIndex) == 0x0001F4, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_FaceIndex) == 0x0001F8, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_TraceStart) == 0x000200, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_BreakHitResult_TraceEnd) == 0x000218, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, K2Node_DynamicCast_AsB_Vote_Starter) == 0x000230, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::K2Node_DynamicCast_AsB_Vote_Starter' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, K2Node_DynamicCast_bSuccess) == 0x000238, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_ImpostorPlayerController_C_TraceForVoteStart, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000239, "Member 'B_ImpostorPlayerController_C_TraceForVoteStart::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 // Function B_ImpostorPlayerController.B_ImpostorPlayerController_C.TypeChatMessage
 // 0x0070 (0x0070 - 0x0000)
@@ -620,22 +620,22 @@ struct B_ImpostorPlayerController_C_TypeChatMessage final
 {
 public:
 	EChatType                                     ChatType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AD[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AE[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_1;      // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AF[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_3;               // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_2;      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37B0[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State_3;      // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

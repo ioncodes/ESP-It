@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_PowerupRuleType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_PowerupRuleType_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -20,25 +20,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PowerupConfigure.WB_PowerupConfigure_C
-// 0x0050 (0x0310 - 0x02C0)
+// 0x0050 (0x0330 - 0x02E0)
 class UWB_PowerupConfigure_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Button_Back;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Button_Reset;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ConfigurePowerupText;                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ParamSliderList;                                   // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FUIParam>                       CurrentPowerupParameters;                          // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	E_PowerupRuleType                             CurrentPowerupType;                                // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Button_Back;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Button_Reset;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ConfigurePowerupText;                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ParamSliderList;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FUIParam>                       CurrentPowerupParameters;                          // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	E_PowerupRuleType                             CurrentPowerupType;                                // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ApplyRules();
 	void BndEvt__WB_GameRules_Button_Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
 	void BndEvt__WB_ModConfigure_Button_Reset_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
 	void CheckForShouldEnable();
-	void CreateUIParameters(TArray<struct FUIParameterData>& UIParameters);
+	void CreateEventBindings();
+	void CreateUIParameters(TArray<struct FUIParameterData>& UIParameters, TArray<struct FUIParam>& DefaultValues);
 	void ExecuteUbergraph_WB_PowerupConfigure(int32 EntryPoint);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	void OnApply();
@@ -61,15 +62,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_PowerupConfigure_C) == 0x000008, "Wrong alignment on UWB_PowerupConfigure_C");
-static_assert(sizeof(UWB_PowerupConfigure_C) == 0x000310, "Wrong size on UWB_PowerupConfigure_C");
-static_assert(offsetof(UWB_PowerupConfigure_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_PowerupConfigure_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, Button_Back) == 0x0002C8, "Member 'UWB_PowerupConfigure_C::Button_Back' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, Button_Reset) == 0x0002D0, "Member 'UWB_PowerupConfigure_C::Button_Reset' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, ConfigurePowerupText) == 0x0002D8, "Member 'UWB_PowerupConfigure_C::ConfigurePowerupText' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, ParamSliderList) == 0x0002E0, "Member 'UWB_PowerupConfigure_C::ParamSliderList' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, CurrentPowerupParameters) == 0x0002E8, "Member 'UWB_PowerupConfigure_C::CurrentPowerupParameters' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, UIElements) == 0x0002F8, "Member 'UWB_PowerupConfigure_C::UIElements' has a wrong offset!");
-static_assert(offsetof(UWB_PowerupConfigure_C, CurrentPowerupType) == 0x000308, "Member 'UWB_PowerupConfigure_C::CurrentPowerupType' has a wrong offset!");
+static_assert(sizeof(UWB_PowerupConfigure_C) == 0x000330, "Wrong size on UWB_PowerupConfigure_C");
+static_assert(offsetof(UWB_PowerupConfigure_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_PowerupConfigure_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, Button_Back) == 0x0002E8, "Member 'UWB_PowerupConfigure_C::Button_Back' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, Button_Reset) == 0x0002F0, "Member 'UWB_PowerupConfigure_C::Button_Reset' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, ConfigurePowerupText) == 0x0002F8, "Member 'UWB_PowerupConfigure_C::ConfigurePowerupText' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, ParamSliderList) == 0x000300, "Member 'UWB_PowerupConfigure_C::ParamSliderList' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, CurrentPowerupParameters) == 0x000308, "Member 'UWB_PowerupConfigure_C::CurrentPowerupParameters' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, UIElements) == 0x000318, "Member 'UWB_PowerupConfigure_C::UIElements' has a wrong offset!");
+static_assert(offsetof(UWB_PowerupConfigure_C, CurrentPowerupType) == 0x000328, "Member 'UWB_PowerupConfigure_C::CurrentPowerupType' has a wrong offset!");
 
 }
 

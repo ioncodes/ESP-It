@@ -55,9 +55,9 @@ void UB_Timer_C::OnFinished__DelegateSignature()
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   ElapsedSeconds                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_RemainingSeconds                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   RemainingSeconds_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_Timer_C::OnSecondElapsed__DelegateSignature(int32 ElapsedSeconds, int32 Param_RemainingSeconds)
+void UB_Timer_C::OnSecondElapsed__DelegateSignature(int32 ElapsedSeconds, int32 RemainingSeconds_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -67,7 +67,7 @@ void UB_Timer_C::OnSecondElapsed__DelegateSignature(int32 ElapsedSeconds, int32 
 	Params::B_Timer_C_OnSecondElapsed__DelegateSignature Parms{};
 
 	Parms.ElapsedSeconds = ElapsedSeconds;
-	Parms.Param_RemainingSeconds = Param_RemainingSeconds;
+	Parms.RemainingSeconds_0 = RemainingSeconds_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

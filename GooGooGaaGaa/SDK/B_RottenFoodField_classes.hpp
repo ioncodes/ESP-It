@@ -17,16 +17,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenFoodField.B_RottenFoodField_C
-// 0x0030 (0x0370 - 0x0340)
+// 0x0030 (0x0368 - 0x0338)
 class AB_RottenFoodField_C final : public AB_TaskField_C
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh5;                                       // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh4;                                       // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh3;                                       // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh5;                                       // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh4;                                       // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh1;                                       // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh3;                                       // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh2;                                       // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void InitializeTaskField();
@@ -42,13 +42,13 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenFoodField_C) == 0x000008, "Wrong alignment on AB_RottenFoodField_C");
-static_assert(sizeof(AB_RottenFoodField_C) == 0x000370, "Wrong size on AB_RottenFoodField_C");
-static_assert(offsetof(AB_RottenFoodField_C, StaticMesh5) == 0x000340, "Member 'AB_RottenFoodField_C::StaticMesh5' has a wrong offset!");
-static_assert(offsetof(AB_RottenFoodField_C, StaticMesh4) == 0x000348, "Member 'AB_RottenFoodField_C::StaticMesh4' has a wrong offset!");
-static_assert(offsetof(AB_RottenFoodField_C, StaticMesh1) == 0x000350, "Member 'AB_RottenFoodField_C::StaticMesh1' has a wrong offset!");
-static_assert(offsetof(AB_RottenFoodField_C, StaticMesh3) == 0x000358, "Member 'AB_RottenFoodField_C::StaticMesh3' has a wrong offset!");
-static_assert(offsetof(AB_RottenFoodField_C, StaticMesh2) == 0x000360, "Member 'AB_RottenFoodField_C::StaticMesh2' has a wrong offset!");
-static_assert(offsetof(AB_RottenFoodField_C, StaticMesh) == 0x000368, "Member 'AB_RottenFoodField_C::StaticMesh' has a wrong offset!");
+static_assert(sizeof(AB_RottenFoodField_C) == 0x000368, "Wrong size on AB_RottenFoodField_C");
+static_assert(offsetof(AB_RottenFoodField_C, StaticMesh5) == 0x000338, "Member 'AB_RottenFoodField_C::StaticMesh5' has a wrong offset!");
+static_assert(offsetof(AB_RottenFoodField_C, StaticMesh4) == 0x000340, "Member 'AB_RottenFoodField_C::StaticMesh4' has a wrong offset!");
+static_assert(offsetof(AB_RottenFoodField_C, StaticMesh1) == 0x000348, "Member 'AB_RottenFoodField_C::StaticMesh1' has a wrong offset!");
+static_assert(offsetof(AB_RottenFoodField_C, StaticMesh3) == 0x000350, "Member 'AB_RottenFoodField_C::StaticMesh3' has a wrong offset!");
+static_assert(offsetof(AB_RottenFoodField_C, StaticMesh2) == 0x000358, "Member 'AB_RottenFoodField_C::StaticMesh2' has a wrong offset!");
+static_assert(offsetof(AB_RottenFoodField_C, StaticMesh) == 0x000360, "Member 'AB_RottenFoodField_C::StaticMesh' has a wrong offset!");
 
 }
 

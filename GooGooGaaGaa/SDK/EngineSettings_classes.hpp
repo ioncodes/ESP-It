@@ -24,19 +24,19 @@ class UConsoleSettings final : public UObject
 {
 public:
 	int32                                         MaxScrollbackSize;                                 // 0x0028(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E2[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAutoCompleteCommand>           ManualAutoCompleteList;                            // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         AutoCompleteMapPaths;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	float                                         BackgroundOpacityPercentage;                       // 0x0050(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOrderTopToBottom;                                 // 0x0054(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisplayHelpInAutoComplete;                        // 0x0055(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E3[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 InputColor;                                        // 0x0058(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 HistoryColor;                                      // 0x005C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 AutoCompleteCommandColor;                          // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 AutoCompleteCVarColor;                             // 0x0064(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 AutoCompleteFadedColor;                            // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -74,7 +74,7 @@ public:
 	EThreePlayerSplitScreenType                   ThreePlayerSplitscreenLayout;                      // 0x005A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFourPlayerSplitScreenType                    FourPlayerSplitscreenLayout;                       // 0x005B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOffsetPlayerGamepadIds;                           // 0x005C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E5[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftClassPath                         GameInstanceClass;                                 // 0x0060(0x0020)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        GameDefaultMap;                                    // 0x0080(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FSoftObjectPath                        ServerDefaultMap;                                  // 0x00A0(0x0020)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -127,14 +127,14 @@ public:
 	int32                                         TotalNetBandwidth;                                 // 0x0030(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BadPingThreshold;                                  // 0x0034(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bIsStandbyCheckingEnabled : 1;                     // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_E6[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StandbyRxCheatTime;                                // 0x003C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StandbyTxCheatTime;                                // 0x0040(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PercentMissingForRxStandby;                        // 0x0044(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PercentMissingForTxStandby;                        // 0x0048(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PercentForBadPing;                                 // 0x004C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         JoinInProgressStandbyWaitTime;                     // 0x0050(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E7[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -167,7 +167,7 @@ public:
 	int32                                         MaxSpectators;                                     // 0x0028(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxPlayers;                                        // 0x002C(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bRequiresPushToTalk : 1;                           // 0x0030(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, GlobalConfig, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_E8[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -202,7 +202,7 @@ static_assert(alignof(UGeneralEngineSettings) == 0x000008, "Wrong alignment on U
 static_assert(sizeof(UGeneralEngineSettings) == 0x000028, "Wrong size on UGeneralEngineSettings");
 
 // Class EngineSettings.GeneralProjectSettings
-// 0x00F0 (0x0118 - 0x0028)
+// 0x00E0 (0x0108 - 0x0028)
 class UGeneralProjectSettings final : public UObject
 {
 public:
@@ -217,18 +217,18 @@ public:
 	class FString                                 ProjectName;                                       // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ProjectVersion;                                    // 0x00B8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SupportContact;                                    // 0x00C8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ProjectDisplayedTitle;                             // 0x00D8(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
-	class FText                                   ProjectDebugTitleInfo;                             // 0x00F0(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
-	bool                                          bShouldWindowPreserveAspectRatio;                  // 0x0108(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBorderlessWindow;                              // 0x0109(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStartInVR;                                        // 0x010A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowWindowResize;                                // 0x010B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowClose;                                       // 0x010C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMaximize;                                    // 0x010D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowMinimize;                                    // 0x010E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x1];                                       // 0x010F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EyeOffsetForFakeStereoRenderingDevice;             // 0x0110(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FOVForFakeStereoRenderingDevice;                   // 0x0114(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ProjectDisplayedTitle;                             // 0x00D8(0x0010)(Edit, Config, NativeAccessSpecifierPublic)
+	class FText                                   ProjectDebugTitleInfo;                             // 0x00E8(0x0010)(Edit, Config, NativeAccessSpecifierPublic)
+	bool                                          bShouldWindowPreserveAspectRatio;                  // 0x00F8(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBorderlessWindow;                              // 0x00F9(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStartInVR;                                        // 0x00FA(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowWindowResize;                                // 0x00FB(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowClose;                                       // 0x00FC(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMaximize;                                    // 0x00FD(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowMinimize;                                    // 0x00FE(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FF[0x1];                                       // 0x00FF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         EyeOffsetForFakeStereoRenderingDevice;             // 0x0100(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FOVForFakeStereoRenderingDevice;                   // 0x0104(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -241,7 +241,7 @@ public:
 	}
 };
 static_assert(alignof(UGeneralProjectSettings) == 0x000008, "Wrong alignment on UGeneralProjectSettings");
-static_assert(sizeof(UGeneralProjectSettings) == 0x000118, "Wrong size on UGeneralProjectSettings");
+static_assert(sizeof(UGeneralProjectSettings) == 0x000108, "Wrong size on UGeneralProjectSettings");
 static_assert(offsetof(UGeneralProjectSettings, CompanyName) == 0x000028, "Member 'UGeneralProjectSettings::CompanyName' has a wrong offset!");
 static_assert(offsetof(UGeneralProjectSettings, CompanyDistinguishedName) == 0x000038, "Member 'UGeneralProjectSettings::CompanyDistinguishedName' has a wrong offset!");
 static_assert(offsetof(UGeneralProjectSettings, CopyrightNotice) == 0x000048, "Member 'UGeneralProjectSettings::CopyrightNotice' has a wrong offset!");
@@ -254,16 +254,16 @@ static_assert(offsetof(UGeneralProjectSettings, ProjectName) == 0x0000A8, "Membe
 static_assert(offsetof(UGeneralProjectSettings, ProjectVersion) == 0x0000B8, "Member 'UGeneralProjectSettings::ProjectVersion' has a wrong offset!");
 static_assert(offsetof(UGeneralProjectSettings, SupportContact) == 0x0000C8, "Member 'UGeneralProjectSettings::SupportContact' has a wrong offset!");
 static_assert(offsetof(UGeneralProjectSettings, ProjectDisplayedTitle) == 0x0000D8, "Member 'UGeneralProjectSettings::ProjectDisplayedTitle' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, ProjectDebugTitleInfo) == 0x0000F0, "Member 'UGeneralProjectSettings::ProjectDebugTitleInfo' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bShouldWindowPreserveAspectRatio) == 0x000108, "Member 'UGeneralProjectSettings::bShouldWindowPreserveAspectRatio' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bUseBorderlessWindow) == 0x000109, "Member 'UGeneralProjectSettings::bUseBorderlessWindow' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bStartInVR) == 0x00010A, "Member 'UGeneralProjectSettings::bStartInVR' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowWindowResize) == 0x00010B, "Member 'UGeneralProjectSettings::bAllowWindowResize' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowClose) == 0x00010C, "Member 'UGeneralProjectSettings::bAllowClose' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowMaximize) == 0x00010D, "Member 'UGeneralProjectSettings::bAllowMaximize' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowMinimize) == 0x00010E, "Member 'UGeneralProjectSettings::bAllowMinimize' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, EyeOffsetForFakeStereoRenderingDevice) == 0x000110, "Member 'UGeneralProjectSettings::EyeOffsetForFakeStereoRenderingDevice' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, FOVForFakeStereoRenderingDevice) == 0x000114, "Member 'UGeneralProjectSettings::FOVForFakeStereoRenderingDevice' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, ProjectDebugTitleInfo) == 0x0000E8, "Member 'UGeneralProjectSettings::ProjectDebugTitleInfo' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bShouldWindowPreserveAspectRatio) == 0x0000F8, "Member 'UGeneralProjectSettings::bShouldWindowPreserveAspectRatio' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bUseBorderlessWindow) == 0x0000F9, "Member 'UGeneralProjectSettings::bUseBorderlessWindow' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bStartInVR) == 0x0000FA, "Member 'UGeneralProjectSettings::bStartInVR' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bAllowWindowResize) == 0x0000FB, "Member 'UGeneralProjectSettings::bAllowWindowResize' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bAllowClose) == 0x0000FC, "Member 'UGeneralProjectSettings::bAllowClose' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bAllowMaximize) == 0x0000FD, "Member 'UGeneralProjectSettings::bAllowMaximize' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, bAllowMinimize) == 0x0000FE, "Member 'UGeneralProjectSettings::bAllowMinimize' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, EyeOffsetForFakeStereoRenderingDevice) == 0x000100, "Member 'UGeneralProjectSettings::EyeOffsetForFakeStereoRenderingDevice' has a wrong offset!");
+static_assert(offsetof(UGeneralProjectSettings, FOVForFakeStereoRenderingDevice) == 0x000104, "Member 'UGeneralProjectSettings::FOVForFakeStereoRenderingDevice' has a wrong offset!");
 
 // Class EngineSettings.HudSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -271,7 +271,7 @@ class UHudSettings final : public UObject
 {
 public:
 	uint8                                         bShowHUD : 1;                                      // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_EA[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           DebugDisplay;                                      // 0x0030(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
 
 public:

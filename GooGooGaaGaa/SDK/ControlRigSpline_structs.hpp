@@ -32,7 +32,7 @@ enum class ESplineType : uint8
 struct alignas(0x08) FControlRigSplineImpl final
 {
 public:
-	uint8                                         Pad_73[0x68];                                      // 0x0000(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x68];                                       // 0x0000(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FControlRigSplineImpl) == 0x000008, "Wrong alignment on FControlRigSplineImpl");
 static_assert(sizeof(FControlRigSplineImpl) == 0x000068, "Wrong size on FControlRigSplineImpl");
@@ -42,7 +42,7 @@ static_assert(sizeof(FControlRigSplineImpl) == 0x000068, "Wrong size on FControl
 struct alignas(0x08) FControlRigSpline final
 {
 public:
-	uint8                                         Pad_74[0x18];                                      // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FControlRigSpline) == 0x000008, "Wrong alignment on FControlRigSpline");
 static_assert(sizeof(FControlRigSpline) == 0x000018, "Wrong size on FControlRigSpline");
@@ -63,7 +63,7 @@ public:
 	TArray<struct FVector>                        Points;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	ESplineType                                   SplineMode;                                        // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bClosed;                                           // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_75[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SamplesPerSegment;                                 // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Compression;                                       // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Stretch;                                           // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -87,7 +87,7 @@ public:
 	TArray<struct FTransform>                     Transforms;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	ESplineType                                   SplineMode;                                        // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bClosed;                                           // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_76[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SamplesPerSegment;                                 // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Compression;                                       // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Stretch;                                           // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -104,32 +104,32 @@ static_assert(offsetof(FRigUnit_ControlRigSplineFromTransforms, Stretch) == 0x00
 static_assert(offsetof(FRigUnit_ControlRigSplineFromTransforms, Spline) == 0x000028, "Member 'FRigUnit_ControlRigSplineFromTransforms::Spline' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_SetSplinePoints
-// 0x0030 (0x0190 - 0x0160)
+// 0x0030 (0x0200 - 0x01D0)
 struct FRigUnit_SetSplinePoints final : public FRigUnitMutable
 {
 public:
-	TArray<struct FVector>                        Points;                                            // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_77[0x8];                                       // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        Points;                                            // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_SetSplinePoints) == 0x000010, "Wrong alignment on FRigUnit_SetSplinePoints");
-static_assert(sizeof(FRigUnit_SetSplinePoints) == 0x000190, "Wrong size on FRigUnit_SetSplinePoints");
-static_assert(offsetof(FRigUnit_SetSplinePoints, Points) == 0x000160, "Member 'FRigUnit_SetSplinePoints::Points' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SetSplinePoints, Spline) == 0x000170, "Member 'FRigUnit_SetSplinePoints::Spline' has a wrong offset!");
+static_assert(sizeof(FRigUnit_SetSplinePoints) == 0x000200, "Wrong size on FRigUnit_SetSplinePoints");
+static_assert(offsetof(FRigUnit_SetSplinePoints, Points) == 0x0001D0, "Member 'FRigUnit_SetSplinePoints::Points' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SetSplinePoints, Spline) == 0x0001E0, "Member 'FRigUnit_SetSplinePoints::Spline' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_SetSplineTransforms
-// 0x0030 (0x0190 - 0x0160)
+// 0x0030 (0x0200 - 0x01D0)
 struct FRigUnit_SetSplineTransforms final : public FRigUnitMutable
 {
 public:
-	TArray<struct FTransform>                     Transforms;                                        // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x8];                                       // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FTransform>                     Transforms;                                        // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_SetSplineTransforms) == 0x000010, "Wrong alignment on FRigUnit_SetSplineTransforms");
-static_assert(sizeof(FRigUnit_SetSplineTransforms) == 0x000190, "Wrong size on FRigUnit_SetSplineTransforms");
-static_assert(offsetof(FRigUnit_SetSplineTransforms, Transforms) == 0x000160, "Member 'FRigUnit_SetSplineTransforms::Transforms' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SetSplineTransforms, Spline) == 0x000170, "Member 'FRigUnit_SetSplineTransforms::Spline' has a wrong offset!");
+static_assert(sizeof(FRigUnit_SetSplineTransforms) == 0x000200, "Wrong size on FRigUnit_SetSplineTransforms");
+static_assert(offsetof(FRigUnit_SetSplineTransforms, Transforms) == 0x0001D0, "Member 'FRigUnit_SetSplineTransforms::Transforms' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SetSplineTransforms, Spline) == 0x0001E0, "Member 'FRigUnit_SetSplineTransforms::Spline' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_PositionFromControlRigSpline
 // 0x0038 (0x0040 - 0x0008)
@@ -138,7 +138,7 @@ struct FRigUnit_PositionFromControlRigSpline final : public FRigUnit_ControlRigS
 public:
 	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                         U;                                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRigUnit_PositionFromControlRigSpline) == 0x000008, "Wrong alignment on FRigUnit_PositionFromControlRigSpline");
@@ -173,10 +173,10 @@ struct FRigUnit_TransformFromControlRigSpline2 final : public FRigUnit_ControlRi
 public:
 	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                         U;                                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PrimaryAxis;                                       // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                SecondaryAxis;                                     // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7B[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0060(0x0060)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRigUnit_TransformFromControlRigSpline2) == 0x000010, "Wrong alignment on FRigUnit_TransformFromControlRigSpline2");
@@ -194,7 +194,7 @@ struct FRigUnit_TangentFromControlRigSpline final : public FRigUnit_ControlRigSp
 public:
 	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                         U;                                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Tangent;                                           // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRigUnit_TangentFromControlRigSpline) == 0x000008, "Wrong alignment on FRigUnit_TangentFromControlRigSpline");
@@ -204,21 +204,21 @@ static_assert(offsetof(FRigUnit_TangentFromControlRigSpline, U) == 0x000020, "Me
 static_assert(offsetof(FRigUnit_TangentFromControlRigSpline, Tangent) == 0x000028, "Member 'FRigUnit_TangentFromControlRigSpline::Tangent' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_DrawControlRigSpline
-// 0x0030 (0x0190 - 0x0160)
+// 0x0030 (0x0200 - 0x01D0)
 struct FRigUnit_DrawControlRigSpline final : public FRigUnitMutable
 {
 public:
-	struct FControlRigSpline                      Spline;                                            // 0x0160(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Color;                                             // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Thickness;                                         // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Detail;                                            // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01D0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color;                                             // 0x01E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Thickness;                                         // 0x01F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Detail;                                            // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRigUnit_DrawControlRigSpline) == 0x000010, "Wrong alignment on FRigUnit_DrawControlRigSpline");
-static_assert(sizeof(FRigUnit_DrawControlRigSpline) == 0x000190, "Wrong size on FRigUnit_DrawControlRigSpline");
-static_assert(offsetof(FRigUnit_DrawControlRigSpline, Spline) == 0x000160, "Member 'FRigUnit_DrawControlRigSpline::Spline' has a wrong offset!");
-static_assert(offsetof(FRigUnit_DrawControlRigSpline, Color) == 0x000178, "Member 'FRigUnit_DrawControlRigSpline::Color' has a wrong offset!");
-static_assert(offsetof(FRigUnit_DrawControlRigSpline, Thickness) == 0x000188, "Member 'FRigUnit_DrawControlRigSpline::Thickness' has a wrong offset!");
-static_assert(offsetof(FRigUnit_DrawControlRigSpline, Detail) == 0x00018C, "Member 'FRigUnit_DrawControlRigSpline::Detail' has a wrong offset!");
+static_assert(sizeof(FRigUnit_DrawControlRigSpline) == 0x000200, "Wrong size on FRigUnit_DrawControlRigSpline");
+static_assert(offsetof(FRigUnit_DrawControlRigSpline, Spline) == 0x0001D0, "Member 'FRigUnit_DrawControlRigSpline::Spline' has a wrong offset!");
+static_assert(offsetof(FRigUnit_DrawControlRigSpline, Color) == 0x0001E8, "Member 'FRigUnit_DrawControlRigSpline::Color' has a wrong offset!");
+static_assert(offsetof(FRigUnit_DrawControlRigSpline, Thickness) == 0x0001F8, "Member 'FRigUnit_DrawControlRigSpline::Thickness' has a wrong offset!");
+static_assert(offsetof(FRigUnit_DrawControlRigSpline, Detail) == 0x0001FC, "Member 'FRigUnit_DrawControlRigSpline::Detail' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_GetLengthControlRigSpline
 // 0x0020 (0x0028 - 0x0008)
@@ -227,7 +227,7 @@ struct FRigUnit_GetLengthControlRigSpline final : public FRigUnit
 public:
 	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                         Length;                                            // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7D[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_GetLengthControlRigSpline) == 0x000008, "Wrong alignment on FRigUnit_GetLengthControlRigSpline");
 static_assert(sizeof(FRigUnit_GetLengthControlRigSpline) == 0x000028, "Wrong size on FRigUnit_GetLengthControlRigSpline");
@@ -250,90 +250,90 @@ static_assert(offsetof(FRigUnit_GetLengthAtParamControlRigSpline, U) == 0x000020
 static_assert(offsetof(FRigUnit_GetLengthAtParamControlRigSpline, Length) == 0x000024, "Member 'FRigUnit_GetLengthAtParamControlRigSpline::Length' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_FitChainToSplineCurve
-// 0x01D0 (0x0330 - 0x0160)
+// 0x01D0 (0x03A0 - 0x01D0)
 struct FRigUnit_FitChainToSplineCurve final : public FRigUnit_HighlevelBaseMutable
 {
 public:
-	struct FRigElementKeyCollection               Items;                                             // 0x0160(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EControlRigCurveAlignment                     Alignment;                                         // 0x0188(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7E[0x3];                                       // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Minimum;                                           // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SamplingPrecision;                                 // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PrimaryAxis;                                       // 0x0198(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SecondaryAxis;                                     // 0x01B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PoleVectorPosition;                                // 0x01C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRigUnit_FitChainToCurve_Rotation> Rotations;                                         // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	ERigVMAnimEasingType                          RotationEaseType;                                  // 0x01F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7F[0x3];                                       // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Weight;                                            // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPropagateToChildren;                              // 0x01F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x7];                                       // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_FitChainToCurve_DebugSettings DebugSettings;                                     // 0x0200(0x0090)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRigUnit_FitChainToCurve_WorkData      WorkData;                                          // 0x0290(0x0098)(Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x8];                                       // 0x0328(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRigElementKeyCollection               Items;                                             // 0x01D0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EControlRigCurveAlignment                     Alignment;                                         // 0x01F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Minimum;                                           // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SamplingPrecision;                                 // 0x0204(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PrimaryAxis;                                       // 0x0208(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SecondaryAxis;                                     // 0x0220(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PoleVectorPosition;                                // 0x0238(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRigUnit_FitChainToCurve_Rotation> Rotations;                                         // 0x0250(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	ERigVMAnimEasingType                          RotationEaseType;                                  // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Weight;                                            // 0x0264(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPropagateToChildren;                              // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigUnit_FitChainToCurve_DebugSettings DebugSettings;                                     // 0x0270(0x0090)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigUnit_FitChainToCurve_WorkData      WorkData;                                          // 0x0300(0x0098)(Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_FitChainToSplineCurve) == 0x000010, "Wrong alignment on FRigUnit_FitChainToSplineCurve");
-static_assert(sizeof(FRigUnit_FitChainToSplineCurve) == 0x000330, "Wrong size on FRigUnit_FitChainToSplineCurve");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Items) == 0x000160, "Member 'FRigUnit_FitChainToSplineCurve::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Spline) == 0x000170, "Member 'FRigUnit_FitChainToSplineCurve::Spline' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Alignment) == 0x000188, "Member 'FRigUnit_FitChainToSplineCurve::Alignment' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Minimum) == 0x00018C, "Member 'FRigUnit_FitChainToSplineCurve::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Maximum) == 0x000190, "Member 'FRigUnit_FitChainToSplineCurve::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, SamplingPrecision) == 0x000194, "Member 'FRigUnit_FitChainToSplineCurve::SamplingPrecision' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, PrimaryAxis) == 0x000198, "Member 'FRigUnit_FitChainToSplineCurve::PrimaryAxis' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, SecondaryAxis) == 0x0001B0, "Member 'FRigUnit_FitChainToSplineCurve::SecondaryAxis' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, PoleVectorPosition) == 0x0001C8, "Member 'FRigUnit_FitChainToSplineCurve::PoleVectorPosition' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Rotations) == 0x0001E0, "Member 'FRigUnit_FitChainToSplineCurve::Rotations' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, RotationEaseType) == 0x0001F0, "Member 'FRigUnit_FitChainToSplineCurve::RotationEaseType' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Weight) == 0x0001F4, "Member 'FRigUnit_FitChainToSplineCurve::Weight' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, bPropagateToChildren) == 0x0001F8, "Member 'FRigUnit_FitChainToSplineCurve::bPropagateToChildren' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, DebugSettings) == 0x000200, "Member 'FRigUnit_FitChainToSplineCurve::DebugSettings' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurve, WorkData) == 0x000290, "Member 'FRigUnit_FitChainToSplineCurve::WorkData' has a wrong offset!");
+static_assert(sizeof(FRigUnit_FitChainToSplineCurve) == 0x0003A0, "Wrong size on FRigUnit_FitChainToSplineCurve");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Items) == 0x0001D0, "Member 'FRigUnit_FitChainToSplineCurve::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Spline) == 0x0001E0, "Member 'FRigUnit_FitChainToSplineCurve::Spline' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Alignment) == 0x0001F8, "Member 'FRigUnit_FitChainToSplineCurve::Alignment' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Minimum) == 0x0001FC, "Member 'FRigUnit_FitChainToSplineCurve::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Maximum) == 0x000200, "Member 'FRigUnit_FitChainToSplineCurve::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, SamplingPrecision) == 0x000204, "Member 'FRigUnit_FitChainToSplineCurve::SamplingPrecision' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, PrimaryAxis) == 0x000208, "Member 'FRigUnit_FitChainToSplineCurve::PrimaryAxis' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, SecondaryAxis) == 0x000220, "Member 'FRigUnit_FitChainToSplineCurve::SecondaryAxis' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, PoleVectorPosition) == 0x000238, "Member 'FRigUnit_FitChainToSplineCurve::PoleVectorPosition' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Rotations) == 0x000250, "Member 'FRigUnit_FitChainToSplineCurve::Rotations' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, RotationEaseType) == 0x000260, "Member 'FRigUnit_FitChainToSplineCurve::RotationEaseType' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, Weight) == 0x000264, "Member 'FRigUnit_FitChainToSplineCurve::Weight' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, bPropagateToChildren) == 0x000268, "Member 'FRigUnit_FitChainToSplineCurve::bPropagateToChildren' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, DebugSettings) == 0x000270, "Member 'FRigUnit_FitChainToSplineCurve::DebugSettings' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurve, WorkData) == 0x000300, "Member 'FRigUnit_FitChainToSplineCurve::WorkData' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_FitChainToSplineCurveItemArray
-// 0x01D0 (0x0330 - 0x0160)
+// 0x01D0 (0x03A0 - 0x01D0)
 struct FRigUnit_FitChainToSplineCurveItemArray final : public FRigUnit_HighlevelBaseMutable
 {
 public:
-	TArray<struct FRigElementKey>                 Items;                                             // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EControlRigCurveAlignment                     Alignment;                                         // 0x0188(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_82[0x3];                                       // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Minimum;                                           // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SamplingPrecision;                                 // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PrimaryAxis;                                       // 0x0198(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SecondaryAxis;                                     // 0x01B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PoleVectorPosition;                                // 0x01C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRigUnit_FitChainToCurve_Rotation> Rotations;                                         // 0x01E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	ERigVMAnimEasingType                          RotationEaseType;                                  // 0x01F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_83[0x3];                                       // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Weight;                                            // 0x01F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPropagateToChildren;                              // 0x01F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x7];                                       // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_FitChainToCurve_DebugSettings DebugSettings;                                     // 0x0200(0x0090)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRigUnit_FitChainToCurve_WorkData      WorkData;                                          // 0x0290(0x0098)(Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_85[0x8];                                       // 0x0328(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 Items;                                             // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EControlRigCurveAlignment                     Alignment;                                         // 0x01F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Minimum;                                           // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SamplingPrecision;                                 // 0x0204(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PrimaryAxis;                                       // 0x0208(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SecondaryAxis;                                     // 0x0220(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PoleVectorPosition;                                // 0x0238(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FRigUnit_FitChainToCurve_Rotation> Rotations;                                         // 0x0250(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	ERigVMAnimEasingType                          RotationEaseType;                                  // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Weight;                                            // 0x0264(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPropagateToChildren;                              // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigUnit_FitChainToCurve_DebugSettings DebugSettings;                                     // 0x0270(0x0090)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigUnit_FitChainToCurve_WorkData      WorkData;                                          // 0x0300(0x0098)(Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_FitChainToSplineCurveItemArray) == 0x000010, "Wrong alignment on FRigUnit_FitChainToSplineCurveItemArray");
-static_assert(sizeof(FRigUnit_FitChainToSplineCurveItemArray) == 0x000330, "Wrong size on FRigUnit_FitChainToSplineCurveItemArray");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Items) == 0x000160, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Spline) == 0x000170, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Spline' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Alignment) == 0x000188, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Alignment' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Minimum) == 0x00018C, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Maximum) == 0x000190, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, SamplingPrecision) == 0x000194, "Member 'FRigUnit_FitChainToSplineCurveItemArray::SamplingPrecision' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, PrimaryAxis) == 0x000198, "Member 'FRigUnit_FitChainToSplineCurveItemArray::PrimaryAxis' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, SecondaryAxis) == 0x0001B0, "Member 'FRigUnit_FitChainToSplineCurveItemArray::SecondaryAxis' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, PoleVectorPosition) == 0x0001C8, "Member 'FRigUnit_FitChainToSplineCurveItemArray::PoleVectorPosition' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Rotations) == 0x0001E0, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Rotations' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, RotationEaseType) == 0x0001F0, "Member 'FRigUnit_FitChainToSplineCurveItemArray::RotationEaseType' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Weight) == 0x0001F4, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Weight' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, bPropagateToChildren) == 0x0001F8, "Member 'FRigUnit_FitChainToSplineCurveItemArray::bPropagateToChildren' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, DebugSettings) == 0x000200, "Member 'FRigUnit_FitChainToSplineCurveItemArray::DebugSettings' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, WorkData) == 0x000290, "Member 'FRigUnit_FitChainToSplineCurveItemArray::WorkData' has a wrong offset!");
+static_assert(sizeof(FRigUnit_FitChainToSplineCurveItemArray) == 0x0003A0, "Wrong size on FRigUnit_FitChainToSplineCurveItemArray");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Items) == 0x0001D0, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Spline) == 0x0001E0, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Spline' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Alignment) == 0x0001F8, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Alignment' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Minimum) == 0x0001FC, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Maximum) == 0x000200, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, SamplingPrecision) == 0x000204, "Member 'FRigUnit_FitChainToSplineCurveItemArray::SamplingPrecision' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, PrimaryAxis) == 0x000208, "Member 'FRigUnit_FitChainToSplineCurveItemArray::PrimaryAxis' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, SecondaryAxis) == 0x000220, "Member 'FRigUnit_FitChainToSplineCurveItemArray::SecondaryAxis' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, PoleVectorPosition) == 0x000238, "Member 'FRigUnit_FitChainToSplineCurveItemArray::PoleVectorPosition' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Rotations) == 0x000250, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Rotations' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, RotationEaseType) == 0x000260, "Member 'FRigUnit_FitChainToSplineCurveItemArray::RotationEaseType' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, Weight) == 0x000264, "Member 'FRigUnit_FitChainToSplineCurveItemArray::Weight' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, bPropagateToChildren) == 0x000268, "Member 'FRigUnit_FitChainToSplineCurveItemArray::bPropagateToChildren' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, DebugSettings) == 0x000270, "Member 'FRigUnit_FitChainToSplineCurveItemArray::DebugSettings' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitChainToSplineCurveItemArray, WorkData) == 0x000300, "Member 'FRigUnit_FitChainToSplineCurveItemArray::WorkData' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_SplineConstraint_WorkData
 // 0x0038 (0x0038 - 0x0000)
@@ -341,7 +341,7 @@ struct FRigUnit_SplineConstraint_WorkData final
 {
 public:
 	float                                         ChainLength;                                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_86[0x4];                                       // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FTransform>                     ItemTransforms;                                    // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<float>                                 ItemSegments;                                      // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FCachedRigElement>              CachedItems;                                       // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
@@ -354,63 +354,63 @@ static_assert(offsetof(FRigUnit_SplineConstraint_WorkData, ItemSegments) == 0x00
 static_assert(offsetof(FRigUnit_SplineConstraint_WorkData, CachedItems) == 0x000028, "Member 'FRigUnit_SplineConstraint_WorkData::CachedItems' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_SplineConstraint
-// 0x00B0 (0x0210 - 0x0160)
+// 0x00B0 (0x0280 - 0x01D0)
 struct FRigUnit_SplineConstraint final : public FRigUnit_HighlevelBaseMutable
 {
 public:
-	TArray<struct FRigElementKey>                 Items;                                             // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EControlRigCurveAlignment                     Alignment;                                         // 0x0188(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_87[0x3];                                       // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Minimum;                                           // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Maximum;                                           // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_88[0x4];                                       // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PrimaryAxis;                                       // 0x0198(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SecondaryAxis;                                     // 0x01B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPropagateToChildren;                              // 0x01C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigUnit_SplineConstraint_WorkData     WorkData;                                          // 0x01D0(0x0038)(Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8A[0x8];                                       // 0x0208(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 Items;                                             // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EControlRigCurveAlignment                     Alignment;                                         // 0x01F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Minimum;                                           // 0x01FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Maximum;                                           // 0x0200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PrimaryAxis;                                       // 0x0208(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SecondaryAxis;                                     // 0x0220(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPropagateToChildren;                              // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigUnit_SplineConstraint_WorkData     WorkData;                                          // 0x0240(0x0038)(Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_SplineConstraint) == 0x000010, "Wrong alignment on FRigUnit_SplineConstraint");
-static_assert(sizeof(FRigUnit_SplineConstraint) == 0x000210, "Wrong size on FRigUnit_SplineConstraint");
-static_assert(offsetof(FRigUnit_SplineConstraint, Items) == 0x000160, "Member 'FRigUnit_SplineConstraint::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, Spline) == 0x000170, "Member 'FRigUnit_SplineConstraint::Spline' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, Alignment) == 0x000188, "Member 'FRigUnit_SplineConstraint::Alignment' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, Minimum) == 0x00018C, "Member 'FRigUnit_SplineConstraint::Minimum' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, Maximum) == 0x000190, "Member 'FRigUnit_SplineConstraint::Maximum' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, PrimaryAxis) == 0x000198, "Member 'FRigUnit_SplineConstraint::PrimaryAxis' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, SecondaryAxis) == 0x0001B0, "Member 'FRigUnit_SplineConstraint::SecondaryAxis' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, bPropagateToChildren) == 0x0001C8, "Member 'FRigUnit_SplineConstraint::bPropagateToChildren' has a wrong offset!");
-static_assert(offsetof(FRigUnit_SplineConstraint, WorkData) == 0x0001D0, "Member 'FRigUnit_SplineConstraint::WorkData' has a wrong offset!");
+static_assert(sizeof(FRigUnit_SplineConstraint) == 0x000280, "Wrong size on FRigUnit_SplineConstraint");
+static_assert(offsetof(FRigUnit_SplineConstraint, Items) == 0x0001D0, "Member 'FRigUnit_SplineConstraint::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, Spline) == 0x0001E0, "Member 'FRigUnit_SplineConstraint::Spline' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, Alignment) == 0x0001F8, "Member 'FRigUnit_SplineConstraint::Alignment' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, Minimum) == 0x0001FC, "Member 'FRigUnit_SplineConstraint::Minimum' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, Maximum) == 0x000200, "Member 'FRigUnit_SplineConstraint::Maximum' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, PrimaryAxis) == 0x000208, "Member 'FRigUnit_SplineConstraint::PrimaryAxis' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, SecondaryAxis) == 0x000220, "Member 'FRigUnit_SplineConstraint::SecondaryAxis' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, bPropagateToChildren) == 0x000238, "Member 'FRigUnit_SplineConstraint::bPropagateToChildren' has a wrong offset!");
+static_assert(offsetof(FRigUnit_SplineConstraint, WorkData) == 0x000240, "Member 'FRigUnit_SplineConstraint::WorkData' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_FitSplineCurveToChain
-// 0x0030 (0x0190 - 0x0160)
+// 0x0030 (0x0200 - 0x01D0)
 struct FRigUnit_FitSplineCurveToChain final : public FRigUnit_HighlevelBaseMutable
 {
 public:
-	struct FRigElementKeyCollection               Items;                                             // 0x0160(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8B[0x8];                                       // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRigElementKeyCollection               Items;                                             // 0x01D0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_FitSplineCurveToChain) == 0x000010, "Wrong alignment on FRigUnit_FitSplineCurveToChain");
-static_assert(sizeof(FRigUnit_FitSplineCurveToChain) == 0x000190, "Wrong size on FRigUnit_FitSplineCurveToChain");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Items) == 0x000160, "Member 'FRigUnit_FitSplineCurveToChain::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Spline) == 0x000170, "Member 'FRigUnit_FitSplineCurveToChain::Spline' has a wrong offset!");
+static_assert(sizeof(FRigUnit_FitSplineCurveToChain) == 0x000200, "Wrong size on FRigUnit_FitSplineCurveToChain");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Items) == 0x0001D0, "Member 'FRigUnit_FitSplineCurveToChain::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChain, Spline) == 0x0001E0, "Member 'FRigUnit_FitSplineCurveToChain::Spline' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_FitSplineCurveToChainItemArray
-// 0x0030 (0x0190 - 0x0160)
+// 0x0030 (0x0200 - 0x01D0)
 struct FRigUnit_FitSplineCurveToChainItemArray final : public FRigUnit_HighlevelBaseMutable
 {
 public:
-	TArray<struct FRigElementKey>                 Items;                                             // 0x0160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FControlRigSpline                      Spline;                                            // 0x0170(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C[0x8];                                       // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 Items;                                             // 0x01D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FControlRigSpline                      Spline;                                            // 0x01E0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000010, "Wrong alignment on FRigUnit_FitSplineCurveToChainItemArray");
-static_assert(sizeof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000190, "Wrong size on FRigUnit_FitSplineCurveToChainItemArray");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Items) == 0x000160, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Items' has a wrong offset!");
-static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Spline) == 0x000170, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Spline' has a wrong offset!");
+static_assert(sizeof(FRigUnit_FitSplineCurveToChainItemArray) == 0x000200, "Wrong size on FRigUnit_FitSplineCurveToChainItemArray");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Items) == 0x0001D0, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Items' has a wrong offset!");
+static_assert(offsetof(FRigUnit_FitSplineCurveToChainItemArray, Spline) == 0x0001E0, "Member 'FRigUnit_FitSplineCurveToChainItemArray::Spline' has a wrong offset!");
 
 // ScriptStruct ControlRigSpline.RigUnit_ClosestParameterFromControlRigSpline
 // 0x0038 (0x0040 - 0x0008)
@@ -420,7 +420,7 @@ public:
 	struct FControlRigSpline                      Spline;                                            // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FVector                                Position;                                          // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         U;                                                 // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8D[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRigUnit_ClosestParameterFromControlRigSpline) == 0x000008, "Wrong alignment on FRigUnit_ClosestParameterFromControlRigSpline");
 static_assert(sizeof(FRigUnit_ClosestParameterFromControlRigSpline) == 0x000040, "Wrong size on FRigUnit_ClosestParameterFromControlRigSpline");

@@ -89,6 +89,28 @@ void UWB_AccountSettings_C::BndEvt__WB_AccountSettings_CopyButton_K2Node_Compone
 }
 
 
+// Function WB_AccountSettings.WB_AccountSettings_C.BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UWB_CheckBoxWithLabel_C*          Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsChecked                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_AccountSettings_C::BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature");
+
+	Params::WB_AccountSettings_C_BndEvt__WB_AccountSettings_InventoryPublic_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature Parms{};
+
+	Parms.Sender = Sender;
+	Parms.IsChecked = IsChecked;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_AccountSettings.WB_AccountSettings_C.BndEvt__WB_AccountSettings_WB_RevealButton_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature
 // (BlueprintEvent)
 
@@ -117,15 +139,15 @@ void UWB_AccountSettings_C::Construct()
 }
 
 
-// Function WB_AccountSettings.WB_AccountSettings_C.CreateToolTip
+// Function WB_AccountSettings.WB_AccountSettings_C.CreateTooltip
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_AccountSettings_C::CreateToolTip()
+void UWB_AccountSettings_C::CreateTooltip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_AccountSettings_C", "CreateToolTip");
+		Func = Class->GetFunction("WB_AccountSettings_C", "CreateTooltip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -276,6 +298,26 @@ void UWB_AccountSettings_C::PresenceUpdated()
 }
 
 
+// Function WB_AccountSettings.WB_AccountSettings_C.ProcessInventoryPrivateSetting
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FAccountSetting                  Setting                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWB_AccountSettings_C::ProcessInventoryPrivateSetting(const struct FAccountSetting& Setting)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_AccountSettings_C", "ProcessInventoryPrivateSetting");
+
+	Params::WB_AccountSettings_C_ProcessInventoryPrivateSetting Parms{};
+
+	Parms.Setting = std::move(Setting);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_AccountSettings.WB_AccountSettings_C.ProcessMirrorInventorySetting
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -321,10 +363,10 @@ void UWB_AccountSettings_C::ProcessSettingsArray(TArray<struct FAccountSetting>&
 // Function WB_AccountSettings.WB_AccountSettings_C.SelectLastListElement
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_AccountSettings_C::SelectLastListElement(EUINavigation Param_Navigation)
+class UWidget* UWB_AccountSettings_C::SelectLastListElement(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -333,7 +375,7 @@ class UWidget* UWB_AccountSettings_C::SelectLastListElement(EUINavigation Param_
 
 	Params::WB_AccountSettings_C_SelectLastListElement Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -344,10 +386,10 @@ class UWidget* UWB_AccountSettings_C::SelectLastListElement(EUINavigation Param_
 // Function WB_AccountSettings.WB_AccountSettings_C.SelectRevealIfPossible
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_AccountSettings_C::SelectRevealIfPossible(EUINavigation Param_Navigation)
+class UWidget* UWB_AccountSettings_C::SelectRevealIfPossible(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -356,7 +398,7 @@ class UWidget* UWB_AccountSettings_C::SelectRevealIfPossible(EUINavigation Param
 
 	Params::WB_AccountSettings_C_SelectRevealIfPossible Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

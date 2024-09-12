@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PlayerVotedOutMaster.PlayerVotedOutMaster_DirectorBP_C
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0048 - 0x0048)
 class UPlayerVotedOutMaster_DirectorBP_C final : public ULevelSequenceDirector
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UPlayerVotedOutMaster_DirectorBP_C) == 0x000008, "Wrong alignment on UPlayerVotedOutMaster_DirectorBP_C");
-static_assert(sizeof(UPlayerVotedOutMaster_DirectorBP_C) == 0x000038, "Wrong size on UPlayerVotedOutMaster_DirectorBP_C");
+static_assert(sizeof(UPlayerVotedOutMaster_DirectorBP_C) == 0x000048, "Wrong size on UPlayerVotedOutMaster_DirectorBP_C");
 
 }
 

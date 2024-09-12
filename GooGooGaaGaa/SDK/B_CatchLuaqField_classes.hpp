@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CatchLuaqField.B_CatchLuaqField_C
-// 0x0000 (0x0340 - 0x0340)
+// 0x0000 (0x0338 - 0x0338)
 class AB_CatchLuaqField_C final : public AB_TaskField_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_CatchLuaqField_C) == 0x000008, "Wrong alignment on AB_CatchLuaqField_C");
-static_assert(sizeof(AB_CatchLuaqField_C) == 0x000340, "Wrong size on AB_CatchLuaqField_C");
+static_assert(sizeof(AB_CatchLuaqField_C) == 0x000338, "Wrong size on AB_CatchLuaqField_C");
 
 }
 

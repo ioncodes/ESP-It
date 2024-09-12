@@ -23,37 +23,37 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ImpostorHUD.WB_ImpostorHUD_C
-// 0x00D0 (0x0390 - 0x02C0)
+// 0x00D0 (0x03B0 - 0x02E0)
 class UWB_ImpostorHUD_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       TaskCompleted;                                     // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeIn;                                            // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeOut;                                           // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UHorizontalBox*                         ActionHint;                                        // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HUDSkill_C*                         ActionSkillIcon;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ActionText;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                AlarmBorder;                                       // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CrossHair;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HUDSkill_C*                         MovementSkillIcon;                                 // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         SkillBar;                                          // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           TaskList;                                          // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HUDSkill_C*                         UtilitySkillIcon;                                  // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_CauldronBombTaskEntry_C*            WB_CauldronBombTaskEntry;                          // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ImpostorTimer_C*                    WB_ImpostorTimer;                                  // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PlayerListWidget_C*                 WB_PlayerListWidget;                               // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TaskProgressBar_C*                  WB_TaskProgressBar;                                // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class APlayerController*                      LocalPlayer;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorPlayerState_C*               LocalPlayerState;                                  // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          Initialized;                                       // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_524D[0x7];                                     // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorGameState_C*                 GameState;                                         // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SabotageBomb_C*                      SabotageBomb;                                      // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_SabotagePortal_C*                    SabotagePortal;                                    // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShowPlayerList;                                    // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       TaskCompleted;                                     // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeIn;                                            // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeOut;                                           // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UHorizontalBox*                         ActionHint;                                        // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HUDSkill_C*                         ActionSkillIcon;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ActionText;                                        // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                AlarmBorder;                                       // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0320(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CrossHair;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HUDSkill_C*                         MovementSkillIcon;                                 // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         SkillBar;                                          // 0x0338(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           TaskList;                                          // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HUDSkill_C*                         UtilitySkillIcon;                                  // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_CauldronBombTaskEntry_C*            WB_CauldronBombTaskEntry;                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ImpostorTimer_C*                    WB_ImpostorTimer;                                  // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PlayerListWidget_C*                 WB_PlayerListWidget;                               // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TaskProgressBar_C*                  WB_TaskProgressBar;                                // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class APlayerController*                      LocalPlayer;                                       // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_ImpostorPlayerState_C*               LocalPlayerState;                                  // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          Initialized;                                       // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_389[0x7];                                      // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorGameState_C*                 GameState;                                         // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SabotageBomb_C*                      SabotageBomb;                                      // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_SabotagePortal_C*                    SabotagePortal;                                    // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowPlayerList;                                    // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -89,33 +89,33 @@ public:
 	}
 };
 static_assert(alignof(UWB_ImpostorHUD_C) == 0x000008, "Wrong alignment on UWB_ImpostorHUD_C");
-static_assert(sizeof(UWB_ImpostorHUD_C) == 0x000390, "Wrong size on UWB_ImpostorHUD_C");
-static_assert(offsetof(UWB_ImpostorHUD_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ImpostorHUD_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, TaskCompleted) == 0x0002C8, "Member 'UWB_ImpostorHUD_C::TaskCompleted' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, FadeIn) == 0x0002D0, "Member 'UWB_ImpostorHUD_C::FadeIn' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, FadeOut) == 0x0002D8, "Member 'UWB_ImpostorHUD_C::FadeOut' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, ActionHint) == 0x0002E0, "Member 'UWB_ImpostorHUD_C::ActionHint' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, ActionSkillIcon) == 0x0002E8, "Member 'UWB_ImpostorHUD_C::ActionSkillIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, ActionText) == 0x0002F0, "Member 'UWB_ImpostorHUD_C::ActionText' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, AlarmBorder) == 0x0002F8, "Member 'UWB_ImpostorHUD_C::AlarmBorder' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, CanvasPanel_0) == 0x000300, "Member 'UWB_ImpostorHUD_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, CrossHair) == 0x000308, "Member 'UWB_ImpostorHUD_C::CrossHair' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, MovementSkillIcon) == 0x000310, "Member 'UWB_ImpostorHUD_C::MovementSkillIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, SkillBar) == 0x000318, "Member 'UWB_ImpostorHUD_C::SkillBar' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, TaskList) == 0x000320, "Member 'UWB_ImpostorHUD_C::TaskList' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, UtilitySkillIcon) == 0x000328, "Member 'UWB_ImpostorHUD_C::UtilitySkillIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, WB_ActionIcon) == 0x000330, "Member 'UWB_ImpostorHUD_C::WB_ActionIcon' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, WB_CauldronBombTaskEntry) == 0x000338, "Member 'UWB_ImpostorHUD_C::WB_CauldronBombTaskEntry' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, WB_ImpostorTimer) == 0x000340, "Member 'UWB_ImpostorHUD_C::WB_ImpostorTimer' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, WB_PlayerListWidget) == 0x000348, "Member 'UWB_ImpostorHUD_C::WB_PlayerListWidget' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, WB_TaskProgressBar) == 0x000350, "Member 'UWB_ImpostorHUD_C::WB_TaskProgressBar' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, LocalPlayer) == 0x000358, "Member 'UWB_ImpostorHUD_C::LocalPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, LocalPlayerState) == 0x000360, "Member 'UWB_ImpostorHUD_C::LocalPlayerState' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, Initialized) == 0x000368, "Member 'UWB_ImpostorHUD_C::Initialized' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, GameState) == 0x000370, "Member 'UWB_ImpostorHUD_C::GameState' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, SabotageBomb) == 0x000378, "Member 'UWB_ImpostorHUD_C::SabotageBomb' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, SabotagePortal) == 0x000380, "Member 'UWB_ImpostorHUD_C::SabotagePortal' has a wrong offset!");
-static_assert(offsetof(UWB_ImpostorHUD_C, ShowPlayerList) == 0x000388, "Member 'UWB_ImpostorHUD_C::ShowPlayerList' has a wrong offset!");
+static_assert(sizeof(UWB_ImpostorHUD_C) == 0x0003B0, "Wrong size on UWB_ImpostorHUD_C");
+static_assert(offsetof(UWB_ImpostorHUD_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ImpostorHUD_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, TaskCompleted) == 0x0002E8, "Member 'UWB_ImpostorHUD_C::TaskCompleted' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, FadeIn) == 0x0002F0, "Member 'UWB_ImpostorHUD_C::FadeIn' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, FadeOut) == 0x0002F8, "Member 'UWB_ImpostorHUD_C::FadeOut' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, ActionHint) == 0x000300, "Member 'UWB_ImpostorHUD_C::ActionHint' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, ActionSkillIcon) == 0x000308, "Member 'UWB_ImpostorHUD_C::ActionSkillIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, ActionText) == 0x000310, "Member 'UWB_ImpostorHUD_C::ActionText' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, AlarmBorder) == 0x000318, "Member 'UWB_ImpostorHUD_C::AlarmBorder' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, CanvasPanel_0) == 0x000320, "Member 'UWB_ImpostorHUD_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, CrossHair) == 0x000328, "Member 'UWB_ImpostorHUD_C::CrossHair' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, MovementSkillIcon) == 0x000330, "Member 'UWB_ImpostorHUD_C::MovementSkillIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, SkillBar) == 0x000338, "Member 'UWB_ImpostorHUD_C::SkillBar' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, TaskList) == 0x000340, "Member 'UWB_ImpostorHUD_C::TaskList' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, UtilitySkillIcon) == 0x000348, "Member 'UWB_ImpostorHUD_C::UtilitySkillIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, WB_ActionIcon) == 0x000350, "Member 'UWB_ImpostorHUD_C::WB_ActionIcon' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, WB_CauldronBombTaskEntry) == 0x000358, "Member 'UWB_ImpostorHUD_C::WB_CauldronBombTaskEntry' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, WB_ImpostorTimer) == 0x000360, "Member 'UWB_ImpostorHUD_C::WB_ImpostorTimer' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, WB_PlayerListWidget) == 0x000368, "Member 'UWB_ImpostorHUD_C::WB_PlayerListWidget' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, WB_TaskProgressBar) == 0x000370, "Member 'UWB_ImpostorHUD_C::WB_TaskProgressBar' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, LocalPlayer) == 0x000378, "Member 'UWB_ImpostorHUD_C::LocalPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, LocalPlayerState) == 0x000380, "Member 'UWB_ImpostorHUD_C::LocalPlayerState' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, Initialized) == 0x000388, "Member 'UWB_ImpostorHUD_C::Initialized' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, GameState) == 0x000390, "Member 'UWB_ImpostorHUD_C::GameState' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, SabotageBomb) == 0x000398, "Member 'UWB_ImpostorHUD_C::SabotageBomb' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, SabotagePortal) == 0x0003A0, "Member 'UWB_ImpostorHUD_C::SabotagePortal' has a wrong offset!");
+static_assert(offsetof(UWB_ImpostorHUD_C, ShowPlayerList) == 0x0003A8, "Member 'UWB_ImpostorHUD_C::ShowPlayerList' has a wrong offset!");
 
 }
 

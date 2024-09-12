@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -46,69 +46,69 @@ static_assert(offsetof(WB_MapTooltipContent_C_ExecuteUbergraph_WB_MapTooltipCont
 static_assert(offsetof(WB_MapTooltipContent_C_ExecuteUbergraph_WB_MapTooltipContent, CallFunc_Not_PreBool_ReturnValue) == 0x00000B, "Member 'WB_MapTooltipContent_C_ExecuteUbergraph_WB_MapTooltipContent::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function WB_MapTooltipContent.WB_MapTooltipContent_C.Get_Name_1_Text_0
-// 0x0090 (0x0090 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_MapTooltipContent_C_Get_Name_1_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0068(0x0010)()
 };
 static_assert(alignof(WB_MapTooltipContent_C_Get_Name_1_Text_0) == 0x000008, "Wrong alignment on WB_MapTooltipContent_C_Get_Name_1_Text_0");
-static_assert(sizeof(WB_MapTooltipContent_C_Get_Name_1_Text_0) == 0x000090, "Wrong size on WB_MapTooltipContent_C_Get_Name_1_Text_0");
+static_assert(sizeof(WB_MapTooltipContent_C_Get_Name_1_Text_0) == 0x000078, "Wrong size on WB_MapTooltipContent_C_Get_Name_1_Text_0");
 static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, ReturnValue) == 0x000000, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, K2Node_MakeArray_Array) == 0x000068, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, CallFunc_Format_ReturnValue) == 0x000078, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, K2Node_MakeArray_Array) == 0x000058, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_1_Text_0, CallFunc_Format_ReturnValue) == 0x000068, "Member 'WB_MapTooltipContent_C_Get_Name_1_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_MapTooltipContent.WB_MapTooltipContent_C.Get_Name_3_Text_0
-// 0x0040 (0x0040 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_MapTooltipContent_C_Get_Name_3_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0010)()
 };
 static_assert(alignof(WB_MapTooltipContent_C_Get_Name_3_Text_0) == 0x000008, "Wrong alignment on WB_MapTooltipContent_C_Get_Name_3_Text_0");
-static_assert(sizeof(WB_MapTooltipContent_C_Get_Name_3_Text_0) == 0x000040, "Wrong size on WB_MapTooltipContent_C_Get_Name_3_Text_0");
+static_assert(sizeof(WB_MapTooltipContent_C_Get_Name_3_Text_0) == 0x000030, "Wrong size on WB_MapTooltipContent_C_Get_Name_3_Text_0");
 static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_3_Text_0, ReturnValue) == 0x000000, "Member 'WB_MapTooltipContent_C_Get_Name_3_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_3_Text_0, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000018, "Member 'WB_MapTooltipContent_C_Get_Name_3_Text_0::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_3_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000028, "Member 'WB_MapTooltipContent_C_Get_Name_3_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_3_Text_0, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000010, "Member 'WB_MapTooltipContent_C_Get_Name_3_Text_0::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_3_Text_0, CallFunc_Conv_StringToText_ReturnValue) == 0x000020, "Member 'WB_MapTooltipContent_C_Get_Name_3_Text_0::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_MapTooltipContent.WB_MapTooltipContent_C.Get_Name_Text_0
-// 0x0038 (0x0038 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_MapTooltipContent_C_Get_Name_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_382C[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0020(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0018(0x0010)()
 };
 static_assert(alignof(WB_MapTooltipContent_C_Get_Name_Text_0) == 0x000008, "Wrong alignment on WB_MapTooltipContent_C_Get_Name_Text_0");
-static_assert(sizeof(WB_MapTooltipContent_C_Get_Name_Text_0) == 0x000038, "Wrong size on WB_MapTooltipContent_C_Get_Name_Text_0");
+static_assert(sizeof(WB_MapTooltipContent_C_Get_Name_Text_0) == 0x000028, "Wrong size on WB_MapTooltipContent_C_Get_Name_Text_0");
 static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_Text_0, ReturnValue) == 0x000000, "Member 'WB_MapTooltipContent_C_Get_Name_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_Text_0, Temp_bool_Variable) == 0x000018, "Member 'WB_MapTooltipContent_C_Get_Name_Text_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_Text_0, K2Node_Select_Default) == 0x000020, "Member 'WB_MapTooltipContent_C_Get_Name_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_Text_0, Temp_bool_Variable) == 0x000010, "Member 'WB_MapTooltipContent_C_Get_Name_Text_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Name_Text_0, K2Node_Select_Default) == 0x000018, "Member 'WB_MapTooltipContent_C_Get_Name_Text_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_MapTooltipContent.WB_MapTooltipContent_C.Get_Playernumber_Text_0
-// 0x0090 (0x0090 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_MapTooltipContent_C_Get_Playernumber_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0068(0x0010)()
 };
 static_assert(alignof(WB_MapTooltipContent_C_Get_Playernumber_Text_0) == 0x000008, "Wrong alignment on WB_MapTooltipContent_C_Get_Playernumber_Text_0");
-static_assert(sizeof(WB_MapTooltipContent_C_Get_Playernumber_Text_0) == 0x000090, "Wrong size on WB_MapTooltipContent_C_Get_Playernumber_Text_0");
+static_assert(sizeof(WB_MapTooltipContent_C_Get_Playernumber_Text_0) == 0x000078, "Wrong size on WB_MapTooltipContent_C_Get_Playernumber_Text_0");
 static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, ReturnValue) == 0x000000, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, K2Node_MakeArray_Array) == 0x000068, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, CallFunc_Format_ReturnValue) == 0x000078, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, K2Node_MakeArray_Array) == 0x000058, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_MapTooltipContent_C_Get_Playernumber_Text_0, CallFunc_Format_ReturnValue) == 0x000068, "Member 'WB_MapTooltipContent_C_Get_Playernumber_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_MapTooltipContent.WB_MapTooltipContent_C.Get_Video_Brush_0
 // 0x0280 (0x0280 - 0x0000)

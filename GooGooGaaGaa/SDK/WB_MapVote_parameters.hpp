@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SMapData_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,12 +26,12 @@ struct WB_MapVote_C_ExecuteUbergraph_WB_MapVote final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue_1;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599C[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x001C(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -47,53 +47,53 @@ static_assert(offsetof(WB_MapVote_C_ExecuteUbergraph_WB_MapVote, K2Node_Event_My
 static_assert(offsetof(WB_MapVote_C_ExecuteUbergraph_WB_MapVote, K2Node_Event_InDeltaTime) == 0x000054, "Member 'WB_MapVote_C_ExecuteUbergraph_WB_MapVote::K2Node_Event_InDeltaTime' has a wrong offset!");
 
 // Function WB_MapVote.WB_MapVote_C.Get_Votes_Text_0
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct WB_MapVote_C_Get_Votes_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	int32                                         VoteCount;                                         // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599D[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0088(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0018)()
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599E[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_599F[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A0[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	int32                                         VoteCount;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0088(0x0010)()
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapVote_C_Get_Votes_Text_0) == 0x000008, "Wrong alignment on WB_MapVote_C_Get_Votes_Text_0");
-static_assert(sizeof(WB_MapVote_C_Get_Votes_Text_0) == 0x0000E8, "Wrong size on WB_MapVote_C_Get_Votes_Text_0");
+static_assert(sizeof(WB_MapVote_C_Get_Votes_Text_0) == 0x0000D0, "Wrong size on WB_MapVote_C_Get_Votes_Text_0");
 static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, ReturnValue) == 0x000000, "Member 'WB_MapVote_C_Get_Votes_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, VoteCount) == 0x000018, "Member 'WB_MapVote_C_Get_Votes_Text_0::VoteCount' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, Temp_int_Variable) == 0x00001C, "Member 'WB_MapVote_C_Get_Votes_Text_0::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'WB_MapVote_C_Get_Votes_Text_0::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, Temp_int_Array_Index_Variable) == 0x000028, "Member 'WB_MapVote_C_Get_Votes_Text_0::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000030, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_MakeArray_Array) == 0x000088, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Format_ReturnValue) == 0x000098, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000B0, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_GetGameState_ReturnValue) == 0x0000B8, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Array_Length_ReturnValue) == 0x0000C0, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Array_Get_Item) == 0x0000C8, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Less_IntInt_ReturnValue) == 0x0000D0, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_DynamicCast_AsB_Player_State) == 0x0000D8, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_DynamicCast_bSuccess) == 0x0000E0, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000E1, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, VoteCount) == 0x000010, "Member 'WB_MapVote_C_Get_Votes_Text_0::VoteCount' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, Temp_int_Variable) == 0x000014, "Member 'WB_MapVote_C_Get_Votes_Text_0::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'WB_MapVote_C_Get_Votes_Text_0::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, Temp_int_Array_Index_Variable) == 0x000020, "Member 'WB_MapVote_C_Get_Votes_Text_0::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000028, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_MakeArray_Array) == 0x000078, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Format_ReturnValue) == 0x000088, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Add_IntInt_ReturnValue_1) == 0x000098, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_GetGameState_ReturnValue) == 0x0000A0, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Array_Length_ReturnValue) == 0x0000A8, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Array_Get_Item) == 0x0000B0, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_Less_IntInt_ReturnValue) == 0x0000B8, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_DynamicCast_AsB_Player_State) == 0x0000C0, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'WB_MapVote_C_Get_Votes_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_Get_Votes_Text_0, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000C9, "Member 'WB_MapVote_C_Get_Votes_Text_0::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_MapVote.WB_MapVote_C.Get_VotesText_Visibility_0
 // 0x0020 (0x0020 - 0x0000)
@@ -104,7 +104,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -137,50 +137,50 @@ static_assert(offsetof(WB_MapVote_C_Tick, MyGeometry) == 0x000000, "Member 'WB_M
 static_assert(offsetof(WB_MapVote_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_MapVote_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WB_MapVote.WB_MapVote_C.UpdateMapData
-// 0x0190 (0x0190 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct WB_MapVote_C_UpdateMapData final
 {
 public:
-	struct FSMapData                              CurrentMapData;                                    // 0x0000(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A2[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0058(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0070(0x0018)()
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A3[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm)
-	class FText                                   K2Node_Select_Default;                             // 0x0100(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0118(0x0018)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0133(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A4[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0138(0x0050)(HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              CurrentMapData;                                    // 0x0000(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0048(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0058(0x0010)()
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0080(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C8(0x0010)(ReferenceParm)
+	class FText                                   K2Node_Select_Default;                             // 0x00D8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E8(0x0010)()
+	bool                                          Temp_bool_Variable_1;                              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item;                           // 0x0100(0x0040)(HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapVote_C_UpdateMapData) == 0x000008, "Wrong alignment on WB_MapVote_C_UpdateMapData");
-static_assert(sizeof(WB_MapVote_C_UpdateMapData) == 0x000190, "Wrong size on WB_MapVote_C_UpdateMapData");
+static_assert(sizeof(WB_MapVote_C_UpdateMapData) == 0x000148, "Wrong size on WB_MapVote_C_UpdateMapData");
 static_assert(offsetof(WB_MapVote_C_UpdateMapData, CurrentMapData) == 0x000000, "Member 'WB_MapVote_C_UpdateMapData::CurrentMapData' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_bool_Variable) == 0x000050, "Member 'WB_MapVote_C_UpdateMapData::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_text_Variable) == 0x000058, "Member 'WB_MapVote_C_UpdateMapData::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_text_Variable_1) == 0x000070, "Member 'WB_MapVote_C_UpdateMapData::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_GetGameState_ReturnValue) == 0x000088, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_DynamicCast_AsB_Game_State) == 0x000090, "Member 'WB_MapVote_C_UpdateMapData::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'WB_MapVote_C_UpdateMapData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_MakeStruct_FormatArgumentData) == 0x0000A0, "Member 'WB_MapVote_C_UpdateMapData::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_MakeArray_Array) == 0x0000F0, "Member 'WB_MapVote_C_UpdateMapData::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_Select_Default) == 0x000100, "Member 'WB_MapVote_C_UpdateMapData::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_Format_ReturnValue) == 0x000118, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_bool_Variable_1) == 0x000130, "Member 'WB_MapVote_C_UpdateMapData::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_IsValid_ReturnValue) == 0x000131, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_byte_Variable) == 0x000132, "Member 'WB_MapVote_C_UpdateMapData::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_byte_Variable_1) == 0x000133, "Member 'WB_MapVote_C_UpdateMapData::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_Array_Get_Item) == 0x000138, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_Select_Default_1) == 0x000188, "Member 'WB_MapVote_C_UpdateMapData::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_bool_Variable) == 0x000040, "Member 'WB_MapVote_C_UpdateMapData::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_text_Variable) == 0x000048, "Member 'WB_MapVote_C_UpdateMapData::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_text_Variable_1) == 0x000058, "Member 'WB_MapVote_C_UpdateMapData::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_GetGameState_ReturnValue) == 0x000068, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_DynamicCast_AsB_Game_State) == 0x000070, "Member 'WB_MapVote_C_UpdateMapData::K2Node_DynamicCast_AsB_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'WB_MapVote_C_UpdateMapData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_MakeStruct_FormatArgumentData) == 0x000080, "Member 'WB_MapVote_C_UpdateMapData::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_MakeArray_Array) == 0x0000C8, "Member 'WB_MapVote_C_UpdateMapData::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_Select_Default) == 0x0000D8, "Member 'WB_MapVote_C_UpdateMapData::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_Format_ReturnValue) == 0x0000E8, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_bool_Variable_1) == 0x0000F8, "Member 'WB_MapVote_C_UpdateMapData::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_IsValid_ReturnValue) == 0x0000F9, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_byte_Variable) == 0x0000FA, "Member 'WB_MapVote_C_UpdateMapData::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, Temp_byte_Variable_1) == 0x0000FB, "Member 'WB_MapVote_C_UpdateMapData::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, CallFunc_Array_Get_Item) == 0x000100, "Member 'WB_MapVote_C_UpdateMapData::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_MapVote_C_UpdateMapData, K2Node_Select_Default_1) == 0x000140, "Member 'WB_MapVote_C_UpdateMapData::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function WB_MapVote.WB_MapVote_C.UpdateSelection
 // 0x0040 (0x0040 - 0x0000)
@@ -188,15 +188,15 @@ struct WB_MapVote_C_UpdateSelection final
 {
 public:
 	int32                                         DisableThreshold;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         K2Node_DynamicCast_AsB_Game_State;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A6[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A7[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

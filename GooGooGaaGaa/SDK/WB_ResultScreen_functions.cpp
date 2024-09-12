@@ -40,9 +40,9 @@ void UWB_ResultScreen_C::ExecuteUbergraph_WB_ResultScreen(int32 EntryPoint)
 // Function WB_ResultScreen.WB_ResultScreen_C.Initialize
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EResultType                             Param_ResultType                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EResultType                             ResultType_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ResultScreen_C::Initialize(EResultType Param_ResultType)
+void UWB_ResultScreen_C::Initialize(EResultType ResultType_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,7 +51,7 @@ void UWB_ResultScreen_C::Initialize(EResultType Param_ResultType)
 
 	Params::WB_ResultScreen_C_Initialize Parms{};
 
-	Parms.Param_ResultType = Param_ResultType;
+	Parms.ResultType_0 = ResultType_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

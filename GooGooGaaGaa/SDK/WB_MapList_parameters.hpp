@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "E_MapListMenuState_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "SMapData_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "UMG_structs.hpp"
-#include "E_MapListMenuState_structs.hpp"
-#include "ESalvageCategory_structs.hpp"
 #include "S_PropLayoutData_structs.hpp"
+#include "ESalvageCategory_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
 namespace SDK::Params
@@ -43,17 +43,17 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F8E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F8F[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F90[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F91[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -89,56 +89,64 @@ static_assert(sizeof(WB_MapList_C_ControllerTab) == 0x000018, "Wrong size on WB_
 static_assert(offsetof(WB_MapList_C_ControllerTab, Key) == 0x000000, "Member 'WB_MapList_C_ControllerTab::Key' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.ExecuteUbergraph_WB_MapList
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct WB_MapList_C_ExecuteUbergraph_WB_MapList final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBlueprintResultSwitch                        CallFunc_ShowWebURLUI_Result;                      // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBlueprintResultSwitch                        CallFunc_ShowWebURLUI_Result;                      // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CallFunc_ShowWebURLUI_AllowedDomains;              // 0x0008(0x0010)(ReferenceParm)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F92[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F93[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ValidCustomMapCycleIsSelected_ValidSelection; // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_MapCycleIsEmpty_IsEmpty;                  // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F94[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool MapListEmpty)>            K2Node_CreateDelegate_OutputDelegate;              // 0x0050(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F95[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_Event_Key;                                  // 0x0078(0x0018)(HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F96[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F97[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F98[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool MapListEmpty)>            K2Node_CreateDelegate_OutputDelegate;              // 0x007C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x0090(0x0018)(HasGetValueTypeHash)
+	struct FKey                                   K2Node_Event_Key;                                  // 0x00A8(0x0018)(HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_4;            // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_4;            // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_QuestionDialog_C*                   CallFunc_ShowQuestionDialog_QuestionDialog;        // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00EB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00EE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapList_C_ExecuteUbergraph_WB_MapList) == 0x000008, "Wrong alignment on WB_MapList_C_ExecuteUbergraph_WB_MapList");
-static_assert(sizeof(WB_MapList_C_ExecuteUbergraph_WB_MapList) == 0x0000C8, "Wrong size on WB_MapList_C_ExecuteUbergraph_WB_MapList");
+static_assert(sizeof(WB_MapList_C_ExecuteUbergraph_WB_MapList) == 0x0000F0, "Wrong size on WB_MapList_C_ExecuteUbergraph_WB_MapList");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, EntryPoint) == 0x000000, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ClassIsChildOf_ReturnValue) == 0x000004, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue) == 0x000005, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_ComponentBoundEvent_bIsChecked) == 0x000006, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowWebURLUI_Result) == 0x000007, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowWebURLUI_Result' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue) == 0x000004, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_ComponentBoundEvent_bIsChecked) == 0x000005, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowWebURLUI_Result) == 0x000006, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowWebURLUI_Result' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowWebURLUI_AllowedDomains) == 0x000008, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowWebURLUI_AllowedDomains' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess) == 0x000018, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue) == 0x000020, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -149,22 +157,30 @@ static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicC
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ValidCustomMapCycleIsSelected_ValidSelection) == 0x000049, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ValidCustomMapCycleIsSelected_ValidSelection' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MapCycleIsEmpty_IsEmpty) == 0x00004A, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MapCycleIsEmpty_IsEmpty' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_1) == 0x00004B, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue) == 0x00004C, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_CreateDelegate_OutputDelegate) == 0x000050, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue_2) == 0x000060, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000068, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_Event_Key) == 0x000078, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_Event_Key' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_2) == 0x000090, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue_3) == 0x000098, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x0000A0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0000A8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_bSuccess_3) == 0x0000B0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x0000B8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_3) == 0x0000C0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x0000C1, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000C2, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue_2) == 0x000050, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000058, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_bSuccess_2) == 0x000060, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_1) == 0x000061, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue_3) == 0x000068, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x000070, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_bSuccess_3) == 0x000078, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_CreateDelegate_OutputDelegate) == 0x00007C, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_InputKeyEvent_Key) == 0x000090, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_InputKeyEvent_Key' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_Event_Key) == 0x0000A8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_Event_Key' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_2) == 0x0000C0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x0000C1, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_SwitchEnum_CmpSuccess_3) == 0x0000C2, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_GetGameInstance_ReturnValue_4) == 0x0000C8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_GetGameInstance_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_AsB_Game_Instance_4) == 0x0000D0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_AsB_Game_Instance_4' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, K2Node_DynamicCast_bSuccess_4) == 0x0000D8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ShowQuestionDialog_QuestionDialog) == 0x0000E0, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ShowQuestionDialog_QuestionDialog' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ClassIsChildOf_ReturnValue) == 0x0000E8, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue) == 0x0000E9, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x0000EA, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000EB, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_SwitchPlatform_ReturnValue) == 0x0000EC, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_IsChecked_ReturnValue) == 0x0000ED, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_ExecuteUbergraph_WB_MapList, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000EE, "Member 'WB_MapList_C_ExecuteUbergraph_WB_MapList::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.Get_AutoSaveCheckbox_Visibility
 // 0x0003 (0x0003 - 0x0000)
@@ -233,7 +249,7 @@ struct WB_MapList_C_Get_ResetMapCycle_Visibility_0 final
 {
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F99[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -275,7 +291,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F9A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsNativePlatformSteam_IsSteam;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -295,85 +311,85 @@ static_assert(offsetof(WB_MapList_C_Get_Workshop_Visibility_0, CallFunc_BooleanA
 static_assert(offsetof(WB_MapList_C_Get_Workshop_Visibility_0, K2Node_Select_Default) == 0x000013, "Member 'WB_MapList_C_Get_Workshop_Visibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.GetIndividualItemDataAndFocus
-// 0x0320 (0x0320 - 0x0000)
+// 0x02F0 (0x02F0 - 0x0000)
 struct WB_MapList_C_GetIndividualItemDataAndFocus final
 {
 public:
 	class UUserWidget*                            CategoryButton;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ESalvageCategory                              SalvageCategory;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F9B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UB_TileViewData_C*>              Data;                                              // 0x0010(0x0010)(Parm, OutParm)
 	TArray<bool>                                  FocusNeeded;                                       // 0x0020(0x0010)(Parm, OutParm)
 	bool                                          AllMapCategoriesAllowed;                           // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MapCycleIsEditable;                                // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSelected;                                        // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F9C[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_PropLayoutData                      LayoutData;                                        // 0x0038(0x0048)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FSMapData                              MapData;                                           // 0x0080(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      SelectedCustomMapData;                             // 0x00D0(0x0048)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FSMapData                              SelectedMapData;                                   // 0x0118(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FS_PropLayoutData>              CustomMaps;                                        // 0x0168(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FSMapData>                      Maps;                                              // 0x0178(0x0010)(Edit, BlueprintVisible)
-	TArray<bool>                                  FocusNeededArray;                                  // 0x0188(0x0010)(Edit, BlueprintVisible)
-	TArray<class UB_MapButtonData_C*>             DataArray;                                         // 0x0198(0x0010)(Edit, BlueprintVisible)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F9D[0x4];                                     // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_PropLayoutData                      CallFunc_Array_Get_Item;                           // 0x01B0(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F9E[0x4];                                     // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0208(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F9F[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA0[0x7];                                     // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA1[0x4];                                     // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA2[0x3];                                     // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FSMapData>                      CallFunc_GetBuiltInMaps_BuiltInCustomMaps;         // 0x0240(0x0010)(ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0254(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA3[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA4[0x3];                                     // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0265(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0266(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0267(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FS_PropLayoutData>              CallFunc_GetCustomMaps_CustomMaps;                 // 0x0268(0x0010)(ReferenceParm)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA5[0x6];                                     // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_Array_Get_Item_1;                         // 0x0280(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA6[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSMapData>                      CallFunc_GetOfficialMapsByGamemode_OfficialMaps;   // 0x02D8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x02EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA7[0x1];                                     // 0x02EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA8[0x2];                                     // 0x02F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA9[0x6];                                     // 0x02FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_MapButtonData_C*                     CallFunc_GetMapButtonData_Data;                    // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FAA[0x4];                                     // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_MapButtonData_C*                     CallFunc_GetMapButtonData_Data_1;                  // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMapData                              MapData;                                           // 0x0080(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      SelectedCustomMapData;                             // 0x00C0(0x0048)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FSMapData                              SelectedMapData;                                   // 0x0108(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FS_PropLayoutData>              CustomMaps;                                        // 0x0148(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FSMapData>                      Maps;                                              // 0x0158(0x0010)(Edit, BlueprintVisible)
+	TArray<bool>                                  FocusNeededArray;                                  // 0x0168(0x0010)(Edit, BlueprintVisible)
+	TArray<class UB_MapButtonData_C*>             DataArray;                                         // 0x0178(0x0010)(Edit, BlueprintVisible)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_PropLayoutData                      CallFunc_Array_Get_Item;                           // 0x0190(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x01E8(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSMapData>                      CallFunc_GetBuiltInMaps_BuiltInCustomMaps;         // 0x0220(0x0010)(ReferenceParm)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0234(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x023C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23D[0x3];                                      // 0x023D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0244(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0245(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0246(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0247(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_PropLayoutData>              CallFunc_GetCustomMaps_CustomMaps;                 // 0x0248(0x0010)(ReferenceParm)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_Array_Get_Item_1;                         // 0x0260(0x0040)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A4[0x4];                                      // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSMapData>                      CallFunc_GetOfficialMapsByGamemode_OfficialMaps;   // 0x02A8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x02BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2BB[0x1];                                      // 0x02BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C2[0x2];                                      // 0x02C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CA[0x6];                                      // 0x02CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_MapButtonData_C*                     CallFunc_GetMapButtonData_Data;                    // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_MapButtonData_C*                     CallFunc_GetMapButtonData_Data_1;                  // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapList_C_GetIndividualItemDataAndFocus) == 0x000008, "Wrong alignment on WB_MapList_C_GetIndividualItemDataAndFocus");
-static_assert(sizeof(WB_MapList_C_GetIndividualItemDataAndFocus) == 0x000320, "Wrong size on WB_MapList_C_GetIndividualItemDataAndFocus");
+static_assert(sizeof(WB_MapList_C_GetIndividualItemDataAndFocus) == 0x0002F0, "Wrong size on WB_MapList_C_GetIndividualItemDataAndFocus");
 static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CategoryButton) == 0x000000, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CategoryButton' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, SalvageCategory) == 0x000008, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::SalvageCategory' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Data) == 0x000010, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Data' has a wrong offset!");
@@ -383,53 +399,53 @@ static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, MapCycleIsEdi
 static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, IsSelected) == 0x000032, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::IsSelected' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, LayoutData) == 0x000038, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::LayoutData' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, MapData) == 0x000080, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::MapData' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, SelectedCustomMapData) == 0x0000D0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::SelectedCustomMapData' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, SelectedMapData) == 0x000118, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::SelectedMapData' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CustomMaps) == 0x000168, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CustomMaps' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Maps) == 0x000178, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Maps' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, FocusNeededArray) == 0x000188, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::FocusNeededArray' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, DataArray) == 0x000198, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::DataArray' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable) == 0x0001A8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item) == 0x0001B0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue) == 0x0001F8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue) == 0x000200, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_bool_Variable) == 0x000208, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance) == 0x000210, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess) == 0x000218, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue_1) == 0x000220, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable) == 0x000228, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000230, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess_1) == 0x000238, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue) == 0x00023C, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetBuiltInMaps_BuiltInCustomMaps) == 0x000240, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetBuiltInMaps_BuiltInCustomMaps' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_1) == 0x000250, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_bool_Variable_1) == 0x000254, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_1) == 0x000258, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue) == 0x00025C, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_1) == 0x000260, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Contains_ReturnValue) == 0x000264, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Not_PreBool_ReturnValue) == 0x000265, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_ClassIsChildOf_ReturnValue) == 0x000266, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x000267, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetCustomMaps_CustomMaps) == 0x000268, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetCustomMaps_CustomMaps' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_BooleanOR_ReturnValue) == 0x000278, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Not_PreBool_ReturnValue_1) == 0x000279, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_1) == 0x000280, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_1) == 0x0002D0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetOfficialMapsByGamemode_OfficialMaps) == 0x0002D8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetOfficialMapsByGamemode_OfficialMaps' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_1) == 0x0002E8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_SwitchEnum_CmpSuccess) == 0x0002E9, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0002EA, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue) == 0x0002EC, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x0002F0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue) == 0x0002F1, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_1) == 0x0002F4, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0002F8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_1) == 0x0002F9, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetMapButtonData_Data) == 0x000300, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetMapButtonData_Data' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_2) == 0x000308, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetMapButtonData_Data_1) == 0x000310, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetMapButtonData_Data_1' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_3) == 0x000318, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, SelectedCustomMapData) == 0x0000C0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::SelectedCustomMapData' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, SelectedMapData) == 0x000108, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::SelectedMapData' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CustomMaps) == 0x000148, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CustomMaps' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Maps) == 0x000158, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Maps' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, FocusNeededArray) == 0x000168, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::FocusNeededArray' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, DataArray) == 0x000178, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::DataArray' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable) == 0x000188, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item) == 0x000190, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue) == 0x0001D8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue) == 0x0001E0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_bool_Variable) == 0x0001E8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance) == 0x0001F0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess) == 0x0001F8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetGameInstance_ReturnValue_1) == 0x000200, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable) == 0x000208, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000210, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_DynamicCast_bSuccess_1) == 0x000218, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue) == 0x00021C, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetBuiltInMaps_BuiltInCustomMaps) == 0x000220, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetBuiltInMaps_BuiltInCustomMaps' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Array_Index_Variable_1) == 0x000230, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_bool_Variable_1) == 0x000234, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, Temp_int_Loop_Counter_Variable_1) == 0x000238, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue) == 0x00023C, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Add_IntInt_ReturnValue_1) == 0x000240, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Contains_ReturnValue) == 0x000244, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Not_PreBool_ReturnValue) == 0x000245, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_ClassIsChildOf_ReturnValue) == 0x000246, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_ClassIsChildOf_ReturnValue_1) == 0x000247, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_ClassIsChildOf_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetCustomMaps_CustomMaps) == 0x000248, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetCustomMaps_CustomMaps' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_BooleanOR_ReturnValue) == 0x000258, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Not_PreBool_ReturnValue_1) == 0x000259, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Get_Item_1) == 0x000260, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Length_ReturnValue_1) == 0x0002A0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetOfficialMapsByGamemode_OfficialMaps) == 0x0002A8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetOfficialMapsByGamemode_OfficialMaps' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Less_IntInt_ReturnValue_1) == 0x0002B8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, K2Node_SwitchEnum_CmpSuccess) == 0x0002B9, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0002BA, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue) == 0x0002BC, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x0002C0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue) == 0x0002C1, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_1) == 0x0002C4, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0002C8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_BooleanAND_ReturnValue_1) == 0x0002C9, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetMapButtonData_Data) == 0x0002D0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetMapButtonData_Data' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_2) == 0x0002D8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_GetMapButtonData_Data_1) == 0x0002E0, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_GetMapButtonData_Data_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_GetIndividualItemDataAndFocus, CallFunc_Array_Add_ReturnValue_3) == 0x0002E8, "Member 'WB_MapList_C_GetIndividualItemDataAndFocus::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.GetOfficialMapsByGamemode
 // 0x0078 (0x0078 - 0x0000)
@@ -443,16 +459,16 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSpecialGameModeSelected_SpecialGameModeSelected; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FAB[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FAC[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      CallFunc_GetOfficialMaps_OfficialMaps;             // 0x0050(0x0010)(ReferenceParm)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_2;             // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FAD[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSMapData>                      CallFunc_GetMapsByFilterCriterion_FoundMaps;       // 0x0068(0x0010)(ReferenceParm)
 };
 static_assert(alignof(WB_MapList_C_GetOfficialMapsByGamemode) == 0x000008, "Wrong alignment on WB_MapList_C_GetOfficialMapsByGamemode");
@@ -491,16 +507,16 @@ struct WB_MapList_C_InitializeMenu final
 public:
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSpecialGameModeSelected_SpecialGameModeSelected; // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FAE[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FAF[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ValidCustomMapCycleIsSelected_ValidSelection; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB0[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -520,6 +536,17 @@ static_assert(offsetof(WB_MapList_C_InitializeMenu, CallFunc_GetGameInstance_Ret
 static_assert(offsetof(WB_MapList_C_InitializeMenu, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000040, "Member 'WB_MapList_C_InitializeMenu::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_InitializeMenu, K2Node_DynamicCast_bSuccess_2) == 0x000048, "Member 'WB_MapList_C_InitializeMenu::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
+// Function WB_MapList.WB_MapList_C.InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0
+// 0x0018 (0x0018 - 0x0000)
+struct WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0) == 0x000008, "Wrong alignment on WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0");
+static_assert(sizeof(WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0) == 0x000018, "Wrong size on WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0");
+static_assert(offsetof(WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0, Key) == 0x000000, "Member 'WB_MapList_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0::Key' has a wrong offset!");
+
 // Function WB_MapList.WB_MapList_C.OnGamepadTab
 // 0x0020 (0x0020 - 0x0000)
 struct WB_MapList_C_OnGamepadTab final
@@ -527,19 +554,23 @@ struct WB_MapList_C_OnGamepadTab final
 public:
 	struct FKey                                   TabKey;                                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	bool                                          ToRight;                                           // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue_1;             // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapList_C_OnGamepadTab) == 0x000008, "Wrong alignment on WB_MapList_C_OnGamepadTab");
 static_assert(sizeof(WB_MapList_C_OnGamepadTab) == 0x000020, "Wrong size on WB_MapList_C_OnGamepadTab");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, TabKey) == 0x000000, "Member 'WB_MapList_C_OnGamepadTab::TabKey' has a wrong offset!");
 static_assert(offsetof(WB_MapList_C_OnGamepadTab, ToRight) == 0x000018, "Member 'WB_MapList_C_OnGamepadTab::ToRight' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000019, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_OnGamepadTab, K2Node_SwitchEnum_CmpSuccess) == 0x00001A, "Member 'WB_MapList_C_OnGamepadTab::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_ClassIsChildOf_ReturnValue) == 0x00001B, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapList_C_OnGamepadTab, K2Node_SwitchEnum_CmpSuccess_1) == 0x00001C, "Member 'WB_MapList_C_OnGamepadTab::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_SwitchPlatform_ReturnValue) == 0x000019, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x00001A, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_SwitchPlatform_ReturnValue_1) == 0x00001B, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_SwitchPlatform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'WB_MapList_C_OnGamepadTab::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, CallFunc_ClassIsChildOf_ReturnValue) == 0x00001D, "Member 'WB_MapList_C_OnGamepadTab::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_OnGamepadTab, K2Node_SwitchEnum_CmpSuccess_1) == 0x00001E, "Member 'WB_MapList_C_OnGamepadTab::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.OnMapRemovedFromMapCycle
 // 0x0010 (0x0010 - 0x0000)
@@ -547,7 +578,7 @@ struct WB_MapList_C_OnMapRemovedFromMapCycle final
 {
 public:
 	bool                                          ListEmpty;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_SetFocusToFarRightElement_WidgetToFocus;  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapList_C_OnMapRemovedFromMapCycle) == 0x000008, "Wrong alignment on WB_MapList_C_OnMapRemovedFromMapCycle");
@@ -576,14 +607,14 @@ struct WB_MapList_C_SetFocusToFarRightElement final
 {
 public:
 	EUINavigation                                 NavDirection;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                WidgetToFocus;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB3[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB4[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default;                             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -608,16 +639,16 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB5[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable_1;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECheckBoxState                                Temp_byte_Variable_2;                              // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECheckBoxState                                Temp_byte_Variable_3;                              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB6[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB7[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -628,7 +659,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB8[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default_1;                           // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECheckBoxState                                K2Node_Select_Default_2;                           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -668,11 +699,11 @@ static_assert(offsetof(WB_MapList_C_SetMenuState, K2Node_Select_Default_3) == 0x
 struct WB_MapList_C_UpdateByAutosaveSetting final
 {
 public:
-	bool                                          Param_ShowAutoSave;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShowAutoSave_0;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapList_C_UpdateByAutosaveSetting) == 0x000001, "Wrong alignment on WB_MapList_C_UpdateByAutosaveSetting");
 static_assert(sizeof(WB_MapList_C_UpdateByAutosaveSetting) == 0x000001, "Wrong size on WB_MapList_C_UpdateByAutosaveSetting");
-static_assert(offsetof(WB_MapList_C_UpdateByAutosaveSetting, Param_ShowAutoSave) == 0x000000, "Member 'WB_MapList_C_UpdateByAutosaveSetting::Param_ShowAutoSave' has a wrong offset!");
+static_assert(offsetof(WB_MapList_C_UpdateByAutosaveSetting, ShowAutoSave_0) == 0x000000, "Member 'WB_MapList_C_UpdateByAutosaveSetting::ShowAutoSave_0' has a wrong offset!");
 
 // Function WB_MapList.WB_MapList_C.UpdateInCycleIcons
 // 0x0050 (0x0050 - 0x0000)
@@ -683,13 +714,13 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FB9[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    CallFunc_GetDisplayedEntryWidgets_ReturnValue;     // 0x0018(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBA[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBB[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_MapListButton_C*                    K2Node_DynamicCast_AsWB_Map_List_Button;           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -715,11 +746,11 @@ public:
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBC[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameMode_C*                          K2Node_DynamicCast_AsB_Game_Mode;                  // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBD[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

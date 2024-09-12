@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // ScriptStruct AB_HookRope.AB_HookRope_C.AnimBlueprintGeneratedConstantData
-// 0x0107 (0x0108 - 0x0001)
+// 0x0167 (0x0168 - 0x0001)
 struct AB_HookRope::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
-	uint8                                         Pad_3730[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __NameProperty_8;                                  // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3731[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNodeFunctionRef                   __StructProperty_9;                                // 0x0010(0x0020)(BlueprintVisible, NoDestructor)
 	float                                         __FloatProperty_10;                                // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputScaleBiasClampConstants          __StructProperty_11;                               // 0x0034(0x002C)(BlueprintVisible, NoDestructor)
@@ -31,13 +31,15 @@ public:
 	bool                                          __BoolProperty_13;                                 // 0x0064(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimSyncMethod                               __EnumProperty_14;                                 // 0x0065(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimGroupRole                                __ByteProperty_15;                                 // 0x0066(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3732[0x1];                                     // 0x0067(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_67[0x1];                                       // 0x0067(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __NameProperty_16;                                 // 0x0068(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0070(0x0080)()
 	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00F0(0x0018)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                                // 0x0108(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                      // 0x0138(0x0030)()
 };
 static_assert(alignof(AB_HookRope::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_HookRope::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_HookRope::FAnimBlueprintGeneratedConstantData) == 0x000108, "Wrong size on AB_HookRope::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(AB_HookRope::FAnimBlueprintGeneratedConstantData) == 0x000168, "Wrong size on AB_HookRope::FAnimBlueprintGeneratedConstantData");
 static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, __NameProperty_8) == 0x000004, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::__NameProperty_8' has a wrong offset!");
 static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, __StructProperty_9) == 0x000010, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::__StructProperty_9' has a wrong offset!");
 static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, __FloatProperty_10) == 0x000030, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::__FloatProperty_10' has a wrong offset!");
@@ -49,6 +51,8 @@ static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, __ByteP
 static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, __NameProperty_16) == 0x000068, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::__NameProperty_16' has a wrong offset!");
 static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000070, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0000F0, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000108, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(AB_HookRope::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x000138, "Member 'AB_HookRope::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
 
 }
 

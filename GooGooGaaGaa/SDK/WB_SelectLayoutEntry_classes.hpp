@@ -19,13 +19,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SelectLayoutEntry.WB_SelectLayoutEntry_C
-// 0x0058 (0x0318 - 0x02C0)
+// 0x0058 (0x0338 - 0x02E0)
 class UWB_SelectLayoutEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_CheckBoxWithLabel_C*                WB_CheckBoxWithLabel;                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FS_PropLayoutData                      LayoutData;                                        // 0x02D0(0x0048)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_CheckBoxWithLabel_C*                WB_CheckBoxWithLabel;                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FS_PropLayoutData                      LayoutData;                                        // 0x02F0(0x0048)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_CheckBoxWithLabel_K2Node_ComponentBoundEvent_0_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked);
@@ -43,10 +43,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_SelectLayoutEntry_C) == 0x000008, "Wrong alignment on UWB_SelectLayoutEntry_C");
-static_assert(sizeof(UWB_SelectLayoutEntry_C) == 0x000318, "Wrong size on UWB_SelectLayoutEntry_C");
-static_assert(offsetof(UWB_SelectLayoutEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SelectLayoutEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SelectLayoutEntry_C, WB_CheckBoxWithLabel) == 0x0002C8, "Member 'UWB_SelectLayoutEntry_C::WB_CheckBoxWithLabel' has a wrong offset!");
-static_assert(offsetof(UWB_SelectLayoutEntry_C, LayoutData) == 0x0002D0, "Member 'UWB_SelectLayoutEntry_C::LayoutData' has a wrong offset!");
+static_assert(sizeof(UWB_SelectLayoutEntry_C) == 0x000338, "Wrong size on UWB_SelectLayoutEntry_C");
+static_assert(offsetof(UWB_SelectLayoutEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SelectLayoutEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SelectLayoutEntry_C, WB_CheckBoxWithLabel) == 0x0002E8, "Member 'UWB_SelectLayoutEntry_C::WB_CheckBoxWithLabel' has a wrong offset!");
+static_assert(offsetof(UWB_SelectLayoutEntry_C, LayoutData) == 0x0002F0, "Member 'UWB_SelectLayoutEntry_C::LayoutData' has a wrong offset!");
 
 }
 

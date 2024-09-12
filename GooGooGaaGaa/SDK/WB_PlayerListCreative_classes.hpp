@@ -20,14 +20,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlayerListCreative.WB_PlayerListCreative_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_PlayerListCreative_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_PLayerListBlockCreative_C*          WB_PLayerListBlockCreative;                        // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_RadialMenuCreative_C*               WB_RadialMenuCreative;                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_PLayerListBlockCreative_C*          WB_PLayerListBlockCreative;                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_RadialMenuCreative_C*               WB_RadialMenuCreative;                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -52,11 +52,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlayerListCreative_C) == 0x000008, "Wrong alignment on UWB_PlayerListCreative_C");
-static_assert(sizeof(UWB_PlayerListCreative_C) == 0x0002E0, "Wrong size on UWB_PlayerListCreative_C");
-static_assert(offsetof(UWB_PlayerListCreative_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_PlayerListCreative_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerListCreative_C, WB_PLayerListBlockCreative) == 0x0002C8, "Member 'UWB_PlayerListCreative_C::WB_PLayerListBlockCreative' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerListCreative_C, WB_RadialMenuCreative) == 0x0002D0, "Member 'UWB_PlayerListCreative_C::WB_RadialMenuCreative' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerListCreative_C, OwningCreativePlayerController) == 0x0002D8, "Member 'UWB_PlayerListCreative_C::OwningCreativePlayerController' has a wrong offset!");
+static_assert(sizeof(UWB_PlayerListCreative_C) == 0x000300, "Wrong size on UWB_PlayerListCreative_C");
+static_assert(offsetof(UWB_PlayerListCreative_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_PlayerListCreative_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerListCreative_C, WB_PLayerListBlockCreative) == 0x0002E8, "Member 'UWB_PlayerListCreative_C::WB_PLayerListBlockCreative' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerListCreative_C, WB_RadialMenuCreative) == 0x0002F0, "Member 'UWB_PlayerListCreative_C::WB_RadialMenuCreative' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerListCreative_C, OwningCreativePlayerController) == 0x0002F8, "Member 'UWB_PlayerListCreative_C::OwningCreativePlayerController' has a wrong offset!");
 
 }
 

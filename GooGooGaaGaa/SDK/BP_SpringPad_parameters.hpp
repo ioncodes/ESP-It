@@ -19,13 +19,13 @@ namespace SDK::Params
 struct BP_SpringPad_C_HandleSpawnedRealActor final
 {
 public:
-	class AActor*                                 Param_SpawnedActor;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 SpawnedActor_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_SpringPad_C*                         K2Node_DynamicCast_AsB_Spring_Pad;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_SpringPad_C_HandleSpawnedRealActor) == 0x000008, "Wrong alignment on BP_SpringPad_C_HandleSpawnedRealActor");
 static_assert(sizeof(BP_SpringPad_C_HandleSpawnedRealActor) == 0x000018, "Wrong size on BP_SpringPad_C_HandleSpawnedRealActor");
-static_assert(offsetof(BP_SpringPad_C_HandleSpawnedRealActor, Param_SpawnedActor) == 0x000000, "Member 'BP_SpringPad_C_HandleSpawnedRealActor::Param_SpawnedActor' has a wrong offset!");
+static_assert(offsetof(BP_SpringPad_C_HandleSpawnedRealActor, SpawnedActor_0) == 0x000000, "Member 'BP_SpringPad_C_HandleSpawnedRealActor::SpawnedActor_0' has a wrong offset!");
 static_assert(offsetof(BP_SpringPad_C_HandleSpawnedRealActor, K2Node_DynamicCast_AsB_Spring_Pad) == 0x000008, "Member 'BP_SpringPad_C_HandleSpawnedRealActor::K2Node_DynamicCast_AsB_Spring_Pad' has a wrong offset!");
 static_assert(offsetof(BP_SpringPad_C_HandleSpawnedRealActor, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_SpringPad_C_HandleSpawnedRealActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 

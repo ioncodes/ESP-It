@@ -41,26 +41,6 @@ void AB_Spectator_C::TryShowTeamSelectionScreen(class UObject* __WorldContext, b
 }
 
 
-// Function B_Spectator.B_Spectator_C.ClientPossessed
-// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_Spectator_C::ClientPossessed(class APlayerController* PlayerController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Spectator_C", "ClientPossessed");
-
-	Params::B_Spectator_C_ClientPossessed Parms{};
-
-	Parms.PlayerController = PlayerController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Spectator.B_Spectator_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -95,26 +75,6 @@ void AB_Spectator_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function B_Spectator.B_Spectator_C.ReceiveUnpossessed
-// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
-// Parameters:
-// class AController*                      OldController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AB_Spectator_C::ReceiveUnpossessed(class AController* OldController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Spectator_C", "ReceiveUnpossessed");
-
-	Params::B_Spectator_C_ReceiveUnpossessed Parms{};
-
-	Parms.OldController = OldController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Spectator.B_Spectator_C.ShowSuitableSelectionScreen
 // (Protected, BlueprintCallable, BlueprintEvent)
 
@@ -143,32 +103,12 @@ void AB_Spectator_C::TickHUD()
 }
 
 
-// Function B_Spectator.B_Spectator_C.ExecuteUbergraph_B_Spectator
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Spectator_C::ExecuteUbergraph_B_Spectator(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Spectator_C", "ExecuteUbergraph_B_Spectator");
-
-	Params::B_Spectator_C_ExecuteUbergraph_B_Spectator Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Spectator.B_Spectator_C.CanTeleport
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_CanTeleport                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanTeleport_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Spectator_C::CanTeleport(bool* Param_CanTeleport)
+void AB_Spectator_C::CanTeleport(bool* CanTeleport_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -179,8 +119,8 @@ void AB_Spectator_C::CanTeleport(bool* Param_CanTeleport)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanTeleport != nullptr)
-		*Param_CanTeleport = Parms.Param_CanTeleport;
+	if (CanTeleport_0 != nullptr)
+		*CanTeleport_0 = Parms.CanTeleport_0;
 }
 
 
@@ -441,6 +381,26 @@ void AB_Spectator_C::ReceivePossessed(class AController* NewController)
 }
 
 
+// Function B_Spectator.B_Spectator_C.ClientPossessed
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_Spectator_C::ClientPossessed(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Spectator_C", "ClientPossessed");
+
+	Params::B_Spectator_C_ClientPossessed Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function B_Spectator.B_Spectator_C.InpAxisEvt_Turn_K2Node_InputAxisEvent_157
 // (BlueprintEvent)
 // Parameters:
@@ -556,6 +516,26 @@ void AB_Spectator_C::InpAxisEvt_CameraRoll_K2Node_InputAxisEvent_318(float AxisV
 	Params::B_Spectator_C_InpAxisEvt_CameraRoll_K2Node_InputAxisEvent_318 Parms{};
 
 	Parms.AxisValue = AxisValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Spectator.B_Spectator_C.ReceiveUnpossessed
+// (BlueprintAuthorityOnly, Event, Public, BlueprintEvent)
+// Parameters:
+// class AController*                      OldController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AB_Spectator_C::ReceiveUnpossessed(class AController* OldController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Spectator_C", "ReceiveUnpossessed");
+
+	Params::B_Spectator_C_ReceiveUnpossessed Parms{};
+
+	Parms.OldController = OldController;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -788,6 +768,26 @@ void AB_Spectator_C::UpdateJoinAsHunterMidgameClient(E_JoinAsHunterStates JoinAs
 	Params::B_Spectator_C_UpdateJoinAsHunterMidgameClient Parms{};
 
 	Parms.JoinAsHunter = JoinAsHunter;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Spectator.B_Spectator_C.ExecuteUbergraph_B_Spectator
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Spectator_C::ExecuteUbergraph_B_Spectator(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Spectator_C", "ExecuteUbergraph_B_Spectator");
+
+	Params::B_Spectator_C_ExecuteUbergraph_B_Spectator Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

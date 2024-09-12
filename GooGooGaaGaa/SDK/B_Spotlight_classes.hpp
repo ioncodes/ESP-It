@@ -21,7 +21,7 @@ namespace SDK
 class AB_Spotlight_C : public AB_StaticMeshLightProp_C
 {
 public:
-	uint8                                         Pad_4CB8[0x7];                                     // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USpotLightComponent*                    SpotLight;                                         // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:

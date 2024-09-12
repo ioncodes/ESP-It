@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -23,7 +23,7 @@ struct B_RottenEggChickenDummy_C_ExecuteUbergraph_B_RottenEggChickenDummy final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A21[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_CustomEvent_FlyTime;                        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -38,15 +38,15 @@ static_assert(offsetof(B_RottenEggChickenDummy_C_ExecuteUbergraph_B_RottenEggChi
 static_assert(offsetof(B_RottenEggChickenDummy_C_ExecuteUbergraph_B_RottenEggChickenDummy, CallFunc_Delay_Duration_ImplicitCast_1) == 0x00001C, "Member 'B_RottenEggChickenDummy_C_ExecuteUbergraph_B_RottenEggChickenDummy::CallFunc_Delay_Duration_ImplicitCast_1' has a wrong offset!");
 
 // Function B_RottenEggChickenDummy.B_RottenEggChickenDummy_C.Fly
-// 0x0100 (0x0100 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct B_RottenEggChickenDummy_C_Fly final
 {
 public:
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0018(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0018(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_RottenEggChickenDummy_C_Fly) == 0x000008, "Wrong alignment on B_RottenEggChickenDummy_C_Fly");
-static_assert(sizeof(B_RottenEggChickenDummy_C_Fly) == 0x000100, "Wrong size on B_RottenEggChickenDummy_C_Fly");
+static_assert(sizeof(B_RottenEggChickenDummy_C_Fly) == 0x000110, "Wrong size on B_RottenEggChickenDummy_C_Fly");
 static_assert(offsetof(B_RottenEggChickenDummy_C_Fly, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000000, "Member 'B_RottenEggChickenDummy_C_Fly::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_RottenEggChickenDummy_C_Fly, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000018, "Member 'B_RottenEggChickenDummy_C_Fly::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
 
@@ -62,15 +62,15 @@ static_assert(sizeof(B_RottenEggChickenDummy_C_LiftChickenUp) == 0x000008, "Wron
 static_assert(offsetof(B_RottenEggChickenDummy_C_LiftChickenUp, FlyTime) == 0x000000, "Member 'B_RottenEggChickenDummy_C_LiftChickenUp::FlyTime' has a wrong offset!");
 
 // Function B_RottenEggChickenDummy.B_RottenEggChickenDummy_C.Sit
-// 0x0100 (0x0100 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct B_RottenEggChickenDummy_C_Sit final
 {
 public:
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0018(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0018(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_RottenEggChickenDummy_C_Sit) == 0x000008, "Wrong alignment on B_RottenEggChickenDummy_C_Sit");
-static_assert(sizeof(B_RottenEggChickenDummy_C_Sit) == 0x000100, "Wrong size on B_RottenEggChickenDummy_C_Sit");
+static_assert(sizeof(B_RottenEggChickenDummy_C_Sit) == 0x000110, "Wrong size on B_RottenEggChickenDummy_C_Sit");
 static_assert(offsetof(B_RottenEggChickenDummy_C_Sit, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000000, "Member 'B_RottenEggChickenDummy_C_Sit::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_RottenEggChickenDummy_C_Sit, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000018, "Member 'B_RottenEggChickenDummy_C_Sit::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
 

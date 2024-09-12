@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SChatMessage_structs.hpp"
 #include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "EChatType_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SChatMessage_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -24,137 +24,147 @@ namespace SDK::Params
 {
 
 // Function WB_Chat.WB_Chat_C.AddChatMessage
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct WB_Chat_C_AddChatMessage final
 {
 public:
-	class FText                                   PlayerName;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   ChatMessage;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	EChatType                                     ChatType;                                          // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Team;                                              // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F65[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           PlayerColor;                                       // 0x0034(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       PlayerTeam;                                        // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F66[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ChatEntry_C*                        CurrentChatEntry;                                  // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F67[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_ChatEntry_C*                        CallFunc_Create_ReturnValue;                       // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F68[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F69[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSChatMessage                          K2Node_MakeStruct_SChatMessage;                    // 0x0088(0x0040)(HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   ChatMessage;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	EChatType                                     ChatType;                                          // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Team;                                              // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           PlayerColor;                                       // 0x0024(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       PlayerTeam;                                        // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_ChatEntry_C*                        CurrentChatEntry;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_ChatEntry_C*                        CallFunc_Create_ReturnValue;                       // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSChatMessage                          K2Node_MakeStruct_SChatMessage;                    // 0x0078(0x0030)(HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_AddChatMessage) == 0x000008, "Wrong alignment on WB_Chat_C_AddChatMessage");
-static_assert(sizeof(WB_Chat_C_AddChatMessage) == 0x0000E0, "Wrong size on WB_Chat_C_AddChatMessage");
+static_assert(sizeof(WB_Chat_C_AddChatMessage) == 0x0000C0, "Wrong size on WB_Chat_C_AddChatMessage");
 static_assert(offsetof(WB_Chat_C_AddChatMessage, PlayerName) == 0x000000, "Member 'WB_Chat_C_AddChatMessage::PlayerName' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, ChatMessage) == 0x000018, "Member 'WB_Chat_C_AddChatMessage::ChatMessage' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, ChatType) == 0x000030, "Member 'WB_Chat_C_AddChatMessage::ChatType' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, Team) == 0x000031, "Member 'WB_Chat_C_AddChatMessage::Team' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, PlayerColor) == 0x000034, "Member 'WB_Chat_C_AddChatMessage::PlayerColor' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, PlayerTeam) == 0x000044, "Member 'WB_Chat_C_AddChatMessage::PlayerTeam' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CurrentChatEntry) == 0x000048, "Member 'WB_Chat_C_AddChatMessage::CurrentChatEntry' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Now_ReturnValue) == 0x000050, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Now_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000058, "Member 'WB_Chat_C_AddChatMessage::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Create_ReturnValue) == 0x000060, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_GetOwningPlayer_ReturnValue) == 0x000068, "Member 'WB_Chat_C_AddChatMessage::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_SwitchEnum_CmpSuccess) == 0x000070, "Member 'WB_Chat_C_AddChatMessage::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_DynamicCast_AsB_Player_State) == 0x000078, "Member 'WB_Chat_C_AddChatMessage::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'WB_Chat_C_AddChatMessage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_TextIsEmpty_ReturnValue) == 0x000081, "Member 'WB_Chat_C_AddChatMessage::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_MakeStruct_SChatMessage) == 0x000088, "Member 'WB_Chat_C_AddChatMessage::K2Node_MakeStruct_SChatMessage' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_PlayAnimation_ReturnValue) == 0x0000C8, "Member 'WB_Chat_C_AddChatMessage::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_AddChild_ReturnValue) == 0x0000D0, "Member 'WB_Chat_C_AddChatMessage::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Array_Add_ReturnValue) == 0x0000D8, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, ChatMessage) == 0x000010, "Member 'WB_Chat_C_AddChatMessage::ChatMessage' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, ChatType) == 0x000020, "Member 'WB_Chat_C_AddChatMessage::ChatType' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, Team) == 0x000021, "Member 'WB_Chat_C_AddChatMessage::Team' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, PlayerColor) == 0x000024, "Member 'WB_Chat_C_AddChatMessage::PlayerColor' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, PlayerTeam) == 0x000034, "Member 'WB_Chat_C_AddChatMessage::PlayerTeam' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CurrentChatEntry) == 0x000038, "Member 'WB_Chat_C_AddChatMessage::CurrentChatEntry' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Now_ReturnValue) == 0x000040, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Now_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000048, "Member 'WB_Chat_C_AddChatMessage::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Create_ReturnValue) == 0x000050, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Create_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_GetOwningPlayer_ReturnValue) == 0x000058, "Member 'WB_Chat_C_AddChatMessage::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_SwitchEnum_CmpSuccess) == 0x000060, "Member 'WB_Chat_C_AddChatMessage::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_DynamicCast_AsB_Player_State) == 0x000068, "Member 'WB_Chat_C_AddChatMessage::K2Node_DynamicCast_AsB_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'WB_Chat_C_AddChatMessage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_TextIsEmpty_ReturnValue) == 0x000071, "Member 'WB_Chat_C_AddChatMessage::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, K2Node_MakeStruct_SChatMessage) == 0x000078, "Member 'WB_Chat_C_AddChatMessage::K2Node_MakeStruct_SChatMessage' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_PlayAnimation_ReturnValue) == 0x0000A8, "Member 'WB_Chat_C_AddChatMessage::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_AddChild_ReturnValue) == 0x0000B0, "Member 'WB_Chat_C_AddChatMessage::CallFunc_AddChild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddChatMessage, CallFunc_Array_Add_ReturnValue) == 0x0000B8, "Member 'WB_Chat_C_AddChatMessage::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.AddPlayerChatMessage
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct WB_Chat_C_AddPlayerChatMessage final
 {
 public:
 	class AB_PlayerState_C*                       PlayerState;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ChatMessage;                                       // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	EChatType                                     ChatType;                                          // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F6A[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           PlayerColor;                                       // 0x0024(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F6B[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ChatMessage;                                       // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	EChatType                                     ChatType;                                          // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           PlayerColor;                                       // 0x001C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F6C[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F6D[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F6E[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F6F[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x008C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayerMuted_IsMuted;                    // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F70[0x1];                                     // 0x009F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00B0(0x0018)()
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetChatEnabled_ChatEnabled;               // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlayerMuted_IsMuted;                    // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x00A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B6[0x2];                                       // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlayerOrBotName_Name;                  // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00C8(0x0010)()
 };
 static_assert(alignof(WB_Chat_C_AddPlayerChatMessage) == 0x000008, "Wrong alignment on WB_Chat_C_AddPlayerChatMessage");
-static_assert(sizeof(WB_Chat_C_AddPlayerChatMessage) == 0x0000C8, "Wrong size on WB_Chat_C_AddPlayerChatMessage");
+static_assert(sizeof(WB_Chat_C_AddPlayerChatMessage) == 0x0000D8, "Wrong size on WB_Chat_C_AddPlayerChatMessage");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, PlayerState) == 0x000000, "Member 'WB_Chat_C_AddPlayerChatMessage::PlayerState' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, ChatMessage) == 0x000008, "Member 'WB_Chat_C_AddPlayerChatMessage::ChatMessage' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, ChatType) == 0x000020, "Member 'WB_Chat_C_AddPlayerChatMessage::ChatType' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, PlayerColor) == 0x000024, "Member 'WB_Chat_C_AddPlayerChatMessage::PlayerColor' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_ReturnValue) == 0x000038, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, ChatType) == 0x000018, "Member 'WB_Chat_C_AddPlayerChatMessage::ChatType' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, PlayerColor) == 0x00001C, "Member 'WB_Chat_C_AddPlayerChatMessage::PlayerColor' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_ReturnValue) == 0x000030, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_ReturnValue_1) == 0x000038, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Game_Instance) == 0x000040, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_SwitchEnum_CmpSuccess) == 0x000049, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameState_ReturnValue) == 0x000050, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_ReturnValue_1) == 0x000058, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000060, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000070, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_2) == 0x000078, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Player_State) == 0x000080, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Player_State' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_3) == 0x000088, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x00008C, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_IsPlayerMuted_IsMuted) == 0x00009C, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_IsPlayerMuted_IsMuted' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Not_PreBool_ReturnValue) == 0x00009D, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_BooleanAND_ReturnValue) == 0x00009E, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetPlayerOrBotName_Name) == 0x0000A0, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_StringToText_ReturnValue) == 0x0000B0, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000050, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameInstance_ReturnValue_2) == 0x000060, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Game_Instance_2) == 0x000068, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Game_Instance_2' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_2) == 0x000070, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetChatEnabled_ChatEnabled) == 0x000071, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetChatEnabled_ChatEnabled' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetGameState_ReturnValue) == 0x000078, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_SwitchEnum_CmpSuccess) == 0x000080, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000088, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_3) == 0x000090, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_AsB_Impostor_Player_State) == 0x000098, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_AsB_Impostor_Player_State' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, K2Node_DynamicCast_bSuccess_4) == 0x0000A0, "Member 'WB_Chat_C_AddPlayerChatMessage::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_IsPlayerMuted_IsMuted) == 0x0000A1, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_IsPlayerMuted_IsMuted' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x0000A4, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Not_PreBool_ReturnValue) == 0x0000B4, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_BooleanAND_ReturnValue) == 0x0000B5, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_GetPlayerOrBotName_Name) == 0x0000B8, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_GetPlayerOrBotName_Name' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_AddPlayerChatMessage, CallFunc_Conv_StringToText_ReturnValue) == 0x0000C8, "Member 'WB_Chat_C_AddPlayerChatMessage::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(sizeof(WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature");
+static_assert(sizeof(WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000010, "Wrong size on WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature");
 static_assert(offsetof(WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_Chat_C_BndEvt__ChatTextBox_K2Node_ComponentBoundEvent_4_OnEditableTextBoxChangedEvent__DelegateSignature::Text' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000008, "Wrong alignment on WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature");
-static_assert(sizeof(WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000018, "Wrong size on WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature");
+static_assert(sizeof(WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature) == 0x000010, "Wrong size on WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature");
 static_assert(offsetof(WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature, Text) == 0x000000, "Member 'WB_Chat_C_BndEvt__ChatTextBoxAll_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature::Text' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.CalculateMaxScrollOffset
@@ -191,7 +201,7 @@ struct WB_Chat_C_ClampChatMessages final
 public:
 	class UWB_ChatEntry_C*                        EntryToRemove;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F71[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ChatEntry_C*                        CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -252,15 +262,15 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F72[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F73[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ChatEntry_C*                        CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F74[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -289,45 +299,45 @@ static_assert(offsetof(WB_Chat_C_CloseChat, CallFunc_PlayAnimation_ReturnValue) 
 static_assert(offsetof(WB_Chat_C_CloseChat, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast) == 0x000058, "Member 'WB_Chat_C_CloseChat::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.ExecuteUbergraph_WB_Chat
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct WB_Chat_C_ExecuteUbergraph_WB_Chat final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F75[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0008(0x0018)(ConstParm)
-	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0020(0x0018)(ConstParm)
-	class UEditableTextBox*                       CallFunc_GetChatTextBox_ChatTextBox;               // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0040(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChatOpenButNotFocused_ReturnValue;      // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F76[0x2];                                     // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_MathExpression_ReturnValue;                 // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_CalculateMaxScrollOffset_ReturnValue;     // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0008(0x0010)(ConstParm)
+	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0018(0x0010)(ConstParm)
+	class UEditableTextBox*                       CallFunc_GetChatTextBox_ChatTextBox;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0030(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsChatOpenButNotFocused_ReturnValue;      // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_MathExpression_ReturnValue;                 // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_CalculateMaxScrollOffset_ReturnValue;     // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_ExecuteUbergraph_WB_Chat) == 0x000008, "Wrong alignment on WB_Chat_C_ExecuteUbergraph_WB_Chat");
-static_assert(sizeof(WB_Chat_C_ExecuteUbergraph_WB_Chat) == 0x0000B8, "Wrong size on WB_Chat_C_ExecuteUbergraph_WB_Chat");
+static_assert(sizeof(WB_Chat_C_ExecuteUbergraph_WB_Chat) == 0x0000A8, "Wrong size on WB_Chat_C_ExecuteUbergraph_WB_Chat");
 static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, EntryPoint) == 0x000000, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_ComponentBoundEvent_Text_1) == 0x000008, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_ComponentBoundEvent_Text_1' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_ComponentBoundEvent_Text) == 0x000020, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_GetChatTextBox_ChatTextBox) == 0x000038, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_GetChatTextBox_ChatTextBox' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_Event_MyGeometry) == 0x000040, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_Event_InDeltaTime) == 0x000078, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_IsChatOpenButNotFocused_ReturnValue) == 0x00007C, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_IsChatOpenButNotFocused_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Not_PreBool_ReturnValue) == 0x00007D, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000080, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000088, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000090, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_MathExpression_ReturnValue) == 0x000098, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_MathExpression_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_CalculateMaxScrollOffset_ReturnValue) == 0x0000A0, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_CalculateMaxScrollOffset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x0000A8, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast) == 0x0000B0, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_ComponentBoundEvent_Text) == 0x000018, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_ComponentBoundEvent_Text' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_GetChatTextBox_ChatTextBox) == 0x000028, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_GetChatTextBox_ChatTextBox' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_Event_MyGeometry) == 0x000030, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_Event_InDeltaTime) == 0x000068, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_IsChatOpenButNotFocused_ReturnValue) == 0x00006C, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_IsChatOpenButNotFocused_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Not_PreBool_ReturnValue) == 0x00006D, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000070, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000078, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000080, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, K2Node_MathExpression_ReturnValue) == 0x000088, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::K2Node_MathExpression_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_CalculateMaxScrollOffset_ReturnValue) == 0x000090, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_CalculateMaxScrollOffset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000098, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_ExecuteUbergraph_WB_Chat, CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast) == 0x0000A0, "Member 'WB_Chat_C_ExecuteUbergraph_WB_Chat::CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.GetChatTextBox
 // 0x0018 (0x0018 - 0x0000)
@@ -336,7 +346,7 @@ struct WB_Chat_C_GetChatTextBox final
 public:
 	class UEditableTextBox*                       ChatTextBox;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EChatType                                     Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F77[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UEditableTextBox*                       K2Node_Select_Default;                             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_GetChatTextBox) == 0x000008, "Wrong alignment on WB_Chat_C_GetChatTextBox");
@@ -346,42 +356,42 @@ static_assert(offsetof(WB_Chat_C_GetChatTextBox, Temp_byte_Variable) == 0x000008
 static_assert(offsetof(WB_Chat_C_GetChatTextBox, K2Node_Select_Default) == 0x000010, "Member 'WB_Chat_C_GetChatTextBox::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.GetTextToAll
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct WB_Chat_C_GetTextToAll final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0010(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
 };
 static_assert(alignof(WB_Chat_C_GetTextToAll) == 0x000008, "Wrong alignment on WB_Chat_C_GetTextToAll");
-static_assert(sizeof(WB_Chat_C_GetTextToAll) == 0x0000A8, "Wrong size on WB_Chat_C_GetTextToAll");
+static_assert(sizeof(WB_Chat_C_GetTextToAll) == 0x000088, "Wrong size on WB_Chat_C_GetTextToAll");
 static_assert(offsetof(WB_Chat_C_GetTextToAll, ReturnValue) == 0x000000, "Member 'WB_Chat_C_GetTextToAll::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToAll, CallFunc_MakeLiteralText_ReturnValue) == 0x000018, "Member 'WB_Chat_C_GetTextToAll::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToAll, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_Chat_C_GetTextToAll::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToAll, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_Chat_C_GetTextToAll::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToAll, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_Chat_C_GetTextToAll::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToAll, CallFunc_MakeLiteralText_ReturnValue) == 0x000010, "Member 'WB_Chat_C_GetTextToAll::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToAll, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_Chat_C_GetTextToAll::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToAll, K2Node_MakeArray_Array) == 0x000068, "Member 'WB_Chat_C_GetTextToAll::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToAll, CallFunc_Format_ReturnValue) == 0x000078, "Member 'WB_Chat_C_GetTextToAll::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.GetTextToTeam
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct WB_Chat_C_GetTextToTeam final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0030(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0080(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0090(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0010(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0078(0x0010)()
 };
 static_assert(alignof(WB_Chat_C_GetTextToTeam) == 0x000008, "Wrong alignment on WB_Chat_C_GetTextToTeam");
-static_assert(sizeof(WB_Chat_C_GetTextToTeam) == 0x0000A8, "Wrong size on WB_Chat_C_GetTextToTeam");
+static_assert(sizeof(WB_Chat_C_GetTextToTeam) == 0x000088, "Wrong size on WB_Chat_C_GetTextToTeam");
 static_assert(offsetof(WB_Chat_C_GetTextToTeam, ReturnValue) == 0x000000, "Member 'WB_Chat_C_GetTextToTeam::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToTeam, CallFunc_MakeLiteralText_ReturnValue) == 0x000018, "Member 'WB_Chat_C_GetTextToTeam::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToTeam, K2Node_MakeStruct_FormatArgumentData) == 0x000030, "Member 'WB_Chat_C_GetTextToTeam::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToTeam, K2Node_MakeArray_Array) == 0x000080, "Member 'WB_Chat_C_GetTextToTeam::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_GetTextToTeam, CallFunc_Format_ReturnValue) == 0x000090, "Member 'WB_Chat_C_GetTextToTeam::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToTeam, CallFunc_MakeLiteralText_ReturnValue) == 0x000010, "Member 'WB_Chat_C_GetTextToTeam::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToTeam, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_Chat_C_GetTextToTeam::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToTeam, K2Node_MakeArray_Array) == 0x000068, "Member 'WB_Chat_C_GetTextToTeam::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_GetTextToTeam, CallFunc_Format_ReturnValue) == 0x000078, "Member 'WB_Chat_C_GetTextToTeam::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.GetVisibility_0
 // 0x0020 (0x0020 - 0x0000)
@@ -389,7 +399,7 @@ struct WB_Chat_C_GetVisibility_0 final
 {
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F78[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -409,7 +419,7 @@ struct WB_Chat_C_IsChatOpenButNotFocused final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F79[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UEditableTextBox*                       CallFunc_GetChatTextBox_ChatTextBox;               // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -439,17 +449,17 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x016B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_3;          // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_4;          // 0x016D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F7A[0x2];                                     // 0x016E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16E[0x2];                                      // 0x016E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0170(0x00B8)()
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x022A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F7B[0x5];                                     // 0x022B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22B[0x5];                                      // 0x022B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CallFunc_GetKey_ReturnValue_1;                     // 0x0230(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_5;          // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x024A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F7C[0x5];                                     // 0x024B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24B[0x5];                                      // 0x024B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0250(0x00B8)()
 };
 static_assert(alignof(WB_Chat_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_Chat_C_OnPreviewKeyDown");
@@ -476,79 +486,87 @@ static_assert(offsetof(WB_Chat_C_OnPreviewKeyDown, CallFunc_Not_PreBool_ReturnVa
 static_assert(offsetof(WB_Chat_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000250, "Member 'WB_Chat_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.OnTextChanged
-// 0x0090 (0x0090 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct WB_Chat_C_OnTextChanged final
 {
 public:
-	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UEditableTextBox*                       ChatBox;                                           // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F7D[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0018)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F7E[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   InText;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class UEditableTextBox*                       ChatBox;                                           // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0050(0x0010)()
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerController_C*                  K2Node_DynamicCast_AsB_Player_Controller;          // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_OnTextChanged) == 0x000008, "Wrong alignment on WB_Chat_C_OnTextChanged");
-static_assert(sizeof(WB_Chat_C_OnTextChanged) == 0x000090, "Wrong size on WB_Chat_C_OnTextChanged");
+static_assert(sizeof(WB_Chat_C_OnTextChanged) == 0x000080, "Wrong size on WB_Chat_C_OnTextChanged");
 static_assert(offsetof(WB_Chat_C_OnTextChanged, InText) == 0x000000, "Member 'WB_Chat_C_OnTextChanged::InText' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, ChatBox) == 0x000018, "Member 'WB_Chat_C_OnTextChanged::ChatBox' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_Conv_TextToString_ReturnValue) == 0x000020, "Member 'WB_Chat_C_OnTextChanged::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000030, "Member 'WB_Chat_C_OnTextChanged::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_GetSubstring_ReturnValue) == 0x000040, "Member 'WB_Chat_C_OnTextChanged::CallFunc_GetSubstring_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, K2Node_SwitchString_CmpSuccess) == 0x000050, "Member 'WB_Chat_C_OnTextChanged::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'WB_Chat_C_OnTextChanged::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_GetOwningPlayer_ReturnValue) == 0x000070, "Member 'WB_Chat_C_OnTextChanged::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'WB_Chat_C_OnTextChanged::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, K2Node_DynamicCast_AsB_Player_Controller) == 0x000080, "Member 'WB_Chat_C_OnTextChanged::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OnTextChanged, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'WB_Chat_C_OnTextChanged::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, ChatBox) == 0x000010, "Member 'WB_Chat_C_OnTextChanged::ChatBox' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_Conv_TextToString_ReturnValue) == 0x000018, "Member 'WB_Chat_C_OnTextChanged::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000028, "Member 'WB_Chat_C_OnTextChanged::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_GetSubstring_ReturnValue) == 0x000038, "Member 'WB_Chat_C_OnTextChanged::CallFunc_GetSubstring_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, K2Node_SwitchString_CmpSuccess) == 0x000048, "Member 'WB_Chat_C_OnTextChanged::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_Conv_StringToText_ReturnValue) == 0x000050, "Member 'WB_Chat_C_OnTextChanged::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_GetOwningPlayer_ReturnValue) == 0x000060, "Member 'WB_Chat_C_OnTextChanged::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'WB_Chat_C_OnTextChanged::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, K2Node_DynamicCast_AsB_Player_Controller) == 0x000070, "Member 'WB_Chat_C_OnTextChanged::K2Node_DynamicCast_AsB_Player_Controller' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OnTextChanged, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'WB_Chat_C_OnTextChanged::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.OpenChat
-// 0x0058 (0x0058 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WB_Chat_C_OpenChat final
 {
 public:
 	EChatType                                     ChatType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F7F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EChatType                                     Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F80[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F81[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EChatType                                     Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UEditableTextBox*                       CallFunc_GetChatTextBox_ChatTextBox;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UHorizontalBox*                         K2Node_Select_Default;                             // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F82[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWB_ChatEntry_C*                        CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F83[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetChatEnabled_ChatEnabled;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_ChatEntry_C*                        CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_OpenChat) == 0x000008, "Wrong alignment on WB_Chat_C_OpenChat");
-static_assert(sizeof(WB_Chat_C_OpenChat) == 0x000058, "Wrong size on WB_Chat_C_OpenChat");
+static_assert(sizeof(WB_Chat_C_OpenChat) == 0x000078, "Wrong size on WB_Chat_C_OpenChat");
 static_assert(offsetof(WB_Chat_C_OpenChat, ChatType) == 0x000000, "Member 'WB_Chat_C_OpenChat::ChatType' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, Temp_int_Array_Index_Variable) == 0x000004, "Member 'WB_Chat_C_OpenChat::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, Temp_byte_Variable) == 0x000008, "Member 'WB_Chat_C_OpenChat::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WB_Chat_C_OpenChat::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WB_Chat_C_OpenChat::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WB_Chat_C_OpenChat::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WB_Chat_C_OpenChat::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'WB_Chat_C_OpenChat::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, Temp_byte_Variable) == 0x000010, "Member 'WB_Chat_C_OpenChat::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_GetChatTextBox_ChatTextBox) == 0x000018, "Member 'WB_Chat_C_OpenChat::CallFunc_GetChatTextBox_ChatTextBox' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_OpenChat, K2Node_Select_Default) == 0x000020, "Member 'WB_Chat_C_OpenChat::K2Node_Select_Default' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_GetGameInstance_ReturnValue) == 0x000028, "Member 'WB_Chat_C_OpenChat::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_OpenChat, K2Node_DynamicCast_AsB_Game_Instance) == 0x000030, "Member 'WB_Chat_C_OpenChat::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_Chat_C_OpenChat, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WB_Chat_C_OpenChat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'WB_Chat_C_OpenChat::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Array_Get_Item) == 0x000040, "Member 'WB_Chat_C_OpenChat::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Less_IntInt_ReturnValue) == 0x000048, "Member 'WB_Chat_C_OpenChat::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_PlayAnimation_ReturnValue) == 0x000050, "Member 'WB_Chat_C_OpenChat::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_GetGameInstance_ReturnValue_1) == 0x000040, "Member 'WB_Chat_C_OpenChat::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000048, "Member 'WB_Chat_C_OpenChat::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, K2Node_DynamicCast_bSuccess_1) == 0x000050, "Member 'WB_Chat_C_OpenChat::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_GetChatEnabled_ChatEnabled) == 0x000051, "Member 'WB_Chat_C_OpenChat::CallFunc_GetChatEnabled_ChatEnabled' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Array_Get_Item) == 0x000058, "Member 'WB_Chat_C_OpenChat::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Array_Length_ReturnValue) == 0x000060, "Member 'WB_Chat_C_OpenChat::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_PlayAnimation_ReturnValue) == 0x000068, "Member 'WB_Chat_C_OpenChat::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Chat_C_OpenChat, CallFunc_Less_IntInt_ReturnValue) == 0x000070, "Member 'WB_Chat_C_OpenChat::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_Chat.WB_Chat_C.Scroll
 // 0x0088 (0x0088 - 0x0000)
@@ -556,7 +574,7 @@ struct WB_Chat_C_Scroll final
 {
 public:
 	EScrollDirection                              ScrollDirection;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F84[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ChatEntry_C*                        ReferenceChatEntry;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxScrollOffset;                                   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ScrollAmount;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -565,16 +583,16 @@ public:
 	double                                        CallFunc_CalculateMaxScrollOffset_ReturnValue;     // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1;                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EScrollDirection                              Temp_byte_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F85[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Select_Default;                             // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetScrollOffset_ReturnValue;              // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F86[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F87[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_Scroll) == 0x000008, "Wrong alignment on WB_Chat_C_Scroll");
@@ -613,14 +631,14 @@ public:
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_3;                   // 0x0200(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0210(0x0014)()
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0224(0x0014)()
-	uint8                                         Pad_4F88[0x8];                                     // 0x0238(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_2;                    // 0x0240(0x00D0)()
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_3;                    // 0x0310(0x00D0)()
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_4;                   // 0x03E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_5;                   // 0x03F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x0400(0x0014)()
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0414(0x0014)()
-	uint8                                         Pad_4F89[0x8];                                     // 0x0428(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_4;                    // 0x0430(0x00D0)()
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_5;                    // 0x0500(0x00D0)()
 	struct FScrollBarStyle                        K2Node_MakeStruct_ScrollBarStyle;                  // 0x05D0(0x0770)()
@@ -669,7 +687,7 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F8A[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y;                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -678,7 +696,7 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_CreativeGameState_C*                 K2Node_DynamicCast_AsB_Creative_Game_State;        // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F8B[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_BreakVector2D_X_1;                        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector2D_Y_1;                        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -724,10 +742,10 @@ struct WB_Chat_C_UpdateScrollBarVisibility final
 {
 public:
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F8C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ChatEntry_C*                        CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F8D[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_SetScrollBarOpacity_Opacity_ImplicitCast; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Chat_C_UpdateScrollBarVisibility) == 0x000008, "Wrong alignment on WB_Chat_C_UpdateScrollBarVisibility");

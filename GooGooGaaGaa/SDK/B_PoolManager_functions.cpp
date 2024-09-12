@@ -76,10 +76,10 @@ void UB_PoolManager_C::EmptyPools()
 // Function B_PoolManager.B_PoolManager_C.GetPoolByClass
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UB_Pool_C*                        Pool                                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_PoolManager_C::GetPoolByClass(class UClass* Param_Class, class UB_Pool_C** Pool)
+void UB_PoolManager_C::GetPoolByClass(class UClass* Class_0, class UB_Pool_C** Pool)
 {
 	static class UFunction* Func = nullptr;
 
@@ -88,7 +88,7 @@ void UB_PoolManager_C::GetPoolByClass(class UClass* Param_Class, class UB_Pool_C
 
 	Params::B_PoolManager_C_GetPoolByClass Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -120,10 +120,10 @@ void UB_PoolManager_C::MoveActorToPoolAndTearDown(class AActor* Actor)
 // Function B_PoolManager.B_PoolManager_C.PoolHasActorReady
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    PoolFilled                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_PoolManager_C::PoolHasActorReady(class UClass* Param_Class, bool* PoolFilled)
+void UB_PoolManager_C::PoolHasActorReady(class UClass* Class_0, bool* PoolFilled)
 {
 	static class UFunction* Func = nullptr;
 
@@ -132,7 +132,7 @@ void UB_PoolManager_C::PoolHasActorReady(class UClass* Param_Class, bool* PoolFi
 
 	Params::B_PoolManager_C_PoolHasActorReady Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -189,14 +189,14 @@ void UB_PoolManager_C::RemoveActorFromPool(class UB_Pool_C* Pool, class AActor* 
 // Function B_PoolManager.B_PoolManager_C.SpawnActorAndTearUp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESpawnActorCollisionHandlingMethod      CollisionHandlingOverride                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-class AActor* UB_PoolManager_C::SpawnActorAndTearUp(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator)
+class AActor* UB_PoolManager_C::SpawnActorAndTearUp(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator)
 {
 	static class UFunction* Func = nullptr;
 
@@ -205,7 +205,7 @@ class AActor* UB_PoolManager_C::SpawnActorAndTearUp(class UClass* Param_Class, c
 
 	Params::B_PoolManager_C_SpawnActorAndTearUp Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.SpawnTransform = std::move(SpawnTransform);
 	Parms.CollisionHandlingOverride = CollisionHandlingOverride;
 	Parms.Owner = Owner;
@@ -220,14 +220,14 @@ class AActor* UB_PoolManager_C::SpawnActorAndTearUp(class UClass* Param_Class, c
 // Function B_PoolManager.B_PoolManager_C.TakeActorFromPoolAndTearUp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FTransform                       SpawnTransform                                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESpawnActorCollisionHandlingMethod      CollisionHandlingOverride                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-class AActor* UB_PoolManager_C::TakeActorFromPoolAndTearUp(class UClass* Param_Class, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator)
+class AActor* UB_PoolManager_C::TakeActorFromPoolAndTearUp(class UClass* Class_0, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner, class APawn* Instigator)
 {
 	static class UFunction* Func = nullptr;
 
@@ -236,7 +236,7 @@ class AActor* UB_PoolManager_C::TakeActorFromPoolAndTearUp(class UClass* Param_C
 
 	Params::B_PoolManager_C_TakeActorFromPoolAndTearUp Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.SpawnTransform = std::move(SpawnTransform);
 	Parms.CollisionHandlingOverride = CollisionHandlingOverride;
 	Parms.Owner = Owner;

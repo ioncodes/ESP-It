@@ -28,9 +28,9 @@ public:
 
 public:
 	void ExecuteUbergraph_B_UserControllerManager(int32 EntryPoint);
-	class FString GetMessageDialogText(EEstablishUserReason Param_Index);
-	class FString GetMessageDialogTitle(EEstablishUserReason Param_Index);
-	void Initialize(class UGameInstance* Param_GameInstance);
+	class FString GetMessageDialogText(EEstablishUserReason Index_0);
+	class FString GetMessageDialogTitle(EEstablishUserReason Index_0);
+	void Initialize(class UGameInstance* GameInstance_0);
 	void OnActiveUserInfoUpdated_Event(const struct FSlateBrush& IconBrush, const class FString& DisplayString);
 	void OnHideUserReestablishMessage_Event();
 	void OnNewUserEstablished_Event();

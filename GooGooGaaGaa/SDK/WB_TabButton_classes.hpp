@@ -10,26 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WB_BaseButton_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_TabButton.WB_TabButton_C
-// 0x0810 (0x0F40 - 0x0730)
+// 0x0800 (0x0F50 - 0x0750)
 class UWB_TabButton_C final : public UWB_BaseButton_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_TabButton_C;                     // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Label;                                             // 0x0738(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                MyButton;                                          // 0x0740(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         Pad_3D5E[0x8];                                     // 0x0748(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FButtonStyle                           ButtonStyleInactive;                               // 0x0750(0x03F0)(Edit, BlueprintVisible)
-	struct FButtonStyle                           ButtonStyleActive;                                 // 0x0B40(0x03F0)(Edit, BlueprintVisible)
-	bool                                          bActive;                                           // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_TabButton_C;                     // 0x0748(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Label;                                             // 0x0750(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                MyButton;                                          // 0x0758(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FButtonStyle                           ButtonStyleInactive;                               // 0x0760(0x03F0)(Edit, BlueprintVisible)
+	struct FButtonStyle                           ButtonStyleActive;                                 // 0x0B50(0x03F0)(Edit, BlueprintVisible)
+	bool                                          bActive;                                           // 0x0F40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	struct FLinearColor Get_Label_ColorAndOpacity_0();
@@ -51,13 +50,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_TabButton_C) == 0x000010, "Wrong alignment on UWB_TabButton_C");
-static_assert(sizeof(UWB_TabButton_C) == 0x000F40, "Wrong size on UWB_TabButton_C");
-static_assert(offsetof(UWB_TabButton_C, UberGraphFrame_WB_TabButton_C) == 0x000730, "Member 'UWB_TabButton_C::UberGraphFrame_WB_TabButton_C' has a wrong offset!");
-static_assert(offsetof(UWB_TabButton_C, Label) == 0x000738, "Member 'UWB_TabButton_C::Label' has a wrong offset!");
-static_assert(offsetof(UWB_TabButton_C, MyButton) == 0x000740, "Member 'UWB_TabButton_C::MyButton' has a wrong offset!");
-static_assert(offsetof(UWB_TabButton_C, ButtonStyleInactive) == 0x000750, "Member 'UWB_TabButton_C::ButtonStyleInactive' has a wrong offset!");
-static_assert(offsetof(UWB_TabButton_C, ButtonStyleActive) == 0x000B40, "Member 'UWB_TabButton_C::ButtonStyleActive' has a wrong offset!");
-static_assert(offsetof(UWB_TabButton_C, bActive) == 0x000F30, "Member 'UWB_TabButton_C::bActive' has a wrong offset!");
+static_assert(sizeof(UWB_TabButton_C) == 0x000F50, "Wrong size on UWB_TabButton_C");
+static_assert(offsetof(UWB_TabButton_C, UberGraphFrame_WB_TabButton_C) == 0x000748, "Member 'UWB_TabButton_C::UberGraphFrame_WB_TabButton_C' has a wrong offset!");
+static_assert(offsetof(UWB_TabButton_C, Label) == 0x000750, "Member 'UWB_TabButton_C::Label' has a wrong offset!");
+static_assert(offsetof(UWB_TabButton_C, MyButton) == 0x000758, "Member 'UWB_TabButton_C::MyButton' has a wrong offset!");
+static_assert(offsetof(UWB_TabButton_C, ButtonStyleInactive) == 0x000760, "Member 'UWB_TabButton_C::ButtonStyleInactive' has a wrong offset!");
+static_assert(offsetof(UWB_TabButton_C, ButtonStyleActive) == 0x000B50, "Member 'UWB_TabButton_C::ButtonStyleActive' has a wrong offset!");
+static_assert(offsetof(UWB_TabButton_C, bActive) == 0x000F40, "Member 'UWB_TabButton_C::bActive' has a wrong offset!");
 
 }
 

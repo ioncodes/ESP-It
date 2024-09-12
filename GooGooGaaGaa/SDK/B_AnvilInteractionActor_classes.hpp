@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_AnvilInteractionActor.B_AnvilInteractionActor_C
-// 0x0040 (0x0378 - 0x0338)
+// 0x0040 (0x0368 - 0x0328)
 class AB_AnvilInteractionActor_C final : public AB_WaitInteractionActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_AnvilInteractionActor_C;          // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         TargetAmount;                                      // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35FC[0x4];                                     // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_AnvilDummy_C*                        CurrentDummy;                                      // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          UpgradeCurrentlyPossible;                          // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DummyOnAnvil;                                      // 0x0351(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35FD[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        HighlightTime;                                     // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PauseTime;                                         // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWB_AnvilTaskOverlay_C*                 AnvilTaskOverlay;                                  // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          StopOverlay;                                       // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_AnvilInteractionActor_C;          // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         TargetAmount;                                      // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_AnvilDummy_C*                        CurrentDummy;                                      // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          UpgradeCurrentlyPossible;                          // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DummyOnAnvil;                                      // 0x0341(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_342[0x6];                                      // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        HighlightTime;                                     // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PauseTime;                                         // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWB_AnvilTaskOverlay_C*                 AnvilTaskOverlay;                                  // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          StopOverlay;                                       // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Act();
@@ -60,16 +60,16 @@ public:
 	}
 };
 static_assert(alignof(AB_AnvilInteractionActor_C) == 0x000008, "Wrong alignment on AB_AnvilInteractionActor_C");
-static_assert(sizeof(AB_AnvilInteractionActor_C) == 0x000378, "Wrong size on AB_AnvilInteractionActor_C");
-static_assert(offsetof(AB_AnvilInteractionActor_C, UberGraphFrame_B_AnvilInteractionActor_C) == 0x000338, "Member 'AB_AnvilInteractionActor_C::UberGraphFrame_B_AnvilInteractionActor_C' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, TargetAmount) == 0x000340, "Member 'AB_AnvilInteractionActor_C::TargetAmount' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, CurrentDummy) == 0x000348, "Member 'AB_AnvilInteractionActor_C::CurrentDummy' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, UpgradeCurrentlyPossible) == 0x000350, "Member 'AB_AnvilInteractionActor_C::UpgradeCurrentlyPossible' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, DummyOnAnvil) == 0x000351, "Member 'AB_AnvilInteractionActor_C::DummyOnAnvil' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, HighlightTime) == 0x000358, "Member 'AB_AnvilInteractionActor_C::HighlightTime' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, PauseTime) == 0x000360, "Member 'AB_AnvilInteractionActor_C::PauseTime' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, AnvilTaskOverlay) == 0x000368, "Member 'AB_AnvilInteractionActor_C::AnvilTaskOverlay' has a wrong offset!");
-static_assert(offsetof(AB_AnvilInteractionActor_C, StopOverlay) == 0x000370, "Member 'AB_AnvilInteractionActor_C::StopOverlay' has a wrong offset!");
+static_assert(sizeof(AB_AnvilInteractionActor_C) == 0x000368, "Wrong size on AB_AnvilInteractionActor_C");
+static_assert(offsetof(AB_AnvilInteractionActor_C, UberGraphFrame_B_AnvilInteractionActor_C) == 0x000328, "Member 'AB_AnvilInteractionActor_C::UberGraphFrame_B_AnvilInteractionActor_C' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, TargetAmount) == 0x000330, "Member 'AB_AnvilInteractionActor_C::TargetAmount' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, CurrentDummy) == 0x000338, "Member 'AB_AnvilInteractionActor_C::CurrentDummy' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, UpgradeCurrentlyPossible) == 0x000340, "Member 'AB_AnvilInteractionActor_C::UpgradeCurrentlyPossible' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, DummyOnAnvil) == 0x000341, "Member 'AB_AnvilInteractionActor_C::DummyOnAnvil' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, HighlightTime) == 0x000348, "Member 'AB_AnvilInteractionActor_C::HighlightTime' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, PauseTime) == 0x000350, "Member 'AB_AnvilInteractionActor_C::PauseTime' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, AnvilTaskOverlay) == 0x000358, "Member 'AB_AnvilInteractionActor_C::AnvilTaskOverlay' has a wrong offset!");
+static_assert(offsetof(AB_AnvilInteractionActor_C, StopOverlay) == 0x000360, "Member 'AB_AnvilInteractionActor_C::StopOverlay' has a wrong offset!");
 
 }
 

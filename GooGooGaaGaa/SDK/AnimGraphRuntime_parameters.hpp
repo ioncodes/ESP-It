@@ -18,6 +18,53 @@
 namespace SDK::Params
 {
 
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNode
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode) == 0x000008, "Wrong alignment on AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode");
+static_assert(sizeof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode) == 0x000028, "Wrong size on AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode, Node) == 0x000000, "Member 'AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode::Node' has a wrong offset!");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode, Result) == 0x000010, "Member 'AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode::Result' has a wrong offset!");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode, ReturnValue) == 0x000018, "Member 'AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNode::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.ConvertToRigidBodyAnimNodePure
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigidBodyAnimNodeReference            RigidBodyAnimNode;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure) == 0x000008, "Wrong alignment on AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure");
+static_assert(sizeof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure) == 0x000028, "Wrong size on AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure, Node) == 0x000000, "Member 'AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure::Node' has a wrong offset!");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure, RigidBodyAnimNode) == 0x000010, "Member 'AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure::RigidBodyAnimNode' has a wrong offset!");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure, Result) == 0x000020, "Member 'AnimNodeRigidBodyLibrary_ConvertToRigidBodyAnimNodePure::Result' has a wrong offset!");
+
+// Function AnimGraphRuntime.AnimNodeRigidBodyLibrary.SetOverridePhysicsAsset
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset final
+{
+public:
+	struct FRigidBodyAnimNodeReference            Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UPhysicsAsset*                          PhysicsAsset;                                      // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigidBodyAnimNodeReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset) == 0x000008, "Wrong alignment on AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset");
+static_assert(sizeof(AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset) == 0x000028, "Wrong size on AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset, Node) == 0x000000, "Member 'AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset::Node' has a wrong offset!");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset, PhysicsAsset) == 0x000010, "Member 'AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset::PhysicsAsset' has a wrong offset!");
+static_assert(offsetof(AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset, ReturnValue) == 0x000018, "Member 'AnimNodeRigidBodyLibrary_SetOverridePhysicsAsset::ReturnValue' has a wrong offset!");
+
 // Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpace
 // 0x0028 (0x0028 - 0x0000)
 struct BlendSpaceLibrary_ConvertToBlendSpace final
@@ -25,7 +72,7 @@ struct BlendSpaceLibrary_ConvertToBlendSpace final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D0[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpaceReference                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BlendSpaceLibrary_ConvertToBlendSpace) == 0x000008, "Wrong alignment on BlendSpaceLibrary_ConvertToBlendSpace");
@@ -42,7 +89,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBlendSpaceReference                   BlendSpace;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D1[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlendSpaceLibrary_ConvertToBlendSpacePure) == 0x000008, "Wrong alignment on BlendSpaceLibrary_ConvertToBlendSpacePure");
 static_assert(sizeof(BlendSpaceLibrary_ConvertToBlendSpacePure) == 0x000028, "Wrong size on BlendSpaceLibrary_ConvertToBlendSpacePure");
@@ -89,6 +136,28 @@ static_assert(sizeof(BlendSpaceLibrary_SnapToPosition) == 0x000028, "Wrong size 
 static_assert(offsetof(BlendSpaceLibrary_SnapToPosition, BlendSpace) == 0x000000, "Member 'BlendSpaceLibrary_SnapToPosition::BlendSpace' has a wrong offset!");
 static_assert(offsetof(BlendSpaceLibrary_SnapToPosition, NewPosition) == 0x000010, "Member 'BlendSpaceLibrary_SnapToPosition::NewPosition' has a wrong offset!");
 
+// Function AnimGraphRuntime.SequencerAnimationOverride.AllowsCinematicOverride
+// 0x0001 (0x0001 - 0x0000)
+struct SequencerAnimationOverride_AllowsCinematicOverride final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SequencerAnimationOverride_AllowsCinematicOverride) == 0x000001, "Wrong alignment on SequencerAnimationOverride_AllowsCinematicOverride");
+static_assert(sizeof(SequencerAnimationOverride_AllowsCinematicOverride) == 0x000001, "Wrong size on SequencerAnimationOverride_AllowsCinematicOverride");
+static_assert(offsetof(SequencerAnimationOverride_AllowsCinematicOverride, ReturnValue) == 0x000000, "Member 'SequencerAnimationOverride_AllowsCinematicOverride::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.SequencerAnimationOverride.GetSequencerAnimSlotNames
+// 0x0010 (0x0010 - 0x0000)
+struct SequencerAnimationOverride_GetSequencerAnimSlotNames final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SequencerAnimationOverride_GetSequencerAnimSlotNames) == 0x000008, "Wrong alignment on SequencerAnimationOverride_GetSequencerAnimSlotNames");
+static_assert(sizeof(SequencerAnimationOverride_GetSequencerAnimSlotNames) == 0x000010, "Wrong size on SequencerAnimationOverride_GetSequencerAnimSlotNames");
+static_assert(offsetof(SequencerAnimationOverride_GetSequencerAnimSlotNames, ReturnValue) == 0x000000, "Member 'SequencerAnimationOverride_GetSequencerAnimSlotNames::ReturnValue' has a wrong offset!");
+
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateMachine
 // 0x0028 (0x0028 - 0x0000)
 struct AnimationStateMachineLibrary_ConvertToAnimationStateMachine final
@@ -97,7 +166,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateMachineReference        AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D2[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_ConvertToAnimationStateMachine) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_ConvertToAnimationStateMachine");
 static_assert(sizeof(AnimationStateMachineLibrary_ConvertToAnimationStateMachine) == 0x000028, "Wrong size on AnimationStateMachineLibrary_ConvertToAnimationStateMachine");
@@ -113,7 +182,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateMachineReference        AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D3[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure");
 static_assert(sizeof(AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure) == 0x000028, "Wrong size on AnimationStateMachineLibrary_ConvertToAnimationStateMachinePure");
@@ -129,7 +198,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D4[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_ConvertToAnimationStateResult) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_ConvertToAnimationStateResult");
 static_assert(sizeof(AnimationStateMachineLibrary_ConvertToAnimationStateResult) == 0x000028, "Wrong size on AnimationStateMachineLibrary_ConvertToAnimationStateResult");
@@ -145,7 +214,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         AnimationState;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D5[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_ConvertToAnimationStateResultPure) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_ConvertToAnimationStateResultPure");
 static_assert(sizeof(AnimationStateMachineLibrary_ConvertToAnimationStateResultPure) == 0x000028, "Wrong size on AnimationStateMachineLibrary_ConvertToAnimationStateResultPure");
@@ -161,7 +230,7 @@ public:
 	struct FAnimUpdateContext                     UpdateContext;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         Node;                                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D6[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_GetRelevantAnimTimeRemaining) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_GetRelevantAnimTimeRemaining");
 static_assert(sizeof(AnimationStateMachineLibrary_GetRelevantAnimTimeRemaining) == 0x000028, "Wrong size on AnimationStateMachineLibrary_GetRelevantAnimTimeRemaining");
@@ -177,7 +246,7 @@ public:
 	struct FAnimUpdateContext                     UpdateContext;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         Node;                                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D7[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_GetRelevantAnimTimeRemainingFraction) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_GetRelevantAnimTimeRemainingFraction");
 static_assert(sizeof(AnimationStateMachineLibrary_GetRelevantAnimTimeRemainingFraction) == 0x000028, "Wrong size on AnimationStateMachineLibrary_GetRelevantAnimTimeRemainingFraction");
@@ -208,7 +277,7 @@ public:
 	struct FAnimUpdateContext                     UpdateContext;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         Node;                                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D8[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_IsStateBlendingIn) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_IsStateBlendingIn");
 static_assert(sizeof(AnimationStateMachineLibrary_IsStateBlendingIn) == 0x000028, "Wrong size on AnimationStateMachineLibrary_IsStateBlendingIn");
@@ -224,7 +293,7 @@ public:
 	struct FAnimUpdateContext                     UpdateContext;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FAnimationStateResultReference         Node;                                              // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D9[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationStateMachineLibrary_IsStateBlendingOut) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_IsStateBlendingOut");
 static_assert(sizeof(AnimationStateMachineLibrary_IsStateBlendingOut) == 0x000028, "Wrong size on AnimationStateMachineLibrary_IsStateBlendingOut");
@@ -242,10 +311,10 @@ public:
 	class FName                                   TargetState;                                       // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETransitionLogicType                          BlendType;                                         // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DA[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBlendProfile*                          BlendProfile;                                      // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAlphaBlendOption                             AlphaBlendOption;                                  // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DB[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            CustomBlendCurve;                                  // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AnimationStateMachineLibrary_SetState) == 0x000008, "Wrong alignment on AnimationStateMachineLibrary_SetState");
@@ -266,7 +335,7 @@ struct AnimExecutionContextLibrary_ConvertToComponentSpacePoseContext final
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DC[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimComponentSpacePoseContext         ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AnimExecutionContextLibrary_ConvertToComponentSpacePoseContext) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_ConvertToComponentSpacePoseContext");
@@ -282,7 +351,7 @@ struct AnimExecutionContextLibrary_ConvertToInitializationContext final
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DD[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimInitializationContext             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AnimExecutionContextLibrary_ConvertToInitializationContext) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_ConvertToInitializationContext");
@@ -298,7 +367,7 @@ struct AnimExecutionContextLibrary_ConvertToPoseContext final
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DE[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimPoseContext                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AnimExecutionContextLibrary_ConvertToPoseContext) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_ConvertToPoseContext");
@@ -314,7 +383,7 @@ struct AnimExecutionContextLibrary_ConvertToUpdateContext final
 public:
 	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EAnimExecutionContextConversionResult         Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DF[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimUpdateContext                     ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AnimExecutionContextLibrary_ConvertToUpdateContext) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_ConvertToUpdateContext");
@@ -342,14 +411,14 @@ struct AnimExecutionContextLibrary_GetAnimNodeReference final
 {
 public:
 	class UAnimInstance*                          Instance;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Param_Index;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E0[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNodeReference                     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AnimExecutionContextLibrary_GetAnimNodeReference) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_GetAnimNodeReference");
 static_assert(sizeof(AnimExecutionContextLibrary_GetAnimNodeReference) == 0x000020, "Wrong size on AnimExecutionContextLibrary_GetAnimNodeReference");
 static_assert(offsetof(AnimExecutionContextLibrary_GetAnimNodeReference, Instance) == 0x000000, "Member 'AnimExecutionContextLibrary_GetAnimNodeReference::Instance' has a wrong offset!");
-static_assert(offsetof(AnimExecutionContextLibrary_GetAnimNodeReference, Param_Index) == 0x000008, "Member 'AnimExecutionContextLibrary_GetAnimNodeReference::Param_Index' has a wrong offset!");
+static_assert(offsetof(AnimExecutionContextLibrary_GetAnimNodeReference, Index_0) == 0x000008, "Member 'AnimExecutionContextLibrary_GetAnimNodeReference::Index_0' has a wrong offset!");
 static_assert(offsetof(AnimExecutionContextLibrary_GetAnimNodeReference, ReturnValue) == 0x000010, "Member 'AnimExecutionContextLibrary_GetAnimNodeReference::ReturnValue' has a wrong offset!");
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetCurrentWeight
@@ -359,7 +428,7 @@ struct AnimExecutionContextLibrary_GetCurrentWeight final
 public:
 	struct FAnimUpdateContext                     Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E1[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimExecutionContextLibrary_GetCurrentWeight) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_GetCurrentWeight");
 static_assert(sizeof(AnimExecutionContextLibrary_GetCurrentWeight) == 0x000018, "Wrong size on AnimExecutionContextLibrary_GetCurrentWeight");
@@ -373,12 +442,53 @@ struct AnimExecutionContextLibrary_GetDeltaTime final
 public:
 	struct FAnimUpdateContext                     Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E2[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimExecutionContextLibrary_GetDeltaTime) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_GetDeltaTime");
 static_assert(sizeof(AnimExecutionContextLibrary_GetDeltaTime) == 0x000018, "Wrong size on AnimExecutionContextLibrary_GetDeltaTime");
 static_assert(offsetof(AnimExecutionContextLibrary_GetDeltaTime, Context) == 0x000000, "Member 'AnimExecutionContextLibrary_GetDeltaTime::Context' has a wrong offset!");
 static_assert(offsetof(AnimExecutionContextLibrary_GetDeltaTime, ReturnValue) == 0x000010, "Member 'AnimExecutionContextLibrary_GetDeltaTime::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.AnimExecutionContextLibrary.IsActive
+// 0x0018 (0x0018 - 0x0000)
+struct AnimExecutionContextLibrary_IsActive final
+{
+public:
+	struct FAnimExecutionContext                  Context;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AnimExecutionContextLibrary_IsActive) == 0x000008, "Wrong alignment on AnimExecutionContextLibrary_IsActive");
+static_assert(sizeof(AnimExecutionContextLibrary_IsActive) == 0x000018, "Wrong size on AnimExecutionContextLibrary_IsActive");
+static_assert(offsetof(AnimExecutionContextLibrary_IsActive, Context) == 0x000000, "Member 'AnimExecutionContextLibrary_IsActive::Context' has a wrong offset!");
+static_assert(offsetof(AnimExecutionContextLibrary_IsActive, ReturnValue) == 0x000010, "Member 'AnimExecutionContextLibrary_IsActive::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.BlendListBaseLibrary.ConvertToBlendListBase
+// 0x0028 (0x0028 - 0x0000)
+struct BlendListBaseLibrary_ConvertToBlendListBase final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBlendListBaseReference                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(BlendListBaseLibrary_ConvertToBlendListBase) == 0x000008, "Wrong alignment on BlendListBaseLibrary_ConvertToBlendListBase");
+static_assert(sizeof(BlendListBaseLibrary_ConvertToBlendListBase) == 0x000028, "Wrong size on BlendListBaseLibrary_ConvertToBlendListBase");
+static_assert(offsetof(BlendListBaseLibrary_ConvertToBlendListBase, Node) == 0x000000, "Member 'BlendListBaseLibrary_ConvertToBlendListBase::Node' has a wrong offset!");
+static_assert(offsetof(BlendListBaseLibrary_ConvertToBlendListBase, Result) == 0x000010, "Member 'BlendListBaseLibrary_ConvertToBlendListBase::Result' has a wrong offset!");
+static_assert(offsetof(BlendListBaseLibrary_ConvertToBlendListBase, ReturnValue) == 0x000018, "Member 'BlendListBaseLibrary_ConvertToBlendListBase::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.BlendListBaseLibrary.ResetNode
+// 0x0010 (0x0010 - 0x0000)
+struct BlendListBaseLibrary_ResetNode final
+{
+public:
+	struct FBlendListBaseReference                BlendListBase;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(BlendListBaseLibrary_ResetNode) == 0x000008, "Wrong alignment on BlendListBaseLibrary_ResetNode");
+static_assert(sizeof(BlendListBaseLibrary_ResetNode) == 0x000010, "Wrong size on BlendListBaseLibrary_ResetNode");
+static_assert(offsetof(BlendListBaseLibrary_ResetNode, BlendListBase) == 0x000000, "Member 'BlendListBaseLibrary_ResetNode::BlendListBase' has a wrong offset!");
 
 // Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayer
 // 0x0028 (0x0028 - 0x0000)
@@ -387,7 +497,7 @@ struct BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E3[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer");
@@ -404,7 +514,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E4[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure");
 static_assert(sizeof(BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure) == 0x000028, "Wrong size on BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure");
@@ -432,7 +542,7 @@ struct BlendSpacePlayerLibrary_GetLoop final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E5[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlendSpacePlayerLibrary_GetLoop) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_GetLoop");
 static_assert(sizeof(BlendSpacePlayerLibrary_GetLoop) == 0x000018, "Wrong size on BlendSpacePlayerLibrary_GetLoop");
@@ -446,7 +556,7 @@ struct BlendSpacePlayerLibrary_GetPlayRate final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E6[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlendSpacePlayerLibrary_GetPlayRate) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_GetPlayRate");
 static_assert(sizeof(BlendSpacePlayerLibrary_GetPlayRate) == 0x000018, "Wrong size on BlendSpacePlayerLibrary_GetPlayRate");
@@ -473,7 +583,7 @@ struct BlendSpacePlayerLibrary_GetStartPosition final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E7[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlendSpacePlayerLibrary_GetStartPosition) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_GetStartPosition");
 static_assert(sizeof(BlendSpacePlayerLibrary_GetStartPosition) == 0x000018, "Wrong size on BlendSpacePlayerLibrary_GetStartPosition");
@@ -504,7 +614,7 @@ public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UBlendSpace*                            BlendSpace;                                        // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BlendTime;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E8[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BlendSpacePlayerLibrary_SetBlendSpaceWithInertialBlending) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_SetBlendSpaceWithInertialBlending");
@@ -522,7 +632,7 @@ struct BlendSpacePlayerLibrary_SetLoop final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E9[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BlendSpacePlayerLibrary_SetLoop) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_SetLoop");
@@ -538,7 +648,7 @@ struct BlendSpacePlayerLibrary_SetPlayRate final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         PlayRate;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EA[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BlendSpacePlayerLibrary_SetPlayRate) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_SetPlayRate");
@@ -554,7 +664,7 @@ struct BlendSpacePlayerLibrary_SetResetPlayTimeWhenBlendSpaceChanges final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bReset;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EB[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlendSpacePlayerReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BlendSpacePlayerLibrary_SetResetPlayTimeWhenBlendSpaceChanges) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_SetResetPlayTimeWhenBlendSpaceChanges");
@@ -570,7 +680,7 @@ struct BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges final
 public:
 	struct FBlendSpacePlayerReference             BlendSpacePlayer;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EC[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges) == 0x000008, "Wrong alignment on BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges");
 static_assert(sizeof(BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges) == 0x000018, "Wrong size on BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges");
@@ -590,33 +700,6 @@ static_assert(sizeof(BlendSpacePlayerLibrary_SnapToPosition) == 0x000028, "Wrong
 static_assert(offsetof(BlendSpacePlayerLibrary_SnapToPosition, BlendSpacePlayer) == 0x000000, "Member 'BlendSpacePlayerLibrary_SnapToPosition::BlendSpacePlayer' has a wrong offset!");
 static_assert(offsetof(BlendSpacePlayerLibrary_SnapToPosition, NewPosition) == 0x000010, "Member 'BlendSpacePlayerLibrary_SnapToPosition::NewPosition' has a wrong offset!");
 
-// Function AnimGraphRuntime.BlendListBaseLibrary.ConvertToBlendListBase
-// 0x0028 (0x0028 - 0x0000)
-struct BlendListBaseLibrary_ConvertToBlendListBase final
-{
-public:
-	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13ED[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBlendListBaseReference                ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlendListBaseLibrary_ConvertToBlendListBase) == 0x000008, "Wrong alignment on BlendListBaseLibrary_ConvertToBlendListBase");
-static_assert(sizeof(BlendListBaseLibrary_ConvertToBlendListBase) == 0x000028, "Wrong size on BlendListBaseLibrary_ConvertToBlendListBase");
-static_assert(offsetof(BlendListBaseLibrary_ConvertToBlendListBase, Node) == 0x000000, "Member 'BlendListBaseLibrary_ConvertToBlendListBase::Node' has a wrong offset!");
-static_assert(offsetof(BlendListBaseLibrary_ConvertToBlendListBase, Result) == 0x000010, "Member 'BlendListBaseLibrary_ConvertToBlendListBase::Result' has a wrong offset!");
-static_assert(offsetof(BlendListBaseLibrary_ConvertToBlendListBase, ReturnValue) == 0x000018, "Member 'BlendListBaseLibrary_ConvertToBlendListBase::ReturnValue' has a wrong offset!");
-
-// Function AnimGraphRuntime.BlendListBaseLibrary.ResetNode
-// 0x0010 (0x0010 - 0x0000)
-struct BlendListBaseLibrary_ResetNode final
-{
-public:
-	struct FBlendListBaseReference                BlendListBase;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(BlendListBaseLibrary_ResetNode) == 0x000008, "Wrong alignment on BlendListBaseLibrary_ResetNode");
-static_assert(sizeof(BlendListBaseLibrary_ResetNode) == 0x000010, "Wrong size on BlendListBaseLibrary_ResetNode");
-static_assert(offsetof(BlendListBaseLibrary_ResetNode, BlendListBase) == 0x000000, "Member 'BlendListBaseLibrary_ResetNode::BlendListBase' has a wrong offset!");
-
 // Function AnimGraphRuntime.KismetAnimationLibrary.CalculateDirection
 // 0x0038 (0x0038 - 0x0000)
 struct KismetAnimationLibrary_CalculateDirection final
@@ -625,7 +708,7 @@ public:
 	struct FVector                                Velocity;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               BaseRotation;                                      // 0x0018(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EE[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KismetAnimationLibrary_CalculateDirection) == 0x000008, "Wrong alignment on KismetAnimationLibrary_CalculateDirection");
 static_assert(sizeof(KismetAnimationLibrary_CalculateDirection) == 0x000038, "Wrong size on KismetAnimationLibrary_CalculateDirection");
@@ -639,7 +722,7 @@ struct KismetAnimationLibrary_K2_CalculateVelocityFromPositionHistory final
 {
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPositionHistory                       History;                                           // 0x0020(0x0030)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         NumberOfSamples;                                   // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -663,22 +746,22 @@ struct KismetAnimationLibrary_K2_CalculateVelocityFromSockets final
 {
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 Component;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SocketOrBoneName;                                  // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReferenceSocketOrBone;                             // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERelativeTransformSpace                       SocketSpace;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F1[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                OffsetInBoneSpace;                                 // 0x0028(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPositionHistory                       History;                                           // 0x0040(0x0030)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         NumberOfSamples;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VelocityMin;                                       // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VelocityMax;                                       // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EEasingFuncType                               EasingType;                                        // 0x007C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F2[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRuntimeFloatCurve                     CustomCurve;                                       // 0x0080(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0108(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F3[0x4];                                     // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KismetAnimationLibrary_K2_CalculateVelocityFromSockets) == 0x000008, "Wrong alignment on KismetAnimationLibrary_K2_CalculateVelocityFromSockets");
 static_assert(sizeof(KismetAnimationLibrary_K2_CalculateVelocityFromSockets) == 0x000110, "Wrong size on KismetAnimationLibrary_K2_CalculateVelocityFromSockets");
@@ -721,17 +804,17 @@ public:
 	const class USkeletalMeshComponent*           Component;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SocketOrBoneNameA;                                 // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERelativeTransformSpace                       SocketSpaceA;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F4[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   SocketOrBoneNameB;                                 // 0x0014(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERelativeTransformSpace                       SocketSpaceB;                                      // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRemapRange;                                       // 0x001D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F5[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InRangeMin;                                        // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InRangeMax;                                        // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OutRangeMin;                                       // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OutRangeMax;                                       // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F6[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KismetAnimationLibrary_K2_DistanceBetweenTwoSocketsAndMapRange) == 0x000008, "Wrong alignment on KismetAnimationLibrary_K2_DistanceBetweenTwoSocketsAndMapRange");
 static_assert(sizeof(KismetAnimationLibrary_K2_DistanceBetweenTwoSocketsAndMapRange) == 0x000038, "Wrong size on KismetAnimationLibrary_K2_DistanceBetweenTwoSocketsAndMapRange");
@@ -753,10 +836,10 @@ struct KismetAnimationLibrary_K2_EndProfilingTimer final
 {
 public:
 	bool                                          bLog;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 LogPrefix;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F8[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KismetAnimationLibrary_K2_EndProfilingTimer) == 0x000008, "Wrong alignment on KismetAnimationLibrary_K2_EndProfilingTimer");
 static_assert(sizeof(KismetAnimationLibrary_K2_EndProfilingTimer) == 0x000020, "Wrong size on KismetAnimationLibrary_K2_EndProfilingTimer");
@@ -773,10 +856,10 @@ public:
 	struct FVector                                TargetPosition;                                    // 0x0060(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LookAtVector;                                      // 0x0078(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseUpVector;                                      // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F9[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                UpVector;                                          // 0x0098(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClampConeInDegree;                                 // 0x00B0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FA[0xC];                                     // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B4[0xC];                                       // 0x00B4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x00C0(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(KismetAnimationLibrary_K2_LookAt) == 0x000010, "Wrong alignment on KismetAnimationLibrary_K2_LookAt");
@@ -820,7 +903,7 @@ public:
 	float                                         RangeOutMaxY;                                      // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RangeOutMinZ;                                      // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RangeOutMaxZ;                                      // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FB[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(KismetAnimationLibrary_K2_MakePerlinNoiseVectorAndRemap) == 0x000008, "Wrong alignment on KismetAnimationLibrary_K2_MakePerlinNoiseVectorAndRemap");
@@ -849,10 +932,10 @@ public:
 	struct FVector                                OutJointPos;                                       // 0x0078(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                OutEndPos;                                         // 0x0090(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowStretching;                                  // 0x00A8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FC[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartStretchRatio;                                 // 0x00AC(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxStretchScale;                                   // 0x00B0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FD[0x4];                                     // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KismetAnimationLibrary_K2_TwoBoneIK) == 0x000008, "Wrong alignment on KismetAnimationLibrary_K2_TwoBoneIK");
 static_assert(sizeof(KismetAnimationLibrary_K2_TwoBoneIK) == 0x0000B8, "Wrong size on KismetAnimationLibrary_K2_TwoBoneIK");
@@ -875,7 +958,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FLayeredBoneBlendReference             LayeredBoneBlend;                                  // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure) == 0x000008, "Wrong alignment on LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure");
 static_assert(sizeof(LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure) == 0x000028, "Wrong size on LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure");
@@ -890,7 +973,7 @@ struct LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FF[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLayeredBoneBlendReference             ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend) == 0x000008, "Wrong alignment on LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend");
@@ -906,7 +989,7 @@ struct LayeredBoneBlendLibrary_GetNumPoses final
 public:
 	struct FLayeredBoneBlendReference             LayeredBoneBlend;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1400[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LayeredBoneBlendLibrary_GetNumPoses) == 0x000008, "Wrong alignment on LayeredBoneBlendLibrary_GetNumPoses");
 static_assert(sizeof(LayeredBoneBlendLibrary_GetNumPoses) == 0x000018, "Wrong size on LayeredBoneBlendLibrary_GetNumPoses");
@@ -922,7 +1005,7 @@ public:
 	struct FLayeredBoneBlendReference             LayeredBoneBlend;                                  // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         PoseIndex;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   BlendMaskName;                                     // 0x0024(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1401[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLayeredBoneBlendReference             ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LayeredBoneBlendLibrary_SetBlendMask) == 0x000008, "Wrong alignment on LayeredBoneBlendLibrary_SetBlendMask");
@@ -940,7 +1023,7 @@ struct LinkedAnimGraphLibrary_ConvertToLinkedAnimGraph final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1402[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinkedAnimGraphReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LinkedAnimGraphLibrary_ConvertToLinkedAnimGraph) == 0x000008, "Wrong alignment on LinkedAnimGraphLibrary_ConvertToLinkedAnimGraph");
@@ -957,7 +1040,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FLinkedAnimGraphReference              LinkedAnimGraph;                                   // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1403[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure) == 0x000008, "Wrong alignment on LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure");
 static_assert(sizeof(LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure) == 0x000028, "Wrong size on LinkedAnimGraphLibrary_ConvertToLinkedAnimGraphPure");
@@ -985,12 +1068,224 @@ struct LinkedAnimGraphLibrary_HasLinkedAnimInstance final
 public:
 	struct FLinkedAnimGraphReference              Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1404[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkedAnimGraphLibrary_HasLinkedAnimInstance) == 0x000008, "Wrong alignment on LinkedAnimGraphLibrary_HasLinkedAnimInstance");
 static_assert(sizeof(LinkedAnimGraphLibrary_HasLinkedAnimInstance) == 0x000018, "Wrong size on LinkedAnimGraphLibrary_HasLinkedAnimInstance");
 static_assert(offsetof(LinkedAnimGraphLibrary_HasLinkedAnimInstance, Node) == 0x000000, "Member 'LinkedAnimGraphLibrary_HasLinkedAnimInstance::Node' has a wrong offset!");
 static_assert(offsetof(LinkedAnimGraphLibrary_HasLinkedAnimInstance, ReturnValue) == 0x000010, "Member 'LinkedAnimGraphLibrary_HasLinkedAnimInstance::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.ConvertToMirrorNode
+// 0x0028 (0x0028 - 0x0000)
+struct MirrorAnimLibrary_ConvertToMirrorNode final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MirrorAnimLibrary_ConvertToMirrorNode) == 0x000008, "Wrong alignment on MirrorAnimLibrary_ConvertToMirrorNode");
+static_assert(sizeof(MirrorAnimLibrary_ConvertToMirrorNode) == 0x000028, "Wrong size on MirrorAnimLibrary_ConvertToMirrorNode");
+static_assert(offsetof(MirrorAnimLibrary_ConvertToMirrorNode, Node) == 0x000000, "Member 'MirrorAnimLibrary_ConvertToMirrorNode::Node' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_ConvertToMirrorNode, Result) == 0x000010, "Member 'MirrorAnimLibrary_ConvertToMirrorNode::Result' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_ConvertToMirrorNode, ReturnValue) == 0x000018, "Member 'MirrorAnimLibrary_ConvertToMirrorNode::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.ConvertToMirrorNodePure
+// 0x0028 (0x0028 - 0x0000)
+struct MirrorAnimLibrary_ConvertToMirrorNodePure final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MirrorAnimLibrary_ConvertToMirrorNodePure) == 0x000008, "Wrong alignment on MirrorAnimLibrary_ConvertToMirrorNodePure");
+static_assert(sizeof(MirrorAnimLibrary_ConvertToMirrorNodePure) == 0x000028, "Wrong size on MirrorAnimLibrary_ConvertToMirrorNodePure");
+static_assert(offsetof(MirrorAnimLibrary_ConvertToMirrorNodePure, Node) == 0x000000, "Member 'MirrorAnimLibrary_ConvertToMirrorNodePure::Node' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_ConvertToMirrorNodePure, MirrorNode) == 0x000010, "Member 'MirrorAnimLibrary_ConvertToMirrorNodePure::MirrorNode' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_ConvertToMirrorNodePure, Result) == 0x000020, "Member 'MirrorAnimLibrary_ConvertToMirrorNodePure::Result' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.GetMirror
+// 0x0018 (0x0018 - 0x0000)
+struct MirrorAnimLibrary_GetMirror final
+{
+public:
+	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MirrorAnimLibrary_GetMirror) == 0x000008, "Wrong alignment on MirrorAnimLibrary_GetMirror");
+static_assert(sizeof(MirrorAnimLibrary_GetMirror) == 0x000018, "Wrong size on MirrorAnimLibrary_GetMirror");
+static_assert(offsetof(MirrorAnimLibrary_GetMirror, MirrorNode) == 0x000000, "Member 'MirrorAnimLibrary_GetMirror::MirrorNode' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_GetMirror, ReturnValue) == 0x000010, "Member 'MirrorAnimLibrary_GetMirror::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.GetMirrorDataTable
+// 0x0018 (0x0018 - 0x0000)
+struct MirrorAnimLibrary_GetMirrorDataTable final
+{
+public:
+	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UMirrorDataTable*                       ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MirrorAnimLibrary_GetMirrorDataTable) == 0x000008, "Wrong alignment on MirrorAnimLibrary_GetMirrorDataTable");
+static_assert(sizeof(MirrorAnimLibrary_GetMirrorDataTable) == 0x000018, "Wrong size on MirrorAnimLibrary_GetMirrorDataTable");
+static_assert(offsetof(MirrorAnimLibrary_GetMirrorDataTable, MirrorNode) == 0x000000, "Member 'MirrorAnimLibrary_GetMirrorDataTable::MirrorNode' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_GetMirrorDataTable, ReturnValue) == 0x000010, "Member 'MirrorAnimLibrary_GetMirrorDataTable::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.GetMirrorTransitionBlendTime
+// 0x0018 (0x0018 - 0x0000)
+struct MirrorAnimLibrary_GetMirrorTransitionBlendTime final
+{
+public:
+	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MirrorAnimLibrary_GetMirrorTransitionBlendTime) == 0x000008, "Wrong alignment on MirrorAnimLibrary_GetMirrorTransitionBlendTime");
+static_assert(sizeof(MirrorAnimLibrary_GetMirrorTransitionBlendTime) == 0x000018, "Wrong size on MirrorAnimLibrary_GetMirrorTransitionBlendTime");
+static_assert(offsetof(MirrorAnimLibrary_GetMirrorTransitionBlendTime, MirrorNode) == 0x000000, "Member 'MirrorAnimLibrary_GetMirrorTransitionBlendTime::MirrorNode' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_GetMirrorTransitionBlendTime, ReturnValue) == 0x000010, "Member 'MirrorAnimLibrary_GetMirrorTransitionBlendTime::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.SetMirror
+// 0x0028 (0x0028 - 0x0000)
+struct MirrorAnimLibrary_SetMirror final
+{
+public:
+	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInMirror;                                         // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MirrorAnimLibrary_SetMirror) == 0x000008, "Wrong alignment on MirrorAnimLibrary_SetMirror");
+static_assert(sizeof(MirrorAnimLibrary_SetMirror) == 0x000028, "Wrong size on MirrorAnimLibrary_SetMirror");
+static_assert(offsetof(MirrorAnimLibrary_SetMirror, MirrorNode) == 0x000000, "Member 'MirrorAnimLibrary_SetMirror::MirrorNode' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_SetMirror, bInMirror) == 0x000010, "Member 'MirrorAnimLibrary_SetMirror::bInMirror' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_SetMirror, ReturnValue) == 0x000018, "Member 'MirrorAnimLibrary_SetMirror::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.MirrorAnimLibrary.SetMirrorTransitionBlendTime
+// 0x0028 (0x0028 - 0x0000)
+struct MirrorAnimLibrary_SetMirrorTransitionBlendTime final
+{
+public:
+	struct FMirrorAnimNodeReference               MirrorNode;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         InBlendTime;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMirrorAnimNodeReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MirrorAnimLibrary_SetMirrorTransitionBlendTime) == 0x000008, "Wrong alignment on MirrorAnimLibrary_SetMirrorTransitionBlendTime");
+static_assert(sizeof(MirrorAnimLibrary_SetMirrorTransitionBlendTime) == 0x000028, "Wrong size on MirrorAnimLibrary_SetMirrorTransitionBlendTime");
+static_assert(offsetof(MirrorAnimLibrary_SetMirrorTransitionBlendTime, MirrorNode) == 0x000000, "Member 'MirrorAnimLibrary_SetMirrorTransitionBlendTime::MirrorNode' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_SetMirrorTransitionBlendTime, InBlendTime) == 0x000010, "Member 'MirrorAnimLibrary_SetMirrorTransitionBlendTime::InBlendTime' has a wrong offset!");
+static_assert(offsetof(MirrorAnimLibrary_SetMirrorTransitionBlendTime, ReturnValue) == 0x000018, "Member 'MirrorAnimLibrary_SetMirrorTransitionBlendTime::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.ConvertToModifyCurveNode
+// 0x0028 (0x0028 - 0x0000)
+struct ModifyCurveAnimLibrary_ConvertToModifyCurveNode final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ModifyCurveAnimLibrary_ConvertToModifyCurveNode) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_ConvertToModifyCurveNode");
+static_assert(sizeof(ModifyCurveAnimLibrary_ConvertToModifyCurveNode) == 0x000028, "Wrong size on ModifyCurveAnimLibrary_ConvertToModifyCurveNode");
+static_assert(offsetof(ModifyCurveAnimLibrary_ConvertToModifyCurveNode, Node) == 0x000000, "Member 'ModifyCurveAnimLibrary_ConvertToModifyCurveNode::Node' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_ConvertToModifyCurveNode, Result) == 0x000010, "Member 'ModifyCurveAnimLibrary_ConvertToModifyCurveNode::Result' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_ConvertToModifyCurveNode, ReturnValue) == 0x000018, "Member 'ModifyCurveAnimLibrary_ConvertToModifyCurveNode::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.ConvertToModifyCurveNodePure
+// 0x0028 (0x0028 - 0x0000)
+struct ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure final
+{
+public:
+	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure");
+static_assert(sizeof(ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure) == 0x000028, "Wrong size on ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure");
+static_assert(offsetof(ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure, Node) == 0x000000, "Member 'ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure::Node' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure, ModifyCurveNode) == 0x000010, "Member 'ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure::ModifyCurveNode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure, Result) == 0x000020, "Member 'ModifyCurveAnimLibrary_ConvertToModifyCurveNodePure::Result' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.GetAlpha
+// 0x0018 (0x0018 - 0x0000)
+struct ModifyCurveAnimLibrary_GetAlpha final
+{
+public:
+	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ModifyCurveAnimLibrary_GetAlpha) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_GetAlpha");
+static_assert(sizeof(ModifyCurveAnimLibrary_GetAlpha) == 0x000018, "Wrong size on ModifyCurveAnimLibrary_GetAlpha");
+static_assert(offsetof(ModifyCurveAnimLibrary_GetAlpha, ModifyCurveNode) == 0x000000, "Member 'ModifyCurveAnimLibrary_GetAlpha::ModifyCurveNode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_GetAlpha, ReturnValue) == 0x000010, "Member 'ModifyCurveAnimLibrary_GetAlpha::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.GetApplyMode
+// 0x0018 (0x0018 - 0x0000)
+struct ModifyCurveAnimLibrary_GetApplyMode final
+{
+public:
+	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EModifyCurveApplyMode                         ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ModifyCurveAnimLibrary_GetApplyMode) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_GetApplyMode");
+static_assert(sizeof(ModifyCurveAnimLibrary_GetApplyMode) == 0x000018, "Wrong size on ModifyCurveAnimLibrary_GetApplyMode");
+static_assert(offsetof(ModifyCurveAnimLibrary_GetApplyMode, ModifyCurveNode) == 0x000000, "Member 'ModifyCurveAnimLibrary_GetApplyMode::ModifyCurveNode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_GetApplyMode, ReturnValue) == 0x000010, "Member 'ModifyCurveAnimLibrary_GetApplyMode::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetAlpha
+// 0x0028 (0x0028 - 0x0000)
+struct ModifyCurveAnimLibrary_SetAlpha final
+{
+public:
+	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         InAlpha;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ModifyCurveAnimLibrary_SetAlpha) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_SetAlpha");
+static_assert(sizeof(ModifyCurveAnimLibrary_SetAlpha) == 0x000028, "Wrong size on ModifyCurveAnimLibrary_SetAlpha");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetAlpha, ModifyCurveNode) == 0x000000, "Member 'ModifyCurveAnimLibrary_SetAlpha::ModifyCurveNode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetAlpha, InAlpha) == 0x000010, "Member 'ModifyCurveAnimLibrary_SetAlpha::InAlpha' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetAlpha, ReturnValue) == 0x000018, "Member 'ModifyCurveAnimLibrary_SetAlpha::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetApplyMode
+// 0x0028 (0x0028 - 0x0000)
+struct ModifyCurveAnimLibrary_SetApplyMode final
+{
+public:
+	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	EModifyCurveApplyMode                         InMode;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ModifyCurveAnimLibrary_SetApplyMode) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_SetApplyMode");
+static_assert(sizeof(ModifyCurveAnimLibrary_SetApplyMode) == 0x000028, "Wrong size on ModifyCurveAnimLibrary_SetApplyMode");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetApplyMode, ModifyCurveNode) == 0x000000, "Member 'ModifyCurveAnimLibrary_SetApplyMode::ModifyCurveNode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetApplyMode, InMode) == 0x000010, "Member 'ModifyCurveAnimLibrary_SetApplyMode::InMode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetApplyMode, ReturnValue) == 0x000018, "Member 'ModifyCurveAnimLibrary_SetApplyMode::ReturnValue' has a wrong offset!");
+
+// Function AnimGraphRuntime.ModifyCurveAnimLibrary.SetCurveMap
+// 0x0070 (0x0070 - 0x0000)
+struct ModifyCurveAnimLibrary_SetCurveMap final
+{
+public:
+	struct FModifyCurveAnimNodeReference          ModifyCurveNode;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	TMap<class FName, float>                      InCurveMap;                                        // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FModifyCurveAnimNodeReference          ReturnValue;                                       // 0x0060(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ModifyCurveAnimLibrary_SetCurveMap) == 0x000008, "Wrong alignment on ModifyCurveAnimLibrary_SetCurveMap");
+static_assert(sizeof(ModifyCurveAnimLibrary_SetCurveMap) == 0x000070, "Wrong size on ModifyCurveAnimLibrary_SetCurveMap");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetCurveMap, ModifyCurveNode) == 0x000000, "Member 'ModifyCurveAnimLibrary_SetCurveMap::ModifyCurveNode' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetCurveMap, InCurveMap) == 0x000010, "Member 'ModifyCurveAnimLibrary_SetCurveMap::InCurveMap' has a wrong offset!");
+static_assert(offsetof(ModifyCurveAnimLibrary_SetCurveMap, ReturnValue) == 0x000060, "Member 'ModifyCurveAnimLibrary_SetCurveMap::ReturnValue' has a wrong offset!");
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
 // 0x0028 (0x0028 - 0x0000)
@@ -1020,7 +1315,7 @@ struct PlayMontageCallbackProxy_OnMontageBlendingOut final
 public:
 	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1406[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PlayMontageCallbackProxy_OnMontageBlendingOut) == 0x000008, "Wrong alignment on PlayMontageCallbackProxy_OnMontageBlendingOut");
 static_assert(sizeof(PlayMontageCallbackProxy_OnMontageBlendingOut) == 0x000010, "Wrong size on PlayMontageCallbackProxy_OnMontageBlendingOut");
@@ -1034,7 +1329,7 @@ struct PlayMontageCallbackProxy_OnMontageEnded final
 public:
 	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1407[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PlayMontageCallbackProxy_OnMontageEnded) == 0x000008, "Wrong alignment on PlayMontageCallbackProxy_OnMontageEnded");
 static_assert(sizeof(PlayMontageCallbackProxy_OnMontageEnded) == 0x000010, "Wrong size on PlayMontageCallbackProxy_OnMontageEnded");
@@ -1075,7 +1370,7 @@ public:
 	struct FAnimUpdateContext                     UpdateContext;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         PlayRate;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1408[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequenceEvaluatorLibrary_AdvanceTime) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_AdvanceTime");
@@ -1092,7 +1387,7 @@ struct SequenceEvaluatorLibrary_ConvertToSequenceEvaluator final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1409[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequenceEvaluatorLibrary_ConvertToSequenceEvaluator) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_ConvertToSequenceEvaluator");
@@ -1109,7 +1404,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140A[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure");
 static_assert(sizeof(SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure) == 0x000028, "Wrong size on SequenceEvaluatorLibrary_ConvertToSequenceEvaluatorPure");
@@ -1124,7 +1419,7 @@ struct SequenceEvaluatorLibrary_GetAccumulatedTime final
 public:
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140B[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequenceEvaluatorLibrary_GetAccumulatedTime) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_GetAccumulatedTime");
 static_assert(sizeof(SequenceEvaluatorLibrary_GetAccumulatedTime) == 0x000018, "Wrong size on SequenceEvaluatorLibrary_GetAccumulatedTime");
@@ -1144,6 +1439,22 @@ static_assert(sizeof(SequenceEvaluatorLibrary_GetSequence) == 0x000018, "Wrong s
 static_assert(offsetof(SequenceEvaluatorLibrary_GetSequence, SequenceEvaluator) == 0x000000, "Member 'SequenceEvaluatorLibrary_GetSequence::SequenceEvaluator' has a wrong offset!");
 static_assert(offsetof(SequenceEvaluatorLibrary_GetSequence, ReturnValue) == 0x000010, "Member 'SequenceEvaluatorLibrary_GetSequence::ReturnValue' has a wrong offset!");
 
+// Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetExplicitFrame
+// 0x0028 (0x0028 - 0x0000)
+struct SequenceEvaluatorLibrary_SetExplicitFrame final
+{
+public:
+	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         Frame;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SequenceEvaluatorLibrary_SetExplicitFrame) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_SetExplicitFrame");
+static_assert(sizeof(SequenceEvaluatorLibrary_SetExplicitFrame) == 0x000028, "Wrong size on SequenceEvaluatorLibrary_SetExplicitFrame");
+static_assert(offsetof(SequenceEvaluatorLibrary_SetExplicitFrame, SequenceEvaluator) == 0x000000, "Member 'SequenceEvaluatorLibrary_SetExplicitFrame::SequenceEvaluator' has a wrong offset!");
+static_assert(offsetof(SequenceEvaluatorLibrary_SetExplicitFrame, Frame) == 0x000010, "Member 'SequenceEvaluatorLibrary_SetExplicitFrame::Frame' has a wrong offset!");
+static_assert(offsetof(SequenceEvaluatorLibrary_SetExplicitFrame, ReturnValue) == 0x000018, "Member 'SequenceEvaluatorLibrary_SetExplicitFrame::ReturnValue' has a wrong offset!");
+
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetExplicitTime
 // 0x0028 (0x0028 - 0x0000)
 struct SequenceEvaluatorLibrary_SetExplicitTime final
@@ -1151,7 +1462,7 @@ struct SequenceEvaluatorLibrary_SetExplicitTime final
 public:
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Time;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequenceEvaluatorLibrary_SetExplicitTime) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_SetExplicitTime");
@@ -1184,7 +1495,7 @@ public:
 	struct FSequenceEvaluatorReference            SequenceEvaluator;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimSequenceBase*                      Sequence;                                          // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BlendTime;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140D[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequenceEvaluatorReference            ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequenceEvaluatorLibrary_SetSequenceWithInertialBlending) == 0x000008, "Wrong alignment on SequenceEvaluatorLibrary_SetSequenceWithInertialBlending");
@@ -1217,7 +1528,7 @@ struct SequencePlayerLibrary_ConvertToSequencePlayer final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequencePlayerLibrary_ConvertToSequencePlayer) == 0x000008, "Wrong alignment on SequencePlayerLibrary_ConvertToSequencePlayer");
@@ -1234,7 +1545,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140F[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencePlayerLibrary_ConvertToSequencePlayerPure) == 0x000008, "Wrong alignment on SequencePlayerLibrary_ConvertToSequencePlayerPure");
 static_assert(sizeof(SequencePlayerLibrary_ConvertToSequencePlayerPure) == 0x000028, "Wrong size on SequencePlayerLibrary_ConvertToSequencePlayerPure");
@@ -1249,7 +1560,7 @@ struct SequencePlayerLibrary_GetAccumulatedTime final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1410[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencePlayerLibrary_GetAccumulatedTime) == 0x000008, "Wrong alignment on SequencePlayerLibrary_GetAccumulatedTime");
 static_assert(sizeof(SequencePlayerLibrary_GetAccumulatedTime) == 0x000018, "Wrong size on SequencePlayerLibrary_GetAccumulatedTime");
@@ -1263,7 +1574,7 @@ struct SequencePlayerLibrary_GetLoopAnimation final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1411[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencePlayerLibrary_GetLoopAnimation) == 0x000008, "Wrong alignment on SequencePlayerLibrary_GetLoopAnimation");
 static_assert(sizeof(SequencePlayerLibrary_GetLoopAnimation) == 0x000018, "Wrong size on SequencePlayerLibrary_GetLoopAnimation");
@@ -1277,7 +1588,7 @@ struct SequencePlayerLibrary_GetPlayRate final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1412[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencePlayerLibrary_GetPlayRate) == 0x000008, "Wrong alignment on SequencePlayerLibrary_GetPlayRate");
 static_assert(sizeof(SequencePlayerLibrary_GetPlayRate) == 0x000018, "Wrong size on SequencePlayerLibrary_GetPlayRate");
@@ -1319,7 +1630,7 @@ struct SequencePlayerLibrary_GetStartPosition final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1413[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SequencePlayerLibrary_GetStartPosition) == 0x000008, "Wrong alignment on SequencePlayerLibrary_GetStartPosition");
 static_assert(sizeof(SequencePlayerLibrary_GetStartPosition) == 0x000018, "Wrong size on SequencePlayerLibrary_GetStartPosition");
@@ -1333,7 +1644,7 @@ struct SequencePlayerLibrary_SetAccumulatedTime final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Time;                                              // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1414[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequencePlayerLibrary_SetAccumulatedTime) == 0x000008, "Wrong alignment on SequencePlayerLibrary_SetAccumulatedTime");
@@ -1349,7 +1660,7 @@ struct SequencePlayerLibrary_SetPlayRate final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         PlayRate;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1415[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequencePlayerLibrary_SetPlayRate) == 0x000008, "Wrong alignment on SequencePlayerLibrary_SetPlayRate");
@@ -1382,7 +1693,7 @@ public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class UAnimSequenceBase*                      Sequence;                                          // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BlendTime;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1416[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequencePlayerLibrary_SetSequenceWithInertialBlending) == 0x000008, "Wrong alignment on SequencePlayerLibrary_SetSequenceWithInertialBlending");
@@ -1400,7 +1711,7 @@ struct SequencePlayerLibrary_SetStartPosition final
 public:
 	struct FSequencePlayerReference               SequencePlayer;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         StartPosition;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1417[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSequencePlayerReference               ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequencePlayerLibrary_SetStartPosition) == 0x000008, "Wrong alignment on SequencePlayerLibrary_SetStartPosition");
@@ -1416,7 +1727,7 @@ struct SkeletalControlLibrary_ConvertToSkeletalControl final
 public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	EAnimNodeReferenceConversionResult            Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1418[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkeletalControlReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SkeletalControlLibrary_ConvertToSkeletalControl) == 0x000008, "Wrong alignment on SkeletalControlLibrary_ConvertToSkeletalControl");
@@ -1433,7 +1744,7 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSkeletalControlReference              SkeletalControl;                                   // 0x0010(0x0010)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          Result;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1419[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SkeletalControlLibrary_ConvertToSkeletalControlPure) == 0x000008, "Wrong alignment on SkeletalControlLibrary_ConvertToSkeletalControlPure");
 static_assert(sizeof(SkeletalControlLibrary_ConvertToSkeletalControlPure) == 0x000028, "Wrong size on SkeletalControlLibrary_ConvertToSkeletalControlPure");
@@ -1448,7 +1759,7 @@ struct SkeletalControlLibrary_GetAlpha final
 public:
 	struct FSkeletalControlReference              SkeletalControl;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_141A[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SkeletalControlLibrary_GetAlpha) == 0x000008, "Wrong alignment on SkeletalControlLibrary_GetAlpha");
 static_assert(sizeof(SkeletalControlLibrary_GetAlpha) == 0x000018, "Wrong size on SkeletalControlLibrary_GetAlpha");
@@ -1462,7 +1773,7 @@ struct SkeletalControlLibrary_SetAlpha final
 public:
 	struct FSkeletalControlReference              SkeletalControl;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Alpha;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_141B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSkeletalControlReference              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SkeletalControlLibrary_SetAlpha) == 0x000008, "Wrong alignment on SkeletalControlLibrary_SetAlpha");

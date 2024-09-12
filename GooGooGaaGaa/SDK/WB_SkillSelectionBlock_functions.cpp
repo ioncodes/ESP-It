@@ -34,12 +34,12 @@ void UWB_SkillSelectionBlock_C::UpdateSkillsByGameRulesMidgameJoin()
 // Function WB_SkillSelectionBlock.WB_SkillSelectionBlock_C.SaveSkill
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ETeamID                                 Param_Team                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Team_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_PlayerState_C*                 PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           Skill                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // ESkillCategory                          SkillCategory                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillSelectionBlock_C::SaveSkill(ETeamID& Param_Team, class AB_PlayerState_C*& PlayerState, class UClass* Skill, ESkillCategory SkillCategory)
+void UWB_SkillSelectionBlock_C::SaveSkill(ETeamID& Team_0, class AB_PlayerState_C*& PlayerState, class UClass* Skill, ESkillCategory SkillCategory)
 {
 	static class UFunction* Func = nullptr;
 
@@ -48,14 +48,14 @@ void UWB_SkillSelectionBlock_C::SaveSkill(ETeamID& Param_Team, class AB_PlayerSt
 
 	Params::WB_SkillSelectionBlock_C_SaveSkill Parms{};
 
-	Parms.Param_Team = Param_Team;
+	Parms.Team_0 = Team_0;
 	Parms.PlayerState = PlayerState;
 	Parms.Skill = Skill;
 	Parms.SkillCategory = SkillCategory;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_Team = Parms.Param_Team;
+	Team_0 = Parms.Team_0;
 	PlayerState = Parms.PlayerState;
 }
 
@@ -226,9 +226,9 @@ struct FEventReply UWB_SkillSelectionBlock_C::OnFocusReceived(const struct FGeom
 // Function WB_SkillSelectionBlock.WB_SkillSelectionBlock_C.SetTeam
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ETeamID                                 Param_Team                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 Team_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillSelectionBlock_C::SetTeam(ETeamID Param_Team)
+void UWB_SkillSelectionBlock_C::SetTeam(ETeamID Team_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -237,7 +237,7 @@ void UWB_SkillSelectionBlock_C::SetTeam(ETeamID Param_Team)
 
 	Params::WB_SkillSelectionBlock_C_SetTeam Parms{};
 
-	Parms.Param_Team = Param_Team;
+	Parms.Team_0 = Team_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

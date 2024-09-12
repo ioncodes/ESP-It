@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_AwakeCheckBoxAreaButton.WB_AwakeCheckBoxAreaButton_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x0318 - 0x0318)
 class UWB_AwakeCheckBoxAreaButton_C final : public UWB_CheckboxAreaButton_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_AwakeCheckBoxAreaButton_C) == 0x000008, "Wrong alignment on UWB_AwakeCheckBoxAreaButton_C");
-static_assert(sizeof(UWB_AwakeCheckBoxAreaButton_C) == 0x000300, "Wrong size on UWB_AwakeCheckBoxAreaButton_C");
+static_assert(sizeof(UWB_AwakeCheckBoxAreaButton_C) == 0x000318, "Wrong size on UWB_AwakeCheckBoxAreaButton_C");
 
 }
 

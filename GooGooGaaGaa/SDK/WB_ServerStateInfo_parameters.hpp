@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_ConnectivityState_structs.hpp"
-#include "E_ConnectivityType_structs.hpp"
-#include "PropWitchHuntModule_structs.hpp"
 #include "UMG_structs.hpp"
+#include "E_ConnectivityType_structs.hpp"
+#include "E_ConnectivityState_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -26,10 +26,10 @@ struct WB_ServerStateInfo_C_AddIfNotConnected final
 {
 public:
 	E_ConnectivityType                            Type;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EF8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyRealOnlineSubsystem_ReturnValue;    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EF9[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_ConnectivityState                           CallFunc_GetConnectivityState_State;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -46,25 +46,25 @@ static_assert(offsetof(WB_ServerStateInfo_C_AddIfNotConnected, CallFunc_GetConne
 static_assert(offsetof(WB_ServerStateInfo_C_AddIfNotConnected, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000022, "Member 'WB_ServerStateInfo_C_AddIfNotConnected::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function WB_ServerStateInfo.WB_ServerStateInfo_C.ExecuteUbergraph_WB_ServerStateInfo
-// 0x0110 (0x0110 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyRealOnlineSubsystem_ReturnValue;    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EFA[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EFB[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EFC[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_2;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_2;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EFD[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(E_ConnectivityType Type, E_ConnectivityState OldState, E_ConnectivityState NewState)> K2Node_CreateDelegate_OutputDelegate;              // 0x004C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_ConnectivityType                            K2Node_CustomEvent_type;                           // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_ConnectivityState                           K2Node_CustomEvent_OldState;                       // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -72,22 +72,22 @@ public:
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0080(0x0018)()
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EFE[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00C0(0x0010)(ReferenceParm)
-	int32                                         K2Node_CustomEvent_ErrorCode;                      // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EFF[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00D8(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 ErrorCode)>              K2Node_CreateDelegate_OutputDelegate_2;            // 0x0100(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0080(0x0010)()
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_3;            // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_3;            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x00B8(0x0010)(ReferenceParm)
+	int32                                         K2Node_CustomEvent_ErrorCode;                      // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00D0(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(int32 ErrorCode)>              K2Node_CreateDelegate_OutputDelegate_2;            // 0x00F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo) == 0x000008, "Wrong alignment on WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo");
-static_assert(sizeof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo) == 0x000110, "Wrong size on WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo");
+static_assert(sizeof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo) == 0x000100, "Wrong size on WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo");
 static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, EntryPoint) == 0x000000, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_HasAnyRealOnlineSubsystem_ReturnValue) == 0x000004, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_HasAnyRealOnlineSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -107,16 +107,16 @@ static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo,
 static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_CreateDelegate_OutputDelegate_1) == 0x000060, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
 static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_MakeArray_Array) == 0x000070, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Format_ReturnValue) == 0x000080, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_GetGameInstance_ReturnValue_3) == 0x000098, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Conv_TextToString_ReturnValue) == 0x0000A0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0000B0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_DynamicCast_bSuccess_3) == 0x0000B8, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_IsValid_ReturnValue) == 0x0000B9, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_MakeArray_Array_1) == 0x0000C0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_CustomEvent_ErrorCode) == 0x0000D0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_CustomEvent_ErrorCode' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Format_ReturnValue_1) == 0x0000D8, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Conv_TextToString_ReturnValue_1) == 0x0000F0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_CreateDelegate_OutputDelegate_2) == 0x000100, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_GetGameInstance_ReturnValue_3) == 0x000090, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_GetGameInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Conv_TextToString_ReturnValue) == 0x000098, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_DynamicCast_AsB_Game_Instance_3) == 0x0000A8, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_DynamicCast_AsB_Game_Instance_3' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_DynamicCast_bSuccess_3) == 0x0000B0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_IsValid_ReturnValue) == 0x0000B1, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_MakeArray_Array_1) == 0x0000B8, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_CustomEvent_ErrorCode) == 0x0000C8, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_CustomEvent_ErrorCode' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Format_ReturnValue_1) == 0x0000D0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, CallFunc_Conv_TextToString_ReturnValue_1) == 0x0000E0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000F0, "Member 'WB_ServerStateInfo_C_ExecuteUbergraph_WB_ServerStateInfo::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
 
 // Function WB_ServerStateInfo.WB_ServerStateInfo_C.GetVisibility_0
 // 0x0020 (0x0020 - 0x0000)
@@ -128,7 +128,7 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsAnyNotConnected_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F00[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -148,13 +148,34 @@ static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_0, K2Node_Select_Defau
 static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_0, CallFunc_GetInputMode_ReturnValue) == 0x000019, "Member 'WB_ServerStateInfo_C_GetVisibility_0::CallFunc_GetInputMode_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_0, K2Node_SwitchEnum_CmpSuccess) == 0x00001A, "Member 'WB_ServerStateInfo_C_GetVisibility_0::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
+// Function WB_ServerStateInfo.WB_ServerStateInfo_C.GetVisibility_1
+// 0x0006 (0x0006 - 0x0000)
+struct WB_ServerStateInfo_C_GetVisibility_1 final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_ServerStateInfo_C_GetVisibility_1) == 0x000001, "Wrong alignment on WB_ServerStateInfo_C_GetVisibility_1");
+static_assert(sizeof(WB_ServerStateInfo_C_GetVisibility_1) == 0x000006, "Wrong size on WB_ServerStateInfo_C_GetVisibility_1");
+static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_1, ReturnValue) == 0x000000, "Member 'WB_ServerStateInfo_C_GetVisibility_1::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_1, Temp_bool_Variable) == 0x000001, "Member 'WB_ServerStateInfo_C_GetVisibility_1::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_1, Temp_byte_Variable) == 0x000002, "Member 'WB_ServerStateInfo_C_GetVisibility_1::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_1, Temp_byte_Variable_1) == 0x000003, "Member 'WB_ServerStateInfo_C_GetVisibility_1::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_1, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WB_ServerStateInfo_C_GetVisibility_1::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ServerStateInfo_C_GetVisibility_1, K2Node_Select_Default) == 0x000005, "Member 'WB_ServerStateInfo_C_GetVisibility_1::K2Node_Select_Default' has a wrong offset!");
+
 // Function WB_ServerStateInfo.WB_ServerStateInfo_C.IsAnyNotConnected
 // 0x0028 (0x0028 - 0x0000)
 struct WB_ServerStateInfo_C_IsAnyNotConnected final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F01[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

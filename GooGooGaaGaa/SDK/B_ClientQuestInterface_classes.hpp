@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
 #include "ClientQuest_structs.hpp"
-#include "ERestCommonError_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "ClientQuestType_structs.hpp"
 #include "LowEntryJson_structs.hpp"
-#include "MasterServerPlugin_structs.hpp"
+#include "ERestCommonError_structs.hpp"
 
 
 namespace SDK
@@ -34,7 +34,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnWeeklyQuestReplaceFlagDidChange;                 // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          CanReplaceWeeklyQuest;                             // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanReplaceDailyQuest;                              // 0x0069(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5861[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FClientQuest>                   CurrentAssignedQuests;                             // 0x0070(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         RemainingTimeMinutesDailyReset;                    // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         RemainingTimeMinutesWeeklyReset;                   // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -56,13 +56,13 @@ public:
 	void ExecuteUbergraph_B_ClientQuestInterface(int32 EntryPoint);
 	void FinalizeQuest(int64 AccountQuestId, int32 QuestID);
 	void GamemodeNameHelper(bool Win, class UClass* GameMode, int32 Value, class FText* Text);
-	void GetCachedQuests(TArray<struct FClientQuest>* Param_CurrentAssignedQuests);
+	void GetCachedQuests(TArray<struct FClientQuest>* CurrentAssignedQuests_0);
 	void GetJsonValueObjectField(class ULowEntryJsonValue* Value, const class FString& FieldName, class ULowEntryJsonValue** Result);
 	void GetQuestFromID(int64 AccountQuestId, bool* QuestFound, struct FClientQuest* Quest);
 	void GetQuestName(int32 QuestID, int32 MaxValue, class FText* QuestName);
 	void HandleInvalidRequestActiveQuests(int32 Code);
 	void HandleQuestDidChange(EQuestChangeReason Reason, int64 AccountQuestId);
-	void Init(const class UB_NewMasterServerManager_C*& Param_NewMasterServerManager);
+	void Init(const class UB_NewMasterServerManager_C*& NewMasterServerManager_0);
 	void OnCompleteQuestRequestComplete(class UVaRestRequestJSON* Request);
 	void OnGetAssignedQuestsRequestComplete(class UVaRestRequestJSON* Request);
 	void OnQuestChanged__DelegateSignature(const struct FClientQuest& UpdatedQuest);

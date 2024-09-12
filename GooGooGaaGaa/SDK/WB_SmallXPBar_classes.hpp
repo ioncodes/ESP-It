@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SmallXPBar.WB_SmallXPBar_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_SmallXPBar_C final : public UUserWidget
 {
 public:
-	class UProgressBar*                           Bar;                                               // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Glass;                                             // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Glow;                                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UProgressBar*                           Bar;                                               // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glass;                                             // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Glow;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +36,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_SmallXPBar_C) == 0x000008, "Wrong alignment on UWB_SmallXPBar_C");
-static_assert(sizeof(UWB_SmallXPBar_C) == 0x0002D8, "Wrong size on UWB_SmallXPBar_C");
-static_assert(offsetof(UWB_SmallXPBar_C, Bar) == 0x0002C0, "Member 'UWB_SmallXPBar_C::Bar' has a wrong offset!");
-static_assert(offsetof(UWB_SmallXPBar_C, Glass) == 0x0002C8, "Member 'UWB_SmallXPBar_C::Glass' has a wrong offset!");
-static_assert(offsetof(UWB_SmallXPBar_C, Glow) == 0x0002D0, "Member 'UWB_SmallXPBar_C::Glow' has a wrong offset!");
+static_assert(sizeof(UWB_SmallXPBar_C) == 0x0002F8, "Wrong size on UWB_SmallXPBar_C");
+static_assert(offsetof(UWB_SmallXPBar_C, Bar) == 0x0002E0, "Member 'UWB_SmallXPBar_C::Bar' has a wrong offset!");
+static_assert(offsetof(UWB_SmallXPBar_C, Glass) == 0x0002E8, "Member 'UWB_SmallXPBar_C::Glass' has a wrong offset!");
+static_assert(offsetof(UWB_SmallXPBar_C, Glow) == 0x0002F0, "Member 'UWB_SmallXPBar_C::Glow' has a wrong offset!");
 
 }
 

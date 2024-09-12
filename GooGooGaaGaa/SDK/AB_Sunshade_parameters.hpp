@@ -21,11 +21,11 @@ namespace SDK::Params
 struct AB_Sunshade_C_AnimGraph final
 {
 public:
-	struct FPoseLink                              Param_AnimGraph;                                   // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
 static_assert(alignof(AB_Sunshade_C_AnimGraph) == 0x000008, "Wrong alignment on AB_Sunshade_C_AnimGraph");
 static_assert(sizeof(AB_Sunshade_C_AnimGraph) == 0x000010, "Wrong size on AB_Sunshade_C_AnimGraph");
-static_assert(offsetof(AB_Sunshade_C_AnimGraph, Param_AnimGraph) == 0x000000, "Member 'AB_Sunshade_C_AnimGraph::Param_AnimGraph' has a wrong offset!");
+static_assert(offsetof(AB_Sunshade_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'AB_Sunshade_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 // Function AB_Sunshade.AB_Sunshade_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -44,14 +44,14 @@ struct AB_Sunshade_C_ExecuteUbergraph_AB_Sunshade final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC3[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Sunshade_C*                          K2Node_DynamicCast_AsB_Sunshade;                   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC4[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaTimeX;                           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

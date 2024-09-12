@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "B_HunterSkinedMesh_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_HunterSkinedMeshColorize.B_HunterSkinedMeshColorize_C
-// 0x0030 (0x0358 - 0x0328)
+// 0x0030 (0x0350 - 0x0320)
 class AB_HunterSkinedMeshColorize_C final : public AB_HunterSkinedMesh_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HunterSkinedMeshColorize_C;       // 0x0328(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetComponent*                       PlayerName;                                        // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Color;                                             // 0x0338(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class APlayerState*                           PlayerState;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HunterSkinedMeshColorize_C;       // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetComponent*                       PlayerName;                                        // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Color;                                             // 0x0330(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class APlayerState*                           PlayerState;                                       // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_HunterSkinedMeshColorize(int32 EntryPoint);
@@ -43,11 +43,11 @@ public:
 	}
 };
 static_assert(alignof(AB_HunterSkinedMeshColorize_C) == 0x000008, "Wrong alignment on AB_HunterSkinedMeshColorize_C");
-static_assert(sizeof(AB_HunterSkinedMeshColorize_C) == 0x000358, "Wrong size on AB_HunterSkinedMeshColorize_C");
-static_assert(offsetof(AB_HunterSkinedMeshColorize_C, UberGraphFrame_B_HunterSkinedMeshColorize_C) == 0x000328, "Member 'AB_HunterSkinedMeshColorize_C::UberGraphFrame_B_HunterSkinedMeshColorize_C' has a wrong offset!");
-static_assert(offsetof(AB_HunterSkinedMeshColorize_C, PlayerName) == 0x000330, "Member 'AB_HunterSkinedMeshColorize_C::PlayerName' has a wrong offset!");
-static_assert(offsetof(AB_HunterSkinedMeshColorize_C, Color) == 0x000338, "Member 'AB_HunterSkinedMeshColorize_C::Color' has a wrong offset!");
-static_assert(offsetof(AB_HunterSkinedMeshColorize_C, PlayerState) == 0x000350, "Member 'AB_HunterSkinedMeshColorize_C::PlayerState' has a wrong offset!");
+static_assert(sizeof(AB_HunterSkinedMeshColorize_C) == 0x000350, "Wrong size on AB_HunterSkinedMeshColorize_C");
+static_assert(offsetof(AB_HunterSkinedMeshColorize_C, UberGraphFrame_B_HunterSkinedMeshColorize_C) == 0x000320, "Member 'AB_HunterSkinedMeshColorize_C::UberGraphFrame_B_HunterSkinedMeshColorize_C' has a wrong offset!");
+static_assert(offsetof(AB_HunterSkinedMeshColorize_C, PlayerName) == 0x000328, "Member 'AB_HunterSkinedMeshColorize_C::PlayerName' has a wrong offset!");
+static_assert(offsetof(AB_HunterSkinedMeshColorize_C, Color) == 0x000330, "Member 'AB_HunterSkinedMeshColorize_C::Color' has a wrong offset!");
+static_assert(offsetof(AB_HunterSkinedMeshColorize_C, PlayerState) == 0x000348, "Member 'AB_HunterSkinedMeshColorize_C::PlayerState' has a wrong offset!");
 
 }
 

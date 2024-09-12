@@ -228,18 +228,18 @@ void UWB_MasterScreen_C::InitialFocus()
 }
 
 
-// Function WB_MasterScreen.WB_MasterScreen_C.isParentVisible
+// Function WB_MasterScreen.WB_MasterScreen_C.IsParentVisible
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsParentVisible                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsParentVisible_0                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MasterScreen_C::IsParentVisible(class UWidget* Widget, bool* Param_IsParentVisible)
+void UWB_MasterScreen_C::IsParentVisible(class UWidget* Widget, bool* IsParentVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_MasterScreen_C", "isParentVisible");
+		Func = Class->GetFunction("WB_MasterScreen_C", "IsParentVisible");
 
 	Params::WB_MasterScreen_C_IsParentVisible Parms{};
 
@@ -247,8 +247,8 @@ void UWB_MasterScreen_C::IsParentVisible(class UWidget* Widget, bool* Param_IsPa
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsParentVisible != nullptr)
-		*Param_IsParentVisible = Parms.Param_IsParentVisible;
+	if (IsParentVisible_0 != nullptr)
+		*IsParentVisible_0 = Parms.IsParentVisible_0;
 }
 
 

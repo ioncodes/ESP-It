@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EControllerLayout_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "SControllerBinding_structs.hpp"
-#include "Engine_structs.hpp"
-#include "SAxisMappings_structs.hpp"
-#include "SActionAndTeam_structs.hpp"
-#include "SActionMappings_structs.hpp"
 #include "SAxisToEdit_structs.hpp"
+#include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "SAxisMappings_structs.hpp"
+#include "SActionMappings_structs.hpp"
+#include "EControllerLayout_structs.hpp"
+#include "SControllerBinding_structs.hpp"
+#include "SActionAndTeam_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,7 +31,7 @@ public:
 	class FName                                   ActionName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKey                                   Key;                                               // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	bool                                          bDuplicateKey;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38B9[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -41,7 +41,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0095(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38BA[0x2];                                     // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionKeyMapping                 K2Node_MakeStruct_InputActionKeyMapping_1;         // 0x0098(0x0028)()
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -73,14 +73,14 @@ struct B_InputMappingsManager_C_AddControllerMappings final
 public:
 	TArray<struct FSControllerBinding>            ControllerLayoutRef;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          bDuplicateKey;                                     // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38BB[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CurrentAction;                                     // 0x0014(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38BC[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   CurrentKey;                                        // 0x0020(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38BD[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -89,7 +89,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38BE[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InputMappingsManager_C_AddControllerMappings) == 0x000008, "Wrong alignment on B_InputMappingsManager_C_AddControllerMappings");
@@ -117,16 +117,16 @@ struct B_InputMappingsManager_C_AreActionMappingsSameLength final
 {
 public:
 	class FName                                   ActionName;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FSActionMappings>    Param_CurrentActionMappings;                       // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TMap<class FName, struct FSActionMappings>    CurrentActionMappings_0;                           // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TMap<class FName, struct FSActionMappings>    ActionMappings;                                    // 0x0058(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x00A8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38BF[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSActionMappings                       CallFunc_Map_Find_Value;                           // 0x00B0(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C0[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSActionMappings                       CallFunc_Map_Find_Value_1;                         // 0x00C8(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C1[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -134,7 +134,7 @@ public:
 static_assert(alignof(B_InputMappingsManager_C_AreActionMappingsSameLength) == 0x000008, "Wrong alignment on B_InputMappingsManager_C_AreActionMappingsSameLength");
 static_assert(sizeof(B_InputMappingsManager_C_AreActionMappingsSameLength) == 0x0000E8, "Wrong size on B_InputMappingsManager_C_AreActionMappingsSameLength");
 static_assert(offsetof(B_InputMappingsManager_C_AreActionMappingsSameLength, ActionName) == 0x000000, "Member 'B_InputMappingsManager_C_AreActionMappingsSameLength::ActionName' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_AreActionMappingsSameLength, Param_CurrentActionMappings) == 0x000008, "Member 'B_InputMappingsManager_C_AreActionMappingsSameLength::Param_CurrentActionMappings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_AreActionMappingsSameLength, CurrentActionMappings_0) == 0x000008, "Member 'B_InputMappingsManager_C_AreActionMappingsSameLength::CurrentActionMappings_0' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_AreActionMappingsSameLength, ActionMappings) == 0x000058, "Member 'B_InputMappingsManager_C_AreActionMappingsSameLength::ActionMappings' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_AreActionMappingsSameLength, ReturnValue) == 0x0000A8, "Member 'B_InputMappingsManager_C_AreActionMappingsSameLength::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_AreActionMappingsSameLength, CallFunc_Map_Find_Value) == 0x0000B0, "Member 'B_InputMappingsManager_C_AreActionMappingsSameLength::CallFunc_Map_Find_Value' has a wrong offset!");
@@ -151,16 +151,16 @@ struct B_InputMappingsManager_C_AreAxisMappingsSameLength final
 {
 public:
 	class FName                                   AxisName;                                          // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FSAxisMappings>      Param_CurrentAxisMappings;                         // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TMap<class FName, struct FSAxisMappings>      CurrentAxisMappings_0;                             // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TMap<class FName, struct FSAxisMappings>      AxisMappings;                                      // 0x0058(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x00A8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C2[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSAxisMappings                         CallFunc_Map_Find_Value;                           // 0x00B0(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C3[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSAxisMappings                         CallFunc_Map_Find_Value_1;                         // 0x00D0(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C4[0x3];                                     // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -168,7 +168,7 @@ public:
 static_assert(alignof(B_InputMappingsManager_C_AreAxisMappingsSameLength) == 0x000008, "Wrong alignment on B_InputMappingsManager_C_AreAxisMappingsSameLength");
 static_assert(sizeof(B_InputMappingsManager_C_AreAxisMappingsSameLength) == 0x0000F8, "Wrong size on B_InputMappingsManager_C_AreAxisMappingsSameLength");
 static_assert(offsetof(B_InputMappingsManager_C_AreAxisMappingsSameLength, AxisName) == 0x000000, "Member 'B_InputMappingsManager_C_AreAxisMappingsSameLength::AxisName' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_AreAxisMappingsSameLength, Param_CurrentAxisMappings) == 0x000008, "Member 'B_InputMappingsManager_C_AreAxisMappingsSameLength::Param_CurrentAxisMappings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_AreAxisMappingsSameLength, CurrentAxisMappings_0) == 0x000008, "Member 'B_InputMappingsManager_C_AreAxisMappingsSameLength::CurrentAxisMappings_0' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_AreAxisMappingsSameLength, AxisMappings) == 0x000058, "Member 'B_InputMappingsManager_C_AreAxisMappingsSameLength::AxisMappings' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_AreAxisMappingsSameLength, ReturnValue) == 0x0000A8, "Member 'B_InputMappingsManager_C_AreAxisMappingsSameLength::ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_AreAxisMappingsSameLength, CallFunc_Map_Find_Value) == 0x0000B0, "Member 'B_InputMappingsManager_C_AreAxisMappingsSameLength::CallFunc_Map_Find_Value' has a wrong offset!");
@@ -186,7 +186,7 @@ struct B_InputMappingsManager_C_ChangeControllerLayout final
 public:
 	EControllerLayout                             ControllerLayout;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EControllerLayout                             Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C5[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSControllerBinding>            K2Node_Select_Default;                             // 0x0008(0x0010)(ReferenceParm)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -203,7 +203,7 @@ struct B_InputMappingsManager_C_ExecuteUbergraph_B_InputMappingsManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -230,13 +230,13 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C7[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_92[0x2];                                       // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x0098(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x00AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C8[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSActionMappings                       CallFunc_Map_Find_Value;                           // 0x00B8(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -279,13 +279,13 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C9[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_92[0x2];                                       // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x0098(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x00AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38CA[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSAxisMappings                         CallFunc_Map_Find_Value;                           // 0x00B8(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -312,24 +312,24 @@ static_assert(offsetof(B_InputMappingsManager_C_GetAxisMappingFor, CallFunc_Map_
 static_assert(offsetof(B_InputMappingsManager_C_GetAxisMappingFor, CallFunc_Map_Find_ReturnValue) == 0x0000D0, "Member 'B_InputMappingsManager_C_GetAxisMappingFor::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function B_InputMappingsManager.B_InputMappingsManager_C.GetAxisName
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct B_InputMappingsManager_C_GetAxisName final
 {
 public:
-	struct FSAxisToEdit                           AxisToEdit;                                        // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSAxisToEdit                           AxisToEdit;                                        // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	class FName                                   ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InputMappingsManager_C_GetAxisName) == 0x000008, "Wrong alignment on B_InputMappingsManager_C_GetAxisName");
-static_assert(sizeof(B_InputMappingsManager_C_GetAxisName) == 0x000048, "Wrong size on B_InputMappingsManager_C_GetAxisName");
+static_assert(sizeof(B_InputMappingsManager_C_GetAxisName) == 0x000040, "Wrong size on B_InputMappingsManager_C_GetAxisName");
 static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, AxisToEdit) == 0x000000, "Member 'B_InputMappingsManager_C_GetAxisName::AxisToEdit' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, ReturnValue) == 0x000028, "Member 'B_InputMappingsManager_C_GetAxisName::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, CallFunc_Conv_TextToString_ReturnValue) == 0x000030, "Member 'B_InputMappingsManager_C_GetAxisName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, CallFunc_Conv_StringToName_ReturnValue) == 0x000040, "Member 'B_InputMappingsManager_C_GetAxisName::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, ReturnValue) == 0x000020, "Member 'B_InputMappingsManager_C_GetAxisName::ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, CallFunc_Conv_TextToString_ReturnValue) == 0x000028, "Member 'B_InputMappingsManager_C_GetAxisName::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetAxisName, CallFunc_Conv_StringToName_ReturnValue) == 0x000038, "Member 'B_InputMappingsManager_C_GetAxisName::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
 
 // Function B_InputMappingsManager.B_InputMappingsManager_C.GetCurrentMappings
-// 0x0238 (0x0238 - 0x0000)
+// 0x0230 (0x0230 - 0x0000)
 struct B_InputMappingsManager_C_GetCurrentMappings final
 {
 public:
@@ -348,21 +348,21 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38CB[0x3];                                     // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSAxisToEdit                           CallFunc_Array_Get_Item;                           // 0x01A0(0x0028)(HasGetValueTypeHash)
-	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x01D0(0x0010)(ReferenceParm)
-	TArray<struct FInputAxisKeyMapping>           CallFunc_GetKeyBindingsForAxis_Bindings;           // 0x01E0(0x0010)(ReferenceParm)
-	struct FSActionMappings                       K2Node_MakeStruct_SActionMappings;                 // 0x01F0(0x0010)(HasGetValueTypeHash)
-	struct FSAxisMappings                         K2Node_MakeStruct_SAxisMappings;                   // 0x0200(0x0018)(HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0218(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x022C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSAxisToEdit                           CallFunc_Array_Get_Item;                           // 0x01A0(0x0020)(HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x01C8(0x0010)(ReferenceParm)
+	TArray<struct FInputAxisKeyMapping>           CallFunc_GetKeyBindingsForAxis_Bindings;           // 0x01D8(0x0010)(ReferenceParm)
+	struct FSActionMappings                       K2Node_MakeStruct_SActionMappings;                 // 0x01E8(0x0010)(HasGetValueTypeHash)
+	struct FSAxisMappings                         K2Node_MakeStruct_SAxisMappings;                   // 0x01F8(0x0018)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0224(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InputMappingsManager_C_GetCurrentMappings) == 0x000008, "Wrong alignment on B_InputMappingsManager_C_GetCurrentMappings");
-static_assert(sizeof(B_InputMappingsManager_C_GetCurrentMappings) == 0x000238, "Wrong size on B_InputMappingsManager_C_GetCurrentMappings");
+static_assert(sizeof(B_InputMappingsManager_C_GetCurrentMappings) == 0x000230, "Wrong size on B_InputMappingsManager_C_GetCurrentMappings");
 static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, ActionMappings) == 0x000000, "Member 'B_InputMappingsManager_C_GetCurrentMappings::ActionMappings' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, AxisMappings) == 0x000050, "Member 'B_InputMappingsManager_C_GetCurrentMappings::AxisMappings' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, LocalAxisMappings) == 0x0000A0, "Member 'B_InputMappingsManager_C_GetCurrentMappings::LocalAxisMappings' has a wrong offset!");
@@ -380,15 +380,15 @@ static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Arr
 static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Less_IntInt_ReturnValue) == 0x000198, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, Temp_int_Array_Index_Variable_1) == 0x00019C, "Member 'B_InputMappingsManager_C_GetCurrentMappings::Temp_int_Array_Index_Variable_1' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Array_Get_Item) == 0x0001A0, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Array_Get_Item_1) == 0x0001C8, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_GetKeyBindingsForAction_Bindings) == 0x0001D0, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_GetKeyBindingsForAction_Bindings' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_GetKeyBindingsForAxis_Bindings) == 0x0001E0, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_GetKeyBindingsForAxis_Bindings' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, K2Node_MakeStruct_SActionMappings) == 0x0001F0, "Member 'B_InputMappingsManager_C_GetCurrentMappings::K2Node_MakeStruct_SActionMappings' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, K2Node_MakeStruct_SAxisMappings) == 0x000200, "Member 'B_InputMappingsManager_C_GetCurrentMappings::K2Node_MakeStruct_SAxisMappings' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Conv_TextToString_ReturnValue) == 0x000218, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Array_Length_ReturnValue_1) == 0x000228, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Conv_StringToName_ReturnValue) == 0x00022C, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Less_IntInt_ReturnValue_1) == 0x000234, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Array_Get_Item_1) == 0x0001C0, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_GetKeyBindingsForAction_Bindings) == 0x0001C8, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_GetKeyBindingsForAction_Bindings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_GetKeyBindingsForAxis_Bindings) == 0x0001D8, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_GetKeyBindingsForAxis_Bindings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, K2Node_MakeStruct_SActionMappings) == 0x0001E8, "Member 'B_InputMappingsManager_C_GetCurrentMappings::K2Node_MakeStruct_SActionMappings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, K2Node_MakeStruct_SAxisMappings) == 0x0001F8, "Member 'B_InputMappingsManager_C_GetCurrentMappings::K2Node_MakeStruct_SAxisMappings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Conv_TextToString_ReturnValue) == 0x000210, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Array_Length_ReturnValue_1) == 0x000220, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Conv_StringToName_ReturnValue) == 0x000224, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_GetCurrentMappings, CallFunc_Less_IntInt_ReturnValue_1) == 0x00022C, "Member 'B_InputMappingsManager_C_GetCurrentMappings::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function B_InputMappingsManager.B_InputMappingsManager_C.Initialize
 // 0x0008 (0x0008 - 0x0000)
@@ -406,11 +406,11 @@ static_assert(offsetof(B_InputMappingsManager_C_Initialize, InGameInstance) == 0
 struct B_InputMappingsManager_C_IsDirty final
 {
 public:
-	bool                                          Param_bDirty;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDirty_0;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_InputMappingsManager_C_IsDirty) == 0x000001, "Wrong alignment on B_InputMappingsManager_C_IsDirty");
 static_assert(sizeof(B_InputMappingsManager_C_IsDirty) == 0x000001, "Wrong size on B_InputMappingsManager_C_IsDirty");
-static_assert(offsetof(B_InputMappingsManager_C_IsDirty, Param_bDirty) == 0x000000, "Member 'B_InputMappingsManager_C_IsDirty::Param_bDirty' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_IsDirty, bDirty_0) == 0x000000, "Member 'B_InputMappingsManager_C_IsDirty::bDirty_0' has a wrong offset!");
 
 // Function B_InputMappingsManager.B_InputMappingsManager_C.IsKeyForAction
 // 0x0088 (0x0088 - 0x0000)
@@ -420,13 +420,13 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	class FName                                   Action;                                            // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38CC[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FInputActionKeyMapping>         LocalMappings;                                     // 0x0028(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0038(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38CD[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionKeyMapping                 CallFunc_Array_Get_Item;                           // 0x0058(0x0028)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -458,27 +458,27 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EControllerLayout                             Temp_byte_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38CE[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSActionAndTeam                        CallFunc_Array_Get_Item;                           // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38CF[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionKeyMapping                 CallFunc_Array_Get_Item_1;                         // 0x0050(0x0028)()
 	TArray<struct FInputActionKeyMapping>         CallFunc_GetKeyBindingsForAction_Bindings;         // 0x0078(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Key_IsGamepadKey_ReturnValue;             // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D0[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D1[0x2];                                     // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9A[0x2];                                       // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSControllerBinding>            K2Node_Select_Default;                             // 0x00A0(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D2[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSControllerBinding                    CallFunc_Array_Get_Item_2;                         // 0x00B8(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -550,14 +550,14 @@ public:
 	class FName                                   ActionName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FName, struct FSActionMappings>    RestoredActionMappings;                            // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CurrentIndex;                                      // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D3[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FInputActionKeyMapping>         RestoredMappings;                                  // 0x0060(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FInputActionKeyMapping>         CurrentMappings;                                   // 0x0070(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Variable;                                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D4[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSActionMappings                       CallFunc_Map_Find_Value;                           // 0x0088(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D5[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionKeyMapping                 K2Node_MakeStruct_InputActionKeyMapping;           // 0x00A0(0x0028)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -571,12 +571,12 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00D7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D6[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D7[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSActionMappings                       CallFunc_Map_Find_Value_1;                         // 0x00F0(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -621,10 +621,10 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D8[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSActionMappings                       CallFunc_Map_Find_Value;                           // 0x0018(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D9[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionKeyMapping                 CallFunc_Array_Get_Item;                           // 0x0030(0x0028)()
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -649,12 +649,12 @@ public:
 	class FName                                   ActionName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FName, struct FSAxisMappings>      RestoredAxisMappings;                              // 0x0008(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         CurrentIndex;                                      // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38DA[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FInputAxisKeyMapping>           RestoredMappings;                                  // 0x0060(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FInputAxisKeyMapping>           CurrentMappings;                                   // 0x0070(0x0010)(Edit, BlueprintVisible)
 	struct FSAxisMappings                         CallFunc_Map_Find_Value;                           // 0x0080(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38DB[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -663,7 +663,7 @@ public:
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38DC[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSAxisMappings                         CallFunc_Map_Find_Value_1;                         // 0x00C0(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -716,10 +716,10 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38DD[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSAxisMappings                         CallFunc_Map_Find_Value;                           // 0x0018(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38DE[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputAxisKeyMapping                   CallFunc_Array_Get_Item;                           // 0x0038(0x0028)()
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -737,7 +737,7 @@ static_assert(offsetof(B_InputMappingsManager_C_RevertAxisMappingsSimple, CallFu
 static_assert(offsetof(B_InputMappingsManager_C_RevertAxisMappingsSimple, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'B_InputMappingsManager_C_RevertAxisMappingsSimple::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function B_InputMappingsManager.B_InputMappingsManager_C.RevertRestoringMappings
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct B_InputMappingsManager_C_RevertRestoringMappings final
 {
 public:
@@ -752,25 +752,25 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AreAxisMappingsSameLength_ReturnValue;    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38DF[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AreActionMappingsSameLength_ReturnValue;  // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E0[0x2];                                     // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EE[0x2];                                       // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E1[0x3];                                     // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E2[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSAxisToEdit                           CallFunc_Array_Get_Item_1;                         // 0x0108(0x0028)(HasGetValueTypeHash)
-	class FName                                   CallFunc_GetAxisName_ReturnValue;                  // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FSActionMappings>    CallFunc_GetCurrentMappings_ActionMappings;        // 0x0138(0x0050)()
-	TMap<class FName, struct FSAxisMappings>      CallFunc_GetCurrentMappings_AxisMappings;          // 0x0188(0x0050)()
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSAxisToEdit                           CallFunc_Array_Get_Item_1;                         // 0x0108(0x0020)(HasGetValueTypeHash)
+	class FName                                   CallFunc_GetAxisName_ReturnValue;                  // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, struct FSActionMappings>    CallFunc_GetCurrentMappings_ActionMappings;        // 0x0130(0x0050)()
+	TMap<class FName, struct FSAxisMappings>      CallFunc_GetCurrentMappings_AxisMappings;          // 0x0180(0x0050)()
 };
 static_assert(alignof(B_InputMappingsManager_C_RevertRestoringMappings) == 0x000008, "Wrong alignment on B_InputMappingsManager_C_RevertRestoringMappings");
-static_assert(sizeof(B_InputMappingsManager_C_RevertRestoringMappings) == 0x0001D8, "Wrong size on B_InputMappingsManager_C_RevertRestoringMappings");
+static_assert(sizeof(B_InputMappingsManager_C_RevertRestoringMappings) == 0x0001D0, "Wrong size on B_InputMappingsManager_C_RevertRestoringMappings");
 static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CurrentAxisName) == 0x000000, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CurrentAxisName' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CurrentActionName) == 0x000008, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CurrentActionName' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, RestoredAxisMappings) == 0x000010, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::RestoredAxisMappings' has a wrong offset!");
@@ -791,9 +791,9 @@ static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFun
 static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000FC, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, Temp_int_Array_Index_Variable_1) == 0x000100, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::Temp_int_Array_Index_Variable_1' has a wrong offset!");
 static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_Array_Get_Item_1) == 0x000108, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_GetAxisName_ReturnValue) == 0x000130, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_GetAxisName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_GetCurrentMappings_ActionMappings) == 0x000138, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_GetCurrentMappings_ActionMappings' has a wrong offset!");
-static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_GetCurrentMappings_AxisMappings) == 0x000188, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_GetCurrentMappings_AxisMappings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_GetAxisName_ReturnValue) == 0x000128, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_GetAxisName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_GetCurrentMappings_ActionMappings) == 0x000130, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_GetCurrentMappings_ActionMappings' has a wrong offset!");
+static_assert(offsetof(B_InputMappingsManager_C_RevertRestoringMappings, CallFunc_GetCurrentMappings_AxisMappings) == 0x000180, "Member 'B_InputMappingsManager_C_RevertRestoringMappings::CallFunc_GetCurrentMappings_AxisMappings' has a wrong offset!");
 
 // Function B_InputMappingsManager.B_InputMappingsManager_C.StoreCurrentMappings
 // 0x00A0 (0x00A0 - 0x0000)

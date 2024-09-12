@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ShootingRangeTask.B_ShootingRangeTask_C
-// 0x0048 (0x0368 - 0x0320)
+// 0x0048 (0x0360 - 0x0318)
 class AB_ShootingRangeTask_C final : public AB_CollectTask_C
 {
 public:
-	uint8                                         Pad_5C33[0x4];                                     // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ShootingRangeTask_C;              // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         TargetRounds;                                      // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentRound;                                      // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_ShootingRangeDummy_C*>        DummyBoards;                                       // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AB_ShootingRangeShootActor_C*>   TargetBoards;                                      // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	bool                                          BoardsAreTurning;                                  // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C34[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DeltaRotation;                                     // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TotalRotation;                                     // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ShootingRangeTask_C;              // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         TargetRounds;                                      // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentRound;                                      // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AB_ShootingRangeDummy_C*>        DummyBoards;                                       // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AB_ShootingRangeShootActor_C*>   TargetBoards;                                      // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	bool                                          BoardsAreTurning;                                  // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DeltaRotation;                                     // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TotalRotation;                                     // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckCompletionConditions(bool* ReadyForCompletion);
@@ -57,15 +57,15 @@ public:
 	}
 };
 static_assert(alignof(AB_ShootingRangeTask_C) == 0x000008, "Wrong alignment on AB_ShootingRangeTask_C");
-static_assert(sizeof(AB_ShootingRangeTask_C) == 0x000368, "Wrong size on AB_ShootingRangeTask_C");
-static_assert(offsetof(AB_ShootingRangeTask_C, UberGraphFrame_B_ShootingRangeTask_C) == 0x000320, "Member 'AB_ShootingRangeTask_C::UberGraphFrame_B_ShootingRangeTask_C' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, TargetRounds) == 0x000328, "Member 'AB_ShootingRangeTask_C::TargetRounds' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, CurrentRound) == 0x00032C, "Member 'AB_ShootingRangeTask_C::CurrentRound' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, DummyBoards) == 0x000330, "Member 'AB_ShootingRangeTask_C::DummyBoards' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, TargetBoards) == 0x000340, "Member 'AB_ShootingRangeTask_C::TargetBoards' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, BoardsAreTurning) == 0x000350, "Member 'AB_ShootingRangeTask_C::BoardsAreTurning' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, DeltaRotation) == 0x000358, "Member 'AB_ShootingRangeTask_C::DeltaRotation' has a wrong offset!");
-static_assert(offsetof(AB_ShootingRangeTask_C, TotalRotation) == 0x000360, "Member 'AB_ShootingRangeTask_C::TotalRotation' has a wrong offset!");
+static_assert(sizeof(AB_ShootingRangeTask_C) == 0x000360, "Wrong size on AB_ShootingRangeTask_C");
+static_assert(offsetof(AB_ShootingRangeTask_C, UberGraphFrame_B_ShootingRangeTask_C) == 0x000318, "Member 'AB_ShootingRangeTask_C::UberGraphFrame_B_ShootingRangeTask_C' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, TargetRounds) == 0x000320, "Member 'AB_ShootingRangeTask_C::TargetRounds' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, CurrentRound) == 0x000324, "Member 'AB_ShootingRangeTask_C::CurrentRound' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, DummyBoards) == 0x000328, "Member 'AB_ShootingRangeTask_C::DummyBoards' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, TargetBoards) == 0x000338, "Member 'AB_ShootingRangeTask_C::TargetBoards' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, BoardsAreTurning) == 0x000348, "Member 'AB_ShootingRangeTask_C::BoardsAreTurning' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, DeltaRotation) == 0x000350, "Member 'AB_ShootingRangeTask_C::DeltaRotation' has a wrong offset!");
+static_assert(offsetof(AB_ShootingRangeTask_C, TotalRotation) == 0x000358, "Member 'AB_ShootingRangeTask_C::TotalRotation' has a wrong offset!");
 
 }
 

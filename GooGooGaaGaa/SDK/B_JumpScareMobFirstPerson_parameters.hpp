@@ -17,7 +17,7 @@ namespace SDK::Params
 {
 
 // Function B_JumpScareMobFirstPerson.B_JumpScareMobFirstPerson_C.ExecuteUbergraph_B_JumpScareMobFirstPerson
-// 0x0780 (0x0780 - 0x0000)
+// 0x0790 (0x0790 - 0x0000)
 struct B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson final
 {
 public:
@@ -25,29 +25,29 @@ public:
 	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5065[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5066[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FWeightedBlendable                     K2Node_MakeStruct_WeightedBlendable;               // 0x0028(0x0010)(NoDestructor)
 	TArray<struct FWeightedBlendable>             K2Node_MakeArray_Array;                            // 0x0038(0x0010)(ReferenceParm)
 	struct FWeightedBlendables                    K2Node_MakeStruct_WeightedBlendables;              // 0x0048(0x0010)()
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPostProcessSettings                   K2Node_MakeStruct_PostProcessSettings;             // 0x0060(0x06E0)()
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x0750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0760(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0768(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_BlendWeight_ImplicitCast;       // 0x0770(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_BlendWeight_ImplicitCast_1;     // 0x0774(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPostProcessSettings                   K2Node_MakeStruct_PostProcessSettings;             // 0x0060(0x06F0)()
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x0760(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0768(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_BlendWeight_ImplicitCast;       // 0x0780(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_BlendWeight_ImplicitCast_1;     // 0x0784(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson) == 0x000010, "Wrong alignment on B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson");
-static_assert(sizeof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson) == 0x000780, "Wrong size on B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson");
+static_assert(sizeof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson) == 0x000790, "Wrong size on B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson");
 static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, EntryPoint) == 0x000000, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, Temp_bool_IsClosed_Variable) == 0x000004, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::Temp_bool_IsClosed_Variable' has a wrong offset!");
 static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_IsDedicatedServer_ReturnValue) == 0x000005, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
@@ -62,14 +62,14 @@ static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareM
 static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, K2Node_MakeStruct_WeightedBlendables) == 0x000048, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::K2Node_MakeStruct_WeightedBlendables' has a wrong offset!");
 static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000058, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, K2Node_MakeStruct_PostProcessSettings) == 0x000060, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::K2Node_MakeStruct_PostProcessSettings' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000740, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000748, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_FMin_ReturnValue) == 0x000750, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x000758, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000760, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000768, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, K2Node_VariableSet_BlendWeight_ImplicitCast) == 0x000770, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::K2Node_VariableSet_BlendWeight_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, K2Node_VariableSet_BlendWeight_ImplicitCast_1) == 0x000774, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::K2Node_VariableSet_BlendWeight_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000750, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000758, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_FMin_ReturnValue) == 0x000760, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_FMin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x000768, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000770, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000778, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, K2Node_VariableSet_BlendWeight_ImplicitCast) == 0x000780, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::K2Node_VariableSet_BlendWeight_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson, K2Node_VariableSet_BlendWeight_ImplicitCast_1) == 0x000784, "Member 'B_JumpScareMobFirstPerson_C_ExecuteUbergraph_B_JumpScareMobFirstPerson::K2Node_VariableSet_BlendWeight_ImplicitCast_1' has a wrong offset!");
 
 // Function B_JumpScareMobFirstPerson.B_JumpScareMobFirstPerson_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

@@ -10,7 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "PropWitchHuntModule_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -18,24 +20,59 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_DevMode.WB_DevMode_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0110 (0x03F0 - 0x02E0)
 class UWB_DevMode_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_CheckBoxWithLabel_C*                CB_DevModeEnabled;                                 // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           CloseBtn;                                          // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ConfigureSkillText;                                // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VB_Settings;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           AimAssistList;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               AimAssistSizeBox;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                CB_DevModeEnabled;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           CloseBtn;                                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ConfigureSkillText;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        DevCategorySwitcher;                               // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           GeneralList;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               GeneralSizeBox;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   LeftShoulderIcon;                                  // 0x0328(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   RightShoulderIcon;                                 // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TabButton_AimAssist;                               // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TabButton_General;                                 // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWB_TabButton_C*>                Buttons;                                           // 0x0348(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UWidget*>                        SettingTabs;                                       // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class UClass*, class UWidget*>           FocusedElements;                                   // 0x0368(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UWidget*                                DesiredSettingsTab;                                // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FUIParameterData>               AimAssistUIParams;                                 // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x03D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<struct FUIParam>                       AimAssistDefaultValues;                            // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
+	void BndEvt__WB_DevMode_TabButton_AimAssist_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature();
+	void BndEvt__WB_DevMode_TabButton_General_K2Node_ComponentBoundEvent_2_Clicked__DelegateSignature();
 	void BndEvt__WB_DevMode_WB_CheckBoxWithLabel_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature(class UWB_CheckBoxWithLabel_C* Sender, bool IsChecked);
 	void BndEvt__WB_GameRules_Back_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
 	void Construct();
+	void CreateEventBindings();
 	void ExecuteUbergraph_WB_DevMode(int32 EntryPoint);
+	void FocusStoredWidget();
+	void GetActiveTab(class UWidget** ActiveTab);
+	TArray<struct FUIParam> GetAimAssistDefaultParams();
+	ESlateVisibility GetControllerIconVisibility();
+	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
+	bool GetShouldGoBackAfterAction();
 	void HandleCheckedStateChanged(bool bChecked);
+	void OnApply();
+	void OnBack();
+	void OnCheckBoxValueChanged(class UWB_CheckBoxWithEditableLabel_C* Sender, bool IsChecked);
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
+	void OnParamSliderRealValueChanged(class UWB_SliderWithEditableLabel_C* Sender, double RealValue);
+	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void OnSpecialAction();
+	void PreConstruct(bool IsDesignTime);
+	void SetActiveSettingsTab(class UWidget* RequestedSettingsTab);
 	void SetSettings();
 	void SetupState();
+	void StoreFocusedWidget();
+	void UpdateTabButtonStyles();
 
 public:
 	static class UClass* StaticClass()
@@ -48,12 +85,27 @@ public:
 	}
 };
 static_assert(alignof(UWB_DevMode_C) == 0x000008, "Wrong alignment on UWB_DevMode_C");
-static_assert(sizeof(UWB_DevMode_C) == 0x0002E8, "Wrong size on UWB_DevMode_C");
-static_assert(offsetof(UWB_DevMode_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_DevMode_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_DevMode_C, CB_DevModeEnabled) == 0x0002C8, "Member 'UWB_DevMode_C::CB_DevModeEnabled' has a wrong offset!");
-static_assert(offsetof(UWB_DevMode_C, CloseBtn) == 0x0002D0, "Member 'UWB_DevMode_C::CloseBtn' has a wrong offset!");
-static_assert(offsetof(UWB_DevMode_C, ConfigureSkillText) == 0x0002D8, "Member 'UWB_DevMode_C::ConfigureSkillText' has a wrong offset!");
-static_assert(offsetof(UWB_DevMode_C, VB_Settings) == 0x0002E0, "Member 'UWB_DevMode_C::VB_Settings' has a wrong offset!");
+static_assert(sizeof(UWB_DevMode_C) == 0x0003F0, "Wrong size on UWB_DevMode_C");
+static_assert(offsetof(UWB_DevMode_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_DevMode_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, AimAssistList) == 0x0002E8, "Member 'UWB_DevMode_C::AimAssistList' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, AimAssistSizeBox) == 0x0002F0, "Member 'UWB_DevMode_C::AimAssistSizeBox' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, CB_DevModeEnabled) == 0x0002F8, "Member 'UWB_DevMode_C::CB_DevModeEnabled' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, CloseBtn) == 0x000300, "Member 'UWB_DevMode_C::CloseBtn' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, ConfigureSkillText) == 0x000308, "Member 'UWB_DevMode_C::ConfigureSkillText' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, DevCategorySwitcher) == 0x000310, "Member 'UWB_DevMode_C::DevCategorySwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, GeneralList) == 0x000318, "Member 'UWB_DevMode_C::GeneralList' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, GeneralSizeBox) == 0x000320, "Member 'UWB_DevMode_C::GeneralSizeBox' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, LeftShoulderIcon) == 0x000328, "Member 'UWB_DevMode_C::LeftShoulderIcon' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, RightShoulderIcon) == 0x000330, "Member 'UWB_DevMode_C::RightShoulderIcon' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, TabButton_AimAssist) == 0x000338, "Member 'UWB_DevMode_C::TabButton_AimAssist' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, TabButton_General) == 0x000340, "Member 'UWB_DevMode_C::TabButton_General' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, Buttons) == 0x000348, "Member 'UWB_DevMode_C::Buttons' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, SettingTabs) == 0x000358, "Member 'UWB_DevMode_C::SettingTabs' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, FocusedElements) == 0x000368, "Member 'UWB_DevMode_C::FocusedElements' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, DesiredSettingsTab) == 0x0003B8, "Member 'UWB_DevMode_C::DesiredSettingsTab' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, AimAssistUIParams) == 0x0003C0, "Member 'UWB_DevMode_C::AimAssistUIParams' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, UIElements) == 0x0003D0, "Member 'UWB_DevMode_C::UIElements' has a wrong offset!");
+static_assert(offsetof(UWB_DevMode_C, AimAssistDefaultValues) == 0x0003E0, "Member 'UWB_DevMode_C::AimAssistDefaultValues' has a wrong offset!");
 
 }
 

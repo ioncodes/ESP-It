@@ -107,18 +107,18 @@ public:
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_1;      // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_2;      // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56E2[0x3];                                     // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_ComponentBoundEvent_RealValue_2;            // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_3;      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56E3[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_MapRangeClamped_ReturnValue_3;            // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_1;            // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_4;      // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56E4[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_MapRangeClamped_ReturnValue_4;            // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue;              // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_5;      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56E5[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_MapRangeClamped_ReturnValue_5;            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDirty_bDirty;                           // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -208,11 +208,11 @@ static_assert(offsetof(WB_Tab_AudioSettings_C_GetPanelWidget, ReturnValue) == 0x
 struct WB_Tab_AudioSettings_C_IsDirty final
 {
 public:
-	bool                                          Param_bDirty;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDirty_0;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_AudioSettings_C_IsDirty) == 0x000001, "Wrong alignment on WB_Tab_AudioSettings_C_IsDirty");
 static_assert(sizeof(WB_Tab_AudioSettings_C_IsDirty) == 0x000001, "Wrong size on WB_Tab_AudioSettings_C_IsDirty");
-static_assert(offsetof(WB_Tab_AudioSettings_C_IsDirty, Param_bDirty) == 0x000000, "Member 'WB_Tab_AudioSettings_C_IsDirty::Param_bDirty' has a wrong offset!");
+static_assert(offsetof(WB_Tab_AudioSettings_C_IsDirty, bDirty_0) == 0x000000, "Member 'WB_Tab_AudioSettings_C_IsDirty::bDirty_0' has a wrong offset!");
 
 // Function WB_Tab_AudioSettings.WB_Tab_AudioSettings_C.LoadSettings
 // 0x0048 (0x0048 - 0x0000)
@@ -246,6 +246,22 @@ static_assert(offsetof(WB_Tab_AudioSettings_C_LoadSettings, K2Node_VariableSet_O
 static_assert(offsetof(WB_Tab_AudioSettings_C_LoadSettings, K2Node_VariableSet_OriginalAmbientVolume_ImplicitCast) == 0x000030, "Member 'WB_Tab_AudioSettings_C_LoadSettings::K2Node_VariableSet_OriginalAmbientVolume_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(WB_Tab_AudioSettings_C_LoadSettings, K2Node_VariableSet_OriginalUserInterfaceVolume_ImplicitCast) == 0x000038, "Member 'WB_Tab_AudioSettings_C_LoadSettings::K2Node_VariableSet_OriginalUserInterfaceVolume_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(WB_Tab_AudioSettings_C_LoadSettings, K2Node_VariableSet_OriginalVoiceChatVolume_ImplicitCast) == 0x000040, "Member 'WB_Tab_AudioSettings_C_LoadSettings::K2Node_VariableSet_OriginalVoiceChatVolume_ImplicitCast' has a wrong offset!");
+
+// Function WB_Tab_AudioSettings.WB_Tab_AudioSettings_C.NavigateList
+// 0x0018 (0x0018 - 0x0000)
+struct WB_Tab_AudioSettings_C_NavigateList final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_NavigateVerticalPanelWidget_WidgetToFocus; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_Tab_AudioSettings_C_NavigateList) == 0x000008, "Wrong alignment on WB_Tab_AudioSettings_C_NavigateList");
+static_assert(sizeof(WB_Tab_AudioSettings_C_NavigateList) == 0x000018, "Wrong size on WB_Tab_AudioSettings_C_NavigateList");
+static_assert(offsetof(WB_Tab_AudioSettings_C_NavigateList, Navigation_0) == 0x000000, "Member 'WB_Tab_AudioSettings_C_NavigateList::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WB_Tab_AudioSettings_C_NavigateList, ReturnValue) == 0x000008, "Member 'WB_Tab_AudioSettings_C_NavigateList::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_AudioSettings_C_NavigateList, CallFunc_NavigateVerticalPanelWidget_WidgetToFocus) == 0x000010, "Member 'WB_Tab_AudioSettings_C_NavigateList::CallFunc_NavigateVerticalPanelWidget_WidgetToFocus' has a wrong offset!");
 
 // Function WB_Tab_AudioSettings.WB_Tab_AudioSettings_C.OnFocusReceived
 // 0x01B0 (0x01B0 - 0x0000)

@@ -59,20 +59,6 @@ void UWB_Customize_C::BndEvt__CustomizeHunterBt_K2Node_ComponentBoundEvent_49_Cl
 }
 
 
-// Function WB_Customize.WB_Customize_C.BndEvt__PropCollection_K2Node_ComponentBoundEvent_41_Clicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWB_Customize_C::BndEvt__PropCollection_K2Node_ComponentBoundEvent_41_Clicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_Customize_C", "BndEvt__PropCollection_K2Node_ComponentBoundEvent_41_Clicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WB_Customize.WB_Customize_C.BndEvt__Salvage_K2Node_ComponentBoundEvent_24_Clicked__DelegateSignature
 // (BlueprintEvent)
 
@@ -110,20 +96,6 @@ void UWB_Customize_C::BndEvt__WB_Button_K2Node_ComponentBoundEvent_82_Clicked__D
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WB_Customize_C", "BndEvt__WB_Button_K2Node_ComponentBoundEvent_82_Clicked__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WB_Customize.WB_Customize_C.BndEvt__WB_Customize_Achievements_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature
-// (BlueprintEvent)
-
-void UWB_Customize_C::BndEvt__WB_Customize_Achievements_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_Customize_C", "BndEvt__WB_Customize_Achievements_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -190,6 +162,26 @@ bool UWB_Customize_C::Get_Craft_bIsEnabled_0()
 		Func = Class->GetFunction("WB_Customize_C", "Get_Craft_bIsEnabled_0");
 
 	Params::WB_Customize_C_Get_Craft_bIsEnabled_0 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WB_Customize.WB_Customize_C.Get_Inventory_Visibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_Customize_C::Get_Inventory_Visibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_Customize_C", "Get_Inventory_Visibility");
+
+	Params::WB_Customize_C_Get_Inventory_Visibility Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -35,12 +35,12 @@ static_assert(alignof(USteamAuthComponentModuleInterface) == 0x000008, "Wrong al
 static_assert(sizeof(USteamAuthComponentModuleInterface) == 0x000028, "Wrong size on USteamAuthComponentModuleInterface");
 
 // Class OnlineSubsystemSteam.SteamNetConnection
-// 0x0008 (0x1E90 - 0x1E88)
+// 0x0008 (0x1E98 - 0x1E90)
 class USteamNetConnection final : public UIpConnection
 {
 public:
-	bool                                          bIsPassthrough;                                    // 0x1E88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A1F[0x7];                                     // 0x1E89(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsPassthrough;                                    // 0x1E90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E91[0x7];                                     // 0x1E91(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -53,15 +53,15 @@ public:
 	}
 };
 static_assert(alignof(USteamNetConnection) == 0x000008, "Wrong alignment on USteamNetConnection");
-static_assert(sizeof(USteamNetConnection) == 0x001E90, "Wrong size on USteamNetConnection");
-static_assert(offsetof(USteamNetConnection, bIsPassthrough) == 0x001E88, "Member 'USteamNetConnection::bIsPassthrough' has a wrong offset!");
+static_assert(sizeof(USteamNetConnection) == 0x001E98, "Wrong size on USteamNetConnection");
+static_assert(offsetof(USteamNetConnection, bIsPassthrough) == 0x001E90, "Member 'USteamNetConnection::bIsPassthrough' has a wrong offset!");
 
 // Class OnlineSubsystemSteam.SteamNetDriver
-// 0x0008 (0x08A8 - 0x08A0)
+// 0x0008 (0x0980 - 0x0978)
 class USteamNetDriver final : public UIpNetDriver
 {
 public:
-	uint8                                         Pad_1A20[0x8];                                     // 0x08A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_978[0x8];                                      // 0x0978(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -74,7 +74,7 @@ public:
 	}
 };
 static_assert(alignof(USteamNetDriver) == 0x000008, "Wrong alignment on USteamNetDriver");
-static_assert(sizeof(USteamNetDriver) == 0x0008A8, "Wrong size on USteamNetDriver");
+static_assert(sizeof(USteamNetDriver) == 0x000980, "Wrong size on USteamNetDriver");
 
 }
 

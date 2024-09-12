@@ -236,9 +236,9 @@ ESlateVisibility UWB_RandomSelectionScreen_C::Get_WitchSkillsText_Visibility()
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Param_InitialFocusWidget                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      InitialFocusWidget_0                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_RandomSelectionScreen_C::GetInitialFocusWidget(class UUserWidget** Param_InitialFocusWidget)
+void UWB_RandomSelectionScreen_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -249,8 +249,8 @@ void UWB_RandomSelectionScreen_C::GetInitialFocusWidget(class UUserWidget** Para
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_InitialFocusWidget != nullptr)
-		*Param_InitialFocusWidget = Parms.Param_InitialFocusWidget;
+	if (InitialFocusWidget_0 != nullptr)
+		*InitialFocusWidget_0 = Parms.InitialFocusWidget_0;
 }
 
 
@@ -277,10 +277,10 @@ ESlateVisibility UWB_RandomSelectionScreen_C::GetVisibility_0()
 // Function WB_RandomSelectionScreen.WB_RandomSelectionScreen_C.HunterSkillsLeftNavigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_RandomSelectionScreen_C::HunterSkillsLeftNavigation(EUINavigation Param_Navigation)
+class UWidget* UWB_RandomSelectionScreen_C::HunterSkillsLeftNavigation(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -289,7 +289,7 @@ class UWidget* UWB_RandomSelectionScreen_C::HunterSkillsLeftNavigation(EUINaviga
 
 	Params::WB_RandomSelectionScreen_C_HunterSkillsLeftNavigation Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_KickPlayerEntry.WB_KickPlayerEntry_C
-// 0x0020 (0x02E0 - 0x02C0)
+// 0x0020 (0x0300 - 0x02E0)
 class UWB_KickPlayerEntry_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Kick;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             PlayerNameText;                                    // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class APlayerState*                           PlayerState;                                       // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Kick;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             PlayerNameText;                                    // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class APlayerState*                           PlayerState;                                       // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_Button_K2Node_ComponentBoundEvent_18_Clicked__DelegateSignature();
@@ -43,11 +43,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_KickPlayerEntry_C) == 0x000008, "Wrong alignment on UWB_KickPlayerEntry_C");
-static_assert(sizeof(UWB_KickPlayerEntry_C) == 0x0002E0, "Wrong size on UWB_KickPlayerEntry_C");
-static_assert(offsetof(UWB_KickPlayerEntry_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_KickPlayerEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerEntry_C, Kick) == 0x0002C8, "Member 'UWB_KickPlayerEntry_C::Kick' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerEntry_C, PlayerNameText) == 0x0002D0, "Member 'UWB_KickPlayerEntry_C::PlayerNameText' has a wrong offset!");
-static_assert(offsetof(UWB_KickPlayerEntry_C, PlayerState) == 0x0002D8, "Member 'UWB_KickPlayerEntry_C::PlayerState' has a wrong offset!");
+static_assert(sizeof(UWB_KickPlayerEntry_C) == 0x000300, "Wrong size on UWB_KickPlayerEntry_C");
+static_assert(offsetof(UWB_KickPlayerEntry_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_KickPlayerEntry_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerEntry_C, Kick) == 0x0002E8, "Member 'UWB_KickPlayerEntry_C::Kick' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerEntry_C, PlayerNameText) == 0x0002F0, "Member 'UWB_KickPlayerEntry_C::PlayerNameText' has a wrong offset!");
+static_assert(offsetof(UWB_KickPlayerEntry_C, PlayerState) == 0x0002F8, "Member 'UWB_KickPlayerEntry_C::PlayerState' has a wrong offset!");
 
 }
 

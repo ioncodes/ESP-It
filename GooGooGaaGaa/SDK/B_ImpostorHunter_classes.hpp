@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "B_Hunter_classes.hpp"
 
 
@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ImpostorHunter.B_ImpostorHunter_C
-// 0x00A0 (0x0AD0 - 0x0A30)
+// 0x00A0 (0x0AC0 - 0x0A20)
 class AB_ImpostorHunter_C final : public AB_Hunter_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorHunter_C;                 // 0x0A28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UB_BaseSkill_C*                         ActionSkill;                                       // 0x0A30(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D17[0x8];                                     // 0x0A38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             VoteCameraTransform;                               // 0x0A40(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_VoteCamera_C*                        SpawnedCameraActor;                                // 0x0AA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWB_VoteScreen_C*                       VoteScreen;                                        // 0x0AA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Transform;                                         // 0x0AB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D18[0x7];                                     // 0x0AB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AB_Cable_C*>                     CablesInLevel;                                     // 0x0AB8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorHunter_C;                 // 0x0A18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_BaseSkill_C*                         ActionSkill;                                       // 0x0A20(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A28[0x8];                                      // 0x0A28(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             VoteCameraTransform;                               // 0x0A30(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_VoteCamera_C*                        SpawnedCameraActor;                                // 0x0A90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWB_VoteScreen_C*                       VoteScreen;                                        // 0x0A98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Transform;                                         // 0x0AA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AA1[0x7];                                      // 0x0AA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AB_Cable_C*>                     CablesInLevel;                                     // 0x0AA8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void DestroyVoteCamera();
@@ -39,7 +39,7 @@ public:
 	void InitPlayername();
 	void InpActEvt_Fire_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void InpActEvt_Fire_K2Node_InputActionEvent_1(const struct FKey& Key);
-	void LoadSkills(class AController* Param_Controller);
+	void LoadSkills(class AController* Controller_0);
 	void LoadSkinsServer(const struct FPrimaryAssetId& HeadSkinClass, const struct FPrimaryAssetId& UpperBodySkinClass, const struct FPrimaryAssetId& LowerBodySkinClass, const struct FPrimaryAssetId& HatSkinClass, const struct FPrimaryAssetId& RangedWeaponSkinClass, const struct FPrimaryAssetId& MeleeWeaponSkinClass, const struct FPrimaryAssetId& SkinColorSkinClass);
 	void MeetingMontageMulti();
 	void MeetingMontageServer();
@@ -80,14 +80,14 @@ public:
 	}
 };
 static_assert(alignof(AB_ImpostorHunter_C) == 0x000010, "Wrong alignment on AB_ImpostorHunter_C");
-static_assert(sizeof(AB_ImpostorHunter_C) == 0x000AD0, "Wrong size on AB_ImpostorHunter_C");
-static_assert(offsetof(AB_ImpostorHunter_C, UberGraphFrame_B_ImpostorHunter_C) == 0x000A28, "Member 'AB_ImpostorHunter_C::UberGraphFrame_B_ImpostorHunter_C' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorHunter_C, ActionSkill) == 0x000A30, "Member 'AB_ImpostorHunter_C::ActionSkill' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorHunter_C, VoteCameraTransform) == 0x000A40, "Member 'AB_ImpostorHunter_C::VoteCameraTransform' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorHunter_C, SpawnedCameraActor) == 0x000AA0, "Member 'AB_ImpostorHunter_C::SpawnedCameraActor' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorHunter_C, VoteScreen) == 0x000AA8, "Member 'AB_ImpostorHunter_C::VoteScreen' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorHunter_C, Transform) == 0x000AB0, "Member 'AB_ImpostorHunter_C::Transform' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorHunter_C, CablesInLevel) == 0x000AB8, "Member 'AB_ImpostorHunter_C::CablesInLevel' has a wrong offset!");
+static_assert(sizeof(AB_ImpostorHunter_C) == 0x000AC0, "Wrong size on AB_ImpostorHunter_C");
+static_assert(offsetof(AB_ImpostorHunter_C, UberGraphFrame_B_ImpostorHunter_C) == 0x000A18, "Member 'AB_ImpostorHunter_C::UberGraphFrame_B_ImpostorHunter_C' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorHunter_C, ActionSkill) == 0x000A20, "Member 'AB_ImpostorHunter_C::ActionSkill' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorHunter_C, VoteCameraTransform) == 0x000A30, "Member 'AB_ImpostorHunter_C::VoteCameraTransform' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorHunter_C, SpawnedCameraActor) == 0x000A90, "Member 'AB_ImpostorHunter_C::SpawnedCameraActor' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorHunter_C, VoteScreen) == 0x000A98, "Member 'AB_ImpostorHunter_C::VoteScreen' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorHunter_C, Transform) == 0x000AA0, "Member 'AB_ImpostorHunter_C::Transform' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorHunter_C, CablesInLevel) == 0x000AA8, "Member 'AB_ImpostorHunter_C::CablesInLevel' has a wrong offset!");
 
 }
 

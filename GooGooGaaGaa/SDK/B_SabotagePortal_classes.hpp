@@ -18,24 +18,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SabotagePortal.B_SabotagePortal_C
-// 0x0028 (0x02F0 - 0x02C8)
+// 0x0028 (0x02E8 - 0x02C0)
 class AB_SabotagePortal_C final : public AB_SabotageActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_SabotagePortal_C;                 // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         ExplodeTime;                                       // 0x02D0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C72[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        PlayingAlarm;                                      // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<int32>                                 ActiveIndices;                                     // 0x02E0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_SabotagePortal_C;                 // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         ExplodeTime;                                       // 0x02C8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        PlayingAlarm;                                      // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 ActiveIndices;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
 
 public:
-	void CheckEnteredCode(class UB_EnteredPortalCode_C* PortalCode, int32 Param_Index);
+	void CheckEnteredCode(class UB_EnteredPortalCode_C* PortalCode, int32 Index_0);
 	void ExecuteUbergraph_B_SabotagePortal(int32 EntryPoint);
 	bool IsActive();
 	void ReceiveTick(float DeltaSeconds);
 	void Sabotage();
 	void Stop();
-	void StopPortal(int32 Param_Index);
+	void StopPortal(int32 Index_0);
 	void TickBomb();
 
 public:
@@ -49,11 +49,11 @@ public:
 	}
 };
 static_assert(alignof(AB_SabotagePortal_C) == 0x000008, "Wrong alignment on AB_SabotagePortal_C");
-static_assert(sizeof(AB_SabotagePortal_C) == 0x0002F0, "Wrong size on AB_SabotagePortal_C");
-static_assert(offsetof(AB_SabotagePortal_C, UberGraphFrame_B_SabotagePortal_C) == 0x0002C8, "Member 'AB_SabotagePortal_C::UberGraphFrame_B_SabotagePortal_C' has a wrong offset!");
-static_assert(offsetof(AB_SabotagePortal_C, ExplodeTime) == 0x0002D0, "Member 'AB_SabotagePortal_C::ExplodeTime' has a wrong offset!");
-static_assert(offsetof(AB_SabotagePortal_C, PlayingAlarm) == 0x0002D8, "Member 'AB_SabotagePortal_C::PlayingAlarm' has a wrong offset!");
-static_assert(offsetof(AB_SabotagePortal_C, ActiveIndices) == 0x0002E0, "Member 'AB_SabotagePortal_C::ActiveIndices' has a wrong offset!");
+static_assert(sizeof(AB_SabotagePortal_C) == 0x0002E8, "Wrong size on AB_SabotagePortal_C");
+static_assert(offsetof(AB_SabotagePortal_C, UberGraphFrame_B_SabotagePortal_C) == 0x0002C0, "Member 'AB_SabotagePortal_C::UberGraphFrame_B_SabotagePortal_C' has a wrong offset!");
+static_assert(offsetof(AB_SabotagePortal_C, ExplodeTime) == 0x0002C8, "Member 'AB_SabotagePortal_C::ExplodeTime' has a wrong offset!");
+static_assert(offsetof(AB_SabotagePortal_C, PlayingAlarm) == 0x0002D0, "Member 'AB_SabotagePortal_C::PlayingAlarm' has a wrong offset!");
+static_assert(offsetof(AB_SabotagePortal_C, ActiveIndices) == 0x0002D8, "Member 'AB_SabotagePortal_C::ActiveIndices' has a wrong offset!");
 
 }
 

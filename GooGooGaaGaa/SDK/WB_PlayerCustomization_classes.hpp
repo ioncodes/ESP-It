@@ -10,46 +10,46 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ETeamID_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlayerCustomization.WB_PlayerCustomization_C
-// 0x00B8 (0x0378 - 0x02C0)
+// 0x00B8 (0x0398 - 0x02E0)
 class UWB_PlayerCustomization_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           ChangeTeam;                                        // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             HunterPlayers;                                     // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_IngameSkinConfigMenu_C*             IngameSkinConfigMenu;                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PlayerListBlock_C*                  PlayerListBlock;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Ready;                                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SkillSelectionBlock_C*              SkillSelectionBlock;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_5;                                       // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_6;                                       // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_7;                                       // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_157;                                     // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VerticalBox_2;                                     // 0x0320(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_GameStartTimer_C*                   WB_GameStartTimer;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TeamLogo_C*                         WB_TeamLogo;                                       // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             WitchCount;                                        // 0x0338(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             WitchPlayers;                                      // 0x0340(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	ETeamID                                       Team;                                              // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CF2[0x3];                                     // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         WitchesCount;                                      // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         HuntersCount;                                      // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SpectatorsCount;                                   // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UWB_PlayerBlock_C*>              PlayerBlocks;                                      // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UUserWidget*                            InitialFocusWidget;                                // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          OpenedViaWardrobe;                                 // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           ChangeTeam;                                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             HunterPlayers;                                     // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_IngameSkinConfigMenu_C*             IngameSkinConfigMenu;                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PlayerListBlock_C*                  PlayerListBlock;                                   // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Ready;                                             // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SkillSelectionBlock_C*              SkillSelectionBlock;                               // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_5;                                       // 0x0320(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_6;                                       // 0x0328(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_7;                                       // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_157;                                     // 0x0338(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_2;                                     // 0x0340(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_GameStartTimer_C*                   WB_GameStartTimer;                                 // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TeamLogo_C*                         WB_TeamLogo;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             WitchCount;                                        // 0x0358(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             WitchPlayers;                                      // 0x0360(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	ETeamID                                       Team;                                              // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x3];                                      // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         WitchesCount;                                      // 0x036C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         HuntersCount;                                      // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SpectatorsCount;                                   // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWB_PlayerBlock_C*>              PlayerBlocks;                                      // 0x0378(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UUserWidget*                            InitialFocusWidget;                                // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          OpenedViaWardrobe;                                 // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__ChangeTeam_K2Node_ComponentBoundEvent_22_Clicked__DelegateSignature();
@@ -66,7 +66,7 @@ public:
 	struct FSlateColor Get_WitchPlayers_ColorAndOpacity_0();
 	class FText Get_WitchPlayers_Text_0();
 	struct FSlateColor GetColorAndOpacity_0();
-	void GetInitialFocusWidget(class UUserWidget** Param_InitialFocusWidget);
+	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0);
 	ESlateVisibility GetVisibility_0();
 	ESlateVisibility GetVisibility_1();
 	ESlateVisibility GetVisibility_2();
@@ -77,8 +77,8 @@ public:
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void OnSpecialAction();
 	void RefreshPlayerCount();
-	void SetTeamAndWardrobe(ETeamID Param_Team, bool OpenViaWardrobe);
-	class UWidget* SkinConfigLeftNavigation(EUINavigation Param_Navigation);
+	void SetTeamAndWardrobe(ETeamID Team_0, bool OpenViaWardrobe);
+	class UWidget* SkinConfigLeftNavigation(EUINavigation Navigation_0);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
@@ -92,31 +92,31 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlayerCustomization_C) == 0x000008, "Wrong alignment on UWB_PlayerCustomization_C");
-static_assert(sizeof(UWB_PlayerCustomization_C) == 0x000378, "Wrong size on UWB_PlayerCustomization_C");
-static_assert(offsetof(UWB_PlayerCustomization_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_PlayerCustomization_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, CanvasPanel_0) == 0x0002C8, "Member 'UWB_PlayerCustomization_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, ChangeTeam) == 0x0002D0, "Member 'UWB_PlayerCustomization_C::ChangeTeam' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, HunterPlayers) == 0x0002D8, "Member 'UWB_PlayerCustomization_C::HunterPlayers' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, IngameSkinConfigMenu) == 0x0002E0, "Member 'UWB_PlayerCustomization_C::IngameSkinConfigMenu' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, PlayerListBlock) == 0x0002E8, "Member 'UWB_PlayerCustomization_C::PlayerListBlock' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, Ready) == 0x0002F0, "Member 'UWB_PlayerCustomization_C::Ready' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, SkillSelectionBlock) == 0x0002F8, "Member 'UWB_PlayerCustomization_C::SkillSelectionBlock' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_5) == 0x000300, "Member 'UWB_PlayerCustomization_C::TextBlock_5' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_6) == 0x000308, "Member 'UWB_PlayerCustomization_C::TextBlock_6' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_7) == 0x000310, "Member 'UWB_PlayerCustomization_C::TextBlock_7' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_157) == 0x000318, "Member 'UWB_PlayerCustomization_C::TextBlock_157' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, VerticalBox_2) == 0x000320, "Member 'UWB_PlayerCustomization_C::VerticalBox_2' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, WB_GameStartTimer) == 0x000328, "Member 'UWB_PlayerCustomization_C::WB_GameStartTimer' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, WB_TeamLogo) == 0x000330, "Member 'UWB_PlayerCustomization_C::WB_TeamLogo' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, WitchCount) == 0x000338, "Member 'UWB_PlayerCustomization_C::WitchCount' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, WitchPlayers) == 0x000340, "Member 'UWB_PlayerCustomization_C::WitchPlayers' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, Team) == 0x000348, "Member 'UWB_PlayerCustomization_C::Team' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, WitchesCount) == 0x00034C, "Member 'UWB_PlayerCustomization_C::WitchesCount' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, HuntersCount) == 0x000350, "Member 'UWB_PlayerCustomization_C::HuntersCount' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, SpectatorsCount) == 0x000354, "Member 'UWB_PlayerCustomization_C::SpectatorsCount' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, PlayerBlocks) == 0x000358, "Member 'UWB_PlayerCustomization_C::PlayerBlocks' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, InitialFocusWidget) == 0x000368, "Member 'UWB_PlayerCustomization_C::InitialFocusWidget' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerCustomization_C, OpenedViaWardrobe) == 0x000370, "Member 'UWB_PlayerCustomization_C::OpenedViaWardrobe' has a wrong offset!");
+static_assert(sizeof(UWB_PlayerCustomization_C) == 0x000398, "Wrong size on UWB_PlayerCustomization_C");
+static_assert(offsetof(UWB_PlayerCustomization_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_PlayerCustomization_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_PlayerCustomization_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, ChangeTeam) == 0x0002F0, "Member 'UWB_PlayerCustomization_C::ChangeTeam' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, HunterPlayers) == 0x0002F8, "Member 'UWB_PlayerCustomization_C::HunterPlayers' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, IngameSkinConfigMenu) == 0x000300, "Member 'UWB_PlayerCustomization_C::IngameSkinConfigMenu' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, PlayerListBlock) == 0x000308, "Member 'UWB_PlayerCustomization_C::PlayerListBlock' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, Ready) == 0x000310, "Member 'UWB_PlayerCustomization_C::Ready' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, SkillSelectionBlock) == 0x000318, "Member 'UWB_PlayerCustomization_C::SkillSelectionBlock' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_5) == 0x000320, "Member 'UWB_PlayerCustomization_C::TextBlock_5' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_6) == 0x000328, "Member 'UWB_PlayerCustomization_C::TextBlock_6' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_7) == 0x000330, "Member 'UWB_PlayerCustomization_C::TextBlock_7' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, TextBlock_157) == 0x000338, "Member 'UWB_PlayerCustomization_C::TextBlock_157' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, VerticalBox_2) == 0x000340, "Member 'UWB_PlayerCustomization_C::VerticalBox_2' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, WB_GameStartTimer) == 0x000348, "Member 'UWB_PlayerCustomization_C::WB_GameStartTimer' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, WB_TeamLogo) == 0x000350, "Member 'UWB_PlayerCustomization_C::WB_TeamLogo' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, WitchCount) == 0x000358, "Member 'UWB_PlayerCustomization_C::WitchCount' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, WitchPlayers) == 0x000360, "Member 'UWB_PlayerCustomization_C::WitchPlayers' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, Team) == 0x000368, "Member 'UWB_PlayerCustomization_C::Team' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, WitchesCount) == 0x00036C, "Member 'UWB_PlayerCustomization_C::WitchesCount' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, HuntersCount) == 0x000370, "Member 'UWB_PlayerCustomization_C::HuntersCount' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, SpectatorsCount) == 0x000374, "Member 'UWB_PlayerCustomization_C::SpectatorsCount' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, PlayerBlocks) == 0x000378, "Member 'UWB_PlayerCustomization_C::PlayerBlocks' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, InitialFocusWidget) == 0x000388, "Member 'UWB_PlayerCustomization_C::InitialFocusWidget' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerCustomization_C, OpenedViaWardrobe) == 0x000390, "Member 'UWB_PlayerCustomization_C::OpenedViaWardrobe' has a wrong offset!");
 
 }
 

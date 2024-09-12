@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchStudyTask.B_WitchStudyTask_C
-// 0x0000 (0x0320 - 0x0320)
+// 0x0000 (0x0318 - 0x0318)
 class AB_WitchStudyTask_C final : public AB_CollectTask_C
 {
 public:
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchStudyTask_C) == 0x000008, "Wrong alignment on AB_WitchStudyTask_C");
-static_assert(sizeof(AB_WitchStudyTask_C) == 0x000320, "Wrong size on AB_WitchStudyTask_C");
+static_assert(sizeof(AB_WitchStudyTask_C) == 0x000318, "Wrong size on AB_WitchStudyTask_C");
 
 }
 

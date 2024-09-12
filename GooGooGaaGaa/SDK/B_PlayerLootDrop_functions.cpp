@@ -76,10 +76,10 @@ void UB_PlayerLootDrop_C::HandleDropSuccess()
 // Function B_PlayerLootDrop.B_PlayerLootDrop_C.InitializeGS
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UGameInstance*                    Param_GameInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APlayerState*                     Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UGameInstance*                    GameInstance_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerState*                     PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_PlayerLootDrop_C::InitializeGS(class UGameInstance* Param_GameInstance, class APlayerState* Param_PlayerState)
+void UB_PlayerLootDrop_C::InitializeGS(class UGameInstance* GameInstance_0, class APlayerState* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -88,8 +88,8 @@ void UB_PlayerLootDrop_C::InitializeGS(class UGameInstance* Param_GameInstance, 
 
 	Params::B_PlayerLootDrop_C_InitializeGS Parms{};
 
-	Parms.Param_GameInstance = Param_GameInstance;
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.GameInstance_0 = GameInstance_0;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

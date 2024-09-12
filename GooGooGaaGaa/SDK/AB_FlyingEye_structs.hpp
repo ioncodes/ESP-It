@@ -17,29 +17,36 @@ namespace SDK
 {
 
 // ScriptStruct AB_FlyingEye.AB_FlyingEye_C.AnimBlueprintGeneratedConstantData
-// 0x010F (0x0110 - 0x0001)
+// 0x025F (0x0260 - 0x0001)
 struct AB_FlyingEye::FAnimBlueprintGeneratedConstantData : public FAnimBlueprintConstantData
 {
 public:
-	uint8                                         Pad_38E4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __NameProperty_23;                                 // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_24;                                 // 0x000C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E5[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         __FloatProperty_25;                                // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputScaleBiasClampConstants          __StructProperty_26;                               // 0x0014(0x002C)(BlueprintVisible, NoDestructor)
 	float                                         __FloatProperty_27;                                // 0x0040(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimSyncMethod                               __EnumProperty_28;                                 // 0x0044(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAnimGroupRole                                __ByteProperty_29;                                 // 0x0045(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E6[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __NameProperty_30;                                 // 0x0048(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_31;                                 // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38E7[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNodeFunctionRef                   __StructProperty_32;                               // 0x0058(0x0020)(BlueprintVisible, NoDestructor)
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0078(0x0080)()
 	struct FAnimSubsystem_Base                    AnimBlueprintExtension_Base;                       // 0x00F8(0x0018)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                                // 0x0110(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_RigidBody;                           // 0x0140(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;               // 0x0170(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                      // 0x01A0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;               // 0x01D0(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_RandomPlayer;                        // 0x0200(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive;                       // 0x0230(0x0030)()
 };
 static_assert(alignof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on AB_FlyingEye::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData) == 0x000110, "Wrong size on AB_FlyingEye::FAnimBlueprintGeneratedConstantData");
+static_assert(sizeof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData) == 0x000260, "Wrong size on AB_FlyingEye::FAnimBlueprintGeneratedConstantData");
 static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, __NameProperty_23) == 0x000004, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::__NameProperty_23' has a wrong offset!");
 static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, __BoolProperty_24) == 0x00000C, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::__BoolProperty_24' has a wrong offset!");
 static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, __FloatProperty_25) == 0x000010, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::__FloatProperty_25' has a wrong offset!");
@@ -52,6 +59,13 @@ static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, __Bool
 static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, __StructProperty_32) == 0x000058, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::__StructProperty_32' has a wrong offset!");
 static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000078, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Base) == 0x0000F8, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x000110, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_RigidBody) == 0x000140, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x000170, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x0001A0, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace) == 0x0001D0, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_RandomPlayer) == 0x000200, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_RandomPlayer' has a wrong offset!");
+static_assert(offsetof(AB_FlyingEye::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive) == 0x000230, "Member 'AB_FlyingEye::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive' has a wrong offset!");
 
 }
 

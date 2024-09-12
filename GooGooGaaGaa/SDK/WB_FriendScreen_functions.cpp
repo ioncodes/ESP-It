@@ -274,6 +274,28 @@ void UWB_FriendScreen_C::OnCallFailed_2BBDE9ED47F12DAA1726459057F076D6(const str
 }
 
 
+// Function WB_FriendScreen.WB_FriendScreen_C.OnCallFailed_762987554731BDE0AC7371A51AC5EEEB
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_FriendScreen_C::OnCallFailed_762987554731BDE0AC7371A51AC5EEEB(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_FriendScreen_C", "OnCallFailed_762987554731BDE0AC7371A51AC5EEEB");
+
+	Params::WB_FriendScreen_C_OnCallFailed_762987554731BDE0AC7371A51AC5EEEB Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_FriendScreen.WB_FriendScreen_C.OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -288,6 +310,28 @@ void UWB_FriendScreen_C::OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6
 		Func = Class->GetFunction("WB_FriendScreen_C", "OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6");
 
 	Params::WB_FriendScreen_C_OnPresenceTaskComplete_2BBDE9ED47F12DAA1726459057F076D6 Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_FriendScreen.WB_FriendScreen_C.OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_FriendScreen_C::OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB(const struct FUniqueNetIdRepl& UserId, bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_FriendScreen_C", "OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB");
+
+	Params::WB_FriendScreen_C_OnPresenceTaskComplete_762987554731BDE0AC7371A51AC5EEEB Parms{};
 
 	Parms.UserId = std::move(UserId);
 	Parms.bWasSuccessful = bWasSuccessful;

@@ -29,7 +29,7 @@ public:
 
 public:
 	void ShouldHandleDamage(bool* ShouldHandle);
-	void IsDead(bool* Param_IsDead);
+	void IsDead(bool* IsDead_0);
 	void GetOwnerPlayerState(class AB_PlayerState_C** PlayerState);
 	void SetPlayerHealthPercental(double Percentage);
 	void GetMaxHealth(double* ReturnMaxHealth);

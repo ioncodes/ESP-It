@@ -17,24 +17,24 @@ namespace SDK::Params
 {
 
 // Function WB_Buff.WB_Buff_C.ExecuteUbergraph_WB_Buff
-// 0x0060 (0x0060 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct WB_Buff_C_ExecuteUbergraph_WB_Buff final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A87[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_ByteToText_ReturnValue;              // 0x0008(0x0018)()
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0020(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_ByteToText_ReturnValue;              // 0x0008(0x0010)()
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0018(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Buff_C_ExecuteUbergraph_WB_Buff) == 0x000008, "Wrong alignment on WB_Buff_C_ExecuteUbergraph_WB_Buff");
-static_assert(sizeof(WB_Buff_C_ExecuteUbergraph_WB_Buff) == 0x000060, "Wrong size on WB_Buff_C_ExecuteUbergraph_WB_Buff");
+static_assert(sizeof(WB_Buff_C_ExecuteUbergraph_WB_Buff) == 0x000058, "Wrong size on WB_Buff_C_ExecuteUbergraph_WB_Buff");
 static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, EntryPoint) == 0x000000, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, CallFunc_Conv_ByteToText_ReturnValue) == 0x000008, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::CallFunc_Conv_ByteToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, K2Node_Event_MyGeometry) == 0x000020, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, K2Node_Event_InDeltaTime) == 0x000058, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, K2Node_Event_MyGeometry) == 0x000018, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_Buff_C_ExecuteUbergraph_WB_Buff, K2Node_Event_InDeltaTime) == 0x000050, "Member 'WB_Buff_C_ExecuteUbergraph_WB_Buff::K2Node_Event_InDeltaTime' has a wrong offset!");
 
 // Function WB_Buff.WB_Buff_C.Tick
 // 0x003C (0x003C - 0x0000)

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "EventNames_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SNeededIngredient_structs.hpp"
 #include "MasterServerPlugin_structs.hpp"
 #include "ESummerEventRecipe_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
+#include "EventNames_structs.hpp"
+#include "S_EventInfo_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "SNeededIngredient_structs.hpp"
-#include "S_EventInfo_structs.hpp"
 #include "EventTime_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 
@@ -27,76 +27,76 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_EventScreen.WB_EventScreen_C
-// 0x0320 (0x05E0 - 0x02C0)
+// 0x02E8 (0x05C8 - 0x02E0)
 class UWB_EventScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       UnlocksFadeIn;                                     // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       UnlocksFadeOut;                                    // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWB_Button_C*                           Back;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ChestCountText;                                    // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ChestImage;                                        // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircularThrobber*                      CircularThrobber_0;                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircularThrobber*                      CircularThrobber_1;                                // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           CombineButton;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           CraftFilledBootButton;                             // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBackgroundBlur*                        EventGuide;                                        // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           EventGuideBack;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                EventGuideBorder;                                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 EventLogo;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Guide;                                             // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Headline;                                          // 0x0338(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_116;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_0;                                         // 0x0348(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_1;                                         // 0x0350(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_5;                                         // 0x0358(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Store;                                             // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_157;                                     // 0x0368(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TimeRemainung;                                     // 0x0370(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TreasureMapCountText;                              // 0x0378(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TreasureMapImage;                                  // 0x0380(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                UnlockAnimation;                                   // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         UnlockList;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Unlock_C*                           WB_Unlock_121;                                     // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           AllItems;                                          // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         NumberOfChests;                                    // 0x03B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NewRewards;                                        // 0x03B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           GeneratedItems;                                    // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 DroppedItemIDs;                                    // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Updating;                                          // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3374[0x7];                                     // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBlueprintOnlineItem>           Ingredients;                                       // 0x03E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 IngredientIndices;                                 // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	ESummerEventRecipe                            Recipe;                                            // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DoNotGetSteamItems;                                // 0x0401(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3375[0x2];                                     // 0x0402(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           ColorNoShell;                                      // 0x0404(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorShell;                                        // 0x0414(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorWhimsical;                                    // 0x0424(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorRare;                                         // 0x0434(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorVeryRare;                                     // 0x0444(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         HighestRarity;                                     // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FBlueprintOnlineItem>           ItemsToRemove;                                     // 0x0458(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         NumberOfKeys;                                      // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3376[0x4];                                     // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           UpdateItemsTimerHandle;                            // 0x0470(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         GeneratorID;                                       // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3377[0x4];                                     // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      PlayerController;                                  // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FBlueprintOnlineItem                   CurrentGeneratedItem;                              // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class UB_EventManager_C*                      EventManager;                                      // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         CraftRetryCounter;                                 // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3378[0x4];                                     // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ANiagaraActor*                          GatchaEffect;                                      // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FSNeededIngredient                     Chest;                                             // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSNeededIngredient                     Key;                                               // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CraftChest;                                        // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3379[0x3];                                     // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NeededKeysToCraftChest;                            // 0x04C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EventNames                                    EventName;                                         // 0x04C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_337A[0x7];                                     // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_EventInfo                           EventInfo;                                         // 0x04D0(0x0110)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       UnlocksFadeIn;                                     // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       UnlocksFadeOut;                                    // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWB_Button_C*                           Back;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ChestCountText;                                    // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ChestImage;                                        // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircularThrobber*                      CircularThrobber_0;                                // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircularThrobber*                      CircularThrobber_1;                                // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           CombineButton;                                     // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           CraftFilledBootButton;                             // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBackgroundBlur*                        EventGuide;                                        // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           EventGuideBack;                                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                EventGuideBorder;                                  // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 EventLogo;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Guide;                                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Headline;                                          // 0x0358(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_116;                                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x0368(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_1;                                         // 0x0370(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_5;                                         // 0x0378(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Store;                                             // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_157;                                     // 0x0388(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TimeRemainung;                                     // 0x0390(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TreasureMapCountText;                              // 0x0398(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TreasureMapImage;                                  // 0x03A0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                UnlockAnimation;                                   // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         UnlockList;                                        // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Unlock_C*                           WB_Unlock_121;                                     // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           AllItems;                                          // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         NumberOfChests;                                    // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NewRewards;                                        // 0x03D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           GeneratedItems;                                    // 0x03D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 DroppedItemIDs;                                    // 0x03E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          Updating;                                          // 0x03F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBlueprintOnlineItem>           Ingredients;                                       // 0x0400(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 IngredientIndices;                                 // 0x0410(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	ESummerEventRecipe                            Recipe;                                            // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DoNotGetSteamItems;                                // 0x0421(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_422[0x2];                                      // 0x0422(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           ColorNoShell;                                      // 0x0424(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorShell;                                        // 0x0434(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorWhimsical;                                    // 0x0444(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorRare;                                         // 0x0454(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorVeryRare;                                     // 0x0464(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         HighestRarity;                                     // 0x0474(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBlueprintOnlineItem>           ItemsToRemove;                                     // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         NumberOfKeys;                                      // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           UpdateItemsTimerHandle;                            // 0x0490(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         GeneratorID;                                       // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      PlayerController;                                  // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FBlueprintOnlineItem                   CurrentGeneratedItem;                              // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class UB_EventManager_C*                      EventManager;                                      // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         CraftRetryCounter;                                 // 0x04C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ANiagaraActor*                          GatchaEffect;                                      // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FSNeededIngredient                     Chest;                                             // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSNeededIngredient                     Key;                                               // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CraftChest;                                        // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E1[0x3];                                      // 0x04E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NeededKeysToCraftChest;                            // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EventNames                                    EventName;                                         // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_EventInfo                           EventInfo;                                         // 0x04F0(0x00D8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void AnimationFinished(class USceneComponent* AnimatedSceneComponent, double UnlockDelay);
@@ -128,7 +128,7 @@ public:
 	class FText GetCraftButtonText();
 	class FText GetEventGuideText();
 	class UB_EventManager_C* GetEventManager();
-	void GetIngredients(TArray<struct FBlueprintOnlineItem>* Param_Ingredients);
+	void GetIngredients(TArray<struct FBlueprintOnlineItem>* Ingredients_0);
 	void GetInitialFocusWidget(class UUserWidget** InitialFocusWidget);
 	class FText GetNumberOfCandiesText();
 	class FText GetNumberOfPumpkinsText();
@@ -171,66 +171,66 @@ public:
 	}
 };
 static_assert(alignof(UWB_EventScreen_C) == 0x000008, "Wrong alignment on UWB_EventScreen_C");
-static_assert(sizeof(UWB_EventScreen_C) == 0x0005E0, "Wrong size on UWB_EventScreen_C");
-static_assert(offsetof(UWB_EventScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_EventScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, UnlocksFadeIn) == 0x0002C8, "Member 'UWB_EventScreen_C::UnlocksFadeIn' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, UnlocksFadeOut) == 0x0002D0, "Member 'UWB_EventScreen_C::UnlocksFadeOut' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Back) == 0x0002D8, "Member 'UWB_EventScreen_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ChestCountText) == 0x0002E0, "Member 'UWB_EventScreen_C::ChestCountText' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ChestImage) == 0x0002E8, "Member 'UWB_EventScreen_C::ChestImage' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CircularThrobber_0) == 0x0002F0, "Member 'UWB_EventScreen_C::CircularThrobber_0' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CircularThrobber_1) == 0x0002F8, "Member 'UWB_EventScreen_C::CircularThrobber_1' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CombineButton) == 0x000300, "Member 'UWB_EventScreen_C::CombineButton' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CraftFilledBootButton) == 0x000308, "Member 'UWB_EventScreen_C::CraftFilledBootButton' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventGuide) == 0x000310, "Member 'UWB_EventScreen_C::EventGuide' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventGuideBack) == 0x000318, "Member 'UWB_EventScreen_C::EventGuideBack' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventGuideBorder) == 0x000320, "Member 'UWB_EventScreen_C::EventGuideBorder' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventLogo) == 0x000328, "Member 'UWB_EventScreen_C::EventLogo' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Guide) == 0x000330, "Member 'UWB_EventScreen_C::Guide' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Headline) == 0x000338, "Member 'UWB_EventScreen_C::Headline' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Image_116) == 0x000340, "Member 'UWB_EventScreen_C::Image_116' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Overlay_0) == 0x000348, "Member 'UWB_EventScreen_C::Overlay_0' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Overlay_1) == 0x000350, "Member 'UWB_EventScreen_C::Overlay_1' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, SizeBox_5) == 0x000358, "Member 'UWB_EventScreen_C::SizeBox_5' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Store) == 0x000360, "Member 'UWB_EventScreen_C::Store' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, TextBlock_157) == 0x000368, "Member 'UWB_EventScreen_C::TextBlock_157' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, TimeRemainung) == 0x000370, "Member 'UWB_EventScreen_C::TimeRemainung' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, TreasureMapCountText) == 0x000378, "Member 'UWB_EventScreen_C::TreasureMapCountText' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, TreasureMapImage) == 0x000380, "Member 'UWB_EventScreen_C::TreasureMapImage' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, UnlockAnimation) == 0x000388, "Member 'UWB_EventScreen_C::UnlockAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, UnlockList) == 0x000390, "Member 'UWB_EventScreen_C::UnlockList' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, WB_Unlock_121) == 0x000398, "Member 'UWB_EventScreen_C::WB_Unlock_121' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, AllItems) == 0x0003A0, "Member 'UWB_EventScreen_C::AllItems' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, NumberOfChests) == 0x0003B0, "Member 'UWB_EventScreen_C::NumberOfChests' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, NewRewards) == 0x0003B4, "Member 'UWB_EventScreen_C::NewRewards' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, GeneratedItems) == 0x0003B8, "Member 'UWB_EventScreen_C::GeneratedItems' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, DroppedItemIDs) == 0x0003C8, "Member 'UWB_EventScreen_C::DroppedItemIDs' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Updating) == 0x0003D8, "Member 'UWB_EventScreen_C::Updating' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Ingredients) == 0x0003E0, "Member 'UWB_EventScreen_C::Ingredients' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, IngredientIndices) == 0x0003F0, "Member 'UWB_EventScreen_C::IngredientIndices' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Recipe) == 0x000400, "Member 'UWB_EventScreen_C::Recipe' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, DoNotGetSteamItems) == 0x000401, "Member 'UWB_EventScreen_C::DoNotGetSteamItems' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ColorNoShell) == 0x000404, "Member 'UWB_EventScreen_C::ColorNoShell' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ColorShell) == 0x000414, "Member 'UWB_EventScreen_C::ColorShell' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ColorWhimsical) == 0x000424, "Member 'UWB_EventScreen_C::ColorWhimsical' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ColorRare) == 0x000434, "Member 'UWB_EventScreen_C::ColorRare' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ColorVeryRare) == 0x000444, "Member 'UWB_EventScreen_C::ColorVeryRare' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, HighestRarity) == 0x000454, "Member 'UWB_EventScreen_C::HighestRarity' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, ItemsToRemove) == 0x000458, "Member 'UWB_EventScreen_C::ItemsToRemove' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, NumberOfKeys) == 0x000468, "Member 'UWB_EventScreen_C::NumberOfKeys' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, UpdateItemsTimerHandle) == 0x000470, "Member 'UWB_EventScreen_C::UpdateItemsTimerHandle' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, GeneratorID) == 0x000478, "Member 'UWB_EventScreen_C::GeneratorID' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, PlayerController) == 0x000480, "Member 'UWB_EventScreen_C::PlayerController' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CurrentGeneratedItem) == 0x000488, "Member 'UWB_EventScreen_C::CurrentGeneratedItem' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventManager) == 0x000498, "Member 'UWB_EventScreen_C::EventManager' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CraftRetryCounter) == 0x0004A0, "Member 'UWB_EventScreen_C::CraftRetryCounter' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, GatchaEffect) == 0x0004A8, "Member 'UWB_EventScreen_C::GatchaEffect' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Chest) == 0x0004B0, "Member 'UWB_EventScreen_C::Chest' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, Key) == 0x0004B8, "Member 'UWB_EventScreen_C::Key' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, CraftChest) == 0x0004C0, "Member 'UWB_EventScreen_C::CraftChest' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, NeededKeysToCraftChest) == 0x0004C4, "Member 'UWB_EventScreen_C::NeededKeysToCraftChest' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventName) == 0x0004C8, "Member 'UWB_EventScreen_C::EventName' has a wrong offset!");
-static_assert(offsetof(UWB_EventScreen_C, EventInfo) == 0x0004D0, "Member 'UWB_EventScreen_C::EventInfo' has a wrong offset!");
+static_assert(sizeof(UWB_EventScreen_C) == 0x0005C8, "Wrong size on UWB_EventScreen_C");
+static_assert(offsetof(UWB_EventScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_EventScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, UnlocksFadeIn) == 0x0002E8, "Member 'UWB_EventScreen_C::UnlocksFadeIn' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, UnlocksFadeOut) == 0x0002F0, "Member 'UWB_EventScreen_C::UnlocksFadeOut' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Back) == 0x0002F8, "Member 'UWB_EventScreen_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ChestCountText) == 0x000300, "Member 'UWB_EventScreen_C::ChestCountText' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ChestImage) == 0x000308, "Member 'UWB_EventScreen_C::ChestImage' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CircularThrobber_0) == 0x000310, "Member 'UWB_EventScreen_C::CircularThrobber_0' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CircularThrobber_1) == 0x000318, "Member 'UWB_EventScreen_C::CircularThrobber_1' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CombineButton) == 0x000320, "Member 'UWB_EventScreen_C::CombineButton' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CraftFilledBootButton) == 0x000328, "Member 'UWB_EventScreen_C::CraftFilledBootButton' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventGuide) == 0x000330, "Member 'UWB_EventScreen_C::EventGuide' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventGuideBack) == 0x000338, "Member 'UWB_EventScreen_C::EventGuideBack' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventGuideBorder) == 0x000340, "Member 'UWB_EventScreen_C::EventGuideBorder' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventLogo) == 0x000348, "Member 'UWB_EventScreen_C::EventLogo' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Guide) == 0x000350, "Member 'UWB_EventScreen_C::Guide' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Headline) == 0x000358, "Member 'UWB_EventScreen_C::Headline' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Image_116) == 0x000360, "Member 'UWB_EventScreen_C::Image_116' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Overlay_0) == 0x000368, "Member 'UWB_EventScreen_C::Overlay_0' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Overlay_1) == 0x000370, "Member 'UWB_EventScreen_C::Overlay_1' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, SizeBox_5) == 0x000378, "Member 'UWB_EventScreen_C::SizeBox_5' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Store) == 0x000380, "Member 'UWB_EventScreen_C::Store' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, TextBlock_157) == 0x000388, "Member 'UWB_EventScreen_C::TextBlock_157' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, TimeRemainung) == 0x000390, "Member 'UWB_EventScreen_C::TimeRemainung' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, TreasureMapCountText) == 0x000398, "Member 'UWB_EventScreen_C::TreasureMapCountText' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, TreasureMapImage) == 0x0003A0, "Member 'UWB_EventScreen_C::TreasureMapImage' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, UnlockAnimation) == 0x0003A8, "Member 'UWB_EventScreen_C::UnlockAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, UnlockList) == 0x0003B0, "Member 'UWB_EventScreen_C::UnlockList' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, WB_Unlock_121) == 0x0003B8, "Member 'UWB_EventScreen_C::WB_Unlock_121' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, AllItems) == 0x0003C0, "Member 'UWB_EventScreen_C::AllItems' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, NumberOfChests) == 0x0003D0, "Member 'UWB_EventScreen_C::NumberOfChests' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, NewRewards) == 0x0003D4, "Member 'UWB_EventScreen_C::NewRewards' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, GeneratedItems) == 0x0003D8, "Member 'UWB_EventScreen_C::GeneratedItems' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, DroppedItemIDs) == 0x0003E8, "Member 'UWB_EventScreen_C::DroppedItemIDs' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Updating) == 0x0003F8, "Member 'UWB_EventScreen_C::Updating' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Ingredients) == 0x000400, "Member 'UWB_EventScreen_C::Ingredients' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, IngredientIndices) == 0x000410, "Member 'UWB_EventScreen_C::IngredientIndices' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Recipe) == 0x000420, "Member 'UWB_EventScreen_C::Recipe' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, DoNotGetSteamItems) == 0x000421, "Member 'UWB_EventScreen_C::DoNotGetSteamItems' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ColorNoShell) == 0x000424, "Member 'UWB_EventScreen_C::ColorNoShell' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ColorShell) == 0x000434, "Member 'UWB_EventScreen_C::ColorShell' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ColorWhimsical) == 0x000444, "Member 'UWB_EventScreen_C::ColorWhimsical' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ColorRare) == 0x000454, "Member 'UWB_EventScreen_C::ColorRare' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ColorVeryRare) == 0x000464, "Member 'UWB_EventScreen_C::ColorVeryRare' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, HighestRarity) == 0x000474, "Member 'UWB_EventScreen_C::HighestRarity' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, ItemsToRemove) == 0x000478, "Member 'UWB_EventScreen_C::ItemsToRemove' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, NumberOfKeys) == 0x000488, "Member 'UWB_EventScreen_C::NumberOfKeys' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, UpdateItemsTimerHandle) == 0x000490, "Member 'UWB_EventScreen_C::UpdateItemsTimerHandle' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, GeneratorID) == 0x000498, "Member 'UWB_EventScreen_C::GeneratorID' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, PlayerController) == 0x0004A0, "Member 'UWB_EventScreen_C::PlayerController' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CurrentGeneratedItem) == 0x0004A8, "Member 'UWB_EventScreen_C::CurrentGeneratedItem' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventManager) == 0x0004B8, "Member 'UWB_EventScreen_C::EventManager' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CraftRetryCounter) == 0x0004C0, "Member 'UWB_EventScreen_C::CraftRetryCounter' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, GatchaEffect) == 0x0004C8, "Member 'UWB_EventScreen_C::GatchaEffect' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Chest) == 0x0004D0, "Member 'UWB_EventScreen_C::Chest' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, Key) == 0x0004D8, "Member 'UWB_EventScreen_C::Key' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, CraftChest) == 0x0004E0, "Member 'UWB_EventScreen_C::CraftChest' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, NeededKeysToCraftChest) == 0x0004E4, "Member 'UWB_EventScreen_C::NeededKeysToCraftChest' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventName) == 0x0004E8, "Member 'UWB_EventScreen_C::EventName' has a wrong offset!");
+static_assert(offsetof(UWB_EventScreen_C, EventInfo) == 0x0004F0, "Member 'UWB_EventScreen_C::EventInfo' has a wrong offset!");
 
 }
 

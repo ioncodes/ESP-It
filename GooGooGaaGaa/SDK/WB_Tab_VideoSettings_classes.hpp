@@ -10,63 +10,64 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Tab_VideoSettings.WB_Tab_VideoSettings_C
-// 0x0130 (0x03F0 - 0x02C0)
+// 0x0130 (0x0410 - 0x02E0)
 class UWB_Tab_VideoSettings_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_CheckBoxWithLabel_C*                CheckBox_FPSCounter;                               // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_CheckBoxWithLabel_C*                CheckBox_VSync;                                    // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ComboBoxWithLabel_C*                ComboBox_AAMode;                                   // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ComboBoxWithLabel_C*                ComboBox_Resolution;                               // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ComboBoxWithLabel_C*                ComboBox_WindowMode;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_AntiAliasing;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_FieldOfView;                                // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_FrameRateLimit;                             // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_Gamma;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_MotionBlur;                                 // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_PostProcessing;                             // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_Reflections;                                // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_ResolutionScale;                            // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_Shadows;                                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_Sharpen;                                    // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_Textures;                                   // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_ViewDistance;                               // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_VisualEffects;                              // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          SelectedVSync;                                     // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5687[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        SelectedGamma;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SelectedFieldOfView;                               // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SelectedMotionBlur;                                // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedExposureMethod;                            // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedAntiAliasingQuality;                       // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SelectedResolutionScale;                           // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedViewDistanceQuality;                       // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedShadowQuality;                             // 0x0394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedPostProcessingQuality;                     // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedReflectionsQuality;                        // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedVisualEffectQuality;                       // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SelectedTextureQuality;                            // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SelectedFramerateLimit;                            // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_SettingsSave_C*                      SettingsSave;                                      // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bDirty;                                            // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5688[0x7];                                     // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SelectedResolution;                                // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 SelectedWindowMode;                                // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	double                                        SelectedSharpen;                                   // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SelectedFPSCounter;                                // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5689[0x3];                                     // 0x03E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AAMethod;                                          // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_CheckBoxWithLabel_C*                CheckBox_FPSCounter;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_CheckBoxWithLabel_C*                CheckBox_VSync;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ComboBoxWithLabel_C*                ComboBox_AAMode;                                   // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ComboBoxWithLabel_C*                ComboBox_Resolution;                               // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ComboBoxWithLabel_C*                ComboBox_WindowMode;                               // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_AntiAliasing;                               // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_FieldOfView;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_FrameRateLimit;                             // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_Gamma;                                      // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_MotionBlur;                                 // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_PostProcessing;                             // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_Reflections;                                // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_ResolutionScale;                            // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_Shadows;                                    // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_Sharpen;                                    // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_Textures;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_ViewDistance;                               // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_VisualEffects;                              // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          SelectedVSync;                                     // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SelectedGamma;                                     // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SelectedFieldOfView;                               // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SelectedMotionBlur;                                // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedExposureMethod;                            // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedAntiAliasingQuality;                       // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SelectedResolutionScale;                           // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedViewDistanceQuality;                       // 0x03B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedShadowQuality;                             // 0x03B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedPostProcessingQuality;                     // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedReflectionsQuality;                        // 0x03BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedVisualEffectQuality;                       // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SelectedTextureQuality;                            // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SelectedFramerateLimit;                            // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_SettingsSave_C*                      SettingsSave;                                      // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDirty;                                            // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SelectedResolution;                                // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 SelectedWindowMode;                                // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	double                                        SelectedSharpen;                                   // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SelectedFPSCounter;                                // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x3];                                      // 0x0409(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AAMethod;                                          // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddComboBoxOptions();
@@ -92,16 +93,17 @@ public:
 	void BndEvt__WB_Tab_VideoSettings_Slider_Reflections_K2Node_ComponentBoundEvent_14_OnRealValueChanged__DelegateSignature(double RealValue);
 	void ConfirmAction();
 	void Construct();
-	void ConvertFrameRateLimitToIndex(double Value, double* Param_Index);
-	void ConvertFrameRateLimitToValue(double Param_Index, double* Value);
+	void ConvertFrameRateLimitToIndex(double Value, double* Index_0);
+	void ConvertFrameRateLimitToValue(double Index_0, double* Value);
 	void Destruct();
 	void DiscardChanges();
 	void ExecuteUbergraph_WB_Tab_VideoSettings(int32 EntryPoint);
 	bool Get_ComboBox_Resolution_bIsEnabled_0();
-	void GetAAMethod(int32* Param_AAMethod);
-	void GetAAMethodFromDisplayString(const class FString& String, int32* Param_AAMethod);
+	void GetAAMethod(int32* AAMethod_0);
+	void GetAAMethodFromDisplayString(const class FString& String, int32* AAMethod_0);
 	class FString GetAAModeString();
 	int32 GetAntiAliasingQuality();
+	void GetDisplayGamma(double* DisplayGamma);
 	double GetFieldOfView();
 	void GetFPSCounter(bool* FPSCounter);
 	double GetFrameRateLimit();
@@ -122,12 +124,13 @@ public:
 	void GetWindowModeFromDisplayString(const class FString& DisplayString, EWindowMode* WindowMode);
 	class FString GetWindowModeString();
 	void Init();
-	void IsDirty(bool* Param_bDirty);
+	void IsDirty(bool* bDirty_0);
 	bool IsFullscreenModeDirty(class UGameUserSettings* GameUserSettings);
 	bool IsScreenResolutionDirty(class UGameUserSettings* GameUserSettings);
 	bool IsVideoModeDirty();
 	void LoadComboBoxSettings();
 	void LoadCurrentSettings();
+	class UWidget* NavigateList(EUINavigation Navigation_0);
 	void RequestConfirmableAction();
 	void RevertChanges();
 	void SaveSettings();
@@ -150,48 +153,48 @@ public:
 	}
 };
 static_assert(alignof(UWB_Tab_VideoSettings_C) == 0x000008, "Wrong alignment on UWB_Tab_VideoSettings_C");
-static_assert(sizeof(UWB_Tab_VideoSettings_C) == 0x0003F0, "Wrong size on UWB_Tab_VideoSettings_C");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Tab_VideoSettings_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, CheckBox_FPSCounter) == 0x0002C8, "Member 'UWB_Tab_VideoSettings_C::CheckBox_FPSCounter' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, CheckBox_VSync) == 0x0002D0, "Member 'UWB_Tab_VideoSettings_C::CheckBox_VSync' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, ComboBox_AAMode) == 0x0002D8, "Member 'UWB_Tab_VideoSettings_C::ComboBox_AAMode' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, ComboBox_Resolution) == 0x0002E0, "Member 'UWB_Tab_VideoSettings_C::ComboBox_Resolution' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, ComboBox_WindowMode) == 0x0002E8, "Member 'UWB_Tab_VideoSettings_C::ComboBox_WindowMode' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, ScrollBox_0) == 0x0002F0, "Member 'UWB_Tab_VideoSettings_C::ScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_AntiAliasing) == 0x0002F8, "Member 'UWB_Tab_VideoSettings_C::Slider_AntiAliasing' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_FieldOfView) == 0x000300, "Member 'UWB_Tab_VideoSettings_C::Slider_FieldOfView' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_FrameRateLimit) == 0x000308, "Member 'UWB_Tab_VideoSettings_C::Slider_FrameRateLimit' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Gamma) == 0x000310, "Member 'UWB_Tab_VideoSettings_C::Slider_Gamma' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_MotionBlur) == 0x000318, "Member 'UWB_Tab_VideoSettings_C::Slider_MotionBlur' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_PostProcessing) == 0x000320, "Member 'UWB_Tab_VideoSettings_C::Slider_PostProcessing' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Reflections) == 0x000328, "Member 'UWB_Tab_VideoSettings_C::Slider_Reflections' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_ResolutionScale) == 0x000330, "Member 'UWB_Tab_VideoSettings_C::Slider_ResolutionScale' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Shadows) == 0x000338, "Member 'UWB_Tab_VideoSettings_C::Slider_Shadows' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Sharpen) == 0x000340, "Member 'UWB_Tab_VideoSettings_C::Slider_Sharpen' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Textures) == 0x000348, "Member 'UWB_Tab_VideoSettings_C::Slider_Textures' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_ViewDistance) == 0x000350, "Member 'UWB_Tab_VideoSettings_C::Slider_ViewDistance' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_VisualEffects) == 0x000358, "Member 'UWB_Tab_VideoSettings_C::Slider_VisualEffects' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedVSync) == 0x000360, "Member 'UWB_Tab_VideoSettings_C::SelectedVSync' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedGamma) == 0x000368, "Member 'UWB_Tab_VideoSettings_C::SelectedGamma' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedFieldOfView) == 0x000370, "Member 'UWB_Tab_VideoSettings_C::SelectedFieldOfView' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedMotionBlur) == 0x000378, "Member 'UWB_Tab_VideoSettings_C::SelectedMotionBlur' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedExposureMethod) == 0x000380, "Member 'UWB_Tab_VideoSettings_C::SelectedExposureMethod' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedAntiAliasingQuality) == 0x000384, "Member 'UWB_Tab_VideoSettings_C::SelectedAntiAliasingQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedResolutionScale) == 0x000388, "Member 'UWB_Tab_VideoSettings_C::SelectedResolutionScale' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedViewDistanceQuality) == 0x000390, "Member 'UWB_Tab_VideoSettings_C::SelectedViewDistanceQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedShadowQuality) == 0x000394, "Member 'UWB_Tab_VideoSettings_C::SelectedShadowQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedPostProcessingQuality) == 0x000398, "Member 'UWB_Tab_VideoSettings_C::SelectedPostProcessingQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedReflectionsQuality) == 0x00039C, "Member 'UWB_Tab_VideoSettings_C::SelectedReflectionsQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedVisualEffectQuality) == 0x0003A0, "Member 'UWB_Tab_VideoSettings_C::SelectedVisualEffectQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedTextureQuality) == 0x0003A4, "Member 'UWB_Tab_VideoSettings_C::SelectedTextureQuality' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedFramerateLimit) == 0x0003A8, "Member 'UWB_Tab_VideoSettings_C::SelectedFramerateLimit' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SettingsSave) == 0x0003B0, "Member 'UWB_Tab_VideoSettings_C::SettingsSave' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, bDirty) == 0x0003B8, "Member 'UWB_Tab_VideoSettings_C::bDirty' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedResolution) == 0x0003C0, "Member 'UWB_Tab_VideoSettings_C::SelectedResolution' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedWindowMode) == 0x0003D0, "Member 'UWB_Tab_VideoSettings_C::SelectedWindowMode' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedSharpen) == 0x0003E0, "Member 'UWB_Tab_VideoSettings_C::SelectedSharpen' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedFPSCounter) == 0x0003E8, "Member 'UWB_Tab_VideoSettings_C::SelectedFPSCounter' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_VideoSettings_C, AAMethod) == 0x0003EC, "Member 'UWB_Tab_VideoSettings_C::AAMethod' has a wrong offset!");
+static_assert(sizeof(UWB_Tab_VideoSettings_C) == 0x000410, "Wrong size on UWB_Tab_VideoSettings_C");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Tab_VideoSettings_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, CheckBox_FPSCounter) == 0x0002E8, "Member 'UWB_Tab_VideoSettings_C::CheckBox_FPSCounter' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, CheckBox_VSync) == 0x0002F0, "Member 'UWB_Tab_VideoSettings_C::CheckBox_VSync' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, ComboBox_AAMode) == 0x0002F8, "Member 'UWB_Tab_VideoSettings_C::ComboBox_AAMode' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, ComboBox_Resolution) == 0x000300, "Member 'UWB_Tab_VideoSettings_C::ComboBox_Resolution' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, ComboBox_WindowMode) == 0x000308, "Member 'UWB_Tab_VideoSettings_C::ComboBox_WindowMode' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, ScrollBox_0) == 0x000310, "Member 'UWB_Tab_VideoSettings_C::ScrollBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_AntiAliasing) == 0x000318, "Member 'UWB_Tab_VideoSettings_C::Slider_AntiAliasing' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_FieldOfView) == 0x000320, "Member 'UWB_Tab_VideoSettings_C::Slider_FieldOfView' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_FrameRateLimit) == 0x000328, "Member 'UWB_Tab_VideoSettings_C::Slider_FrameRateLimit' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Gamma) == 0x000330, "Member 'UWB_Tab_VideoSettings_C::Slider_Gamma' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_MotionBlur) == 0x000338, "Member 'UWB_Tab_VideoSettings_C::Slider_MotionBlur' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_PostProcessing) == 0x000340, "Member 'UWB_Tab_VideoSettings_C::Slider_PostProcessing' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Reflections) == 0x000348, "Member 'UWB_Tab_VideoSettings_C::Slider_Reflections' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_ResolutionScale) == 0x000350, "Member 'UWB_Tab_VideoSettings_C::Slider_ResolutionScale' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Shadows) == 0x000358, "Member 'UWB_Tab_VideoSettings_C::Slider_Shadows' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Sharpen) == 0x000360, "Member 'UWB_Tab_VideoSettings_C::Slider_Sharpen' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_Textures) == 0x000368, "Member 'UWB_Tab_VideoSettings_C::Slider_Textures' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_ViewDistance) == 0x000370, "Member 'UWB_Tab_VideoSettings_C::Slider_ViewDistance' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, Slider_VisualEffects) == 0x000378, "Member 'UWB_Tab_VideoSettings_C::Slider_VisualEffects' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedVSync) == 0x000380, "Member 'UWB_Tab_VideoSettings_C::SelectedVSync' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedGamma) == 0x000388, "Member 'UWB_Tab_VideoSettings_C::SelectedGamma' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedFieldOfView) == 0x000390, "Member 'UWB_Tab_VideoSettings_C::SelectedFieldOfView' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedMotionBlur) == 0x000398, "Member 'UWB_Tab_VideoSettings_C::SelectedMotionBlur' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedExposureMethod) == 0x0003A0, "Member 'UWB_Tab_VideoSettings_C::SelectedExposureMethod' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedAntiAliasingQuality) == 0x0003A4, "Member 'UWB_Tab_VideoSettings_C::SelectedAntiAliasingQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedResolutionScale) == 0x0003A8, "Member 'UWB_Tab_VideoSettings_C::SelectedResolutionScale' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedViewDistanceQuality) == 0x0003B0, "Member 'UWB_Tab_VideoSettings_C::SelectedViewDistanceQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedShadowQuality) == 0x0003B4, "Member 'UWB_Tab_VideoSettings_C::SelectedShadowQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedPostProcessingQuality) == 0x0003B8, "Member 'UWB_Tab_VideoSettings_C::SelectedPostProcessingQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedReflectionsQuality) == 0x0003BC, "Member 'UWB_Tab_VideoSettings_C::SelectedReflectionsQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedVisualEffectQuality) == 0x0003C0, "Member 'UWB_Tab_VideoSettings_C::SelectedVisualEffectQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedTextureQuality) == 0x0003C4, "Member 'UWB_Tab_VideoSettings_C::SelectedTextureQuality' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedFramerateLimit) == 0x0003C8, "Member 'UWB_Tab_VideoSettings_C::SelectedFramerateLimit' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SettingsSave) == 0x0003D0, "Member 'UWB_Tab_VideoSettings_C::SettingsSave' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, bDirty) == 0x0003D8, "Member 'UWB_Tab_VideoSettings_C::bDirty' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedResolution) == 0x0003E0, "Member 'UWB_Tab_VideoSettings_C::SelectedResolution' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedWindowMode) == 0x0003F0, "Member 'UWB_Tab_VideoSettings_C::SelectedWindowMode' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedSharpen) == 0x000400, "Member 'UWB_Tab_VideoSettings_C::SelectedSharpen' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, SelectedFPSCounter) == 0x000408, "Member 'UWB_Tab_VideoSettings_C::SelectedFPSCounter' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_VideoSettings_C, AAMethod) == 0x00040C, "Member 'UWB_Tab_VideoSettings_C::AAMethod' has a wrong offset!");
 
 }
 

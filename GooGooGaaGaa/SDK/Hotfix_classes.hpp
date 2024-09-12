@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Hotfix_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Hotfix_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ namespace SDK
 class UOnlineHotfixManager final : public UObject
 {
 public:
-	uint8                                         Pad_1FF2[0x200];                                   // 0x0028(0x0200)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x200];                                     // 0x0028(0x0200)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OSSName;                                           // 0x0228(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 HotfixManagerClassName;                            // 0x0238(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DebugPrefix;                                       // 0x0248(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -54,32 +54,32 @@ static_assert(offsetof(UOnlineHotfixManager, AssetsHotfixedFromIniFiles) == 0x00
 class UUpdateManager final : public UObject
 {
 public:
-	uint8                                         Pad_1FF3[0x60];                                    // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         UpdateCheckStartDelay;                             // 0x0088(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         UpdateCheckCachedResponseDelay;                    // 0x008C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         HotfixCheckCompleteDelay;                          // 0x0090(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         UpdateCheckCompleteDelay;                          // 0x0094(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         HotfixAvailabilityCheckCompleteDelay;              // 0x0098(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         UpdateCheckAvailabilityCompleteDelay;              // 0x009C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1FF4[0x4];                                     // 0x00A0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0[0x4];                                       // 0x00A0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AppSuspendedUpdateCheckTimeSeconds;                // 0x00A4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1FF5[0x8];                                     // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bPlatformEnvironmentDetected;                      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bInitialUpdateFinished;                            // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCheckHotfixAvailabilityOnly;                      // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EUpdateState                                  CurrentUpdateState;                                // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bInitialUpdateFinished;                            // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCheckHotfixAvailabilityOnly;                      // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EUpdateState                                  CurrentUpdateState;                                // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B3[0x1];                                       // 0x00B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WorstNumFilesPendingLoadViewed;                    // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1FF6[0x4];                                     // 0x00B8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x4];                                       // 0x00B8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	EHotfixResult                                 LastHotfixResult;                                  // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1FF7[0x23];                                    // 0x00BD(0x0023)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BD[0x23];                                      // 0x00BD(0x0023)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              LastUpdateCheck[0x2];                              // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EUpdateCompletionStatus                       LastCompletionResult[0x2];                         // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1FF8[0x26];                                    // 0x00F2(0x0026)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F2[0x26];                                      // 0x00F2(0x0026)(Fixing Size After Last Property [ Dumper-7 ])
 	class UEnum*                                  UpdateStateEnum;                                   // 0x0118(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UEnum*                                  UpdateCompletionEnum;                              // 0x0120(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FUpdateContextDefinition               UpdateContextDefinitionUnknown;                    // 0x0128(0x0068)(Config, NativeAccessSpecifierPrivate)
 	TArray<struct FUpdateContextDefinition>       UpdateContextDefinitions;                          // 0x0190(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1FF9[0x58];                                    // 0x01A0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A0[0x58];                                     // 0x01A0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -100,10 +100,9 @@ static_assert(offsetof(UUpdateManager, UpdateCheckCompleteDelay) == 0x000094, "M
 static_assert(offsetof(UUpdateManager, HotfixAvailabilityCheckCompleteDelay) == 0x000098, "Member 'UUpdateManager::HotfixAvailabilityCheckCompleteDelay' has a wrong offset!");
 static_assert(offsetof(UUpdateManager, UpdateCheckAvailabilityCompleteDelay) == 0x00009C, "Member 'UUpdateManager::UpdateCheckAvailabilityCompleteDelay' has a wrong offset!");
 static_assert(offsetof(UUpdateManager, AppSuspendedUpdateCheckTimeSeconds) == 0x0000A4, "Member 'UUpdateManager::AppSuspendedUpdateCheckTimeSeconds' has a wrong offset!");
-static_assert(offsetof(UUpdateManager, bPlatformEnvironmentDetected) == 0x0000B0, "Member 'UUpdateManager::bPlatformEnvironmentDetected' has a wrong offset!");
-static_assert(offsetof(UUpdateManager, bInitialUpdateFinished) == 0x0000B1, "Member 'UUpdateManager::bInitialUpdateFinished' has a wrong offset!");
-static_assert(offsetof(UUpdateManager, bCheckHotfixAvailabilityOnly) == 0x0000B2, "Member 'UUpdateManager::bCheckHotfixAvailabilityOnly' has a wrong offset!");
-static_assert(offsetof(UUpdateManager, CurrentUpdateState) == 0x0000B3, "Member 'UUpdateManager::CurrentUpdateState' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, bInitialUpdateFinished) == 0x0000B0, "Member 'UUpdateManager::bInitialUpdateFinished' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, bCheckHotfixAvailabilityOnly) == 0x0000B1, "Member 'UUpdateManager::bCheckHotfixAvailabilityOnly' has a wrong offset!");
+static_assert(offsetof(UUpdateManager, CurrentUpdateState) == 0x0000B2, "Member 'UUpdateManager::CurrentUpdateState' has a wrong offset!");
 static_assert(offsetof(UUpdateManager, WorstNumFilesPendingLoadViewed) == 0x0000B4, "Member 'UUpdateManager::WorstNumFilesPendingLoadViewed' has a wrong offset!");
 static_assert(offsetof(UUpdateManager, LastHotfixResult) == 0x0000BC, "Member 'UUpdateManager::LastHotfixResult' has a wrong offset!");
 static_assert(offsetof(UUpdateManager, LastUpdateCheck) == 0x0000E0, "Member 'UUpdateManager::LastUpdateCheck' has a wrong offset!");

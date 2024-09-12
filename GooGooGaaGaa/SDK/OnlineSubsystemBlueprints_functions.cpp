@@ -140,6 +140,38 @@ bool UOnlineAchievementsSubsystem::IsSubsystemAvailable()
 }
 
 
+// Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersByFilter.QueryOffersByFilter
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineStoreV2Subsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FOnlineStoreFilterBP             Filter                                                 (Parm, NativeAccessSpecifierPublic)
+// class UOnlineStoreV2SubsystemQueryOffersByFilter*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineStoreV2SubsystemQueryOffersByFilter* UOnlineStoreV2SubsystemQueryOffersByFilter::QueryOffersByFilter(class UOnlineStoreV2Subsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const struct FOnlineStoreFilterBP& Filter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineStoreV2SubsystemQueryOffersByFilter", "QueryOffersByFilter");
+
+	Params::OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.UserId = std::move(UserId);
+	Parms.Filter = std::move(Filter);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements.WriteAchievements
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -202,6 +234,36 @@ class UOnlineAchievementsSubsystemQueryAchievements* UOnlineAchievementsSubsyste
 }
 
 
+// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadMatchWithID.LoadMatchWithID
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineTurnBasedSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           MatchID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineTurnBasedSubsystemLoadMatchWithID*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineTurnBasedSubsystemLoadMatchWithID* UOnlineTurnBasedSubsystemLoadMatchWithID::LoadMatchWithID(class UOnlineTurnBasedSubsystem* Subsystem, const class FString& MatchID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineTurnBasedSubsystemLoadMatchWithID", "LoadMatchWithID");
+
+	Params::OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.MatchID = std::move(MatchID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemQueryAchievementDescriptions.QueryAchievementDescriptions
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -245,6 +307,167 @@ bool UOnlineAvatarSubsystem::IsSubsystemAvailable()
 		Func = Class->GetFunction("OnlineAvatarSubsystem", "IsSubsystemAvailable");
 
 	Params::OnlineAvatarSubsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFile
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineTitleFileSubsystem::ClearFile(const class FString& Filename)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTitleFileSubsystem", "ClearFile");
+
+	Params::OnlineTitleFileSubsystem_ClearFile Parms{};
+
+	Parms.Filename = std::move(Filename);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFiles
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineTitleFileSubsystem::ClearFiles()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTitleFileSubsystem", "ClearFiles");
+
+	Params::OnlineTitleFileSubsystem_ClearFiles Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.DeleteCachedFiles
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bSkipEnumerated                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineTitleFileSubsystem::DeleteCachedFiles(bool bSkipEnumerated)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTitleFileSubsystem", "DeleteCachedFiles");
+
+	Params::OnlineTitleFileSubsystem_DeleteCachedFiles Parms{};
+
+	Parms.bSkipEnumerated = bSkipEnumerated;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileContents
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UFileData*                        FileContents                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineTitleFileSubsystem::GetFileContents(const class FString& Filename, class UFileData** FileContents)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTitleFileSubsystem", "GetFileContents");
+
+	Params::OnlineTitleFileSubsystem_GetFileContents Parms{};
+
+	Parms.Filename = std::move(Filename);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (FileContents != nullptr)
+		*FileContents = Parms.FileContents;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileList
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FCloudFileHeaderBP>       Files                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UOnlineTitleFileSubsystem::GetFileList(TArray<struct FCloudFileHeaderBP>* Files)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTitleFileSubsystem", "GetFileList");
+
+	Params::OnlineTitleFileSubsystem_GetFileList Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Files != nullptr)
+		*Files = std::move(Parms.Files);
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineTitleFileSubsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTitleFileSubsystem", "IsSubsystemAvailable");
+
+	Params::OnlineTitleFileSubsystem_IsSubsystemAvailable Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -318,6 +541,111 @@ class UOnlineAvatarSubsystemGetAvatarUrl* UOnlineAvatarSubsystemGetAvatarUrl::Ge
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetCategories
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FOnlineStoreCategoryBP>   OutCategories                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UOnlineStoreV2Subsystem::GetCategories(TArray<struct FOnlineStoreCategoryBP>* OutCategories)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineStoreV2Subsystem", "GetCategories");
+
+	Params::OnlineStoreV2Subsystem_GetCategories Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutCategories != nullptr)
+		*OutCategories = std::move(Parms.OutCategories);
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffer
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           OfferId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineStoreOffer*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineStoreOffer* UOnlineStoreV2Subsystem::GetOffer(const class FString& OfferId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineStoreV2Subsystem", "GetOffer");
+
+	Params::OnlineStoreV2Subsystem_GetOffer Parms{};
+
+	Parms.OfferId = std::move(OfferId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffers
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UOnlineStoreOffer*>        OutOffers                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UOnlineStoreV2Subsystem::GetOffers(TArray<class UOnlineStoreOffer*>* OutOffers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineStoreV2Subsystem", "GetOffers");
+
+	Params::OnlineStoreV2Subsystem_GetOffers Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutOffers != nullptr)
+		*OutOffers = std::move(Parms.OutOffers);
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineStoreV2Subsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineStoreV2Subsystem", "IsSubsystemAvailable");
+
+	Params::OnlineStoreV2Subsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -792,10 +1120,10 @@ bool UOnlineChatSubsystem::SendRoomChat(const struct FUniqueNetIdRepl& UserId, c
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Namespace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           NameSpace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UOnlineEntitlement*>       OutUserEntitlements                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
-void UOnlineEntitlementsSubsystem::GetAllEntitlements(const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, TArray<class UOnlineEntitlement*>* OutUserEntitlements)
+void UOnlineEntitlementsSubsystem::GetAllEntitlements(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, TArray<class UOnlineEntitlement*>* OutUserEntitlements)
 {
 	static class UFunction* Func = nullptr;
 
@@ -805,7 +1133,7 @@ void UOnlineEntitlementsSubsystem::GetAllEntitlements(const struct FUniqueNetIdR
 	Params::OnlineEntitlementsSubsystem_GetAllEntitlements Parms{};
 
 	Parms.UserId = std::move(UserId);
-	Parms.Namespace = std::move(Namespace);
+	Parms.NameSpace = std::move(NameSpace);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -904,16 +1232,66 @@ bool UOnlineEntitlementsSubsystem::IsSubsystemAvailable()
 }
 
 
+// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.GetMatchDataSize
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UOnlineTurnBasedSubsystem::GetMatchDataSize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTurnBasedSubsystem", "GetMatchDataSize");
+
+	Params::OnlineTurnBasedSubsystem_GetMatchDataSize Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineTurnBasedSubsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineTurnBasedSubsystem", "IsSubsystemAvailable");
+
+	Params::OnlineTurnBasedSubsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineEntitlementsSubsystemQueryEntitlements.QueryEntitlements
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UOnlineEntitlementsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Namespace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           NameSpace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FPagedQueryBP                    Page                                                   (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // class UOnlineEntitlementsSubsystemQueryEntitlements*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UOnlineEntitlementsSubsystemQueryEntitlements* UOnlineEntitlementsSubsystemQueryEntitlements::QueryEntitlements(class UOnlineEntitlementsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, const struct FPagedQueryBP& Page)
+class UOnlineEntitlementsSubsystemQueryEntitlements* UOnlineEntitlementsSubsystemQueryEntitlements::QueryEntitlements(class UOnlineEntitlementsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, const struct FPagedQueryBP& Page)
 {
 	static class UFunction* Func = nullptr;
 
@@ -924,7 +1302,7 @@ class UOnlineEntitlementsSubsystemQueryEntitlements* UOnlineEntitlementsSubsyste
 
 	Parms.Subsystem = Subsystem;
 	Parms.UserId = std::move(UserId);
-	Parms.Namespace = std::move(Namespace);
+	Parms.NameSpace = std::move(NameSpace);
 	Parms.Page = std::move(Page);
 
 	auto Flgs = Func->FunctionFlags;
@@ -956,6 +1334,38 @@ bool UOnlineEventsSubsystem::IsSubsystemAvailable()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping.QueryUserIdMapping
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineUserSubsystem*             Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           DisplayNameOrEmail                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineUserSubsystemQueryUserIdMapping*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineUserSubsystemQueryUserIdMapping* UOnlineUserSubsystemQueryUserIdMapping::QueryUserIdMapping(class UOnlineUserSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& DisplayNameOrEmail)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineUserSubsystemQueryUserIdMapping", "QueryUserIdMapping");
+
+	Params::OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.UserId = std::move(UserId);
+	Parms.DisplayNameOrEmail = std::move(DisplayNameOrEmail);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -1364,6 +1774,36 @@ class UOnlineExternalUISubsystemShowLoginUI* UOnlineExternalUISubsystemShowLogin
 }
 
 
+// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles.EnumerateUserFiles
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineUserCloudSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineUserCloudSubsystemEnumerateUserFiles*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineUserCloudSubsystemEnumerateUserFiles* UOnlineUserCloudSubsystemEnumerateUserFiles::EnumerateUserFiles(class UOnlineUserCloudSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineUserCloudSubsystemEnumerateUserFiles", "EnumerateUserFiles");
+
+	Params::OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.UserId = std::move(UserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowAccountCreationUI.ShowAccountCreationUI
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1414,6 +1854,36 @@ class UOnlineExternalUISubsystemShowWebURL* UOnlineExternalUISubsystemShowWebURL
 	Parms.Subsystem = Subsystem;
 	Parms.URL = std::move(URL);
 	Parms.ShowParams = std::move(ShowParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystemReadFile.ReadFile
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineTitleFileSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineTitleFileSubsystemReadFile*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineTitleFileSubsystemReadFile* UOnlineTitleFileSubsystemReadFile::ReadFile(class UOnlineTitleFileSubsystem* Subsystem, const class FString& Filename)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineTitleFileSubsystemReadFile", "ReadFile");
+
+	Params::OnlineTitleFileSubsystemReadFile_ReadFile Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.Filename = std::move(Filename);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1544,6 +2014,34 @@ class UOnlineExternalUISubsystemShowSendMessageToUserUI* UOnlineExternalUISubsys
 	Parms.LocalUserNum = LocalUserNum;
 	Parms.Recipient = std::move(Recipient);
 	Parms.ShowParams = std::move(ShowParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemDisconnect.Disconnect
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineVoiceChatSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineVoiceChatSubsystemDisconnect*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineVoiceChatSubsystemDisconnect* UOnlineVoiceChatSubsystemDisconnect::Disconnect(class UOnlineVoiceChatSubsystem* Subsystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineVoiceChatSubsystemDisconnect", "Disconnect");
+
+	Params::OnlineVoiceChatSubsystemDisconnect_Disconnect Parms{};
+
+	Parms.Subsystem = Subsystem;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1728,11 +2226,11 @@ bool UOnlineFriendsSubsystem::GetFriendsList(int32 LocalUserNum, const class FSt
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Namespace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           NameSpace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<class UOnlineRecentPlayerRef*>   OutRecentPlayers                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UOnlineFriendsSubsystem::GetRecentPlayers(const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, TArray<class UOnlineRecentPlayerRef*>* OutRecentPlayers)
+bool UOnlineFriendsSubsystem::GetRecentPlayers(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, TArray<class UOnlineRecentPlayerRef*>* OutRecentPlayers)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1742,7 +2240,7 @@ bool UOnlineFriendsSubsystem::GetRecentPlayers(const struct FUniqueNetIdRepl& Us
 	Params::OnlineFriendsSubsystem_GetRecentPlayers Parms{};
 
 	Parms.UserId = std::move(UserId);
-	Parms.Namespace = std::move(Namespace);
+	Parms.NameSpace = std::move(NameSpace);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1981,6 +2479,181 @@ class UOnlineFriendsSubsystemRejectInvite* UOnlineFriendsSubsystemRejectInvite::
 }
 
 
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.CreateUser
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UVoiceChatUser*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UVoiceChatUser* UOnlineVoiceChatSubsystem::CreateUser()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "CreateUser");
+
+	Params::OnlineVoiceChatSubsystem_CreateUser Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Initialize_
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineVoiceChatSubsystem::Initialize_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "Initialize_");
+
+	Params::OnlineVoiceChatSubsystem_Initialize_ Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnected
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineVoiceChatSubsystem::IsConnected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsConnected");
+
+	Params::OnlineVoiceChatSubsystem_IsConnected Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnecting
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineVoiceChatSubsystem::IsConnecting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsConnecting");
+
+	Params::OnlineVoiceChatSubsystem_IsConnecting Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsInitialized
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineVoiceChatSubsystem::IsInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsInitialized");
+
+	Params::OnlineVoiceChatSubsystem_IsInitialized Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineVoiceChatSubsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsSubsystemAvailable");
+
+	Params::OnlineVoiceChatSubsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Uninitialize_
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineVoiceChatSubsystem::Uninitialize_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "Uninitialize_");
+
+	Params::OnlineVoiceChatSubsystem_Uninitialize_ Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemSetFriendAlias.SetFriendAlias
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -2044,6 +2717,238 @@ class UOnlineFriendsSubsystemDeleteFriendAlias* UOnlineFriendsSubsystemDeleteFri
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetColumns
+// (Final, Native, Private, BlueprintCallable)
+// Parameters:
+// TArray<struct FColumnMetaDataBP>        InColumns                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UOnlineLeaderboardRead::SetColumns(const TArray<struct FColumnMetaDataBP>& InColumns)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "SetColumns");
+
+	Params::OnlineLeaderboardRead_SetColumns Parms{};
+
+	Parms.InColumns = std::move(InColumns);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetLeaderboardName
+// (Final, Native, Private, BlueprintCallable)
+// Parameters:
+// class FName                             LeaderboardName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLeaderboardRead::SetLeaderboardName(class FName LeaderboardName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "SetLeaderboardName");
+
+	Params::OnlineLeaderboardRead_SetLeaderboardName Parms{};
+
+	Parms.LeaderboardName = LeaderboardName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetSortedColumn
+// (Final, Native, Private, BlueprintCallable)
+// Parameters:
+// class FName                             SortedColumn                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLeaderboardRead::SetSortedColumn(class FName SortedColumn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "SetSortedColumn");
+
+	Params::OnlineLeaderboardRead_SetSortedColumn Parms{};
+
+	Parms.SortedColumn = SortedColumn;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.FindPlayerRecord
+// (Final, Native, Private, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    OutFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FOnlineStatsRowBP                ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FOnlineStatsRowBP UOnlineLeaderboardRead::FindPlayerRecord(const struct FUniqueNetIdRepl& UserId, bool* OutFound) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "FindPlayerRecord");
+
+	Params::OnlineLeaderboardRead_FindPlayerRecord Parms{};
+
+	Parms.UserId = std::move(UserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutFound != nullptr)
+		*OutFound = Parms.OutFound;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetColumns
+// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FColumnMetaDataBP>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FColumnMetaDataBP> UOnlineLeaderboardRead::GetColumns() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "GetColumns");
+
+	Params::OnlineLeaderboardRead_GetColumns Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetLeaderboardName
+// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UOnlineLeaderboardRead::GetLeaderboardName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "GetLeaderboardName");
+
+	Params::OnlineLeaderboardRead_GetLeaderboardName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetReadState
+// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EOnlineAsyncTaskState_                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EOnlineAsyncTaskState_ UOnlineLeaderboardRead::GetReadState() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "GetReadState");
+
+	Params::OnlineLeaderboardRead_GetReadState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetRows
+// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FOnlineStatsRowBP>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FOnlineStatsRowBP> UOnlineLeaderboardRead::GetRows() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "GetRows");
+
+	Params::OnlineLeaderboardRead_GetRows Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetSortedColumn
+// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UOnlineLeaderboardRead::GetSortedColumn() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardRead", "GetSortedColumn");
+
+	Params::OnlineLeaderboardRead_GetSortedColumn Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -2119,15 +3024,42 @@ class UOnlineFriendsSubsystemAddRecentPlayers* UOnlineFriendsSubsystemAddRecentP
 }
 
 
+// Function OnlineSubsystemBlueprints.OnlineAchievementsWrite.SetAchievementProgress
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             AchievementID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AchievementProgress                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineAchievementsWrite::SetAchievementProgress(class FName AchievementID, float AchievementProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineAchievementsWrite", "SetAchievementProgress");
+
+	Params::OnlineAchievementsWrite_SetAchievementProgress Parms{};
+
+	Parms.AchievementID = AchievementID;
+	Parms.AchievementProgress = AchievementProgress;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryRecentPlayers.QueryRecentPlayers
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UOnlineFriendsSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Namespace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           NameSpace                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UOnlineFriendsSubsystemQueryRecentPlayers*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UOnlineFriendsSubsystemQueryRecentPlayers* UOnlineFriendsSubsystemQueryRecentPlayers::QueryRecentPlayers(class UOnlineFriendsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Namespace)
+class UOnlineFriendsSubsystemQueryRecentPlayers* UOnlineFriendsSubsystemQueryRecentPlayers::QueryRecentPlayers(class UOnlineFriendsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2138,7 +3070,7 @@ class UOnlineFriendsSubsystemQueryRecentPlayers* UOnlineFriendsSubsystemQueryRec
 
 	Parms.Subsystem = Subsystem;
 	Parms.UserId = std::move(UserId);
-	Parms.Namespace = std::move(Namespace);
+	Parms.NameSpace = std::move(NameSpace);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2171,6 +3103,40 @@ class UOnlineFriendsSubsystemBlockPlayer* UOnlineFriendsSubsystemBlockPlayer::Bl
 	Parms.Subsystem = Subsystem;
 	Parms.LocalUserNum = LocalUserNum;
 	Parms.PlayerId = std::move(PlayerId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemKickParticipant.KickParticipant
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineVoiceAdminSubsystem*       Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ChannelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 TargetUserId                                           (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineVoiceAdminSubsystemKickParticipant*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineVoiceAdminSubsystemKickParticipant* UOnlineVoiceAdminSubsystemKickParticipant::KickParticipant(class UOnlineVoiceAdminSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ChannelName, const struct FUniqueNetIdRepl& TargetUserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineVoiceAdminSubsystemKickParticipant", "KickParticipant");
+
+	Params::OnlineVoiceAdminSubsystemKickParticipant_KickParticipant Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.ChannelName = std::move(ChannelName);
+	Parms.TargetUserId = std::move(TargetUserId);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2383,31 +3349,6 @@ void UOnlineUserRef::SetUserLocalAttribute(const class FString& Key, const class
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineRecentPlayerRef.GetLastSeen
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FDateTime                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FDateTime UOnlineRecentPlayerRef::GetLastSeen()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineRecentPlayerRef", "GetLastSeen");
-
-	Params::OnlineRecentPlayerRef_GetLastSeen Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryFriendSettings.QueryFriendSettings
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -2465,6 +3406,81 @@ class UOnlineFriendsSubsystemSetFriendSettings* UOnlineFriendsSubsystemSetFriend
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.Party.GetLeaderId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FUniqueNetIdRepl UParty::GetLeaderId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Party", "GetLeaderId");
+
+	Params::Party_GetLeaderId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.Party.GetPartyId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UPartyId*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPartyId* UParty::GetPartyId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Party", "GetPartyId");
+
+	Params::Party_GetPartyId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.Party.GetPartyTypeId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int64 UParty::GetPartyTypeId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Party", "GetPartyTypeId");
+
+	Params::Party_GetPartyTypeId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -2560,6 +3576,31 @@ class UOnlineGameActivitySubsystemStartActivity* UOnlineGameActivitySubsystemSta
 }
 
 
+// Function OnlineSubsystemBlueprints.LobbyId.ToDebugString
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString ULobbyId::ToDebugString()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LobbyId", "ToDebugString");
+
+	Params::LobbyId_ToDebugString Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemEndActivity.EndActivity
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -2614,6 +3655,418 @@ class UOnlineGameActivitySubsystemResetAllActiveActivities* UOnlineGameActivityS
 
 	Parms.Subsystem = Subsystem;
 	Parms.LocalUserId = std::move(LocalUserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnCreateAccountFlowUIRequired
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class FString                           RequestedURL                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineExternalUISubsystem*       ExternalUIContext                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RequestID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IExternalUIFlowHandler::OnCreateAccountFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ExternalUIFlowHandler", "OnCreateAccountFlowUIRequired");
+
+	Params::ExternalUIFlowHandler_OnCreateAccountFlowUIRequired Parms{};
+
+	Parms.RequestedURL = std::move(RequestedURL);
+	Parms.ExternalUIContext = ExternalUIContext;
+	Parms.RequestID = RequestID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnLoginFlowUIRequired
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class FString                           RequestedURL                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineExternalUISubsystem*       ExternalUIContext                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RequestID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool IExternalUIFlowHandler::OnLoginFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ExternalUIFlowHandler", "OnLoginFlowUIRequired");
+
+	Params::ExternalUIFlowHandler_OnLoginFlowUIRequired Parms{};
+
+	Parms.RequestedURL = std::move(RequestedURL);
+	Parms.ExternalUIContext = ExternalUIContext;
+	Parms.RequestID = RequestID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemResumeActivity.ResumeActivity
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameActivitySubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ActivityId                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FOnlineActivityTasksToResetBP    TasksToReset                                           (Parm, NativeAccessSpecifierPublic)
+// class UOnlineGameActivitySubsystemResumeActivity*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameActivitySubsystemResumeActivity* UOnlineGameActivitySubsystemResumeActivity::ResumeActivity(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ActivityId, const struct FOnlineActivityTasksToResetBP& TasksToReset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameActivitySubsystemResumeActivity", "ResumeActivity");
+
+	Params::OnlineGameActivitySubsystemResumeActivity_ResumeActivity Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.ActivityId = std::move(ActivityId);
+	Parms.TasksToReset = std::move(TasksToReset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityAvailability.SetActivityAvailability
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameActivitySubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ActivityId                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineGameActivitySubsystemSetActivityAvailability*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameActivitySubsystemSetActivityAvailability* UOnlineGameActivitySubsystemSetActivityAvailability::SetActivityAvailability(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ActivityId, bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameActivitySubsystemSetActivityAvailability", "SetActivityAvailability");
+
+	Params::OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.ActivityId = std::move(ActivityId);
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineRecentPlayerRef.GetLastSeen
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FDateTime                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FDateTime UOnlineRecentPlayerRef::GetLastSeen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineRecentPlayerRef", "GetLastSeen");
+
+	Params::OnlineRecentPlayerRef_GetLastSeen Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityPriority.SetActivityPriority
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameActivitySubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TMap<class FString, int32>              PrioritizedActivities                                  (Parm, NativeAccessSpecifierPublic)
+// class UOnlineGameActivitySubsystemSetActivityPriority*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameActivitySubsystemSetActivityPriority* UOnlineGameActivitySubsystemSetActivityPriority::SetActivityPriority(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TMap<class FString, int32>& PrioritizedActivities)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameActivitySubsystemSetActivityPriority", "SetActivityPriority");
+
+	Params::OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.PrioritizedActivities = std::move(PrioritizedActivities);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineGameItemStatsSubsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineGameItemStatsSubsystem", "IsSubsystemAvailable");
+
+	Params::OnlineGameItemStatsSubsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSettings.GetValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FOnlineSessionSettingsBP         ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FOnlineSessionSettingsBP UOnlineSessionSettings::GetValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineSessionSettings", "GetValue");
+
+	Params::OnlineSessionSettings_GetValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemUsage.ItemUsage
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ItemUsedBy                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ItemsUsed                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class UOnlineGameItemStatsSubsystemItemUsage*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameItemStatsSubsystemItemUsage* UOnlineGameItemStatsSubsystemItemUsage::ItemUsage(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ItemUsedBy, const TArray<class FString>& ItemsUsed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemUsage", "ItemUsage");
+
+	Params::OnlineGameItemStatsSubsystemItemUsage_ItemUsage Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.ItemUsedBy = std::move(ItemUsedBy);
+	Parms.ItemsUsed = std::move(ItemsUsed);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemImpact.ItemImpact
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   TargetActors                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class FString                           ImpactInitiatedBy                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ItemsUsed                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class UOnlineGameItemStatsSubsystemItemImpact*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameItemStatsSubsystemItemImpact* UOnlineGameItemStatsSubsystemItemImpact::ItemImpact(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TArray<class FString>& TargetActors, const class FString& ImpactInitiatedBy, const TArray<class FString>& ItemsUsed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemImpact", "ItemImpact");
+
+	Params::OnlineGameItemStatsSubsystemItemImpact_ItemImpact Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.TargetActors = std::move(TargetActors);
+	Parms.ImpactInitiatedBy = std::move(ImpactInitiatedBy);
+	Parms.ItemsUsed = std::move(ItemsUsed);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.ReadablePartyData.GetAttribute
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           AttrName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    OutFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVariantDataBP                   OutAttrValue                                           (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UReadablePartyData::GetAttribute(const class FString& AttrName, bool* OutFound, struct FVariantDataBP* OutAttrValue) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ReadablePartyData", "GetAttribute");
+
+	Params::ReadablePartyData_GetAttribute Parms{};
+
+	Parms.AttrName = std::move(AttrName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutFound != nullptr)
+		*OutFound = Parms.OutFound;
+
+	if (OutAttrValue != nullptr)
+		*OutAttrValue = std::move(Parms.OutAttrValue);
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemMitigation.ItemMitigation
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ItemsUsed                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FString>                   ImpactItemsMitigated                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class FString                           ItemUsedBy                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineGameItemStatsSubsystemItemMitigation*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameItemStatsSubsystemItemMitigation* UOnlineGameItemStatsSubsystemItemMitigation::ItemMitigation(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TArray<class FString>& ItemsUsed, const TArray<class FString>& ImpactItemsMitigated, const class FString& ItemUsedBy)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemMitigation", "ItemMitigation");
+
+	Params::OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.ItemsUsed = std::move(ItemsUsed);
+	Parms.ImpactItemsMitigated = std::move(ImpactItemsMitigated);
+	Parms.ItemUsedBy = std::move(ItemUsedBy);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemAvailabilityChange.ItemAvailabilityChange
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FString>                   AvailableItems                                         (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FString>                   UnavailableItems                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class UOnlineGameItemStatsSubsystemItemAvailabilityChange*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineGameItemStatsSubsystemItemAvailabilityChange* UOnlineGameItemStatsSubsystemItemAvailabilityChange::ItemAvailabilityChange(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TArray<class FString>& AvailableItems, const TArray<class FString>& UnavailableItems)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemAvailabilityChange", "ItemAvailabilityChange");
+
+	Params::OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.AvailableItems = std::move(AvailableItems);
+	Parms.UnavailableItems = std::move(UnavailableItems);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2803,471 +4256,6 @@ void UOnlineLobbyTransaction::SetPublic(bool Public)
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemResumeActivity.ResumeActivity
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameActivitySubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ActivityId                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FOnlineActivityTasksToResetBP    TasksToReset                                           (Parm, NativeAccessSpecifierPublic)
-// class UOnlineGameActivitySubsystemResumeActivity*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameActivitySubsystemResumeActivity* UOnlineGameActivitySubsystemResumeActivity::ResumeActivity(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ActivityId, const struct FOnlineActivityTasksToResetBP& TasksToReset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameActivitySubsystemResumeActivity", "ResumeActivity");
-
-	Params::OnlineGameActivitySubsystemResumeActivity_ResumeActivity Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.ActivityId = std::move(ActivityId);
-	Parms.TasksToReset = std::move(TasksToReset);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityAvailability.SetActivityAvailability
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameActivitySubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ActivityId                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineGameActivitySubsystemSetActivityAvailability*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameActivitySubsystemSetActivityAvailability* UOnlineGameActivitySubsystemSetActivityAvailability::SetActivityAvailability(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ActivityId, bool bEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameActivitySubsystemSetActivityAvailability", "SetActivityAvailability");
-
-	Params::OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.ActivityId = std::move(ActivityId);
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetPurchaseTransactionState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// EPurchaseTransactionState_              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EPurchaseTransactionState_ UPurchaseReceipt::GetPurchaseTransactionState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PurchaseReceipt", "GetPurchaseTransactionState");
-
-	Params::PurchaseReceipt_GetPurchaseTransactionState Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetReceiptOffers
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// TArray<struct FReceiptOfferEntryBP>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FReceiptOfferEntryBP> UPurchaseReceipt::GetReceiptOffers()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PurchaseReceipt", "GetReceiptOffers");
-
-	Params::PurchaseReceipt_GetReceiptOffers Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetTransactionId
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UPurchaseReceipt::GetTransactionId()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PurchaseReceipt", "GetTransactionId");
-
-	Params::PurchaseReceipt_GetTransactionId Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityPriority.SetActivityPriority
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameActivitySubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, int32>              PrioritizedActivities                                  (Parm, NativeAccessSpecifierPublic)
-// class UOnlineGameActivitySubsystemSetActivityPriority*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameActivitySubsystemSetActivityPriority* UOnlineGameActivitySubsystemSetActivityPriority::SetActivityPriority(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TMap<class FString, int32>& PrioritizedActivities)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameActivitySubsystemSetActivityPriority", "SetActivityPriority");
-
-	Params::OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.PrioritizedActivities = std::move(PrioritizedActivities);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineGameItemStatsSubsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineGameItemStatsSubsystem", "IsSubsystemAvailable");
-
-	Params::OnlineGameItemStatsSubsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.Party.GetLeaderId
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FUniqueNetIdRepl UParty::GetLeaderId()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Party", "GetLeaderId");
-
-	Params::Party_GetLeaderId Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.Party.GetPartyId
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UPartyId*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPartyId* UParty::GetPartyId()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Party", "GetPartyId");
-
-	Params::Party_GetPartyId Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.Party.GetPartyTypeId
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int64 UParty::GetPartyTypeId()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Party", "GetPartyTypeId");
-
-	Params::Party_GetPartyTypeId Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemUsage.ItemUsage
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ItemUsedBy                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   ItemsUsed                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class UOnlineGameItemStatsSubsystemItemUsage*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameItemStatsSubsystemItemUsage* UOnlineGameItemStatsSubsystemItemUsage::ItemUsage(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ItemUsedBy, const TArray<class FString>& ItemsUsed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemUsage", "ItemUsage");
-
-	Params::OnlineGameItemStatsSubsystemItemUsage_ItemUsage Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.ItemUsedBy = std::move(ItemUsedBy);
-	Parms.ItemsUsed = std::move(ItemsUsed);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemImpact.ItemImpact
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   TargetActors                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class FString                           ImpactInitiatedBy                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   ItemsUsed                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class UOnlineGameItemStatsSubsystemItemImpact*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameItemStatsSubsystemItemImpact* UOnlineGameItemStatsSubsystemItemImpact::ItemImpact(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TArray<class FString>& TargetActors, const class FString& ImpactInitiatedBy, const TArray<class FString>& ItemsUsed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemImpact", "ItemImpact");
-
-	Params::OnlineGameItemStatsSubsystemItemImpact_ItemImpact Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.TargetActors = std::move(TargetActors);
-	Parms.ImpactInitiatedBy = std::move(ImpactInitiatedBy);
-	Parms.ItemsUsed = std::move(ItemsUsed);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.LobbyId.ToDebugString
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString ULobbyId::ToDebugString()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LobbyId", "ToDebugString");
-
-	Params::LobbyId_ToDebugString Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemMitigation.ItemMitigation
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   ItemsUsed                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<class FString>                   ImpactItemsMitigated                                   (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class FString                           ItemUsedBy                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineGameItemStatsSubsystemItemMitigation*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameItemStatsSubsystemItemMitigation* UOnlineGameItemStatsSubsystemItemMitigation::ItemMitigation(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TArray<class FString>& ItemsUsed, const TArray<class FString>& ImpactItemsMitigated, const class FString& ItemUsedBy)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemMitigation", "ItemMitigation");
-
-	Params::OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.ItemsUsed = std::move(ItemsUsed);
-	Parms.ImpactItemsMitigated = std::move(ImpactItemsMitigated);
-	Parms.ItemUsedBy = std::move(ItemUsedBy);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemAvailabilityChange.ItemAvailabilityChange
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineGameItemStatsSubsystem*    Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FString>                   AvailableItems                                         (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<class FString>                   UnavailableItems                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class UOnlineGameItemStatsSubsystemItemAvailabilityChange*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineGameItemStatsSubsystemItemAvailabilityChange* UOnlineGameItemStatsSubsystemItemAvailabilityChange::ItemAvailabilityChange(class UOnlineGameItemStatsSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const TArray<class FString>& AvailableItems, const TArray<class FString>& UnavailableItems)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineGameItemStatsSubsystemItemAvailabilityChange", "ItemAvailabilityChange");
-
-	Params::OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.AvailableItems = std::move(AvailableItems);
-	Parms.UnavailableItems = std::move(UnavailableItems);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.PartyId.ToDebugString
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UPartyId::ToDebugString()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PartyId", "ToDebugString");
-
-	Params::PartyId_ToDebugString Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemInventoryChange.ItemInventoryChange
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -3336,22 +4324,30 @@ class UOnlineGameItemStatsSubsystemItemLoadoutChange* UOnlineGameItemStatsSubsys
 }
 
 
-// Function OnlineSubsystemBlueprints.VoiceChatUserLogout.Logout
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById.FindSessionById
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UVoiceChatUser*                   Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UVoiceChatUserLogout*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineSessionSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 SearchingUserId                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 SessionId                                              (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 FriendId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           UserData                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineSessionSubsystemFindSessionById*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UVoiceChatUserLogout* UVoiceChatUserLogout::Logout(class UVoiceChatUser* Subsystem)
+class UOnlineSessionSubsystemFindSessionById* UOnlineSessionSubsystemFindSessionById::FindSessionById(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingUserId, const struct FUniqueNetIdRepl& SessionId, const struct FUniqueNetIdRepl& FriendId, const class FString& UserData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("VoiceChatUserLogout", "Logout");
+		Func = StaticClass()->GetFunction("OnlineSessionSubsystemFindSessionById", "FindSessionById");
 
-	Params::VoiceChatUserLogout_Logout Parms{};
+	Params::OnlineSessionSubsystemFindSessionById_FindSessionById Parms{};
 
 	Parms.Subsystem = Subsystem;
+	Parms.SearchingUserId = std::move(SearchingUserId);
+	Parms.SessionId = std::move(SessionId);
+	Parms.FriendId = std::move(FriendId);
+	Parms.UserData = std::move(UserData);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4024,24 +5020,29 @@ class FString UOnlineHelpers::ReadFileDataAsString(class UFileData* FileData)
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSettings.GetValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Function OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel.LeaveChannel
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FOnlineSessionSettingsBP         ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+// class UVoiceChatUser*                   Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ChannelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UVoiceChatUserLeaveChannel*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FOnlineSessionSettingsBP UOnlineSessionSettings::GetValue()
+class UVoiceChatUserLeaveChannel* UVoiceChatUserLeaveChannel::LeaveChannel(class UVoiceChatUser* Subsystem, const class FString& ChannelName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineSessionSettings", "GetValue");
+		Func = StaticClass()->GetFunction("VoiceChatUserLeaveChannel", "LeaveChannel");
 
-	Params::OnlineSessionSettings_GetValue Parms{};
+	Params::VoiceChatUserLeaveChannel_LeaveChannel Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.ChannelName = std::move(ChannelName);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -4405,36 +5406,35 @@ class UOnlineIdentitySubsystemLogin* UOnlineIdentitySubsystemLogin::Login(class 
 }
 
 
-// Function OnlineSubsystemBlueprints.ReadablePartyData.GetAttribute
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession.FindFriendSession
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                           AttrName                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    OutFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVariantDataBP                   OutAttrValue                                           (Parm, OutParm, NativeAccessSpecifierPublic)
+// class UOnlineSessionSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LocalUserNum                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 Friend                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineSessionSubsystemFindFriendSession*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UReadablePartyData::GetAttribute(const class FString& AttrName, bool* OutFound, struct FVariantDataBP* OutAttrValue) const
+class UOnlineSessionSubsystemFindFriendSession* UOnlineSessionSubsystemFindFriendSession::FindFriendSession(class UOnlineSessionSubsystem* Subsystem, int32 LocalUserNum, const struct FUniqueNetIdRepl& Friend)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ReadablePartyData", "GetAttribute");
+		Func = StaticClass()->GetFunction("OnlineSessionSubsystemFindFriendSession", "FindFriendSession");
 
-	Params::ReadablePartyData_GetAttribute Parms{};
+	Params::OnlineSessionSubsystemFindFriendSession_FindFriendSession Parms{};
 
-	Parms.AttrName = std::move(AttrName);
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserNum = LocalUserNum;
+	Parms.Friend = std::move(Friend);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
-	if (OutFound != nullptr)
-		*OutFound = Parms.OutFound;
-
-	if (OutAttrValue != nullptr)
-		*OutAttrValue = std::move(Parms.OutAttrValue);
+	return Parms.ReturnValue;
 }
 
 
@@ -4491,6 +5491,659 @@ class UOnlineIdentitySubsystemAutoLogin* UOnlineIdentitySubsystemAutoLogin::Auto
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking.CancelMatchmaking
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineSessionSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 SearchingPlayerId                                      (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             SessionName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineSessionSubsystemCancelMatchmaking*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineSessionSubsystemCancelMatchmaking* UOnlineSessionSubsystemCancelMatchmaking::CancelMatchmaking(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingPlayerId, class FName SessionName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineSessionSubsystemCancelMatchmaking", "CancelMatchmaking");
+
+	Params::OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.SearchingPlayerId = std::move(SearchingPlayerId);
+	Parms.SessionName = SessionName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemRevokeAuthToken.RevokeAuthToken
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineIdentitySubsystem*         Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineIdentitySubsystemRevokeAuthToken*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineIdentitySubsystemRevokeAuthToken* UOnlineIdentitySubsystemRevokeAuthToken::RevokeAuthToken(class UOnlineIdentitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineIdentitySubsystemRevokeAuthToken", "RevokeAuthToken");
+
+	Params::OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemGetUserPrivilege.GetUserPrivilege
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineIdentitySubsystem*         Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EOnlineUserPrivilege                    Privilege                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EShowPrivilegeResolveUI_                ShowResolveUI                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineIdentitySubsystemGetUserPrivilege*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineIdentitySubsystemGetUserPrivilege* UOnlineIdentitySubsystemGetUserPrivilege::GetUserPrivilege(class UOnlineIdentitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, EShowPrivilegeResolveUI_ ShowResolveUI)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineIdentitySubsystemGetUserPrivilege", "GetUserPrivilege");
+
+	Params::OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserId = std::move(LocalUserId);
+	Parms.Privilege = Privilege;
+	Parms.ShowResolveUI = ShowResolveUI;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.VoiceChatUserLogout.Logout
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UVoiceChatUser*                   Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UVoiceChatUserLogout*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UVoiceChatUserLogout* UVoiceChatUserLogout::Logout(class UVoiceChatUser* Subsystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("VoiceChatUserLogout", "Logout");
+
+	Params::VoiceChatUserLogout_Logout Parms{};
+
+	Parms.Subsystem = Subsystem;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FlushLeaderboards
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             SessionName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLeaderboardsSubsystem::FlushLeaderboards(class FName SessionName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "FlushLeaderboards");
+
+	Params::OnlineLeaderboardsSubsystem_FlushLeaderboards Parms{};
+
+	Parms.SessionName = SessionName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FreeStats
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOnlineLeaderboardsSubsystem::FreeStats(class UOnlineLeaderboardRead* ReadObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "FreeStats");
+
+	Params::OnlineLeaderboardsSubsystem_FreeStats Parms{};
+
+	Parms.ReadObject = ReadObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLeaderboardsSubsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "IsSubsystemAvailable");
+
+	Params::OnlineLeaderboardsSubsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.WriteLeaderboards
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             SessionName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 Player                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardWrite*          WriteObject                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLeaderboardsSubsystem::WriteLeaderboards(class FName SessionName, const struct FUniqueNetIdRepl& Player, class UOnlineLeaderboardWrite* WriteObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "WriteLeaderboards");
+
+	Params::OnlineLeaderboardsSubsystem_WriteLeaderboards Parms{};
+
+	Parms.SessionName = SessionName;
+	Parms.Player = std::move(Player);
+	Parms.WriteObject = WriteObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboards.ReadLeaderboards
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FUniqueNetIdRepl>         Players                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardsSubsystemReadLeaderboards*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLeaderboardsSubsystemReadLeaderboards* UOnlineLeaderboardsSubsystemReadLeaderboards::ReadLeaderboards(class UOnlineLeaderboardsSubsystem* Subsystem, const TArray<struct FUniqueNetIdRepl>& Players, class UOnlineLeaderboardRead* ReadObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboards", "ReadLeaderboards");
+
+	Params::OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.Players = std::move(Players);
+	Parms.ReadObject = ReadObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsForFriends.ReadLeaderboardsForFriends
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LocalUserNum                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends* UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends::ReadLeaderboardsForFriends(class UOnlineLeaderboardsSubsystem* Subsystem, int32 LocalUserNum, class UOnlineLeaderboardRead* ReadObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboardsForFriends", "ReadLeaderboardsForFriends");
+
+	Params::OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.LocalUserNum = LocalUserNum;
+	Parms.ReadObject = ReadObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank.ReadLeaderboardsAroundRank
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Rank                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   Range                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank* UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank::ReadLeaderboardsAroundRank(class UOnlineLeaderboardsSubsystem* Subsystem, int32 Rank, int64 Range, class UOnlineLeaderboardRead* ReadObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank", "ReadLeaderboardsAroundRank");
+
+	Params::OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.Rank = Rank;
+	Parms.Range = Range;
+	Parms.ReadObject = ReadObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser.ReadLeaderboardsAroundUser
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 Player                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   Range                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser* UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser::ReadLeaderboardsAroundUser(class UOnlineLeaderboardsSubsystem* Subsystem, const struct FUniqueNetIdRepl& Player, int64 Range, class UOnlineLeaderboardRead* ReadObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser", "ReadLeaderboardsAroundUser");
+
+	Params::OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser Parms{};
+
+	Parms.Subsystem = Subsystem;
+	Parms.Player = std::move(Player);
+	Parms.Range = Range;
+	Parms.ReadObject = ReadObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetLobbyMetadataValue
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           MetadataKey                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVariantDataBP                   OutMetadataValue                                       (Parm, OutParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLobbySubsystem::GetLobbyMetadataValue(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, const class FString& MetadataKey, struct FVariantDataBP* OutMetadataValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "GetLobbyMetadataValue");
+
+	Params::OnlineLobbySubsystem_GetLobbyMetadataValue Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
+	Parms.MetadataKey = std::move(MetadataKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMetadataValue != nullptr)
+		*OutMetadataValue = std::move(Parms.OutMetadataValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberCount
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OutMemberCount                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLobbySubsystem::GetMemberCount(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, int32* OutMemberCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "GetMemberCount");
+
+	Params::OnlineLobbySubsystem_GetMemberCount Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMemberCount != nullptr)
+		*OutMemberCount = Parms.OutMemberCount;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberMetadataValue
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 MemberId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           MetadataKey                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVariantDataBP                   OutMetadataValue                                       (Parm, OutParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLobbySubsystem::GetMemberMetadataValue(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& MetadataKey, struct FVariantDataBP* OutMetadataValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "GetMemberMetadataValue");
+
+	Params::OnlineLobbySubsystem_GetMemberMetadataValue Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
+	Parms.MemberId = std::move(MemberId);
+	Parms.MetadataKey = std::move(MetadataKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMetadataValue != nullptr)
+		*OutMetadataValue = std::move(Parms.OutMetadataValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberUserId
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MemberIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 OutMemberId                                            (Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLobbySubsystem::GetMemberUserId(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, int32 MemberIndex, struct FUniqueNetIdRepl* OutMemberId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "GetMemberUserId");
+
+	Params::OnlineLobbySubsystem_GetMemberUserId Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
+	Parms.MemberIndex = MemberIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutMemberId != nullptr)
+		*OutMemberId = std::move(Parms.OutMemberId);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.IsSubsystemAvailable
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UOnlineLobbySubsystem::IsSubsystemAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "IsSubsystemAvailable");
+
+	Params::OnlineLobbySubsystem_IsSubsystemAvailable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeCreateLobbyTransaction
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLobbyTransaction*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLobbyTransaction* UOnlineLobbySubsystem::MakeCreateLobbyTransaction(const struct FUniqueNetIdRepl& UserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "MakeCreateLobbyTransaction");
+
+	Params::OnlineLobbySubsystem_MakeCreateLobbyTransaction Parms{};
+
+	Parms.UserId = std::move(UserId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyMemberTransaction
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 MemberId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLobbyMemberTransaction*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLobbyMemberTransaction* UOnlineLobbySubsystem::MakeUpdateLobbyMemberTransaction(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, const struct FUniqueNetIdRepl& MemberId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "MakeUpdateLobbyMemberTransaction");
+
+	Params::OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
+	Parms.MemberId = std::move(MemberId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyTransaction
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOnlineLobbyTransaction*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOnlineLobbyTransaction* UOnlineLobbySubsystem::MakeUpdateLobbyTransaction(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "MakeUpdateLobbyTransaction");
+
+	Params::OnlineLobbySubsystem_MakeUpdateLobbyTransaction Parms{};
+
+	Parms.UserId = std::move(UserId);
+	Parms.LobbyId = LobbyId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.ParseSerializedLobbyId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InLobbyId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULobbyId*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULobbyId* UOnlineLobbySubsystem::ParseSerializedLobbyId(const class FString& InLobbyId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineLobbySubsystem", "ParseSerializedLobbyId");
+
+	Params::OnlineLobbySubsystem_ParseSerializedLobbyId Parms{};
+
+	Parms.InLobbyId = std::move(InLobbyId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -4910,10 +6563,10 @@ float UVoiceChatUser::GetPlayerVolume(const class FString& PlayerName)
 // Function OnlineSubsystemBlueprints.VoiceChatUser.GetSetting
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class FString UVoiceChatUser::GetSetting(const class FString& Param_Name)
+class FString UVoiceChatUser::GetSetting(const class FString& Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4922,7 +6575,7 @@ class FString UVoiceChatUser::GetSetting(const class FString& Param_Name)
 
 	Params::VoiceChatUser_GetSetting Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5450,10 +7103,10 @@ void UVoiceChatUser::SetPlayerVolume(const class FString& PlayerName, float Volu
 // Function OnlineSubsystemBlueprints.VoiceChatUser.SetSetting
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVoiceChatUser::SetSetting(const class FString& Param_Name, const class FString& Value)
+void UVoiceChatUser::SetSetting(const class FString& Name_0, const class FString& Value)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5462,7 +7115,7 @@ void UVoiceChatUser::SetSetting(const class FString& Param_Name, const class FSt
 
 	Params::VoiceChatUser_SetSetting Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.Value = std::move(Value);
 
 	auto Flgs = Func->FunctionFlags;
@@ -5559,677 +7212,6 @@ void UVoiceChatUser::UnblockPlayers(const TArray<class FString>& PlayerNames)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemRevokeAuthToken.RevokeAuthToken
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineIdentitySubsystem*         Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineIdentitySubsystemRevokeAuthToken*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineIdentitySubsystemRevokeAuthToken* UOnlineIdentitySubsystemRevokeAuthToken::RevokeAuthToken(class UOnlineIdentitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineIdentitySubsystemRevokeAuthToken", "RevokeAuthToken");
-
-	Params::OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemGetUserPrivilege.GetUserPrivilege
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineIdentitySubsystem*         Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EOnlineUserPrivilege                    Privilege                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineIdentitySubsystemGetUserPrivilege*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineIdentitySubsystemGetUserPrivilege* UOnlineIdentitySubsystemGetUserPrivilege::GetUserPrivilege(class UOnlineIdentitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineIdentitySubsystemGetUserPrivilege", "GetUserPrivilege");
-
-	Params::OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.Privilege = Privilege;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FlushLeaderboards
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             SessionName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLeaderboardsSubsystem::FlushLeaderboards(class FName SessionName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "FlushLeaderboards");
-
-	Params::OnlineLeaderboardsSubsystem_FlushLeaderboards Parms{};
-
-	Parms.SessionName = SessionName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FreeStats
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineLeaderboardsSubsystem::FreeStats(class UOnlineLeaderboardRead* ReadObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "FreeStats");
-
-	Params::OnlineLeaderboardsSubsystem_FreeStats Parms{};
-
-	Parms.ReadObject = ReadObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLeaderboardsSubsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "IsSubsystemAvailable");
-
-	Params::OnlineLeaderboardsSubsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.WriteLeaderboards
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             SessionName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 Player                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardWrite*          WriteObject                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLeaderboardsSubsystem::WriteLeaderboards(class FName SessionName, const struct FUniqueNetIdRepl& Player, class UOnlineLeaderboardWrite* WriteObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardsSubsystem", "WriteLeaderboards");
-
-	Params::OnlineLeaderboardsSubsystem_WriteLeaderboards Parms{};
-
-	Parms.SessionName = SessionName;
-	Parms.Player = std::move(Player);
-	Parms.WriteObject = WriteObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboards.ReadLeaderboards
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FUniqueNetIdRepl>         Players                                                (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardsSubsystemReadLeaderboards*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLeaderboardsSubsystemReadLeaderboards* UOnlineLeaderboardsSubsystemReadLeaderboards::ReadLeaderboards(class UOnlineLeaderboardsSubsystem* Subsystem, const TArray<struct FUniqueNetIdRepl>& Players, class UOnlineLeaderboardRead* ReadObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboards", "ReadLeaderboards");
-
-	Params::OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.Players = std::move(Players);
-	Parms.ReadObject = ReadObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel.LeaveChannel
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UVoiceChatUser*                   Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ChannelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UVoiceChatUserLeaveChannel*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UVoiceChatUserLeaveChannel* UVoiceChatUserLeaveChannel::LeaveChannel(class UVoiceChatUser* Subsystem, const class FString& ChannelName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("VoiceChatUserLeaveChannel", "LeaveChannel");
-
-	Params::VoiceChatUserLeaveChannel_LeaveChannel Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.ChannelName = std::move(ChannelName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsForFriends.ReadLeaderboardsForFriends
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LocalUserNum                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends* UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends::ReadLeaderboardsForFriends(class UOnlineLeaderboardsSubsystem* Subsystem, int32 LocalUserNum, class UOnlineLeaderboardRead* ReadObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboardsForFriends", "ReadLeaderboardsForFriends");
-
-	Params::OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.ReadObject = ReadObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank.ReadLeaderboardsAroundRank
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Rank                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Range                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank* UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank::ReadLeaderboardsAroundRank(class UOnlineLeaderboardsSubsystem* Subsystem, int32 Rank, int64 Range, class UOnlineLeaderboardRead* ReadObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank", "ReadLeaderboardsAroundRank");
-
-	Params::OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.Rank = Rank;
-	Parms.Range = Range;
-	Parms.ReadObject = ReadObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchResults
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FOnlineSessionSearchResultBP>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FOnlineSessionSearchResultBP> UOnlineSessionSearch::GetSearchResults() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineSessionSearch", "GetSearchResults");
-
-	Params::OnlineSessionSearch_GetSearchResults Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EOnlineAsyncTaskState_                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EOnlineAsyncTaskState_ UOnlineSessionSearch::GetSearchState() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineSessionSearch", "GetSearchState");
-
-	Params::OnlineSessionSearch_GetSearchState Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser.ReadLeaderboardsAroundUser
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineLeaderboardsSubsystem*     Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 Player                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Range                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardRead*           ReadObject                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser* UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser::ReadLeaderboardsAroundUser(class UOnlineLeaderboardsSubsystem* Subsystem, const struct FUniqueNetIdRepl& Player, int64 Range, class UOnlineLeaderboardRead* ReadObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser", "ReadLeaderboardsAroundUser");
-
-	Params::OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.Player = std::move(Player);
-	Parms.Range = Range;
-	Parms.ReadObject = ReadObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetLobbyMetadataValue
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           MetadataKey                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVariantDataBP                   OutMetadataValue                                       (Parm, OutParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLobbySubsystem::GetLobbyMetadataValue(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, const class FString& MetadataKey, struct FVariantDataBP* OutMetadataValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "GetLobbyMetadataValue");
-
-	Params::OnlineLobbySubsystem_GetLobbyMetadataValue Parms{};
-
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-	Parms.MetadataKey = std::move(MetadataKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMetadataValue != nullptr)
-		*OutMetadataValue = std::move(Parms.OutMetadataValue);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberCount
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   OutMemberCount                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLobbySubsystem::GetMemberCount(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, int32* OutMemberCount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "GetMemberCount");
-
-	Params::OnlineLobbySubsystem_GetMemberCount Parms{};
-
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMemberCount != nullptr)
-		*OutMemberCount = Parms.OutMemberCount;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberMetadataValue
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 MemberId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           MetadataKey                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVariantDataBP                   OutMetadataValue                                       (Parm, OutParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLobbySubsystem::GetMemberMetadataValue(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, const struct FUniqueNetIdRepl& MemberId, const class FString& MetadataKey, struct FVariantDataBP* OutMetadataValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "GetMemberMetadataValue");
-
-	Params::OnlineLobbySubsystem_GetMemberMetadataValue Parms{};
-
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-	Parms.MemberId = std::move(MemberId);
-	Parms.MetadataKey = std::move(MetadataKey);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMetadataValue != nullptr)
-		*OutMetadataValue = std::move(Parms.OutMetadataValue);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberUserId
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   MemberIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 OutMemberId                                            (Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLobbySubsystem::GetMemberUserId(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, int32 MemberIndex, struct FUniqueNetIdRepl* OutMemberId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "GetMemberUserId");
-
-	Params::OnlineLobbySubsystem_GetMemberUserId Parms{};
-
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-	Parms.MemberIndex = MemberIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutMemberId != nullptr)
-		*OutMemberId = std::move(Parms.OutMemberId);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineLobbySubsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "IsSubsystemAvailable");
-
-	Params::OnlineLobbySubsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeCreateLobbyTransaction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLobbyTransaction*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLobbyTransaction* UOnlineLobbySubsystem::MakeCreateLobbyTransaction(const struct FUniqueNetIdRepl& UserId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "MakeCreateLobbyTransaction");
-
-	Params::OnlineLobbySubsystem_MakeCreateLobbyTransaction Parms{};
-
-	Parms.UserId = std::move(UserId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyMemberTransaction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 MemberId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLobbyMemberTransaction*    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLobbyMemberTransaction* UOnlineLobbySubsystem::MakeUpdateLobbyMemberTransaction(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId, const struct FUniqueNetIdRepl& MemberId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "MakeUpdateLobbyMemberTransaction");
-
-	Params::OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction Parms{};
-
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-	Parms.MemberId = std::move(MemberId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyTransaction
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         LobbyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineLobbyTransaction*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineLobbyTransaction* UOnlineLobbySubsystem::MakeUpdateLobbyTransaction(const struct FUniqueNetIdRepl& UserId, class ULobbyId* LobbyId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "MakeUpdateLobbyTransaction");
-
-	Params::OnlineLobbySubsystem_MakeUpdateLobbyTransaction Parms{};
-
-	Parms.UserId = std::move(UserId);
-	Parms.LobbyId = LobbyId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.ParseSerializedLobbyId
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InLobbyId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULobbyId*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULobbyId* UOnlineLobbySubsystem::ParseSerializedLobbyId(const class FString& InLobbyId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLobbySubsystem", "ParseSerializedLobbyId");
-
-	Params::OnlineLobbySubsystem_ParseSerializedLobbyId Parms{};
-
-	Parms.InLobbyId = std::move(InLobbyId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -6864,10 +7846,10 @@ class UParty* UOnlinePartySubsystem::GetParty(const struct FUniqueNetIdRepl& Loc
 // Parameters:
 // struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPartyId*                         PartyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Namespace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NameSpace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UReadablePartyData*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UReadablePartyData* UOnlinePartySubsystem::GetPartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName Namespace)
+class UReadablePartyData* UOnlinePartySubsystem::GetPartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName NameSpace)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6878,7 +7860,7 @@ class UReadablePartyData* UOnlinePartySubsystem::GetPartyData(const struct FUniq
 
 	Parms.LocalUserId = std::move(LocalUserId);
 	Parms.PartyId = PartyId;
-	Parms.Namespace = Namespace;
+	Parms.NameSpace = NameSpace;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6959,10 +7941,10 @@ int64 UOnlinePartySubsystem::GetPartyMemberCount(const struct FUniqueNetIdRepl& 
 // struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPartyId*                         PartyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FUniqueNetIdRepl                 MemberId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Namespace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NameSpace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UReadablePartyData*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UReadablePartyData* UOnlinePartySubsystem::GetPartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId, class FName Namespace)
+class UReadablePartyData* UOnlinePartySubsystem::GetPartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId, class FName NameSpace)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6974,7 +7956,7 @@ class UReadablePartyData* UOnlinePartySubsystem::GetPartyMemberData(const struct
 	Parms.LocalUserId = std::move(LocalUserId);
 	Parms.PartyId = PartyId;
 	Parms.MemberId = std::move(MemberId);
-	Parms.Namespace = Namespace;
+	Parms.NameSpace = NameSpace;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7272,11 +8254,11 @@ void UOnlinePartySubsystem::RespondToQueryJoinability(const struct FUniqueNetIdR
 // Parameters:
 // struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPartyId*                         PartyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Namespace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NameSpace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UReadablePartyData*               PartyData                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UOnlinePartySubsystem::UpdatePartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName Namespace, class UReadablePartyData* PartyData)
+bool UOnlinePartySubsystem::UpdatePartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName NameSpace, class UReadablePartyData* PartyData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7287,7 +8269,7 @@ bool UOnlinePartySubsystem::UpdatePartyData(const struct FUniqueNetIdRepl& Local
 
 	Parms.LocalUserId = std::move(LocalUserId);
 	Parms.PartyId = PartyId;
-	Parms.Namespace = Namespace;
+	Parms.NameSpace = NameSpace;
 	Parms.PartyData = PartyData;
 
 	auto Flgs = Func->FunctionFlags;
@@ -7306,11 +8288,11 @@ bool UOnlinePartySubsystem::UpdatePartyData(const struct FUniqueNetIdRepl& Local
 // Parameters:
 // struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPartyId*                         PartyId                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Namespace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             NameSpace                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UReadablePartyData*               PartyMemberData                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UOnlinePartySubsystem::UpdatePartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName Namespace, class UReadablePartyData* PartyMemberData)
+bool UOnlinePartySubsystem::UpdatePartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName NameSpace, class UReadablePartyData* PartyMemberData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7321,7 +8303,7 @@ bool UOnlinePartySubsystem::UpdatePartyMemberData(const struct FUniqueNetIdRepl&
 
 	Parms.LocalUserId = std::move(LocalUserId);
 	Parms.PartyId = PartyId;
-	Parms.Namespace = Namespace;
+	Parms.NameSpace = NameSpace;
 	Parms.PartyMemberData = PartyMemberData;
 
 	auto Flgs = Func->FunctionFlags;
@@ -8705,38 +9687,6 @@ class UOnlineSessionSubsystemStartMatchmaking* UOnlineSessionSubsystemStartMatch
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking.CancelMatchmaking
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineSessionSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 SearchingPlayerId                                      (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             SessionName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineSessionSubsystemCancelMatchmaking*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineSessionSubsystemCancelMatchmaking* UOnlineSessionSubsystemCancelMatchmaking::CancelMatchmaking(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingPlayerId, class FName SessionName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineSessionSubsystemCancelMatchmaking", "CancelMatchmaking");
-
-	Params::OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.SearchingPlayerId = std::move(SearchingPlayerId);
-	Parms.SessionName = SessionName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessions.FindSessions
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -8757,42 +9707,6 @@ class UOnlineSessionSubsystemFindSessions* UOnlineSessionSubsystemFindSessions::
 	Parms.Subsystem = Subsystem;
 	Parms.SearchingPlayerId = std::move(SearchingPlayerId);
 	Parms.SearchSettings = SearchSettings;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById.FindSessionById
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineSessionSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 SearchingUserId                                        (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 SessionId                                              (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 FriendId                                               (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           UserData                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineSessionSubsystemFindSessionById*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineSessionSubsystemFindSessionById* UOnlineSessionSubsystemFindSessionById::FindSessionById(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingUserId, const struct FUniqueNetIdRepl& SessionId, const struct FUniqueNetIdRepl& FriendId, const class FString& UserData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineSessionSubsystemFindSessionById", "FindSessionById");
-
-	Params::OnlineSessionSubsystemFindSessionById_FindSessionById Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.SearchingUserId = std::move(SearchingUserId);
-	Parms.SessionId = std::move(SessionId);
-	Parms.FriendId = std::move(FriendId);
-	Parms.UserData = std::move(UserData);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8885,38 +9799,6 @@ class UOnlineSessionSubsystemJoinSession* UOnlineSessionSubsystemJoinSession::Jo
 	Parms.LocalUserId = std::move(LocalUserId);
 	Parms.SessionName = SessionName;
 	Parms.DesiredSession = std::move(DesiredSession);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession.FindFriendSession
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineSessionSubsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LocalUserNum                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 Friend                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineSessionSubsystemFindFriendSession*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineSessionSubsystemFindFriendSession* UOnlineSessionSubsystemFindFriendSession::FindFriendSession(class UOnlineSessionSubsystem* Subsystem, int32 LocalUserNum, const struct FUniqueNetIdRepl& Friend)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineSessionSubsystemFindFriendSession", "FindFriendSession");
-
-	Params::OnlineSessionSubsystemFindFriendSession_FindFriendSession Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.Friend = std::move(Friend);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -9317,111 +10199,6 @@ class UOnlineStatsSubsystemUpdateStats* UOnlineStatsSubsystemUpdateStats::Update
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetCategories
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FOnlineStoreCategoryBP>   OutCategories                                          (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UOnlineStoreV2Subsystem::GetCategories(TArray<struct FOnlineStoreCategoryBP>* OutCategories)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineStoreV2Subsystem", "GetCategories");
-
-	Params::OnlineStoreV2Subsystem_GetCategories Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutCategories != nullptr)
-		*OutCategories = std::move(Parms.OutCategories);
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FString                           OfferId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineStoreOffer*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineStoreOffer* UOnlineStoreV2Subsystem::GetOffer(const class FString& OfferId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineStoreV2Subsystem", "GetOffer");
-
-	Params::OnlineStoreV2Subsystem_GetOffer Parms{};
-
-	Parms.OfferId = std::move(OfferId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffers
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<class UOnlineStoreOffer*>        OutOffers                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UOnlineStoreV2Subsystem::GetOffers(TArray<class UOnlineStoreOffer*>* OutOffers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineStoreV2Subsystem", "GetOffers");
-
-	Params::OnlineStoreV2Subsystem_GetOffers Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutOffers != nullptr)
-		*OutOffers = std::move(Parms.OutOffers);
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineStoreV2Subsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineStoreV2Subsystem", "IsSubsystemAvailable");
-
-	Params::OnlineStoreV2Subsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryCategories.QueryCategories
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -9440,38 +10217,6 @@ class UOnlineStoreV2SubsystemQueryCategories* UOnlineStoreV2SubsystemQueryCatego
 
 	Parms.Subsystem = Subsystem;
 	Parms.UserId = std::move(UserId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersByFilter.QueryOffersByFilter
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineStoreV2Subsystem*          Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FOnlineStoreFilterBP             Filter                                                 (Parm, NativeAccessSpecifierPublic)
-// class UOnlineStoreV2SubsystemQueryOffersByFilter*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineStoreV2SubsystemQueryOffersByFilter* UOnlineStoreV2SubsystemQueryOffersByFilter::QueryOffersByFilter(class UOnlineStoreV2Subsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const struct FOnlineStoreFilterBP& Filter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineStoreV2SubsystemQueryOffersByFilter", "QueryOffersByFilter");
-
-	Params::OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.UserId = std::move(UserId);
-	Parms.Filter = std::move(Filter);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10459,167 +11204,6 @@ bool UOnlineTimeSubsystem::QueryServerUtcTime()
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFile
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineTitleFileSubsystem::ClearFile(const class FString& Filename)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTitleFileSubsystem", "ClearFile");
-
-	Params::OnlineTitleFileSubsystem_ClearFile Parms{};
-
-	Parms.Filename = std::move(Filename);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFiles
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineTitleFileSubsystem::ClearFiles()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTitleFileSubsystem", "ClearFiles");
-
-	Params::OnlineTitleFileSubsystem_ClearFiles Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.DeleteCachedFiles
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bSkipEnumerated                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineTitleFileSubsystem::DeleteCachedFiles(bool bSkipEnumerated)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTitleFileSubsystem", "DeleteCachedFiles");
-
-	Params::OnlineTitleFileSubsystem_DeleteCachedFiles Parms{};
-
-	Parms.bSkipEnumerated = bSkipEnumerated;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileContents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UFileData*                        FileContents                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineTitleFileSubsystem::GetFileContents(const class FString& Filename, class UFileData** FileContents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTitleFileSubsystem", "GetFileContents");
-
-	Params::OnlineTitleFileSubsystem_GetFileContents Parms{};
-
-	Parms.Filename = std::move(Filename);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (FileContents != nullptr)
-		*FileContents = Parms.FileContents;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileList
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FCloudFileHeaderBP>       Files                                                  (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UOnlineTitleFileSubsystem::GetFileList(TArray<struct FCloudFileHeaderBP>* Files)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTitleFileSubsystem", "GetFileList");
-
-	Params::OnlineTitleFileSubsystem_GetFileList Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Files != nullptr)
-		*Files = std::move(Parms.Files);
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineTitleFileSubsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTitleFileSubsystem", "IsSubsystemAvailable");
-
-	Params::OnlineTitleFileSubsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystemEnumerateFiles.EnumerateFiles
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -10638,36 +11222,6 @@ class UOnlineTitleFileSubsystemEnumerateFiles* UOnlineTitleFileSubsystemEnumerat
 
 	Parms.Subsystem = Subsystem;
 	Parms.Page = std::move(Page);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystemReadFile.ReadFile
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineTitleFileSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Filename                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineTitleFileSubsystemReadFile*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineTitleFileSubsystemReadFile* UOnlineTitleFileSubsystemReadFile::ReadFile(class UOnlineTitleFileSubsystem* Subsystem, const class FString& Filename)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineTitleFileSubsystemReadFile", "ReadFile");
-
-	Params::OnlineTitleFileSubsystemReadFile_ReadFile Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.Filename = std::move(Filename);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -10705,56 +11259,6 @@ bool UOnlineTournamentSubsystem::IsSubsystemAvailable()
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.GetMatchDataSize
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UOnlineTurnBasedSubsystem::GetMatchDataSize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTurnBasedSubsystem", "GetMatchDataSize");
-
-	Params::OnlineTurnBasedSubsystem_GetMatchDataSize Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineTurnBasedSubsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineTurnBasedSubsystem", "IsSubsystemAvailable");
-
-	Params::OnlineTurnBasedSubsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadAllMatches.LoadAllMatches
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -10771,36 +11275,6 @@ class UOnlineTurnBasedSubsystemLoadAllMatches* UOnlineTurnBasedSubsystemLoadAllM
 	Params::OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches Parms{};
 
 	Parms.Subsystem = Subsystem;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadMatchWithID.LoadMatchWithID
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineTurnBasedSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           MatchID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineTurnBasedSubsystemLoadMatchWithID*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineTurnBasedSubsystemLoadMatchWithID* UOnlineTurnBasedSubsystemLoadMatchWithID::LoadMatchWithID(class UOnlineTurnBasedSubsystem* Subsystem, const class FString& MatchID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineTurnBasedSubsystemLoadMatchWithID", "LoadMatchWithID");
-
-	Params::OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.MatchID = std::move(MatchID);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -11066,33 +11540,32 @@ bool UOnlineUserCloudSubsystem::RequestUsageInfo(const struct FUniqueNetIdRepl& 
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles.EnumerateUserFiles
-// (Final, Native, Static, Public, BlueprintCallable)
+// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystem.TriggerOnWriteUserFileProgressDelegates
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UOnlineUserCloudSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineUserCloudSubsystemEnumerateUserFiles*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param1                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FUniqueNetIdRepl                 Param2                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Param3                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UOnlineUserCloudSubsystemEnumerateUserFiles* UOnlineUserCloudSubsystemEnumerateUserFiles::EnumerateUserFiles(class UOnlineUserCloudSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId)
+void UOnlineUserCloudSubsystem::TriggerOnWriteUserFileProgressDelegates(int32 Param1, const struct FUniqueNetIdRepl& Param2, const class FString& Param3)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineUserCloudSubsystemEnumerateUserFiles", "EnumerateUserFiles");
+		Func = Class->GetFunction("OnlineUserCloudSubsystem", "TriggerOnWriteUserFileProgressDelegates");
 
-	Params::OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles Parms{};
+	Params::OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates Parms{};
 
-	Parms.Subsystem = Subsystem;
-	Parms.UserId = std::move(UserId);
+	Parms.Param1 = Param1;
+	Parms.Param2 = std::move(Param2);
+	Parms.Param3 = std::move(Param3);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -11380,38 +11853,6 @@ class UOnlineUserSubsystemQueryUserInfo* UOnlineUserSubsystemQueryUserInfo::Quer
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping.QueryUserIdMapping
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineUserSubsystem*             Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           DisplayNameOrEmail                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineUserSubsystemQueryUserIdMapping*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineUserSubsystemQueryUserIdMapping* UOnlineUserSubsystemQueryUserIdMapping::QueryUserIdMapping(class UOnlineUserSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& DisplayNameOrEmail)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineUserSubsystemQueryUserIdMapping", "QueryUserIdMapping");
-
-	Params::OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.UserId = std::move(UserId);
-	Parms.DisplayNameOrEmail = std::move(DisplayNameOrEmail);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryExternalIdMappings.QueryExternalIdMappings
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -11505,40 +11946,6 @@ class UOnlineVoiceAdminSubsystemCreateChannelCredentials* UOnlineVoiceAdminSubsy
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemKickParticipant.KickParticipant
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineVoiceAdminSubsystem*       Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 LocalUserId                                            (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ChannelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 TargetUserId                                           (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineVoiceAdminSubsystemKickParticipant*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineVoiceAdminSubsystemKickParticipant* UOnlineVoiceAdminSubsystemKickParticipant::KickParticipant(class UOnlineVoiceAdminSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ChannelName, const struct FUniqueNetIdRepl& TargetUserId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineVoiceAdminSubsystemKickParticipant", "KickParticipant");
-
-	Params::OnlineVoiceAdminSubsystemKickParticipant_KickParticipant Parms{};
-
-	Parms.Subsystem = Subsystem;
-	Parms.LocalUserId = std::move(LocalUserId);
-	Parms.ChannelName = std::move(ChannelName);
-	Parms.TargetUserId = std::move(TargetUserId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemSetParticipantHardMute.SetParticipantHardMute
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -11575,181 +11982,6 @@ class UOnlineVoiceAdminSubsystemSetParticipantHardMute* UOnlineVoiceAdminSubsyst
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.CreateUser
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UVoiceChatUser*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UVoiceChatUser* UOnlineVoiceChatSubsystem::CreateUser()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "CreateUser");
-
-	Params::OnlineVoiceChatSubsystem_CreateUser Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Initialize_
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineVoiceChatSubsystem::Initialize_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "Initialize_");
-
-	Params::OnlineVoiceChatSubsystem_Initialize_ Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnected
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineVoiceChatSubsystem::IsConnected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsConnected");
-
-	Params::OnlineVoiceChatSubsystem_IsConnected Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnecting
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineVoiceChatSubsystem::IsConnecting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsConnecting");
-
-	Params::OnlineVoiceChatSubsystem_IsConnecting Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsInitialized
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineVoiceChatSubsystem::IsInitialized()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsInitialized");
-
-	Params::OnlineVoiceChatSubsystem_IsInitialized Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsSubsystemAvailable
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineVoiceChatSubsystem::IsSubsystemAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "IsSubsystemAvailable");
-
-	Params::OnlineVoiceChatSubsystem_IsSubsystemAvailable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Uninitialize_
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UOnlineVoiceChatSubsystem::Uninitialize_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineVoiceChatSubsystem", "Uninitialize_");
-
-	Params::OnlineVoiceChatSubsystem_Uninitialize_ Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemConnect.Connect
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -11764,34 +11996,6 @@ class UOnlineVoiceChatSubsystemConnect* UOnlineVoiceChatSubsystemConnect::Connec
 		Func = StaticClass()->GetFunction("OnlineVoiceChatSubsystemConnect", "Connect");
 
 	Params::OnlineVoiceChatSubsystemConnect_Connect Parms{};
-
-	Parms.Subsystem = Subsystem;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemDisconnect.Disconnect
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UOnlineVoiceChatSubsystem*        Subsystem                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineVoiceChatSubsystemDisconnect*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UOnlineVoiceChatSubsystemDisconnect* UOnlineVoiceChatSubsystemDisconnect::Disconnect(class UOnlineVoiceChatSubsystem* Subsystem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("OnlineVoiceChatSubsystemDisconnect", "Disconnect");
-
-	Params::OnlineVoiceChatSubsystemDisconnect_Disconnect Parms{};
 
 	Parms.Subsystem = Subsystem;
 
@@ -12421,33 +12625,6 @@ bool UOnlineVoiceSubsystem::UnRegisterRemoteTalker(const struct FUniqueNetIdRepl
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineAchievementsWrite.SetAchievementProgress
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             AchievementID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   AchievementProgress                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UOnlineAchievementsWrite::SetAchievementProgress(class FName AchievementID, float AchievementProgress)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineAchievementsWrite", "SetAchievementProgress");
-
-	Params::OnlineAchievementsWrite_SetAchievementProgress Parms{};
-
-	Parms.AchievementID = AchievementID;
-	Parms.AchievementProgress = AchievementProgress;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineEntitlement.GetConsumedCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -12698,70 +12875,6 @@ bool UOnlineEntitlement::IsConsumable()
 }
 
 
-// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnCreateAccountFlowUIRequired
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class FString                           RequestedURL                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineExternalUISubsystem*       ExternalUIContext                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   RequestID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IExternalUIFlowHandler::OnCreateAccountFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ExternalUIFlowHandler", "OnCreateAccountFlowUIRequired");
-
-	Params::ExternalUIFlowHandler_OnCreateAccountFlowUIRequired Parms{};
-
-	Parms.RequestedURL = std::move(RequestedURL);
-	Parms.ExternalUIContext = ExternalUIContext;
-	Parms.RequestID = RequestID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnLoginFlowUIRequired
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class FString                           RequestedURL                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UOnlineExternalUISubsystem*       ExternalUIContext                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   RequestID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool IExternalUIFlowHandler::OnLoginFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ExternalUIFlowHandler", "OnLoginFlowUIRequired");
-
-	Params::ExternalUIFlowHandler_OnLoginFlowUIRequired Parms{};
-
-	Parms.RequestedURL = std::move(RequestedURL);
-	Parms.ExternalUIContext = ExternalUIContext;
-	Parms.RequestID = RequestID;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemBlueprints.OnlineFriendRef.GetInviteStatus
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -12812,21 +12925,21 @@ struct FOnlineUserPresenceData UOnlineFriendRef::GetPresence()
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetColumns
-// (Final, Native, Private, BlueprintCallable)
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardWrite.SetLeaderboardNames
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FColumnMetaDataBP>        InColumns                                              (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FName>                     LeaderboardNames                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 
-void UOnlineLeaderboardRead::SetColumns(const TArray<struct FColumnMetaDataBP>& InColumns)
+void UOnlineLeaderboardWrite::SetLeaderboardNames(const TArray<class FName>& LeaderboardNames)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "SetColumns");
+		Func = Class->GetFunction("OnlineLeaderboardWrite", "SetLeaderboardNames");
 
-	Params::OnlineLeaderboardRead_SetColumns Parms{};
+	Params::OnlineLeaderboardWrite_SetLeaderboardNames Parms{};
 
-	Parms.InColumns = std::move(InColumns);
+	Parms.LeaderboardNames = std::move(LeaderboardNames);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -12837,21 +12950,21 @@ void UOnlineLeaderboardRead::SetColumns(const TArray<struct FColumnMetaDataBP>& 
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetLeaderboardName
-// (Final, Native, Private, BlueprintCallable)
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardWrite.SetRatedStat
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             LeaderboardName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             RatedStat                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UOnlineLeaderboardRead::SetLeaderboardName(class FName LeaderboardName)
+void UOnlineLeaderboardWrite::SetRatedStat(class FName RatedStat)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "SetLeaderboardName");
+		Func = Class->GetFunction("OnlineLeaderboardWrite", "SetRatedStat");
 
-	Params::OnlineLeaderboardRead_SetLeaderboardName Parms{};
+	Params::OnlineLeaderboardWrite_SetRatedStat Parms{};
 
-	Parms.LeaderboardName = LeaderboardName;
+	Parms.RatedStat = RatedStat;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -12862,21 +12975,21 @@ void UOnlineLeaderboardRead::SetLeaderboardName(class FName LeaderboardName)
 }
 
 
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetSortedColumn
-// (Final, Native, Private, BlueprintCallable)
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardWrite.SetStats
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             SortedColumn                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TMap<class FString, struct FVariantDataBP>Stats                                                  (Parm, NativeAccessSpecifierPublic)
 
-void UOnlineLeaderboardRead::SetSortedColumn(class FName SortedColumn)
+void UOnlineLeaderboardWrite::SetStats(const TMap<class FString, struct FVariantDataBP>& Stats)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "SetSortedColumn");
+		Func = Class->GetFunction("OnlineLeaderboardWrite", "SetStats");
 
-	Params::OnlineLeaderboardRead_SetSortedColumn Parms{};
+	Params::OnlineLeaderboardWrite_SetStats Parms{};
 
-	Parms.SortedColumn = SortedColumn;
+	Parms.Stats = std::move(Stats);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -12884,163 +12997,6 @@ void UOnlineLeaderboardRead::SetSortedColumn(class FName SortedColumn)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.FindPlayerRecord
-// (Final, Native, Private, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FUniqueNetIdRepl                 UserId                                                 (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    OutFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FOnlineStatsRowBP                ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FOnlineStatsRowBP UOnlineLeaderboardRead::FindPlayerRecord(const struct FUniqueNetIdRepl& UserId, bool* OutFound) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "FindPlayerRecord");
-
-	Params::OnlineLeaderboardRead_FindPlayerRecord Parms{};
-
-	Parms.UserId = std::move(UserId);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutFound != nullptr)
-		*OutFound = Parms.OutFound;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetColumns
-// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FColumnMetaDataBP>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FColumnMetaDataBP> UOnlineLeaderboardRead::GetColumns() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "GetColumns");
-
-	Params::OnlineLeaderboardRead_GetColumns Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetLeaderboardName
-// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FName UOnlineLeaderboardRead::GetLeaderboardName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "GetLeaderboardName");
-
-	Params::OnlineLeaderboardRead_GetLeaderboardName Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetReadState
-// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EOnlineAsyncTaskState_                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EOnlineAsyncTaskState_ UOnlineLeaderboardRead::GetReadState() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "GetReadState");
-
-	Params::OnlineLeaderboardRead_GetReadState Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetRows
-// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FOnlineStatsRowBP>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FOnlineStatsRowBP> UOnlineLeaderboardRead::GetRows() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "GetRows");
-
-	Params::OnlineLeaderboardRead_GetRows Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetSortedColumn
-// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FName UOnlineLeaderboardRead::GetSortedColumn() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OnlineLeaderboardRead", "GetSortedColumn");
-
-	Params::OnlineLeaderboardRead_GetSortedColumn Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -13445,6 +13401,31 @@ void UMutablePartyData::SetAttribute(const class FString& AttrName, const struct
 }
 
 
+// Function OnlineSubsystemBlueprints.PartyId.ToDebugString
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UPartyId::ToDebugString()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PartyId", "ToDebugString");
+
+	Params::PartyId_ToDebugString Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.OnlinePartyJoinInfo.GetPartyId
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -13545,6 +13526,81 @@ class FString UOnlinePartyJoinInfo::ToDebugString()
 }
 
 
+// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetPurchaseTransactionState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// EPurchaseTransactionState_              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EPurchaseTransactionState_ UPurchaseReceipt::GetPurchaseTransactionState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PurchaseReceipt", "GetPurchaseTransactionState");
+
+	Params::PurchaseReceipt_GetPurchaseTransactionState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetReceiptOffers
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// TArray<struct FReceiptOfferEntryBP>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FReceiptOfferEntryBP> UPurchaseReceipt::GetReceiptOffers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PurchaseReceipt", "GetReceiptOffers");
+
+	Params::PurchaseReceipt_GetReceiptOffers Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetTransactionId
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UPurchaseReceipt::GetTransactionId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PurchaseReceipt", "GetTransactionId");
+
+	Params::PurchaseReceipt_GetTransactionId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemBlueprints.NamedOnlineSession.GetValue
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -13558,6 +13614,56 @@ struct FNamedOnlineSessionBP UNamedOnlineSession::GetValue()
 		Func = Class->GetFunction("NamedOnlineSession", "GetValue");
 
 	Params::NamedOnlineSession_GetValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchResults
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FOnlineSessionSearchResultBP>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FOnlineSessionSearchResultBP> UOnlineSessionSearch::GetSearchResults() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineSessionSearch", "GetSearchResults");
+
+	Params::OnlineSessionSearch_GetSearchResults Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EOnlineAsyncTaskState_                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EOnlineAsyncTaskState_ UOnlineSessionSearch::GetSearchState() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OnlineSessionSearch", "GetSearchState");
+
+	Params::OnlineSessionSearch_GetSearchState Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

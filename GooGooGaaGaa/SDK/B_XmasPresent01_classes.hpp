@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "B_StaticMeshProp_classes.hpp"
 
 
@@ -17,11 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_XmasPresent01.B_XmasPresent01_C
-// 0x0000 (0x0590 - 0x0590)
+// 0x0010 (0x05A0 - 0x0590)
 class AB_XmasPresent01_C final : public AB_StaticMeshProp_C
 {
 public:
-	class UB_WindForce_C*                         B_WindForce;                                       // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_XmasPresent01_C;                  // 0x0588(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UB_WindForce_C*                         B_WindForce;                                       // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_B_XmasPresent01(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +40,9 @@ public:
 	}
 };
 static_assert(alignof(AB_XmasPresent01_C) == 0x000010, "Wrong alignment on AB_XmasPresent01_C");
-static_assert(sizeof(AB_XmasPresent01_C) == 0x000590, "Wrong size on AB_XmasPresent01_C");
-static_assert(offsetof(AB_XmasPresent01_C, B_WindForce) == 0x000588, "Member 'AB_XmasPresent01_C::B_WindForce' has a wrong offset!");
+static_assert(sizeof(AB_XmasPresent01_C) == 0x0005A0, "Wrong size on AB_XmasPresent01_C");
+static_assert(offsetof(AB_XmasPresent01_C, UberGraphFrame_B_XmasPresent01_C) == 0x000588, "Member 'AB_XmasPresent01_C::UberGraphFrame_B_XmasPresent01_C' has a wrong offset!");
+static_assert(offsetof(AB_XmasPresent01_C, B_WindForce) == 0x000590, "Member 'AB_XmasPresent01_C::B_WindForce' has a wrong offset!");
 
 }
 

@@ -54,9 +54,9 @@ void AB_Witch_C::ReceivePossessed(class AController* NewController)
 // Function B_Witch.B_Witch_C.SetProp
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PropPawnPhysics_C*             Param_SpawnedProp                                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PropPawnPhysics_C*             SpawnedProp_0                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Witch_C::SetProp(class AB_PropPawnPhysics_C** Param_SpawnedProp)
+void AB_Witch_C::SetProp(class AB_PropPawnPhysics_C** SpawnedProp_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -67,8 +67,8 @@ void AB_Witch_C::SetProp(class AB_PropPawnPhysics_C** Param_SpawnedProp)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_SpawnedProp != nullptr)
-		*Param_SpawnedProp = Parms.Param_SpawnedProp;
+	if (SpawnedProp_0 != nullptr)
+		*SpawnedProp_0 = Parms.SpawnedProp_0;
 }
 
 
@@ -259,9 +259,9 @@ void AB_Witch_C::GetSplashSound(class USoundCue** Sound)
 // Function B_Witch.B_Witch_C.CanTeleport
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_CanTeleport                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanTeleport_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Witch_C::CanTeleport(bool* Param_CanTeleport)
+void AB_Witch_C::CanTeleport(bool* CanTeleport_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -272,17 +272,17 @@ void AB_Witch_C::CanTeleport(bool* Param_CanTeleport)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanTeleport != nullptr)
-		*Param_CanTeleport = Parms.Param_CanTeleport;
+	if (CanTeleport_0 != nullptr)
+		*CanTeleport_0 = Parms.CanTeleport_0;
 }
 
 
 // Function B_Witch.B_Witch_C.GetCurrentController
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Witch_C::GetCurrentController(class AController** Param_Controller)
+void AB_Witch_C::GetCurrentController(class AController** Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -293,8 +293,8 @@ void AB_Witch_C::GetCurrentController(class AController** Param_Controller)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Controller != nullptr)
-		*Param_Controller = Parms.Param_Controller;
+	if (Controller_0 != nullptr)
+		*Controller_0 = Parms.Controller_0;
 }
 
 
@@ -699,10 +699,10 @@ void AB_Witch_C::RecalculateHP()
 // Function B_Witch.B_Witch_C.VerifySkinSlots
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FWitchSkin                       Param_Skin                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FWitchSkin                       Skin_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // struct FWitchSkin                       VerifiedSkin                                           (Parm, OutParm, NoDestructor)
 
-void AB_Witch_C::VerifySkinSlots(const struct FWitchSkin& Param_Skin, struct FWitchSkin* VerifiedSkin)
+void AB_Witch_C::VerifySkinSlots(const struct FWitchSkin& Skin_0, struct FWitchSkin* VerifiedSkin)
 {
 	static class UFunction* Func = nullptr;
 
@@ -711,7 +711,7 @@ void AB_Witch_C::VerifySkinSlots(const struct FWitchSkin& Param_Skin, struct FWi
 
 	Params::B_Witch_C_VerifySkinSlots Parms{};
 
-	Parms.Param_Skin = std::move(Param_Skin);
+	Parms.Skin_0 = std::move(Skin_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -876,9 +876,9 @@ void AB_Witch_C::Dissolve()
 // Function B_Witch.B_Witch_C.UpdateSkinColor
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Witch_C::UpdateSkinColor(class UClass* Param_Class)
+void AB_Witch_C::UpdateSkinColor(class UClass* Class_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -887,7 +887,7 @@ void AB_Witch_C::UpdateSkinColor(class UClass* Param_Class)
 
 	Params::B_Witch_C_UpdateSkinColor Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -896,11 +896,11 @@ void AB_Witch_C::UpdateSkinColor(class UClass* Param_Class)
 // Function B_Witch.B_Witch_C.AttachToSocket
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FName                             InSocketName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           ActorRef                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Witch_C::AttachToSocket(class UClass* Param_Class, class FName InSocketName, class AActor** ActorRef)
+void AB_Witch_C::AttachToSocket(class UClass* Class_0, class FName InSocketName, class AActor** ActorRef)
 {
 	static class UFunction* Func = nullptr;
 
@@ -909,7 +909,7 @@ void AB_Witch_C::AttachToSocket(class UClass* Param_Class, class FName InSocketN
 
 	Params::B_Witch_C_AttachToSocket Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.InSocketName = InSocketName;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -978,9 +978,9 @@ void AB_Witch_C::TryInitializeSkinContent()
 // Function B_Witch.B_Witch_C.LoadSkills
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Witch_C::LoadSkills(class AController* Param_Controller)
+void AB_Witch_C::LoadSkills(class AController* Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -989,7 +989,7 @@ void AB_Witch_C::LoadSkills(class AController* Param_Controller)
 
 	Params::B_Witch_C_LoadSkills Parms{};
 
-	Parms.Param_Controller = Param_Controller;
+	Parms.Controller_0 = Controller_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

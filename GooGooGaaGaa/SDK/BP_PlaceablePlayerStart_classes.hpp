@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlaceablePlayerStart.BP_PlaceablePlayerStart_C
-// 0x0010 (0x0378 - 0x0368)
+// 0x0010 (0x0360 - 0x0350)
 class ABP_PlaceablePlayerStart_C : public ABP_PlaceableStaticProp_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PlaceablePlayerStart_C;          // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          Occupied;                                          // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_PlaceablePlayerStart_C;          // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          Occupied;                                          // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetOccupied(bool* Param_Occupied);
+	void GetOccupied(bool* Occupied_0);
 	void ReceiveBeginPlay();
 	void UnselectFromEditing();
-	void SetOccupied(bool Param_Occupied);
+	void SetOccupied(bool Occupied_0);
 	void ExecuteUbergraph_BP_PlaceablePlayerStart(int32 EntryPoint);
 
 public:
@@ -43,9 +43,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_PlaceablePlayerStart_C) == 0x000008, "Wrong alignment on ABP_PlaceablePlayerStart_C");
-static_assert(sizeof(ABP_PlaceablePlayerStart_C) == 0x000378, "Wrong size on ABP_PlaceablePlayerStart_C");
-static_assert(offsetof(ABP_PlaceablePlayerStart_C, UberGraphFrame_BP_PlaceablePlayerStart_C) == 0x000368, "Member 'ABP_PlaceablePlayerStart_C::UberGraphFrame_BP_PlaceablePlayerStart_C' has a wrong offset!");
-static_assert(offsetof(ABP_PlaceablePlayerStart_C, Occupied) == 0x000370, "Member 'ABP_PlaceablePlayerStart_C::Occupied' has a wrong offset!");
+static_assert(sizeof(ABP_PlaceablePlayerStart_C) == 0x000360, "Wrong size on ABP_PlaceablePlayerStart_C");
+static_assert(offsetof(ABP_PlaceablePlayerStart_C, UberGraphFrame_BP_PlaceablePlayerStart_C) == 0x000350, "Member 'ABP_PlaceablePlayerStart_C::UberGraphFrame_BP_PlaceablePlayerStart_C' has a wrong offset!");
+static_assert(offsetof(ABP_PlaceablePlayerStart_C, Occupied) == 0x000358, "Member 'ABP_PlaceablePlayerStart_C::Occupied' has a wrong offset!");
 
 }
 

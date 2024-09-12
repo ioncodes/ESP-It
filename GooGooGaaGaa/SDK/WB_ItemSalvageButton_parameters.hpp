@@ -10,6 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -73,39 +76,39 @@ static_assert(offsetof(WB_ItemSalvageButton_C_GetIsButtonEnabled, CallFunc_IsVal
 struct WB_ItemSalvageButton_C_GetNotifyButtonVisibility final
 {
 public:
-	bool                                          Param_IsVisible;                                   // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsVisible_0;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ItemSalvageButton_C_GetNotifyButtonVisibility) == 0x000001, "Wrong alignment on WB_ItemSalvageButton_C_GetNotifyButtonVisibility");
 static_assert(sizeof(WB_ItemSalvageButton_C_GetNotifyButtonVisibility) == 0x000001, "Wrong size on WB_ItemSalvageButton_C_GetNotifyButtonVisibility");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetNotifyButtonVisibility, Param_IsVisible) == 0x000000, "Member 'WB_ItemSalvageButton_C_GetNotifyButtonVisibility::Param_IsVisible' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetNotifyButtonVisibility, IsVisible_0) == 0x000000, "Member 'WB_ItemSalvageButton_C_GetNotifyButtonVisibility::IsVisible_0' has a wrong offset!");
 
 // Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.GetQuantityText
-// 0x0060 (0x0060 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct WB_ItemSalvageButton_C_GetQuantityText final
 {
 public:
-	class FText                                   Quantity;                                          // 0x0000(0x0018)(Parm, OutParm)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C8[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetRecipeQuantity_Value;                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C9[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0018)()
-	int32                                         CallFunc_GetSkinItemQuantity_Value;                // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57CA[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0048(0x0018)()
+	class FText                                   Quantity;                                          // 0x0000(0x0010)(Parm, OutParm)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_1;            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetRecipeQuantity_Value;                  // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0010)()
+	int32                                         CallFunc_GetSkinItemQuantity_Value;                // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0038(0x0010)()
 };
 static_assert(alignof(WB_ItemSalvageButton_C_GetQuantityText) == 0x000008, "Wrong alignment on WB_ItemSalvageButton_C_GetQuantityText");
-static_assert(sizeof(WB_ItemSalvageButton_C_GetQuantityText) == 0x000060, "Wrong size on WB_ItemSalvageButton_C_GetQuantityText");
+static_assert(sizeof(WB_ItemSalvageButton_C_GetQuantityText) == 0x000048, "Wrong size on WB_ItemSalvageButton_C_GetQuantityText");
 static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, Quantity) == 0x000000, "Member 'WB_ItemSalvageButton_C_GetQuantityText::Quantity' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000018, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_NotEqual_IntInt_ReturnValue_1) == 0x000019, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_NotEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_GetRecipeQuantity_Value) == 0x00001C, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_GetRecipeQuantity_Value' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_BooleanAND_ReturnValue) == 0x000020, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_GetSkinItemQuantity_Value) == 0x000040, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_GetSkinItemQuantity_Value' has a wrong offset!");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000048, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000010, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_NotEqual_IntInt_ReturnValue_1) == 0x000011, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_NotEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_GetRecipeQuantity_Value) == 0x000014, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_GetRecipeQuantity_Value' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_BooleanAND_ReturnValue) == 0x000018, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_Conv_IntToText_ReturnValue) == 0x000020, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_GetSkinItemQuantity_Value) == 0x000030, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_GetSkinItemQuantity_Value' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetQuantityText, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000038, "Member 'WB_ItemSalvageButton_C_GetQuantityText::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
 
 // Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.GetQuantityVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -134,15 +137,34 @@ static_assert(offsetof(WB_ItemSalvageButton_C_GetRecipeIconVisibility, ShowIcon)
 struct WB_ItemSalvageButton_C_GetTooltip final
 {
 public:
-	class UUserWidget*                            Param_ToolTip;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            ToolTip_0;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            CallFunc_GetTooltip_Tooltip;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ItemSalvageButton_C_GetTooltip) == 0x000008, "Wrong alignment on WB_ItemSalvageButton_C_GetTooltip");
 static_assert(sizeof(WB_ItemSalvageButton_C_GetTooltip) == 0x000018, "Wrong size on WB_ItemSalvageButton_C_GetTooltip");
-static_assert(offsetof(WB_ItemSalvageButton_C_GetTooltip, Param_ToolTip) == 0x000000, "Member 'WB_ItemSalvageButton_C_GetTooltip::Param_ToolTip' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_GetTooltip, ToolTip_0) == 0x000000, "Member 'WB_ItemSalvageButton_C_GetTooltip::ToolTip_0' has a wrong offset!");
 static_assert(offsetof(WB_ItemSalvageButton_C_GetTooltip, CallFunc_GetTooltip_Tooltip) == 0x000008, "Member 'WB_ItemSalvageButton_C_GetTooltip::CallFunc_GetTooltip_Tooltip' has a wrong offset!");
 static_assert(offsetof(WB_ItemSalvageButton_C_GetTooltip, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000010, "Member 'WB_ItemSalvageButton_C_GetTooltip::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.OnFocusReceived
+// 0x01B8 (0x01B8 - 0x0000)
+struct WB_ItemSalvageButton_C_OnFocusReceived final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_OnFocusReceived_ReturnValue;              // 0x00F8(0x00B8)()
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_ItemSalvageButton_C_OnFocusReceived) == 0x000008, "Wrong alignment on WB_ItemSalvageButton_C_OnFocusReceived");
+static_assert(sizeof(WB_ItemSalvageButton_C_OnFocusReceived) == 0x0001B8, "Wrong size on WB_ItemSalvageButton_C_OnFocusReceived");
+static_assert(offsetof(WB_ItemSalvageButton_C_OnFocusReceived, MyGeometry) == 0x000000, "Member 'WB_ItemSalvageButton_C_OnFocusReceived::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_OnFocusReceived, InFocusEvent) == 0x000038, "Member 'WB_ItemSalvageButton_C_OnFocusReceived::InFocusEvent' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_OnFocusReceived, ReturnValue) == 0x000040, "Member 'WB_ItemSalvageButton_C_OnFocusReceived::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_OnFocusReceived, CallFunc_OnFocusReceived_ReturnValue) == 0x0000F8, "Member 'WB_ItemSalvageButton_C_OnFocusReceived::CallFunc_OnFocusReceived_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ItemSalvageButton_C_OnFocusReceived, CallFunc_IsGamepadMode_ReturnValue) == 0x0001B0, "Member 'WB_ItemSalvageButton_C_OnFocusReceived::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
 
 // Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.SetIndividualParameters
 // 0x0018 (0x0018 - 0x0000)
@@ -150,7 +172,7 @@ struct WB_ItemSalvageButton_C_SetIndividualParameters final
 {
 public:
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57CB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SalvageScreen_C*                    K2Node_DynamicCast_AsWB_Salvage_Screen;            // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ItemSetListOverlay.WB_ItemSetListOverlay_C
-// 0x0010 (0x02D0 - 0x02C0)
+// 0x0010 (0x02F0 - 0x02E0)
 class UWB_ItemSetListOverlay_C final : public UUserWidget
 {
 public:
-	class UWB_ItemSetList_C*                      ItemSetList;                                       // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_0;                                         // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ItemSetList_C*                      ItemSetList;                                       // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_0;                                         // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	ESlateVisibility GetOverlayVisibility();
@@ -39,9 +39,9 @@ public:
 	}
 };
 static_assert(alignof(UWB_ItemSetListOverlay_C) == 0x000008, "Wrong alignment on UWB_ItemSetListOverlay_C");
-static_assert(sizeof(UWB_ItemSetListOverlay_C) == 0x0002D0, "Wrong size on UWB_ItemSetListOverlay_C");
-static_assert(offsetof(UWB_ItemSetListOverlay_C, ItemSetList) == 0x0002C0, "Member 'UWB_ItemSetListOverlay_C::ItemSetList' has a wrong offset!");
-static_assert(offsetof(UWB_ItemSetListOverlay_C, Overlay_0) == 0x0002C8, "Member 'UWB_ItemSetListOverlay_C::Overlay_0' has a wrong offset!");
+static_assert(sizeof(UWB_ItemSetListOverlay_C) == 0x0002F0, "Wrong size on UWB_ItemSetListOverlay_C");
+static_assert(offsetof(UWB_ItemSetListOverlay_C, ItemSetList) == 0x0002E0, "Member 'UWB_ItemSetListOverlay_C::ItemSetList' has a wrong offset!");
+static_assert(offsetof(UWB_ItemSetListOverlay_C, Overlay_0) == 0x0002E8, "Member 'UWB_ItemSetListOverlay_C::Overlay_0' has a wrong offset!");
 
 }
 

@@ -114,9 +114,9 @@ void UWB_AchievementItem_C::OnListItemObjectSet(class UObject* ListItemObject)
 // Function WB_AchievementItem.WB_AchievementItem_C.SetAchievementData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FS_AchievementData               Param_AchievementData                                  (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
+// struct FS_AchievementData               AchievementData_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void UWB_AchievementItem_C::SetAchievementData(const struct FS_AchievementData& Param_AchievementData)
+void UWB_AchievementItem_C::SetAchievementData(const struct FS_AchievementData& AchievementData_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -125,7 +125,7 @@ void UWB_AchievementItem_C::SetAchievementData(const struct FS_AchievementData& 
 
 	Params::WB_AchievementItem_C_SetAchievementData Parms{};
 
-	Parms.Param_AchievementData = std::move(Param_AchievementData);
+	Parms.AchievementData_0 = std::move(AchievementData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinWitchHeadDefault.B_SkinWitchHeadDefault_C
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x02C8 - 0x02C8)
 class AB_SkinWitchHeadDefault_C final : public AB_SkinWitchHeadBase_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(AB_SkinWitchHeadDefault_C) == 0x000008, "Wrong alignment on AB_SkinWitchHeadDefault_C");
-static_assert(sizeof(AB_SkinWitchHeadDefault_C) == 0x0002D0, "Wrong size on AB_SkinWitchHeadDefault_C");
+static_assert(sizeof(AB_SkinWitchHeadDefault_C) == 0x0002C8, "Wrong size on AB_SkinWitchHeadDefault_C");
 
 }
 

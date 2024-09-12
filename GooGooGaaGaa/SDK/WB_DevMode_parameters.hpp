@@ -10,6 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "PropWitchHuntModule_structs.hpp"
+#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "InputCore_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -27,28 +32,269 @@ static_assert(sizeof(WB_DevMode_C_BndEvt__WB_DevMode_WB_CheckBoxWithLabel_K2Node
 static_assert(offsetof(WB_DevMode_C_BndEvt__WB_DevMode_WB_CheckBoxWithLabel_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature, Sender) == 0x000000, "Member 'WB_DevMode_C_BndEvt__WB_DevMode_WB_CheckBoxWithLabel_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature::Sender' has a wrong offset!");
 static_assert(offsetof(WB_DevMode_C_BndEvt__WB_DevMode_WB_CheckBoxWithLabel_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature, IsChecked) == 0x000008, "Member 'WB_DevMode_C_BndEvt__WB_DevMode_WB_CheckBoxWithLabel_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature::IsChecked' has a wrong offset!");
 
+// Function WB_DevMode.WB_DevMode_C.CreateEventBindings
+// 0x0060 (0x0060 - 0x0000)
+struct WB_DevMode_C_CreateEventBindings final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWB_SliderWithEditableLabel_C* Sender, double RealValue)> K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UWB_CheckBoxWithEditableLabel_C* Sender, bool IsChecked)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWB_BaseControlWithLabel_C*             CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SliderWithEditableLabel_C*          K2Node_DynamicCast_AsWB_Slider_with_Editable_Label; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_CheckBoxWithEditableLabel_C*        K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label; // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetIsChecked_IsChecked;                   // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_CreateEventBindings) == 0x000008, "Wrong alignment on WB_DevMode_C_CreateEventBindings");
+static_assert(sizeof(WB_DevMode_C_CreateEventBindings) == 0x000060, "Wrong size on WB_DevMode_C_CreateEventBindings");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WB_DevMode_C_CreateEventBindings::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WB_DevMode_C_CreateEventBindings::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WB_DevMode_C_CreateEventBindings::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'WB_DevMode_C_CreateEventBindings::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, K2Node_CreateDelegate_OutputDelegate_1) == 0x00001C, "Member 'WB_DevMode_C_CreateEventBindings::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'WB_DevMode_C_CreateEventBindings::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, CallFunc_Array_Get_Item) == 0x000030, "Member 'WB_DevMode_C_CreateEventBindings::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'WB_DevMode_C_CreateEventBindings::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, K2Node_DynamicCast_AsWB_Slider_with_Editable_Label) == 0x000040, "Member 'WB_DevMode_C_CreateEventBindings::K2Node_DynamicCast_AsWB_Slider_with_Editable_Label' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'WB_DevMode_C_CreateEventBindings::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label) == 0x000050, "Member 'WB_DevMode_C_CreateEventBindings::K2Node_DynamicCast_AsWB_Check_Box_with_Editable_Label' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'WB_DevMode_C_CreateEventBindings::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_CreateEventBindings, CallFunc_GetIsChecked_IsChecked) == 0x000059, "Member 'WB_DevMode_C_CreateEventBindings::CallFunc_GetIsChecked_IsChecked' has a wrong offset!");
+
 // Function WB_DevMode.WB_DevMode_C.ExecuteUbergraph_WB_DevMode
-// 0x0030 (0x0030 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct WB_DevMode_C_ExecuteUbergraph_WB_DevMode final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58B6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58B7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender;                 // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_IsChecked;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender;                 // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_IsChecked;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetBoolSetting_bHasValue;                 // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetBoolSetting_ReturnValue;               // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWB_TabButton_C*>                K2Node_MakeArray_Array;                            // 0x0050(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UWidget*>                        K2Node_MakeArray_Array_1;                          // 0x0060(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UWB_BaseControlWithLabel_C*>     CallFunc_CreateUIParameters_ReturningUIElements;   // 0x0078(0x0010)(ReferenceParm, ContainsInstancedReference)
+	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x0088(0x0060)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue;                // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EE[0x2];                                       // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue;              // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       K2Node_SetFieldsInStruct_StructOut;                // 0x00F8(0x0060)()
 };
 static_assert(alignof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode) == 0x000008, "Wrong alignment on WB_DevMode_C_ExecuteUbergraph_WB_DevMode");
-static_assert(sizeof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode) == 0x000030, "Wrong size on WB_DevMode_C_ExecuteUbergraph_WB_DevMode");
+static_assert(sizeof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode) == 0x000158, "Wrong size on WB_DevMode_C_ExecuteUbergraph_WB_DevMode");
 static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, EntryPoint) == 0x000000, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_ComponentBoundEvent_Sender) == 0x000020, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_ComponentBoundEvent_Sender' has a wrong offset!");
-static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_ComponentBoundEvent_IsChecked) == 0x000028, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_ComponentBoundEvent_IsChecked' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_DynamicCast_AsB_Game_Instance) == 0x000020, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_ComponentBoundEvent_Sender) == 0x000030, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_ComponentBoundEvent_Sender' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_ComponentBoundEvent_IsChecked) == 0x000038, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_ComponentBoundEvent_IsChecked' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000040, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetBoolSetting_bHasValue) == 0x000048, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetBoolSetting_bHasValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetBoolSetting_ReturnValue) == 0x000049, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetBoolSetting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_Event_IsDesignTime) == 0x00004A, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_MakeArray_Array) == 0x000050, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_MakeArray_Array_1) == 0x000060, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetOwningPlayer_ReturnValue) == 0x000070, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_CreateUIParameters_ReturningUIElements) == 0x000078, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_CreateUIParameters_ReturningUIElements' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_Array_Get_Item) == 0x000088, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_Array_Length_ReturnValue) == 0x0000E8, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_Less_IntInt_ReturnValue) == 0x0000EC, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetFloatSetting_bHasValue) == 0x0000ED, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetFloatSetting_bHasValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, CallFunc_GetFloatSetting_ReturnValue) == 0x0000F0, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::CallFunc_GetFloatSetting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_ExecuteUbergraph_WB_DevMode, K2Node_SetFieldsInStruct_StructOut) == 0x0000F8, "Member 'WB_DevMode_C_ExecuteUbergraph_WB_DevMode::K2Node_SetFieldsInStruct_StructOut' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.FocusStoredWidget
+// 0x0038 (0x0038 - 0x0000)
+struct WB_DevMode_C_FocusStoredWidget final
+{
+public:
+	class UWidget*                                CurrentSettingsTab;                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_Map_Find_Value;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_FocusStoredWidget) == 0x000008, "Wrong alignment on WB_DevMode_C_FocusStoredWidget");
+static_assert(sizeof(WB_DevMode_C_FocusStoredWidget) == 0x000038, "Wrong size on WB_DevMode_C_FocusStoredWidget");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CurrentSettingsTab) == 0x000000, "Member 'WB_DevMode_C_FocusStoredWidget::CurrentSettingsTab' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CallFunc_GetActiveWidget_ReturnValue) == 0x000008, "Member 'WB_DevMode_C_FocusStoredWidget::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_FocusStoredWidget::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'WB_DevMode_C_FocusStoredWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CallFunc_GetObjectClass_ReturnValue) == 0x000020, "Member 'WB_DevMode_C_FocusStoredWidget::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CallFunc_Map_Find_Value) == 0x000028, "Member 'WB_DevMode_C_FocusStoredWidget::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_FocusStoredWidget, CallFunc_Map_Find_ReturnValue) == 0x000030, "Member 'WB_DevMode_C_FocusStoredWidget::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.GetActiveTab
+// 0x0010 (0x0010 - 0x0000)
+struct WB_DevMode_C_GetActiveTab final
+{
+public:
+	class UWidget*                                ActiveTab;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_GetActiveTab) == 0x000008, "Wrong alignment on WB_DevMode_C_GetActiveTab");
+static_assert(sizeof(WB_DevMode_C_GetActiveTab) == 0x000010, "Wrong size on WB_DevMode_C_GetActiveTab");
+static_assert(offsetof(WB_DevMode_C_GetActiveTab, ActiveTab) == 0x000000, "Member 'WB_DevMode_C_GetActiveTab::ActiveTab' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetActiveTab, CallFunc_GetActiveWidget_ReturnValue) == 0x000008, "Member 'WB_DevMode_C_GetActiveTab::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.GetAimAssistDefaultParams
+// 0x0140 (0x0140 - 0x0000)
+struct WB_DevMode_C_GetAimAssistDefaultParams final
+{
+public:
+	TArray<struct FUIParam>                       ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_1;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_1;            // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               K2Node_MakeStruct_UIParam;                         // 0x0030(0x0014)(NoDestructor)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_1;                       // 0x0044(0x0014)(NoDestructor)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_2;              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_2;            // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_3;              // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_3;            // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_2;                       // 0x0078(0x0014)(NoDestructor)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_3;                       // 0x008C(0x0014)(NoDestructor)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_5;         // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_4;              // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_4;            // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_5;              // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_5;            // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_4;                       // 0x00C0(0x0014)(NoDestructor)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_5;                       // 0x00D4(0x0014)(NoDestructor)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_6;         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_7;         // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_6;              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_6;            // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatSetting_bHasValue_7;              // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatSetting_ReturnValue_7;            // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_6;                       // 0x0108(0x0014)(NoDestructor)
+	struct FUIParam                               K2Node_MakeStruct_UIParam_7;                       // 0x011C(0x0014)(NoDestructor)
+	TArray<struct FUIParam>                       K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm)
+};
+static_assert(alignof(WB_DevMode_C_GetAimAssistDefaultParams) == 0x000008, "Wrong alignment on WB_DevMode_C_GetAimAssistDefaultParams");
+static_assert(sizeof(WB_DevMode_C_GetAimAssistDefaultParams) == 0x000140, "Wrong size on WB_DevMode_C_GetAimAssistDefaultParams");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, ReturnValue) == 0x000000, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000018, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue) == 0x000020, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue) == 0x000024, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_1) == 0x000028, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_1) == 0x00002C, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam) == 0x000030, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_1) == 0x000044, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_2) == 0x000058, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_3) == 0x000060, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_2) == 0x000068, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_2' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_2) == 0x00006C, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_3) == 0x000070, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_3' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_3) == 0x000074, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_2) == 0x000078, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_2' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_3) == 0x00008C, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_3' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_4) == 0x0000A0, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_5) == 0x0000A8, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_4) == 0x0000B0, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_4' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_4) == 0x0000B4, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_5) == 0x0000B8, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_5' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_5) == 0x0000BC, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_4) == 0x0000C0, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_4' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_5) == 0x0000D4, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_5' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_6) == 0x0000E8, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetEngineSubsystem_ReturnValue_7) == 0x0000F0, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetEngineSubsystem_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_6) == 0x0000F8, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_6' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_6) == 0x0000FC, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_bHasValue_7) == 0x000100, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_bHasValue_7' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, CallFunc_GetFloatSetting_ReturnValue_7) == 0x000104, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::CallFunc_GetFloatSetting_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_6) == 0x000108, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_6' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeStruct_UIParam_7) == 0x00011C, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeStruct_UIParam_7' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetAimAssistDefaultParams, K2Node_MakeArray_Array) == 0x000130, "Member 'WB_DevMode_C_GetAimAssistDefaultParams::K2Node_MakeArray_Array' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.GetControllerIconVisibility
+// 0x0006 (0x0006 - 0x0000)
+struct WB_DevMode_C_GetControllerIconVisibility final
+{
+public:
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_GetControllerIconVisibility) == 0x000001, "Wrong alignment on WB_DevMode_C_GetControllerIconVisibility");
+static_assert(sizeof(WB_DevMode_C_GetControllerIconVisibility) == 0x000006, "Wrong size on WB_DevMode_C_GetControllerIconVisibility");
+static_assert(offsetof(WB_DevMode_C_GetControllerIconVisibility, ReturnValue) == 0x000000, "Member 'WB_DevMode_C_GetControllerIconVisibility::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetControllerIconVisibility, Temp_bool_Variable) == 0x000001, "Member 'WB_DevMode_C_GetControllerIconVisibility::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetControllerIconVisibility, Temp_byte_Variable) == 0x000002, "Member 'WB_DevMode_C_GetControllerIconVisibility::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetControllerIconVisibility, Temp_byte_Variable_1) == 0x000003, "Member 'WB_DevMode_C_GetControllerIconVisibility::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetControllerIconVisibility, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_DevMode_C_GetControllerIconVisibility::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_GetControllerIconVisibility, K2Node_Select_Default) == 0x000005, "Member 'WB_DevMode_C_GetControllerIconVisibility::K2Node_Select_Default' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.GetInitialFocusWidget
+// 0x0008 (0x0008 - 0x0000)
+struct WB_DevMode_C_GetInitialFocusWidget final
+{
+public:
+	class UUserWidget*                            InitialFocusWidget;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_DevMode_C_GetInitialFocusWidget");
+static_assert(sizeof(WB_DevMode_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_DevMode_C_GetInitialFocusWidget");
+static_assert(offsetof(WB_DevMode_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_DevMode_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.GetShouldGoBackAfterAction
+// 0x0001 (0x0001 - 0x0000)
+struct WB_DevMode_C_GetShouldGoBackAfterAction final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_GetShouldGoBackAfterAction) == 0x000001, "Wrong alignment on WB_DevMode_C_GetShouldGoBackAfterAction");
+static_assert(sizeof(WB_DevMode_C_GetShouldGoBackAfterAction) == 0x000001, "Wrong size on WB_DevMode_C_GetShouldGoBackAfterAction");
+static_assert(offsetof(WB_DevMode_C_GetShouldGoBackAfterAction, ReturnValue) == 0x000000, "Member 'WB_DevMode_C_GetShouldGoBackAfterAction::ReturnValue' has a wrong offset!");
 
 // Function WB_DevMode.WB_DevMode_C.HandleCheckedStateChanged
 // 0x0038 (0x0038 - 0x0000)
@@ -57,11 +303,11 @@ struct WB_DevMode_C_HandleCheckedStateChanged final
 public:
 	bool                                          bChecked;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInChecked;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58B8[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EnableDeveloperMode_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58B9[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_3;         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_4;         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -77,6 +323,129 @@ static_assert(offsetof(WB_DevMode_C_HandleCheckedStateChanged, CallFunc_GetEngin
 static_assert(offsetof(WB_DevMode_C_HandleCheckedStateChanged, CallFunc_GetEngineSubsystem_ReturnValue_3) == 0x000028, "Member 'WB_DevMode_C_HandleCheckedStateChanged::CallFunc_GetEngineSubsystem_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WB_DevMode_C_HandleCheckedStateChanged, CallFunc_GetEngineSubsystem_ReturnValue_4) == 0x000030, "Member 'WB_DevMode_C_HandleCheckedStateChanged::CallFunc_GetEngineSubsystem_ReturnValue_4' has a wrong offset!");
 
+// Function WB_DevMode.WB_DevMode_C.OnCheckBoxValueChanged
+// 0x0010 (0x0010 - 0x0000)
+struct WB_DevMode_C_OnCheckBoxValueChanged final
+{
+public:
+	class UWB_CheckBoxWithEditableLabel_C*        Sender;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsChecked;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_OnCheckBoxValueChanged) == 0x000008, "Wrong alignment on WB_DevMode_C_OnCheckBoxValueChanged");
+static_assert(sizeof(WB_DevMode_C_OnCheckBoxValueChanged) == 0x000010, "Wrong size on WB_DevMode_C_OnCheckBoxValueChanged");
+static_assert(offsetof(WB_DevMode_C_OnCheckBoxValueChanged, Sender) == 0x000000, "Member 'WB_DevMode_C_OnCheckBoxValueChanged::Sender' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnCheckBoxValueChanged, IsChecked) == 0x000008, "Member 'WB_DevMode_C_OnCheckBoxValueChanged::IsChecked' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.OnFocusReceived
+// 0x01B0 (0x01B0 - 0x0000)
+struct WB_DevMode_C_OnFocusReceived final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_OnFocusReceived_ReturnValue;              // 0x00F8(0x00B8)()
+};
+static_assert(alignof(WB_DevMode_C_OnFocusReceived) == 0x000008, "Wrong alignment on WB_DevMode_C_OnFocusReceived");
+static_assert(sizeof(WB_DevMode_C_OnFocusReceived) == 0x0001B0, "Wrong size on WB_DevMode_C_OnFocusReceived");
+static_assert(offsetof(WB_DevMode_C_OnFocusReceived, MyGeometry) == 0x000000, "Member 'WB_DevMode_C_OnFocusReceived::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnFocusReceived, InFocusEvent) == 0x000038, "Member 'WB_DevMode_C_OnFocusReceived::InFocusEvent' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnFocusReceived, ReturnValue) == 0x000040, "Member 'WB_DevMode_C_OnFocusReceived::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnFocusReceived, CallFunc_OnFocusReceived_ReturnValue) == 0x0000F8, "Member 'WB_DevMode_C_OnFocusReceived::CallFunc_OnFocusReceived_ReturnValue' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.OnParamSliderRealValueChanged
+// 0x0020 (0x0020 - 0x0000)
+struct WB_DevMode_C_OnParamSliderRealValueChanged final
+{
+public:
+	class UWB_SliderWithEditableLabel_C*          Sender;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        RealValue;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatSetting_Value_ImplicitCast;       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_OnParamSliderRealValueChanged) == 0x000008, "Wrong alignment on WB_DevMode_C_OnParamSliderRealValueChanged");
+static_assert(sizeof(WB_DevMode_C_OnParamSliderRealValueChanged) == 0x000020, "Wrong size on WB_DevMode_C_OnParamSliderRealValueChanged");
+static_assert(offsetof(WB_DevMode_C_OnParamSliderRealValueChanged, Sender) == 0x000000, "Member 'WB_DevMode_C_OnParamSliderRealValueChanged::Sender' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnParamSliderRealValueChanged, RealValue) == 0x000008, "Member 'WB_DevMode_C_OnParamSliderRealValueChanged::RealValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnParamSliderRealValueChanged, CallFunc_GetEngineSubsystem_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_OnParamSliderRealValueChanged::CallFunc_GetEngineSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnParamSliderRealValueChanged, CallFunc_SetFloatSetting_Value_ImplicitCast) == 0x000018, "Member 'WB_DevMode_C_OnParamSliderRealValueChanged::CallFunc_SetFloatSetting_Value_ImplicitCast' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.OnPreviewKeyDown
+// 0x0388 (0x0388 - 0x0000)
+struct WB_DevMode_C_OnPreviewKeyDown final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0130(0x00B8)()
+	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x01E8(0x00B8)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x02A0(0x0018)(HasGetValueTypeHash)
+	struct FEventReply                            CallFunc_Handled_ReturnValue_1;                    // 0x02B8(0x00B8)()
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_372[0x6];                                      // 0x0372(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetWidgetLeftToSwitcher_ReturnValue;      // 0x0378(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetWidgetRightToSwitcher_ReturnValue;     // 0x0380(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_DevMode_C_OnPreviewKeyDown");
+static_assert(sizeof(WB_DevMode_C_OnPreviewKeyDown) == 0x000388, "Wrong size on WB_DevMode_C_OnPreviewKeyDown");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'WB_DevMode_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'WB_DevMode_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'WB_DevMode_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000130, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_OnPreviewKeyDown_ReturnValue) == 0x0001E8, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_OnPreviewKeyDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0002A0, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue_1) == 0x0002B8, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x000370, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x000371, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_GetWidgetLeftToSwitcher_ReturnValue) == 0x000378, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_GetWidgetLeftToSwitcher_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_OnPreviewKeyDown, CallFunc_GetWidgetRightToSwitcher_ReturnValue) == 0x000380, "Member 'WB_DevMode_C_OnPreviewKeyDown::CallFunc_GetWidgetRightToSwitcher_ReturnValue' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WB_DevMode_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_PreConstruct) == 0x000001, "Wrong alignment on WB_DevMode_C_PreConstruct");
+static_assert(sizeof(WB_DevMode_C_PreConstruct) == 0x000001, "Wrong size on WB_DevMode_C_PreConstruct");
+static_assert(offsetof(WB_DevMode_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WB_DevMode_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.SetActiveSettingsTab
+// 0x0060 (0x0060 - 0x0000)
+struct WB_DevMode_C_SetActiveSettingsTab final
+{
+public:
+	class UWidget*                                RequestedSettingsTab;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IIConfirmable_C>       K2Node_DynamicCast_AsIConfirmable;                 // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IIConfirmable_C>       K2Node_DynamicCast_AsIConfirmable_1;               // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDirty_bDirty;                           // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IIConfirmable_C>       K2Node_DynamicCast_AsIConfirmable_2;               // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_SetActiveSettingsTab) == 0x000008, "Wrong alignment on WB_DevMode_C_SetActiveSettingsTab");
+static_assert(sizeof(WB_DevMode_C_SetActiveSettingsTab) == 0x000060, "Wrong size on WB_DevMode_C_SetActiveSettingsTab");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, RequestedSettingsTab) == 0x000000, "Member 'WB_DevMode_C_SetActiveSettingsTab::RequestedSettingsTab' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, CallFunc_GetActiveWidget_ReturnValue) == 0x000008, "Member 'WB_DevMode_C_SetActiveSettingsTab::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, K2Node_DynamicCast_AsIConfirmable) == 0x000010, "Member 'WB_DevMode_C_SetActiveSettingsTab::K2Node_DynamicCast_AsIConfirmable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_DevMode_C_SetActiveSettingsTab::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, CallFunc_GetActiveWidget_ReturnValue_1) == 0x000028, "Member 'WB_DevMode_C_SetActiveSettingsTab::CallFunc_GetActiveWidget_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, K2Node_DynamicCast_AsIConfirmable_1) == 0x000030, "Member 'WB_DevMode_C_SetActiveSettingsTab::K2Node_DynamicCast_AsIConfirmable_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'WB_DevMode_C_SetActiveSettingsTab::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, CallFunc_IsDirty_bDirty) == 0x000041, "Member 'WB_DevMode_C_SetActiveSettingsTab::CallFunc_IsDirty_bDirty' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, CallFunc_Not_PreBool_ReturnValue) == 0x000042, "Member 'WB_DevMode_C_SetActiveSettingsTab::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, K2Node_DynamicCast_AsIConfirmable_2) == 0x000048, "Member 'WB_DevMode_C_SetActiveSettingsTab::K2Node_DynamicCast_AsIConfirmable_2' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_SetActiveSettingsTab, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'WB_DevMode_C_SetActiveSettingsTab::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+
 // Function WB_DevMode.WB_DevMode_C.SetupState
 // 0x0020 (0x0020 - 0x0000)
 struct WB_DevMode_C_SetupState final
@@ -85,7 +454,7 @@ public:
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_1;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CouldEnableDeveloperMode_ReturnValue;     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58BA[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDeveloperModeSubsystem*                CallFunc_GetEngineSubsystem_ReturnValue_2;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_DevMode_C_SetupState) == 0x000008, "Wrong alignment on WB_DevMode_C_SetupState");
@@ -94,6 +463,103 @@ static_assert(offsetof(WB_DevMode_C_SetupState, CallFunc_GetEngineSubsystem_Retu
 static_assert(offsetof(WB_DevMode_C_SetupState, CallFunc_GetEngineSubsystem_ReturnValue_1) == 0x000008, "Member 'WB_DevMode_C_SetupState::CallFunc_GetEngineSubsystem_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_DevMode_C_SetupState, CallFunc_CouldEnableDeveloperMode_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_SetupState::CallFunc_CouldEnableDeveloperMode_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_DevMode_C_SetupState, CallFunc_GetEngineSubsystem_ReturnValue_2) == 0x000018, "Member 'WB_DevMode_C_SetupState::CallFunc_GetEngineSubsystem_ReturnValue_2' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.StoreFocusedWidget
+// 0x00C0 (0x00C0 - 0x0000)
+struct WB_DevMode_C_StoreFocusedWidget final
+{
+public:
+	class UWidget*                                CurrentSettingsTab;                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IISettingsTab_C>       K2Node_DynamicCast_AsISettings_Tab;                // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_GetPanelWidget_ReturnValue;               // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPanelWidget*>                   K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class UPanelWidget*>                   K2Node_LowEntry_LocalVariable_Value__Object;       // 0x0068(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPanelWidget*                           K2Node_DynamicCast_AsPanel_Widget;                 // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_StoreFocusedWidget) == 0x000008, "Wrong alignment on WB_DevMode_C_StoreFocusedWidget");
+static_assert(sizeof(WB_DevMode_C_StoreFocusedWidget) == 0x0000C0, "Wrong size on WB_DevMode_C_StoreFocusedWidget");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CurrentSettingsTab) == 0x000000, "Member 'WB_DevMode_C_StoreFocusedWidget::CurrentSettingsTab' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WB_DevMode_C_StoreFocusedWidget::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, Temp_int_Variable) == 0x00000C, "Member 'WB_DevMode_C_StoreFocusedWidget::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_GetActiveWidget_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, Temp_int_Loop_Counter_Variable) == 0x00001C, "Member 'WB_DevMode_C_StoreFocusedWidget::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_GetObjectClass_ReturnValue) == 0x000020, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Add_IntInt_ReturnValue_1) == 0x000028, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, K2Node_DynamicCast_AsISettings_Tab) == 0x000030, "Member 'WB_DevMode_C_StoreFocusedWidget::K2Node_DynamicCast_AsISettings_Tab' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'WB_DevMode_C_StoreFocusedWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_GetPanelWidget_ReturnValue) == 0x000048, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_GetPanelWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Map_Remove_ReturnValue) == 0x000050, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, K2Node_MakeArray_Array) == 0x000058, "Member 'WB_DevMode_C_StoreFocusedWidget::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, K2Node_LowEntry_LocalVariable_Value__Object) == 0x000068, "Member 'WB_DevMode_C_StoreFocusedWidget::K2Node_LowEntry_LocalVariable_Value__Object' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Array_Get_Item) == 0x000080, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_GetChildAt_ReturnValue) == 0x000090, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_HasAnyUserFocus_ReturnValue) == 0x000098, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_HasAnyUserFocus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, K2Node_DynamicCast_AsPanel_Widget) == 0x0000A0, "Member 'WB_DevMode_C_StoreFocusedWidget::K2Node_DynamicCast_AsPanel_Widget' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, K2Node_DynamicCast_bSuccess_1) == 0x0000A8, "Member 'WB_DevMode_C_StoreFocusedWidget::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Array_Add_ReturnValue) == 0x0000AC, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_GetChildrenCount_ReturnValue) == 0x0000B0, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000B4, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_StoreFocusedWidget, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000B8, "Member 'WB_DevMode_C_StoreFocusedWidget::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WB_DevMode.WB_DevMode_C.UpdateTabButtonStyles
+// 0x0040 (0x0040 - 0x0000)
+struct WB_DevMode_C_UpdateTabButtonStyles final
+{
+public:
+	class UWB_TabButton_C*                        CurrentButton;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_Array_Get_Item_1;                         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_DevMode_C_UpdateTabButtonStyles) == 0x000008, "Wrong alignment on WB_DevMode_C_UpdateTabButtonStyles");
+static_assert(sizeof(WB_DevMode_C_UpdateTabButtonStyles) == 0x000040, "Wrong size on WB_DevMode_C_UpdateTabButtonStyles");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CurrentButton) == 0x000000, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CurrentButton' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WB_DevMode_C_UpdateTabButtonStyles::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'WB_DevMode_C_UpdateTabButtonStyles::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_GetActiveWidget_ReturnValue) == 0x000018, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_Array_Get_Item) == 0x000020, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_Array_Get_Item_1) == 0x000028, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000030, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_Array_Length_ReturnValue) == 0x000034, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_DevMode_C_UpdateTabButtonStyles, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'WB_DevMode_C_UpdateTabButtonStyles::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

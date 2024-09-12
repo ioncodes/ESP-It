@@ -10,18 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "B_SkinItem_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "B_SkinItem_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_SkinIconBase.B_SkinIconBase_C
-// 0x00D0 (0x0380 - 0x02B0)
+// 0x00D8 (0x0380 - 0x02A8)
 class AB_SkinIconBase_C : public AB_SkinItem_C
 {
 public:
+	uint8                                         Pad_2A8[0x8];                                      // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            SlateIcon;                                         // 0x02B0(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

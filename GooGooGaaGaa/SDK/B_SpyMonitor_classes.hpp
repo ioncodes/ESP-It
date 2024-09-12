@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SpyMonitor.B_SpyMonitor_C
-// 0x0048 (0x02E0 - 0x0298)
+// 0x0048 (0x02D8 - 0x0290)
 class AB_SpyMonitor_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   SM_SpyGlasses;                                     // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Interaction;                                       // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Highlight;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AB_SpyCamera_C*                         MyCamera;                                          // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	bool                                          Active;                                            // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51B9[0x7];                                     // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_SecurityCameraHud_C*                MyHUD;                                             // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Highlighted;                                       // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   SM_SpyGlasses;                                     // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Interaction;                                       // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Highlight;                                         // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AB_SpyCamera_C*                         MyCamera;                                          // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	bool                                          Active;                                            // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SecurityCameraHud_C*                MyHUD;                                             // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Highlighted;                                       // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Activated(class APlayerController* PlayerController);
@@ -57,16 +57,16 @@ public:
 	}
 };
 static_assert(alignof(AB_SpyMonitor_C) == 0x000008, "Wrong alignment on AB_SpyMonitor_C");
-static_assert(sizeof(AB_SpyMonitor_C) == 0x0002E0, "Wrong size on AB_SpyMonitor_C");
-static_assert(offsetof(AB_SpyMonitor_C, UberGraphFrame) == 0x000298, "Member 'AB_SpyMonitor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, SM_SpyGlasses) == 0x0002A0, "Member 'AB_SpyMonitor_C::SM_SpyGlasses' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, Interaction) == 0x0002A8, "Member 'AB_SpyMonitor_C::Interaction' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, Highlight) == 0x0002B0, "Member 'AB_SpyMonitor_C::Highlight' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, Scene) == 0x0002B8, "Member 'AB_SpyMonitor_C::Scene' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, MyCamera) == 0x0002C0, "Member 'AB_SpyMonitor_C::MyCamera' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, Active) == 0x0002C8, "Member 'AB_SpyMonitor_C::Active' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, MyHUD) == 0x0002D0, "Member 'AB_SpyMonitor_C::MyHUD' has a wrong offset!");
-static_assert(offsetof(AB_SpyMonitor_C, Highlighted) == 0x0002D8, "Member 'AB_SpyMonitor_C::Highlighted' has a wrong offset!");
+static_assert(sizeof(AB_SpyMonitor_C) == 0x0002D8, "Wrong size on AB_SpyMonitor_C");
+static_assert(offsetof(AB_SpyMonitor_C, UberGraphFrame) == 0x000290, "Member 'AB_SpyMonitor_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, SM_SpyGlasses) == 0x000298, "Member 'AB_SpyMonitor_C::SM_SpyGlasses' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, Interaction) == 0x0002A0, "Member 'AB_SpyMonitor_C::Interaction' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, Highlight) == 0x0002A8, "Member 'AB_SpyMonitor_C::Highlight' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, Scene) == 0x0002B0, "Member 'AB_SpyMonitor_C::Scene' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, MyCamera) == 0x0002B8, "Member 'AB_SpyMonitor_C::MyCamera' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, Active) == 0x0002C0, "Member 'AB_SpyMonitor_C::Active' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, MyHUD) == 0x0002C8, "Member 'AB_SpyMonitor_C::MyHUD' has a wrong offset!");
+static_assert(offsetof(AB_SpyMonitor_C, Highlighted) == 0x0002D0, "Member 'AB_SpyMonitor_C::Highlighted' has a wrong offset!");
 
 }
 

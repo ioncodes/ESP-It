@@ -11,38 +11,56 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_StartupVideos.WB_StartupVideos_C.ExecuteUbergraph_WB_StartupVideos
-// 0x0048 (0x0048 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OpenUrl_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58BB[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0046(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x000C(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPlaying_ReturnValue;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OpenUrl_ReturnValue_1;                    // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos) == 0x000004, "Wrong alignment on WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos");
-static_assert(sizeof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos) == 0x000048, "Wrong size on WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos");
+static_assert(alignof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos) == 0x000008, "Wrong alignment on WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos");
+static_assert(sizeof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos) == 0x000088, "Wrong size on WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos");
 static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, EntryPoint) == 0x000000, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_OpenUrl_ReturnValue) == 0x000004, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_OpenUrl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_OpenUrl_ReturnValue_1) == 0x000005, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_OpenUrl_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, K2Node_Event_MyGeometry) == 0x000008, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, K2Node_Event_InDeltaTime) == 0x000040, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_IsPlaying_ReturnValue) == 0x000044, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_IsPlaying_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Not_PreBool_ReturnValue) == 0x000045, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_BooleanAND_ReturnValue) == 0x000046, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, Temp_int_Variable) == 0x000004, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, K2Node_Event_MyGeometry) == 0x00000C, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, K2Node_Event_InDeltaTime) == 0x000044, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::K2Node_Event_InDeltaTime' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_IsPlaying_ReturnValue) == 0x000048, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_IsPlaying_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Not_PreBool_ReturnValue) == 0x000049, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_BooleanAND_ReturnValue) == 0x00004A, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Array_Get_Item) == 0x000050, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_OpenUrl_ReturnValue) == 0x000060, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_OpenUrl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Add_IntInt_ReturnValue_1) == 0x000064, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Array_Get_Item_1) == 0x000068, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, Temp_int_Variable_1) == 0x000078, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_OpenUrl_ReturnValue_1) == 0x00007C, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_OpenUrl_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000084, "Member 'WB_StartupVideos_C_ExecuteUbergraph_WB_StartupVideos::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_StartupVideos.WB_StartupVideos_C.GetInitialFocusWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -65,7 +83,7 @@ public:
 	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_Key_IsButtonAxis_ReturnValue;             // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58BC[0x7];                                     // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0150(0x00B8)()
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0208(0x00B8)()
 };

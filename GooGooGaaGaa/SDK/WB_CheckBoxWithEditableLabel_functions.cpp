@@ -87,15 +87,15 @@ void UWB_CheckBoxWithEditableLabel_C::CheckDefaultToUpdateUI()
 }
 
 
-// Function WB_CheckBoxWithEditableLabel.WB_CheckBoxWithEditableLabel_C.CreateToolTip
+// Function WB_CheckBoxWithEditableLabel.WB_CheckBoxWithEditableLabel_C.CreateTooltip
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_CheckBoxWithEditableLabel_C::CreateToolTip()
+void UWB_CheckBoxWithEditableLabel_C::CreateTooltip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_CheckBoxWithEditableLabel_C", "CreateToolTip");
+		Func = Class->GetFunction("WB_CheckBoxWithEditableLabel_C", "CreateTooltip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

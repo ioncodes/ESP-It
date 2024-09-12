@@ -34,9 +34,9 @@ void AB_Buff_C::BuffEnd()
 // Function B_Buff.B_Buff_C.BuffStart
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AB_PlayerState_C*                 Param_PlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AB_PlayerState_C*                 PlayerState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Buff_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
+void AB_Buff_C::BuffStart(class AB_PlayerState_C* PlayerState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -45,7 +45,7 @@ void AB_Buff_C::BuffStart(class AB_PlayerState_C* Param_PlayerState)
 
 	Params::B_Buff_C_BuffStart Parms{};
 
-	Parms.Param_PlayerState = Param_PlayerState;
+	Parms.PlayerState_0 = PlayerState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

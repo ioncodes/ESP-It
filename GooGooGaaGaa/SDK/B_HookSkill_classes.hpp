@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "B_BaseHunterSkill_classes.hpp"
 
 
@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HookSkill.B_HookSkill_C
-// 0x0038 (0x0140 - 0x0108)
+// 0x0038 (0x0138 - 0x0100)
 class UB_HookSkill_C final : public UB_BaseHunterSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HookSkill_C;                      // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        ShootDelay;                                        // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GunOffset;                                         // 0x0118(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_Hook_C*                              Hook;                                              // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_HookRope_C*                          Rope;                                              // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HookSkill_C;                      // 0x0100(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        ShootDelay;                                        // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GunOffset;                                         // 0x0110(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_Hook_C*                              Hook;                                              // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_HookRope_C*                          Rope;                                              // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_HookSkill(int32 EntryPoint);
@@ -48,12 +48,12 @@ public:
 	}
 };
 static_assert(alignof(UB_HookSkill_C) == 0x000008, "Wrong alignment on UB_HookSkill_C");
-static_assert(sizeof(UB_HookSkill_C) == 0x000140, "Wrong size on UB_HookSkill_C");
-static_assert(offsetof(UB_HookSkill_C, UberGraphFrame_B_HookSkill_C) == 0x000108, "Member 'UB_HookSkill_C::UberGraphFrame_B_HookSkill_C' has a wrong offset!");
-static_assert(offsetof(UB_HookSkill_C, ShootDelay) == 0x000110, "Member 'UB_HookSkill_C::ShootDelay' has a wrong offset!");
-static_assert(offsetof(UB_HookSkill_C, GunOffset) == 0x000118, "Member 'UB_HookSkill_C::GunOffset' has a wrong offset!");
-static_assert(offsetof(UB_HookSkill_C, Hook) == 0x000130, "Member 'UB_HookSkill_C::Hook' has a wrong offset!");
-static_assert(offsetof(UB_HookSkill_C, Rope) == 0x000138, "Member 'UB_HookSkill_C::Rope' has a wrong offset!");
+static_assert(sizeof(UB_HookSkill_C) == 0x000138, "Wrong size on UB_HookSkill_C");
+static_assert(offsetof(UB_HookSkill_C, UberGraphFrame_B_HookSkill_C) == 0x000100, "Member 'UB_HookSkill_C::UberGraphFrame_B_HookSkill_C' has a wrong offset!");
+static_assert(offsetof(UB_HookSkill_C, ShootDelay) == 0x000108, "Member 'UB_HookSkill_C::ShootDelay' has a wrong offset!");
+static_assert(offsetof(UB_HookSkill_C, GunOffset) == 0x000110, "Member 'UB_HookSkill_C::GunOffset' has a wrong offset!");
+static_assert(offsetof(UB_HookSkill_C, Hook) == 0x000128, "Member 'UB_HookSkill_C::Hook' has a wrong offset!");
+static_assert(offsetof(UB_HookSkill_C, Rope) == 0x000130, "Member 'UB_HookSkill_C::Rope' has a wrong offset!");
 
 }
 

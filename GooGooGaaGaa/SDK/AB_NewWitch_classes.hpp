@@ -10,74 +10,74 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "AB_NewWitch_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_NewWitch.AB_NewWitch_C
-// 0x11B0 (0x1500 - 0x0350)
+// 0x11D0 (0x1540 - 0x0370)
 class UAB_NewWitch_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_5D43[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct AB_NewWitch::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0358(0x000C)(HasGetValueTypeHash)
-	uint8                                         Pad_5D44[0x4];                                     // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0368(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0370(0x0008)()
-	uint8                                         Pad_5D45[0x8];                                     // 0x0378(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x0380(0x0950)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0CD0(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x0D18(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x0D60(0x00F0)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0E50(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0E70(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x0E90(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x0EB8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x0EE0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x0F08(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x0F30(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x0F58(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0F80(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0FA8(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x0FD0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x1018(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x1038(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x1080(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x10A0(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x10E8(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1108(0x0048)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x1150(0x0020)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x1170(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x1198(0x0028)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x11C0(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x1230(0x0020)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1250(0x0070)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x12C0(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x12E0(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x13A8(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x13C8(0x00C8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1490(0x0020)()
-	bool                                          bIsInAir;                                          // 0x14B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsWalking;                                         // 0x14B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D46[0x6];                                     // 0x14B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Speed;                                             // 0x14B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ZSpeed;                                            // 0x14C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFlying;                                          // 0x14C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCrouching;                                       // 0x14C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D47[0x6];                                     // 0x14CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CurrentVelocity;                                   // 0x14D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACharacter*                             CurrentCharacter;                                  // 0x14E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        FallingTime;                                       // 0x14F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct AB_NewWitch::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0378(0x000C)(HasGetValueTypeHash)
+	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0388(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0390(0x0008)()
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x03A0(0x0970)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0D10(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x0D58(0x0048)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x0DA0(0x00F0)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0E90(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0EB0(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_9;                  // 0x0ED0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_8;                  // 0x0EF8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_7;                  // 0x0F20(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_6;                  // 0x0F48(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x0F70(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x0F98(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0FC0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0FE8(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x1010(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_6;                       // 0x1058(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x1078(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_5;                       // 0x10C0(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x10E0(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_4;                       // 0x1128(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1148(0x0048)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x1190(0x0020)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x11B0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x11D8(0x0028)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x1200(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x1270(0x0020)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x1290(0x0070)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x1300(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x1320(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x13E8(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1408(0x00C8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x14D0(0x0020)()
+	bool                                          bIsInAir;                                          // 0x14F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsWalking;                                         // 0x14F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14F2[0x6];                                     // 0x14F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Speed;                                             // 0x14F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ZSpeed;                                            // 0x1500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFlying;                                          // 0x1508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCrouching;                                       // 0x1509(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_150A[0x6];                                     // 0x150A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CurrentVelocity;                                   // 0x1510(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CurrentCharacter;                                  // 0x1528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        FallingTime;                                       // 0x1530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AB_NewWitch_AnimGraphNode_TransitionResult_03560EB44770E82E2BD1C6A1378CEB25();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_AB_NewWitch_AnimGraphNode_TransitionResult_3D77D2B543CBFD7BBB97FDBA2B618A30();
@@ -97,52 +97,52 @@ public:
 	}
 };
 static_assert(alignof(UAB_NewWitch_C) == 0x000010, "Wrong alignment on UAB_NewWitch_C");
-static_assert(sizeof(UAB_NewWitch_C) == 0x001500, "Wrong size on UAB_NewWitch_C");
-static_assert(offsetof(UAB_NewWitch_C, UberGraphFrame) == 0x000350, "Member 'UAB_NewWitch_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, __AnimBlueprintMutables) == 0x000358, "Member 'UAB_NewWitch_C::__AnimBlueprintMutables' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimBlueprintExtension_PropertyAccess) == 0x000368, "Member 'UAB_NewWitch_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimBlueprintExtension_Base) == 0x000370, "Member 'UAB_NewWitch_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_RigidBody) == 0x000380, "Member 'UAB_NewWitch_C::AnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_Slot) == 0x000CD0, "Member 'UAB_NewWitch_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_4) == 0x000D18, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_LayeredBoneBlend) == 0x000D60, "Member 'UAB_NewWitch_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_ComponentToLocalSpace) == 0x000E50, "Member 'UAB_NewWitch_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_LocalToComponentSpace) == 0x000E70, "Member 'UAB_NewWitch_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_9) == 0x000E90, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_8) == 0x000EB8, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_7) == 0x000EE0, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_6) == 0x000F08, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_5) == 0x000F30, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_4) == 0x000F58, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_3) == 0x000F80, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_2) == 0x000FA8, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_3) == 0x000FD0, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_6) == 0x001018, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_6' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_2) == 0x001038, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_5) == 0x001080, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_5' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_1) == 0x0010A0, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_4) == 0x0010E8, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_4' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer) == 0x001108, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_3) == 0x001150, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_1) == 0x001170, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult) == 0x001198, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_BlendSpacePlayer_1) == 0x0011C0, "Member 'UAB_NewWitch_C::AnimGraphNode_BlendSpacePlayer_1' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_2) == 0x001230, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_BlendSpacePlayer) == 0x001250, "Member 'UAB_NewWitch_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_1) == 0x0012C0, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateMachine_1) == 0x0012E0, "Member 'UAB_NewWitch_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult) == 0x0013A8, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateMachine) == 0x0013C8, "Member 'UAB_NewWitch_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_Root) == 0x001490, "Member 'UAB_NewWitch_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, bIsInAir) == 0x0014B0, "Member 'UAB_NewWitch_C::bIsInAir' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, IsWalking) == 0x0014B1, "Member 'UAB_NewWitch_C::IsWalking' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, Speed) == 0x0014B8, "Member 'UAB_NewWitch_C::Speed' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, ZSpeed) == 0x0014C0, "Member 'UAB_NewWitch_C::ZSpeed' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, IsFlying) == 0x0014C8, "Member 'UAB_NewWitch_C::IsFlying' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, IsCrouching) == 0x0014C9, "Member 'UAB_NewWitch_C::IsCrouching' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, CurrentVelocity) == 0x0014D0, "Member 'UAB_NewWitch_C::CurrentVelocity' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, CurrentCharacter) == 0x0014E8, "Member 'UAB_NewWitch_C::CurrentCharacter' has a wrong offset!");
-static_assert(offsetof(UAB_NewWitch_C, FallingTime) == 0x0014F0, "Member 'UAB_NewWitch_C::FallingTime' has a wrong offset!");
+static_assert(sizeof(UAB_NewWitch_C) == 0x001540, "Wrong size on UAB_NewWitch_C");
+static_assert(offsetof(UAB_NewWitch_C, UberGraphFrame) == 0x000370, "Member 'UAB_NewWitch_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, __AnimBlueprintMutables) == 0x000378, "Member 'UAB_NewWitch_C::__AnimBlueprintMutables' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimBlueprintExtension_PropertyAccess) == 0x000388, "Member 'UAB_NewWitch_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimBlueprintExtension_Base) == 0x000390, "Member 'UAB_NewWitch_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_RigidBody) == 0x0003A0, "Member 'UAB_NewWitch_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_Slot) == 0x000D10, "Member 'UAB_NewWitch_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_4) == 0x000D58, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_LayeredBoneBlend) == 0x000DA0, "Member 'UAB_NewWitch_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_ComponentToLocalSpace) == 0x000E90, "Member 'UAB_NewWitch_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_LocalToComponentSpace) == 0x000EB0, "Member 'UAB_NewWitch_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_9) == 0x000ED0, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_8) == 0x000EF8, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_7) == 0x000F20, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_6) == 0x000F48, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_5) == 0x000F70, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_4) == 0x000F98, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_3) == 0x000FC0, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_2) == 0x000FE8, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_3) == 0x001010, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_6) == 0x001058, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_6' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_2) == 0x001078, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_5) == 0x0010C0, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_5' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer_1) == 0x0010E0, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_4) == 0x001128, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_4' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_SequencePlayer) == 0x001148, "Member 'UAB_NewWitch_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_3) == 0x001190, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_3' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult_1) == 0x0011B0, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_TransitionResult) == 0x0011D8, "Member 'UAB_NewWitch_C::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_BlendSpacePlayer_1) == 0x001200, "Member 'UAB_NewWitch_C::AnimGraphNode_BlendSpacePlayer_1' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_2) == 0x001270, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_BlendSpacePlayer) == 0x001290, "Member 'UAB_NewWitch_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult_1) == 0x001300, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateMachine_1) == 0x001320, "Member 'UAB_NewWitch_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateResult) == 0x0013E8, "Member 'UAB_NewWitch_C::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_StateMachine) == 0x001408, "Member 'UAB_NewWitch_C::AnimGraphNode_StateMachine' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, AnimGraphNode_Root) == 0x0014D0, "Member 'UAB_NewWitch_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, bIsInAir) == 0x0014F0, "Member 'UAB_NewWitch_C::bIsInAir' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, IsWalking) == 0x0014F1, "Member 'UAB_NewWitch_C::IsWalking' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, Speed) == 0x0014F8, "Member 'UAB_NewWitch_C::Speed' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, ZSpeed) == 0x001500, "Member 'UAB_NewWitch_C::ZSpeed' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, IsFlying) == 0x001508, "Member 'UAB_NewWitch_C::IsFlying' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, IsCrouching) == 0x001509, "Member 'UAB_NewWitch_C::IsCrouching' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, CurrentVelocity) == 0x001510, "Member 'UAB_NewWitch_C::CurrentVelocity' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, CurrentCharacter) == 0x001528, "Member 'UAB_NewWitch_C::CurrentCharacter' has a wrong offset!");
+static_assert(offsetof(UAB_NewWitch_C, FallingTime) == 0x001530, "Member 'UAB_NewWitch_C::FallingTime' has a wrong offset!");
 
 }
 

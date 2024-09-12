@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EChatRelationship_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "EChatRelationship_structs.hpp"
 
 
 namespace SDK
@@ -28,7 +28,7 @@ public:
 	TMap<class FString, int32>                    ChatRelationships;                                 // 0x0038(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UB_SaveGameManager_C*                   SaveGameManager;                                   // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bVoiceChatEnabled;                                 // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBE[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       MyPlayerState;                                     // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_UserControllerManager_C*             UserControllerManager;                             // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           SanityTimer;                                       // 0x00A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -53,12 +53,12 @@ public:
 	void OnPlayerLeft(class APlayerState* PlayerState);
 	void OnPlayerStateInitialized(class APlayerState* PlayerState);
 	void OnPushToTalkChanged_Event(bool bIsTalking);
-	void OnVoiceChatToggled(bool Param_bVoiceChatEnabled);
+	void OnVoiceChatToggled(bool bVoiceChatEnabled_0);
 	bool ReceiveGameChat(class APlayerState* PlayerState);
 	bool ReceiveVoiceChat(class APlayerState* PlayerState);
 	void SanityCheckPushToTalk();
 	void SetMyPlayerState(class APlayerState* PlayerState);
-	void SetVoiceChatStatus(bool Param_bVoiceChatEnabled);
+	void SetVoiceChatStatus(bool bVoiceChatEnabled_0);
 	bool ShouldBeGameplayMuted(class APlayerState* MyPlayer, class APlayerState* OtherPlayer);
 	void ToggleManualMute(class APlayerState* PlayerState);
 	void UpdateChatStatus(class APlayerState* PlayerState);

@@ -27,7 +27,7 @@ public:
 
 public:
 	void AllocatePlayers(TArray<class APlayerState*>& PlayerStates);
-	void GetHunterPlayersByChance(int32 Amount, TArray<class APlayerState*>* Param_Players);
+	void GetHunterPlayersByChance(int32 Amount, TArray<class APlayerState*>* Players_0);
 	void Normalize();
 
 public:

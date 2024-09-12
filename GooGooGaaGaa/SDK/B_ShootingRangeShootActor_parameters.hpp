@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -34,11 +34,11 @@ struct B_ShootingRangeShootActor_C_ExecuteUbergraph_B_ShootingRangeShootActor fi
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36FF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ShootingRangeTask_C*                 K2Node_DynamicCast_AsB_Shooting_Range_Task;        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3700[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_RemoveTargetAfterHit_DeltaSeconds_ImplicitCast; // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -74,7 +74,7 @@ static_assert(sizeof(B_ShootingRangeShootActor_C_ReceiveTick) == 0x000004, "Wron
 static_assert(offsetof(B_ShootingRangeShootActor_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'B_ShootingRangeShootActor_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function B_ShootingRangeShootActor.B_ShootingRangeShootActor_C.RemoveTargetAfterHit
-// 0x0138 (0x0138 - 0x0000)
+// 0x0148 (0x0148 - 0x0000)
 struct B_ShootingRangeShootActor_C_RemoveTargetAfterHit final
 {
 public:
@@ -85,15 +85,15 @@ public:
 	float                                         CallFunc_BreakRotator_Pitch;                       // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3701[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult;    // 0x0040(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3702[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult;    // 0x0040(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit) == 0x000008, "Wrong alignment on B_ShootingRangeShootActor_C_RemoveTargetAfterHit");
-static_assert(sizeof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit) == 0x000138, "Wrong size on B_ShootingRangeShootActor_C_RemoveTargetAfterHit");
+static_assert(sizeof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit) == 0x000148, "Wrong size on B_ShootingRangeShootActor_C_RemoveTargetAfterHit");
 static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, DeltaSeconds) == 0x000000, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, DeltaTimeRotation) == 0x000008, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::DeltaTimeRotation' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_MakeRotator_ReturnValue) == 0x000010, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
@@ -103,8 +103,8 @@ static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFun
 static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000034, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_K2_AddRelativeRotation_SweepHitResult) == 0x000040, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_K2_AddRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000128, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000130, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000138, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_ShootingRangeShootActor_C_RemoveTargetAfterHit, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000140, "Member 'B_ShootingRangeShootActor_C_RemoveTargetAfterHit::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 }
 

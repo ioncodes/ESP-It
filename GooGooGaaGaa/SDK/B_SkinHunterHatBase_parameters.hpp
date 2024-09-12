@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,17 +29,17 @@ static_assert(sizeof(B_SkinHunterHatBase_C_UpdateOffset) == 0x000018, "Wrong siz
 static_assert(offsetof(B_SkinHunterHatBase_C_UpdateOffset, Offset) == 0x000000, "Member 'B_SkinHunterHatBase_C_UpdateOffset::Offset' has a wrong offset!");
 
 // Function B_SkinHunterHatBase.B_SkinHunterHatBase_C.ExecuteUbergraph_B_SkinHunterHatBase
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DE0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                K2Node_CustomEvent_Offset;                         // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0020(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0020(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase) == 0x000008, "Wrong alignment on B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase");
-static_assert(sizeof(B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase) == 0x000108, "Wrong size on B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase");
+static_assert(sizeof(B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase) == 0x000118, "Wrong size on B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase");
 static_assert(offsetof(B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase, EntryPoint) == 0x000000, "Member 'B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase, K2Node_CustomEvent_Offset) == 0x000008, "Member 'B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase::K2Node_CustomEvent_Offset' has a wrong offset!");
 static_assert(offsetof(B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000020, "Member 'B_SkinHunterHatBase_C_ExecuteUbergraph_B_SkinHunterHatBase::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");

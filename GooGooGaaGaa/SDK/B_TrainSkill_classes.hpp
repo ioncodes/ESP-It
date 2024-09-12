@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_TrainSkill.B_TrainSkill_C
-// 0x0000 (0x0160 - 0x0160)
+// 0x0000 (0x0158 - 0x0158)
 class UB_TrainSkill_C final : public UB_ProjectileSkill_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UB_TrainSkill_C) == 0x000008, "Wrong alignment on UB_TrainSkill_C");
-static_assert(sizeof(UB_TrainSkill_C) == 0x000160, "Wrong size on UB_TrainSkill_C");
+static_assert(sizeof(UB_TrainSkill_C) == 0x000158, "Wrong size on UB_TrainSkill_C");
 
 }
 

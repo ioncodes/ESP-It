@@ -18,30 +18,30 @@ namespace SDK::Params
 {
 
 // Function B_RoofSnow.B_RoofSnow_C.DrawCollision
-// 0x0128 (0x0128 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct B_RoofSnow_C_DrawCollision final
 {
 public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector2D                              CallFunc_FindCollisionUV_UV;                       // 0x00E8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FindCollisionUV_ReturnValue;              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3776[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_R_ImplicitCast;                  // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MakeStruct_G_ImplicitCast;                  // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Hit;                                               // 0x0000(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector2D                              CallFunc_FindCollisionUV_UV;                       // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FindCollisionUV_ReturnValue;              // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector2D_X;                          // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_R_ImplicitCast;                  // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_MakeStruct_G_ImplicitCast;                  // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_RoofSnow_C_DrawCollision) == 0x000008, "Wrong alignment on B_RoofSnow_C_DrawCollision");
-static_assert(sizeof(B_RoofSnow_C_DrawCollision) == 0x000128, "Wrong size on B_RoofSnow_C_DrawCollision");
+static_assert(sizeof(B_RoofSnow_C_DrawCollision) == 0x000138, "Wrong size on B_RoofSnow_C_DrawCollision");
 static_assert(offsetof(B_RoofSnow_C_DrawCollision, Hit) == 0x000000, "Member 'B_RoofSnow_C_DrawCollision::Hit' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_FindCollisionUV_UV) == 0x0000E8, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_FindCollisionUV_UV' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_FindCollisionUV_ReturnValue) == 0x0000F8, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_FindCollisionUV_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_BreakVector2D_X) == 0x000100, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_BreakVector2D_Y) == 0x000108, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, K2Node_MakeStruct_LinearColor) == 0x000110, "Member 'B_RoofSnow_C_DrawCollision::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, K2Node_MakeStruct_R_ImplicitCast) == 0x000120, "Member 'B_RoofSnow_C_DrawCollision::K2Node_MakeStruct_R_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_RoofSnow_C_DrawCollision, K2Node_MakeStruct_G_ImplicitCast) == 0x000124, "Member 'B_RoofSnow_C_DrawCollision::K2Node_MakeStruct_G_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_FindCollisionUV_UV) == 0x0000F8, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_FindCollisionUV_UV' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_FindCollisionUV_ReturnValue) == 0x000108, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_FindCollisionUV_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_BreakVector2D_X) == 0x000110, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, CallFunc_BreakVector2D_Y) == 0x000118, "Member 'B_RoofSnow_C_DrawCollision::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, K2Node_MakeStruct_LinearColor) == 0x000120, "Member 'B_RoofSnow_C_DrawCollision::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, K2Node_MakeStruct_R_ImplicitCast) == 0x000130, "Member 'B_RoofSnow_C_DrawCollision::K2Node_MakeStruct_R_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_RoofSnow_C_DrawCollision, K2Node_MakeStruct_G_ImplicitCast) == 0x000134, "Member 'B_RoofSnow_C_DrawCollision::K2Node_MakeStruct_G_ImplicitCast' has a wrong offset!");
 
 // Function B_RoofSnow.B_RoofSnow_C.ExecuteUbergraph_B_RoofSnow
 // 0x0004 (0x0004 - 0x0000)

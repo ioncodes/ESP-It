@@ -154,9 +154,9 @@ void IIProp_C::GetMaxHealth(double* MaxHealth)
 // Function IProp.IProp_C.GetName
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void IIProp_C::GetName(class FString* Param_Name)
+void IIProp_C::GetName(class FString* Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -167,8 +167,8 @@ void IIProp_C::GetName(class FString* Param_Name)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 }
 
 

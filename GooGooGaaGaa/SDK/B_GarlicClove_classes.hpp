@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_GarlicClove.B_GarlicClove_C
-// 0x0060 (0x0328 - 0x02C8)
+// 0x0060 (0x0320 - 0x02C0)
 class AB_GarlicClove_C final : public AB_PooledActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_GarlicClove_C;                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Audio;                                             // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      Niagara;                                           // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentSize;                                       // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        ParentSceneComponent;                              // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         PushedWitches;                                     // 0x0300(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         PushingWitches;                                    // 0x0310(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class UCurveFloat*                            AreaCurve;                                         // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_GarlicClove_C;                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Audio;                                             // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      Niagara;                                           // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentSize;                                       // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        ParentSceneComponent;                              // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         PushedWitches;                                     // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         PushingWitches;                                    // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class UCurveFloat*                            AreaCurve;                                         // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__B_GarlicClove_Sphere1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -47,7 +47,7 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void TearDown();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 	void TickPushWitches();
 	void TickSize();
 
@@ -62,17 +62,17 @@ public:
 	}
 };
 static_assert(alignof(AB_GarlicClove_C) == 0x000008, "Wrong alignment on AB_GarlicClove_C");
-static_assert(sizeof(AB_GarlicClove_C) == 0x000328, "Wrong size on AB_GarlicClove_C");
-static_assert(offsetof(AB_GarlicClove_C, UberGraphFrame_B_GarlicClove_C) == 0x0002C8, "Member 'AB_GarlicClove_C::UberGraphFrame_B_GarlicClove_C' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, Audio) == 0x0002D0, "Member 'AB_GarlicClove_C::Audio' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, Sphere) == 0x0002D8, "Member 'AB_GarlicClove_C::Sphere' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, Niagara) == 0x0002E0, "Member 'AB_GarlicClove_C::Niagara' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, StaticMesh) == 0x0002E8, "Member 'AB_GarlicClove_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, CurrentSize) == 0x0002F0, "Member 'AB_GarlicClove_C::CurrentSize' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, ParentSceneComponent) == 0x0002F8, "Member 'AB_GarlicClove_C::ParentSceneComponent' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, PushedWitches) == 0x000300, "Member 'AB_GarlicClove_C::PushedWitches' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, PushingWitches) == 0x000310, "Member 'AB_GarlicClove_C::PushingWitches' has a wrong offset!");
-static_assert(offsetof(AB_GarlicClove_C, AreaCurve) == 0x000320, "Member 'AB_GarlicClove_C::AreaCurve' has a wrong offset!");
+static_assert(sizeof(AB_GarlicClove_C) == 0x000320, "Wrong size on AB_GarlicClove_C");
+static_assert(offsetof(AB_GarlicClove_C, UberGraphFrame_B_GarlicClove_C) == 0x0002C0, "Member 'AB_GarlicClove_C::UberGraphFrame_B_GarlicClove_C' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, Audio) == 0x0002C8, "Member 'AB_GarlicClove_C::Audio' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, Sphere) == 0x0002D0, "Member 'AB_GarlicClove_C::Sphere' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, Niagara) == 0x0002D8, "Member 'AB_GarlicClove_C::Niagara' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, StaticMesh) == 0x0002E0, "Member 'AB_GarlicClove_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, CurrentSize) == 0x0002E8, "Member 'AB_GarlicClove_C::CurrentSize' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, ParentSceneComponent) == 0x0002F0, "Member 'AB_GarlicClove_C::ParentSceneComponent' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, PushedWitches) == 0x0002F8, "Member 'AB_GarlicClove_C::PushedWitches' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, PushingWitches) == 0x000308, "Member 'AB_GarlicClove_C::PushingWitches' has a wrong offset!");
+static_assert(offsetof(AB_GarlicClove_C, AreaCurve) == 0x000318, "Member 'AB_GarlicClove_C::AreaCurve' has a wrong offset!");
 
 }
 

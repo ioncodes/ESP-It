@@ -559,9 +559,9 @@ void UB_MapManager_C::GetSpecificMapOrCustomMapFromFileName(const class FString&
 // Function B_MapManager.B_MapManager_C.GetSuitableMapCycleName
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class FText                             Param_Name                                             (Parm, OutParm)
+// class FText                             Name_0                                                 (Parm, OutParm)
 
-void UB_MapManager_C::GetSuitableMapCycleName(class FText* Param_Name) const
+void UB_MapManager_C::GetSuitableMapCycleName(class FText* Name_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -572,8 +572,8 @@ void UB_MapManager_C::GetSuitableMapCycleName(class FText* Param_Name) const
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 }
 
 

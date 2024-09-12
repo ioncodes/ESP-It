@@ -219,10 +219,10 @@ void UWB_SaveLoadLayout_C::GetInitialFocusWidget(class UUserWidget** InitialFocu
 // Function WB_SaveLoadLayout.WB_SaveLoadLayout_C.Loaded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_LayoutName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           LayoutName_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    Saved                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SaveLoadLayout_C::Loaded(const class FString& Param_LayoutName, bool Saved)
+void UWB_SaveLoadLayout_C::Loaded(const class FString& LayoutName_0, bool Saved)
 {
 	static class UFunction* Func = nullptr;
 
@@ -231,7 +231,7 @@ void UWB_SaveLoadLayout_C::Loaded(const class FString& Param_LayoutName, bool Sa
 
 	Params::WB_SaveLoadLayout_C_Loaded Parms{};
 
-	Parms.Param_LayoutName = std::move(Param_LayoutName);
+	Parms.LayoutName_0 = std::move(LayoutName_0);
 	Parms.Saved = Saved;
 
 	UObject::ProcessEvent(Func, &Parms);

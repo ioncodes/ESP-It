@@ -12,8 +12,8 @@
 
 #include "E_GameModifierType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "PropWitchHuntModule_structs.hpp"
 #include "S_GameModifier_structs.hpp"
+#include "PropWitchHuntModule_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,19 +28,19 @@ public:
 	int32                                         ChangedModCounter;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5312[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5313[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_GameModifier                        CallFunc_Array_Get_Item;                           // 0x0028(0x0018)(HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsModUsingRules_IsUsingRules;             // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5314[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5315[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5316[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UModParameters*                         CallFunc_Map_Find_Value;                           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -73,32 +73,68 @@ static_assert(sizeof(B_ModParametersSubsystem_C_ExecuteUbergraph_B_ModParameters
 static_assert(offsetof(B_ModParametersSubsystem_C_ExecuteUbergraph_B_ModParametersSubsystem, EntryPoint) == 0x000000, "Member 'B_ModParametersSubsystem_C_ExecuteUbergraph_B_ModParametersSubsystem::EntryPoint' has a wrong offset!");
 
 // Function B_ModParametersSubsystem.B_ModParametersSubsystem_C.GetDefaultModParameterValue
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct B_ModParametersSubsystem_C_GetDefaultModParameterValue final
 {
 public:
 	E_GameModifierType                            SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5317[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUIParameterData                       UIPameter;                                         // 0x0008(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FUIParam                               DefaultValue;                                      // 0x0080(0x0014)(Parm, OutParm, NoDestructor)
-	uint8                                         Pad_5318[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UModParameters*                         CallFunc_Map_Find_Value;                           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5319[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x00B8(0x0014)(NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       UIPameter;                                         // 0x0008(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FUIParam                               DefaultValue;                                      // 0x0068(0x0014)(Parm, OutParm, NoDestructor)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UModParameters*                         CallFunc_Map_Find_Value;                           // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUIParam                               CallFunc_GetParameterValue_ReturnValue;            // 0x00A0(0x0014)(NoDestructor)
 };
 static_assert(alignof(B_ModParametersSubsystem_C_GetDefaultModParameterValue) == 0x000008, "Wrong alignment on B_ModParametersSubsystem_C_GetDefaultModParameterValue");
-static_assert(sizeof(B_ModParametersSubsystem_C_GetDefaultModParameterValue) == 0x0000D0, "Wrong size on B_ModParametersSubsystem_C_GetDefaultModParameterValue");
+static_assert(sizeof(B_ModParametersSubsystem_C_GetDefaultModParameterValue) == 0x0000B8, "Wrong size on B_ModParametersSubsystem_C_GetDefaultModParameterValue");
 static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, SkillType) == 0x000000, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::SkillType' has a wrong offset!");
 static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, UIPameter) == 0x000008, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::UIPameter' has a wrong offset!");
-static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, DefaultValue) == 0x000080, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::DefaultValue' has a wrong offset!");
-static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_Map_Find_Value) == 0x000098, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_GetObjectClass_ReturnValue) == 0x0000A8, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_GetDefaultObject_ReturnValue) == 0x0000B0, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_GetParameterValue_ReturnValue) == 0x0000B8, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_GetParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, DefaultValue) == 0x000068, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::DefaultValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_Map_Find_Value) == 0x000080, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_Map_Find_ReturnValue) == 0x000088, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_GetObjectClass_ReturnValue) == 0x000090, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_GetDefaultObject_ReturnValue) == 0x000098, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_GetDefaultObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValue, CallFunc_GetParameterValue_ReturnValue) == 0x0000A0, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValue::CallFunc_GetParameterValue_ReturnValue' has a wrong offset!");
+
+// Function B_ModParametersSubsystem.B_ModParametersSubsystem_C.GetDefaultModParameterValues
+// 0x00C8 (0x00C8 - 0x0000)
+struct B_ModParametersSubsystem_C_GetDefaultModParameterValues final
+{
+public:
+	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	E_GameModifierType                            ModType;                                           // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FUIParam>                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm)
+	TArray<struct FUIParam>                       DefaultParams;                                     // 0x0028(0x0010)(Edit, BlueprintVisible)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUIParameterData                       CallFunc_Array_Get_Item;                           // 0x0048(0x0060)()
+	struct FUIParam                               CallFunc_GetDefaultModParameterValue_DefaultValue; // 0x00A8(0x0014)(NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(B_ModParametersSubsystem_C_GetDefaultModParameterValues) == 0x000008, "Wrong alignment on B_ModParametersSubsystem_C_GetDefaultModParameterValues");
+static_assert(sizeof(B_ModParametersSubsystem_C_GetDefaultModParameterValues) == 0x0000C8, "Wrong size on B_ModParametersSubsystem_C_GetDefaultModParameterValues");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, UIParameters) == 0x000000, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::UIParameters' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, ModType) == 0x000010, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::ModType' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, ReturnValue) == 0x000018, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, DefaultParams) == 0x000028, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::DefaultParams' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, CallFunc_Array_Get_Item) == 0x000048, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, CallFunc_GetDefaultModParameterValue_DefaultValue) == 0x0000A8, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::CallFunc_GetDefaultModParameterValue_DefaultValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, CallFunc_Less_IntInt_ReturnValue) == 0x0000BC, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, CallFunc_Add_IntInt_ReturnValue) == 0x0000C0, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ModParametersSubsystem_C_GetDefaultModParameterValues, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'B_ModParametersSubsystem_C_GetDefaultModParameterValues::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_ModParametersSubsystem.B_ModParametersSubsystem_C.GetModParameters
 // 0x0020 (0x0020 - 0x0000)
@@ -106,7 +142,7 @@ struct B_ModParametersSubsystem_C_GetModParameters final
 {
 public:
 	E_GameModifierType                            ModType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UModParameters*                         ModParameter;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UModParameters*                         CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -124,11 +160,11 @@ struct B_ModParametersSubsystem_C_GetUIParameters final
 {
 public:
 	E_GameModifierType                            ModType;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParameterData>               UIParameters;                                      // 0x0008(0x0010)(Parm, OutParm)
 	class UModParameters*                         CallFunc_Map_Find_Value;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531C[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUIParameterData>               CallFunc_GetUIParameters_ReturnValue;              // 0x0028(0x0010)(ReferenceParm)
 };
 static_assert(alignof(B_ModParametersSubsystem_C_GetUIParameters) == 0x000008, "Wrong alignment on B_ModParametersSubsystem_C_GetUIParameters");
@@ -146,10 +182,10 @@ struct B_ModParametersSubsystem_C_InitializeDefaultModParameters final
 public:
 	E_GameModifierType                            Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_GameModifierType                            Temp_byte_Variable_1;                              // 0x0001(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531D[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_PropRetaliationParameters_C*         CallFunc_CreateObject_Object;                      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_GameModifierType                            Temp_byte_Variable_2;                              // 0x0010(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_DissolvingPropsParameters_C*         CallFunc_CreateObject_Object_1;                    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_MoveOrDamageParameters_C*            CallFunc_CreateObject_Object_2;                    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -168,15 +204,15 @@ struct B_ModParametersSubsystem_C_InitializeDissolvingProps final
 {
 public:
 	E_GameModifierType                            Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531F[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue_1;      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5320[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5321[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_BaseGameModifierActor_C*             CallFunc_FinishSpawningActor_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -200,28 +236,28 @@ struct B_ModParametersSubsystem_C_InitializeMods final
 {
 public:
 	E_GameModifierType                            ModType;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5322[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5323[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_GameMode_C*                          CallFunc_GetBGameMode_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5324[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_BaseGameModifierActor_C*             CallFunc_Map_Find_Value;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5325[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UModParameters*                         CallFunc_Map_Find_Value_1;                         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5326[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_BaseGameModifierActor_C*             CallFunc_Map_Find_Value_2;                         // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5327[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<E_GameModifierType>                    CallFunc_Map_Values_Values;                        // 0x0058(0x0010)(ReferenceParm)
 	TArray<E_GameModifierType>                    CallFunc_Map_Keys_Keys;                            // 0x0068(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -259,13 +295,13 @@ struct B_ModParametersSubsystem_C_InitializeMoveOrDamageActor final
 {
 public:
 	E_GameModifierType                            Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5328[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5329[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_BaseGameModifierActor_C*             CallFunc_FinishSpawningActor_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -286,15 +322,15 @@ struct B_ModParametersSubsystem_C_InitializePropRetaliation final
 {
 public:
 	E_GameModifierType                            Temp_byte_Variable;                                // 0x0000(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532A[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AB_GameState_C*                         CallFunc_GetBGameState_ReturnValue;                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue_1;      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532B[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532C[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_BaseGameModifierActor_C*             CallFunc_FinishSpawningActor_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -319,10 +355,10 @@ struct B_ModParametersSubsystem_C_IsModUsingRules final
 public:
 	E_GameModifierType                            SkillType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsingRules;                                      // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532D[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UModParameters*                         CallFunc_Map_Find_Value;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_532E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                CallFunc_GetDefaultObject_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AreParametersEqual_ReturnValue;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

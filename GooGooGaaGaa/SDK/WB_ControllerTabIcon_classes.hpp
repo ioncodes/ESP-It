@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ControllerTabIcon.WB_ControllerTabIcon_C
-// 0x0000 (0x0338 - 0x0338)
+// 0x0000 (0x0358 - 0x0358)
 class UWB_ControllerTabIcon_C final : public UWB_ControllerIcon_C
 {
 public:
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(UWB_ControllerTabIcon_C) == 0x000008, "Wrong alignment on UWB_ControllerTabIcon_C");
-static_assert(sizeof(UWB_ControllerTabIcon_C) == 0x000338, "Wrong size on UWB_ControllerTabIcon_C");
+static_assert(sizeof(UWB_ControllerTabIcon_C) == 0x000358, "Wrong size on UWB_ControllerTabIcon_C");
 
 }
 

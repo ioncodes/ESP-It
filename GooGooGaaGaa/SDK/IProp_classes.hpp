@@ -27,7 +27,7 @@ public:
 	void GetCameraDistance(double* CameraDistance);
 	void GetCenter(struct FVector* Center);
 	void GetMaxHealth(double* MaxHealth);
-	void GetName(class FString* Param_Name);
+	void GetName(class FString* Name_0);
 	void GetRuntimePropData(struct FSRuntimePropData* RuntimePropData);
 	void GetSize(double* Size);
 	void GetVisualInterpolators(TArray<class AB_VisualIntepolator_C*>* VisualInterpolators);

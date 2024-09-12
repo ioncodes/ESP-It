@@ -10,52 +10,52 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "E_QuestionAnswer_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SaveLoadScreen.WB_SaveLoadScreen_C
-// 0x0198 (0x0458 - 0x02C0)
+// 0x0178 (0x0458 - 0x02E0)
 class UWB_SaveLoadScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Delete;                                            // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       InputTextBox;                                      // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Load;                                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             NameText;                                          // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Save;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UListView*                              SaveList;                                          // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SaveLoadTitle;                                     // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          SavingAllowed;                                     // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FileEditingAllowed;                                // 0x0311(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52CE[0x6];                                     // 0x0312(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, class UB_SaveEntryData_C*> SaveEntries;                                       // 0x0318(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UB_SaveEntryData_C*                     LastSelectedItem;                                  // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 SaveLocation;                                      // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class USaveGame*                              FileToSave;                                        // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnFileLoaded;                                      // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnEmptyEntryLoaded;                                // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnFileSaved;                                       // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnFileDeleted;                                     // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnBackPressed;                                     // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnEntrySelected;                                   // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FText                                   MenuTitle;                                         // 0x03E8(0x0018)(Edit, BlueprintVisible)
-	class FText                                   MenuTitleLoadOnly;                                 // 0x0400(0x0018)(Edit, BlueprintVisible)
-	class FText                                   SaveFieldName;                                     // 0x0418(0x0018)(Edit, BlueprintVisible)
-	class FText                                   InitialEntryName;                                  // 0x0430(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Delete;                                            // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       InputTextBox;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Load;                                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             NameText;                                          // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Save;                                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UListView*                              SaveList;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SaveLoadTitle;                                     // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ActionIcon_C*                       WB_ActionIcon;                                     // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          SavingAllowed;                                     // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FileEditingAllowed;                                // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x6];                                      // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class UB_SaveEntryData_C*> SaveEntries;                                       // 0x0338(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UB_SaveEntryData_C*                     LastSelectedItem;                                  // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SaveLocation;                                      // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class USaveGame*                              FileToSave;                                        // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnFileLoaded;                                      // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnEmptyEntryLoaded;                                // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnFileSaved;                                       // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnFileDeleted;                                     // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnBackPressed;                                     // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnEntrySelected;                                   // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FText                                   MenuTitle;                                         // 0x0408(0x0010)(Edit, BlueprintVisible)
+	class FText                                   MenuTitleLoadOnly;                                 // 0x0418(0x0010)(Edit, BlueprintVisible)
+	class FText                                   SaveFieldName;                                     // 0x0428(0x0010)(Edit, BlueprintVisible)
+	class FText                                   InitialEntryName;                                  // 0x0438(0x0010)(Edit, BlueprintVisible)
 	class FString                                 FolderName;                                        // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void OnFileLoaded__DelegateSignature(const class FString& Filename, class USaveGame* Param_SaveFile);
+	void OnFileLoaded__DelegateSignature(const class FString& Filename, class USaveGame* SaveFile_0);
 	void OnBackPressed__DelegateSignature();
 	void OnEntrySelected__DelegateSignature(class USaveGame* EntrySaveFile);
 	void OnFileDeleted__DelegateSignature();
@@ -71,7 +71,7 @@ public:
 	void InputCommitted(const class FText& InputText);
 	void SaveFile(class USaveGame* File, const class FString& Filename);
 	void SetUITexts();
-	void InitializeSaveLoadUI(const class FString& Param_SaveLocation, bool AllowFileEditing, class USaveGame* Param_FileToSave);
+	void InitializeSaveLoadUI(const class FString& SaveLocation_0, bool AllowFileEditing, class USaveGame* FileToSave_0);
 	void GetSystemFriendlyFileName(const class FString& OldName, class FString* SystemFriendly);
 	void GetUserFriendlyFileName(const class FString& OldName, class FString* UserFriendly);
 	void DeleteItem();
@@ -111,32 +111,32 @@ public:
 };
 static_assert(alignof(UWB_SaveLoadScreen_C) == 0x000008, "Wrong alignment on UWB_SaveLoadScreen_C");
 static_assert(sizeof(UWB_SaveLoadScreen_C) == 0x000458, "Wrong size on UWB_SaveLoadScreen_C");
-static_assert(offsetof(UWB_SaveLoadScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SaveLoadScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, Back) == 0x0002C8, "Member 'UWB_SaveLoadScreen_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, Delete) == 0x0002D0, "Member 'UWB_SaveLoadScreen_C::Delete' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, InputTextBox) == 0x0002D8, "Member 'UWB_SaveLoadScreen_C::InputTextBox' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, Load) == 0x0002E0, "Member 'UWB_SaveLoadScreen_C::Load' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, NameText) == 0x0002E8, "Member 'UWB_SaveLoadScreen_C::NameText' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, Save) == 0x0002F0, "Member 'UWB_SaveLoadScreen_C::Save' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, SaveList) == 0x0002F8, "Member 'UWB_SaveLoadScreen_C::SaveList' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, SaveLoadTitle) == 0x000300, "Member 'UWB_SaveLoadScreen_C::SaveLoadTitle' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, WB_ActionIcon) == 0x000308, "Member 'UWB_SaveLoadScreen_C::WB_ActionIcon' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, SavingAllowed) == 0x000310, "Member 'UWB_SaveLoadScreen_C::SavingAllowed' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, FileEditingAllowed) == 0x000311, "Member 'UWB_SaveLoadScreen_C::FileEditingAllowed' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, SaveEntries) == 0x000318, "Member 'UWB_SaveLoadScreen_C::SaveEntries' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, LastSelectedItem) == 0x000368, "Member 'UWB_SaveLoadScreen_C::LastSelectedItem' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, SaveLocation) == 0x000370, "Member 'UWB_SaveLoadScreen_C::SaveLocation' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, FileToSave) == 0x000380, "Member 'UWB_SaveLoadScreen_C::FileToSave' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, OnFileLoaded) == 0x000388, "Member 'UWB_SaveLoadScreen_C::OnFileLoaded' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, OnEmptyEntryLoaded) == 0x000398, "Member 'UWB_SaveLoadScreen_C::OnEmptyEntryLoaded' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, OnFileSaved) == 0x0003A8, "Member 'UWB_SaveLoadScreen_C::OnFileSaved' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, OnFileDeleted) == 0x0003B8, "Member 'UWB_SaveLoadScreen_C::OnFileDeleted' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, OnBackPressed) == 0x0003C8, "Member 'UWB_SaveLoadScreen_C::OnBackPressed' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, OnEntrySelected) == 0x0003D8, "Member 'UWB_SaveLoadScreen_C::OnEntrySelected' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, MenuTitle) == 0x0003E8, "Member 'UWB_SaveLoadScreen_C::MenuTitle' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, MenuTitleLoadOnly) == 0x000400, "Member 'UWB_SaveLoadScreen_C::MenuTitleLoadOnly' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, SaveFieldName) == 0x000418, "Member 'UWB_SaveLoadScreen_C::SaveFieldName' has a wrong offset!");
-static_assert(offsetof(UWB_SaveLoadScreen_C, InitialEntryName) == 0x000430, "Member 'UWB_SaveLoadScreen_C::InitialEntryName' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SaveLoadScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, Back) == 0x0002E8, "Member 'UWB_SaveLoadScreen_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, Delete) == 0x0002F0, "Member 'UWB_SaveLoadScreen_C::Delete' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, InputTextBox) == 0x0002F8, "Member 'UWB_SaveLoadScreen_C::InputTextBox' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, Load) == 0x000300, "Member 'UWB_SaveLoadScreen_C::Load' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, NameText) == 0x000308, "Member 'UWB_SaveLoadScreen_C::NameText' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, Save) == 0x000310, "Member 'UWB_SaveLoadScreen_C::Save' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, SaveList) == 0x000318, "Member 'UWB_SaveLoadScreen_C::SaveList' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, SaveLoadTitle) == 0x000320, "Member 'UWB_SaveLoadScreen_C::SaveLoadTitle' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, WB_ActionIcon) == 0x000328, "Member 'UWB_SaveLoadScreen_C::WB_ActionIcon' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, SavingAllowed) == 0x000330, "Member 'UWB_SaveLoadScreen_C::SavingAllowed' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, FileEditingAllowed) == 0x000331, "Member 'UWB_SaveLoadScreen_C::FileEditingAllowed' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, SaveEntries) == 0x000338, "Member 'UWB_SaveLoadScreen_C::SaveEntries' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, LastSelectedItem) == 0x000388, "Member 'UWB_SaveLoadScreen_C::LastSelectedItem' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, SaveLocation) == 0x000390, "Member 'UWB_SaveLoadScreen_C::SaveLocation' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, FileToSave) == 0x0003A0, "Member 'UWB_SaveLoadScreen_C::FileToSave' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, OnFileLoaded) == 0x0003A8, "Member 'UWB_SaveLoadScreen_C::OnFileLoaded' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, OnEmptyEntryLoaded) == 0x0003B8, "Member 'UWB_SaveLoadScreen_C::OnEmptyEntryLoaded' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, OnFileSaved) == 0x0003C8, "Member 'UWB_SaveLoadScreen_C::OnFileSaved' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, OnFileDeleted) == 0x0003D8, "Member 'UWB_SaveLoadScreen_C::OnFileDeleted' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, OnBackPressed) == 0x0003E8, "Member 'UWB_SaveLoadScreen_C::OnBackPressed' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, OnEntrySelected) == 0x0003F8, "Member 'UWB_SaveLoadScreen_C::OnEntrySelected' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, MenuTitle) == 0x000408, "Member 'UWB_SaveLoadScreen_C::MenuTitle' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, MenuTitleLoadOnly) == 0x000418, "Member 'UWB_SaveLoadScreen_C::MenuTitleLoadOnly' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, SaveFieldName) == 0x000428, "Member 'UWB_SaveLoadScreen_C::SaveFieldName' has a wrong offset!");
+static_assert(offsetof(UWB_SaveLoadScreen_C, InitialEntryName) == 0x000438, "Member 'UWB_SaveLoadScreen_C::InitialEntryName' has a wrong offset!");
 static_assert(offsetof(UWB_SaveLoadScreen_C, FolderName) == 0x000448, "Member 'UWB_SaveLoadScreen_C::FolderName' has a wrong offset!");
 
 }

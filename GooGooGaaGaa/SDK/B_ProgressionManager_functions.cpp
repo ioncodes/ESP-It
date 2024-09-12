@@ -254,9 +254,9 @@ void UB_ProgressionManager_C::GetMaxExpPrestige(int32* MaxExp)
 // Function B_ProgressionManager.B_ProgressionManager_C.GetPrestigeExp
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_PrestigeExp                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PrestigeExp_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ProgressionManager_C::GetPrestigeExp(int32* Param_PrestigeExp)
+void UB_ProgressionManager_C::GetPrestigeExp(int32* PrestigeExp_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -267,17 +267,17 @@ void UB_ProgressionManager_C::GetPrestigeExp(int32* Param_PrestigeExp)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_PrestigeExp != nullptr)
-		*Param_PrestigeExp = Parms.Param_PrestigeExp;
+	if (PrestigeExp_0 != nullptr)
+		*PrestigeExp_0 = Parms.PrestigeExp_0;
 }
 
 
 // Function B_ProgressionManager.B_ProgressionManager_C.GetPrestigeLevel
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_PrestigeLevel                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PrestigeLevel_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_ProgressionManager_C::GetPrestigeLevel(int32* Param_PrestigeLevel)
+void UB_ProgressionManager_C::GetPrestigeLevel(int32* PrestigeLevel_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -288,8 +288,8 @@ void UB_ProgressionManager_C::GetPrestigeLevel(int32* Param_PrestigeLevel)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_PrestigeLevel != nullptr)
-		*Param_PrestigeLevel = Parms.Param_PrestigeLevel;
+	if (PrestigeLevel_0 != nullptr)
+		*PrestigeLevel_0 = Parms.PrestigeLevel_0;
 }
 
 

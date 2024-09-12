@@ -10,52 +10,52 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_ModifierButton.WB_ModifierButton_C.ExecuteUbergraph_WB_ModifierButton
-// 0x0190 (0x0190 - 0x0000)
+// 0x0178 (0x0178 - 0x0000)
 struct WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DEF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DF0[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DF1[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetWidget_UserWidget;                     // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DF2[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_ModConfigure_C*                     K2Node_DynamicCast_AsWB_Mod_Configure;             // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DF3[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWB_TooltipTextContent_C*               CallFunc_Create_ReturnValue;                       // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UB_ModParametersSubsystem_C*            CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_ModParametersSubsystem_C*            CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UModParameters*                         CallFunc_GetModParameters_ModParameter;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsModUsingRules_IsUsingRules;             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4DF4[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0088(0x0050)(HasGetValueTypeHash)
-	class UModParameters*                         CallFunc_GetModParameters_ModParameter_1;          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00E0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0140(0x0018)()
-	TSoftObjectPtr<class UTexture2D>              CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue; // 0x0158(0x0028)(UObjectWrapper, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Select_Default;                             // 0x0180(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0088(0x0048)(HasGetValueTypeHash)
+	class UModParameters*                         CallFunc_GetModParameters_ModParameter_1;          // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0130(0x0010)()
+	TSoftObjectPtr<class UTexture2D>              CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue; // 0x0140(0x0028)(UObjectWrapper, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Select_Default;                             // 0x0168(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton) == 0x000008, "Wrong alignment on WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton");
-static_assert(sizeof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton) == 0x000190, "Wrong size on WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton");
+static_assert(sizeof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton) == 0x000178, "Wrong size on WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton");
 static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, EntryPoint) == 0x000000, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_GetGameInstance_ReturnValue_1) == 0x000010, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
@@ -75,12 +75,12 @@ static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, C
 static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_GetModParameters_ModParameter) == 0x000078, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_GetModParameters_ModParameter' has a wrong offset!");
 static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_IsModUsingRules_IsUsingRules) == 0x000080, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_IsModUsingRules_IsUsingRules' has a wrong offset!");
 static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_MakeStruct_FormatArgumentData) == 0x000088, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_GetModParameters_ModParameter_1) == 0x0000D8, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_GetModParameters_ModParameter_1' has a wrong offset!");
-static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000E0, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_MakeArray_Array) == 0x000130, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_Format_ReturnValue) == 0x000140, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue) == 0x000158, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_Select_Default) == 0x000180, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_GetModParameters_ModParameter_1) == 0x0000D0, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_GetModParameters_ModParameter_1' has a wrong offset!");
+static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D8, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_MakeArray_Array) == 0x000120, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_Format_ReturnValue) == 0x000130, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue) == 0x000140, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton, K2Node_Select_Default) == 0x000168, "Member 'WB_ModifierButton_C_ExecuteUbergraph_WB_ModifierButton::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_ModifierButton.WB_ModifierButton_C.GetGridButton
 // 0x0008 (0x0008 - 0x0000)

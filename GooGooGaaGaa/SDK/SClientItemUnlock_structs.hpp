@@ -23,11 +23,11 @@ struct FSClientItemUnlock final
 public:
 	int32                                         ItemId_31_8F8FB9AD4C42CA7480790C92AA36A313;        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EItemUnlockType                               Type_26_A26C14EB462A1BF52E6B8995756A575E;          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C2[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Quantity_21_8D7D807D408F856B5413EDBB93E7589B;      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FromCauldron_28_392DC8824EE7AFB9E1B724A76DE9BA37;  // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSkill_34_F5A7B7E74293C5636D561AA85C4BE760;       // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_36C3[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 SkillClass_37_00EDC4D04965E3480B9DFD9B54459864;    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSClientItemUnlock) == 0x000008, "Wrong alignment on FSClientItemUnlock");

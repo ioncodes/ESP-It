@@ -18,19 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CookingTask.B_CookingTask_C
-// 0x0050 (0x0370 - 0x0320)
+// 0x0050 (0x0368 - 0x0318)
 class AB_CookingTask_C final : public AB_CollectTask_C
 {
 public:
-	uint8                                         Pad_4F0C[0x4];                                     // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CookingTask_C;                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        FailSound;                                         // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class UStaticMesh*>                    Ingredients;                                       // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, AdvancedDisplay)
-	TArray<int32>                                 TargetOrder;                                       // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 DisplayOrder;                                      // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Initialized;                                       // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F0D[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_CookingRecipeSign_C*                 RecipeSign;                                        // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CookingTask_C;                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        FailSound;                                         // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class UStaticMesh*>                    Ingredients;                                       // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, AdvancedDisplay)
+	TArray<int32>                                 TargetOrder;                                       // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 DisplayOrder;                                      // 0x0348(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          Initialized;                                       // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_359[0x7];                                      // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_CookingRecipeSign_C*                 RecipeSign;                                        // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckCompletionConditions(bool* ReadyForCompletion);
@@ -54,14 +54,14 @@ public:
 	}
 };
 static_assert(alignof(AB_CookingTask_C) == 0x000008, "Wrong alignment on AB_CookingTask_C");
-static_assert(sizeof(AB_CookingTask_C) == 0x000370, "Wrong size on AB_CookingTask_C");
-static_assert(offsetof(AB_CookingTask_C, UberGraphFrame_B_CookingTask_C) == 0x000320, "Member 'AB_CookingTask_C::UberGraphFrame_B_CookingTask_C' has a wrong offset!");
-static_assert(offsetof(AB_CookingTask_C, FailSound) == 0x000328, "Member 'AB_CookingTask_C::FailSound' has a wrong offset!");
-static_assert(offsetof(AB_CookingTask_C, Ingredients) == 0x000330, "Member 'AB_CookingTask_C::Ingredients' has a wrong offset!");
-static_assert(offsetof(AB_CookingTask_C, TargetOrder) == 0x000340, "Member 'AB_CookingTask_C::TargetOrder' has a wrong offset!");
-static_assert(offsetof(AB_CookingTask_C, DisplayOrder) == 0x000350, "Member 'AB_CookingTask_C::DisplayOrder' has a wrong offset!");
-static_assert(offsetof(AB_CookingTask_C, Initialized) == 0x000360, "Member 'AB_CookingTask_C::Initialized' has a wrong offset!");
-static_assert(offsetof(AB_CookingTask_C, RecipeSign) == 0x000368, "Member 'AB_CookingTask_C::RecipeSign' has a wrong offset!");
+static_assert(sizeof(AB_CookingTask_C) == 0x000368, "Wrong size on AB_CookingTask_C");
+static_assert(offsetof(AB_CookingTask_C, UberGraphFrame_B_CookingTask_C) == 0x000318, "Member 'AB_CookingTask_C::UberGraphFrame_B_CookingTask_C' has a wrong offset!");
+static_assert(offsetof(AB_CookingTask_C, FailSound) == 0x000320, "Member 'AB_CookingTask_C::FailSound' has a wrong offset!");
+static_assert(offsetof(AB_CookingTask_C, Ingredients) == 0x000328, "Member 'AB_CookingTask_C::Ingredients' has a wrong offset!");
+static_assert(offsetof(AB_CookingTask_C, TargetOrder) == 0x000338, "Member 'AB_CookingTask_C::TargetOrder' has a wrong offset!");
+static_assert(offsetof(AB_CookingTask_C, DisplayOrder) == 0x000348, "Member 'AB_CookingTask_C::DisplayOrder' has a wrong offset!");
+static_assert(offsetof(AB_CookingTask_C, Initialized) == 0x000358, "Member 'AB_CookingTask_C::Initialized' has a wrong offset!");
+static_assert(offsetof(AB_CookingTask_C, RecipeSign) == 0x000360, "Member 'AB_CookingTask_C::RecipeSign' has a wrong offset!");
 
 }
 

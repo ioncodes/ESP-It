@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function WB_HealthBar.WB_HealthBar_C.ExecuteUbergraph_WB_HealthBar
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_HealthBar_C::ExecuteUbergraph_WB_HealthBar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_HealthBar_C", "ExecuteUbergraph_WB_HealthBar");
+
+	Params::WB_HealthBar_C_ExecuteUbergraph_WB_HealthBar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WB_HealthBar.WB_HealthBar_C.GetVisibility_0
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -54,26 +74,6 @@ void UWB_HealthBar_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 
 	Parms.MyGeometry = std::move(MyGeometry);
 	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WB_HealthBar.WB_HealthBar_C.ExecuteUbergraph_WB_HealthBar
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWB_HealthBar_C::ExecuteUbergraph_WB_HealthBar(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_HealthBar_C", "ExecuteUbergraph_WB_HealthBar");
-
-	Params::WB_HealthBar_C_ExecuteUbergraph_WB_HealthBar Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

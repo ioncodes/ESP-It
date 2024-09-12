@@ -845,8 +845,9 @@ class UMaterialInstanceDynamic* UWaterBodyComponent::GetWaterStaticMeshMaterialI
 // Parameters:
 // bool                                    bShapeOrPositionChanged                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bWeightmapSettingsChanged                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUserTriggeredChanged                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UWaterBodyComponent::OnWaterBodyChanged(bool bShapeOrPositionChanged, bool bWeightmapSettingsChanged)
+void UWaterBodyComponent::OnWaterBodyChanged(bool bShapeOrPositionChanged, bool bWeightmapSettingsChanged, bool bUserTriggeredChanged)
 {
 	static class UFunction* Func = nullptr;
 
@@ -857,6 +858,32 @@ void UWaterBodyComponent::OnWaterBodyChanged(bool bShapeOrPositionChanged, bool 
 
 	Parms.bShapeOrPositionChanged = bShapeOrPositionChanged;
 	Parms.bWeightmapSettingsChanged = bWeightmapSettingsChanged;
+	Parms.bUserTriggeredChanged = bUserTriggeredChanged;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.WaterBodyComponent.SetUnderwaterPostProcessMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InMaterial                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWaterBodyComponent::SetUnderwaterPostProcessMaterial(class UMaterialInterface* InMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyComponent", "SetUnderwaterPostProcessMaterial");
+
+	Params::WaterBodyComponent_SetUnderwaterPostProcessMaterial Parms{};
+
+	Parms.InMaterial = InMaterial;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -884,6 +911,56 @@ void UWaterBodyComponent::SetWaterAndUnderWaterPostProcessMaterial(class UMateri
 
 	Parms.InWaterMaterial = InWaterMaterial;
 	Parms.InUnderWaterPostProcessMaterial = InUnderWaterPostProcessMaterial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.WaterBodyComponent.SetWaterMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InMaterial                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWaterBodyComponent::SetWaterMaterial(class UMaterialInterface* InMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyComponent", "SetWaterMaterial");
+
+	Params::WaterBodyComponent_SetWaterMaterial Parms{};
+
+	Parms.InMaterial = InMaterial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.WaterBodyComponent.SetWaterStaticMeshMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InMaterial                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWaterBodyComponent::SetWaterStaticMeshMaterial(class UMaterialInterface* InMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyComponent", "SetWaterStaticMeshMaterial");
+
+	Params::WaterBodyComponent_SetWaterStaticMeshMaterial Parms{};
+
+	Parms.InMaterial = InMaterial;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1010,6 +1087,56 @@ float UWaterBodyComponent::GetMaxWaveHeight() const
 		Func = Class->GetFunction("WaterBodyComponent", "GetMaxWaveHeight");
 
 	Params::WaterBodyComponent_GetMaxWaveHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.WaterBodyComponent.GetRiverToLakeTransitionMaterial
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMaterialInterface*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInterface* UWaterBodyComponent::GetRiverToLakeTransitionMaterial() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyComponent", "GetRiverToLakeTransitionMaterial");
+
+	Params::WaterBodyComponent_GetRiverToLakeTransitionMaterial Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.WaterBodyComponent.GetRiverToOceanTransitionMaterial
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMaterialInterface*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInterface* UWaterBodyComponent::GetRiverToOceanTransitionMaterial() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyComponent", "GetRiverToOceanTransitionMaterial");
+
+	Params::WaterBodyComponent_GetRiverToOceanTransitionMaterial Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1240,6 +1367,83 @@ class UWaterSplineComponent* AWaterBodyIsland::GetWaterSpline() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Water.WaterBodyRiverComponent.SetLakeAndOceanTransitionMaterials
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InLakeTransition                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInterface*               InOceanTransition                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWaterBodyRiverComponent::SetLakeAndOceanTransitionMaterials(class UMaterialInterface* InLakeTransition, class UMaterialInterface* InOceanTransition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyRiverComponent", "SetLakeAndOceanTransitionMaterials");
+
+	Params::WaterBodyRiverComponent_SetLakeAndOceanTransitionMaterials Parms{};
+
+	Parms.InLakeTransition = InLakeTransition;
+	Parms.InOceanTransition = InOceanTransition;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.WaterBodyRiverComponent.SetLakeTransitionMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InMat                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWaterBodyRiverComponent::SetLakeTransitionMaterial(class UMaterialInterface* InMat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyRiverComponent", "SetLakeTransitionMaterial");
+
+	Params::WaterBodyRiverComponent_SetLakeTransitionMaterial Parms{};
+
+	Parms.InMat = InMat;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.WaterBodyRiverComponent.SetOceanTransitionMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InMat                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UWaterBodyRiverComponent::SetOceanTransitionMaterial(class UMaterialInterface* InMat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterBodyRiverComponent", "SetOceanTransitionMaterial");
+
+	Params::WaterBodyRiverComponent_SetOceanTransitionMaterial Parms{};
+
+	Parms.InMat = InMat;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -1627,6 +1831,56 @@ bool UWaterSubsystem::IsWaterRenderingEnabled() const
 		Func = Class->GetFunction("WaterSubsystem", "IsWaterRenderingEnabled");
 
 	Params::WaterSubsystem_IsWaterRenderingEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Water.WaterZone.SetFarMeshMaterial
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInterface*               InFarMaterial                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AWaterZone::SetFarMeshMaterial(class UMaterialInterface* InFarMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterZone", "SetFarMeshMaterial");
+
+	Params::WaterZone_SetFarMeshMaterial Parms{};
+
+	Parms.InFarMaterial = InFarMaterial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Water.WaterZone.GetWaterZoneIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 AWaterZone::GetWaterZoneIndex() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WaterZone", "GetWaterZoneIndex");
+
+	Params::WaterZone_GetWaterZoneIndex Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

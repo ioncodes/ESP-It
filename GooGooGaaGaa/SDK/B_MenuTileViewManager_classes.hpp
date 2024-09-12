@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "E_PowerupRuleType_structs.hpp"
-#include "ETeamID_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "E_GameModifierType_structs.hpp"
+#include "ETeamID_structs.hpp"
 
 
 namespace SDK
@@ -33,10 +33,11 @@ public:
 	void GetMaterialButtonData(class UUserWidget* Parent, bool IsInitial, class UMaterialInterface* Material, class UB_BasePlaceableMaterialOverwrite_C* MaterialOverwrite, int32 SlotIndex, class UB_MaterialButtonData_C** MaterialButtonData);
 	void GetModButtonData(E_GameModifierType Modifier, bool HasInitialFocus, class UUserWidget* Parent, class UB_ModButtonData_C** ButtonData);
 	void GetPowerupButtonData(E_PowerupRuleType Powerup, bool HasInitialFocus, class UUserWidget* Parent, class UB_PowerupButtonData_C** ButtonData);
-	void GetPropButtonData(int32 PropId, bool UnlockedByDefault, bool IsInitial, class UClass* Structure, class UUserWidget* Parent, const struct FPrefabToSave& Prefab, class UB_PropButtonData_C** Data);
+	void GetPropButtonData(int32 PropID, bool UnlockedByDefault, bool IsInitial, class UClass* Structure, class UUserWidget* Parent, const struct FPrefabToSave& Prefab, class UB_PropButtonData_C** Data);
 	void GetSkillButtonData(bool HasInitialFocus, class UClass* SkillClass, class UUserWidget* Parent, class UB_SkillButtonData_C** ButtonData);
 	void GetSkinConfigButtonData(bool HasInitialFocusOrSelection, class UUserWidget* Parent, int32 SkinConfigNr, class UB_SkinConfigButtonData_C** Data);
 	void GetSkinOrRecipeData(const struct FS_ItemInfo& SkinInfo, const struct FS_RecipeInfo& RecipeInfo, bool HasInitialFocusOrSelection, class UUserWidget* Parent, class UB_SkinOrRecipeItemData_C** Data);
+	void GetTradingButtonData(const struct FTradingItem& Item, const struct FS_ItemInfo& SkinItem, const struct FS_RecipeInfo& RecipeItem, bool HasInitialFocus, class UUserWidget* Parent, class UB_TradingItemData_C** Data);
 	void SetGeneralData(class UB_TileViewData_C* TileViewData, bool HasInitialFocusOrSelection, class UUserWidget* Parent);
 	void TileViewIsEmpty(class UListViewBase* TileView, bool* IsEmpty);
 	void UpdateSkinConfigTileView(class UTileView* TileView, class UB_SkinSelection_C* SkinSaves, ETeamID Team, class UUserWidget* Parent);

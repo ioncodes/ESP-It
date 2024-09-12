@@ -19,34 +19,35 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PlayerBlock.WB_PlayerBlock_C
-// 0x00B0 (0x0370 - 0x02C0)
+// 0x00A0 (0x0380 - 0x02E0)
 class UWB_PlayerBlock_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 HunterMovementSkill;                               // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 HunterUtilitySkill;                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_WB_PlayerBlock_C;                             // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Ready;                                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 TalkingIndicator;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PlayerIcon_C*                       WB_PlayerIcon;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 WitchMovementSkill;                                // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 WitchUtilitySkill;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWrapBox*                               WrapBox_0;                                         // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       PlayerState;                                       // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_TournamentPlayer_C*                  TournamentPlayer;                                  // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsObjectivePlayerState;                            // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57EB[0x7];                                     // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   KOText;                                            // 0x0328(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   BotText;                                           // 0x0340(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   OfflineText;                                       // 0x0358(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 HunterMovementSkill;                               // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 HunterUtilitySkill;                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Ready;                                             // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URetainerBox*                           RetainerBox_0;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 TalkingIndicator;                                  // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PlayerIcon_C*                       WB_PlayerIcon;                                     // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 WitchMovementSkill;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 WitchUtilitySkill;                                 // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWrapBox*                               WrapBox_0;                                         // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_TournamentPlayer_C*                  TournamentPlayer;                                  // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsObjectivePlayerState;                            // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_349[0x7];                                      // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   KOText;                                            // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   BotText;                                           // 0x0360(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   OfflineText;                                       // 0x0370(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	ESlateVisibility GetVisibility_0();
 	void UpdateValues();
 	ESlateVisibility GetTalkingIndicatorVisibility();
-	class FText GetPingOrBotText(class APlayerState*& Param_PlayerState);
-	class FText GetKOText(class AB_PlayerState_C*& Param_PlayerState);
+	class FText GetPingOrBotText(class APlayerState*& PlayerState_0);
+	class FText GetKOText(class AB_PlayerState_C*& PlayerState_0);
 	struct FSlateBrush Get_WitchMovementSkill_Brush_0();
 	struct FSlateBrush Get_HunterMovementSkill_Brush_0();
 	ESlateVisibility Get_WitchMovementSkill_Visibility_0();
@@ -72,23 +73,24 @@ public:
 	}
 };
 static_assert(alignof(UWB_PlayerBlock_C) == 0x000008, "Wrong alignment on UWB_PlayerBlock_C");
-static_assert(sizeof(UWB_PlayerBlock_C) == 0x000370, "Wrong size on UWB_PlayerBlock_C");
-static_assert(offsetof(UWB_PlayerBlock_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_PlayerBlock_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, HunterMovementSkill) == 0x0002C8, "Member 'UWB_PlayerBlock_C::HunterMovementSkill' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, HunterUtilitySkill) == 0x0002D0, "Member 'UWB_PlayerBlock_C::HunterUtilitySkill' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, Name_WB_PlayerBlock_C) == 0x0002D8, "Member 'UWB_PlayerBlock_C::Name_WB_PlayerBlock_C' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, Ready) == 0x0002E0, "Member 'UWB_PlayerBlock_C::Ready' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, TalkingIndicator) == 0x0002E8, "Member 'UWB_PlayerBlock_C::TalkingIndicator' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, WB_PlayerIcon) == 0x0002F0, "Member 'UWB_PlayerBlock_C::WB_PlayerIcon' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, WitchMovementSkill) == 0x0002F8, "Member 'UWB_PlayerBlock_C::WitchMovementSkill' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, WitchUtilitySkill) == 0x000300, "Member 'UWB_PlayerBlock_C::WitchUtilitySkill' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, WrapBox_0) == 0x000308, "Member 'UWB_PlayerBlock_C::WrapBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, PlayerState) == 0x000310, "Member 'UWB_PlayerBlock_C::PlayerState' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, TournamentPlayer) == 0x000318, "Member 'UWB_PlayerBlock_C::TournamentPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, IsObjectivePlayerState) == 0x000320, "Member 'UWB_PlayerBlock_C::IsObjectivePlayerState' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, KOText) == 0x000328, "Member 'UWB_PlayerBlock_C::KOText' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, BotText) == 0x000340, "Member 'UWB_PlayerBlock_C::BotText' has a wrong offset!");
-static_assert(offsetof(UWB_PlayerBlock_C, OfflineText) == 0x000358, "Member 'UWB_PlayerBlock_C::OfflineText' has a wrong offset!");
+static_assert(sizeof(UWB_PlayerBlock_C) == 0x000380, "Wrong size on UWB_PlayerBlock_C");
+static_assert(offsetof(UWB_PlayerBlock_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_PlayerBlock_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, HunterMovementSkill) == 0x0002E8, "Member 'UWB_PlayerBlock_C::HunterMovementSkill' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, HunterUtilitySkill) == 0x0002F0, "Member 'UWB_PlayerBlock_C::HunterUtilitySkill' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, Name_0) == 0x0002F8, "Member 'UWB_PlayerBlock_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, Ready) == 0x000300, "Member 'UWB_PlayerBlock_C::Ready' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, RetainerBox_0) == 0x000308, "Member 'UWB_PlayerBlock_C::RetainerBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, TalkingIndicator) == 0x000310, "Member 'UWB_PlayerBlock_C::TalkingIndicator' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, WB_PlayerIcon) == 0x000318, "Member 'UWB_PlayerBlock_C::WB_PlayerIcon' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, WitchMovementSkill) == 0x000320, "Member 'UWB_PlayerBlock_C::WitchMovementSkill' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, WitchUtilitySkill) == 0x000328, "Member 'UWB_PlayerBlock_C::WitchUtilitySkill' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, WrapBox_0) == 0x000330, "Member 'UWB_PlayerBlock_C::WrapBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, PlayerState) == 0x000338, "Member 'UWB_PlayerBlock_C::PlayerState' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, TournamentPlayer) == 0x000340, "Member 'UWB_PlayerBlock_C::TournamentPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, IsObjectivePlayerState) == 0x000348, "Member 'UWB_PlayerBlock_C::IsObjectivePlayerState' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, KOText) == 0x000350, "Member 'UWB_PlayerBlock_C::KOText' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, BotText) == 0x000360, "Member 'UWB_PlayerBlock_C::BotText' has a wrong offset!");
+static_assert(offsetof(UWB_PlayerBlock_C, OfflineText) == 0x000370, "Member 'UWB_PlayerBlock_C::OfflineText' has a wrong offset!");
 
 }
 

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SControllerBinding_structs.hpp"
 #include "SAxisToEdit_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EControllerLayout_structs.hpp"
+#include "SControllerBinding_structs.hpp"
 #include "SActionMappings_structs.hpp"
 #include "SAxisMappings_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
-#include "EControllerLayout_structs.hpp"
 
 
 namespace SDK
@@ -34,7 +34,7 @@ public:
 	TMap<class FName, struct FSActionMappings>    CurrentActionMappings;                             // 0x0068(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<class FName, struct FSAxisMappings>      CurrentAxisMappings;                               // 0x00B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bDirty;                                            // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38B8[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSControllerBinding>            ControllerLayoutDefault;                           // 0x0110(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FSControllerBinding>            ControllerLayout1;                                 // 0x0120(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FSControllerBinding>            ControllerLayout2;                                 // 0x0130(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -44,8 +44,8 @@ public:
 public:
 	void AddActionBinding(class FName ActionName, const struct FKey& Key);
 	void AddControllerMappings(TArray<struct FSControllerBinding>& ControllerLayoutRef);
-	bool AreActionMappingsSameLength(const class FName& ActionName, const TMap<class FName, struct FSActionMappings>& Param_CurrentActionMappings, const TMap<class FName, struct FSActionMappings>& ActionMappings);
-	bool AreAxisMappingsSameLength(const class FName& AxisName, const TMap<class FName, struct FSAxisMappings>& Param_CurrentAxisMappings, const TMap<class FName, struct FSAxisMappings>& AxisMappings);
+	bool AreActionMappingsSameLength(const class FName& ActionName, const TMap<class FName, struct FSActionMappings>& CurrentActionMappings_0, const TMap<class FName, struct FSActionMappings>& ActionMappings);
+	bool AreAxisMappingsSameLength(const class FName& AxisName, const TMap<class FName, struct FSAxisMappings>& CurrentAxisMappings_0, const TMap<class FName, struct FSAxisMappings>& AxisMappings);
 	void ChangeControllerLayout(EControllerLayout ControllerLayout);
 	void ExecuteUbergraph_B_InputMappingsManager(int32 EntryPoint);
 	struct FInputActionKeyMapping GetActionMappingFor(const struct FKey& Key);
@@ -53,7 +53,7 @@ public:
 	class FName GetAxisName(const struct FSAxisToEdit& AxisToEdit);
 	void GetCurrentMappings(TMap<class FName, struct FSActionMappings>* ActionMappings, TMap<class FName, struct FSAxisMappings>* AxisMappings);
 	void Initialize(class UGameInstance* InGameInstance);
-	void IsDirty(bool* Param_bDirty);
+	void IsDirty(bool* bDirty_0);
 	bool IsKeyForAction(const struct FKey& Key, class FName Action);
 	void OnMappingsChanged__DelegateSignature();
 	void OnMappingsChangedEvent();

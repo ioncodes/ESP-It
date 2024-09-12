@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function B_PumpkinGhostDummy.B_PumpkinGhostDummy_C.PickMesh
-// 0x0260 (0x0260 - 0x0000)
+// 0x0270 (0x0270 - 0x0000)
 struct B_PumpkinGhostDummy_C_PickMesh final
 {
 public:
@@ -28,7 +28,7 @@ public:
 	class UStaticMesh*                            MeshModel;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ELowEntryExtendedStandardLibrary1to10other    CallFunc_CaseSwitchObject_Branch;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_585F[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -39,12 +39,12 @@ public:
 	double                                        CallFunc_BreakVector_Z;                            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5860[0x8];                                     // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0110(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0170(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0170(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_PumpkinGhostDummy_C_PickMesh) == 0x000010, "Wrong alignment on B_PumpkinGhostDummy_C_PickMesh");
-static_assert(sizeof(B_PumpkinGhostDummy_C_PickMesh) == 0x000260, "Wrong size on B_PumpkinGhostDummy_C_PickMesh");
+static_assert(sizeof(B_PumpkinGhostDummy_C_PickMesh) == 0x000270, "Wrong size on B_PumpkinGhostDummy_C_PickMesh");
 static_assert(offsetof(B_PumpkinGhostDummy_C_PickMesh, Static_Mesh) == 0x000000, "Member 'B_PumpkinGhostDummy_C_PickMesh::Static_Mesh' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostDummy_C_PickMesh, Offset) == 0x000008, "Member 'B_PumpkinGhostDummy_C_PickMesh::Offset' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostDummy_C_PickMesh, MeshModel) == 0x000010, "Member 'B_PumpkinGhostDummy_C_PickMesh::MeshModel' has a wrong offset!");

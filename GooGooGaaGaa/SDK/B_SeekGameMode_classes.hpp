@@ -20,28 +20,28 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_SeekGameMode.B_SeekGameMode_C
-// 0x0010 (0x05C0 - 0x05B0)
+// 0x0010 (0x05B8 - 0x05A8)
 class AB_SeekGameMode_C : public AB_GameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_SeekGameMode_C;                   // 0x05B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          JoinAsHunter;                                      // 0x05B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_SeekGameMode_C;                   // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          JoinAsHunter;                                      // 0x05B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void GetRoundEndTimerUntilRestart(int32* Seconds);
+	void HandleEndMatch(ETeamID WinnerTeam, bool ForceRegardlessOfEnd);
 	void HandleEndMatchByTime();
+	void HandleStartMatch();
+	void HandleStartSeek();
 	void ReceiveBeginPlay();
+	void TimerFinished();
+	void ExecuteUbergraph_B_SeekGameMode(int32 EntryPoint);
 	void PlayerIDReceived(class AB_PlayerState_C* PlayerState);
 	void MidgameJoiningPlayerReady(class AB_PlayerState_C* ReadyPlayer);
 	void InitializeSessionInfo();
 	void InitMatchTimeForSession();
 	void InitMatchStartedFlagForSession();
 	void InitializeSeekTime();
-	void GetRoundEndTimerUntilRestart(int32* Seconds);
-	void HandleStartSeek();
-	void HandleStartMatch();
-	void HandleEndMatch(ETeamID WinnerTeam, bool ForceRegardlessOfEnd);
-	void TimerFinished();
-	void ExecuteUbergraph_B_SeekGameMode(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -54,9 +54,9 @@ public:
 	}
 };
 static_assert(alignof(AB_SeekGameMode_C) == 0x000008, "Wrong alignment on AB_SeekGameMode_C");
-static_assert(sizeof(AB_SeekGameMode_C) == 0x0005C0, "Wrong size on AB_SeekGameMode_C");
-static_assert(offsetof(AB_SeekGameMode_C, UberGraphFrame_B_SeekGameMode_C) == 0x0005B0, "Member 'AB_SeekGameMode_C::UberGraphFrame_B_SeekGameMode_C' has a wrong offset!");
-static_assert(offsetof(AB_SeekGameMode_C, JoinAsHunter) == 0x0005B8, "Member 'AB_SeekGameMode_C::JoinAsHunter' has a wrong offset!");
+static_assert(sizeof(AB_SeekGameMode_C) == 0x0005B8, "Wrong size on AB_SeekGameMode_C");
+static_assert(offsetof(AB_SeekGameMode_C, UberGraphFrame_B_SeekGameMode_C) == 0x0005A8, "Member 'AB_SeekGameMode_C::UberGraphFrame_B_SeekGameMode_C' has a wrong offset!");
+static_assert(offsetof(AB_SeekGameMode_C, JoinAsHunter) == 0x0005B0, "Member 'AB_SeekGameMode_C::JoinAsHunter' has a wrong offset!");
 
 }
 

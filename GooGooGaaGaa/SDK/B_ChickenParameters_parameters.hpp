@@ -17,27 +17,27 @@ namespace SDK::Params
 {
 
 // Function B_ChickenParameters.B_ChickenParameters_C.GetFormattedTooltip
-// 0x0138 (0x0138 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct B_ChickenParameters_C_GetFormattedTooltip final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0068(0x0050)(HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00C0(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0120(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0058(0x0048)(HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00A8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0010)()
 };
 static_assert(alignof(B_ChickenParameters_C_GetFormattedTooltip) == 0x000008, "Wrong alignment on B_ChickenParameters_C_GetFormattedTooltip");
-static_assert(sizeof(B_ChickenParameters_C_GetFormattedTooltip) == 0x000138, "Wrong size on B_ChickenParameters_C_GetFormattedTooltip");
+static_assert(sizeof(B_ChickenParameters_C_GetFormattedTooltip) == 0x000110, "Wrong size on B_ChickenParameters_C_GetFormattedTooltip");
 static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, ReturnValue) == 0x000000, "Member 'B_ChickenParameters_C_GetFormattedTooltip::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_1) == 0x000068, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000B8, "Member 'B_ChickenParameters_C_GetFormattedTooltip::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000C0, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeArray_Array) == 0x000110, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, CallFunc_Format_ReturnValue) == 0x000120, "Member 'B_ChickenParameters_C_GetFormattedTooltip::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData) == 0x000010, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_1) == 0x000058, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000A0, "Member 'B_ChickenParameters_C_GetFormattedTooltip::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000A8, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, K2Node_MakeArray_Array) == 0x0000F0, "Member 'B_ChickenParameters_C_GetFormattedTooltip::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_ChickenParameters_C_GetFormattedTooltip, CallFunc_Format_ReturnValue) == 0x000100, "Member 'B_ChickenParameters_C_GetFormattedTooltip::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 }
 

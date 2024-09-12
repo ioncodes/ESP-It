@@ -561,9 +561,9 @@ void UWB_HUD_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 // Function WB_HUD.WB_HUD_C.UpdateBigTextTimer
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Time_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_HUD_C::UpdateBigTextTimer(int32 Param_Time)
+void UWB_HUD_C::UpdateBigTextTimer(int32 Time_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -572,7 +572,7 @@ void UWB_HUD_C::UpdateBigTextTimer(int32 Param_Time)
 
 	Params::WB_HUD_C_UpdateBigTextTimer Parms{};
 
-	Parms.Param_Time = Param_Time;
+	Parms.Time_0 = Time_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

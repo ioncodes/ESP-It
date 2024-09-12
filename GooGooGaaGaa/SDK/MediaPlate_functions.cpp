@@ -114,10 +114,10 @@ class UMediaPlayer* UMediaPlateComponent::GetMediaPlayer()
 // Function MediaPlate.MediaPlateComponent.GetMediaTexture
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaTexture*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UMediaTexture* UMediaPlateComponent::GetMediaTexture(int32 Param_Index)
+class UMediaTexture* UMediaPlateComponent::GetMediaTexture(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -126,7 +126,7 @@ class UMediaTexture* UMediaPlateComponent::GetMediaTexture(int32 Param_Index)
 
 	Params::MediaPlateComponent_GetMediaTexture Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -178,6 +178,44 @@ void UMediaPlateComponent::OnMediaOpened(const class FString& DeviceUrl)
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaPlate.MediaPlateComponent.OnMediaResumed
+// (Final, Native, Private)
+
+void UMediaPlateComponent::OnMediaResumed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "OnMediaResumed");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaPlate.MediaPlateComponent.OnMediaSuspended
+// (Final, Native, Private)
+
+void UMediaPlateComponent::OnMediaSuspended()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlateComponent", "OnMediaSuspended");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

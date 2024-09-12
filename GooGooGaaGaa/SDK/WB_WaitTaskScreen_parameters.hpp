@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,29 +26,29 @@ struct WB_WaitTaskScreen_C_ExecuteUbergraph_WB_WaitTaskScreen final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA4[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_Task_C*                              K2Node_DynamicCast_AsB_Task;                       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA5[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_WitchSkillStudyInteractionActor_C*   K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA6[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0040(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA7[0x3];                                     // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0064(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetMousePosition_Success;                 // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA8[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetMousePosition_X;                       // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMousePosition_Y;                       // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CA9[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -108,7 +108,7 @@ struct WB_WaitTaskScreen_C_GetSkillStudyTextVisibility final
 {
 public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_WitchSkillStudyInteractionActor_C*   K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -130,12 +130,12 @@ public:
 	struct FEventReply                            ReturnValue;                                       // 0x0080(0x00B8)(Parm, OutParm, ReturnParm)
 	struct FEventReply                            CallFunc_OnAnalogValueChanged_ReturnValue;         // 0x0138(0x00B8)()
 	float                                         CallFunc_GetAnalogValue_ReturnValue;               // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAB[0x4];                                     // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKeyEvent                              CallFunc_GetKeyEventFromAnalogInputEvent_ReturnValue; // 0x01F8(0x0040)()
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0238(0x0018)(HasGetValueTypeHash)
 	float                                         CallFunc_GetAnalogValue_ReturnValue_1;             // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAC[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_255[0x3];                                      // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKeyEvent                              CallFunc_GetKeyEventFromAnalogInputEvent_ReturnValue_1; // 0x0258(0x0040)()
 	struct FKey                                   CallFunc_GetKey_ReturnValue_1;                     // 0x0298(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -156,7 +156,7 @@ static_assert(offsetof(WB_WaitTaskScreen_C_OnAnalogValueChanged, CallFunc_GetKey
 static_assert(offsetof(WB_WaitTaskScreen_C_OnAnalogValueChanged, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x0002B0, "Member 'WB_WaitTaskScreen_C_OnAnalogValueChanged::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
 
 // Function WB_WaitTaskScreen.WB_WaitTaskScreen_C.RotateWitchSkillStudyMeshOnScreen
-// 0x0308 (0x0308 - 0x0000)
+// 0x0328 (0x0328 - 0x0000)
 struct WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen final
 {
 public:
@@ -171,10 +171,10 @@ public:
 	double                                        RotationSpeed;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetMousePosition_Success;                 // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAD[0x2];                                     // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x2];                                       // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetMousePosition_X;                       // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetMousePosition_Y;                       // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAE[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -183,28 +183,28 @@ public:
 	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CAF[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult;       // 0x00D8(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult_1;     // 0x01C0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x02A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_X;                          // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_WitchSkillStudyInteractionActor_C*   K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor; // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CB0[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_DeltaMouseX_ImplicitCast;       // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_DeltaMouseY_ImplicitCast;       // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x0304(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult;       // 0x00D8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_AddLocalRotation_SweepHitResult_1;     // 0x01D0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector2D                              CallFunc_Subtract_Vector2DVector2D_ReturnValue;    // 0x02C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_WitchSkillStudyInteractionActor_C*   K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor; // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_DeltaMouseX_ImplicitCast;       // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_DeltaMouseY_ImplicitCast;       // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast_1;           // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen) == 0x000008, "Wrong alignment on WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen");
-static_assert(sizeof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen) == 0x000308, "Wrong size on WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen");
+static_assert(sizeof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen) == 0x000328, "Wrong size on WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen");
 static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, WitchSkillStudyInteractionActor) == 0x000000, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::WitchSkillStudyInteractionActor' has a wrong offset!");
 static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, DeltaRot) == 0x000008, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::DeltaRot' has a wrong offset!");
 static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, DeltaMouseY) == 0x000010, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::DeltaMouseY' has a wrong offset!");
@@ -229,20 +229,20 @@ static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, Ca
 static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000C8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000D0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_K2_AddLocalRotation_SweepHitResult) == 0x0000D8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_K2_AddLocalRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_K2_AddLocalRotation_SweepHitResult_1) == 0x0001C0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_K2_AddLocalRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x0002A8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_BreakVector2D_X) == 0x0002B8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_BreakVector2D_Y) == 0x0002C0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor) == 0x0002C8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_DynamicCast_bSuccess) == 0x0002D0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0002D8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0002E0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_VariableSet_DeltaMouseX_ImplicitCast) == 0x0002E8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_VariableSet_DeltaMouseX_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_VariableSet_DeltaMouseY_ImplicitCast) == 0x0002F0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_VariableSet_DeltaMouseY_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x0002F8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0002FC, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000300, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x000304, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_K2_AddLocalRotation_SweepHitResult_1) == 0x0001D0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_K2_AddLocalRotation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x0002C8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_BreakVector2D_X) == 0x0002D8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_BreakVector2D_X' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_BreakVector2D_Y) == 0x0002E0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_BreakVector2D_Y' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor) == 0x0002E8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_DynamicCast_AsB_Witch_Skill_Study_Interaction_Actor' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_DynamicCast_bSuccess) == 0x0002F0, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0002F8, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000300, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_VariableSet_DeltaMouseX_ImplicitCast) == 0x000308, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_VariableSet_DeltaMouseX_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, K2Node_VariableSet_DeltaMouseY_ImplicitCast) == 0x000310, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::K2Node_VariableSet_DeltaMouseY_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000318, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x00031C, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x000320, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen, CallFunc_MakeRotator_Yaw_ImplicitCast_1) == 0x000324, "Member 'WB_WaitTaskScreen_C_RotateWitchSkillStudyMeshOnScreen::CallFunc_MakeRotator_Yaw_ImplicitCast_1' has a wrong offset!");
 
 // Function WB_WaitTaskScreen.WB_WaitTaskScreen_C.SetPlanStudyBarProgress
 // 0x0060 (0x0060 - 0x0000)
@@ -251,12 +251,12 @@ struct WB_WaitTaskScreen_C_SetPlanStudyBarProgress final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CB1[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PlanStudyInteractionActor_C*         K2Node_DynamicCast_AsB_Plan_Study_Interaction_Actor; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CB2[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakTimespan_Days;                       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -264,7 +264,7 @@ public:
 	int32                                         CallFunc_BreakTimespan_Minutes;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakTimespan_Seconds;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakTimespan_Milliseconds;               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4CB3[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_FunctionResult_ReturnValue_ImplicitCast;    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

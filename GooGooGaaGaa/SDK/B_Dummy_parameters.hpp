@@ -18,14 +18,14 @@ namespace SDK::Params
 {
 
 // Function B_Dummy.B_Dummy_C.UpdateRotation
-// 0x0140 (0x0140 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct B_Dummy_C_UpdateRotation final
 {
 public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3911[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRandomStream                          CallFunc_MakeRandomStream_ReturnValue;             // 0x0014(0x0008)(ZeroConstructor, NoDestructor)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomIntegerFromStream_ReturnValue;      // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -33,14 +33,14 @@ public:
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_BreakRandomStream_InitialSeed;            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3912[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_AddWorldRotation_SweepHitResult;       // 0x0050(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3913[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_AddWorldRotation_SweepHitResult;       // 0x0050(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_Dummy_C_UpdateRotation) == 0x000008, "Wrong alignment on B_Dummy_C_UpdateRotation");
-static_assert(sizeof(B_Dummy_C_UpdateRotation) == 0x000140, "Wrong size on B_Dummy_C_UpdateRotation");
+static_assert(sizeof(B_Dummy_C_UpdateRotation) == 0x000150, "Wrong size on B_Dummy_C_UpdateRotation");
 static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_GetGameState_ReturnValue) == 0x000000, "Member 'B_Dummy_C_UpdateRotation::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Dummy_C_UpdateRotation, K2Node_DynamicCast_AsB_Impostor_Game_State) == 0x000008, "Member 'B_Dummy_C_UpdateRotation::K2Node_DynamicCast_AsB_Impostor_Game_State' has a wrong offset!");
 static_assert(offsetof(B_Dummy_C_UpdateRotation, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'B_Dummy_C_UpdateRotation::K2Node_DynamicCast_bSuccess' has a wrong offset!");
@@ -52,8 +52,8 @@ static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_Conv_IntToDouble_Retur
 static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_MakeRotator_ReturnValue) == 0x000030, "Member 'B_Dummy_C_UpdateRotation::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_BreakRandomStream_InitialSeed) == 0x000048, "Member 'B_Dummy_C_UpdateRotation::CallFunc_BreakRandomStream_InitialSeed' has a wrong offset!");
 static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_K2_AddWorldRotation_SweepHitResult) == 0x000050, "Member 'B_Dummy_C_UpdateRotation::CallFunc_K2_AddWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000138, "Member 'B_Dummy_C_UpdateRotation::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x00013C, "Member 'B_Dummy_C_UpdateRotation::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000148, "Member 'B_Dummy_C_UpdateRotation::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_Dummy_C_UpdateRotation, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x00014C, "Member 'B_Dummy_C_UpdateRotation::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
 
 // Function B_Dummy.B_Dummy_C.ExecuteUbergraph_B_Dummy
 // 0x0008 (0x0008 - 0x0000)

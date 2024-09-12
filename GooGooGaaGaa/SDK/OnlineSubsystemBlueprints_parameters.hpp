@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,7 +27,7 @@ public:
 	class FString                                 AchievementID;                                     // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOnlineAchievementBP                   OutAchievement;                                    // 0x0040(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EOnlineCachedResult_                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC6[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineAchievementsSubsystem_GetCachedAchievement) == 0x000008, "Wrong alignment on OnlineAchievementsSubsystem_GetCachedAchievement");
 static_assert(sizeof(OnlineAchievementsSubsystem_GetCachedAchievement) == 0x000060, "Wrong size on OnlineAchievementsSubsystem_GetCachedAchievement");
@@ -37,20 +37,20 @@ static_assert(offsetof(OnlineAchievementsSubsystem_GetCachedAchievement, OutAchi
 static_assert(offsetof(OnlineAchievementsSubsystem_GetCachedAchievement, ReturnValue) == 0x000058, "Member 'OnlineAchievementsSubsystem_GetCachedAchievement::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystem.GetCachedAchievementDescription
-// 0x0070 (0x0070 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct OnlineAchievementsSubsystem_GetCachedAchievementDescription final
 {
 public:
 	class FString                                 AchievementID;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineAchievementDescBP               OutAchievementDesc;                                // 0x0010(0x0058)(Parm, OutParm, NativeAccessSpecifierPublic)
-	EOnlineCachedResult_                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC7[0x7];                                     // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FOnlineAchievementDescBP               OutAchievementDesc;                                // 0x0010(0x0040)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EOnlineCachedResult_                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineAchievementsSubsystem_GetCachedAchievementDescription) == 0x000008, "Wrong alignment on OnlineAchievementsSubsystem_GetCachedAchievementDescription");
-static_assert(sizeof(OnlineAchievementsSubsystem_GetCachedAchievementDescription) == 0x000070, "Wrong size on OnlineAchievementsSubsystem_GetCachedAchievementDescription");
+static_assert(sizeof(OnlineAchievementsSubsystem_GetCachedAchievementDescription) == 0x000058, "Wrong size on OnlineAchievementsSubsystem_GetCachedAchievementDescription");
 static_assert(offsetof(OnlineAchievementsSubsystem_GetCachedAchievementDescription, AchievementID) == 0x000000, "Member 'OnlineAchievementsSubsystem_GetCachedAchievementDescription::AchievementID' has a wrong offset!");
 static_assert(offsetof(OnlineAchievementsSubsystem_GetCachedAchievementDescription, OutAchievementDesc) == 0x000010, "Member 'OnlineAchievementsSubsystem_GetCachedAchievementDescription::OutAchievementDesc' has a wrong offset!");
-static_assert(offsetof(OnlineAchievementsSubsystem_GetCachedAchievementDescription, ReturnValue) == 0x000068, "Member 'OnlineAchievementsSubsystem_GetCachedAchievementDescription::ReturnValue' has a wrong offset!");
+static_assert(offsetof(OnlineAchievementsSubsystem_GetCachedAchievementDescription, ReturnValue) == 0x000050, "Member 'OnlineAchievementsSubsystem_GetCachedAchievementDescription::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystem.GetCachedAchievements
 // 0x0048 (0x0048 - 0x0000)
@@ -60,7 +60,7 @@ public:
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FOnlineAchievementBP>           OutAchievements;                                   // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	EOnlineCachedResult_                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC8[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineAchievementsSubsystem_GetCachedAchievements) == 0x000008, "Wrong alignment on OnlineAchievementsSubsystem_GetCachedAchievements");
 static_assert(sizeof(OnlineAchievementsSubsystem_GetCachedAchievements) == 0x000048, "Wrong size on OnlineAchievementsSubsystem_GetCachedAchievements");
@@ -78,6 +78,23 @@ public:
 static_assert(alignof(OnlineAchievementsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineAchievementsSubsystem_IsSubsystemAvailable");
 static_assert(sizeof(OnlineAchievementsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineAchievementsSubsystem_IsSubsystemAvailable");
 static_assert(offsetof(OnlineAchievementsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineAchievementsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersByFilter.QueryOffersByFilter
+// 0x0070 (0x0070 - 0x0000)
+struct OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter final
+{
+public:
+	class UOnlineStoreV2Subsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineStoreFilterBP                   Filter;                                            // 0x0038(0x0030)(Parm, NativeAccessSpecifierPublic)
+	class UOnlineStoreV2SubsystemQueryOffersByFilter* ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter) == 0x000008, "Wrong alignment on OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter");
+static_assert(sizeof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter) == 0x000070, "Wrong size on OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter");
+static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, Subsystem) == 0x000000, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, UserId) == 0x000008, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, Filter) == 0x000038, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::Filter' has a wrong offset!");
+static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, ReturnValue) == 0x000068, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements.WriteAchievements
 // 0x0048 (0x0048 - 0x0000)
@@ -111,6 +128,21 @@ static_assert(offsetof(OnlineAchievementsSubsystemQueryAchievements_QueryAchieve
 static_assert(offsetof(OnlineAchievementsSubsystemQueryAchievements_QueryAchievements, PlayerId) == 0x000008, "Member 'OnlineAchievementsSubsystemQueryAchievements_QueryAchievements::PlayerId' has a wrong offset!");
 static_assert(offsetof(OnlineAchievementsSubsystemQueryAchievements_QueryAchievements, ReturnValue) == 0x000038, "Member 'OnlineAchievementsSubsystemQueryAchievements_QueryAchievements::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadMatchWithID.LoadMatchWithID
+// 0x0020 (0x0020 - 0x0000)
+struct OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID final
+{
+public:
+	class UOnlineTurnBasedSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MatchID;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineTurnBasedSubsystemLoadMatchWithID* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID) == 0x000008, "Wrong alignment on OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID");
+static_assert(sizeof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID) == 0x000020, "Wrong size on OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID");
+static_assert(offsetof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID, Subsystem) == 0x000000, "Member 'OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID, MatchID) == 0x000008, "Member 'OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID::MatchID' has a wrong offset!");
+static_assert(offsetof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID, ReturnValue) == 0x000018, "Member 'OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineAchievementsSubsystemQueryAchievementDescriptions.QueryAchievementDescriptions
 // 0x0040 (0x0040 - 0x0000)
 struct OnlineAchievementsSubsystemQueryAchievementDescriptions_QueryAchievementDescriptions final
@@ -136,6 +168,80 @@ public:
 static_assert(alignof(OnlineAvatarSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineAvatarSubsystem_IsSubsystemAvailable");
 static_assert(sizeof(OnlineAvatarSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineAvatarSubsystem_IsSubsystemAvailable");
 static_assert(offsetof(OnlineAvatarSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineAvatarSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFile
+// 0x0018 (0x0018 - 0x0000)
+struct OnlineTitleFileSubsystem_ClearFile final
+{
+public:
+	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineTitleFileSubsystem_ClearFile) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystem_ClearFile");
+static_assert(sizeof(OnlineTitleFileSubsystem_ClearFile) == 0x000018, "Wrong size on OnlineTitleFileSubsystem_ClearFile");
+static_assert(offsetof(OnlineTitleFileSubsystem_ClearFile, Filename) == 0x000000, "Member 'OnlineTitleFileSubsystem_ClearFile::Filename' has a wrong offset!");
+static_assert(offsetof(OnlineTitleFileSubsystem_ClearFile, ReturnValue) == 0x000010, "Member 'OnlineTitleFileSubsystem_ClearFile::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFiles
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineTitleFileSubsystem_ClearFiles final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTitleFileSubsystem_ClearFiles) == 0x000001, "Wrong alignment on OnlineTitleFileSubsystem_ClearFiles");
+static_assert(sizeof(OnlineTitleFileSubsystem_ClearFiles) == 0x000001, "Wrong size on OnlineTitleFileSubsystem_ClearFiles");
+static_assert(offsetof(OnlineTitleFileSubsystem_ClearFiles, ReturnValue) == 0x000000, "Member 'OnlineTitleFileSubsystem_ClearFiles::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.DeleteCachedFiles
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineTitleFileSubsystem_DeleteCachedFiles final
+{
+public:
+	bool                                          bSkipEnumerated;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTitleFileSubsystem_DeleteCachedFiles) == 0x000001, "Wrong alignment on OnlineTitleFileSubsystem_DeleteCachedFiles");
+static_assert(sizeof(OnlineTitleFileSubsystem_DeleteCachedFiles) == 0x000001, "Wrong size on OnlineTitleFileSubsystem_DeleteCachedFiles");
+static_assert(offsetof(OnlineTitleFileSubsystem_DeleteCachedFiles, bSkipEnumerated) == 0x000000, "Member 'OnlineTitleFileSubsystem_DeleteCachedFiles::bSkipEnumerated' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileContents
+// 0x0020 (0x0020 - 0x0000)
+struct OnlineTitleFileSubsystem_GetFileContents final
+{
+public:
+	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFileData*                              FileContents;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineTitleFileSubsystem_GetFileContents) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystem_GetFileContents");
+static_assert(sizeof(OnlineTitleFileSubsystem_GetFileContents) == 0x000020, "Wrong size on OnlineTitleFileSubsystem_GetFileContents");
+static_assert(offsetof(OnlineTitleFileSubsystem_GetFileContents, Filename) == 0x000000, "Member 'OnlineTitleFileSubsystem_GetFileContents::Filename' has a wrong offset!");
+static_assert(offsetof(OnlineTitleFileSubsystem_GetFileContents, FileContents) == 0x000010, "Member 'OnlineTitleFileSubsystem_GetFileContents::FileContents' has a wrong offset!");
+static_assert(offsetof(OnlineTitleFileSubsystem_GetFileContents, ReturnValue) == 0x000018, "Member 'OnlineTitleFileSubsystem_GetFileContents::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileList
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineTitleFileSubsystem_GetFileList final
+{
+public:
+	TArray<struct FCloudFileHeaderBP>             Files;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTitleFileSubsystem_GetFileList) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystem_GetFileList");
+static_assert(sizeof(OnlineTitleFileSubsystem_GetFileList) == 0x000010, "Wrong size on OnlineTitleFileSubsystem_GetFileList");
+static_assert(offsetof(OnlineTitleFileSubsystem_GetFileList, Files) == 0x000000, "Member 'OnlineTitleFileSubsystem_GetFileList::Files' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineTitleFileSubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTitleFileSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineTitleFileSubsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineTitleFileSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineTitleFileSubsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineTitleFileSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineTitleFileSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineAvatarSubsystemGetAvatar.GetAvatar
 // 0x0078 (0x0078 - 0x0000)
@@ -175,6 +281,52 @@ static_assert(offsetof(OnlineAvatarSubsystemGetAvatarUrl_GetAvatarUrl, TargetUse
 static_assert(offsetof(OnlineAvatarSubsystemGetAvatarUrl_GetAvatarUrl, DefaultAvatarUrl) == 0x000068, "Member 'OnlineAvatarSubsystemGetAvatarUrl_GetAvatarUrl::DefaultAvatarUrl' has a wrong offset!");
 static_assert(offsetof(OnlineAvatarSubsystemGetAvatarUrl_GetAvatarUrl, ReturnValue) == 0x000078, "Member 'OnlineAvatarSubsystemGetAvatarUrl_GetAvatarUrl::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetCategories
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineStoreV2Subsystem_GetCategories final
+{
+public:
+	TArray<struct FOnlineStoreCategoryBP>         OutCategories;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineStoreV2Subsystem_GetCategories) == 0x000008, "Wrong alignment on OnlineStoreV2Subsystem_GetCategories");
+static_assert(sizeof(OnlineStoreV2Subsystem_GetCategories) == 0x000010, "Wrong size on OnlineStoreV2Subsystem_GetCategories");
+static_assert(offsetof(OnlineStoreV2Subsystem_GetCategories, OutCategories) == 0x000000, "Member 'OnlineStoreV2Subsystem_GetCategories::OutCategories' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffer
+// 0x0018 (0x0018 - 0x0000)
+struct OnlineStoreV2Subsystem_GetOffer final
+{
+public:
+	class FString                                 OfferId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineStoreOffer*                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineStoreV2Subsystem_GetOffer) == 0x000008, "Wrong alignment on OnlineStoreV2Subsystem_GetOffer");
+static_assert(sizeof(OnlineStoreV2Subsystem_GetOffer) == 0x000018, "Wrong size on OnlineStoreV2Subsystem_GetOffer");
+static_assert(offsetof(OnlineStoreV2Subsystem_GetOffer, OfferId) == 0x000000, "Member 'OnlineStoreV2Subsystem_GetOffer::OfferId' has a wrong offset!");
+static_assert(offsetof(OnlineStoreV2Subsystem_GetOffer, ReturnValue) == 0x000010, "Member 'OnlineStoreV2Subsystem_GetOffer::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffers
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineStoreV2Subsystem_GetOffers final
+{
+public:
+	TArray<class UOnlineStoreOffer*>              OutOffers;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineStoreV2Subsystem_GetOffers) == 0x000008, "Wrong alignment on OnlineStoreV2Subsystem_GetOffers");
+static_assert(sizeof(OnlineStoreV2Subsystem_GetOffers) == 0x000010, "Wrong size on OnlineStoreV2Subsystem_GetOffers");
+static_assert(offsetof(OnlineStoreV2Subsystem_GetOffers, OutOffers) == 0x000000, "Member 'OnlineStoreV2Subsystem_GetOffers::OutOffers' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineStoreV2Subsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineStoreV2Subsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineStoreV2Subsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineStoreV2Subsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineStoreV2Subsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineStoreV2Subsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineStoreV2Subsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineChatSubsystem.ConfigureRoom
 // 0x0068 (0x0068 - 0x0000)
 struct OnlineChatSubsystem_ConfigureRoom final
@@ -184,7 +336,7 @@ public:
 	class FString                                 RoomId;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChatRoomConfigBP                      ChatRoomConfig;                                    // 0x0040(0x0020)(Parm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCB[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_ConfigureRoom) == 0x000008, "Wrong alignment on OnlineChatSubsystem_ConfigureRoom");
 static_assert(sizeof(OnlineChatSubsystem_ConfigureRoom) == 0x000068, "Wrong size on OnlineChatSubsystem_ConfigureRoom");
@@ -203,7 +355,7 @@ public:
 	class FString                                 Nickname;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChatRoomConfigBP                      ChatRoomConfig;                                    // 0x0050(0x0020)(Parm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCC[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_CreateRoom) == 0x000008, "Wrong alignment on OnlineChatSubsystem_CreateRoom");
 static_assert(sizeof(OnlineChatSubsystem_CreateRoom) == 0x000078, "Wrong size on OnlineChatSubsystem_CreateRoom");
@@ -221,7 +373,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RoomId;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCD[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_ExitRoom) == 0x000008, "Wrong alignment on OnlineChatSubsystem_ExitRoom");
 static_assert(sizeof(OnlineChatSubsystem_ExitRoom) == 0x000048, "Wrong size on OnlineChatSubsystem_ExitRoom");
@@ -250,10 +402,10 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RoomId;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumMessages;                                       // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCE[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FChatMessageBP>                 OutMessages;                                       // 0x0048(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCF[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_GetLastMessages) == 0x000008, "Wrong alignment on OnlineChatSubsystem_GetLastMessages");
 static_assert(sizeof(OnlineChatSubsystem_GetLastMessages) == 0x000060, "Wrong size on OnlineChatSubsystem_GetLastMessages");
@@ -289,7 +441,7 @@ public:
 	class FString                                 RoomId;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FChatRoomMemberBP>              OutMembers;                                        // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD0[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_GetMembers) == 0x000008, "Wrong alignment on OnlineChatSubsystem_GetMembers");
 static_assert(sizeof(OnlineChatSubsystem_GetMembers) == 0x000058, "Wrong size on OnlineChatSubsystem_GetMembers");
@@ -321,7 +473,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       RecipientId;                                       // 0x0030(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD1[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_IsChatAllowed) == 0x000008, "Wrong alignment on OnlineChatSubsystem_IsChatAllowed");
 static_assert(sizeof(OnlineChatSubsystem_IsChatAllowed) == 0x000068, "Wrong size on OnlineChatSubsystem_IsChatAllowed");
@@ -350,7 +502,7 @@ public:
 	class FString                                 Nickname;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChatRoomConfigBP                      ChatRoomConfig;                                    // 0x0050(0x0020)(Parm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD2[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_JoinPrivateRoom) == 0x000008, "Wrong alignment on OnlineChatSubsystem_JoinPrivateRoom");
 static_assert(sizeof(OnlineChatSubsystem_JoinPrivateRoom) == 0x000078, "Wrong size on OnlineChatSubsystem_JoinPrivateRoom");
@@ -370,7 +522,7 @@ public:
 	class FString                                 Nickname;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChatRoomConfigBP                      ChatRoomConfig;                                    // 0x0050(0x0020)(Parm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD3[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_JoinPublicRoom) == 0x000008, "Wrong alignment on OnlineChatSubsystem_JoinPublicRoom");
 static_assert(sizeof(OnlineChatSubsystem_JoinPublicRoom) == 0x000078, "Wrong size on OnlineChatSubsystem_JoinPublicRoom");
@@ -389,7 +541,7 @@ public:
 	struct FUniqueNetIdRepl                       RecipientId;                                       // 0x0030(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MsgBody;                                           // 0x0060(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD4[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_SendPrivateChat) == 0x000008, "Wrong alignment on OnlineChatSubsystem_SendPrivateChat");
 static_assert(sizeof(OnlineChatSubsystem_SendPrivateChat) == 0x000078, "Wrong size on OnlineChatSubsystem_SendPrivateChat");
@@ -407,7 +559,7 @@ public:
 	class FString                                 RoomId;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MsgBody;                                           // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD5[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineChatSubsystem_SendRoomChat) == 0x000008, "Wrong alignment on OnlineChatSubsystem_SendRoomChat");
 static_assert(sizeof(OnlineChatSubsystem_SendRoomChat) == 0x000058, "Wrong size on OnlineChatSubsystem_SendRoomChat");
@@ -422,13 +574,13 @@ struct OnlineEntitlementsSubsystem_GetAllEntitlements final
 {
 public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Namespace;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NameSpace;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UOnlineEntitlement*>             OutUserEntitlements;                               // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineEntitlementsSubsystem_GetAllEntitlements) == 0x000008, "Wrong alignment on OnlineEntitlementsSubsystem_GetAllEntitlements");
 static_assert(sizeof(OnlineEntitlementsSubsystem_GetAllEntitlements) == 0x000050, "Wrong size on OnlineEntitlementsSubsystem_GetAllEntitlements");
 static_assert(offsetof(OnlineEntitlementsSubsystem_GetAllEntitlements, UserId) == 0x000000, "Member 'OnlineEntitlementsSubsystem_GetAllEntitlements::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineEntitlementsSubsystem_GetAllEntitlements, Namespace) == 0x000030, "Member 'OnlineEntitlementsSubsystem_GetAllEntitlements::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlineEntitlementsSubsystem_GetAllEntitlements, NameSpace) == 0x000030, "Member 'OnlineEntitlementsSubsystem_GetAllEntitlements::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlineEntitlementsSubsystem_GetAllEntitlements, OutUserEntitlements) == 0x000040, "Member 'OnlineEntitlementsSubsystem_GetAllEntitlements::OutUserEntitlements' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineEntitlementsSubsystem.GetEntitlement
@@ -472,6 +624,28 @@ static_assert(alignof(OnlineEntitlementsSubsystem_IsSubsystemAvailable) == 0x000
 static_assert(sizeof(OnlineEntitlementsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineEntitlementsSubsystem_IsSubsystemAvailable");
 static_assert(offsetof(OnlineEntitlementsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineEntitlementsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.GetMatchDataSize
+// 0x0004 (0x0004 - 0x0000)
+struct OnlineTurnBasedSubsystem_GetMatchDataSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTurnBasedSubsystem_GetMatchDataSize) == 0x000004, "Wrong alignment on OnlineTurnBasedSubsystem_GetMatchDataSize");
+static_assert(sizeof(OnlineTurnBasedSubsystem_GetMatchDataSize) == 0x000004, "Wrong size on OnlineTurnBasedSubsystem_GetMatchDataSize");
+static_assert(offsetof(OnlineTurnBasedSubsystem_GetMatchDataSize, ReturnValue) == 0x000000, "Member 'OnlineTurnBasedSubsystem_GetMatchDataSize::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineTurnBasedSubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTurnBasedSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineTurnBasedSubsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineTurnBasedSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineTurnBasedSubsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineTurnBasedSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineTurnBasedSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineEntitlementsSubsystemQueryEntitlements.QueryEntitlements
 // 0x0058 (0x0058 - 0x0000)
 struct OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements final
@@ -479,7 +653,7 @@ struct OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements final
 public:
 	class UOnlineEntitlementsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Namespace;                                         // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NameSpace;                                         // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPagedQueryBP                          Page;                                              // 0x0048(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UOnlineEntitlementsSubsystemQueryEntitlements* ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -487,7 +661,7 @@ static_assert(alignof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlem
 static_assert(sizeof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements) == 0x000058, "Wrong size on OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements");
 static_assert(offsetof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements, Subsystem) == 0x000000, "Member 'OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements, UserId) == 0x000008, "Member 'OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements, Namespace) == 0x000038, "Member 'OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements, NameSpace) == 0x000038, "Member 'OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements, Page) == 0x000048, "Member 'OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements::Page' has a wrong offset!");
 static_assert(offsetof(OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements, ReturnValue) == 0x000050, "Member 'OnlineEntitlementsSubsystemQueryEntitlements_QueryEntitlements::ReturnValue' has a wrong offset!");
 
@@ -501,6 +675,23 @@ public:
 static_assert(alignof(OnlineEventsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineEventsSubsystem_IsSubsystemAvailable");
 static_assert(sizeof(OnlineEventsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineEventsSubsystem_IsSubsystemAvailable");
 static_assert(offsetof(OnlineEventsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineEventsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping.QueryUserIdMapping
+// 0x0050 (0x0050 - 0x0000)
+struct OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping final
+{
+public:
+	class UOnlineUserSubsystem*                   Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayNameOrEmail;                                // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineUserSubsystemQueryUserIdMapping* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping) == 0x000008, "Wrong alignment on OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping");
+static_assert(sizeof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping) == 0x000050, "Wrong size on OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping");
+static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, Subsystem) == 0x000000, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, UserId) == 0x000008, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, DisplayNameOrEmail) == 0x000038, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::DisplayNameOrEmail' has a wrong offset!");
+static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, ReturnValue) == 0x000048, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystem.AddLoginFlowHandler
 // 0x0010 (0x0010 - 0x0000)
@@ -536,31 +727,31 @@ static_assert(sizeof(OnlineExternalUISubsystem_IsSubsystemAvailable) == 0x000001
 static_assert(offsetof(OnlineExternalUISubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineExternalUISubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystem.LoginFlowComplete
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct OnlineExternalUISubsystem_LoginFlowComplete final
 {
 public:
 	int32                                         RequestID;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CDB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLoginFlowResultBP                     Result;                                            // 0x0008(0x0040)(Parm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLoginFlowResultBP                     Result;                                            // 0x0008(0x0038)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineExternalUISubsystem_LoginFlowComplete) == 0x000008, "Wrong alignment on OnlineExternalUISubsystem_LoginFlowComplete");
-static_assert(sizeof(OnlineExternalUISubsystem_LoginFlowComplete) == 0x000048, "Wrong size on OnlineExternalUISubsystem_LoginFlowComplete");
+static_assert(sizeof(OnlineExternalUISubsystem_LoginFlowComplete) == 0x000040, "Wrong size on OnlineExternalUISubsystem_LoginFlowComplete");
 static_assert(offsetof(OnlineExternalUISubsystem_LoginFlowComplete, RequestID) == 0x000000, "Member 'OnlineExternalUISubsystem_LoginFlowComplete::RequestID' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystem_LoginFlowComplete, Result) == 0x000008, "Member 'OnlineExternalUISubsystem_LoginFlowComplete::Result' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystem.NotifyLoginRedirectURL
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct OnlineExternalUISubsystem_NotifyLoginRedirectURL final
 {
 public:
 	int32                                         RequestID;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CDC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 URL;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLoginFlowResultBP                     ReturnValue;                                       // 0x0018(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FLoginFlowResultBP                     ReturnValue;                                       // 0x0018(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineExternalUISubsystem_NotifyLoginRedirectURL) == 0x000008, "Wrong alignment on OnlineExternalUISubsystem_NotifyLoginRedirectURL");
-static_assert(sizeof(OnlineExternalUISubsystem_NotifyLoginRedirectURL) == 0x000058, "Wrong size on OnlineExternalUISubsystem_NotifyLoginRedirectURL");
+static_assert(sizeof(OnlineExternalUISubsystem_NotifyLoginRedirectURL) == 0x000050, "Wrong size on OnlineExternalUISubsystem_NotifyLoginRedirectURL");
 static_assert(offsetof(OnlineExternalUISubsystem_NotifyLoginRedirectURL, RequestID) == 0x000000, "Member 'OnlineExternalUISubsystem_NotifyLoginRedirectURL::RequestID' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystem_NotifyLoginRedirectURL, URL) == 0x000008, "Member 'OnlineExternalUISubsystem_NotifyLoginRedirectURL::URL' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystem_NotifyLoginRedirectURL, ReturnValue) == 0x000018, "Member 'OnlineExternalUISubsystem_NotifyLoginRedirectURL::ReturnValue' has a wrong offset!");
@@ -583,7 +774,7 @@ struct OnlineExternalUISubsystem_ShowAccountUpgradeUI final
 public:
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CDD[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineExternalUISubsystem_ShowAccountUpgradeUI) == 0x000008, "Wrong alignment on OnlineExternalUISubsystem_ShowAccountUpgradeUI");
 static_assert(sizeof(OnlineExternalUISubsystem_ShowAccountUpgradeUI) == 0x000038, "Wrong size on OnlineExternalUISubsystem_ShowAccountUpgradeUI");
@@ -597,7 +788,7 @@ struct OnlineExternalUISubsystem_ShowAchievementsUI final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CDE[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineExternalUISubsystem_ShowAchievementsUI) == 0x000004, "Wrong alignment on OnlineExternalUISubsystem_ShowAchievementsUI");
 static_assert(sizeof(OnlineExternalUISubsystem_ShowAchievementsUI) == 0x000008, "Wrong size on OnlineExternalUISubsystem_ShowAchievementsUI");
@@ -611,7 +802,7 @@ struct OnlineExternalUISubsystem_ShowFriendsUI final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CDF[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineExternalUISubsystem_ShowFriendsUI) == 0x000004, "Wrong alignment on OnlineExternalUISubsystem_ShowFriendsUI");
 static_assert(sizeof(OnlineExternalUISubsystem_ShowFriendsUI) == 0x000008, "Wrong size on OnlineExternalUISubsystem_ShowFriendsUI");
@@ -626,7 +817,7 @@ public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SessionName;                                       // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CE0[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineExternalUISubsystem_ShowInviteUI) == 0x000004, "Wrong alignment on OnlineExternalUISubsystem_ShowInviteUI");
 static_assert(sizeof(OnlineExternalUISubsystem_ShowInviteUI) == 0x000010, "Wrong size on OnlineExternalUISubsystem_ShowInviteUI");
@@ -641,7 +832,7 @@ struct OnlineExternalUISubsystem_ShowLeaderBoardUI final
 public:
 	class FString                                 LeaderboardName;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CE1[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineExternalUISubsystem_ShowLeaderBoardUI) == 0x000008, "Wrong alignment on OnlineExternalUISubsystem_ShowLeaderBoardUI");
 static_assert(sizeof(OnlineExternalUISubsystem_ShowLeaderBoardUI) == 0x000018, "Wrong size on OnlineExternalUISubsystem_ShowLeaderBoardUI");
@@ -656,7 +847,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPlatformMessageType_                         MessageType;                                       // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CE2[0x6];                                     // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineExternalUISubsystem_ShowPlatformMessageBox) == 0x000008, "Wrong alignment on OnlineExternalUISubsystem_ShowPlatformMessageBox");
 static_assert(sizeof(OnlineExternalUISubsystem_ShowPlatformMessageBox) == 0x000038, "Wrong size on OnlineExternalUISubsystem_ShowPlatformMessageBox");
@@ -673,7 +864,7 @@ public:
 	int32                                         ControllerIndex;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowOnlineOnly;                                   // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowSkipButton;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CE4[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineExternalUISubsystemShowLoginUI*  ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineExternalUISubsystemShowLoginUI_ShowLoginUI) == 0x000008, "Wrong alignment on OnlineExternalUISubsystemShowLoginUI_ShowLoginUI");
@@ -684,6 +875,21 @@ static_assert(offsetof(OnlineExternalUISubsystemShowLoginUI_ShowLoginUI, bShowOn
 static_assert(offsetof(OnlineExternalUISubsystemShowLoginUI_ShowLoginUI, bShowSkipButton) == 0x00000D, "Member 'OnlineExternalUISubsystemShowLoginUI_ShowLoginUI::bShowSkipButton' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowLoginUI_ShowLoginUI, ReturnValue) == 0x000010, "Member 'OnlineExternalUISubsystemShowLoginUI_ShowLoginUI::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles.EnumerateUserFiles
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles final
+{
+public:
+	class UOnlineUserCloudSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineUserCloudSubsystemEnumerateUserFiles* ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles");
+static_assert(sizeof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles) == 0x000040, "Wrong size on OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles");
+static_assert(offsetof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles, Subsystem) == 0x000000, "Member 'OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles, UserId) == 0x000008, "Member 'OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles, ReturnValue) == 0x000038, "Member 'OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowAccountCreationUI.ShowAccountCreationUI
 // 0x0018 (0x0018 - 0x0000)
 struct OnlineExternalUISubsystemShowAccountCreationUI_ShowAccountCreationUI final
@@ -691,7 +897,7 @@ struct OnlineExternalUISubsystemShowAccountCreationUI_ShowAccountCreationUI fina
 public:
 	class UOnlineExternalUISubsystem*             Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ControllerIndex;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CE6[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineExternalUISubsystemShowAccountCreationUI* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineExternalUISubsystemShowAccountCreationUI_ShowAccountCreationUI) == 0x000008, "Wrong alignment on OnlineExternalUISubsystemShowAccountCreationUI_ShowAccountCreationUI");
@@ -717,6 +923,21 @@ static_assert(offsetof(OnlineExternalUISubsystemShowWebURL_ShowWebURL, URL) == 0
 static_assert(offsetof(OnlineExternalUISubsystemShowWebURL_ShowWebURL, ShowParams) == 0x000018, "Member 'OnlineExternalUISubsystemShowWebURL_ShowWebURL::ShowParams' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowWebURL_ShowWebURL, ReturnValue) == 0x000050, "Member 'OnlineExternalUISubsystemShowWebURL_ShowWebURL::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystemReadFile.ReadFile
+// 0x0020 (0x0020 - 0x0000)
+struct OnlineTitleFileSubsystemReadFile_ReadFile final
+{
+public:
+	class UOnlineTitleFileSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineTitleFileSubsystemReadFile*      ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineTitleFileSubsystemReadFile_ReadFile) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystemReadFile_ReadFile");
+static_assert(sizeof(OnlineTitleFileSubsystemReadFile_ReadFile) == 0x000020, "Wrong size on OnlineTitleFileSubsystemReadFile_ReadFile");
+static_assert(offsetof(OnlineTitleFileSubsystemReadFile_ReadFile, Subsystem) == 0x000000, "Member 'OnlineTitleFileSubsystemReadFile_ReadFile::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineTitleFileSubsystemReadFile_ReadFile, Filename) == 0x000008, "Member 'OnlineTitleFileSubsystemReadFile_ReadFile::Filename' has a wrong offset!");
+static_assert(offsetof(OnlineTitleFileSubsystemReadFile_ReadFile, ReturnValue) == 0x000018, "Member 'OnlineTitleFileSubsystemReadFile_ReadFile::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowProfileUI.ShowProfileUI
 // 0x0070 (0x0070 - 0x0000)
 struct OnlineExternalUISubsystemShowProfileUI_ShowProfileUI final
@@ -741,7 +962,7 @@ struct OnlineExternalUISubsystemShowStoreUI_ShowStoreUI final
 public:
 	class UOnlineExternalUISubsystem*             Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CE8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FShowStoreParameters                   ShowParams;                                        // 0x0010(0x0028)(Parm, NativeAccessSpecifierPublic)
 	class UOnlineExternalUISubsystemShowStoreUI*  ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -753,42 +974,55 @@ static_assert(offsetof(OnlineExternalUISubsystemShowStoreUI_ShowStoreUI, ShowPar
 static_assert(offsetof(OnlineExternalUISubsystemShowStoreUI_ShowStoreUI, ReturnValue) == 0x000038, "Member 'OnlineExternalUISubsystemShowStoreUI_ShowStoreUI::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowSendMessageUI.ShowSendMessageUI
-// 0x0108 (0x0108 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI final
 {
 public:
 	class UOnlineExternalUISubsystem*             Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CEA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FShowSendMessageParameters             ShowParams;                                        // 0x0010(0x00F0)(Parm, NativeAccessSpecifierPublic)
-	class UOnlineExternalUISubsystemShowSendMessageUI* ReturnValue;                                       // 0x0100(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FShowSendMessageParameters             ShowParams;                                        // 0x0010(0x00D8)(Parm, NativeAccessSpecifierPublic)
+	class UOnlineExternalUISubsystemShowSendMessageUI* ReturnValue;                                       // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI) == 0x000008, "Wrong alignment on OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI");
-static_assert(sizeof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI) == 0x000108, "Wrong size on OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI");
+static_assert(sizeof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI) == 0x0000F0, "Wrong size on OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI, Subsystem) == 0x000000, "Member 'OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI, LocalUserNum) == 0x000008, "Member 'OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI::LocalUserNum' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI, ShowParams) == 0x000010, "Member 'OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI::ShowParams' has a wrong offset!");
-static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI, ReturnValue) == 0x000100, "Member 'OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI::ReturnValue' has a wrong offset!");
+static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI, ReturnValue) == 0x0000E8, "Member 'OnlineExternalUISubsystemShowSendMessageUI_ShowSendMessageUI::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowSendMessageToUserUI.ShowSendMessageToUserUI
-// 0x0138 (0x0138 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI final
 {
 public:
 	class UOnlineExternalUISubsystem*             Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CEC[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       Recipient;                                         // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FShowSendMessageParameters             ShowParams;                                        // 0x0040(0x00F0)(Parm, NativeAccessSpecifierPublic)
-	class UOnlineExternalUISubsystemShowSendMessageToUserUI* ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FShowSendMessageParameters             ShowParams;                                        // 0x0040(0x00D8)(Parm, NativeAccessSpecifierPublic)
+	class UOnlineExternalUISubsystemShowSendMessageToUserUI* ReturnValue;                                       // 0x0118(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI) == 0x000008, "Wrong alignment on OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI");
-static_assert(sizeof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI) == 0x000138, "Wrong size on OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI");
+static_assert(sizeof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI) == 0x000120, "Wrong size on OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI, Subsystem) == 0x000000, "Member 'OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI, LocalUserNum) == 0x000008, "Member 'OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI::LocalUserNum' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI, Recipient) == 0x000010, "Member 'OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI::Recipient' has a wrong offset!");
 static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI, ShowParams) == 0x000040, "Member 'OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI::ShowParams' has a wrong offset!");
-static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI, ReturnValue) == 0x000130, "Member 'OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI::ReturnValue' has a wrong offset!");
+static_assert(offsetof(OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI, ReturnValue) == 0x000118, "Member 'OnlineExternalUISubsystemShowSendMessageToUserUI_ShowSendMessageToUserUI::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemDisconnect.Disconnect
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineVoiceChatSubsystemDisconnect_Disconnect final
+{
+public:
+	class UOnlineVoiceChatSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineVoiceChatSubsystemDisconnect*    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystemDisconnect_Disconnect) == 0x000008, "Wrong alignment on OnlineVoiceChatSubsystemDisconnect_Disconnect");
+static_assert(sizeof(OnlineVoiceChatSubsystemDisconnect_Disconnect) == 0x000010, "Wrong size on OnlineVoiceChatSubsystemDisconnect_Disconnect");
+static_assert(offsetof(OnlineVoiceChatSubsystemDisconnect_Disconnect, Subsystem) == 0x000000, "Member 'OnlineVoiceChatSubsystemDisconnect_Disconnect::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineVoiceChatSubsystemDisconnect_Disconnect, ReturnValue) == 0x000008, "Member 'OnlineVoiceChatSubsystemDisconnect_Disconnect::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystem.GetBlockedPlayers
 // 0x0048 (0x0048 - 0x0000)
@@ -798,7 +1032,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UOnlineUserRef*>                 OutBlockedPlayers;                                 // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CEE[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineFriendsSubsystem_GetBlockedPlayers) == 0x000008, "Wrong alignment on OnlineFriendsSubsystem_GetBlockedPlayers");
 static_assert(sizeof(OnlineFriendsSubsystem_GetBlockedPlayers) == 0x000048, "Wrong size on OnlineFriendsSubsystem_GetBlockedPlayers");
@@ -812,7 +1046,7 @@ struct OnlineFriendsSubsystem_GetFriend final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CEF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendRef*                       ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -832,7 +1066,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FOnlineFriendSettingsSourceDataConfig> OutSettings;                                       // 0x0030(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF0[0x7];                                     // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineFriendsSubsystem_GetFriendSettings) == 0x000008, "Wrong alignment on OnlineFriendsSubsystem_GetFriendSettings");
 static_assert(sizeof(OnlineFriendsSubsystem_GetFriendSettings) == 0x000088, "Wrong size on OnlineFriendsSubsystem_GetFriendSettings");
@@ -846,11 +1080,11 @@ struct OnlineFriendsSubsystem_GetFriendsList final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ListName;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UOnlineFriendRef*>               OutFriends;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF2[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineFriendsSubsystem_GetFriendsList) == 0x000008, "Wrong alignment on OnlineFriendsSubsystem_GetFriendsList");
 static_assert(sizeof(OnlineFriendsSubsystem_GetFriendsList) == 0x000030, "Wrong size on OnlineFriendsSubsystem_GetFriendsList");
@@ -865,15 +1099,15 @@ struct OnlineFriendsSubsystem_GetRecentPlayers final
 {
 public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Namespace;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NameSpace;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UOnlineRecentPlayerRef*>         OutRecentPlayers;                                  // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF3[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineFriendsSubsystem_GetRecentPlayers) == 0x000008, "Wrong alignment on OnlineFriendsSubsystem_GetRecentPlayers");
 static_assert(sizeof(OnlineFriendsSubsystem_GetRecentPlayers) == 0x000058, "Wrong size on OnlineFriendsSubsystem_GetRecentPlayers");
 static_assert(offsetof(OnlineFriendsSubsystem_GetRecentPlayers, UserId) == 0x000000, "Member 'OnlineFriendsSubsystem_GetRecentPlayers::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineFriendsSubsystem_GetRecentPlayers, Namespace) == 0x000030, "Member 'OnlineFriendsSubsystem_GetRecentPlayers::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlineFriendsSubsystem_GetRecentPlayers, NameSpace) == 0x000030, "Member 'OnlineFriendsSubsystem_GetRecentPlayers::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystem_GetRecentPlayers, OutRecentPlayers) == 0x000040, "Member 'OnlineFriendsSubsystem_GetRecentPlayers::OutRecentPlayers' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystem_GetRecentPlayers, ReturnValue) == 0x000050, "Member 'OnlineFriendsSubsystem_GetRecentPlayers::ReturnValue' has a wrong offset!");
 
@@ -883,11 +1117,11 @@ struct OnlineFriendsSubsystem_IsFriend final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF5[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineFriendsSubsystem_IsFriend) == 0x000008, "Wrong alignment on OnlineFriendsSubsystem_IsFriend");
 static_assert(sizeof(OnlineFriendsSubsystem_IsFriend) == 0x000050, "Wrong size on OnlineFriendsSubsystem_IsFriend");
@@ -914,7 +1148,7 @@ struct OnlineFriendsSubsystemReadFriendsList_ReadFriendsList final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF7[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ListName;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemReadFriendsList* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -932,7 +1166,7 @@ struct OnlineFriendsSubsystemDeleteFriendsList_DeleteFriendsList final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CF9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ListName;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemDeleteFriendsList* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -950,7 +1184,7 @@ struct OnlineFriendsSubsystemSendInvite_SendInvite final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CFB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemSendInvite*      ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -970,7 +1204,7 @@ struct OnlineFriendsSubsystemAcceptInvite_AcceptInvite final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CFD[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemAcceptInvite*    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -990,7 +1224,7 @@ struct OnlineFriendsSubsystemRejectInvite_RejectInvite final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D00[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemRejectInvite*    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1003,6 +1237,83 @@ static_assert(offsetof(OnlineFriendsSubsystemRejectInvite_RejectInvite, FriendId
 static_assert(offsetof(OnlineFriendsSubsystemRejectInvite_RejectInvite, ListName) == 0x000040, "Member 'OnlineFriendsSubsystemRejectInvite_RejectInvite::ListName' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemRejectInvite_RejectInvite, ReturnValue) == 0x000050, "Member 'OnlineFriendsSubsystemRejectInvite_RejectInvite::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.CreateUser
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineVoiceChatSubsystem_CreateUser final
+{
+public:
+	class UVoiceChatUser*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_CreateUser) == 0x000008, "Wrong alignment on OnlineVoiceChatSubsystem_CreateUser");
+static_assert(sizeof(OnlineVoiceChatSubsystem_CreateUser) == 0x000008, "Wrong size on OnlineVoiceChatSubsystem_CreateUser");
+static_assert(offsetof(OnlineVoiceChatSubsystem_CreateUser, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_CreateUser::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Initialize_
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineVoiceChatSubsystem_Initialize_ final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_Initialize_) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_Initialize_");
+static_assert(sizeof(OnlineVoiceChatSubsystem_Initialize_) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_Initialize_");
+static_assert(offsetof(OnlineVoiceChatSubsystem_Initialize_, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_Initialize_::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnected
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineVoiceChatSubsystem_IsConnected final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_IsConnected) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsConnected");
+static_assert(sizeof(OnlineVoiceChatSubsystem_IsConnected) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsConnected");
+static_assert(offsetof(OnlineVoiceChatSubsystem_IsConnected, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsConnected::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnecting
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineVoiceChatSubsystem_IsConnecting final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_IsConnecting) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsConnecting");
+static_assert(sizeof(OnlineVoiceChatSubsystem_IsConnecting) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsConnecting");
+static_assert(offsetof(OnlineVoiceChatSubsystem_IsConnecting, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsConnecting::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsInitialized
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineVoiceChatSubsystem_IsInitialized final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_IsInitialized) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsInitialized");
+static_assert(sizeof(OnlineVoiceChatSubsystem_IsInitialized) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsInitialized");
+static_assert(offsetof(OnlineVoiceChatSubsystem_IsInitialized, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsInitialized::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineVoiceChatSubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineVoiceChatSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineVoiceChatSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Uninitialize_
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineVoiceChatSubsystem_Uninitialize_ final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceChatSubsystem_Uninitialize_) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_Uninitialize_");
+static_assert(sizeof(OnlineVoiceChatSubsystem_Uninitialize_) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_Uninitialize_");
+static_assert(offsetof(OnlineVoiceChatSubsystem_Uninitialize_, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_Uninitialize_::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemSetFriendAlias.SetFriendAlias
 // 0x0068 (0x0068 - 0x0000)
 struct OnlineFriendsSubsystemSetFriendAlias_SetFriendAlias final
@@ -1010,7 +1321,7 @@ struct OnlineFriendsSubsystemSetFriendAlias_SetFriendAlias final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D02[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Alias;                                             // 0x0050(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1032,7 +1343,7 @@ struct OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D04[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemDeleteFriendAlias* ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1045,6 +1356,110 @@ static_assert(offsetof(OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias
 static_assert(offsetof(OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias, ListName) == 0x000040, "Member 'OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias::ListName' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias, ReturnValue) == 0x000050, "Member 'OnlineFriendsSubsystemDeleteFriendAlias_DeleteFriendAlias::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetColumns
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineLeaderboardRead_SetColumns final
+{
+public:
+	TArray<struct FColumnMetaDataBP>              InColumns;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_SetColumns) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_SetColumns");
+static_assert(sizeof(OnlineLeaderboardRead_SetColumns) == 0x000010, "Wrong size on OnlineLeaderboardRead_SetColumns");
+static_assert(offsetof(OnlineLeaderboardRead_SetColumns, InColumns) == 0x000000, "Member 'OnlineLeaderboardRead_SetColumns::InColumns' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetLeaderboardName
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineLeaderboardRead_SetLeaderboardName final
+{
+public:
+	class FName                                   LeaderboardName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_SetLeaderboardName) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_SetLeaderboardName");
+static_assert(sizeof(OnlineLeaderboardRead_SetLeaderboardName) == 0x000008, "Wrong size on OnlineLeaderboardRead_SetLeaderboardName");
+static_assert(offsetof(OnlineLeaderboardRead_SetLeaderboardName, LeaderboardName) == 0x000000, "Member 'OnlineLeaderboardRead_SetLeaderboardName::LeaderboardName' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetSortedColumn
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineLeaderboardRead_SetSortedColumn final
+{
+public:
+	class FName                                   SortedColumn;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_SetSortedColumn) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_SetSortedColumn");
+static_assert(sizeof(OnlineLeaderboardRead_SetSortedColumn) == 0x000008, "Wrong size on OnlineLeaderboardRead_SetSortedColumn");
+static_assert(offsetof(OnlineLeaderboardRead_SetSortedColumn, SortedColumn) == 0x000000, "Member 'OnlineLeaderboardRead_SetSortedColumn::SortedColumn' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.FindPlayerRecord
+// 0x00D0 (0x00D0 - 0x0000)
+struct OnlineLeaderboardRead_FindPlayerRecord final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutFound;                                          // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineStatsRowBP                      ReturnValue;                                       // 0x0038(0x0098)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_FindPlayerRecord) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_FindPlayerRecord");
+static_assert(sizeof(OnlineLeaderboardRead_FindPlayerRecord) == 0x0000D0, "Wrong size on OnlineLeaderboardRead_FindPlayerRecord");
+static_assert(offsetof(OnlineLeaderboardRead_FindPlayerRecord, UserId) == 0x000000, "Member 'OnlineLeaderboardRead_FindPlayerRecord::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardRead_FindPlayerRecord, OutFound) == 0x000030, "Member 'OnlineLeaderboardRead_FindPlayerRecord::OutFound' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardRead_FindPlayerRecord, ReturnValue) == 0x000038, "Member 'OnlineLeaderboardRead_FindPlayerRecord::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetColumns
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineLeaderboardRead_GetColumns final
+{
+public:
+	TArray<struct FColumnMetaDataBP>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_GetColumns) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_GetColumns");
+static_assert(sizeof(OnlineLeaderboardRead_GetColumns) == 0x000010, "Wrong size on OnlineLeaderboardRead_GetColumns");
+static_assert(offsetof(OnlineLeaderboardRead_GetColumns, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetColumns::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetLeaderboardName
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineLeaderboardRead_GetLeaderboardName final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_GetLeaderboardName) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_GetLeaderboardName");
+static_assert(sizeof(OnlineLeaderboardRead_GetLeaderboardName) == 0x000008, "Wrong size on OnlineLeaderboardRead_GetLeaderboardName");
+static_assert(offsetof(OnlineLeaderboardRead_GetLeaderboardName, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetLeaderboardName::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetReadState
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineLeaderboardRead_GetReadState final
+{
+public:
+	EOnlineAsyncTaskState_                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_GetReadState) == 0x000001, "Wrong alignment on OnlineLeaderboardRead_GetReadState");
+static_assert(sizeof(OnlineLeaderboardRead_GetReadState) == 0x000001, "Wrong size on OnlineLeaderboardRead_GetReadState");
+static_assert(offsetof(OnlineLeaderboardRead_GetReadState, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetReadState::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetRows
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineLeaderboardRead_GetRows final
+{
+public:
+	TArray<struct FOnlineStatsRowBP>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_GetRows) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_GetRows");
+static_assert(sizeof(OnlineLeaderboardRead_GetRows) == 0x000010, "Wrong size on OnlineLeaderboardRead_GetRows");
+static_assert(offsetof(OnlineLeaderboardRead_GetRows, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetRows::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetSortedColumn
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineLeaderboardRead_GetSortedColumn final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardRead_GetSortedColumn) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_GetSortedColumn");
+static_assert(sizeof(OnlineLeaderboardRead_GetSortedColumn) == 0x000008, "Wrong size on OnlineLeaderboardRead_GetSortedColumn");
+static_assert(offsetof(OnlineLeaderboardRead_GetSortedColumn, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetSortedColumn::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemDeleteFriend.DeleteFriend
 // 0x0058 (0x0058 - 0x0000)
 struct OnlineFriendsSubsystemDeleteFriend_DeleteFriend final
@@ -1052,7 +1467,7 @@ struct OnlineFriendsSubsystemDeleteFriend_DeleteFriend final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D07[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ListName;                                          // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemDeleteFriend*    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1084,6 +1499,19 @@ static_assert(offsetof(OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers, 
 static_assert(offsetof(OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers, ListName) == 0x000048, "Member 'OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers::ListName' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers, ReturnValue) == 0x000058, "Member 'OnlineFriendsSubsystemAddRecentPlayers_AddRecentPlayers::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineAchievementsWrite.SetAchievementProgress
+// 0x000C (0x000C - 0x0000)
+struct OnlineAchievementsWrite_SetAchievementProgress final
+{
+public:
+	class FName                                   AchievementID;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AchievementProgress;                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineAchievementsWrite_SetAchievementProgress) == 0x000004, "Wrong alignment on OnlineAchievementsWrite_SetAchievementProgress");
+static_assert(sizeof(OnlineAchievementsWrite_SetAchievementProgress) == 0x00000C, "Wrong size on OnlineAchievementsWrite_SetAchievementProgress");
+static_assert(offsetof(OnlineAchievementsWrite_SetAchievementProgress, AchievementID) == 0x000000, "Member 'OnlineAchievementsWrite_SetAchievementProgress::AchievementID' has a wrong offset!");
+static_assert(offsetof(OnlineAchievementsWrite_SetAchievementProgress, AchievementProgress) == 0x000008, "Member 'OnlineAchievementsWrite_SetAchievementProgress::AchievementProgress' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryRecentPlayers.QueryRecentPlayers
 // 0x0050 (0x0050 - 0x0000)
 struct OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers final
@@ -1091,14 +1519,14 @@ struct OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Namespace;                                         // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NameSpace;                                         // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemQueryRecentPlayers* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers) == 0x000008, "Wrong alignment on OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers");
 static_assert(sizeof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers) == 0x000050, "Wrong size on OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers");
 static_assert(offsetof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers, Subsystem) == 0x000000, "Member 'OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers, UserId) == 0x000008, "Member 'OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers, Namespace) == 0x000038, "Member 'OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers, NameSpace) == 0x000038, "Member 'OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers, ReturnValue) == 0x000048, "Member 'OnlineFriendsSubsystemQueryRecentPlayers_QueryRecentPlayers::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemBlockPlayer.BlockPlayer
@@ -1108,7 +1536,7 @@ struct OnlineFriendsSubsystemBlockPlayer_BlockPlayer final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D0B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemBlockPlayer*     ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1119,6 +1547,25 @@ static_assert(offsetof(OnlineFriendsSubsystemBlockPlayer_BlockPlayer, LocalUserN
 static_assert(offsetof(OnlineFriendsSubsystemBlockPlayer_BlockPlayer, PlayerId) == 0x000010, "Member 'OnlineFriendsSubsystemBlockPlayer_BlockPlayer::PlayerId' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemBlockPlayer_BlockPlayer, ReturnValue) == 0x000040, "Member 'OnlineFriendsSubsystemBlockPlayer_BlockPlayer::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemKickParticipant.KickParticipant
+// 0x0080 (0x0080 - 0x0000)
+struct OnlineVoiceAdminSubsystemKickParticipant_KickParticipant final
+{
+public:
+	class UOnlineVoiceAdminSubsystem*             Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ChannelName;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       TargetUserId;                                      // 0x0048(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineVoiceAdminSubsystemKickParticipant* ReturnValue;                                       // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant) == 0x000008, "Wrong alignment on OnlineVoiceAdminSubsystemKickParticipant_KickParticipant");
+static_assert(sizeof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant) == 0x000080, "Wrong size on OnlineVoiceAdminSubsystemKickParticipant_KickParticipant");
+static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, Subsystem) == 0x000000, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, LocalUserId) == 0x000008, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, ChannelName) == 0x000038, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::ChannelName' has a wrong offset!");
+static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, TargetUserId) == 0x000048, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::TargetUserId' has a wrong offset!");
+static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, ReturnValue) == 0x000078, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemUnblockPlayer.UnblockPlayer
 // 0x0048 (0x0048 - 0x0000)
 struct OnlineFriendsSubsystemUnblockPlayer_UnblockPlayer final
@@ -1126,7 +1573,7 @@ struct OnlineFriendsSubsystemUnblockPlayer_UnblockPlayer final
 public:
 	class UOnlineFriendsSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D0E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystemUnblockPlayer*   ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1181,7 +1628,7 @@ struct OnlineUserRef_GetUserAttribute final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Found;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D11[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineUserRef_GetUserAttribute) == 0x000008, "Wrong alignment on OnlineUserRef_GetUserAttribute");
@@ -1209,24 +1656,13 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Success;                                           // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D12[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineUserRef_SetUserLocalAttribute) == 0x000008, "Wrong alignment on OnlineUserRef_SetUserLocalAttribute");
 static_assert(sizeof(OnlineUserRef_SetUserLocalAttribute) == 0x000028, "Wrong size on OnlineUserRef_SetUserLocalAttribute");
 static_assert(offsetof(OnlineUserRef_SetUserLocalAttribute, Key) == 0x000000, "Member 'OnlineUserRef_SetUserLocalAttribute::Key' has a wrong offset!");
 static_assert(offsetof(OnlineUserRef_SetUserLocalAttribute, Value) == 0x000010, "Member 'OnlineUserRef_SetUserLocalAttribute::Value' has a wrong offset!");
 static_assert(offsetof(OnlineUserRef_SetUserLocalAttribute, Success) == 0x000020, "Member 'OnlineUserRef_SetUserLocalAttribute::Success' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineRecentPlayerRef.GetLastSeen
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineRecentPlayerRef_GetLastSeen final
-{
-public:
-	struct FDateTime                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineRecentPlayerRef_GetLastSeen) == 0x000008, "Wrong alignment on OnlineRecentPlayerRef_GetLastSeen");
-static_assert(sizeof(OnlineRecentPlayerRef_GetLastSeen) == 0x000008, "Wrong size on OnlineRecentPlayerRef_GetLastSeen");
-static_assert(offsetof(OnlineRecentPlayerRef_GetLastSeen, ReturnValue) == 0x000000, "Member 'OnlineRecentPlayerRef_GetLastSeen::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryFriendSettings.QueryFriendSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -1252,7 +1688,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Source;                                            // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bNeverShowAgain;                                   // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D15[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineFriendsSubsystemSetFriendSettings* ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings) == 0x000008, "Wrong alignment on OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings");
@@ -1262,6 +1698,39 @@ static_assert(offsetof(OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings
 static_assert(offsetof(OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings, Source) == 0x000038, "Member 'OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings::Source' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings, bNeverShowAgain) == 0x000048, "Member 'OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings::bNeverShowAgain' has a wrong offset!");
 static_assert(offsetof(OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings, ReturnValue) == 0x000050, "Member 'OnlineFriendsSubsystemSetFriendSettings_SetFriendSettings::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.Party.GetLeaderId
+// 0x0030 (0x0030 - 0x0000)
+struct Party_GetLeaderId final
+{
+public:
+	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(Party_GetLeaderId) == 0x000008, "Wrong alignment on Party_GetLeaderId");
+static_assert(sizeof(Party_GetLeaderId) == 0x000030, "Wrong size on Party_GetLeaderId");
+static_assert(offsetof(Party_GetLeaderId, ReturnValue) == 0x000000, "Member 'Party_GetLeaderId::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.Party.GetPartyId
+// 0x0008 (0x0008 - 0x0000)
+struct Party_GetPartyId final
+{
+public:
+	class UPartyId*                               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(Party_GetPartyId) == 0x000008, "Wrong alignment on Party_GetPartyId");
+static_assert(sizeof(Party_GetPartyId) == 0x000008, "Wrong size on Party_GetPartyId");
+static_assert(offsetof(Party_GetPartyId, ReturnValue) == 0x000000, "Member 'Party_GetPartyId::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.Party.GetPartyTypeId
+// 0x0008 (0x0008 - 0x0000)
+struct Party_GetPartyTypeId final
+{
+public:
+	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(Party_GetPartyTypeId) == 0x000008, "Wrong alignment on Party_GetPartyTypeId");
+static_assert(sizeof(Party_GetPartyTypeId) == 0x000008, "Wrong size on Party_GetPartyTypeId");
+static_assert(offsetof(Party_GetPartyTypeId, ReturnValue) == 0x000000, "Member 'Party_GetPartyTypeId::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystem.IsSubsystemAvailable
 // 0x0001 (0x0001 - 0x0000)
@@ -1306,6 +1775,17 @@ static_assert(offsetof(OnlineGameActivitySubsystemStartActivity_StartActivity, A
 static_assert(offsetof(OnlineGameActivitySubsystemStartActivity_StartActivity, Params_0) == 0x000048, "Member 'OnlineGameActivitySubsystemStartActivity_StartActivity::Params_0' has a wrong offset!");
 static_assert(offsetof(OnlineGameActivitySubsystemStartActivity_StartActivity, ReturnValue) == 0x000098, "Member 'OnlineGameActivitySubsystemStartActivity_StartActivity::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.LobbyId.ToDebugString
+// 0x0010 (0x0010 - 0x0000)
+struct LobbyId_ToDebugString final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LobbyId_ToDebugString) == 0x000008, "Wrong alignment on LobbyId_ToDebugString");
+static_assert(sizeof(LobbyId_ToDebugString) == 0x000010, "Wrong size on LobbyId_ToDebugString");
+static_assert(offsetof(LobbyId_ToDebugString, ReturnValue) == 0x000000, "Member 'LobbyId_ToDebugString::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemEndActivity.EndActivity
 // 0x00A8 (0x00A8 - 0x0000)
 struct OnlineGameActivitySubsystemEndActivity_EndActivity final
@@ -1315,7 +1795,7 @@ public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ActivityId;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOnlineActivityOutcome_                       ActivityOutcome;                                   // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D18[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, struct FVariantDataBP>    Params_0;                                          // 0x0050(0x0050)(Parm, NativeAccessSpecifierPublic)
 	class UOnlineGameActivitySubsystemEndActivity* ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1342,6 +1822,227 @@ static_assert(sizeof(OnlineGameActivitySubsystemResetAllActiveActivities_ResetAl
 static_assert(offsetof(OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities::LocalUserId' has a wrong offset!");
 static_assert(offsetof(OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities, ReturnValue) == 0x000038, "Member 'OnlineGameActivitySubsystemResetAllActiveActivities_ResetAllActiveActivities::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnCreateAccountFlowUIRequired
+// 0x0020 (0x0020 - 0x0000)
+struct ExternalUIFlowHandler_OnCreateAccountFlowUIRequired final
+{
+public:
+	class FString                                 RequestedURL;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineExternalUISubsystem*             ExternalUIContext;                                 // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RequestID;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired) == 0x000008, "Wrong alignment on ExternalUIFlowHandler_OnCreateAccountFlowUIRequired");
+static_assert(sizeof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired) == 0x000020, "Wrong size on ExternalUIFlowHandler_OnCreateAccountFlowUIRequired");
+static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, RequestedURL) == 0x000000, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::RequestedURL' has a wrong offset!");
+static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, ExternalUIContext) == 0x000010, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::ExternalUIContext' has a wrong offset!");
+static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, RequestID) == 0x000018, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::RequestID' has a wrong offset!");
+static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, ReturnValue) == 0x00001C, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnLoginFlowUIRequired
+// 0x0020 (0x0020 - 0x0000)
+struct ExternalUIFlowHandler_OnLoginFlowUIRequired final
+{
+public:
+	class FString                                 RequestedURL;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineExternalUISubsystem*             ExternalUIContext;                                 // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RequestID;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ExternalUIFlowHandler_OnLoginFlowUIRequired) == 0x000008, "Wrong alignment on ExternalUIFlowHandler_OnLoginFlowUIRequired");
+static_assert(sizeof(ExternalUIFlowHandler_OnLoginFlowUIRequired) == 0x000020, "Wrong size on ExternalUIFlowHandler_OnLoginFlowUIRequired");
+static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, RequestedURL) == 0x000000, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::RequestedURL' has a wrong offset!");
+static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, ExternalUIContext) == 0x000010, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::ExternalUIContext' has a wrong offset!");
+static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, RequestID) == 0x000018, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::RequestID' has a wrong offset!");
+static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, ReturnValue) == 0x00001C, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemResumeActivity.ResumeActivity
+// 0x0078 (0x0078 - 0x0000)
+struct OnlineGameActivitySubsystemResumeActivity_ResumeActivity final
+{
+public:
+	class UOnlineGameActivitySubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActivityId;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FOnlineActivityTasksToResetBP          TasksToReset;                                      // 0x0048(0x0028)(Parm, NativeAccessSpecifierPublic)
+	class UOnlineGameActivitySubsystemResumeActivity* ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity) == 0x000008, "Wrong alignment on OnlineGameActivitySubsystemResumeActivity_ResumeActivity");
+static_assert(sizeof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity) == 0x000078, "Wrong size on OnlineGameActivitySubsystemResumeActivity_ResumeActivity");
+static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, ActivityId) == 0x000038, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::ActivityId' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, TasksToReset) == 0x000048, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::TasksToReset' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, ReturnValue) == 0x000070, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityAvailability.SetActivityAvailability
+// 0x0058 (0x0058 - 0x0000)
+struct OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability final
+{
+public:
+	class UOnlineGameActivitySubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActivityId;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineGameActivitySubsystemSetActivityAvailability* ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability) == 0x000008, "Wrong alignment on OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability");
+static_assert(sizeof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability) == 0x000058, "Wrong size on OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, ActivityId) == 0x000038, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::ActivityId' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, bEnabled) == 0x000048, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::bEnabled' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, ReturnValue) == 0x000050, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineRecentPlayerRef.GetLastSeen
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineRecentPlayerRef_GetLastSeen final
+{
+public:
+	struct FDateTime                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineRecentPlayerRef_GetLastSeen) == 0x000008, "Wrong alignment on OnlineRecentPlayerRef_GetLastSeen");
+static_assert(sizeof(OnlineRecentPlayerRef_GetLastSeen) == 0x000008, "Wrong size on OnlineRecentPlayerRef_GetLastSeen");
+static_assert(offsetof(OnlineRecentPlayerRef_GetLastSeen, ReturnValue) == 0x000000, "Member 'OnlineRecentPlayerRef_GetLastSeen::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityPriority.SetActivityPriority
+// 0x0090 (0x0090 - 0x0000)
+struct OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority final
+{
+public:
+	class UOnlineGameActivitySubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, int32>                    PrioritizedActivities;                             // 0x0038(0x0050)(Parm, NativeAccessSpecifierPublic)
+	class UOnlineGameActivitySubsystemSetActivityPriority* ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority) == 0x000008, "Wrong alignment on OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority");
+static_assert(sizeof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority) == 0x000090, "Wrong size on OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, PrioritizedActivities) == 0x000038, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::PrioritizedActivities' has a wrong offset!");
+static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, ReturnValue) == 0x000088, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineGameItemStatsSubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameItemStatsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineGameItemStatsSubsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineGameItemStatsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineGameItemStatsSubsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineGameItemStatsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineGameItemStatsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSettings.GetValue
+// 0x0150 (0x0150 - 0x0000)
+struct OnlineSessionSettings_GetValue final
+{
+public:
+	struct FOnlineSessionSettingsBP               ReturnValue;                                       // 0x0000(0x0150)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineSessionSettings_GetValue) == 0x000008, "Wrong alignment on OnlineSessionSettings_GetValue");
+static_assert(sizeof(OnlineSessionSettings_GetValue) == 0x000150, "Wrong size on OnlineSessionSettings_GetValue");
+static_assert(offsetof(OnlineSessionSettings_GetValue, ReturnValue) == 0x000000, "Member 'OnlineSessionSettings_GetValue::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemUsage.ItemUsage
+// 0x0060 (0x0060 - 0x0000)
+struct OnlineGameItemStatsSubsystemItemUsage_ItemUsage final
+{
+public:
+	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemUsedBy;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ItemsUsed;                                         // 0x0048(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UOnlineGameItemStatsSubsystemItemUsage* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemUsage_ItemUsage");
+static_assert(sizeof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage) == 0x000060, "Wrong size on OnlineGameItemStatsSubsystemItemUsage_ItemUsage");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, ItemUsedBy) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::ItemUsedBy' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, ItemsUsed) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::ItemsUsed' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, ReturnValue) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemImpact.ItemImpact
+// 0x0070 (0x0070 - 0x0000)
+struct OnlineGameItemStatsSubsystemItemImpact_ItemImpact final
+{
+public:
+	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         TargetActors;                                      // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 ImpactInitiatedBy;                                 // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ItemsUsed;                                         // 0x0058(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UOnlineGameItemStatsSubsystemItemImpact* ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemImpact_ItemImpact");
+static_assert(sizeof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact) == 0x000070, "Wrong size on OnlineGameItemStatsSubsystemItemImpact_ItemImpact");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, TargetActors) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::TargetActors' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, ImpactInitiatedBy) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::ImpactInitiatedBy' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, ItemsUsed) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::ItemsUsed' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, ReturnValue) == 0x000068, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.ReadablePartyData.GetAttribute
+// 0x0040 (0x0040 - 0x0000)
+struct ReadablePartyData_GetAttribute final
+{
+public:
+	class FString                                 AttrName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutFound;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVariantDataBP                         OutAttrValue;                                      // 0x0018(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ReadablePartyData_GetAttribute) == 0x000008, "Wrong alignment on ReadablePartyData_GetAttribute");
+static_assert(sizeof(ReadablePartyData_GetAttribute) == 0x000040, "Wrong size on ReadablePartyData_GetAttribute");
+static_assert(offsetof(ReadablePartyData_GetAttribute, AttrName) == 0x000000, "Member 'ReadablePartyData_GetAttribute::AttrName' has a wrong offset!");
+static_assert(offsetof(ReadablePartyData_GetAttribute, OutFound) == 0x000010, "Member 'ReadablePartyData_GetAttribute::OutFound' has a wrong offset!");
+static_assert(offsetof(ReadablePartyData_GetAttribute, OutAttrValue) == 0x000018, "Member 'ReadablePartyData_GetAttribute::OutAttrValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemMitigation.ItemMitigation
+// 0x0070 (0x0070 - 0x0000)
+struct OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation final
+{
+public:
+	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ItemsUsed;                                         // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ImpactItemsMitigated;                              // 0x0048(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 ItemUsedBy;                                        // 0x0058(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineGameItemStatsSubsystemItemMitigation* ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation");
+static_assert(sizeof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation) == 0x000070, "Wrong size on OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ItemsUsed) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ItemsUsed' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ImpactItemsMitigated) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ImpactItemsMitigated' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ItemUsedBy) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ItemUsedBy' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ReturnValue) == 0x000068, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemAvailabilityChange.ItemAvailabilityChange
+// 0x0060 (0x0060 - 0x0000)
+struct OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange final
+{
+public:
+	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AvailableItems;                                    // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         UnavailableItems;                                  // 0x0048(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UOnlineGameItemStatsSubsystemItemAvailabilityChange* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange");
+static_assert(sizeof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange) == 0x000060, "Wrong size on OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, AvailableItems) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::AvailableItems' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, UnavailableItems) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::UnavailableItems' has a wrong offset!");
+static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, ReturnValue) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineLobbyTransaction.DeleteMetadata
 // 0x0010 (0x0010 - 0x0000)
@@ -1422,241 +2123,6 @@ static_assert(alignof(OnlineLobbyTransaction_SetPublic) == 0x000001, "Wrong alig
 static_assert(sizeof(OnlineLobbyTransaction_SetPublic) == 0x000001, "Wrong size on OnlineLobbyTransaction_SetPublic");
 static_assert(offsetof(OnlineLobbyTransaction_SetPublic, Public) == 0x000000, "Member 'OnlineLobbyTransaction_SetPublic::Public' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemResumeActivity.ResumeActivity
-// 0x0078 (0x0078 - 0x0000)
-struct OnlineGameActivitySubsystemResumeActivity_ResumeActivity final
-{
-public:
-	class UOnlineGameActivitySubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActivityId;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineActivityTasksToResetBP          TasksToReset;                                      // 0x0048(0x0028)(Parm, NativeAccessSpecifierPublic)
-	class UOnlineGameActivitySubsystemResumeActivity* ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity) == 0x000008, "Wrong alignment on OnlineGameActivitySubsystemResumeActivity_ResumeActivity");
-static_assert(sizeof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity) == 0x000078, "Wrong size on OnlineGameActivitySubsystemResumeActivity_ResumeActivity");
-static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, ActivityId) == 0x000038, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::ActivityId' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, TasksToReset) == 0x000048, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::TasksToReset' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemResumeActivity_ResumeActivity, ReturnValue) == 0x000070, "Member 'OnlineGameActivitySubsystemResumeActivity_ResumeActivity::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityAvailability.SetActivityAvailability
-// 0x0058 (0x0058 - 0x0000)
-struct OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability final
-{
-public:
-	class UOnlineGameActivitySubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActivityId;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D1B[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineGameActivitySubsystemSetActivityAvailability* ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability) == 0x000008, "Wrong alignment on OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability");
-static_assert(sizeof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability) == 0x000058, "Wrong size on OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, ActivityId) == 0x000038, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::ActivityId' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, bEnabled) == 0x000048, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::bEnabled' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability, ReturnValue) == 0x000050, "Member 'OnlineGameActivitySubsystemSetActivityAvailability_SetActivityAvailability::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetPurchaseTransactionState
-// 0x0001 (0x0001 - 0x0000)
-struct PurchaseReceipt_GetPurchaseTransactionState final
-{
-public:
-	EPurchaseTransactionState_                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PurchaseReceipt_GetPurchaseTransactionState) == 0x000001, "Wrong alignment on PurchaseReceipt_GetPurchaseTransactionState");
-static_assert(sizeof(PurchaseReceipt_GetPurchaseTransactionState) == 0x000001, "Wrong size on PurchaseReceipt_GetPurchaseTransactionState");
-static_assert(offsetof(PurchaseReceipt_GetPurchaseTransactionState, ReturnValue) == 0x000000, "Member 'PurchaseReceipt_GetPurchaseTransactionState::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetReceiptOffers
-// 0x0010 (0x0010 - 0x0000)
-struct PurchaseReceipt_GetReceiptOffers final
-{
-public:
-	TArray<struct FReceiptOfferEntryBP>           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PurchaseReceipt_GetReceiptOffers) == 0x000008, "Wrong alignment on PurchaseReceipt_GetReceiptOffers");
-static_assert(sizeof(PurchaseReceipt_GetReceiptOffers) == 0x000010, "Wrong size on PurchaseReceipt_GetReceiptOffers");
-static_assert(offsetof(PurchaseReceipt_GetReceiptOffers, ReturnValue) == 0x000000, "Member 'PurchaseReceipt_GetReceiptOffers::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetTransactionId
-// 0x0010 (0x0010 - 0x0000)
-struct PurchaseReceipt_GetTransactionId final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PurchaseReceipt_GetTransactionId) == 0x000008, "Wrong alignment on PurchaseReceipt_GetTransactionId");
-static_assert(sizeof(PurchaseReceipt_GetTransactionId) == 0x000010, "Wrong size on PurchaseReceipt_GetTransactionId");
-static_assert(offsetof(PurchaseReceipt_GetTransactionId, ReturnValue) == 0x000000, "Member 'PurchaseReceipt_GetTransactionId::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityPriority.SetActivityPriority
-// 0x0090 (0x0090 - 0x0000)
-struct OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority final
-{
-public:
-	class UOnlineGameActivitySubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, int32>                    PrioritizedActivities;                             // 0x0038(0x0050)(Parm, NativeAccessSpecifierPublic)
-	class UOnlineGameActivitySubsystemSetActivityPriority* ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority) == 0x000008, "Wrong alignment on OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority");
-static_assert(sizeof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority) == 0x000090, "Wrong size on OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, Subsystem) == 0x000000, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, LocalUserId) == 0x000008, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, PrioritizedActivities) == 0x000038, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::PrioritizedActivities' has a wrong offset!");
-static_assert(offsetof(OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority, ReturnValue) == 0x000088, "Member 'OnlineGameActivitySubsystemSetActivityPriority_SetActivityPriority::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineGameItemStatsSubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameItemStatsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineGameItemStatsSubsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineGameItemStatsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineGameItemStatsSubsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineGameItemStatsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineGameItemStatsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.Party.GetLeaderId
-// 0x0030 (0x0030 - 0x0000)
-struct Party_GetLeaderId final
-{
-public:
-	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(Party_GetLeaderId) == 0x000008, "Wrong alignment on Party_GetLeaderId");
-static_assert(sizeof(Party_GetLeaderId) == 0x000030, "Wrong size on Party_GetLeaderId");
-static_assert(offsetof(Party_GetLeaderId, ReturnValue) == 0x000000, "Member 'Party_GetLeaderId::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.Party.GetPartyId
-// 0x0008 (0x0008 - 0x0000)
-struct Party_GetPartyId final
-{
-public:
-	class UPartyId*                               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(Party_GetPartyId) == 0x000008, "Wrong alignment on Party_GetPartyId");
-static_assert(sizeof(Party_GetPartyId) == 0x000008, "Wrong size on Party_GetPartyId");
-static_assert(offsetof(Party_GetPartyId, ReturnValue) == 0x000000, "Member 'Party_GetPartyId::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.Party.GetPartyTypeId
-// 0x0008 (0x0008 - 0x0000)
-struct Party_GetPartyTypeId final
-{
-public:
-	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(Party_GetPartyTypeId) == 0x000008, "Wrong alignment on Party_GetPartyTypeId");
-static_assert(sizeof(Party_GetPartyTypeId) == 0x000008, "Wrong size on Party_GetPartyTypeId");
-static_assert(offsetof(Party_GetPartyTypeId, ReturnValue) == 0x000000, "Member 'Party_GetPartyTypeId::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemUsage.ItemUsage
-// 0x0060 (0x0060 - 0x0000)
-struct OnlineGameItemStatsSubsystemItemUsage_ItemUsage final
-{
-public:
-	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemUsedBy;                                        // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ItemsUsed;                                         // 0x0048(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UOnlineGameItemStatsSubsystemItemUsage* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemUsage_ItemUsage");
-static_assert(sizeof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage) == 0x000060, "Wrong size on OnlineGameItemStatsSubsystemItemUsage_ItemUsage");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, ItemUsedBy) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::ItemUsedBy' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, ItemsUsed) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::ItemsUsed' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemUsage_ItemUsage, ReturnValue) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemUsage_ItemUsage::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemImpact.ItemImpact
-// 0x0070 (0x0070 - 0x0000)
-struct OnlineGameItemStatsSubsystemItemImpact_ItemImpact final
-{
-public:
-	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         TargetActors;                                      // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 ImpactInitiatedBy;                                 // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ItemsUsed;                                         // 0x0058(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UOnlineGameItemStatsSubsystemItemImpact* ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemImpact_ItemImpact");
-static_assert(sizeof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact) == 0x000070, "Wrong size on OnlineGameItemStatsSubsystemItemImpact_ItemImpact");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, TargetActors) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::TargetActors' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, ImpactInitiatedBy) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::ImpactInitiatedBy' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, ItemsUsed) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::ItemsUsed' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemImpact_ItemImpact, ReturnValue) == 0x000068, "Member 'OnlineGameItemStatsSubsystemItemImpact_ItemImpact::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.LobbyId.ToDebugString
-// 0x0010 (0x0010 - 0x0000)
-struct LobbyId_ToDebugString final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LobbyId_ToDebugString) == 0x000008, "Wrong alignment on LobbyId_ToDebugString");
-static_assert(sizeof(LobbyId_ToDebugString) == 0x000010, "Wrong size on LobbyId_ToDebugString");
-static_assert(offsetof(LobbyId_ToDebugString, ReturnValue) == 0x000000, "Member 'LobbyId_ToDebugString::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemMitigation.ItemMitigation
-// 0x0070 (0x0070 - 0x0000)
-struct OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation final
-{
-public:
-	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ItemsUsed;                                         // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ImpactItemsMitigated;                              // 0x0048(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 ItemUsedBy;                                        // 0x0058(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineGameItemStatsSubsystemItemMitigation* ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation");
-static_assert(sizeof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation) == 0x000070, "Wrong size on OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ItemsUsed) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ItemsUsed' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ImpactItemsMitigated) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ImpactItemsMitigated' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ItemUsedBy) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ItemUsedBy' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation, ReturnValue) == 0x000068, "Member 'OnlineGameItemStatsSubsystemItemMitigation_ItemMitigation::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemAvailabilityChange.ItemAvailabilityChange
-// 0x0060 (0x0060 - 0x0000)
-struct OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange final
-{
-public:
-	class UOnlineGameItemStatsSubsystem*          Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AvailableItems;                                    // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         UnavailableItems;                                  // 0x0048(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UOnlineGameItemStatsSubsystemItemAvailabilityChange* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange) == 0x000008, "Wrong alignment on OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange");
-static_assert(sizeof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange) == 0x000060, "Wrong size on OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, Subsystem) == 0x000000, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, LocalUserId) == 0x000008, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, AvailableItems) == 0x000038, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::AvailableItems' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, UnavailableItems) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::UnavailableItems' has a wrong offset!");
-static_assert(offsetof(OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange, ReturnValue) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemAvailabilityChange_ItemAvailabilityChange::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.PartyId.ToDebugString
-// 0x0010 (0x0010 - 0x0000)
-struct PartyId_ToDebugString final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PartyId_ToDebugString) == 0x000008, "Wrong alignment on PartyId_ToDebugString");
-static_assert(sizeof(PartyId_ToDebugString) == 0x000010, "Wrong size on PartyId_ToDebugString");
-static_assert(offsetof(PartyId_ToDebugString, ReturnValue) == 0x000000, "Member 'PartyId_ToDebugString::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemInventoryChange.ItemInventoryChange
 // 0x0060 (0x0060 - 0x0000)
 struct OnlineGameItemStatsSubsystemItemInventoryChange_ItemInventoryChange final
@@ -1695,18 +2161,26 @@ static_assert(offsetof(OnlineGameItemStatsSubsystemItemLoadoutChange_ItemLoadout
 static_assert(offsetof(OnlineGameItemStatsSubsystemItemLoadoutChange_ItemLoadoutChange, UnequippedItems) == 0x000048, "Member 'OnlineGameItemStatsSubsystemItemLoadoutChange_ItemLoadoutChange::UnequippedItems' has a wrong offset!");
 static_assert(offsetof(OnlineGameItemStatsSubsystemItemLoadoutChange_ItemLoadoutChange, ReturnValue) == 0x000058, "Member 'OnlineGameItemStatsSubsystemItemLoadoutChange_ItemLoadoutChange::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.VoiceChatUserLogout.Logout
-// 0x0010 (0x0010 - 0x0000)
-struct VoiceChatUserLogout_Logout final
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById.FindSessionById
+// 0x00B0 (0x00B0 - 0x0000)
+struct OnlineSessionSubsystemFindSessionById_FindSessionById final
 {
 public:
-	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVoiceChatUserLogout*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       SearchingUserId;                                   // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       SessionId;                                         // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0068(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserData;                                          // 0x0098(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemFindSessionById* ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VoiceChatUserLogout_Logout) == 0x000008, "Wrong alignment on VoiceChatUserLogout_Logout");
-static_assert(sizeof(VoiceChatUserLogout_Logout) == 0x000010, "Wrong size on VoiceChatUserLogout_Logout");
-static_assert(offsetof(VoiceChatUserLogout_Logout, Subsystem) == 0x000000, "Member 'VoiceChatUserLogout_Logout::Subsystem' has a wrong offset!");
-static_assert(offsetof(VoiceChatUserLogout_Logout, ReturnValue) == 0x000008, "Member 'VoiceChatUserLogout_Logout::ReturnValue' has a wrong offset!");
+static_assert(alignof(OnlineSessionSubsystemFindSessionById_FindSessionById) == 0x000008, "Wrong alignment on OnlineSessionSubsystemFindSessionById_FindSessionById");
+static_assert(sizeof(OnlineSessionSubsystemFindSessionById_FindSessionById) == 0x0000B0, "Wrong size on OnlineSessionSubsystemFindSessionById_FindSessionById");
+static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, Subsystem) == 0x000000, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, SearchingUserId) == 0x000008, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::SearchingUserId' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, SessionId) == 0x000038, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::SessionId' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, FriendId) == 0x000068, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::FriendId' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, UserData) == 0x000098, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::UserData' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, ReturnValue) == 0x0000A8, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineGroupsSubsystem.GetNamespace
 // 0x0010 (0x0010 - 0x0000)
@@ -1818,7 +2292,7 @@ public:
 	struct FUniqueNetIdRepl                       InA;                                               // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       InB;                                               // 0x0030(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D22[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineHelpers_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl) == 0x000008, "Wrong alignment on OnlineHelpers_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl");
 static_assert(sizeof(OnlineHelpers_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl) == 0x000068, "Wrong size on OnlineHelpers_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl");
@@ -1834,7 +2308,7 @@ public:
 	class ULobbyId*                               A;                                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULobbyId*                               B;                                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D23[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineHelpers_EqualEqual_LobbyIdLobbyId) == 0x000008, "Wrong alignment on OnlineHelpers_EqualEqual_LobbyIdLobbyId");
 static_assert(sizeof(OnlineHelpers_EqualEqual_LobbyIdLobbyId) == 0x000018, "Wrong size on OnlineHelpers_EqualEqual_LobbyIdLobbyId");
@@ -1850,7 +2324,7 @@ public:
 	class UPartyId*                               A;                                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPartyId*                               B;                                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D24[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineHelpers_EqualEqual_PartyIdPartyId) == 0x000008, "Wrong alignment on OnlineHelpers_EqualEqual_PartyIdPartyId");
 static_assert(sizeof(OnlineHelpers_EqualEqual_PartyIdPartyId) == 0x000018, "Wrong size on OnlineHelpers_EqualEqual_PartyIdPartyId");
@@ -1878,7 +2352,7 @@ struct OnlineHelpers_FUniqueNetIdIsValid final
 public:
 	struct FUniqueNetIdRepl                       InNetId;                                           // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D25[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineHelpers_FUniqueNetIdIsValid) == 0x000008, "Wrong alignment on OnlineHelpers_FUniqueNetIdIsValid");
 static_assert(sizeof(OnlineHelpers_FUniqueNetIdIsValid) == 0x000038, "Wrong size on OnlineHelpers_FUniqueNetIdIsValid");
@@ -1944,7 +2418,7 @@ public:
 	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   PortType;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWasSuccessful;                                    // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D26[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutConnectInfo;                                    // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineHelpers_GetResolvedConnectStringByName) == 0x000008, "Wrong alignment on OnlineHelpers_GetResolvedConnectStringByName");
@@ -1964,7 +2438,7 @@ public:
 	struct FOnlineSessionSearchResultBP           SearchResult;                                      // 0x0008(0x01B8)(Parm, NativeAccessSpecifierPublic)
 	class FName                                   PortType;                                          // 0x01C0(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWasSuccessful;                                    // 0x01C8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D27[0x7];                                     // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OutConnectInfo;                                    // 0x01D0(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineHelpers_GetResolvedConnectStringBySearchResult) == 0x000008, "Wrong alignment on OnlineHelpers_GetResolvedConnectStringBySearchResult");
@@ -1982,7 +2456,7 @@ struct OnlineHelpers_IsValid_LobbyId final
 public:
 	class ULobbyId*                               A;                                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D28[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineHelpers_IsValid_LobbyId) == 0x000008, "Wrong alignment on OnlineHelpers_IsValid_LobbyId");
 static_assert(sizeof(OnlineHelpers_IsValid_LobbyId) == 0x000010, "Wrong size on OnlineHelpers_IsValid_LobbyId");
@@ -1996,7 +2470,7 @@ struct OnlineHelpers_IsValid_PartyId final
 public:
 	class UPartyId*                               A;                                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D29[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineHelpers_IsValid_PartyId) == 0x000008, "Wrong alignment on OnlineHelpers_IsValid_PartyId");
 static_assert(sizeof(OnlineHelpers_IsValid_PartyId) == 0x000010, "Wrong size on OnlineHelpers_IsValid_PartyId");
@@ -2029,16 +2503,20 @@ static_assert(sizeof(OnlineHelpers_ReadFileDataAsString) == 0x000018, "Wrong siz
 static_assert(offsetof(OnlineHelpers_ReadFileDataAsString, FileData) == 0x000000, "Member 'OnlineHelpers_ReadFileDataAsString::FileData' has a wrong offset!");
 static_assert(offsetof(OnlineHelpers_ReadFileDataAsString, ReturnValue) == 0x000008, "Member 'OnlineHelpers_ReadFileDataAsString::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSettings.GetValue
-// 0x0150 (0x0150 - 0x0000)
-struct OnlineSessionSettings_GetValue final
+// Function OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel.LeaveChannel
+// 0x0020 (0x0020 - 0x0000)
+struct VoiceChatUserLeaveChannel_LeaveChannel final
 {
 public:
-	struct FOnlineSessionSettingsBP               ReturnValue;                                       // 0x0000(0x0150)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ChannelName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVoiceChatUserLeaveChannel*             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(OnlineSessionSettings_GetValue) == 0x000008, "Wrong alignment on OnlineSessionSettings_GetValue");
-static_assert(sizeof(OnlineSessionSettings_GetValue) == 0x000150, "Wrong size on OnlineSessionSettings_GetValue");
-static_assert(offsetof(OnlineSessionSettings_GetValue, ReturnValue) == 0x000000, "Member 'OnlineSessionSettings_GetValue::ReturnValue' has a wrong offset!");
+static_assert(alignof(VoiceChatUserLeaveChannel_LeaveChannel) == 0x000008, "Wrong alignment on VoiceChatUserLeaveChannel_LeaveChannel");
+static_assert(sizeof(VoiceChatUserLeaveChannel_LeaveChannel) == 0x000020, "Wrong size on VoiceChatUserLeaveChannel_LeaveChannel");
+static_assert(offsetof(VoiceChatUserLeaveChannel_LeaveChannel, Subsystem) == 0x000000, "Member 'VoiceChatUserLeaveChannel_LeaveChannel::Subsystem' has a wrong offset!");
+static_assert(offsetof(VoiceChatUserLeaveChannel_LeaveChannel, ChannelName) == 0x000008, "Member 'VoiceChatUserLeaveChannel_LeaveChannel::ChannelName' has a wrong offset!");
+static_assert(offsetof(VoiceChatUserLeaveChannel_LeaveChannel, ReturnValue) == 0x000018, "Member 'VoiceChatUserLeaveChannel_LeaveChannel::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineIdentitySubsystem.ClearCachedAuthToken
 // 0x0030 (0x0030 - 0x0000)
@@ -2081,7 +2559,7 @@ struct OnlineIdentitySubsystem_GetAuthToken final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D2C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineIdentitySubsystem_GetAuthToken) == 0x000008, "Wrong alignment on OnlineIdentitySubsystem_GetAuthToken");
@@ -2107,7 +2585,7 @@ struct OnlineIdentitySubsystem_GetLoginStatus final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOnlineLoginStatus                            ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D2D[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineIdentitySubsystem_GetLoginStatus) == 0x000004, "Wrong alignment on OnlineIdentitySubsystem_GetLoginStatus");
 static_assert(sizeof(OnlineIdentitySubsystem_GetLoginStatus) == 0x000008, "Wrong size on OnlineIdentitySubsystem_GetLoginStatus");
@@ -2121,7 +2599,7 @@ struct OnlineIdentitySubsystem_GetPlatformUserIdFromUniqueNetId final
 public:
 	struct FUniqueNetIdRepl                       UniqueNetId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D2E[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineIdentitySubsystem_GetPlatformUserIdFromUniqueNetId) == 0x000008, "Wrong alignment on OnlineIdentitySubsystem_GetPlatformUserIdFromUniqueNetId");
 static_assert(sizeof(OnlineIdentitySubsystem_GetPlatformUserIdFromUniqueNetId) == 0x000038, "Wrong size on OnlineIdentitySubsystem_GetPlatformUserIdFromUniqueNetId");
@@ -2147,7 +2625,7 @@ struct OnlineIdentitySubsystem_GetSponsorUniquePlayerId final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D2F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineIdentitySubsystem_GetSponsorUniquePlayerId) == 0x000008, "Wrong alignment on OnlineIdentitySubsystem_GetSponsorUniquePlayerId");
@@ -2161,7 +2639,7 @@ struct OnlineIdentitySubsystem_GetUniquePlayerId final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D30[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineIdentitySubsystem_GetUniquePlayerId) == 0x000008, "Wrong alignment on OnlineIdentitySubsystem_GetUniquePlayerId");
@@ -2200,7 +2678,7 @@ struct OnlineIdentitySubsystemLogin_Login final
 public:
 	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D33[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnlineAccountCredential               AccountCredentials;                                // 0x0010(0x0030)(Parm, NativeAccessSpecifierPublic)
 	class UOnlineIdentitySubsystemLogin*          ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2211,21 +2689,23 @@ static_assert(offsetof(OnlineIdentitySubsystemLogin_Login, LocalUserNum) == 0x00
 static_assert(offsetof(OnlineIdentitySubsystemLogin_Login, AccountCredentials) == 0x000010, "Member 'OnlineIdentitySubsystemLogin_Login::AccountCredentials' has a wrong offset!");
 static_assert(offsetof(OnlineIdentitySubsystemLogin_Login, ReturnValue) == 0x000040, "Member 'OnlineIdentitySubsystemLogin_Login::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.ReadablePartyData.GetAttribute
-// 0x0040 (0x0040 - 0x0000)
-struct ReadablePartyData_GetAttribute final
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession.FindFriendSession
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineSessionSubsystemFindFriendSession_FindFriendSession final
 {
 public:
-	class FString                                 AttrName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OutFound;                                          // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D35[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVariantDataBP                         OutAttrValue;                                      // 0x0018(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Friend;                                            // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemFindFriendSession* ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ReadablePartyData_GetAttribute) == 0x000008, "Wrong alignment on ReadablePartyData_GetAttribute");
-static_assert(sizeof(ReadablePartyData_GetAttribute) == 0x000040, "Wrong size on ReadablePartyData_GetAttribute");
-static_assert(offsetof(ReadablePartyData_GetAttribute, AttrName) == 0x000000, "Member 'ReadablePartyData_GetAttribute::AttrName' has a wrong offset!");
-static_assert(offsetof(ReadablePartyData_GetAttribute, OutFound) == 0x000010, "Member 'ReadablePartyData_GetAttribute::OutFound' has a wrong offset!");
-static_assert(offsetof(ReadablePartyData_GetAttribute, OutAttrValue) == 0x000018, "Member 'ReadablePartyData_GetAttribute::OutAttrValue' has a wrong offset!");
+static_assert(alignof(OnlineSessionSubsystemFindFriendSession_FindFriendSession) == 0x000008, "Wrong alignment on OnlineSessionSubsystemFindFriendSession_FindFriendSession");
+static_assert(sizeof(OnlineSessionSubsystemFindFriendSession_FindFriendSession) == 0x000048, "Wrong size on OnlineSessionSubsystemFindFriendSession_FindFriendSession");
+static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, Subsystem) == 0x000000, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, LocalUserNum) == 0x000008, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::LocalUserNum' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, Friend) == 0x000010, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::Friend' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, ReturnValue) == 0x000040, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemLogout.Logout
 // 0x0018 (0x0018 - 0x0000)
@@ -2234,7 +2714,7 @@ struct OnlineIdentitySubsystemLogout_Logout final
 public:
 	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D38[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineIdentitySubsystemLogout*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineIdentitySubsystemLogout_Logout) == 0x000008, "Wrong alignment on OnlineIdentitySubsystemLogout_Logout");
@@ -2250,7 +2730,7 @@ struct OnlineIdentitySubsystemAutoLogin_AutoLogin final
 public:
 	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineIdentitySubsystemAutoLogin*      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineIdentitySubsystemAutoLogin_AutoLogin) == 0x000008, "Wrong alignment on OnlineIdentitySubsystemAutoLogin_AutoLogin");
@@ -2258,6 +2738,349 @@ static_assert(sizeof(OnlineIdentitySubsystemAutoLogin_AutoLogin) == 0x000018, "W
 static_assert(offsetof(OnlineIdentitySubsystemAutoLogin_AutoLogin, Subsystem) == 0x000000, "Member 'OnlineIdentitySubsystemAutoLogin_AutoLogin::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineIdentitySubsystemAutoLogin_AutoLogin, LocalUserNum) == 0x000008, "Member 'OnlineIdentitySubsystemAutoLogin_AutoLogin::LocalUserNum' has a wrong offset!");
 static_assert(offsetof(OnlineIdentitySubsystemAutoLogin_AutoLogin, ReturnValue) == 0x000010, "Member 'OnlineIdentitySubsystemAutoLogin_AutoLogin::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking.CancelMatchmaking
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking final
+{
+public:
+	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       SearchingPlayerId;                                 // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystemCancelMatchmaking* ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking) == 0x000008, "Wrong alignment on OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking");
+static_assert(sizeof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking) == 0x000048, "Wrong size on OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking");
+static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, Subsystem) == 0x000000, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, SearchingPlayerId) == 0x000008, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::SearchingPlayerId' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, SessionName) == 0x000038, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::SessionName' has a wrong offset!");
+static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, ReturnValue) == 0x000040, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemRevokeAuthToken.RevokeAuthToken
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken final
+{
+public:
+	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineIdentitySubsystemRevokeAuthToken* ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken) == 0x000008, "Wrong alignment on OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken");
+static_assert(sizeof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken) == 0x000040, "Wrong size on OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken");
+static_assert(offsetof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken, Subsystem) == 0x000000, "Member 'OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken, LocalUserId) == 0x000008, "Member 'OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken, ReturnValue) == 0x000038, "Member 'OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemGetUserPrivilege.GetUserPrivilege
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege final
+{
+public:
+	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOnlineUserPrivilege                          Privilege;                                         // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EShowPrivilegeResolveUI_                      ShowResolveUI;                                     // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineIdentitySubsystemGetUserPrivilege* ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege) == 0x000008, "Wrong alignment on OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege");
+static_assert(sizeof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege) == 0x000048, "Wrong size on OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege");
+static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, Subsystem) == 0x000000, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, LocalUserId) == 0x000008, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::LocalUserId' has a wrong offset!");
+static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, Privilege) == 0x000038, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::Privilege' has a wrong offset!");
+static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, ShowResolveUI) == 0x000039, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::ShowResolveUI' has a wrong offset!");
+static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, ReturnValue) == 0x000040, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.VoiceChatUserLogout.Logout
+// 0x0010 (0x0010 - 0x0000)
+struct VoiceChatUserLogout_Logout final
+{
+public:
+	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVoiceChatUserLogout*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VoiceChatUserLogout_Logout) == 0x000008, "Wrong alignment on VoiceChatUserLogout_Logout");
+static_assert(sizeof(VoiceChatUserLogout_Logout) == 0x000010, "Wrong size on VoiceChatUserLogout_Logout");
+static_assert(offsetof(VoiceChatUserLogout_Logout, Subsystem) == 0x000000, "Member 'VoiceChatUserLogout_Logout::Subsystem' has a wrong offset!");
+static_assert(offsetof(VoiceChatUserLogout_Logout, ReturnValue) == 0x000008, "Member 'VoiceChatUserLogout_Logout::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FlushLeaderboards
+// 0x000C (0x000C - 0x0000)
+struct OnlineLeaderboardsSubsystem_FlushLeaderboards final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineLeaderboardsSubsystem_FlushLeaderboards) == 0x000004, "Wrong alignment on OnlineLeaderboardsSubsystem_FlushLeaderboards");
+static_assert(sizeof(OnlineLeaderboardsSubsystem_FlushLeaderboards) == 0x00000C, "Wrong size on OnlineLeaderboardsSubsystem_FlushLeaderboards");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_FlushLeaderboards, SessionName) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_FlushLeaderboards::SessionName' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_FlushLeaderboards, ReturnValue) == 0x000008, "Member 'OnlineLeaderboardsSubsystem_FlushLeaderboards::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FreeStats
+// 0x0008 (0x0008 - 0x0000)
+struct OnlineLeaderboardsSubsystem_FreeStats final
+{
+public:
+	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardsSubsystem_FreeStats) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystem_FreeStats");
+static_assert(sizeof(OnlineLeaderboardsSubsystem_FreeStats) == 0x000008, "Wrong size on OnlineLeaderboardsSubsystem_FreeStats");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_FreeStats, ReadObject) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_FreeStats::ReadObject' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineLeaderboardsSubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineLeaderboardsSubsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineLeaderboardsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineLeaderboardsSubsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.WriteLeaderboards
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineLeaderboardsSubsystem_WriteLeaderboards final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       Player;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardWrite*                WriteObject;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineLeaderboardsSubsystem_WriteLeaderboards) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystem_WriteLeaderboards");
+static_assert(sizeof(OnlineLeaderboardsSubsystem_WriteLeaderboards) == 0x000048, "Wrong size on OnlineLeaderboardsSubsystem_WriteLeaderboards");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, SessionName) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::SessionName' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, Player) == 0x000008, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::Player' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, WriteObject) == 0x000038, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::WriteObject' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, ReturnValue) == 0x000040, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboards.ReadLeaderboards
+// 0x0028 (0x0028 - 0x0000)
+struct OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards final
+{
+public:
+	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FUniqueNetIdRepl>               Players;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardsSubsystemReadLeaderboards* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards");
+static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards) == 0x000028, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, Players) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::Players' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, ReadObject) == 0x000018, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::ReadObject' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, ReturnValue) == 0x000020, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsForFriends.ReadLeaderboardsForFriends
+// 0x0020 (0x0020 - 0x0000)
+struct OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends final
+{
+public:
+	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends");
+static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends) == 0x000020, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, LocalUserNum) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::LocalUserNum' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, ReadObject) == 0x000010, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::ReadObject' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, ReturnValue) == 0x000018, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank.ReadLeaderboardsAroundRank
+// 0x0028 (0x0028 - 0x0000)
+struct OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank final
+{
+public:
+	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         Range;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank");
+static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank) == 0x000028, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, Rank) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::Rank' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, Range) == 0x000010, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::Range' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, ReadObject) == 0x000018, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::ReadObject' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, ReturnValue) == 0x000020, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser.ReadLeaderboardsAroundUser
+// 0x0050 (0x0050 - 0x0000)
+struct OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser final
+{
+public:
+	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       Player;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         Range;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser");
+static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser) == 0x000050, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::Subsystem' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, Player) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::Player' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, Range) == 0x000038, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::Range' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, ReadObject) == 0x000040, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::ReadObject' has a wrong offset!");
+static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, ReturnValue) == 0x000048, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetLobbyMetadataValue
+// 0x0078 (0x0078 - 0x0000)
+struct OnlineLobbySubsystem_GetLobbyMetadataValue final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MetadataKey;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         OutMetadataValue;                                  // 0x0048(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineLobbySubsystem_GetLobbyMetadataValue) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetLobbyMetadataValue");
+static_assert(sizeof(OnlineLobbySubsystem_GetLobbyMetadataValue) == 0x000078, "Wrong size on OnlineLobbySubsystem_GetLobbyMetadataValue");
+static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::LobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, MetadataKey) == 0x000038, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::MetadataKey' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, OutMetadataValue) == 0x000048, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::OutMetadataValue' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, ReturnValue) == 0x000070, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberCount
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineLobbySubsystem_GetMemberCount final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutMemberCount;                                    // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x003C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineLobbySubsystem_GetMemberCount) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetMemberCount");
+static_assert(sizeof(OnlineLobbySubsystem_GetMemberCount) == 0x000040, "Wrong size on OnlineLobbySubsystem_GetMemberCount");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetMemberCount::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetMemberCount::LobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, OutMemberCount) == 0x000038, "Member 'OnlineLobbySubsystem_GetMemberCount::OutMemberCount' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, ReturnValue) == 0x00003C, "Member 'OnlineLobbySubsystem_GetMemberCount::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberMetadataValue
+// 0x00A8 (0x00A8 - 0x0000)
+struct OnlineLobbySubsystem_GetMemberMetadataValue final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       MemberId;                                          // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MetadataKey;                                       // 0x0068(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         OutMetadataValue;                                  // 0x0078(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineLobbySubsystem_GetMemberMetadataValue) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetMemberMetadataValue");
+static_assert(sizeof(OnlineLobbySubsystem_GetMemberMetadataValue) == 0x0000A8, "Wrong size on OnlineLobbySubsystem_GetMemberMetadataValue");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::LobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, MemberId) == 0x000038, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::MemberId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, MetadataKey) == 0x000068, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::MetadataKey' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, OutMetadataValue) == 0x000078, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::OutMetadataValue' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, ReturnValue) == 0x0000A0, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberUserId
+// 0x0078 (0x0078 - 0x0000)
+struct OnlineLobbySubsystem_GetMemberUserId final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MemberIndex;                                       // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       OutMemberId;                                       // 0x0040(0x0030)(Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(OnlineLobbySubsystem_GetMemberUserId) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetMemberUserId");
+static_assert(sizeof(OnlineLobbySubsystem_GetMemberUserId) == 0x000078, "Wrong size on OnlineLobbySubsystem_GetMemberUserId");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetMemberUserId::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetMemberUserId::LobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, MemberIndex) == 0x000038, "Member 'OnlineLobbySubsystem_GetMemberUserId::MemberIndex' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, OutMemberId) == 0x000040, "Member 'OnlineLobbySubsystem_GetMemberUserId::OutMemberId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, ReturnValue) == 0x000070, "Member 'OnlineLobbySubsystem_GetMemberUserId::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.IsSubsystemAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineLobbySubsystem_IsSubsystemAvailable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLobbySubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineLobbySubsystem_IsSubsystemAvailable");
+static_assert(sizeof(OnlineLobbySubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineLobbySubsystem_IsSubsystemAvailable");
+static_assert(offsetof(OnlineLobbySubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineLobbySubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeCreateLobbyTransaction
+// 0x0038 (0x0038 - 0x0000)
+struct OnlineLobbySubsystem_MakeCreateLobbyTransaction final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLobbyTransaction*                ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLobbySubsystem_MakeCreateLobbyTransaction) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_MakeCreateLobbyTransaction");
+static_assert(sizeof(OnlineLobbySubsystem_MakeCreateLobbyTransaction) == 0x000038, "Wrong size on OnlineLobbySubsystem_MakeCreateLobbyTransaction");
+static_assert(offsetof(OnlineLobbySubsystem_MakeCreateLobbyTransaction, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_MakeCreateLobbyTransaction::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_MakeCreateLobbyTransaction, ReturnValue) == 0x000030, "Member 'OnlineLobbySubsystem_MakeCreateLobbyTransaction::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyMemberTransaction
+// 0x0070 (0x0070 - 0x0000)
+struct OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       MemberId;                                          // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLobbyMemberTransaction*          ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction");
+static_assert(sizeof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction) == 0x000070, "Wrong size on OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::LobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, MemberId) == 0x000038, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::MemberId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, ReturnValue) == 0x000068, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyTransaction
+// 0x0040 (0x0040 - 0x0000)
+struct OnlineLobbySubsystem_MakeUpdateLobbyTransaction final
+{
+public:
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UOnlineLobbyTransaction*                ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_MakeUpdateLobbyTransaction");
+static_assert(sizeof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction) == 0x000040, "Wrong size on OnlineLobbySubsystem_MakeUpdateLobbyTransaction");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyTransaction::UserId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyTransaction::LobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction, ReturnValue) == 0x000038, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyTransaction::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.ParseSerializedLobbyId
+// 0x0018 (0x0018 - 0x0000)
+struct OnlineLobbySubsystem_ParseSerializedLobbyId final
+{
+public:
+	class FString                                 InLobbyId;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULobbyId*                               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineLobbySubsystem_ParseSerializedLobbyId) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_ParseSerializedLobbyId");
+static_assert(sizeof(OnlineLobbySubsystem_ParseSerializedLobbyId) == 0x000018, "Wrong size on OnlineLobbySubsystem_ParseSerializedLobbyId");
+static_assert(offsetof(OnlineLobbySubsystem_ParseSerializedLobbyId, InLobbyId) == 0x000000, "Member 'OnlineLobbySubsystem_ParseSerializedLobbyId::InLobbyId' has a wrong offset!");
+static_assert(offsetof(OnlineLobbySubsystem_ParseSerializedLobbyId, ReturnValue) == 0x000010, "Member 'OnlineLobbySubsystem_ParseSerializedLobbyId::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.VoiceChatUser.BlockPlayers
 // 0x0010 (0x0010 - 0x0000)
@@ -2354,7 +3177,7 @@ struct VoiceChatUser_GetChannelType final
 public:
 	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVoiceChatChannelType_                        ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D47[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_GetChannelType) == 0x000008, "Wrong alignment on VoiceChatUser_GetChannelType");
 static_assert(sizeof(VoiceChatUser_GetChannelType) == 0x000018, "Wrong size on VoiceChatUser_GetChannelType");
@@ -2436,7 +3259,7 @@ struct VoiceChatUser_GetPlayerVolume final
 public:
 	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D48[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_GetPlayerVolume) == 0x000008, "Wrong alignment on VoiceChatUser_GetPlayerVolume");
 static_assert(sizeof(VoiceChatUser_GetPlayerVolume) == 0x000018, "Wrong size on VoiceChatUser_GetPlayerVolume");
@@ -2448,12 +3271,12 @@ static_assert(offsetof(VoiceChatUser_GetPlayerVolume, ReturnValue) == 0x000010, 
 struct VoiceChatUser_GetSetting final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VoiceChatUser_GetSetting) == 0x000008, "Wrong alignment on VoiceChatUser_GetSetting");
 static_assert(sizeof(VoiceChatUser_GetSetting) == 0x000020, "Wrong size on VoiceChatUser_GetSetting");
-static_assert(offsetof(VoiceChatUser_GetSetting, Param_Name) == 0x000000, "Member 'VoiceChatUser_GetSetting::Param_Name' has a wrong offset!");
+static_assert(offsetof(VoiceChatUser_GetSetting, Name_0) == 0x000000, "Member 'VoiceChatUser_GetSetting::Name_0' has a wrong offset!");
 static_assert(offsetof(VoiceChatUser_GetSetting, ReturnValue) == 0x000010, "Member 'VoiceChatUser_GetSetting::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.VoiceChatUser.GetTransmitChannels
@@ -2485,9 +3308,9 @@ struct VoiceChatUser_InsecureGetJoinToken final
 public:
 	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVoiceChatChannelType_                        ChannelType;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D49[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVoiceChatChannel3dPropertiesBP        Channel3dProperties;                               // 0x0014(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4A[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VoiceChatUser_InsecureGetJoinToken) == 0x000008, "Wrong alignment on VoiceChatUser_InsecureGetJoinToken");
@@ -2518,7 +3341,7 @@ public:
 	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PlayerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4B[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_IsChannelPlayerMuted) == 0x000008, "Wrong alignment on VoiceChatUser_IsChannelPlayerMuted");
 static_assert(sizeof(VoiceChatUser_IsChannelPlayerMuted) == 0x000028, "Wrong size on VoiceChatUser_IsChannelPlayerMuted");
@@ -2555,7 +3378,7 @@ struct VoiceChatUser_IsPlayerMuted final
 public:
 	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4C[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_IsPlayerMuted) == 0x000008, "Wrong alignment on VoiceChatUser_IsPlayerMuted");
 static_assert(sizeof(VoiceChatUser_IsPlayerMuted) == 0x000018, "Wrong size on VoiceChatUser_IsPlayerMuted");
@@ -2569,7 +3392,7 @@ struct VoiceChatUser_IsPlayerTalking final
 public:
 	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4D[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_IsPlayerTalking) == 0x000008, "Wrong alignment on VoiceChatUser_IsPlayerTalking");
 static_assert(sizeof(VoiceChatUser_IsPlayerTalking) == 0x000018, "Wrong size on VoiceChatUser_IsPlayerTalking");
@@ -2647,7 +3470,7 @@ public:
 	class FString                                 ChannelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PlayerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAudioMuted;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4E[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_SetChannelPlayerMuted) == 0x000008, "Wrong alignment on VoiceChatUser_SetChannelPlayerMuted");
 static_assert(sizeof(VoiceChatUser_SetChannelPlayerMuted) == 0x000028, "Wrong size on VoiceChatUser_SetChannelPlayerMuted");
@@ -2684,7 +3507,7 @@ struct VoiceChatUser_SetPlayerMuted final
 public:
 	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMuted;                                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4F[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_SetPlayerMuted) == 0x000008, "Wrong alignment on VoiceChatUser_SetPlayerMuted");
 static_assert(sizeof(VoiceChatUser_SetPlayerMuted) == 0x000018, "Wrong size on VoiceChatUser_SetPlayerMuted");
@@ -2698,7 +3521,7 @@ struct VoiceChatUser_SetPlayerVolume final
 public:
 	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Volume;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D50[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VoiceChatUser_SetPlayerVolume) == 0x000008, "Wrong alignment on VoiceChatUser_SetPlayerVolume");
 static_assert(sizeof(VoiceChatUser_SetPlayerVolume) == 0x000018, "Wrong size on VoiceChatUser_SetPlayerVolume");
@@ -2710,12 +3533,12 @@ static_assert(offsetof(VoiceChatUser_SetPlayerVolume, Volume) == 0x000010, "Memb
 struct VoiceChatUser_SetSetting final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VoiceChatUser_SetSetting) == 0x000008, "Wrong alignment on VoiceChatUser_SetSetting");
 static_assert(sizeof(VoiceChatUser_SetSetting) == 0x000020, "Wrong size on VoiceChatUser_SetSetting");
-static_assert(offsetof(VoiceChatUser_SetSetting, Param_Name) == 0x000000, "Member 'VoiceChatUser_SetSetting::Param_Name' has a wrong offset!");
+static_assert(offsetof(VoiceChatUser_SetSetting, Name_0) == 0x000000, "Member 'VoiceChatUser_SetSetting::Name_0' has a wrong offset!");
 static_assert(offsetof(VoiceChatUser_SetSetting, Value) == 0x000010, "Member 'VoiceChatUser_SetSetting::Value' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.VoiceChatUser.TransmitToSpecificChannels
@@ -2739,354 +3562,6 @@ public:
 static_assert(alignof(VoiceChatUser_UnblockPlayers) == 0x000008, "Wrong alignment on VoiceChatUser_UnblockPlayers");
 static_assert(sizeof(VoiceChatUser_UnblockPlayers) == 0x000010, "Wrong size on VoiceChatUser_UnblockPlayers");
 static_assert(offsetof(VoiceChatUser_UnblockPlayers, PlayerNames) == 0x000000, "Member 'VoiceChatUser_UnblockPlayers::PlayerNames' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemRevokeAuthToken.RevokeAuthToken
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken final
-{
-public:
-	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineIdentitySubsystemRevokeAuthToken* ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken) == 0x000008, "Wrong alignment on OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken");
-static_assert(sizeof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken) == 0x000040, "Wrong size on OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken");
-static_assert(offsetof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken, Subsystem) == 0x000000, "Member 'OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken, LocalUserId) == 0x000008, "Member 'OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken, ReturnValue) == 0x000038, "Member 'OnlineIdentitySubsystemRevokeAuthToken_RevokeAuthToken::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineIdentitySubsystemGetUserPrivilege.GetUserPrivilege
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege final
-{
-public:
-	class UOnlineIdentitySubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOnlineUserPrivilege                          Privilege;                                         // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D52[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineIdentitySubsystemGetUserPrivilege* ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege) == 0x000008, "Wrong alignment on OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege");
-static_assert(sizeof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege) == 0x000048, "Wrong size on OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege");
-static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, Subsystem) == 0x000000, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, LocalUserId) == 0x000008, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, Privilege) == 0x000038, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::Privilege' has a wrong offset!");
-static_assert(offsetof(OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege, ReturnValue) == 0x000040, "Member 'OnlineIdentitySubsystemGetUserPrivilege_GetUserPrivilege::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FlushLeaderboards
-// 0x000C (0x000C - 0x0000)
-struct OnlineLeaderboardsSubsystem_FlushLeaderboards final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D54[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineLeaderboardsSubsystem_FlushLeaderboards) == 0x000004, "Wrong alignment on OnlineLeaderboardsSubsystem_FlushLeaderboards");
-static_assert(sizeof(OnlineLeaderboardsSubsystem_FlushLeaderboards) == 0x00000C, "Wrong size on OnlineLeaderboardsSubsystem_FlushLeaderboards");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_FlushLeaderboards, SessionName) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_FlushLeaderboards::SessionName' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_FlushLeaderboards, ReturnValue) == 0x000008, "Member 'OnlineLeaderboardsSubsystem_FlushLeaderboards::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.FreeStats
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineLeaderboardsSubsystem_FreeStats final
-{
-public:
-	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardsSubsystem_FreeStats) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystem_FreeStats");
-static_assert(sizeof(OnlineLeaderboardsSubsystem_FreeStats) == 0x000008, "Wrong size on OnlineLeaderboardsSubsystem_FreeStats");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_FreeStats, ReadObject) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_FreeStats::ReadObject' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineLeaderboardsSubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineLeaderboardsSubsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineLeaderboardsSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineLeaderboardsSubsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem.WriteLeaderboards
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineLeaderboardsSubsystem_WriteLeaderboards final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       Player;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardWrite*                WriteObject;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D55[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineLeaderboardsSubsystem_WriteLeaderboards) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystem_WriteLeaderboards");
-static_assert(sizeof(OnlineLeaderboardsSubsystem_WriteLeaderboards) == 0x000048, "Wrong size on OnlineLeaderboardsSubsystem_WriteLeaderboards");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, SessionName) == 0x000000, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::SessionName' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, Player) == 0x000008, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::Player' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, WriteObject) == 0x000038, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::WriteObject' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystem_WriteLeaderboards, ReturnValue) == 0x000040, "Member 'OnlineLeaderboardsSubsystem_WriteLeaderboards::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboards.ReadLeaderboards
-// 0x0028 (0x0028 - 0x0000)
-struct OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards final
-{
-public:
-	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FUniqueNetIdRepl>               Players;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardsSubsystemReadLeaderboards* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards");
-static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards) == 0x000028, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, Players) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::Players' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, ReadObject) == 0x000018, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::ReadObject' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards, ReturnValue) == 0x000020, "Member 'OnlineLeaderboardsSubsystemReadLeaderboards_ReadLeaderboards::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel.LeaveChannel
-// 0x0020 (0x0020 - 0x0000)
-struct VoiceChatUserLeaveChannel_LeaveChannel final
-{
-public:
-	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ChannelName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVoiceChatUserLeaveChannel*             ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VoiceChatUserLeaveChannel_LeaveChannel) == 0x000008, "Wrong alignment on VoiceChatUserLeaveChannel_LeaveChannel");
-static_assert(sizeof(VoiceChatUserLeaveChannel_LeaveChannel) == 0x000020, "Wrong size on VoiceChatUserLeaveChannel_LeaveChannel");
-static_assert(offsetof(VoiceChatUserLeaveChannel_LeaveChannel, Subsystem) == 0x000000, "Member 'VoiceChatUserLeaveChannel_LeaveChannel::Subsystem' has a wrong offset!");
-static_assert(offsetof(VoiceChatUserLeaveChannel_LeaveChannel, ChannelName) == 0x000008, "Member 'VoiceChatUserLeaveChannel_LeaveChannel::ChannelName' has a wrong offset!");
-static_assert(offsetof(VoiceChatUserLeaveChannel_LeaveChannel, ReturnValue) == 0x000018, "Member 'VoiceChatUserLeaveChannel_LeaveChannel::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsForFriends.ReadLeaderboardsForFriends
-// 0x0020 (0x0020 - 0x0000)
-struct OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends final
-{
-public:
-	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D59[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends");
-static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends) == 0x000020, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, LocalUserNum) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, ReadObject) == 0x000010, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::ReadObject' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends, ReturnValue) == 0x000018, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsForFriends_ReadLeaderboardsForFriends::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank.ReadLeaderboardsAroundRank
-// 0x0028 (0x0028 - 0x0000)
-struct OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank final
-{
-public:
-	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D5C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         Range;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank* ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank");
-static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank) == 0x000028, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, Rank) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::Rank' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, Range) == 0x000010, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::Range' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, ReadObject) == 0x000018, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::ReadObject' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank, ReturnValue) == 0x000020, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundRank_ReadLeaderboardsAroundRank::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchResults
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineSessionSearch_GetSearchResults final
-{
-public:
-	TArray<struct FOnlineSessionSearchResultBP>   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineSessionSearch_GetSearchResults) == 0x000008, "Wrong alignment on OnlineSessionSearch_GetSearchResults");
-static_assert(sizeof(OnlineSessionSearch_GetSearchResults) == 0x000010, "Wrong size on OnlineSessionSearch_GetSearchResults");
-static_assert(offsetof(OnlineSessionSearch_GetSearchResults, ReturnValue) == 0x000000, "Member 'OnlineSessionSearch_GetSearchResults::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchState
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineSessionSearch_GetSearchState final
-{
-public:
-	EOnlineAsyncTaskState_                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineSessionSearch_GetSearchState) == 0x000001, "Wrong alignment on OnlineSessionSearch_GetSearchState");
-static_assert(sizeof(OnlineSessionSearch_GetSearchState) == 0x000001, "Wrong size on OnlineSessionSearch_GetSearchState");
-static_assert(offsetof(OnlineSessionSearch_GetSearchState, ReturnValue) == 0x000000, "Member 'OnlineSessionSearch_GetSearchState::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser.ReadLeaderboardsAroundUser
-// 0x0050 (0x0050 - 0x0000)
-struct OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser final
-{
-public:
-	class UOnlineLeaderboardsSubsystem*           Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       Player;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         Range;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardRead*                 ReadObject;                                        // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser) == 0x000008, "Wrong alignment on OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser");
-static_assert(sizeof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser) == 0x000050, "Wrong size on OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, Subsystem) == 0x000000, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, Player) == 0x000008, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::Player' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, Range) == 0x000038, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::Range' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, ReadObject) == 0x000040, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::ReadObject' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser, ReturnValue) == 0x000048, "Member 'OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser_ReadLeaderboardsAroundUser::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetLobbyMetadataValue
-// 0x0078 (0x0078 - 0x0000)
-struct OnlineLobbySubsystem_GetLobbyMetadataValue final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MetadataKey;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         OutMetadataValue;                                  // 0x0048(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D62[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineLobbySubsystem_GetLobbyMetadataValue) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetLobbyMetadataValue");
-static_assert(sizeof(OnlineLobbySubsystem_GetLobbyMetadataValue) == 0x000078, "Wrong size on OnlineLobbySubsystem_GetLobbyMetadataValue");
-static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::LobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, MetadataKey) == 0x000038, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::MetadataKey' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, OutMetadataValue) == 0x000048, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::OutMetadataValue' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetLobbyMetadataValue, ReturnValue) == 0x000070, "Member 'OnlineLobbySubsystem_GetLobbyMetadataValue::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberCount
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineLobbySubsystem_GetMemberCount final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutMemberCount;                                    // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x003C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D63[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineLobbySubsystem_GetMemberCount) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetMemberCount");
-static_assert(sizeof(OnlineLobbySubsystem_GetMemberCount) == 0x000040, "Wrong size on OnlineLobbySubsystem_GetMemberCount");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetMemberCount::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetMemberCount::LobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, OutMemberCount) == 0x000038, "Member 'OnlineLobbySubsystem_GetMemberCount::OutMemberCount' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberCount, ReturnValue) == 0x00003C, "Member 'OnlineLobbySubsystem_GetMemberCount::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberMetadataValue
-// 0x00A8 (0x00A8 - 0x0000)
-struct OnlineLobbySubsystem_GetMemberMetadataValue final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       MemberId;                                          // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MetadataKey;                                       // 0x0068(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVariantDataBP                         OutMetadataValue;                                  // 0x0078(0x0028)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D64[0x7];                                     // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineLobbySubsystem_GetMemberMetadataValue) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetMemberMetadataValue");
-static_assert(sizeof(OnlineLobbySubsystem_GetMemberMetadataValue) == 0x0000A8, "Wrong size on OnlineLobbySubsystem_GetMemberMetadataValue");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::LobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, MemberId) == 0x000038, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::MemberId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, MetadataKey) == 0x000068, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::MetadataKey' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, OutMetadataValue) == 0x000078, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::OutMetadataValue' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberMetadataValue, ReturnValue) == 0x0000A0, "Member 'OnlineLobbySubsystem_GetMemberMetadataValue::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.GetMemberUserId
-// 0x0078 (0x0078 - 0x0000)
-struct OnlineLobbySubsystem_GetMemberUserId final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MemberIndex;                                       // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D65[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       OutMemberId;                                       // 0x0040(0x0030)(Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D66[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineLobbySubsystem_GetMemberUserId) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_GetMemberUserId");
-static_assert(sizeof(OnlineLobbySubsystem_GetMemberUserId) == 0x000078, "Wrong size on OnlineLobbySubsystem_GetMemberUserId");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_GetMemberUserId::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_GetMemberUserId::LobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, MemberIndex) == 0x000038, "Member 'OnlineLobbySubsystem_GetMemberUserId::MemberIndex' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, OutMemberId) == 0x000040, "Member 'OnlineLobbySubsystem_GetMemberUserId::OutMemberId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_GetMemberUserId, ReturnValue) == 0x000070, "Member 'OnlineLobbySubsystem_GetMemberUserId::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineLobbySubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLobbySubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineLobbySubsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineLobbySubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineLobbySubsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineLobbySubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineLobbySubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeCreateLobbyTransaction
-// 0x0038 (0x0038 - 0x0000)
-struct OnlineLobbySubsystem_MakeCreateLobbyTransaction final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLobbyTransaction*                ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLobbySubsystem_MakeCreateLobbyTransaction) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_MakeCreateLobbyTransaction");
-static_assert(sizeof(OnlineLobbySubsystem_MakeCreateLobbyTransaction) == 0x000038, "Wrong size on OnlineLobbySubsystem_MakeCreateLobbyTransaction");
-static_assert(offsetof(OnlineLobbySubsystem_MakeCreateLobbyTransaction, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_MakeCreateLobbyTransaction::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_MakeCreateLobbyTransaction, ReturnValue) == 0x000030, "Member 'OnlineLobbySubsystem_MakeCreateLobbyTransaction::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyMemberTransaction
-// 0x0070 (0x0070 - 0x0000)
-struct OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       MemberId;                                          // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLobbyMemberTransaction*          ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction");
-static_assert(sizeof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction) == 0x000070, "Wrong size on OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::LobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, MemberId) == 0x000038, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::MemberId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction, ReturnValue) == 0x000068, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyMemberTransaction::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.MakeUpdateLobbyTransaction
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineLobbySubsystem_MakeUpdateLobbyTransaction final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               LobbyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineLobbyTransaction*                ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_MakeUpdateLobbyTransaction");
-static_assert(sizeof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction) == 0x000040, "Wrong size on OnlineLobbySubsystem_MakeUpdateLobbyTransaction");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction, UserId) == 0x000000, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyTransaction::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction, LobbyId) == 0x000030, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyTransaction::LobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_MakeUpdateLobbyTransaction, ReturnValue) == 0x000038, "Member 'OnlineLobbySubsystem_MakeUpdateLobbyTransaction::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLobbySubsystem.ParseSerializedLobbyId
-// 0x0018 (0x0018 - 0x0000)
-struct OnlineLobbySubsystem_ParseSerializedLobbyId final
-{
-public:
-	class FString                                 InLobbyId;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULobbyId*                               ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLobbySubsystem_ParseSerializedLobbyId) == 0x000008, "Wrong alignment on OnlineLobbySubsystem_ParseSerializedLobbyId");
-static_assert(sizeof(OnlineLobbySubsystem_ParseSerializedLobbyId) == 0x000018, "Wrong size on OnlineLobbySubsystem_ParseSerializedLobbyId");
-static_assert(offsetof(OnlineLobbySubsystem_ParseSerializedLobbyId, InLobbyId) == 0x000000, "Member 'OnlineLobbySubsystem_ParseSerializedLobbyId::InLobbyId' has a wrong offset!");
-static_assert(offsetof(OnlineLobbySubsystem_ParseSerializedLobbyId, ReturnValue) == 0x000010, "Member 'OnlineLobbySubsystem_ParseSerializedLobbyId::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineLobbySubsystemCreateLobby.CreateLobby
 // 0x0048 (0x0048 - 0x0000)
@@ -3278,7 +3753,7 @@ struct OnlineMessageSanitizerSubsystemQueryBlockedUser_QueryBlockedUser final
 public:
 	class UOnlineMessageSanitizerSubsystem*       Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D69[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 FromUserId;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 FromPlatform;                                      // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineMessageSanitizerSubsystemQueryBlockedUser* ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3298,7 +3773,7 @@ struct OnlineMessageSubsystem_ClearMessageHeaders final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D6B[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineMessageSubsystem_ClearMessageHeaders) == 0x000004, "Wrong alignment on OnlineMessageSubsystem_ClearMessageHeaders");
 static_assert(sizeof(OnlineMessageSubsystem_ClearMessageHeaders) == 0x000008, "Wrong size on OnlineMessageSubsystem_ClearMessageHeaders");
@@ -3312,7 +3787,7 @@ struct OnlineMessageSubsystem_ClearMessages final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D6C[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineMessageSubsystem_ClearMessages) == 0x000004, "Wrong alignment on OnlineMessageSubsystem_ClearMessages");
 static_assert(sizeof(OnlineMessageSubsystem_ClearMessages) == 0x000008, "Wrong size on OnlineMessageSubsystem_ClearMessages");
@@ -3326,7 +3801,7 @@ struct OnlineMessageSubsystem_EnumerateMessages final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D6D[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineMessageSubsystem_EnumerateMessages) == 0x000004, "Wrong alignment on OnlineMessageSubsystem_EnumerateMessages");
 static_assert(sizeof(OnlineMessageSubsystem_EnumerateMessages) == 0x000008, "Wrong size on OnlineMessageSubsystem_EnumerateMessages");
@@ -3353,10 +3828,10 @@ public:
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       RecipientId;                                       // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsApproved;                                       // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D6F[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DeniedResultCode;                                  // 0x006C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D70[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_ApproveJoinRequest) == 0x000008, "Wrong alignment on OnlinePartySubsystem_ApproveJoinRequest");
 static_assert(sizeof(OnlinePartySubsystem_ApproveJoinRequest) == 0x000078, "Wrong size on OnlinePartySubsystem_ApproveJoinRequest");
@@ -3375,7 +3850,7 @@ public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UPartyId*>                       OutPartyIdArray;                                   // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D71[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_GetJoinedParties) == 0x000008, "Wrong alignment on OnlinePartySubsystem_GetJoinedParties");
 static_assert(sizeof(OnlinePartySubsystem_GetJoinedParties) == 0x000048, "Wrong size on OnlinePartySubsystem_GetJoinedParties");
@@ -3405,14 +3880,14 @@ struct OnlinePartySubsystem_GetPartyData final
 public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Namespace;                                         // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NameSpace;                                         // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReadablePartyData*                     ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlinePartySubsystem_GetPartyData) == 0x000008, "Wrong alignment on OnlinePartySubsystem_GetPartyData");
 static_assert(sizeof(OnlinePartySubsystem_GetPartyData) == 0x000048, "Wrong size on OnlinePartySubsystem_GetPartyData");
 static_assert(offsetof(OnlinePartySubsystem_GetPartyData, LocalUserId) == 0x000000, "Member 'OnlinePartySubsystem_GetPartyData::LocalUserId' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_GetPartyData, PartyId) == 0x000030, "Member 'OnlinePartySubsystem_GetPartyData::PartyId' has a wrong offset!");
-static_assert(offsetof(OnlinePartySubsystem_GetPartyData, Namespace) == 0x000038, "Member 'OnlinePartySubsystem_GetPartyData::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlinePartySubsystem_GetPartyData, NameSpace) == 0x000038, "Member 'OnlinePartySubsystem_GetPartyData::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_GetPartyData, ReturnValue) == 0x000040, "Member 'OnlinePartySubsystem_GetPartyData::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlinePartySubsystem.GetPartyMember
@@ -3455,7 +3930,7 @@ public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       MemberId;                                          // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Namespace;                                         // 0x0068(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NameSpace;                                         // 0x0068(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReadablePartyData*                     ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlinePartySubsystem_GetPartyMemberData) == 0x000008, "Wrong alignment on OnlinePartySubsystem_GetPartyMemberData");
@@ -3463,7 +3938,7 @@ static_assert(sizeof(OnlinePartySubsystem_GetPartyMemberData) == 0x000078, "Wron
 static_assert(offsetof(OnlinePartySubsystem_GetPartyMemberData, LocalUserId) == 0x000000, "Member 'OnlinePartySubsystem_GetPartyMemberData::LocalUserId' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_GetPartyMemberData, PartyId) == 0x000030, "Member 'OnlinePartySubsystem_GetPartyMemberData::PartyId' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_GetPartyMemberData, MemberId) == 0x000038, "Member 'OnlinePartySubsystem_GetPartyMemberData::MemberId' has a wrong offset!");
-static_assert(offsetof(OnlinePartySubsystem_GetPartyMemberData, Namespace) == 0x000068, "Member 'OnlinePartySubsystem_GetPartyMemberData::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlinePartySubsystem_GetPartyMemberData, NameSpace) == 0x000068, "Member 'OnlinePartySubsystem_GetPartyMemberData::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_GetPartyMemberData, ReturnValue) == 0x000070, "Member 'OnlinePartySubsystem_GetPartyMemberData::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlinePartySubsystem.GetPartyMembers
@@ -3475,7 +3950,7 @@ public:
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UBlueprintPartyMember*>          OutPartyMembersArray;                              // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D72[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_GetPartyMembers) == 0x000008, "Wrong alignment on OnlinePartySubsystem_GetPartyMembers");
 static_assert(sizeof(OnlinePartySubsystem_GetPartyMembers) == 0x000050, "Wrong size on OnlinePartySubsystem_GetPartyMembers");
@@ -3493,7 +3968,7 @@ public:
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FUniqueNetIdRepl>               OutPendingInvitedUserArray;                        // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D73[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_GetPendingInvitedUsers) == 0x000008, "Wrong alignment on OnlinePartySubsystem_GetPendingInvitedUsers");
 static_assert(sizeof(OnlinePartySubsystem_GetPendingInvitedUsers) == 0x000050, "Wrong size on OnlinePartySubsystem_GetPendingInvitedUsers");
@@ -3510,7 +3985,7 @@ public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UOnlinePartyJoinInfo*>           OutPendingInvitesArray;                            // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D74[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_GetPendingInvites) == 0x000008, "Wrong alignment on OnlinePartySubsystem_GetPendingInvites");
 static_assert(sizeof(OnlinePartySubsystem_GetPendingInvites) == 0x000048, "Wrong size on OnlinePartySubsystem_GetPendingInvites");
@@ -3527,7 +4002,7 @@ public:
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       MemberId;                                          // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D75[0x7];                                     // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_IsMemberLeader) == 0x000008, "Wrong alignment on OnlinePartySubsystem_IsMemberLeader");
 static_assert(sizeof(OnlinePartySubsystem_IsMemberLeader) == 0x000070, "Wrong size on OnlinePartySubsystem_IsMemberLeader");
@@ -3583,7 +4058,7 @@ public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       SenderId;                                          // 0x0030(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D76[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_RejectInvitation) == 0x000008, "Wrong alignment on OnlinePartySubsystem_RejectInvitation");
 static_assert(sizeof(OnlinePartySubsystem_RejectInvitation) == 0x000068, "Wrong size on OnlinePartySubsystem_RejectInvitation");
@@ -3600,7 +4075,7 @@ public:
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       RecipientId;                                       // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCanJoin;                                          // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D77[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DeniedResultCode;                                  // 0x006C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReadablePartyData*                     PartyData;                                         // 0x0070(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3620,16 +4095,16 @@ struct OnlinePartySubsystem_UpdatePartyData final
 public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Namespace;                                         // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NameSpace;                                         // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReadablePartyData*                     PartyData;                                         // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D78[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_UpdatePartyData) == 0x000008, "Wrong alignment on OnlinePartySubsystem_UpdatePartyData");
 static_assert(sizeof(OnlinePartySubsystem_UpdatePartyData) == 0x000050, "Wrong size on OnlinePartySubsystem_UpdatePartyData");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyData, LocalUserId) == 0x000000, "Member 'OnlinePartySubsystem_UpdatePartyData::LocalUserId' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyData, PartyId) == 0x000030, "Member 'OnlinePartySubsystem_UpdatePartyData::PartyId' has a wrong offset!");
-static_assert(offsetof(OnlinePartySubsystem_UpdatePartyData, Namespace) == 0x000038, "Member 'OnlinePartySubsystem_UpdatePartyData::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlinePartySubsystem_UpdatePartyData, NameSpace) == 0x000038, "Member 'OnlinePartySubsystem_UpdatePartyData::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyData, PartyData) == 0x000040, "Member 'OnlinePartySubsystem_UpdatePartyData::PartyData' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyData, ReturnValue) == 0x000048, "Member 'OnlinePartySubsystem_UpdatePartyData::ReturnValue' has a wrong offset!");
 
@@ -3640,16 +4115,16 @@ struct OnlinePartySubsystem_UpdatePartyMemberData final
 public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPartyId*                               PartyId;                                           // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Namespace;                                         // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NameSpace;                                         // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UReadablePartyData*                     PartyMemberData;                                   // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D79[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePartySubsystem_UpdatePartyMemberData) == 0x000008, "Wrong alignment on OnlinePartySubsystem_UpdatePartyMemberData");
 static_assert(sizeof(OnlinePartySubsystem_UpdatePartyMemberData) == 0x000050, "Wrong size on OnlinePartySubsystem_UpdatePartyMemberData");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyMemberData, LocalUserId) == 0x000000, "Member 'OnlinePartySubsystem_UpdatePartyMemberData::LocalUserId' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyMemberData, PartyId) == 0x000030, "Member 'OnlinePartySubsystem_UpdatePartyMemberData::PartyId' has a wrong offset!");
-static_assert(offsetof(OnlinePartySubsystem_UpdatePartyMemberData, Namespace) == 0x000038, "Member 'OnlinePartySubsystem_UpdatePartyMemberData::Namespace' has a wrong offset!");
+static_assert(offsetof(OnlinePartySubsystem_UpdatePartyMemberData, NameSpace) == 0x000038, "Member 'OnlinePartySubsystem_UpdatePartyMemberData::NameSpace' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyMemberData, PartyMemberData) == 0x000040, "Member 'OnlinePartySubsystem_UpdatePartyMemberData::PartyMemberData' has a wrong offset!");
 static_assert(offsetof(OnlinePartySubsystem_UpdatePartyMemberData, ReturnValue) == 0x000048, "Member 'OnlinePartySubsystem_UpdatePartyMemberData::ReturnValue' has a wrong offset!");
 
@@ -3727,7 +4202,7 @@ public:
 	class UPartyId*                               PartyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOnlinePartyConfiguration              PartyConfig;                                       // 0x0040(0x0040)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bShouldRegenerateReservationKey;                   // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D7B[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlinePartySubsystemUpdateParty*       ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlinePartySubsystemUpdateParty_UpdateParty) == 0x000008, "Wrong alignment on OnlinePartySubsystemUpdateParty_UpdateParty");
@@ -3786,7 +4261,7 @@ public:
 	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPartyId*                               PartyId;                                           // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSynchronizeLeave;                                 // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D7D[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlinePartySubsystemLeaveParty*        ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlinePartySubsystemLeaveParty_LeaveParty) == 0x000008, "Wrong alignment on OnlinePartySubsystemLeaveParty_LeaveParty");
@@ -3881,7 +4356,7 @@ public:
 	struct FUniqueNetIdRepl                       User;                                              // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOnlineUserPresenceData                OutPresence;                                       // 0x0030(0x00A8)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EOnlineCachedResult_                          ReturnValue;                                       // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D7F[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePresenceSubsystem_GetCachedPresence) == 0x000008, "Wrong alignment on OnlinePresenceSubsystem_GetCachedPresence");
 static_assert(sizeof(OnlinePresenceSubsystem_GetCachedPresence) == 0x0000E0, "Wrong size on OnlinePresenceSubsystem_GetCachedPresence");
@@ -3899,7 +4374,7 @@ public:
 	class FString                                 AppId;                                             // 0x0060(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOnlineUserPresenceData                OutPresence;                                       // 0x0070(0x00A8)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EOnlineCachedResult_                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D80[0x7];                                     // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePresenceSubsystem_GetCachedPresenceForApp) == 0x000008, "Wrong alignment on OnlinePresenceSubsystem_GetCachedPresenceForApp");
 static_assert(sizeof(OnlinePresenceSubsystem_GetCachedPresenceForApp) == 0x000120, "Wrong size on OnlinePresenceSubsystem_GetCachedPresenceForApp");
@@ -3987,7 +4462,7 @@ struct OnlinePurchaseSubsystem_IsAllowedToPurchase final
 public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D82[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlinePurchaseSubsystem_IsAllowedToPurchase) == 0x000008, "Wrong alignment on OnlinePurchaseSubsystem_IsAllowedToPurchase");
 static_assert(sizeof(OnlinePurchaseSubsystem_IsAllowedToPurchase) == 0x000038, "Wrong size on OnlinePurchaseSubsystem_IsAllowedToPurchase");
@@ -4047,7 +4522,7 @@ public:
 	class UOnlinePurchaseSubsystem*               Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRestoreReceipts;                                  // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D84[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlinePurchaseSubsystemQueryReceipts*  ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlinePurchaseSubsystemQueryReceipts_QueryReceipts) == 0x000008, "Wrong alignment on OnlinePurchaseSubsystemQueryReceipts_QueryReceipts");
@@ -4131,7 +4606,7 @@ struct OnlineSessionSubsystem_GetSessionState final
 public:
 	class FName                                   SessionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOnlineSessionState_                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D86[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSessionSubsystem_GetSessionState) == 0x000004, "Wrong alignment on OnlineSessionSubsystem_GetSessionState");
 static_assert(sizeof(OnlineSessionSubsystem_GetSessionState) == 0x00000C, "Wrong size on OnlineSessionSubsystem_GetSessionState");
@@ -4145,7 +4620,7 @@ struct OnlineSessionSubsystem_GetVoiceChatRoomName final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SessionName;                                       // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D87[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineSessionSubsystem_GetVoiceChatRoomName) == 0x000008, "Wrong alignment on OnlineSessionSubsystem_GetVoiceChatRoomName");
@@ -4173,7 +4648,7 @@ public:
 	class FName                                   SessionName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D88[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSessionSubsystem_IsPlayerInSession) == 0x000008, "Wrong alignment on OnlineSessionSubsystem_IsPlayerInSession");
 static_assert(sizeof(OnlineSessionSubsystem_IsPlayerInSession) == 0x000040, "Wrong size on OnlineSessionSubsystem_IsPlayerInSession");
@@ -4210,7 +4685,7 @@ struct OnlineSessionSubsystem_RemovePlayerFromSession final
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SessionName;                                       // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D89[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       TargetPlayerId;                                    // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineSessionSubsystem_RemovePlayerFromSession) == 0x000008, "Wrong alignment on OnlineSessionSubsystem_RemovePlayerFromSession");
@@ -4228,7 +4703,7 @@ public:
 	class FName                                   SessionName;                                       // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       Friend;                                            // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D8A[0x7];                                     // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSessionSubsystem_SendSessionInviteToFriend) == 0x000008, "Wrong alignment on OnlineSessionSubsystem_SendSessionInviteToFriend");
 static_assert(sizeof(OnlineSessionSubsystem_SendSessionInviteToFriend) == 0x000070, "Wrong size on OnlineSessionSubsystem_SendSessionInviteToFriend");
@@ -4246,7 +4721,7 @@ public:
 	class FName                                   SessionName;                                       // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FUniqueNetIdRepl>               Friends;                                           // 0x0038(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D8B[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSessionSubsystem_SendSessionInviteToFriends) == 0x000008, "Wrong alignment on OnlineSessionSubsystem_SendSessionInviteToFriends");
 static_assert(sizeof(OnlineSessionSubsystem_SendSessionInviteToFriends) == 0x000050, "Wrong size on OnlineSessionSubsystem_SendSessionInviteToFriends");
@@ -4298,7 +4773,7 @@ public:
 	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOnlineSessionSettingsBP               UpdatedSessionSettings;                            // 0x0010(0x0150)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bShouldRefreshOnlineData;                          // 0x0160(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D90[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystemUpdateSession*   ReturnValue;                                       // 0x0168(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineSessionSubsystemUpdateSession_UpdateSession) == 0x000008, "Wrong alignment on OnlineSessionSubsystemUpdateSession_UpdateSession");
@@ -4360,23 +4835,6 @@ static_assert(offsetof(OnlineSessionSubsystemStartMatchmaking_StartMatchmaking, 
 static_assert(offsetof(OnlineSessionSubsystemStartMatchmaking_StartMatchmaking, SearchSettings) == 0x000170, "Member 'OnlineSessionSubsystemStartMatchmaking_StartMatchmaking::SearchSettings' has a wrong offset!");
 static_assert(offsetof(OnlineSessionSubsystemStartMatchmaking_StartMatchmaking, ReturnValue) == 0x000178, "Member 'OnlineSessionSubsystemStartMatchmaking_StartMatchmaking::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking.CancelMatchmaking
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       SearchingPlayerId;                                 // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemCancelMatchmaking* ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking) == 0x000008, "Wrong alignment on OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking");
-static_assert(sizeof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking) == 0x000048, "Wrong size on OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking");
-static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, Subsystem) == 0x000000, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, SearchingPlayerId) == 0x000008, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::SearchingPlayerId' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, SessionName) == 0x000038, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::SessionName' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking, ReturnValue) == 0x000040, "Member 'OnlineSessionSubsystemCancelMatchmaking_CancelMatchmaking::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessions.FindSessions
 // 0x0048 (0x0048 - 0x0000)
 struct OnlineSessionSubsystemFindSessions_FindSessions final
@@ -4393,27 +4851,6 @@ static_assert(offsetof(OnlineSessionSubsystemFindSessions_FindSessions, Subsyste
 static_assert(offsetof(OnlineSessionSubsystemFindSessions_FindSessions, SearchingPlayerId) == 0x000008, "Member 'OnlineSessionSubsystemFindSessions_FindSessions::SearchingPlayerId' has a wrong offset!");
 static_assert(offsetof(OnlineSessionSubsystemFindSessions_FindSessions, SearchSettings) == 0x000038, "Member 'OnlineSessionSubsystemFindSessions_FindSessions::SearchSettings' has a wrong offset!");
 static_assert(offsetof(OnlineSessionSubsystemFindSessions_FindSessions, ReturnValue) == 0x000040, "Member 'OnlineSessionSubsystemFindSessions_FindSessions::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById.FindSessionById
-// 0x00B0 (0x00B0 - 0x0000)
-struct OnlineSessionSubsystemFindSessionById_FindSessionById final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       SearchingUserId;                                   // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       SessionId;                                         // 0x0038(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0068(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserData;                                          // 0x0098(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemFindSessionById* ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineSessionSubsystemFindSessionById_FindSessionById) == 0x000008, "Wrong alignment on OnlineSessionSubsystemFindSessionById_FindSessionById");
-static_assert(sizeof(OnlineSessionSubsystemFindSessionById_FindSessionById) == 0x0000B0, "Wrong size on OnlineSessionSubsystemFindSessionById_FindSessionById");
-static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, Subsystem) == 0x000000, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, SearchingUserId) == 0x000008, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::SearchingUserId' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, SessionId) == 0x000038, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::SessionId' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, FriendId) == 0x000068, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::FriendId' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, UserData) == 0x000098, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::UserData' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindSessionById_FindSessionById, ReturnValue) == 0x0000A8, "Member 'OnlineSessionSubsystemFindSessionById_FindSessionById::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelFindSessions.CancelFindSessions
 // 0x0010 (0x0010 - 0x0000)
@@ -4462,24 +4899,6 @@ static_assert(offsetof(OnlineSessionSubsystemJoinSession_JoinSession, SessionNam
 static_assert(offsetof(OnlineSessionSubsystemJoinSession_JoinSession, DesiredSession) == 0x000040, "Member 'OnlineSessionSubsystemJoinSession_JoinSession::DesiredSession' has a wrong offset!");
 static_assert(offsetof(OnlineSessionSubsystemJoinSession_JoinSession, ReturnValue) == 0x0001F8, "Member 'OnlineSessionSubsystemJoinSession_JoinSession::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession.FindFriendSession
-// 0x0048 (0x0048 - 0x0000)
-struct OnlineSessionSubsystemFindFriendSession_FindFriendSession final
-{
-public:
-	class UOnlineSessionSubsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D9A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       Friend;                                            // 0x0010(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystemFindFriendSession* ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineSessionSubsystemFindFriendSession_FindFriendSession) == 0x000008, "Wrong alignment on OnlineSessionSubsystemFindFriendSession_FindFriendSession");
-static_assert(sizeof(OnlineSessionSubsystemFindFriendSession_FindFriendSession) == 0x000048, "Wrong size on OnlineSessionSubsystemFindFriendSession_FindFriendSession");
-static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, Subsystem) == 0x000000, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, LocalUserNum) == 0x000008, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, Friend) == 0x000010, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::Friend' has a wrong offset!");
-static_assert(offsetof(OnlineSessionSubsystemFindFriendSession_FindFriendSession, ReturnValue) == 0x000040, "Member 'OnlineSessionSubsystemFindFriendSession_FindFriendSession::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineSessionSubsystemRegisterPlayers.RegisterPlayers
 // 0x0030 (0x0030 - 0x0000)
 struct OnlineSessionSubsystemRegisterPlayers_RegisterPlayers final
@@ -4489,7 +4908,7 @@ public:
 	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FUniqueNetIdRepl>               Players;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bWasInvited;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D9D[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineSessionSubsystemRegisterPlayers* ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineSessionSubsystemRegisterPlayers_RegisterPlayers) == 0x000008, "Wrong alignment on OnlineSessionSubsystemRegisterPlayers_RegisterPlayers");
@@ -4582,7 +5001,7 @@ public:
 	class FString                                 Filename;                                          // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFileData*                              Contents;                                          // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DA0[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSharedCloudSubsystem_WriteSharedFile) == 0x000008, "Wrong alignment on OnlineSharedCloudSubsystem_WriteSharedFile");
 static_assert(sizeof(OnlineSharedCloudSubsystem_WriteSharedFile) == 0x000050, "Wrong size on OnlineSharedCloudSubsystem_WriteSharedFile");
@@ -4610,7 +5029,7 @@ public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumPostsToRead;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DA2[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineSharingSubsystem_ReadNewsFeed) == 0x000004, "Wrong alignment on OnlineSharingSubsystem_ReadNewsFeed");
 static_assert(sizeof(OnlineSharingSubsystem_ReadNewsFeed) == 0x00000C, "Wrong size on OnlineSharingSubsystem_ReadNewsFeed");
@@ -4678,52 +5097,6 @@ static_assert(offsetof(OnlineStatsSubsystemUpdateStats_UpdateStats, LocalUserId)
 static_assert(offsetof(OnlineStatsSubsystemUpdateStats_UpdateStats, UpdatedUserStats) == 0x000038, "Member 'OnlineStatsSubsystemUpdateStats_UpdateStats::UpdatedUserStats' has a wrong offset!");
 static_assert(offsetof(OnlineStatsSubsystemUpdateStats_UpdateStats, ReturnValue) == 0x000048, "Member 'OnlineStatsSubsystemUpdateStats_UpdateStats::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetCategories
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineStoreV2Subsystem_GetCategories final
-{
-public:
-	TArray<struct FOnlineStoreCategoryBP>         OutCategories;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineStoreV2Subsystem_GetCategories) == 0x000008, "Wrong alignment on OnlineStoreV2Subsystem_GetCategories");
-static_assert(sizeof(OnlineStoreV2Subsystem_GetCategories) == 0x000010, "Wrong size on OnlineStoreV2Subsystem_GetCategories");
-static_assert(offsetof(OnlineStoreV2Subsystem_GetCategories, OutCategories) == 0x000000, "Member 'OnlineStoreV2Subsystem_GetCategories::OutCategories' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffer
-// 0x0018 (0x0018 - 0x0000)
-struct OnlineStoreV2Subsystem_GetOffer final
-{
-public:
-	class FString                                 OfferId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineStoreOffer*                      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineStoreV2Subsystem_GetOffer) == 0x000008, "Wrong alignment on OnlineStoreV2Subsystem_GetOffer");
-static_assert(sizeof(OnlineStoreV2Subsystem_GetOffer) == 0x000018, "Wrong size on OnlineStoreV2Subsystem_GetOffer");
-static_assert(offsetof(OnlineStoreV2Subsystem_GetOffer, OfferId) == 0x000000, "Member 'OnlineStoreV2Subsystem_GetOffer::OfferId' has a wrong offset!");
-static_assert(offsetof(OnlineStoreV2Subsystem_GetOffer, ReturnValue) == 0x000010, "Member 'OnlineStoreV2Subsystem_GetOffer::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.GetOffers
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineStoreV2Subsystem_GetOffers final
-{
-public:
-	TArray<class UOnlineStoreOffer*>              OutOffers;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineStoreV2Subsystem_GetOffers) == 0x000008, "Wrong alignment on OnlineStoreV2Subsystem_GetOffers");
-static_assert(sizeof(OnlineStoreV2Subsystem_GetOffers) == 0x000010, "Wrong size on OnlineStoreV2Subsystem_GetOffers");
-static_assert(offsetof(OnlineStoreV2Subsystem_GetOffers, OutOffers) == 0x000000, "Member 'OnlineStoreV2Subsystem_GetOffers::OutOffers' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2Subsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineStoreV2Subsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineStoreV2Subsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineStoreV2Subsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineStoreV2Subsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineStoreV2Subsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineStoreV2Subsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineStoreV2Subsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryCategories.QueryCategories
 // 0x0040 (0x0040 - 0x0000)
 struct OnlineStoreV2SubsystemQueryCategories_QueryCategories final
@@ -4738,23 +5111,6 @@ static_assert(sizeof(OnlineStoreV2SubsystemQueryCategories_QueryCategories) == 0
 static_assert(offsetof(OnlineStoreV2SubsystemQueryCategories_QueryCategories, Subsystem) == 0x000000, "Member 'OnlineStoreV2SubsystemQueryCategories_QueryCategories::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineStoreV2SubsystemQueryCategories_QueryCategories, UserId) == 0x000008, "Member 'OnlineStoreV2SubsystemQueryCategories_QueryCategories::UserId' has a wrong offset!");
 static_assert(offsetof(OnlineStoreV2SubsystemQueryCategories_QueryCategories, ReturnValue) == 0x000038, "Member 'OnlineStoreV2SubsystemQueryCategories_QueryCategories::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersByFilter.QueryOffersByFilter
-// 0x0070 (0x0070 - 0x0000)
-struct OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter final
-{
-public:
-	class UOnlineStoreV2Subsystem*                Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FOnlineStoreFilterBP                   Filter;                                            // 0x0038(0x0030)(Parm, NativeAccessSpecifierPublic)
-	class UOnlineStoreV2SubsystemQueryOffersByFilter* ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter) == 0x000008, "Wrong alignment on OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter");
-static_assert(sizeof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter) == 0x000070, "Wrong size on OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter");
-static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, Subsystem) == 0x000000, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, UserId) == 0x000008, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, Filter) == 0x000038, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::Filter' has a wrong offset!");
-static_assert(offsetof(OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter, ReturnValue) == 0x000068, "Member 'OnlineStoreV2SubsystemQueryOffersByFilter_QueryOffersByFilter::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersById.QueryOffersById
 // 0x0050 (0x0050 - 0x0000)
@@ -5209,80 +5565,6 @@ static_assert(alignof(OnlineTimeSubsystem_QueryServerUtcTime) == 0x000001, "Wron
 static_assert(sizeof(OnlineTimeSubsystem_QueryServerUtcTime) == 0x000001, "Wrong size on OnlineTimeSubsystem_QueryServerUtcTime");
 static_assert(offsetof(OnlineTimeSubsystem_QueryServerUtcTime, ReturnValue) == 0x000000, "Member 'OnlineTimeSubsystem_QueryServerUtcTime::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFile
-// 0x0018 (0x0018 - 0x0000)
-struct OnlineTitleFileSubsystem_ClearFile final
-{
-public:
-	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DA7[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineTitleFileSubsystem_ClearFile) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystem_ClearFile");
-static_assert(sizeof(OnlineTitleFileSubsystem_ClearFile) == 0x000018, "Wrong size on OnlineTitleFileSubsystem_ClearFile");
-static_assert(offsetof(OnlineTitleFileSubsystem_ClearFile, Filename) == 0x000000, "Member 'OnlineTitleFileSubsystem_ClearFile::Filename' has a wrong offset!");
-static_assert(offsetof(OnlineTitleFileSubsystem_ClearFile, ReturnValue) == 0x000010, "Member 'OnlineTitleFileSubsystem_ClearFile::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.ClearFiles
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineTitleFileSubsystem_ClearFiles final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTitleFileSubsystem_ClearFiles) == 0x000001, "Wrong alignment on OnlineTitleFileSubsystem_ClearFiles");
-static_assert(sizeof(OnlineTitleFileSubsystem_ClearFiles) == 0x000001, "Wrong size on OnlineTitleFileSubsystem_ClearFiles");
-static_assert(offsetof(OnlineTitleFileSubsystem_ClearFiles, ReturnValue) == 0x000000, "Member 'OnlineTitleFileSubsystem_ClearFiles::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.DeleteCachedFiles
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineTitleFileSubsystem_DeleteCachedFiles final
-{
-public:
-	bool                                          bSkipEnumerated;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTitleFileSubsystem_DeleteCachedFiles) == 0x000001, "Wrong alignment on OnlineTitleFileSubsystem_DeleteCachedFiles");
-static_assert(sizeof(OnlineTitleFileSubsystem_DeleteCachedFiles) == 0x000001, "Wrong size on OnlineTitleFileSubsystem_DeleteCachedFiles");
-static_assert(offsetof(OnlineTitleFileSubsystem_DeleteCachedFiles, bSkipEnumerated) == 0x000000, "Member 'OnlineTitleFileSubsystem_DeleteCachedFiles::bSkipEnumerated' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileContents
-// 0x0020 (0x0020 - 0x0000)
-struct OnlineTitleFileSubsystem_GetFileContents final
-{
-public:
-	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFileData*                              FileContents;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DA8[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(OnlineTitleFileSubsystem_GetFileContents) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystem_GetFileContents");
-static_assert(sizeof(OnlineTitleFileSubsystem_GetFileContents) == 0x000020, "Wrong size on OnlineTitleFileSubsystem_GetFileContents");
-static_assert(offsetof(OnlineTitleFileSubsystem_GetFileContents, Filename) == 0x000000, "Member 'OnlineTitleFileSubsystem_GetFileContents::Filename' has a wrong offset!");
-static_assert(offsetof(OnlineTitleFileSubsystem_GetFileContents, FileContents) == 0x000010, "Member 'OnlineTitleFileSubsystem_GetFileContents::FileContents' has a wrong offset!");
-static_assert(offsetof(OnlineTitleFileSubsystem_GetFileContents, ReturnValue) == 0x000018, "Member 'OnlineTitleFileSubsystem_GetFileContents::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.GetFileList
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineTitleFileSubsystem_GetFileList final
-{
-public:
-	TArray<struct FCloudFileHeaderBP>             Files;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTitleFileSubsystem_GetFileList) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystem_GetFileList");
-static_assert(sizeof(OnlineTitleFileSubsystem_GetFileList) == 0x000010, "Wrong size on OnlineTitleFileSubsystem_GetFileList");
-static_assert(offsetof(OnlineTitleFileSubsystem_GetFileList, Files) == 0x000000, "Member 'OnlineTitleFileSubsystem_GetFileList::Files' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineTitleFileSubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTitleFileSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineTitleFileSubsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineTitleFileSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineTitleFileSubsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineTitleFileSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineTitleFileSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystemEnumerateFiles.EnumerateFiles
 // 0x0018 (0x0018 - 0x0000)
 struct OnlineTitleFileSubsystemEnumerateFiles_EnumerateFiles final
@@ -5298,21 +5580,6 @@ static_assert(offsetof(OnlineTitleFileSubsystemEnumerateFiles_EnumerateFiles, Su
 static_assert(offsetof(OnlineTitleFileSubsystemEnumerateFiles_EnumerateFiles, Page) == 0x000008, "Member 'OnlineTitleFileSubsystemEnumerateFiles_EnumerateFiles::Page' has a wrong offset!");
 static_assert(offsetof(OnlineTitleFileSubsystemEnumerateFiles_EnumerateFiles, ReturnValue) == 0x000010, "Member 'OnlineTitleFileSubsystemEnumerateFiles_EnumerateFiles::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineTitleFileSubsystemReadFile.ReadFile
-// 0x0020 (0x0020 - 0x0000)
-struct OnlineTitleFileSubsystemReadFile_ReadFile final
-{
-public:
-	class UOnlineTitleFileSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineTitleFileSubsystemReadFile*      ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTitleFileSubsystemReadFile_ReadFile) == 0x000008, "Wrong alignment on OnlineTitleFileSubsystemReadFile_ReadFile");
-static_assert(sizeof(OnlineTitleFileSubsystemReadFile_ReadFile) == 0x000020, "Wrong size on OnlineTitleFileSubsystemReadFile_ReadFile");
-static_assert(offsetof(OnlineTitleFileSubsystemReadFile_ReadFile, Subsystem) == 0x000000, "Member 'OnlineTitleFileSubsystemReadFile_ReadFile::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineTitleFileSubsystemReadFile_ReadFile, Filename) == 0x000008, "Member 'OnlineTitleFileSubsystemReadFile_ReadFile::Filename' has a wrong offset!");
-static_assert(offsetof(OnlineTitleFileSubsystemReadFile_ReadFile, ReturnValue) == 0x000018, "Member 'OnlineTitleFileSubsystemReadFile_ReadFile::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineTournamentSubsystem.IsSubsystemAvailable
 // 0x0001 (0x0001 - 0x0000)
 struct OnlineTournamentSubsystem_IsSubsystemAvailable final
@@ -5323,28 +5590,6 @@ public:
 static_assert(alignof(OnlineTournamentSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineTournamentSubsystem_IsSubsystemAvailable");
 static_assert(sizeof(OnlineTournamentSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineTournamentSubsystem_IsSubsystemAvailable");
 static_assert(offsetof(OnlineTournamentSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineTournamentSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.GetMatchDataSize
-// 0x0004 (0x0004 - 0x0000)
-struct OnlineTurnBasedSubsystem_GetMatchDataSize final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTurnBasedSubsystem_GetMatchDataSize) == 0x000004, "Wrong alignment on OnlineTurnBasedSubsystem_GetMatchDataSize");
-static_assert(sizeof(OnlineTurnBasedSubsystem_GetMatchDataSize) == 0x000004, "Wrong size on OnlineTurnBasedSubsystem_GetMatchDataSize");
-static_assert(offsetof(OnlineTurnBasedSubsystem_GetMatchDataSize, ReturnValue) == 0x000000, "Member 'OnlineTurnBasedSubsystem_GetMatchDataSize::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineTurnBasedSubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTurnBasedSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineTurnBasedSubsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineTurnBasedSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineTurnBasedSubsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineTurnBasedSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineTurnBasedSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadAllMatches.LoadAllMatches
 // 0x0010 (0x0010 - 0x0000)
@@ -5358,21 +5603,6 @@ static_assert(alignof(OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches) == 
 static_assert(sizeof(OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches) == 0x000010, "Wrong size on OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches");
 static_assert(offsetof(OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches, Subsystem) == 0x000000, "Member 'OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches, ReturnValue) == 0x000008, "Member 'OnlineTurnBasedSubsystemLoadAllMatches_LoadAllMatches::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadMatchWithID.LoadMatchWithID
-// 0x0020 (0x0020 - 0x0000)
-struct OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID final
-{
-public:
-	class UOnlineTurnBasedSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 MatchID;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineTurnBasedSubsystemLoadMatchWithID* ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID) == 0x000008, "Wrong alignment on OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID");
-static_assert(sizeof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID) == 0x000020, "Wrong size on OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID");
-static_assert(offsetof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID, Subsystem) == 0x000000, "Member 'OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID, MatchID) == 0x000008, "Member 'OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID::MatchID' has a wrong offset!");
-static_assert(offsetof(OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID, ReturnValue) == 0x000018, "Member 'OnlineTurnBasedSubsystemLoadMatchWithID_LoadMatchWithID::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystem.CancelWriteUserFile
 // 0x0040 (0x0040 - 0x0000)
@@ -5395,7 +5625,7 @@ public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Filename;                                          // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DAE[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineUserCloudSubsystem_ClearFile) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystem_ClearFile");
 static_assert(sizeof(OnlineUserCloudSubsystem_ClearFile) == 0x000048, "Wrong size on OnlineUserCloudSubsystem_ClearFile");
@@ -5410,7 +5640,7 @@ struct OnlineUserCloudSubsystem_ClearFiles final
 public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DAF[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineUserCloudSubsystem_ClearFiles) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystem_ClearFiles");
 static_assert(sizeof(OnlineUserCloudSubsystem_ClearFiles) == 0x000038, "Wrong size on OnlineUserCloudSubsystem_ClearFiles");
@@ -5450,7 +5680,7 @@ public:
 	class FString                                 Filename;                                          // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFileData*                              FileContents;                                      // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DB0[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineUserCloudSubsystem_GetFileContents) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystem_GetFileContents");
 static_assert(sizeof(OnlineUserCloudSubsystem_GetFileContents) == 0x000050, "Wrong size on OnlineUserCloudSubsystem_GetFileContents");
@@ -5490,27 +5720,28 @@ struct OnlineUserCloudSubsystem_RequestUsageInfo final
 public:
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DB1[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineUserCloudSubsystem_RequestUsageInfo) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystem_RequestUsageInfo");
 static_assert(sizeof(OnlineUserCloudSubsystem_RequestUsageInfo) == 0x000038, "Wrong size on OnlineUserCloudSubsystem_RequestUsageInfo");
 static_assert(offsetof(OnlineUserCloudSubsystem_RequestUsageInfo, UserId) == 0x000000, "Member 'OnlineUserCloudSubsystem_RequestUsageInfo::UserId' has a wrong offset!");
 static_assert(offsetof(OnlineUserCloudSubsystem_RequestUsageInfo, ReturnValue) == 0x000030, "Member 'OnlineUserCloudSubsystem_RequestUsageInfo::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles.EnumerateUserFiles
-// 0x0040 (0x0040 - 0x0000)
-struct OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles final
+// Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystem.TriggerOnWriteUserFileProgressDelegates
+// 0x0048 (0x0048 - 0x0000)
+struct OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates final
 {
 public:
-	class UOnlineUserCloudSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineUserCloudSubsystemEnumerateUserFiles* ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Param1;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       Param2;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Param3;                                            // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles");
-static_assert(sizeof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles) == 0x000040, "Wrong size on OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles");
-static_assert(offsetof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles, Subsystem) == 0x000000, "Member 'OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles, UserId) == 0x000008, "Member 'OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles, ReturnValue) == 0x000038, "Member 'OnlineUserCloudSubsystemEnumerateUserFiles_EnumerateUserFiles::ReturnValue' has a wrong offset!");
+static_assert(alignof(OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates");
+static_assert(sizeof(OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates) == 0x000048, "Wrong size on OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates");
+static_assert(offsetof(OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates, Param1) == 0x000000, "Member 'OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates::Param1' has a wrong offset!");
+static_assert(offsetof(OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates, Param2) == 0x000008, "Member 'OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates::Param2' has a wrong offset!");
+static_assert(offsetof(OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates, Param3) == 0x000038, "Member 'OnlineUserCloudSubsystem_TriggerOnWriteUserFileProgressDelegates::Param3' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineUserCloudSubsystemReadUserFile.ReadUserFile
 // 0x0050 (0x0050 - 0x0000)
@@ -5539,7 +5770,7 @@ public:
 	class FString                                 Filename;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFileData*                              FileContents;                                      // 0x0048(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCompressBeforeUpload;                             // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DB6[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineUserCloudSubsystemWriteUserFile* ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineUserCloudSubsystemWriteUserFile_WriteUserFile) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystemWriteUserFile_WriteUserFile");
@@ -5561,7 +5792,7 @@ public:
 	class FString                                 Filename;                                          // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldCloudDelete;                                // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldLocallyDelete;                              // 0x0049(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DB9[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineUserCloudSubsystemDeleteUserFile* ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineUserCloudSubsystemDeleteUserFile_DeleteUserFile) == 0x000008, "Wrong alignment on OnlineUserCloudSubsystemDeleteUserFile_DeleteUserFile");
@@ -5579,10 +5810,10 @@ struct OnlineUserSubsystem_GetAllUserInfo final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DBB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UOnlineUserRef*>                 OutUsers;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DBC[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineUserSubsystem_GetAllUserInfo) == 0x000008, "Wrong alignment on OnlineUserSubsystem_GetAllUserInfo");
 static_assert(sizeof(OnlineUserSubsystem_GetAllUserInfo) == 0x000020, "Wrong size on OnlineUserSubsystem_GetAllUserInfo");
@@ -5626,7 +5857,7 @@ struct OnlineUserSubsystem_GetUserInfo final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DBD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UOnlineUserRef*                         ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5654,7 +5885,7 @@ struct OnlineUserSubsystemQueryUserInfo_QueryUserInfo final
 public:
 	class UOnlineUserSubsystem*                   Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LocalUserNum;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC0[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               UserIds;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class UOnlineUserSubsystemQueryUserInfo*      ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5664,23 +5895,6 @@ static_assert(offsetof(OnlineUserSubsystemQueryUserInfo_QueryUserInfo, Subsystem
 static_assert(offsetof(OnlineUserSubsystemQueryUserInfo_QueryUserInfo, LocalUserNum) == 0x000008, "Member 'OnlineUserSubsystemQueryUserInfo_QueryUserInfo::LocalUserNum' has a wrong offset!");
 static_assert(offsetof(OnlineUserSubsystemQueryUserInfo_QueryUserInfo, UserIds) == 0x000010, "Member 'OnlineUserSubsystemQueryUserInfo_QueryUserInfo::UserIds' has a wrong offset!");
 static_assert(offsetof(OnlineUserSubsystemQueryUserInfo_QueryUserInfo, ReturnValue) == 0x000020, "Member 'OnlineUserSubsystemQueryUserInfo_QueryUserInfo::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping.QueryUserIdMapping
-// 0x0050 (0x0050 - 0x0000)
-struct OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping final
-{
-public:
-	class UOnlineUserSubsystem*                   Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayNameOrEmail;                                // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineUserSubsystemQueryUserIdMapping* ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping) == 0x000008, "Wrong alignment on OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping");
-static_assert(sizeof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping) == 0x000050, "Wrong size on OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping");
-static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, Subsystem) == 0x000000, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, UserId) == 0x000008, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, DisplayNameOrEmail) == 0x000038, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::DisplayNameOrEmail' has a wrong offset!");
-static_assert(offsetof(OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping, ReturnValue) == 0x000048, "Member 'OnlineUserSubsystemQueryUserIdMapping_QueryUserIdMapping::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineUserSubsystemQueryExternalIdMappings.QueryExternalIdMappings
 // 0x0068 (0x0068 - 0x0000)
@@ -5731,25 +5945,6 @@ static_assert(offsetof(OnlineVoiceAdminSubsystemCreateChannelCredentials_CreateC
 static_assert(offsetof(OnlineVoiceAdminSubsystemCreateChannelCredentials_CreateChannelCredentials, TargetUserIds) == 0x000048, "Member 'OnlineVoiceAdminSubsystemCreateChannelCredentials_CreateChannelCredentials::TargetUserIds' has a wrong offset!");
 static_assert(offsetof(OnlineVoiceAdminSubsystemCreateChannelCredentials_CreateChannelCredentials, ReturnValue) == 0x000058, "Member 'OnlineVoiceAdminSubsystemCreateChannelCredentials_CreateChannelCredentials::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemKickParticipant.KickParticipant
-// 0x0080 (0x0080 - 0x0000)
-struct OnlineVoiceAdminSubsystemKickParticipant_KickParticipant final
-{
-public:
-	class UOnlineVoiceAdminSubsystem*             Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       LocalUserId;                                       // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ChannelName;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       TargetUserId;                                      // 0x0048(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineVoiceAdminSubsystemKickParticipant* ReturnValue;                                       // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant) == 0x000008, "Wrong alignment on OnlineVoiceAdminSubsystemKickParticipant_KickParticipant");
-static_assert(sizeof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant) == 0x000080, "Wrong size on OnlineVoiceAdminSubsystemKickParticipant_KickParticipant");
-static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, Subsystem) == 0x000000, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, LocalUserId) == 0x000008, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::LocalUserId' has a wrong offset!");
-static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, ChannelName) == 0x000038, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::ChannelName' has a wrong offset!");
-static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, TargetUserId) == 0x000048, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::TargetUserId' has a wrong offset!");
-static_assert(offsetof(OnlineVoiceAdminSubsystemKickParticipant_KickParticipant, ReturnValue) == 0x000078, "Member 'OnlineVoiceAdminSubsystemKickParticipant_KickParticipant::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemSetParticipantHardMute.SetParticipantHardMute
 // 0x0088 (0x0088 - 0x0000)
 struct OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute final
@@ -5760,7 +5955,7 @@ public:
 	class FString                                 ChannelName;                                       // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       TargetUserId;                                      // 0x0048(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMuted;                                            // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC3[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineVoiceAdminSubsystemSetParticipantHardMute* ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute) == 0x000008, "Wrong alignment on OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute");
@@ -5771,83 +5966,6 @@ static_assert(offsetof(OnlineVoiceAdminSubsystemSetParticipantHardMute_SetPartic
 static_assert(offsetof(OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute, TargetUserId) == 0x000048, "Member 'OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute::TargetUserId' has a wrong offset!");
 static_assert(offsetof(OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute, bMuted) == 0x000078, "Member 'OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute::bMuted' has a wrong offset!");
 static_assert(offsetof(OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute, ReturnValue) == 0x000080, "Member 'OnlineVoiceAdminSubsystemSetParticipantHardMute_SetParticipantHardMute::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.CreateUser
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineVoiceChatSubsystem_CreateUser final
-{
-public:
-	class UVoiceChatUser*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_CreateUser) == 0x000008, "Wrong alignment on OnlineVoiceChatSubsystem_CreateUser");
-static_assert(sizeof(OnlineVoiceChatSubsystem_CreateUser) == 0x000008, "Wrong size on OnlineVoiceChatSubsystem_CreateUser");
-static_assert(offsetof(OnlineVoiceChatSubsystem_CreateUser, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_CreateUser::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Initialize_
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineVoiceChatSubsystem_Initialize_ final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_Initialize_) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_Initialize_");
-static_assert(sizeof(OnlineVoiceChatSubsystem_Initialize_) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_Initialize_");
-static_assert(offsetof(OnlineVoiceChatSubsystem_Initialize_, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_Initialize_::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnected
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineVoiceChatSubsystem_IsConnected final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_IsConnected) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsConnected");
-static_assert(sizeof(OnlineVoiceChatSubsystem_IsConnected) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsConnected");
-static_assert(offsetof(OnlineVoiceChatSubsystem_IsConnected, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsConnected::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsConnecting
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineVoiceChatSubsystem_IsConnecting final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_IsConnecting) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsConnecting");
-static_assert(sizeof(OnlineVoiceChatSubsystem_IsConnecting) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsConnecting");
-static_assert(offsetof(OnlineVoiceChatSubsystem_IsConnecting, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsConnecting::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsInitialized
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineVoiceChatSubsystem_IsInitialized final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_IsInitialized) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsInitialized");
-static_assert(sizeof(OnlineVoiceChatSubsystem_IsInitialized) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsInitialized");
-static_assert(offsetof(OnlineVoiceChatSubsystem_IsInitialized, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsInitialized::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.IsSubsystemAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineVoiceChatSubsystem_IsSubsystemAvailable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_IsSubsystemAvailable");
-static_assert(sizeof(OnlineVoiceChatSubsystem_IsSubsystemAvailable) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_IsSubsystemAvailable");
-static_assert(offsetof(OnlineVoiceChatSubsystem_IsSubsystemAvailable, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_IsSubsystemAvailable::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem.Uninitialize_
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineVoiceChatSubsystem_Uninitialize_ final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystem_Uninitialize_) == 0x000001, "Wrong alignment on OnlineVoiceChatSubsystem_Uninitialize_");
-static_assert(sizeof(OnlineVoiceChatSubsystem_Uninitialize_) == 0x000001, "Wrong size on OnlineVoiceChatSubsystem_Uninitialize_");
-static_assert(offsetof(OnlineVoiceChatSubsystem_Uninitialize_, ReturnValue) == 0x000000, "Member 'OnlineVoiceChatSubsystem_Uninitialize_::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemConnect.Connect
 // 0x0010 (0x0010 - 0x0000)
@@ -5862,19 +5980,6 @@ static_assert(sizeof(OnlineVoiceChatSubsystemConnect_Connect) == 0x000010, "Wron
 static_assert(offsetof(OnlineVoiceChatSubsystemConnect_Connect, Subsystem) == 0x000000, "Member 'OnlineVoiceChatSubsystemConnect_Connect::Subsystem' has a wrong offset!");
 static_assert(offsetof(OnlineVoiceChatSubsystemConnect_Connect, ReturnValue) == 0x000008, "Member 'OnlineVoiceChatSubsystemConnect_Connect::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemDisconnect.Disconnect
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineVoiceChatSubsystemDisconnect_Disconnect final
-{
-public:
-	class UOnlineVoiceChatSubsystem*              Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineVoiceChatSubsystemDisconnect*    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineVoiceChatSubsystemDisconnect_Disconnect) == 0x000008, "Wrong alignment on OnlineVoiceChatSubsystemDisconnect_Disconnect");
-static_assert(sizeof(OnlineVoiceChatSubsystemDisconnect_Disconnect) == 0x000010, "Wrong size on OnlineVoiceChatSubsystemDisconnect_Disconnect");
-static_assert(offsetof(OnlineVoiceChatSubsystemDisconnect_Disconnect, Subsystem) == 0x000000, "Member 'OnlineVoiceChatSubsystemDisconnect_Disconnect::Subsystem' has a wrong offset!");
-static_assert(offsetof(OnlineVoiceChatSubsystemDisconnect_Disconnect, ReturnValue) == 0x000008, "Member 'OnlineVoiceChatSubsystemDisconnect_Disconnect::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineVoiceSubsystem.GetAmplitudeOfRemoteTalker
 // 0x0038 (0x0038 - 0x0000)
 struct OnlineVoiceSubsystem_GetAmplitudeOfRemoteTalker final
@@ -5882,7 +5987,7 @@ struct OnlineVoiceSubsystem_GetAmplitudeOfRemoteTalker final
 public:
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC9[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_GetAmplitudeOfRemoteTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_GetAmplitudeOfRemoteTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_GetAmplitudeOfRemoteTalker) == 0x000038, "Wrong size on OnlineVoiceSubsystem_GetAmplitudeOfRemoteTalker");
@@ -5918,7 +6023,7 @@ struct OnlineVoiceSubsystem_IsHeadsetPresent final
 public:
 	int64                                         LocalUserNum;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DCA[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_IsHeadsetPresent) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_IsHeadsetPresent");
 static_assert(sizeof(OnlineVoiceSubsystem_IsHeadsetPresent) == 0x000010, "Wrong size on OnlineVoiceSubsystem_IsHeadsetPresent");
@@ -5932,7 +6037,7 @@ struct OnlineVoiceSubsystem_IsLocalPlayerTalking final
 public:
 	int64                                         LocalUserNum;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DCB[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_IsLocalPlayerTalking) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_IsLocalPlayerTalking");
 static_assert(sizeof(OnlineVoiceSubsystem_IsLocalPlayerTalking) == 0x000010, "Wrong size on OnlineVoiceSubsystem_IsLocalPlayerTalking");
@@ -5947,7 +6052,7 @@ public:
 	int64                                         LocalUserNum;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DCC[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_IsMuted) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_IsMuted");
 static_assert(sizeof(OnlineVoiceSubsystem_IsMuted) == 0x000040, "Wrong size on OnlineVoiceSubsystem_IsMuted");
@@ -5962,7 +6067,7 @@ struct OnlineVoiceSubsystem_IsRemotePlayerTalking final
 public:
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DCD[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_IsRemotePlayerTalking) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_IsRemotePlayerTalking");
 static_assert(sizeof(OnlineVoiceSubsystem_IsRemotePlayerTalking) == 0x000038, "Wrong size on OnlineVoiceSubsystem_IsRemotePlayerTalking");
@@ -5986,11 +6091,11 @@ struct OnlineVoiceSubsystem_MuteRemoteTalker final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DCE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsSystemWide;                                     // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DCF[0x6];                                     // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_MuteRemoteTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_MuteRemoteTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_MuteRemoteTalker) == 0x000040, "Wrong size on OnlineVoiceSubsystem_MuteRemoteTalker");
@@ -6006,7 +6111,7 @@ struct OnlineVoiceSubsystem_PatchLocalTalkerOutputToEndpoint final
 public:
 	class FString                                 InDeviceName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD0[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_PatchLocalTalkerOutputToEndpoint) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_PatchLocalTalkerOutputToEndpoint");
 static_assert(sizeof(OnlineVoiceSubsystem_PatchLocalTalkerOutputToEndpoint) == 0x000018, "Wrong size on OnlineVoiceSubsystem_PatchLocalTalkerOutputToEndpoint");
@@ -6021,7 +6126,7 @@ public:
 	class FString                                 InDeviceName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMuteInGameOutput;                                 // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD1[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_PatchRemoteTalkerOutputToEndpoint) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_PatchRemoteTalkerOutputToEndpoint");
 static_assert(sizeof(OnlineVoiceSubsystem_PatchRemoteTalkerOutputToEndpoint) == 0x000018, "Wrong size on OnlineVoiceSubsystem_PatchRemoteTalkerOutputToEndpoint");
@@ -6036,7 +6141,7 @@ struct OnlineVoiceSubsystem_RegisterLocalTalker final
 public:
 	int64                                         LocalUserNum;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD2[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_RegisterLocalTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_RegisterLocalTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_RegisterLocalTalker) == 0x000010, "Wrong size on OnlineVoiceSubsystem_RegisterLocalTalker");
@@ -6050,7 +6155,7 @@ struct OnlineVoiceSubsystem_RegisterRemoteTalker final
 public:
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD3[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_RegisterRemoteTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_RegisterRemoteTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_RegisterRemoteTalker) == 0x000038, "Wrong size on OnlineVoiceSubsystem_RegisterRemoteTalker");
@@ -6085,11 +6190,11 @@ struct OnlineVoiceSubsystem_UnMuteRemoteTalker final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0008(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsSystemWide;                                     // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD5[0x6];                                     // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_UnMuteRemoteTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_UnMuteRemoteTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_UnMuteRemoteTalker) == 0x000040, "Wrong size on OnlineVoiceSubsystem_UnMuteRemoteTalker");
@@ -6105,7 +6210,7 @@ struct OnlineVoiceSubsystem_UnRegisterLocalTalker final
 public:
 	int64                                         LocalUserNum;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD6[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_UnRegisterLocalTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_UnRegisterLocalTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_UnRegisterLocalTalker) == 0x000010, "Wrong size on OnlineVoiceSubsystem_UnRegisterLocalTalker");
@@ -6119,25 +6224,12 @@ struct OnlineVoiceSubsystem_UnRegisterRemoteTalker final
 public:
 	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD7[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(OnlineVoiceSubsystem_UnRegisterRemoteTalker) == 0x000008, "Wrong alignment on OnlineVoiceSubsystem_UnRegisterRemoteTalker");
 static_assert(sizeof(OnlineVoiceSubsystem_UnRegisterRemoteTalker) == 0x000038, "Wrong size on OnlineVoiceSubsystem_UnRegisterRemoteTalker");
 static_assert(offsetof(OnlineVoiceSubsystem_UnRegisterRemoteTalker, UniqueID) == 0x000000, "Member 'OnlineVoiceSubsystem_UnRegisterRemoteTalker::UniqueID' has a wrong offset!");
 static_assert(offsetof(OnlineVoiceSubsystem_UnRegisterRemoteTalker, ReturnValue) == 0x000030, "Member 'OnlineVoiceSubsystem_UnRegisterRemoteTalker::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineAchievementsWrite.SetAchievementProgress
-// 0x000C (0x000C - 0x0000)
-struct OnlineAchievementsWrite_SetAchievementProgress final
-{
-public:
-	class FName                                   AchievementID;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AchievementProgress;                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineAchievementsWrite_SetAchievementProgress) == 0x000004, "Wrong alignment on OnlineAchievementsWrite_SetAchievementProgress");
-static_assert(sizeof(OnlineAchievementsWrite_SetAchievementProgress) == 0x00000C, "Wrong size on OnlineAchievementsWrite_SetAchievementProgress");
-static_assert(offsetof(OnlineAchievementsWrite_SetAchievementProgress, AchievementID) == 0x000000, "Member 'OnlineAchievementsWrite_SetAchievementProgress::AchievementID' has a wrong offset!");
-static_assert(offsetof(OnlineAchievementsWrite_SetAchievementProgress, AchievementProgress) == 0x000008, "Member 'OnlineAchievementsWrite_SetAchievementProgress::AchievementProgress' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineEntitlement.GetConsumedCount
 // 0x0004 (0x0004 - 0x0000)
@@ -6249,42 +6341,6 @@ static_assert(alignof(OnlineEntitlement_IsConsumable) == 0x000001, "Wrong alignm
 static_assert(sizeof(OnlineEntitlement_IsConsumable) == 0x000001, "Wrong size on OnlineEntitlement_IsConsumable");
 static_assert(offsetof(OnlineEntitlement_IsConsumable, ReturnValue) == 0x000000, "Member 'OnlineEntitlement_IsConsumable::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnCreateAccountFlowUIRequired
-// 0x0020 (0x0020 - 0x0000)
-struct ExternalUIFlowHandler_OnCreateAccountFlowUIRequired final
-{
-public:
-	class FString                                 RequestedURL;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineExternalUISubsystem*             ExternalUIContext;                                 // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequestID;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDA[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired) == 0x000008, "Wrong alignment on ExternalUIFlowHandler_OnCreateAccountFlowUIRequired");
-static_assert(sizeof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired) == 0x000020, "Wrong size on ExternalUIFlowHandler_OnCreateAccountFlowUIRequired");
-static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, RequestedURL) == 0x000000, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::RequestedURL' has a wrong offset!");
-static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, ExternalUIContext) == 0x000010, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::ExternalUIContext' has a wrong offset!");
-static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, RequestID) == 0x000018, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::RequestID' has a wrong offset!");
-static_assert(offsetof(ExternalUIFlowHandler_OnCreateAccountFlowUIRequired, ReturnValue) == 0x00001C, "Member 'ExternalUIFlowHandler_OnCreateAccountFlowUIRequired::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.ExternalUIFlowHandler.OnLoginFlowUIRequired
-// 0x0020 (0x0020 - 0x0000)
-struct ExternalUIFlowHandler_OnLoginFlowUIRequired final
-{
-public:
-	class FString                                 RequestedURL;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UOnlineExternalUISubsystem*             ExternalUIContext;                                 // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequestID;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDB[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ExternalUIFlowHandler_OnLoginFlowUIRequired) == 0x000008, "Wrong alignment on ExternalUIFlowHandler_OnLoginFlowUIRequired");
-static_assert(sizeof(ExternalUIFlowHandler_OnLoginFlowUIRequired) == 0x000020, "Wrong size on ExternalUIFlowHandler_OnLoginFlowUIRequired");
-static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, RequestedURL) == 0x000000, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::RequestedURL' has a wrong offset!");
-static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, ExternalUIContext) == 0x000010, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::ExternalUIContext' has a wrong offset!");
-static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, RequestID) == 0x000018, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::RequestID' has a wrong offset!");
-static_assert(offsetof(ExternalUIFlowHandler_OnLoginFlowUIRequired, ReturnValue) == 0x00001C, "Member 'ExternalUIFlowHandler_OnLoginFlowUIRequired::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemBlueprints.OnlineFriendRef.GetInviteStatus
 // 0x0001 (0x0001 - 0x0000)
 struct OnlineFriendRef_GetInviteStatus final
@@ -6307,109 +6363,38 @@ static_assert(alignof(OnlineFriendRef_GetPresence) == 0x000008, "Wrong alignment
 static_assert(sizeof(OnlineFriendRef_GetPresence) == 0x0000A8, "Wrong size on OnlineFriendRef_GetPresence");
 static_assert(offsetof(OnlineFriendRef_GetPresence, ReturnValue) == 0x000000, "Member 'OnlineFriendRef_GetPresence::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetColumns
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardWrite.SetLeaderboardNames
 // 0x0010 (0x0010 - 0x0000)
-struct OnlineLeaderboardRead_SetColumns final
+struct OnlineLeaderboardWrite_SetLeaderboardNames final
 {
 public:
-	TArray<struct FColumnMetaDataBP>              InColumns;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           LeaderboardNames;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(OnlineLeaderboardRead_SetColumns) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_SetColumns");
-static_assert(sizeof(OnlineLeaderboardRead_SetColumns) == 0x000010, "Wrong size on OnlineLeaderboardRead_SetColumns");
-static_assert(offsetof(OnlineLeaderboardRead_SetColumns, InColumns) == 0x000000, "Member 'OnlineLeaderboardRead_SetColumns::InColumns' has a wrong offset!");
+static_assert(alignof(OnlineLeaderboardWrite_SetLeaderboardNames) == 0x000008, "Wrong alignment on OnlineLeaderboardWrite_SetLeaderboardNames");
+static_assert(sizeof(OnlineLeaderboardWrite_SetLeaderboardNames) == 0x000010, "Wrong size on OnlineLeaderboardWrite_SetLeaderboardNames");
+static_assert(offsetof(OnlineLeaderboardWrite_SetLeaderboardNames, LeaderboardNames) == 0x000000, "Member 'OnlineLeaderboardWrite_SetLeaderboardNames::LeaderboardNames' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetLeaderboardName
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardWrite.SetRatedStat
 // 0x0008 (0x0008 - 0x0000)
-struct OnlineLeaderboardRead_SetLeaderboardName final
+struct OnlineLeaderboardWrite_SetRatedStat final
 {
 public:
-	class FName                                   LeaderboardName;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RatedStat;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(OnlineLeaderboardRead_SetLeaderboardName) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_SetLeaderboardName");
-static_assert(sizeof(OnlineLeaderboardRead_SetLeaderboardName) == 0x000008, "Wrong size on OnlineLeaderboardRead_SetLeaderboardName");
-static_assert(offsetof(OnlineLeaderboardRead_SetLeaderboardName, LeaderboardName) == 0x000000, "Member 'OnlineLeaderboardRead_SetLeaderboardName::LeaderboardName' has a wrong offset!");
+static_assert(alignof(OnlineLeaderboardWrite_SetRatedStat) == 0x000004, "Wrong alignment on OnlineLeaderboardWrite_SetRatedStat");
+static_assert(sizeof(OnlineLeaderboardWrite_SetRatedStat) == 0x000008, "Wrong size on OnlineLeaderboardWrite_SetRatedStat");
+static_assert(offsetof(OnlineLeaderboardWrite_SetRatedStat, RatedStat) == 0x000000, "Member 'OnlineLeaderboardWrite_SetRatedStat::RatedStat' has a wrong offset!");
 
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.SetSortedColumn
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineLeaderboardRead_SetSortedColumn final
+// Function OnlineSubsystemBlueprints.OnlineLeaderboardWrite.SetStats
+// 0x0050 (0x0050 - 0x0000)
+struct OnlineLeaderboardWrite_SetStats final
 {
 public:
-	class FName                                   SortedColumn;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FVariantDataBP>    Stats;                                             // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(OnlineLeaderboardRead_SetSortedColumn) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_SetSortedColumn");
-static_assert(sizeof(OnlineLeaderboardRead_SetSortedColumn) == 0x000008, "Wrong size on OnlineLeaderboardRead_SetSortedColumn");
-static_assert(offsetof(OnlineLeaderboardRead_SetSortedColumn, SortedColumn) == 0x000000, "Member 'OnlineLeaderboardRead_SetSortedColumn::SortedColumn' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.FindPlayerRecord
-// 0x00D0 (0x00D0 - 0x0000)
-struct OnlineLeaderboardRead_FindPlayerRecord final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OutFound;                                          // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDF[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineStatsRowBP                      ReturnValue;                                       // 0x0038(0x0098)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardRead_FindPlayerRecord) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_FindPlayerRecord");
-static_assert(sizeof(OnlineLeaderboardRead_FindPlayerRecord) == 0x0000D0, "Wrong size on OnlineLeaderboardRead_FindPlayerRecord");
-static_assert(offsetof(OnlineLeaderboardRead_FindPlayerRecord, UserId) == 0x000000, "Member 'OnlineLeaderboardRead_FindPlayerRecord::UserId' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardRead_FindPlayerRecord, OutFound) == 0x000030, "Member 'OnlineLeaderboardRead_FindPlayerRecord::OutFound' has a wrong offset!");
-static_assert(offsetof(OnlineLeaderboardRead_FindPlayerRecord, ReturnValue) == 0x000038, "Member 'OnlineLeaderboardRead_FindPlayerRecord::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetColumns
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineLeaderboardRead_GetColumns final
-{
-public:
-	TArray<struct FColumnMetaDataBP>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardRead_GetColumns) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_GetColumns");
-static_assert(sizeof(OnlineLeaderboardRead_GetColumns) == 0x000010, "Wrong size on OnlineLeaderboardRead_GetColumns");
-static_assert(offsetof(OnlineLeaderboardRead_GetColumns, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetColumns::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetLeaderboardName
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineLeaderboardRead_GetLeaderboardName final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardRead_GetLeaderboardName) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_GetLeaderboardName");
-static_assert(sizeof(OnlineLeaderboardRead_GetLeaderboardName) == 0x000008, "Wrong size on OnlineLeaderboardRead_GetLeaderboardName");
-static_assert(offsetof(OnlineLeaderboardRead_GetLeaderboardName, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetLeaderboardName::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetReadState
-// 0x0001 (0x0001 - 0x0000)
-struct OnlineLeaderboardRead_GetReadState final
-{
-public:
-	EOnlineAsyncTaskState_                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardRead_GetReadState) == 0x000001, "Wrong alignment on OnlineLeaderboardRead_GetReadState");
-static_assert(sizeof(OnlineLeaderboardRead_GetReadState) == 0x000001, "Wrong size on OnlineLeaderboardRead_GetReadState");
-static_assert(offsetof(OnlineLeaderboardRead_GetReadState, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetReadState::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetRows
-// 0x0010 (0x0010 - 0x0000)
-struct OnlineLeaderboardRead_GetRows final
-{
-public:
-	TArray<struct FOnlineStatsRowBP>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardRead_GetRows) == 0x000008, "Wrong alignment on OnlineLeaderboardRead_GetRows");
-static_assert(sizeof(OnlineLeaderboardRead_GetRows) == 0x000010, "Wrong size on OnlineLeaderboardRead_GetRows");
-static_assert(offsetof(OnlineLeaderboardRead_GetRows, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetRows::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemBlueprints.OnlineLeaderboardRead.GetSortedColumn
-// 0x0008 (0x0008 - 0x0000)
-struct OnlineLeaderboardRead_GetSortedColumn final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(OnlineLeaderboardRead_GetSortedColumn) == 0x000004, "Wrong alignment on OnlineLeaderboardRead_GetSortedColumn");
-static_assert(sizeof(OnlineLeaderboardRead_GetSortedColumn) == 0x000008, "Wrong size on OnlineLeaderboardRead_GetSortedColumn");
-static_assert(offsetof(OnlineLeaderboardRead_GetSortedColumn, ReturnValue) == 0x000000, "Member 'OnlineLeaderboardRead_GetSortedColumn::ReturnValue' has a wrong offset!");
+static_assert(alignof(OnlineLeaderboardWrite_SetStats) == 0x000008, "Wrong alignment on OnlineLeaderboardWrite_SetStats");
+static_assert(sizeof(OnlineLeaderboardWrite_SetStats) == 0x000050, "Wrong size on OnlineLeaderboardWrite_SetStats");
+static_assert(offsetof(OnlineLeaderboardWrite_SetStats, Stats) == 0x000000, "Member 'OnlineLeaderboardWrite_SetStats::Stats' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.Lobby.GetId
 // 0x0008 (0x0008 - 0x0000)
@@ -6497,7 +6482,7 @@ struct UserOnlineAccountRef_GetAuthAttribute final
 public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Found;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE3[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(UserOnlineAccountRef_GetAuthAttribute) == 0x000008, "Wrong alignment on UserOnlineAccountRef_GetAuthAttribute");
@@ -6514,7 +6499,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE4[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(UserOnlineAccountRef_SetUserAttribute) == 0x000008, "Wrong alignment on UserOnlineAccountRef_SetUserAttribute");
 static_assert(sizeof(UserOnlineAccountRef_SetUserAttribute) == 0x000028, "Wrong size on UserOnlineAccountRef_SetUserAttribute");
@@ -6554,7 +6539,7 @@ public:
 	class FString                                 AttrName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OutAttrValue;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE6[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BlueprintPartyMember_GetUserAttribute) == 0x000008, "Wrong alignment on BlueprintPartyMember_GetUserAttribute");
 static_assert(sizeof(BlueprintPartyMember_GetUserAttribute) == 0x000028, "Wrong size on BlueprintPartyMember_GetUserAttribute");
@@ -6596,6 +6581,17 @@ static_assert(alignof(MutablePartyData_SetAttribute) == 0x000008, "Wrong alignme
 static_assert(sizeof(MutablePartyData_SetAttribute) == 0x000038, "Wrong size on MutablePartyData_SetAttribute");
 static_assert(offsetof(MutablePartyData_SetAttribute, AttrName) == 0x000000, "Member 'MutablePartyData_SetAttribute::AttrName' has a wrong offset!");
 static_assert(offsetof(MutablePartyData_SetAttribute, AttrValue) == 0x000010, "Member 'MutablePartyData_SetAttribute::AttrValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.PartyId.ToDebugString
+// 0x0010 (0x0010 - 0x0000)
+struct PartyId_ToDebugString final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PartyId_ToDebugString) == 0x000008, "Wrong alignment on PartyId_ToDebugString");
+static_assert(sizeof(PartyId_ToDebugString) == 0x000010, "Wrong size on PartyId_ToDebugString");
+static_assert(offsetof(PartyId_ToDebugString, ReturnValue) == 0x000000, "Member 'PartyId_ToDebugString::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlinePartyJoinInfo.GetPartyId
 // 0x0008 (0x0008 - 0x0000)
@@ -6641,6 +6637,39 @@ static_assert(alignof(OnlinePartyJoinInfo_ToDebugString) == 0x000008, "Wrong ali
 static_assert(sizeof(OnlinePartyJoinInfo_ToDebugString) == 0x000010, "Wrong size on OnlinePartyJoinInfo_ToDebugString");
 static_assert(offsetof(OnlinePartyJoinInfo_ToDebugString, ReturnValue) == 0x000000, "Member 'OnlinePartyJoinInfo_ToDebugString::ReturnValue' has a wrong offset!");
 
+// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetPurchaseTransactionState
+// 0x0001 (0x0001 - 0x0000)
+struct PurchaseReceipt_GetPurchaseTransactionState final
+{
+public:
+	EPurchaseTransactionState_                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PurchaseReceipt_GetPurchaseTransactionState) == 0x000001, "Wrong alignment on PurchaseReceipt_GetPurchaseTransactionState");
+static_assert(sizeof(PurchaseReceipt_GetPurchaseTransactionState) == 0x000001, "Wrong size on PurchaseReceipt_GetPurchaseTransactionState");
+static_assert(offsetof(PurchaseReceipt_GetPurchaseTransactionState, ReturnValue) == 0x000000, "Member 'PurchaseReceipt_GetPurchaseTransactionState::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetReceiptOffers
+// 0x0010 (0x0010 - 0x0000)
+struct PurchaseReceipt_GetReceiptOffers final
+{
+public:
+	TArray<struct FReceiptOfferEntryBP>           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PurchaseReceipt_GetReceiptOffers) == 0x000008, "Wrong alignment on PurchaseReceipt_GetReceiptOffers");
+static_assert(sizeof(PurchaseReceipt_GetReceiptOffers) == 0x000010, "Wrong size on PurchaseReceipt_GetReceiptOffers");
+static_assert(offsetof(PurchaseReceipt_GetReceiptOffers, ReturnValue) == 0x000000, "Member 'PurchaseReceipt_GetReceiptOffers::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.PurchaseReceipt.GetTransactionId
+// 0x0010 (0x0010 - 0x0000)
+struct PurchaseReceipt_GetTransactionId final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PurchaseReceipt_GetTransactionId) == 0x000008, "Wrong alignment on PurchaseReceipt_GetTransactionId");
+static_assert(sizeof(PurchaseReceipt_GetTransactionId) == 0x000010, "Wrong size on PurchaseReceipt_GetTransactionId");
+static_assert(offsetof(PurchaseReceipt_GetTransactionId, ReturnValue) == 0x000000, "Member 'PurchaseReceipt_GetTransactionId::ReturnValue' has a wrong offset!");
+
 // Function OnlineSubsystemBlueprints.NamedOnlineSession.GetValue
 // 0x0208 (0x0208 - 0x0000)
 struct NamedOnlineSession_GetValue final
@@ -6651,6 +6680,28 @@ public:
 static_assert(alignof(NamedOnlineSession_GetValue) == 0x000008, "Wrong alignment on NamedOnlineSession_GetValue");
 static_assert(sizeof(NamedOnlineSession_GetValue) == 0x000208, "Wrong size on NamedOnlineSession_GetValue");
 static_assert(offsetof(NamedOnlineSession_GetValue, ReturnValue) == 0x000000, "Member 'NamedOnlineSession_GetValue::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchResults
+// 0x0010 (0x0010 - 0x0000)
+struct OnlineSessionSearch_GetSearchResults final
+{
+public:
+	TArray<struct FOnlineSessionSearchResultBP>   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineSessionSearch_GetSearchResults) == 0x000008, "Wrong alignment on OnlineSessionSearch_GetSearchResults");
+static_assert(sizeof(OnlineSessionSearch_GetSearchResults) == 0x000010, "Wrong size on OnlineSessionSearch_GetSearchResults");
+static_assert(offsetof(OnlineSessionSearch_GetSearchResults, ReturnValue) == 0x000000, "Member 'OnlineSessionSearch_GetSearchResults::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemBlueprints.OnlineSessionSearch.GetSearchState
+// 0x0001 (0x0001 - 0x0000)
+struct OnlineSessionSearch_GetSearchState final
+{
+public:
+	EOnlineAsyncTaskState_                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OnlineSessionSearch_GetSearchState) == 0x000001, "Wrong alignment on OnlineSessionSearch_GetSearchState");
+static_assert(sizeof(OnlineSessionSearch_GetSearchState) == 0x000001, "Wrong size on OnlineSessionSearch_GetSearchState");
+static_assert(offsetof(OnlineSessionSearch_GetSearchState, ReturnValue) == 0x000000, "Member 'OnlineSessionSearch_GetSearchState::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetCurrencyCode
 // 0x0010 (0x0010 - 0x0000)
@@ -6664,36 +6715,36 @@ static_assert(sizeof(OnlineStoreOffer_GetCurrencyCode) == 0x000010, "Wrong size 
 static_assert(offsetof(OnlineStoreOffer_GetCurrencyCode, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetCurrencyCode::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetDescription
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct OnlineStoreOffer_GetDescription final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineStoreOffer_GetDescription) == 0x000008, "Wrong alignment on OnlineStoreOffer_GetDescription");
-static_assert(sizeof(OnlineStoreOffer_GetDescription) == 0x000018, "Wrong size on OnlineStoreOffer_GetDescription");
+static_assert(sizeof(OnlineStoreOffer_GetDescription) == 0x000010, "Wrong size on OnlineStoreOffer_GetDescription");
 static_assert(offsetof(OnlineStoreOffer_GetDescription, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetDescription::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetDisplayPrice
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct OnlineStoreOffer_GetDisplayPrice final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineStoreOffer_GetDisplayPrice) == 0x000008, "Wrong alignment on OnlineStoreOffer_GetDisplayPrice");
-static_assert(sizeof(OnlineStoreOffer_GetDisplayPrice) == 0x000018, "Wrong size on OnlineStoreOffer_GetDisplayPrice");
+static_assert(sizeof(OnlineStoreOffer_GetDisplayPrice) == 0x000010, "Wrong size on OnlineStoreOffer_GetDisplayPrice");
 static_assert(offsetof(OnlineStoreOffer_GetDisplayPrice, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetDisplayPrice::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetDisplayRegularPrice
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct OnlineStoreOffer_GetDisplayRegularPrice final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineStoreOffer_GetDisplayRegularPrice) == 0x000008, "Wrong alignment on OnlineStoreOffer_GetDisplayRegularPrice");
-static_assert(sizeof(OnlineStoreOffer_GetDisplayRegularPrice) == 0x000018, "Wrong size on OnlineStoreOffer_GetDisplayRegularPrice");
+static_assert(sizeof(OnlineStoreOffer_GetDisplayRegularPrice) == 0x000010, "Wrong size on OnlineStoreOffer_GetDisplayRegularPrice");
 static_assert(offsetof(OnlineStoreOffer_GetDisplayRegularPrice, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetDisplayRegularPrice::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetDynamicFields
@@ -6719,14 +6770,14 @@ static_assert(sizeof(OnlineStoreOffer_GetExpirationDate) == 0x000008, "Wrong siz
 static_assert(offsetof(OnlineStoreOffer_GetExpirationDate, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetExpirationDate::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetLongDescription
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct OnlineStoreOffer_GetLongDescription final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineStoreOffer_GetLongDescription) == 0x000008, "Wrong alignment on OnlineStoreOffer_GetLongDescription");
-static_assert(sizeof(OnlineStoreOffer_GetLongDescription) == 0x000018, "Wrong size on OnlineStoreOffer_GetLongDescription");
+static_assert(sizeof(OnlineStoreOffer_GetLongDescription) == 0x000010, "Wrong size on OnlineStoreOffer_GetLongDescription");
 static_assert(offsetof(OnlineStoreOffer_GetLongDescription, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetLongDescription::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetNumericPrice
@@ -6774,14 +6825,14 @@ static_assert(sizeof(OnlineStoreOffer_GetReleaseDate) == 0x000008, "Wrong size o
 static_assert(offsetof(OnlineStoreOffer_GetReleaseDate, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetReleaseDate::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.GetTitle
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct OnlineStoreOffer_GetTitle final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OnlineStoreOffer_GetTitle) == 0x000008, "Wrong alignment on OnlineStoreOffer_GetTitle");
-static_assert(sizeof(OnlineStoreOffer_GetTitle) == 0x000018, "Wrong size on OnlineStoreOffer_GetTitle");
+static_assert(sizeof(OnlineStoreOffer_GetTitle) == 0x000010, "Wrong size on OnlineStoreOffer_GetTitle");
 static_assert(offsetof(OnlineStoreOffer_GetTitle, ReturnValue) == 0x000000, "Member 'OnlineStoreOffer_GetTitle::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemBlueprints.OnlineStoreOffer.IsPurchasable
@@ -6802,7 +6853,7 @@ struct VoiceChatUserLogin_Login final
 public:
 	class UVoiceChatUser*                         Subsystem;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlatformId;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DED[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PlayerName;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Credentials;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UVoiceChatUserLogin*                    ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -6824,9 +6875,9 @@ public:
 	class FString                                 ChannelName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ChannelCredentials;                                // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVoiceChatChannelType_                        ChannelType;                                       // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF0[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVoiceChatChannel3dPropertiesBP        Channel3dProperties;                               // 0x002C(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF1[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVoiceChatUserJoinChannel*              ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VoiceChatUserJoinChannel_JoinChannel) == 0x000008, "Wrong alignment on VoiceChatUserJoinChannel_JoinChannel");

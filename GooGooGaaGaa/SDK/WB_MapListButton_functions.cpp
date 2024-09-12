@@ -110,9 +110,9 @@ void UWB_MapListButton_C::GetIsSelected(bool* Is_Selected)
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    FileNameIsValid                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           Param_Filename                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Filename_0                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWB_MapListButton_C::GetMapFileName(bool* FileNameIsValid, class FString* Param_Filename)
+void UWB_MapListButton_C::GetMapFileName(bool* FileNameIsValid, class FString* Filename_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -126,17 +126,17 @@ void UWB_MapListButton_C::GetMapFileName(bool* FileNameIsValid, class FString* P
 	if (FileNameIsValid != nullptr)
 		*FileNameIsValid = Parms.FileNameIsValid;
 
-	if (Param_Filename != nullptr)
-		*Param_Filename = std::move(Parms.Param_Filename);
+	if (Filename_0 != nullptr)
+		*Filename_0 = std::move(Parms.Filename_0);
 }
 
 
 // Function WB_MapListButton.WB_MapListButton_C.GetNotifyButtonVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsVisible                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MapListButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
+void UWB_MapListButton_C::GetNotifyButtonVisibility(bool* IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -147,8 +147,8 @@ void UWB_MapListButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsVisible != nullptr)
-		*Param_IsVisible = Parms.Param_IsVisible;
+	if (IsVisible_0 != nullptr)
+		*IsVisible_0 = Parms.IsVisible_0;
 }
 
 
@@ -176,9 +176,9 @@ void UWB_MapListButton_C::GetQuantityVisibility(bool* ShowQuantity)
 // Function WB_MapListButton.WB_MapListButton_C.GetTooltip
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UUserWidget*                      Param_ToolTip                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTip_0                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_MapListButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
+void UWB_MapListButton_C::GetTooltip(class UUserWidget** ToolTip_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -189,8 +189,8 @@ void UWB_MapListButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ToolTip != nullptr)
-		*Param_ToolTip = Parms.Param_ToolTip;
+	if (ToolTip_0 != nullptr)
+		*ToolTip_0 = Parms.ToolTip_0;
 }
 
 

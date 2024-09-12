@@ -2850,11 +2850,11 @@ void ULowEntryFileManagerLibrary::SetFileTimestamp(const class FString& File, co
 // Function LowEntryFileManager.LowEntryFileManagerLibrary.SplitName
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           NamePart                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ExtensionPart                                          (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ULowEntryFileManagerLibrary::SplitName(const class FString& Param_Name, class FString* NamePart, class FString* ExtensionPart)
+void ULowEntryFileManagerLibrary::SplitName(const class FString& Name_0, class FString* NamePart, class FString* ExtensionPart)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2863,7 +2863,7 @@ void ULowEntryFileManagerLibrary::SplitName(const class FString& Param_Name, cla
 
 	Params::LowEntryFileManagerLibrary_SplitName Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

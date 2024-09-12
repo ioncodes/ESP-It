@@ -14,6 +14,25 @@
 namespace SDK
 {
 
+// Enum InputCore.ETouchIndex
+// NumValues: 0x000D
+enum class ETouchIndex : uint8
+{
+	Touch1                                   = 0,
+	Touch2                                   = 1,
+	Touch3                                   = 2,
+	Touch4                                   = 3,
+	Touch5                                   = 4,
+	Touch6                                   = 5,
+	Touch7                                   = 6,
+	Touch8                                   = 7,
+	Touch9                                   = 8,
+	Touch10                                  = 9,
+	CursorPointerIndex                       = 10,
+	MAX_TOUCHES                              = 11,
+	ETouchIndex_MAX                          = 12,
+};
+
 // Enum InputCore.EControllerHand
 // NumValues: 0x0014
 enum class EControllerHand : uint8
@@ -38,25 +57,6 @@ enum class EControllerHand : uint8
 	Special                                  = 17,
 	ControllerHand_Count                     = 18,
 	EControllerHand_MAX                      = 19,
-};
-
-// Enum InputCore.ETouchIndex
-// NumValues: 0x000D
-enum class ETouchIndex : uint8
-{
-	Touch1                                   = 0,
-	Touch2                                   = 1,
-	Touch3                                   = 2,
-	Touch4                                   = 3,
-	Touch5                                   = 4,
-	Touch6                                   = 5,
-	Touch7                                   = 6,
-	Touch8                                   = 7,
-	Touch9                                   = 8,
-	Touch10                                  = 9,
-	CursorPointerIndex                       = 10,
-	MAX_TOUCHES                              = 11,
-	ETouchIndex_MAX                          = 12,
 };
 
 // Enum InputCore.EConsoleForGamepadLabels
@@ -89,7 +89,7 @@ struct alignas(0x08) FKey final
 {
 public:
 	class FName                                   KeyName;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_72[0x10];                                      // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FKey) == 0x000008, "Wrong alignment on FKey");
 static_assert(sizeof(FKey) == 0x000018, "Wrong size on FKey");

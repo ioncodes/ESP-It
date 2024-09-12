@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "S_Event_structs.hpp"
 #include "LowEntryJson_structs.hpp"
-#include "Engine_structs.hpp"
-#include "EventTime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EventNames_structs.hpp"
+#include "EventTime_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,7 +27,7 @@ struct B_EventManager_C_EventToString final
 {
 public:
 	EventNames                                    Event;                                             // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_565D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 String;                                            // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Map_Find_Value;                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,12 +40,12 @@ static_assert(offsetof(B_EventManager_C_EventToString, CallFunc_Map_Find_Value) 
 static_assert(offsetof(B_EventManager_C_EventToString, CallFunc_Map_Find_ReturnValue) == 0x000028, "Member 'B_EventManager_C_EventToString::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function B_EventManager.B_EventManager_C.ExecuteUbergraph_B_EventManager
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct B_EventManager_C_ExecuteUbergraph_B_EventManager final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_565E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_DownloadedString;               // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_QueryId;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& DownloadedString, int32 QueryID)> K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -54,51 +54,51 @@ public:
 	class FString                                 CallFunc_LoadStringFromFile_Result;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LoadStringFromFile_ReturnValue;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetJsonArray_Branch;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_565F[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonArray*                     CallFunc_Object_GetJsonArray_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5660[0x2];                                     // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_66[0x2];                                       // 0x0066(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_DownloadedString_1;             // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_QueryId_1;                      // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5661[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_Key;                            // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0090(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A8(0x0050)(HasGetValueTypeHash)
-	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0100(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0110(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(const class FString& DownloadedString, int32 QueryID)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0138(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5662[0x2];                                     // 0x015A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ELowEntryJsonValueFound                       CallFunc_Array_GetJsonValue_Branch;                // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5663[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULowEntryJsonValue*                     CallFunc_Array_GetJsonValue_ReturnValue;           // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ELowEntryJsonTypeFound                        CallFunc_Value_GetJsonObject_Branch;               // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5664[0x6];                                     // 0x0172(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULowEntryJsonObject*                    CallFunc_Value_GetJsonObject_ReturnValue;          // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ParseAndAddEvents_Success;                // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5665[0x1];                                     // 0x0183(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5666[0x7];                                     // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_BuildRestCallUrl_Url;                     // 0x01A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UDownloadStringCallbackProxy*           CallFunc_DownloadString_ReturnValue;               // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0090(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00A0(0x0048)(HasGetValueTypeHash)
+	class UGameInstance*                          K2Node_Event_InGameInstance;                       // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00F0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0100(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(const class FString& DownloadedString, int32 QueryID)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0120(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULowEntryJsonObject*                    CallFunc_Json_ParseJsonString_ReturnJsonObjectValue; // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULowEntryJsonArray*                     CallFunc_Json_ParseJsonString_ReturnJsonArrayValue; // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	ELowEntryJsonParseResult                      CallFunc_Json_ParseJsonString_Branch;              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ELowEntryJsonValueFound                       CallFunc_Array_GetJsonValue_Branch;                // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULowEntryJsonValue*                     CallFunc_Array_GetJsonValue_ReturnValue;           // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ELowEntryJsonTypeFound                        CallFunc_Value_GetJsonObject_Branch;               // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULowEntryJsonObject*                    CallFunc_Value_GetJsonObject_ReturnValue;          // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ParseAndAddEvents_Success;                // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16B[0x1];                                      // 0x016B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_BuildRestCallUrl_Url;                     // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UDownloadStringCallbackProxy*           CallFunc_DownloadString_ReturnValue;               // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_EventManager_C_ExecuteUbergraph_B_EventManager) == 0x000008, "Wrong alignment on B_EventManager_C_ExecuteUbergraph_B_EventManager");
-static_assert(sizeof(B_EventManager_C_ExecuteUbergraph_B_EventManager) == 0x0001C0, "Wrong size on B_EventManager_C_ExecuteUbergraph_B_EventManager");
+static_assert(sizeof(B_EventManager_C_ExecuteUbergraph_B_EventManager) == 0x0001A8, "Wrong size on B_EventManager_C_ExecuteUbergraph_B_EventManager");
 static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, EntryPoint) == 0x000000, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_CustomEvent_DownloadedString) == 0x000008, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_CustomEvent_DownloadedString' has a wrong offset!");
 static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_CustomEvent_QueryId) == 0x000018, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_CustomEvent_QueryId' has a wrong offset!");
@@ -116,32 +116,32 @@ static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_
 static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_CustomEvent_QueryId_1) == 0x000078, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_CustomEvent_QueryId_1' has a wrong offset!");
 static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_CustomEvent_Key) == 0x000080, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_CustomEvent_Key' has a wrong offset!");
 static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Conv_StringToText_ReturnValue) == 0x000090, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_MakeStruct_FormatArgumentData) == 0x0000A8, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_Event_InGameInstance) == 0x0000F8, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_Event_InGameInstance' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_MakeArray_Array) == 0x000100, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Format_ReturnValue) == 0x000110, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Conv_TextToString_ReturnValue) == 0x000128, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000138, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Json_ParseJsonString_ReturnJsonObjectValue) == 0x000148, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Json_ParseJsonString_ReturnJsonObjectValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Json_ParseJsonString_ReturnJsonArrayValue) == 0x000150, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Json_ParseJsonString_ReturnJsonArrayValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Json_ParseJsonString_Branch) == 0x000158, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Json_ParseJsonString_Branch' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_SwitchEnum_CmpSuccess_1) == 0x000159, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, Temp_int_Loop_Counter_Variable) == 0x00015C, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Array_GetJsonValue_Branch) == 0x000160, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Array_GetJsonValue_Branch' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Array_GetJsonValue_ReturnValue) == 0x000168, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Array_GetJsonValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Less_IntInt_ReturnValue) == 0x000170, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Value_GetJsonObject_Branch) == 0x000171, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Value_GetJsonObject_Branch' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Value_GetJsonObject_ReturnValue) == 0x000178, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Value_GetJsonObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_ParseAndAddEvents_Success) == 0x000180, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_ParseAndAddEvents_Success' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_SwitchEnum_CmpSuccess_2) == 0x000181, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_SwitchEnum_CmpSuccess_3) == 0x000182, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Add_IntInt_ReturnValue) == 0x000184, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_GetGameInstance_ReturnValue) == 0x000188, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000190, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_DynamicCast_bSuccess) == 0x000198, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_BuildRestCallUrl_Url) == 0x0001A0, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_BuildRestCallUrl_Url' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_DownloadString_ReturnValue) == 0x0001B0, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_DownloadString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_IsValid_ReturnValue_1) == 0x0001B8, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_MakeStruct_FormatArgumentData) == 0x0000A0, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_Event_InGameInstance) == 0x0000E8, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_Event_InGameInstance' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_MakeArray_Array) == 0x0000F0, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Format_ReturnValue) == 0x000100, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Conv_TextToString_ReturnValue) == 0x000110, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_CreateDelegate_OutputDelegate_1) == 0x000120, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Json_ParseJsonString_ReturnJsonObjectValue) == 0x000130, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Json_ParseJsonString_ReturnJsonObjectValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Json_ParseJsonString_ReturnJsonArrayValue) == 0x000138, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Json_ParseJsonString_ReturnJsonArrayValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Json_ParseJsonString_Branch) == 0x000140, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Json_ParseJsonString_Branch' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_SwitchEnum_CmpSuccess_1) == 0x000141, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, Temp_int_Loop_Counter_Variable) == 0x000144, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Array_GetJsonValue_Branch) == 0x000148, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Array_GetJsonValue_Branch' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Array_GetJsonValue_ReturnValue) == 0x000150, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Array_GetJsonValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Less_IntInt_ReturnValue) == 0x000158, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Value_GetJsonObject_Branch) == 0x000159, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Value_GetJsonObject_Branch' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Value_GetJsonObject_ReturnValue) == 0x000160, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Value_GetJsonObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_ParseAndAddEvents_Success) == 0x000168, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_ParseAndAddEvents_Success' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_SwitchEnum_CmpSuccess_2) == 0x000169, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_SwitchEnum_CmpSuccess_3) == 0x00016A, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_Add_IntInt_ReturnValue) == 0x00016C, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_GetGameInstance_ReturnValue) == 0x000170, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_DynamicCast_AsB_Game_Instance) == 0x000178, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, K2Node_DynamicCast_bSuccess) == 0x000180, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_BuildRestCallUrl_Url) == 0x000188, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_BuildRestCallUrl_Url' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_DownloadString_ReturnValue) == 0x000198, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_DownloadString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_EventManager_C_ExecuteUbergraph_B_EventManager, CallFunc_IsValid_ReturnValue_1) == 0x0001A0, "Member 'B_EventManager_C_ExecuteUbergraph_B_EventManager::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function B_EventManager.B_EventManager_C.GetEventTime
 // 0x0050 (0x0050 - 0x0000)
@@ -149,17 +149,17 @@ struct B_EventManager_C_GetEventTime final
 {
 public:
 	EventTime                                     EventTimeType;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5667[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CurrentTime;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue_1;  // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue_2;  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DateTimeDateTime_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5668[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DateTimeDateTime_ReturnValue_1;      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5669[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_ConvertLocalDateToUtcDate_Utc;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_EventManager_C_GetEventTime) == 0x000008, "Wrong alignment on B_EventManager_C_GetEventTime");
@@ -187,22 +187,22 @@ public:
 	int32                                         Month;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Year;                                              // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_566A[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue;            // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_1;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_566B[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_1;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_2;               // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_566C[0x1];                                     // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_2;          // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetInteger_Branch_3;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_566D[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Object_GetInteger_ReturnValue_3;          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_566E[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_MakeDateTime_ReturnValue;                 // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_EventManager_C_GetTime) == 0x000008, "Wrong alignment on B_EventManager_C_GetTime");
@@ -285,27 +285,27 @@ public:
 	bool                                          FoundError;                                        // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetJsonObject_Branch;              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_566F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObject*                    CallFunc_Object_GetJsonObject_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_GetTime_ReturnValue;                      // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetJsonObject_Branch_1;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5670[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULowEntryJsonObject*                    CallFunc_Object_GetJsonObject_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_GetTime_ReturnValue_1;                    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELowEntryJsonValueAndTypeFound                CallFunc_Object_GetString_Branch;                  // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5671[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Object_GetString_ReturnValue;             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	EventNames                                    CallFunc_StringToEvent_Event;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5672[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS_Event                               K2Node_MakeStruct_S_Event;                         // 0x0058(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5673[0x5];                                     // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_Now_ReturnValue;                          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_ConvertLocalDateToUtcDate_Utc;            // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DateTimeDateTime_ReturnValue;     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -350,17 +350,17 @@ struct B_EventManager_C_StringToEvent final
 public:
 	class FString                                 String;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	EventNames                                    Event;                                             // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5674[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<EventNames>                            CallFunc_Map_Keys_Keys;                            // 0x0020(0x0010)(ReferenceParm)
 	TArray<class FString>                         CallFunc_Map_Values_Values;                        // 0x0030(0x0010)(ReferenceParm)
 	EventNames                                    CallFunc_Array_Get_Item;                           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5675[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5676[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

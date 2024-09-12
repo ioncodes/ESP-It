@@ -10,31 +10,31 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "WB_PlaceAndEditUITab_classes.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_PropTab.WB_PropTab_C
-// 0x0058 (0x0330 - 0x02D8)
+// 0x0058 (0x0350 - 0x02F8)
 class UWB_PropTab_C final : public UWB_PlaceAndEditUITab_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PropTab_C;                       // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_AwakeCheckBoxAreaButton_C*          AwakeCheckboxAreaButton;                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 BorderLine;                                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        GravityButton;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             HealthText;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PhysicsCheckboxAreaButton_C*        PhysicsCheckboxAreaButton;                         // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_GroupPreviewInfo_C*                 PropGroupPreviewInfo;                              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             SpeedText;                                         // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           StatsBox;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_WorldSettingsTab_C*                 WorldsettingsTabParent;                            // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          UsePhysicsNow;                                     // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_PropTab_C;                       // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_AwakeCheckBoxAreaButton_C*          AwakeCheckboxAreaButton;                           // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 BorderLine;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        GravityButton;                                     // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             HealthText;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PhysicsCheckboxAreaButton_C*        PhysicsCheckboxAreaButton;                         // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_GroupPreviewInfo_C*                 PropGroupPreviewInfo;                              // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             SpeedText;                                         // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           StatsBox;                                          // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_WorldSettingsTab_C*                 WorldsettingsTabParent;                            // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          UsePhysicsNow;                                     // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__WB_PropTab_AwakeCheckboxAreaButton_K2Node_ComponentBoundEvent_1_Clicked__DelegateSignature();
@@ -61,18 +61,18 @@ public:
 	}
 };
 static_assert(alignof(UWB_PropTab_C) == 0x000008, "Wrong alignment on UWB_PropTab_C");
-static_assert(sizeof(UWB_PropTab_C) == 0x000330, "Wrong size on UWB_PropTab_C");
-static_assert(offsetof(UWB_PropTab_C, UberGraphFrame_WB_PropTab_C) == 0x0002D8, "Member 'UWB_PropTab_C::UberGraphFrame_WB_PropTab_C' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, AwakeCheckboxAreaButton) == 0x0002E0, "Member 'UWB_PropTab_C::AwakeCheckboxAreaButton' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, BorderLine) == 0x0002E8, "Member 'UWB_PropTab_C::BorderLine' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, GravityButton) == 0x0002F0, "Member 'UWB_PropTab_C::GravityButton' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, HealthText) == 0x0002F8, "Member 'UWB_PropTab_C::HealthText' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, PhysicsCheckboxAreaButton) == 0x000300, "Member 'UWB_PropTab_C::PhysicsCheckboxAreaButton' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, PropGroupPreviewInfo) == 0x000308, "Member 'UWB_PropTab_C::PropGroupPreviewInfo' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, SpeedText) == 0x000310, "Member 'UWB_PropTab_C::SpeedText' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, StatsBox) == 0x000318, "Member 'UWB_PropTab_C::StatsBox' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, WorldsettingsTabParent) == 0x000320, "Member 'UWB_PropTab_C::WorldsettingsTabParent' has a wrong offset!");
-static_assert(offsetof(UWB_PropTab_C, UsePhysicsNow) == 0x000328, "Member 'UWB_PropTab_C::UsePhysicsNow' has a wrong offset!");
+static_assert(sizeof(UWB_PropTab_C) == 0x000350, "Wrong size on UWB_PropTab_C");
+static_assert(offsetof(UWB_PropTab_C, UberGraphFrame_WB_PropTab_C) == 0x0002F8, "Member 'UWB_PropTab_C::UberGraphFrame_WB_PropTab_C' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, AwakeCheckboxAreaButton) == 0x000300, "Member 'UWB_PropTab_C::AwakeCheckboxAreaButton' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, BorderLine) == 0x000308, "Member 'UWB_PropTab_C::BorderLine' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, GravityButton) == 0x000310, "Member 'UWB_PropTab_C::GravityButton' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, HealthText) == 0x000318, "Member 'UWB_PropTab_C::HealthText' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, PhysicsCheckboxAreaButton) == 0x000320, "Member 'UWB_PropTab_C::PhysicsCheckboxAreaButton' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, PropGroupPreviewInfo) == 0x000328, "Member 'UWB_PropTab_C::PropGroupPreviewInfo' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, SpeedText) == 0x000330, "Member 'UWB_PropTab_C::SpeedText' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, StatsBox) == 0x000338, "Member 'UWB_PropTab_C::StatsBox' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, WorldsettingsTabParent) == 0x000340, "Member 'UWB_PropTab_C::WorldsettingsTabParent' has a wrong offset!");
+static_assert(offsetof(UWB_PropTab_C, UsePhysicsNow) == 0x000348, "Member 'UWB_PropTab_C::UsePhysicsNow' has a wrong offset!");
 
 }
 

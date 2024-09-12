@@ -10,70 +10,70 @@
 
 #include "Basic.hpp"
 
-#include "EResultType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "B_SeekGameState_classes.hpp"
-#include "S_PropList_structs.hpp"
 #include "E_ObjectiveTeam_structs.hpp"
+#include "S_PropList_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "B_SeekGameState_classes.hpp"
+#include "EResultType_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_ObjectiveGameState.B_ObjectiveGameState_C
-// 0x01C0 (0x0788 - 0x05C8)
+// 0x01C0 (0x0778 - 0x05B8)
 class AB_ObjectiveGameState_C final : public AB_SeekGameState_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectiveGameState_C;             // 0x05C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	uint8                                         CauldronsFilled;                                   // 0x05D0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CauldronTarget;                                    // 0x05D1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         MaxLives;                                          // 0x05D2(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_368D[0x5];                                     // 0x05D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AB_ObjectiveCauldron_C*>         Cauldrons;                                         // 0x05D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AB_StaticMeshProp_C*>            AllProps;                                          // 0x05E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TMap<class UClass*, struct FS_PropList>       Proplist;                                          // 0x05F8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UClass*>                         ValidProps;                                        // 0x0648(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsInOvertime;                                      // 0x0658(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_368E[0x7];                                     // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class APlayerState*, int32>              CauldronInitializedOnClientFalseCount;             // 0x0660(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	int32                                         CurrentRound;                                      // 0x06B0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPlayerSelectionNotBalance;                       // 0x06B4(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_368F[0x3];                                     // 0x06B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RequiredPlayersPerTeam;                            // 0x06B8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3690[0x4];                                     // 0x06BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLinearColor>                   FilledCauldronColors;                              // 0x06C0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	FMulticastInlineDelegateProperty_             OnMatchStarted_0;                                  // 0x06D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnOverTimeStarted;                                 // 0x06E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnCauldronFilled;                                  // 0x06F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnPropMovedToInactiveCauldron;                     // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnRevivePossible;                                  // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnTransformedIntoWantedProp;                       // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnPropMovedToReviveCircle;                         // 0x0730(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UB_ObjectiveRoundState_C*               RoundStateTeamA;                                   // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UB_ObjectiveRoundState_C*               RoundStateTeamB;                                   // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnGameStarted;                                     // 0x0750(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	E_ObjectiveTeam                               WinnerObjectiveTeam;                               // 0x0760(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3691[0x3];                                     // 0x0761(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         WinningReasonIndex;                                // 0x0764(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnMaxLivesChanged;                                 // 0x0768(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	double                                        NoPlayersOnDynamicInstanceTime;                    // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxTimeForDynamicInstanceToShutdown;               // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectiveGameState_C;             // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         CauldronsFilled;                                   // 0x05C0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CauldronTarget;                                    // 0x05C1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         MaxLives;                                          // 0x05C2(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C3[0x5];                                      // 0x05C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AB_ObjectiveCauldron_C*>         Cauldrons;                                         // 0x05C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AB_StaticMeshProp_C*>            AllProps;                                          // 0x05D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TMap<class UClass*, struct FS_PropList>       Proplist;                                          // 0x05E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UClass*>                         ValidProps;                                        // 0x0638(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsInOvertime;                                      // 0x0648(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class APlayerState*, int32>              CauldronInitializedOnClientFalseCount;             // 0x0650(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	int32                                         CurrentRound;                                      // 0x06A0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPlayerSelectionNotBalance;                       // 0x06A4(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A5[0x3];                                      // 0x06A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RequiredPlayersPerTeam;                            // 0x06A8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLinearColor>                   FilledCauldronColors;                              // 0x06B0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	FMulticastInlineDelegateProperty_             OnMatchStarted_0;                                  // 0x06C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnOverTimeStarted;                                 // 0x06D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnCauldronFilled;                                  // 0x06E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnPropMovedToInactiveCauldron;                     // 0x06F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnRevivePossible;                                  // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnTransformedIntoWantedProp;                       // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnPropMovedToReviveCircle;                         // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UB_ObjectiveRoundState_C*               RoundStateTeamA;                                   // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UB_ObjectiveRoundState_C*               RoundStateTeamB;                                   // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnGameStarted;                                     // 0x0740(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	E_ObjectiveTeam                               WinnerObjectiveTeam;                               // 0x0750(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_751[0x3];                                      // 0x0751(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         WinningReasonIndex;                                // 0x0754(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnMaxLivesChanged;                                 // 0x0758(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        NoPlayersOnDynamicInstanceTime;                    // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxTimeForDynamicInstanceToShutdown;               // 0x0770(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnMaxLivesChanged__DelegateSignature();
-	void OnCauldronFilled__DelegateSignature();
-	void OnPropMovedToInactiveCauldron__DelegateSignature(class APlayerController* PlayerController);
 	void OnPropMovedToReviveCircle__DelegateSignature(class APlayerController* PlayerController);
 	void OnOverTimeStarted__DelegateSignature(class UClass* WantedPropClass);
 	void OnRevivePossible__DelegateSignature(class APlayerState* KilledPlayer);
-	void AddRoundStatesMulti(const TArray<int32>& Playtime, const TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, const TArray<ETeamID>& Param_WinnerTeam, const TArray<int32>& Wins);
+	void OnCauldronFilled__DelegateSignature();
+	void OnPropMovedToInactiveCauldron__DelegateSignature(class APlayerController* PlayerController);
+	void AddRoundStatesMulti(const TArray<int32>& Playtime, const TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, const TArray<ETeamID>& WinnerTeam_0, const TArray<int32>& Wins);
 	void BindHelpTextEvents();
 	void ExecuteUbergraph_B_ObjectiveGameState(int32 EntryPoint);
 	void GeneratePropArrays();
-	void HandleAddRoundStates(TArray<int32>& Playtime, TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, TArray<ETeamID>& Param_WinnerTeam, TArray<int32>& Wins);
+	void HandleAddRoundStates(TArray<int32>& Playtime, TArray<int32>& TotalCauldronsFilled, TArray<int32>& WitchLivesLeft, TArray<ETeamID>& WinnerTeam_0, TArray<int32>& Wins);
 	void LoadPropsAndCauldrons();
 	void LoadPropsAndCauldronsMulti();
 	void ObjectiveHelp();
@@ -112,36 +112,36 @@ public:
 	}
 };
 static_assert(alignof(AB_ObjectiveGameState_C) == 0x000008, "Wrong alignment on AB_ObjectiveGameState_C");
-static_assert(sizeof(AB_ObjectiveGameState_C) == 0x000788, "Wrong size on AB_ObjectiveGameState_C");
-static_assert(offsetof(AB_ObjectiveGameState_C, UberGraphFrame_B_ObjectiveGameState_C) == 0x0005C8, "Member 'AB_ObjectiveGameState_C::UberGraphFrame_B_ObjectiveGameState_C' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, CauldronsFilled) == 0x0005D0, "Member 'AB_ObjectiveGameState_C::CauldronsFilled' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, CauldronTarget) == 0x0005D1, "Member 'AB_ObjectiveGameState_C::CauldronTarget' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, MaxLives) == 0x0005D2, "Member 'AB_ObjectiveGameState_C::MaxLives' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, Cauldrons) == 0x0005D8, "Member 'AB_ObjectiveGameState_C::Cauldrons' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, AllProps) == 0x0005E8, "Member 'AB_ObjectiveGameState_C::AllProps' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, Proplist) == 0x0005F8, "Member 'AB_ObjectiveGameState_C::Proplist' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, ValidProps) == 0x000648, "Member 'AB_ObjectiveGameState_C::ValidProps' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, IsInOvertime) == 0x000658, "Member 'AB_ObjectiveGameState_C::IsInOvertime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, CauldronInitializedOnClientFalseCount) == 0x000660, "Member 'AB_ObjectiveGameState_C::CauldronInitializedOnClientFalseCount' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, CurrentRound) == 0x0006B0, "Member 'AB_ObjectiveGameState_C::CurrentRound' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, IsPlayerSelectionNotBalance) == 0x0006B4, "Member 'AB_ObjectiveGameState_C::IsPlayerSelectionNotBalance' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, RequiredPlayersPerTeam) == 0x0006B8, "Member 'AB_ObjectiveGameState_C::RequiredPlayersPerTeam' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, FilledCauldronColors) == 0x0006C0, "Member 'AB_ObjectiveGameState_C::FilledCauldronColors' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnMatchStarted_0) == 0x0006D0, "Member 'AB_ObjectiveGameState_C::OnMatchStarted_0' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnOverTimeStarted) == 0x0006E0, "Member 'AB_ObjectiveGameState_C::OnOverTimeStarted' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnCauldronFilled) == 0x0006F0, "Member 'AB_ObjectiveGameState_C::OnCauldronFilled' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnPropMovedToInactiveCauldron) == 0x000700, "Member 'AB_ObjectiveGameState_C::OnPropMovedToInactiveCauldron' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnRevivePossible) == 0x000710, "Member 'AB_ObjectiveGameState_C::OnRevivePossible' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnTransformedIntoWantedProp) == 0x000720, "Member 'AB_ObjectiveGameState_C::OnTransformedIntoWantedProp' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnPropMovedToReviveCircle) == 0x000730, "Member 'AB_ObjectiveGameState_C::OnPropMovedToReviveCircle' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, RoundStateTeamA) == 0x000740, "Member 'AB_ObjectiveGameState_C::RoundStateTeamA' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, RoundStateTeamB) == 0x000748, "Member 'AB_ObjectiveGameState_C::RoundStateTeamB' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnGameStarted) == 0x000750, "Member 'AB_ObjectiveGameState_C::OnGameStarted' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, WinnerObjectiveTeam) == 0x000760, "Member 'AB_ObjectiveGameState_C::WinnerObjectiveTeam' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, WinningReasonIndex) == 0x000764, "Member 'AB_ObjectiveGameState_C::WinningReasonIndex' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, OnMaxLivesChanged) == 0x000768, "Member 'AB_ObjectiveGameState_C::OnMaxLivesChanged' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, NoPlayersOnDynamicInstanceTime) == 0x000778, "Member 'AB_ObjectiveGameState_C::NoPlayersOnDynamicInstanceTime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameState_C, MaxTimeForDynamicInstanceToShutdown) == 0x000780, "Member 'AB_ObjectiveGameState_C::MaxTimeForDynamicInstanceToShutdown' has a wrong offset!");
+static_assert(sizeof(AB_ObjectiveGameState_C) == 0x000778, "Wrong size on AB_ObjectiveGameState_C");
+static_assert(offsetof(AB_ObjectiveGameState_C, UberGraphFrame_B_ObjectiveGameState_C) == 0x0005B8, "Member 'AB_ObjectiveGameState_C::UberGraphFrame_B_ObjectiveGameState_C' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, CauldronsFilled) == 0x0005C0, "Member 'AB_ObjectiveGameState_C::CauldronsFilled' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, CauldronTarget) == 0x0005C1, "Member 'AB_ObjectiveGameState_C::CauldronTarget' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, MaxLives) == 0x0005C2, "Member 'AB_ObjectiveGameState_C::MaxLives' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, Cauldrons) == 0x0005C8, "Member 'AB_ObjectiveGameState_C::Cauldrons' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, AllProps) == 0x0005D8, "Member 'AB_ObjectiveGameState_C::AllProps' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, Proplist) == 0x0005E8, "Member 'AB_ObjectiveGameState_C::Proplist' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, ValidProps) == 0x000638, "Member 'AB_ObjectiveGameState_C::ValidProps' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, IsInOvertime) == 0x000648, "Member 'AB_ObjectiveGameState_C::IsInOvertime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, CauldronInitializedOnClientFalseCount) == 0x000650, "Member 'AB_ObjectiveGameState_C::CauldronInitializedOnClientFalseCount' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, CurrentRound) == 0x0006A0, "Member 'AB_ObjectiveGameState_C::CurrentRound' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, IsPlayerSelectionNotBalance) == 0x0006A4, "Member 'AB_ObjectiveGameState_C::IsPlayerSelectionNotBalance' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, RequiredPlayersPerTeam) == 0x0006A8, "Member 'AB_ObjectiveGameState_C::RequiredPlayersPerTeam' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, FilledCauldronColors) == 0x0006B0, "Member 'AB_ObjectiveGameState_C::FilledCauldronColors' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnMatchStarted_0) == 0x0006C0, "Member 'AB_ObjectiveGameState_C::OnMatchStarted_0' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnOverTimeStarted) == 0x0006D0, "Member 'AB_ObjectiveGameState_C::OnOverTimeStarted' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnCauldronFilled) == 0x0006E0, "Member 'AB_ObjectiveGameState_C::OnCauldronFilled' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnPropMovedToInactiveCauldron) == 0x0006F0, "Member 'AB_ObjectiveGameState_C::OnPropMovedToInactiveCauldron' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnRevivePossible) == 0x000700, "Member 'AB_ObjectiveGameState_C::OnRevivePossible' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnTransformedIntoWantedProp) == 0x000710, "Member 'AB_ObjectiveGameState_C::OnTransformedIntoWantedProp' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnPropMovedToReviveCircle) == 0x000720, "Member 'AB_ObjectiveGameState_C::OnPropMovedToReviveCircle' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, RoundStateTeamA) == 0x000730, "Member 'AB_ObjectiveGameState_C::RoundStateTeamA' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, RoundStateTeamB) == 0x000738, "Member 'AB_ObjectiveGameState_C::RoundStateTeamB' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnGameStarted) == 0x000740, "Member 'AB_ObjectiveGameState_C::OnGameStarted' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, WinnerObjectiveTeam) == 0x000750, "Member 'AB_ObjectiveGameState_C::WinnerObjectiveTeam' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, WinningReasonIndex) == 0x000754, "Member 'AB_ObjectiveGameState_C::WinningReasonIndex' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, OnMaxLivesChanged) == 0x000758, "Member 'AB_ObjectiveGameState_C::OnMaxLivesChanged' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, NoPlayersOnDynamicInstanceTime) == 0x000768, "Member 'AB_ObjectiveGameState_C::NoPlayersOnDynamicInstanceTime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameState_C, MaxTimeForDynamicInstanceToShutdown) == 0x000770, "Member 'AB_ObjectiveGameState_C::MaxTimeForDynamicInstanceToShutdown' has a wrong offset!");
 
 }
 

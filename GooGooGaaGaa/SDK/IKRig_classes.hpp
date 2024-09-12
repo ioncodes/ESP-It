@@ -10,15 +10,82 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 #include "IKRig_structs.hpp"
 #include "PBIK_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class IKRig.RetargetOpBase
+// 0x0008 (0x0030 - 0x0028)
+class URetargetOpBase : public UObject
+{
+public:
+	bool                                          bIsEnabled;                                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RetargetOpBase">();
+	}
+	static class URetargetOpBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URetargetOpBase>();
+	}
+};
+static_assert(alignof(URetargetOpBase) == 0x000008, "Wrong alignment on URetargetOpBase");
+static_assert(sizeof(URetargetOpBase) == 0x000030, "Wrong size on URetargetOpBase");
+static_assert(offsetof(URetargetOpBase, bIsEnabled) == 0x000028, "Member 'URetargetOpBase::bIsEnabled' has a wrong offset!");
+
+// Class IKRig.CurveRemapOp
+// 0x0018 (0x0048 - 0x0030)
+class UCurveRemapOp final : public URetargetOpBase
+{
+public:
+	TArray<struct FCurveRemapPair>                CurvesToRemap;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bCopyAllSourceCurves;                              // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"CurveRemapOp">();
+	}
+	static class UCurveRemapOp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCurveRemapOp>();
+	}
+};
+static_assert(alignof(UCurveRemapOp) == 0x000008, "Wrong alignment on UCurveRemapOp");
+static_assert(sizeof(UCurveRemapOp) == 0x000048, "Wrong size on UCurveRemapOp");
+static_assert(offsetof(UCurveRemapOp, CurvesToRemap) == 0x000030, "Member 'UCurveRemapOp::CurvesToRemap' has a wrong offset!");
+static_assert(offsetof(UCurveRemapOp, bCopyAllSourceCurves) == 0x000040, "Member 'UCurveRemapOp::bCopyAllSourceCurves' has a wrong offset!");
+
+// Class IKRig.RetargetOpStack
+// 0x0010 (0x0038 - 0x0028)
+class URetargetOpStack final : public UObject
+{
+public:
+	TArray<class URetargetOpBase*>                RetargetOps;                                       // 0x0028(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RetargetOpStack">();
+	}
+	static class URetargetOpStack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URetargetOpStack>();
+	}
+};
+static_assert(alignof(URetargetOpStack) == 0x000008, "Wrong alignment on URetargetOpStack");
+static_assert(sizeof(URetargetOpStack) == 0x000038, "Wrong size on URetargetOpStack");
+static_assert(offsetof(URetargetOpStack, RetargetOps) == 0x000028, "Member 'URetargetOpStack::RetargetOps' has a wrong offset!");
 
 // Class IKRig.IKGoalCreatorInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -40,12 +107,83 @@ public:
 static_assert(alignof(IIKGoalCreatorInterface) == 0x000008, "Wrong alignment on IIKGoalCreatorInterface");
 static_assert(sizeof(IIKGoalCreatorInterface) == 0x000028, "Wrong size on IIKGoalCreatorInterface");
 
+// Class IKRig.PinBoneOp
+// 0x00E0 (0x0110 - 0x0030)
+class UPinBoneOp final : public URetargetOpBase
+{
+public:
+	TArray<struct FPinBoneData>                   BonesToPin;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	ERetargetSourceOrTarget                       PinTo;                                             // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPinBoneType                                  PinType;                                           // 0x0041(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMaintainOffset;                                   // 0x0042(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43[0xD];                                       // 0x0043(0x000D)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             GlobalOffset;                                      // 0x0050(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             LocalOffset;                                       // 0x00B0(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PinBoneOp">();
+	}
+	static class UPinBoneOp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPinBoneOp>();
+	}
+};
+static_assert(alignof(UPinBoneOp) == 0x000010, "Wrong alignment on UPinBoneOp");
+static_assert(sizeof(UPinBoneOp) == 0x000110, "Wrong size on UPinBoneOp");
+static_assert(offsetof(UPinBoneOp, BonesToPin) == 0x000030, "Member 'UPinBoneOp::BonesToPin' has a wrong offset!");
+static_assert(offsetof(UPinBoneOp, PinTo) == 0x000040, "Member 'UPinBoneOp::PinTo' has a wrong offset!");
+static_assert(offsetof(UPinBoneOp, PinType) == 0x000041, "Member 'UPinBoneOp::PinType' has a wrong offset!");
+static_assert(offsetof(UPinBoneOp, bMaintainOffset) == 0x000042, "Member 'UPinBoneOp::bMaintainOffset' has a wrong offset!");
+static_assert(offsetof(UPinBoneOp, GlobalOffset) == 0x000050, "Member 'UPinBoneOp::GlobalOffset' has a wrong offset!");
+static_assert(offsetof(UPinBoneOp, LocalOffset) == 0x0000B0, "Member 'UPinBoneOp::LocalOffset' has a wrong offset!");
+
+// Class IKRig.RootMotionGeneratorOp
+// 0x0220 (0x0250 - 0x0030)
+class URootMotionGeneratorOp final : public URetargetOpBase
+{
+public:
+	class FName                                   SourceRootBone;                                    // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetRootBone;                                    // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetPelvisBone;                                  // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERootMotionSource                             RootMotionSource;                                  // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERootMotionHeightSource                       RootHeightSource;                                  // 0x0049(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPropagateToNonRetargetedChildren;                 // 0x004A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMaintainOffsetFromPelvis;                         // 0x004B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRotateWithPelvis;                                 // 0x004C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             GlobalOffset;                                      // 0x0050(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B0[0x1A0];                                     // 0x00B0(0x01A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RootMotionGeneratorOp">();
+	}
+	static class URootMotionGeneratorOp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URootMotionGeneratorOp>();
+	}
+};
+static_assert(alignof(URootMotionGeneratorOp) == 0x000010, "Wrong alignment on URootMotionGeneratorOp");
+static_assert(sizeof(URootMotionGeneratorOp) == 0x000250, "Wrong size on URootMotionGeneratorOp");
+static_assert(offsetof(URootMotionGeneratorOp, SourceRootBone) == 0x000030, "Member 'URootMotionGeneratorOp::SourceRootBone' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, TargetRootBone) == 0x000038, "Member 'URootMotionGeneratorOp::TargetRootBone' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, TargetPelvisBone) == 0x000040, "Member 'URootMotionGeneratorOp::TargetPelvisBone' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, RootMotionSource) == 0x000048, "Member 'URootMotionGeneratorOp::RootMotionSource' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, RootHeightSource) == 0x000049, "Member 'URootMotionGeneratorOp::RootHeightSource' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, bPropagateToNonRetargetedChildren) == 0x00004A, "Member 'URootMotionGeneratorOp::bPropagateToNonRetargetedChildren' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, bMaintainOffsetFromPelvis) == 0x00004B, "Member 'URootMotionGeneratorOp::bMaintainOffsetFromPelvis' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, bRotateWithPelvis) == 0x00004C, "Member 'URootMotionGeneratorOp::bRotateWithPelvis' has a wrong offset!");
+static_assert(offsetof(URootMotionGeneratorOp, GlobalOffset) == 0x000050, "Member 'URootMotionGeneratorOp::GlobalOffset' has a wrong offset!");
+
 // Class IKRig.IKRigComponent
 // 0x0018 (0x00B8 - 0x00A0)
 class UIKRigComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_2DA5[0x18];                                    // 0x00A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0[0x18];                                      // 0x00A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearAllGoals();
@@ -67,13 +205,13 @@ static_assert(alignof(UIKRigComponent) == 0x000008, "Wrong alignment on UIKRigCo
 static_assert(sizeof(UIKRigComponent) == 0x0000B8, "Wrong size on UIKRigComponent");
 
 // Class IKRig.RetargetChainSettings
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x00C0 (0x00E8 - 0x0028)
 class URetargetChainSettings final : public UObject
 {
 public:
 	class FName                                   SourceChain;                                       // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TargetChain;                                       // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   Settings;                                          // 0x0038(0x00A8)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   Settings;                                          // 0x0038(0x00B0)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -86,7 +224,7 @@ public:
 	}
 };
 static_assert(alignof(URetargetChainSettings) == 0x000008, "Wrong alignment on URetargetChainSettings");
-static_assert(sizeof(URetargetChainSettings) == 0x0000E0, "Wrong size on URetargetChainSettings");
+static_assert(sizeof(URetargetChainSettings) == 0x0000E8, "Wrong size on URetargetChainSettings");
 static_assert(offsetof(URetargetChainSettings, SourceChain) == 0x000028, "Member 'URetargetChainSettings::SourceChain' has a wrong offset!");
 static_assert(offsetof(URetargetChainSettings, TargetChain) == 0x000030, "Member 'URetargetChainSettings::TargetChain' has a wrong offset!");
 static_assert(offsetof(URetargetChainSettings, Settings) == 0x000038, "Member 'URetargetChainSettings::Settings' has a wrong offset!");
@@ -113,11 +251,12 @@ static_assert(sizeof(URetargetRootSettings) == 0x000090, "Wrong size on URetarge
 static_assert(offsetof(URetargetRootSettings, Settings) == 0x000028, "Member 'URetargetRootSettings::Settings' has a wrong offset!");
 
 // Class IKRig.IKRetargetGlobalSettings
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UIKRetargetGlobalSettings final : public UObject
 {
 public:
-	struct FRetargetGlobalSettings                Settings;                                          // 0x0028(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRetargetGlobalSettings                Settings;                                          // 0x0028(0x0024)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -130,28 +269,31 @@ public:
 	}
 };
 static_assert(alignof(UIKRetargetGlobalSettings) == 0x000008, "Wrong alignment on UIKRetargetGlobalSettings");
-static_assert(sizeof(UIKRetargetGlobalSettings) == 0x000048, "Wrong size on UIKRetargetGlobalSettings");
+static_assert(sizeof(UIKRetargetGlobalSettings) == 0x000050, "Wrong size on UIKRetargetGlobalSettings");
 static_assert(offsetof(UIKRetargetGlobalSettings, Settings) == 0x000028, "Member 'UIKRetargetGlobalSettings::Settings' has a wrong offset!");
 
 // Class IKRig.IKRetargeter
-// 0x01E0 (0x0208 - 0x0028)
+// 0x01F0 (0x0218 - 0x0028)
 class UIKRetargeter final : public UObject
 {
 public:
-	TSoftObjectPtr<class UIKRigDefinition>        SourceIKRigAsset;                                  // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TSoftObjectPtr<class UIKRigDefinition>        TargetIKRigAsset;                                  // 0x0050(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FRetargetChainMap>              ChainMapping;                                      // 0x0078(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
-	TArray<class URetargetChainSettings*>         ChainSettings;                                     // 0x0088(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	class URetargetRootSettings*                  RootSettings;                                      // 0x0098(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UIKRetargetGlobalSettings*              GlobalSettings;                                    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FRetargetProfile>    Profiles;                                          // 0x00A8(0x0050)(NativeAccessSpecifierPrivate)
-	class FName                                   CurrentProfile;                                    // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FIKRetargetPose>     SourceRetargetPoses;                               // 0x0100(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FIKRetargetPose>     TargetRetargetPoses;                               // 0x0150(0x0050)(NativeAccessSpecifierPrivate)
-	class FName                                   CurrentSourceRetargetPose;                         // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   CurrentTargetRetargetPose;                         // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FIKRetargetPose>     RetargetPoses;                                     // 0x01B0(0x0050)(Deprecated, NativeAccessSpecifierPrivate)
-	class FName                                   CurrentRetargetPose;                               // 0x0200(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         Version;                                           // 0x0028(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UIKRigDefinition>        SourceIKRigAsset;                                  // 0x0030(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UIKRigDefinition>        TargetIKRigAsset;                                  // 0x0058(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FRetargetChainMap>              ChainMapping;                                      // 0x0080(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPrivate)
+	TArray<class URetargetChainSettings*>         ChainSettings;                                     // 0x0090(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	class URetargetRootSettings*                  RootSettings;                                      // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UIKRetargetGlobalSettings*              GlobalSettings;                                    // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class URetargetOpStack*                       OpStack;                                           // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FRetargetProfile>    Profiles;                                          // 0x00B8(0x0050)(NativeAccessSpecifierPrivate)
+	class FName                                   CurrentProfile;                                    // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FIKRetargetPose>     SourceRetargetPoses;                               // 0x0110(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FIKRetargetPose>     TargetRetargetPoses;                               // 0x0160(0x0050)(NativeAccessSpecifierPrivate)
+	class FName                                   CurrentSourceRetargetPose;                         // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   CurrentTargetRetargetPose;                         // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FIKRetargetPose>     RetargetPoses;                                     // 0x01C0(0x0050)(Deprecated, NativeAccessSpecifierPrivate)
+	class FName                                   CurrentRetargetPose;                               // 0x0210(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static struct FTargetChainSettings GetChainSettingsFromRetargetAsset(const class UIKRetargeter* RetargetAsset, const class FName TargetChainName, const class FName OptionalProfileName);
@@ -163,10 +305,13 @@ public:
 	static struct FTargetRootSettings GetRootSettingsFromRetargetProfile(struct FRetargetProfile& RetargetProfile);
 	static void SetChainFKSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainFKSettings& FKSettings, const class FName TargetChainName);
 	static void SetChainIKSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainIKSettings& IKSettings, const class FName TargetChainName);
-	static void SetChainSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainSettings& Param_ChainSettings, const class FName TargetChainName);
+	static void SetChainSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainSettings& ChainSettings_0, const class FName TargetChainName);
 	static void SetChainSpeedPlantSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetChainSpeedPlantSettings& SpeedPlantSettings, const class FName TargetChainName);
-	static void SetGlobalSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FRetargetGlobalSettings& Param_GlobalSettings);
-	static void SetRootSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetRootSettings& Param_RootSettings);
+	static void SetGlobalSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FRetargetGlobalSettings& GlobalSettings_0);
+	static void SetRootSettingsInRetargetProfile(struct FRetargetProfile& RetargetProfile, const struct FTargetRootSettings& RootSettings_0);
+
+	bool HasSourceIKRig() const;
+	bool HasTargetIKRig() const;
 
 public:
 	static class UClass* StaticClass()
@@ -179,30 +324,34 @@ public:
 	}
 };
 static_assert(alignof(UIKRetargeter) == 0x000008, "Wrong alignment on UIKRetargeter");
-static_assert(sizeof(UIKRetargeter) == 0x000208, "Wrong size on UIKRetargeter");
-static_assert(offsetof(UIKRetargeter, SourceIKRigAsset) == 0x000028, "Member 'UIKRetargeter::SourceIKRigAsset' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, TargetIKRigAsset) == 0x000050, "Member 'UIKRetargeter::TargetIKRigAsset' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, ChainMapping) == 0x000078, "Member 'UIKRetargeter::ChainMapping' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, ChainSettings) == 0x000088, "Member 'UIKRetargeter::ChainSettings' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, RootSettings) == 0x000098, "Member 'UIKRetargeter::RootSettings' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, GlobalSettings) == 0x0000A0, "Member 'UIKRetargeter::GlobalSettings' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, Profiles) == 0x0000A8, "Member 'UIKRetargeter::Profiles' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, CurrentProfile) == 0x0000F8, "Member 'UIKRetargeter::CurrentProfile' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, SourceRetargetPoses) == 0x000100, "Member 'UIKRetargeter::SourceRetargetPoses' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, TargetRetargetPoses) == 0x000150, "Member 'UIKRetargeter::TargetRetargetPoses' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, CurrentSourceRetargetPose) == 0x0001A0, "Member 'UIKRetargeter::CurrentSourceRetargetPose' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, CurrentTargetRetargetPose) == 0x0001A8, "Member 'UIKRetargeter::CurrentTargetRetargetPose' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, RetargetPoses) == 0x0001B0, "Member 'UIKRetargeter::RetargetPoses' has a wrong offset!");
-static_assert(offsetof(UIKRetargeter, CurrentRetargetPose) == 0x000200, "Member 'UIKRetargeter::CurrentRetargetPose' has a wrong offset!");
+static_assert(sizeof(UIKRetargeter) == 0x000218, "Wrong size on UIKRetargeter");
+static_assert(offsetof(UIKRetargeter, Version) == 0x000028, "Member 'UIKRetargeter::Version' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, SourceIKRigAsset) == 0x000030, "Member 'UIKRetargeter::SourceIKRigAsset' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, TargetIKRigAsset) == 0x000058, "Member 'UIKRetargeter::TargetIKRigAsset' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, ChainMapping) == 0x000080, "Member 'UIKRetargeter::ChainMapping' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, ChainSettings) == 0x000090, "Member 'UIKRetargeter::ChainSettings' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, RootSettings) == 0x0000A0, "Member 'UIKRetargeter::RootSettings' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, GlobalSettings) == 0x0000A8, "Member 'UIKRetargeter::GlobalSettings' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, OpStack) == 0x0000B0, "Member 'UIKRetargeter::OpStack' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, Profiles) == 0x0000B8, "Member 'UIKRetargeter::Profiles' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, CurrentProfile) == 0x000108, "Member 'UIKRetargeter::CurrentProfile' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, SourceRetargetPoses) == 0x000110, "Member 'UIKRetargeter::SourceRetargetPoses' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, TargetRetargetPoses) == 0x000160, "Member 'UIKRetargeter::TargetRetargetPoses' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, CurrentSourceRetargetPose) == 0x0001B0, "Member 'UIKRetargeter::CurrentSourceRetargetPose' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, CurrentTargetRetargetPose) == 0x0001B8, "Member 'UIKRetargeter::CurrentTargetRetargetPose' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, RetargetPoses) == 0x0001C0, "Member 'UIKRetargeter::RetargetPoses' has a wrong offset!");
+static_assert(offsetof(UIKRetargeter, CurrentRetargetPose) == 0x000210, "Member 'UIKRetargeter::CurrentRetargetPose' has a wrong offset!");
 
 // Class IKRig.IKRetargetProcessor
-// 0x0348 (0x0370 - 0x0028)
+// 0x0378 (0x03A0 - 0x0028)
 class alignas(0x10) UIKRetargetProcessor final : public UObject
 {
 public:
-	uint8                                         Pad_2DA9[0x148];                                   // 0x0028(0x0148)(Fixing Size After Last Property [ Dumper-7 ])
-	class UIKRigProcessor*                        IKRigProcessor;                                    // 0x0170(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2DAA[0x1F8];                                   // 0x0178(0x01F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x160];                                     // 0x0028(0x0160)(Fixing Size After Last Property [ Dumper-7 ])
+	class UIKRigProcessor*                        IKRigProcessor;                                    // 0x0188(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_190[0x1F8];                                    // 0x0190(0x01F8)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class URetargetOpBase*>                OpStack;                                           // 0x0388(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -215,8 +364,9 @@ public:
 	}
 };
 static_assert(alignof(UIKRetargetProcessor) == 0x000010, "Wrong alignment on UIKRetargetProcessor");
-static_assert(sizeof(UIKRetargetProcessor) == 0x000370, "Wrong size on UIKRetargetProcessor");
-static_assert(offsetof(UIKRetargetProcessor, IKRigProcessor) == 0x000170, "Member 'UIKRetargetProcessor::IKRigProcessor' has a wrong offset!");
+static_assert(sizeof(UIKRetargetProcessor) == 0x0003A0, "Wrong size on UIKRetargetProcessor");
+static_assert(offsetof(UIKRetargetProcessor, IKRigProcessor) == 0x000188, "Member 'UIKRetargetProcessor::IKRigProcessor' has a wrong offset!");
+static_assert(offsetof(UIKRetargetProcessor, OpStack) == 0x000388, "Member 'UIKRetargetProcessor::OpStack' has a wrong offset!");
 
 // Class IKRig.IKRigEffectorGoal
 // 0x00D8 (0x0100 - 0x0028)
@@ -254,7 +404,7 @@ static_assert(offsetof(UIKRigEffectorGoal, InitialTransform) == 0x0000A0, "Membe
 class UIKRigDefinition final : public UObject
 {
 public:
-	uint8                                         Pad_2DAB[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class USkeletalMesh>           PreviewSkeletalMesh;                               // 0x0030(0x0028)(Edit, AssetRegistrySearchable, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIKRigSkeleton                         Skeleton;                                          // 0x0058(0x0070)(NativeAccessSpecifierPrivate)
 	TArray<class UIKRigEffectorGoal*>             Goals;                                             // 0x00C8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
@@ -284,9 +434,9 @@ static_assert(offsetof(UIKRigDefinition, RetargetDefinition) == 0x0000E8, "Membe
 class UIKRigProcessor final : public UObject
 {
 public:
-	uint8                                         Pad_2DAC[0x38];                                    // 0x0028(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UIKRigSolver*>                   Solvers;                                           // 0x0060(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2DAD[0xD8];                                    // 0x0070(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0xD8];                                      // 0x0070(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -308,7 +458,7 @@ class UIKRigSolver : public UObject
 {
 public:
 	bool                                          bIsEnabled;                                        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2DAE[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -332,7 +482,7 @@ public:
 	class FName                                   GoalName;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   BoneName;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InfluenceMultiplier;                               // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DAF[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -367,9 +517,9 @@ public:
 	float                                         RotateXAlpha;                                      // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotateYAlpha;                                      // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotateZAlpha;                                      // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB0[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UIKRig_BodyMoverEffector*>       Effectors;                                         // 0x0068(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB1[0x8];                                     // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -428,20 +578,20 @@ public:
 	class FName                                   RootName;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReachPrecision;                                    // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAxis                                         HingeRotationAxis;                                 // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB2[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxIterations;                                     // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableLimit;                                      // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB3[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinRotationAngle;                                  // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAveragePull;                                      // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB4[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PullDistribution;                                  // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReachStepAlpha;                                    // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableTwistCorrection;                            // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAxis                                         EndBoneForwardAxis;                                // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB5[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UIKRig_LimbEffector*                    Effector;                                          // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2DB6[0x28];                                    // 0x0068(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x28];                                      // 0x0068(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -469,16 +619,18 @@ static_assert(offsetof(UIKRig_LimbSolver, EndBoneForwardAxis) == 0x000059, "Memb
 static_assert(offsetof(UIKRig_LimbSolver, Effector) == 0x000060, "Member 'UIKRig_LimbSolver::Effector' has a wrong offset!");
 
 // Class IKRig.IKRig_FBIKEffector
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UIKRig_FBIKEffector final : public UObject
 {
 public:
 	class FName                                   GoalName;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   BoneName;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StrengthAlpha;                                     // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PullChainAlpha;                                    // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PinRotation;                                       // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         IndexInSolver;                                     // 0x0044(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChainDepth;                                        // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StrengthAlpha;                                     // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PullChainAlpha;                                    // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PinRotation;                                       // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         IndexInSolver;                                     // 0x0048(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -491,13 +643,14 @@ public:
 	}
 };
 static_assert(alignof(UIKRig_FBIKEffector) == 0x000008, "Wrong alignment on UIKRig_FBIKEffector");
-static_assert(sizeof(UIKRig_FBIKEffector) == 0x000048, "Wrong size on UIKRig_FBIKEffector");
+static_assert(sizeof(UIKRig_FBIKEffector) == 0x000050, "Wrong size on UIKRig_FBIKEffector");
 static_assert(offsetof(UIKRig_FBIKEffector, GoalName) == 0x000028, "Member 'UIKRig_FBIKEffector::GoalName' has a wrong offset!");
 static_assert(offsetof(UIKRig_FBIKEffector, BoneName) == 0x000030, "Member 'UIKRig_FBIKEffector::BoneName' has a wrong offset!");
-static_assert(offsetof(UIKRig_FBIKEffector, StrengthAlpha) == 0x000038, "Member 'UIKRig_FBIKEffector::StrengthAlpha' has a wrong offset!");
-static_assert(offsetof(UIKRig_FBIKEffector, PullChainAlpha) == 0x00003C, "Member 'UIKRig_FBIKEffector::PullChainAlpha' has a wrong offset!");
-static_assert(offsetof(UIKRig_FBIKEffector, PinRotation) == 0x000040, "Member 'UIKRig_FBIKEffector::PinRotation' has a wrong offset!");
-static_assert(offsetof(UIKRig_FBIKEffector, IndexInSolver) == 0x000044, "Member 'UIKRig_FBIKEffector::IndexInSolver' has a wrong offset!");
+static_assert(offsetof(UIKRig_FBIKEffector, ChainDepth) == 0x000038, "Member 'UIKRig_FBIKEffector::ChainDepth' has a wrong offset!");
+static_assert(offsetof(UIKRig_FBIKEffector, StrengthAlpha) == 0x00003C, "Member 'UIKRig_FBIKEffector::StrengthAlpha' has a wrong offset!");
+static_assert(offsetof(UIKRig_FBIKEffector, PullChainAlpha) == 0x000040, "Member 'UIKRig_FBIKEffector::PullChainAlpha' has a wrong offset!");
+static_assert(offsetof(UIKRig_FBIKEffector, PinRotation) == 0x000044, "Member 'UIKRig_FBIKEffector::PinRotation' has a wrong offset!");
+static_assert(offsetof(UIKRig_FBIKEffector, IndexInSolver) == 0x000048, "Member 'UIKRig_FBIKEffector::IndexInSolver' has a wrong offset!");
 
 // Class IKRig.IKRig_FBIKBoneSettings
 // 0x0050 (0x0078 - 0x0028)
@@ -508,19 +661,19 @@ public:
 	float                                         RotationStiffness;                                 // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositionStiffness;                                 // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPBIKLimitType                                X;                                                 // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB7[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinX;                                              // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxX;                                              // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPBIKLimitType                                Y;                                                 // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB8[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinY;                                              // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxY;                                              // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPBIKLimitType                                Z;                                                 // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DB9[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinZ;                                              // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxZ;                                              // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUsePreferredAngles;                               // 0x005C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DBA[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PreferredAngles;                                   // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -551,25 +704,26 @@ static_assert(offsetof(UIKRig_FBIKBoneSettings, bUsePreferredAngles) == 0x00005C
 static_assert(offsetof(UIKRig_FBIKBoneSettings, PreferredAngles) == 0x000060, "Member 'UIKRig_FBIKBoneSettings::PreferredAngles' has a wrong offset!");
 
 // Class IKRig.IKRigFBIKSolver
-// 0x00D0 (0x0100 - 0x0030)
+// 0x00C0 (0x00F0 - 0x0030)
 class UIKRigFBIKSolver final : public UIKRigSolver
 {
 public:
 	class FName                                   RootBone;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Iterations;                                        // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MassMultiplier;                                    // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowStretch;                                     // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPBIKRootBehavior                             RootBehavior;                                      // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DBB[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRootPrePullSettings                   PrePullRootSettings;                               // 0x0044(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         PullChainAlpha;                                    // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxAngle;                                          // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverRelaxation;                                    // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStartSolveFromInputPose;                          // 0x0070(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DBC[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SubIterations;                                     // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MassMultiplier;                                    // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowStretch;                                     // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPBIKRootBehavior                             RootBehavior;                                      // 0x0045(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRootPrePullSettings                   PrePullRootSettings;                               // 0x0048(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         PullChainAlpha;                                    // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxAngle;                                          // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverRelaxation;                                    // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStartSolveFromInputPose;                          // 0x0074(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UIKRig_FBIKEffector*>            Effectors;                                         // 0x0078(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class UIKRig_FBIKBoneSettings*>        BoneSettings;                                      // 0x0088(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DBD[0x68];                                    // 0x0098(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x58];                                      // 0x0098(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -582,17 +736,18 @@ public:
 	}
 };
 static_assert(alignof(UIKRigFBIKSolver) == 0x000008, "Wrong alignment on UIKRigFBIKSolver");
-static_assert(sizeof(UIKRigFBIKSolver) == 0x000100, "Wrong size on UIKRigFBIKSolver");
+static_assert(sizeof(UIKRigFBIKSolver) == 0x0000F0, "Wrong size on UIKRigFBIKSolver");
 static_assert(offsetof(UIKRigFBIKSolver, RootBone) == 0x000030, "Member 'UIKRigFBIKSolver::RootBone' has a wrong offset!");
 static_assert(offsetof(UIKRigFBIKSolver, Iterations) == 0x000038, "Member 'UIKRigFBIKSolver::Iterations' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, MassMultiplier) == 0x00003C, "Member 'UIKRigFBIKSolver::MassMultiplier' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, bAllowStretch) == 0x000040, "Member 'UIKRigFBIKSolver::bAllowStretch' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, RootBehavior) == 0x000041, "Member 'UIKRigFBIKSolver::RootBehavior' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, PrePullRootSettings) == 0x000044, "Member 'UIKRigFBIKSolver::PrePullRootSettings' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, PullChainAlpha) == 0x000064, "Member 'UIKRigFBIKSolver::PullChainAlpha' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, MaxAngle) == 0x000068, "Member 'UIKRigFBIKSolver::MaxAngle' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, OverRelaxation) == 0x00006C, "Member 'UIKRigFBIKSolver::OverRelaxation' has a wrong offset!");
-static_assert(offsetof(UIKRigFBIKSolver, bStartSolveFromInputPose) == 0x000070, "Member 'UIKRigFBIKSolver::bStartSolveFromInputPose' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, SubIterations) == 0x00003C, "Member 'UIKRigFBIKSolver::SubIterations' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, MassMultiplier) == 0x000040, "Member 'UIKRigFBIKSolver::MassMultiplier' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, bAllowStretch) == 0x000044, "Member 'UIKRigFBIKSolver::bAllowStretch' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, RootBehavior) == 0x000045, "Member 'UIKRigFBIKSolver::RootBehavior' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, PrePullRootSettings) == 0x000048, "Member 'UIKRigFBIKSolver::PrePullRootSettings' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, PullChainAlpha) == 0x000068, "Member 'UIKRigFBIKSolver::PullChainAlpha' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, MaxAngle) == 0x00006C, "Member 'UIKRigFBIKSolver::MaxAngle' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, OverRelaxation) == 0x000070, "Member 'UIKRigFBIKSolver::OverRelaxation' has a wrong offset!");
+static_assert(offsetof(UIKRigFBIKSolver, bStartSolveFromInputPose) == 0x000074, "Member 'UIKRigFBIKSolver::bStartSolveFromInputPose' has a wrong offset!");
 static_assert(offsetof(UIKRigFBIKSolver, Effectors) == 0x000078, "Member 'UIKRigFBIKSolver::Effectors' has a wrong offset!");
 static_assert(offsetof(UIKRigFBIKSolver, BoneSettings) == 0x000088, "Member 'UIKRigFBIKSolver::BoneSettings' has a wrong offset!");
 
@@ -604,7 +759,7 @@ public:
 	class FName                                   GoalName;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   BoneName;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Alpha;                                             // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DBE[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -630,7 +785,7 @@ public:
 	class FName                                   RootName;                                          // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   EndName;                                           // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UIKRig_PoleSolverEffector*              Effector;                                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2DBF[0x20];                                    // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x20];                                      // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -655,7 +810,7 @@ class UIKRig_SetTransformEffector final : public UObject
 public:
 	bool                                          bEnablePosition;                                   // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableRotation;                                   // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DC0[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Alpha;                                             // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -682,7 +837,7 @@ public:
 	class FName                                   Goal;                                              // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   RootBone;                                          // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UIKRig_SetTransformEffector*            Effector;                                          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2DC1[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

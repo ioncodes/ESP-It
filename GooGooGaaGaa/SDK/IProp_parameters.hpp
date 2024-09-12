@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SRuntimePropData_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SRuntimePropData_structs.hpp"
 
 
 namespace SDK::Params
@@ -94,11 +94,11 @@ static_assert(offsetof(IProp_C_GetMaxHealth, MaxHealth) == 0x000000, "Member 'IP
 struct IProp_C_GetName final
 {
 public:
-	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IProp_C_GetName) == 0x000008, "Wrong alignment on IProp_C_GetName");
 static_assert(sizeof(IProp_C_GetName) == 0x000010, "Wrong size on IProp_C_GetName");
-static_assert(offsetof(IProp_C_GetName, Param_Name) == 0x000000, "Member 'IProp_C_GetName::Param_Name' has a wrong offset!");
+static_assert(offsetof(IProp_C_GetName, Name_0) == 0x000000, "Member 'IProp_C_GetName::Name_0' has a wrong offset!");
 
 // Function IProp.IProp_C.GetRuntimePropData
 // 0x0038 (0x0038 - 0x0000)
@@ -163,11 +163,11 @@ struct IProp_C_OffsetPosition final
 {
 public:
 	class AActor*                                 Prop;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4BA0[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WantedSpawnTransform;                              // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         IgnoreActors;                                      // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ValidTransform;                                    // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4BA1[0xF];                                     // 0x0081(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0xF];                                       // 0x0081(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0090(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(IProp_C_OffsetPosition) == 0x000010, "Wrong alignment on IProp_C_OffsetPosition");
@@ -225,7 +225,7 @@ struct IProp_C_Stop final
 {
 public:
 	bool                                          Start;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4BA2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               WantedRotation;                                    // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ForcedOutput;                                      // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

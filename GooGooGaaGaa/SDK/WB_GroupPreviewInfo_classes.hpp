@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_GroupPreviewInfo.WB_GroupPreviewInfo_C
-// 0x0030 (0x02F0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_GroupPreviewInfo_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             AmountTextField;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_PropButton_C*                       PreviewActorButton;                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         PreviewBox;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsGroupPreview;                                    // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4663[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TotalAmount;                                       // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             AmountTextField;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_PropButton_C*                       PreviewActorButton;                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         PreviewBox;                                        // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsGroupPreview;                                    // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_309[0x3];                                      // 0x0309(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TotalAmount;                                       // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateContentAndVisibility(TArray<class AActor*>& TargetArray);
@@ -49,14 +49,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_GroupPreviewInfo_C) == 0x000008, "Wrong alignment on UWB_GroupPreviewInfo_C");
-static_assert(sizeof(UWB_GroupPreviewInfo_C) == 0x0002F0, "Wrong size on UWB_GroupPreviewInfo_C");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_GroupPreviewInfo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, AmountTextField) == 0x0002C8, "Member 'UWB_GroupPreviewInfo_C::AmountTextField' has a wrong offset!");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, PreviewActorButton) == 0x0002D0, "Member 'UWB_GroupPreviewInfo_C::PreviewActorButton' has a wrong offset!");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, PreviewBox) == 0x0002D8, "Member 'UWB_GroupPreviewInfo_C::PreviewBox' has a wrong offset!");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, OwningCreativePlayerController) == 0x0002E0, "Member 'UWB_GroupPreviewInfo_C::OwningCreativePlayerController' has a wrong offset!");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, IsGroupPreview) == 0x0002E8, "Member 'UWB_GroupPreviewInfo_C::IsGroupPreview' has a wrong offset!");
-static_assert(offsetof(UWB_GroupPreviewInfo_C, TotalAmount) == 0x0002EC, "Member 'UWB_GroupPreviewInfo_C::TotalAmount' has a wrong offset!");
+static_assert(sizeof(UWB_GroupPreviewInfo_C) == 0x000310, "Wrong size on UWB_GroupPreviewInfo_C");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_GroupPreviewInfo_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, AmountTextField) == 0x0002E8, "Member 'UWB_GroupPreviewInfo_C::AmountTextField' has a wrong offset!");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, PreviewActorButton) == 0x0002F0, "Member 'UWB_GroupPreviewInfo_C::PreviewActorButton' has a wrong offset!");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, PreviewBox) == 0x0002F8, "Member 'UWB_GroupPreviewInfo_C::PreviewBox' has a wrong offset!");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, OwningCreativePlayerController) == 0x000300, "Member 'UWB_GroupPreviewInfo_C::OwningCreativePlayerController' has a wrong offset!");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, IsGroupPreview) == 0x000308, "Member 'UWB_GroupPreviewInfo_C::IsGroupPreview' has a wrong offset!");
+static_assert(offsetof(UWB_GroupPreviewInfo_C, TotalAmount) == 0x00030C, "Member 'UWB_GroupPreviewInfo_C::TotalAmount' has a wrong offset!");
 
 }
 

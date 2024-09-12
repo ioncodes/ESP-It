@@ -20,29 +20,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ObjectivePlayerState.B_ObjectivePlayerState_C
-// 0x0038 (0x0670 - 0x0638)
+// 0x0038 (0x0668 - 0x0630)
 class AB_ObjectivePlayerState_C final : public AB_PlayerState_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectivePlayerState_C;           // 0x0638(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	uint8                                         Lives;                                             // 0x0640(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_ObjectiveTeam                               ObjectiveTeam;                                     // 0x0641(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5978[0x6];                                     // 0x0642(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_ObjectiveMatchPlayerState_C*         ObjectiveMatchPlayerState;                         // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsReadyObjectiveTeamSelection;                     // 0x0650(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsTeamInitialized;                                 // 0x0651(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5979[0x6];                                     // 0x0652(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PreviousTravelDistance;                            // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MinimumRequiredTravelDistancePerSecondForActivity; // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SecondsInactive;                                   // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ShowHelpEveryXSeconds;                             // 0x066C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectivePlayerState_C;           // 0x0630(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	uint8                                         Lives;                                             // 0x0638(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_ObjectiveTeam                               ObjectiveTeam;                                     // 0x0639(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_63A[0x6];                                      // 0x063A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_ObjectiveMatchPlayerState_C*         ObjectiveMatchPlayerState;                         // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsReadyObjectiveTeamSelection;                     // 0x0648(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsTeamInitialized;                                 // 0x0649(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64A[0x6];                                      // 0x064A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PreviousTravelDistance;                            // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MinimumRequiredTravelDistancePerSecondForActivity; // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SecondsInactive;                                   // 0x0660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ShowHelpEveryXSeconds;                             // 0x0664(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CheckForWitchActivity();
 	void ExecuteUbergraph_B_ObjectivePlayerState(int32 EntryPoint);
 	void HandleIsReady();
 	void InitializeFromMatchPlayerState();
-	void IsLocalReady(bool* Param_IsLocalReady);
+	void IsLocalReady(bool* Param_IsLocalReady_0);
 	void OnRep_IsReadyObjectiveTeamSelection();
 	void ProceedMatchRunningKick();
 	void ReceiveBeginPlay();
@@ -62,17 +62,17 @@ public:
 	}
 };
 static_assert(alignof(AB_ObjectivePlayerState_C) == 0x000008, "Wrong alignment on AB_ObjectivePlayerState_C");
-static_assert(sizeof(AB_ObjectivePlayerState_C) == 0x000670, "Wrong size on AB_ObjectivePlayerState_C");
-static_assert(offsetof(AB_ObjectivePlayerState_C, UberGraphFrame_B_ObjectivePlayerState_C) == 0x000638, "Member 'AB_ObjectivePlayerState_C::UberGraphFrame_B_ObjectivePlayerState_C' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, Lives) == 0x000640, "Member 'AB_ObjectivePlayerState_C::Lives' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, ObjectiveTeam) == 0x000641, "Member 'AB_ObjectivePlayerState_C::ObjectiveTeam' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, ObjectiveMatchPlayerState) == 0x000648, "Member 'AB_ObjectivePlayerState_C::ObjectiveMatchPlayerState' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, IsReadyObjectiveTeamSelection) == 0x000650, "Member 'AB_ObjectivePlayerState_C::IsReadyObjectiveTeamSelection' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, IsTeamInitialized) == 0x000651, "Member 'AB_ObjectivePlayerState_C::IsTeamInitialized' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, PreviousTravelDistance) == 0x000658, "Member 'AB_ObjectivePlayerState_C::PreviousTravelDistance' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, MinimumRequiredTravelDistancePerSecondForActivity) == 0x000660, "Member 'AB_ObjectivePlayerState_C::MinimumRequiredTravelDistancePerSecondForActivity' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, SecondsInactive) == 0x000668, "Member 'AB_ObjectivePlayerState_C::SecondsInactive' has a wrong offset!");
-static_assert(offsetof(AB_ObjectivePlayerState_C, ShowHelpEveryXSeconds) == 0x00066C, "Member 'AB_ObjectivePlayerState_C::ShowHelpEveryXSeconds' has a wrong offset!");
+static_assert(sizeof(AB_ObjectivePlayerState_C) == 0x000668, "Wrong size on AB_ObjectivePlayerState_C");
+static_assert(offsetof(AB_ObjectivePlayerState_C, UberGraphFrame_B_ObjectivePlayerState_C) == 0x000630, "Member 'AB_ObjectivePlayerState_C::UberGraphFrame_B_ObjectivePlayerState_C' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, Lives) == 0x000638, "Member 'AB_ObjectivePlayerState_C::Lives' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, ObjectiveTeam) == 0x000639, "Member 'AB_ObjectivePlayerState_C::ObjectiveTeam' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, ObjectiveMatchPlayerState) == 0x000640, "Member 'AB_ObjectivePlayerState_C::ObjectiveMatchPlayerState' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, IsReadyObjectiveTeamSelection) == 0x000648, "Member 'AB_ObjectivePlayerState_C::IsReadyObjectiveTeamSelection' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, IsTeamInitialized) == 0x000649, "Member 'AB_ObjectivePlayerState_C::IsTeamInitialized' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, PreviousTravelDistance) == 0x000650, "Member 'AB_ObjectivePlayerState_C::PreviousTravelDistance' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, MinimumRequiredTravelDistancePerSecondForActivity) == 0x000658, "Member 'AB_ObjectivePlayerState_C::MinimumRequiredTravelDistancePerSecondForActivity' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, SecondsInactive) == 0x000660, "Member 'AB_ObjectivePlayerState_C::SecondsInactive' has a wrong offset!");
+static_assert(offsetof(AB_ObjectivePlayerState_C, ShowHelpEveryXSeconds) == 0x000664, "Member 'AB_ObjectivePlayerState_C::ShowHelpEveryXSeconds' has a wrong offset!");
 
 }
 

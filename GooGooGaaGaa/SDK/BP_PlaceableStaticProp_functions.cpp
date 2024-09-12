@@ -58,9 +58,9 @@ void ABP_PlaceableStaticProp_C::ApplyVisualMaterialChanges(const TArray<class UM
 // Parameters:
 // class UB_BasePlaceableMaterialOverwrite_C*MaterialOverwrite                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UMaterialInterface*               NewMaterial                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlaceableStaticProp_C::SetSpecficMaterial(class UB_BasePlaceableMaterialOverwrite_C* MaterialOverwrite, class UMaterialInterface* NewMaterial, int32 Param_Index)
+void ABP_PlaceableStaticProp_C::SetSpecficMaterial(class UB_BasePlaceableMaterialOverwrite_C* MaterialOverwrite, class UMaterialInterface* NewMaterial, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -71,7 +71,7 @@ void ABP_PlaceableStaticProp_C::SetSpecficMaterial(class UB_BasePlaceableMateria
 
 	Parms.MaterialOverwrite = MaterialOverwrite;
 	Parms.NewMaterial = NewMaterial;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

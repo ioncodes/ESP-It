@@ -17,27 +17,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ItemSalvageButton.WB_ItemSalvageButton_C
-// 0x0028 (0x0420 - 0x03F8)
+// 0x0028 (0x0428 - 0x0400)
 class UWB_ItemSalvageButton_C final : public UWB_SkinOrRecipeButton_C
 {
 public:
-	bool                                          IsRecipe;                                          // 0x03F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57C7[0x7];                                     // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_SalvageScreen_C*                    ParentSalvageScreen;                               // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnClicked;                                         // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          UsedInSalvageDetails;                              // 0x0418(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRecipe;                                          // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SalvageScreen_C*                    ParentSalvageScreen;                               // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnClicked;                                         // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          UsedInSalvageDetails;                              // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Clicked();
 	void ClickedGamepadModeAddOn();
 	class UWB_GridButton_C* GetGridButton();
 	void GetIsButtonEnabled(bool* IsEnabled);
-	void GetNotifyButtonVisibility(bool* Param_IsVisible);
+	void GetNotifyButtonVisibility(bool* IsVisible_0);
 	void GetQuantityText(class FText* Quantity);
 	void GetQuantityVisibility(bool* ShowQuantity);
 	void GetRecipeIconVisibility(bool* ShowIcon);
-	void GetTooltip(class UUserWidget** Param_ToolTip);
+	void GetTooltip(class UUserWidget** ToolTip_0);
 	void OnClicked__DelegateSignature();
+	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	void SetIndividualParameters();
 
 public:
@@ -51,11 +52,11 @@ public:
 	}
 };
 static_assert(alignof(UWB_ItemSalvageButton_C) == 0x000008, "Wrong alignment on UWB_ItemSalvageButton_C");
-static_assert(sizeof(UWB_ItemSalvageButton_C) == 0x000420, "Wrong size on UWB_ItemSalvageButton_C");
-static_assert(offsetof(UWB_ItemSalvageButton_C, IsRecipe) == 0x0003F8, "Member 'UWB_ItemSalvageButton_C::IsRecipe' has a wrong offset!");
-static_assert(offsetof(UWB_ItemSalvageButton_C, ParentSalvageScreen) == 0x000400, "Member 'UWB_ItemSalvageButton_C::ParentSalvageScreen' has a wrong offset!");
-static_assert(offsetof(UWB_ItemSalvageButton_C, OnClicked) == 0x000408, "Member 'UWB_ItemSalvageButton_C::OnClicked' has a wrong offset!");
-static_assert(offsetof(UWB_ItemSalvageButton_C, UsedInSalvageDetails) == 0x000418, "Member 'UWB_ItemSalvageButton_C::UsedInSalvageDetails' has a wrong offset!");
+static_assert(sizeof(UWB_ItemSalvageButton_C) == 0x000428, "Wrong size on UWB_ItemSalvageButton_C");
+static_assert(offsetof(UWB_ItemSalvageButton_C, IsRecipe) == 0x000400, "Member 'UWB_ItemSalvageButton_C::IsRecipe' has a wrong offset!");
+static_assert(offsetof(UWB_ItemSalvageButton_C, ParentSalvageScreen) == 0x000408, "Member 'UWB_ItemSalvageButton_C::ParentSalvageScreen' has a wrong offset!");
+static_assert(offsetof(UWB_ItemSalvageButton_C, OnClicked) == 0x000410, "Member 'UWB_ItemSalvageButton_C::OnClicked' has a wrong offset!");
+static_assert(offsetof(UWB_ItemSalvageButton_C, UsedInSalvageDetails) == 0x000420, "Member 'UWB_ItemSalvageButton_C::UsedInSalvageDetails' has a wrong offset!");
 
 }
 

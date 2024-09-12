@@ -89,9 +89,9 @@ void UWB_ItemSalvageButton_C::GetIsButtonEnabled(bool* IsEnabled)
 // Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.GetNotifyButtonVisibility
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_IsVisible                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsVisible_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ItemSalvageButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
+void UWB_ItemSalvageButton_C::GetNotifyButtonVisibility(bool* IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -102,8 +102,8 @@ void UWB_ItemSalvageButton_C::GetNotifyButtonVisibility(bool* Param_IsVisible)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsVisible != nullptr)
-		*Param_IsVisible = Parms.Param_IsVisible;
+	if (IsVisible_0 != nullptr)
+		*IsVisible_0 = Parms.IsVisible_0;
 }
 
 
@@ -173,9 +173,9 @@ void UWB_ItemSalvageButton_C::GetRecipeIconVisibility(bool* ShowIcon)
 // Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.GetTooltip
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UUserWidget*                      Param_ToolTip                                          (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      ToolTip_0                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ItemSalvageButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
+void UWB_ItemSalvageButton_C::GetTooltip(class UUserWidget** ToolTip_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -186,8 +186,8 @@ void UWB_ItemSalvageButton_C::GetTooltip(class UUserWidget** Param_ToolTip)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ToolTip != nullptr)
-		*Param_ToolTip = Parms.Param_ToolTip;
+	if (ToolTip_0 != nullptr)
+		*ToolTip_0 = Parms.ToolTip_0;
 }
 
 
@@ -202,6 +202,31 @@ void UWB_ItemSalvageButton_C::OnClicked__DelegateSignature()
 		Func = Class->GetFunction("WB_ItemSalvageButton_C", "OnClicked__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_ItemSalvageButton.WB_ItemSalvageButton_C.OnFocusReceived
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// struct FFocusEvent                      InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWB_ItemSalvageButton_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_ItemSalvageButton_C", "OnFocusReceived");
+
+	Params::WB_ItemSalvageButton_C_OnFocusReceived Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

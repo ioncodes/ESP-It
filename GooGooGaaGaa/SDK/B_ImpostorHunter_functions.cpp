@@ -108,9 +108,9 @@ void AB_ImpostorHunter_C::InpActEvt_Fire_K2Node_InputActionEvent_1(const struct 
 // Function B_ImpostorHunter.B_ImpostorHunter_C.LoadSkills
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_ImpostorHunter_C::LoadSkills(class AController* Param_Controller)
+void AB_ImpostorHunter_C::LoadSkills(class AController* Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -119,7 +119,7 @@ void AB_ImpostorHunter_C::LoadSkills(class AController* Param_Controller)
 
 	Params::B_ImpostorHunter_C_LoadSkills Parms{};
 
-	Parms.Param_Controller = Param_Controller;
+	Parms.Controller_0 = Controller_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

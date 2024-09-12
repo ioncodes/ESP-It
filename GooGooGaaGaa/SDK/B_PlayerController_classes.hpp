@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EChatType_structs.hpp"
+#include "PropWitchHuntModule_classes.hpp"
 #include "ESleepPropSendState_structs.hpp"
-#include "PropWitchHuntModule_structs.hpp"
-#include "MasterServerPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "S_ServerStat_structs.hpp"
+#include "MasterServerPlugin_structs.hpp"
 #include "ETeamID_structs.hpp"
+#include "EChatType_structs.hpp"
 #include "ESkillCategory_structs.hpp"
 
 
@@ -26,86 +25,86 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PlayerController.B_PlayerController_C
-// 0x02D0 (0x0B28 - 0x0858)
-class AB_PlayerController_C : public APlayerController
+// 0x02C0 (0x0B18 - 0x0858)
+class AB_PlayerController_C : public AWitchItPlayerController
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0858(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UB_AimAssistComponent_C*                B_AimAssistComponent;                              // 0x0860(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUserInterfaceHidden;                             // 0x0868(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A19[0x7];                                     // 0x0869(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_869[0x7];                                      // 0x0869(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         TrackingUIClasses;                                 // 0x0870(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	double                                        ChatMessagesPerSecond;                             // 0x0880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ChatBlockCooldown;                                 // 0x0888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        ChatCooldownPerViolation;                          // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxChatMessagesPerSecond;                          // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         CollectedPropsForSleep;                            // 0x08A0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FBlueprintItemSerialization            LastItemSerialization;                             // 0x08B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IsInventoryDebug;                                  // 0x08C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1A[0x7];                                     // 0x08C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AB_PlayerState_C*>               PendingPlayerTeamChoice;                           // 0x08C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         CollectedPropsForWake;                             // 0x08D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         CollectedPropsForScale;                            // 0x08E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         SendingProps;                                      // 0x08F8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<struct FVector>                        SendingPropLocations;                              // 0x0908(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FRotator>                       SendingPropRotations;                              // 0x0918(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class AActor*>                         SendingWakeProps;                                  // 0x0928(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         SendingScaleProps;                                 // 0x0938(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<struct FVector>                        SendingPropScales;                                 // 0x0948(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<bool>                                  SendingStartAwakeProps;                            // 0x0958(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<bool>                                  SendingFreezedProps;                               // 0x0968(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	ESleepPropSendState                           SleepPropSendState;                                // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESleepPropSendState                           WakePropSendState;                                 // 0x0979(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESleepPropSendState                           ScalePropSendState;                                // 0x097A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1B[0x1];                                     // 0x097B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SleepPropSendTries;                                // 0x097C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         WakePropSendTries;                                 // 0x0980(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsRequesting;                                      // 0x0984(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1C[0x3];                                     // 0x0985(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class APlayerState*>                   RemainingPlayers;                                  // 0x0988(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	int32                                         TestBitValue;                                      // 0x0998(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TestBitIndex;                                      // 0x099C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CurrentControlRotation;                            // 0x09A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	class APawn*                                  CurrentControlledPawn;                             // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ControlledPawnIsWitch;                             // 0x09C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1D[0x7];                                     // 0x09C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FS_ServerStat>                  CurrentServerStats;                                // 0x09C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class AB_StaticMeshProp_C*>            Proplist;                                          // 0x09D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AB_Witch_C*>                     WitchList;                                         // 0x09E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	bool                                          WitchPropJiggleMode;                               // 0x09F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1E[0x7];                                     // 0x09F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         WitchPropList;                                     // 0x0A00(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FVector                                JiggleVector;                                      // 0x0A10(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         JiggleForce;                                       // 0x0A28(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ScalePropSendTries;                                // 0x0A2C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TransformRange;                                    // 0x0A30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TargetProp;                                        // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentEyeMovementDirection;                       // 0x0A40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentEyeMovementAxisValue;                       // 0x0A41(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A1F[0x6];                                     // 0x0A42(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CurrentClientForwadAxisVector;                     // 0x0A48(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CurrentClientRightAxisVector;                      // 0x0A60(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CurrentClientUpAxisVector;                         // 0x0A78(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentPressedMoveUpAxisValue;                     // 0x0A90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InitializeTournament;                              // 0x0A98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A20[0x7];                                     // 0x0A99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, class UWB_BaseModWidget_C*> HUDExtensions;                                     // 0x0AA0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UWB_NewItemPopup_C*                     NewItemPopupWidget;                                // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             AchievementsTable;                                 // 0x0AF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        KeepTargetPropTime;                                // 0x0B00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InScopeMode;                                       // 0x0B08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A21[0x7];                                     // 0x0B09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_FieldOfViewComponent_C*              FOVComponent;                                      // 0x0B10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         ControllerSensivity;                               // 0x0B18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DefaultYawScale;                                   // 0x0B1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DefaultPitchScale;                                 // 0x0B20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInventoryDebug;                                  // 0x08B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B1[0x7];                                      // 0x08B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AB_PlayerState_C*>               PendingPlayerTeamChoice;                           // 0x08B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         CollectedPropsForWake;                             // 0x08C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         CollectedPropsForScale;                            // 0x08D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         SendingProps;                                      // 0x08E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<struct FVector>                        SendingPropLocations;                              // 0x08F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FRotator>                       SendingPropRotations;                              // 0x0908(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class AActor*>                         SendingWakeProps;                                  // 0x0918(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         SendingScaleProps;                                 // 0x0928(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<struct FVector>                        SendingPropScales;                                 // 0x0938(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<bool>                                  SendingStartAwakeProps;                            // 0x0948(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<bool>                                  SendingFreezedProps;                               // 0x0958(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	ESleepPropSendState                           SleepPropSendState;                                // 0x0968(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESleepPropSendState                           WakePropSendState;                                 // 0x0969(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESleepPropSendState                           ScalePropSendState;                                // 0x096A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_96B[0x1];                                      // 0x096B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SleepPropSendTries;                                // 0x096C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         WakePropSendTries;                                 // 0x0970(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRequesting;                                      // 0x0974(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_975[0x3];                                      // 0x0975(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class APlayerState*>                   RemainingPlayers;                                  // 0x0978(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	int32                                         TestBitValue;                                      // 0x0988(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TestBitIndex;                                      // 0x098C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CurrentControlRotation;                            // 0x0990(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class APawn*                                  CurrentControlledPawn;                             // 0x09A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ControlledPawnIsWitch;                             // 0x09B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9B1[0x7];                                      // 0x09B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS_ServerStat>                  CurrentServerStats;                                // 0x09B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class AB_StaticMeshProp_C*>            Proplist;                                          // 0x09C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AB_Witch_C*>                     WitchList;                                         // 0x09D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	bool                                          WitchPropJiggleMode;                               // 0x09E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9E9[0x7];                                      // 0x09E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         WitchPropList;                                     // 0x09F0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FVector                                JiggleVector;                                      // 0x0A00(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         JiggleForce;                                       // 0x0A18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ScalePropSendTries;                                // 0x0A1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TransformRange;                                    // 0x0A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetProp;                                        // 0x0A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentEyeMovementDirection;                       // 0x0A30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentEyeMovementAxisValue;                       // 0x0A31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A32[0x6];                                      // 0x0A32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CurrentClientForwadAxisVector;                     // 0x0A38(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CurrentClientRightAxisVector;                      // 0x0A50(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CurrentClientUpAxisVector;                         // 0x0A68(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentPressedMoveUpAxisValue;                     // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InitializeTournament;                              // 0x0A88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A89[0x7];                                      // 0x0A89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, class UWB_BaseModWidget_C*> HUDExtensions;                                     // 0x0A90(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UWB_NewItemPopup_C*                     NewItemPopupWidget;                                // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             AchievementsTable;                                 // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        KeepTargetPropTime;                                // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InScopeMode;                                       // 0x0AF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AF9[0x7];                                      // 0x0AF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_FieldOfViewComponent_C*              FOVComponent;                                      // 0x0B00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         ControllerSensivity;                               // 0x0B08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DefaultYawScale;                                   // 0x0B0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DefaultPitchScale;                                 // 0x0B10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_B_PlayerController(int32 EntryPoint);
+	void CheckForSleepingProps();
 	void SetScopeMode(bool Active);
 	void TickScopeMode();
-	void AddNewPropToCollection(int32 PropId, int32 CategoryCount, int32 SetCount, int32 TotalCategory, int32 TotalSet);
+	void AddNewPropToCollection(int32 PropID, int32 CategoryCount, int32 SetCount, int32 TotalCategory, int32 TotalSet);
 	void HandleStatChangeNotificationReceived(EStatChangeReason Reason, const class FString& StatApiName, int64 NewValue);
 	void CreateItemPopupWidget();
 	void QuestUpdated(const struct FClientQuest& Quest);
@@ -144,26 +143,13 @@ public:
 	void UpdateChatViolation();
 	void UpdateChatMessagesPerSecond();
 	bool MaxChatMessagesPerSecondSent();
-	void InpActEvt_Alt_M_K2Node_InputKeyEvent_10(const struct FKey& Key);
-	void InpActEvt_Alt_N_K2Node_InputKeyEvent_9(const struct FKey& Key);
-	void InpActEvt_Alt_V_K2Node_InputKeyEvent_8(const struct FKey& Key);
+	void InpActEvt_Alt_M_K2Node_InputKeyEvent_5(const struct FKey& Key);
+	void InpActEvt_Alt_V_K2Node_InputKeyEvent_4(const struct FKey& Key);
 	void OnFailure_8EEBFB5E40DA48B300341CB094C09B40(const TArray<struct FBlueprintOnlineItem>& Items);
 	void OnSuccess_8EEBFB5E40DA48B300341CB094C09B40(const TArray<struct FBlueprintOnlineItem>& Items);
 	void OnFailure_E115D7FB4CB46569B723769816421735(const TArray<struct FBlueprintOnlineItem>& Items);
 	void OnSuccess_E115D7FB4CB46569B723769816421735(const TArray<struct FBlueprintOnlineItem>& Items);
-	void InpActEvt_Alt_J_K2Node_InputKeyEvent_7(const struct FKey& Key);
-	void OnFailure_042638A744992EAEEA83ACA49ECBB8F9(const TArray<struct FBlueprintOnlineItem>& Items);
-	void OnSuccess_042638A744992EAEEA83ACA49ECBB8F9(const TArray<struct FBlueprintOnlineItem>& Items);
-	void OnFailure_C24E8E8A463783E6293C189C38FF744B(const struct FBlueprintItemSerialization& ItemSerialization);
-	void OnSuccess_C24E8E8A463783E6293C189C38FF744B(const struct FBlueprintItemSerialization& ItemSerialization);
-	void OnFailure_85D98CA74265CBF64032A9B41794D0BE(const TArray<struct FBlueprintOnlineItem>& Items);
-	void OnSuccess_85D98CA74265CBF64032A9B41794D0BE(const TArray<struct FBlueprintOnlineItem>& Items);
-	void InpActEvt_Alt_P_K2Node_InputKeyEvent_6(const struct FKey& Key);
-	void InpActEvt_Alt_Z_K2Node_InputKeyEvent_5(const struct FKey& Key);
-	void InpActEvt_Alt_B_K2Node_InputKeyEvent_4(const struct FKey& Key);
 	void InpActEvt_Five_K2Node_InputKeyEvent_3(const struct FKey& Key);
-	void OnFailure_B67E4BD34DE2CED06BB952B738E499FF(const TArray<struct FBlueprintOnlineItem>& Items);
-	void OnSuccess_B67E4BD34DE2CED06BB952B738E499FF(const TArray<struct FBlueprintOnlineItem>& Items);
 	void InpActEvt_Menu_K2Node_InputActionEvent_15(const struct FKey& Key);
 	void InpActEvt_HideUserInterface_K2Node_InputActionEvent_14(const struct FKey& Key);
 	void InpActEvt_PlayerList_K2Node_InputActionEvent_13(const struct FKey& Key);
@@ -212,10 +198,10 @@ public:
 	void PutPropsToWake(const TArray<class AActor*>& Actors);
 	void PutPropsToWakeSuccess();
 	void PutPropsToWakeFailedUnkownProp();
-	void AddNewPropToCollectionClient(int32 PropId, int32 CountCategory, int32 CountSet, int32 TotalCategory, int32 TotalSet);
+	void AddNewPropToCollectionClient(int32 PropID, int32 CountCategory, int32 CountSet, int32 TotalCategory, int32 TotalSet);
 	void RequestServerInfoServer();
 	void RequestServerInfoClient(const TArray<struct FS_ServerStat>& ServerStats);
-	void VoteMap(int32 Param_Index);
+	void VoteMap(int32 Index_0);
 	void ReportPlayerServer(class APlayerState* PlayerToReport, int32 ReasonIndex);
 	void ReportPlayerClient(class APlayerState* ReportedPlayerState);
 	void SetReady(bool WantsToSpectate, bool Ready);
@@ -263,7 +249,7 @@ public:
 	}
 };
 static_assert(alignof(AB_PlayerController_C) == 0x000008, "Wrong alignment on AB_PlayerController_C");
-static_assert(sizeof(AB_PlayerController_C) == 0x000B28, "Wrong size on AB_PlayerController_C");
+static_assert(sizeof(AB_PlayerController_C) == 0x000B18, "Wrong size on AB_PlayerController_C");
 static_assert(offsetof(AB_PlayerController_C, UberGraphFrame) == 0x000858, "Member 'AB_PlayerController_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(AB_PlayerController_C, B_AimAssistComponent) == 0x000860, "Member 'AB_PlayerController_C::B_AimAssistComponent' has a wrong offset!");
 static_assert(offsetof(AB_PlayerController_C, IsUserInterfaceHidden) == 0x000868, "Member 'AB_PlayerController_C::IsUserInterfaceHidden' has a wrong offset!");
@@ -273,57 +259,56 @@ static_assert(offsetof(AB_PlayerController_C, ChatBlockCooldown) == 0x000888, "M
 static_assert(offsetof(AB_PlayerController_C, ChatCooldownPerViolation) == 0x000890, "Member 'AB_PlayerController_C::ChatCooldownPerViolation' has a wrong offset!");
 static_assert(offsetof(AB_PlayerController_C, MaxChatMessagesPerSecond) == 0x000898, "Member 'AB_PlayerController_C::MaxChatMessagesPerSecond' has a wrong offset!");
 static_assert(offsetof(AB_PlayerController_C, CollectedPropsForSleep) == 0x0008A0, "Member 'AB_PlayerController_C::CollectedPropsForSleep' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, LastItemSerialization) == 0x0008B0, "Member 'AB_PlayerController_C::LastItemSerialization' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, IsInventoryDebug) == 0x0008C0, "Member 'AB_PlayerController_C::IsInventoryDebug' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, PendingPlayerTeamChoice) == 0x0008C8, "Member 'AB_PlayerController_C::PendingPlayerTeamChoice' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CollectedPropsForWake) == 0x0008D8, "Member 'AB_PlayerController_C::CollectedPropsForWake' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CollectedPropsForScale) == 0x0008E8, "Member 'AB_PlayerController_C::CollectedPropsForScale' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingProps) == 0x0008F8, "Member 'AB_PlayerController_C::SendingProps' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingPropLocations) == 0x000908, "Member 'AB_PlayerController_C::SendingPropLocations' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingPropRotations) == 0x000918, "Member 'AB_PlayerController_C::SendingPropRotations' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingWakeProps) == 0x000928, "Member 'AB_PlayerController_C::SendingWakeProps' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingScaleProps) == 0x000938, "Member 'AB_PlayerController_C::SendingScaleProps' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingPropScales) == 0x000948, "Member 'AB_PlayerController_C::SendingPropScales' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingStartAwakeProps) == 0x000958, "Member 'AB_PlayerController_C::SendingStartAwakeProps' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SendingFreezedProps) == 0x000968, "Member 'AB_PlayerController_C::SendingFreezedProps' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SleepPropSendState) == 0x000978, "Member 'AB_PlayerController_C::SleepPropSendState' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, WakePropSendState) == 0x000979, "Member 'AB_PlayerController_C::WakePropSendState' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, ScalePropSendState) == 0x00097A, "Member 'AB_PlayerController_C::ScalePropSendState' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, SleepPropSendTries) == 0x00097C, "Member 'AB_PlayerController_C::SleepPropSendTries' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, WakePropSendTries) == 0x000980, "Member 'AB_PlayerController_C::WakePropSendTries' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, IsRequesting) == 0x000984, "Member 'AB_PlayerController_C::IsRequesting' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, RemainingPlayers) == 0x000988, "Member 'AB_PlayerController_C::RemainingPlayers' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, TestBitValue) == 0x000998, "Member 'AB_PlayerController_C::TestBitValue' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, TestBitIndex) == 0x00099C, "Member 'AB_PlayerController_C::TestBitIndex' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentControlRotation) == 0x0009A0, "Member 'AB_PlayerController_C::CurrentControlRotation' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentControlledPawn) == 0x0009B8, "Member 'AB_PlayerController_C::CurrentControlledPawn' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, ControlledPawnIsWitch) == 0x0009C0, "Member 'AB_PlayerController_C::ControlledPawnIsWitch' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentServerStats) == 0x0009C8, "Member 'AB_PlayerController_C::CurrentServerStats' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, Proplist) == 0x0009D8, "Member 'AB_PlayerController_C::Proplist' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, WitchList) == 0x0009E8, "Member 'AB_PlayerController_C::WitchList' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, WitchPropJiggleMode) == 0x0009F8, "Member 'AB_PlayerController_C::WitchPropJiggleMode' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, WitchPropList) == 0x000A00, "Member 'AB_PlayerController_C::WitchPropList' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, JiggleVector) == 0x000A10, "Member 'AB_PlayerController_C::JiggleVector' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, JiggleForce) == 0x000A28, "Member 'AB_PlayerController_C::JiggleForce' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, ScalePropSendTries) == 0x000A2C, "Member 'AB_PlayerController_C::ScalePropSendTries' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, TransformRange) == 0x000A30, "Member 'AB_PlayerController_C::TransformRange' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, TargetProp) == 0x000A38, "Member 'AB_PlayerController_C::TargetProp' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentEyeMovementDirection) == 0x000A40, "Member 'AB_PlayerController_C::CurrentEyeMovementDirection' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentEyeMovementAxisValue) == 0x000A41, "Member 'AB_PlayerController_C::CurrentEyeMovementAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentClientForwadAxisVector) == 0x000A48, "Member 'AB_PlayerController_C::CurrentClientForwadAxisVector' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentClientRightAxisVector) == 0x000A60, "Member 'AB_PlayerController_C::CurrentClientRightAxisVector' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentClientUpAxisVector) == 0x000A78, "Member 'AB_PlayerController_C::CurrentClientUpAxisVector' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, CurrentPressedMoveUpAxisValue) == 0x000A90, "Member 'AB_PlayerController_C::CurrentPressedMoveUpAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, InitializeTournament) == 0x000A98, "Member 'AB_PlayerController_C::InitializeTournament' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, HUDExtensions) == 0x000AA0, "Member 'AB_PlayerController_C::HUDExtensions' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, NewItemPopupWidget) == 0x000AF0, "Member 'AB_PlayerController_C::NewItemPopupWidget' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, AchievementsTable) == 0x000AF8, "Member 'AB_PlayerController_C::AchievementsTable' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, KeepTargetPropTime) == 0x000B00, "Member 'AB_PlayerController_C::KeepTargetPropTime' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, InScopeMode) == 0x000B08, "Member 'AB_PlayerController_C::InScopeMode' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, FOVComponent) == 0x000B10, "Member 'AB_PlayerController_C::FOVComponent' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, ControllerSensivity) == 0x000B18, "Member 'AB_PlayerController_C::ControllerSensivity' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, DefaultYawScale) == 0x000B1C, "Member 'AB_PlayerController_C::DefaultYawScale' has a wrong offset!");
-static_assert(offsetof(AB_PlayerController_C, DefaultPitchScale) == 0x000B20, "Member 'AB_PlayerController_C::DefaultPitchScale' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, IsInventoryDebug) == 0x0008B0, "Member 'AB_PlayerController_C::IsInventoryDebug' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, PendingPlayerTeamChoice) == 0x0008B8, "Member 'AB_PlayerController_C::PendingPlayerTeamChoice' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CollectedPropsForWake) == 0x0008C8, "Member 'AB_PlayerController_C::CollectedPropsForWake' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CollectedPropsForScale) == 0x0008D8, "Member 'AB_PlayerController_C::CollectedPropsForScale' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingProps) == 0x0008E8, "Member 'AB_PlayerController_C::SendingProps' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingPropLocations) == 0x0008F8, "Member 'AB_PlayerController_C::SendingPropLocations' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingPropRotations) == 0x000908, "Member 'AB_PlayerController_C::SendingPropRotations' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingWakeProps) == 0x000918, "Member 'AB_PlayerController_C::SendingWakeProps' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingScaleProps) == 0x000928, "Member 'AB_PlayerController_C::SendingScaleProps' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingPropScales) == 0x000938, "Member 'AB_PlayerController_C::SendingPropScales' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingStartAwakeProps) == 0x000948, "Member 'AB_PlayerController_C::SendingStartAwakeProps' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SendingFreezedProps) == 0x000958, "Member 'AB_PlayerController_C::SendingFreezedProps' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SleepPropSendState) == 0x000968, "Member 'AB_PlayerController_C::SleepPropSendState' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, WakePropSendState) == 0x000969, "Member 'AB_PlayerController_C::WakePropSendState' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, ScalePropSendState) == 0x00096A, "Member 'AB_PlayerController_C::ScalePropSendState' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, SleepPropSendTries) == 0x00096C, "Member 'AB_PlayerController_C::SleepPropSendTries' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, WakePropSendTries) == 0x000970, "Member 'AB_PlayerController_C::WakePropSendTries' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, IsRequesting) == 0x000974, "Member 'AB_PlayerController_C::IsRequesting' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, RemainingPlayers) == 0x000978, "Member 'AB_PlayerController_C::RemainingPlayers' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, TestBitValue) == 0x000988, "Member 'AB_PlayerController_C::TestBitValue' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, TestBitIndex) == 0x00098C, "Member 'AB_PlayerController_C::TestBitIndex' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentControlRotation) == 0x000990, "Member 'AB_PlayerController_C::CurrentControlRotation' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentControlledPawn) == 0x0009A8, "Member 'AB_PlayerController_C::CurrentControlledPawn' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, ControlledPawnIsWitch) == 0x0009B0, "Member 'AB_PlayerController_C::ControlledPawnIsWitch' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentServerStats) == 0x0009B8, "Member 'AB_PlayerController_C::CurrentServerStats' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, Proplist) == 0x0009C8, "Member 'AB_PlayerController_C::Proplist' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, WitchList) == 0x0009D8, "Member 'AB_PlayerController_C::WitchList' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, WitchPropJiggleMode) == 0x0009E8, "Member 'AB_PlayerController_C::WitchPropJiggleMode' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, WitchPropList) == 0x0009F0, "Member 'AB_PlayerController_C::WitchPropList' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, JiggleVector) == 0x000A00, "Member 'AB_PlayerController_C::JiggleVector' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, JiggleForce) == 0x000A18, "Member 'AB_PlayerController_C::JiggleForce' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, ScalePropSendTries) == 0x000A1C, "Member 'AB_PlayerController_C::ScalePropSendTries' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, TransformRange) == 0x000A20, "Member 'AB_PlayerController_C::TransformRange' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, TargetProp) == 0x000A28, "Member 'AB_PlayerController_C::TargetProp' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentEyeMovementDirection) == 0x000A30, "Member 'AB_PlayerController_C::CurrentEyeMovementDirection' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentEyeMovementAxisValue) == 0x000A31, "Member 'AB_PlayerController_C::CurrentEyeMovementAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentClientForwadAxisVector) == 0x000A38, "Member 'AB_PlayerController_C::CurrentClientForwadAxisVector' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentClientRightAxisVector) == 0x000A50, "Member 'AB_PlayerController_C::CurrentClientRightAxisVector' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentClientUpAxisVector) == 0x000A68, "Member 'AB_PlayerController_C::CurrentClientUpAxisVector' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, CurrentPressedMoveUpAxisValue) == 0x000A80, "Member 'AB_PlayerController_C::CurrentPressedMoveUpAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, InitializeTournament) == 0x000A88, "Member 'AB_PlayerController_C::InitializeTournament' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, HUDExtensions) == 0x000A90, "Member 'AB_PlayerController_C::HUDExtensions' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, NewItemPopupWidget) == 0x000AE0, "Member 'AB_PlayerController_C::NewItemPopupWidget' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, AchievementsTable) == 0x000AE8, "Member 'AB_PlayerController_C::AchievementsTable' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, KeepTargetPropTime) == 0x000AF0, "Member 'AB_PlayerController_C::KeepTargetPropTime' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, InScopeMode) == 0x000AF8, "Member 'AB_PlayerController_C::InScopeMode' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, FOVComponent) == 0x000B00, "Member 'AB_PlayerController_C::FOVComponent' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, ControllerSensivity) == 0x000B08, "Member 'AB_PlayerController_C::ControllerSensivity' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, DefaultYawScale) == 0x000B0C, "Member 'AB_PlayerController_C::DefaultYawScale' has a wrong offset!");
+static_assert(offsetof(AB_PlayerController_C, DefaultPitchScale) == 0x000B10, "Member 'AB_PlayerController_C::DefaultPitchScale' has a wrong offset!");
 
 }
 

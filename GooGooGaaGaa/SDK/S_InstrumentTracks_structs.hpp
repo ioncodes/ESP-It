@@ -22,7 +22,7 @@ struct FS_InstrumentTracks final
 {
 public:
 	E_InstrumentTypes                             InstrumentType_5_D848F65F4B05B25F9A7C279AE344B03C; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3922[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USoundCue*>                      Tracks_6_61AAF7844A0A2DE8CB9075A5668D84F6;         // 0x0008(0x0010)(Edit, BlueprintVisible)
 	TArray<class USoundWave*>                     TrackSounds_10_C9ED10BE43FAE46423FFF380A1B05227;   // 0x0018(0x0010)(Edit, BlueprintVisible)
 };

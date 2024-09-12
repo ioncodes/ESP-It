@@ -116,9 +116,9 @@ void AB_SpringPad_C::ExecuteUbergraph_B_SpringPad(int32 EntryPoint)
 // Parameters:
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_HitByPotato                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HitByPotato_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SpringPad_C::FireMulticast(class AActor* Actor, class UPrimitiveComponent* Component, bool Param_HitByPotato)
+void AB_SpringPad_C::FireMulticast(class AActor* Actor, class UPrimitiveComponent* Component, bool HitByPotato_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -129,7 +129,7 @@ void AB_SpringPad_C::FireMulticast(class AActor* Actor, class UPrimitiveComponen
 
 	Parms.Actor = Actor;
 	Parms.Component = Component;
-	Parms.Param_HitByPotato = Param_HitByPotato;
+	Parms.HitByPotato_0 = HitByPotato_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -176,9 +176,9 @@ void AB_SpringPad_C::LogicAfterFire()
 // Parameters:
 // class AActor*                           TriggerActor                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              TriggerComponent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_HitByPotato                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HitByPotato_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SpringPad_C::MoveTriggerActorAndPlaySound(const class AActor* TriggerActor, class UPrimitiveComponent* TriggerComponent, bool Param_HitByPotato)
+void AB_SpringPad_C::MoveTriggerActorAndPlaySound(const class AActor* TriggerActor, class UPrimitiveComponent* TriggerComponent, bool HitByPotato_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -189,7 +189,7 @@ void AB_SpringPad_C::MoveTriggerActorAndPlaySound(const class AActor* TriggerAct
 
 	Parms.TriggerActor = TriggerActor;
 	Parms.TriggerComponent = TriggerComponent;
-	Parms.Param_HitByPotato = Param_HitByPotato;
+	Parms.HitByPotato_0 = HitByPotato_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

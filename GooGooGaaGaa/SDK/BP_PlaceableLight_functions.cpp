@@ -108,9 +108,9 @@ void ABP_PlaceableLight_C::ReceiveTick(float DeltaSeconds)
 // Function BP_PlaceableLight.BP_PlaceableLight_C.SetColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     Param_Color                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     Color_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlaceableLight_C::SetColor(const struct FLinearColor& Param_Color)
+void ABP_PlaceableLight_C::SetColor(const struct FLinearColor& Color_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -119,7 +119,7 @@ void ABP_PlaceableLight_C::SetColor(const struct FLinearColor& Param_Color)
 
 	Params::BP_PlaceableLight_C_SetColor Parms{};
 
-	Parms.Param_Color = std::move(Param_Color);
+	Parms.Color_0 = std::move(Color_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

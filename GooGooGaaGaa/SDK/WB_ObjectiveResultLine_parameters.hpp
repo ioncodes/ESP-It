@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -75,22 +75,22 @@ static_assert(offsetof(WB_ObjectiveResultLine_C_GetColorAndOpacity_1, CallFunc_G
 struct WB_ObjectiveResultLine_C_GetTeamColor final
 {
 public:
-	ETeamID                                       Param_Index;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5971[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	ETeamID                                       Index_0;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           SpecifiedColor;                                    // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5972[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0020(0x0014)()
-	uint8                                         Pad_5973[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Temp_byte_Variable;                                // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5974[0x2];                                     // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_Select_Default;                             // 0x0044(0x0014)(ConstParm)
 };
 static_assert(alignof(WB_ObjectiveResultLine_C_GetTeamColor) == 0x000008, "Wrong alignment on WB_ObjectiveResultLine_C_GetTeamColor");
 static_assert(sizeof(WB_ObjectiveResultLine_C_GetTeamColor) == 0x000058, "Wrong size on WB_ObjectiveResultLine_C_GetTeamColor");
-static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamColor, Param_Index) == 0x000000, "Member 'WB_ObjectiveResultLine_C_GetTeamColor::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamColor, Index_0) == 0x000000, "Member 'WB_ObjectiveResultLine_C_GetTeamColor::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamColor, SpecifiedColor) == 0x000004, "Member 'WB_ObjectiveResultLine_C_GetTeamColor::SpecifiedColor' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamColor, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_ObjectiveResultLine_C_GetTeamColor::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamColor, K2Node_MakeStruct_SlateColor) == 0x000020, "Member 'WB_ObjectiveResultLine_C_GetTeamColor::K2Node_MakeStruct_SlateColor' has a wrong offset!");
@@ -104,21 +104,21 @@ static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamColor, K2Node_Select_Defa
 struct WB_ObjectiveResultLine_C_GetTeamIcon final
 {
 public:
-	ETeamID                                       Param_Index;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5975[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	ETeamID                                       Index_0;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            SlateBrush;                                        // 0x0010(0x00D0)(Parm, OutParm)
 	ETeamID                                       Temp_byte_Variable;                                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5976[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable;                              // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_1;                            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable_2;                            // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                K2Node_Select_Default;                             // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5977[0x8];                                     // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0110(0x00D0)()
 };
 static_assert(alignof(WB_ObjectiveResultLine_C_GetTeamIcon) == 0x000010, "Wrong alignment on WB_ObjectiveResultLine_C_GetTeamIcon");
 static_assert(sizeof(WB_ObjectiveResultLine_C_GetTeamIcon) == 0x0001E0, "Wrong size on WB_ObjectiveResultLine_C_GetTeamIcon");
-static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamIcon, Param_Index) == 0x000000, "Member 'WB_ObjectiveResultLine_C_GetTeamIcon::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamIcon, Index_0) == 0x000000, "Member 'WB_ObjectiveResultLine_C_GetTeamIcon::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamIcon, SlateBrush) == 0x000010, "Member 'WB_ObjectiveResultLine_C_GetTeamIcon::SlateBrush' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamIcon, Temp_byte_Variable) == 0x0000E0, "Member 'WB_ObjectiveResultLine_C_GetTeamIcon::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WB_ObjectiveResultLine_C_GetTeamIcon, Temp_object_Variable) == 0x0000E8, "Member 'WB_ObjectiveResultLine_C_GetTeamIcon::Temp_object_Variable' has a wrong offset!");

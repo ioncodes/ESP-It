@@ -22,7 +22,7 @@ namespace SDK
 class AB_BuffHunterRapidFire_C final : public AB_Buff_C
 {
 public:
-	uint8                                         Pad_4A51[0x7];                                     // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_BuffHunterRapidFire_C;            // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class AB_Hunter_C*                            Hunter;                                            // 0x03A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UB_PotatoSkill_C*                       PotatoSkill;                                       // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -32,15 +32,15 @@ public:
 
 public:
 	void BuffEnd();
-	void BuffStart(class AB_PlayerState_C* Param_PlayerState);
+	void BuffStart(class AB_PlayerState_C* PlayerState_0);
 	void ExecuteUbergraph_B_BuffHunterRapidFire(int32 EntryPoint);
-	int32 GetActiveRapidFireBuffCount(class AB_PlayerState_C*& Param_PlayerState);
-	class AB_BuffHunterRapidFire_C* GetFirstRapidFireBuff(class AB_PlayerState_C* Param_PlayerState);
+	int32 GetActiveRapidFireBuffCount(class AB_PlayerState_C*& PlayerState_0);
+	class AB_BuffHunterRapidFire_C* GetFirstRapidFireBuff(class AB_PlayerState_C* PlayerState_0);
 	void ReceiveTick(float DeltaSeconds);
 	void RemoveTrailMulti();
-	void SetRapidFireValues(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* Param_PotatoSkill);
-	void SetRapidFireValuesMulti(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* Param_PotatoSkill);
-	void SpawnTrailMulti(class AB_Hunter_C* Param_Hunter);
+	void SetRapidFireValues(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* PotatoSkill_0);
+	void SetRapidFireValuesMulti(double StaminaCost, double Cooldown, class UB_PotatoSkill_C* PotatoSkill_0);
+	void SpawnTrailMulti(class AB_Hunter_C* Hunter_0);
 
 public:
 	static class UClass* StaticClass()

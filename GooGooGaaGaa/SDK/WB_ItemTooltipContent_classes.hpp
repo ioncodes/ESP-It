@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "B_SteamItemDef_structs.hpp"
 #include "Engine_structs.hpp"
 #include "S_ItemInfo_structs.hpp"
 #include "UMG_structs.hpp"
@@ -21,19 +20,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ItemTooltipContent.WB_ItemTooltipContent_C
-// 0x00F8 (0x03B8 - 0x02C0)
+// 0x00D8 (0x03B8 - 0x02E0)
 class UWB_ItemTooltipContent_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Description;                                       // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ItemType;                                          // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_WB_ItemTooltipContent_C;                      // 0x02E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_3;                                       // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FB_SteamItemDef                        ItemDef;                                           // 0x02F0(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FS_ItemInfo                            SkinItemInfo;                                      // 0x0330(0x0080)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
-	class UObject*                                LoadedImage;                                       // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Description;                                       // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ItemType;                                          // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x0300(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_3;                                       // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FS_ItemInfo                            SkinItemInfo;                                      // 0x0310(0x0078)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
+	class UObject*                                LoadedImage;                                       // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ItemDescription;                                   // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          ItemTradable;                                      // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ItemName;                                          // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void Construct();
@@ -60,15 +62,17 @@ public:
 };
 static_assert(alignof(UWB_ItemTooltipContent_C) == 0x000008, "Wrong alignment on UWB_ItemTooltipContent_C");
 static_assert(sizeof(UWB_ItemTooltipContent_C) == 0x0003B8, "Wrong size on UWB_ItemTooltipContent_C");
-static_assert(offsetof(UWB_ItemTooltipContent_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ItemTooltipContent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, Description) == 0x0002C8, "Member 'UWB_ItemTooltipContent_C::Description' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, Image_0) == 0x0002D0, "Member 'UWB_ItemTooltipContent_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, ItemType) == 0x0002D8, "Member 'UWB_ItemTooltipContent_C::ItemType' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, Name_WB_ItemTooltipContent_C) == 0x0002E0, "Member 'UWB_ItemTooltipContent_C::Name_WB_ItemTooltipContent_C' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, TextBlock_3) == 0x0002E8, "Member 'UWB_ItemTooltipContent_C::TextBlock_3' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, ItemDef) == 0x0002F0, "Member 'UWB_ItemTooltipContent_C::ItemDef' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, SkinItemInfo) == 0x000330, "Member 'UWB_ItemTooltipContent_C::SkinItemInfo' has a wrong offset!");
-static_assert(offsetof(UWB_ItemTooltipContent_C, LoadedImage) == 0x0003B0, "Member 'UWB_ItemTooltipContent_C::LoadedImage' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ItemTooltipContent_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, Description) == 0x0002E8, "Member 'UWB_ItemTooltipContent_C::Description' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, Image_0) == 0x0002F0, "Member 'UWB_ItemTooltipContent_C::Image_0' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, ItemType) == 0x0002F8, "Member 'UWB_ItemTooltipContent_C::ItemType' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, Name_0) == 0x000300, "Member 'UWB_ItemTooltipContent_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, TextBlock_3) == 0x000308, "Member 'UWB_ItemTooltipContent_C::TextBlock_3' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, SkinItemInfo) == 0x000310, "Member 'UWB_ItemTooltipContent_C::SkinItemInfo' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, LoadedImage) == 0x000388, "Member 'UWB_ItemTooltipContent_C::LoadedImage' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, ItemDescription) == 0x000390, "Member 'UWB_ItemTooltipContent_C::ItemDescription' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, ItemTradable) == 0x0003A0, "Member 'UWB_ItemTooltipContent_C::ItemTradable' has a wrong offset!");
+static_assert(offsetof(UWB_ItemTooltipContent_C, ItemName) == 0x0003A8, "Member 'UWB_ItemTooltipContent_C::ItemName' has a wrong offset!");
 
 }
 

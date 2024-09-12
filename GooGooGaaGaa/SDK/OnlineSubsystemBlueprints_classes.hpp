@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -24,7 +24,7 @@ namespace SDK
 class UOnlineAchievementsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CC5[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnAchievementUnlocked;                             // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -46,6 +46,40 @@ public:
 static_assert(alignof(UOnlineAchievementsSubsystem) == 0x000008, "Wrong alignment on UOnlineAchievementsSubsystem");
 static_assert(sizeof(UOnlineAchievementsSubsystem) == 0x0000B8, "Wrong size on UOnlineAchievementsSubsystem");
 static_assert(offsetof(UOnlineAchievementsSubsystem, OnAchievementUnlocked) == 0x0000A8, "Member 'UOnlineAchievementsSubsystem::OnAchievementUnlocked' has a wrong offset!");
+
+// Class OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersByFilter
+// 0x0098 (0x00C8 - 0x0030)
+class UOnlineStoreV2SubsystemQueryOffersByFilter final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnQueryOnlineStoreOffersComplete;                  // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineStoreV2Subsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FOnlineStoreFilterBP                   __Store__Filter;                                   // 0x0098(0x0030)(NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineStoreV2SubsystemQueryOffersByFilter* QueryOffersByFilter(class UOnlineStoreV2Subsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const struct FOnlineStoreFilterBP& Filter);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineStoreV2SubsystemQueryOffersByFilter">();
+	}
+	static class UOnlineStoreV2SubsystemQueryOffersByFilter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineStoreV2SubsystemQueryOffersByFilter>();
+	}
+};
+static_assert(alignof(UOnlineStoreV2SubsystemQueryOffersByFilter) == 0x000008, "Wrong alignment on UOnlineStoreV2SubsystemQueryOffersByFilter");
+static_assert(sizeof(UOnlineStoreV2SubsystemQueryOffersByFilter) == 0x0000C8, "Wrong size on UOnlineStoreV2SubsystemQueryOffersByFilter");
+static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, OnCallFailed) == 0x000030, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, OnQueryOnlineStoreOffersComplete) == 0x000040, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::OnQueryOnlineStoreOffersComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__Subsystem) == 0x000050, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__UserId) == 0x000068, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__UserId' has a wrong offset!");
+static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__Filter) == 0x000098, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__Filter' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineAchievementsSubsystemWriteAchievements
 // 0x0070 (0x00A0 - 0x0030)
@@ -113,6 +147,38 @@ static_assert(offsetof(UOnlineAchievementsSubsystemQueryAchievements, __Store__S
 static_assert(offsetof(UOnlineAchievementsSubsystemQueryAchievements, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineAchievementsSubsystemQueryAchievements::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineAchievementsSubsystemQueryAchievements, __Store__PlayerId) == 0x000068, "Member 'UOnlineAchievementsSubsystemQueryAchievements::__Store__PlayerId' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadMatchWithID
+// 0x0048 (0x0078 - 0x0030)
+class UOnlineTurnBasedSubsystemLoadMatchWithID final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             LoadTurnBasedMatchWithIDSignature;                 // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineTurnBasedSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__MatchID;                                  // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineTurnBasedSubsystemLoadMatchWithID* LoadMatchWithID(class UOnlineTurnBasedSubsystem* Subsystem, const class FString& MatchID);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineTurnBasedSubsystemLoadMatchWithID">();
+	}
+	static class UOnlineTurnBasedSubsystemLoadMatchWithID* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineTurnBasedSubsystemLoadMatchWithID>();
+	}
+};
+static_assert(alignof(UOnlineTurnBasedSubsystemLoadMatchWithID) == 0x000008, "Wrong alignment on UOnlineTurnBasedSubsystemLoadMatchWithID");
+static_assert(sizeof(UOnlineTurnBasedSubsystemLoadMatchWithID) == 0x000078, "Wrong size on UOnlineTurnBasedSubsystemLoadMatchWithID");
+static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, OnCallFailed) == 0x000030, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, LoadTurnBasedMatchWithIDSignature) == 0x000040, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::LoadTurnBasedMatchWithIDSignature' has a wrong offset!");
+static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, __Store__Subsystem) == 0x000050, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, __Store__MatchID) == 0x000068, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::__Store__MatchID' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineAchievementsSubsystemQueryAchievementDescriptions
 // 0x0068 (0x0098 - 0x0030)
 class UOnlineAchievementsSubsystemQueryAchievementDescriptions final : public UBlueprintAsyncActionBase
@@ -150,7 +216,7 @@ static_assert(offsetof(UOnlineAchievementsSubsystemQueryAchievementDescriptions,
 class UOnlineAvatarSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CC9[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsSubsystemAvailable();
@@ -167,6 +233,40 @@ public:
 };
 static_assert(alignof(UOnlineAvatarSubsystem) == 0x000008, "Wrong alignment on UOnlineAvatarSubsystem");
 static_assert(sizeof(UOnlineAvatarSubsystem) == 0x0000A0, "Wrong size on UOnlineAvatarSubsystem");
+
+// Class OnlineSubsystemBlueprints.OnlineTitleFileSubsystem
+// 0x00B8 (0x00E8 - 0x0030)
+class UOnlineTitleFileSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x88];                                      // 0x0030(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnEnumerateFilesComplete;                          // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReadFileComplete;                                // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReadFileProgress;                                // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	bool ClearFile(const class FString& Filename);
+	bool ClearFiles();
+	void DeleteCachedFiles(bool bSkipEnumerated);
+	bool GetFileContents(const class FString& Filename, class UFileData** FileContents);
+	void GetFileList(TArray<struct FCloudFileHeaderBP>* Files);
+	bool IsSubsystemAvailable();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineTitleFileSubsystem">();
+	}
+	static class UOnlineTitleFileSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineTitleFileSubsystem>();
+	}
+};
+static_assert(alignof(UOnlineTitleFileSubsystem) == 0x000008, "Wrong alignment on UOnlineTitleFileSubsystem");
+static_assert(sizeof(UOnlineTitleFileSubsystem) == 0x0000E8, "Wrong size on UOnlineTitleFileSubsystem");
+static_assert(offsetof(UOnlineTitleFileSubsystem, OnEnumerateFilesComplete) == 0x0000B8, "Member 'UOnlineTitleFileSubsystem::OnEnumerateFilesComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystem, OnReadFileComplete) == 0x0000C8, "Member 'UOnlineTitleFileSubsystem::OnReadFileComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystem, OnReadFileProgress) == 0x0000D8, "Member 'UOnlineTitleFileSubsystem::OnReadFileProgress' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineAvatarSubsystemGetAvatar
 // 0x00A0 (0x00D0 - 0x0030)
@@ -240,12 +340,40 @@ static_assert(offsetof(UOnlineAvatarSubsystemGetAvatarUrl, __Store__LocalUserId)
 static_assert(offsetof(UOnlineAvatarSubsystemGetAvatarUrl, __Store__TargetUserId) == 0x000098, "Member 'UOnlineAvatarSubsystemGetAvatarUrl::__Store__TargetUserId' has a wrong offset!");
 static_assert(offsetof(UOnlineAvatarSubsystemGetAvatarUrl, __Store__DefaultAvatarUrl) == 0x0000C8, "Member 'UOnlineAvatarSubsystemGetAvatarUrl::__Store__DefaultAvatarUrl' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineStoreV2Subsystem
+// 0x0088 (0x00B8 - 0x0030)
+class UOnlineStoreV2Subsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnQueryForAvailablePurchasesComplete;              // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	void GetCategories(TArray<struct FOnlineStoreCategoryBP>* OutCategories);
+	class UOnlineStoreOffer* GetOffer(const class FString& OfferId);
+	void GetOffers(TArray<class UOnlineStoreOffer*>* OutOffers);
+	bool IsSubsystemAvailable();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineStoreV2Subsystem">();
+	}
+	static class UOnlineStoreV2Subsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineStoreV2Subsystem>();
+	}
+};
+static_assert(alignof(UOnlineStoreV2Subsystem) == 0x000008, "Wrong alignment on UOnlineStoreV2Subsystem");
+static_assert(sizeof(UOnlineStoreV2Subsystem) == 0x0000B8, "Wrong size on UOnlineStoreV2Subsystem");
+static_assert(offsetof(UOnlineStoreV2Subsystem, OnQueryForAvailablePurchasesComplete) == 0x0000A8, "Member 'UOnlineStoreV2Subsystem::OnQueryForAvailablePurchasesComplete' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineChatSubsystem
 // 0x0160 (0x0190 - 0x0030)
 class UOnlineChatSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CCA[0xC0];                                    // 0x0030(0x00C0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xC0];                                      // 0x0030(0x00C0)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnChatRoomCreated;                                 // 0x00F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnChatRoomConfigured;                              // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnChatRoomJoinPublic;                              // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -302,11 +430,11 @@ static_assert(offsetof(UOnlineChatSubsystem, OnChatPrivateMessageReceived) == 0x
 class UOnlineEntitlementsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CD6[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnQueryEntitlementsComplete;                       // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
-	void GetAllEntitlements(const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, TArray<class UOnlineEntitlement*>* OutUserEntitlements);
+	void GetAllEntitlements(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, TArray<class UOnlineEntitlement*>* OutUserEntitlements);
 	class UOnlineEntitlement* GetEntitlement(const struct FUniqueNetIdRepl& UserId, const class FString& EntitlementId);
 	class UOnlineEntitlement* GetItemEntitlement(const struct FUniqueNetIdRepl& UserId, const class FString& ItemId);
 	bool IsSubsystemAvailable();
@@ -325,6 +453,30 @@ static_assert(alignof(UOnlineEntitlementsSubsystem) == 0x000008, "Wrong alignmen
 static_assert(sizeof(UOnlineEntitlementsSubsystem) == 0x0000B8, "Wrong size on UOnlineEntitlementsSubsystem");
 static_assert(offsetof(UOnlineEntitlementsSubsystem, OnQueryEntitlementsComplete) == 0x0000A8, "Member 'UOnlineEntitlementsSubsystem::OnQueryEntitlementsComplete' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem
+// 0x0070 (0x00A0 - 0x0030)
+class UOnlineTurnBasedSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 GetMatchDataSize();
+	bool IsSubsystemAvailable();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineTurnBasedSubsystem">();
+	}
+	static class UOnlineTurnBasedSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineTurnBasedSubsystem>();
+	}
+};
+static_assert(alignof(UOnlineTurnBasedSubsystem) == 0x000008, "Wrong alignment on UOnlineTurnBasedSubsystem");
+static_assert(sizeof(UOnlineTurnBasedSubsystem) == 0x0000A0, "Wrong size on UOnlineTurnBasedSubsystem");
+
 // Class OnlineSubsystemBlueprints.OnlineEntitlementsSubsystemQueryEntitlements
 // 0x0088 (0x00B8 - 0x0030)
 class UOnlineEntitlementsSubsystemQueryEntitlements final : public UBlueprintAsyncActionBase
@@ -334,13 +486,13 @@ public:
 	FMulticastInlineDelegateProperty_             OnQueryEntitlementsComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineEntitlementsSubsystem*           __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CD7[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__Namespace;                                // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FPagedQueryBP                          __Store__Page;                                     // 0x00B0(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
 
 public:
-	static class UOnlineEntitlementsSubsystemQueryEntitlements* QueryEntitlements(class UOnlineEntitlementsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, const struct FPagedQueryBP& Page);
+	static class UOnlineEntitlementsSubsystemQueryEntitlements* QueryEntitlements(class UOnlineEntitlementsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, const struct FPagedQueryBP& Page);
 
 public:
 	static class UClass* StaticClass()
@@ -367,7 +519,7 @@ static_assert(offsetof(UOnlineEntitlementsSubsystemQueryEntitlements, __Store__P
 class UOnlineEventsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CD8[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsSubsystemAvailable();
@@ -385,14 +537,48 @@ public:
 static_assert(alignof(UOnlineEventsSubsystem) == 0x000008, "Wrong alignment on UOnlineEventsSubsystem");
 static_assert(sizeof(UOnlineEventsSubsystem) == 0x0000A0, "Wrong size on UOnlineEventsSubsystem");
 
+// Class OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping
+// 0x0078 (0x00A8 - 0x0030)
+class UOnlineUserSubsystemQueryUserIdMapping final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnQueryUserMappingComplete;                        // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineUserSubsystem*                   __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__DisplayNameOrEmail;                       // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineUserSubsystemQueryUserIdMapping* QueryUserIdMapping(class UOnlineUserSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& DisplayNameOrEmail);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineUserSubsystemQueryUserIdMapping">();
+	}
+	static class UOnlineUserSubsystemQueryUserIdMapping* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineUserSubsystemQueryUserIdMapping>();
+	}
+};
+static_assert(alignof(UOnlineUserSubsystemQueryUserIdMapping) == 0x000008, "Wrong alignment on UOnlineUserSubsystemQueryUserIdMapping");
+static_assert(sizeof(UOnlineUserSubsystemQueryUserIdMapping) == 0x0000A8, "Wrong size on UOnlineUserSubsystemQueryUserIdMapping");
+static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, OnCallFailed) == 0x000030, "Member 'UOnlineUserSubsystemQueryUserIdMapping::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, OnQueryUserMappingComplete) == 0x000040, "Member 'UOnlineUserSubsystemQueryUserIdMapping::OnQueryUserMappingComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__Subsystem) == 0x000050, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__UserId) == 0x000068, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__UserId' has a wrong offset!");
+static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__DisplayNameOrEmail) == 0x000098, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__DisplayNameOrEmail' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineExternalUISubsystem
 // 0x0140 (0x0170 - 0x0030)
 class UOnlineExternalUISubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CD9[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FExternalUIFlowHandlerRegistration> FlowHandlers;                                      // 0x00A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CDA[0xA8];                                    // 0x00B8(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0xA8];                                      // 0x00B8(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnExternalUIChange;                                // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -438,7 +624,7 @@ public:
 	int32                                         __Store__ControllerIndex;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bShowOnlineOnly;                          // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bShowSkipButton;                          // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CE3[0x2];                                     // 0x006E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineExternalUISubsystemShowLoginUI* ShowLoginUI(class UOnlineExternalUISubsystem* Subsystem, int32 ControllerIndex, bool bShowOnlineOnly, bool bShowSkipButton);
@@ -463,6 +649,39 @@ static_assert(offsetof(UOnlineExternalUISubsystemShowLoginUI, __Store__Controlle
 static_assert(offsetof(UOnlineExternalUISubsystemShowLoginUI, __Store__bShowOnlineOnly) == 0x00006C, "Member 'UOnlineExternalUISubsystemShowLoginUI::__Store__bShowOnlineOnly' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowLoginUI, __Store__bShowSkipButton) == 0x00006D, "Member 'UOnlineExternalUISubsystemShowLoginUI::__Store__bShowSkipButton' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles
+// 0x0070 (0x00A0 - 0x0030)
+class UOnlineUserCloudSubsystemEnumerateUserFiles final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnEnumerateUserFilesComplete;                      // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineUserCloudSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineUserCloudSubsystemEnumerateUserFiles* EnumerateUserFiles(class UOnlineUserCloudSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineUserCloudSubsystemEnumerateUserFiles">();
+	}
+	static class UOnlineUserCloudSubsystemEnumerateUserFiles* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineUserCloudSubsystemEnumerateUserFiles>();
+	}
+};
+static_assert(alignof(UOnlineUserCloudSubsystemEnumerateUserFiles) == 0x000008, "Wrong alignment on UOnlineUserCloudSubsystemEnumerateUserFiles");
+static_assert(sizeof(UOnlineUserCloudSubsystemEnumerateUserFiles) == 0x0000A0, "Wrong size on UOnlineUserCloudSubsystemEnumerateUserFiles");
+static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, OnCallFailed) == 0x000030, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, OnEnumerateUserFilesComplete) == 0x000040, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::OnEnumerateUserFilesComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, __Store__Subsystem) == 0x000050, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, __Store__UserId) == 0x000070, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::__Store__UserId' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowAccountCreationUI
 // 0x0040 (0x0070 - 0x0030)
 class UOnlineExternalUISubsystemShowAccountCreationUI final : public UBlueprintAsyncActionBase
@@ -473,7 +692,7 @@ public:
 	class UOnlineExternalUISubsystem*             __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__ControllerIndex;                          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CE5[0x4];                                     // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineExternalUISubsystemShowAccountCreationUI* ShowAccountCreationUI(class UOnlineExternalUISubsystem* Subsystem, int32 ControllerIndex);
@@ -530,6 +749,41 @@ static_assert(offsetof(UOnlineExternalUISubsystemShowWebURL, __Store__CallUnique
 static_assert(offsetof(UOnlineExternalUISubsystemShowWebURL, __Store__Url) == 0x000068, "Member 'UOnlineExternalUISubsystemShowWebURL::__Store__Url' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowWebURL, __Store__ShowParams) == 0x000078, "Member 'UOnlineExternalUISubsystemShowWebURL::__Store__ShowParams' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineTitleFileSubsystemReadFile
+// 0x0068 (0x0098 - 0x0030)
+class UOnlineTitleFileSubsystemReadFile final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReadFileComplete;                                // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnReadFileProgress;                                // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineTitleFileSubsystem*              __Store__Subsystem;                                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_78[0x10];                                      // 0x0078(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 __Store__FileName;                                 // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineTitleFileSubsystemReadFile* ReadFile(class UOnlineTitleFileSubsystem* Subsystem, const class FString& Filename);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineTitleFileSubsystemReadFile">();
+	}
+	static class UOnlineTitleFileSubsystemReadFile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineTitleFileSubsystemReadFile>();
+	}
+};
+static_assert(alignof(UOnlineTitleFileSubsystemReadFile) == 0x000008, "Wrong alignment on UOnlineTitleFileSubsystemReadFile");
+static_assert(sizeof(UOnlineTitleFileSubsystemReadFile) == 0x000098, "Wrong size on UOnlineTitleFileSubsystemReadFile");
+static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, OnCallFailed) == 0x000030, "Member 'UOnlineTitleFileSubsystemReadFile::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, OnReadFileComplete) == 0x000040, "Member 'UOnlineTitleFileSubsystemReadFile::OnReadFileComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, OnReadFileProgress) == 0x000050, "Member 'UOnlineTitleFileSubsystemReadFile::OnReadFileProgress' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, __Store__Subsystem) == 0x000060, "Member 'UOnlineTitleFileSubsystemReadFile::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, __Store__CallUniquenessId) == 0x000068, "Member 'UOnlineTitleFileSubsystemReadFile::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, __Store__FileName) == 0x000088, "Member 'UOnlineTitleFileSubsystemReadFile::__Store__FileName' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowProfileUI
 // 0x0098 (0x00C8 - 0x0030)
 class UOnlineExternalUISubsystemShowProfileUI final : public UBlueprintAsyncActionBase
@@ -574,7 +828,7 @@ public:
 	class UOnlineExternalUISubsystem*             __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CE7[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FShowStoreParameters                   __Store__ShowParams;                               // 0x0070(0x0028)(NativeAccessSpecifierPrivate)
 
 public:
@@ -600,7 +854,7 @@ static_assert(offsetof(UOnlineExternalUISubsystemShowStoreUI, __Store__LocalUser
 static_assert(offsetof(UOnlineExternalUISubsystemShowStoreUI, __Store__ShowParams) == 0x000070, "Member 'UOnlineExternalUISubsystemShowStoreUI::__Store__ShowParams' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowSendMessageUI
-// 0x0130 (0x0160 - 0x0030)
+// 0x0118 (0x0148 - 0x0030)
 class UOnlineExternalUISubsystemShowSendMessageUI final : public UBlueprintAsyncActionBase
 {
 public:
@@ -609,8 +863,8 @@ public:
 	class UOnlineExternalUISubsystem*             __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CE9[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FShowSendMessageParameters             __Store__ShowParams;                               // 0x0070(0x00F0)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FShowSendMessageParameters             __Store__ShowParams;                               // 0x0070(0x00D8)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UOnlineExternalUISubsystemShowSendMessageUI* ShowSendMessageUI(class UOnlineExternalUISubsystem* Subsystem, int32 LocalUserNum, const struct FShowSendMessageParameters& ShowParams);
@@ -626,7 +880,7 @@ public:
 	}
 };
 static_assert(alignof(UOnlineExternalUISubsystemShowSendMessageUI) == 0x000008, "Wrong alignment on UOnlineExternalUISubsystemShowSendMessageUI");
-static_assert(sizeof(UOnlineExternalUISubsystemShowSendMessageUI) == 0x000160, "Wrong size on UOnlineExternalUISubsystemShowSendMessageUI");
+static_assert(sizeof(UOnlineExternalUISubsystemShowSendMessageUI) == 0x000148, "Wrong size on UOnlineExternalUISubsystemShowSendMessageUI");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageUI, OnCallFailed) == 0x000030, "Member 'UOnlineExternalUISubsystemShowSendMessageUI::OnCallFailed' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageUI, OnShowSendMessageUIClosed) == 0x000040, "Member 'UOnlineExternalUISubsystemShowSendMessageUI::OnShowSendMessageUIClosed' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageUI, __Store__Subsystem) == 0x000050, "Member 'UOnlineExternalUISubsystemShowSendMessageUI::__Store__Subsystem' has a wrong offset!");
@@ -635,7 +889,7 @@ static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageUI, __Store__Loc
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageUI, __Store__ShowParams) == 0x000070, "Member 'UOnlineExternalUISubsystemShowSendMessageUI::__Store__ShowParams' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineExternalUISubsystemShowSendMessageToUserUI
-// 0x0160 (0x0190 - 0x0030)
+// 0x0148 (0x0178 - 0x0030)
 class UOnlineExternalUISubsystemShowSendMessageToUserUI final : public UBlueprintAsyncActionBase
 {
 public:
@@ -644,9 +898,9 @@ public:
 	class UOnlineExternalUISubsystem*             __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CEB[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__Recipient;                                // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FShowSendMessageParameters             __Store__ShowParams;                               // 0x00A0(0x00F0)(NativeAccessSpecifierPrivate)
+	struct FShowSendMessageParameters             __Store__ShowParams;                               // 0x00A0(0x00D8)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UOnlineExternalUISubsystemShowSendMessageToUserUI* ShowSendMessageToUserUI(class UOnlineExternalUISubsystem* Subsystem, int32 LocalUserNum, const struct FUniqueNetIdRepl& Recipient, const struct FShowSendMessageParameters& ShowParams);
@@ -662,7 +916,7 @@ public:
 	}
 };
 static_assert(alignof(UOnlineExternalUISubsystemShowSendMessageToUserUI) == 0x000008, "Wrong alignment on UOnlineExternalUISubsystemShowSendMessageToUserUI");
-static_assert(sizeof(UOnlineExternalUISubsystemShowSendMessageToUserUI) == 0x000190, "Wrong size on UOnlineExternalUISubsystemShowSendMessageToUserUI");
+static_assert(sizeof(UOnlineExternalUISubsystemShowSendMessageToUserUI) == 0x000178, "Wrong size on UOnlineExternalUISubsystemShowSendMessageToUserUI");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageToUserUI, OnCallFailed) == 0x000030, "Member 'UOnlineExternalUISubsystemShowSendMessageToUserUI::OnCallFailed' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageToUserUI, OnShowSendMessageUIClosed) == 0x000040, "Member 'UOnlineExternalUISubsystemShowSendMessageToUserUI::OnShowSendMessageUIClosed' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageToUserUI, __Store__Subsystem) == 0x000050, "Member 'UOnlineExternalUISubsystemShowSendMessageToUserUI::__Store__Subsystem' has a wrong offset!");
@@ -671,12 +925,40 @@ static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageToUserUI, __Stor
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageToUserUI, __Store__Recipient) == 0x000070, "Member 'UOnlineExternalUISubsystemShowSendMessageToUserUI::__Store__Recipient' has a wrong offset!");
 static_assert(offsetof(UOnlineExternalUISubsystemShowSendMessageToUserUI, __Store__ShowParams) == 0x0000A0, "Member 'UOnlineExternalUISubsystemShowSendMessageToUserUI::__Store__ShowParams' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemDisconnect
+// 0x0028 (0x0058 - 0x0030)
+class UOnlineVoiceChatSubsystemDisconnect final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnVoiceChatDisconnectComplete;                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineVoiceChatSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineVoiceChatSubsystemDisconnect* Disconnect(class UOnlineVoiceChatSubsystem* Subsystem);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineVoiceChatSubsystemDisconnect">();
+	}
+	static class UOnlineVoiceChatSubsystemDisconnect* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineVoiceChatSubsystemDisconnect>();
+	}
+};
+static_assert(alignof(UOnlineVoiceChatSubsystemDisconnect) == 0x000008, "Wrong alignment on UOnlineVoiceChatSubsystemDisconnect");
+static_assert(sizeof(UOnlineVoiceChatSubsystemDisconnect) == 0x000058, "Wrong size on UOnlineVoiceChatSubsystemDisconnect");
+static_assert(offsetof(UOnlineVoiceChatSubsystemDisconnect, OnCallFailed) == 0x000030, "Member 'UOnlineVoiceChatSubsystemDisconnect::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceChatSubsystemDisconnect, OnVoiceChatDisconnectComplete) == 0x000040, "Member 'UOnlineVoiceChatSubsystemDisconnect::OnVoiceChatDisconnectComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceChatSubsystemDisconnect, __Store__Subsystem) == 0x000050, "Member 'UOnlineVoiceChatSubsystemDisconnect::__Store__Subsystem' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineFriendsSubsystem
 // 0x0228 (0x0258 - 0x0030)
 class UOnlineFriendsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1CED[0x128];                                   // 0x0030(0x0128)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x128];                                     // 0x0030(0x0128)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnFriendsChange;                                   // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnOutgoingInviteSent;                              // 0x0168(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnInviteReceived;                                  // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -701,7 +983,7 @@ public:
 	class UOnlineFriendRef* GetFriend(int32 LocalUserNum, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName);
 	bool GetFriendSettings(const struct FUniqueNetIdRepl& UserId, TMap<class FString, struct FOnlineFriendSettingsSourceDataConfig>* OutSettings);
 	bool GetFriendsList(int32 LocalUserNum, const class FString& ListName, TArray<class UOnlineFriendRef*>* OutFriends);
-	bool GetRecentPlayers(const struct FUniqueNetIdRepl& UserId, const class FString& Namespace, TArray<class UOnlineRecentPlayerRef*>* OutRecentPlayers);
+	bool GetRecentPlayers(const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace, TArray<class UOnlineRecentPlayerRef*>* OutRecentPlayers);
 	bool IsFriend(int32 LocalUserNum, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName);
 	bool IsSubsystemAvailable();
 
@@ -744,7 +1026,7 @@ public:
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CF6[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 __Store__ListName;                                 // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -779,7 +1061,7 @@ public:
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CF8[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 __Store__ListName;                                 // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -814,7 +1096,7 @@ public:
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CFA[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ListName;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -851,7 +1133,7 @@ public:
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CFC[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ListName;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -887,9 +1169,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnRejectInviteComplete;                            // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CFE[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CFF[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x0078(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ListName;                                 // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -916,6 +1198,46 @@ static_assert(offsetof(UOnlineFriendsSubsystemRejectInvite, __Store__LocalUserNu
 static_assert(offsetof(UOnlineFriendsSubsystemRejectInvite, __Store__FriendId) == 0x000078, "Member 'UOnlineFriendsSubsystemRejectInvite::__Store__FriendId' has a wrong offset!");
 static_assert(offsetof(UOnlineFriendsSubsystemRejectInvite, __Store__ListName) == 0x0000A8, "Member 'UOnlineFriendsSubsystemRejectInvite::__Store__ListName' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem
+// 0x0070 (0x00A0 - 0x0030)
+class UOnlineVoiceChatSubsystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVoiceChatUser*                         PrimaryVoiceUser;                                  // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnVoiceChatReconnected;                            // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatConnected;                              // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatDisconnected;                           // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UVoiceChatUser* CreateUser();
+	bool Initialize_();
+	bool IsConnected();
+	bool IsConnecting();
+	bool IsInitialized();
+	bool IsSubsystemAvailable();
+	bool Uninitialize_();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineVoiceChatSubsystem">();
+	}
+	static class UOnlineVoiceChatSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineVoiceChatSubsystem>();
+	}
+};
+static_assert(alignof(UOnlineVoiceChatSubsystem) == 0x000008, "Wrong alignment on UOnlineVoiceChatSubsystem");
+static_assert(sizeof(UOnlineVoiceChatSubsystem) == 0x0000A0, "Wrong size on UOnlineVoiceChatSubsystem");
+static_assert(offsetof(UOnlineVoiceChatSubsystem, PrimaryVoiceUser) == 0x000050, "Member 'UOnlineVoiceChatSubsystem::PrimaryVoiceUser' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceChatSubsystem, OnVoiceChatReconnected) == 0x000058, "Member 'UOnlineVoiceChatSubsystem::OnVoiceChatReconnected' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceChatSubsystem, OnVoiceChatConnected) == 0x000070, "Member 'UOnlineVoiceChatSubsystem::OnVoiceChatConnected' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceChatSubsystem, OnVoiceChatDisconnected) == 0x000088, "Member 'UOnlineVoiceChatSubsystem::OnVoiceChatDisconnected' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineFriendsSubsystemSetFriendAlias
 // 0x0090 (0x00C0 - 0x0030)
 class UOnlineFriendsSubsystemSetFriendAlias final : public UBlueprintAsyncActionBase
@@ -926,7 +1248,7 @@ public:
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D01[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ListName;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__Alias;                                    // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -965,7 +1287,7 @@ public:
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D03[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ListName;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -992,6 +1314,38 @@ static_assert(offsetof(UOnlineFriendsSubsystemDeleteFriendAlias, __Store__LocalU
 static_assert(offsetof(UOnlineFriendsSubsystemDeleteFriendAlias, __Store__FriendId) == 0x000070, "Member 'UOnlineFriendsSubsystemDeleteFriendAlias::__Store__FriendId' has a wrong offset!");
 static_assert(offsetof(UOnlineFriendsSubsystemDeleteFriendAlias, __Store__ListName) == 0x0000A0, "Member 'UOnlineFriendsSubsystemDeleteFriendAlias::__Store__ListName' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineLeaderboardRead
+// 0x0010 (0x0038 - 0x0028)
+class UOnlineLeaderboardRead final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetColumns(const TArray<struct FColumnMetaDataBP>& InColumns);
+	void SetLeaderboardName(class FName LeaderboardName);
+	void SetSortedColumn(class FName SortedColumn);
+
+	struct FOnlineStatsRowBP FindPlayerRecord(const struct FUniqueNetIdRepl& UserId, bool* OutFound) const;
+	TArray<struct FColumnMetaDataBP> GetColumns() const;
+	class FName GetLeaderboardName() const;
+	EOnlineAsyncTaskState_ GetReadState() const;
+	TArray<struct FOnlineStatsRowBP> GetRows() const;
+	class FName GetSortedColumn() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineLeaderboardRead">();
+	}
+	static class UOnlineLeaderboardRead* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineLeaderboardRead>();
+	}
+};
+static_assert(alignof(UOnlineLeaderboardRead) == 0x000008, "Wrong alignment on UOnlineLeaderboardRead");
+static_assert(sizeof(UOnlineLeaderboardRead) == 0x000038, "Wrong size on UOnlineLeaderboardRead");
+
 // Class OnlineSubsystemBlueprints.OnlineFriendsSubsystemDeleteFriend
 // 0x0088 (0x00B8 - 0x0030)
 class UOnlineFriendsSubsystemDeleteFriend final : public UBlueprintAsyncActionBase
@@ -1001,9 +1355,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnDeleteFriendComplete;                            // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D05[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D06[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x0078(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ListName;                                 // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -1066,6 +1420,29 @@ static_assert(offsetof(UOnlineFriendsSubsystemAddRecentPlayers, __Store__UserId)
 static_assert(offsetof(UOnlineFriendsSubsystemAddRecentPlayers, __Store__InRecentPlayers) == 0x000098, "Member 'UOnlineFriendsSubsystemAddRecentPlayers::__Store__InRecentPlayers' has a wrong offset!");
 static_assert(offsetof(UOnlineFriendsSubsystemAddRecentPlayers, __Store__ListName) == 0x0000A8, "Member 'UOnlineFriendsSubsystemAddRecentPlayers::__Store__ListName' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineAchievementsWrite
+// 0x0010 (0x0038 - 0x0028)
+class UOnlineAchievementsWrite final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetAchievementProgress(class FName AchievementID, float AchievementProgress);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineAchievementsWrite">();
+	}
+	static class UOnlineAchievementsWrite* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineAchievementsWrite>();
+	}
+};
+static_assert(alignof(UOnlineAchievementsWrite) == 0x000008, "Wrong alignment on UOnlineAchievementsWrite");
+static_assert(sizeof(UOnlineAchievementsWrite) == 0x000038, "Wrong size on UOnlineAchievementsWrite");
+
 // Class OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryRecentPlayers
 // 0x0080 (0x00B0 - 0x0030)
 class UOnlineFriendsSubsystemQueryRecentPlayers final : public UBlueprintAsyncActionBase
@@ -1075,12 +1452,12 @@ public:
 	FMulticastInlineDelegateProperty_             OnQueryRecentPlayersComplete;                      // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D08[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__Namespace;                                // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	static class UOnlineFriendsSubsystemQueryRecentPlayers* QueryRecentPlayers(class UOnlineFriendsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Namespace);
+	static class UOnlineFriendsSubsystemQueryRecentPlayers* QueryRecentPlayers(class UOnlineFriendsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& NameSpace);
 
 public:
 	static class UClass* StaticClass()
@@ -1110,9 +1487,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnBlockedPlayerComplete;                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D09[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D0A[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__PlayerId;                                 // 0x0078(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -1137,6 +1514,42 @@ static_assert(offsetof(UOnlineFriendsSubsystemBlockPlayer, __Store__CallUniquene
 static_assert(offsetof(UOnlineFriendsSubsystemBlockPlayer, __Store__LocalUserNum) == 0x000070, "Member 'UOnlineFriendsSubsystemBlockPlayer::__Store__LocalUserNum' has a wrong offset!");
 static_assert(offsetof(UOnlineFriendsSubsystemBlockPlayer, __Store__PlayerId) == 0x000078, "Member 'UOnlineFriendsSubsystemBlockPlayer::__Store__PlayerId' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemKickParticipant
+// 0x00A8 (0x00D8 - 0x0030)
+class UOnlineVoiceAdminSubsystemKickParticipant final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnVoiceAdminKickParticipantComplete;               // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineVoiceAdminSubsystem*             __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__ChannelName;                              // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__TargetUserId;                             // 0x00A8(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UOnlineVoiceAdminSubsystemKickParticipant* KickParticipant(class UOnlineVoiceAdminSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ChannelName, const struct FUniqueNetIdRepl& TargetUserId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineVoiceAdminSubsystemKickParticipant">();
+	}
+	static class UOnlineVoiceAdminSubsystemKickParticipant* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineVoiceAdminSubsystemKickParticipant>();
+	}
+};
+static_assert(alignof(UOnlineVoiceAdminSubsystemKickParticipant) == 0x000008, "Wrong alignment on UOnlineVoiceAdminSubsystemKickParticipant");
+static_assert(sizeof(UOnlineVoiceAdminSubsystemKickParticipant) == 0x0000D8, "Wrong size on UOnlineVoiceAdminSubsystemKickParticipant");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, OnCallFailed) == 0x000030, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, OnVoiceAdminKickParticipantComplete) == 0x000040, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::OnVoiceAdminKickParticipantComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__Subsystem) == 0x000050, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__LocalUserId) == 0x000068, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__LocalUserId' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__ChannelName) == 0x000098, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__ChannelName' has a wrong offset!");
+static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__TargetUserId) == 0x0000A8, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__TargetUserId' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineFriendsSubsystemUnblockPlayer
 // 0x0078 (0x00A8 - 0x0030)
 class UOnlineFriendsSubsystemUnblockPlayer final : public UBlueprintAsyncActionBase
@@ -1146,9 +1559,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnUnblockedPlayerComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D0C[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D0D[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__PlayerId;                                 // 0x0078(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -1182,7 +1595,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnQueryBlockedPlayersComplete;                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineFriendsSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D0F[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -1211,7 +1624,7 @@ static_assert(offsetof(UOnlineFriendsSubsystemQueryBlockedPlayers, __Store__User
 class UOnlineUserRef : public UObject
 {
 public:
-	uint8                                         Pad_1D10[0x20];                                    // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetDisplayName();
@@ -1232,29 +1645,6 @@ public:
 };
 static_assert(alignof(UOnlineUserRef) == 0x000008, "Wrong alignment on UOnlineUserRef");
 static_assert(sizeof(UOnlineUserRef) == 0x000048, "Wrong size on UOnlineUserRef");
-
-// Class OnlineSubsystemBlueprints.OnlineRecentPlayerRef
-// 0x0010 (0x0058 - 0x0048)
-class UOnlineRecentPlayerRef final : public UOnlineUserRef
-{
-public:
-	uint8                                         Pad_1D13[0x10];                                    // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FDateTime GetLastSeen();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineRecentPlayerRef">();
-	}
-	static class UOnlineRecentPlayerRef* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineRecentPlayerRef>();
-	}
-};
-static_assert(alignof(UOnlineRecentPlayerRef) == 0x000008, "Wrong alignment on UOnlineRecentPlayerRef");
-static_assert(sizeof(UOnlineRecentPlayerRef) == 0x000058, "Wrong size on UOnlineRecentPlayerRef");
 
 // Class OnlineSubsystemBlueprints.OnlineFriendsSubsystemQueryFriendSettings
 // 0x0068 (0x0098 - 0x0030)
@@ -1300,7 +1690,7 @@ public:
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__Source;                                   // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bNeverShowAgain;                          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D14[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineFriendsSubsystemSetFriendSettings* SetFriendSettings(class UOnlineFriendsSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Source, bool bNeverShowAgain);
@@ -1325,12 +1715,37 @@ static_assert(offsetof(UOnlineFriendsSubsystemSetFriendSettings, __Store__UserId
 static_assert(offsetof(UOnlineFriendsSubsystemSetFriendSettings, __Store__Source) == 0x000098, "Member 'UOnlineFriendsSubsystemSetFriendSettings::__Store__Source' has a wrong offset!");
 static_assert(offsetof(UOnlineFriendsSubsystemSetFriendSettings, __Store__bNeverShowAgain) == 0x0000A8, "Member 'UOnlineFriendsSubsystemSetFriendSettings::__Store__bNeverShowAgain' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.Party
+// 0x0010 (0x0038 - 0x0028)
+class UParty final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FUniqueNetIdRepl GetLeaderId();
+	class UPartyId* GetPartyId();
+	int64 GetPartyTypeId();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"Party">();
+	}
+	static class UParty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UParty>();
+	}
+};
+static_assert(alignof(UParty) == 0x000008, "Wrong alignment on UParty");
+static_assert(sizeof(UParty) == 0x000038, "Wrong size on UParty");
+
 // Class OnlineSubsystemBlueprints.OnlineGameActivitySubsystem
 // 0x0088 (0x00B8 - 0x0030)
 class UOnlineGameActivitySubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D16[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnGameActivityActivationRequested;                 // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -1387,6 +1802,29 @@ static_assert(offsetof(UOnlineGameActivitySubsystemStartActivity, __Store__Local
 static_assert(offsetof(UOnlineGameActivitySubsystemStartActivity, __Store__ActivityId) == 0x000098, "Member 'UOnlineGameActivitySubsystemStartActivity::__Store__ActivityId' has a wrong offset!");
 static_assert(offsetof(UOnlineGameActivitySubsystemStartActivity, __Store__Parms) == 0x0000A8, "Member 'UOnlineGameActivitySubsystemStartActivity::__Store__Parms' has a wrong offset!");
 
+// Class OnlineSubsystemBlueprints.LobbyId
+// 0x0010 (0x0038 - 0x0028)
+class ULobbyId final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class FString ToDebugString();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LobbyId">();
+	}
+	static class ULobbyId* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULobbyId>();
+	}
+};
+static_assert(alignof(ULobbyId) == 0x000008, "Wrong alignment on ULobbyId");
+static_assert(sizeof(ULobbyId) == 0x000038, "Wrong size on ULobbyId");
+
 // Class OnlineSubsystemBlueprints.OnlineGameActivitySubsystemEndActivity
 // 0x00D0 (0x0100 - 0x0030)
 class UOnlineGameActivitySubsystemEndActivity final : public UBlueprintAsyncActionBase
@@ -1399,7 +1837,7 @@ public:
 	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ActivityId;                               // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	EOnlineActivityOutcome_                       __Store__ActivityOutcome;                          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D17[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, struct FVariantDataBP>    __Store__Parms;                                    // 0x00B0(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
@@ -1458,34 +1896,26 @@ static_assert(offsetof(UOnlineGameActivitySubsystemResetAllActiveActivities, __S
 static_assert(offsetof(UOnlineGameActivitySubsystemResetAllActiveActivities, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineGameActivitySubsystemResetAllActiveActivities::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineGameActivitySubsystemResetAllActiveActivities, __Store__LocalUserId) == 0x000068, "Member 'UOnlineGameActivitySubsystemResetAllActiveActivities::__Store__LocalUserId' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineLobbyTransaction
-// 0x0010 (0x0038 - 0x0028)
-class UOnlineLobbyTransaction final : public UObject
+// Class OnlineSubsystemBlueprints.ExternalUIFlowHandler
+// 0x0000 (0x0028 - 0x0028)
+class IExternalUIFlowHandler final : public IInterface
 {
 public:
-	uint8                                         Pad_1D19[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void DeleteMetadata(const class FString& Key);
-	void DeleteMetadataByArray(const TArray<class FString>& MetaDataKeys);
-	void SetCapacity(int64 Capacity);
-	void SetLocked(bool Locked);
-	void SetMetadata(const class FString& Key, const struct FVariantDataBP& Value);
-	void SetMetadataByMap(const TMap<class FString, struct FVariantDataBP>& MetaData);
-	void SetPublic(bool Public);
+	bool OnCreateAccountFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID);
+	bool OnLoginFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineLobbyTransaction">();
+		return StaticClassImpl<"ExternalUIFlowHandler">();
 	}
-	static class UOnlineLobbyTransaction* GetDefaultObj()
+	static class IExternalUIFlowHandler* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnlineLobbyTransaction>();
+		return GetDefaultObjImpl<IExternalUIFlowHandler>();
 	}
 };
-static_assert(alignof(UOnlineLobbyTransaction) == 0x000008, "Wrong alignment on UOnlineLobbyTransaction");
-static_assert(sizeof(UOnlineLobbyTransaction) == 0x000038, "Wrong size on UOnlineLobbyTransaction");
+static_assert(alignof(IExternalUIFlowHandler) == 0x000008, "Wrong alignment on IExternalUIFlowHandler");
+static_assert(sizeof(IExternalUIFlowHandler) == 0x000028, "Wrong size on IExternalUIFlowHandler");
 
 // Class OnlineSubsystemBlueprints.OnlineGameActivitySubsystemResumeActivity
 // 0x00A0 (0x00D0 - 0x0030)
@@ -1535,7 +1965,7 @@ public:
 	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ActivityId;                               // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bEnabled;                                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D1A[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineGameActivitySubsystemSetActivityAvailability* SetActivityAvailability(class UOnlineGameActivitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ActivityId, bool bEnabled);
@@ -1560,30 +1990,28 @@ static_assert(offsetof(UOnlineGameActivitySubsystemSetActivityAvailability, __St
 static_assert(offsetof(UOnlineGameActivitySubsystemSetActivityAvailability, __Store__ActivityId) == 0x000098, "Member 'UOnlineGameActivitySubsystemSetActivityAvailability::__Store__ActivityId' has a wrong offset!");
 static_assert(offsetof(UOnlineGameActivitySubsystemSetActivityAvailability, __Store__bEnabled) == 0x0000A8, "Member 'UOnlineGameActivitySubsystemSetActivityAvailability::__Store__bEnabled' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.PurchaseReceipt
-// 0x0010 (0x0038 - 0x0028)
-class UPurchaseReceipt final : public UObject
+// Class OnlineSubsystemBlueprints.OnlineRecentPlayerRef
+// 0x0010 (0x0058 - 0x0048)
+class UOnlineRecentPlayerRef final : public UOnlineUserRef
 {
 public:
-	uint8                                         Pad_1D1C[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	EPurchaseTransactionState_ GetPurchaseTransactionState();
-	TArray<struct FReceiptOfferEntryBP> GetReceiptOffers();
-	class FString GetTransactionId();
+	struct FDateTime GetLastSeen();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PurchaseReceipt">();
+		return StaticClassImpl<"OnlineRecentPlayerRef">();
 	}
-	static class UPurchaseReceipt* GetDefaultObj()
+	static class UOnlineRecentPlayerRef* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPurchaseReceipt>();
+		return GetDefaultObjImpl<UOnlineRecentPlayerRef>();
 	}
 };
-static_assert(alignof(UPurchaseReceipt) == 0x000008, "Wrong alignment on UPurchaseReceipt");
-static_assert(sizeof(UPurchaseReceipt) == 0x000038, "Wrong size on UPurchaseReceipt");
+static_assert(alignof(UOnlineRecentPlayerRef) == 0x000008, "Wrong alignment on UOnlineRecentPlayerRef");
+static_assert(sizeof(UOnlineRecentPlayerRef) == 0x000058, "Wrong size on UOnlineRecentPlayerRef");
 
 // Class OnlineSubsystemBlueprints.OnlineGameActivitySubsystemSetActivityPriority
 // 0x00B8 (0x00E8 - 0x0030)
@@ -1624,7 +2052,7 @@ static_assert(offsetof(UOnlineGameActivitySubsystemSetActivityPriority, __Store_
 class UOnlineGameItemStatsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D1D[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsSubsystemAvailable();
@@ -1642,30 +2070,28 @@ public:
 static_assert(alignof(UOnlineGameItemStatsSubsystem) == 0x000008, "Wrong alignment on UOnlineGameItemStatsSubsystem");
 static_assert(sizeof(UOnlineGameItemStatsSubsystem) == 0x0000A0, "Wrong size on UOnlineGameItemStatsSubsystem");
 
-// Class OnlineSubsystemBlueprints.Party
-// 0x0010 (0x0038 - 0x0028)
-class UParty final : public UObject
+// Class OnlineSubsystemBlueprints.OnlineSessionSettings
+// 0x0150 (0x0178 - 0x0028)
+class UOnlineSessionSettings final : public UObject
 {
 public:
-	uint8                                         Pad_1D1E[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x150];                                     // 0x0028(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	struct FUniqueNetIdRepl GetLeaderId();
-	class UPartyId* GetPartyId();
-	int64 GetPartyTypeId();
+	struct FOnlineSessionSettingsBP GetValue();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"Party">();
+		return StaticClassImpl<"OnlineSessionSettings">();
 	}
-	static class UParty* GetDefaultObj()
+	static class UOnlineSessionSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UParty>();
+		return GetDefaultObjImpl<UOnlineSessionSettings>();
 	}
 };
-static_assert(alignof(UParty) == 0x000008, "Wrong alignment on UParty");
-static_assert(sizeof(UParty) == 0x000038, "Wrong size on UParty");
+static_assert(alignof(UOnlineSessionSettings) == 0x000008, "Wrong alignment on UOnlineSessionSettings");
+static_assert(sizeof(UOnlineSessionSettings) == 0x000178, "Wrong size on UOnlineSessionSettings");
 
 // Class OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemUsage
 // 0x0088 (0x00B8 - 0x0030)
@@ -1741,28 +2167,28 @@ static_assert(offsetof(UOnlineGameItemStatsSubsystemItemImpact, __Store__TargetA
 static_assert(offsetof(UOnlineGameItemStatsSubsystemItemImpact, __Store__ImpactInitiatedBy) == 0x0000A8, "Member 'UOnlineGameItemStatsSubsystemItemImpact::__Store__ImpactInitiatedBy' has a wrong offset!");
 static_assert(offsetof(UOnlineGameItemStatsSubsystemItemImpact, __Store__ItemsUsed) == 0x0000B8, "Member 'UOnlineGameItemStatsSubsystemItemImpact::__Store__ItemsUsed' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.LobbyId
+// Class OnlineSubsystemBlueprints.ReadablePartyData
 // 0x0010 (0x0038 - 0x0028)
-class ULobbyId final : public UObject
+class UReadablePartyData : public UObject
 {
 public:
-	uint8                                         Pad_1D1F[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class FString ToDebugString();
+	void GetAttribute(const class FString& AttrName, bool* OutFound, struct FVariantDataBP* OutAttrValue) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LobbyId">();
+		return StaticClassImpl<"ReadablePartyData">();
 	}
-	static class ULobbyId* GetDefaultObj()
+	static class UReadablePartyData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULobbyId>();
+		return GetDefaultObjImpl<UReadablePartyData>();
 	}
 };
-static_assert(alignof(ULobbyId) == 0x000008, "Wrong alignment on ULobbyId");
-static_assert(sizeof(ULobbyId) == 0x000038, "Wrong size on ULobbyId");
+static_assert(alignof(UReadablePartyData) == 0x000008, "Wrong alignment on UReadablePartyData");
+static_assert(sizeof(UReadablePartyData) == 0x000038, "Wrong size on UReadablePartyData");
 
 // Class OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemMitigation
 // 0x0098 (0x00C8 - 0x0030)
@@ -1838,28 +2264,34 @@ static_assert(offsetof(UOnlineGameItemStatsSubsystemItemAvailabilityChange, __St
 static_assert(offsetof(UOnlineGameItemStatsSubsystemItemAvailabilityChange, __Store__AvailableItems) == 0x000098, "Member 'UOnlineGameItemStatsSubsystemItemAvailabilityChange::__Store__AvailableItems' has a wrong offset!");
 static_assert(offsetof(UOnlineGameItemStatsSubsystemItemAvailabilityChange, __Store__UnavailableItems) == 0x0000A8, "Member 'UOnlineGameItemStatsSubsystemItemAvailabilityChange::__Store__UnavailableItems' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.PartyId
+// Class OnlineSubsystemBlueprints.OnlineLobbyTransaction
 // 0x0010 (0x0038 - 0x0028)
-class UPartyId final : public UObject
+class UOnlineLobbyTransaction final : public UObject
 {
 public:
-	uint8                                         Pad_1D20[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class FString ToDebugString();
+	void DeleteMetadata(const class FString& Key);
+	void DeleteMetadataByArray(const TArray<class FString>& MetaDataKeys);
+	void SetCapacity(int64 Capacity);
+	void SetLocked(bool Locked);
+	void SetMetadata(const class FString& Key, const struct FVariantDataBP& Value);
+	void SetMetadataByMap(const TMap<class FString, struct FVariantDataBP>& MetaData);
+	void SetPublic(bool Public);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PartyId">();
+		return StaticClassImpl<"OnlineLobbyTransaction">();
 	}
-	static class UPartyId* GetDefaultObj()
+	static class UOnlineLobbyTransaction* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UPartyId>();
+		return GetDefaultObjImpl<UOnlineLobbyTransaction>();
 	}
 };
-static_assert(alignof(UPartyId) == 0x000008, "Wrong alignment on UPartyId");
-static_assert(sizeof(UPartyId) == 0x000038, "Wrong size on UPartyId");
+static_assert(alignof(UOnlineLobbyTransaction) == 0x000008, "Wrong alignment on UOnlineLobbyTransaction");
+static_assert(sizeof(UOnlineLobbyTransaction) == 0x000038, "Wrong size on UOnlineLobbyTransaction");
 
 // Class OnlineSubsystemBlueprints.OnlineGameItemStatsSubsystemItemInventoryChange
 // 0x0088 (0x00B8 - 0x0030)
@@ -1933,40 +2365,50 @@ static_assert(offsetof(UOnlineGameItemStatsSubsystemItemLoadoutChange, __Store__
 static_assert(offsetof(UOnlineGameItemStatsSubsystemItemLoadoutChange, __Store__EquippedItems) == 0x000098, "Member 'UOnlineGameItemStatsSubsystemItemLoadoutChange::__Store__EquippedItems' has a wrong offset!");
 static_assert(offsetof(UOnlineGameItemStatsSubsystemItemLoadoutChange, __Store__UnequippedItems) == 0x0000A8, "Member 'UOnlineGameItemStatsSubsystemItemLoadoutChange::__Store__UnequippedItems' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.VoiceChatUserLogout
-// 0x0028 (0x0058 - 0x0030)
-class UVoiceChatUserLogout final : public UBlueprintAsyncActionBase
+// Class OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById
+// 0x00D8 (0x0108 - 0x0030)
+class UOnlineSessionSubsystemFindSessionById final : public UBlueprintAsyncActionBase
 {
 public:
 	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnVoiceChatLogoutComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UVoiceChatUser*                         __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	FMulticastInlineDelegateProperty_             OnSingleSessionResultComplete;                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__SearchingUserId;                          // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__SessionId;                                // 0x0098(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x00C8(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__UserData;                                 // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	static class UVoiceChatUserLogout* Logout(class UVoiceChatUser* Subsystem);
+	static class UOnlineSessionSubsystemFindSessionById* FindSessionById(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingUserId, const struct FUniqueNetIdRepl& SessionId, const struct FUniqueNetIdRepl& FriendId, const class FString& UserData);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VoiceChatUserLogout">();
+		return StaticClassImpl<"OnlineSessionSubsystemFindSessionById">();
 	}
-	static class UVoiceChatUserLogout* GetDefaultObj()
+	static class UOnlineSessionSubsystemFindSessionById* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UVoiceChatUserLogout>();
+		return GetDefaultObjImpl<UOnlineSessionSubsystemFindSessionById>();
 	}
 };
-static_assert(alignof(UVoiceChatUserLogout) == 0x000008, "Wrong alignment on UVoiceChatUserLogout");
-static_assert(sizeof(UVoiceChatUserLogout) == 0x000058, "Wrong size on UVoiceChatUserLogout");
-static_assert(offsetof(UVoiceChatUserLogout, OnCallFailed) == 0x000030, "Member 'UVoiceChatUserLogout::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUserLogout, OnVoiceChatLogoutComplete) == 0x000040, "Member 'UVoiceChatUserLogout::OnVoiceChatLogoutComplete' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUserLogout, __Store__Subsystem) == 0x000050, "Member 'UVoiceChatUserLogout::__Store__Subsystem' has a wrong offset!");
+static_assert(alignof(UOnlineSessionSubsystemFindSessionById) == 0x000008, "Wrong alignment on UOnlineSessionSubsystemFindSessionById");
+static_assert(sizeof(UOnlineSessionSubsystemFindSessionById) == 0x000108, "Wrong size on UOnlineSessionSubsystemFindSessionById");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, OnCallFailed) == 0x000030, "Member 'UOnlineSessionSubsystemFindSessionById::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, OnSingleSessionResultComplete) == 0x000040, "Member 'UOnlineSessionSubsystemFindSessionById::OnSingleSessionResultComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__Subsystem) == 0x000050, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__SearchingUserId) == 0x000068, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__SearchingUserId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__SessionId) == 0x000098, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__SessionId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__FriendId) == 0x0000C8, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__FriendId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__UserData) == 0x0000F8, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__UserData' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineGroupsSubsystem
 // 0x0070 (0x00A0 - 0x0030)
 class UOnlineGroupsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D21[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetNamespace();
@@ -2025,35 +2467,42 @@ public:
 static_assert(alignof(UOnlineHelpers) == 0x000008, "Wrong alignment on UOnlineHelpers");
 static_assert(sizeof(UOnlineHelpers) == 0x000028, "Wrong size on UOnlineHelpers");
 
-// Class OnlineSubsystemBlueprints.OnlineSessionSettings
-// 0x0150 (0x0178 - 0x0028)
-class UOnlineSessionSettings final : public UObject
+// Class OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel
+// 0x0038 (0x0068 - 0x0030)
+class UVoiceChatUserLeaveChannel final : public UBlueprintAsyncActionBase
 {
 public:
-	uint8                                         Pad_1D2A[0x150];                                   // 0x0028(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnVoiceChatChannelLeaveComplete;                   // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UVoiceChatUser*                         __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__ChannelName;                              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	struct FOnlineSessionSettingsBP GetValue();
+	static class UVoiceChatUserLeaveChannel* LeaveChannel(class UVoiceChatUser* Subsystem, const class FString& ChannelName);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnlineSessionSettings">();
+		return StaticClassImpl<"VoiceChatUserLeaveChannel">();
 	}
-	static class UOnlineSessionSettings* GetDefaultObj()
+	static class UVoiceChatUserLeaveChannel* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UOnlineSessionSettings>();
+		return GetDefaultObjImpl<UVoiceChatUserLeaveChannel>();
 	}
 };
-static_assert(alignof(UOnlineSessionSettings) == 0x000008, "Wrong alignment on UOnlineSessionSettings");
-static_assert(sizeof(UOnlineSessionSettings) == 0x000178, "Wrong size on UOnlineSessionSettings");
+static_assert(alignof(UVoiceChatUserLeaveChannel) == 0x000008, "Wrong alignment on UVoiceChatUserLeaveChannel");
+static_assert(sizeof(UVoiceChatUserLeaveChannel) == 0x000068, "Wrong size on UVoiceChatUserLeaveChannel");
+static_assert(offsetof(UVoiceChatUserLeaveChannel, OnCallFailed) == 0x000030, "Member 'UVoiceChatUserLeaveChannel::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUserLeaveChannel, OnVoiceChatChannelLeaveComplete) == 0x000040, "Member 'UVoiceChatUserLeaveChannel::OnVoiceChatChannelLeaveComplete' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUserLeaveChannel, __Store__Subsystem) == 0x000050, "Member 'UVoiceChatUserLeaveChannel::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUserLeaveChannel, __Store__ChannelName) == 0x000058, "Member 'UVoiceChatUserLeaveChannel::__Store__ChannelName' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineIdentitySubsystem
 // 0x0100 (0x0130 - 0x0030)
 class UOnlineIdentitySubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D2B[0xB0];                                    // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLoginChanged;                                    // 0x00E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoginStatusChanged;                              // 0x00F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoginComplete;                                   // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -2101,9 +2550,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnLoginComplete;                                   // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineIdentitySubsystem*               __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D31[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D32[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnlineAccountCredential               __Store__AccountCredentials;                       // 0x0078(0x0030)(NativeAccessSpecifierPrivate)
 
 public:
@@ -2128,28 +2577,41 @@ static_assert(offsetof(UOnlineIdentitySubsystemLogin, __Store__CallUniquenessId)
 static_assert(offsetof(UOnlineIdentitySubsystemLogin, __Store__LocalUserNum) == 0x000070, "Member 'UOnlineIdentitySubsystemLogin::__Store__LocalUserNum' has a wrong offset!");
 static_assert(offsetof(UOnlineIdentitySubsystemLogin, __Store__AccountCredentials) == 0x000078, "Member 'UOnlineIdentitySubsystemLogin::__Store__AccountCredentials' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.ReadablePartyData
-// 0x0010 (0x0038 - 0x0028)
-class UReadablePartyData : public UObject
+// Class OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession
+// 0x0078 (0x00A8 - 0x0030)
+class UOnlineSessionSubsystemFindFriendSession final : public UBlueprintAsyncActionBase
 {
 public:
-	uint8                                         Pad_1D34[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFindFriendSessionComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       __Store__Friend;                                   // 0x0078(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	void GetAttribute(const class FString& AttrName, bool* OutFound, struct FVariantDataBP* OutAttrValue) const;
+	static class UOnlineSessionSubsystemFindFriendSession* FindFriendSession(class UOnlineSessionSubsystem* Subsystem, int32 LocalUserNum, const struct FUniqueNetIdRepl& Friend);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReadablePartyData">();
+		return StaticClassImpl<"OnlineSessionSubsystemFindFriendSession">();
 	}
-	static class UReadablePartyData* GetDefaultObj()
+	static class UOnlineSessionSubsystemFindFriendSession* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UReadablePartyData>();
+		return GetDefaultObjImpl<UOnlineSessionSubsystemFindFriendSession>();
 	}
 };
-static_assert(alignof(UReadablePartyData) == 0x000008, "Wrong alignment on UReadablePartyData");
-static_assert(sizeof(UReadablePartyData) == 0x000038, "Wrong size on UReadablePartyData");
+static_assert(alignof(UOnlineSessionSubsystemFindFriendSession) == 0x000008, "Wrong alignment on UOnlineSessionSubsystemFindFriendSession");
+static_assert(sizeof(UOnlineSessionSubsystemFindFriendSession) == 0x0000A8, "Wrong size on UOnlineSessionSubsystemFindFriendSession");
+static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, OnCallFailed) == 0x000030, "Member 'UOnlineSessionSubsystemFindFriendSession::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, OnFindFriendSessionComplete) == 0x000040, "Member 'UOnlineSessionSubsystemFindFriendSession::OnFindFriendSessionComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__Subsystem) == 0x000050, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__LocalUserNum) == 0x000070, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__LocalUserNum' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__Friend) == 0x000078, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__Friend' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineIdentitySubsystemLogout
 // 0x0048 (0x0078 - 0x0030)
@@ -2160,9 +2622,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnLogoutComplete;                                  // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineIdentitySubsystem*               __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D36[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D37[0x4];                                     // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineIdentitySubsystemLogout* Logout(class UOnlineIdentitySubsystem* Subsystem, int32 LocalUserNum);
@@ -2194,9 +2656,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnLoginComplete;                                   // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineIdentitySubsystem*               __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D39[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D3A[0x4];                                     // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineIdentitySubsystemAutoLogin* AutoLogin(class UOnlineIdentitySubsystem* Subsystem, int32 LocalUserNum);
@@ -2219,98 +2681,40 @@ static_assert(offsetof(UOnlineIdentitySubsystemAutoLogin, __Store__Subsystem) ==
 static_assert(offsetof(UOnlineIdentitySubsystemAutoLogin, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineIdentitySubsystemAutoLogin::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineIdentitySubsystemAutoLogin, __Store__LocalUserNum) == 0x000070, "Member 'UOnlineIdentitySubsystemAutoLogin::__Store__LocalUserNum' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.VoiceChatUser
-// 0x0150 (0x0178 - 0x0028)
-class UVoiceChatUser final : public UObject
+// Class OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking
+// 0x0078 (0x00A8 - 0x0030)
+class UOnlineSessionSubsystemCancelMatchmaking final : public UBlueprintAsyncActionBase
 {
 public:
-	uint8                                         Pad_1D3C[0x60];                                    // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatAvailableAudioDevicesChanged;           // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3D[0x8];                                     // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatLoggedIn;                               // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3E[0x8];                                     // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatLoggedOut;                              // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3F[0x8];                                     // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatChannelJoined;                          // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D40[0x8];                                     // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatChannelExited;                          // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D41[0x8];                                     // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerAdded;                            // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D42[0x8];                                     // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerRemoved;                          // 0x0118(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D43[0x8];                                     // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerTalkingUpdated;                   // 0x0130(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D44[0x8];                                     // 0x0140(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerMuteUpdated;                      // 0x0148(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D45[0x8];                                     // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerVolumeUpdated;                    // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D46[0x8];                                     // 0x0170(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnCancelMatchmakingComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       __Store__SearchingPlayerId;                        // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   __Store__SessionName;                              // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
-	void BlockPlayers(const TArray<class FString>& PlayerNames);
-	bool GetAudioInputDeviceMuted();
-	float GetAudioInputVolume();
-	bool GetAudioOutputDeviceMuted();
-	float GetAudioOutputVolume();
-	TArray<struct FVoiceChatDeviceInfoBP> GetAvailableInputDeviceInfos();
-	TArray<struct FVoiceChatDeviceInfoBP> GetAvailableOutputDeviceInfos();
-	TArray<class FString> GetChannels();
-	EVoiceChatChannelType_ GetChannelType(const class FString& ChannelName);
-	struct FVoiceChatDeviceInfoBP GetDefaultInputDeviceInfo();
-	struct FVoiceChatDeviceInfoBP GetDefaultOutputDeviceInfo();
-	struct FVoiceChatDeviceInfoBP GetInputDeviceInfo();
-	class FString GetLoggedInPlayerName();
-	struct FVoiceChatDeviceInfoBP GetOutputDeviceInfo();
-	TArray<class FString> GetPlayersInChannel(const class FString& ChannelName);
-	float GetPlayerVolume(const class FString& PlayerName);
-	class FString GetSetting(const class FString& Param_Name);
-	TSet<class FString> GetTransmitChannels();
-	EVoiceChatTransmitMode_ GetTransmitMode();
-	class FString InsecureGetJoinToken(const class FString& ChannelName, EVoiceChatChannelType_ ChannelType, const struct FVoiceChatChannel3dPropertiesBP& Channel3dProperties);
-	class FString InsecureGetLoginToken(const class FString& PlayerName);
-	bool IsChannelPlayerMuted(const class FString& ChannelName, const class FString& PlayerName);
-	bool IsLoggedIn();
-	bool IsLoggingIn();
-	bool IsPlayerMuted(const class FString& PlayerName);
-	bool IsPlayerTalking(const class FString& PlayerName);
-	void Set3DPosition(const class FString& ChannelName, const struct FVector& SpeakerPosition, const struct FVector& ListenerPosition, const struct FVector& ListenerForwardDirection, const struct FVector& ListenerUpDirection);
-	void SetAudioInputDeviceMuted(bool bIsMuted);
-	void SetAudioInputVolume(float Volume);
-	void SetAudioOutputDeviceMuted(bool bIsMuted);
-	void SetAudioOutputVolume(float Volume);
-	void SetChannelPlayerMuted(const class FString& ChannelName, const class FString& PlayerName, bool bAudioMuted);
-	void SetInputDeviceId(const class FString& InputDeviceId);
-	void SetOutputDeviceId(const class FString& OutputDeviceId);
-	void SetPlayerMuted(const class FString& PlayerName, bool bMuted);
-	void SetPlayerVolume(const class FString& PlayerName, float Volume);
-	void SetSetting(const class FString& Param_Name, const class FString& Value);
-	void TransmitToAllChannels();
-	void TransmitToNoChannels();
-	void TransmitToSpecificChannels(const TSet<class FString>& ChannelNames);
-	void UnblockPlayers(const TArray<class FString>& PlayerNames);
+	static class UOnlineSessionSubsystemCancelMatchmaking* CancelMatchmaking(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingPlayerId, class FName SessionName);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VoiceChatUser">();
+		return StaticClassImpl<"OnlineSessionSubsystemCancelMatchmaking">();
 	}
-	static class UVoiceChatUser* GetDefaultObj()
+	static class UOnlineSessionSubsystemCancelMatchmaking* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UVoiceChatUser>();
+		return GetDefaultObjImpl<UOnlineSessionSubsystemCancelMatchmaking>();
 	}
 };
-static_assert(alignof(UVoiceChatUser) == 0x000008, "Wrong alignment on UVoiceChatUser");
-static_assert(sizeof(UVoiceChatUser) == 0x000178, "Wrong size on UVoiceChatUser");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatAvailableAudioDevicesChanged) == 0x000088, "Member 'UVoiceChatUser::OnVoiceChatAvailableAudioDevicesChanged' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatLoggedIn) == 0x0000A0, "Member 'UVoiceChatUser::OnVoiceChatLoggedIn' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatLoggedOut) == 0x0000B8, "Member 'UVoiceChatUser::OnVoiceChatLoggedOut' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatChannelJoined) == 0x0000D0, "Member 'UVoiceChatUser::OnVoiceChatChannelJoined' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatChannelExited) == 0x0000E8, "Member 'UVoiceChatUser::OnVoiceChatChannelExited' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerAdded) == 0x000100, "Member 'UVoiceChatUser::OnVoiceChatPlayerAdded' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerRemoved) == 0x000118, "Member 'UVoiceChatUser::OnVoiceChatPlayerRemoved' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerTalkingUpdated) == 0x000130, "Member 'UVoiceChatUser::OnVoiceChatPlayerTalkingUpdated' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerMuteUpdated) == 0x000148, "Member 'UVoiceChatUser::OnVoiceChatPlayerMuteUpdated' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerVolumeUpdated) == 0x000160, "Member 'UVoiceChatUser::OnVoiceChatPlayerVolumeUpdated' has a wrong offset!");
+static_assert(alignof(UOnlineSessionSubsystemCancelMatchmaking) == 0x000008, "Wrong alignment on UOnlineSessionSubsystemCancelMatchmaking");
+static_assert(sizeof(UOnlineSessionSubsystemCancelMatchmaking) == 0x0000A8, "Wrong size on UOnlineSessionSubsystemCancelMatchmaking");
+static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, OnCallFailed) == 0x000030, "Member 'UOnlineSessionSubsystemCancelMatchmaking::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, OnCancelMatchmakingComplete) == 0x000040, "Member 'UOnlineSessionSubsystemCancelMatchmaking::OnCancelMatchmakingComplete' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__Subsystem) == 0x000050, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__Subsystem' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__CallUniquenessId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__SearchingPlayerId) == 0x000070, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__SearchingPlayerId' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__SessionName) == 0x0000A0, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__SessionName' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineIdentitySubsystemRevokeAuthToken
 // 0x0068 (0x0098 - 0x0030)
@@ -2355,10 +2759,11 @@ public:
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	EOnlineUserPrivilege                          __Store__Privilege;                                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D51[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EShowPrivilegeResolveUI_                      __Store__ShowResolveUI;                            // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UOnlineIdentitySubsystemGetUserPrivilege* GetUserPrivilege(class UOnlineIdentitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege);
+	static class UOnlineIdentitySubsystemGetUserPrivilege* GetUserPrivilege(class UOnlineIdentitySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, EOnlineUserPrivilege Privilege, EShowPrivilegeResolveUI_ ShowResolveUI);
 
 public:
 	static class UClass* StaticClass()
@@ -2378,13 +2783,42 @@ static_assert(offsetof(UOnlineIdentitySubsystemGetUserPrivilege, __Store__Subsys
 static_assert(offsetof(UOnlineIdentitySubsystemGetUserPrivilege, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineIdentitySubsystemGetUserPrivilege::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineIdentitySubsystemGetUserPrivilege, __Store__LocalUserId) == 0x000068, "Member 'UOnlineIdentitySubsystemGetUserPrivilege::__Store__LocalUserId' has a wrong offset!");
 static_assert(offsetof(UOnlineIdentitySubsystemGetUserPrivilege, __Store__Privilege) == 0x000098, "Member 'UOnlineIdentitySubsystemGetUserPrivilege::__Store__Privilege' has a wrong offset!");
+static_assert(offsetof(UOnlineIdentitySubsystemGetUserPrivilege, __Store__ShowResolveUI) == 0x000099, "Member 'UOnlineIdentitySubsystemGetUserPrivilege::__Store__ShowResolveUI' has a wrong offset!");
+
+// Class OnlineSubsystemBlueprints.VoiceChatUserLogout
+// 0x0028 (0x0058 - 0x0030)
+class UVoiceChatUserLogout final : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnVoiceChatLogoutComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UVoiceChatUser*                         __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UVoiceChatUserLogout* Logout(class UVoiceChatUser* Subsystem);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VoiceChatUserLogout">();
+	}
+	static class UVoiceChatUserLogout* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVoiceChatUserLogout>();
+	}
+};
+static_assert(alignof(UVoiceChatUserLogout) == 0x000008, "Wrong alignment on UVoiceChatUserLogout");
+static_assert(sizeof(UVoiceChatUserLogout) == 0x000058, "Wrong size on UVoiceChatUserLogout");
+static_assert(offsetof(UVoiceChatUserLogout, OnCallFailed) == 0x000030, "Member 'UVoiceChatUserLogout::OnCallFailed' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUserLogout, OnVoiceChatLogoutComplete) == 0x000040, "Member 'UVoiceChatUserLogout::OnVoiceChatLogoutComplete' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUserLogout, __Store__Subsystem) == 0x000050, "Member 'UVoiceChatUserLogout::__Store__Subsystem' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystem
 // 0x00A0 (0x00D0 - 0x0030)
 class UOnlineLeaderboardsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D53[0x80];                                    // 0x0030(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x80];                                      // 0x0030(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLeaderboardReadComplete;                         // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLeaderboardFlushComplete;                        // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
@@ -2418,7 +2852,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnLeaderboardReadComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineLeaderboardsSubsystem*           __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D56[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               __Store__Players;                                  // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class UOnlineLeaderboardRead*                 __Store__ReadObject;                               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -2444,36 +2878,6 @@ static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboards, __Store__Ca
 static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboards, __Store__Players) == 0x000070, "Member 'UOnlineLeaderboardsSubsystemReadLeaderboards::__Store__Players' has a wrong offset!");
 static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboards, __Store__ReadObject) == 0x000080, "Member 'UOnlineLeaderboardsSubsystemReadLeaderboards::__Store__ReadObject' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.VoiceChatUserLeaveChannel
-// 0x0038 (0x0068 - 0x0030)
-class UVoiceChatUserLeaveChannel final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnVoiceChatChannelLeaveComplete;                   // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UVoiceChatUser*                         __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__ChannelName;                              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UVoiceChatUserLeaveChannel* LeaveChannel(class UVoiceChatUser* Subsystem, const class FString& ChannelName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VoiceChatUserLeaveChannel">();
-	}
-	static class UVoiceChatUserLeaveChannel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVoiceChatUserLeaveChannel>();
-	}
-};
-static_assert(alignof(UVoiceChatUserLeaveChannel) == 0x000008, "Wrong alignment on UVoiceChatUserLeaveChannel");
-static_assert(sizeof(UVoiceChatUserLeaveChannel) == 0x000068, "Wrong size on UVoiceChatUserLeaveChannel");
-static_assert(offsetof(UVoiceChatUserLeaveChannel, OnCallFailed) == 0x000030, "Member 'UVoiceChatUserLeaveChannel::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUserLeaveChannel, OnVoiceChatChannelLeaveComplete) == 0x000040, "Member 'UVoiceChatUserLeaveChannel::OnVoiceChatChannelLeaveComplete' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUserLeaveChannel, __Store__Subsystem) == 0x000050, "Member 'UVoiceChatUserLeaveChannel::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UVoiceChatUserLeaveChannel, __Store__ChannelName) == 0x000058, "Member 'UVoiceChatUserLeaveChannel::__Store__ChannelName' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsForFriends
 // 0x0050 (0x0080 - 0x0030)
 class UOnlineLeaderboardsSubsystemReadLeaderboardsForFriends final : public UBlueprintAsyncActionBase
@@ -2483,9 +2887,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnLeaderboardReadComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineLeaderboardsSubsystem*           __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D57[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D58[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineLeaderboardRead*                 __Store__ReadObject;                               // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -2519,9 +2923,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnLeaderboardReadComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineLeaderboardsSubsystem*           __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D5A[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__Rank;                                     // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D5B[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         __Store__Range;                                    // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UOnlineLeaderboardRead*                 __Store__ReadObject;                               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -2548,44 +2952,6 @@ static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank, _
 static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank, __Store__Range) == 0x000078, "Member 'UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank::__Store__Range' has a wrong offset!");
 static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank, __Store__ReadObject) == 0x000080, "Member 'UOnlineLeaderboardsSubsystemReadLeaderboardsAroundRank::__Store__ReadObject' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineSessionSearch
-// 0x0088 (0x00B0 - 0x0028)
-class UOnlineSessionSearch final : public UObject
-{
-public:
-	uint8                                         Pad_1D5D[0x20];                                    // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxSearchResults;                                  // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLanQuery;                                       // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D5E[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PingBucketSize;                                    // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PlatformHash;                                      // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeoutInSeconds;                                  // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D5F[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FSessionSearchParamBP> SearchParams;                                      // 0x0060(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, NativeAccessSpecifierPublic)
-
-public:
-	TArray<struct FOnlineSessionSearchResultBP> GetSearchResults() const;
-	EOnlineAsyncTaskState_ GetSearchState() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineSessionSearch">();
-	}
-	static class UOnlineSessionSearch* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineSessionSearch>();
-	}
-};
-static_assert(alignof(UOnlineSessionSearch) == 0x000008, "Wrong alignment on UOnlineSessionSearch");
-static_assert(sizeof(UOnlineSessionSearch) == 0x0000B0, "Wrong size on UOnlineSessionSearch");
-static_assert(offsetof(UOnlineSessionSearch, MaxSearchResults) == 0x000048, "Member 'UOnlineSessionSearch::MaxSearchResults' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSearch, bIsLanQuery) == 0x00004C, "Member 'UOnlineSessionSearch::bIsLanQuery' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSearch, PingBucketSize) == 0x000050, "Member 'UOnlineSessionSearch::PingBucketSize' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSearch, PlatformHash) == 0x000054, "Member 'UOnlineSessionSearch::PlatformHash' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSearch, TimeoutInSeconds) == 0x000058, "Member 'UOnlineSessionSearch::TimeoutInSeconds' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSearch, SearchParams) == 0x000060, "Member 'UOnlineSessionSearch::SearchParams' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineLeaderboardsSubsystemReadLeaderboardsAroundUser
 // 0x0080 (0x00B0 - 0x0030)
 class UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser final : public UBlueprintAsyncActionBase
@@ -2595,7 +2961,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnLeaderboardReadComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineLeaderboardsSubsystem*           __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D60[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__Player;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int64                                         __Store__Range;                                    // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UOnlineLeaderboardRead*                 __Store__ReadObject;                               // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -2628,7 +2994,7 @@ static_assert(offsetof(UOnlineLeaderboardsSubsystemReadLeaderboardsAroundUser, _
 class UOnlineLobbySubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D61[0x98];                                    // 0x0030(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x98];                                      // 0x0030(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLobbyUpdate;                                     // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLobbyDelete;                                     // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnMemberConnect;                                   // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -2663,6 +3029,99 @@ static_assert(offsetof(UOnlineLobbySubsystem, OnLobbyDelete) == 0x0000D8, "Membe
 static_assert(offsetof(UOnlineLobbySubsystem, OnMemberConnect) == 0x0000E8, "Member 'UOnlineLobbySubsystem::OnMemberConnect' has a wrong offset!");
 static_assert(offsetof(UOnlineLobbySubsystem, OnMemberUpdate) == 0x0000F8, "Member 'UOnlineLobbySubsystem::OnMemberUpdate' has a wrong offset!");
 static_assert(offsetof(UOnlineLobbySubsystem, OnMemberDisconnect) == 0x000108, "Member 'UOnlineLobbySubsystem::OnMemberDisconnect' has a wrong offset!");
+
+// Class OnlineSubsystemBlueprints.VoiceChatUser
+// 0x0150 (0x0178 - 0x0028)
+class UVoiceChatUser final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x60];                                      // 0x0028(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatAvailableAudioDevicesChanged;           // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatLoggedIn;                               // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatLoggedOut;                              // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatChannelJoined;                          // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatChannelExited;                          // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerAdded;                            // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerRemoved;                          // 0x0118(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerTalkingUpdated;                   // 0x0130(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_140[0x8];                                      // 0x0140(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerMuteUpdated;                      // 0x0148(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnVoiceChatPlayerVolumeUpdated;                    // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_170[0x8];                                      // 0x0170(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void BlockPlayers(const TArray<class FString>& PlayerNames);
+	bool GetAudioInputDeviceMuted();
+	float GetAudioInputVolume();
+	bool GetAudioOutputDeviceMuted();
+	float GetAudioOutputVolume();
+	TArray<struct FVoiceChatDeviceInfoBP> GetAvailableInputDeviceInfos();
+	TArray<struct FVoiceChatDeviceInfoBP> GetAvailableOutputDeviceInfos();
+	TArray<class FString> GetChannels();
+	EVoiceChatChannelType_ GetChannelType(const class FString& ChannelName);
+	struct FVoiceChatDeviceInfoBP GetDefaultInputDeviceInfo();
+	struct FVoiceChatDeviceInfoBP GetDefaultOutputDeviceInfo();
+	struct FVoiceChatDeviceInfoBP GetInputDeviceInfo();
+	class FString GetLoggedInPlayerName();
+	struct FVoiceChatDeviceInfoBP GetOutputDeviceInfo();
+	TArray<class FString> GetPlayersInChannel(const class FString& ChannelName);
+	float GetPlayerVolume(const class FString& PlayerName);
+	class FString GetSetting(const class FString& Name_0);
+	TSet<class FString> GetTransmitChannels();
+	EVoiceChatTransmitMode_ GetTransmitMode();
+	class FString InsecureGetJoinToken(const class FString& ChannelName, EVoiceChatChannelType_ ChannelType, const struct FVoiceChatChannel3dPropertiesBP& Channel3dProperties);
+	class FString InsecureGetLoginToken(const class FString& PlayerName);
+	bool IsChannelPlayerMuted(const class FString& ChannelName, const class FString& PlayerName);
+	bool IsLoggedIn();
+	bool IsLoggingIn();
+	bool IsPlayerMuted(const class FString& PlayerName);
+	bool IsPlayerTalking(const class FString& PlayerName);
+	void Set3DPosition(const class FString& ChannelName, const struct FVector& SpeakerPosition, const struct FVector& ListenerPosition, const struct FVector& ListenerForwardDirection, const struct FVector& ListenerUpDirection);
+	void SetAudioInputDeviceMuted(bool bIsMuted);
+	void SetAudioInputVolume(float Volume);
+	void SetAudioOutputDeviceMuted(bool bIsMuted);
+	void SetAudioOutputVolume(float Volume);
+	void SetChannelPlayerMuted(const class FString& ChannelName, const class FString& PlayerName, bool bAudioMuted);
+	void SetInputDeviceId(const class FString& InputDeviceId);
+	void SetOutputDeviceId(const class FString& OutputDeviceId);
+	void SetPlayerMuted(const class FString& PlayerName, bool bMuted);
+	void SetPlayerVolume(const class FString& PlayerName, float Volume);
+	void SetSetting(const class FString& Name_0, const class FString& Value);
+	void TransmitToAllChannels();
+	void TransmitToNoChannels();
+	void TransmitToSpecificChannels(const TSet<class FString>& ChannelNames);
+	void UnblockPlayers(const TArray<class FString>& PlayerNames);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VoiceChatUser">();
+	}
+	static class UVoiceChatUser* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVoiceChatUser>();
+	}
+};
+static_assert(alignof(UVoiceChatUser) == 0x000008, "Wrong alignment on UVoiceChatUser");
+static_assert(sizeof(UVoiceChatUser) == 0x000178, "Wrong size on UVoiceChatUser");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatAvailableAudioDevicesChanged) == 0x000088, "Member 'UVoiceChatUser::OnVoiceChatAvailableAudioDevicesChanged' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatLoggedIn) == 0x0000A0, "Member 'UVoiceChatUser::OnVoiceChatLoggedIn' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatLoggedOut) == 0x0000B8, "Member 'UVoiceChatUser::OnVoiceChatLoggedOut' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatChannelJoined) == 0x0000D0, "Member 'UVoiceChatUser::OnVoiceChatChannelJoined' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatChannelExited) == 0x0000E8, "Member 'UVoiceChatUser::OnVoiceChatChannelExited' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerAdded) == 0x000100, "Member 'UVoiceChatUser::OnVoiceChatPlayerAdded' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerRemoved) == 0x000118, "Member 'UVoiceChatUser::OnVoiceChatPlayerRemoved' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerTalkingUpdated) == 0x000130, "Member 'UVoiceChatUser::OnVoiceChatPlayerTalkingUpdated' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerMuteUpdated) == 0x000148, "Member 'UVoiceChatUser::OnVoiceChatPlayerMuteUpdated' has a wrong offset!");
+static_assert(offsetof(UVoiceChatUser, OnVoiceChatPlayerVolumeUpdated) == 0x000160, "Member 'UVoiceChatUser::OnVoiceChatPlayerVolumeUpdated' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineLobbySubsystemCreateLobby
 // 0x0070 (0x00A0 - 0x0030)
@@ -2947,7 +3406,7 @@ static_assert(offsetof(UOnlineLobbySubsystemKickMember, __Store__MemberId) == 0x
 class UOnlineMessageSanitizerSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D67[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsSubsystemAvailable();
@@ -3040,7 +3499,7 @@ public:
 	class UOnlineMessageSanitizerSubsystem*       __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__LocalUserNum;                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D68[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 __Store__FromUserId;                               // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__FromPlatform;                             // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -3072,7 +3531,7 @@ static_assert(offsetof(UOnlineMessageSanitizerSubsystemQueryBlockedUser, __Store
 class UOnlineMessageSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D6A[0x90];                                    // 0x0030(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x90];                                      // 0x0030(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnEnumerateMessagesComplete;                       // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSendMessageComplete;                             // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
@@ -3102,7 +3561,7 @@ static_assert(offsetof(UOnlineMessageSubsystem, OnSendMessageComplete) == 0x0000
 class UOnlinePartySubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D6E[0xE0];                                    // 0x0030(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xE0];                                      // 0x0030(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnPartyJoined;                                     // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnPartyExited;                                     // 0x0120(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnPartyStateChanged;                               // 0x0130(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -3123,10 +3582,10 @@ public:
 	void DumpPartyState();
 	bool GetJoinedParties(const struct FUniqueNetIdRepl& LocalUserId, TArray<class UPartyId*>* OutPartyIdArray);
 	class UParty* GetParty(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId);
-	class UReadablePartyData* GetPartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName Namespace);
+	class UReadablePartyData* GetPartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName NameSpace);
 	class UBlueprintPartyMember* GetPartyMember(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId);
 	int64 GetPartyMemberCount(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId);
-	class UReadablePartyData* GetPartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId, class FName Namespace);
+	class UReadablePartyData* GetPartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId, class FName NameSpace);
 	bool GetPartyMembers(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, TArray<class UBlueprintPartyMember*>* OutPartyMembersArray);
 	bool GetPendingInvitedUsers(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, TArray<struct FUniqueNetIdRepl>* OutPendingInvitedUserArray);
 	bool GetPendingInvites(const struct FUniqueNetIdRepl& LocalUserId, TArray<class UOnlinePartyJoinInfo*>* OutPendingInvitesArray);
@@ -3136,8 +3595,8 @@ public:
 	class FString MakeTokenFromJoinInfo(class UOnlinePartyJoinInfo* JoinInfo);
 	bool RejectInvitation(const struct FUniqueNetIdRepl& LocalUserId, const struct FUniqueNetIdRepl& SenderId);
 	void RespondToQueryJoinability(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& RecipientId, bool bCanJoin, int32 DeniedResultCode, class UReadablePartyData* PartyData);
-	bool UpdatePartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName Namespace, class UReadablePartyData* PartyData);
-	bool UpdatePartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName Namespace, class UReadablePartyData* PartyMemberData);
+	bool UpdatePartyData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName NameSpace, class UReadablePartyData* PartyData);
+	bool UpdatePartyMemberData(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, class FName NameSpace, class UReadablePartyData* PartyMemberData);
 
 public:
 	static class UClass* StaticClass()
@@ -3311,7 +3770,7 @@ public:
 	class UPartyId*                               __Store__PartyId;                                  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FOnlinePartyConfiguration              __Store__PartyConfig;                              // 0x00A0(0x0040)(NativeAccessSpecifierPrivate)
 	bool                                          __Store__bShouldRegenerateReservationKey;          // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D7A[0x7];                                     // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlinePartySubsystemUpdateParty* UpdateParty(class UOnlinePartySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FOnlinePartyConfiguration& PartyConfig, bool bShouldRegenerateReservationKey);
@@ -3421,7 +3880,7 @@ public:
 	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UPartyId*                               __Store__PartyId;                                  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bSynchronizeLeave;                        // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D7C[0x7];                                     // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlinePartySubsystemLeaveParty* LeaveParty(class UOnlinePartySubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, bool bSynchronizeLeave);
@@ -3595,7 +4054,7 @@ static_assert(offsetof(UOnlinePartySubsystemPromoteMember, __Store__TargetMember
 class UOnlinePresenceSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D7E[0x80];                                    // 0x0030(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x80];                                      // 0x0030(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnPresenceReceived;                                // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnPresenceArrayUpdated;                            // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
@@ -3690,7 +4149,7 @@ static_assert(offsetof(UOnlinePresenceSubsystemQueryPresence, __Store__User) == 
 class UOnlinePurchaseSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D81[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnUnexpectedPurchaseReceipt;                       // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -3792,7 +4251,7 @@ public:
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bRestoreReceipts;                         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D83[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlinePurchaseSubsystemQueryReceipts* QueryReceipts(class UOnlinePurchaseSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, bool bRestoreReceipts);
@@ -3855,7 +4314,7 @@ static_assert(offsetof(UOnlinePurchaseSubsystemFinalizeReceiptValidationInfo, __
 class UOnlineSessionSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D85[0x128];                                   // 0x0030(0x0128)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x128];                                     // 0x0030(0x0128)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnCreateSessionComplete;                           // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnStartSessionComplete;                            // 0x0168(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnUpdateSessionComplete;                           // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -3939,7 +4398,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnCreateSessionComplete;                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D8C[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__HostingPlayerId;                          // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                   __Store__SessionName;                              // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FOnlineSessionSettingsBP               __Store__NewSessionSettings;                       // 0x00A8(0x0150)(NativeAccessSpecifierPrivate)
@@ -3976,7 +4435,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnStartSessionComplete;                            // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D8D[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __Store__SessionName;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -4009,11 +4468,11 @@ public:
 	FMulticastInlineDelegateProperty_             OnUpdateSessionComplete;                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D8E[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __Store__SessionName;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FOnlineSessionSettingsBP               __Store__UpdatedSessionSettings;                   // 0x0078(0x0150)(NativeAccessSpecifierPrivate)
 	bool                                          __Store__bShouldRefreshOnlineData;                 // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D8F[0x7];                                     // 0x01C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineSessionSubsystemUpdateSession* UpdateSession(class UOnlineSessionSubsystem* Subsystem, class FName SessionName, const struct FOnlineSessionSettingsBP& UpdatedSessionSettings, bool bShouldRefreshOnlineData);
@@ -4047,7 +4506,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnEndSessionComplete;                              // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D91[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __Store__SessionName;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -4112,7 +4571,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnMatchmakingComplete;                             // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D92[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               __Store__LocalPlayers;                             // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	class FName                                   __Store__SessionName;                              // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FOnlineSessionSettingsBP               __Store__NewSessionSettings;                       // 0x0088(0x0150)(NativeAccessSpecifierPrivate)
@@ -4142,41 +4601,6 @@ static_assert(offsetof(UOnlineSessionSubsystemStartMatchmaking, __Store__Session
 static_assert(offsetof(UOnlineSessionSubsystemStartMatchmaking, __Store__NewSessionSettings) == 0x000088, "Member 'UOnlineSessionSubsystemStartMatchmaking::__Store__NewSessionSettings' has a wrong offset!");
 static_assert(offsetof(UOnlineSessionSubsystemStartMatchmaking, __Store__SearchSettings) == 0x0001D8, "Member 'UOnlineSessionSubsystemStartMatchmaking::__Store__SearchSettings' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelMatchmaking
-// 0x0078 (0x00A8 - 0x0030)
-class UOnlineSessionSubsystemCancelMatchmaking final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnCancelMatchmakingComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D93[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       __Store__SearchingPlayerId;                        // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   __Store__SessionName;                              // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineSessionSubsystemCancelMatchmaking* CancelMatchmaking(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingPlayerId, class FName SessionName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineSessionSubsystemCancelMatchmaking">();
-	}
-	static class UOnlineSessionSubsystemCancelMatchmaking* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineSessionSubsystemCancelMatchmaking>();
-	}
-};
-static_assert(alignof(UOnlineSessionSubsystemCancelMatchmaking) == 0x000008, "Wrong alignment on UOnlineSessionSubsystemCancelMatchmaking");
-static_assert(sizeof(UOnlineSessionSubsystemCancelMatchmaking) == 0x0000A8, "Wrong size on UOnlineSessionSubsystemCancelMatchmaking");
-static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, OnCallFailed) == 0x000030, "Member 'UOnlineSessionSubsystemCancelMatchmaking::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, OnCancelMatchmakingComplete) == 0x000040, "Member 'UOnlineSessionSubsystemCancelMatchmaking::OnCancelMatchmakingComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__Subsystem) == 0x000050, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__SearchingPlayerId) == 0x000070, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__SearchingPlayerId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemCancelMatchmaking, __Store__SessionName) == 0x0000A0, "Member 'UOnlineSessionSubsystemCancelMatchmaking::__Store__SessionName' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessions
 // 0x0078 (0x00A8 - 0x0030)
 class UOnlineSessionSubsystemFindSessions final : public UBlueprintAsyncActionBase
@@ -4186,7 +4610,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnFindSessionsComplete;                            // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D94[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__SearchingPlayerId;                        // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UOnlineSessionSearch*                   __Store__SearchSettings;                           // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -4212,44 +4636,6 @@ static_assert(offsetof(UOnlineSessionSubsystemFindSessions, __Store__CallUniquen
 static_assert(offsetof(UOnlineSessionSubsystemFindSessions, __Store__SearchingPlayerId) == 0x000070, "Member 'UOnlineSessionSubsystemFindSessions::__Store__SearchingPlayerId' has a wrong offset!");
 static_assert(offsetof(UOnlineSessionSubsystemFindSessions, __Store__SearchSettings) == 0x0000A0, "Member 'UOnlineSessionSubsystemFindSessions::__Store__SearchSettings' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineSessionSubsystemFindSessionById
-// 0x00D8 (0x0108 - 0x0030)
-class UOnlineSessionSubsystemFindSessionById final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnSingleSessionResultComplete;                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__SearchingUserId;                          // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__SessionId;                                // 0x0098(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__FriendId;                                 // 0x00C8(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__UserData;                                 // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineSessionSubsystemFindSessionById* FindSessionById(class UOnlineSessionSubsystem* Subsystem, const struct FUniqueNetIdRepl& SearchingUserId, const struct FUniqueNetIdRepl& SessionId, const struct FUniqueNetIdRepl& FriendId, const class FString& UserData);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineSessionSubsystemFindSessionById">();
-	}
-	static class UOnlineSessionSubsystemFindSessionById* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineSessionSubsystemFindSessionById>();
-	}
-};
-static_assert(alignof(UOnlineSessionSubsystemFindSessionById) == 0x000008, "Wrong alignment on UOnlineSessionSubsystemFindSessionById");
-static_assert(sizeof(UOnlineSessionSubsystemFindSessionById) == 0x000108, "Wrong size on UOnlineSessionSubsystemFindSessionById");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, OnCallFailed) == 0x000030, "Member 'UOnlineSessionSubsystemFindSessionById::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, OnSingleSessionResultComplete) == 0x000040, "Member 'UOnlineSessionSubsystemFindSessionById::OnSingleSessionResultComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__Subsystem) == 0x000050, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__SearchingUserId) == 0x000068, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__SearchingUserId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__SessionId) == 0x000098, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__SessionId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__FriendId) == 0x0000C8, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__FriendId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindSessionById, __Store__UserData) == 0x0000F8, "Member 'UOnlineSessionSubsystemFindSessionById::__Store__UserData' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineSessionSubsystemCancelFindSessions
 // 0x0040 (0x0070 - 0x0030)
 class UOnlineSessionSubsystemCancelFindSessions final : public UBlueprintAsyncActionBase
@@ -4259,7 +4645,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnCancelFindSessionsComplete;                      // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D95[0x8];                                     // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineSessionSubsystemCancelFindSessions* CancelFindSessions(class UOnlineSessionSubsystem* Subsystem);
@@ -4290,7 +4676,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnPingSearchResultsComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D96[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnlineSessionSearchResultBP           __Store__SearchResult;                             // 0x0070(0x01B8)(NativeAccessSpecifierPrivate)
 
 public:
@@ -4323,7 +4709,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnJoinSessionComplete;                             // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D97[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                   __Store__SessionName;                              // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FOnlineSessionSearchResultBP           __Store__DesiredSession;                           // 0x00A8(0x01B8)(NativeAccessSpecifierPrivate)
@@ -4351,42 +4737,6 @@ static_assert(offsetof(UOnlineSessionSubsystemJoinSession, __Store__LocalUserId)
 static_assert(offsetof(UOnlineSessionSubsystemJoinSession, __Store__SessionName) == 0x0000A0, "Member 'UOnlineSessionSubsystemJoinSession::__Store__SessionName' has a wrong offset!");
 static_assert(offsetof(UOnlineSessionSubsystemJoinSession, __Store__DesiredSession) == 0x0000A8, "Member 'UOnlineSessionSubsystemJoinSession::__Store__DesiredSession' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineSessionSubsystemFindFriendSession
-// 0x0078 (0x00A8 - 0x0030)
-class UOnlineSessionSubsystemFindFriendSession final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFindFriendSessionComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D98[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D99[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       __Store__Friend;                                   // 0x0078(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineSessionSubsystemFindFriendSession* FindFriendSession(class UOnlineSessionSubsystem* Subsystem, int32 LocalUserNum, const struct FUniqueNetIdRepl& Friend);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineSessionSubsystemFindFriendSession">();
-	}
-	static class UOnlineSessionSubsystemFindFriendSession* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineSessionSubsystemFindFriendSession>();
-	}
-};
-static_assert(alignof(UOnlineSessionSubsystemFindFriendSession) == 0x000008, "Wrong alignment on UOnlineSessionSubsystemFindFriendSession");
-static_assert(sizeof(UOnlineSessionSubsystemFindFriendSession) == 0x0000A8, "Wrong size on UOnlineSessionSubsystemFindFriendSession");
-static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, OnCallFailed) == 0x000030, "Member 'UOnlineSessionSubsystemFindFriendSession::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, OnFindFriendSessionComplete) == 0x000040, "Member 'UOnlineSessionSubsystemFindFriendSession::OnFindFriendSessionComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__Subsystem) == 0x000050, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__LocalUserNum) == 0x000070, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__LocalUserNum' has a wrong offset!");
-static_assert(offsetof(UOnlineSessionSubsystemFindFriendSession, __Store__Friend) == 0x000078, "Member 'UOnlineSessionSubsystemFindFriendSession::__Store__Friend' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineSessionSubsystemRegisterPlayers
 // 0x0060 (0x0090 - 0x0030)
 class UOnlineSessionSubsystemRegisterPlayers final : public UBlueprintAsyncActionBase
@@ -4396,11 +4746,11 @@ public:
 	FMulticastInlineDelegateProperty_             OnRegisterPlayersComplete;                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D9B[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __Store__SessionName;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FUniqueNetIdRepl>               __Store__Players;                                  // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bWasInvited;                              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D9C[0x7];                                     // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineSessionSubsystemRegisterPlayers* RegisterPlayers(class UOnlineSessionSubsystem* Subsystem, class FName SessionName, const TArray<struct FUniqueNetIdRepl>& Players, bool bWasInvited);
@@ -4434,7 +4784,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnUnregisterPlayersComplete;                       // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineSessionSubsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D9E[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   __Store__SessionName;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FUniqueNetIdRepl>               __Store__Players;                                  // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
@@ -4533,7 +4883,7 @@ static_assert(offsetof(UOnlineSessionSubsystemUnregisterLocalPlayer, __Store__Se
 class UOnlineSharedCloudSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1D9F[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool ClearSharedFiles();
@@ -4558,7 +4908,7 @@ static_assert(sizeof(UOnlineSharedCloudSubsystem) == 0x0000A0, "Wrong size on UO
 class UOnlineSharingSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DA1[0xB0];                                    // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnRequestNewReadPermissionsComplete;               // 0x00E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnRequestNewPublishPermissionsComplete;            // 0x00F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnReadNewsFeedComplete;                            // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -4590,7 +4940,7 @@ static_assert(offsetof(UOnlineSharingSubsystem, OnSharePostComplete) == 0x000110
 class UOnlineStatsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DA3[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FOnlineStatsUserStatsBP GetStats(const struct FUniqueNetIdRepl& StatsUserId);
@@ -4679,34 +5029,6 @@ static_assert(offsetof(UOnlineStatsSubsystemUpdateStats, __Store__CallUniqueness
 static_assert(offsetof(UOnlineStatsSubsystemUpdateStats, __Store__LocalUserId) == 0x000068, "Member 'UOnlineStatsSubsystemUpdateStats::__Store__LocalUserId' has a wrong offset!");
 static_assert(offsetof(UOnlineStatsSubsystemUpdateStats, __Store__UpdatedUserStats) == 0x000098, "Member 'UOnlineStatsSubsystemUpdateStats::__Store__UpdatedUserStats' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineStoreV2Subsystem
-// 0x0088 (0x00B8 - 0x0030)
-class UOnlineStoreV2Subsystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_1DA4[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnQueryForAvailablePurchasesComplete;              // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	void GetCategories(TArray<struct FOnlineStoreCategoryBP>* OutCategories);
-	class UOnlineStoreOffer* GetOffer(const class FString& OfferId);
-	void GetOffers(TArray<class UOnlineStoreOffer*>* OutOffers);
-	bool IsSubsystemAvailable();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineStoreV2Subsystem">();
-	}
-	static class UOnlineStoreV2Subsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineStoreV2Subsystem>();
-	}
-};
-static_assert(alignof(UOnlineStoreV2Subsystem) == 0x000008, "Wrong alignment on UOnlineStoreV2Subsystem");
-static_assert(sizeof(UOnlineStoreV2Subsystem) == 0x0000B8, "Wrong size on UOnlineStoreV2Subsystem");
-static_assert(offsetof(UOnlineStoreV2Subsystem, OnQueryForAvailablePurchasesComplete) == 0x0000A8, "Member 'UOnlineStoreV2Subsystem::OnQueryForAvailablePurchasesComplete' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryCategories
 // 0x0068 (0x0098 - 0x0030)
 class UOnlineStoreV2SubsystemQueryCategories final : public UBlueprintAsyncActionBase
@@ -4738,40 +5060,6 @@ static_assert(offsetof(UOnlineStoreV2SubsystemQueryCategories, OnQueryOnlineStor
 static_assert(offsetof(UOnlineStoreV2SubsystemQueryCategories, __Store__Subsystem) == 0x000050, "Member 'UOnlineStoreV2SubsystemQueryCategories::__Store__Subsystem' has a wrong offset!");
 static_assert(offsetof(UOnlineStoreV2SubsystemQueryCategories, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineStoreV2SubsystemQueryCategories::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineStoreV2SubsystemQueryCategories, __Store__UserId) == 0x000068, "Member 'UOnlineStoreV2SubsystemQueryCategories::__Store__UserId' has a wrong offset!");
-
-// Class OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersByFilter
-// 0x0098 (0x00C8 - 0x0030)
-class UOnlineStoreV2SubsystemQueryOffersByFilter final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnQueryOnlineStoreOffersComplete;                  // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineStoreV2Subsystem*                __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FOnlineStoreFilterBP                   __Store__Filter;                                   // 0x0098(0x0030)(NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineStoreV2SubsystemQueryOffersByFilter* QueryOffersByFilter(class UOnlineStoreV2Subsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const struct FOnlineStoreFilterBP& Filter);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineStoreV2SubsystemQueryOffersByFilter">();
-	}
-	static class UOnlineStoreV2SubsystemQueryOffersByFilter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineStoreV2SubsystemQueryOffersByFilter>();
-	}
-};
-static_assert(alignof(UOnlineStoreV2SubsystemQueryOffersByFilter) == 0x000008, "Wrong alignment on UOnlineStoreV2SubsystemQueryOffersByFilter");
-static_assert(sizeof(UOnlineStoreV2SubsystemQueryOffersByFilter) == 0x0000C8, "Wrong size on UOnlineStoreV2SubsystemQueryOffersByFilter");
-static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, OnCallFailed) == 0x000030, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, OnQueryOnlineStoreOffersComplete) == 0x000040, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::OnQueryOnlineStoreOffersComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__Subsystem) == 0x000050, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__UserId) == 0x000068, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__UserId' has a wrong offset!");
-static_assert(offsetof(UOnlineStoreV2SubsystemQueryOffersByFilter, __Store__Filter) == 0x000098, "Member 'UOnlineStoreV2SubsystemQueryOffersByFilter::__Store__Filter' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineStoreV2SubsystemQueryOffersById
 // 0x0078 (0x00A8 - 0x0030)
@@ -4866,7 +5154,7 @@ static_assert(offsetof(UOnlineSubsystem, SubsystemCache) == 0x000030, "Member 'U
 class UOnlineTimeSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DA5[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnQueryServerUtcTimeComplete;                      // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -4888,40 +5176,6 @@ static_assert(alignof(UOnlineTimeSubsystem) == 0x000008, "Wrong alignment on UOn
 static_assert(sizeof(UOnlineTimeSubsystem) == 0x0000B8, "Wrong size on UOnlineTimeSubsystem");
 static_assert(offsetof(UOnlineTimeSubsystem, OnQueryServerUtcTimeComplete) == 0x0000A8, "Member 'UOnlineTimeSubsystem::OnQueryServerUtcTimeComplete' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineTitleFileSubsystem
-// 0x00B8 (0x00E8 - 0x0030)
-class UOnlineTitleFileSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_1DA6[0x88];                                    // 0x0030(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnEnumerateFilesComplete;                          // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReadFileComplete;                                // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReadFileProgress;                                // 0x00D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-
-public:
-	bool ClearFile(const class FString& Filename);
-	bool ClearFiles();
-	void DeleteCachedFiles(bool bSkipEnumerated);
-	bool GetFileContents(const class FString& Filename, class UFileData** FileContents);
-	void GetFileList(TArray<struct FCloudFileHeaderBP>* Files);
-	bool IsSubsystemAvailable();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineTitleFileSubsystem">();
-	}
-	static class UOnlineTitleFileSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineTitleFileSubsystem>();
-	}
-};
-static_assert(alignof(UOnlineTitleFileSubsystem) == 0x000008, "Wrong alignment on UOnlineTitleFileSubsystem");
-static_assert(sizeof(UOnlineTitleFileSubsystem) == 0x0000E8, "Wrong size on UOnlineTitleFileSubsystem");
-static_assert(offsetof(UOnlineTitleFileSubsystem, OnEnumerateFilesComplete) == 0x0000B8, "Member 'UOnlineTitleFileSubsystem::OnEnumerateFilesComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystem, OnReadFileComplete) == 0x0000C8, "Member 'UOnlineTitleFileSubsystem::OnReadFileComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystem, OnReadFileProgress) == 0x0000D8, "Member 'UOnlineTitleFileSubsystem::OnReadFileProgress' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineTitleFileSubsystemEnumerateFiles
 // 0x0048 (0x0078 - 0x0030)
 class UOnlineTitleFileSubsystemEnumerateFiles final : public UBlueprintAsyncActionBase
@@ -4931,7 +5185,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnEnumerateFilesComplete;                          // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineTitleFileSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DA9[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPagedQueryBP                          __Store__Page;                                     // 0x0070(0x0008)(NoDestructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -4955,47 +5209,12 @@ static_assert(offsetof(UOnlineTitleFileSubsystemEnumerateFiles, __Store__Subsyst
 static_assert(offsetof(UOnlineTitleFileSubsystemEnumerateFiles, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineTitleFileSubsystemEnumerateFiles::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineTitleFileSubsystemEnumerateFiles, __Store__Page) == 0x000070, "Member 'UOnlineTitleFileSubsystemEnumerateFiles::__Store__Page' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineTitleFileSubsystemReadFile
-// 0x0068 (0x0098 - 0x0030)
-class UOnlineTitleFileSubsystemReadFile final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReadFileComplete;                                // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnReadFileProgress;                                // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineTitleFileSubsystem*              __Store__Subsystem;                                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DAA[0x10];                                    // 0x0078(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 __Store__FileName;                                 // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineTitleFileSubsystemReadFile* ReadFile(class UOnlineTitleFileSubsystem* Subsystem, const class FString& Filename);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineTitleFileSubsystemReadFile">();
-	}
-	static class UOnlineTitleFileSubsystemReadFile* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineTitleFileSubsystemReadFile>();
-	}
-};
-static_assert(alignof(UOnlineTitleFileSubsystemReadFile) == 0x000008, "Wrong alignment on UOnlineTitleFileSubsystemReadFile");
-static_assert(sizeof(UOnlineTitleFileSubsystemReadFile) == 0x000098, "Wrong size on UOnlineTitleFileSubsystemReadFile");
-static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, OnCallFailed) == 0x000030, "Member 'UOnlineTitleFileSubsystemReadFile::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, OnReadFileComplete) == 0x000040, "Member 'UOnlineTitleFileSubsystemReadFile::OnReadFileComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, OnReadFileProgress) == 0x000050, "Member 'UOnlineTitleFileSubsystemReadFile::OnReadFileProgress' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, __Store__Subsystem) == 0x000060, "Member 'UOnlineTitleFileSubsystemReadFile::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, __Store__CallUniquenessId) == 0x000068, "Member 'UOnlineTitleFileSubsystemReadFile::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineTitleFileSubsystemReadFile, __Store__FileName) == 0x000088, "Member 'UOnlineTitleFileSubsystemReadFile::__Store__FileName' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineTournamentSubsystem
 // 0x0070 (0x00A0 - 0x0030)
 class UOnlineTournamentSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DAB[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsSubsystemAvailable();
@@ -5012,30 +5231,6 @@ public:
 };
 static_assert(alignof(UOnlineTournamentSubsystem) == 0x000008, "Wrong alignment on UOnlineTournamentSubsystem");
 static_assert(sizeof(UOnlineTournamentSubsystem) == 0x0000A0, "Wrong size on UOnlineTournamentSubsystem");
-
-// Class OnlineSubsystemBlueprints.OnlineTurnBasedSubsystem
-// 0x0070 (0x00A0 - 0x0030)
-class UOnlineTurnBasedSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_1DAC[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	int32 GetMatchDataSize();
-	bool IsSubsystemAvailable();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineTurnBasedSubsystem">();
-	}
-	static class UOnlineTurnBasedSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineTurnBasedSubsystem>();
-	}
-};
-static_assert(alignof(UOnlineTurnBasedSubsystem) == 0x000008, "Wrong alignment on UOnlineTurnBasedSubsystem");
-static_assert(sizeof(UOnlineTurnBasedSubsystem) == 0x0000A0, "Wrong size on UOnlineTurnBasedSubsystem");
 
 // Class OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadAllMatches
 // 0x0038 (0x0068 - 0x0030)
@@ -5067,47 +5262,15 @@ static_assert(offsetof(UOnlineTurnBasedSubsystemLoadAllMatches, LoadTurnBasedMat
 static_assert(offsetof(UOnlineTurnBasedSubsystemLoadAllMatches, __Store__Subsystem) == 0x000050, "Member 'UOnlineTurnBasedSubsystemLoadAllMatches::__Store__Subsystem' has a wrong offset!");
 static_assert(offsetof(UOnlineTurnBasedSubsystemLoadAllMatches, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineTurnBasedSubsystemLoadAllMatches::__Store__CallUniquenessId' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineTurnBasedSubsystemLoadMatchWithID
-// 0x0048 (0x0078 - 0x0030)
-class UOnlineTurnBasedSubsystemLoadMatchWithID final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             LoadTurnBasedMatchWithIDSignature;                 // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineTurnBasedSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__MatchID;                                  // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineTurnBasedSubsystemLoadMatchWithID* LoadMatchWithID(class UOnlineTurnBasedSubsystem* Subsystem, const class FString& MatchID);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineTurnBasedSubsystemLoadMatchWithID">();
-	}
-	static class UOnlineTurnBasedSubsystemLoadMatchWithID* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineTurnBasedSubsystemLoadMatchWithID>();
-	}
-};
-static_assert(alignof(UOnlineTurnBasedSubsystemLoadMatchWithID) == 0x000008, "Wrong alignment on UOnlineTurnBasedSubsystemLoadMatchWithID");
-static_assert(sizeof(UOnlineTurnBasedSubsystemLoadMatchWithID) == 0x000078, "Wrong size on UOnlineTurnBasedSubsystemLoadMatchWithID");
-static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, OnCallFailed) == 0x000030, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, LoadTurnBasedMatchWithIDSignature) == 0x000040, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::LoadTurnBasedMatchWithIDSignature' has a wrong offset!");
-static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, __Store__Subsystem) == 0x000050, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineTurnBasedSubsystemLoadMatchWithID, __Store__MatchID) == 0x000068, "Member 'UOnlineTurnBasedSubsystemLoadMatchWithID::__Store__MatchID' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineUserCloudSubsystem
 // 0x0100 (0x0130 - 0x0030)
 class UOnlineUserCloudSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DAD[0xA0];                                    // 0x0030(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xA0];                                      // 0x0030(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnEnumerateUserFilesComplete;                      // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnReadUserFileComplete;                            // 0x00E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnWriteUserFileProgress;                           // 0x00F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnWriteUserFileProgress64;                         // 0x00F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnWriteUserFileComplete;                           // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnWriteUserFileCanceled;                           // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnDeleteUserFileComplete;                          // 0x0120(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -5122,6 +5285,7 @@ public:
 	void GetUserFileList(const struct FUniqueNetIdRepl& UserId, TArray<struct FCloudFileHeaderBP>* UserFiles);
 	bool IsSubsystemAvailable();
 	bool RequestUsageInfo(const struct FUniqueNetIdRepl& UserId);
+	void TriggerOnWriteUserFileProgressDelegates(int32 Param1, const struct FUniqueNetIdRepl& Param2, const class FString& Param3);
 
 public:
 	static class UClass* StaticClass()
@@ -5137,43 +5301,10 @@ static_assert(alignof(UOnlineUserCloudSubsystem) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UOnlineUserCloudSubsystem) == 0x000130, "Wrong size on UOnlineUserCloudSubsystem");
 static_assert(offsetof(UOnlineUserCloudSubsystem, OnEnumerateUserFilesComplete) == 0x0000D0, "Member 'UOnlineUserCloudSubsystem::OnEnumerateUserFilesComplete' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystem, OnReadUserFileComplete) == 0x0000E0, "Member 'UOnlineUserCloudSubsystem::OnReadUserFileComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineUserCloudSubsystem, OnWriteUserFileProgress) == 0x0000F0, "Member 'UOnlineUserCloudSubsystem::OnWriteUserFileProgress' has a wrong offset!");
+static_assert(offsetof(UOnlineUserCloudSubsystem, OnWriteUserFileProgress64) == 0x0000F0, "Member 'UOnlineUserCloudSubsystem::OnWriteUserFileProgress64' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystem, OnWriteUserFileComplete) == 0x000100, "Member 'UOnlineUserCloudSubsystem::OnWriteUserFileComplete' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystem, OnWriteUserFileCanceled) == 0x000110, "Member 'UOnlineUserCloudSubsystem::OnWriteUserFileCanceled' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystem, OnDeleteUserFileComplete) == 0x000120, "Member 'UOnlineUserCloudSubsystem::OnDeleteUserFileComplete' has a wrong offset!");
-
-// Class OnlineSubsystemBlueprints.OnlineUserCloudSubsystemEnumerateUserFiles
-// 0x0070 (0x00A0 - 0x0030)
-class UOnlineUserCloudSubsystemEnumerateUserFiles final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnEnumerateUserFilesComplete;                      // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineUserCloudSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DB2[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineUserCloudSubsystemEnumerateUserFiles* EnumerateUserFiles(class UOnlineUserCloudSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineUserCloudSubsystemEnumerateUserFiles">();
-	}
-	static class UOnlineUserCloudSubsystemEnumerateUserFiles* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineUserCloudSubsystemEnumerateUserFiles>();
-	}
-};
-static_assert(alignof(UOnlineUserCloudSubsystemEnumerateUserFiles) == 0x000008, "Wrong alignment on UOnlineUserCloudSubsystemEnumerateUserFiles");
-static_assert(sizeof(UOnlineUserCloudSubsystemEnumerateUserFiles) == 0x0000A0, "Wrong size on UOnlineUserCloudSubsystemEnumerateUserFiles");
-static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, OnCallFailed) == 0x000030, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, OnEnumerateUserFilesComplete) == 0x000040, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::OnEnumerateUserFilesComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, __Store__Subsystem) == 0x000050, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineUserCloudSubsystemEnumerateUserFiles, __Store__UserId) == 0x000070, "Member 'UOnlineUserCloudSubsystemEnumerateUserFiles::__Store__UserId' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineUserCloudSubsystemReadUserFile
 // 0x0080 (0x00B0 - 0x0030)
@@ -5184,7 +5315,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnReadUserFileComplete;                            // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineUserCloudSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DB3[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__FileName;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -5217,16 +5348,16 @@ class UOnlineUserCloudSubsystemWriteUserFile final : public UBlueprintAsyncActio
 public:
 	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnWriteUserFileComplete;                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnWriteUserFileProgress;                           // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnWriteUserFileProgress64;                         // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnWriteUserFileCanceled;                           // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineUserCloudSubsystem*              __Store__Subsystem;                                // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DB4[0x18];                                    // 0x0088(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_88[0x18];                                      // 0x0088(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x00A0(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__FileName;                                 // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UFileData*                              __Store__FileContents;                             // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bCompressBeforeUpload;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DB5[0x7];                                     // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineUserCloudSubsystemWriteUserFile* WriteUserFile(class UOnlineUserCloudSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, class UFileData* FileContents, bool bCompressBeforeUpload);
@@ -5245,7 +5376,7 @@ static_assert(alignof(UOnlineUserCloudSubsystemWriteUserFile) == 0x000008, "Wron
 static_assert(sizeof(UOnlineUserCloudSubsystemWriteUserFile) == 0x0000F0, "Wrong size on UOnlineUserCloudSubsystemWriteUserFile");
 static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, OnCallFailed) == 0x000030, "Member 'UOnlineUserCloudSubsystemWriteUserFile::OnCallFailed' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, OnWriteUserFileComplete) == 0x000040, "Member 'UOnlineUserCloudSubsystemWriteUserFile::OnWriteUserFileComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, OnWriteUserFileProgress) == 0x000050, "Member 'UOnlineUserCloudSubsystemWriteUserFile::OnWriteUserFileProgress' has a wrong offset!");
+static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, OnWriteUserFileProgress64) == 0x000050, "Member 'UOnlineUserCloudSubsystemWriteUserFile::OnWriteUserFileProgress64' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, OnWriteUserFileCanceled) == 0x000060, "Member 'UOnlineUserCloudSubsystemWriteUserFile::OnWriteUserFileCanceled' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, __Store__Subsystem) == 0x000070, "Member 'UOnlineUserCloudSubsystemWriteUserFile::__Store__Subsystem' has a wrong offset!");
 static_assert(offsetof(UOnlineUserCloudSubsystemWriteUserFile, __Store__CallUniquenessId) == 0x000078, "Member 'UOnlineUserCloudSubsystemWriteUserFile::__Store__CallUniquenessId' has a wrong offset!");
@@ -5263,12 +5394,12 @@ public:
 	FMulticastInlineDelegateProperty_             OnDeleteUserFileComplete;                          // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineUserCloudSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DB7[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0070(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__FileName;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bShouldCloudDelete;                       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bShouldLocallyDelete;                     // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DB8[0x6];                                     // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineUserCloudSubsystemDeleteUserFile* DeleteUserFile(class UOnlineUserCloudSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, bool bShouldCloudDelete, bool bShouldLocallyDelete);
@@ -5299,7 +5430,7 @@ static_assert(offsetof(UOnlineUserCloudSubsystemDeleteUserFile, __Store__bShould
 class UOnlineUserSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DBA[0x80];                                    // 0x0030(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x80];                                      // 0x0030(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnQueryUserInfoComplete;                           // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -5332,9 +5463,9 @@ public:
 	FMulticastInlineDelegateProperty_             OnQueryUserInfoComplete;                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UOnlineUserSubsystem*                   __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DBE[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         __Store__LocalUserNum;                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DBF[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUniqueNetIdRepl>               __Store__UserIds;                                  // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -5358,40 +5489,6 @@ static_assert(offsetof(UOnlineUserSubsystemQueryUserInfo, __Store__Subsystem) ==
 static_assert(offsetof(UOnlineUserSubsystemQueryUserInfo, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineUserSubsystemQueryUserInfo::__Store__CallUniquenessId' has a wrong offset!");
 static_assert(offsetof(UOnlineUserSubsystemQueryUserInfo, __Store__LocalUserNum) == 0x000070, "Member 'UOnlineUserSubsystemQueryUserInfo::__Store__LocalUserNum' has a wrong offset!");
 static_assert(offsetof(UOnlineUserSubsystemQueryUserInfo, __Store__UserIds) == 0x000078, "Member 'UOnlineUserSubsystemQueryUserInfo::__Store__UserIds' has a wrong offset!");
-
-// Class OnlineSubsystemBlueprints.OnlineUserSubsystemQueryUserIdMapping
-// 0x0078 (0x00A8 - 0x0030)
-class UOnlineUserSubsystemQueryUserIdMapping final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnQueryUserMappingComplete;                        // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineUserSubsystem*                   __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__UserId;                                   // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__DisplayNameOrEmail;                       // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineUserSubsystemQueryUserIdMapping* QueryUserIdMapping(class UOnlineUserSubsystem* Subsystem, const struct FUniqueNetIdRepl& UserId, const class FString& DisplayNameOrEmail);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineUserSubsystemQueryUserIdMapping">();
-	}
-	static class UOnlineUserSubsystemQueryUserIdMapping* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineUserSubsystemQueryUserIdMapping>();
-	}
-};
-static_assert(alignof(UOnlineUserSubsystemQueryUserIdMapping) == 0x000008, "Wrong alignment on UOnlineUserSubsystemQueryUserIdMapping");
-static_assert(sizeof(UOnlineUserSubsystemQueryUserIdMapping) == 0x0000A8, "Wrong size on UOnlineUserSubsystemQueryUserIdMapping");
-static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, OnCallFailed) == 0x000030, "Member 'UOnlineUserSubsystemQueryUserIdMapping::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, OnQueryUserMappingComplete) == 0x000040, "Member 'UOnlineUserSubsystemQueryUserIdMapping::OnQueryUserMappingComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__Subsystem) == 0x000050, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__UserId) == 0x000068, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__UserId' has a wrong offset!");
-static_assert(offsetof(UOnlineUserSubsystemQueryUserIdMapping, __Store__DisplayNameOrEmail) == 0x000098, "Member 'UOnlineUserSubsystemQueryUserIdMapping::__Store__DisplayNameOrEmail' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineUserSubsystemQueryExternalIdMappings
 // 0x0090 (0x00C0 - 0x0030)
@@ -5434,7 +5531,7 @@ static_assert(offsetof(UOnlineUserSubsystemQueryExternalIdMappings, __Store__Ext
 class UOnlineVoiceAdminSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DC1[0x70];                                    // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x70];                                      // 0x0030(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsSubsystemAvailable();
@@ -5488,42 +5585,6 @@ static_assert(offsetof(UOnlineVoiceAdminSubsystemCreateChannelCredentials, __Sto
 static_assert(offsetof(UOnlineVoiceAdminSubsystemCreateChannelCredentials, __Store__ChannelName) == 0x000098, "Member 'UOnlineVoiceAdminSubsystemCreateChannelCredentials::__Store__ChannelName' has a wrong offset!");
 static_assert(offsetof(UOnlineVoiceAdminSubsystemCreateChannelCredentials, __Store__TargetUserIds) == 0x0000A8, "Member 'UOnlineVoiceAdminSubsystemCreateChannelCredentials::__Store__TargetUserIds' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemKickParticipant
-// 0x00A8 (0x00D8 - 0x0030)
-class UOnlineVoiceAdminSubsystemKickParticipant final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnVoiceAdminKickParticipantComplete;               // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineVoiceAdminSubsystem*             __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__CallUniquenessId;                         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__LocalUserId;                              // 0x0068(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 __Store__ChannelName;                              // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FUniqueNetIdRepl                       __Store__TargetUserId;                             // 0x00A8(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineVoiceAdminSubsystemKickParticipant* KickParticipant(class UOnlineVoiceAdminSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ChannelName, const struct FUniqueNetIdRepl& TargetUserId);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineVoiceAdminSubsystemKickParticipant">();
-	}
-	static class UOnlineVoiceAdminSubsystemKickParticipant* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineVoiceAdminSubsystemKickParticipant>();
-	}
-};
-static_assert(alignof(UOnlineVoiceAdminSubsystemKickParticipant) == 0x000008, "Wrong alignment on UOnlineVoiceAdminSubsystemKickParticipant");
-static_assert(sizeof(UOnlineVoiceAdminSubsystemKickParticipant) == 0x0000D8, "Wrong size on UOnlineVoiceAdminSubsystemKickParticipant");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, OnCallFailed) == 0x000030, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, OnVoiceAdminKickParticipantComplete) == 0x000040, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::OnVoiceAdminKickParticipantComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__Subsystem) == 0x000050, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__Subsystem' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__CallUniquenessId) == 0x000058, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__CallUniquenessId' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__LocalUserId) == 0x000068, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__LocalUserId' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__ChannelName) == 0x000098, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__ChannelName' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceAdminSubsystemKickParticipant, __Store__TargetUserId) == 0x0000A8, "Member 'UOnlineVoiceAdminSubsystemKickParticipant::__Store__TargetUserId' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineVoiceAdminSubsystemSetParticipantHardMute
 // 0x00B0 (0x00E0 - 0x0030)
 class UOnlineVoiceAdminSubsystemSetParticipantHardMute final : public UBlueprintAsyncActionBase
@@ -5537,7 +5598,7 @@ public:
 	class FString                                 __Store__ChannelName;                              // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FUniqueNetIdRepl                       __Store__TargetUserId;                             // 0x00A8(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          __Store__bMuted;                                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DC2[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOnlineVoiceAdminSubsystemSetParticipantHardMute* SetParticipantHardMute(class UOnlineVoiceAdminSubsystem* Subsystem, const struct FUniqueNetIdRepl& LocalUserId, const class FString& ChannelName, const struct FUniqueNetIdRepl& TargetUserId, bool bMuted);
@@ -5562,46 +5623,6 @@ static_assert(offsetof(UOnlineVoiceAdminSubsystemSetParticipantHardMute, __Store
 static_assert(offsetof(UOnlineVoiceAdminSubsystemSetParticipantHardMute, __Store__ChannelName) == 0x000098, "Member 'UOnlineVoiceAdminSubsystemSetParticipantHardMute::__Store__ChannelName' has a wrong offset!");
 static_assert(offsetof(UOnlineVoiceAdminSubsystemSetParticipantHardMute, __Store__TargetUserId) == 0x0000A8, "Member 'UOnlineVoiceAdminSubsystemSetParticipantHardMute::__Store__TargetUserId' has a wrong offset!");
 static_assert(offsetof(UOnlineVoiceAdminSubsystemSetParticipantHardMute, __Store__bMuted) == 0x0000D8, "Member 'UOnlineVoiceAdminSubsystemSetParticipantHardMute::__Store__bMuted' has a wrong offset!");
-
-// Class OnlineSubsystemBlueprints.OnlineVoiceChatSubsystem
-// 0x0070 (0x00A0 - 0x0030)
-class UOnlineVoiceChatSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_1DC4[0x20];                                    // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVoiceChatUser*                         PrimaryVoiceUser;                                  // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnVoiceChatReconnected;                            // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC5[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatConnected;                              // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC6[0x8];                                     // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnVoiceChatDisconnected;                           // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC7[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UVoiceChatUser* CreateUser();
-	bool Initialize_();
-	bool IsConnected();
-	bool IsConnecting();
-	bool IsInitialized();
-	bool IsSubsystemAvailable();
-	bool Uninitialize_();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineVoiceChatSubsystem">();
-	}
-	static class UOnlineVoiceChatSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineVoiceChatSubsystem>();
-	}
-};
-static_assert(alignof(UOnlineVoiceChatSubsystem) == 0x000008, "Wrong alignment on UOnlineVoiceChatSubsystem");
-static_assert(sizeof(UOnlineVoiceChatSubsystem) == 0x0000A0, "Wrong size on UOnlineVoiceChatSubsystem");
-static_assert(offsetof(UOnlineVoiceChatSubsystem, PrimaryVoiceUser) == 0x000050, "Member 'UOnlineVoiceChatSubsystem::PrimaryVoiceUser' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceChatSubsystem, OnVoiceChatReconnected) == 0x000058, "Member 'UOnlineVoiceChatSubsystem::OnVoiceChatReconnected' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceChatSubsystem, OnVoiceChatConnected) == 0x000070, "Member 'UOnlineVoiceChatSubsystem::OnVoiceChatConnected' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceChatSubsystem, OnVoiceChatDisconnected) == 0x000088, "Member 'UOnlineVoiceChatSubsystem::OnVoiceChatDisconnected' has a wrong offset!");
 
 // Class OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemConnect
 // 0x0028 (0x0058 - 0x0030)
@@ -5631,40 +5652,12 @@ static_assert(offsetof(UOnlineVoiceChatSubsystemConnect, OnCallFailed) == 0x0000
 static_assert(offsetof(UOnlineVoiceChatSubsystemConnect, OnVoiceChatConnectComplete) == 0x000040, "Member 'UOnlineVoiceChatSubsystemConnect::OnVoiceChatConnectComplete' has a wrong offset!");
 static_assert(offsetof(UOnlineVoiceChatSubsystemConnect, __Store__Subsystem) == 0x000050, "Member 'UOnlineVoiceChatSubsystemConnect::__Store__Subsystem' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineVoiceChatSubsystemDisconnect
-// 0x0028 (0x0058 - 0x0030)
-class UOnlineVoiceChatSubsystemDisconnect final : public UBlueprintAsyncActionBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnCallFailed;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnVoiceChatDisconnectComplete;                     // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UOnlineVoiceChatSubsystem*              __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UOnlineVoiceChatSubsystemDisconnect* Disconnect(class UOnlineVoiceChatSubsystem* Subsystem);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineVoiceChatSubsystemDisconnect">();
-	}
-	static class UOnlineVoiceChatSubsystemDisconnect* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineVoiceChatSubsystemDisconnect>();
-	}
-};
-static_assert(alignof(UOnlineVoiceChatSubsystemDisconnect) == 0x000008, "Wrong alignment on UOnlineVoiceChatSubsystemDisconnect");
-static_assert(sizeof(UOnlineVoiceChatSubsystemDisconnect) == 0x000058, "Wrong size on UOnlineVoiceChatSubsystemDisconnect");
-static_assert(offsetof(UOnlineVoiceChatSubsystemDisconnect, OnCallFailed) == 0x000030, "Member 'UOnlineVoiceChatSubsystemDisconnect::OnCallFailed' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceChatSubsystemDisconnect, OnVoiceChatDisconnectComplete) == 0x000040, "Member 'UOnlineVoiceChatSubsystemDisconnect::OnVoiceChatDisconnectComplete' has a wrong offset!");
-static_assert(offsetof(UOnlineVoiceChatSubsystemDisconnect, __Store__Subsystem) == 0x000050, "Member 'UOnlineVoiceChatSubsystemDisconnect::__Store__Subsystem' has a wrong offset!");
-
 // Class OnlineSubsystemBlueprints.OnlineVoiceSubsystem
 // 0x0088 (0x00B8 - 0x0030)
 class UOnlineVoiceSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_1DC8[0x78];                                    // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x78];                                      // 0x0030(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnPlayerTalkingStateChanged;                       // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
@@ -5707,35 +5700,12 @@ static_assert(alignof(UOnlineVoiceSubsystem) == 0x000008, "Wrong alignment on UO
 static_assert(sizeof(UOnlineVoiceSubsystem) == 0x0000B8, "Wrong size on UOnlineVoiceSubsystem");
 static_assert(offsetof(UOnlineVoiceSubsystem, OnPlayerTalkingStateChanged) == 0x0000A8, "Member 'UOnlineVoiceSubsystem::OnPlayerTalkingStateChanged' has a wrong offset!");
 
-// Class OnlineSubsystemBlueprints.OnlineAchievementsWrite
-// 0x0010 (0x0038 - 0x0028)
-class UOnlineAchievementsWrite final : public UObject
-{
-public:
-	uint8                                         Pad_1DD8[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetAchievementProgress(class FName AchievementID, float AchievementProgress);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineAchievementsWrite">();
-	}
-	static class UOnlineAchievementsWrite* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineAchievementsWrite>();
-	}
-};
-static_assert(alignof(UOnlineAchievementsWrite) == 0x000008, "Wrong alignment on UOnlineAchievementsWrite");
-static_assert(sizeof(UOnlineAchievementsWrite) == 0x000038, "Wrong size on UOnlineAchievementsWrite");
-
 // Class OnlineSubsystemBlueprints.OnlineEntitlement
 // 0x0010 (0x0038 - 0x0028)
 class UOnlineEntitlement final : public UObject
 {
 public:
-	uint8                                         Pad_1DD9[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetConsumedCount();
@@ -5762,33 +5732,12 @@ public:
 static_assert(alignof(UOnlineEntitlement) == 0x000008, "Wrong alignment on UOnlineEntitlement");
 static_assert(sizeof(UOnlineEntitlement) == 0x000038, "Wrong size on UOnlineEntitlement");
 
-// Class OnlineSubsystemBlueprints.ExternalUIFlowHandler
-// 0x0000 (0x0028 - 0x0028)
-class IExternalUIFlowHandler final : public IInterface
-{
-public:
-	bool OnCreateAccountFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID);
-	bool OnLoginFlowUIRequired(const class FString& RequestedURL, class UOnlineExternalUISubsystem* ExternalUIContext, int32 RequestID);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ExternalUIFlowHandler">();
-	}
-	static class IExternalUIFlowHandler* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IExternalUIFlowHandler>();
-	}
-};
-static_assert(alignof(IExternalUIFlowHandler) == 0x000008, "Wrong alignment on IExternalUIFlowHandler");
-static_assert(sizeof(IExternalUIFlowHandler) == 0x000028, "Wrong size on IExternalUIFlowHandler");
-
 // Class OnlineSubsystemBlueprints.FileData
 // 0x0010 (0x0038 - 0x0028)
 class UFileData final : public UObject
 {
 public:
-	uint8                                         Pad_1DDC[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -5808,7 +5757,7 @@ static_assert(sizeof(UFileData) == 0x000038, "Wrong size on UFileData");
 class UOnlineFriendRef final : public UOnlineUserRef
 {
 public:
-	uint8                                         Pad_1DDD[0x10];                                    // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	EInviteStatus_ GetInviteStatus();
@@ -5827,42 +5776,18 @@ public:
 static_assert(alignof(UOnlineFriendRef) == 0x000008, "Wrong alignment on UOnlineFriendRef");
 static_assert(sizeof(UOnlineFriendRef) == 0x000058, "Wrong size on UOnlineFriendRef");
 
-// Class OnlineSubsystemBlueprints.OnlineLeaderboardRead
-// 0x0010 (0x0038 - 0x0028)
-class UOnlineLeaderboardRead final : public UObject
-{
-public:
-	uint8                                         Pad_1DDE[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetColumns(const TArray<struct FColumnMetaDataBP>& InColumns);
-	void SetLeaderboardName(class FName LeaderboardName);
-	void SetSortedColumn(class FName SortedColumn);
-
-	struct FOnlineStatsRowBP FindPlayerRecord(const struct FUniqueNetIdRepl& UserId, bool* OutFound) const;
-	TArray<struct FColumnMetaDataBP> GetColumns() const;
-	class FName GetLeaderboardName() const;
-	EOnlineAsyncTaskState_ GetReadState() const;
-	TArray<struct FOnlineStatsRowBP> GetRows() const;
-	class FName GetSortedColumn() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OnlineLeaderboardRead">();
-	}
-	static class UOnlineLeaderboardRead* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOnlineLeaderboardRead>();
-	}
-};
-static_assert(alignof(UOnlineLeaderboardRead) == 0x000008, "Wrong alignment on UOnlineLeaderboardRead");
-static_assert(sizeof(UOnlineLeaderboardRead) == 0x000038, "Wrong size on UOnlineLeaderboardRead");
-
 // Class OnlineSubsystemBlueprints.OnlineLeaderboardWrite
-// 0x0000 (0x0028 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UOnlineLeaderboardWrite final : public UObject
 {
+public:
+	uint8                                         Pad_28[0x68];                                      // 0x0028(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetLeaderboardNames(const TArray<class FName>& LeaderboardNames);
+	void SetRatedStat(class FName RatedStat);
+	void SetStats(const TMap<class FString, struct FVariantDataBP>& Stats);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -5874,14 +5799,14 @@ public:
 	}
 };
 static_assert(alignof(UOnlineLeaderboardWrite) == 0x000008, "Wrong alignment on UOnlineLeaderboardWrite");
-static_assert(sizeof(UOnlineLeaderboardWrite) == 0x000028, "Wrong size on UOnlineLeaderboardWrite");
+static_assert(sizeof(UOnlineLeaderboardWrite) == 0x000090, "Wrong size on UOnlineLeaderboardWrite");
 
 // Class OnlineSubsystemBlueprints.Lobby
 // 0x0010 (0x0038 - 0x0028)
 class ULobby final : public UObject
 {
 public:
-	uint8                                         Pad_1DE0[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class ULobbyId* GetId();
@@ -5905,7 +5830,7 @@ static_assert(sizeof(ULobby) == 0x000038, "Wrong size on ULobby");
 class UOnlineLobbyMemberTransaction final : public UObject
 {
 public:
-	uint8                                         Pad_1DE1[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DeleteMetadata(const class FString& Key);
@@ -5931,7 +5856,7 @@ static_assert(sizeof(UOnlineLobbyMemberTransaction) == 0x000038, "Wrong size on 
 class UUserOnlineAccountRef final : public UOnlineUserRef
 {
 public:
-	uint8                                         Pad_1DE2[0x10];                                    // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetAccessToken();
@@ -5956,7 +5881,7 @@ static_assert(sizeof(UUserOnlineAccountRef) == 0x000058, "Wrong size on UUserOnl
 class UBlueprintPartyMember final : public UObject
 {
 public:
-	uint8                                         Pad_1DE5[0x20];                                    // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnAttributeChanged;                                // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnConnectionStatusChanged;                         // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
@@ -5986,7 +5911,7 @@ static_assert(offsetof(UBlueprintPartyMember, OnConnectionStatusChanged) == 0x00
 class UMutablePartyData final : public UReadablePartyData
 {
 public:
-	uint8                                         Pad_1DE7[0x10];                                    // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void RemoveAttribute(const class FString& AttrName);
@@ -6005,12 +5930,35 @@ public:
 static_assert(alignof(UMutablePartyData) == 0x000008, "Wrong alignment on UMutablePartyData");
 static_assert(sizeof(UMutablePartyData) == 0x000048, "Wrong size on UMutablePartyData");
 
+// Class OnlineSubsystemBlueprints.PartyId
+// 0x0010 (0x0038 - 0x0028)
+class UPartyId final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class FString ToDebugString();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PartyId">();
+	}
+	static class UPartyId* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPartyId>();
+	}
+};
+static_assert(alignof(UPartyId) == 0x000008, "Wrong alignment on UPartyId");
+static_assert(sizeof(UPartyId) == 0x000038, "Wrong size on UPartyId");
+
 // Class OnlineSubsystemBlueprints.OnlinePartyJoinInfo
 // 0x0010 (0x0038 - 0x0028)
 class UOnlinePartyJoinInfo final : public UObject
 {
 public:
-	uint8                                         Pad_1DE8[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UPartyId* GetPartyId();
@@ -6031,12 +5979,37 @@ public:
 static_assert(alignof(UOnlinePartyJoinInfo) == 0x000008, "Wrong alignment on UOnlinePartyJoinInfo");
 static_assert(sizeof(UOnlinePartyJoinInfo) == 0x000038, "Wrong size on UOnlinePartyJoinInfo");
 
+// Class OnlineSubsystemBlueprints.PurchaseReceipt
+// 0x0010 (0x0038 - 0x0028)
+class UPurchaseReceipt final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	EPurchaseTransactionState_ GetPurchaseTransactionState();
+	TArray<struct FReceiptOfferEntryBP> GetReceiptOffers();
+	class FString GetTransactionId();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PurchaseReceipt">();
+	}
+	static class UPurchaseReceipt* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPurchaseReceipt>();
+	}
+};
+static_assert(alignof(UPurchaseReceipt) == 0x000008, "Wrong alignment on UPurchaseReceipt");
+static_assert(sizeof(UPurchaseReceipt) == 0x000038, "Wrong size on UPurchaseReceipt");
+
 // Class OnlineSubsystemBlueprints.OnlineSessionInfo
 // 0x0010 (0x0038 - 0x0028)
 class UOnlineSessionInfo final : public UObject
 {
 public:
-	uint8                                         Pad_1DE9[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -6056,7 +6029,7 @@ static_assert(sizeof(UOnlineSessionInfo) == 0x000038, "Wrong size on UOnlineSess
 class UNamedOnlineSession final : public UObject
 {
 public:
-	uint8                                         Pad_1DEA[0x208];                                   // 0x0028(0x0208)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x208];                                     // 0x0028(0x0208)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FNamedOnlineSessionBP GetValue();
@@ -6074,12 +6047,50 @@ public:
 static_assert(alignof(UNamedOnlineSession) == 0x000008, "Wrong alignment on UNamedOnlineSession");
 static_assert(sizeof(UNamedOnlineSession) == 0x000230, "Wrong size on UNamedOnlineSession");
 
+// Class OnlineSubsystemBlueprints.OnlineSessionSearch
+// 0x0088 (0x00B0 - 0x0028)
+class UOnlineSessionSearch final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxSearchResults;                                  // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLanQuery;                                       // 0x004C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PingBucketSize;                                    // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PlatformHash;                                      // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeoutInSeconds;                                  // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FSessionSearchParamBP> SearchParams;                                      // 0x0060(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, NativeAccessSpecifierPublic)
+
+public:
+	TArray<struct FOnlineSessionSearchResultBP> GetSearchResults() const;
+	EOnlineAsyncTaskState_ GetSearchState() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OnlineSessionSearch">();
+	}
+	static class UOnlineSessionSearch* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOnlineSessionSearch>();
+	}
+};
+static_assert(alignof(UOnlineSessionSearch) == 0x000008, "Wrong alignment on UOnlineSessionSearch");
+static_assert(sizeof(UOnlineSessionSearch) == 0x0000B0, "Wrong size on UOnlineSessionSearch");
+static_assert(offsetof(UOnlineSessionSearch, MaxSearchResults) == 0x000048, "Member 'UOnlineSessionSearch::MaxSearchResults' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSearch, bIsLanQuery) == 0x00004C, "Member 'UOnlineSessionSearch::bIsLanQuery' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSearch, PingBucketSize) == 0x000050, "Member 'UOnlineSessionSearch::PingBucketSize' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSearch, PlatformHash) == 0x000054, "Member 'UOnlineSessionSearch::PlatformHash' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSearch, TimeoutInSeconds) == 0x000058, "Member 'UOnlineSessionSearch::TimeoutInSeconds' has a wrong offset!");
+static_assert(offsetof(UOnlineSessionSearch, SearchParams) == 0x000060, "Member 'UOnlineSessionSearch::SearchParams' has a wrong offset!");
+
 // Class OnlineSubsystemBlueprints.OnlineStoreOffer
 // 0x0010 (0x0038 - 0x0028)
 class UOnlineStoreOffer final : public UObject
 {
 public:
-	uint8                                         Pad_1DEB[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetCurrencyCode();
@@ -6118,7 +6129,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnVoiceChatLoginComplete;                          // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UVoiceChatUser*                         __Store__Subsystem;                                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         __Store__PlatformId;                               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DEC[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 __Store__PlayerName;                               // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__Credentials;                              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -6155,9 +6166,9 @@ public:
 	class FString                                 __Store__ChannelName;                              // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 __Store__ChannelCredentials;                       // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	EVoiceChatChannelType_                        __Store__ChannelType;                              // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DEE[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVoiceChatChannel3dPropertiesBP        __Store__Channel3dProperties;                      // 0x007C(0x0010)(NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DEF[0x4];                                     // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UVoiceChatUserJoinChannel* JoinChannel(class UVoiceChatUser* Subsystem, const class FString& ChannelName, const class FString& ChannelCredentials, EVoiceChatChannelType_ ChannelType, const struct FVoiceChatChannel3dPropertiesBP& Channel3dProperties);

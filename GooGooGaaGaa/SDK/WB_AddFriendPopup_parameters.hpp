@@ -10,8 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -35,25 +38,26 @@ struct WB_AddFriendPopup_C_CheckForUniqueNetIDValidity final
 public:
 	struct FUniqueNetIdRepl                       InNetId;                                           // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	bool                                          CallFunc_FUniqueNetIdIsValid_ReturnValue;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5559[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UOnlineFriendRef*>               CallFunc_GetFriendsList_OutFriends;                // 0x0048(0x0010)(ReferenceParm)
 	bool                                          CallFunc_GetFriendsList_ReturnValue;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_555A[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UOnlineFriendRef*                       CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_555B[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0070(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue; // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EInviteStatus_                                CallFunc_GetInviteStatus_ReturnValue;              // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_555C[0x5];                                     // 0x00A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_1;                  // 0x00A8(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1; // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue;                    // 0x0068(0x0030)(HasGetValueTypeHash)
+	EInviteStatus_                                CallFunc_GetInviteStatus_ReturnValue;              // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       CallFunc_GetUserId_ReturnValue_1;                  // 0x00A0(0x0030)(HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue; // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1; // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_CheckForUniqueNetIDValidity");
 static_assert(sizeof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity) == 0x0000E0, "Wrong size on WB_AddFriendPopup_C_CheckForUniqueNetIDValidity");
@@ -61,19 +65,19 @@ static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, InNetId)
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_FUniqueNetIdIsValid_ReturnValue) == 0x000030, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_FUniqueNetIdIsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, Temp_int_Array_Index_Variable) == 0x000034, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Add_IntInt_ReturnValue) == 0x00003C, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000040, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetFriendsList_OutFriends) == 0x000048, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetFriendsList_OutFriends' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetFriendsList_ReturnValue) == 0x000058, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetFriendsList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Array_Length_ReturnValue) == 0x00005C, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Array_Get_Item) == 0x000060, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetUserId_ReturnValue) == 0x000070, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue) == 0x0000A0, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetInviteStatus_ReturnValue) == 0x0000A1, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetInviteStatus_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, K2Node_SwitchEnum_CmpSuccess) == 0x0000A2, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetUserId_ReturnValue_1) == 0x0000A8, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetUserId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1) == 0x0000D8, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetUserId_ReturnValue) == 0x000068, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetUserId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetInviteStatus_ReturnValue) == 0x000098, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetInviteStatus_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_GetUserId_ReturnValue_1) == 0x0000A0, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_GetUserId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, K2Node_SwitchEnum_CmpSuccess) == 0x0000D0, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Array_Length_ReturnValue) == 0x0000D4, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_Less_IntInt_ReturnValue) == 0x0000D8, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue) == 0x0000D9, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_CheckForUniqueNetIDValidity, CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1) == 0x0000DA, "Member 'WB_AddFriendPopup_C_CheckForUniqueNetIDValidity::CallFunc_EqualEqual_FUniqueNetIdReplFUniqueNetIdRepl_ReturnValue_1' has a wrong offset!");
 
 // Function WB_AddFriendPopup.WB_AddFriendPopup_C.CloseDialog
 // 0x0018 (0x0018 - 0x0000)
@@ -90,152 +94,95 @@ static_assert(offsetof(WB_AddFriendPopup_C_CloseDialog, CallFunc_GetGameInstance
 static_assert(offsetof(WB_AddFriendPopup_C_CloseDialog, K2Node_DynamicCast_AsB_Game_Instance) == 0x000008, "Member 'WB_AddFriendPopup_C_CloseDialog::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
 static_assert(offsetof(WB_AddFriendPopup_C_CloseDialog, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'WB_AddFriendPopup_C_CloseDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.CreateToolTip
+// Function WB_AddFriendPopup.WB_AddFriendPopup_C.CreateTooltip
 // 0x0008 (0x0008 - 0x0000)
-struct WB_AddFriendPopup_C_CreateToolTip final
+struct WB_AddFriendPopup_C_CreateTooltip final
 {
 public:
 	class UUserWidget*                            CallFunc_CreateTextTooltip_Tooltip;                // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WB_AddFriendPopup_C_CreateToolTip) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_CreateToolTip");
-static_assert(sizeof(WB_AddFriendPopup_C_CreateToolTip) == 0x000008, "Wrong size on WB_AddFriendPopup_C_CreateToolTip");
-static_assert(offsetof(WB_AddFriendPopup_C_CreateToolTip, CallFunc_CreateTextTooltip_Tooltip) == 0x000000, "Member 'WB_AddFriendPopup_C_CreateToolTip::CallFunc_CreateTextTooltip_Tooltip' has a wrong offset!");
+static_assert(alignof(WB_AddFriendPopup_C_CreateTooltip) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_CreateTooltip");
+static_assert(sizeof(WB_AddFriendPopup_C_CreateTooltip) == 0x000008, "Wrong size on WB_AddFriendPopup_C_CreateTooltip");
+static_assert(offsetof(WB_AddFriendPopup_C_CreateTooltip, CallFunc_CreateTextTooltip_Tooltip) == 0x000000, "Member 'WB_AddFriendPopup_C_CreateTooltip::CallFunc_CreateTextTooltip_Tooltip' has a wrong offset!");
 
 // Function WB_AddFriendPopup.WB_AddFriendPopup_C.ExecuteUbergraph_WB_AddFriendPopup
-// 0x0400 (0x0400 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum_3;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_3;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_555D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_3;                     // 0x0010(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_3;                     // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_3;                     // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate;              // 0x0060(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum_2;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_2;               // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_555E[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_2;                     // 0x0078(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_2;                     // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_2;                     // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x00C8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable;                              // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_1;                            // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable;                              // 0x0108(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_555F[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum_1;                 // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful_1;               // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5560[0x3];                                     // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId_1;                     // 0x0158(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName_1;                     // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr_1;                     // 0x0198(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x01A8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_CustomEvent_LocalUserNum;                   // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5561[0x3];                                     // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_FriendId;                       // 0x01C0(0x0030)(HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ListName;                       // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_CustomEvent_ErrorStr;                       // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(int32 LocalUserNum, bool bWasSuccessful, const struct FUniqueNetIdRepl& FriendId, const class FString& ListName, const class FString& ErrorStr)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0210(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_2;                            // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_3;                            // 0x0230(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       Temp_struct_Variable_1;                            // 0x0240(0x0030)(HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5562[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_ClipboardGet_ReturnValue;                 // 0x0280(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0290(0x0018)()
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x02A8(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x02C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x02D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5563[0x3];                                     // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x02E0(0x0030)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x0310(0x0018)()
-	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x0328(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0338(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5564[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x0350(0x0030)(HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5565[0x7];                                     // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_PlayerId_1;                     // 0x0388(0x0030)(HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       K2Node_CustomEvent_PlayerId;                       // 0x03B8(0x0030)(HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemSendInvite*      CallFunc_SendInvite_ReturnValue;                   // 0x03E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UOnlineFriendsSubsystemAcceptInvite*    CallFunc_AcceptInvite_ReturnValue;                 // 0x03F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_ClipboardGet_ReturnValue;                 // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0060(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Len_ReturnValue;                          // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_GetControllerUniqueNetId_ReturnValue;     // 0x0090(0x0030)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue; // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x00D0(0x0010)()
+	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_PlayerId_1;                     // 0x0100(0x0030)(HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       K2Node_CustomEvent_PlayerId;                       // 0x0130(0x0030)(HasGetValueTypeHash)
+	bool                                          CallFunc_SendFriendInvite_InitialSuccess;          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_AcceptFriendRequest_InitialSuccess;       // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_163[0x5];                                      // 0x0163(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOnlineIdentitySubsystem*               CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       CallFunc_CreateUniquePlayerId_ReturnValue;         // 0x0170(0x0030)(HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup");
-static_assert(sizeof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup) == 0x000400, "Wrong size on WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup");
+static_assert(sizeof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup) == 0x0001A8, "Wrong size on WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup");
 static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, EntryPoint) == 0x000000, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_LocalUserNum_3) == 0x000004, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_LocalUserNum_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_bWasSuccessful_3) == 0x000008, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_bWasSuccessful_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_FriendId_3) == 0x000010, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_FriendId_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ListName_3) == 0x000040, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ListName_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ErrorStr_3) == 0x000050, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ErrorStr_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CreateDelegate_OutputDelegate) == 0x000060, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_LocalUserNum_2) == 0x000070, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_LocalUserNum_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_bWasSuccessful_2) == 0x000074, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_bWasSuccessful_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_FriendId_2) == 0x000078, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_FriendId_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ListName_2) == 0x0000A8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ListName_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ErrorStr_2) == 0x0000B8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ErrorStr_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000C8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_string_Variable) == 0x0000D8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_string_Variable_1) == 0x0000E8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Concat_StrStr_ReturnValue) == 0x0000F8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_struct_Variable) == 0x000108, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_bool_Variable) == 0x000138, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_int_Variable) == 0x00013C, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000140, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetGameInstanceSubsystem_ReturnValue_1) == 0x000148, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetGameInstanceSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_LocalUserNum_1) == 0x000150, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_LocalUserNum_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_bWasSuccessful_1) == 0x000154, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_bWasSuccessful_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_FriendId_1) == 0x000158, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_FriendId_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ListName_1) == 0x000188, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ListName_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ErrorStr_1) == 0x000198, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ErrorStr_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001A8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_LocalUserNum) == 0x0001B8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_LocalUserNum' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_bWasSuccessful) == 0x0001BC, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_FriendId) == 0x0001C0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_FriendId' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ListName) == 0x0001F0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ListName' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_ErrorStr) == 0x000200, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_ErrorStr' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CreateDelegate_OutputDelegate_3) == 0x000210, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_string_Variable_2) == 0x000220, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_string_Variable_3) == 0x000230, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_struct_Variable_1) == 0x000240, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_bool_Variable_1) == 0x000270, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_int_Variable_1) == 0x000274, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetGameInstanceSubsystem_ReturnValue_2) == 0x000278, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetGameInstanceSubsystem_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_ClipboardGet_ReturnValue) == 0x000280, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_ClipboardGet_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_StringToText_ReturnValue) == 0x000290, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetText_ReturnValue) == 0x0002A8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_TextToString_ReturnValue) == 0x0002C0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Len_ReturnValue) == 0x0002D0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Len_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0002D4, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetOwningPlayer_ReturnValue) == 0x0002D8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x0002E0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetText_ReturnValue_1) == 0x000310, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x000328, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000338, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_NotEqual_StrStr_ReturnValue) == 0x000348, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_NotEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x000350, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_BooleanAND_ReturnValue) == 0x000380, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_PlayerId_1) == 0x000388, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_PlayerId_1' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_PlayerId) == 0x0003B8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_PlayerId' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_SendInvite_ReturnValue) == 0x0003E8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_SendInvite_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_AcceptInvite_ReturnValue) == 0x0003F0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_AcceptInvite_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_IsValid_ReturnValue) == 0x0003F8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_IsValid_ReturnValue_1) == 0x0003F9, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_byte_Variable) == 0x000004, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_bool_Variable) == 0x000019, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetGameInstance_ReturnValue_1) == 0x000020, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000028, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_ClipboardGet_ReturnValue) == 0x000038, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_ClipboardGet_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_StringToText_ReturnValue) == 0x000048, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, Temp_byte_Variable_1) == 0x000058, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetText_ReturnValue) == 0x000060, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_TextToString_ReturnValue) == 0x000070, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Len_ReturnValue) == 0x000080, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Len_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000084, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetOwningPlayer_ReturnValue) == 0x000088, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetControllerUniqueNetId_ReturnValue) == 0x000090, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetControllerUniqueNetId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue) == 0x0000C0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_FUniqueNetIdReplToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetText_ReturnValue_1) == 0x0000D0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_NotEqual_StrStr_ReturnValue) == 0x0000E0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_NotEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_Conv_TextToString_ReturnValue_1) == 0x0000E8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_BooleanAND_ReturnValue) == 0x0000F8, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_PlayerId_1) == 0x000100, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_PlayerId_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_CustomEvent_PlayerId) == 0x000130, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_CustomEvent_PlayerId' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_SendFriendInvite_InitialSuccess) == 0x000160, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_SendFriendInvite_InitialSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_AcceptFriendRequest_InitialSuccess) == 0x000161, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_AcceptFriendRequest_InitialSuccess' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_IsGamepadMode_ReturnValue) == 0x000162, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000168, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, CallFunc_CreateUniquePlayerId_ReturnValue) == 0x000170, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::CallFunc_CreateUniquePlayerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup, K2Node_Select_Default) == 0x0001A0, "Member 'WB_AddFriendPopup_C_ExecuteUbergraph_WB_AddFriendPopup::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_AddFriendPopup.WB_AddFriendPopup_C.GetInitialFocusWidget
 // 0x0008 (0x0008 - 0x0000)
@@ -248,85 +195,49 @@ static_assert(alignof(WB_AddFriendPopup_C_GetInitialFocusWidget) == 0x000008, "W
 static_assert(sizeof(WB_AddFriendPopup_C_GetInitialFocusWidget) == 0x000008, "Wrong size on WB_AddFriendPopup_C_GetInitialFocusWidget");
 static_assert(offsetof(WB_AddFriendPopup_C_GetInitialFocusWidget, InitialFocusWidget) == 0x000000, "Member 'WB_AddFriendPopup_C_GetInitialFocusWidget::InitialFocusWidget' has a wrong offset!");
 
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8
-// 0x0058 (0x0058 - 0x0000)
-struct WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8 final
+// Function WB_AddFriendPopup.WB_AddFriendPopup_C.GetVisibility_0
+// 0x0006 (0x0006 - 0x0000)
+struct WB_AddFriendPopup_C_GetVisibility_0 final
 {
 public:
-	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5566[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0008(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FString                                 ListName;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 ErrorStr;                                          // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8");
-static_assert(sizeof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8) == 0x000058, "Wrong size on WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8");
-static_assert(offsetof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8, LocalUserNum) == 0x000000, "Member 'WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8, bWasSuccessful) == 0x000004, "Member 'WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8::bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8, FriendId) == 0x000008, "Member 'WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8::FriendId' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8, ListName) == 0x000038, "Member 'WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8::ListName' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8, ErrorStr) == 0x000048, "Member 'WB_AddFriendPopup_C_OnAcceptInviteComplete_F7D3584845B632AAD1CDF58F5BC28CC8::ErrorStr' has a wrong offset!");
+static_assert(alignof(WB_AddFriendPopup_C_GetVisibility_0) == 0x000001, "Wrong alignment on WB_AddFriendPopup_C_GetVisibility_0");
+static_assert(sizeof(WB_AddFriendPopup_C_GetVisibility_0) == 0x000006, "Wrong size on WB_AddFriendPopup_C_GetVisibility_0");
+static_assert(offsetof(WB_AddFriendPopup_C_GetVisibility_0, ReturnValue) == 0x000000, "Member 'WB_AddFriendPopup_C_GetVisibility_0::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_GetVisibility_0, Temp_bool_Variable) == 0x000001, "Member 'WB_AddFriendPopup_C_GetVisibility_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_GetVisibility_0, Temp_byte_Variable) == 0x000002, "Member 'WB_AddFriendPopup_C_GetVisibility_0::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_GetVisibility_0, Temp_byte_Variable_1) == 0x000003, "Member 'WB_AddFriendPopup_C_GetVisibility_0::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_GetVisibility_0, CallFunc_IsConsoleBuild_ReturnValue) == 0x000004, "Member 'WB_AddFriendPopup_C_GetVisibility_0::CallFunc_IsConsoleBuild_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_GetVisibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_AddFriendPopup_C_GetVisibility_0::K2Node_Select_Default' has a wrong offset!");
 
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnCallFailed_3FAB678D48D68FCB1B4029A289214264
-// 0x0058 (0x0058 - 0x0000)
-struct WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264 final
+// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnPreviewKeyDown
+// 0x02C0 (0x02C0 - 0x0000)
+struct WB_AddFriendPopup_C_OnPreviewKeyDown final
 {
 public:
-	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5567[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0008(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FString                                 ListName;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 ErrorStr;                                          // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0130(0x00B8)()
+	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x01E8(0x00B8)()
+	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x02A0(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264");
-static_assert(sizeof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264) == 0x000058, "Wrong size on WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264, LocalUserNum) == 0x000000, "Member 'WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264, bWasSuccessful) == 0x000004, "Member 'WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264::bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264, FriendId) == 0x000008, "Member 'WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264::FriendId' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264, ListName) == 0x000038, "Member 'WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264::ListName' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264, ErrorStr) == 0x000048, "Member 'WB_AddFriendPopup_C_OnCallFailed_3FAB678D48D68FCB1B4029A289214264::ErrorStr' has a wrong offset!");
-
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8
-// 0x0058 (0x0058 - 0x0000)
-struct WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8 final
-{
-public:
-	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5568[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0008(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FString                                 ListName;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 ErrorStr;                                          // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8");
-static_assert(sizeof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8) == 0x000058, "Wrong size on WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8, LocalUserNum) == 0x000000, "Member 'WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8, bWasSuccessful) == 0x000004, "Member 'WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8::bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8, FriendId) == 0x000008, "Member 'WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8::FriendId' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8, ListName) == 0x000038, "Member 'WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8::ListName' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8, ErrorStr) == 0x000048, "Member 'WB_AddFriendPopup_C_OnCallFailed_F7D3584845B632AAD1CDF58F5BC28CC8::ErrorStr' has a wrong offset!");
-
-// Function WB_AddFriendPopup.WB_AddFriendPopup_C.OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264
-// 0x0058 (0x0058 - 0x0000)
-struct WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264 final
-{
-public:
-	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5569[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       FriendId;                                          // 0x0008(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FString                                 ListName;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 ErrorStr;                                          // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264");
-static_assert(sizeof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264) == 0x000058, "Wrong size on WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264");
-static_assert(offsetof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264, LocalUserNum) == 0x000000, "Member 'WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264, bWasSuccessful) == 0x000004, "Member 'WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264::bWasSuccessful' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264, FriendId) == 0x000008, "Member 'WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264::FriendId' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264, ListName) == 0x000038, "Member 'WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264::ListName' has a wrong offset!");
-static_assert(offsetof(WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264, ErrorStr) == 0x000048, "Member 'WB_AddFriendPopup_C_OnSendInviteComplete_3FAB678D48D68FCB1B4029A289214264::ErrorStr' has a wrong offset!");
+static_assert(alignof(WB_AddFriendPopup_C_OnPreviewKeyDown) == 0x000008, "Wrong alignment on WB_AddFriendPopup_C_OnPreviewKeyDown");
+static_assert(sizeof(WB_AddFriendPopup_C_OnPreviewKeyDown) == 0x0002C0, "Wrong size on WB_AddFriendPopup_C_OnPreviewKeyDown");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, MyGeometry) == 0x000000, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, InKeyEvent) == 0x000038, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::InKeyEvent' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, ReturnValue) == 0x000078, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, CallFunc_Handled_ReturnValue) == 0x000130, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::CallFunc_Handled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, CallFunc_OnPreviewKeyDown_ReturnValue) == 0x0001E8, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::CallFunc_OnPreviewKeyDown_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, CallFunc_GetKey_ReturnValue) == 0x0002A0, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::CallFunc_GetKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_AddFriendPopup_C_OnPreviewKeyDown, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x0002B8, "Member 'WB_AddFriendPopup_C_OnPreviewKeyDown::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
 
 // Function WB_AddFriendPopup.WB_AddFriendPopup_C.SendFriendInvite
 // 0x0030 (0x0030 - 0x0000)

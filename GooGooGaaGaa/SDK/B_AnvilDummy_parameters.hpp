@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -23,7 +23,7 @@ struct B_AnvilDummy_C_ExecuteUbergraph_B_AnvilDummy final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3778[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_AnvilDummy_C_ExecuteUbergraph_B_AnvilDummy) == 0x000010, "Wrong alignment on B_AnvilDummy_C_ExecuteUbergraph_B_AnvilDummy");
@@ -32,7 +32,7 @@ static_assert(offsetof(B_AnvilDummy_C_ExecuteUbergraph_B_AnvilDummy, EntryPoint)
 static_assert(offsetof(B_AnvilDummy_C_ExecuteUbergraph_B_AnvilDummy, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000010, "Member 'B_AnvilDummy_C_ExecuteUbergraph_B_AnvilDummy::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
 
 // Function B_AnvilDummy.B_AnvilDummy_C.PlaceOnAnvil
-// 0x0280 (0x0280 - 0x0000)
+// 0x0290 (0x0290 - 0x0000)
 struct B_AnvilDummy_C_PlaceOnAnvil final
 {
 public:
@@ -42,20 +42,20 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_AnvilTask_C*                         K2Node_DynamicCast_AsB_Anvil_Task;                 // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3779[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_AnvilField_C*                        K2Node_DynamicCast_AsB_Anvil_Field;                // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_377A[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0130(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0190(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0190(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_AnvilDummy_C_PlaceOnAnvil) == 0x000010, "Wrong alignment on B_AnvilDummy_C_PlaceOnAnvil");
-static_assert(sizeof(B_AnvilDummy_C_PlaceOnAnvil) == 0x000280, "Wrong size on B_AnvilDummy_C_PlaceOnAnvil");
+static_assert(sizeof(B_AnvilDummy_C_PlaceOnAnvil) == 0x000290, "Wrong size on B_AnvilDummy_C_PlaceOnAnvil");
 static_assert(offsetof(B_AnvilDummy_C_PlaceOnAnvil, CallFunc_BreakTransform_Location) == 0x000000, "Member 'B_AnvilDummy_C_PlaceOnAnvil::CallFunc_BreakTransform_Location' has a wrong offset!");
 static_assert(offsetof(B_AnvilDummy_C_PlaceOnAnvil, CallFunc_BreakTransform_Rotation) == 0x000018, "Member 'B_AnvilDummy_C_PlaceOnAnvil::CallFunc_BreakTransform_Rotation' has a wrong offset!");
 static_assert(offsetof(B_AnvilDummy_C_PlaceOnAnvil, CallFunc_BreakTransform_Scale) == 0x000030, "Member 'B_AnvilDummy_C_PlaceOnAnvil::CallFunc_BreakTransform_Scale' has a wrong offset!");
@@ -73,14 +73,14 @@ static_assert(offsetof(B_AnvilDummy_C_PlaceOnAnvil, CallFunc_MakeTransform_Retur
 static_assert(offsetof(B_AnvilDummy_C_PlaceOnAnvil, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x000190, "Member 'B_AnvilDummy_C_PlaceOnAnvil::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
 
 // Function B_AnvilDummy.B_AnvilDummy_C.RemoveFromAnvil
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct B_AnvilDummy_C_RemoveFromAnvil final
 {
 public:
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0000(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0000(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_AnvilDummy_C_RemoveFromAnvil) == 0x000008, "Wrong alignment on B_AnvilDummy_C_RemoveFromAnvil");
-static_assert(sizeof(B_AnvilDummy_C_RemoveFromAnvil) == 0x0000E8, "Wrong size on B_AnvilDummy_C_RemoveFromAnvil");
+static_assert(sizeof(B_AnvilDummy_C_RemoveFromAnvil) == 0x0000F8, "Wrong size on B_AnvilDummy_C_RemoveFromAnvil");
 static_assert(offsetof(B_AnvilDummy_C_RemoveFromAnvil, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x000000, "Member 'B_AnvilDummy_C_RemoveFromAnvil::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
 
 // Function B_AnvilDummy.B_AnvilDummy_C.TryToUpgrade
@@ -92,7 +92,7 @@ public:
 	class FString                                 CallFunc_GetDisplayName_ReturnValue_1;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSubstring_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSubstring_ReturnValue_1;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_377B[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetDisplayName_ReturnValue_2;             // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSubstring_ReturnValue_2;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

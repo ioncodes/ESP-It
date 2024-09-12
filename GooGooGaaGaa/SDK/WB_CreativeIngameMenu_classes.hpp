@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_QuestionAnswer_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "E_CreativePlayerMode_structs.hpp"
@@ -22,40 +22,40 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_CreativeIngameMenu.WB_CreativeIngameMenu_C
-// 0x0130 (0x03F0 - 0x02C0)
+// 0x0108 (0x03E8 - 0x02E0)
 class UWB_CreativeIngameMenu_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Authority;                                         // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Continue;                                          // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Exit;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Invite;                                            // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           LayoutBox;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             LayoutEditor;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             LoadingWIText;                                     // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircularThrobber*                      LoadingWIThrobber;                                 // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircularThrobber*                      LoadingWIThrobberPlaytest;                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         LoadingWorkshopItem;                               // 0x0310(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           LoadLayout;                                        // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           MutePlayer;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           NewLayout;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           PlayTestButton;                                    // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           SaveLayout;                                        // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           Settings;                                          // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           ShareLayout;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           TakePhoto;                                         // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           VoteKick;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          WantToExitToMainMenu;                              // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WantToSurrender;                                   // 0x0361(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5AFF[0x6];                                     // 0x0362(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   NewLayoutText;                                     // 0x0368(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   LoadLayoutText;                                    // 0x0380(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   SaveLayoutText;                                    // 0x0398(0x0018)(Edit, BlueprintVisible)
-	class FText                                   SubmitLayoutText;                                  // 0x03B0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   LayoutEditorText;                                  // 0x03C8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlayTestChangeWaitSeconds;                         // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Authority;                                         // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Continue;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Exit;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Invite;                                            // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           LayoutBox;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             LayoutEditor;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             LoadingWIText;                                     // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircularThrobber*                      LoadingWIThrobber;                                 // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircularThrobber*                      LoadingWIThrobberPlaytest;                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         LoadingWorkshopItem;                               // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           LoadLayout;                                        // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           MutePlayer;                                        // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           NewLayout;                                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           PlayTestButton;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           SaveLayout;                                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           Settings;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           ShareLayout;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           TakePhoto;                                         // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           VoteKick;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          WantToExitToMainMenu;                              // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WantToSurrender;                                   // 0x0381(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_382[0x6];                                      // 0x0382(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   NewLayoutText;                                     // 0x0388(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   LoadLayoutText;                                    // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   SaveLayoutText;                                    // 0x03A8(0x0010)(Edit, BlueprintVisible)
+	class FText                                   SubmitLayoutText;                                  // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   LayoutEditorText;                                  // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AB_CreativePlayerController_C*          OwningCreativePlayerController;                    // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlayTestChangeWaitSeconds;                         // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__LoadLayout_K2Node_ComponentBoundEvent_0_Clicked__DelegateSignature();
@@ -120,36 +120,36 @@ public:
 	}
 };
 static_assert(alignof(UWB_CreativeIngameMenu_C) == 0x000008, "Wrong alignment on UWB_CreativeIngameMenu_C");
-static_assert(sizeof(UWB_CreativeIngameMenu_C) == 0x0003F0, "Wrong size on UWB_CreativeIngameMenu_C");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_CreativeIngameMenu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, Authority) == 0x0002C8, "Member 'UWB_CreativeIngameMenu_C::Authority' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, Continue) == 0x0002D0, "Member 'UWB_CreativeIngameMenu_C::Continue' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, Exit) == 0x0002D8, "Member 'UWB_CreativeIngameMenu_C::Exit' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, Invite) == 0x0002E0, "Member 'UWB_CreativeIngameMenu_C::Invite' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LayoutBox) == 0x0002E8, "Member 'UWB_CreativeIngameMenu_C::LayoutBox' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LayoutEditor) == 0x0002F0, "Member 'UWB_CreativeIngameMenu_C::LayoutEditor' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWIText) == 0x0002F8, "Member 'UWB_CreativeIngameMenu_C::LoadingWIText' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWIThrobber) == 0x000300, "Member 'UWB_CreativeIngameMenu_C::LoadingWIThrobber' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWIThrobberPlaytest) == 0x000308, "Member 'UWB_CreativeIngameMenu_C::LoadingWIThrobberPlaytest' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWorkshopItem) == 0x000310, "Member 'UWB_CreativeIngameMenu_C::LoadingWorkshopItem' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadLayout) == 0x000318, "Member 'UWB_CreativeIngameMenu_C::LoadLayout' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, MutePlayer) == 0x000320, "Member 'UWB_CreativeIngameMenu_C::MutePlayer' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, NewLayout) == 0x000328, "Member 'UWB_CreativeIngameMenu_C::NewLayout' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, PlayTestButton) == 0x000330, "Member 'UWB_CreativeIngameMenu_C::PlayTestButton' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, SaveLayout) == 0x000338, "Member 'UWB_CreativeIngameMenu_C::SaveLayout' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, Settings) == 0x000340, "Member 'UWB_CreativeIngameMenu_C::Settings' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, ShareLayout) == 0x000348, "Member 'UWB_CreativeIngameMenu_C::ShareLayout' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, TakePhoto) == 0x000350, "Member 'UWB_CreativeIngameMenu_C::TakePhoto' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, VoteKick) == 0x000358, "Member 'UWB_CreativeIngameMenu_C::VoteKick' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, WantToExitToMainMenu) == 0x000360, "Member 'UWB_CreativeIngameMenu_C::WantToExitToMainMenu' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, WantToSurrender) == 0x000361, "Member 'UWB_CreativeIngameMenu_C::WantToSurrender' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, NewLayoutText) == 0x000368, "Member 'UWB_CreativeIngameMenu_C::NewLayoutText' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadLayoutText) == 0x000380, "Member 'UWB_CreativeIngameMenu_C::LoadLayoutText' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, SaveLayoutText) == 0x000398, "Member 'UWB_CreativeIngameMenu_C::SaveLayoutText' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, SubmitLayoutText) == 0x0003B0, "Member 'UWB_CreativeIngameMenu_C::SubmitLayoutText' has a wrong offset!");
+static_assert(sizeof(UWB_CreativeIngameMenu_C) == 0x0003E8, "Wrong size on UWB_CreativeIngameMenu_C");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_CreativeIngameMenu_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, Authority) == 0x0002E8, "Member 'UWB_CreativeIngameMenu_C::Authority' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, Continue) == 0x0002F0, "Member 'UWB_CreativeIngameMenu_C::Continue' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, Exit) == 0x0002F8, "Member 'UWB_CreativeIngameMenu_C::Exit' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, Invite) == 0x000300, "Member 'UWB_CreativeIngameMenu_C::Invite' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LayoutBox) == 0x000308, "Member 'UWB_CreativeIngameMenu_C::LayoutBox' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LayoutEditor) == 0x000310, "Member 'UWB_CreativeIngameMenu_C::LayoutEditor' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWIText) == 0x000318, "Member 'UWB_CreativeIngameMenu_C::LoadingWIText' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWIThrobber) == 0x000320, "Member 'UWB_CreativeIngameMenu_C::LoadingWIThrobber' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWIThrobberPlaytest) == 0x000328, "Member 'UWB_CreativeIngameMenu_C::LoadingWIThrobberPlaytest' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadingWorkshopItem) == 0x000330, "Member 'UWB_CreativeIngameMenu_C::LoadingWorkshopItem' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadLayout) == 0x000338, "Member 'UWB_CreativeIngameMenu_C::LoadLayout' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, MutePlayer) == 0x000340, "Member 'UWB_CreativeIngameMenu_C::MutePlayer' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, NewLayout) == 0x000348, "Member 'UWB_CreativeIngameMenu_C::NewLayout' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, PlayTestButton) == 0x000350, "Member 'UWB_CreativeIngameMenu_C::PlayTestButton' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, SaveLayout) == 0x000358, "Member 'UWB_CreativeIngameMenu_C::SaveLayout' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, Settings) == 0x000360, "Member 'UWB_CreativeIngameMenu_C::Settings' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, ShareLayout) == 0x000368, "Member 'UWB_CreativeIngameMenu_C::ShareLayout' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, TakePhoto) == 0x000370, "Member 'UWB_CreativeIngameMenu_C::TakePhoto' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, VoteKick) == 0x000378, "Member 'UWB_CreativeIngameMenu_C::VoteKick' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, WantToExitToMainMenu) == 0x000380, "Member 'UWB_CreativeIngameMenu_C::WantToExitToMainMenu' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, WantToSurrender) == 0x000381, "Member 'UWB_CreativeIngameMenu_C::WantToSurrender' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, NewLayoutText) == 0x000388, "Member 'UWB_CreativeIngameMenu_C::NewLayoutText' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, LoadLayoutText) == 0x000398, "Member 'UWB_CreativeIngameMenu_C::LoadLayoutText' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, SaveLayoutText) == 0x0003A8, "Member 'UWB_CreativeIngameMenu_C::SaveLayoutText' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, SubmitLayoutText) == 0x0003B8, "Member 'UWB_CreativeIngameMenu_C::SubmitLayoutText' has a wrong offset!");
 static_assert(offsetof(UWB_CreativeIngameMenu_C, LayoutEditorText) == 0x0003C8, "Member 'UWB_CreativeIngameMenu_C::LayoutEditorText' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, OwningCreativePlayerController) == 0x0003E0, "Member 'UWB_CreativeIngameMenu_C::OwningCreativePlayerController' has a wrong offset!");
-static_assert(offsetof(UWB_CreativeIngameMenu_C, PlayTestChangeWaitSeconds) == 0x0003E8, "Member 'UWB_CreativeIngameMenu_C::PlayTestChangeWaitSeconds' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, OwningCreativePlayerController) == 0x0003D8, "Member 'UWB_CreativeIngameMenu_C::OwningCreativePlayerController' has a wrong offset!");
+static_assert(offsetof(UWB_CreativeIngameMenu_C, PlayTestChangeWaitSeconds) == 0x0003E0, "Member 'UWB_CreativeIngameMenu_C::PlayTestChangeWaitSeconds' has a wrong offset!");
 
 }
 

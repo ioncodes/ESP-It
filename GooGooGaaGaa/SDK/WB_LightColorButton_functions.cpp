@@ -20,9 +20,9 @@ namespace SDK
 // Function WB_LightColorButton.WB_LightColorButton_C.GetBorderColor
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FLinearColor                     Param_Color                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor                     Color_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_LightColorButton_C::GetBorderColor(struct FLinearColor* Param_Color)
+void UWB_LightColorButton_C::GetBorderColor(struct FLinearColor* Color_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,8 +33,8 @@ void UWB_LightColorButton_C::GetBorderColor(struct FLinearColor* Param_Color)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Color != nullptr)
-		*Param_Color = std::move(Parms.Param_Color);
+	if (Color_0 != nullptr)
+		*Color_0 = std::move(Parms.Color_0);
 }
 
 

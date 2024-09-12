@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_CauldronProgress.WB_CauldronProgress_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_CauldronProgress_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Cauldron1;                                         // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Cauldron2;                                         // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Cauldron3;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Cauldron1;                                         // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Cauldron2;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Cauldron3;                                         // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,10 +36,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_CauldronProgress_C) == 0x000008, "Wrong alignment on UWB_CauldronProgress_C");
-static_assert(sizeof(UWB_CauldronProgress_C) == 0x0002D8, "Wrong size on UWB_CauldronProgress_C");
-static_assert(offsetof(UWB_CauldronProgress_C, Cauldron1) == 0x0002C0, "Member 'UWB_CauldronProgress_C::Cauldron1' has a wrong offset!");
-static_assert(offsetof(UWB_CauldronProgress_C, Cauldron2) == 0x0002C8, "Member 'UWB_CauldronProgress_C::Cauldron2' has a wrong offset!");
-static_assert(offsetof(UWB_CauldronProgress_C, Cauldron3) == 0x0002D0, "Member 'UWB_CauldronProgress_C::Cauldron3' has a wrong offset!");
+static_assert(sizeof(UWB_CauldronProgress_C) == 0x0002F8, "Wrong size on UWB_CauldronProgress_C");
+static_assert(offsetof(UWB_CauldronProgress_C, Cauldron1) == 0x0002E0, "Member 'UWB_CauldronProgress_C::Cauldron1' has a wrong offset!");
+static_assert(offsetof(UWB_CauldronProgress_C, Cauldron2) == 0x0002E8, "Member 'UWB_CauldronProgress_C::Cauldron2' has a wrong offset!");
+static_assert(offsetof(UWB_CauldronProgress_C, Cauldron3) == 0x0002F0, "Member 'UWB_CauldronProgress_C::Cauldron3' has a wrong offset!");
 
 }
 

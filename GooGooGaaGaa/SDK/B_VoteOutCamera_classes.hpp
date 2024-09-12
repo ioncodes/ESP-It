@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_VoteOutCamera.B_VoteOutCamera_C
-// 0x0010 (0x02A8 - 0x0298)
+// 0x0010 (0x02A0 - 0x0290)
 class AB_VoteOutCamera_C final : public AActor
 {
 public:
-	class UCameraComponent*                       Camera;                                            // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       Camera;                                            // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(AB_VoteOutCamera_C) == 0x000008, "Wrong alignment on AB_VoteOutCamera_C");
-static_assert(sizeof(AB_VoteOutCamera_C) == 0x0002A8, "Wrong size on AB_VoteOutCamera_C");
-static_assert(offsetof(AB_VoteOutCamera_C, Camera) == 0x000298, "Member 'AB_VoteOutCamera_C::Camera' has a wrong offset!");
-static_assert(offsetof(AB_VoteOutCamera_C, DefaultSceneRoot) == 0x0002A0, "Member 'AB_VoteOutCamera_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(AB_VoteOutCamera_C) == 0x0002A0, "Wrong size on AB_VoteOutCamera_C");
+static_assert(offsetof(AB_VoteOutCamera_C, Camera) == 0x000290, "Member 'AB_VoteOutCamera_C::Camera' has a wrong offset!");
+static_assert(offsetof(AB_VoteOutCamera_C, DefaultSceneRoot) == 0x000298, "Member 'AB_VoteOutCamera_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

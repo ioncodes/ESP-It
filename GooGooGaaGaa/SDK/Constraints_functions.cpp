@@ -17,6 +17,98 @@
 namespace SDK
 {
 
+// SparseDelegateFunction Constraints.ConstraintsManager.OnConstraintAdded__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class UConstraintsManager*              Mananger                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTickableConstraint*              Constraint                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConstraintsManager::OnConstraintAdded__DelegateSignature(class UConstraintsManager* Mananger, class UTickableConstraint* Constraint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConstraintsManager", "OnConstraintAdded__DelegateSignature");
+
+	Params::ConstraintsManager_OnConstraintAdded__DelegateSignature Parms{};
+
+	Parms.Mananger = Mananger;
+	Parms.Constraint = Constraint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// SparseDelegateFunction Constraints.ConstraintsManager.OnConstraintRemoved__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class UConstraintsManager*              Mananger                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTickableConstraint*              Constraint                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDoNotCompensate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConstraintsManager::OnConstraintRemoved__DelegateSignature(class UConstraintsManager* Mananger, class UTickableConstraint* Constraint, bool bDoNotCompensate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConstraintsManager", "OnConstraintRemoved__DelegateSignature");
+
+	Params::ConstraintsManager_OnConstraintRemoved__DelegateSignature Parms{};
+
+	Parms.Mananger = Mananger;
+	Parms.Constraint = Constraint;
+	Parms.bDoNotCompensate = bDoNotCompensate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// SparseDelegateFunction Constraints.ConstraintSubsystem.OnConstraintAddedToSystem__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class UConstraintSubsystem*             Mananger                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTickableConstraint*              Constraint                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConstraintSubsystem::OnConstraintAddedToSystem__DelegateSignature(class UConstraintSubsystem* Mananger, class UTickableConstraint* Constraint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConstraintSubsystem", "OnConstraintAddedToSystem__DelegateSignature");
+
+	Params::ConstraintSubsystem_OnConstraintAddedToSystem__DelegateSignature Parms{};
+
+	Parms.Mananger = Mananger;
+	Parms.Constraint = Constraint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// SparseDelegateFunction Constraints.ConstraintSubsystem.OnConstraintRemovedFromSystem__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class UConstraintSubsystem*             Mananger                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTickableConstraint*              Constraint                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDoNotCompensate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConstraintSubsystem::OnConstraintRemovedFromSystem__DelegateSignature(class UConstraintSubsystem* Mananger, class UTickableConstraint* Constraint, bool bDoNotCompensate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConstraintSubsystem", "OnConstraintRemovedFromSystem__DelegateSignature");
+
+	Params::ConstraintSubsystem_OnConstraintRemovedFromSystem__DelegateSignature Parms{};
+
+	Parms.Mananger = Mananger;
+	Parms.Constraint = Constraint;
+	Parms.bDoNotCompensate = bDoNotCompensate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function Constraints.ConstraintsScriptingLibrary.AddConstraint
 // (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -161,34 +253,6 @@ TArray<class UTickableConstraint*> UConstraintsScriptingLibrary::GetConstraintsA
 		Func = StaticClass()->GetFunction("ConstraintsScriptingLibrary", "GetConstraintsArray");
 
 	Params::ConstraintsScriptingLibrary_GetConstraintsArray Parms{};
-
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Constraints.ConstraintsScriptingLibrary.GetManager
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UConstraintsManager*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UConstraintsManager* UConstraintsScriptingLibrary::GetManager(class UWorld* InWorld)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ConstraintsScriptingLibrary", "GetManager");
-
-	Params::ConstraintsScriptingLibrary_GetManager Parms{};
 
 	Parms.InWorld = InWorld;
 

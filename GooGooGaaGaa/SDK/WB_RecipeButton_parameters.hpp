@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "B_Ingredient_structs.hpp"
 #include "B_Rarity_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -36,7 +37,7 @@ struct WB_RecipeButton_C_ExecuteUbergraph_WB_RecipeButton final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsButtonEnabled_IsEnabled;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E90[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -74,26 +75,26 @@ static_assert(offsetof(WB_RecipeButton_C_GetIsButtonEnabled, CallFunc_IsValid_Re
 static_assert(offsetof(WB_RecipeButton_C_GetIsButtonEnabled, CallFunc_HasMaterials_ReturnValue) == 0x000002, "Member 'WB_RecipeButton_C_GetIsButtonEnabled::CallFunc_HasMaterials_ReturnValue' has a wrong offset!");
 
 // Function WB_RecipeButton.WB_RecipeButton_C.GetQuantityText
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_RecipeButton_C_GetQuantityText final
 {
 public:
-	class FText                                   Quantity;                                          // 0x0000(0x0018)(Parm, OutParm)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E91[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0018)()
+	class FText                                   Quantity;                                          // 0x0000(0x0010)(Parm, OutParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0010)()
 };
 static_assert(alignof(WB_RecipeButton_C_GetQuantityText) == 0x000008, "Wrong alignment on WB_RecipeButton_C_GetQuantityText");
-static_assert(sizeof(WB_RecipeButton_C_GetQuantityText) == 0x000048, "Wrong size on WB_RecipeButton_C_GetQuantityText");
+static_assert(sizeof(WB_RecipeButton_C_GetQuantityText) == 0x000038, "Wrong size on WB_RecipeButton_C_GetQuantityText");
 static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, Quantity) == 0x000000, "Member 'WB_RecipeButton_C_GetQuantityText::Quantity' has a wrong offset!");
-static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_RecipeButton_C_GetQuantityText::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, K2Node_DynamicCast_AsB_Game_Instance) == 0x000020, "Member 'WB_RecipeButton_C_GetQuantityText::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_RecipeButton_C_GetQuantityText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, CallFunc_GetItemQuantity_ReturnValue) == 0x00002C, "Member 'WB_RecipeButton_C_GetQuantityText::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'WB_RecipeButton_C_GetQuantityText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'WB_RecipeButton_C_GetQuantityText::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_RecipeButton_C_GetQuantityText::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_RecipeButton_C_GetQuantityText::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, CallFunc_GetItemQuantity_ReturnValue) == 0x000024, "Member 'WB_RecipeButton_C_GetQuantityText::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_GetQuantityText, CallFunc_Conv_IntToText_ReturnValue) == 0x000028, "Member 'WB_RecipeButton_C_GetQuantityText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function WB_RecipeButton.WB_RecipeButton_C.GetQuantityVisibility
 // 0x0002 (0x0002 - 0x0000)
@@ -128,21 +129,21 @@ struct WB_RecipeButton_C_HasMaterials final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bHasMaterials;                                     // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E92[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E93[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FB_Ingredient                          CallFunc_Array_Get_Item;                           // 0x0024(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E94[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetIngredientInfo_DefId;                  // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EB_Rarity                                     CallFunc_GetIngredientInfo_Rarity;                 // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E95[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             CallFunc_GetIngredientInfo_Texture;                // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraSystem*                         CallFunc_GetIngredientInfo_SpawnEffect;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetItemQuantity_ReturnValue;              // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -167,6 +168,26 @@ static_assert(offsetof(WB_RecipeButton_C_HasMaterials, CallFunc_GetIngredientInf
 static_assert(offsetof(WB_RecipeButton_C_HasMaterials, CallFunc_GetIngredientInfo_SpawnEffect) == 0x000048, "Member 'WB_RecipeButton_C_HasMaterials::CallFunc_GetIngredientInfo_SpawnEffect' has a wrong offset!");
 static_assert(offsetof(WB_RecipeButton_C_HasMaterials, CallFunc_GetItemQuantity_ReturnValue) == 0x000050, "Member 'WB_RecipeButton_C_HasMaterials::CallFunc_GetItemQuantity_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_RecipeButton_C_HasMaterials, CallFunc_Greater_IntInt_ReturnValue) == 0x000054, "Member 'WB_RecipeButton_C_HasMaterials::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+
+// Function WB_RecipeButton.WB_RecipeButton_C.OnFocusReceived
+// 0x01B8 (0x01B8 - 0x0000)
+struct WB_RecipeButton_C_OnFocusReceived final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
+	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_OnFocusReceived_ReturnValue;              // 0x0100(0x00B8)()
+};
+static_assert(alignof(WB_RecipeButton_C_OnFocusReceived) == 0x000008, "Wrong alignment on WB_RecipeButton_C_OnFocusReceived");
+static_assert(sizeof(WB_RecipeButton_C_OnFocusReceived) == 0x0001B8, "Wrong size on WB_RecipeButton_C_OnFocusReceived");
+static_assert(offsetof(WB_RecipeButton_C_OnFocusReceived, MyGeometry) == 0x000000, "Member 'WB_RecipeButton_C_OnFocusReceived::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_OnFocusReceived, InFocusEvent) == 0x000038, "Member 'WB_RecipeButton_C_OnFocusReceived::InFocusEvent' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_OnFocusReceived, ReturnValue) == 0x000040, "Member 'WB_RecipeButton_C_OnFocusReceived::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_OnFocusReceived, CallFunc_IsGamepadMode_ReturnValue) == 0x0000F8, "Member 'WB_RecipeButton_C_OnFocusReceived::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_RecipeButton_C_OnFocusReceived, CallFunc_OnFocusReceived_ReturnValue) == 0x000100, "Member 'WB_RecipeButton_C_OnFocusReceived::CallFunc_OnFocusReceived_ReturnValue' has a wrong offset!");
 
 // Function WB_RecipeButton.WB_RecipeButton_C.SetIndividualParameters
 // 0x0010 (0x0010 - 0x0000)

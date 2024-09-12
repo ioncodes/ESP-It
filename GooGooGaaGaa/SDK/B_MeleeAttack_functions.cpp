@@ -61,13 +61,13 @@ void AB_MeleeAttack_C::AddHitComponent(class UPrimitiveComponent* Component)
 // (HasOutParams, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Param_OtherActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              Param_OtherComp                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FHitResult                       SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void AB_MeleeAttack_C::BndEvt__Cone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* Param_OtherActor, class UPrimitiveComponent* Param_OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void AB_MeleeAttack_C::BndEvt__Cone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor_0, class UPrimitiveComponent* OtherComp_0, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static class UFunction* Func = nullptr;
 
@@ -77,8 +77,8 @@ void AB_MeleeAttack_C::BndEvt__Cone_K2Node_ComponentBoundEvent_0_ComponentBeginO
 	Params::B_MeleeAttack_C_BndEvt__Cone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
 
 	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.Param_OtherActor = Param_OtherActor;
-	Parms.Param_OtherComp = Param_OtherComp;
+	Parms.OtherActor_0 = OtherActor_0;
+	Parms.OtherComp_0 = OtherComp_0;
 	Parms.OtherBodyIndex = OtherBodyIndex;
 	Parms.bFromSweep = bFromSweep;
 	Parms.SweepResult = std::move(SweepResult);
@@ -110,10 +110,10 @@ void AB_MeleeAttack_C::ExecuteUbergraph_B_MeleeAttack(int32 EntryPoint)
 // Function B_MeleeAttack.B_MeleeAttack_C.HandleHit
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_OtherActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              Param_OtherComp                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void AB_MeleeAttack_C::HandleHit(class AActor* Param_OtherActor, class UPrimitiveComponent* Param_OtherComp)
+void AB_MeleeAttack_C::HandleHit(class AActor* OtherActor_0, class UPrimitiveComponent* OtherComp_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -122,8 +122,8 @@ void AB_MeleeAttack_C::HandleHit(class AActor* Param_OtherActor, class UPrimitiv
 
 	Params::B_MeleeAttack_C_HandleHit Parms{};
 
-	Parms.Param_OtherActor = Param_OtherActor;
-	Parms.Param_OtherComp = Param_OtherComp;
+	Parms.OtherActor_0 = OtherActor_0;
+	Parms.OtherComp_0 = OtherComp_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

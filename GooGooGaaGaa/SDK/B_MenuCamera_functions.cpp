@@ -58,9 +58,9 @@ double AB_MenuCamera_C::Remap(double Value)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                          ImpactPoint                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Param_DesiredLightPos                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          DesiredLightPos_0                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_MenuCamera_C::CalculateDesiredLightPos(const struct FVector& ImpactPoint, struct FVector* Param_DesiredLightPos)
+void AB_MenuCamera_C::CalculateDesiredLightPos(const struct FVector& ImpactPoint, struct FVector* DesiredLightPos_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -73,8 +73,8 @@ void AB_MenuCamera_C::CalculateDesiredLightPos(const struct FVector& ImpactPoint
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_DesiredLightPos != nullptr)
-		*Param_DesiredLightPos = std::move(Parms.Param_DesiredLightPos);
+	if (DesiredLightPos_0 != nullptr)
+		*DesiredLightPos_0 = std::move(Parms.DesiredLightPos_0);
 }
 
 

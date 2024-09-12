@@ -48,9 +48,9 @@ void AB_SeekGameState_C::ShowResult()
 // Function B_SeekGameState.B_SeekGameState_C.HasTrackingStarted
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasTrackingStarted                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_HasTrackingStarted_0                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SeekGameState_C::HasTrackingStarted(bool* Param_HasTrackingStarted)
+void AB_SeekGameState_C::HasTrackingStarted(bool* Param_HasTrackingStarted_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -61,8 +61,8 @@ void AB_SeekGameState_C::HasTrackingStarted(bool* Param_HasTrackingStarted)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasTrackingStarted != nullptr)
-		*Param_HasTrackingStarted = Parms.Param_HasTrackingStarted;
+	if (Param_HasTrackingStarted_0 != nullptr)
+		*Param_HasTrackingStarted_0 = Parms.Param_HasTrackingStarted_0;
 }
 
 

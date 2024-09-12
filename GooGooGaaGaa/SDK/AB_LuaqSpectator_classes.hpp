@@ -19,22 +19,22 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass AB_LuaqSpectator.AB_LuaqSpectator_C
-// 0x0A10 (0x0D60 - 0x0350)
+// 0x0A30 (0x0DA0 - 0x0370)
 class UAB_LuaqSpectator_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_37BA[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0358(0x0008)()
-	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0360(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0368(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0388(0x0048)()
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x03D0(0x0950)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0D20(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0D40(0x0020)()
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0378(0x0008)()
+	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0380(0x0008)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0388(0x0020)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x03A8(0x0048)()
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x03F0(0x0970)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0D60(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0D80(0x0020)()
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_AB_LuaqSpectator(int32 EntryPoint);
 
 public:
@@ -48,15 +48,15 @@ public:
 	}
 };
 static_assert(alignof(UAB_LuaqSpectator_C) == 0x000010, "Wrong alignment on UAB_LuaqSpectator_C");
-static_assert(sizeof(UAB_LuaqSpectator_C) == 0x000D60, "Wrong size on UAB_LuaqSpectator_C");
-static_assert(offsetof(UAB_LuaqSpectator_C, UberGraphFrame) == 0x000350, "Member 'UAB_LuaqSpectator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimBlueprintExtension_PropertyAccess) == 0x000358, "Member 'UAB_LuaqSpectator_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimBlueprintExtension_Base) == 0x000360, "Member 'UAB_LuaqSpectator_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_Root) == 0x000368, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_SequencePlayer) == 0x000388, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_RigidBody) == 0x0003D0, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_RigidBody' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_LocalToComponentSpace) == 0x000D20, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_ComponentToLocalSpace) == 0x000D40, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(sizeof(UAB_LuaqSpectator_C) == 0x000DA0, "Wrong size on UAB_LuaqSpectator_C");
+static_assert(offsetof(UAB_LuaqSpectator_C, UberGraphFrame) == 0x000370, "Member 'UAB_LuaqSpectator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimBlueprintExtension_PropertyAccess) == 0x000378, "Member 'UAB_LuaqSpectator_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimBlueprintExtension_Base) == 0x000380, "Member 'UAB_LuaqSpectator_C::AnimBlueprintExtension_Base' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_Root) == 0x000388, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_SequencePlayer) == 0x0003A8, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_RigidBody) == 0x0003F0, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_RigidBody' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_LocalToComponentSpace) == 0x000D60, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UAB_LuaqSpectator_C, AnimGraphNode_ComponentToLocalSpace) == 0x000D80, "Member 'UAB_LuaqSpectator_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
 
 }
 

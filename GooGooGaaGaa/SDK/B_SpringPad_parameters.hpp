@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -44,7 +44,7 @@ static_assert(offsetof(B_SpringPad_C_BndEvt__Box_K2Node_ComponentBoundEvent_1_Co
 static_assert(offsetof(B_SpringPad_C_BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentWakeSignature__DelegateSignature, BoneName) == 0x000008, "Member 'B_SpringPad_C_BndEvt__Box_K2Node_ComponentBoundEvent_1_ComponentWakeSignature__DelegateSignature::BoneName' has a wrong offset!");
 
 // Function B_SpringPad.B_SpringPad_C.BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -53,11 +53,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4866[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -66,7 +66,7 @@ static_assert(offsetof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBound
 static_assert(offsetof(B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_SpringPad_C_BndEvt__TriggerSphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_SpringPad.B_SpringPad_C.ExecuteUbergraph_B_SpringPad
-// 0x0290 (0x0290 - 0x0000)
+// 0x02A0 (0x02A0 - 0x0000)
 struct B_SpringPad_C_ExecuteUbergraph_B_SpringPad final
 {
 public:
@@ -91,11 +91,11 @@ public:
 	class FName                                   K2Node_CustomEvent_NotifyName;                     // 0x00CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_8;            // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable_1;                              // 0x00E4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4867[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_GameMode_C*                          K2Node_DynamicCast_AsB_Game_Mode;                  // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4868[0x7];                                     // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue_1;      // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -103,32 +103,32 @@ public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0113(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_NotifyName_9;                   // 0x0114(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4869[0x3];                                     // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_486A[0x3];                                     // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0140(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 K2Node_CustomEvent_Actor;                          // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_CustomEvent_Component;                      // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_HitByPotato;                    // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_486B[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_SleepingComponent;      // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_ComponentBoundEvent_BoneName_1;             // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_WakingComponent;        // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_ComponentBoundEvent_BoneName;               // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_9;            // 0x0260(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_486C[0x7];                                     // 0x0271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1; // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0140(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AActor*                                 K2Node_CustomEvent_Actor;                          // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_CustomEvent_Component;                      // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_HitByPotato;                    // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_SleepingComponent;      // 0x0250(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_ComponentBoundEvent_BoneName_1;             // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_WakingComponent;        // 0x0260(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_ComponentBoundEvent_BoneName;               // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_9;            // 0x0270(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1; // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad) == 0x000008, "Wrong alignment on B_SpringPad_C_ExecuteUbergraph_B_SpringPad");
-static_assert(sizeof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad) == 0x000290, "Wrong size on B_SpringPad_C_ExecuteUbergraph_B_SpringPad");
+static_assert(sizeof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad) == 0x0002A0, "Wrong size on B_SpringPad_C_ExecuteUbergraph_B_SpringPad");
 static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, EntryPoint) == 0x000000, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_NotifyName_8) == 0x000004, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_NotifyName_8' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
@@ -166,19 +166,19 @@ static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_Compon
 static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000138, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_bFromSweep) == 0x00013C, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_SweepResult) == 0x000140, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_Actor) == 0x000228, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_Component) == 0x000230, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_Component' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_HitByPotato) == 0x000238, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_HitByPotato' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_SleepingComponent) == 0x000240, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_SleepingComponent' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_BoneName_1) == 0x000248, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_BoneName_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_WakingComponent) == 0x000250, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_WakingComponent' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_BoneName) == 0x000258, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_BoneName' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CreateDelegate_OutputDelegate_9) == 0x000260, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_IsDedicatedServer_ReturnValue) == 0x000270, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x000278, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1) == 0x000280, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_IsValid_ReturnValue) == 0x000288, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_IsValid_ReturnValue_1) == 0x000289, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_Actor) == 0x000238, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_Actor' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_Component) == 0x000240, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_Component' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CustomEvent_HitByPotato) == 0x000248, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CustomEvent_HitByPotato' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_SleepingComponent) == 0x000250, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_SleepingComponent' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_BoneName_1) == 0x000258, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_BoneName_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_WakingComponent) == 0x000260, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_WakingComponent' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_ComponentBoundEvent_BoneName) == 0x000268, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_ComponentBoundEvent_BoneName' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, K2Node_CreateDelegate_OutputDelegate_9) == 0x000270, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_IsDedicatedServer_ReturnValue) == 0x000280, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x000288, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1) == 0x000290, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_IsValid_ReturnValue) == 0x000298, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_ExecuteUbergraph_B_SpringPad, CallFunc_IsValid_ReturnValue_1) == 0x000299, "Member 'B_SpringPad_C_ExecuteUbergraph_B_SpringPad::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function B_SpringPad.B_SpringPad_C.FireMulticast
 // 0x0018 (0x0018 - 0x0000)
@@ -187,13 +187,13 @@ struct B_SpringPad_C_FireMulticast final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    Component;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_HitByPotato;                                 // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HitByPotato_0;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SpringPad_C_FireMulticast) == 0x000008, "Wrong alignment on B_SpringPad_C_FireMulticast");
 static_assert(sizeof(B_SpringPad_C_FireMulticast) == 0x000018, "Wrong size on B_SpringPad_C_FireMulticast");
 static_assert(offsetof(B_SpringPad_C_FireMulticast, Actor) == 0x000000, "Member 'B_SpringPad_C_FireMulticast::Actor' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_FireMulticast, Component) == 0x000008, "Member 'B_SpringPad_C_FireMulticast::Component' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_FireMulticast, Param_HitByPotato) == 0x000010, "Member 'B_SpringPad_C_FireMulticast::Param_HitByPotato' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_FireMulticast, HitByPotato_0) == 0x000010, "Member 'B_SpringPad_C_FireMulticast::HitByPotato_0' has a wrong offset!");
 
 // Function B_SpringPad.B_SpringPad_C.HandleSpringPadTriggered
 // 0x0030 (0x0030 - 0x0000)
@@ -206,7 +206,7 @@ public:
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_486D[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -226,69 +226,72 @@ static_assert(offsetof(B_SpringPad_C_HandleSpringPadTriggered, CallFunc_Not_PreB
 static_assert(offsetof(B_SpringPad_C_HandleSpringPadTriggered, CallFunc_BooleanAND_ReturnValue) == 0x00002A, "Member 'B_SpringPad_C_HandleSpringPadTriggered::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_SpringPad.B_SpringPad_C.MoveTriggerActorAndPlaySound
-// 0x0130 (0x0130 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct B_SpringPad_C_MoveTriggerActorAndPlaySound final
 {
 public:
 	const class AActor*                           TriggerActor;                                      // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    TriggerComponent;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_HitByPotato;                                 // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_486E[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentVelocity_ReturnValue;         // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_486F[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4870[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4871[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4872[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4873[0x6];                                     // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Temp_real_Variable;                                // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HitByPotato_0;                                     // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentVelocity_ReturnValue;         // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Select_Default;                             // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Select_Default_1;                           // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetUpVector_ReturnValue_1;                // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast; // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast; // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Temp_real_Variable;                                // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default_1;                           // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetUpVector_ReturnValue_1;                // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast; // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast; // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SpringPad_C_MoveTriggerActorAndPlaySound) == 0x000008, "Wrong alignment on B_SpringPad_C_MoveTriggerActorAndPlaySound");
-static_assert(sizeof(B_SpringPad_C_MoveTriggerActorAndPlaySound) == 0x000130, "Wrong size on B_SpringPad_C_MoveTriggerActorAndPlaySound");
+static_assert(sizeof(B_SpringPad_C_MoveTriggerActorAndPlaySound) == 0x000140, "Wrong size on B_SpringPad_C_MoveTriggerActorAndPlaySound");
 static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, TriggerActor) == 0x000000, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::TriggerActor' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, TriggerComponent) == 0x000008, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::TriggerComponent' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Param_HitByPotato) == 0x000010, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Param_HitByPotato' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_IsDedicatedServer_ReturnValue) == 0x000011, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetComponentVelocity_ReturnValue) == 0x000030, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetComponentVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_IsSimulatingPhysics_ReturnValue) == 0x000048, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_IsSimulatingPhysics_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000050, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_DynamicCast_AsCharacter) == 0x000070, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetObjectClass_ReturnValue) == 0x000080, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_ClassIsChildOf_ReturnValue) == 0x000088, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x000090, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Temp_bool_Variable) == 0x0000A8, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Temp_bool_Variable_1) == 0x0000A9, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Temp_real_Variable) == 0x0000B0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, HitByPotato_0) == 0x000010, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::HitByPotato_0' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetObjectClass_ReturnValue) == 0x000018, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_ClassIsChildOf_ReturnValue) == 0x000020, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_IsDedicatedServer_ReturnValue) == 0x000021, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000028, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetComponentVelocity_ReturnValue) == 0x000040, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetComponentVelocity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_IsSimulatingPhysics_ReturnValue) == 0x000058, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_IsSimulatingPhysics_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000060, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_DynamicCast_AsCharacter) == 0x000080, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_DynamicCast_bSuccess) == 0x000088, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000090, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Temp_bool_Variable) == 0x000098, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0000A0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_Select_Default) == 0x0000B8, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_Select_Default_1) == 0x0000C0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetUpVector_ReturnValue) == 0x0000C8, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x0000E0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetUpVector_ReturnValue_1) == 0x0000F8, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetUpVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorFloat_ReturnValue_1) == 0x000110, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast) == 0x000128, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast) == 0x00012C, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Temp_real_Variable) == 0x0000C0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Temp_real_Variable' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, Temp_bool_Variable_1) == 0x0000C8, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, K2Node_Select_Default_1) == 0x0000D0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetUpVector_ReturnValue) == 0x0000D8, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x0000F0, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_GetUpVector_ReturnValue_1) == 0x000108, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_GetUpVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_Multiply_VectorFloat_ReturnValue_1) == 0x000120, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast) == 0x000138, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_SpringPad_C_MoveTriggerActorAndPlaySound, CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast) == 0x00013C, "Member 'B_SpringPad_C_MoveTriggerActorAndPlaySound::CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast' has a wrong offset!");
 
 // Function B_SpringPad.B_SpringPad_C.OnBlendOut_716B379C4EDA7279FD1A55B5BEB22BED
 // 0x0008 (0x0008 - 0x0000)

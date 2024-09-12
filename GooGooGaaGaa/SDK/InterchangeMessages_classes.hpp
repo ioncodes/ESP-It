@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class InterchangeMessages.InterchangeResultMeshWarning
-// 0x0010 (0x0070 - 0x0060)
+// 0x0010 (0x0080 - 0x0070)
 class UInterchangeResultMeshWarning : public UInterchangeResultWarning
 {
 public:
-	class FString                                 MeshName;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MeshName;                                          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -34,15 +34,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultMeshWarning) == 0x000008, "Wrong alignment on UInterchangeResultMeshWarning");
-static_assert(sizeof(UInterchangeResultMeshWarning) == 0x000070, "Wrong size on UInterchangeResultMeshWarning");
-static_assert(offsetof(UInterchangeResultMeshWarning, MeshName) == 0x000060, "Member 'UInterchangeResultMeshWarning::MeshName' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultMeshWarning) == 0x000080, "Wrong size on UInterchangeResultMeshWarning");
+static_assert(offsetof(UInterchangeResultMeshWarning, MeshName) == 0x000070, "Member 'UInterchangeResultMeshWarning::MeshName' has a wrong offset!");
 
 // Class InterchangeMessages.InterchangeResultTextureWarning
-// 0x0010 (0x0070 - 0x0060)
+// 0x0010 (0x0080 - 0x0070)
 class UInterchangeResultTextureWarning : public UInterchangeResultWarning
 {
 public:
-	class FString                                 TextureName;                                       // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TextureName;                                       // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -55,15 +55,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultTextureWarning) == 0x000008, "Wrong alignment on UInterchangeResultTextureWarning");
-static_assert(sizeof(UInterchangeResultTextureWarning) == 0x000070, "Wrong size on UInterchangeResultTextureWarning");
-static_assert(offsetof(UInterchangeResultTextureWarning, TextureName) == 0x000060, "Member 'UInterchangeResultTextureWarning::TextureName' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultTextureWarning) == 0x000080, "Wrong size on UInterchangeResultTextureWarning");
+static_assert(offsetof(UInterchangeResultTextureWarning, TextureName) == 0x000070, "Member 'UInterchangeResultTextureWarning::TextureName' has a wrong offset!");
 
 // Class InterchangeMessages.InterchangeResultMeshError
-// 0x0010 (0x0070 - 0x0060)
+// 0x0010 (0x0080 - 0x0070)
 class UInterchangeResultMeshError : public UInterchangeResultError
 {
 public:
-	class FString                                 MeshName;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MeshName;                                          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -76,15 +76,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultMeshError) == 0x000008, "Wrong alignment on UInterchangeResultMeshError");
-static_assert(sizeof(UInterchangeResultMeshError) == 0x000070, "Wrong size on UInterchangeResultMeshError");
-static_assert(offsetof(UInterchangeResultMeshError, MeshName) == 0x000060, "Member 'UInterchangeResultMeshError::MeshName' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultMeshError) == 0x000080, "Wrong size on UInterchangeResultMeshError");
+static_assert(offsetof(UInterchangeResultMeshError, MeshName) == 0x000070, "Member 'UInterchangeResultMeshError::MeshName' has a wrong offset!");
 
 // Class InterchangeMessages.InterchangeResultMeshWarning_Generic
-// 0x0018 (0x0088 - 0x0070)
+// 0x0010 (0x0090 - 0x0080)
 class UInterchangeResultMeshWarning_Generic final : public UInterchangeResultMeshWarning
 {
 public:
-	class FText                                   Text;                                              // 0x0070(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0080(0x0010)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -97,15 +97,15 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultMeshWarning_Generic) == 0x000008, "Wrong alignment on UInterchangeResultMeshWarning_Generic");
-static_assert(sizeof(UInterchangeResultMeshWarning_Generic) == 0x000088, "Wrong size on UInterchangeResultMeshWarning_Generic");
-static_assert(offsetof(UInterchangeResultMeshWarning_Generic, Text) == 0x000070, "Member 'UInterchangeResultMeshWarning_Generic::Text' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultMeshWarning_Generic) == 0x000090, "Wrong size on UInterchangeResultMeshWarning_Generic");
+static_assert(offsetof(UInterchangeResultMeshWarning_Generic, Text) == 0x000080, "Member 'UInterchangeResultMeshWarning_Generic::Text' has a wrong offset!");
 
 // Class InterchangeMessages.InterchangeResultMeshError_Generic
-// 0x0018 (0x0088 - 0x0070)
+// 0x0010 (0x0090 - 0x0080)
 class UInterchangeResultMeshError_Generic final : public UInterchangeResultMeshError
 {
 public:
-	class FText                                   Text;                                              // 0x0070(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0080(0x0010)(NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -118,16 +118,16 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultMeshError_Generic) == 0x000008, "Wrong alignment on UInterchangeResultMeshError_Generic");
-static_assert(sizeof(UInterchangeResultMeshError_Generic) == 0x000088, "Wrong size on UInterchangeResultMeshError_Generic");
-static_assert(offsetof(UInterchangeResultMeshError_Generic, Text) == 0x000070, "Member 'UInterchangeResultMeshError_Generic::Text' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultMeshError_Generic) == 0x000090, "Wrong size on UInterchangeResultMeshError_Generic");
+static_assert(offsetof(UInterchangeResultMeshError_Generic, Text) == 0x000080, "Member 'UInterchangeResultMeshError_Generic::Text' has a wrong offset!");
 
 // Class InterchangeMessages.InterchangeResultMeshWarning_TooManyUVs
-// 0x0008 (0x0078 - 0x0070)
+// 0x0008 (0x0088 - 0x0080)
 class UInterchangeResultMeshWarning_TooManyUVs final : public UInterchangeResultMeshWarning
 {
 public:
-	int32                                         ExcessUVs;                                         // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3118[0x4];                                     // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ExcessUVs;                                         // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -140,16 +140,16 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultMeshWarning_TooManyUVs) == 0x000008, "Wrong alignment on UInterchangeResultMeshWarning_TooManyUVs");
-static_assert(sizeof(UInterchangeResultMeshWarning_TooManyUVs) == 0x000078, "Wrong size on UInterchangeResultMeshWarning_TooManyUVs");
-static_assert(offsetof(UInterchangeResultMeshWarning_TooManyUVs, ExcessUVs) == 0x000070, "Member 'UInterchangeResultMeshWarning_TooManyUVs::ExcessUVs' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultMeshWarning_TooManyUVs) == 0x000088, "Wrong size on UInterchangeResultMeshWarning_TooManyUVs");
+static_assert(offsetof(UInterchangeResultMeshWarning_TooManyUVs, ExcessUVs) == 0x000080, "Member 'UInterchangeResultMeshWarning_TooManyUVs::ExcessUVs' has a wrong offset!");
 
 // Class InterchangeMessages.InterchangeResultTextureWarning_TextureFileDoNotExist
-// 0x0028 (0x0098 - 0x0070)
+// 0x0020 (0x00A0 - 0x0080)
 class UInterchangeResultTextureWarning_TextureFileDoNotExist final : public UInterchangeResultTextureWarning
 {
 public:
-	class FText                                   Text;                                              // 0x0070(0x0018)(NativeAccessSpecifierPublic)
-	class FString                                 MaterialName;                                      // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Text;                                              // 0x0080(0x0010)(NativeAccessSpecifierPublic)
+	class FString                                 MaterialName;                                      // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -162,9 +162,9 @@ public:
 	}
 };
 static_assert(alignof(UInterchangeResultTextureWarning_TextureFileDoNotExist) == 0x000008, "Wrong alignment on UInterchangeResultTextureWarning_TextureFileDoNotExist");
-static_assert(sizeof(UInterchangeResultTextureWarning_TextureFileDoNotExist) == 0x000098, "Wrong size on UInterchangeResultTextureWarning_TextureFileDoNotExist");
-static_assert(offsetof(UInterchangeResultTextureWarning_TextureFileDoNotExist, Text) == 0x000070, "Member 'UInterchangeResultTextureWarning_TextureFileDoNotExist::Text' has a wrong offset!");
-static_assert(offsetof(UInterchangeResultTextureWarning_TextureFileDoNotExist, MaterialName) == 0x000088, "Member 'UInterchangeResultTextureWarning_TextureFileDoNotExist::MaterialName' has a wrong offset!");
+static_assert(sizeof(UInterchangeResultTextureWarning_TextureFileDoNotExist) == 0x0000A0, "Wrong size on UInterchangeResultTextureWarning_TextureFileDoNotExist");
+static_assert(offsetof(UInterchangeResultTextureWarning_TextureFileDoNotExist, Text) == 0x000080, "Member 'UInterchangeResultTextureWarning_TextureFileDoNotExist::Text' has a wrong offset!");
+static_assert(offsetof(UInterchangeResultTextureWarning_TextureFileDoNotExist, MaterialName) == 0x000090, "Member 'UInterchangeResultTextureWarning_TextureFileDoNotExist::MaterialName' has a wrong offset!");
 
 }
 

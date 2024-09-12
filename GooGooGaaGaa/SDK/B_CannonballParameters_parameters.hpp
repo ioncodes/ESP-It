@@ -17,37 +17,37 @@ namespace SDK::Params
 {
 
 // Function B_CannonballParameters.B_CannonballParameters_C.GetFormattedTooltip
-// 0x0160 (0x0160 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct B_CannonballParameters_C_GetFormattedTooltip final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0048(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0098(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00E8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0138(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0148(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0088(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x00D0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0118(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0128(0x0010)()
 };
 static_assert(alignof(B_CannonballParameters_C_GetFormattedTooltip) == 0x000008, "Wrong alignment on B_CannonballParameters_C_GetFormattedTooltip");
-static_assert(sizeof(B_CannonballParameters_C_GetFormattedTooltip) == 0x000160, "Wrong size on B_CannonballParameters_C_GetFormattedTooltip");
+static_assert(sizeof(B_CannonballParameters_C_GetFormattedTooltip) == 0x000138, "Wrong size on B_CannonballParameters_C_GetFormattedTooltip");
 static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, ReturnValue) == 0x000000, "Member 'B_CannonballParameters_C_GetFormattedTooltip::ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000018, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000020, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000028, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000038, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000040, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData) == 0x000048, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_1) == 0x000098, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000E8, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeArray_Array) == 0x000138, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Format_ReturnValue) == 0x000148, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000010, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x000018, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000020, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000028, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000030, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000038, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_1) == 0x000088, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeStruct_FormatArgumentData_2) == 0x0000D0, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, K2Node_MakeArray_Array) == 0x000118, "Member 'B_CannonballParameters_C_GetFormattedTooltip::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(B_CannonballParameters_C_GetFormattedTooltip, CallFunc_Format_ReturnValue) == 0x000128, "Member 'B_CannonballParameters_C_GetFormattedTooltip::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 }
 

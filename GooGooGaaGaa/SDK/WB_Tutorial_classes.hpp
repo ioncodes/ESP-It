@@ -19,28 +19,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Tutorial.WB_Tutorial_C
-// 0x0098 (0x0358 - 0x02C0)
+// 0x0098 (0x0378 - 0x02E0)
 class UWB_Tutorial_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetSwitcher*                        HelpSwitcher;                                      // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   LeftShoulderIcon;                                  // 0x02D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ControllerIcon_C*                   RightShoulderIcon;                                 // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        TabButton_Gamemodes;                               // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        TabButton_Hunter;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        TabButton_Intro;                                   // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_TabButton_C*                        TabButton_Witch;                                   // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HelpGamemodes_C*                    WB_HelpGamemodes;                                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HelpHunter_C*                       WB_HelpHunter;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HelpIntro_C*                        WB_HelpIntro;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_HelpWitch_C*                        WB_HelpWitch;                                      // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWB_TabButton_C*>                Buttons;                                           // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UWB_HelpTabBase_C*>              HelpTabs;                                          // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UUserWidget*                            ActiveWidget;                                      // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          ButtonFocusExists;                                 // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_575C[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            TempActiveWidget;                                  // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetSwitcher*                        HelpSwitcher;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   LeftShoulderIcon;                                  // 0x02F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ControllerIcon_C*                   RightShoulderIcon;                                 // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TabButton_Gamemodes;                               // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TabButton_Hunter;                                  // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TabButton_Intro;                                   // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_TabButton_C*                        TabButton_Witch;                                   // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HelpGamemodes_C*                    WB_HelpGamemodes;                                  // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HelpHunter_C*                       WB_HelpHunter;                                     // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HelpIntro_C*                        WB_HelpIntro;                                      // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_HelpWitch_C*                        WB_HelpWitch;                                      // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWB_TabButton_C*>                Buttons;                                           // 0x0340(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UWB_HelpTabBase_C*>              HelpTabs;                                          // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	class UUserWidget*                            ActiveWidget;                                      // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          ButtonFocusExists;                                 // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUserWidget*                            TempActiveWidget;                                  // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__TabButton_Gamemodes_K2Node_ComponentBoundEvent_6_Clicked__DelegateSignature();
@@ -75,24 +75,24 @@ public:
 	}
 };
 static_assert(alignof(UWB_Tutorial_C) == 0x000008, "Wrong alignment on UWB_Tutorial_C");
-static_assert(sizeof(UWB_Tutorial_C) == 0x000358, "Wrong size on UWB_Tutorial_C");
-static_assert(offsetof(UWB_Tutorial_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Tutorial_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, HelpSwitcher) == 0x0002C8, "Member 'UWB_Tutorial_C::HelpSwitcher' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, LeftShoulderIcon) == 0x0002D0, "Member 'UWB_Tutorial_C::LeftShoulderIcon' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, RightShoulderIcon) == 0x0002D8, "Member 'UWB_Tutorial_C::RightShoulderIcon' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, TabButton_Gamemodes) == 0x0002E0, "Member 'UWB_Tutorial_C::TabButton_Gamemodes' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, TabButton_Hunter) == 0x0002E8, "Member 'UWB_Tutorial_C::TabButton_Hunter' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, TabButton_Intro) == 0x0002F0, "Member 'UWB_Tutorial_C::TabButton_Intro' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, TabButton_Witch) == 0x0002F8, "Member 'UWB_Tutorial_C::TabButton_Witch' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, WB_HelpGamemodes) == 0x000300, "Member 'UWB_Tutorial_C::WB_HelpGamemodes' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, WB_HelpHunter) == 0x000308, "Member 'UWB_Tutorial_C::WB_HelpHunter' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, WB_HelpIntro) == 0x000310, "Member 'UWB_Tutorial_C::WB_HelpIntro' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, WB_HelpWitch) == 0x000318, "Member 'UWB_Tutorial_C::WB_HelpWitch' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, Buttons) == 0x000320, "Member 'UWB_Tutorial_C::Buttons' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, HelpTabs) == 0x000330, "Member 'UWB_Tutorial_C::HelpTabs' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, ActiveWidget) == 0x000340, "Member 'UWB_Tutorial_C::ActiveWidget' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, ButtonFocusExists) == 0x000348, "Member 'UWB_Tutorial_C::ButtonFocusExists' has a wrong offset!");
-static_assert(offsetof(UWB_Tutorial_C, TempActiveWidget) == 0x000350, "Member 'UWB_Tutorial_C::TempActiveWidget' has a wrong offset!");
+static_assert(sizeof(UWB_Tutorial_C) == 0x000378, "Wrong size on UWB_Tutorial_C");
+static_assert(offsetof(UWB_Tutorial_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Tutorial_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, HelpSwitcher) == 0x0002E8, "Member 'UWB_Tutorial_C::HelpSwitcher' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, LeftShoulderIcon) == 0x0002F0, "Member 'UWB_Tutorial_C::LeftShoulderIcon' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, RightShoulderIcon) == 0x0002F8, "Member 'UWB_Tutorial_C::RightShoulderIcon' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, TabButton_Gamemodes) == 0x000300, "Member 'UWB_Tutorial_C::TabButton_Gamemodes' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, TabButton_Hunter) == 0x000308, "Member 'UWB_Tutorial_C::TabButton_Hunter' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, TabButton_Intro) == 0x000310, "Member 'UWB_Tutorial_C::TabButton_Intro' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, TabButton_Witch) == 0x000318, "Member 'UWB_Tutorial_C::TabButton_Witch' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, WB_HelpGamemodes) == 0x000320, "Member 'UWB_Tutorial_C::WB_HelpGamemodes' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, WB_HelpHunter) == 0x000328, "Member 'UWB_Tutorial_C::WB_HelpHunter' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, WB_HelpIntro) == 0x000330, "Member 'UWB_Tutorial_C::WB_HelpIntro' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, WB_HelpWitch) == 0x000338, "Member 'UWB_Tutorial_C::WB_HelpWitch' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, Buttons) == 0x000340, "Member 'UWB_Tutorial_C::Buttons' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, HelpTabs) == 0x000350, "Member 'UWB_Tutorial_C::HelpTabs' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, ActiveWidget) == 0x000360, "Member 'UWB_Tutorial_C::ActiveWidget' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, ButtonFocusExists) == 0x000368, "Member 'UWB_Tutorial_C::ButtonFocusExists' has a wrong offset!");
+static_assert(offsetof(UWB_Tutorial_C, TempActiveWidget) == 0x000370, "Member 'UWB_Tutorial_C::TempActiveWidget' has a wrong offset!");
 
 }
 

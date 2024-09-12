@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_FlyParameters.B_FlyParameters_C
-// 0x0018 (0x0070 - 0x0058)
+// 0x0018 (0x0068 - 0x0050)
 class UB_FlyParameters_C final : public USkillParameters
 {
 public:
-	double                                        ActivationManaCost;                                // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ManaCostPerSecond;                                 // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ForceMultiplier;                                   // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ActivationManaCost;                                // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ManaCostPerSecond;                                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ForceMultiplier;                                   // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FText GetFormattedTooltip();
@@ -39,10 +39,10 @@ public:
 	}
 };
 static_assert(alignof(UB_FlyParameters_C) == 0x000008, "Wrong alignment on UB_FlyParameters_C");
-static_assert(sizeof(UB_FlyParameters_C) == 0x000070, "Wrong size on UB_FlyParameters_C");
-static_assert(offsetof(UB_FlyParameters_C, ActivationManaCost) == 0x000058, "Member 'UB_FlyParameters_C::ActivationManaCost' has a wrong offset!");
-static_assert(offsetof(UB_FlyParameters_C, ManaCostPerSecond) == 0x000060, "Member 'UB_FlyParameters_C::ManaCostPerSecond' has a wrong offset!");
-static_assert(offsetof(UB_FlyParameters_C, ForceMultiplier) == 0x000068, "Member 'UB_FlyParameters_C::ForceMultiplier' has a wrong offset!");
+static_assert(sizeof(UB_FlyParameters_C) == 0x000068, "Wrong size on UB_FlyParameters_C");
+static_assert(offsetof(UB_FlyParameters_C, ActivationManaCost) == 0x000050, "Member 'UB_FlyParameters_C::ActivationManaCost' has a wrong offset!");
+static_assert(offsetof(UB_FlyParameters_C, ManaCostPerSecond) == 0x000058, "Member 'UB_FlyParameters_C::ManaCostPerSecond' has a wrong offset!");
+static_assert(offsetof(UB_FlyParameters_C, ForceMultiplier) == 0x000060, "Member 'UB_FlyParameters_C::ForceMultiplier' has a wrong offset!");
 
 }
 

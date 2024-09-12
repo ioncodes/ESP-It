@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_AchievementData.B_AchievementData_C
-// 0x0128 (0x0150 - 0x0028)
+// 0x0118 (0x0140 - 0x0028)
 class UB_AchievementData_C final : public UObject
 {
 public:
-	uint8                                         Pad_3803[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_AchievementData                     Data;                                              // 0x0030(0x0120)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_AchievementData                     Data;                                              // 0x0030(0x0110)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -36,7 +36,7 @@ public:
 	}
 };
 static_assert(alignof(UB_AchievementData_C) == 0x000010, "Wrong alignment on UB_AchievementData_C");
-static_assert(sizeof(UB_AchievementData_C) == 0x000150, "Wrong size on UB_AchievementData_C");
+static_assert(sizeof(UB_AchievementData_C) == 0x000140, "Wrong size on UB_AchievementData_C");
 static_assert(offsetof(UB_AchievementData_C, Data) == 0x000030, "Member 'UB_AchievementData_C::Data' has a wrong offset!");
 
 }

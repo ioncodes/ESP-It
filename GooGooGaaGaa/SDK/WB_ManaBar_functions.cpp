@@ -20,9 +20,9 @@ namespace SDK
 // Function WB_ManaBar.WB_ManaBar_C.SetOwner
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_Owner                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ManaBar_C::SetOwner(class AActor* Param_Owner)
+void UWB_ManaBar_C::SetOwner(class AActor* Owner_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UWB_ManaBar_C::SetOwner(class AActor* Param_Owner)
 
 	Params::WB_ManaBar_C_SetOwner Parms{};
 
-	Parms.Param_Owner = Param_Owner;
+	Parms.Owner_0 = Owner_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

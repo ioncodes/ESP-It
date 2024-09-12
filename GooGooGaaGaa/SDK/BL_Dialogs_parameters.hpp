@@ -15,34 +15,34 @@ namespace SDK::Params
 {
 
 // Function BL_Dialogs.BL_Dialogs_C.ShowDialog
-// 0x0078 (0x0078 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct BL_Dialogs_C_ShowDialog final
 {
 public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   Message;                                           // 0x0018(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          bShowBackButton;                                   // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAutoRevertVideoMode;                              // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_112C[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Title;                                             // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   Message;                                           // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          bShowBackButton;                                   // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAutoRevertVideoMode;                              // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BL_Dialogs_C_ShowDialog) == 0x000008, "Wrong alignment on BL_Dialogs_C_ShowDialog");
-static_assert(sizeof(BL_Dialogs_C_ShowDialog) == 0x000078, "Wrong size on BL_Dialogs_C_ShowDialog");
+static_assert(sizeof(BL_Dialogs_C_ShowDialog) == 0x000068, "Wrong size on BL_Dialogs_C_ShowDialog");
 static_assert(offsetof(BL_Dialogs_C_ShowDialog, Title) == 0x000000, "Member 'BL_Dialogs_C_ShowDialog::Title' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, Message) == 0x000018, "Member 'BL_Dialogs_C_ShowDialog::Message' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, bShowBackButton) == 0x000030, "Member 'BL_Dialogs_C_ShowDialog::bShowBackButton' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, bAutoRevertVideoMode) == 0x000031, "Member 'BL_Dialogs_C_ShowDialog::bAutoRevertVideoMode' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, __WorldContext) == 0x000038, "Member 'BL_Dialogs_C_ShowDialog::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, CallFunc_Conv_TextToString_ReturnValue) == 0x000040, "Member 'BL_Dialogs_C_ShowDialog::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, CallFunc_GetGameInstance_ReturnValue) == 0x000050, "Member 'BL_Dialogs_C_ShowDialog::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000058, "Member 'BL_Dialogs_C_ShowDialog::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, K2Node_DynamicCast_AsB_Game_Instance) == 0x000068, "Member 'BL_Dialogs_C_ShowDialog::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(BL_Dialogs_C_ShowDialog, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'BL_Dialogs_C_ShowDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, Message) == 0x000010, "Member 'BL_Dialogs_C_ShowDialog::Message' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, bShowBackButton) == 0x000020, "Member 'BL_Dialogs_C_ShowDialog::bShowBackButton' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, bAutoRevertVideoMode) == 0x000021, "Member 'BL_Dialogs_C_ShowDialog::bAutoRevertVideoMode' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, __WorldContext) == 0x000028, "Member 'BL_Dialogs_C_ShowDialog::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, CallFunc_Conv_TextToString_ReturnValue) == 0x000030, "Member 'BL_Dialogs_C_ShowDialog::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, CallFunc_GetGameInstance_ReturnValue) == 0x000040, "Member 'BL_Dialogs_C_ShowDialog::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000048, "Member 'BL_Dialogs_C_ShowDialog::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, K2Node_DynamicCast_AsB_Game_Instance) == 0x000058, "Member 'BL_Dialogs_C_ShowDialog::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(BL_Dialogs_C_ShowDialog, K2Node_DynamicCast_bSuccess) == 0x000060, "Member 'BL_Dialogs_C_ShowDialog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function BL_Dialogs.BL_Dialogs_C.ShowFillAPotTutorialDialog
 // 0x0008 (0x0008 - 0x0000)

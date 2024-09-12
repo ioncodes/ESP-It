@@ -20,16 +20,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ImpostorGameMode.B_ImpostorGameMode_C
-// 0x0078 (0x0628 - 0x05B0)
+// 0x0078 (0x0620 - 0x05A8)
 class AB_ImpostorGameMode_C final : public AB_GameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorGameMode_C;               // 0x05B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AB_ImpostorGameState_C*                 ImpostorGameState;                                 // 0x05B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<int32, int32>                            TasksPerPlayerCount;                               // 0x05C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          EnableImposturousStartTimer;                       // 0x0610(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4BA9[0x7];                                     // 0x0611(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnMatchStarted;                                    // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ImpostorGameMode_C;               // 0x05A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AB_ImpostorGameState_C*                 ImpostorGameState;                                 // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<int32, int32>                            TasksPerPlayerCount;                               // 0x05B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          EnableImposturousStartTimer;                       // 0x0608(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnMatchStarted;                                    // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void OnMatchStarted__DelegateSignature();
@@ -51,7 +51,7 @@ public:
 	void ReceiveBeginPlay();
 	void RemoveAllCorpses();
 	void RespawnAllPlayers();
-	void SpawnPlayer(const struct FTransform& Transform, class UClass* Param_Class, class APlayerController* PlayerController);
+	void SpawnPlayer(const struct FTransform& Transform, class UClass* Class_0, class APlayerController* PlayerController);
 	void StartMeeting(class AB_ImpostorPlayerState_C* FoundPlayerState, class AB_ImpostorPlayerState_C* ReporterPlayerState);
 	void TimerFinished();
 	void UnoccupyAllPlayerStarts();
@@ -70,12 +70,12 @@ public:
 	}
 };
 static_assert(alignof(AB_ImpostorGameMode_C) == 0x000008, "Wrong alignment on AB_ImpostorGameMode_C");
-static_assert(sizeof(AB_ImpostorGameMode_C) == 0x000628, "Wrong size on AB_ImpostorGameMode_C");
-static_assert(offsetof(AB_ImpostorGameMode_C, UberGraphFrame_B_ImpostorGameMode_C) == 0x0005B0, "Member 'AB_ImpostorGameMode_C::UberGraphFrame_B_ImpostorGameMode_C' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorGameMode_C, ImpostorGameState) == 0x0005B8, "Member 'AB_ImpostorGameMode_C::ImpostorGameState' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorGameMode_C, TasksPerPlayerCount) == 0x0005C0, "Member 'AB_ImpostorGameMode_C::TasksPerPlayerCount' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorGameMode_C, EnableImposturousStartTimer) == 0x000610, "Member 'AB_ImpostorGameMode_C::EnableImposturousStartTimer' has a wrong offset!");
-static_assert(offsetof(AB_ImpostorGameMode_C, OnMatchStarted) == 0x000618, "Member 'AB_ImpostorGameMode_C::OnMatchStarted' has a wrong offset!");
+static_assert(sizeof(AB_ImpostorGameMode_C) == 0x000620, "Wrong size on AB_ImpostorGameMode_C");
+static_assert(offsetof(AB_ImpostorGameMode_C, UberGraphFrame_B_ImpostorGameMode_C) == 0x0005A8, "Member 'AB_ImpostorGameMode_C::UberGraphFrame_B_ImpostorGameMode_C' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorGameMode_C, ImpostorGameState) == 0x0005B0, "Member 'AB_ImpostorGameMode_C::ImpostorGameState' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorGameMode_C, TasksPerPlayerCount) == 0x0005B8, "Member 'AB_ImpostorGameMode_C::TasksPerPlayerCount' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorGameMode_C, EnableImposturousStartTimer) == 0x000608, "Member 'AB_ImpostorGameMode_C::EnableImposturousStartTimer' has a wrong offset!");
+static_assert(offsetof(AB_ImpostorGameMode_C, OnMatchStarted) == 0x000610, "Member 'AB_ImpostorGameMode_C::OnMatchStarted' has a wrong offset!");
 
 }
 

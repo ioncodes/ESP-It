@@ -40,10 +40,10 @@ void UWB_SkillHelp_C::ExecuteUbergraph_WB_SkillHelp(int32 EntryPoint)
 // Function WB_SkillHelp.WB_SkillHelp_C.GetSkillTeam
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UClass*                           Param_SkillClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// ETeamID                                 Param_SkillTeam                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           SkillClass_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// ETeamID                                 SkillTeam_0                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillHelp_C::GetSkillTeam(class UClass* Param_SkillClass, ETeamID* Param_SkillTeam)
+void UWB_SkillHelp_C::GetSkillTeam(class UClass* SkillClass_0, ETeamID* SkillTeam_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,22 +52,22 @@ void UWB_SkillHelp_C::GetSkillTeam(class UClass* Param_SkillClass, ETeamID* Para
 
 	Params::WB_SkillHelp_C_GetSkillTeam Parms{};
 
-	Parms.Param_SkillClass = Param_SkillClass;
+	Parms.SkillClass_0 = SkillClass_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_SkillTeam != nullptr)
-		*Param_SkillTeam = Parms.Param_SkillTeam;
+	if (SkillTeam_0 != nullptr)
+		*SkillTeam_0 = Parms.SkillTeam_0;
 }
 
 
 // Function WB_SkillHelp.WB_SkillHelp_C.SetSkill
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_SkillClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           SkillClass_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // ESkillCategory                          OldSkillCategory                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_SkillHelp_C::SetSkill(class UClass* Param_SkillClass, ESkillCategory OldSkillCategory)
+void UWB_SkillHelp_C::SetSkill(class UClass* SkillClass_0, ESkillCategory OldSkillCategory)
 {
 	static class UFunction* Func = nullptr;
 
@@ -76,7 +76,7 @@ void UWB_SkillHelp_C::SetSkill(class UClass* Param_SkillClass, ESkillCategory Ol
 
 	Params::WB_SkillHelp_C_SetSkill Parms{};
 
-	Parms.Param_SkillClass = Param_SkillClass;
+	Parms.SkillClass_0 = SkillClass_0;
 	Parms.OldSkillCategory = OldSkillCategory;
 
 	UObject::ProcessEvent(Func, &Parms);

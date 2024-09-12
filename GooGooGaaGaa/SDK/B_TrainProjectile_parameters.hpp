@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_TrainProjectile.B_TrainProjectile_C.BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -27,11 +27,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50F8[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -40,7 +40,7 @@ static_assert(offsetof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_TrainProjectile_C_BndEvt__B_TrainProjectile_Cylinder_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_TrainProjectile.B_TrainProjectile_C.BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// 0x0118 (0x0118 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature final
 {
 public:
@@ -48,10 +48,10 @@ public:
 	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0030(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             Hit;                                               // 0x0030(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
-static_assert(sizeof(B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature) == 0x000118, "Wrong size on B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
+static_assert(sizeof(B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature) == 0x000128, "Wrong size on B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, HitComponent) == 0x000000, "Member 'B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::HitComponent' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_TrainProjectile_C_BndEvt__Cylinder_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -67,12 +67,12 @@ public:
 	double                                        Temp_real_Variable;                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1;                              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50F9[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50FA[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_Select_Default;                             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FInterpTo_ReturnValue;                    // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -110,32 +110,32 @@ static_assert(offsetof(B_TrainProjectile_C_CalculateTrainPitch, CallFunc_FInterp
 static_assert(offsetof(B_TrainProjectile_C_CalculateTrainPitch, CallFunc_SetPitchMultiplier_NewPitchMultiplier_ImplicitCast) == 0x0000C8, "Member 'B_TrainProjectile_C_CalculateTrainPitch::CallFunc_SetPitchMultiplier_NewPitchMultiplier_ImplicitCast' has a wrong offset!");
 
 // Function B_TrainProjectile.B_TrainProjectile_C.ExecuteUbergraph_B_TrainProjectile
-// 0x0268 (0x0268 - 0x0000)
+// 0x0288 (0x0288 - 0x0000)
 struct B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50FB[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_HitComponent;           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor_1;           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp_1;            // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_ComponentBoundEvent_NormalImpulse;          // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_ComponentBoundEvent_Hit;                    // 0x0060(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0160(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50FC[0x3];                                     // 0x017D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0180(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             K2Node_ComponentBoundEvent_Hit;                    // 0x0060(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0190(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile) == 0x000008, "Wrong alignment on B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile");
-static_assert(sizeof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile) == 0x000268, "Wrong size on B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile");
+static_assert(sizeof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile) == 0x000288, "Wrong size on B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile");
 static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, EntryPoint) == 0x000000, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, CallFunc_IsDedicatedServer_ReturnValue) == 0x000008, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
@@ -146,13 +146,13 @@ static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K
 static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherComp_1) == 0x000040, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherComp_1' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_NormalImpulse) == 0x000048, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_NormalImpulse' has a wrong offset!");
 static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_Hit) == 0x000060, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_Hit' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000148, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000160, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherActor) == 0x000168, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherComp) == 0x000170, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000178, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_bFromSweep) == 0x00017C, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
-static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_SweepResult) == 0x000180, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000158, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000170, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherActor) == 0x000178, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherComp) == 0x000180, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000188, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_bFromSweep) == 0x00018C, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
+static_assert(offsetof(B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile, K2Node_ComponentBoundEvent_SweepResult) == 0x000190, "Member 'B_TrainProjectile_C_ExecuteUbergraph_B_TrainProjectile::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
 
 // Function B_TrainProjectile.B_TrainProjectile_C.HitWitch
 // 0x00B8 (0x00B8 - 0x0000)
@@ -161,34 +161,34 @@ struct B_TrainProjectile_C_HitWitch final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50FD[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_1;             // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50FE[0x1];                                     // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AController*                            CallFunc_GetInstigatorController_ReturnValue;      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50FF[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PlayerState_C*                       K2Node_DynamicCast_AsB_Player_State;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5100[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_SkillParametersSubsystem_C*          CallFunc_GetWorldSubsystem_ReturnValue_1;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AController*                            CallFunc_GetInstigatorController_ReturnValue_1;    // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_ApplyDamage_ReturnValue;                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5101[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_1;             // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_2;             // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5102[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_2;             // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClassIsChildOf_ReturnValue_3;             // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5103[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_GetInstigator_ReturnValue_1;              // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_3;             // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 CallFunc_GetObjectClass_ReturnValue_4;             // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -198,12 +198,12 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5104[0x2];                                     // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00AE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5105[0x1];                                     // 0x00AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AF[0x1];                                       // 0x00AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_ApplyDamage_BaseDamage_ImplicitCast;      // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_TrainProjectile_C_HitWitch) == 0x000008, "Wrong alignment on B_TrainProjectile_C_HitWitch");

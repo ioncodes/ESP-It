@@ -10,63 +10,63 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_ObjectiveCauldron.B_ObjectiveCauldron_C
-// 0x0150 (0x03E8 - 0x0298)
+// 0x0150 (0x03E0 - 0x0290)
 class AB_ObjectiveCauldron_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_CauldronCooking;                                // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight;                                         // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Fluid;                                             // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Fill;                                              // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SC_CauldronCooking;                                // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   RuneRays;                                          // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       MinPropSphere;                                     // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        EmitterSpawn;                                      // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Lightshaft;                                        // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       WitchCheckSphere;                                  // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDecalComponent*                        Decal;                                             // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       Widget;                                            // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       PropCheckSphere;                                   // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cauldron;                                          // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Stacks;                                            // 0x0318(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         MaxStacks;                                         // 0x0319(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Filled;                                            // 0x031A(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DB3[0x5];                                     // 0x031B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 WantedProp;                                        // 0x0320(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AB_ObjectiveGameMode_C*                 GameMode;                                          // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumberOfWitches;                                   // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DB4[0x4];                                     // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        WitchInCircleTime;                                 // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        WitchInCircleTimeNeeded;                           // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Active;                                            // 0x0348(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DB5[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DrawSizeMax;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DrawSizeMin;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DecalMaterial;                                     // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               FillMaterial;                                      // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        Fillstate;                                         // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	int32                                         ExtraTime;                                         // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Color;                                             // 0x037C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DB6[0x4];                                     // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VisualCirclelFill;                                 // 0x0390(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_ObjectiveGameState_C*                GameState;                                         // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalBrightness;                                   // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AController*                            Controller;                                        // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class UClass*>                         LastProps;                                         // 0x03B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        MinPropDistance;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         EditorVaildProps;                                  // 0x03C8(0x0010)(Edit, BlueprintVisible)
-	TArray<class FString>                         PropClassesToAvoid;                                // 0x03D8(0x0010)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_CauldronCooking;                                // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Fluid;                                             // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Fill;                                              // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SC_CauldronCooking;                                // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   RuneRays;                                          // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       MinPropSphere;                                     // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        EmitterSpawn;                                      // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Lightshaft;                                        // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       WitchCheckSphere;                                  // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        Decal;                                             // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       Widget;                                            // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       PropCheckSphere;                                   // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cauldron;                                          // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Stacks;                                            // 0x0310(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         MaxStacks;                                         // 0x0311(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Filled;                                            // 0x0312(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_313[0x5];                                      // 0x0313(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 WantedProp;                                        // 0x0318(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AB_ObjectiveGameMode_C*                 GameMode;                                          // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumberOfWitches;                                   // 0x0328(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        WitchInCircleTime;                                 // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WitchInCircleTimeNeeded;                           // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Active;                                            // 0x0340(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DrawSizeMax;                                       // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DrawSizeMin;                                       // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DecalMaterial;                                     // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               FillMaterial;                                      // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        Fillstate;                                         // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	int32                                         ExtraTime;                                         // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Color;                                             // 0x0374(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VisualCirclelFill;                                 // 0x0388(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_ObjectiveGameState_C*                GameState;                                         // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalBrightness;                                   // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            Controller;                                        // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class UClass*>                         LastProps;                                         // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        MinPropDistance;                                   // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FString>                         EditorVaildProps;                                  // 0x03C0(0x0010)(Edit, BlueprintVisible)
+	TArray<class FString>                         PropClassesToAvoid;                                // 0x03D0(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ActivateLightMulti();
@@ -100,47 +100,47 @@ public:
 	}
 };
 static_assert(alignof(AB_ObjectiveCauldron_C) == 0x000008, "Wrong alignment on AB_ObjectiveCauldron_C");
-static_assert(sizeof(AB_ObjectiveCauldron_C) == 0x0003E8, "Wrong size on AB_ObjectiveCauldron_C");
-static_assert(offsetof(AB_ObjectiveCauldron_C, UberGraphFrame) == 0x000298, "Member 'AB_ObjectiveCauldron_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, NS_CauldronCooking) == 0x0002A0, "Member 'AB_ObjectiveCauldron_C::NS_CauldronCooking' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, SpotLight) == 0x0002A8, "Member 'AB_ObjectiveCauldron_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Fluid) == 0x0002B0, "Member 'AB_ObjectiveCauldron_C::Fluid' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Fill) == 0x0002B8, "Member 'AB_ObjectiveCauldron_C::Fill' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, SC_CauldronCooking) == 0x0002C0, "Member 'AB_ObjectiveCauldron_C::SC_CauldronCooking' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, RuneRays) == 0x0002C8, "Member 'AB_ObjectiveCauldron_C::RuneRays' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, MinPropSphere) == 0x0002D0, "Member 'AB_ObjectiveCauldron_C::MinPropSphere' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, EmitterSpawn) == 0x0002D8, "Member 'AB_ObjectiveCauldron_C::EmitterSpawn' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Lightshaft) == 0x0002E0, "Member 'AB_ObjectiveCauldron_C::Lightshaft' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, WitchCheckSphere) == 0x0002E8, "Member 'AB_ObjectiveCauldron_C::WitchCheckSphere' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Decal) == 0x0002F0, "Member 'AB_ObjectiveCauldron_C::Decal' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Widget) == 0x0002F8, "Member 'AB_ObjectiveCauldron_C::Widget' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, PropCheckSphere) == 0x000300, "Member 'AB_ObjectiveCauldron_C::PropCheckSphere' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Cauldron) == 0x000308, "Member 'AB_ObjectiveCauldron_C::Cauldron' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, DefaultSceneRoot) == 0x000310, "Member 'AB_ObjectiveCauldron_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Stacks) == 0x000318, "Member 'AB_ObjectiveCauldron_C::Stacks' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, MaxStacks) == 0x000319, "Member 'AB_ObjectiveCauldron_C::MaxStacks' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Filled) == 0x00031A, "Member 'AB_ObjectiveCauldron_C::Filled' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, WantedProp) == 0x000320, "Member 'AB_ObjectiveCauldron_C::WantedProp' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, GameMode) == 0x000328, "Member 'AB_ObjectiveCauldron_C::GameMode' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, NumberOfWitches) == 0x000330, "Member 'AB_ObjectiveCauldron_C::NumberOfWitches' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, WitchInCircleTime) == 0x000338, "Member 'AB_ObjectiveCauldron_C::WitchInCircleTime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, WitchInCircleTimeNeeded) == 0x000340, "Member 'AB_ObjectiveCauldron_C::WitchInCircleTimeNeeded' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Active) == 0x000348, "Member 'AB_ObjectiveCauldron_C::Active' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, DrawSizeMax) == 0x000350, "Member 'AB_ObjectiveCauldron_C::DrawSizeMax' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, DrawSizeMin) == 0x000358, "Member 'AB_ObjectiveCauldron_C::DrawSizeMin' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, DecalMaterial) == 0x000360, "Member 'AB_ObjectiveCauldron_C::DecalMaterial' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, FillMaterial) == 0x000368, "Member 'AB_ObjectiveCauldron_C::FillMaterial' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Fillstate) == 0x000370, "Member 'AB_ObjectiveCauldron_C::Fillstate' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, ExtraTime) == 0x000378, "Member 'AB_ObjectiveCauldron_C::ExtraTime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Color) == 0x00037C, "Member 'AB_ObjectiveCauldron_C::Color' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, VisualCirclelFill) == 0x000390, "Member 'AB_ObjectiveCauldron_C::VisualCirclelFill' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, GameState) == 0x000398, "Member 'AB_ObjectiveCauldron_C::GameState' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, DecalBrightness) == 0x0003A0, "Member 'AB_ObjectiveCauldron_C::DecalBrightness' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, Controller) == 0x0003A8, "Member 'AB_ObjectiveCauldron_C::Controller' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, LastProps) == 0x0003B0, "Member 'AB_ObjectiveCauldron_C::LastProps' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, MinPropDistance) == 0x0003C0, "Member 'AB_ObjectiveCauldron_C::MinPropDistance' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, EditorVaildProps) == 0x0003C8, "Member 'AB_ObjectiveCauldron_C::EditorVaildProps' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveCauldron_C, PropClassesToAvoid) == 0x0003D8, "Member 'AB_ObjectiveCauldron_C::PropClassesToAvoid' has a wrong offset!");
+static_assert(sizeof(AB_ObjectiveCauldron_C) == 0x0003E0, "Wrong size on AB_ObjectiveCauldron_C");
+static_assert(offsetof(AB_ObjectiveCauldron_C, UberGraphFrame) == 0x000290, "Member 'AB_ObjectiveCauldron_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, NS_CauldronCooking) == 0x000298, "Member 'AB_ObjectiveCauldron_C::NS_CauldronCooking' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, SpotLight) == 0x0002A0, "Member 'AB_ObjectiveCauldron_C::SpotLight' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Fluid) == 0x0002A8, "Member 'AB_ObjectiveCauldron_C::Fluid' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Fill) == 0x0002B0, "Member 'AB_ObjectiveCauldron_C::Fill' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, SC_CauldronCooking) == 0x0002B8, "Member 'AB_ObjectiveCauldron_C::SC_CauldronCooking' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, RuneRays) == 0x0002C0, "Member 'AB_ObjectiveCauldron_C::RuneRays' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, MinPropSphere) == 0x0002C8, "Member 'AB_ObjectiveCauldron_C::MinPropSphere' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, EmitterSpawn) == 0x0002D0, "Member 'AB_ObjectiveCauldron_C::EmitterSpawn' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Lightshaft) == 0x0002D8, "Member 'AB_ObjectiveCauldron_C::Lightshaft' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, WitchCheckSphere) == 0x0002E0, "Member 'AB_ObjectiveCauldron_C::WitchCheckSphere' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Decal) == 0x0002E8, "Member 'AB_ObjectiveCauldron_C::Decal' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Widget) == 0x0002F0, "Member 'AB_ObjectiveCauldron_C::Widget' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, PropCheckSphere) == 0x0002F8, "Member 'AB_ObjectiveCauldron_C::PropCheckSphere' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Cauldron) == 0x000300, "Member 'AB_ObjectiveCauldron_C::Cauldron' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, DefaultSceneRoot) == 0x000308, "Member 'AB_ObjectiveCauldron_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Stacks) == 0x000310, "Member 'AB_ObjectiveCauldron_C::Stacks' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, MaxStacks) == 0x000311, "Member 'AB_ObjectiveCauldron_C::MaxStacks' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Filled) == 0x000312, "Member 'AB_ObjectiveCauldron_C::Filled' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, WantedProp) == 0x000318, "Member 'AB_ObjectiveCauldron_C::WantedProp' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, GameMode) == 0x000320, "Member 'AB_ObjectiveCauldron_C::GameMode' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, NumberOfWitches) == 0x000328, "Member 'AB_ObjectiveCauldron_C::NumberOfWitches' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, WitchInCircleTime) == 0x000330, "Member 'AB_ObjectiveCauldron_C::WitchInCircleTime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, WitchInCircleTimeNeeded) == 0x000338, "Member 'AB_ObjectiveCauldron_C::WitchInCircleTimeNeeded' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Active) == 0x000340, "Member 'AB_ObjectiveCauldron_C::Active' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, DrawSizeMax) == 0x000348, "Member 'AB_ObjectiveCauldron_C::DrawSizeMax' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, DrawSizeMin) == 0x000350, "Member 'AB_ObjectiveCauldron_C::DrawSizeMin' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, DecalMaterial) == 0x000358, "Member 'AB_ObjectiveCauldron_C::DecalMaterial' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, FillMaterial) == 0x000360, "Member 'AB_ObjectiveCauldron_C::FillMaterial' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Fillstate) == 0x000368, "Member 'AB_ObjectiveCauldron_C::Fillstate' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, ExtraTime) == 0x000370, "Member 'AB_ObjectiveCauldron_C::ExtraTime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Color) == 0x000374, "Member 'AB_ObjectiveCauldron_C::Color' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, VisualCirclelFill) == 0x000388, "Member 'AB_ObjectiveCauldron_C::VisualCirclelFill' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, GameState) == 0x000390, "Member 'AB_ObjectiveCauldron_C::GameState' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, DecalBrightness) == 0x000398, "Member 'AB_ObjectiveCauldron_C::DecalBrightness' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, Controller) == 0x0003A0, "Member 'AB_ObjectiveCauldron_C::Controller' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, LastProps) == 0x0003A8, "Member 'AB_ObjectiveCauldron_C::LastProps' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, MinPropDistance) == 0x0003B8, "Member 'AB_ObjectiveCauldron_C::MinPropDistance' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, EditorVaildProps) == 0x0003C0, "Member 'AB_ObjectiveCauldron_C::EditorVaildProps' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveCauldron_C, PropClassesToAvoid) == 0x0003D0, "Member 'AB_ObjectiveCauldron_C::PropClassesToAvoid' has a wrong offset!");
 
 }
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "SAxisToEdit_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,7 +28,7 @@ public:
 	class UWB_KeyBinding_C*                       Widget;                                            // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildIndex_ReturnValue;                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_547B[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUniformGridSlot*                       CallFunc_AddChildToUniformGrid_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_MathExpression_ReturnValue;                 // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -67,17 +67,17 @@ static_assert(offsetof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAction, Act
 static_assert(offsetof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAction, CallFunc_CreateKeyBindingWidget_KeyBindingWidget) == 0x000008, "Member 'WB_KeyBindingList_C_CreateKeyBindingWidgetFromAction::CallFunc_CreateKeyBindingWidget_KeyBindingWidget' has a wrong offset!");
 
 // Function WB_KeyBindingList.WB_KeyBindingList_C.CreateKeyBindingWidgetFromAxis
-// 0x0030 (0x0030 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis final
 {
 public:
-	struct FSAxisToEdit                           Param_AxisToEdit;                                  // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class UWB_KeyBinding_C*                       CallFunc_CreateKeyBindingWidget_KeyBindingWidget;  // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FSAxisToEdit                           AxisToEdit_0;                                      // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UWB_KeyBinding_C*                       CallFunc_CreateKeyBindingWidget_KeyBindingWidget;  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis) == 0x000008, "Wrong alignment on WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis");
-static_assert(sizeof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis) == 0x000030, "Wrong size on WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis");
-static_assert(offsetof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis, Param_AxisToEdit) == 0x000000, "Member 'WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis::Param_AxisToEdit' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis, CallFunc_CreateKeyBindingWidget_KeyBindingWidget) == 0x000028, "Member 'WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis::CallFunc_CreateKeyBindingWidget_KeyBindingWidget' has a wrong offset!");
+static_assert(sizeof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis) == 0x000028, "Wrong size on WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis");
+static_assert(offsetof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis, AxisToEdit_0) == 0x000000, "Member 'WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis::AxisToEdit_0' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis, CallFunc_CreateKeyBindingWidget_KeyBindingWidget) == 0x000020, "Member 'WB_KeyBindingList_C_CreateKeyBindingWidgetFromAxis::CallFunc_CreateKeyBindingWidget_KeyBindingWidget' has a wrong offset!");
 
 // Function WB_KeyBindingList.WB_KeyBindingList_C.ExecuteUbergraph_WB_KeyBindingList
 // 0x0080 (0x0080 - 0x0000)
@@ -88,14 +88,14 @@ public:
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_547C[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_KeyBinding_C*                       K2Node_CustomEvent_KeyBindingWidget;               // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_KeyBindingButton_C*                 K2Node_CustomEvent_KeyBindingButton;               // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_Index;                          // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_547D[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_547E[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -133,7 +133,7 @@ static_assert(offsetof(WB_KeyBindingList_C_GetInitialFocusWidget, K2Node_Dynamic
 static_assert(offsetof(WB_KeyBindingList_C_GetInitialFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_KeyBindingList_C_GetInitialFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function WB_KeyBindingList.WB_KeyBindingList_C.InitializeBindingWidgets
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_KeyBindingList_C_InitializeBindingWidgets final
 {
 public:
@@ -143,16 +143,16 @@ public:
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSAxisToEdit                           CallFunc_Array_Get_Item;                           // 0x0018(0x0028)(HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_547F[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSAxisToEdit                           CallFunc_Array_Get_Item;                           // 0x0018(0x0020)(HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_KeyBindingList_C_InitializeBindingWidgets) == 0x000008, "Wrong alignment on WB_KeyBindingList_C_InitializeBindingWidgets");
-static_assert(sizeof(WB_KeyBindingList_C_InitializeBindingWidgets) == 0x000058, "Wrong size on WB_KeyBindingList_C_InitializeBindingWidgets");
+static_assert(sizeof(WB_KeyBindingList_C_InitializeBindingWidgets) == 0x000050, "Wrong size on WB_KeyBindingList_C_InitializeBindingWidgets");
 static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, Temp_int_Array_Index_Variable) == 0x000008, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::Temp_int_Array_Index_Variable' has a wrong offset!");
@@ -160,11 +160,11 @@ static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, Temp_int_Ar
 static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, Temp_int_Loop_Counter_Variable_1) == 0x000010, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
 static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Add_IntInt_ReturnValue_1) == 0x000014, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Get_Item) == 0x000018, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Less_IntInt_ReturnValue) == 0x000044, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Get_Item_1) == 0x000048, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Length_ReturnValue_1) == 0x000050, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000054, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Get_Item_1) == 0x000040, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Array_Length_ReturnValue_1) == 0x000048, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_InitializeBindingWidgets, CallFunc_Less_IntInt_ReturnValue_1) == 0x00004C, "Member 'WB_KeyBindingList_C_InitializeBindingWidgets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function WB_KeyBindingList.WB_KeyBindingList_C.LoadInputMappingsManagerSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -188,13 +188,13 @@ struct WB_KeyBindingList_C_OnKeyBindingButtonClicked final
 public:
 	class UWB_KeyBinding_C*                       KeyBindingWidget;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWB_KeyBindingButton_C*                 KeyBindingButton;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_Index;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_KeyBindingList_C_OnKeyBindingButtonClicked) == 0x000008, "Wrong alignment on WB_KeyBindingList_C_OnKeyBindingButtonClicked");
 static_assert(sizeof(WB_KeyBindingList_C_OnKeyBindingButtonClicked) == 0x000018, "Wrong size on WB_KeyBindingList_C_OnKeyBindingButtonClicked");
 static_assert(offsetof(WB_KeyBindingList_C_OnKeyBindingButtonClicked, KeyBindingWidget) == 0x000000, "Member 'WB_KeyBindingList_C_OnKeyBindingButtonClicked::KeyBindingWidget' has a wrong offset!");
 static_assert(offsetof(WB_KeyBindingList_C_OnKeyBindingButtonClicked, KeyBindingButton) == 0x000008, "Member 'WB_KeyBindingList_C_OnKeyBindingButtonClicked::KeyBindingButton' has a wrong offset!");
-static_assert(offsetof(WB_KeyBindingList_C_OnKeyBindingButtonClicked, Param_Index) == 0x000010, "Member 'WB_KeyBindingList_C_OnKeyBindingButtonClicked::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_KeyBindingList_C_OnKeyBindingButtonClicked, Index_0) == 0x000010, "Member 'WB_KeyBindingList_C_OnKeyBindingButtonClicked::Index_0' has a wrong offset!");
 
 // Function WB_KeyBindingList.WB_KeyBindingList_C.OnPreviewKeyDown
 // 0x02C0 (0x02C0 - 0x0000)
@@ -207,7 +207,7 @@ public:
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5480[0x6];                                     // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_OnPreviewKeyDown_ReturnValue;             // 0x0150(0x00B8)()
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0208(0x00B8)()
 };

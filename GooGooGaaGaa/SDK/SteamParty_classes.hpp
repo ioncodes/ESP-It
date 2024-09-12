@@ -21,9 +21,9 @@ namespace SDK
 class ASteamBeaconPlayerController final : public APlayerController
 {
 public:
-	uint8                                         Pad_1FAE[0x18];                                    // 0x0858(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_858[0x18];                                     // 0x0858(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          IsPushToTalk;                                      // 0x0870(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FAF[0x7];                                     // 0x0871(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_871[0x7];                                      // 0x0871(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BPEvent_PartyHostConnectionFailure();

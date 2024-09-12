@@ -22,7 +22,7 @@ namespace SDK
 class AB_Smog_C : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4F1C[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_Smog_C;                           // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:

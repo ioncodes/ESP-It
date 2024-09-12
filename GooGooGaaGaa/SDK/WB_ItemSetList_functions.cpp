@@ -60,10 +60,10 @@ ESlateVisibility UWB_ItemSetList_C::ItemSetListVisibility()
 // Function WB_ItemSetList.WB_ItemSetList_C.UpdateSetList
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_SetName                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             SetName_0                                              (BlueprintVisible, BlueprintReadOnly, Parm)
 // TArray<int32>                           SortedIds                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWB_ItemSetList_C::UpdateSetList(const class FText& Param_SetName, TArray<int32>& SortedIds)
+void UWB_ItemSetList_C::UpdateSetList(const class FText& SetName_0, TArray<int32>& SortedIds)
 {
 	static class UFunction* Func = nullptr;
 
@@ -72,7 +72,7 @@ void UWB_ItemSetList_C::UpdateSetList(const class FText& Param_SetName, TArray<i
 
 	Params::WB_ItemSetList_C_UpdateSetList Parms{};
 
-	Parms.Param_SetName = std::move(Param_SetName);
+	Parms.SetName_0 = std::move(SetName_0);
 	Parms.SortedIds = std::move(SortedIds);
 
 	UObject::ProcessEvent(Func, &Parms);

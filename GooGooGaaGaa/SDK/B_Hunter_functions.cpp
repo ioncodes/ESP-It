@@ -20,9 +20,9 @@ namespace SDK
 // Function B_Hunter.B_Hunter_C.LoadSkills
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::LoadSkills(class AController* Param_Controller)
+void AB_Hunter_C::LoadSkills(class AController* Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void AB_Hunter_C::LoadSkills(class AController* Param_Controller)
 
 	Params::B_Hunter_C_LoadSkills Parms{};
 
-	Parms.Param_Controller = Param_Controller;
+	Parms.Controller_0 = Controller_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -109,9 +109,9 @@ void AB_Hunter_C::GetAttachComponent(class USceneComponent** Component)
 // Function B_Hunter.B_Hunter_C.GetCurrentController
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      Param_Controller                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AController*                      Controller_0                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::GetCurrentController(class AController** Param_Controller)
+void AB_Hunter_C::GetCurrentController(class AController** Controller_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -122,8 +122,8 @@ void AB_Hunter_C::GetCurrentController(class AController** Param_Controller)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Controller != nullptr)
-		*Param_Controller = Parms.Param_Controller;
+	if (Controller_0 != nullptr)
+		*Controller_0 = Parms.Controller_0;
 }
 
 
@@ -454,9 +454,9 @@ void AB_Hunter_C::GetSplashSound(class USoundCue** Sound)
 // Function B_Hunter.B_Hunter_C.CanTeleport
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_CanTeleport                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanTeleport_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::CanTeleport(bool* Param_CanTeleport)
+void AB_Hunter_C::CanTeleport(bool* CanTeleport_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -467,8 +467,8 @@ void AB_Hunter_C::CanTeleport(bool* Param_CanTeleport)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_CanTeleport != nullptr)
-		*Param_CanTeleport = Parms.Param_CanTeleport;
+	if (CanTeleport_0 != nullptr)
+		*CanTeleport_0 = Parms.CanTeleport_0;
 }
 
 
@@ -870,9 +870,9 @@ void AB_Hunter_C::InitMeleeSkill(class UClass* ActorComponentClass)
 // Function B_Hunter.B_Hunter_C.InitPrimarySkill
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_PrimarySkillClass                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           PrimarySkillClass_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::InitPrimarySkill(class UClass* Param_PrimarySkillClass)
+void AB_Hunter_C::InitPrimarySkill(class UClass* PrimarySkillClass_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -881,7 +881,7 @@ void AB_Hunter_C::InitPrimarySkill(class UClass* Param_PrimarySkillClass)
 
 	Params::B_Hunter_C_InitPrimarySkill Parms{};
 
-	Parms.Param_PrimarySkillClass = Param_PrimarySkillClass;
+	Parms.PrimarySkillClass_0 = PrimarySkillClass_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1138,9 +1138,9 @@ void AB_Hunter_C::InitVisualChild()
 // Function B_Hunter.B_Hunter_C.UpdateSkinColor
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::UpdateSkinColor(class UClass* Param_Class)
+void AB_Hunter_C::UpdateSkinColor(class UClass* Class_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1149,7 +1149,7 @@ void AB_Hunter_C::UpdateSkinColor(class UClass* Param_Class)
 
 	Params::B_Hunter_C_UpdateSkinColor Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1254,12 +1254,12 @@ void AB_Hunter_C::InitFirstPersonMeshes(class AActor* Body_Part)
 // Function B_Hunter.B_Hunter_C.AttachToSocket
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class FName                             InSocketName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USceneComponent*                  Parent                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           ActorRef                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::AttachToSocket(class UClass* Param_Class, class FName InSocketName, class USceneComponent* Parent, class AActor** ActorRef)
+void AB_Hunter_C::AttachToSocket(class UClass* Class_0, class FName InSocketName, class USceneComponent* Parent, class AActor** ActorRef)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1268,7 +1268,7 @@ void AB_Hunter_C::AttachToSocket(class UClass* Param_Class, class FName InSocket
 
 	Params::B_Hunter_C_AttachToSocket Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.InSocketName = InSocketName;
 	Parms.Parent = Parent;
 
@@ -1319,12 +1319,12 @@ struct FTransform AB_Hunter_C::GetSpawnTransform_X(const struct FVector& Offset)
 // Function B_Hunter.B_Hunter_C.AttachBodyPart
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class USkeletalMeshComponent*           Parent                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    SelfShadowOlny                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AB_SkinBodypart_C*                BodyPart                                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::AttachBodyPart(class UClass* Param_Class, class USkeletalMeshComponent* Parent, bool SelfShadowOlny, class AB_SkinBodypart_C** BodyPart)
+void AB_Hunter_C::AttachBodyPart(class UClass* Class_0, class USkeletalMeshComponent* Parent, bool SelfShadowOlny, class AB_SkinBodypart_C** BodyPart)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1333,7 +1333,7 @@ void AB_Hunter_C::AttachBodyPart(class UClass* Param_Class, class USkeletalMeshC
 
 	Params::B_Hunter_C_AttachBodyPart Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 	Parms.Parent = Parent;
 	Parms.SelfShadowOlny = SelfShadowOlny;
 
@@ -1737,6 +1737,206 @@ void AB_Hunter_C::InpActEvt_ActivateUtilitySkill_K2Node_InputActionEvent_0(const
 	Params::B_Hunter_C_InpActEvt_ActivateUtilitySkill_K2Node_InputActionEvent_0 Parms{};
 
 	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnNotifyEnd_EA8DF1E84A21C12E1CCB14A1BFE9F3D9
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnNotifyEnd_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnNotifyEnd_EA8DF1E84A21C12E1CCB14A1BFE9F3D9");
+
+	Params::B_Hunter_C_OnNotifyEnd_EA8DF1E84A21C12E1CCB14A1BFE9F3D9 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnNotifyBegin_EA8DF1E84A21C12E1CCB14A1BFE9F3D9
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnNotifyBegin_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnNotifyBegin_EA8DF1E84A21C12E1CCB14A1BFE9F3D9");
+
+	Params::B_Hunter_C_OnNotifyBegin_EA8DF1E84A21C12E1CCB14A1BFE9F3D9 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnInterrupted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnInterrupted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnInterrupted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9");
+
+	Params::B_Hunter_C_OnInterrupted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnBlendOut_EA8DF1E84A21C12E1CCB14A1BFE9F3D9
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnBlendOut_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnBlendOut_EA8DF1E84A21C12E1CCB14A1BFE9F3D9");
+
+	Params::B_Hunter_C_OnBlendOut_EA8DF1E84A21C12E1CCB14A1BFE9F3D9 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnCompleted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnCompleted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnCompleted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9");
+
+	Params::B_Hunter_C_OnCompleted_EA8DF1E84A21C12E1CCB14A1BFE9F3D9 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnNotifyEnd_81C6679440A6C915A43C14BD22B9E000
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnNotifyEnd_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnNotifyEnd_81C6679440A6C915A43C14BD22B9E000");
+
+	Params::B_Hunter_C_OnNotifyEnd_81C6679440A6C915A43C14BD22B9E000 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnNotifyBegin_81C6679440A6C915A43C14BD22B9E000
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnNotifyBegin_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnNotifyBegin_81C6679440A6C915A43C14BD22B9E000");
+
+	Params::B_Hunter_C_OnNotifyBegin_81C6679440A6C915A43C14BD22B9E000 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnInterrupted_81C6679440A6C915A43C14BD22B9E000
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnInterrupted_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnInterrupted_81C6679440A6C915A43C14BD22B9E000");
+
+	Params::B_Hunter_C_OnInterrupted_81C6679440A6C915A43C14BD22B9E000 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnBlendOut_81C6679440A6C915A43C14BD22B9E000
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnBlendOut_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnBlendOut_81C6679440A6C915A43C14BD22B9E000");
+
+	Params::B_Hunter_C_OnBlendOut_81C6679440A6C915A43C14BD22B9E000 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Hunter.B_Hunter_C.OnCompleted_81C6679440A6C915A43C14BD22B9E000
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Hunter_C::OnCompleted_81C6679440A6C915A43C14BD22B9E000(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Hunter_C", "OnCompleted_81C6679440A6C915A43C14BD22B9E000");
+
+	Params::B_Hunter_C_OnCompleted_81C6679440A6C915A43C14BD22B9E000 Parms{};
+
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -2167,9 +2367,9 @@ void AB_Hunter_C::OnSetConfused(bool bConfused, double Duration)
 // Function B_Hunter.B_Hunter_C.HitActor
 // (Net, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Param_HitActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           HitActor_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void AB_Hunter_C::HitActor(class AActor* Param_HitActor)
+void AB_Hunter_C::HitActor(class AActor* HitActor_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2178,7 +2378,7 @@ void AB_Hunter_C::HitActor(class AActor* Param_HitActor)
 
 	Params::B_Hunter_C_HitActor Parms{};
 
-	Parms.Param_HitActor = Param_HitActor;
+	Parms.HitActor_0 = HitActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

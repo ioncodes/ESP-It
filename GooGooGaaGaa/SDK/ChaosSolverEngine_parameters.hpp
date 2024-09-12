@@ -18,15 +18,15 @@ namespace SDK::Params
 {
 
 // Function ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult final
 {
 public:
 	struct FChaosPhysicsCollisionInfo             PhysicsCollision;                                  // 0x0000(0x00C0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FHitResult                             ReturnValue;                                       // 0x00C0(0x00E8)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FHitResult                             ReturnValue;                                       // 0x00C0(0x00F8)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult) == 0x000008, "Wrong alignment on ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult");
-static_assert(sizeof(ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult) == 0x0001A8, "Wrong size on ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult");
+static_assert(sizeof(ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult) == 0x0001B8, "Wrong size on ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult");
 static_assert(offsetof(ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult, PhysicsCollision) == 0x000000, "Member 'ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult::PhysicsCollision' has a wrong offset!");
 static_assert(offsetof(ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult, ReturnValue) == 0x0000C0, "Member 'ChaosSolverEngineBlueprintLibrary_ConvertPhysicsCollisionToHitResult::ReturnValue' has a wrong offset!");
 

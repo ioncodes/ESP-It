@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_BaseCheckBox.WB_BaseCheckBox_C
-// 0x15E0 (0x18A0 - 0x02C0)
+// 0x15E0 (0x18C0 - 0x02E0)
 class UWB_BaseCheckBox_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNamedSlot*                             CheckBoxSlot;                                      // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FCheckBoxStyle                         CheckBoxStyle;                                     // 0x02D0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FCheckBoxStyle                         CheckBoxStyleFocused;                              // 0x0DA0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateColor                            TextColor;                                         // 0x1870(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSlateColor                            TextColorFocused;                                  // 0x1884(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNamedSlot*                             CheckBoxSlot;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FCheckBoxStyle                         CheckBoxStyle;                                     // 0x02F0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FCheckBoxStyle                         CheckBoxStyleFocused;                              // 0x0DC0(0x0AD0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateColor                            TextColor;                                         // 0x1890(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSlateColor                            TextColorFocused;                                  // 0x18A4(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_WB_BaseCheckBox(int32 EntryPoint);
@@ -45,13 +45,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_BaseCheckBox_C) == 0x000010, "Wrong alignment on UWB_BaseCheckBox_C");
-static_assert(sizeof(UWB_BaseCheckBox_C) == 0x0018A0, "Wrong size on UWB_BaseCheckBox_C");
-static_assert(offsetof(UWB_BaseCheckBox_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_BaseCheckBox_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_BaseCheckBox_C, CheckBoxSlot) == 0x0002C8, "Member 'UWB_BaseCheckBox_C::CheckBoxSlot' has a wrong offset!");
-static_assert(offsetof(UWB_BaseCheckBox_C, CheckBoxStyle) == 0x0002D0, "Member 'UWB_BaseCheckBox_C::CheckBoxStyle' has a wrong offset!");
-static_assert(offsetof(UWB_BaseCheckBox_C, CheckBoxStyleFocused) == 0x000DA0, "Member 'UWB_BaseCheckBox_C::CheckBoxStyleFocused' has a wrong offset!");
-static_assert(offsetof(UWB_BaseCheckBox_C, TextColor) == 0x001870, "Member 'UWB_BaseCheckBox_C::TextColor' has a wrong offset!");
-static_assert(offsetof(UWB_BaseCheckBox_C, TextColorFocused) == 0x001884, "Member 'UWB_BaseCheckBox_C::TextColorFocused' has a wrong offset!");
+static_assert(sizeof(UWB_BaseCheckBox_C) == 0x0018C0, "Wrong size on UWB_BaseCheckBox_C");
+static_assert(offsetof(UWB_BaseCheckBox_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_BaseCheckBox_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_BaseCheckBox_C, CheckBoxSlot) == 0x0002E8, "Member 'UWB_BaseCheckBox_C::CheckBoxSlot' has a wrong offset!");
+static_assert(offsetof(UWB_BaseCheckBox_C, CheckBoxStyle) == 0x0002F0, "Member 'UWB_BaseCheckBox_C::CheckBoxStyle' has a wrong offset!");
+static_assert(offsetof(UWB_BaseCheckBox_C, CheckBoxStyleFocused) == 0x000DC0, "Member 'UWB_BaseCheckBox_C::CheckBoxStyleFocused' has a wrong offset!");
+static_assert(offsetof(UWB_BaseCheckBox_C, TextColor) == 0x001890, "Member 'UWB_BaseCheckBox_C::TextColor' has a wrong offset!");
+static_assert(offsetof(UWB_BaseCheckBox_C, TextColorFocused) == 0x0018A4, "Member 'UWB_BaseCheckBox_C::TextColorFocused' has a wrong offset!");
 
 }
 

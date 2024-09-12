@@ -11,25 +11,25 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_PossessNotWorkingReason_structs.hpp"
 #include "B_BaseWitchSkill_classes.hpp"
+#include "E_PossessNotWorkingReason_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_PossessSkill.B_PossessSkill_C
-// 0x0028 (0x0130 - 0x0108)
+// 0x0028 (0x0128 - 0x0100)
 class UB_PossessSkill_C final : public UB_BaseWitchSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_PossessSkill_C;                   // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          KeepOldProp;                                       // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E08[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CurrentTargetProp;                                 // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	E_PossessNotWorkingReason                     CurrentNotWorkingReason;                           // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E09[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        KeepTargetPropTime;                                // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_PossessSkill_C;                   // 0x0100(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          KeepOldProp;                                       // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CurrentTargetProp;                                 // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	E_PossessNotWorkingReason                     CurrentNotWorkingReason;                           // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        KeepTargetPropTime;                                // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanActivate();
@@ -59,12 +59,12 @@ public:
 	}
 };
 static_assert(alignof(UB_PossessSkill_C) == 0x000008, "Wrong alignment on UB_PossessSkill_C");
-static_assert(sizeof(UB_PossessSkill_C) == 0x000130, "Wrong size on UB_PossessSkill_C");
-static_assert(offsetof(UB_PossessSkill_C, UberGraphFrame_B_PossessSkill_C) == 0x000108, "Member 'UB_PossessSkill_C::UberGraphFrame_B_PossessSkill_C' has a wrong offset!");
-static_assert(offsetof(UB_PossessSkill_C, KeepOldProp) == 0x000110, "Member 'UB_PossessSkill_C::KeepOldProp' has a wrong offset!");
-static_assert(offsetof(UB_PossessSkill_C, CurrentTargetProp) == 0x000118, "Member 'UB_PossessSkill_C::CurrentTargetProp' has a wrong offset!");
-static_assert(offsetof(UB_PossessSkill_C, CurrentNotWorkingReason) == 0x000120, "Member 'UB_PossessSkill_C::CurrentNotWorkingReason' has a wrong offset!");
-static_assert(offsetof(UB_PossessSkill_C, KeepTargetPropTime) == 0x000128, "Member 'UB_PossessSkill_C::KeepTargetPropTime' has a wrong offset!");
+static_assert(sizeof(UB_PossessSkill_C) == 0x000128, "Wrong size on UB_PossessSkill_C");
+static_assert(offsetof(UB_PossessSkill_C, UberGraphFrame_B_PossessSkill_C) == 0x000100, "Member 'UB_PossessSkill_C::UberGraphFrame_B_PossessSkill_C' has a wrong offset!");
+static_assert(offsetof(UB_PossessSkill_C, KeepOldProp) == 0x000108, "Member 'UB_PossessSkill_C::KeepOldProp' has a wrong offset!");
+static_assert(offsetof(UB_PossessSkill_C, CurrentTargetProp) == 0x000110, "Member 'UB_PossessSkill_C::CurrentTargetProp' has a wrong offset!");
+static_assert(offsetof(UB_PossessSkill_C, CurrentNotWorkingReason) == 0x000118, "Member 'UB_PossessSkill_C::CurrentNotWorkingReason' has a wrong offset!");
+static_assert(offsetof(UB_PossessSkill_C, KeepTargetPropTime) == 0x000120, "Member 'UB_PossessSkill_C::KeepTargetPropTime' has a wrong offset!");
 
 }
 

@@ -62,7 +62,7 @@ struct FAutoCompleteCommand final
 public:
 	class FString                                 Command;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Desc;                                              // 0x0010(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E1[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAutoCompleteCommand) == 0x000008, "Wrong alignment on FAutoCompleteCommand");
 static_assert(sizeof(FAutoCompleteCommand) == 0x000028, "Wrong size on FAutoCompleteCommand");
@@ -83,16 +83,16 @@ static_assert(offsetof(FGameModeName, Name) == 0x000000, "Member 'FGameModeName:
 static_assert(offsetof(FGameModeName, GameMode) == 0x000010, "Member 'FGameModeName::GameMode' has a wrong offset!");
 
 // ScriptStruct EngineSettings.TemplateMapInfoOverride
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct FTemplateMapInfoOverride final
 {
 public:
 	struct FSoftObjectPath                        Thumbnail;                                         // 0x0000(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        Map;                                               // 0x0020(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   DisplayName;                                       // 0x0040(0x0018)(Edit, Config, NativeAccessSpecifierPublic)
+	class FText                                   DisplayName;                                       // 0x0040(0x0010)(Edit, Config, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FTemplateMapInfoOverride) == 0x000008, "Wrong alignment on FTemplateMapInfoOverride");
-static_assert(sizeof(FTemplateMapInfoOverride) == 0x000058, "Wrong size on FTemplateMapInfoOverride");
+static_assert(sizeof(FTemplateMapInfoOverride) == 0x000050, "Wrong size on FTemplateMapInfoOverride");
 static_assert(offsetof(FTemplateMapInfoOverride, Thumbnail) == 0x000000, "Member 'FTemplateMapInfoOverride::Thumbnail' has a wrong offset!");
 static_assert(offsetof(FTemplateMapInfoOverride, Map) == 0x000020, "Member 'FTemplateMapInfoOverride::Map' has a wrong offset!");
 static_assert(offsetof(FTemplateMapInfoOverride, DisplayName) == 0x000040, "Member 'FTemplateMapInfoOverride::DisplayName' has a wrong offset!");

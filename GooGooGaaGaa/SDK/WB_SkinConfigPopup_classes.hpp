@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SkinConfigPopup.WB_SkinConfigPopup_C
-// 0x0030 (0x02F0 - 0x02C0)
+// 0x0030 (0x0310 - 0x02E0)
 class UWB_SkinConfigPopup_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Back;                                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTileView*                              ConfigTileView;                                    // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         RetryCounter;                                      // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4730[0x4];                                     // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_IngameSkinConfigMenu_C*             Parent;                                            // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UB_MenuTileViewManager_C*               TileViewManager;                                   // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Back;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTileView*                              ConfigTileView;                                    // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         RetryCounter;                                      // 0x02F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_IngameSkinConfigMenu_C*             Parent;                                            // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UB_MenuTileViewManager_C*               TileViewManager;                                   // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddSkinConfigButton(int32 ConfigNr, int32 ActiveConfigNr);
@@ -55,13 +55,13 @@ public:
 	}
 };
 static_assert(alignof(UWB_SkinConfigPopup_C) == 0x000008, "Wrong alignment on UWB_SkinConfigPopup_C");
-static_assert(sizeof(UWB_SkinConfigPopup_C) == 0x0002F0, "Wrong size on UWB_SkinConfigPopup_C");
-static_assert(offsetof(UWB_SkinConfigPopup_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_SkinConfigPopup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_SkinConfigPopup_C, Back) == 0x0002C8, "Member 'UWB_SkinConfigPopup_C::Back' has a wrong offset!");
-static_assert(offsetof(UWB_SkinConfigPopup_C, ConfigTileView) == 0x0002D0, "Member 'UWB_SkinConfigPopup_C::ConfigTileView' has a wrong offset!");
-static_assert(offsetof(UWB_SkinConfigPopup_C, RetryCounter) == 0x0002D8, "Member 'UWB_SkinConfigPopup_C::RetryCounter' has a wrong offset!");
-static_assert(offsetof(UWB_SkinConfigPopup_C, Parent) == 0x0002E0, "Member 'UWB_SkinConfigPopup_C::Parent' has a wrong offset!");
-static_assert(offsetof(UWB_SkinConfigPopup_C, TileViewManager) == 0x0002E8, "Member 'UWB_SkinConfigPopup_C::TileViewManager' has a wrong offset!");
+static_assert(sizeof(UWB_SkinConfigPopup_C) == 0x000310, "Wrong size on UWB_SkinConfigPopup_C");
+static_assert(offsetof(UWB_SkinConfigPopup_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_SkinConfigPopup_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_SkinConfigPopup_C, Back) == 0x0002E8, "Member 'UWB_SkinConfigPopup_C::Back' has a wrong offset!");
+static_assert(offsetof(UWB_SkinConfigPopup_C, ConfigTileView) == 0x0002F0, "Member 'UWB_SkinConfigPopup_C::ConfigTileView' has a wrong offset!");
+static_assert(offsetof(UWB_SkinConfigPopup_C, RetryCounter) == 0x0002F8, "Member 'UWB_SkinConfigPopup_C::RetryCounter' has a wrong offset!");
+static_assert(offsetof(UWB_SkinConfigPopup_C, Parent) == 0x000300, "Member 'UWB_SkinConfigPopup_C::Parent' has a wrong offset!");
+static_assert(offsetof(UWB_SkinConfigPopup_C, TileViewManager) == 0x000308, "Member 'UWB_SkinConfigPopup_C::TileViewManager' has a wrong offset!");
 
 }
 

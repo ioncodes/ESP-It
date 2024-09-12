@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_AnvilField.B_AnvilField_C
-// 0x0010 (0x0350 - 0x0340)
+// 0x0010 (0x0348 - 0x0338)
 class AB_AnvilField_C final : public AB_TaskField_C
 {
 public:
-	class UBoxComponent*                          FieldBlockage;                                     // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Anvil;                                             // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          FieldBlockage;                                     // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Anvil;                                             // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ActOnSpawnTransform(const struct FTransform& Spawn_Transform, bool IsPossibleTargetIndex);
@@ -38,9 +38,9 @@ public:
 	}
 };
 static_assert(alignof(AB_AnvilField_C) == 0x000008, "Wrong alignment on AB_AnvilField_C");
-static_assert(sizeof(AB_AnvilField_C) == 0x000350, "Wrong size on AB_AnvilField_C");
-static_assert(offsetof(AB_AnvilField_C, FieldBlockage) == 0x000340, "Member 'AB_AnvilField_C::FieldBlockage' has a wrong offset!");
-static_assert(offsetof(AB_AnvilField_C, Anvil) == 0x000348, "Member 'AB_AnvilField_C::Anvil' has a wrong offset!");
+static_assert(sizeof(AB_AnvilField_C) == 0x000348, "Wrong size on AB_AnvilField_C");
+static_assert(offsetof(AB_AnvilField_C, FieldBlockage) == 0x000338, "Member 'AB_AnvilField_C::FieldBlockage' has a wrong offset!");
+static_assert(offsetof(AB_AnvilField_C, Anvil) == 0x000340, "Member 'AB_AnvilField_C::Anvil' has a wrong offset!");
 
 }
 

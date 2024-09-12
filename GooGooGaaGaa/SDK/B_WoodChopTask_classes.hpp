@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WoodChopTask.B_WoodChopTask_C
-// 0x0010 (0x0330 - 0x0320)
+// 0x0010 (0x0328 - 0x0318)
 class AB_WoodChopTask_C final : public AB_CollectTask_C
 {
 public:
-	uint8                                         Pad_5C6D[0x4];                                     // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AB_WoodChopField_C*>             TaskFields;                                        // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AB_WoodChopField_C*>             TaskFields;                                        // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:
 	void Initialize();
@@ -41,8 +41,8 @@ public:
 	}
 };
 static_assert(alignof(AB_WoodChopTask_C) == 0x000008, "Wrong alignment on AB_WoodChopTask_C");
-static_assert(sizeof(AB_WoodChopTask_C) == 0x000330, "Wrong size on AB_WoodChopTask_C");
-static_assert(offsetof(AB_WoodChopTask_C, TaskFields) == 0x000320, "Member 'AB_WoodChopTask_C::TaskFields' has a wrong offset!");
+static_assert(sizeof(AB_WoodChopTask_C) == 0x000328, "Wrong size on AB_WoodChopTask_C");
+static_assert(offsetof(AB_WoodChopTask_C, TaskFields) == 0x000318, "Member 'AB_WoodChopTask_C::TaskFields' has a wrong offset!");
 
 }
 

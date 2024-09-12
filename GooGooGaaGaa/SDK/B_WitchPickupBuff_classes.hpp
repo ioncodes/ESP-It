@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_WitchPickupBuff.B_WitchPickupBuff_C
-// 0x0010 (0x0330 - 0x0320)
+// 0x0010 (0x0320 - 0x0310)
 class AB_WitchPickupBuff_C : public AB_WitchPickup_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_WitchPickupBuff_C;                // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                 Buff;                                              // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_WitchPickupBuff_C;                // 0x0310(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                 Buff;                                              // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void PickupCollected(class APawn* Pawn);
@@ -40,9 +40,9 @@ public:
 	}
 };
 static_assert(alignof(AB_WitchPickupBuff_C) == 0x000008, "Wrong alignment on AB_WitchPickupBuff_C");
-static_assert(sizeof(AB_WitchPickupBuff_C) == 0x000330, "Wrong size on AB_WitchPickupBuff_C");
-static_assert(offsetof(AB_WitchPickupBuff_C, UberGraphFrame_B_WitchPickupBuff_C) == 0x000320, "Member 'AB_WitchPickupBuff_C::UberGraphFrame_B_WitchPickupBuff_C' has a wrong offset!");
-static_assert(offsetof(AB_WitchPickupBuff_C, Buff) == 0x000328, "Member 'AB_WitchPickupBuff_C::Buff' has a wrong offset!");
+static_assert(sizeof(AB_WitchPickupBuff_C) == 0x000320, "Wrong size on AB_WitchPickupBuff_C");
+static_assert(offsetof(AB_WitchPickupBuff_C, UberGraphFrame_B_WitchPickupBuff_C) == 0x000310, "Member 'AB_WitchPickupBuff_C::UberGraphFrame_B_WitchPickupBuff_C' has a wrong offset!");
+static_assert(offsetof(AB_WitchPickupBuff_C, Buff) == 0x000318, "Member 'AB_WitchPickupBuff_C::Buff' has a wrong offset!");
 
 }
 

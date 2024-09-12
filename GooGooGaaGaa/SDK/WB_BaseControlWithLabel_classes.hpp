@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "WB_BaseControl_classes.hpp"
 
 
@@ -19,27 +19,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_BaseControlWithLabel.WB_BaseControlWithLabel_C
-// 0x0068 (0x0340 - 0x02D8)
+// 0x0068 (0x0360 - 0x02F8)
 class UWB_BaseControlWithLabel_C : public UWB_BaseControl_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             DescriptiveLabelWidget;                            // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FText                                   DescriptiveLabel;                                  // 0x02E8(0x0018)(Edit, BlueprintVisible)
-	class UWidget*                                FocusableWidget;                                   // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UTextBlock*>                     TextWidgetsToFocus;                                // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	struct FSlateColor                            TextFocusColor;                                    // 0x0318(0x0014)(Edit, BlueprintVisible)
-	struct FSlateColor                            TextColor;                                         // 0x032C(0x0014)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             DescriptiveLabelWidget;                            // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FText                                   DescriptiveLabel;                                  // 0x0308(0x0010)(Edit, BlueprintVisible)
+	class UWidget*                                FocusableWidget;                                   // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UTextBlock*>                     TextWidgetsToFocus;                                // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FSlateColor                            TextFocusColor;                                    // 0x0330(0x0014)(Edit, BlueprintVisible)
+	struct FSlateColor                            TextColor;                                         // 0x0344(0x0014)(Edit, BlueprintVisible)
+	bool                                          HideOnConsoles;                                    // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void PreConstruct(bool IsDesignTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void CustomDown();
 	void CustomUp();
 	void CustomLeft();
 	void CustomRight();
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void ChangeTextColor(const struct FSlateColor& InColorAndOpacity);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_WB_BaseControlWithLabel(int32 EntryPoint);
 
 public:
@@ -53,14 +54,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_BaseControlWithLabel_C) == 0x000008, "Wrong alignment on UWB_BaseControlWithLabel_C");
-static_assert(sizeof(UWB_BaseControlWithLabel_C) == 0x000340, "Wrong size on UWB_BaseControlWithLabel_C");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, UberGraphFrame) == 0x0002D8, "Member 'UWB_BaseControlWithLabel_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, DescriptiveLabelWidget) == 0x0002E0, "Member 'UWB_BaseControlWithLabel_C::DescriptiveLabelWidget' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, DescriptiveLabel) == 0x0002E8, "Member 'UWB_BaseControlWithLabel_C::DescriptiveLabel' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, FocusableWidget) == 0x000300, "Member 'UWB_BaseControlWithLabel_C::FocusableWidget' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, TextWidgetsToFocus) == 0x000308, "Member 'UWB_BaseControlWithLabel_C::TextWidgetsToFocus' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, TextFocusColor) == 0x000318, "Member 'UWB_BaseControlWithLabel_C::TextFocusColor' has a wrong offset!");
-static_assert(offsetof(UWB_BaseControlWithLabel_C, TextColor) == 0x00032C, "Member 'UWB_BaseControlWithLabel_C::TextColor' has a wrong offset!");
+static_assert(sizeof(UWB_BaseControlWithLabel_C) == 0x000360, "Wrong size on UWB_BaseControlWithLabel_C");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, UberGraphFrame) == 0x0002F8, "Member 'UWB_BaseControlWithLabel_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, DescriptiveLabelWidget) == 0x000300, "Member 'UWB_BaseControlWithLabel_C::DescriptiveLabelWidget' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, DescriptiveLabel) == 0x000308, "Member 'UWB_BaseControlWithLabel_C::DescriptiveLabel' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, FocusableWidget) == 0x000318, "Member 'UWB_BaseControlWithLabel_C::FocusableWidget' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, TextWidgetsToFocus) == 0x000320, "Member 'UWB_BaseControlWithLabel_C::TextWidgetsToFocus' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, TextFocusColor) == 0x000330, "Member 'UWB_BaseControlWithLabel_C::TextFocusColor' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, TextColor) == 0x000344, "Member 'UWB_BaseControlWithLabel_C::TextColor' has a wrong offset!");
+static_assert(offsetof(UWB_BaseControlWithLabel_C, HideOnConsoles) == 0x000358, "Member 'UWB_BaseControlWithLabel_C::HideOnConsoles' has a wrong offset!");
 
 }
 

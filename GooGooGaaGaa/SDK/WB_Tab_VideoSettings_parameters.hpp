@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
 
 
@@ -20,27 +21,27 @@ namespace SDK::Params
 {
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.AddScreenResolutions
-// 0x0060 (0x0060 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct WB_Tab_VideoSettings_C_AddScreenResolutions final
 {
 public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_568A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSupportedResolution>           CallFunc_GetSupportedScreenResolutions_Resolutions; // 0x0010(0x0010)(ReferenceParm)
 	struct FSupportedResolution                   CallFunc_Array_Get_Item;                           // 0x0020(0x0018)()
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_568B[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0040(0x0018)()
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0040(0x0010)()
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_AddScreenResolutions) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_AddScreenResolutions");
-static_assert(sizeof(WB_Tab_VideoSettings_C_AddScreenResolutions) == 0x000060, "Wrong size on WB_Tab_VideoSettings_C_AddScreenResolutions");
+static_assert(sizeof(WB_Tab_VideoSettings_C_AddScreenResolutions) == 0x000058, "Wrong size on WB_Tab_VideoSettings_C_AddScreenResolutions");
 static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
@@ -49,35 +50,30 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Arr
 static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Conv_StringToText_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Array_Add_ReturnValue) == 0x000058, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00005C, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x00005D, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_BooleanAND_ReturnValue) == 0x00005E, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_Array_Add_ReturnValue) == 0x000050, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000054, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000055, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_AddScreenResolutions, CallFunc_BooleanAND_ReturnValue) == 0x000056, "Member 'WB_Tab_VideoSettings_C_AddScreenResolutions::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.ApplySettings
-// 0x0040 (0x0040 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_Tab_VideoSettings_C_ApplySettings final
 {
 public:
-	float                                         CallFunc_GetGamma_ReturnValue;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_568C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FSupportedResolution                   CallFunc_GetScreenResolutionFromDisplayString_SupportedResolution; // 0x0010(0x0018)()
-	EWindowMode                                   CallFunc_GetWindowModeFromDisplayString_WindowMode; // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_568D[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_SelectedGamma_ImplicitCast;     // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast; // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast;  // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FSupportedResolution                   CallFunc_GetScreenResolutionFromDisplayString_SupportedResolution; // 0x0008(0x0018)()
+	EWindowMode                                   CallFunc_GetWindowModeFromDisplayString_WindowMode; // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast; // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast;  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_ApplySettings) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_ApplySettings");
-static_assert(sizeof(WB_Tab_VideoSettings_C_ApplySettings) == 0x000040, "Wrong size on WB_Tab_VideoSettings_C_ApplySettings");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetGamma_ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetGamma_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetGameUserSettings_ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetScreenResolutionFromDisplayString_SupportedResolution) == 0x000010, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetScreenResolutionFromDisplayString_SupportedResolution' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetWindowModeFromDisplayString_WindowMode) == 0x000028, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetWindowModeFromDisplayString_WindowMode' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, K2Node_VariableSet_SelectedGamma_ImplicitCast) == 0x000030, "Member 'WB_Tab_VideoSettings_C_ApplySettings::K2Node_VariableSet_SelectedGamma_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast) == 0x000038, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast) == 0x00003C, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast' has a wrong offset!");
+static_assert(sizeof(WB_Tab_VideoSettings_C_ApplySettings) == 0x000030, "Wrong size on WB_Tab_VideoSettings_C_ApplySettings");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetGameUserSettings_ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetScreenResolutionFromDisplayString_SupportedResolution) == 0x000008, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetScreenResolutionFromDisplayString_SupportedResolution' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_GetWindowModeFromDisplayString_WindowMode) == 0x000020, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_GetWindowModeFromDisplayString_WindowMode' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast) == 0x000024, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ApplySettings, CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast) == 0x000028, "Member 'WB_Tab_VideoSettings_C_ApplySettings::CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.BndEvt__CheckBox_VSync_K2Node_ComponentBoundEvent_1_OnCheckStateChanged__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -288,32 +284,32 @@ static_assert(sizeof(WB_Tab_VideoSettings_C_BndEvt__WB_Tab_VideoSettings_Slider_
 static_assert(offsetof(WB_Tab_VideoSettings_C_BndEvt__WB_Tab_VideoSettings_Slider_Reflections_K2Node_ComponentBoundEvent_14_OnRealValueChanged__DelegateSignature, RealValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_BndEvt__WB_Tab_VideoSettings_Slider_Reflections_K2Node_ComponentBoundEvent_14_OnRealValueChanged__DelegateSignature::RealValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.ConvertFrameRateLimitToIndex
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Param_Index;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Index_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_568E[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0030(0x0018)()
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Text_ToInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_568F[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Array_Get_Item;                           // 0x0030(0x0010)()
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Text_ToInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue_1;           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex");
-static_assert(sizeof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex) == 0x000068, "Wrong size on WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex");
+static_assert(sizeof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex) == 0x000060, "Wrong size on WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, Value) == 0x000000, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::Value' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, Param_Index) == 0x000008, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, Index_0) == 0x000008, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Round_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Round_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, Temp_int_Array_Index_Variable) == 0x000014, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, Temp_int_Loop_Counter_Variable) == 0x000018, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -321,37 +317,37 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, Call
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Array_Get_Item) == 0x000030, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Subtract_IntInt_ReturnValue) == 0x000048, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Text_ToInt_ReturnValue) == 0x00004C, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Text_ToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000050, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000058, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Array_Length_ReturnValue_1) == 0x00005C, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Text_ToInt_ReturnValue) == 0x000044, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Text_ToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Conv_IntToDouble_ReturnValue_1) == 0x000048, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Conv_IntToDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000050, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Array_Length_ReturnValue_1) == 0x000054, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex, CallFunc_Less_IntInt_ReturnValue) == 0x000058, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToIndex::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.ConvertFrameRateLimitToValue
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue final
 {
 public:
-	double                                        Param_Index;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Index_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Value;                                             // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5690[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0028(0x0018)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5691[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Text_ToInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Text_IsNumeric_ReturnValue;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Array_Get_Item;                           // 0x0028(0x0010)()
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Text_ToInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Text_IsNumeric_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue");
-static_assert(sizeof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue) == 0x000058, "Wrong size on WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, Param_Index) == 0x000000, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::Param_Index' has a wrong offset!");
+static_assert(sizeof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue) == 0x000050, "Wrong size on WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, Index_0) == 0x000000, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, Value) == 0x000008, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::Value' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, Temp_int_Array_Index_Variable) == 0x000010, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Round_ReturnValue) == 0x000014, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Round_ReturnValue' has a wrong offset!");
@@ -360,10 +356,10 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, Temp
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Add_IntInt_ReturnValue) == 0x000020, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Array_Get_Item) == 0x000028, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Text_ToInt_ReturnValue) == 0x000044, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Text_ToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000048, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Text_IsNumeric_ReturnValue) == 0x000050, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Text_IsNumeric_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Text_ToInt_ReturnValue) == 0x00003C, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Text_ToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue, CallFunc_Text_IsNumeric_ReturnValue) == 0x000048, "Member 'WB_Tab_VideoSettings_C_ConvertFrameRateLimitToValue::CallFunc_Text_IsNumeric_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.ExecuteUbergraph_WB_Tab_VideoSettings
 // 0x01D0 (0x01D0 - 0x0000)
@@ -373,21 +369,21 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsConsoleBuild_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5692[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5693[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_ComponentBoundEvent_RealValue_12;           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_11;           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5694[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_ConvertFrameRateLimitToValue_Value;       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_10;           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_9;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_8;            // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_7;            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5695[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_ComponentBoundEvent_RealValue_6;            // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue_5;            // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -398,12 +394,12 @@ public:
 	int32                                         CallFunc_Round_ReturnValue_5;                      // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender_1;               // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_IsChecked_1;            // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5696[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_ComponentBoundEvent_RealValue_2;            // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_1;      // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5697[0x1];                                     // 0x00DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DB[0x1];                                       // 0x00DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetGamma_ReturnValue;                     // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_2;      // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_3;      // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -416,37 +412,37 @@ public:
 	class FString                                 K2Node_ComponentBoundEvent_SelectedItem_2;         // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType_2;        // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_5;            // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5698[0x6];                                     // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_ComponentBoundEvent_SelectedItem_1;         // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType_1;        // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_StrStr_ReturnValue_1;            // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5699[0x5];                                     // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_113[0x5];                                      // 0x0113(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SettingsTabs_C*                     CallFunc_WidgetGetParentOfClass_ReturnValue;       // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569A[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_SettingsTabs_C*                     CallFunc_WidgetGetParentOfClass_ReturnValue_1;     // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVideoModeDirty_ReturnValue;             // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569B[0x5];                                     // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_133[0x5];                                      // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_ComponentBoundEvent_RealValue_1;            // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_DoubleToString_ReturnValue;          // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue_5;      // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569C[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UWB_CheckBoxWithLabel_C*                K2Node_ComponentBoundEvent_Sender;                 // 0x0168(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_IsChecked;              // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569D[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue_1;          // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDirty_bDirty;                           // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569E[0x5];                                     // 0x018B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18B[0x5];                                      // 0x018B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_569F[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetAAMethodFromDisplayString_AAMethod;    // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_ComponentBoundEvent_RealValue;              // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -454,7 +450,7 @@ public:
 	int32                                         CallFunc_Round_ReturnValue_7;                      // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_6;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue_7;            // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A0[0x2];                                     // 0x01C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2[0x2];                                      // 0x01C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetGamma_gamma_ImplicitCast;              // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_NotEqual_DoubleDouble_B_ImplicitCast;     // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -534,89 +530,89 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_ExecuteUbergraph_WB_Tab_VideoSetti
 static_assert(offsetof(WB_Tab_VideoSettings_C_ExecuteUbergraph_WB_Tab_VideoSettings, CallFunc_NotEqual_DoubleDouble_B_ImplicitCast) == 0x0001C8, "Member 'WB_Tab_VideoSettings_C_ExecuteUbergraph_WB_Tab_VideoSettings::CallFunc_NotEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.Get_ComboBox_Resolution_bIsEnabled_0
-// 0x0028 (0x0028 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0 final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0008(0x0018)()
-	bool                                          CallFunc_NotEqual_TextText_ReturnValue;            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0008(0x0010)()
+	bool                                          CallFunc_NotEqual_TextText_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0");
-static_assert(sizeof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0) == 0x000028, "Wrong size on WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0");
+static_assert(sizeof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0) == 0x000020, "Wrong size on WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0");
 static_assert(offsetof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0, ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0, CallFunc_MakeLiteralText_ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0, CallFunc_NotEqual_TextText_ReturnValue) == 0x000020, "Member 'WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0::CallFunc_NotEqual_TextText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0, CallFunc_NotEqual_TextText_ReturnValue) == 0x000018, "Member 'WB_Tab_VideoSettings_C_Get_ComboBox_Resolution_bIsEnabled_0::CallFunc_NotEqual_TextText_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetAAMethod
 // 0x0004 (0x0004 - 0x0000)
 struct WB_Tab_VideoSettings_C_GetAAMethod final
 {
 public:
-	int32                                         Param_AAMethod;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AAMethod_0;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetAAMethod) == 0x000004, "Wrong alignment on WB_Tab_VideoSettings_C_GetAAMethod");
 static_assert(sizeof(WB_Tab_VideoSettings_C_GetAAMethod) == 0x000004, "Wrong size on WB_Tab_VideoSettings_C_GetAAMethod");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethod, Param_AAMethod) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetAAMethod::Param_AAMethod' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethod, AAMethod_0) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetAAMethod::AAMethod_0' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetAAMethodFromDisplayString
-// 0x0058 (0x0058 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString final
 {
 public:
 	class FString                                 String;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Param_AAMethod;                                    // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AAMethod_0;                                        // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A2[0x1];                                     // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0028(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0028(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString");
-static_assert(sizeof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString) == 0x000058, "Wrong size on WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString");
+static_assert(sizeof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString) == 0x000050, "Wrong size on WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, String) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::String' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, Param_AAMethod) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::Param_AAMethod' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, AAMethod_0) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::AAMethod_0' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000014, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000015, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x000016, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, K2Node_MakeArray_Array) == 0x000018, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_Format_ReturnValue) == 0x000028, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_Conv_TextToString_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000050, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_Conv_TextToString_ReturnValue) == 0x000038, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000048, "Member 'WB_Tab_VideoSettings_C_GetAAMethodFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetAAModeString
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct WB_Tab_VideoSettings_C_GetAAModeString final
 {
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A3[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0028(0x0018)()
-	class FString                                 Temp_string_Variable;                              // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_1;                            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_2;                            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable_3;                            // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Select_Default;                             // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0028(0x0010)()
+	class FString                                 Temp_string_Variable;                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_1;                            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_2;                            // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable_3;                            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetAAModeString) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetAAModeString");
-static_assert(sizeof(WB_Tab_VideoSettings_C_GetAAModeString) == 0x0000A0, "Wrong size on WB_Tab_VideoSettings_C_GetAAModeString");
+static_assert(sizeof(WB_Tab_VideoSettings_C_GetAAModeString) == 0x000098, "Wrong size on WB_Tab_VideoSettings_C_GetAAModeString");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, K2Node_MakeArray_Array) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_int_Variable) == 0x000020, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_int_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, CallFunc_Format_ReturnValue) == 0x000028, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable) == 0x000040, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, CallFunc_Conv_TextToString_ReturnValue) == 0x000050, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable_1) == 0x000060, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable_2) == 0x000070, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable_3) == 0x000080, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, K2Node_Select_Default) == 0x000090, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable) == 0x000038, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, CallFunc_Conv_TextToString_ReturnValue) == 0x000048, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable_1) == 0x000058, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable_2) == 0x000068, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, Temp_string_Variable_3) == 0x000078, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::Temp_string_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetAAModeString, K2Node_Select_Default) == 0x000088, "Member 'WB_Tab_VideoSettings_C_GetAAModeString::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetAntiAliasingQuality
 // 0x0018 (0x0018 - 0x0000)
@@ -624,7 +620,7 @@ struct WB_Tab_VideoSettings_C_GetAntiAliasingQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetAntiAliasingQuality_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -633,6 +629,17 @@ static_assert(sizeof(WB_Tab_VideoSettings_C_GetAntiAliasingQuality) == 0x000018,
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAntiAliasingQuality, ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetAntiAliasingQuality::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAntiAliasingQuality, CallFunc_GetGameUserSettings_ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_GetAntiAliasingQuality::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetAntiAliasingQuality, CallFunc_GetAntiAliasingQuality_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetAntiAliasingQuality::CallFunc_GetAntiAliasingQuality_ReturnValue' has a wrong offset!");
+
+// Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetDisplayGamma
+// 0x0008 (0x0008 - 0x0000)
+struct WB_Tab_VideoSettings_C_GetDisplayGamma final
+{
+public:
+	double                                        DisplayGamma;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_Tab_VideoSettings_C_GetDisplayGamma) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetDisplayGamma");
+static_assert(sizeof(WB_Tab_VideoSettings_C_GetDisplayGamma) == 0x000008, "Wrong size on WB_Tab_VideoSettings_C_GetDisplayGamma");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetDisplayGamma, DisplayGamma) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetDisplayGamma::DisplayGamma' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetFieldOfView
 // 0x0008 (0x0008 - 0x0000)
@@ -664,7 +671,7 @@ public:
 	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFrameRateLimit_ReturnValue;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A5[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_FunctionResult_ReturnValue_ImplicitCast;    // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetFrameRateLimit) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetFrameRateLimit");
@@ -675,26 +682,29 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_GetFrameRateLimit, CallFunc_GetFra
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetFrameRateLimit, K2Node_FunctionResult_ReturnValue_ImplicitCast) == 0x000018, "Member 'WB_Tab_VideoSettings_C_GetFrameRateLimit::K2Node_FunctionResult_ReturnValue_ImplicitCast' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetInitialFocusWidget
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct WB_Tab_VideoSettings_C_GetInitialFocusWidget final
 {
 public:
 	class UUserWidget*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A6[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A7[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWB_BaseControlWithLabel_C*             K2Node_DynamicCast_AsWB_Base_Control_with_Label;   // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A8[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56A9[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetInitialFocusWidget) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetInitialFocusWidget");
-static_assert(sizeof(WB_Tab_VideoSettings_C_GetInitialFocusWidget) == 0x000038, "Wrong size on WB_Tab_VideoSettings_C_GetInitialFocusWidget");
+static_assert(sizeof(WB_Tab_VideoSettings_C_GetInitialFocusWidget) == 0x000040, "Wrong size on WB_Tab_VideoSettings_C_GetInitialFocusWidget");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, Temp_int_Variable) == 0x000008, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::Temp_int_Variable' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_GetChildAt_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
@@ -702,8 +712,11 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_Ge
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, K2Node_DynamicCast_AsWB_Base_Control_with_Label) == 0x000020, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::K2Node_DynamicCast_AsWB_Base_Control_with_Label' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_Subtract_IntInt_ReturnValue) == 0x00002C, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000030, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_GetVisibility_ReturnValue) == 0x000030, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_GetVisibility_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000031, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000032, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetInitialFocusWidget, CallFunc_BooleanAND_ReturnValue) == 0x000038, "Member 'WB_Tab_VideoSettings_C_GetInitialFocusWidget::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetMotionBlur
 // 0x0008 (0x0008 - 0x0000)
@@ -733,7 +746,7 @@ struct WB_Tab_VideoSettings_C_GetPostProcessingQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56AA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetPostProcessingQuality_ReturnValue;     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -749,7 +762,7 @@ struct WB_Tab_VideoSettings_C_GetReflectionsQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56AB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetReflectionQuality_ReturnValue;         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -807,10 +820,10 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56AC[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSupportedResolution>           CallFunc_GetSupportedScreenResolutions_Resolutions; // 0x0038(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56AD[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSupportedResolution                   CallFunc_Array_Get_Item;                           // 0x0050(0x0018)()
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -834,7 +847,7 @@ struct WB_Tab_VideoSettings_C_GetShadowQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56AE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetShadowQuality_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -861,7 +874,7 @@ struct WB_Tab_VideoSettings_C_GetTextureQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56AF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetTextureQuality_ReturnValue;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -877,7 +890,7 @@ struct WB_Tab_VideoSettings_C_GetViewDistanceQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetViewDistanceQuality_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -893,7 +906,7 @@ struct WB_Tab_VideoSettings_C_GetVisualEffectQuality final
 {
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetVisualEffectQuality_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -909,7 +922,7 @@ struct WB_Tab_VideoSettings_C_GetWindowMode final
 {
 public:
 	EWindowMode                                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSupportedResolution                   CallFunc_GetScreenResolution_Resolution;           // 0x0008(0x0018)()
 	EWindowMode                                   CallFunc_GetScreenResolution_WindowMode;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -920,91 +933,91 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowMode, CallFunc_GetScreenR
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowMode, CallFunc_GetScreenResolution_WindowMode) == 0x000020, "Member 'WB_Tab_VideoSettings_C_GetWindowMode::CallFunc_GetScreenResolution_WindowMode' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetWindowModeFromDisplayString
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString final
 {
 public:
 	class FString                                 DisplayString;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	EWindowMode                                   WindowMode;                                        // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B3[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0028(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0038(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0050(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B4[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0090(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x00A0(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0038(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0048(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0080(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0090(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString");
-static_assert(sizeof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString) == 0x0000D0, "Wrong size on WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString");
+static_assert(sizeof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString) == 0x0000B8, "Wrong size on WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, DisplayString) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::DisplayString' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, WindowMode) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::WindowMode' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, K2Node_MakeArray_Array) == 0x000018, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, K2Node_MakeArray_Array_1) == 0x000028, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::K2Node_MakeArray_Array_1' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Format_ReturnValue) == 0x000038, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Format_ReturnValue_1) == 0x000050, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Conv_TextToString_ReturnValue) == 0x000068, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000078, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000088, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000089, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, K2Node_MakeArray_Array_2) == 0x000090, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Format_ReturnValue_2) == 0x0000A0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000B8, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x0000C8, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Format_ReturnValue_1) == 0x000048, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Conv_TextToString_ReturnValue) == 0x000058, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000068, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000078, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000079, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, K2Node_MakeArray_Array_2) == 0x000080, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Format_ReturnValue_2) == 0x000090, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000A0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x0000B0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeFromDisplayString::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.GetWindowModeString
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct WB_Tab_VideoSettings_C_GetWindowModeString final
 {
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0020(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0030(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0048(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0080(0x0010)(ReferenceParm)
-	struct FSupportedResolution                   CallFunc_GetScreenResolution_Resolution;           // 0x0090(0x0018)()
-	EWindowMode                                   CallFunc_GetScreenResolution_WindowMode;           // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B5[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x00B0(0x0018)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B6[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0030(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0040(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0070(0x0010)(ReferenceParm)
+	struct FSupportedResolution                   CallFunc_GetScreenResolution_Resolution;           // 0x0080(0x0018)()
+	EWindowMode                                   CallFunc_GetScreenResolution_WindowMode;           // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x00A0(0x0010)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue_2;          // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_GetWindowModeString) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_GetWindowModeString");
-static_assert(sizeof(WB_Tab_VideoSettings_C_GetWindowModeString) == 0x0000E0, "Wrong size on WB_Tab_VideoSettings_C_GetWindowModeString");
+static_assert(sizeof(WB_Tab_VideoSettings_C_GetWindowModeString) == 0x0000C8, "Wrong size on WB_Tab_VideoSettings_C_GetWindowModeString");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, K2Node_MakeArray_Array) == 0x000010, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::K2Node_MakeArray_Array' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, K2Node_MakeArray_Array_1) == 0x000020, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::K2Node_MakeArray_Array_1' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Format_ReturnValue) == 0x000030, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Format_ReturnValue_1) == 0x000048, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Conv_TextToString_ReturnValue) == 0x000060, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000070, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, K2Node_MakeArray_Array_2) == 0x000080, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_GetScreenResolution_Resolution) == 0x000090, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_GetScreenResolution_Resolution' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_GetScreenResolution_WindowMode) == 0x0000A8, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_GetScreenResolution_WindowMode' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Format_ReturnValue_2) == 0x0000B0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, K2Node_SwitchEnum_CmpSuccess) == 0x0000C8, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000D0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Format_ReturnValue_1) == 0x000040, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Conv_TextToString_ReturnValue) == 0x000050, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Conv_TextToString_ReturnValue_1) == 0x000060, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Conv_TextToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, K2Node_MakeArray_Array_2) == 0x000070, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_GetScreenResolution_Resolution) == 0x000080, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_GetScreenResolution_Resolution' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_GetScreenResolution_WindowMode) == 0x000098, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_GetScreenResolution_WindowMode' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Format_ReturnValue_2) == 0x0000A0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, K2Node_SwitchEnum_CmpSuccess) == 0x0000B0, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_GetWindowModeString, CallFunc_Conv_TextToString_ReturnValue_2) == 0x0000B8, "Member 'WB_Tab_VideoSettings_C_GetWindowModeString::CallFunc_Conv_TextToString_ReturnValue_2' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.IsDirty
 // 0x0001 (0x0001 - 0x0000)
 struct WB_Tab_VideoSettings_C_IsDirty final
 {
 public:
-	bool                                          Param_bDirty;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDirty_0;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_IsDirty) == 0x000001, "Wrong alignment on WB_Tab_VideoSettings_C_IsDirty");
 static_assert(sizeof(WB_Tab_VideoSettings_C_IsDirty) == 0x000001, "Wrong size on WB_Tab_VideoSettings_C_IsDirty");
-static_assert(offsetof(WB_Tab_VideoSettings_C_IsDirty, Param_bDirty) == 0x000000, "Member 'WB_Tab_VideoSettings_C_IsDirty::Param_bDirty' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_IsDirty, bDirty_0) == 0x000000, "Member 'WB_Tab_VideoSettings_C_IsDirty::bDirty_0' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.IsFullscreenModeDirty
 // 0x0010 (0x0010 - 0x0000)
@@ -1032,7 +1045,7 @@ struct WB_Tab_VideoSettings_C_IsScreenResolutionDirty final
 public:
 	class UGameUserSettings*                      GameUserSettings;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B7[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIntPoint                              CallFunc_GetLastConfirmedScreenResolution_ReturnValue; // 0x000C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FIntPoint                              CallFunc_GetScreenResolution_ReturnValue;          // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1055,7 +1068,7 @@ struct WB_Tab_VideoSettings_C_IsVideoModeDirty final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsFullscreenModeDirty_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsScreenResolutionDirty_ReturnValue;      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1083,54 +1096,69 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_LoadComboBoxSettings, CallFunc_Get
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadComboBoxSettings, CallFunc_GetResolution_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_LoadComboBoxSettings::CallFunc_GetResolution_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.LoadCurrentSettings
-// 0x0070 (0x0070 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct WB_Tab_VideoSettings_C_LoadCurrentSettings final
 {
 public:
-	int32                                         CallFunc_GetVisualEffectQuality_ReturnValue;       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetPostProcessingQuality_ReturnValue;     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetShadowQuality_ReturnValue;             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetViewDistanceQuality_ReturnValue;       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetAntiAliasingQuality_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56B9[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTextureQuality_ReturnValue;            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetVisualEffectQuality_ReturnValue;       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetPostProcessingQuality_ReturnValue;     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetShadowQuality_ReturnValue;             // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetViewDistanceQuality_ReturnValue;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetAntiAliasingQuality_ReturnValue;       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetFrameRateLimit_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetResolutionScale_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetMotionBlur_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetFieldOfView_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTextureQuality_ReturnValue;            // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetReflectionsQuality_ReturnValue;        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetDisplayGamma_DisplayGamma;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetSharpen_Sharpen;                       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetFPSCounter_FPSCounter;                 // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BA[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetAAMethod_AAMethod;                     // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetAutoExposureMethod_ReturnValue;        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGamma_ReturnValue;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetReflectionsQuality_ReturnValue;        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetAutoExposureMethod_ReturnValue;        // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVSyncEnabled_ReturnValue;               // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BB[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_SelectedGamma_ImplicitCast;     // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetGamma_gamma_ImplicitCast;              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_LoadCurrentSettings) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_LoadCurrentSettings");
-static_assert(sizeof(WB_Tab_VideoSettings_C_LoadCurrentSettings) == 0x000070, "Wrong size on WB_Tab_VideoSettings_C_LoadCurrentSettings");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetVisualEffectQuality_ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetVisualEffectQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetPostProcessingQuality_ReturnValue) == 0x000004, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetPostProcessingQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetShadowQuality_ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetShadowQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetViewDistanceQuality_ReturnValue) == 0x00000C, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetViewDistanceQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetAntiAliasingQuality_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetAntiAliasingQuality_ReturnValue' has a wrong offset!");
+static_assert(sizeof(WB_Tab_VideoSettings_C_LoadCurrentSettings) == 0x000068, "Wrong size on WB_Tab_VideoSettings_C_LoadCurrentSettings");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetTextureQuality_ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetTextureQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetVisualEffectQuality_ReturnValue) == 0x000004, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetVisualEffectQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetPostProcessingQuality_ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetPostProcessingQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetShadowQuality_ReturnValue) == 0x00000C, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetShadowQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetViewDistanceQuality_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetViewDistanceQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetAntiAliasingQuality_ReturnValue) == 0x000014, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetAntiAliasingQuality_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetFrameRateLimit_ReturnValue) == 0x000018, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetFrameRateLimit_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetResolutionScale_ReturnValue) == 0x000020, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetResolutionScale_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetMotionBlur_ReturnValue) == 0x000028, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetMotionBlur_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetFieldOfView_ReturnValue) == 0x000030, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetFieldOfView_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetTextureQuality_ReturnValue) == 0x000038, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetTextureQuality_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetReflectionsQuality_ReturnValue) == 0x00003C, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetReflectionsQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetDisplayGamma_DisplayGamma) == 0x000038, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetDisplayGamma_DisplayGamma' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetGameUserSettings_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetSharpen_Sharpen) == 0x000048, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetSharpen_Sharpen' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetFPSCounter_FPSCounter) == 0x000050, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetFPSCounter_FPSCounter' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetAAMethod_AAMethod) == 0x000054, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetAAMethod_AAMethod' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetAutoExposureMethod_ReturnValue) == 0x000058, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetAutoExposureMethod_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetGamma_ReturnValue) == 0x00005C, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetGamma_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetReflectionsQuality_ReturnValue) == 0x000058, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetReflectionsQuality_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_GetAutoExposureMethod_ReturnValue) == 0x00005C, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_GetAutoExposureMethod_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_IsVSyncEnabled_ReturnValue) == 0x000060, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_IsVSyncEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, K2Node_VariableSet_SelectedGamma_ImplicitCast) == 0x000068, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::K2Node_VariableSet_SelectedGamma_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_LoadCurrentSettings, CallFunc_SetGamma_gamma_ImplicitCast) == 0x000064, "Member 'WB_Tab_VideoSettings_C_LoadCurrentSettings::CallFunc_SetGamma_gamma_ImplicitCast' has a wrong offset!");
+
+// Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.NavigateList
+// 0x0018 (0x0018 - 0x0000)
+struct WB_Tab_VideoSettings_C_NavigateList final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_NavigateVerticalPanelWidget_WidgetToFocus; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WB_Tab_VideoSettings_C_NavigateList) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_NavigateList");
+static_assert(sizeof(WB_Tab_VideoSettings_C_NavigateList) == 0x000018, "Wrong size on WB_Tab_VideoSettings_C_NavigateList");
+static_assert(offsetof(WB_Tab_VideoSettings_C_NavigateList, Navigation_0) == 0x000000, "Member 'WB_Tab_VideoSettings_C_NavigateList::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_NavigateList, ReturnValue) == 0x000008, "Member 'WB_Tab_VideoSettings_C_NavigateList::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_NavigateList, CallFunc_NavigateVerticalPanelWidget_WidgetToFocus) == 0x000010, "Member 'WB_Tab_VideoSettings_C_NavigateList::CallFunc_NavigateVerticalPanelWidget_WidgetToFocus' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.SaveSettings
 // 0x0060 (0x0060 - 0x0000)
@@ -1168,7 +1196,7 @@ struct WB_Tab_VideoSettings_C_SetSettingsVisibilityForPlatform final
 public:
 	TArray<class UUserWidget*>                    SettingsToHideOnConsole;                           // 0x0000(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BC[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Ps4Platform_ReturnValue;                  // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1177,9 +1205,9 @@ public:
 	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BD[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BE[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    K2Node_MakeArray_Array;                            // 0x0038(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_SetSettingsVisibilityForPlatform) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_SetSettingsVisibilityForPlatform");
@@ -1231,10 +1259,10 @@ struct WB_Tab_VideoSettings_C_UpdateAAMethod final
 {
 public:
 	int32                                         MethodID;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56C0[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_UpdateAAMethod) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_UpdateAAMethod");
@@ -1245,25 +1273,25 @@ static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateAAMethod, CallFunc_NotEqual_
 static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateAAMethod, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'WB_Tab_VideoSettings_C_UpdateAAMethod::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.UpdateComboBoxValues
-// 0x0078 (0x0078 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct WB_Tab_VideoSettings_C_UpdateComboBoxValues final
 {
 public:
 	class FString                                 CallFunc_GetAAModeString_ReturnValue;              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetWindowModeString_ReturnValue;          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0038(0x0018)()
-	class FString                                 CallFunc_GetResolution_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0060(0x0018)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0020(0x0010)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0030(0x0010)()
+	class FString                                 CallFunc_GetResolution_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_2;          // 0x0050(0x0010)()
 };
 static_assert(alignof(WB_Tab_VideoSettings_C_UpdateComboBoxValues) == 0x000008, "Wrong alignment on WB_Tab_VideoSettings_C_UpdateComboBoxValues");
-static_assert(sizeof(WB_Tab_VideoSettings_C_UpdateComboBoxValues) == 0x000078, "Wrong size on WB_Tab_VideoSettings_C_UpdateComboBoxValues");
+static_assert(sizeof(WB_Tab_VideoSettings_C_UpdateComboBoxValues) == 0x000060, "Wrong size on WB_Tab_VideoSettings_C_UpdateComboBoxValues");
 static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_GetAAModeString_ReturnValue) == 0x000000, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_GetAAModeString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_GetWindowModeString_ReturnValue) == 0x000010, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_GetWindowModeString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_Conv_StringToText_ReturnValue) == 0x000020, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000038, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_GetResolution_ReturnValue) == 0x000050, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_GetResolution_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000060, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000030, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_GetResolution_ReturnValue) == 0x000040, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_GetResolution_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_Tab_VideoSettings_C_UpdateComboBoxValues, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000050, "Member 'WB_Tab_VideoSettings_C_UpdateComboBoxValues::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
 
 // Function WB_Tab_VideoSettings.WB_Tab_VideoSettings_C.UpdateWidgetValues
 // 0x0048 (0x0048 - 0x0000)

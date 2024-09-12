@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "Chaos_structs.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "PhysicsCore_structs.hpp"
+#include "Chaos_structs.hpp"
 
 
 namespace SDK
@@ -45,7 +45,7 @@ public:
 	EPhysicsType                                  PhysicsType;                                       // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionTraceFlag                           CollisionTraceFlag;                                // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EBodyCollisionResponse                        CollisionReponse;                                  // 0x0032(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FA[0x5];                                       // 0x0033(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -76,7 +76,7 @@ public:
 	float                                         AngularEtherDrag;                                  // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SleepingLinearVelocityThreshold;                   // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SleepingAngularVelocityThreshold;                  // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FB[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -99,7 +99,7 @@ static_assert(offsetof(UChaosPhysicalMaterial, SleepingLinearVelocityThreshold) 
 static_assert(offsetof(UChaosPhysicalMaterial, SleepingAngularVelocityThreshold) == 0x000040, "Member 'UChaosPhysicalMaterial::SleepingAngularVelocityThreshold' has a wrong offset!");
 
 // Class PhysicsCore.PhysicalMaterial
-// 0x0060 (0x0088 - 0x0028)
+// 0x0070 (0x0098 - 0x0028)
 class UPhysicalMaterial : public UObject
 {
 public:
@@ -107,23 +107,29 @@ public:
 	float                                         StaticFriction;                                    // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFrictionCombineMode                          FrictionCombineMode;                               // 0x0030(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideFrictionCombineMode;                      // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Restitution;                                       // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFrictionCombineMode                          RestitutionCombineMode;                            // 0x0038(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideRestitutionCombineMode;                   // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FD[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Density;                                           // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SleepLinearVelocityThreshold;                      // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SleepAngularVelocityThreshold;                     // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SleepCounterThreshold;                             // 0x0048(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RaiseMassToPower;                                  // 0x004C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DestructibleDamageThresholdScale;                  // 0x0050(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FE[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPhysicalMaterialPropertyBase*          PhysicalMaterialProperty;                          // 0x0058(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPhysicalSurface                              SurfaceType;                                       // 0x0060(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPhysicalMaterialStrength              Strength;                                          // 0x0064(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_100[0x18];                                     // 0x0070(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPhysicalMaterialDamageModifier        DamageModifier;                                    // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bShowExperimentalProperties;                       // 0x0074(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPhysicalMaterialSoftCollisionMode            SoftCollisionMode;                                 // 0x0075(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SoftCollisionThickness;                            // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseFrictionImpulse;                               // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -136,7 +142,7 @@ public:
 	}
 };
 static_assert(alignof(UPhysicalMaterial) == 0x000008, "Wrong alignment on UPhysicalMaterial");
-static_assert(sizeof(UPhysicalMaterial) == 0x000088, "Wrong size on UPhysicalMaterial");
+static_assert(sizeof(UPhysicalMaterial) == 0x000098, "Wrong size on UPhysicalMaterial");
 static_assert(offsetof(UPhysicalMaterial, Friction) == 0x000028, "Member 'UPhysicalMaterial::Friction' has a wrong offset!");
 static_assert(offsetof(UPhysicalMaterial, StaticFriction) == 0x00002C, "Member 'UPhysicalMaterial::StaticFriction' has a wrong offset!");
 static_assert(offsetof(UPhysicalMaterial, FrictionCombineMode) == 0x000030, "Member 'UPhysicalMaterial::FrictionCombineMode' has a wrong offset!");
@@ -153,9 +159,14 @@ static_assert(offsetof(UPhysicalMaterial, DestructibleDamageThresholdScale) == 0
 static_assert(offsetof(UPhysicalMaterial, PhysicalMaterialProperty) == 0x000058, "Member 'UPhysicalMaterial::PhysicalMaterialProperty' has a wrong offset!");
 static_assert(offsetof(UPhysicalMaterial, SurfaceType) == 0x000060, "Member 'UPhysicalMaterial::SurfaceType' has a wrong offset!");
 static_assert(offsetof(UPhysicalMaterial, Strength) == 0x000064, "Member 'UPhysicalMaterial::Strength' has a wrong offset!");
+static_assert(offsetof(UPhysicalMaterial, DamageModifier) == 0x000070, "Member 'UPhysicalMaterial::DamageModifier' has a wrong offset!");
+static_assert(offsetof(UPhysicalMaterial, bShowExperimentalProperties) == 0x000074, "Member 'UPhysicalMaterial::bShowExperimentalProperties' has a wrong offset!");
+static_assert(offsetof(UPhysicalMaterial, SoftCollisionMode) == 0x000075, "Member 'UPhysicalMaterial::SoftCollisionMode' has a wrong offset!");
+static_assert(offsetof(UPhysicalMaterial, SoftCollisionThickness) == 0x000078, "Member 'UPhysicalMaterial::SoftCollisionThickness' has a wrong offset!");
+static_assert(offsetof(UPhysicalMaterial, BaseFrictionImpulse) == 0x00007C, "Member 'UPhysicalMaterial::BaseFrictionImpulse' has a wrong offset!");
 
 // Class PhysicsCore.PhysicsSettingsCore
-// 0x00A8 (0x00E0 - 0x0038)
+// 0x00B0 (0x00E8 - 0x0038)
 class UPhysicsSettingsCore : public UDeveloperSettings
 {
 public:
@@ -172,11 +183,11 @@ public:
 	bool                                          bWarnMissingLocks;                                 // 0x0054(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnable2DPhysics;                                  // 0x0055(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDefaultHasComplexCollision;                       // 0x0056(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_101[0x1];                                      // 0x0057(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_57[0x1];                                       // 0x0057(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BounceThresholdVelocity;                           // 0x0058(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFrictionCombineMode                          FrictionCombineMode;                               // 0x005C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFrictionCombineMode                          RestitutionCombineMode;                            // 0x005D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_102[0x2];                                      // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxAngularVelocity;                                // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxDepenetrationVelocity;                          // 0x0064(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ContactOffsetMultiplier;                           // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -184,8 +195,9 @@ public:
 	float                                         MaxContactOffset;                                  // 0x0070(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSimulateSkeletalMeshOnDedicatedServer;            // 0x0074(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionTraceFlag                           DefaultShapeComplexity;                            // 0x0075(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_103[0x2];                                      // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChaosSolverConfiguration              SolverOptions;                                     // 0x0078(0x0068)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FChaosSolverConfiguration              SolverOptions;                                     // 0x0078(0x006C)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -198,7 +210,7 @@ public:
 	}
 };
 static_assert(alignof(UPhysicsSettingsCore) == 0x000008, "Wrong alignment on UPhysicsSettingsCore");
-static_assert(sizeof(UPhysicsSettingsCore) == 0x0000E0, "Wrong size on UPhysicsSettingsCore");
+static_assert(sizeof(UPhysicsSettingsCore) == 0x0000E8, "Wrong size on UPhysicsSettingsCore");
 static_assert(offsetof(UPhysicsSettingsCore, DefaultGravityZ) == 0x000038, "Member 'UPhysicsSettingsCore::DefaultGravityZ' has a wrong offset!");
 static_assert(offsetof(UPhysicsSettingsCore, DefaultTerminalVelocity) == 0x00003C, "Member 'UPhysicsSettingsCore::DefaultTerminalVelocity' has a wrong offset!");
 static_assert(offsetof(UPhysicsSettingsCore, DefaultFluidFriction) == 0x000040, "Member 'UPhysicsSettingsCore::DefaultFluidFriction' has a wrong offset!");

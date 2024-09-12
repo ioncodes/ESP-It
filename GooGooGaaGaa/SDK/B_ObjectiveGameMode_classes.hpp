@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_ObjectiveTeam_structs.hpp"
 #include "B_SeekGameMode_classes.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -20,28 +20,28 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ObjectiveGameMode.B_ObjectiveGameMode_C
-// 0x0060 (0x0620 - 0x05C0)
+// 0x0060 (0x0618 - 0x05B8)
 class AB_ObjectiveGameMode_C final : public AB_SeekGameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectiveGameMode_C;              // 0x05C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class AB_ObjectiveWitchRespawnPoint_C*> AllWitchRespawnPoints;                             // 0x05C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	int32                                         OverTime;                                          // 0x05D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48B3[0x4];                                     // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ObjectiveGameState_C*                ObjectiveGameState;                                // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        StartSeekTime;                                     // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentPlaytime;                                   // 0x05F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48B4[0x4];                                     // 0x05F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_ObjectivePlayerController_C*         TempJoiningPlayer;                                 // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        NoPlayersOnDynamicInstanceTime;                    // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxTimeForDynamicInstanceToShutdown;               // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_MatchOptions_C*                      NextRoundMatchOptions;                             // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        ShudownTimer;                                      // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ObjectiveGameMode_C;              // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class AB_ObjectiveWitchRespawnPoint_C*> AllWitchRespawnPoints;                             // 0x05C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	int32                                         OverTime;                                          // 0x05D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ObjectiveGameState_C*                ObjectiveGameState;                                // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        StartSeekTime;                                     // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentPlaytime;                                   // 0x05E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_ObjectivePlayerController_C*         TempJoiningPlayer;                                 // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        NoPlayersOnDynamicInstanceTime;                    // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxTimeForDynamicInstanceToShutdown;               // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_MatchOptions_C*                      NextRoundMatchOptions;                             // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        ShudownTimer;                                      // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AreAllPlayersReadyWithTeamSelection(bool* AreReady);
 	void CheckEndMatchWitchesDead();
-	void CheckForOverTime(bool* Param_OverTime);
+	void CheckForOverTime(bool* OverTime_0);
 	void CheckTimerForMatchStart();
 	void CheckWitchesAlive(bool* WitchAlive);
 	void EnsureInitialize();
@@ -76,8 +76,8 @@ public:
 	void StartFirstRound();
 	void StartGame();
 	void StartNewGame(bool RestartByPlayerJoin);
-	void StartNewGameOverride(bool RestartByPlayerJoin, bool* Param_StartNewGame);
-	void SurrenderTeam(E_ObjectiveTeam SurrenderObjectiveTeam, ETeamID Param_SurrenderTeam);
+	void StartNewGameOverride(bool RestartByPlayerJoin, bool* StartNewGame_0);
+	void SurrenderTeam(E_ObjectiveTeam SurrenderObjectiveTeam, ETeamID SurrenderTeam_0);
 	void TimerFinished();
 	void TimerSecondElapsed(double RemainingSeconds);
 	void UnregisterPlayer(class AController* PlayerController);
@@ -98,18 +98,18 @@ public:
 	}
 };
 static_assert(alignof(AB_ObjectiveGameMode_C) == 0x000008, "Wrong alignment on AB_ObjectiveGameMode_C");
-static_assert(sizeof(AB_ObjectiveGameMode_C) == 0x000620, "Wrong size on AB_ObjectiveGameMode_C");
-static_assert(offsetof(AB_ObjectiveGameMode_C, UberGraphFrame_B_ObjectiveGameMode_C) == 0x0005C0, "Member 'AB_ObjectiveGameMode_C::UberGraphFrame_B_ObjectiveGameMode_C' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, AllWitchRespawnPoints) == 0x0005C8, "Member 'AB_ObjectiveGameMode_C::AllWitchRespawnPoints' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, OverTime) == 0x0005D8, "Member 'AB_ObjectiveGameMode_C::OverTime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, ObjectiveGameState) == 0x0005E0, "Member 'AB_ObjectiveGameMode_C::ObjectiveGameState' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, StartSeekTime) == 0x0005E8, "Member 'AB_ObjectiveGameMode_C::StartSeekTime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, CurrentPlaytime) == 0x0005F0, "Member 'AB_ObjectiveGameMode_C::CurrentPlaytime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, TempJoiningPlayer) == 0x0005F8, "Member 'AB_ObjectiveGameMode_C::TempJoiningPlayer' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, NoPlayersOnDynamicInstanceTime) == 0x000600, "Member 'AB_ObjectiveGameMode_C::NoPlayersOnDynamicInstanceTime' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, MaxTimeForDynamicInstanceToShutdown) == 0x000608, "Member 'AB_ObjectiveGameMode_C::MaxTimeForDynamicInstanceToShutdown' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, NextRoundMatchOptions) == 0x000610, "Member 'AB_ObjectiveGameMode_C::NextRoundMatchOptions' has a wrong offset!");
-static_assert(offsetof(AB_ObjectiveGameMode_C, ShudownTimer) == 0x000618, "Member 'AB_ObjectiveGameMode_C::ShudownTimer' has a wrong offset!");
+static_assert(sizeof(AB_ObjectiveGameMode_C) == 0x000618, "Wrong size on AB_ObjectiveGameMode_C");
+static_assert(offsetof(AB_ObjectiveGameMode_C, UberGraphFrame_B_ObjectiveGameMode_C) == 0x0005B8, "Member 'AB_ObjectiveGameMode_C::UberGraphFrame_B_ObjectiveGameMode_C' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, AllWitchRespawnPoints) == 0x0005C0, "Member 'AB_ObjectiveGameMode_C::AllWitchRespawnPoints' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, OverTime) == 0x0005D0, "Member 'AB_ObjectiveGameMode_C::OverTime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, ObjectiveGameState) == 0x0005D8, "Member 'AB_ObjectiveGameMode_C::ObjectiveGameState' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, StartSeekTime) == 0x0005E0, "Member 'AB_ObjectiveGameMode_C::StartSeekTime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, CurrentPlaytime) == 0x0005E8, "Member 'AB_ObjectiveGameMode_C::CurrentPlaytime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, TempJoiningPlayer) == 0x0005F0, "Member 'AB_ObjectiveGameMode_C::TempJoiningPlayer' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, NoPlayersOnDynamicInstanceTime) == 0x0005F8, "Member 'AB_ObjectiveGameMode_C::NoPlayersOnDynamicInstanceTime' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, MaxTimeForDynamicInstanceToShutdown) == 0x000600, "Member 'AB_ObjectiveGameMode_C::MaxTimeForDynamicInstanceToShutdown' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, NextRoundMatchOptions) == 0x000608, "Member 'AB_ObjectiveGameMode_C::NextRoundMatchOptions' has a wrong offset!");
+static_assert(offsetof(AB_ObjectiveGameMode_C, ShudownTimer) == 0x000610, "Member 'AB_ObjectiveGameMode_C::ShudownTimer' has a wrong offset!");
 
 }
 

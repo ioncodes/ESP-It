@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EHunterScoreStat_structs.hpp"
 #include "EWitchScoreStat_structs.hpp"
+#include "EHunterScoreStat_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
@@ -49,7 +49,7 @@ public:
 	void GetHunterValueToUseForCalculation(EHunterScoreStat HunterScoreStat, double* ValueToUse, double* OriginalValue);
 	void GetWitchScoreStat(EWitchScoreStat WitchScoreStat, double* Stat);
 	void GetWitchValueToUseForCalculation(EWitchScoreStat WitchScoreStat, double* ValueToUse, double* OriginalValue);
-	void IsRecordingStats(bool* Param_IsRecordingStats);
+	void IsRecordingStats(bool* IsRecordingStats_0);
 	void UpdateAverageHunterScoreStat(EHunterScoreStat HunterScoreStat, double Value);
 	void UpdateAverageWitchScoreStat(EWitchScoreStat WitchScoreStat, double Value);
 

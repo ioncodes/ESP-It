@@ -122,9 +122,9 @@ void UB_MenuUIManager_C::ExecuteUbergraph_B_MenuUIManager(int32 EntryPoint)
 // Function B_MenuUIManager.B_MenuUIManager_C.GetGameInstance
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UB_GameInstance_C*                Param_GameInstance                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UB_GameInstance_C*                GameInstance_0                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_MenuUIManager_C::GetGameInstance(class UB_GameInstance_C** Param_GameInstance)
+void UB_MenuUIManager_C::GetGameInstance(class UB_GameInstance_C** GameInstance_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -135,8 +135,8 @@ void UB_MenuUIManager_C::GetGameInstance(class UB_GameInstance_C** Param_GameIns
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_GameInstance != nullptr)
-		*Param_GameInstance = Parms.Param_GameInstance;
+	if (GameInstance_0 != nullptr)
+		*GameInstance_0 = Parms.GameInstance_0;
 }
 
 
@@ -301,10 +301,10 @@ void UB_MenuUIManager_C::ShowConfirmationDialog(const class FString& Title, cons
 // Function B_MenuUIManager.B_MenuUIManager_C.ShowDialog
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_Class                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           Class_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UUserWidget*                      Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UB_MenuUIManager_C::ShowDialog(class UClass* Param_Class, class UUserWidget** Widget)
+void UB_MenuUIManager_C::ShowDialog(class UClass* Class_0, class UUserWidget** Widget)
 {
 	static class UFunction* Func = nullptr;
 
@@ -313,7 +313,7 @@ void UB_MenuUIManager_C::ShowDialog(class UClass* Param_Class, class UUserWidget
 
 	Params::B_MenuUIManager_C_ShowDialog Parms{};
 
-	Parms.Param_Class = Param_Class;
+	Parms.Class_0 = Class_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

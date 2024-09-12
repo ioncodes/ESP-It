@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "EHighlightChannel_structs.hpp"
 #include "Engine_structs.hpp"
 #include "B_StaticMeshActionProp_classes.hpp"
-#include "EHighlightChannel_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -24,12 +24,12 @@ namespace SDK
 class AB_Sunshade_C final : public AB_StaticMeshActionProp_C
 {
 public:
-	uint8                                         Pad_4EC5[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D1[0x7];                                      // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_Sunshade_C;                       // 0x05D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UB_WindForce_C*                         B_WindForce;                                       // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   CollisionCone;                                     // 0x05E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 SK_Sunshade;                                       // 0x05F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC6[0x8];                                     // 0x05F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F8[0x8];                                      // 0x05F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ClosedTransform;                                   // 0x0600(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             OpenTransform;                                     // 0x0660(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CurrentTransformTarget;                            // 0x06C0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

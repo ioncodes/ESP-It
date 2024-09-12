@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "ETeamID_structs.hpp"
 
@@ -18,77 +19,107 @@ namespace SDK::Params
 {
 
 // Function WB_ControllerHelpElement.WB_ControllerHelpElement_C.ExecuteUbergraph_WB_ControllerHelpElement
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x0258 (0x0258 - 0x0000)
 struct WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CBE[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0020(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0038(0x0018)()
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CBF[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC0[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FKey, class FName>                K2Node_CustomEvent_Bindings;                       // 0x0070(0x0050)()
-	ETeamID                                       K2Node_CustomEvent_Team;                           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC1[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x00C8(0x0018)()
-	class FName                                   CallFunc_Map_Find_Value;                           // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC2[0x5];                                     // 0x00EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Map_Find_Value_1;                         // 0x00F0(0x0018)()
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETeamID                                       Temp_byte_Variable_1;                              // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC3[0x6];                                     // 0x010A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_3;                              // 0x0110(0x0018)()
-	class FText                                   Temp_text_Variable_4;                              // 0x0128(0x0018)()
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0008(0x0010)()
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0048)(HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FKey, class FName>                K2Node_CustomEvent_Bindings;                       // 0x0080(0x0050)()
+	ETeamID                                       K2Node_CustomEvent_Team;                           // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Map_Find_Value;                           // 0x00D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_2;        // 0x00DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Map_Find_Value_1;                         // 0x00E0(0x0010)()
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   CallFunc_GetKeyForAction_ReturnValue;              // 0x00F8(0x0018)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetKeyForAction_bKeyFound;                // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0118(0x0010)()
+	ETeamID                                       Temp_byte_Variable;                                // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_1;                              // 0x0130(0x0010)()
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC4[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_5;                              // 0x0148(0x0018)()
-	class FText                                   K2Node_Select_Default_1;                           // 0x0160(0x0018)()
-	class FName                                   CallFunc_Map_Find_Value_2;                         // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CC5[0x7];                                     // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Map_Find_Value_3;                         // 0x0188(0x0018)()
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_2;                              // 0x0148(0x0010)()
+	class FName                                   CallFunc_Map_Find_Value_2;                         // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Map_Find_Value_3;                         // 0x0168(0x0010)()
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETeamID                                       Temp_byte_Variable_1;                              // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17A[0x6];                                      // 0x017A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0180(0x0010)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0190(0x0010)()
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x01A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A3[0x5];                                      // 0x01A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_4;                              // 0x01A8(0x0010)()
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable_5;                              // 0x01C0(0x0010)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x01D0(0x0010)()
+	class FText                                   K2Node_Select_Default_1;                           // 0x01E0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01F0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0238(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0248(0x0010)()
 };
 static_assert(alignof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement) == 0x000008, "Wrong alignment on WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement");
-static_assert(sizeof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement) == 0x0001A8, "Wrong size on WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement");
+static_assert(sizeof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement) == 0x000258, "Wrong size on WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement");
 static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, EntryPoint) == 0x000000, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_byte_Variable) == 0x000004, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable) == 0x000008, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_1) == 0x000020, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_2) == 0x000038, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_Event_IsDesignTime) == 0x000050, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_GetGameInstance_ReturnValue) == 0x000058, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_DynamicCast_AsB_Game_Instance) == 0x000060, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_CustomEvent_Bindings) == 0x000070, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_CustomEvent_Bindings' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_CustomEvent_Team) == 0x0000C0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_CustomEvent_Team' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_Select_Default) == 0x0000C8, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value) == 0x0000E0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue) == 0x0000E8, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0000E9, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x0000EA, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value_1) == 0x0000F0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue_1) == 0x000108, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_byte_Variable_1) == 0x000109, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_3) == 0x000110, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_4) == 0x000128, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_MakeLiteralText_ReturnValue) == 0x000008, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_Event_IsDesignTime) == 0x000018, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_MakeStruct_FormatArgumentData) == 0x000020, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_GetGameInstance_ReturnValue) == 0x000068, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_DynamicCast_AsB_Game_Instance) == 0x000070, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_CustomEvent_Bindings) == 0x000080, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_CustomEvent_Bindings' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_CustomEvent_Team) == 0x0000D0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_CustomEvent_Team' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value) == 0x0000D4, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue) == 0x0000DC, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_NameName_ReturnValue) == 0x0000DD, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x0000DE, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_NameName_ReturnValue_2) == 0x0000DF, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_NameName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value_1) == 0x0000E0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue_1) == 0x0000F0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_GetKeyForAction_ReturnValue) == 0x0000F8, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_GetKeyForAction_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_GetKeyForAction_bKeyFound) == 0x000110, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_GetKeyForAction_bKeyFound' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable) == 0x000118, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_byte_Variable) == 0x000128, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_1) == 0x000130, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_1' has a wrong offset!");
 static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_TextIsEmpty_ReturnValue) == 0x000140, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_5) == 0x000148, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_Select_Default_1) == 0x000160, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value_2) == 0x000178, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue_2) == 0x000180, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value_3) == 0x000188, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue_3) == 0x0001A0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_2) == 0x000148, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value_2) == 0x000158, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue_2) == 0x000160, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_Value_3) == 0x000168, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Map_Find_ReturnValue_3) == 0x000178, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_byte_Variable_1) == 0x000179, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_Select_Default) == 0x000180, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_3) == 0x000190, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_SwitchPlatform_ReturnValue) == 0x0001A0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x0001A1, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_EqualEqual_KeyKey_ReturnValue_1) == 0x0001A2, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_EqualEqual_KeyKey_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_4) == 0x0001A8, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_BooleanOR_ReturnValue) == 0x0001B8, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, Temp_text_Variable_5) == 0x0001C0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::Temp_text_Variable_5' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_MakeLiteralText_ReturnValue_1) == 0x0001D0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_Select_Default_1) == 0x0001E0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001F0, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, K2Node_MakeArray_Array) == 0x000238, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement, CallFunc_Format_ReturnValue) == 0x000248, "Member 'WB_ControllerHelpElement_C_ExecuteUbergraph_WB_ControllerHelpElement::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_ControllerHelpElement.WB_ControllerHelpElement_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)

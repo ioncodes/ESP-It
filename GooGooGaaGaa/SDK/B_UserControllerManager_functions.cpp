@@ -40,10 +40,10 @@ void UB_UserControllerManager_C::ExecuteUbergraph_B_UserControllerManager(int32 
 // Function B_UserControllerManager.B_UserControllerManager_C.GetMessageDialogText
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// EEstablishUserReason                    Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEstablishUserReason                    Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-class FString UB_UserControllerManager_C::GetMessageDialogText(EEstablishUserReason Param_Index)
+class FString UB_UserControllerManager_C::GetMessageDialogText(EEstablishUserReason Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,7 +52,7 @@ class FString UB_UserControllerManager_C::GetMessageDialogText(EEstablishUserRea
 
 	Params::B_UserControllerManager_C_GetMessageDialogText Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -63,10 +63,10 @@ class FString UB_UserControllerManager_C::GetMessageDialogText(EEstablishUserRea
 // Function B_UserControllerManager.B_UserControllerManager_C.GetMessageDialogTitle
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// EEstablishUserReason                    Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEstablishUserReason                    Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-class FString UB_UserControllerManager_C::GetMessageDialogTitle(EEstablishUserReason Param_Index)
+class FString UB_UserControllerManager_C::GetMessageDialogTitle(EEstablishUserReason Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -75,7 +75,7 @@ class FString UB_UserControllerManager_C::GetMessageDialogTitle(EEstablishUserRe
 
 	Params::B_UserControllerManager_C_GetMessageDialogTitle Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -86,9 +86,9 @@ class FString UB_UserControllerManager_C::GetMessageDialogTitle(EEstablishUserRe
 // Function B_UserControllerManager.B_UserControllerManager_C.Initialize
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UGameInstance*                    Param_GameInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UGameInstance*                    GameInstance_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_UserControllerManager_C::Initialize(class UGameInstance* Param_GameInstance)
+void UB_UserControllerManager_C::Initialize(class UGameInstance* GameInstance_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -97,7 +97,7 @@ void UB_UserControllerManager_C::Initialize(class UGameInstance* Param_GameInsta
 
 	Params::B_UserControllerManager_C_Initialize Parms{};
 
-	Parms.Param_GameInstance = Param_GameInstance;
+	Parms.GameInstance_0 = GameInstance_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

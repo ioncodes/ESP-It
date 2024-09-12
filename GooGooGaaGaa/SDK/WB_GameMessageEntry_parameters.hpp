@@ -12,8 +12,8 @@
 
 #include "EGameMessageType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,10 +28,10 @@ public:
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsAnimationPlaying_ReturnValue;           // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3814[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetAnimationCurrentTime_ReturnValue;      // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3815[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_GameMessageEntry_C_ExecuteUbergraph_WB_GameMessageEntry) == 0x000008, "Wrong alignment on WB_GameMessageEntry_C_ExecuteUbergraph_WB_GameMessageEntry");
@@ -45,172 +45,172 @@ static_assert(offsetof(WB_GameMessageEntry_C_ExecuteUbergraph_WB_GameMessageEntr
 static_assert(offsetof(WB_GameMessageEntry_C_ExecuteUbergraph_WB_GameMessageEntry, CallFunc_PlayAnimation_ReturnValue) == 0x000050, "Member 'WB_GameMessageEntry_C_ExecuteUbergraph_WB_GameMessageEntry::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 // Function WB_GameMessageEntry.WB_GameMessageEntry_C.Get_MessageText_Text_0
-// 0x0810 (0x0810 - 0x0000)
+// 0x0710 (0x0710 - 0x0000)
 struct WB_GameMessageEntry_C_Get_MessageText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          NamelessAnnouncement;                              // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameMessageType                              Temp_byte_Variable;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3816[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_3;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_4;                               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_5;                               // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_6;                               // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_7;                               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_8;                               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_9;                               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_10;                              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_11;                              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_12;                              // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_13;                              // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3817[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable;                                // 0x0058(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0070(0x0018)()
-	int32                                         Temp_int_Variable_14;                              // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3818[0x2];                                     // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0090(0x0014)()
-	int32                                         K2Node_Select_Default;                             // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x00B0(0x0058)(HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3819[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0110(0x0050)(HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0160(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0170(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0180(0x0018)()
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x0198(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x01A8(0x0014)()
-	uint8                                         Pad_381A[0x4];                                     // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01C0(0x0050)(HasGetValueTypeHash)
-	int32                                         CallFunc_Text_ToInt_ReturnValue;                   // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_381B[0x4];                                     // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0218(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0268(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_381C[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0280(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0298(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x02E8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0338(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0348(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0358(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0370(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0388(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x03D8(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x0428(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x0438(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x0448(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x0460(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0478(0x0050)(HasGetValueTypeHash)
-	class FText                                   K2Node_Select_Default_1;                           // 0x04C8(0x0018)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x04E0(0x0010)(ReferenceParm)
-	class FText                                   K2Node_Select_Default_2;                           // 0x04F0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0508(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0520(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x0570(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_7;                          // 0x05C0(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_8;                          // 0x05D0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_7;                     // 0x05E0(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_8;                     // 0x05F8(0x0018)()
-	class FText                                   K2Node_Select_Default_3;                           // 0x0610(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0628(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x0678(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_9;                          // 0x06C8(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_10;                         // 0x06D8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_9;                     // 0x06E8(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_10;                    // 0x0700(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0718(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x0768(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_11;                         // 0x07B8(0x0010)(ReferenceParm)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_12;                         // 0x07C8(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_11;                    // 0x07D8(0x0018)()
-	class FText                                   CallFunc_Format_ReturnValue_12;                    // 0x07F0(0x0018)()
-	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x0808(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          NamelessAnnouncement;                              // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameMessageType                              Temp_byte_Variable;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_6;                               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_7;                               // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_8;                               // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_9;                               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_10;                              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_11;                              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_12;                              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_13;                              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0050(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0060(0x0010)()
+	int32                                         Temp_int_Variable_14;                              // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0078(0x0014)()
+	int32                                         K2Node_Select_Default;                             // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0098(0x0060)(HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0100(0x0048)(HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0148(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0158(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0168(0x0010)()
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0188(0x0014)()
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01A0(0x0048)(HasGetValueTypeHash)
+	int32                                         CallFunc_Text_ToInt_ReturnValue;                   // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x01F0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0238(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0250(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0260(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x02A8(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x02F0(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_3;                          // 0x0300(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0310(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_3;                     // 0x0320(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0330(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0378(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_4;                          // 0x03C0(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_5;                          // 0x03D0(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_4;                     // 0x03E0(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_5;                     // 0x03F0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_7;            // 0x0400(0x0048)(HasGetValueTypeHash)
+	class FText                                   K2Node_Select_Default_1;                           // 0x0448(0x0010)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_6;                          // 0x0458(0x0010)(ReferenceParm)
+	class FText                                   K2Node_Select_Default_2;                           // 0x0468(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_6;                     // 0x0478(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_8;            // 0x0488(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_9;            // 0x04D0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_7;                          // 0x0518(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_8;                          // 0x0528(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_7;                     // 0x0538(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_8;                     // 0x0548(0x0010)()
+	class FText                                   K2Node_Select_Default_3;                           // 0x0558(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_10;           // 0x0568(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_11;           // 0x05B0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_9;                          // 0x05F8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_10;                         // 0x0608(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_9;                     // 0x0618(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_10;                    // 0x0628(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_12;           // 0x0638(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_13;           // 0x0680(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_11;                         // 0x06C8(0x0010)(ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_12;                         // 0x06D8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue_11;                    // 0x06E8(0x0010)()
+	class FText                                   CallFunc_Format_ReturnValue_12;                    // 0x06F8(0x0010)()
+	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x0708(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_GameMessageEntry_C_Get_MessageText_Text_0) == 0x000008, "Wrong alignment on WB_GameMessageEntry_C_Get_MessageText_Text_0");
-static_assert(sizeof(WB_GameMessageEntry_C_Get_MessageText_Text_0) == 0x000810, "Wrong size on WB_GameMessageEntry_C_Get_MessageText_Text_0");
+static_assert(sizeof(WB_GameMessageEntry_C_Get_MessageText_Text_0) == 0x000710, "Wrong size on WB_GameMessageEntry_C_Get_MessageText_Text_0");
 static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, ReturnValue) == 0x000000, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, NamelessAnnouncement) == 0x000018, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::NamelessAnnouncement' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_byte_Variable) == 0x000019, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable) == 0x00001C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_1) == 0x000020, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_2) == 0x000024, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_3) == 0x000028, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_4) == 0x00002C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_5) == 0x000030, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_5' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_6) == 0x000034, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_6' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_7) == 0x000038, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_7' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_8) == 0x00003C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_8' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_9) == 0x000040, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_9' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_10) == 0x000044, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_10' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_11) == 0x000048, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_11' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_12) == 0x00004C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_12' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_13) == 0x000050, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_13' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_text_Variable) == 0x000058, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_text_Variable_1) == 0x000070, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_14) == 0x000088, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_14' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_bool_Variable) == 0x00008C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_bool_Variable_1) == 0x00008D, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_SlateColor) == 0x000090, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default) == 0x0000A4, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000A8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_SlateFontInfo) == 0x0000B0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_SwitchEnum_CmpSuccess) == 0x000108, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000110, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_LinearColor) == 0x000160, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array) == 0x000170, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue) == 0x000180, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_LinearColor_1) == 0x000198, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_SlateColor_1) == 0x0001A8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001C0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Text_ToInt_ReturnValue) == 0x000210, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Text_ToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_2) == 0x000218, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_1) == 0x000268, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000278, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_1) == 0x000280, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_3) == 0x000298, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_4) == 0x0002E8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_2) == 0x000338, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_3) == 0x000348, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_2) == 0x000358, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_3) == 0x000370, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_5) == 0x000388, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_6) == 0x0003D8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_4) == 0x000428, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_5) == 0x000438, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_4) == 0x000448, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_5) == 0x000460, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_7) == 0x000478, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default_1) == 0x0004C8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_6) == 0x0004E0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_6' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default_2) == 0x0004F0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_6) == 0x000508, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_8) == 0x000520, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_9) == 0x000570, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_7) == 0x0005C0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_7' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_8) == 0x0005D0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_8' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_7) == 0x0005E0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_8) == 0x0005F8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default_3) == 0x000610, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_10) == 0x000628, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_10' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_11) == 0x000678, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_11' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_9) == 0x0006C8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_9' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_10) == 0x0006D8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_10' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_9) == 0x0006E8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_10) == 0x000700, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_12) == 0x000718, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_12' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_13) == 0x000768, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_13' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_11) == 0x0007B8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_11' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_12) == 0x0007C8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_12' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_11) == 0x0007D8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_12) == 0x0007F0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_Size_ImplicitCast) == 0x000808, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_Size_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, NamelessAnnouncement) == 0x000010, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::NamelessAnnouncement' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_byte_Variable) == 0x000011, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable) == 0x000014, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_1) == 0x000018, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_2) == 0x00001C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_3) == 0x000020, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_4) == 0x000024, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_5) == 0x000028, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_6) == 0x00002C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_6' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_7) == 0x000030, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_7' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_8) == 0x000034, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_8' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_9) == 0x000038, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_9' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_10) == 0x00003C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_10' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_11) == 0x000040, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_11' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_12) == 0x000044, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_12' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_13) == 0x000048, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_13' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_text_Variable) == 0x000050, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_text_Variable' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_text_Variable_1) == 0x000060, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_text_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_int_Variable_14) == 0x000070, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_int_Variable_14' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_bool_Variable) == 0x000074, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, Temp_bool_Variable_1) == 0x000075, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_SlateColor) == 0x000078, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default) == 0x00008C, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Conv_IntToDouble_ReturnValue) == 0x000090, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_SlateFontInfo) == 0x000098, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_SwitchEnum_CmpSuccess) == 0x0000F8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000100, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_LinearColor) == 0x000148, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array) == 0x000158, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue) == 0x000168, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_LinearColor_1) == 0x000178, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_SlateColor_1) == 0x000188, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001A0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Text_ToInt_ReturnValue) == 0x0001E8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Text_ToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_2) == 0x0001F0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_1) == 0x000238, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000248, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_1) == 0x000250, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_3) == 0x000260, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_4) == 0x0002A8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_2) == 0x0002F0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_3) == 0x000300, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_2) == 0x000310, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_3) == 0x000320, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_5) == 0x000330, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_6) == 0x000378, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_4) == 0x0003C0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_5) == 0x0003D0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_5' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_4) == 0x0003E0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_5) == 0x0003F0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_7) == 0x000400, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_7' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default_1) == 0x000448, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_6) == 0x000458, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_6' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default_2) == 0x000468, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_6) == 0x000478, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_8) == 0x000488, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_8' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_9) == 0x0004D0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_9' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_7) == 0x000518, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_7' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_8) == 0x000528, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_8' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_7) == 0x000538, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_8) == 0x000548, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_Select_Default_3) == 0x000558, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_10) == 0x000568, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_10' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_11) == 0x0005B0, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_11' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_9) == 0x0005F8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_9' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_10) == 0x000608, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_10' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_9) == 0x000618, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_10) == 0x000628, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_12) == 0x000638, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_12' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_FormatArgumentData_13) == 0x000680, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_FormatArgumentData_13' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_11) == 0x0006C8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_11' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeArray_Array_12) == 0x0006D8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeArray_Array_12' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_11) == 0x0006E8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, CallFunc_Format_ReturnValue_12) == 0x0006F8, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::CallFunc_Format_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(WB_GameMessageEntry_C_Get_MessageText_Text_0, K2Node_MakeStruct_Size_ImplicitCast) == 0x000708, "Member 'WB_GameMessageEntry_C_Get_MessageText_Text_0::K2Node_MakeStruct_Size_ImplicitCast' has a wrong offset!");
 
 // Function WB_GameMessageEntry.WB_GameMessageEntry_C.Tick
 // 0x003C (0x003C - 0x0000)

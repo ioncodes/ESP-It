@@ -239,9 +239,9 @@ void UB_UserInterfaceHelper_C::ResetButtonToNormalStyle(class UButton* Button, c
 // Parameters:
 // struct FKey                             Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsKeyTab                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsKeyTab_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UB_UserInterfaceHelper_C::IsKeyTab(const struct FKey& Key, class UObject* __WorldContext, bool* Param_IsKeyTab)
+void UB_UserInterfaceHelper_C::IsKeyTab(const struct FKey& Key, class UObject* __WorldContext, bool* IsKeyTab_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -255,8 +255,8 @@ void UB_UserInterfaceHelper_C::IsKeyTab(const struct FKey& Key, class UObject* _
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Param_IsKeyTab != nullptr)
-		*Param_IsKeyTab = Parms.Param_IsKeyTab;
+	if (IsKeyTab_0 != nullptr)
+		*IsKeyTab_0 = Parms.IsKeyTab_0;
 }
 
 

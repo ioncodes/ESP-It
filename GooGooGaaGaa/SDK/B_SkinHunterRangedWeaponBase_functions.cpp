@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function B_SkinHunterRangedWeaponBase.B_SkinHunterRangedWeaponBase_C.ExecuteUbergraph_B_SkinHunterRangedWeaponBase
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_SkinHunterRangedWeaponBase.B_SkinHunterRangedWeaponBase_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AB_SkinHunterRangedWeaponBase_C::ExecuteUbergraph_B_SkinHunterRangedWeaponBase(int32 EntryPoint)
+void AB_SkinHunterRangedWeaponBase_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_SkinHunterRangedWeaponBase_C", "ExecuteUbergraph_B_SkinHunterRangedWeaponBase");
+		Func = Class->GetFunction("B_SkinHunterRangedWeaponBase_C", "UserConstructionScript");
 
-	Params::B_SkinHunterRangedWeaponBase_C_ExecuteUbergraph_B_SkinHunterRangedWeaponBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,17 +51,23 @@ void AB_SkinHunterRangedWeaponBase_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function B_SkinHunterRangedWeaponBase.B_SkinHunterRangedWeaponBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function B_SkinHunterRangedWeaponBase.B_SkinHunterRangedWeaponBase_C.ExecuteUbergraph_B_SkinHunterRangedWeaponBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SkinHunterRangedWeaponBase_C::UserConstructionScript()
+void AB_SkinHunterRangedWeaponBase_C::ExecuteUbergraph_B_SkinHunterRangedWeaponBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_SkinHunterRangedWeaponBase_C", "UserConstructionScript");
+		Func = Class->GetFunction("B_SkinHunterRangedWeaponBase_C", "ExecuteUbergraph_B_SkinHunterRangedWeaponBase");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_SkinHunterRangedWeaponBase_C_ExecuteUbergraph_B_SkinHunterRangedWeaponBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

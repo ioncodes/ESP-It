@@ -15,15 +15,25 @@ namespace SDK::Params
 {
 
 // Function BP_PalaceDoor.BP_PalaceDoor_C.OpenDoor
-// 0x0001 (0x0001 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct BP_PalaceDoor_C_OpenDoor final
 {
 public:
 	bool                                          Fast;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FTrunc_ReturnValue_1;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PalaceDoor_C_OpenDoor) == 0x000001, "Wrong alignment on BP_PalaceDoor_C_OpenDoor");
-static_assert(sizeof(BP_PalaceDoor_C_OpenDoor) == 0x000001, "Wrong size on BP_PalaceDoor_C_OpenDoor");
+static_assert(alignof(BP_PalaceDoor_C_OpenDoor) == 0x000008, "Wrong alignment on BP_PalaceDoor_C_OpenDoor");
+static_assert(sizeof(BP_PalaceDoor_C_OpenDoor) == 0x000028, "Wrong size on BP_PalaceDoor_C_OpenDoor");
 static_assert(offsetof(BP_PalaceDoor_C_OpenDoor, Fast) == 0x000000, "Member 'BP_PalaceDoor_C_OpenDoor::Fast' has a wrong offset!");
+static_assert(offsetof(BP_PalaceDoor_C_OpenDoor, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'BP_PalaceDoor_C_OpenDoor::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalaceDoor_C_OpenDoor, CallFunc_FTrunc_ReturnValue) == 0x000010, "Member 'BP_PalaceDoor_C_OpenDoor::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PalaceDoor_C_OpenDoor, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000018, "Member 'BP_PalaceDoor_C_OpenDoor::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PalaceDoor_C_OpenDoor, CallFunc_FTrunc_ReturnValue_1) == 0x000020, "Member 'BP_PalaceDoor_C_OpenDoor::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
 
 }
 

@@ -18,49 +18,58 @@ namespace SDK::Params
 {
 
 // Function B_SkinSelectionFunctionLibrary.B_SkinSelectionFunctionLibrary_C.Get Skin Config Save Name
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name final
 {
 public:
 	class UB_SkinSelection_C*                     SkinSelection;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Team;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CEE[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ConfigNr;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Param_Name;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Name_0;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Prefix;                                            // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Suffix;                                            // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CombinedNames;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CEF[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_SwitchPlatform_ReturnValue;               // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetProjectSavedDirectory_ReturnValue;     // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_2; // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_3; // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SwitchPlatform_ReturnValue_1;             // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_SelectString_ReturnValue_1;               // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue; // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_1; // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_2; // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_String__CombineStrings_Multi_ReturnValue_3; // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name) == 0x000008, "Wrong alignment on B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name");
-static_assert(sizeof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name) == 0x0000E0, "Wrong size on B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name");
+static_assert(sizeof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name) == 0x000108, "Wrong size on B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, SkinSelection) == 0x000000, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::SkinSelection' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Team) == 0x000008, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Team' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, ConfigNr) == 0x00000C, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::ConfigNr' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, __WorldContext) == 0x000010, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::__WorldContext' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Param_Name) == 0x000018, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Param_Name' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Name_0) == 0x000018, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Name_0' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Prefix) == 0x000028, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Prefix' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, Suffix) == 0x000038, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::Suffix' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CombinedNames) == 0x000048, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CombinedNames' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, K2Node_SwitchEnum_CmpSuccess) == 0x000058, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SwitchPlatform_ReturnValue) == 0x000059, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SwitchPlatform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_GetProjectSavedDirectory_ReturnValue) == 0x000060, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_GetProjectSavedDirectory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item) == 0x000070, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue) == 0x000090, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_1) == 0x0000A0, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Concat_StrStr_ReturnValue) == 0x0000B0, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_2) == 0x0000C0, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_3) == 0x0000D0, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SelectString_ReturnValue) == 0x000070, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SelectString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SwitchPlatform_ReturnValue_1) == 0x000080, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SwitchPlatform_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_SelectString_ReturnValue_1) == 0x000088, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_SelectString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item) == 0x000098, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue) == 0x0000A8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Array_Get_Item_1) == 0x0000B8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_1) == 0x0000C8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_Concat_StrStr_ReturnValue) == 0x0000D8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_2) == 0x0000E8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name, CallFunc_String__CombineStrings_Multi_ReturnValue_3) == 0x0000F8, "Member 'B_SkinSelectionFunctionLibrary_C_Get_Skin_Config_Save_Name::CallFunc_String__CombineStrings_Multi_ReturnValue_3' has a wrong offset!");
 
 // Function B_SkinSelectionFunctionLibrary.B_SkinSelectionFunctionLibrary_C.Get Default Skin Configs
 // 0x00C8 (0x00C8 - 0x0000)
@@ -88,7 +97,7 @@ struct B_SkinSelectionFunctionLibrary_C_Get_Active_Skin_Config_Nr final
 public:
 	class UB_SkinSelection_C*                     SkinSelection;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Team;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF0[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         ConfigNr;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Nr;                                                // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -111,17 +120,17 @@ public:
 	class UB_SkinSelection_C*                     SkinSelection;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         ConfigNr;                                          // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Team;                                              // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF1[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FHunterSkin                            DefaultHunter;                                     // 0x0018(0x0038)(Edit, BlueprintVisible, NoDestructor)
 	struct FWitchSkin                             DefaultWitch;                                      // 0x0050(0x0028)(Edit, BlueprintVisible, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF2[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF3[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHunterSkin                            CallFunc_Array_Get_Item;                           // 0x0090(0x0038)(NoDestructor)
 	struct FWitchSkin                             CallFunc_Array_Get_Item_1;                         // 0x00C8(0x0028)(NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -152,16 +161,16 @@ struct B_SkinSelectionFunctionLibrary_C_Update_Skin_Config_Content final
 public:
 	class UB_SkinSelection_C*                     SkinSelection;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ETeamID                                       Team;                                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF4[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ConfigNr;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FWitchSkin                             WitchSkin;                                         // 0x0010(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FHunterSkin                            HunterSkin;                                        // 0x0038(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	class UObject*                                __WorldContext;                                    // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF5[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF6[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -169,22 +178,22 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF7[0x2];                                     // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B6[0x2];                                       // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF8[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF9[0x1];                                     // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D3[0x1];                                       // 0x00D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFA[0x3];                                     // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -252,7 +261,7 @@ public:
 	class UB_SkinSelection_C*                     CallFunc_CreateObject_Object;                      // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFB[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_SkinSelection_C*                     K2Node_DynamicCast_AsB_Skin_Selection;             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasSaveGameAnyBytes_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

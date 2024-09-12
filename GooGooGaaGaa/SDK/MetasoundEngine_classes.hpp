@@ -10,30 +10,63 @@
 
 #include "Basic.hpp"
 
-#include "MetasoundEngine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "MetasoundFrontend_structs.hpp"
+#include "MetasoundEngine_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
 {
 
+// Class MetasoundEngine.MetasoundFrontendLiteralBlueprintAccess
+// 0x0000 (0x0028 - 0x0028)
+class UMetasoundFrontendLiteralBlueprintAccess final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FMetasoundFrontendLiteral CreateBoolArrayMetaSoundLiteral(const TArray<bool>& Value);
+	static struct FMetasoundFrontendLiteral CreateBoolMetaSoundLiteral(bool Value);
+	static struct FMetasoundFrontendLiteral CreateFloatArrayMetaSoundLiteral(const TArray<float>& Value);
+	static struct FMetasoundFrontendLiteral CreateFloatMetaSoundLiteral(float Value);
+	static struct FMetasoundFrontendLiteral CreateIntArrayMetaSoundLiteral(const TArray<int32>& Value);
+	static struct FMetasoundFrontendLiteral CreateIntMetaSoundLiteral(int32 Value);
+	static struct FMetasoundFrontendLiteral CreateMetaSoundLiteralFromParam(const struct FAudioParameter& Param);
+	static struct FMetasoundFrontendLiteral CreateObjectArrayMetaSoundLiteral(const TArray<class UObject*>& Value);
+	static struct FMetasoundFrontendLiteral CreateObjectMetaSoundLiteral(class UObject* Value);
+	static struct FMetasoundFrontendLiteral CreateStringArrayMetaSoundLiteral(const TArray<class FString>& Value);
+	static struct FMetasoundFrontendLiteral CreateStringMetaSoundLiteral(const class FString& Value);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MetasoundFrontendLiteralBlueprintAccess">();
+	}
+	static class UMetasoundFrontendLiteralBlueprintAccess* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetasoundFrontendLiteralBlueprintAccess>();
+	}
+};
+static_assert(alignof(UMetasoundFrontendLiteralBlueprintAccess) == 0x000008, "Wrong alignment on UMetasoundFrontendLiteralBlueprintAccess");
+static_assert(sizeof(UMetasoundFrontendLiteralBlueprintAccess) == 0x000028, "Wrong size on UMetasoundFrontendLiteralBlueprintAccess");
+
 // Class MetasoundEngine.MetasoundGeneratorHandle
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x0070 (0x0098 - 0x0028)
 class UMetasoundGeneratorHandle final : public UObject
 {
 public:
-	uint8                                         Pad_321B[0xB8];                                    // 0x0028(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x70];                                      // 0x0028(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UMetasoundGeneratorHandle* CreateMetaSoundGeneratorHandle(class UAudioComponent* OnComponent);
 
 	bool ApplyParameterPack(class UMetasoundParameterPack* Pack);
-	void OnOutputValueChangedMulticast__DelegateSignature(class FName Param_Name, const struct FMetaSoundOutput& Output);
 	bool WatchOutput(class FName OutputName, const TDelegate<void(class FName OutputName, struct FMetaSoundOutput& Output)>& OnOutputValueChanged, class FName AnalyzerName, class FName AnalyzerOutputName);
+
+	void EnableRuntimeRenderTiming(bool Enable) const;
+	double GetCPUCoreUtilization() const;
+	void UpdateWatchers() const;
 
 public:
 	static class UClass* StaticClass()
@@ -46,7 +79,32 @@ public:
 	}
 };
 static_assert(alignof(UMetasoundGeneratorHandle) == 0x000008, "Wrong alignment on UMetasoundGeneratorHandle");
-static_assert(sizeof(UMetasoundGeneratorHandle) == 0x0000E0, "Wrong size on UMetasoundGeneratorHandle");
+static_assert(sizeof(UMetasoundGeneratorHandle) == 0x000098, "Wrong size on UMetasoundGeneratorHandle");
+
+// Class MetasoundEngine.MetaSoundCacheSubsystem
+// 0x0040 (0x0070 - 0x0030)
+class UMetaSoundCacheSubsystem final : public UAudioEngineSubsystem
+{
+public:
+	uint8                                         Pad_30[0x40];                                      // 0x0030(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void PrecacheMetaSound(class UMetaSoundSource* InMetaSound, int32 InNumInstances);
+	void RemoveCachedOperatorsForMetaSound(class UMetaSoundSource* InMetaSound);
+	void TouchOrPrecacheMetaSound(class UMetaSoundSource* InMetaSound, int32 InNumInstances);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MetaSoundCacheSubsystem">();
+	}
+	static class UMetaSoundCacheSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetaSoundCacheSubsystem>();
+	}
+};
+static_assert(alignof(UMetaSoundCacheSubsystem) == 0x000008, "Wrong alignment on UMetaSoundCacheSubsystem");
+static_assert(sizeof(UMetaSoundCacheSubsystem) == 0x000070, "Wrong size on UMetaSoundCacheSubsystem");
 
 // Class MetasoundEngine.MetasoundOutputBlueprintAccess
 // 0x0000 (0x0028 - 0x0028)
@@ -57,7 +115,7 @@ public:
 	static float GetFloat(const struct FMetaSoundOutput& Output, bool* Success);
 	static int32 GetInt32(const struct FMetaSoundOutput& Output, bool* Success);
 	static class FString GetString(const struct FMetaSoundOutput& Output, bool* Success);
-	static float GetTimeSeconds(const struct FMetaSoundOutput& Output, bool* Success);
+	static double GetTimeSeconds(const struct FMetaSoundOutput& Output, bool* Success);
 	static bool IsBool(const struct FMetaSoundOutput& Output);
 	static bool IsFloat(const struct FMetaSoundOutput& Output);
 	static bool IsInt32(const struct FMetaSoundOutput& Output);
@@ -101,20 +159,41 @@ static_assert(alignof(UMetaSoundOutputSubsystem) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UMetaSoundOutputSubsystem) == 0x000050, "Wrong size on UMetaSoundOutputSubsystem");
 static_assert(offsetof(UMetaSoundOutputSubsystem, TrackedGenerators) == 0x000040, "Member 'UMetaSoundOutputSubsystem::TrackedGenerators' has a wrong offset!");
 
+// Class MetasoundEngine.MetaSoundQualityHelper
+// 0x0000 (0x0028 - 0x0028)
+class UMetaSoundQualityHelper final : public UObject
+{
+public:
+	static TArray<class FName> GetQualityList();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MetaSoundQualityHelper">();
+	}
+	static class UMetaSoundQualityHelper* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetaSoundQualityHelper>();
+	}
+};
+static_assert(alignof(UMetaSoundQualityHelper) == 0x000008, "Wrong alignment on UMetaSoundQualityHelper");
+static_assert(sizeof(UMetaSoundQualityHelper) == 0x000028, "Wrong size on UMetaSoundQualityHelper");
+
 // Class MetasoundEngine.MetaSoundSettings
-// 0x0048 (0x0080 - 0x0038)
+// 0x0058 (0x0090 - 0x0038)
 class UMetaSoundSettings final : public UDeveloperSettings
 {
 public:
 	bool                                          bAutoUpdateEnabled;                                // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3229[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetasoundFrontendClassName>    AutoUpdateDenylist;                                // 0x0040(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<struct FDefaultMetaSoundAssetAutoUpdateSettings> AutoUpdateAssetDenylist;                           // 0x0050(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                          bAutoUpdateLogWarningOnDroppedConnection;          // 0x0060(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_322A[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FDirectoryPath>                 DirectoriesToRegister;                             // 0x0068(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	int32                                         DenyListCacheChangeID;                             // 0x0078(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_322B[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMetaSoundQualitySettings>      QualitySettings;                                   // 0x0080(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -127,13 +206,14 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundSettings) == 0x000008, "Wrong alignment on UMetaSoundSettings");
-static_assert(sizeof(UMetaSoundSettings) == 0x000080, "Wrong size on UMetaSoundSettings");
+static_assert(sizeof(UMetaSoundSettings) == 0x000090, "Wrong size on UMetaSoundSettings");
 static_assert(offsetof(UMetaSoundSettings, bAutoUpdateEnabled) == 0x000038, "Member 'UMetaSoundSettings::bAutoUpdateEnabled' has a wrong offset!");
 static_assert(offsetof(UMetaSoundSettings, AutoUpdateDenylist) == 0x000040, "Member 'UMetaSoundSettings::AutoUpdateDenylist' has a wrong offset!");
 static_assert(offsetof(UMetaSoundSettings, AutoUpdateAssetDenylist) == 0x000050, "Member 'UMetaSoundSettings::AutoUpdateAssetDenylist' has a wrong offset!");
 static_assert(offsetof(UMetaSoundSettings, bAutoUpdateLogWarningOnDroppedConnection) == 0x000060, "Member 'UMetaSoundSettings::bAutoUpdateLogWarningOnDroppedConnection' has a wrong offset!");
 static_assert(offsetof(UMetaSoundSettings, DirectoriesToRegister) == 0x000068, "Member 'UMetaSoundSettings::DirectoriesToRegister' has a wrong offset!");
 static_assert(offsetof(UMetaSoundSettings, DenyListCacheChangeID) == 0x000078, "Member 'UMetaSoundSettings::DenyListCacheChangeID' has a wrong offset!");
+static_assert(offsetof(UMetaSoundSettings, QualitySettings) == 0x000080, "Member 'UMetaSoundSettings::QualitySettings' has a wrong offset!");
 
 // Class MetasoundEngine.MetasoundEditorGraphBase
 // 0x0000 (0x0060 - 0x0060)
@@ -153,16 +233,17 @@ static_assert(alignof(UMetasoundEditorGraphBase) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UMetasoundEditorGraphBase) == 0x000060, "Wrong size on UMetasoundEditorGraphBase");
 
 // Class MetasoundEngine.MetaSoundPatch
-// 0x0338 (0x0360 - 0x0028)
+// 0x0320 (0x0348 - 0x0028)
 class UMetaSoundPatch final : public UObject
 {
 public:
-	uint8                                         Pad_322C[0x70];                                    // 0x0028(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendDocument             RootMetaSoundDocument;                             // 0x0098(0x01C8)(Edit, Protected, NativeAccessSpecifierProtected)
-	TSet<class FString>                           ReferencedAssetClassKeys;                          // 0x0260(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<class UObject*>                          ReferencedAssetClassObjects;                       // 0x02B0(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TSet<struct FSoftObjectPath>                  ReferenceAssetClassCache;                          // 0x0300(0x0050)(Protected, NativeAccessSpecifierProtected)
-	struct FGuid                                  AssetClassID;                                      // 0x0350(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x48];                                      // 0x0028(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendDocument             RootMetaSoundDocument;                             // 0x0070(0x01D0)(Edit, Protected, NativeAccessSpecifierProtected)
+	TSet<class FString>                           ReferencedAssetClassKeys;                          // 0x0240(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TSet<class UObject*>                          ReferencedAssetClassObjects;                       // 0x0290(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TSet<struct FSoftObjectPath>                  ReferenceAssetClassCache;                          // 0x02E0(0x0050)(Protected, NativeAccessSpecifierProtected)
+	struct FGuid                                  AssetClassID;                                      // 0x0330(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_340[0x8];                                      // 0x0340(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -175,21 +256,21 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundPatch) == 0x000008, "Wrong alignment on UMetaSoundPatch");
-static_assert(sizeof(UMetaSoundPatch) == 0x000360, "Wrong size on UMetaSoundPatch");
-static_assert(offsetof(UMetaSoundPatch, RootMetaSoundDocument) == 0x000098, "Member 'UMetaSoundPatch::RootMetaSoundDocument' has a wrong offset!");
-static_assert(offsetof(UMetaSoundPatch, ReferencedAssetClassKeys) == 0x000260, "Member 'UMetaSoundPatch::ReferencedAssetClassKeys' has a wrong offset!");
-static_assert(offsetof(UMetaSoundPatch, ReferencedAssetClassObjects) == 0x0002B0, "Member 'UMetaSoundPatch::ReferencedAssetClassObjects' has a wrong offset!");
-static_assert(offsetof(UMetaSoundPatch, ReferenceAssetClassCache) == 0x000300, "Member 'UMetaSoundPatch::ReferenceAssetClassCache' has a wrong offset!");
-static_assert(offsetof(UMetaSoundPatch, AssetClassID) == 0x000350, "Member 'UMetaSoundPatch::AssetClassID' has a wrong offset!");
+static_assert(sizeof(UMetaSoundPatch) == 0x000348, "Wrong size on UMetaSoundPatch");
+static_assert(offsetof(UMetaSoundPatch, RootMetaSoundDocument) == 0x000070, "Member 'UMetaSoundPatch::RootMetaSoundDocument' has a wrong offset!");
+static_assert(offsetof(UMetaSoundPatch, ReferencedAssetClassKeys) == 0x000240, "Member 'UMetaSoundPatch::ReferencedAssetClassKeys' has a wrong offset!");
+static_assert(offsetof(UMetaSoundPatch, ReferencedAssetClassObjects) == 0x000290, "Member 'UMetaSoundPatch::ReferencedAssetClassObjects' has a wrong offset!");
+static_assert(offsetof(UMetaSoundPatch, ReferenceAssetClassCache) == 0x0002E0, "Member 'UMetaSoundPatch::ReferenceAssetClassCache' has a wrong offset!");
+static_assert(offsetof(UMetaSoundPatch, AssetClassID) == 0x000330, "Member 'UMetaSoundPatch::AssetClassID' has a wrong offset!");
 
 // Class MetasoundEngine.MetaSoundAssetSubsystem
 // 0x01B0 (0x01E0 - 0x0030)
 class UMetaSoundAssetSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_322D[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMetaSoundAsyncAssetDependencies> LoadingDependencies;                               // 0x0038(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_322E[0x198];                                   // 0x0048(0x0198)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x198];                                     // 0x0048(0x0198)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void RegisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories);
@@ -210,20 +291,19 @@ static_assert(sizeof(UMetaSoundAssetSubsystem) == 0x0001E0, "Wrong size on UMeta
 static_assert(offsetof(UMetaSoundAssetSubsystem, LoadingDependencies) == 0x000038, "Member 'UMetaSoundAssetSubsystem::LoadingDependencies' has a wrong offset!");
 
 // Class MetasoundEngine.MetaSoundBuilderBase
-// 0x0038 (0x0060 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UMetaSoundBuilderBase : public UObject
 {
 public:
-	struct FMetaSoundFrontendDocumentBuilder      Builder;                                           // 0x0028(0x0030)(Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsAttached;                                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_322F[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMetaSoundFrontendDocumentBuilder      Builder;                                           // 0x0028(0x0038)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	struct FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(class FName Param_Name, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput);
-	struct FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(class FName Param_Name, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput);
+	struct FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput);
+	struct FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput);
 	void AddInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
 	struct FMetaSoundNodeHandle AddNode(const TScriptInterface<class IMetaSoundDocumentInterface>& NodeClass, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, int32 MajorVersion, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult* OutResult, int32 MajorVersion);
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> ConnectNodeInputsToMatchingGraphInterfaceInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
 	void ConnectNodeInputToGraphInput(class FName GraphInputName, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
 	TArray<struct FMetaSoundBuilderNodeInputHandle> ConnectNodeOutputsToMatchingGraphInterfaceOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
@@ -250,11 +330,11 @@ public:
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
 	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType);
 	struct FMetasoundFrontendLiteral GetNodeInputClassDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Param_Name, class FName* DataType, EMetaSoundBuilderResult* OutResult);
+	void GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
 	struct FMetasoundFrontendLiteral GetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Param_Name, class FName* DataType, EMetaSoundBuilderResult* OutResult);
-	void RemoveGraphInput(class FName Param_Name, EMetaSoundBuilderResult* OutResult);
-	void RemoveGraphOutput(class FName Param_Name, EMetaSoundBuilderResult* OutResult);
+	void GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
+	void RemoveGraphInput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
+	void RemoveGraphOutput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
 	void RemoveInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
 	void RemoveNode(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
 	void RemoveNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
@@ -264,6 +344,8 @@ public:
 	bool ContainsNode(const struct FMetaSoundNodeHandle& Node) const;
 	bool ContainsNodeInput(const struct FMetaSoundBuilderNodeInputHandle& Input) const;
 	bool ContainsNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& Output) const;
+	bool GetNodeInputIsConstructorPin(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
+	bool GetNodeOutputIsConstructorPin(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const;
 	class UObject* GetReferencedPresetAsset() const;
 	bool InterfaceIsDeclared(class FName InterfaceName) const;
 	bool IsPreset() const;
@@ -282,12 +364,11 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundBuilderBase) == 0x000008, "Wrong alignment on UMetaSoundBuilderBase");
-static_assert(sizeof(UMetaSoundBuilderBase) == 0x000060, "Wrong size on UMetaSoundBuilderBase");
+static_assert(sizeof(UMetaSoundBuilderBase) == 0x000068, "Wrong size on UMetaSoundBuilderBase");
 static_assert(offsetof(UMetaSoundBuilderBase, Builder) == 0x000028, "Member 'UMetaSoundBuilderBase::Builder' has a wrong offset!");
-static_assert(offsetof(UMetaSoundBuilderBase, bIsAttached) == 0x000058, "Member 'UMetaSoundBuilderBase::bIsAttached' has a wrong offset!");
 
 // Class MetasoundEngine.MetaSoundPatchBuilder
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0068 - 0x0068)
 class UMetaSoundPatchBuilder final : public UMetaSoundBuilderBase
 {
 public:
@@ -304,18 +385,21 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundPatchBuilder) == 0x000008, "Wrong alignment on UMetaSoundPatchBuilder");
-static_assert(sizeof(UMetaSoundPatchBuilder) == 0x000060, "Wrong size on UMetaSoundPatchBuilder");
+static_assert(sizeof(UMetaSoundPatchBuilder) == 0x000068, "Wrong size on UMetaSoundPatchBuilder");
 
 // Class MetasoundEngine.MetaSoundSourceBuilder
-// 0x0008 (0x0068 - 0x0060)
+// 0x0018 (0x0080 - 0x0068)
 class UMetaSoundSourceBuilder final : public UMetaSoundBuilderBase
 {
 public:
-	uint8                                         Pad_3264[0x8];                                     // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Audition(class UObject* Parent, class UAudioComponent* AudioComponent, TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)> OnCreateGenerator, bool bLiveUpdatesEnabled);
+	void SetBlockRateOverride(float BlockRate);
 	void SetFormat(EMetaSoundOutputAudioFormat OutputFormat, EMetaSoundBuilderResult* OutResult);
+	void SetQuality(class FName Quality);
+	void SetSampleRateOverride(int32 SampleRate);
 
 	TScriptInterface<class IMetaSoundDocumentInterface> Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const;
 	bool GetLiveUpdatesEnabled() const;
@@ -331,16 +415,17 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundSourceBuilder) == 0x000008, "Wrong alignment on UMetaSoundSourceBuilder");
-static_assert(sizeof(UMetaSoundSourceBuilder) == 0x000068, "Wrong size on UMetaSoundSourceBuilder");
+static_assert(sizeof(UMetaSoundSourceBuilder) == 0x000080, "Wrong size on UMetaSoundSourceBuilder");
 
 // Class MetasoundEngine.MetaSoundBuilderSubsystem
-// 0x00A8 (0x00D8 - 0x0030)
+// 0x00F8 (0x0128 - 0x0030)
 class UMetaSoundBuilderSubsystem final : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_3266[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, class UMetaSoundBuilderBase*> NamedBuilders;                                     // 0x0038(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-	TMap<class FName, TWeakObjectPtr<class UMetaSoundBuilderBase>> AssetBuilders;                                     // 0x0088(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<struct FMetasoundFrontendClassName, TWeakObjectPtr<class UMetaSoundBuilderBase>> AssetBuilders;                                     // 0x0088(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+	TMap<struct FMetasoundFrontendClassName, TWeakObjectPtr<class UMetaSoundBuilderBase>> TransientBuilders;                                 // 0x00D8(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 
 public:
 	struct FMetasoundFrontendLiteral CreateBoolArrayMetaSoundLiteral(const TArray<bool>& Value, class FName* DataType);
@@ -368,6 +453,7 @@ public:
 	bool UnregisterPatchBuilder(class FName BuilderName);
 	bool UnregisterSourceBuilder(class FName BuilderName);
 
+	class UMetaSoundBuilderBase* FindBuilderOfDocument(TScriptInterface<class IMetaSoundDocumentInterface> InMetaSound) const;
 	bool IsInterfaceRegistered(class FName InInterfaceName) const;
 
 public:
@@ -381,24 +467,25 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundBuilderSubsystem) == 0x000008, "Wrong alignment on UMetaSoundBuilderSubsystem");
-static_assert(sizeof(UMetaSoundBuilderSubsystem) == 0x0000D8, "Wrong size on UMetaSoundBuilderSubsystem");
+static_assert(sizeof(UMetaSoundBuilderSubsystem) == 0x000128, "Wrong size on UMetaSoundBuilderSubsystem");
 static_assert(offsetof(UMetaSoundBuilderSubsystem, NamedBuilders) == 0x000038, "Member 'UMetaSoundBuilderSubsystem::NamedBuilders' has a wrong offset!");
 static_assert(offsetof(UMetaSoundBuilderSubsystem, AssetBuilders) == 0x000088, "Member 'UMetaSoundBuilderSubsystem::AssetBuilders' has a wrong offset!");
+static_assert(offsetof(UMetaSoundBuilderSubsystem, TransientBuilders) == 0x0000D8, "Member 'UMetaSoundBuilderSubsystem::TransientBuilders' has a wrong offset!");
 
 // Class MetasoundEngine.MetaSoundSource
-// 0x0410 (0x0890 - 0x0480)
+// 0x0410 (0x0880 - 0x0470)
 class alignas(0x10) UMetaSoundSource final : public USoundWaveProcedural
 {
 public:
-	uint8                                         Pad_3273[0x70];                                    // 0x0480(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMetasoundFrontendDocument             RootMetaSoundDocument;                             // 0x04F0(0x01C8)(Edit, Protected, NativeAccessSpecifierProtected)
-	TSet<class FString>                           ReferencedAssetClassKeys;                          // 0x06B8(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TSet<class UObject*>                          ReferencedAssetClassObjects;                       // 0x0708(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TSet<struct FSoftObjectPath>                  ReferenceAssetClassCache;                          // 0x0758(0x0050)(Protected, NativeAccessSpecifierProtected)
-	EMetaSoundOutputAudioFormat                   OutputFormat;                                      // 0x07A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3274[0x3];                                     // 0x07A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  AssetClassID;                                      // 0x07AC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3275[0xD4];                                    // 0x07BC(0x00D4)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_470[0x48];                                     // 0x0470(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMetasoundFrontendDocument             RootMetaSoundDocument;                             // 0x04B8(0x01D0)(Edit, Protected, NativeAccessSpecifierProtected)
+	TSet<class FString>                           ReferencedAssetClassKeys;                          // 0x0688(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TSet<class UObject*>                          ReferencedAssetClassObjects;                       // 0x06D8(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TSet<struct FSoftObjectPath>                  ReferenceAssetClassCache;                          // 0x0728(0x0050)(Protected, NativeAccessSpecifierProtected)
+	EMetaSoundOutputAudioFormat                   OutputFormat;                                      // 0x0778(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_779[0x3];                                      // 0x0779(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  AssetClassID;                                      // 0x077C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78C[0xF4];                                     // 0x078C(0x00F4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -411,13 +498,13 @@ public:
 	}
 };
 static_assert(alignof(UMetaSoundSource) == 0x000010, "Wrong alignment on UMetaSoundSource");
-static_assert(sizeof(UMetaSoundSource) == 0x000890, "Wrong size on UMetaSoundSource");
-static_assert(offsetof(UMetaSoundSource, RootMetaSoundDocument) == 0x0004F0, "Member 'UMetaSoundSource::RootMetaSoundDocument' has a wrong offset!");
-static_assert(offsetof(UMetaSoundSource, ReferencedAssetClassKeys) == 0x0006B8, "Member 'UMetaSoundSource::ReferencedAssetClassKeys' has a wrong offset!");
-static_assert(offsetof(UMetaSoundSource, ReferencedAssetClassObjects) == 0x000708, "Member 'UMetaSoundSource::ReferencedAssetClassObjects' has a wrong offset!");
-static_assert(offsetof(UMetaSoundSource, ReferenceAssetClassCache) == 0x000758, "Member 'UMetaSoundSource::ReferenceAssetClassCache' has a wrong offset!");
-static_assert(offsetof(UMetaSoundSource, OutputFormat) == 0x0007A8, "Member 'UMetaSoundSource::OutputFormat' has a wrong offset!");
-static_assert(offsetof(UMetaSoundSource, AssetClassID) == 0x0007AC, "Member 'UMetaSoundSource::AssetClassID' has a wrong offset!");
+static_assert(sizeof(UMetaSoundSource) == 0x000880, "Wrong size on UMetaSoundSource");
+static_assert(offsetof(UMetaSoundSource, RootMetaSoundDocument) == 0x0004B8, "Member 'UMetaSoundSource::RootMetaSoundDocument' has a wrong offset!");
+static_assert(offsetof(UMetaSoundSource, ReferencedAssetClassKeys) == 0x000688, "Member 'UMetaSoundSource::ReferencedAssetClassKeys' has a wrong offset!");
+static_assert(offsetof(UMetaSoundSource, ReferencedAssetClassObjects) == 0x0006D8, "Member 'UMetaSoundSource::ReferencedAssetClassObjects' has a wrong offset!");
+static_assert(offsetof(UMetaSoundSource, ReferenceAssetClassCache) == 0x000728, "Member 'UMetaSoundSource::ReferenceAssetClassCache' has a wrong offset!");
+static_assert(offsetof(UMetaSoundSource, OutputFormat) == 0x000778, "Member 'UMetaSoundSource::OutputFormat' has a wrong offset!");
+static_assert(offsetof(UMetaSoundSource, AssetClassID) == 0x00077C, "Member 'UMetaSoundSource::AssetClassID' has a wrong offset!");
 
 }
 

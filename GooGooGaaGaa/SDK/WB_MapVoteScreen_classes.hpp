@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MapVoteScreen.WB_MapVoteScreen_C
-// 0x0018 (0x02D8 - 0x02C0)
+// 0x0018 (0x02F8 - 0x02E0)
 class UWB_MapVoteScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_MapVoteBar_C*                       WB_MapVoteBar;                                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_ResultScreenBase_C*                 WB_ResultScreenBase;                               // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_MapVoteBar_C*                       WB_MapVoteBar;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_ResultScreenBase_C*                 WB_ResultScreenBase;                               // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WB_MapVoteScreen(int32 EntryPoint);
@@ -46,10 +46,10 @@ public:
 	}
 };
 static_assert(alignof(UWB_MapVoteScreen_C) == 0x000008, "Wrong alignment on UWB_MapVoteScreen_C");
-static_assert(sizeof(UWB_MapVoteScreen_C) == 0x0002D8, "Wrong size on UWB_MapVoteScreen_C");
-static_assert(offsetof(UWB_MapVoteScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_MapVoteScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteScreen_C, WB_MapVoteBar) == 0x0002C8, "Member 'UWB_MapVoteScreen_C::WB_MapVoteBar' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteScreen_C, WB_ResultScreenBase) == 0x0002D0, "Member 'UWB_MapVoteScreen_C::WB_ResultScreenBase' has a wrong offset!");
+static_assert(sizeof(UWB_MapVoteScreen_C) == 0x0002F8, "Wrong size on UWB_MapVoteScreen_C");
+static_assert(offsetof(UWB_MapVoteScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_MapVoteScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteScreen_C, WB_MapVoteBar) == 0x0002E8, "Member 'UWB_MapVoteScreen_C::WB_MapVoteBar' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteScreen_C, WB_ResultScreenBase) == 0x0002F0, "Member 'UWB_MapVoteScreen_C::WB_ResultScreenBase' has a wrong offset!");
 
 }
 

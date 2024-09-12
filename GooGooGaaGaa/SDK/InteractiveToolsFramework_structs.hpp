@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -79,7 +80,7 @@ enum class EStandardToolContextMaterials : uint8
 
 // Enum InteractiveToolsFramework.EToolContextCoordinateSystem
 // NumValues: 0x0003
-enum class EToolContextCoordinateSystem : uint32
+enum class EToolContextCoordinateSystem : uint8
 {
 	World                                    = 0,
 	Local                                    = 1,
@@ -174,7 +175,7 @@ enum class EInputCaptureState : uint8
 
 // Enum InteractiveToolsFramework.EInputDevices
 // NumValues: 0x0009
-enum class EInputDevices : uint16
+enum class EInputDevices : uint32
 {
 	None                                     = 0,
 	Keyboard                                 = 1,
@@ -291,7 +292,7 @@ public:
 	struct FLinearColor                           Value;                                             // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasValue;                                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverridesChildState;                              // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1789[0x2];                                     // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGizmoElementColorAttribute) == 0x000004, "Wrong alignment on FGizmoElementColorAttribute");
 static_assert(sizeof(FGizmoElementColorAttribute) == 0x000014, "Wrong size on FGizmoElementColorAttribute");
@@ -306,7 +307,7 @@ struct FGizmoElementMaterialAttribute final
 public:
 	TWeakObjectPtr<class UMaterialInterface>      Value;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverridesChildState;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_178A[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGizmoElementMaterialAttribute) == 0x000004, "Wrong alignment on FGizmoElementMaterialAttribute");
 static_assert(sizeof(FGizmoElementMaterialAttribute) == 0x00000C, "Wrong size on FGizmoElementMaterialAttribute");
@@ -363,14 +364,14 @@ static_assert(offsetof(FGizmoFloatParameterChange, InitialValue) == 0x000000, "M
 static_assert(offsetof(FGizmoFloatParameterChange, CurrentValue) == 0x000004, "Member 'FGizmoFloatParameterChange::CurrentValue' has a wrong offset!");
 
 // ScriptStruct InteractiveToolsFramework.BrushStampData
-// 0x0128 (0x0128 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct alignas(0x08) FBrushStampData final
 {
 public:
-	uint8                                         Pad_178B[0x128];                                   // 0x0000(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x138];                                      // 0x0000(0x0138)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBrushStampData) == 0x000008, "Wrong alignment on FBrushStampData");
-static_assert(sizeof(FBrushStampData) == 0x000128, "Wrong size on FBrushStampData");
+static_assert(sizeof(FBrushStampData) == 0x000138, "Wrong size on FBrushStampData");
 
 // ScriptStruct InteractiveToolsFramework.BehaviorInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -378,7 +379,7 @@ struct FBehaviorInfo final
 {
 public:
 	class UInputBehavior*                         Behavior;                                          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_178C[0x18];                                    // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x18];                                       // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBehaviorInfo) == 0x000008, "Wrong alignment on FBehaviorInfo");
 static_assert(sizeof(FBehaviorInfo) == 0x000020, "Wrong size on FBehaviorInfo");
@@ -390,13 +391,13 @@ struct FInputRayHit final
 {
 public:
 	bool                                          bHit;                                              // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_178D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        HitDepth;                                          // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                HitNormal;                                         // 0x0010(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasHitNormal;                                     // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_178E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         HitIdentifier;                                     // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_178F[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class UObject>                 HitObject;                                         // 0x0038(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FInputRayHit) == 0x000008, "Wrong alignment on FInputRayHit");
@@ -408,15 +409,91 @@ static_assert(offsetof(FInputRayHit, bHasHitNormal) == 0x000028, "Member 'FInput
 static_assert(offsetof(FInputRayHit, HitIdentifier) == 0x00002C, "Member 'FInputRayHit::HitIdentifier' has a wrong offset!");
 static_assert(offsetof(FInputRayHit, HitObject) == 0x000038, "Member 'FInputRayHit::HitObject' has a wrong offset!");
 
+// ScriptStruct InteractiveToolsFramework.DeviceButtonState
+// 0x0020 (0x0020 - 0x0000)
+struct FDeviceButtonState final
+{
+public:
+	struct FKey                                   Button;                                            // 0x0000(0x0018)(BlueprintVisible, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPressed;                                          // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDown;                                             // 0x0019(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReleased;                                         // 0x001A(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FDeviceButtonState) == 0x000008, "Wrong alignment on FDeviceButtonState");
+static_assert(sizeof(FDeviceButtonState) == 0x000020, "Wrong size on FDeviceButtonState");
+static_assert(offsetof(FDeviceButtonState, Button) == 0x000000, "Member 'FDeviceButtonState::Button' has a wrong offset!");
+static_assert(offsetof(FDeviceButtonState, bPressed) == 0x000018, "Member 'FDeviceButtonState::bPressed' has a wrong offset!");
+static_assert(offsetof(FDeviceButtonState, bDown) == 0x000019, "Member 'FDeviceButtonState::bDown' has a wrong offset!");
+static_assert(offsetof(FDeviceButtonState, bReleased) == 0x00001A, "Member 'FDeviceButtonState::bReleased' has a wrong offset!");
+
+// ScriptStruct InteractiveToolsFramework.KeyboardInputDeviceState
+// 0x0020 (0x0020 - 0x0000)
+struct FKeyboardInputDeviceState final
+{
+public:
+	struct FDeviceButtonState                     ActiveKey;                                         // 0x0000(0x0020)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FKeyboardInputDeviceState) == 0x000008, "Wrong alignment on FKeyboardInputDeviceState");
+static_assert(sizeof(FKeyboardInputDeviceState) == 0x000020, "Wrong size on FKeyboardInputDeviceState");
+static_assert(offsetof(FKeyboardInputDeviceState, ActiveKey) == 0x000000, "Member 'FKeyboardInputDeviceState::ActiveKey' has a wrong offset!");
+
+// ScriptStruct InteractiveToolsFramework.MouseInputDeviceState
+// 0x00B8 (0x00B8 - 0x0000)
+struct FMouseInputDeviceState final
+{
+public:
+	struct FDeviceButtonState                     Left;                                              // 0x0000(0x0020)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+	struct FDeviceButtonState                     Middle;                                            // 0x0020(0x0020)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+	struct FDeviceButtonState                     Right;                                             // 0x0040(0x0020)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+	float                                         WheelDelta;                                        // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Position2D;                                        // 0x0068(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Delta2D;                                           // 0x0078(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRay                                   WorldRay;                                          // 0x0088(0x0030)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMouseInputDeviceState) == 0x000008, "Wrong alignment on FMouseInputDeviceState");
+static_assert(sizeof(FMouseInputDeviceState) == 0x0000B8, "Wrong size on FMouseInputDeviceState");
+static_assert(offsetof(FMouseInputDeviceState, Left) == 0x000000, "Member 'FMouseInputDeviceState::Left' has a wrong offset!");
+static_assert(offsetof(FMouseInputDeviceState, Middle) == 0x000020, "Member 'FMouseInputDeviceState::Middle' has a wrong offset!");
+static_assert(offsetof(FMouseInputDeviceState, Right) == 0x000040, "Member 'FMouseInputDeviceState::Right' has a wrong offset!");
+static_assert(offsetof(FMouseInputDeviceState, WheelDelta) == 0x000060, "Member 'FMouseInputDeviceState::WheelDelta' has a wrong offset!");
+static_assert(offsetof(FMouseInputDeviceState, Position2D) == 0x000068, "Member 'FMouseInputDeviceState::Position2D' has a wrong offset!");
+static_assert(offsetof(FMouseInputDeviceState, Delta2D) == 0x000078, "Member 'FMouseInputDeviceState::Delta2D' has a wrong offset!");
+static_assert(offsetof(FMouseInputDeviceState, WorldRay) == 0x000088, "Member 'FMouseInputDeviceState::WorldRay' has a wrong offset!");
+
+// ScriptStruct InteractiveToolsFramework.InputDeviceState
+// 0x00E0 (0x00E0 - 0x0000)
+struct FInputDeviceState final
+{
+public:
+	EInputDevices                                 InputDevice;                                       // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShiftKeyDown;                                     // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAltKeyDown;                                       // 0x0005(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCtrlKeyDown;                                      // 0x0006(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCmdKeyDown;                                       // 0x0007(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKeyboardInputDeviceState              Keyboard;                                          // 0x0008(0x0020)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+	struct FMouseInputDeviceState                 Mouse;                                             // 0x0028(0x00B8)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FInputDeviceState) == 0x000008, "Wrong alignment on FInputDeviceState");
+static_assert(sizeof(FInputDeviceState) == 0x0000E0, "Wrong size on FInputDeviceState");
+static_assert(offsetof(FInputDeviceState, InputDevice) == 0x000000, "Member 'FInputDeviceState::InputDevice' has a wrong offset!");
+static_assert(offsetof(FInputDeviceState, bShiftKeyDown) == 0x000004, "Member 'FInputDeviceState::bShiftKeyDown' has a wrong offset!");
+static_assert(offsetof(FInputDeviceState, bAltKeyDown) == 0x000005, "Member 'FInputDeviceState::bAltKeyDown' has a wrong offset!");
+static_assert(offsetof(FInputDeviceState, bCtrlKeyDown) == 0x000006, "Member 'FInputDeviceState::bCtrlKeyDown' has a wrong offset!");
+static_assert(offsetof(FInputDeviceState, bCmdKeyDown) == 0x000007, "Member 'FInputDeviceState::bCmdKeyDown' has a wrong offset!");
+static_assert(offsetof(FInputDeviceState, Keyboard) == 0x000008, "Member 'FInputDeviceState::Keyboard' has a wrong offset!");
+static_assert(offsetof(FInputDeviceState, Mouse) == 0x000028, "Member 'FInputDeviceState::Mouse' has a wrong offset!");
+
 // ScriptStruct InteractiveToolsFramework.InputDeviceRay
 // 0x0048 (0x0048 - 0x0000)
 struct FInputDeviceRay final
 {
 public:
-	struct FRay                                   WorldRay;                                          // 0x0000(0x0030)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bHas2D;                                            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1790[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ScreenPosition;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRay                                   WorldRay;                                          // 0x0000(0x0030)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bHas2D;                                            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ScreenPosition;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FInputDeviceRay) == 0x000008, "Wrong alignment on FInputDeviceRay");
 static_assert(sizeof(FInputDeviceRay) == 0x000048, "Wrong size on FInputDeviceRay");
@@ -430,7 +507,7 @@ struct FActiveGizmo final
 {
 public:
 	class UInteractiveGizmo*                      Gizmo;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1791[0x28];                                    // 0x0008(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x28];                                       // 0x0008(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FActiveGizmo) == 0x000008, "Wrong alignment on FActiveGizmo");
 static_assert(sizeof(FActiveGizmo) == 0x000030, "Wrong size on FActiveGizmo");

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,7 +29,7 @@ static_assert(sizeof(B_PumpkinGhostShootActor_C_Act) == 0x000001, "Wrong size on
 static_assert(offsetof(B_PumpkinGhostShootActor_C_Act, CallFunc_Not_PreBool_ReturnValue) == 0x000000, "Member 'B_PumpkinGhostShootActor_C_Act::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function B_PumpkinGhostShootActor.B_PumpkinGhostShootActor_C.BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -38,11 +38,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C9F[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -51,7 +51,7 @@ static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2N
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_PumpkinGhostShootActor_C_BndEvt__PumpkinGhostSphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_PumpkinGhostShootActor.B_PumpkinGhostShootActor_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0108 (0x0108 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
@@ -60,11 +60,11 @@ public:
 	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA0[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
-static_assert(sizeof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature) == 0x000108, "Wrong size on B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
+static_assert(sizeof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature) == 0x000118, "Wrong size on B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
@@ -73,7 +73,7 @@ static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_Componen
 static_assert(offsetof(B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature, SweepResult) == 0x000020, "Member 'B_PumpkinGhostShootActor_C_BndEvt__Sphere_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature::SweepResult' has a wrong offset!");
 
 // Function B_PumpkinGhostShootActor.B_PumpkinGhostShootActor_C.ExecuteUbergraph_B_PumpkinGhostShootActor
-// 0x0368 (0x0368 - 0x0000)
+// 0x0398 (0x0398 - 0x0000)
 struct B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor final
 {
 public:
@@ -81,40 +81,40 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA1[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent_1;  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor_1;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp_1;            // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex_1;       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bFromSweep_1;           // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA2[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult_1;          // 0x0038(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AB_PumpkinGhostDummy_C*                 K2Node_DynamicCast_AsB_Pumpkin_Ghost_Dummy;        // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA3[0x6];                                     // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0148(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA4[0x3];                                     // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0168(0x00E8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_AddWorldOffset_SweepHitResult;         // 0x0250(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AB_PumpkinGhostShootActor_C*            K2Node_DynamicCast_AsB_Pumpkin_Ghost_Shoot_Actor;  // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA5[0x6];                                     // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0348(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AB_PumpkinGhostTask_C*                  K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task;         // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0358(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0359(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA6[0x6];                                     // 0x035A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult_1;          // 0x0038(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AB_PumpkinGhostDummy_C*                 K2Node_DynamicCast_AsB_Pumpkin_Ghost_Dummy;        // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0168(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bFromSweep;             // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_ComponentBoundEvent_SweepResult;            // 0x0178(0x00F8)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_AddWorldOffset_SweepHitResult;         // 0x0270(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AB_PumpkinGhostShootActor_C*            K2Node_DynamicCast_AsB_Pumpkin_Ghost_Shoot_Actor;  // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_372[0x6];                                      // 0x0372(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AB_PumpkinGhostTask_C*                  K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task;         // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0389(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_38A[0x6];                                      // 0x038A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor) == 0x000008, "Wrong alignment on B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor");
-static_assert(sizeof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor) == 0x000368, "Wrong size on B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor");
+static_assert(sizeof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor) == 0x000398, "Wrong size on B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, EntryPoint) == 0x000000, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::EntryPoint' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000008, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
@@ -125,25 +125,25 @@ static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhos
 static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherBodyIndex_1) == 0x000030, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherBodyIndex_1' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_bFromSweep_1) == 0x000034, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_bFromSweep_1' has a wrong offset!");
 static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_SweepResult_1) == 0x000038, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_SweepResult_1' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_AsB_Pumpkin_Ghost_Dummy) == 0x000120, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_AsB_Pumpkin_Ghost_Dummy' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_bSuccess) == 0x000128, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_BooleanAND_ReturnValue) == 0x000129, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000130, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000148, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherActor) == 0x000150, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherComp) == 0x000158, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000160, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_bFromSweep) == 0x000164, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_SweepResult) == 0x000168, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_K2_AddWorldOffset_SweepHitResult) == 0x000250, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_K2_AddWorldOffset_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_AsB_Pumpkin_Ghost_Shoot_Actor) == 0x000338, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_AsB_Pumpkin_Ghost_Shoot_Actor' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_bSuccess_1) == 0x000340, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000341, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_GetOwner_ReturnValue) == 0x000348, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task) == 0x000350, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_bSuccess_2) == 0x000358, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_BooleanAND_ReturnValue_1) == 0x000359, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000360, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_AsB_Pumpkin_Ghost_Dummy) == 0x000130, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_AsB_Pumpkin_Ghost_Dummy' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_bSuccess) == 0x000138, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_BooleanAND_ReturnValue) == 0x000139, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000140, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000158, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherActor) == 0x000160, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherComp) == 0x000168, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000170, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_bFromSweep) == 0x000174, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_bFromSweep' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_ComponentBoundEvent_SweepResult) == 0x000178, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_ComponentBoundEvent_SweepResult' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_K2_AddWorldOffset_SweepHitResult) == 0x000270, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_K2_AddWorldOffset_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_AsB_Pumpkin_Ghost_Shoot_Actor) == 0x000368, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_AsB_Pumpkin_Ghost_Shoot_Actor' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_bSuccess_1) == 0x000370, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000371, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_GetOwner_ReturnValue) == 0x000378, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task) == 0x000380, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, K2Node_DynamicCast_bSuccess_2) == 0x000388, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_BooleanAND_ReturnValue_1) == 0x000389, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000390, "Member 'B_PumpkinGhostShootActor_C_ExecuteUbergraph_B_PumpkinGhostShootActor::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function B_PumpkinGhostShootActor.B_PumpkinGhostShootActor_C.React
 // 0x0001 (0x0001 - 0x0000)
@@ -176,7 +176,7 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_PumpkinGhostTask_C*                  K2Node_DynamicCast_AsB_Pumpkin_Ghost_Task;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CA7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AB_PumpkinGhostShootActor_C*            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -84,14 +84,14 @@ static_assert(offsetof(WB_RadialMenuCreative_C_On_Border_MouseMove, ReturnValue)
 static_assert(offsetof(WB_RadialMenuCreative_C_On_Border_MouseMove, CallFunc_Handled_ReturnValue) == 0x000168, "Member 'WB_RadialMenuCreative_C_On_Border_MouseMove::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 // Function WB_RadialMenuCreative.WB_RadialMenuCreative_C.UpdateOptionTitle
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct WB_RadialMenuCreative_C_UpdateOptionTitle final
 {
 public:
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0000(0x0018)()
+	class FText                                   CallFunc_Array_Get_Item;                           // 0x0000(0x0010)()
 };
 static_assert(alignof(WB_RadialMenuCreative_C_UpdateOptionTitle) == 0x000008, "Wrong alignment on WB_RadialMenuCreative_C_UpdateOptionTitle");
-static_assert(sizeof(WB_RadialMenuCreative_C_UpdateOptionTitle) == 0x000018, "Wrong size on WB_RadialMenuCreative_C_UpdateOptionTitle");
+static_assert(sizeof(WB_RadialMenuCreative_C_UpdateOptionTitle) == 0x000010, "Wrong size on WB_RadialMenuCreative_C_UpdateOptionTitle");
 static_assert(offsetof(WB_RadialMenuCreative_C_UpdateOptionTitle, CallFunc_Array_Get_Item) == 0x000000, "Member 'WB_RadialMenuCreative_C_UpdateOptionTitle::CallFunc_Array_Get_Item' has a wrong offset!");
 
 }

@@ -35,10 +35,10 @@ public:
 	void ConsumeMana(double Amount);
 	void TickManaRegen();
 	void SetCurrentManaRegenPerSecond(double NewManaRegenPerSecond);
-	void SetCurrentMana(double Param_CurrentMana);
-	void SetMaximumMana(double Param_MaximumMana);
-	void GetValues(double* Param_MaximumMana, double* Param_CurrentMana, double* Param_CurrentManaRegenPerSecond);
-	void SetValues(double Param_MaximumMana, double Param_CurrentMana, double Param_CurrentManaRegenPerSecond);
+	void SetCurrentMana(double CurrentMana_0);
+	void SetMaximumMana(double MaximumMana_0);
+	void GetValues(double* MaximumMana_0, double* CurrentMana_0, double* CurrentManaRegenPerSecond_0);
+	void SetValues(double MaximumMana_0, double CurrentMana_0, double CurrentManaRegenPerSecond_0);
 	void ApplyCurrentBuffs();
 	void Initialize();
 	void ReceiveTick(float DeltaSeconds);

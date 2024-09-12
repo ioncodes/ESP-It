@@ -11,19 +11,18 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SMapData_structs.hpp"
-#include "S_PropLayoutData_structs.hpp"
 #include "ESalvageCategory_structs.hpp"
-#include "InputCore_structs.hpp"
+#include "S_PropLayoutData_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.GetVisibility_0
-// 0x0006 (0x0006 - 0x0000)
+// 0x0007 (0x0007 - 0x0000)
 struct WB_MapCyclePreview_C_GetVisibility_0 final
 {
 public:
@@ -32,16 +31,18 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsGamepadMode_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapCyclePreview_C_GetVisibility_0) == 0x000001, "Wrong alignment on WB_MapCyclePreview_C_GetVisibility_0");
-static_assert(sizeof(WB_MapCyclePreview_C_GetVisibility_0) == 0x000006, "Wrong size on WB_MapCyclePreview_C_GetVisibility_0");
+static_assert(sizeof(WB_MapCyclePreview_C_GetVisibility_0) == 0x000007, "Wrong size on WB_MapCyclePreview_C_GetVisibility_0");
 static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, ReturnValue) == 0x000000, "Member 'WB_MapCyclePreview_C_GetVisibility_0::ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, Temp_bool_Variable) == 0x000001, "Member 'WB_MapCyclePreview_C_GetVisibility_0::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, Temp_byte_Variable) == 0x000002, "Member 'WB_MapCyclePreview_C_GetVisibility_0::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, Temp_byte_Variable_1) == 0x000003, "Member 'WB_MapCyclePreview_C_GetVisibility_0::Temp_byte_Variable_1' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, CallFunc_IsGamepadMode_ReturnValue) == 0x000004, "Member 'WB_MapCyclePreview_C_GetVisibility_0::CallFunc_IsGamepadMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, K2Node_Select_Default) == 0x000005, "Member 'WB_MapCyclePreview_C_GetVisibility_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, CallFunc_BooleanAND_ReturnValue) == 0x000005, "Member 'WB_MapCyclePreview_C_GetVisibility_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_GetVisibility_0, K2Node_Select_Default) == 0x000006, "Member 'WB_MapCyclePreview_C_GetVisibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.OnFocusReceived
 // 0x01B0 (0x01B0 - 0x0000)
@@ -61,80 +62,80 @@ static_assert(offsetof(WB_MapCyclePreview_C_OnFocusReceived, ReturnValue) == 0x0
 static_assert(offsetof(WB_MapCyclePreview_C_OnFocusReceived, CallFunc_Handled_ReturnValue) == 0x0000F8, "Member 'WB_MapCyclePreview_C_OnFocusReceived::CallFunc_Handled_ReturnValue' has a wrong offset!");
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.SetTitleAndCheckboxState
-// 0x0088 (0x0088 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct WB_MapCyclePreview_C_SetTitleAndCheckboxState final
 {
 public:
-	class FText                                   Temp_text_Variable;                                // 0x0000(0x0018)()
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F2[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F3[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F4[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetSuitableMapCycleName_Name;             // 0x0050(0x0018)()
-	ECheckBoxState                                Temp_byte_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECheckBoxState                                Temp_byte_Variable_1;                              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECheckBoxState                                K2Node_Select_Default;                             // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F5[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_1;                           // 0x0070(0x0018)()
+	class FText                                   Temp_text_Variable;                                // 0x0000(0x0010)()
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetSuitableMapCycleName_Name;             // 0x0048(0x0010)()
+	ECheckBoxState                                Temp_byte_Variable;                                // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECheckBoxState                                Temp_byte_Variable_1;                              // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECheckBoxState                                K2Node_Select_Default;                             // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_1;                           // 0x0060(0x0010)()
 };
 static_assert(alignof(WB_MapCyclePreview_C_SetTitleAndCheckboxState) == 0x000008, "Wrong alignment on WB_MapCyclePreview_C_SetTitleAndCheckboxState");
-static_assert(sizeof(WB_MapCyclePreview_C_SetTitleAndCheckboxState) == 0x000088, "Wrong size on WB_MapCyclePreview_C_SetTitleAndCheckboxState");
+static_assert(sizeof(WB_MapCyclePreview_C_SetTitleAndCheckboxState) == 0x000070, "Wrong size on WB_MapCyclePreview_C_SetTitleAndCheckboxState");
 static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_text_Variable) == 0x000000, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_bool_Variable) == 0x000018, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, CallFunc_GetGameInstance_ReturnValue) == 0x000020, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, CallFunc_GetGameInstance_ReturnValue_1) == 0x000028, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_AsB_Game_Instance) == 0x000030, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000040, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, CallFunc_GetSuitableMapCycleName_Name) == 0x000050, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::CallFunc_GetSuitableMapCycleName_Name' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_byte_Variable) == 0x000068, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_byte_Variable_1) == 0x000069, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_bool_Variable_1) == 0x00006A, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_Select_Default) == 0x00006B, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_Select_Default_1) == 0x000070, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_bool_Variable) == 0x000010, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, CallFunc_GetGameInstance_ReturnValue_1) == 0x000020, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_AsB_Game_Instance) == 0x000028, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000038, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, CallFunc_GetSuitableMapCycleName_Name) == 0x000048, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::CallFunc_GetSuitableMapCycleName_Name' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_byte_Variable) == 0x000058, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_byte_Variable_1) == 0x000059, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, Temp_bool_Variable_1) == 0x00005A, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_Select_Default) == 0x00005B, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_SetTitleAndCheckboxState, K2Node_Select_Default_1) == 0x000060, "Member 'WB_MapCyclePreview_C_SetTitleAndCheckboxState::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.Get_MapCountText_Text_0
-// 0x0108 (0x0108 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct WB_MapCyclePreview_C_Get_MapCountText_Text_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F6[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetAmountOfMapsInCycle_AmountOfMaps;      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0040(0x0050)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0090(0x0050)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00E0(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00F0(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetAmountOfMapsInCycle_AmountOfMaps;      // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue_1;            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0048)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0080(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00C8(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00D8(0x0010)()
 };
 static_assert(alignof(WB_MapCyclePreview_C_Get_MapCountText_Text_0) == 0x000008, "Wrong alignment on WB_MapCyclePreview_C_Get_MapCountText_Text_0");
-static_assert(sizeof(WB_MapCyclePreview_C_Get_MapCountText_Text_0) == 0x000108, "Wrong size on WB_MapCyclePreview_C_Get_MapCountText_Text_0");
+static_assert(sizeof(WB_MapCyclePreview_C_Get_MapCountText_Text_0) == 0x0000E8, "Wrong size on WB_MapCyclePreview_C_Get_MapCountText_Text_0");
 static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, ReturnValue) == 0x000000, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_DynamicCast_AsB_Game_Instance) == 0x000020, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_GetAmountOfMapsInCycle_AmountOfMaps) == 0x00002C, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_GetAmountOfMapsInCycle_AmountOfMaps' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000030, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000038, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000040, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000090, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_MakeArray_Array) == 0x0000E0, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_Format_ReturnValue) == 0x0000F0, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_GetAmountOfMapsInCycle_AmountOfMaps) == 0x000024, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_GetAmountOfMapsInCycle_AmountOfMaps' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue) == 0x000028, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_Conv_IntToInt64_ReturnValue_1) == 0x000030, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_Conv_IntToInt64_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_MakeStruct_FormatArgumentData_1) == 0x000080, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, K2Node_MakeArray_Array) == 0x0000C8, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_Get_MapCountText_Text_0, CallFunc_Format_ReturnValue) == 0x0000D8, "Member 'WB_MapCyclePreview_C_Get_MapCountText_Text_0::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.GetMapButtonDataByFileName
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct WB_MapCyclePreview_C_GetMapButtonDataByFileName final
 {
 public:
@@ -145,13 +146,13 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound; // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound; // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F7[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData; // 0x0030(0x0050)(HasGetValueTypeHash)
-	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData; // 0x0080(0x0048)(ZeroConstructor, HasGetValueTypeHash)
-	class UB_MapButtonData_C*                     CallFunc_GetMapButtonData_Data;                    // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMapData                              CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData; // 0x0030(0x0040)(HasGetValueTypeHash)
+	struct FS_PropLayoutData                      CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData; // 0x0070(0x0048)(ZeroConstructor, HasGetValueTypeHash)
+	class UB_MapButtonData_C*                     CallFunc_GetMapButtonData_Data;                    // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapCyclePreview_C_GetMapButtonDataByFileName) == 0x000008, "Wrong alignment on WB_MapCyclePreview_C_GetMapButtonDataByFileName");
-static_assert(sizeof(WB_MapCyclePreview_C_GetMapButtonDataByFileName) == 0x0000D0, "Wrong size on WB_MapCyclePreview_C_GetMapButtonDataByFileName");
+static_assert(sizeof(WB_MapCyclePreview_C_GetMapButtonDataByFileName) == 0x0000C0, "Wrong size on WB_MapCyclePreview_C_GetMapButtonDataByFileName");
 static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, Filename) == 0x000000, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::Filename' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, Data) == 0x000010, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::Data' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetGameInstance_ReturnValue) == 0x000018, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
@@ -160,8 +161,8 @@ static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, K2Node_D
 static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound) == 0x000029, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapDataFound' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound) == 0x00002A, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutDataFound' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData) == 0x000030, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetSpecificMapOrCustomMapFromFileName_MapData' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData) == 0x000080, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetMapButtonData_Data) == 0x0000C8, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetMapButtonData_Data' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData) == 0x000070, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetSpecificMapOrCustomMapFromFileName_LayoutData' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_GetMapButtonDataByFileName, CallFunc_GetMapButtonData_Data) == 0x0000B8, "Member 'WB_MapCyclePreview_C_GetMapButtonDataByFileName::CallFunc_GetMapButtonData_Data' has a wrong offset!");
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.RemoveSelectedMapFromCycle
 // 0x0058 (0x0058 - 0x0000)
@@ -170,25 +171,25 @@ struct WB_MapCyclePreview_C_RemoveSelectedMapFromCycle final
 public:
 	class UB_TileViewData_C*                      ItemData;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectedIndex;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MapButtonData_C*                     MapButtonData;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_Index;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F9[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52FA[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52FB[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetNumItems_ReturnValue;                  // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52FC[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetIndexForItem_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52FD[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52FE[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Select_Default;                             // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle) == 0x000008, "Wrong alignment on WB_MapCyclePreview_C_RemoveSelectedMapFromCycle");
@@ -196,7 +197,7 @@ static_assert(sizeof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle) == 0x00005
 static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, ItemData) == 0x000000, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::ItemData' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, SelectedIndex) == 0x000008, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::SelectedIndex' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, MapButtonData) == 0x000010, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::MapButtonData' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, Param_Index) == 0x000018, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::Param_Index' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, Index_0) == 0x000018, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::Index_0' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, CallFunc_GetGameInstance_ReturnValue) == 0x000020, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, Temp_bool_Variable) == 0x000028, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_RemoveSelectedMapFromCycle, K2Node_DynamicCast_AsB_Game_Instance) == 0x000030, "Member 'WB_MapCyclePreview_C_RemoveSelectedMapFromCycle::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
@@ -216,11 +217,11 @@ struct WB_MapCyclePreview_C_TryAddSelectedMapToCycle final
 public:
 	class FString                                 Filename;                                          // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52FF[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5300[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_MapButtonData_C*                     CallFunc_GetMapButtonDataByFileName_Data;          // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AddItemToMapCycle_Success;                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -241,26 +242,26 @@ struct WB_MapCyclePreview_C_GetIndividualItemDataAndFocus final
 public:
 	class UUserWidget*                            CategoryButton;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ESalvageCategory                              SalvageCategory;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5301[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UB_TileViewData_C*>              Data;                                              // 0x0010(0x0010)(Parm, OutParm)
 	TArray<bool>                                  FocusNeeded;                                       // 0x0020(0x0010)(Parm, OutParm)
 	TArray<bool>                                  FocusNeededArray;                                  // 0x0030(0x0010)(Edit, BlueprintVisible)
 	TArray<class UB_TileViewData_C*>              DataArray;                                         // 0x0040(0x0010)(Edit, BlueprintVisible)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5302[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5303[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5304[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UB_MapButtonData_C*                     CallFunc_GetMapButtonDataByFileName_Data;          // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0098(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5305[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -297,17 +298,6 @@ static_assert(alignof(WB_MapCyclePreview_C_GetTileView) == 0x000008, "Wrong alig
 static_assert(sizeof(WB_MapCyclePreview_C_GetTileView) == 0x000008, "Wrong size on WB_MapCyclePreview_C_GetTileView");
 static_assert(offsetof(WB_MapCyclePreview_C_GetTileView, TileView) == 0x000000, "Member 'WB_MapCyclePreview_C_GetTileView::TileView' has a wrong offset!");
 
-// Function WB_MapCyclePreview.WB_MapCyclePreview_C.InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0
-// 0x0018 (0x0018 - 0x0000)
-struct WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-static_assert(alignof(WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0) == 0x000008, "Wrong alignment on WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0");
-static_assert(sizeof(WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0) == 0x000018, "Wrong size on WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0");
-static_assert(offsetof(WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0, Key) == 0x000000, "Member 'WB_MapCyclePreview_C_InpActEvt_Gamepad_Special_Left_K2Node_InputKeyEvent_0::Key' has a wrong offset!");
-
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.BndEvt__WB_MapCyclePreview_RandomCheckbox_K2Node_ComponentBoundEvent_0_OnCheckStateChanged__DelegateSignature
 // 0x0001 (0x0001 - 0x0000)
 struct WB_MapCyclePreview_C_BndEvt__WB_MapCyclePreview_RandomCheckbox_K2Node_ComponentBoundEvent_0_OnCheckStateChanged__DelegateSignature final
@@ -331,38 +321,25 @@ static_assert(sizeof(WB_MapCyclePreview_C_OnMapRemoved__DelegateSignature) == 0x
 static_assert(offsetof(WB_MapCyclePreview_C_OnMapRemoved__DelegateSignature, MapListEmpty) == 0x000000, "Member 'WB_MapCyclePreview_C_OnMapRemoved__DelegateSignature::MapListEmpty' has a wrong offset!");
 
 // Function WB_MapCyclePreview.WB_MapCyclePreview_C.ExecuteUbergraph_WB_MapCyclePreview
-// 0x0050 (0x0050 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5306[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5307[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsChecked_ReturnValue;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5308[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKey                                   K2Node_InputKeyEvent_Key;                          // 0x0038(0x0018)(HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview) == 0x000008, "Wrong alignment on WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview");
-static_assert(sizeof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview) == 0x000050, "Wrong size on WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview");
+static_assert(sizeof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview) == 0x000028, "Wrong size on WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview");
 static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, EntryPoint) == 0x000000, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_DynamicCast_AsB_Game_Instance) == 0x000010, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_ComponentBoundEvent_bIsChecked) == 0x000019, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, CallFunc_GetGameInstance_ReturnValue_1) == 0x000020, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_DynamicCast_AsB_Game_Instance_1) == 0x000028, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_DynamicCast_AsB_Game_Instance_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, CallFunc_IsChecked_ReturnValue) == 0x000031, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::CallFunc_IsChecked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, CallFunc_Not_PreBool_ReturnValue) == 0x000032, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_InputKeyEvent_Key) == 0x000038, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_InputKeyEvent_Key' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_ComponentBoundEvent_bIsChecked) == 0x000010, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_DynamicCast_AsB_Game_Instance) == 0x000018, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_DynamicCast_AsB_Game_Instance' has a wrong offset!");
+static_assert(offsetof(WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'WB_MapCyclePreview_C_ExecuteUbergraph_WB_MapCyclePreview::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 }
 

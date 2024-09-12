@@ -118,9 +118,9 @@ class FText UWB_IngredientInfo_C::Get_Quantity_Text_0()
 // Function WB_IngredientInfo.WB_IngredientInfo_C.CountIngredient
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// E_Ingredients                           Param_Ingredient                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Ingredients                           Ingredient_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_IngredientInfo_C::CountIngredient(E_Ingredients Param_Ingredient)
+void UWB_IngredientInfo_C::CountIngredient(E_Ingredients Ingredient_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -129,7 +129,7 @@ void UWB_IngredientInfo_C::CountIngredient(E_Ingredients Param_Ingredient)
 
 	Params::WB_IngredientInfo_C_CountIngredient Parms{};
 
-	Parms.Param_Ingredient = Param_Ingredient;
+	Parms.Ingredient_0 = Ingredient_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

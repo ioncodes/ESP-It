@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MapVoteBar.WB_MapVoteBar_C
-// 0x0048 (0x0308 - 0x02C0)
+// 0x0048 (0x0328 - 0x02E0)
 class UWB_MapVoteBar_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                LastMapBoxParent;                                  // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MapVote_C*                          Map1;                                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MapVote_C*                          Map2;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MapVote_C*                          Map3;                                              // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MapVote_C*                          Map4;                                              // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_MapVote_C*                          Map5;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UWB_MapVote_C*>                  MapsToVote;                                        // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                LastMapBoxParent;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MapVote_C*                          Map1;                                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MapVote_C*                          Map2;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MapVote_C*                          Map3;                                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MapVote_C*                          Map4;                                              // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_MapVote_C*                          Map5;                                              // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UWB_MapVote_C*>                  MapsToVote;                                        // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void Construct();
@@ -49,15 +49,15 @@ public:
 	}
 };
 static_assert(alignof(UWB_MapVoteBar_C) == 0x000008, "Wrong alignment on UWB_MapVoteBar_C");
-static_assert(sizeof(UWB_MapVoteBar_C) == 0x000308, "Wrong size on UWB_MapVoteBar_C");
-static_assert(offsetof(UWB_MapVoteBar_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_MapVoteBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, LastMapBoxParent) == 0x0002C8, "Member 'UWB_MapVoteBar_C::LastMapBoxParent' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, Map1) == 0x0002D0, "Member 'UWB_MapVoteBar_C::Map1' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, Map2) == 0x0002D8, "Member 'UWB_MapVoteBar_C::Map2' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, Map3) == 0x0002E0, "Member 'UWB_MapVoteBar_C::Map3' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, Map4) == 0x0002E8, "Member 'UWB_MapVoteBar_C::Map4' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, Map5) == 0x0002F0, "Member 'UWB_MapVoteBar_C::Map5' has a wrong offset!");
-static_assert(offsetof(UWB_MapVoteBar_C, MapsToVote) == 0x0002F8, "Member 'UWB_MapVoteBar_C::MapsToVote' has a wrong offset!");
+static_assert(sizeof(UWB_MapVoteBar_C) == 0x000328, "Wrong size on UWB_MapVoteBar_C");
+static_assert(offsetof(UWB_MapVoteBar_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_MapVoteBar_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, LastMapBoxParent) == 0x0002E8, "Member 'UWB_MapVoteBar_C::LastMapBoxParent' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, Map1) == 0x0002F0, "Member 'UWB_MapVoteBar_C::Map1' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, Map2) == 0x0002F8, "Member 'UWB_MapVoteBar_C::Map2' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, Map3) == 0x000300, "Member 'UWB_MapVoteBar_C::Map3' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, Map4) == 0x000308, "Member 'UWB_MapVoteBar_C::Map4' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, Map5) == 0x000310, "Member 'UWB_MapVoteBar_C::Map5' has a wrong offset!");
+static_assert(offsetof(UWB_MapVoteBar_C, MapsToVote) == 0x000318, "Member 'UWB_MapVoteBar_C::MapsToVote' has a wrong offset!");
 
 }
 

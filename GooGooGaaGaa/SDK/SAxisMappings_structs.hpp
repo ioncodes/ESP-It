@@ -22,7 +22,7 @@ struct FSAxisMappings final
 {
 public:
 	float                                         Scale_15_A6A151BD4EBED5EAE5BE12ABE084374A;         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3673[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FInputAxisKeyMapping>           Mappings_11_3D71A57B4637E42390A6A19A665EA214;      // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FSAxisMappings) == 0x000008, "Wrong alignment on FSAxisMappings");

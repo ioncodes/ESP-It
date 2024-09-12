@@ -18,39 +18,39 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_TrapProjectile.B_TrapProjectile_C
-// 0x00F8 (0x0390 - 0x0298)
+// 0x00F8 (0x0388 - 0x0290)
 class AB_TrapProjectile_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USphereComponent*                       PropSuckSphere;                                    // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       WitchSuckSphere;                                   // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SuckAudioWitch;                                    // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SuckAudioNormal;                                   // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      VacuumTrapEffect;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SK_MagicSucker;                                    // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class UPrimitiveComponent*>            SuckingComponents;                                 // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class AActor*>                         SuckingWitches;                                    // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class UPrimitiveComponent*>            SuckingDecoyComponents;                            // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	double                                        Lifetime;                                          // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        NoSuckTime;                                        // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ExpireTime;                                        // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SoundTime;                                         // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentLifeTime;                                   // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentSuckTime;                                   // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         SuckingDecoyWitches;                               // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class UCurveFloat*                            SuckPitchCurve;                                    // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        TimerIncrement;                                    // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EndSoundPlayed;                                    // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ExpireEffectShown;                                 // 0x0359(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5928[0x6];                                     // 0x035A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        InitialSpeed;                                      // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSucking;                                         // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5929[0x7];                                     // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnReadyForTearUp;                                  // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	double                                        Lightmass;                                         // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HeavyMass;                                         // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                       PropSuckSphere;                                    // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       WitchSuckSphere;                                   // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SuckAudioWitch;                                    // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SuckAudioNormal;                                   // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      VacuumTrapEffect;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SK_MagicSucker;                                    // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class UPrimitiveComponent*>            SuckingComponents;                                 // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class AActor*>                         SuckingWitches;                                    // 0x02E0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class UPrimitiveComponent*>            SuckingDecoyComponents;                            // 0x02F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	double                                        Lifetime;                                          // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NoSuckTime;                                        // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ExpireTime;                                        // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SoundTime;                                         // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentLifeTime;                                   // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentSuckTime;                                   // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         SuckingDecoyWitches;                               // 0x0330(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class UCurveFloat*                            SuckPitchCurve;                                    // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        TimerIncrement;                                    // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EndSoundPlayed;                                    // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ExpireEffectShown;                                 // 0x0351(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_352[0x6];                                      // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InitialSpeed;                                      // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSucking;                                         // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnReadyForTearUp;                                  // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        Lightmass;                                         // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HeavyMass;                                         // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AddForceToPrimitiveComponent(class UPrimitiveComponent* SuckComponent, bool IsWitch);
@@ -82,13 +82,13 @@ public:
 	void StopWitchDebuff(class AActor* Actor);
 	void SuckPrimitiveComponent(class UPrimitiveComponent* SuckComponent);
 	void SuckPrimitiveComponentsAndLaunchWitches();
-	void SuckWitch(class AB_Witch_C* Param_SuckWitch);
+	void SuckWitch(class AB_Witch_C* SuckWitch_0);
 	void TearDown();
 	void TearDownMulticast();
 	void TearDownPoolObject();
-	void TearUp(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
-	void TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
-	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Param_Owner, class APawn* Param_Instigator);
+	void TearUp(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
+	void TearUpMulticast(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
+	void TearUpPoolObject(const struct FTransform& SpawnTransform, class AActor* Owner_0, class APawn* Instigator_0);
 	void UpdateEffect(int32 WitchCount);
 	void UpdateEffectMulti(int32 WitchCount);
 	void UpdateSoundPitches();
@@ -104,34 +104,34 @@ public:
 	}
 };
 static_assert(alignof(AB_TrapProjectile_C) == 0x000008, "Wrong alignment on AB_TrapProjectile_C");
-static_assert(sizeof(AB_TrapProjectile_C) == 0x000390, "Wrong size on AB_TrapProjectile_C");
-static_assert(offsetof(AB_TrapProjectile_C, UberGraphFrame) == 0x000298, "Member 'AB_TrapProjectile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, PropSuckSphere) == 0x0002A0, "Member 'AB_TrapProjectile_C::PropSuckSphere' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, WitchSuckSphere) == 0x0002A8, "Member 'AB_TrapProjectile_C::WitchSuckSphere' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckAudioWitch) == 0x0002B0, "Member 'AB_TrapProjectile_C::SuckAudioWitch' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckAudioNormal) == 0x0002B8, "Member 'AB_TrapProjectile_C::SuckAudioNormal' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, VacuumTrapEffect) == 0x0002C0, "Member 'AB_TrapProjectile_C::VacuumTrapEffect' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SK_MagicSucker) == 0x0002C8, "Member 'AB_TrapProjectile_C::SK_MagicSucker' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, Box) == 0x0002D0, "Member 'AB_TrapProjectile_C::Box' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckingComponents) == 0x0002D8, "Member 'AB_TrapProjectile_C::SuckingComponents' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckingWitches) == 0x0002E8, "Member 'AB_TrapProjectile_C::SuckingWitches' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckingDecoyComponents) == 0x0002F8, "Member 'AB_TrapProjectile_C::SuckingDecoyComponents' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, Lifetime) == 0x000308, "Member 'AB_TrapProjectile_C::Lifetime' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, NoSuckTime) == 0x000310, "Member 'AB_TrapProjectile_C::NoSuckTime' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, ExpireTime) == 0x000318, "Member 'AB_TrapProjectile_C::ExpireTime' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SoundTime) == 0x000320, "Member 'AB_TrapProjectile_C::SoundTime' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, CurrentLifeTime) == 0x000328, "Member 'AB_TrapProjectile_C::CurrentLifeTime' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, CurrentSuckTime) == 0x000330, "Member 'AB_TrapProjectile_C::CurrentSuckTime' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckingDecoyWitches) == 0x000338, "Member 'AB_TrapProjectile_C::SuckingDecoyWitches' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, SuckPitchCurve) == 0x000348, "Member 'AB_TrapProjectile_C::SuckPitchCurve' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, TimerIncrement) == 0x000350, "Member 'AB_TrapProjectile_C::TimerIncrement' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, EndSoundPlayed) == 0x000358, "Member 'AB_TrapProjectile_C::EndSoundPlayed' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, ExpireEffectShown) == 0x000359, "Member 'AB_TrapProjectile_C::ExpireEffectShown' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, InitialSpeed) == 0x000360, "Member 'AB_TrapProjectile_C::InitialSpeed' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, IsSucking) == 0x000368, "Member 'AB_TrapProjectile_C::IsSucking' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, OnReadyForTearUp) == 0x000370, "Member 'AB_TrapProjectile_C::OnReadyForTearUp' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, Lightmass) == 0x000380, "Member 'AB_TrapProjectile_C::Lightmass' has a wrong offset!");
-static_assert(offsetof(AB_TrapProjectile_C, HeavyMass) == 0x000388, "Member 'AB_TrapProjectile_C::HeavyMass' has a wrong offset!");
+static_assert(sizeof(AB_TrapProjectile_C) == 0x000388, "Wrong size on AB_TrapProjectile_C");
+static_assert(offsetof(AB_TrapProjectile_C, UberGraphFrame) == 0x000290, "Member 'AB_TrapProjectile_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, PropSuckSphere) == 0x000298, "Member 'AB_TrapProjectile_C::PropSuckSphere' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, WitchSuckSphere) == 0x0002A0, "Member 'AB_TrapProjectile_C::WitchSuckSphere' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckAudioWitch) == 0x0002A8, "Member 'AB_TrapProjectile_C::SuckAudioWitch' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckAudioNormal) == 0x0002B0, "Member 'AB_TrapProjectile_C::SuckAudioNormal' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, VacuumTrapEffect) == 0x0002B8, "Member 'AB_TrapProjectile_C::VacuumTrapEffect' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SK_MagicSucker) == 0x0002C0, "Member 'AB_TrapProjectile_C::SK_MagicSucker' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, Box) == 0x0002C8, "Member 'AB_TrapProjectile_C::Box' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckingComponents) == 0x0002D0, "Member 'AB_TrapProjectile_C::SuckingComponents' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckingWitches) == 0x0002E0, "Member 'AB_TrapProjectile_C::SuckingWitches' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckingDecoyComponents) == 0x0002F0, "Member 'AB_TrapProjectile_C::SuckingDecoyComponents' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, Lifetime) == 0x000300, "Member 'AB_TrapProjectile_C::Lifetime' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, NoSuckTime) == 0x000308, "Member 'AB_TrapProjectile_C::NoSuckTime' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, ExpireTime) == 0x000310, "Member 'AB_TrapProjectile_C::ExpireTime' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SoundTime) == 0x000318, "Member 'AB_TrapProjectile_C::SoundTime' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, CurrentLifeTime) == 0x000320, "Member 'AB_TrapProjectile_C::CurrentLifeTime' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, CurrentSuckTime) == 0x000328, "Member 'AB_TrapProjectile_C::CurrentSuckTime' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckingDecoyWitches) == 0x000330, "Member 'AB_TrapProjectile_C::SuckingDecoyWitches' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, SuckPitchCurve) == 0x000340, "Member 'AB_TrapProjectile_C::SuckPitchCurve' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, TimerIncrement) == 0x000348, "Member 'AB_TrapProjectile_C::TimerIncrement' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, EndSoundPlayed) == 0x000350, "Member 'AB_TrapProjectile_C::EndSoundPlayed' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, ExpireEffectShown) == 0x000351, "Member 'AB_TrapProjectile_C::ExpireEffectShown' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, InitialSpeed) == 0x000358, "Member 'AB_TrapProjectile_C::InitialSpeed' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, IsSucking) == 0x000360, "Member 'AB_TrapProjectile_C::IsSucking' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, OnReadyForTearUp) == 0x000368, "Member 'AB_TrapProjectile_C::OnReadyForTearUp' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, Lightmass) == 0x000378, "Member 'AB_TrapProjectile_C::Lightmass' has a wrong offset!");
+static_assert(offsetof(AB_TrapProjectile_C, HeavyMass) == 0x000380, "Member 'AB_TrapProjectile_C::HeavyMass' has a wrong offset!");
 
 }
 

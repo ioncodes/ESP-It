@@ -12,34 +12,35 @@
 
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_Tab_AudioSettings.WB_Tab_AudioSettings_C
-// 0x0088 (0x0348 - 0x02C0)
+// 0x0088 (0x0368 - 0x02E0)
 class UWB_Tab_AudioSettings_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_AmbientVolume;                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_GeneralVolume;                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_MusicVolume;                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_SoundVolume;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_UserInterfaceVolume;                        // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_SliderWithLabel_C*                  Slider_VoiceChatVolume;                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAudioComponent*                        TestSoundMouse;                                    // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        TestSoundController;                               // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          bDirty;                                            // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56E1[0x7];                                     // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        OriginalMasterVolume;                              // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OriginalSoundVolume;                               // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OriginalMusicVolume;                               // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OriginalAmbientVolume;                             // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OriginalUserInterfaceVolume;                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        OriginalVoiceChatVolume;                           // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_AmbientVolume;                              // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_GeneralVolume;                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_MusicVolume;                                // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_SoundVolume;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_UserInterfaceVolume;                        // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_SliderWithLabel_C*                  Slider_VoiceChatVolume;                            // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UAudioComponent*                        TestSoundMouse;                                    // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        TestSoundController;                               // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDirty;                                            // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        OriginalMasterVolume;                              // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OriginalSoundVolume;                               // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OriginalMusicVolume;                               // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OriginalAmbientVolume;                             // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OriginalUserInterfaceVolume;                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        OriginalVoiceChatVolume;                           // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Slider_AmbientVolume_K2Node_ComponentBoundEvent_129_OnRealValueChanged__DelegateSignature(double RealValue);
@@ -75,8 +76,9 @@ public:
 	class UUserWidget* GetInitialFocusWidget();
 	class UPanelWidget* GetPanelWidget();
 	void Init();
-	void IsDirty(bool* Param_bDirty);
+	void IsDirty(bool* bDirty_0);
 	void LoadSettings();
+	class UWidget* NavigateList(EUINavigation Navigation_0);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	void PlayTestSoundController();
 	void PlayTestSoundMouse();
@@ -100,24 +102,24 @@ public:
 	}
 };
 static_assert(alignof(UWB_Tab_AudioSettings_C) == 0x000008, "Wrong alignment on UWB_Tab_AudioSettings_C");
-static_assert(sizeof(UWB_Tab_AudioSettings_C) == 0x000348, "Wrong size on UWB_Tab_AudioSettings_C");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_Tab_AudioSettings_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, ScrollBox_0) == 0x0002C8, "Member 'UWB_Tab_AudioSettings_C::ScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_AmbientVolume) == 0x0002D0, "Member 'UWB_Tab_AudioSettings_C::Slider_AmbientVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_GeneralVolume) == 0x0002D8, "Member 'UWB_Tab_AudioSettings_C::Slider_GeneralVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_MusicVolume) == 0x0002E0, "Member 'UWB_Tab_AudioSettings_C::Slider_MusicVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_SoundVolume) == 0x0002E8, "Member 'UWB_Tab_AudioSettings_C::Slider_SoundVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_UserInterfaceVolume) == 0x0002F0, "Member 'UWB_Tab_AudioSettings_C::Slider_UserInterfaceVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_VoiceChatVolume) == 0x0002F8, "Member 'UWB_Tab_AudioSettings_C::Slider_VoiceChatVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, TestSoundMouse) == 0x000300, "Member 'UWB_Tab_AudioSettings_C::TestSoundMouse' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, TestSoundController) == 0x000308, "Member 'UWB_Tab_AudioSettings_C::TestSoundController' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, bDirty) == 0x000310, "Member 'UWB_Tab_AudioSettings_C::bDirty' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalMasterVolume) == 0x000318, "Member 'UWB_Tab_AudioSettings_C::OriginalMasterVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalSoundVolume) == 0x000320, "Member 'UWB_Tab_AudioSettings_C::OriginalSoundVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalMusicVolume) == 0x000328, "Member 'UWB_Tab_AudioSettings_C::OriginalMusicVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalAmbientVolume) == 0x000330, "Member 'UWB_Tab_AudioSettings_C::OriginalAmbientVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalUserInterfaceVolume) == 0x000338, "Member 'UWB_Tab_AudioSettings_C::OriginalUserInterfaceVolume' has a wrong offset!");
-static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalVoiceChatVolume) == 0x000340, "Member 'UWB_Tab_AudioSettings_C::OriginalVoiceChatVolume' has a wrong offset!");
+static_assert(sizeof(UWB_Tab_AudioSettings_C) == 0x000368, "Wrong size on UWB_Tab_AudioSettings_C");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_Tab_AudioSettings_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, ScrollBox_0) == 0x0002E8, "Member 'UWB_Tab_AudioSettings_C::ScrollBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_AmbientVolume) == 0x0002F0, "Member 'UWB_Tab_AudioSettings_C::Slider_AmbientVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_GeneralVolume) == 0x0002F8, "Member 'UWB_Tab_AudioSettings_C::Slider_GeneralVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_MusicVolume) == 0x000300, "Member 'UWB_Tab_AudioSettings_C::Slider_MusicVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_SoundVolume) == 0x000308, "Member 'UWB_Tab_AudioSettings_C::Slider_SoundVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_UserInterfaceVolume) == 0x000310, "Member 'UWB_Tab_AudioSettings_C::Slider_UserInterfaceVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, Slider_VoiceChatVolume) == 0x000318, "Member 'UWB_Tab_AudioSettings_C::Slider_VoiceChatVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, TestSoundMouse) == 0x000320, "Member 'UWB_Tab_AudioSettings_C::TestSoundMouse' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, TestSoundController) == 0x000328, "Member 'UWB_Tab_AudioSettings_C::TestSoundController' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, bDirty) == 0x000330, "Member 'UWB_Tab_AudioSettings_C::bDirty' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalMasterVolume) == 0x000338, "Member 'UWB_Tab_AudioSettings_C::OriginalMasterVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalSoundVolume) == 0x000340, "Member 'UWB_Tab_AudioSettings_C::OriginalSoundVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalMusicVolume) == 0x000348, "Member 'UWB_Tab_AudioSettings_C::OriginalMusicVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalAmbientVolume) == 0x000350, "Member 'UWB_Tab_AudioSettings_C::OriginalAmbientVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalUserInterfaceVolume) == 0x000358, "Member 'UWB_Tab_AudioSettings_C::OriginalUserInterfaceVolume' has a wrong offset!");
+static_assert(offsetof(UWB_Tab_AudioSettings_C, OriginalVoiceChatVolume) == 0x000360, "Member 'UWB_Tab_AudioSettings_C::OriginalVoiceChatVolume' has a wrong offset!");
 
 }
 

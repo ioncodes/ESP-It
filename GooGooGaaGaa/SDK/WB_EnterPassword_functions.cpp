@@ -79,6 +79,26 @@ void UWB_EnterPassword_C::ExecuteUbergraph_WB_EnterPassword(int32 EntryPoint)
 }
 
 
+// Function WB_EnterPassword.WB_EnterPassword_C.Get_ControllerIcon_Visibility
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UWB_EnterPassword_C::Get_ControllerIcon_Visibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_EnterPassword_C", "Get_ControllerIcon_Visibility");
+
+	Params::WB_EnterPassword_C_Get_ControllerIcon_Visibility Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WB_EnterPassword.WB_EnterPassword_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -125,6 +145,31 @@ void UWB_EnterPassword_C::OnBack()
 		Func = Class->GetFunction("WB_EnterPassword_C", "OnBack");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WB_EnterPassword.WB_EnterPassword_C.OnPreviewKeyDown
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// struct FKeyEvent                        InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UWB_EnterPassword_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_EnterPassword_C", "OnPreviewKeyDown");
+
+	Params::WB_EnterPassword_C_OnPreviewKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 

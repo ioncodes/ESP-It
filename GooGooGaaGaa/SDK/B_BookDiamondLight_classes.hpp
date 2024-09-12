@@ -10,7 +10,7 @@
 
 #include "Basic.hpp"
 
-#include "B_Lantern_classes.hpp"
+#include "B_StaticMeshLightProp_classes.hpp"
 
 
 namespace SDK
@@ -18,10 +18,10 @@ namespace SDK
 
 // BlueprintGeneratedClass B_BookDiamondLight.B_BookDiamondLight_C
 // 0x0000 (0x0600 - 0x0600)
-class AB_BookDiamondLight_C : public AB_Lantern_C
+class AB_BookDiamondLight_C : public AB_StaticMeshLightProp_C
 {
 public:
-	uint8                                         Pad_5067[0x7];                                     // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_WindForce_C*                         B_WindForce;                                       // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:

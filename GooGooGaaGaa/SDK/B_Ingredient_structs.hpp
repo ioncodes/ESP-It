@@ -22,7 +22,7 @@ struct FB_Ingredient final
 {
 public:
 	E_Ingredients                                 Ingredient_7_604CD50140C268CE4C76F69BCAA5FFCE;     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35A5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Amount_5_D5C320BE4228F5B2430310B68605941D;         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FB_Ingredient) == 0x000004, "Wrong alignment on FB_Ingredient");

@@ -143,6 +143,20 @@ void UWB_IngameMenu_C::BndEvt__WB_IngameMenu_AdvancedOptions_K2Node_ComponentBou
 }
 
 
+// Function WB_IngameMenu.WB_IngameMenu_C.BndEvt__WB_IngameMenu_DevModeBtn_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature
+// (BlueprintEvent)
+
+void UWB_IngameMenu_C::BndEvt__WB_IngameMenu_DevModeBtn_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_IngameMenu_C", "BndEvt__WB_IngameMenu_DevModeBtn_K2Node_ComponentBoundEvent_3_Clicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WB_IngameMenu.WB_IngameMenu_C.ConfirmAction
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -464,10 +478,10 @@ void UWB_IngameMenu_C::IsDirty(bool* bDirty)
 // Function WB_IngameMenu.WB_IngameMenu_C.NavigateToQuests
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EUINavigation                           Param_Navigation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UWB_IngameMenu_C::NavigateToQuests(EUINavigation Param_Navigation)
+class UWidget* UWB_IngameMenu_C::NavigateToQuests(EUINavigation Navigation_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -476,7 +490,7 @@ class UWidget* UWB_IngameMenu_C::NavigateToQuests(EUINavigation Param_Navigation
 
 	Params::WB_IngameMenu_C_NavigateToQuests Parms{};
 
-	Parms.Param_Navigation = Param_Navigation;
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -633,6 +647,20 @@ void UWB_IngameMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WB_IngameMenu.WB_IngameMenu_C.ToggleDevModeButton
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWB_IngameMenu_C::ToggleDevModeButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_IngameMenu_C", "ToggleDevModeButton");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

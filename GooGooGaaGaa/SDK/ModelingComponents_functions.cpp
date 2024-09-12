@@ -17,81 +17,6 @@
 namespace SDK
 {
 
-// Function ModelingComponents.CreateMeshObjectTypeProperties.GetOutputTypeNamesFunc
-// (Final, Native, Public)
-// Parameters:
-// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class FString> UCreateMeshObjectTypeProperties::GetOutputTypeNamesFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreateMeshObjectTypeProperties", "GetOutputTypeNamesFunc");
-
-	Params::CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ModelingComponents.CreateMeshObjectTypeProperties.GetCurrentCreateMeshType
-// (Final, Native, Public, Const)
-// Parameters:
-// ECreateObjectTypeHint                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ECreateObjectTypeHint UCreateMeshObjectTypeProperties::GetCurrentCreateMeshType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreateMeshObjectTypeProperties", "GetCurrentCreateMeshType");
-
-	Params::CreateMeshObjectTypeProperties_GetCurrentCreateMeshType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ModelingComponents.CreateMeshObjectTypeProperties.ShouldShowPropertySet
-// (Final, Native, Public, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UCreateMeshObjectTypeProperties::ShouldShowPropertySet() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreateMeshObjectTypeProperties", "ShouldShowPropertySet");
-
-	Params::CreateMeshObjectTypeProperties_ShouldShowPropertySet Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ModelingComponents.MeshTopologySelectionMechanicProperties.InvertSelection
 // (Final, Native, Public)
 
@@ -419,6 +344,31 @@ void UPreviewGeometry::RemoveAllPointSets(bool bDestroy)
 }
 
 
+// Function ModelingComponents.PreviewGeometry.RemoveAllTriangleSets
+// (Final, Native, Public)
+// Parameters:
+// bool                                    bDestroy                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPreviewGeometry::RemoveAllTriangleSets(bool bDestroy)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PreviewGeometry", "RemoveAllTriangleSets");
+
+	Params::PreviewGeometry_RemoveAllTriangleSets Parms{};
+
+	Parms.bDestroy = bDestroy;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ModelingComponents.PreviewGeometry.RemoveLineSet
 // (Final, Native, Public)
 // Parameters:
@@ -466,6 +416,36 @@ bool UPreviewGeometry::RemovePointSet(const class FString& PointSetIdentifier, b
 	Params::PreviewGeometry_RemovePointSet Parms{};
 
 	Parms.PointSetIdentifier = std::move(PointSetIdentifier);
+	Parms.bDestroy = bDestroy;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.PreviewGeometry.RemoveTriangleSet
+// (Final, Native, Public)
+// Parameters:
+// class FString                           TriangleSetIdentifier                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDestroy                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UPreviewGeometry::RemoveTriangleSet(const class FString& TriangleSetIdentifier, bool bDestroy)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PreviewGeometry", "RemoveTriangleSet");
+
+	Params::PreviewGeometry_RemoveTriangleSet Parms{};
+
+	Parms.TriangleSetIdentifier = std::move(TriangleSetIdentifier);
 	Parms.bDestroy = bDestroy;
 
 	auto Flgs = Func->FunctionFlags;
@@ -774,6 +754,81 @@ struct FCreateTextureObjectResult UModelingObjectsCreationAPI::CreateTextureObje
 	Params::ModelingObjectsCreationAPI_CreateTextureObject Parms{};
 
 	Parms.CreateTexParams = std::move(CreateTexParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.CreateMeshObjectTypeProperties.GetOutputTypeNamesFunc
+// (Final, Native, Public)
+// Parameters:
+// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class FString> UCreateMeshObjectTypeProperties::GetOutputTypeNamesFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreateMeshObjectTypeProperties", "GetOutputTypeNamesFunc");
+
+	Params::CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.CreateMeshObjectTypeProperties.GetCurrentCreateMeshType
+// (Final, Native, Public, Const)
+// Parameters:
+// ECreateObjectTypeHint                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ECreateObjectTypeHint UCreateMeshObjectTypeProperties::GetCurrentCreateMeshType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreateMeshObjectTypeProperties", "GetCurrentCreateMeshType");
+
+	Params::CreateMeshObjectTypeProperties_GetCurrentCreateMeshType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.CreateMeshObjectTypeProperties.ShouldShowPropertySet
+// (Final, Native, Public, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCreateMeshObjectTypeProperties::ShouldShowPropertySet() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreateMeshObjectTypeProperties", "ShouldShowPropertySet");
+
+	Params::CreateMeshObjectTypeProperties_ShouldShowPropertySet Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

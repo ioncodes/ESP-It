@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_ObjectiveTeam_structs.hpp"
 #include "PropWitchHuntModule_classes.hpp"
+#include "E_ObjectiveTeam_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -28,10 +28,10 @@ public:
 	int32                                         RequiredPlayersPerTeam;                            // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IgnorePlayersPerTeamRequirement;                   // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMatchOver;                                       // 0x0089(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D57[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<E_ObjectiveTeam, int32>                  TeamWins;                                          // 0x0090(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          TeamAStartsAsWitch;                                // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D58[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UB_ObjectiveRoundState_C*>       RoundStates;                                       // 0x00E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	E_ObjectiveTeam                               SurrenderedTeam;                                   // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -45,7 +45,7 @@ public:
 	void GetRoundStatesSortedByTeam(TArray<class UB_ObjectiveRoundState_C*>* RoundStatesSortedByTeam);
 	void GetWinnerForRound(bool FirstRound, E_ObjectiveTeam* WinnerTeam);
 	void GetWinnerTeam(class AB_GameState_C* GameState, E_ObjectiveTeam* WinnerTeam, int32* ReasonIndex);
-	void IsMatchDead(class AB_GameState_C* GameState, bool* Param_IsMatchDead);
+	void IsMatchDead(class AB_GameState_C* GameState, bool* IsMatchDead_0);
 	void IsMatchIntact(class AB_GameState_C* GameState, bool* EnoughPlayerConnected);
 	void IsPlayerInMatch(class APlayerState* PlayerState, bool* IsInMatch);
 	void PrintPlayerIds();

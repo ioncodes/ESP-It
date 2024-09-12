@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_JoinAsHunterStates_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ETeamID_structs.hpp"
 
 
@@ -21,65 +21,61 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Spectator.B_Spectator_C
-// 0x0170 (0x0490 - 0x0320)
+// 0x0168 (0x0480 - 0x0318)
 #pragma pack(push, 0x1)
 class alignas(0x10) AB_Spectator_C : public APawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCameraComponent*                       Camera;                                            // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       CollisionSphere;                                   // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFloatingPawnMovement*                  FloatingPawnMovement;                              // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Outline;                                           // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCameraComponent*                       SartCam;                                           // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpringArmComponent*                    SpringArm;                                         // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        Yaw;                                               // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Pitch;                                             // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Forward;                                           // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Right;                                             // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Up;                                                // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SmoothControlls;                                   // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3292[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ZoomMultiplier;                                    // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Movement;                                          // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DeadCam;                                           // 0x0399(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          DeadPlayerWasHunter;                               // 0x039A(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_3293[0x5];                                     // 0x039B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerState*                           Killer;                                            // 0x03A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_3294[0x8];                                     // 0x03A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             TargetPosition;                                    // 0x03B0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DesiredFieldOfView;                                // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TeleportOnCooldown;                                // 0x0418(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3295[0x7];                                     // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TempForwardAxisValue;                              // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TempRightAxisValue;                                // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TempUpAxisValue;                                   // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TempUpAxisValueController;                         // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UB_FieldOfViewComponent_C*              FieldOfViewComponent;                              // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        ReplicationDelay;                                  // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InterpolationSpeed;                                // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableTurn;                                       // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3296[0x7];                                     // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerState_C*                       LocalPlayerState;                                  // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          SelectionScreenShown;                              // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3297[0x7];                                     // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BaseLookUpRate;                                    // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BaseTurnRate;                                      // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Invisible;                                         // 0x0480(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	E_JoinAsHunterStates                          JoinAsHunterState;                                 // 0x0481(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCameraComponent*                       Camera;                                            // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       CollisionSphere;                                   // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFloatingPawnMovement*                  FloatingPawnMovement;                              // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Outline;                                           // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCameraComponent*                       SartCam;                                           // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpringArmComponent*                    SpringArm;                                         // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        Yaw;                                               // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Pitch;                                             // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Forward;                                           // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Right;                                             // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Up;                                                // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SmoothControlls;                                   // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ZoomMultiplier;                                    // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Movement;                                          // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DeadCam;                                           // 0x0391(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          DeadPlayerWasHunter;                               // 0x0392(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_393[0x5];                                      // 0x0393(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerState*                           Killer;                                            // 0x0398(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FTransform                             TargetPosition;                                    // 0x03A0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DesiredFieldOfView;                                // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TeleportOnCooldown;                                // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TempForwardAxisValue;                              // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TempRightAxisValue;                                // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TempUpAxisValue;                                   // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TempUpAxisValueController;                         // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UB_FieldOfViewComponent_C*              FieldOfViewComponent;                              // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        ReplicationDelay;                                  // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InterpolationSpeed;                                // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableTurn;                                       // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerState_C*                       LocalPlayerState;                                  // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          SelectionScreenShown;                              // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BaseLookUpRate;                                    // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BaseTurnRate;                                      // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Invisible;                                         // 0x0470(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	E_JoinAsHunterStates                          JoinAsHunterState;                                 // 0x0471(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	static void TryShowTeamSelectionScreen(class UObject* __WorldContext, bool* ScreenShown);
 
-	void ClientPossessed(class APlayerController* PlayerController);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ReceiveUnpossessed(class AController* OldController);
 	void ShowSuitableSelectionScreen();
 	void TickHUD();
-	void ExecuteUbergraph_B_Spectator(int32 EntryPoint);
-	void CanTeleport(bool* Param_CanTeleport);
+	void CanTeleport(bool* CanTeleport_0);
 	void OnRep_Invisible();
 	void InitializeHUD();
 	void RefreshScreen();
@@ -94,12 +90,14 @@ public:
 	void InpActEvt_Crouch_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void InpActEvt_Crouch_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void ReceivePossessed(class AController* NewController);
+	void ClientPossessed(class APlayerController* PlayerController);
 	void InpAxisEvt_Turn_K2Node_InputAxisEvent_157(float AxisValue);
 	void InpAxisEvt_LookUp_K2Node_InputAxisEvent_172(float AxisValue);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_181(float AxisValue);
 	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_192(float AxisValue);
 	void InpAxisEvt_Zoom_K2Node_InputAxisEvent_132(float AxisValue);
 	void InpAxisEvt_CameraRoll_K2Node_InputAxisEvent_318(float AxisValue);
+	void ReceiveUnpossessed(class AController* OldController);
 	void SetTransformServer(const struct FTransform& Transform);
 	void SetTransformMulti(const struct FTransform& Transform);
 	void ProceedTeleport();
@@ -114,6 +112,7 @@ public:
 	void TryInitializeHUD();
 	void UnhideSpectator();
 	void UpdateJoinAsHunterMidgameClient(E_JoinAsHunterStates JoinAsHunter);
+	void ExecuteUbergraph_B_Spectator(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -127,43 +126,43 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(AB_Spectator_C) == 0x000010, "Wrong alignment on AB_Spectator_C");
-static_assert(sizeof(AB_Spectator_C) == 0x000490, "Wrong size on AB_Spectator_C");
-static_assert(offsetof(AB_Spectator_C, UberGraphFrame) == 0x000320, "Member 'AB_Spectator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Camera) == 0x000328, "Member 'AB_Spectator_C::Camera' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, CollisionSphere) == 0x000330, "Member 'AB_Spectator_C::CollisionSphere' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, FloatingPawnMovement) == 0x000338, "Member 'AB_Spectator_C::FloatingPawnMovement' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Outline) == 0x000340, "Member 'AB_Spectator_C::Outline' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Mesh) == 0x000348, "Member 'AB_Spectator_C::Mesh' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, SartCam) == 0x000350, "Member 'AB_Spectator_C::SartCam' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, SpringArm) == 0x000358, "Member 'AB_Spectator_C::SpringArm' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Yaw) == 0x000360, "Member 'AB_Spectator_C::Yaw' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Pitch) == 0x000368, "Member 'AB_Spectator_C::Pitch' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Forward) == 0x000370, "Member 'AB_Spectator_C::Forward' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Right) == 0x000378, "Member 'AB_Spectator_C::Right' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Up) == 0x000380, "Member 'AB_Spectator_C::Up' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, SmoothControlls) == 0x000388, "Member 'AB_Spectator_C::SmoothControlls' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, ZoomMultiplier) == 0x000390, "Member 'AB_Spectator_C::ZoomMultiplier' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Movement) == 0x000398, "Member 'AB_Spectator_C::Movement' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, DeadCam) == 0x000399, "Member 'AB_Spectator_C::DeadCam' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, DeadPlayerWasHunter) == 0x00039A, "Member 'AB_Spectator_C::DeadPlayerWasHunter' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Killer) == 0x0003A0, "Member 'AB_Spectator_C::Killer' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, TargetPosition) == 0x0003B0, "Member 'AB_Spectator_C::TargetPosition' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, DesiredFieldOfView) == 0x000410, "Member 'AB_Spectator_C::DesiredFieldOfView' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, TeleportOnCooldown) == 0x000418, "Member 'AB_Spectator_C::TeleportOnCooldown' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, TempForwardAxisValue) == 0x000420, "Member 'AB_Spectator_C::TempForwardAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, TempRightAxisValue) == 0x000428, "Member 'AB_Spectator_C::TempRightAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, TempUpAxisValue) == 0x000430, "Member 'AB_Spectator_C::TempUpAxisValue' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, TempUpAxisValueController) == 0x000438, "Member 'AB_Spectator_C::TempUpAxisValueController' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, FieldOfViewComponent) == 0x000440, "Member 'AB_Spectator_C::FieldOfViewComponent' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, ReplicationDelay) == 0x000448, "Member 'AB_Spectator_C::ReplicationDelay' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, InterpolationSpeed) == 0x000450, "Member 'AB_Spectator_C::InterpolationSpeed' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, DisableTurn) == 0x000458, "Member 'AB_Spectator_C::DisableTurn' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, LocalPlayerState) == 0x000460, "Member 'AB_Spectator_C::LocalPlayerState' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, SelectionScreenShown) == 0x000468, "Member 'AB_Spectator_C::SelectionScreenShown' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, BaseLookUpRate) == 0x000470, "Member 'AB_Spectator_C::BaseLookUpRate' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, BaseTurnRate) == 0x000478, "Member 'AB_Spectator_C::BaseTurnRate' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, Invisible) == 0x000480, "Member 'AB_Spectator_C::Invisible' has a wrong offset!");
-static_assert(offsetof(AB_Spectator_C, JoinAsHunterState) == 0x000481, "Member 'AB_Spectator_C::JoinAsHunterState' has a wrong offset!");
+static_assert(sizeof(AB_Spectator_C) == 0x000480, "Wrong size on AB_Spectator_C");
+static_assert(offsetof(AB_Spectator_C, UberGraphFrame) == 0x000318, "Member 'AB_Spectator_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Camera) == 0x000320, "Member 'AB_Spectator_C::Camera' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, CollisionSphere) == 0x000328, "Member 'AB_Spectator_C::CollisionSphere' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, FloatingPawnMovement) == 0x000330, "Member 'AB_Spectator_C::FloatingPawnMovement' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Outline) == 0x000338, "Member 'AB_Spectator_C::Outline' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Mesh) == 0x000340, "Member 'AB_Spectator_C::Mesh' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, SartCam) == 0x000348, "Member 'AB_Spectator_C::SartCam' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, SpringArm) == 0x000350, "Member 'AB_Spectator_C::SpringArm' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Yaw) == 0x000358, "Member 'AB_Spectator_C::Yaw' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Pitch) == 0x000360, "Member 'AB_Spectator_C::Pitch' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Forward) == 0x000368, "Member 'AB_Spectator_C::Forward' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Right) == 0x000370, "Member 'AB_Spectator_C::Right' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Up) == 0x000378, "Member 'AB_Spectator_C::Up' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, SmoothControlls) == 0x000380, "Member 'AB_Spectator_C::SmoothControlls' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, ZoomMultiplier) == 0x000388, "Member 'AB_Spectator_C::ZoomMultiplier' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Movement) == 0x000390, "Member 'AB_Spectator_C::Movement' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, DeadCam) == 0x000391, "Member 'AB_Spectator_C::DeadCam' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, DeadPlayerWasHunter) == 0x000392, "Member 'AB_Spectator_C::DeadPlayerWasHunter' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Killer) == 0x000398, "Member 'AB_Spectator_C::Killer' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, TargetPosition) == 0x0003A0, "Member 'AB_Spectator_C::TargetPosition' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, DesiredFieldOfView) == 0x000400, "Member 'AB_Spectator_C::DesiredFieldOfView' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, TeleportOnCooldown) == 0x000408, "Member 'AB_Spectator_C::TeleportOnCooldown' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, TempForwardAxisValue) == 0x000410, "Member 'AB_Spectator_C::TempForwardAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, TempRightAxisValue) == 0x000418, "Member 'AB_Spectator_C::TempRightAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, TempUpAxisValue) == 0x000420, "Member 'AB_Spectator_C::TempUpAxisValue' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, TempUpAxisValueController) == 0x000428, "Member 'AB_Spectator_C::TempUpAxisValueController' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, FieldOfViewComponent) == 0x000430, "Member 'AB_Spectator_C::FieldOfViewComponent' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, ReplicationDelay) == 0x000438, "Member 'AB_Spectator_C::ReplicationDelay' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, InterpolationSpeed) == 0x000440, "Member 'AB_Spectator_C::InterpolationSpeed' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, DisableTurn) == 0x000448, "Member 'AB_Spectator_C::DisableTurn' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, LocalPlayerState) == 0x000450, "Member 'AB_Spectator_C::LocalPlayerState' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, SelectionScreenShown) == 0x000458, "Member 'AB_Spectator_C::SelectionScreenShown' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, BaseLookUpRate) == 0x000460, "Member 'AB_Spectator_C::BaseLookUpRate' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, BaseTurnRate) == 0x000468, "Member 'AB_Spectator_C::BaseTurnRate' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, Invisible) == 0x000470, "Member 'AB_Spectator_C::Invisible' has a wrong offset!");
+static_assert(offsetof(AB_Spectator_C, JoinAsHunterState) == 0x000471, "Member 'AB_Spectator_C::JoinAsHunterState' has a wrong offset!");
 
 }
 

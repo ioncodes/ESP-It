@@ -20,9 +20,9 @@ namespace SDK
 // Function WB_ControllerIconWithLabel.WB_ControllerIconWithLabel_C.Center
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UHorizontalBoxSlot*               Param_Slot                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UHorizontalBoxSlot*               Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ControllerIconWithLabel_C::Center(class UHorizontalBoxSlot* Param_Slot)
+void UWB_ControllerIconWithLabel_C::Center(class UHorizontalBoxSlot* Slot_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UWB_ControllerIconWithLabel_C::Center(class UHorizontalBoxSlot* Param_Slot)
 
 	Params::WB_ControllerIconWithLabel_C_Center Parms{};
 
-	Parms.Param_Slot = Param_Slot;
+	Parms.Slot_0 = Slot_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

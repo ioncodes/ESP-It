@@ -392,9 +392,9 @@ void UB_WitchHuntFunctionLibrary_C::SpectatorWitchHighlight(class APawn*& SelfRe
 // Parameters:
 // class APlayerState*                     PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FString                           Param_Name                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UB_WitchHuntFunctionLibrary_C::GetPlayerOrBotName(class APlayerState* PlayerState, class UObject* __WorldContext, class FString* Param_Name)
+void UB_WitchHuntFunctionLibrary_C::GetPlayerOrBotName(class APlayerState* PlayerState, class UObject* __WorldContext, class FString* Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -408,8 +408,8 @@ void UB_WitchHuntFunctionLibrary_C::GetPlayerOrBotName(class APlayerState* Playe
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Param_Name != nullptr)
-		*Param_Name = std::move(Parms.Param_Name);
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
 }
 
 

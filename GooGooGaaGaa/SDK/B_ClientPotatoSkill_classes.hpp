@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ClientPotatoSkill.B_ClientPotatoSkill_C
-// 0x0008 (0x0160 - 0x0158)
+// 0x0008 (0x0158 - 0x0150)
 class UB_ClientPotatoSkill_C final : public UB_ClientProjectileSkill_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ClientPotatoSkill_C;              // 0x0158(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ClientPotatoSkill_C;              // 0x0150(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_ClientPotatoSkill(int32 EntryPoint);
@@ -42,8 +42,8 @@ public:
 	}
 };
 static_assert(alignof(UB_ClientPotatoSkill_C) == 0x000008, "Wrong alignment on UB_ClientPotatoSkill_C");
-static_assert(sizeof(UB_ClientPotatoSkill_C) == 0x000160, "Wrong size on UB_ClientPotatoSkill_C");
-static_assert(offsetof(UB_ClientPotatoSkill_C, UberGraphFrame_B_ClientPotatoSkill_C) == 0x000158, "Member 'UB_ClientPotatoSkill_C::UberGraphFrame_B_ClientPotatoSkill_C' has a wrong offset!");
+static_assert(sizeof(UB_ClientPotatoSkill_C) == 0x000158, "Wrong size on UB_ClientPotatoSkill_C");
+static_assert(offsetof(UB_ClientPotatoSkill_C, UberGraphFrame_B_ClientPotatoSkill_C) == 0x000150, "Member 'UB_ClientPotatoSkill_C::UberGraphFrame_B_ClientPotatoSkill_C' has a wrong offset!");
 
 }
 

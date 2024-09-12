@@ -40,6 +40,60 @@ class UObject* IMovieSceneBoundObjectProxy::BP_GetBoundObjectForSequencer(class 
 }
 
 
+// Function MovieScene.MovieSceneBindingEventReceiverInterface.OnObjectBoundBySequencer
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UMovieSceneSequencePlayer*        Player                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMovieSceneObjectBindingID       BindingID                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IMovieSceneBindingEventReceiverInterface::OnObjectBoundBySequencer(class UMovieSceneSequencePlayer* Player, const struct FMovieSceneObjectBindingID& BindingID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneBindingEventReceiverInterface", "OnObjectBoundBySequencer");
+
+	Params::MovieSceneBindingEventReceiverInterface_OnObjectBoundBySequencer Parms{};
+
+	Parms.Player = Player;
+	Parms.BindingID = std::move(BindingID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieScene.MovieSceneBindingEventReceiverInterface.OnObjectUnboundBySequencer
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UMovieSceneSequencePlayer*        Player                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMovieSceneObjectBindingID       BindingID                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IMovieSceneBindingEventReceiverInterface::OnObjectUnboundBySequencer(class UMovieSceneSequencePlayer* Player, const struct FMovieSceneObjectBindingID& BindingID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneBindingEventReceiverInterface", "OnObjectUnboundBySequencer");
+
+	Params::MovieSceneBindingEventReceiverInterface_OnObjectUnboundBySequencer Parms{};
+
+	Parms.Player = Player;
+	Parms.BindingID = std::move(BindingID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MovieScene.MovieSceneEasingFunction.OnEvaluate
 // (RequiredAPI, Event, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -1249,6 +1303,31 @@ void UMovieSceneSequencePlayer::Scrub()
 }
 
 
+// Function MovieScene.MovieSceneSequencePlayer.SetCompletionModeOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EMovieSceneCompletionModeOverride       CompletionModeOverride                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneSequencePlayer::SetCompletionModeOverride(EMovieSceneCompletionModeOverride CompletionModeOverride)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequencePlayer", "SetCompletionModeOverride");
+
+	Params::MovieSceneSequencePlayer_SetCompletionModeOverride Parms{};
+
+	Parms.CompletionModeOverride = CompletionModeOverride;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MovieScene.MovieSceneSequencePlayer.SetDisableCameraCuts
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1381,10 +1460,10 @@ void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 // Function MovieScene.MovieSceneSequencePlayer.SetTimeRange
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// float                                   Param_StartTime                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   StartTime_0                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneSequencePlayer::SetTimeRange(float Param_StartTime, float Duration)
+void UMovieSceneSequencePlayer::SetTimeRange(float StartTime_0, float Duration)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1393,7 +1472,7 @@ void UMovieSceneSequencePlayer::SetTimeRange(float Param_StartTime, float Durati
 
 	Params::MovieSceneSequencePlayer_SetTimeRange Parms{};
 
-	Parms.Param_StartTime = Param_StartTime;
+	Parms.StartTime_0 = StartTime_0;
 	Parms.Duration = Duration;
 
 	auto Flgs = Func->FunctionFlags;
@@ -1465,6 +1544,31 @@ void UMovieSceneSequencePlayer::StopAtCurrentTime()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieScene.MovieSceneSequencePlayer.GetCompletionModeOverride
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EMovieSceneCompletionModeOverride       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EMovieSceneCompletionModeOverride UMovieSceneSequencePlayer::GetCompletionModeOverride() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequencePlayer", "GetCompletionModeOverride");
+
+	Params::MovieSceneSequencePlayer_GetCompletionModeOverride Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

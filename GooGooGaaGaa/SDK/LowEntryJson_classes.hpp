@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 #include "LowEntryJson_structs.hpp"
 
 
@@ -23,7 +23,7 @@ namespace SDK
 class ULowEntryJsonArray final : public UObject
 {
 public:
-	uint8                                         Pad_201C[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -105,37 +105,37 @@ public:
 	static class ULowEntryJsonArray* Array_CreateFromStringArray(const TArray<class FString>& Value);
 	static bool Array_Equals(class ULowEntryJsonArray* JsonArrayA, class ULowEntryJsonArray* JsonArrayB);
 	static void Array_Expand(class ULowEntryJsonArray* JsonArray, const int32 Size);
-	static void Array_Get(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonType* Branch, class FString* ReturnStringValue, int64* ReturnLongValue, int32* ReturnIntegerValue, double* ReturnFloatValue, uint8* ReturnByteValue, bool* ReturnBooleanValue, class ULowEntryJsonObject** ReturnJsonObjectValue, class ULowEntryJsonArray** ReturnJsonArrayValue);
-	static bool Array_GetAsBooleanOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const bool Default);
-	static uint8 Array_GetAsByteOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const uint8 Default);
-	static double Array_GetAsFloatOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const double Default);
-	static int32 Array_GetAsIntegerOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int32 Default);
-	static class ULowEntryJsonArray* Array_GetAsJsonArrayOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonArray* Default);
-	static class ULowEntryJsonObject* Array_GetAsJsonObjectOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonObject* Default);
-	static class ULowEntryJsonValue* Array_GetAsJsonValueOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonValue* Default);
-	static int64 Array_GetAsLongOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int64 Default);
-	static class FString Array_GetAsStringOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const class FString& Default);
-	static bool Array_GetBoolean(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static uint8 Array_GetByte(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static double Array_GetFloat(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static int32 Array_GetInteger(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static class ULowEntryJsonArray* Array_GetJsonArray(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static class ULowEntryJsonObject* Array_GetJsonObject(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static class ULowEntryJsonValue* Array_GetJsonValue(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueFound* Branch);
-	static int64 Array_GetLong(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static void Array_GetNull(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static class FString Array_GetString(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, ELowEntryJsonValueAndTypeFound* Branch);
-	static void Array_InsertBoolean(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const bool Value);
-	static void Array_InsertByte(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const uint8 Value);
-	static void Array_InsertFloat(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const double Value);
-	static void Array_InsertInteger(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int32 Value);
-	static void Array_InsertJsonArray(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonArray* Value, const bool Unsafe);
-	static void Array_InsertJsonObject(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonObject* Value, const bool Unsafe);
-	static void Array_InsertJsonValue(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonValue* Value, const bool Unsafe);
-	static void Array_InsertLong(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int64 Value);
-	static void Array_InsertNull(class ULowEntryJsonArray* JsonArray, const int32 Param_Index);
-	static void Array_InsertString(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const class FString& Value);
-	static bool Array_IsSet(class ULowEntryJsonArray* JsonArray, const int32 Param_Index);
+	static void Array_Get(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonType* Branch, class FString* ReturnStringValue, int64* ReturnLongValue, int32* ReturnIntegerValue, double* ReturnFloatValue, uint8* ReturnByteValue, bool* ReturnBooleanValue, class ULowEntryJsonObject** ReturnJsonObjectValue, class ULowEntryJsonArray** ReturnJsonArrayValue);
+	static bool Array_GetAsBooleanOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const bool Default);
+	static uint8 Array_GetAsByteOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const uint8 Default);
+	static double Array_GetAsFloatOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const double Default);
+	static int32 Array_GetAsIntegerOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int32 Default);
+	static class ULowEntryJsonArray* Array_GetAsJsonArrayOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonArray* Default);
+	static class ULowEntryJsonObject* Array_GetAsJsonObjectOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonObject* Default);
+	static class ULowEntryJsonValue* Array_GetAsJsonValueOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonValue* Default);
+	static int64 Array_GetAsLongOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int64 Default);
+	static class FString Array_GetAsStringOrDefault(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const class FString& Default);
+	static bool Array_GetBoolean(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static uint8 Array_GetByte(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static double Array_GetFloat(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static int32 Array_GetInteger(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static class ULowEntryJsonArray* Array_GetJsonArray(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static class ULowEntryJsonObject* Array_GetJsonObject(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static class ULowEntryJsonValue* Array_GetJsonValue(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueFound* Branch);
+	static int64 Array_GetLong(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static void Array_GetNull(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static class FString Array_GetString(class ULowEntryJsonArray* JsonArray, const int32 Index_0, ELowEntryJsonValueAndTypeFound* Branch);
+	static void Array_InsertBoolean(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const bool Value);
+	static void Array_InsertByte(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const uint8 Value);
+	static void Array_InsertFloat(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const double Value);
+	static void Array_InsertInteger(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int32 Value);
+	static void Array_InsertJsonArray(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonArray* Value, const bool Unsafe);
+	static void Array_InsertJsonObject(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonObject* Value, const bool Unsafe);
+	static void Array_InsertJsonValue(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonValue* Value, const bool Unsafe);
+	static void Array_InsertLong(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int64 Value);
+	static void Array_InsertNull(class ULowEntryJsonArray* JsonArray, const int32 Index_0);
+	static void Array_InsertString(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const class FString& Value);
+	static bool Array_IsSet(class ULowEntryJsonArray* JsonArray, const int32 Index_0);
 	static int32 Array_Length(class ULowEntryJsonArray* JsonArray);
 	static class ULowEntryJsonArray* Array_Merge(class ULowEntryJsonArray* JsonArray1, class ULowEntryJsonArray* JsonArray2);
 	static bool Array_NotEquals(class ULowEntryJsonArray* JsonArrayA, class ULowEntryJsonArray* JsonArrayB);
@@ -154,19 +154,19 @@ public:
 	static class ULowEntryJsonArray* Array_Pure_Merge(class ULowEntryJsonArray* JsonArray1, class ULowEntryJsonArray* JsonArray2);
 	static class FString Array_Pure_ToJsonString(class ULowEntryJsonArray* JsonArray, const bool PrettyPrint);
 	static void Array_Resize(class ULowEntryJsonArray* JsonArray, const int32 Size);
-	static void Array_SetBoolean(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const bool Value);
-	static void Array_SetByte(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const uint8 Value);
-	static void Array_SetFloat(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const double Value);
-	static void Array_SetInteger(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int32 Value);
-	static void Array_SetJsonArray(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonArray* Value, const bool Unsafe);
-	static void Array_SetJsonObject(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonObject* Value, const bool Unsafe);
-	static void Array_SetJsonValue(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, class ULowEntryJsonValue* Value, const bool Unsafe);
-	static void Array_SetLong(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int64 Value);
-	static void Array_SetNull(class ULowEntryJsonArray* JsonArray, const int32 Param_Index);
-	static void Array_SetString(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const class FString& Value);
+	static void Array_SetBoolean(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const bool Value);
+	static void Array_SetByte(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const uint8 Value);
+	static void Array_SetFloat(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const double Value);
+	static void Array_SetInteger(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int32 Value);
+	static void Array_SetJsonArray(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonArray* Value, const bool Unsafe);
+	static void Array_SetJsonObject(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonObject* Value, const bool Unsafe);
+	static void Array_SetJsonValue(class ULowEntryJsonArray* JsonArray, const int32 Index_0, class ULowEntryJsonValue* Value, const bool Unsafe);
+	static void Array_SetLong(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int64 Value);
+	static void Array_SetNull(class ULowEntryJsonArray* JsonArray, const int32 Index_0);
+	static void Array_SetString(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const class FString& Value);
 	static void Array_Shorten(class ULowEntryJsonArray* JsonArray, const int32 Size);
 	static class FString Array_ToJsonString(class ULowEntryJsonArray* JsonArray, const bool PrettyPrint);
-	static void Array_Unset(class ULowEntryJsonArray* JsonArray, const int32 Param_Index, const int32 Count);
+	static void Array_Unset(class ULowEntryJsonArray* JsonArray, const int32 Index_0, const int32 Count);
 	static void Json_ParseJsonString(const class FString& JsonString, class ULowEntryJsonObject** ReturnJsonObjectValue, class ULowEntryJsonArray** ReturnJsonArrayValue, ELowEntryJsonParseResult* Branch);
 	static void Object_Append(class ULowEntryJsonObject* JsonObject, class ULowEntryJsonObject* AppendJsonObject, const bool OverrideDuplicates);
 	static void Object_Clear(class ULowEntryJsonObject* JsonObject);
@@ -232,7 +232,7 @@ public:
 	static class ULowEntryJsonObjectEntry* ObjectEntry_Pure_CreateFromString(const class FString& Key, const class FString& Value);
 	static class ULowEntryJsonObjectIterator* ObjectIterator_Clone(class ULowEntryJsonObjectIterator* JsonObjectIterator);
 	static class ULowEntryJsonObjectIterator* ObjectIterator_Create(class ULowEntryJsonObject* JsonObject);
-	static void ObjectIterator_Get(class ULowEntryJsonObjectIterator* JsonObjectIterator, const int32 Param_Index, class FString* Key, class ULowEntryJsonValue** JsonValue, ELowEntryJsonValueFound* Branch);
+	static void ObjectIterator_Get(class ULowEntryJsonObjectIterator* JsonObjectIterator, const int32 Index_0, class FString* Key, class ULowEntryJsonValue** JsonValue, ELowEntryJsonValueFound* Branch);
 	static TArray<class FString> ObjectIterator_GetKeys(class ULowEntryJsonObjectIterator* JsonObjectIterator);
 	static class ULowEntryJsonArray* ObjectIterator_GetValues(class ULowEntryJsonObjectIterator* JsonObjectIterator);
 	static int32 ObjectIterator_Length(class ULowEntryJsonObjectIterator* JsonObjectIterator);
@@ -307,7 +307,7 @@ static_assert(sizeof(ULowEntryJsonLibrary) == 0x000028, "Wrong size on ULowEntry
 class ULowEntryJsonObject final : public UObject
 {
 public:
-	uint8                                         Pad_20BD[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -351,7 +351,7 @@ class ULowEntryJsonObjectIterator final : public UObject
 {
 public:
 	TArray<class FString>                         Keys;                                              // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20BE[0x10];                                    // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -372,7 +372,7 @@ static_assert(offsetof(ULowEntryJsonObjectIterator, Keys) == 0x000028, "Member '
 class ULowEntryJsonValue final : public UObject
 {
 public:
-	uint8                                         Pad_20BF[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

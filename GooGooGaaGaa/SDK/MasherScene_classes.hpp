@@ -18,134 +18,134 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MasherScene.MasherScene_C
-// 0x03E0 (0x0678 - 0x0298)
+// 0x03E0 (0x0670 - 0x0290)
 class AMasherScene_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_MediumFireDoF2;                                 // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_MediumFireDoF1;                                 // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        S_Fireplace_Cue;                                   // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_SmithHammer;                                    // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight5;                                       // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        SmashParticles;                                    // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight4;                                       // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  PostProcess;                                       // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cube;                                              // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   B_MenuCamera;                                      // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Hammer;                                         // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Shovel;                                         // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_TallCrate;                                      // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Harpoon;                                        // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Pitchfork;                                      // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Chair;                                          // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Bucket;                                         // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0130;                           // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0129;                           // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0128;                           // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0127;                           // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0126;                           // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0125;                           // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0124;                           // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0123;                           // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0122;                           // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0119;                           // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0118;                           // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0117;                           // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0113;                           // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0112;                           // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0111;                           // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0110;                           // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0109;                           // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0108;                           // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0107;                           // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0106;                           // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0104;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0103;                           // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0102;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0101;                           // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent0100;                           // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent099;                            // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent098;                            // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent095;                            // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent094;                            // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent093;                            // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent092;                            // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent091;                            // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent090;                            // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent089;                            // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent088;                            // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent087;                            // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent086;                            // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent085;                            // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent067;                            // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent01;                             // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent065;                            // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent064;                            // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent063;                            // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent062;                            // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent061;                            // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent060;                            // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent059;                            // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent058;                            // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent057;                            // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent056;                            // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent055;                            // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent054;                            // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent053;                            // 0x04D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent052;                            // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent051;                            // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent050;                            // 0x04F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent049;                            // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent048;                            // 0x0500(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent047;                            // 0x0508(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent046;                            // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent045;                            // 0x0518(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent044;                            // 0x0520(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent043;                            // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent042;                            // 0x0530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent041;                            // 0x0538(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent033;                            // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent032;                            // 0x0548(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent031;                            // 0x0550(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent030;                            // 0x0558(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent029;                            // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent028;                            // 0x0568(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent027;                            // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent026;                            // 0x0578(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent023;                            // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent022;                            // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent020;                            // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent019;                            // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent018;                            // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent017;                            // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent016;                            // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent015;                            // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent014;                            // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent013;                            // 0x05C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent012;                            // 0x05D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent011;                            // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent010;                            // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent09;                             // 0x05E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent08;                             // 0x05F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent07;                             // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent06;                             // 0x0600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent05;                             // 0x0608(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent04;                             // 0x0610(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent03;                             // 0x0618(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent02;                             // 0x0620(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComponent066;                            // 0x0628(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Mehses;                                            // 0x0630(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight3;                                       // 0x0638(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight2;                                       // 0x0640(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight1;                                        // 0x0648(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight;                                        // 0x0650(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    SpotLight;                                         // 0x0658(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SK_MashHammer;                                     // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SH_Anvil;                                          // 0x0668(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        SharedRoot;                                        // 0x0670(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0290(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_MediumFireDoF2;                                 // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_MediumFireDoF1;                                 // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        S_Fireplace_Cue;                                   // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_SmithHammer;                                    // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight5;                                       // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        SmashParticles;                                    // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight4;                                       // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  PostProcess;                                       // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cube;                                              // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   B_MenuCamera;                                      // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Hammer;                                         // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Shovel;                                         // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_TallCrate;                                      // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Harpoon;                                        // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Pitchfork;                                      // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Chair;                                          // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Bucket;                                         // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0130;                           // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0129;                           // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0128;                           // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0127;                           // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0126;                           // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0125;                           // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0124;                           // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0123;                           // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0122;                           // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0119;                           // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0118;                           // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0117;                           // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0113;                           // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0112;                           // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0111;                           // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0110;                           // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0109;                           // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0108;                           // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0107;                           // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0106;                           // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0104;                           // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0103;                           // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0102;                           // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0101;                           // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent0100;                           // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent099;                            // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent098;                            // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent095;                            // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent094;                            // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent093;                            // 0x0418(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent092;                            // 0x0420(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent091;                            // 0x0428(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent090;                            // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent089;                            // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent088;                            // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent087;                            // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent086;                            // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent085;                            // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent067;                            // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent01;                             // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent065;                            // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent064;                            // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent063;                            // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent062;                            // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent061;                            // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent060;                            // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent059;                            // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent058;                            // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent057;                            // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent056;                            // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent055;                            // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent054;                            // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent053;                            // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent052;                            // 0x04D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent051;                            // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent050;                            // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent049;                            // 0x04F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent048;                            // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent047;                            // 0x0500(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent046;                            // 0x0508(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent045;                            // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent044;                            // 0x0518(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent043;                            // 0x0520(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent042;                            // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent041;                            // 0x0530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent033;                            // 0x0538(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent032;                            // 0x0540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent031;                            // 0x0548(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent030;                            // 0x0550(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent029;                            // 0x0558(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent028;                            // 0x0560(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent027;                            // 0x0568(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent026;                            // 0x0570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent023;                            // 0x0578(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent022;                            // 0x0580(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent020;                            // 0x0588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent019;                            // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent018;                            // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent017;                            // 0x05A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent016;                            // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent015;                            // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent014;                            // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent013;                            // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent012;                            // 0x05C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent011;                            // 0x05D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent010;                            // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent09;                             // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent08;                             // 0x05E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent07;                             // 0x05F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent06;                             // 0x05F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent05;                             // 0x0600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent04;                             // 0x0608(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent03;                             // 0x0610(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent02;                             // 0x0618(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComponent066;                            // 0x0620(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Mehses;                                            // 0x0628(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight3;                                       // 0x0630(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight2;                                       // 0x0638(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight1;                                        // 0x0640(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight;                                        // 0x0648(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x0650(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SK_MashHammer;                                     // 0x0658(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SH_Anvil;                                          // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        SharedRoot;                                        // 0x0668(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MasherScene(int32 EntryPoint);
@@ -161,131 +161,131 @@ public:
 	}
 };
 static_assert(alignof(AMasherScene_C) == 0x000008, "Wrong alignment on AMasherScene_C");
-static_assert(sizeof(AMasherScene_C) == 0x000678, "Wrong size on AMasherScene_C");
-static_assert(offsetof(AMasherScene_C, UberGraphFrame) == 0x000298, "Member 'AMasherScene_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, NS_MediumFireDoF2) == 0x0002A0, "Member 'AMasherScene_C::NS_MediumFireDoF2' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, NS_MediumFireDoF1) == 0x0002A8, "Member 'AMasherScene_C::NS_MediumFireDoF1' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, S_Fireplace_Cue) == 0x0002B0, "Member 'AMasherScene_C::S_Fireplace_Cue' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_SmithHammer) == 0x0002B8, "Member 'AMasherScene_C::SM_SmithHammer' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, PointLight5) == 0x0002C0, "Member 'AMasherScene_C::PointLight5' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SmashParticles) == 0x0002C8, "Member 'AMasherScene_C::SmashParticles' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, PointLight4) == 0x0002D0, "Member 'AMasherScene_C::PointLight4' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, PostProcess) == 0x0002D8, "Member 'AMasherScene_C::PostProcess' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, Cube) == 0x0002E0, "Member 'AMasherScene_C::Cube' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, Box) == 0x0002E8, "Member 'AMasherScene_C::Box' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, B_MenuCamera) == 0x0002F0, "Member 'AMasherScene_C::B_MenuCamera' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMesh) == 0x0002F8, "Member 'AMasherScene_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_Hammer) == 0x000300, "Member 'AMasherScene_C::SM_Hammer' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_Shovel) == 0x000308, "Member 'AMasherScene_C::SM_Shovel' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_TallCrate) == 0x000310, "Member 'AMasherScene_C::SM_TallCrate' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_Harpoon) == 0x000318, "Member 'AMasherScene_C::SM_Harpoon' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_Pitchfork) == 0x000320, "Member 'AMasherScene_C::SM_Pitchfork' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_Chair) == 0x000328, "Member 'AMasherScene_C::SM_Chair' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SM_Bucket) == 0x000330, "Member 'AMasherScene_C::SM_Bucket' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0130) == 0x000338, "Member 'AMasherScene_C::StaticMeshComponent0130' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0129) == 0x000340, "Member 'AMasherScene_C::StaticMeshComponent0129' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0128) == 0x000348, "Member 'AMasherScene_C::StaticMeshComponent0128' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0127) == 0x000350, "Member 'AMasherScene_C::StaticMeshComponent0127' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0126) == 0x000358, "Member 'AMasherScene_C::StaticMeshComponent0126' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0125) == 0x000360, "Member 'AMasherScene_C::StaticMeshComponent0125' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0124) == 0x000368, "Member 'AMasherScene_C::StaticMeshComponent0124' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0123) == 0x000370, "Member 'AMasherScene_C::StaticMeshComponent0123' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0122) == 0x000378, "Member 'AMasherScene_C::StaticMeshComponent0122' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0119) == 0x000380, "Member 'AMasherScene_C::StaticMeshComponent0119' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0118) == 0x000388, "Member 'AMasherScene_C::StaticMeshComponent0118' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0117) == 0x000390, "Member 'AMasherScene_C::StaticMeshComponent0117' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0113) == 0x000398, "Member 'AMasherScene_C::StaticMeshComponent0113' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0112) == 0x0003A0, "Member 'AMasherScene_C::StaticMeshComponent0112' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0111) == 0x0003A8, "Member 'AMasherScene_C::StaticMeshComponent0111' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0110) == 0x0003B0, "Member 'AMasherScene_C::StaticMeshComponent0110' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0109) == 0x0003B8, "Member 'AMasherScene_C::StaticMeshComponent0109' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0108) == 0x0003C0, "Member 'AMasherScene_C::StaticMeshComponent0108' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0107) == 0x0003C8, "Member 'AMasherScene_C::StaticMeshComponent0107' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0106) == 0x0003D0, "Member 'AMasherScene_C::StaticMeshComponent0106' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0104) == 0x0003D8, "Member 'AMasherScene_C::StaticMeshComponent0104' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0103) == 0x0003E0, "Member 'AMasherScene_C::StaticMeshComponent0103' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0102) == 0x0003E8, "Member 'AMasherScene_C::StaticMeshComponent0102' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0101) == 0x0003F0, "Member 'AMasherScene_C::StaticMeshComponent0101' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent0100) == 0x0003F8, "Member 'AMasherScene_C::StaticMeshComponent0100' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent099) == 0x000400, "Member 'AMasherScene_C::StaticMeshComponent099' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent098) == 0x000408, "Member 'AMasherScene_C::StaticMeshComponent098' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent095) == 0x000410, "Member 'AMasherScene_C::StaticMeshComponent095' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent094) == 0x000418, "Member 'AMasherScene_C::StaticMeshComponent094' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent093) == 0x000420, "Member 'AMasherScene_C::StaticMeshComponent093' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent092) == 0x000428, "Member 'AMasherScene_C::StaticMeshComponent092' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent091) == 0x000430, "Member 'AMasherScene_C::StaticMeshComponent091' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent090) == 0x000438, "Member 'AMasherScene_C::StaticMeshComponent090' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent089) == 0x000440, "Member 'AMasherScene_C::StaticMeshComponent089' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent088) == 0x000448, "Member 'AMasherScene_C::StaticMeshComponent088' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent087) == 0x000450, "Member 'AMasherScene_C::StaticMeshComponent087' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent086) == 0x000458, "Member 'AMasherScene_C::StaticMeshComponent086' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent085) == 0x000460, "Member 'AMasherScene_C::StaticMeshComponent085' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent067) == 0x000468, "Member 'AMasherScene_C::StaticMeshComponent067' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent01) == 0x000470, "Member 'AMasherScene_C::StaticMeshComponent01' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent065) == 0x000478, "Member 'AMasherScene_C::StaticMeshComponent065' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent064) == 0x000480, "Member 'AMasherScene_C::StaticMeshComponent064' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent063) == 0x000488, "Member 'AMasherScene_C::StaticMeshComponent063' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent062) == 0x000490, "Member 'AMasherScene_C::StaticMeshComponent062' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent061) == 0x000498, "Member 'AMasherScene_C::StaticMeshComponent061' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent060) == 0x0004A0, "Member 'AMasherScene_C::StaticMeshComponent060' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent059) == 0x0004A8, "Member 'AMasherScene_C::StaticMeshComponent059' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent058) == 0x0004B0, "Member 'AMasherScene_C::StaticMeshComponent058' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent057) == 0x0004B8, "Member 'AMasherScene_C::StaticMeshComponent057' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent056) == 0x0004C0, "Member 'AMasherScene_C::StaticMeshComponent056' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent055) == 0x0004C8, "Member 'AMasherScene_C::StaticMeshComponent055' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent054) == 0x0004D0, "Member 'AMasherScene_C::StaticMeshComponent054' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent053) == 0x0004D8, "Member 'AMasherScene_C::StaticMeshComponent053' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent052) == 0x0004E0, "Member 'AMasherScene_C::StaticMeshComponent052' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent051) == 0x0004E8, "Member 'AMasherScene_C::StaticMeshComponent051' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent050) == 0x0004F0, "Member 'AMasherScene_C::StaticMeshComponent050' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent049) == 0x0004F8, "Member 'AMasherScene_C::StaticMeshComponent049' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent048) == 0x000500, "Member 'AMasherScene_C::StaticMeshComponent048' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent047) == 0x000508, "Member 'AMasherScene_C::StaticMeshComponent047' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent046) == 0x000510, "Member 'AMasherScene_C::StaticMeshComponent046' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent045) == 0x000518, "Member 'AMasherScene_C::StaticMeshComponent045' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent044) == 0x000520, "Member 'AMasherScene_C::StaticMeshComponent044' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent043) == 0x000528, "Member 'AMasherScene_C::StaticMeshComponent043' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent042) == 0x000530, "Member 'AMasherScene_C::StaticMeshComponent042' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent041) == 0x000538, "Member 'AMasherScene_C::StaticMeshComponent041' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent033) == 0x000540, "Member 'AMasherScene_C::StaticMeshComponent033' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent032) == 0x000548, "Member 'AMasherScene_C::StaticMeshComponent032' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent031) == 0x000550, "Member 'AMasherScene_C::StaticMeshComponent031' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent030) == 0x000558, "Member 'AMasherScene_C::StaticMeshComponent030' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent029) == 0x000560, "Member 'AMasherScene_C::StaticMeshComponent029' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent028) == 0x000568, "Member 'AMasherScene_C::StaticMeshComponent028' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent027) == 0x000570, "Member 'AMasherScene_C::StaticMeshComponent027' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent026) == 0x000578, "Member 'AMasherScene_C::StaticMeshComponent026' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent023) == 0x000580, "Member 'AMasherScene_C::StaticMeshComponent023' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent022) == 0x000588, "Member 'AMasherScene_C::StaticMeshComponent022' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent020) == 0x000590, "Member 'AMasherScene_C::StaticMeshComponent020' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent019) == 0x000598, "Member 'AMasherScene_C::StaticMeshComponent019' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent018) == 0x0005A0, "Member 'AMasherScene_C::StaticMeshComponent018' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent017) == 0x0005A8, "Member 'AMasherScene_C::StaticMeshComponent017' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent016) == 0x0005B0, "Member 'AMasherScene_C::StaticMeshComponent016' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent015) == 0x0005B8, "Member 'AMasherScene_C::StaticMeshComponent015' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent014) == 0x0005C0, "Member 'AMasherScene_C::StaticMeshComponent014' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent013) == 0x0005C8, "Member 'AMasherScene_C::StaticMeshComponent013' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent012) == 0x0005D0, "Member 'AMasherScene_C::StaticMeshComponent012' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent011) == 0x0005D8, "Member 'AMasherScene_C::StaticMeshComponent011' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent010) == 0x0005E0, "Member 'AMasherScene_C::StaticMeshComponent010' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent09) == 0x0005E8, "Member 'AMasherScene_C::StaticMeshComponent09' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent08) == 0x0005F0, "Member 'AMasherScene_C::StaticMeshComponent08' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent07) == 0x0005F8, "Member 'AMasherScene_C::StaticMeshComponent07' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent06) == 0x000600, "Member 'AMasherScene_C::StaticMeshComponent06' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent05) == 0x000608, "Member 'AMasherScene_C::StaticMeshComponent05' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent04) == 0x000610, "Member 'AMasherScene_C::StaticMeshComponent04' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent03) == 0x000618, "Member 'AMasherScene_C::StaticMeshComponent03' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent02) == 0x000620, "Member 'AMasherScene_C::StaticMeshComponent02' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, StaticMeshComponent066) == 0x000628, "Member 'AMasherScene_C::StaticMeshComponent066' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, Mehses) == 0x000630, "Member 'AMasherScene_C::Mehses' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, PointLight3) == 0x000638, "Member 'AMasherScene_C::PointLight3' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, PointLight2) == 0x000640, "Member 'AMasherScene_C::PointLight2' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SpotLight1) == 0x000648, "Member 'AMasherScene_C::SpotLight1' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, PointLight) == 0x000650, "Member 'AMasherScene_C::PointLight' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SpotLight) == 0x000658, "Member 'AMasherScene_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SK_MashHammer) == 0x000660, "Member 'AMasherScene_C::SK_MashHammer' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SH_Anvil) == 0x000668, "Member 'AMasherScene_C::SH_Anvil' has a wrong offset!");
-static_assert(offsetof(AMasherScene_C, SharedRoot) == 0x000670, "Member 'AMasherScene_C::SharedRoot' has a wrong offset!");
+static_assert(sizeof(AMasherScene_C) == 0x000670, "Wrong size on AMasherScene_C");
+static_assert(offsetof(AMasherScene_C, UberGraphFrame) == 0x000290, "Member 'AMasherScene_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, NS_MediumFireDoF2) == 0x000298, "Member 'AMasherScene_C::NS_MediumFireDoF2' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, NS_MediumFireDoF1) == 0x0002A0, "Member 'AMasherScene_C::NS_MediumFireDoF1' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, S_Fireplace_Cue) == 0x0002A8, "Member 'AMasherScene_C::S_Fireplace_Cue' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_SmithHammer) == 0x0002B0, "Member 'AMasherScene_C::SM_SmithHammer' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, PointLight5) == 0x0002B8, "Member 'AMasherScene_C::PointLight5' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SmashParticles) == 0x0002C0, "Member 'AMasherScene_C::SmashParticles' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, PointLight4) == 0x0002C8, "Member 'AMasherScene_C::PointLight4' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, PostProcess) == 0x0002D0, "Member 'AMasherScene_C::PostProcess' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, Cube) == 0x0002D8, "Member 'AMasherScene_C::Cube' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, Box) == 0x0002E0, "Member 'AMasherScene_C::Box' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, B_MenuCamera) == 0x0002E8, "Member 'AMasherScene_C::B_MenuCamera' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMesh) == 0x0002F0, "Member 'AMasherScene_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_Hammer) == 0x0002F8, "Member 'AMasherScene_C::SM_Hammer' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_Shovel) == 0x000300, "Member 'AMasherScene_C::SM_Shovel' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_TallCrate) == 0x000308, "Member 'AMasherScene_C::SM_TallCrate' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_Harpoon) == 0x000310, "Member 'AMasherScene_C::SM_Harpoon' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_Pitchfork) == 0x000318, "Member 'AMasherScene_C::SM_Pitchfork' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_Chair) == 0x000320, "Member 'AMasherScene_C::SM_Chair' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SM_Bucket) == 0x000328, "Member 'AMasherScene_C::SM_Bucket' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0130) == 0x000330, "Member 'AMasherScene_C::StaticMeshComponent0130' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0129) == 0x000338, "Member 'AMasherScene_C::StaticMeshComponent0129' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0128) == 0x000340, "Member 'AMasherScene_C::StaticMeshComponent0128' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0127) == 0x000348, "Member 'AMasherScene_C::StaticMeshComponent0127' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0126) == 0x000350, "Member 'AMasherScene_C::StaticMeshComponent0126' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0125) == 0x000358, "Member 'AMasherScene_C::StaticMeshComponent0125' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0124) == 0x000360, "Member 'AMasherScene_C::StaticMeshComponent0124' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0123) == 0x000368, "Member 'AMasherScene_C::StaticMeshComponent0123' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0122) == 0x000370, "Member 'AMasherScene_C::StaticMeshComponent0122' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0119) == 0x000378, "Member 'AMasherScene_C::StaticMeshComponent0119' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0118) == 0x000380, "Member 'AMasherScene_C::StaticMeshComponent0118' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0117) == 0x000388, "Member 'AMasherScene_C::StaticMeshComponent0117' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0113) == 0x000390, "Member 'AMasherScene_C::StaticMeshComponent0113' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0112) == 0x000398, "Member 'AMasherScene_C::StaticMeshComponent0112' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0111) == 0x0003A0, "Member 'AMasherScene_C::StaticMeshComponent0111' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0110) == 0x0003A8, "Member 'AMasherScene_C::StaticMeshComponent0110' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0109) == 0x0003B0, "Member 'AMasherScene_C::StaticMeshComponent0109' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0108) == 0x0003B8, "Member 'AMasherScene_C::StaticMeshComponent0108' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0107) == 0x0003C0, "Member 'AMasherScene_C::StaticMeshComponent0107' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0106) == 0x0003C8, "Member 'AMasherScene_C::StaticMeshComponent0106' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0104) == 0x0003D0, "Member 'AMasherScene_C::StaticMeshComponent0104' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0103) == 0x0003D8, "Member 'AMasherScene_C::StaticMeshComponent0103' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0102) == 0x0003E0, "Member 'AMasherScene_C::StaticMeshComponent0102' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0101) == 0x0003E8, "Member 'AMasherScene_C::StaticMeshComponent0101' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent0100) == 0x0003F0, "Member 'AMasherScene_C::StaticMeshComponent0100' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent099) == 0x0003F8, "Member 'AMasherScene_C::StaticMeshComponent099' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent098) == 0x000400, "Member 'AMasherScene_C::StaticMeshComponent098' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent095) == 0x000408, "Member 'AMasherScene_C::StaticMeshComponent095' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent094) == 0x000410, "Member 'AMasherScene_C::StaticMeshComponent094' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent093) == 0x000418, "Member 'AMasherScene_C::StaticMeshComponent093' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent092) == 0x000420, "Member 'AMasherScene_C::StaticMeshComponent092' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent091) == 0x000428, "Member 'AMasherScene_C::StaticMeshComponent091' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent090) == 0x000430, "Member 'AMasherScene_C::StaticMeshComponent090' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent089) == 0x000438, "Member 'AMasherScene_C::StaticMeshComponent089' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent088) == 0x000440, "Member 'AMasherScene_C::StaticMeshComponent088' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent087) == 0x000448, "Member 'AMasherScene_C::StaticMeshComponent087' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent086) == 0x000450, "Member 'AMasherScene_C::StaticMeshComponent086' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent085) == 0x000458, "Member 'AMasherScene_C::StaticMeshComponent085' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent067) == 0x000460, "Member 'AMasherScene_C::StaticMeshComponent067' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent01) == 0x000468, "Member 'AMasherScene_C::StaticMeshComponent01' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent065) == 0x000470, "Member 'AMasherScene_C::StaticMeshComponent065' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent064) == 0x000478, "Member 'AMasherScene_C::StaticMeshComponent064' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent063) == 0x000480, "Member 'AMasherScene_C::StaticMeshComponent063' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent062) == 0x000488, "Member 'AMasherScene_C::StaticMeshComponent062' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent061) == 0x000490, "Member 'AMasherScene_C::StaticMeshComponent061' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent060) == 0x000498, "Member 'AMasherScene_C::StaticMeshComponent060' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent059) == 0x0004A0, "Member 'AMasherScene_C::StaticMeshComponent059' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent058) == 0x0004A8, "Member 'AMasherScene_C::StaticMeshComponent058' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent057) == 0x0004B0, "Member 'AMasherScene_C::StaticMeshComponent057' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent056) == 0x0004B8, "Member 'AMasherScene_C::StaticMeshComponent056' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent055) == 0x0004C0, "Member 'AMasherScene_C::StaticMeshComponent055' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent054) == 0x0004C8, "Member 'AMasherScene_C::StaticMeshComponent054' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent053) == 0x0004D0, "Member 'AMasherScene_C::StaticMeshComponent053' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent052) == 0x0004D8, "Member 'AMasherScene_C::StaticMeshComponent052' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent051) == 0x0004E0, "Member 'AMasherScene_C::StaticMeshComponent051' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent050) == 0x0004E8, "Member 'AMasherScene_C::StaticMeshComponent050' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent049) == 0x0004F0, "Member 'AMasherScene_C::StaticMeshComponent049' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent048) == 0x0004F8, "Member 'AMasherScene_C::StaticMeshComponent048' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent047) == 0x000500, "Member 'AMasherScene_C::StaticMeshComponent047' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent046) == 0x000508, "Member 'AMasherScene_C::StaticMeshComponent046' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent045) == 0x000510, "Member 'AMasherScene_C::StaticMeshComponent045' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent044) == 0x000518, "Member 'AMasherScene_C::StaticMeshComponent044' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent043) == 0x000520, "Member 'AMasherScene_C::StaticMeshComponent043' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent042) == 0x000528, "Member 'AMasherScene_C::StaticMeshComponent042' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent041) == 0x000530, "Member 'AMasherScene_C::StaticMeshComponent041' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent033) == 0x000538, "Member 'AMasherScene_C::StaticMeshComponent033' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent032) == 0x000540, "Member 'AMasherScene_C::StaticMeshComponent032' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent031) == 0x000548, "Member 'AMasherScene_C::StaticMeshComponent031' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent030) == 0x000550, "Member 'AMasherScene_C::StaticMeshComponent030' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent029) == 0x000558, "Member 'AMasherScene_C::StaticMeshComponent029' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent028) == 0x000560, "Member 'AMasherScene_C::StaticMeshComponent028' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent027) == 0x000568, "Member 'AMasherScene_C::StaticMeshComponent027' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent026) == 0x000570, "Member 'AMasherScene_C::StaticMeshComponent026' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent023) == 0x000578, "Member 'AMasherScene_C::StaticMeshComponent023' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent022) == 0x000580, "Member 'AMasherScene_C::StaticMeshComponent022' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent020) == 0x000588, "Member 'AMasherScene_C::StaticMeshComponent020' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent019) == 0x000590, "Member 'AMasherScene_C::StaticMeshComponent019' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent018) == 0x000598, "Member 'AMasherScene_C::StaticMeshComponent018' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent017) == 0x0005A0, "Member 'AMasherScene_C::StaticMeshComponent017' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent016) == 0x0005A8, "Member 'AMasherScene_C::StaticMeshComponent016' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent015) == 0x0005B0, "Member 'AMasherScene_C::StaticMeshComponent015' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent014) == 0x0005B8, "Member 'AMasherScene_C::StaticMeshComponent014' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent013) == 0x0005C0, "Member 'AMasherScene_C::StaticMeshComponent013' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent012) == 0x0005C8, "Member 'AMasherScene_C::StaticMeshComponent012' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent011) == 0x0005D0, "Member 'AMasherScene_C::StaticMeshComponent011' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent010) == 0x0005D8, "Member 'AMasherScene_C::StaticMeshComponent010' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent09) == 0x0005E0, "Member 'AMasherScene_C::StaticMeshComponent09' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent08) == 0x0005E8, "Member 'AMasherScene_C::StaticMeshComponent08' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent07) == 0x0005F0, "Member 'AMasherScene_C::StaticMeshComponent07' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent06) == 0x0005F8, "Member 'AMasherScene_C::StaticMeshComponent06' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent05) == 0x000600, "Member 'AMasherScene_C::StaticMeshComponent05' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent04) == 0x000608, "Member 'AMasherScene_C::StaticMeshComponent04' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent03) == 0x000610, "Member 'AMasherScene_C::StaticMeshComponent03' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent02) == 0x000618, "Member 'AMasherScene_C::StaticMeshComponent02' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, StaticMeshComponent066) == 0x000620, "Member 'AMasherScene_C::StaticMeshComponent066' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, Mehses) == 0x000628, "Member 'AMasherScene_C::Mehses' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, PointLight3) == 0x000630, "Member 'AMasherScene_C::PointLight3' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, PointLight2) == 0x000638, "Member 'AMasherScene_C::PointLight2' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SpotLight1) == 0x000640, "Member 'AMasherScene_C::SpotLight1' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, PointLight) == 0x000648, "Member 'AMasherScene_C::PointLight' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SpotLight) == 0x000650, "Member 'AMasherScene_C::SpotLight' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SK_MashHammer) == 0x000658, "Member 'AMasherScene_C::SK_MashHammer' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SH_Anvil) == 0x000660, "Member 'AMasherScene_C::SH_Anvil' has a wrong offset!");
+static_assert(offsetof(AMasherScene_C, SharedRoot) == 0x000668, "Member 'AMasherScene_C::SharedRoot' has a wrong offset!");
 
 }
 

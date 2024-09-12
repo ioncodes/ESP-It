@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -357,6 +357,16 @@ enum class EInviteStatus_ : uint8
 	EInviteStatus_MAX                        = 6,
 };
 
+// Enum OnlineSubsystemBlueprints.EShowPrivilegeResolveUI_
+// NumValues: 0x0004
+enum class EShowPrivilegeResolveUI_ : uint8
+{
+	Default                                  = 0,
+	Show                                     = 1,
+	NotShow                                  = 2,
+	EShowPrivilegeResolveUI_MAX              = 3,
+};
+
 // Enum OnlineSubsystemBlueprints.EOnlineLobbySearchQueryFilterComparator_
 // NumValues: 0x0007
 enum class EOnlineLobbySearchQueryFilterComparator_ : uint8
@@ -533,19 +543,6 @@ enum class EVoiceChatAttenuationModel_ : uint8
 	EVoiceChatAttenuationModel_MAX           = 4,
 };
 
-// ScriptStruct OnlineSubsystemBlueprints.ReportPlayedWithUserInfo
-// 0x0040 (0x0040 - 0x0000)
-struct FReportPlayedWithUserInfo final
-{
-public:
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PresenceStr;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FReportPlayedWithUserInfo) == 0x000008, "Wrong alignment on FReportPlayedWithUserInfo");
-static_assert(sizeof(FReportPlayedWithUserInfo) == 0x000040, "Wrong size on FReportPlayedWithUserInfo");
-static_assert(offsetof(FReportPlayedWithUserInfo, UserId) == 0x000000, "Member 'FReportPlayedWithUserInfo::UserId' has a wrong offset!");
-static_assert(offsetof(FReportPlayedWithUserInfo, PresenceStr) == 0x000030, "Member 'FReportPlayedWithUserInfo::PresenceStr' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemBlueprints.VariantDataBP
 // 0x0028 (0x0028 - 0x0000)
 struct FVariantDataBP final
@@ -553,10 +550,10 @@ struct FVariantDataBP final
 public:
 	EOnlineKeyValuePairDataType_                  Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AsBool;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C9C[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AsInt;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AsFloat;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C9D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         AsInt64;                                           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AsString;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -576,7 +573,7 @@ struct FOnlineSessionSettingBP final
 public:
 	struct FVariantDataBP                         Data;                                              // 0x0000(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	EOnlineDataAdvertisementType_                 AdvertisementType;                                 // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C9E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ID;                                                // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOnlineSessionSettingBP) == 0x000008, "Wrong alignment on FOnlineSessionSettingBP");
@@ -603,7 +600,7 @@ static_assert(offsetof(FOnlineSessionMemberSettingsBP, MemberSettings) == 0x0000
 struct FOnlineSessionSettingsBP final
 {
 public:
-	uint8                                         Pad_1C9F[0xD8];                                    // 0x0000(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xD8];                                       // 0x0000(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumPublicConnections;                              // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumPrivateConnections;                             // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldAdvertise;                                  // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -665,19 +662,36 @@ static_assert(offsetof(FOnlineSessionBP, NumOpenPrivateConnections) == 0x000198,
 static_assert(offsetof(FOnlineSessionBP, NumOpenPublicConnections) == 0x00019C, "Member 'FOnlineSessionBP::NumOpenPublicConnections' has a wrong offset!");
 static_assert(offsetof(FOnlineSessionBP, SessionId) == 0x0001A0, "Member 'FOnlineSessionBP::SessionId' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineSessionSearchResultBP
-// 0x01B8 (0x01B8 - 0x0000)
-struct FOnlineSessionSearchResultBP final
+// ScriptStruct OnlineSubsystemBlueprints.VoiceChatChannel3dPropertiesBP
+// 0x0010 (0x0010 - 0x0000)
+struct FVoiceChatChannel3dPropertiesBP final
 {
 public:
-	struct FOnlineSessionBP                       Session;                                           // 0x0000(0x01B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	int32                                         PingInMs;                                          // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA0[0x4];                                     // 0x01B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVoiceChatAttenuationModel_                   AttenuationModel;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinDistance;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistance;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rolloff;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOnlineSessionSearchResultBP) == 0x000008, "Wrong alignment on FOnlineSessionSearchResultBP");
-static_assert(sizeof(FOnlineSessionSearchResultBP) == 0x0001B8, "Wrong size on FOnlineSessionSearchResultBP");
-static_assert(offsetof(FOnlineSessionSearchResultBP, Session) == 0x000000, "Member 'FOnlineSessionSearchResultBP::Session' has a wrong offset!");
-static_assert(offsetof(FOnlineSessionSearchResultBP, PingInMs) == 0x0001B0, "Member 'FOnlineSessionSearchResultBP::PingInMs' has a wrong offset!");
+static_assert(alignof(FVoiceChatChannel3dPropertiesBP) == 0x000004, "Wrong alignment on FVoiceChatChannel3dPropertiesBP");
+static_assert(sizeof(FVoiceChatChannel3dPropertiesBP) == 0x000010, "Wrong size on FVoiceChatChannel3dPropertiesBP");
+static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, bSet) == 0x000000, "Member 'FVoiceChatChannel3dPropertiesBP::bSet' has a wrong offset!");
+static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, AttenuationModel) == 0x000001, "Member 'FVoiceChatChannel3dPropertiesBP::AttenuationModel' has a wrong offset!");
+static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, MinDistance) == 0x000004, "Member 'FVoiceChatChannel3dPropertiesBP::MinDistance' has a wrong offset!");
+static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, MaxDistance) == 0x000008, "Member 'FVoiceChatChannel3dPropertiesBP::MaxDistance' has a wrong offset!");
+static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, Rolloff) == 0x00000C, "Member 'FVoiceChatChannel3dPropertiesBP::Rolloff' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemBlueprints.OnlineFriendSettingsSourceDataConfig
+// 0x0001 (0x0001 - 0x0000)
+struct FOnlineFriendSettingsSourceDataConfig final
+{
+public:
+	bool                                          NeverShowAgain;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOnlineFriendSettingsSourceDataConfig) == 0x000001, "Wrong alignment on FOnlineFriendSettingsSourceDataConfig");
+static_assert(sizeof(FOnlineFriendSettingsSourceDataConfig) == 0x000001, "Wrong size on FOnlineFriendSettingsSourceDataConfig");
+static_assert(offsetof(FOnlineFriendSettingsSourceDataConfig, NeverShowAgain) == 0x000000, "Member 'FOnlineFriendSettingsSourceDataConfig::NeverShowAgain' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.ChatMessageBP
 // 0x0058 (0x0058 - 0x0000)
@@ -696,26 +710,21 @@ static_assert(offsetof(FChatMessageBP, Nickname) == 0x000030, "Member 'FChatMess
 static_assert(offsetof(FChatMessageBP, Body) == 0x000040, "Member 'FChatMessageBP::Body' has a wrong offset!");
 static_assert(offsetof(FChatMessageBP, Timestamp) == 0x000050, "Member 'FChatMessageBP::Timestamp' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.NamedOnlineSessionBP
-// 0x0058 (0x0208 - 0x01B0)
-struct FNamedOnlineSessionBP final : public FOnlineSessionBP
+// ScriptStruct OnlineSubsystemBlueprints.ShowStoreParameters
+// 0x0028 (0x0028 - 0x0000)
+struct FShowStoreParameters final
 {
 public:
-	class FName                                   SessionName;                                       // 0x01B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHosting;                                          // 0x01B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA1[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FUniqueNetIdRepl                       LocalOwnerId;                                      // 0x01C0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FUniqueNetIdRepl>               RegisteredPlayers;                                 // 0x01F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	EOnlineSessionState_                          SessionState;                                      // 0x0200(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA2[0x7];                                     // 0x0201(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 Category;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ProductId;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AddToCart;                                         // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNamedOnlineSessionBP) == 0x000008, "Wrong alignment on FNamedOnlineSessionBP");
-static_assert(sizeof(FNamedOnlineSessionBP) == 0x000208, "Wrong size on FNamedOnlineSessionBP");
-static_assert(offsetof(FNamedOnlineSessionBP, SessionName) == 0x0001B0, "Member 'FNamedOnlineSessionBP::SessionName' has a wrong offset!");
-static_assert(offsetof(FNamedOnlineSessionBP, bHosting) == 0x0001B8, "Member 'FNamedOnlineSessionBP::bHosting' has a wrong offset!");
-static_assert(offsetof(FNamedOnlineSessionBP, LocalOwnerId) == 0x0001C0, "Member 'FNamedOnlineSessionBP::LocalOwnerId' has a wrong offset!");
-static_assert(offsetof(FNamedOnlineSessionBP, RegisteredPlayers) == 0x0001F0, "Member 'FNamedOnlineSessionBP::RegisteredPlayers' has a wrong offset!");
-static_assert(offsetof(FNamedOnlineSessionBP, SessionState) == 0x000200, "Member 'FNamedOnlineSessionBP::SessionState' has a wrong offset!");
+static_assert(alignof(FShowStoreParameters) == 0x000008, "Wrong alignment on FShowStoreParameters");
+static_assert(sizeof(FShowStoreParameters) == 0x000028, "Wrong size on FShowStoreParameters");
+static_assert(offsetof(FShowStoreParameters, Category) == 0x000000, "Member 'FShowStoreParameters::Category' has a wrong offset!");
+static_assert(offsetof(FShowStoreParameters, ProductId) == 0x000010, "Member 'FShowStoreParameters::ProductId' has a wrong offset!");
+static_assert(offsetof(FShowStoreParameters, AddToCart) == 0x000020, "Member 'FShowStoreParameters::AddToCart' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.FriendSettingsData
 // 0x0050 (0x0050 - 0x0000)
@@ -728,18 +737,19 @@ static_assert(alignof(FFriendSettingsData) == 0x000008, "Wrong alignment on FFri
 static_assert(sizeof(FFriendSettingsData) == 0x000050, "Wrong size on FFriendSettingsData");
 static_assert(offsetof(FFriendSettingsData, Data) == 0x000000, "Member 'FFriendSettingsData::Data' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStoreCategoryBP
-// 0x0028 (0x0028 - 0x0000)
-struct FOnlineStoreCategoryBP final
+// ScriptStruct OnlineSubsystemBlueprints.OnlineSessionSearchResultBP
+// 0x01B8 (0x01B8 - 0x0000)
+struct FOnlineSessionSearchResultBP final
 {
 public:
-	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FOnlineSessionBP                       Session;                                           // 0x0000(0x01B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	int32                                         PingInMs;                                          // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOnlineStoreCategoryBP) == 0x000008, "Wrong alignment on FOnlineStoreCategoryBP");
-static_assert(sizeof(FOnlineStoreCategoryBP) == 0x000028, "Wrong size on FOnlineStoreCategoryBP");
-static_assert(offsetof(FOnlineStoreCategoryBP, ID) == 0x000000, "Member 'FOnlineStoreCategoryBP::ID' has a wrong offset!");
-static_assert(offsetof(FOnlineStoreCategoryBP, Description) == 0x000010, "Member 'FOnlineStoreCategoryBP::Description' has a wrong offset!");
+static_assert(alignof(FOnlineSessionSearchResultBP) == 0x000008, "Wrong alignment on FOnlineSessionSearchResultBP");
+static_assert(sizeof(FOnlineSessionSearchResultBP) == 0x0001B8, "Wrong size on FOnlineSessionSearchResultBP");
+static_assert(offsetof(FOnlineSessionSearchResultBP, Session) == 0x000000, "Member 'FOnlineSessionSearchResultBP::Session' has a wrong offset!");
+static_assert(offsetof(FOnlineSessionSearchResultBP, PingInMs) == 0x0001B0, "Member 'FOnlineSessionSearchResultBP::PingInMs' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.OptionalOnlineSessionSearchResultBP
 // 0x01C0 (0x01C0 - 0x0000)
@@ -747,7 +757,7 @@ struct FOptionalOnlineSessionSearchResultBP final
 {
 public:
 	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnlineSessionSearchResultBP           SearchResult;                                      // 0x0008(0x01B8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOptionalOnlineSessionSearchResultBP) == 0x000008, "Wrong alignment on FOptionalOnlineSessionSearchResultBP");
@@ -755,59 +765,19 @@ static_assert(sizeof(FOptionalOnlineSessionSearchResultBP) == 0x0001C0, "Wrong s
 static_assert(offsetof(FOptionalOnlineSessionSearchResultBP, bSet) == 0x000000, "Member 'FOptionalOnlineSessionSearchResultBP::bSet' has a wrong offset!");
 static_assert(offsetof(FOptionalOnlineSessionSearchResultBP, SearchResult) == 0x000008, "Member 'FOptionalOnlineSessionSearchResultBP::SearchResult' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.VoiceChatChannel3dPropertiesBP
-// 0x0010 (0x0010 - 0x0000)
-struct FVoiceChatChannel3dPropertiesBP final
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStatUpdateBP
+// 0x0030 (0x0030 - 0x0000)
+struct FOnlineStatUpdateBP final
 {
 public:
-	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVoiceChatAttenuationModel_                   AttenuationModel;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA4[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinDistance;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDistance;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Rolloff;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOnlineStatModificationType_                  Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVariantDataBP                         Value;                                             // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FVoiceChatChannel3dPropertiesBP) == 0x000004, "Wrong alignment on FVoiceChatChannel3dPropertiesBP");
-static_assert(sizeof(FVoiceChatChannel3dPropertiesBP) == 0x000010, "Wrong size on FVoiceChatChannel3dPropertiesBP");
-static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, bSet) == 0x000000, "Member 'FVoiceChatChannel3dPropertiesBP::bSet' has a wrong offset!");
-static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, AttenuationModel) == 0x000001, "Member 'FVoiceChatChannel3dPropertiesBP::AttenuationModel' has a wrong offset!");
-static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, MinDistance) == 0x000004, "Member 'FVoiceChatChannel3dPropertiesBP::MinDistance' has a wrong offset!");
-static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, MaxDistance) == 0x000008, "Member 'FVoiceChatChannel3dPropertiesBP::MaxDistance' has a wrong offset!");
-static_assert(offsetof(FVoiceChatChannel3dPropertiesBP, Rolloff) == 0x00000C, "Member 'FVoiceChatChannel3dPropertiesBP::Rolloff' has a wrong offset!");
-
-// ScriptStruct OnlineSubsystemBlueprints.OnlineMessagePayloadData
-// 0x0001 (0x0001 - 0x0000)
-struct FOnlineMessagePayloadData final
-{
-public:
-	uint8                                         Pad_1CA5[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOnlineMessagePayloadData) == 0x000001, "Wrong alignment on FOnlineMessagePayloadData");
-static_assert(sizeof(FOnlineMessagePayloadData) == 0x000001, "Wrong size on FOnlineMessagePayloadData");
-
-// ScriptStruct OnlineSubsystemBlueprints.ShowSendMessageParameters
-// 0x00F0 (0x00F0 - 0x0000)
-struct FShowSendMessageParameters final
-{
-public:
-	class FText                                   DisplayTitle;                                      // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            DisplayTitle_Loc;                                  // 0x0018(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   DisplayMessage;                                    // 0x0068(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   DisplayDetails;                                    // 0x0080(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            DisplayDetails_Loc;                                // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FOnlineMessagePayloadData              DataPayload;                                       // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA6[0x3];                                     // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxRecipients;                                     // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FShowSendMessageParameters) == 0x000008, "Wrong alignment on FShowSendMessageParameters");
-static_assert(sizeof(FShowSendMessageParameters) == 0x0000F0, "Wrong size on FShowSendMessageParameters");
-static_assert(offsetof(FShowSendMessageParameters, DisplayTitle) == 0x000000, "Member 'FShowSendMessageParameters::DisplayTitle' has a wrong offset!");
-static_assert(offsetof(FShowSendMessageParameters, DisplayTitle_Loc) == 0x000018, "Member 'FShowSendMessageParameters::DisplayTitle_Loc' has a wrong offset!");
-static_assert(offsetof(FShowSendMessageParameters, DisplayMessage) == 0x000068, "Member 'FShowSendMessageParameters::DisplayMessage' has a wrong offset!");
-static_assert(offsetof(FShowSendMessageParameters, DisplayDetails) == 0x000080, "Member 'FShowSendMessageParameters::DisplayDetails' has a wrong offset!");
-static_assert(offsetof(FShowSendMessageParameters, DisplayDetails_Loc) == 0x000098, "Member 'FShowSendMessageParameters::DisplayDetails_Loc' has a wrong offset!");
-static_assert(offsetof(FShowSendMessageParameters, DataPayload) == 0x0000E8, "Member 'FShowSendMessageParameters::DataPayload' has a wrong offset!");
-static_assert(offsetof(FShowSendMessageParameters, MaxRecipients) == 0x0000EC, "Member 'FShowSendMessageParameters::MaxRecipients' has a wrong offset!");
+static_assert(alignof(FOnlineStatUpdateBP) == 0x000008, "Wrong alignment on FOnlineStatUpdateBP");
+static_assert(sizeof(FOnlineStatUpdateBP) == 0x000030, "Wrong size on FOnlineStatUpdateBP");
+static_assert(offsetof(FOnlineStatUpdateBP, Type) == 0x000000, "Member 'FOnlineStatUpdateBP::Type' has a wrong offset!");
+static_assert(offsetof(FOnlineStatUpdateBP, Value) == 0x000008, "Member 'FOnlineStatUpdateBP::Value' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserStatsBP
 // 0x0080 (0x0080 - 0x0000)
@@ -822,62 +792,53 @@ static_assert(sizeof(FOnlineStatsUserStatsBP) == 0x000080, "Wrong size on FOnlin
 static_assert(offsetof(FOnlineStatsUserStatsBP, PlayerId) == 0x000000, "Member 'FOnlineStatsUserStatsBP::PlayerId' has a wrong offset!");
 static_assert(offsetof(FOnlineStatsUserStatsBP, Stats) == 0x000030, "Member 'FOnlineStatsUserStatsBP::Stats' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStatUpdateBP
+// ScriptStruct OnlineSubsystemBlueprints.SessionSearchParamBP
 // 0x0030 (0x0030 - 0x0000)
-struct FOnlineStatUpdateBP final
+struct FSessionSearchParamBP final
 {
 public:
-	EOnlineStatModificationType_                  Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVariantDataBP                         Value;                                             // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FVariantDataBP                         Data;                                              // 0x0000(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EOnlineComparisonOp_                          Op;                                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ID;                                                // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOnlineStatUpdateBP) == 0x000008, "Wrong alignment on FOnlineStatUpdateBP");
-static_assert(sizeof(FOnlineStatUpdateBP) == 0x000030, "Wrong size on FOnlineStatUpdateBP");
-static_assert(offsetof(FOnlineStatUpdateBP, Type) == 0x000000, "Member 'FOnlineStatUpdateBP::Type' has a wrong offset!");
-static_assert(offsetof(FOnlineStatUpdateBP, Value) == 0x000008, "Member 'FOnlineStatUpdateBP::Value' has a wrong offset!");
+static_assert(alignof(FSessionSearchParamBP) == 0x000008, "Wrong alignment on FSessionSearchParamBP");
+static_assert(sizeof(FSessionSearchParamBP) == 0x000030, "Wrong size on FSessionSearchParamBP");
+static_assert(offsetof(FSessionSearchParamBP, Data) == 0x000000, "Member 'FSessionSearchParamBP::Data' has a wrong offset!");
+static_assert(offsetof(FSessionSearchParamBP, Op) == 0x000028, "Member 'FSessionSearchParamBP::Op' has a wrong offset!");
+static_assert(offsetof(FSessionSearchParamBP, ID) == 0x00002C, "Member 'FSessionSearchParamBP::ID' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserUpdatedStatsBP
-// 0x0080 (0x0080 - 0x0000)
-struct FOnlineStatsUserUpdatedStatsBP final
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsRowBP
+// 0x0098 (0x0098 - 0x0000)
+struct FOnlineStatsRowBP final
 {
 public:
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FOnlineStatUpdateBP> Stats;                                             // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 PlayerNickname;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0010(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Rank;                                              // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FVariantDataBP>      Columns;                                           // 0x0048(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOnlineStatsUserUpdatedStatsBP) == 0x000008, "Wrong alignment on FOnlineStatsUserUpdatedStatsBP");
-static_assert(sizeof(FOnlineStatsUserUpdatedStatsBP) == 0x000080, "Wrong size on FOnlineStatsUserUpdatedStatsBP");
-static_assert(offsetof(FOnlineStatsUserUpdatedStatsBP, PlayerId) == 0x000000, "Member 'FOnlineStatsUserUpdatedStatsBP::PlayerId' has a wrong offset!");
-static_assert(offsetof(FOnlineStatsUserUpdatedStatsBP, Stats) == 0x000030, "Member 'FOnlineStatsUserUpdatedStatsBP::Stats' has a wrong offset!");
-
-// ScriptStruct OnlineSubsystemBlueprints.PurchaseOfferEntryBP
-// 0x0028 (0x0028 - 0x0000)
-struct FPurchaseOfferEntryBP final
-{
-public:
-	class FString                                 OfferNamespace;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OfferId;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Quantity;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA8[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPurchaseOfferEntryBP) == 0x000008, "Wrong alignment on FPurchaseOfferEntryBP");
-static_assert(sizeof(FPurchaseOfferEntryBP) == 0x000028, "Wrong size on FPurchaseOfferEntryBP");
-static_assert(offsetof(FPurchaseOfferEntryBP, OfferNamespace) == 0x000000, "Member 'FPurchaseOfferEntryBP::OfferNamespace' has a wrong offset!");
-static_assert(offsetof(FPurchaseOfferEntryBP, OfferId) == 0x000010, "Member 'FPurchaseOfferEntryBP::OfferId' has a wrong offset!");
-static_assert(offsetof(FPurchaseOfferEntryBP, Quantity) == 0x000020, "Member 'FPurchaseOfferEntryBP::Quantity' has a wrong offset!");
+static_assert(alignof(FOnlineStatsRowBP) == 0x000008, "Wrong alignment on FOnlineStatsRowBP");
+static_assert(sizeof(FOnlineStatsRowBP) == 0x000098, "Wrong size on FOnlineStatsRowBP");
+static_assert(offsetof(FOnlineStatsRowBP, PlayerNickname) == 0x000000, "Member 'FOnlineStatsRowBP::PlayerNickname' has a wrong offset!");
+static_assert(offsetof(FOnlineStatsRowBP, PlayerId) == 0x000010, "Member 'FOnlineStatsRowBP::PlayerId' has a wrong offset!");
+static_assert(offsetof(FOnlineStatsRowBP, Rank) == 0x000040, "Member 'FOnlineStatsRowBP::Rank' has a wrong offset!");
+static_assert(offsetof(FOnlineStatsRowBP, Columns) == 0x000048, "Member 'FOnlineStatsRowBP::Columns' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineErrorInfo
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FOnlineErrorInfo final
 {
 public:
 	bool                                          Successful;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CA9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorRaw;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ErrorCode;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ErrorMessage;                                      // 0x0028(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   ErrorMessage;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOnlineErrorInfo) == 0x000008, "Wrong alignment on FOnlineErrorInfo");
-static_assert(sizeof(FOnlineErrorInfo) == 0x000040, "Wrong size on FOnlineErrorInfo");
+static_assert(sizeof(FOnlineErrorInfo) == 0x000038, "Wrong size on FOnlineErrorInfo");
 static_assert(offsetof(FOnlineErrorInfo, Successful) == 0x000000, "Member 'FOnlineErrorInfo::Successful' has a wrong offset!");
 static_assert(offsetof(FOnlineErrorInfo, ErrorRaw) == 0x000008, "Member 'FOnlineErrorInfo::ErrorRaw' has a wrong offset!");
 static_assert(offsetof(FOnlineErrorInfo, ErrorCode) == 0x000018, "Member 'FOnlineErrorInfo::ErrorCode' has a wrong offset!");
@@ -894,7 +855,7 @@ public:
 	bool                                          ChatEnabled;                                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ShouldRemoveOnDisconnection;                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsAcceptingMembers;                                // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CAA[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NotAcceptingMembersReason;                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxMembers;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Nickname;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -937,7 +898,7 @@ struct FBlockedQueryResultInfo final
 public:
 	bool                                          Blocked;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          BlockedNonFriends;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CAB[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 UserId;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FBlockedQueryResultInfo) == 0x000008, "Wrong alignment on FBlockedQueryResultInfo");
@@ -946,21 +907,18 @@ static_assert(offsetof(FBlockedQueryResultInfo, Blocked) == 0x000000, "Member 'F
 static_assert(offsetof(FBlockedQueryResultInfo, BlockedNonFriends) == 0x000001, "Member 'FBlockedQueryResultInfo::BlockedNonFriends' has a wrong offset!");
 static_assert(offsetof(FBlockedQueryResultInfo, UserId) == 0x000008, "Member 'FBlockedQueryResultInfo::UserId' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineActivityTasksToResetBP
-// 0x0028 (0x0028 - 0x0000)
-struct FOnlineActivityTasksToResetBP final
+// ScriptStruct OnlineSubsystemBlueprints.ReportPlayedWithUserInfo
+// 0x0040 (0x0040 - 0x0000)
+struct FReportPlayedWithUserInfo final
 {
 public:
-	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CAC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         InProgressTasks;                                   // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         CompletedTasks;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PresenceStr;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOnlineActivityTasksToResetBP) == 0x000008, "Wrong alignment on FOnlineActivityTasksToResetBP");
-static_assert(sizeof(FOnlineActivityTasksToResetBP) == 0x000028, "Wrong size on FOnlineActivityTasksToResetBP");
-static_assert(offsetof(FOnlineActivityTasksToResetBP, bSet) == 0x000000, "Member 'FOnlineActivityTasksToResetBP::bSet' has a wrong offset!");
-static_assert(offsetof(FOnlineActivityTasksToResetBP, InProgressTasks) == 0x000008, "Member 'FOnlineActivityTasksToResetBP::InProgressTasks' has a wrong offset!");
-static_assert(offsetof(FOnlineActivityTasksToResetBP, CompletedTasks) == 0x000018, "Member 'FOnlineActivityTasksToResetBP::CompletedTasks' has a wrong offset!");
+static_assert(alignof(FReportPlayedWithUserInfo) == 0x000008, "Wrong alignment on FReportPlayedWithUserInfo");
+static_assert(sizeof(FReportPlayedWithUserInfo) == 0x000040, "Wrong size on FReportPlayedWithUserInfo");
+static_assert(offsetof(FReportPlayedWithUserInfo, UserId) == 0x000000, "Member 'FReportPlayedWithUserInfo::UserId' has a wrong offset!");
+static_assert(offsetof(FReportPlayedWithUserInfo, PresenceStr) == 0x000030, "Member 'FReportPlayedWithUserInfo::PresenceStr' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.ExternalIdQueryOptionsBP
 // 0x0018 (0x0018 - 0x0000)
@@ -968,7 +926,7 @@ struct FExternalIdQueryOptionsBP final
 {
 public:
 	bool                                          bLookupByDisplayName;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CAD[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AuthType;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FExternalIdQueryOptionsBP) == 0x000008, "Wrong alignment on FExternalIdQueryOptionsBP");
@@ -976,29 +934,39 @@ static_assert(sizeof(FExternalIdQueryOptionsBP) == 0x000018, "Wrong size on FExt
 static_assert(offsetof(FExternalIdQueryOptionsBP, bLookupByDisplayName) == 0x000000, "Member 'FExternalIdQueryOptionsBP::bLookupByDisplayName' has a wrong offset!");
 static_assert(offsetof(FExternalIdQueryOptionsBP, AuthType) == 0x000008, "Member 'FExternalIdQueryOptionsBP::AuthType' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.CloudFileHeaderBP
-// 0x0058 (0x0058 - 0x0000)
-struct FCloudFileHeaderBP final
+// ScriptStruct OnlineSubsystemBlueprints.OnlineMessagePayloadData
+// 0x0001 (0x0001 - 0x0000)
+struct FOnlineMessagePayloadData final
 {
 public:
-	class FString                                 Hash;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   HashType;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DLName;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FileSize;                                          // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CAE[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 URL;                                               // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         ChunkId;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FCloudFileHeaderBP) == 0x000008, "Wrong alignment on FCloudFileHeaderBP");
-static_assert(sizeof(FCloudFileHeaderBP) == 0x000058, "Wrong size on FCloudFileHeaderBP");
-static_assert(offsetof(FCloudFileHeaderBP, Hash) == 0x000000, "Member 'FCloudFileHeaderBP::Hash' has a wrong offset!");
-static_assert(offsetof(FCloudFileHeaderBP, HashType) == 0x000010, "Member 'FCloudFileHeaderBP::HashType' has a wrong offset!");
-static_assert(offsetof(FCloudFileHeaderBP, DLName) == 0x000018, "Member 'FCloudFileHeaderBP::DLName' has a wrong offset!");
-static_assert(offsetof(FCloudFileHeaderBP, Filename) == 0x000028, "Member 'FCloudFileHeaderBP::Filename' has a wrong offset!");
-static_assert(offsetof(FCloudFileHeaderBP, FileSize) == 0x000038, "Member 'FCloudFileHeaderBP::FileSize' has a wrong offset!");
-static_assert(offsetof(FCloudFileHeaderBP, URL) == 0x000040, "Member 'FCloudFileHeaderBP::URL' has a wrong offset!");
-static_assert(offsetof(FCloudFileHeaderBP, ChunkId) == 0x000050, "Member 'FCloudFileHeaderBP::ChunkId' has a wrong offset!");
+static_assert(alignof(FOnlineMessagePayloadData) == 0x000001, "Wrong alignment on FOnlineMessagePayloadData");
+static_assert(sizeof(FOnlineMessagePayloadData) == 0x000001, "Wrong size on FOnlineMessagePayloadData");
+
+// ScriptStruct OnlineSubsystemBlueprints.ShowSendMessageParameters
+// 0x00D8 (0x00D8 - 0x0000)
+struct FShowSendMessageParameters final
+{
+public:
+	class FText                                   DisplayTitle;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            DisplayTitle_Loc;                                  // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   DisplayMessage;                                    // 0x0060(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   DisplayDetails;                                    // 0x0070(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            DisplayDetails_Loc;                                // 0x0080(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FOnlineMessagePayloadData              DataPayload;                                       // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxRecipients;                                     // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FShowSendMessageParameters) == 0x000008, "Wrong alignment on FShowSendMessageParameters");
+static_assert(sizeof(FShowSendMessageParameters) == 0x0000D8, "Wrong size on FShowSendMessageParameters");
+static_assert(offsetof(FShowSendMessageParameters, DisplayTitle) == 0x000000, "Member 'FShowSendMessageParameters::DisplayTitle' has a wrong offset!");
+static_assert(offsetof(FShowSendMessageParameters, DisplayTitle_Loc) == 0x000010, "Member 'FShowSendMessageParameters::DisplayTitle_Loc' has a wrong offset!");
+static_assert(offsetof(FShowSendMessageParameters, DisplayMessage) == 0x000060, "Member 'FShowSendMessageParameters::DisplayMessage' has a wrong offset!");
+static_assert(offsetof(FShowSendMessageParameters, DisplayDetails) == 0x000070, "Member 'FShowSendMessageParameters::DisplayDetails' has a wrong offset!");
+static_assert(offsetof(FShowSendMessageParameters, DisplayDetails_Loc) == 0x000080, "Member 'FShowSendMessageParameters::DisplayDetails_Loc' has a wrong offset!");
+static_assert(offsetof(FShowSendMessageParameters, DataPayload) == 0x0000D0, "Member 'FShowSendMessageParameters::DataPayload' has a wrong offset!");
+static_assert(offsetof(FShowSendMessageParameters, MaxRecipients) == 0x0000D4, "Member 'FShowSendMessageParameters::MaxRecipients' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.VoiceAdminChannelCredentialsBP
 // 0x0050 (0x0050 - 0x0000)
@@ -1015,38 +983,6 @@ static_assert(offsetof(FVoiceAdminChannelCredentialsBP, TargetUserId) == 0x00000
 static_assert(offsetof(FVoiceAdminChannelCredentialsBP, PlayerName) == 0x000030, "Member 'FVoiceAdminChannelCredentialsBP::PlayerName' has a wrong offset!");
 static_assert(offsetof(FVoiceAdminChannelCredentialsBP, ChannelCredentials) == 0x000040, "Member 'FVoiceAdminChannelCredentialsBP::ChannelCredentials' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.ShowWebUrlParameters
-// 0x0038 (0x0038 - 0x0000)
-struct FShowWebUrlParameters final
-{
-public:
-	bool                                          Embedded;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowCloseButton;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowBackground;                                    // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          HideCursor;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ResetCookies;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CAF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OffsetX;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OffsetY;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SizeX;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SizeY;                                             // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AllowedDomains;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 CallbackPath;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FShowWebUrlParameters) == 0x000008, "Wrong alignment on FShowWebUrlParameters");
-static_assert(sizeof(FShowWebUrlParameters) == 0x000038, "Wrong size on FShowWebUrlParameters");
-static_assert(offsetof(FShowWebUrlParameters, Embedded) == 0x000000, "Member 'FShowWebUrlParameters::Embedded' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, ShowCloseButton) == 0x000001, "Member 'FShowWebUrlParameters::ShowCloseButton' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, ShowBackground) == 0x000002, "Member 'FShowWebUrlParameters::ShowBackground' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, HideCursor) == 0x000003, "Member 'FShowWebUrlParameters::HideCursor' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, ResetCookies) == 0x000004, "Member 'FShowWebUrlParameters::ResetCookies' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, OffsetX) == 0x000008, "Member 'FShowWebUrlParameters::OffsetX' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, OffsetY) == 0x00000C, "Member 'FShowWebUrlParameters::OffsetY' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, SizeX) == 0x000010, "Member 'FShowWebUrlParameters::SizeX' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, SizeY) == 0x000014, "Member 'FShowWebUrlParameters::SizeY' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, AllowedDomains) == 0x000018, "Member 'FShowWebUrlParameters::AllowedDomains' has a wrong offset!");
-static_assert(offsetof(FShowWebUrlParameters, CallbackPath) == 0x000028, "Member 'FShowWebUrlParameters::CallbackPath' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemBlueprints.VoiceChatResultBP
 // 0x0030 (0x0030 - 0x0000)
 struct FVoiceChatResultBP final
@@ -1054,10 +990,10 @@ struct FVoiceChatResultBP final
 public:
 	bool                                          Successful;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVoiceChatResult_                             ResultCode;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB0[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorCode;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorNum;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB1[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorDesc;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FVoiceChatResultBP) == 0x000008, "Wrong alignment on FVoiceChatResultBP");
@@ -1068,22 +1004,6 @@ static_assert(offsetof(FVoiceChatResultBP, ErrorCode) == 0x000008, "Member 'FVoi
 static_assert(offsetof(FVoiceChatResultBP, ErrorNum) == 0x000018, "Member 'FVoiceChatResultBP::ErrorNum' has a wrong offset!");
 static_assert(offsetof(FVoiceChatResultBP, ErrorDesc) == 0x000020, "Member 'FVoiceChatResultBP::ErrorDesc' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.SessionSearchParamBP
-// 0x0030 (0x0030 - 0x0000)
-struct FSessionSearchParamBP final
-{
-public:
-	struct FVariantDataBP                         Data;                                              // 0x0000(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EOnlineComparisonOp_                          Op;                                                // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB2[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ID;                                                // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSessionSearchParamBP) == 0x000008, "Wrong alignment on FSessionSearchParamBP");
-static_assert(sizeof(FSessionSearchParamBP) == 0x000030, "Wrong size on FSessionSearchParamBP");
-static_assert(offsetof(FSessionSearchParamBP, Data) == 0x000000, "Member 'FSessionSearchParamBP::Data' has a wrong offset!");
-static_assert(offsetof(FSessionSearchParamBP, Op) == 0x000028, "Member 'FSessionSearchParamBP::Op' has a wrong offset!");
-static_assert(offsetof(FSessionSearchParamBP, ID) == 0x00002C, "Member 'FSessionSearchParamBP::ID' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemBlueprints.OnlineUserPresenceStatusData
 // 0x0068 (0x0068 - 0x0000)
 struct FOnlineUserPresenceStatusData final
@@ -1091,7 +1011,7 @@ struct FOnlineUserPresenceStatusData final
 public:
 	class FString                                 Status;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFOnlineUserPresenceStatusState               State;                                             // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB3[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, class FString>            Properties;                                        // 0x0018(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOnlineUserPresenceStatusData) == 0x000008, "Wrong alignment on FOnlineUserPresenceStatusData");
@@ -1111,7 +1031,7 @@ public:
 	bool                                          IsPlayingThisGame;                                 // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsJoinable;                                        // 0x0033(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          HasVoiceSupport;                                   // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB4[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              LastOnline;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOnlineUserPresenceStatusData          Status;                                            // 0x0040(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
@@ -1133,7 +1053,7 @@ struct FOnlineAchievementBP final
 public:
 	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Progress;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB5[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOnlineAchievementBP) == 0x000008, "Wrong alignment on FOnlineAchievementBP");
 static_assert(sizeof(FOnlineAchievementBP) == 0x000018, "Wrong size on FOnlineAchievementBP");
@@ -1141,24 +1061,24 @@ static_assert(offsetof(FOnlineAchievementBP, ID) == 0x000000, "Member 'FOnlineAc
 static_assert(offsetof(FOnlineAchievementBP, Progress) == 0x000010, "Member 'FOnlineAchievementBP::Progress' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineAchievementDescBP
-// 0x0058 (0x0058 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FOnlineAchievementDescBP final
 {
 public:
-	class FText                                   Title;                                             // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	class FText                                   LockedDesc;                                        // 0x0018(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	class FText                                   UnlockedDesc;                                      // 0x0030(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	bool                                          bIsHidden;                                         // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB6[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              UnlockTime;                                        // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Title;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	class FText                                   LockedDesc;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	class FText                                   UnlockedDesc;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	bool                                          bIsHidden;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              UnlockTime;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOnlineAchievementDescBP) == 0x000008, "Wrong alignment on FOnlineAchievementDescBP");
-static_assert(sizeof(FOnlineAchievementDescBP) == 0x000058, "Wrong size on FOnlineAchievementDescBP");
+static_assert(sizeof(FOnlineAchievementDescBP) == 0x000040, "Wrong size on FOnlineAchievementDescBP");
 static_assert(offsetof(FOnlineAchievementDescBP, Title) == 0x000000, "Member 'FOnlineAchievementDescBP::Title' has a wrong offset!");
-static_assert(offsetof(FOnlineAchievementDescBP, LockedDesc) == 0x000018, "Member 'FOnlineAchievementDescBP::LockedDesc' has a wrong offset!");
-static_assert(offsetof(FOnlineAchievementDescBP, UnlockedDesc) == 0x000030, "Member 'FOnlineAchievementDescBP::UnlockedDesc' has a wrong offset!");
-static_assert(offsetof(FOnlineAchievementDescBP, bIsHidden) == 0x000048, "Member 'FOnlineAchievementDescBP::bIsHidden' has a wrong offset!");
-static_assert(offsetof(FOnlineAchievementDescBP, UnlockTime) == 0x000050, "Member 'FOnlineAchievementDescBP::UnlockTime' has a wrong offset!");
+static_assert(offsetof(FOnlineAchievementDescBP, LockedDesc) == 0x000010, "Member 'FOnlineAchievementDescBP::LockedDesc' has a wrong offset!");
+static_assert(offsetof(FOnlineAchievementDescBP, UnlockedDesc) == 0x000020, "Member 'FOnlineAchievementDescBP::UnlockedDesc' has a wrong offset!");
+static_assert(offsetof(FOnlineAchievementDescBP, bIsHidden) == 0x000030, "Member 'FOnlineAchievementDescBP::bIsHidden' has a wrong offset!");
+static_assert(offsetof(FOnlineAchievementDescBP, UnlockTime) == 0x000038, "Member 'FOnlineAchievementDescBP::UnlockTime' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.ChatRoomConfigBP
 // 0x0020 (0x0020 - 0x0000)
@@ -1167,10 +1087,10 @@ struct FChatRoomConfigBP final
 public:
 	bool                                          bRejoinOnDisconnect;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPasswordRequired;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB7[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Password;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAnnounceMembers;                                  // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB8[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FChatRoomConfigBP) == 0x000008, "Wrong alignment on FChatRoomConfigBP");
 static_assert(sizeof(FChatRoomConfigBP) == 0x000020, "Wrong size on FChatRoomConfigBP");
@@ -1185,13 +1105,13 @@ struct FChatRoomInfoBP final
 {
 public:
 	bool                                          bIsValid;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RoomId;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       OwnerId;                                           // 0x0018(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Subject;                                           // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrivate;                                          // 0x0058(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bJoined;                                           // 0x0059(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBA[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FChatRoomConfigBP                      RoomConfig;                                        // 0x0060(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FChatRoomInfoBP) == 0x000008, "Wrong alignment on FChatRoomInfoBP");
@@ -1210,7 +1130,7 @@ struct FChatRoomMemberBP final
 {
 public:
 	bool                                          bIsValid;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Nickname;                                          // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1219,6 +1139,22 @@ static_assert(sizeof(FChatRoomMemberBP) == 0x000048, "Wrong size on FChatRoomMem
 static_assert(offsetof(FChatRoomMemberBP, bIsValid) == 0x000000, "Member 'FChatRoomMemberBP::bIsValid' has a wrong offset!");
 static_assert(offsetof(FChatRoomMemberBP, UserId) == 0x000008, "Member 'FChatRoomMemberBP::UserId' has a wrong offset!");
 static_assert(offsetof(FChatRoomMemberBP, Nickname) == 0x000038, "Member 'FChatRoomMemberBP::Nickname' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemBlueprints.PurchaseOfferEntryBP
+// 0x0028 (0x0028 - 0x0000)
+struct FPurchaseOfferEntryBP final
+{
+public:
+	class FString                                 OfferNamespace;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OfferId;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Quantity;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPurchaseOfferEntryBP) == 0x000008, "Wrong alignment on FPurchaseOfferEntryBP");
+static_assert(sizeof(FPurchaseOfferEntryBP) == 0x000028, "Wrong size on FPurchaseOfferEntryBP");
+static_assert(offsetof(FPurchaseOfferEntryBP, OfferNamespace) == 0x000000, "Member 'FPurchaseOfferEntryBP::OfferNamespace' has a wrong offset!");
+static_assert(offsetof(FPurchaseOfferEntryBP, OfferId) == 0x000010, "Member 'FPurchaseOfferEntryBP::OfferId' has a wrong offset!");
+static_assert(offsetof(FPurchaseOfferEntryBP, Quantity) == 0x000020, "Member 'FPurchaseOfferEntryBP::Quantity' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.PurchaseCheckoutRequestBP
 // 0x0020 (0x0020 - 0x0000)
@@ -1239,45 +1175,98 @@ struct FExternalUIFlowHandlerRegistration final
 {
 public:
 	class UObject*                                Interface;                                         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBC[0x10];                                    // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FExternalUIFlowHandlerRegistration) == 0x000008, "Wrong alignment on FExternalUIFlowHandlerRegistration");
 static_assert(sizeof(FExternalUIFlowHandlerRegistration) == 0x000018, "Wrong size on FExternalUIFlowHandlerRegistration");
 static_assert(offsetof(FExternalUIFlowHandlerRegistration, Interface) == 0x000000, "Member 'FExternalUIFlowHandlerRegistration::Interface' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.LoginFlowResultBP
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FLoginFlowResultBP final
 {
 public:
 	class FString                                 Token;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ErrorMessage;                                      // 0x0010(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FString                                 ErrorRaw;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumericErrorCode;                                  // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBD[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   ErrorMessage;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FString                                 ErrorRaw;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumericErrorCode;                                  // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FLoginFlowResultBP) == 0x000008, "Wrong alignment on FLoginFlowResultBP");
-static_assert(sizeof(FLoginFlowResultBP) == 0x000040, "Wrong size on FLoginFlowResultBP");
+static_assert(sizeof(FLoginFlowResultBP) == 0x000038, "Wrong size on FLoginFlowResultBP");
 static_assert(offsetof(FLoginFlowResultBP, Token) == 0x000000, "Member 'FLoginFlowResultBP::Token' has a wrong offset!");
 static_assert(offsetof(FLoginFlowResultBP, ErrorMessage) == 0x000010, "Member 'FLoginFlowResultBP::ErrorMessage' has a wrong offset!");
-static_assert(offsetof(FLoginFlowResultBP, ErrorRaw) == 0x000028, "Member 'FLoginFlowResultBP::ErrorRaw' has a wrong offset!");
-static_assert(offsetof(FLoginFlowResultBP, NumericErrorCode) == 0x000038, "Member 'FLoginFlowResultBP::NumericErrorCode' has a wrong offset!");
+static_assert(offsetof(FLoginFlowResultBP, ErrorRaw) == 0x000020, "Member 'FLoginFlowResultBP::ErrorRaw' has a wrong offset!");
+static_assert(offsetof(FLoginFlowResultBP, NumericErrorCode) == 0x000030, "Member 'FLoginFlowResultBP::NumericErrorCode' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.ShowStoreParameters
-// 0x0028 (0x0028 - 0x0000)
-struct FShowStoreParameters final
+// ScriptStruct OnlineSubsystemBlueprints.ShowWebUrlParameters
+// 0x0038 (0x0038 - 0x0000)
+struct FShowWebUrlParameters final
 {
 public:
-	class FString                                 Category;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ProductId;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AddToCart;                                         // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          Embedded;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowCloseButton;                                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowBackground;                                    // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          HideCursor;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ResetCookies;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OffsetX;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OffsetY;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeX;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeY;                                             // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AllowedDomains;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 CallbackPath;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FShowStoreParameters) == 0x000008, "Wrong alignment on FShowStoreParameters");
-static_assert(sizeof(FShowStoreParameters) == 0x000028, "Wrong size on FShowStoreParameters");
-static_assert(offsetof(FShowStoreParameters, Category) == 0x000000, "Member 'FShowStoreParameters::Category' has a wrong offset!");
-static_assert(offsetof(FShowStoreParameters, ProductId) == 0x000010, "Member 'FShowStoreParameters::ProductId' has a wrong offset!");
-static_assert(offsetof(FShowStoreParameters, AddToCart) == 0x000020, "Member 'FShowStoreParameters::AddToCart' has a wrong offset!");
+static_assert(alignof(FShowWebUrlParameters) == 0x000008, "Wrong alignment on FShowWebUrlParameters");
+static_assert(sizeof(FShowWebUrlParameters) == 0x000038, "Wrong size on FShowWebUrlParameters");
+static_assert(offsetof(FShowWebUrlParameters, Embedded) == 0x000000, "Member 'FShowWebUrlParameters::Embedded' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, ShowCloseButton) == 0x000001, "Member 'FShowWebUrlParameters::ShowCloseButton' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, ShowBackground) == 0x000002, "Member 'FShowWebUrlParameters::ShowBackground' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, HideCursor) == 0x000003, "Member 'FShowWebUrlParameters::HideCursor' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, ResetCookies) == 0x000004, "Member 'FShowWebUrlParameters::ResetCookies' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, OffsetX) == 0x000008, "Member 'FShowWebUrlParameters::OffsetX' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, OffsetY) == 0x00000C, "Member 'FShowWebUrlParameters::OffsetY' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, SizeX) == 0x000010, "Member 'FShowWebUrlParameters::SizeX' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, SizeY) == 0x000014, "Member 'FShowWebUrlParameters::SizeY' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, AllowedDomains) == 0x000018, "Member 'FShowWebUrlParameters::AllowedDomains' has a wrong offset!");
+static_assert(offsetof(FShowWebUrlParameters, CallbackPath) == 0x000028, "Member 'FShowWebUrlParameters::CallbackPath' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsUserUpdatedStatsBP
+// 0x0080 (0x0080 - 0x0000)
+struct FOnlineStatsUserUpdatedStatsBP final
+{
+public:
+	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FOnlineStatUpdateBP> Stats;                                             // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOnlineStatsUserUpdatedStatsBP) == 0x000008, "Wrong alignment on FOnlineStatsUserUpdatedStatsBP");
+static_assert(sizeof(FOnlineStatsUserUpdatedStatsBP) == 0x000080, "Wrong size on FOnlineStatsUserUpdatedStatsBP");
+static_assert(offsetof(FOnlineStatsUserUpdatedStatsBP, PlayerId) == 0x000000, "Member 'FOnlineStatsUserUpdatedStatsBP::PlayerId' has a wrong offset!");
+static_assert(offsetof(FOnlineStatsUserUpdatedStatsBP, Stats) == 0x000030, "Member 'FOnlineStatsUserUpdatedStatsBP::Stats' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemBlueprints.CloudFileHeaderBP
+// 0x0058 (0x0058 - 0x0000)
+struct FCloudFileHeaderBP final
+{
+public:
+	class FString                                 Hash;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   HashType;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DLName;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FileSize;                                          // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 URL;                                               // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ChunkId;                                           // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCloudFileHeaderBP) == 0x000008, "Wrong alignment on FCloudFileHeaderBP");
+static_assert(sizeof(FCloudFileHeaderBP) == 0x000058, "Wrong size on FCloudFileHeaderBP");
+static_assert(offsetof(FCloudFileHeaderBP, Hash) == 0x000000, "Member 'FCloudFileHeaderBP::Hash' has a wrong offset!");
+static_assert(offsetof(FCloudFileHeaderBP, HashType) == 0x000010, "Member 'FCloudFileHeaderBP::HashType' has a wrong offset!");
+static_assert(offsetof(FCloudFileHeaderBP, DLName) == 0x000018, "Member 'FCloudFileHeaderBP::DLName' has a wrong offset!");
+static_assert(offsetof(FCloudFileHeaderBP, Filename) == 0x000028, "Member 'FCloudFileHeaderBP::Filename' has a wrong offset!");
+static_assert(offsetof(FCloudFileHeaderBP, FileSize) == 0x000038, "Member 'FCloudFileHeaderBP::FileSize' has a wrong offset!");
+static_assert(offsetof(FCloudFileHeaderBP, URL) == 0x000040, "Member 'FCloudFileHeaderBP::URL' has a wrong offset!");
+static_assert(offsetof(FCloudFileHeaderBP, ChunkId) == 0x000050, "Member 'FCloudFileHeaderBP::ChunkId' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.PagedQueryBP
 // 0x0008 (0x0008 - 0x0000)
@@ -1292,16 +1281,21 @@ static_assert(sizeof(FPagedQueryBP) == 0x000008, "Wrong size on FPagedQueryBP");
 static_assert(offsetof(FPagedQueryBP, Start) == 0x000000, "Member 'FPagedQueryBP::Start' has a wrong offset!");
 static_assert(offsetof(FPagedQueryBP, Count) == 0x000004, "Member 'FPagedQueryBP::Count' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineFriendSettingsSourceDataConfig
-// 0x0001 (0x0001 - 0x0000)
-struct FOnlineFriendSettingsSourceDataConfig final
+// ScriptStruct OnlineSubsystemBlueprints.OnlineActivityTasksToResetBP
+// 0x0028 (0x0028 - 0x0000)
+struct FOnlineActivityTasksToResetBP final
 {
 public:
-	bool                                          NeverShowAgain;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         InProgressTasks;                                   // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CompletedTasks;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOnlineFriendSettingsSourceDataConfig) == 0x000001, "Wrong alignment on FOnlineFriendSettingsSourceDataConfig");
-static_assert(sizeof(FOnlineFriendSettingsSourceDataConfig) == 0x000001, "Wrong size on FOnlineFriendSettingsSourceDataConfig");
-static_assert(offsetof(FOnlineFriendSettingsSourceDataConfig, NeverShowAgain) == 0x000000, "Member 'FOnlineFriendSettingsSourceDataConfig::NeverShowAgain' has a wrong offset!");
+static_assert(alignof(FOnlineActivityTasksToResetBP) == 0x000008, "Wrong alignment on FOnlineActivityTasksToResetBP");
+static_assert(sizeof(FOnlineActivityTasksToResetBP) == 0x000028, "Wrong size on FOnlineActivityTasksToResetBP");
+static_assert(offsetof(FOnlineActivityTasksToResetBP, bSet) == 0x000000, "Member 'FOnlineActivityTasksToResetBP::bSet' has a wrong offset!");
+static_assert(offsetof(FOnlineActivityTasksToResetBP, InProgressTasks) == 0x000008, "Member 'FOnlineActivityTasksToResetBP::InProgressTasks' has a wrong offset!");
+static_assert(offsetof(FOnlineActivityTasksToResetBP, CompletedTasks) == 0x000018, "Member 'FOnlineActivityTasksToResetBP::CompletedTasks' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineActivityPlayerLocationBP
 // 0x0030 (0x0030 - 0x0000)
@@ -1309,7 +1303,7 @@ struct FOnlineActivityPlayerLocationBP final
 {
 public:
 	bool                                          bSet;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBF[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ZoneId;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Coordinates;                                       // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1319,24 +1313,6 @@ static_assert(offsetof(FOnlineActivityPlayerLocationBP, bSet) == 0x000000, "Memb
 static_assert(offsetof(FOnlineActivityPlayerLocationBP, ZoneId) == 0x000008, "Member 'FOnlineActivityPlayerLocationBP::ZoneId' has a wrong offset!");
 static_assert(offsetof(FOnlineActivityPlayerLocationBP, Coordinates) == 0x000018, "Member 'FOnlineActivityPlayerLocationBP::Coordinates' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemBlueprints.OnlineStatsRowBP
-// 0x0098 (0x0098 - 0x0000)
-struct FOnlineStatsRowBP final
-{
-public:
-	class FString                                 PlayerNickname;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       PlayerId;                                          // 0x0010(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Rank;                                              // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC0[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FVariantDataBP>      Columns;                                           // 0x0048(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOnlineStatsRowBP) == 0x000008, "Wrong alignment on FOnlineStatsRowBP");
-static_assert(sizeof(FOnlineStatsRowBP) == 0x000098, "Wrong size on FOnlineStatsRowBP");
-static_assert(offsetof(FOnlineStatsRowBP, PlayerNickname) == 0x000000, "Member 'FOnlineStatsRowBP::PlayerNickname' has a wrong offset!");
-static_assert(offsetof(FOnlineStatsRowBP, PlayerId) == 0x000010, "Member 'FOnlineStatsRowBP::PlayerId' has a wrong offset!");
-static_assert(offsetof(FOnlineStatsRowBP, Rank) == 0x000040, "Member 'FOnlineStatsRowBP::Rank' has a wrong offset!");
-static_assert(offsetof(FOnlineStatsRowBP, Columns) == 0x000048, "Member 'FOnlineStatsRowBP::Columns' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemBlueprints.ColumnMetaDataBP
 // 0x000C (0x000C - 0x0000)
 struct FColumnMetaDataBP final
@@ -1344,7 +1320,7 @@ struct FColumnMetaDataBP final
 public:
 	class FName                                   ColumnName;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOnlineKeyValuePairDataType_                  DataType;                                          // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC1[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FColumnMetaDataBP) == 0x000004, "Wrong alignment on FColumnMetaDataBP");
 static_assert(sizeof(FColumnMetaDataBP) == 0x00000C, "Wrong size on FColumnMetaDataBP");
@@ -1359,7 +1335,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVariantDataBP                         Value;                                             // 0x0010(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	EOnlineLobbySearchQueryFilterComparator_      Comparison;                                        // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC2[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOnlineLobbySearchQueryFilterBP) == 0x000008, "Wrong alignment on FOnlineLobbySearchQueryFilterBP");
 static_assert(sizeof(FOnlineLobbySearchQueryFilterBP) == 0x000040, "Wrong size on FOnlineLobbySearchQueryFilterBP");
@@ -1375,7 +1351,7 @@ public:
 	TArray<struct FOnlineLobbySearchQueryFilterBP> Filters;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	int64                                         Limit;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          HasLimit;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC3[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOnlineLobbySearchQueryBP) == 0x000008, "Wrong alignment on FOnlineLobbySearchQueryBP");
 static_assert(sizeof(FOnlineLobbySearchQueryBP) == 0x000020, "Wrong size on FOnlineLobbySearchQueryBP");
@@ -1418,18 +1394,52 @@ static_assert(offsetof(FLineItemInfoBP, ValidationInfo) == 0x000020, "Member 'FL
 struct FReceiptOfferEntryBP final
 {
 public:
-	class FString                                 Namespace;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NameSpace;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OfferId;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Quantity;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC4[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FLineItemInfoBP>                LineItems;                                         // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FReceiptOfferEntryBP) == 0x000008, "Wrong alignment on FReceiptOfferEntryBP");
 static_assert(sizeof(FReceiptOfferEntryBP) == 0x000038, "Wrong size on FReceiptOfferEntryBP");
-static_assert(offsetof(FReceiptOfferEntryBP, Namespace) == 0x000000, "Member 'FReceiptOfferEntryBP::Namespace' has a wrong offset!");
+static_assert(offsetof(FReceiptOfferEntryBP, NameSpace) == 0x000000, "Member 'FReceiptOfferEntryBP::NameSpace' has a wrong offset!");
 static_assert(offsetof(FReceiptOfferEntryBP, OfferId) == 0x000010, "Member 'FReceiptOfferEntryBP::OfferId' has a wrong offset!");
 static_assert(offsetof(FReceiptOfferEntryBP, Quantity) == 0x000020, "Member 'FReceiptOfferEntryBP::Quantity' has a wrong offset!");
 static_assert(offsetof(FReceiptOfferEntryBP, LineItems) == 0x000028, "Member 'FReceiptOfferEntryBP::LineItems' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemBlueprints.NamedOnlineSessionBP
+// 0x0058 (0x0208 - 0x01B0)
+struct FNamedOnlineSessionBP final : public FOnlineSessionBP
+{
+public:
+	class FName                                   SessionName;                                       // 0x01B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHosting;                                          // 0x01B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FUniqueNetIdRepl                       LocalOwnerId;                                      // 0x01C0(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FUniqueNetIdRepl>               RegisteredPlayers;                                 // 0x01F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	EOnlineSessionState_                          SessionState;                                      // 0x0200(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FNamedOnlineSessionBP) == 0x000008, "Wrong alignment on FNamedOnlineSessionBP");
+static_assert(sizeof(FNamedOnlineSessionBP) == 0x000208, "Wrong size on FNamedOnlineSessionBP");
+static_assert(offsetof(FNamedOnlineSessionBP, SessionName) == 0x0001B0, "Member 'FNamedOnlineSessionBP::SessionName' has a wrong offset!");
+static_assert(offsetof(FNamedOnlineSessionBP, bHosting) == 0x0001B8, "Member 'FNamedOnlineSessionBP::bHosting' has a wrong offset!");
+static_assert(offsetof(FNamedOnlineSessionBP, LocalOwnerId) == 0x0001C0, "Member 'FNamedOnlineSessionBP::LocalOwnerId' has a wrong offset!");
+static_assert(offsetof(FNamedOnlineSessionBP, RegisteredPlayers) == 0x0001F0, "Member 'FNamedOnlineSessionBP::RegisteredPlayers' has a wrong offset!");
+static_assert(offsetof(FNamedOnlineSessionBP, SessionState) == 0x000200, "Member 'FNamedOnlineSessionBP::SessionState' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemBlueprints.OnlineStoreCategoryBP
+// 0x0020 (0x0020 - 0x0000)
+struct FOnlineStoreCategoryBP final
+{
+public:
+	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOnlineStoreCategoryBP) == 0x000008, "Wrong alignment on FOnlineStoreCategoryBP");
+static_assert(sizeof(FOnlineStoreCategoryBP) == 0x000020, "Wrong size on FOnlineStoreCategoryBP");
+static_assert(offsetof(FOnlineStoreCategoryBP, ID) == 0x000000, "Member 'FOnlineStoreCategoryBP::ID' has a wrong offset!");
+static_assert(offsetof(FOnlineStoreCategoryBP, Description) == 0x000010, "Member 'FOnlineStoreCategoryBP::Description' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemBlueprints.OnlineStoreFilterBP
 // 0x0030 (0x0030 - 0x0000)

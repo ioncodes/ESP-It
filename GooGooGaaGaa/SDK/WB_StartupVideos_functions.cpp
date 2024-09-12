@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function WB_StartupVideos.WB_StartupVideos_C.BndEvt__WB_StartupVideos_MediaPlayer_K2Node_ComponentBoundEvent_1_OnBinkMediaPlayerMediaReachedEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWB_StartupVideos_C::BndEvt__WB_StartupVideos_MediaPlayer_K2Node_ComponentBoundEvent_1_OnBinkMediaPlayerMediaReachedEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_StartupVideos_C", "BndEvt__WB_StartupVideos_MediaPlayer_K2Node_ComponentBoundEvent_1_OnBinkMediaPlayerMediaReachedEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WB_StartupVideos.WB_StartupVideos_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

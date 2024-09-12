@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "E_Axis_structs.hpp"
-#include "E_CreativePlayerMode_structs.hpp"
-#include "E_ModifyMode_structs.hpp"
 #include "E_SwitchConnectionsVisibility_structs.hpp"
+#include "E_CreativePlayerMode_structs.hpp"
 #include "PropWitchHuntModule_structs.hpp"
+#include "E_ModifyMode_structs.hpp"
 #include "B_PlayerController_classes.hpp"
 #include "UMG_structs.hpp"
 #include "ETeamID_structs.hpp"
@@ -26,63 +26,63 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CreativePlayerController.B_CreativePlayerController_C
-// 0x01F0 (0x0D18 - 0x0B28)
+// 0x01F0 (0x0D08 - 0x0B18)
 class AB_CreativePlayerController_C final : public AB_PlayerController_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativePlayerController_C;       // 0x0B28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UClass*                                 LastSelectedClassToPlace;                          // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         ActorsToPlace;                                     // 0x0B38(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         PlacedActors;                                      // 0x0B48(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	struct FRotator                               PropRotationToPlace;                               // 0x0B58(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                PropSizeToPlace;                                   // 0x0B70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PropBoundsLengthToPlace;                           // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_PlacePropCheckerCube_C*              PlacePropChecker;                                  // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShiftIsDown;                                       // 0x0B98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4419[0x7];                                     // 0x0B99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class AActor*, struct FTransform>        SelectedActorsTransforms;                          // 0x0BA0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         SelectedActors;                                    // 0x0BF0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class ABP_Switch_C*                           SelectedSwitch;                                    // 0x0C00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TArray<class AB_SwitchConnection_C*>          SwitchConnections;                                 // 0x0C08(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class AB_BaseGizmo_C*                         GizmoActor;                                        // 0x0C18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          MultipleSelected;                                  // 0x0C20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441A[0x3];                                     // 0x0C21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxGroupSize;                                      // 0x0C24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EditActorMode;                                     // 0x0C28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsDraggingActor;                                   // 0x0C29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsModifyingActor;                                  // 0x0C2A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_ModifyMode                                  ModifyMode;                                        // 0x0C2B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441B[0x4];                                     // 0x0C2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               AttachedRotation;                                  // 0x0C30(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          FireIsDown;                                        // 0x0C48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ControlIsDown;                                     // 0x0C49(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsTakingScreenshot;                                // 0x0C4A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_Axis                                        CurrentModifyingAxis;                              // 0x0C4B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LocalModifyMode;                                   // 0x0C4C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PrefabsEnabled;                                    // 0x0C4D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PlayerWantsMenuFilter;                             // 0x0C4E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DrawConnections;                                   // 0x0C4F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FPrefabToSave                          LastSelectedPrefabToPlace;                         // 0x0C50(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UWB_PlaceAndEditUI_C*                   EditUI;                                            // 0x0C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	E_SwitchConnectionsVisibility                 SwitchConnectionsVisibility;                       // 0x0C98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_CreativePlayerMode                          CurrentPlayMode;                                   // 0x0C99(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441C[0x6];                                     // 0x0C9A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnPlayerModeChanged;                               // 0x0CA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	E_CreativePlayerMode                          TargetPostPlayTestMode;                            // 0x0CB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441D[0x7];                                     // 0x0CB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_PlayerListCreative_C*               PlayerList;                                        // 0x0CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnGroupAmountChanged;                              // 0x0CC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsCollisionWallSelected;                           // 0x0CD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441E[0x7];                                     // 0x0CD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 LastSelectedMaterialOverwriteClass;                // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UWB_TeamSelectionCreative_C*            TeamSelection;                                     // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              SavedMousePosition;                                // 0x0CE8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsRightMouseDown;                                  // 0x0CF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_441F[0x7];                                     // 0x0CF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              LastPlayTestModeChangeTime;                        // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          WantsToSubmittToWorkshop;                          // 0x0D08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4420[0x7];                                     // 0x0D09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWB_PropCollectionWidgetCreative_C*     ItemCollectionScreen;                              // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_CreativePlayerController_C;       // 0x0B18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UClass*                                 LastSelectedClassToPlace;                          // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         ActorsToPlace;                                     // 0x0B28(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         PlacedActors;                                      // 0x0B38(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FRotator                               PropRotationToPlace;                               // 0x0B48(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                PropSizeToPlace;                                   // 0x0B60(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PropBoundsLengthToPlace;                           // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_PlacePropCheckerCube_C*              PlacePropChecker;                                  // 0x0B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShiftIsDown;                                       // 0x0B88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B89[0x7];                                      // 0x0B89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class AActor*, struct FTransform>        SelectedActorsTransforms;                          // 0x0B90(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class AActor*>                         SelectedActors;                                    // 0x0BE0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class ABP_Switch_C*                           SelectedSwitch;                                    // 0x0BF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<class AB_SwitchConnection_C*>          SwitchConnections;                                 // 0x0BF8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class AB_BaseGizmo_C*                         GizmoActor;                                        // 0x0C08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          MultipleSelected;                                  // 0x0C10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C11[0x3];                                      // 0x0C11(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxGroupSize;                                      // 0x0C14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EditActorMode;                                     // 0x0C18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDraggingActor;                                   // 0x0C19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsModifyingActor;                                  // 0x0C1A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_ModifyMode                                  ModifyMode;                                        // 0x0C1B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C1C[0x4];                                      // 0x0C1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               AttachedRotation;                                  // 0x0C20(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          FireIsDown;                                        // 0x0C38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ControlIsDown;                                     // 0x0C39(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsTakingScreenshot;                                // 0x0C3A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Axis                                        CurrentModifyingAxis;                              // 0x0C3B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LocalModifyMode;                                   // 0x0C3C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PrefabsEnabled;                                    // 0x0C3D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PlayerWantsMenuFilter;                             // 0x0C3E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DrawConnections;                                   // 0x0C3F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPrefabToSave                          LastSelectedPrefabToPlace;                         // 0x0C40(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UWB_PlaceAndEditUI_C*                   EditUI;                                            // 0x0C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	E_SwitchConnectionsVisibility                 SwitchConnectionsVisibility;                       // 0x0C88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_CreativePlayerMode                          CurrentPlayMode;                                   // 0x0C89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C8A[0x6];                                      // 0x0C8A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnPlayerModeChanged;                               // 0x0C90(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	E_CreativePlayerMode                          TargetPostPlayTestMode;                            // 0x0CA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA1[0x7];                                      // 0x0CA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_PlayerListCreative_C*               PlayerList;                                        // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnGroupAmountChanged;                              // 0x0CB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsCollisionWallSelected;                           // 0x0CC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC1[0x7];                                      // 0x0CC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 LastSelectedMaterialOverwriteClass;                // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UWB_TeamSelectionCreative_C*            TeamSelection;                                     // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              SavedMousePosition;                                // 0x0CD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRightMouseDown;                                  // 0x0CE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE9[0x7];                                      // 0x0CE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastPlayTestModeChangeTime;                        // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          WantsToSubmittToWorkshop;                          // 0x0CF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CF9[0x7];                                      // 0x0CF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_PropCollectionWidgetCreative_C*     ItemCollectionScreen;                              // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void OnGroupAmountChanged__DelegateSignature(class AActor* AddedOrRemovedActor, bool WasAdded);
@@ -96,14 +96,14 @@ public:
 	void AddTargetToSwitch(class AActor* ActorToAdd, class ABP_Switch_C* SWITCH, TArray<class AActor*>& TempTargetList);
 	void AddTargetToSwitchServer(const class AActor* ActorToAdd, const class ABP_Switch_C* SWITCH, const TArray<class AActor*>& OldTargetList);
 	void BeginPlayClient();
-	void BeginTakingScreenshot(bool Param_WantsToSubmittToWorkshop);
+	void BeginTakingScreenshot(bool WantsToSubmittToWorkshop_0);
 	void CanPlayTestBeToggledSafely(bool* CanBeToggled);
 	void ChangeBrightnessServer(class ABP_PlaceableLight_C* PlaceableLight, double ChangeValue);
 	void ChangeLightColorServer(const struct FVector& Color, class ABP_PlaceableLight_C* TargetLight);
 	void ChangeModifyMode();
 	void ChangePlayerMode(E_CreativePlayerMode NewMode);
 	void ChangePlayerModeByShortcutKey(E_CreativePlayerMode NewMode);
-	void ChangeToSpecificModifyMode(E_ModifyMode Param_ModifyMode);
+	void ChangeToSpecificModifyMode(E_ModifyMode ModifyMode_0);
 	void CheckActorAmountLimits(class AB_CreativeGameState_C* CreativeGameState, TArray<class AActor*>& ActorsToDuplicate, bool* BelowLimit);
 	void CheckSizeMultipleAfterAnchorSizeChange(TArray<class AActor*>& ActorsToCheck);
 	void ClampScaleOfTargetOrAnchorActor(class AActor* TargetActor_Optional_, double WantedScale, double* ClampedScale);
@@ -224,20 +224,20 @@ public:
 	void ToggleSwitchBreaksAfterUse(class ABP_Switch_C* SWITCH, bool BreaksAfterUse);
 	void ToggleSwitchBreaksServer(class ABP_Switch_C* SWITCH, bool BreaksAfterUse);
 	void TraceActorToPlace();
-	void TransformTrace(class APawn* Param_Pawn, class AActor** Actor, E_Axis* ModifyingAxis);
+	void TransformTrace(class APawn* Pawn_0, class AActor** Actor, E_Axis* ModifyingAxis);
 	void TurnPropMeshIntoPlaceModeMesh(class UPrimitiveComponent* CurrentMesh);
 	void UpdateActionBoolServer(class AActor* Actor, bool Activated);
 	void UpdateActorTransformServer(const class AActor* SelectedActor, const struct FTransform& Transform);
 	void UpdateDraggedPropRotation();
-	void UpdateFreezeServer(class AB_StaticMeshProp_C* Param_TargetProp, bool Freeze);
+	void UpdateFreezeServer(class AB_StaticMeshProp_C* TargetProp_0, bool Freeze);
 	void UpdateGizmoActor();
 	void UpdateGizmoVisibility();
-	void UpdateMaterialServer(class ABP_PlaceableStaticProp_C* TargetStructure, class UB_BasePlaceableMaterialOverwrite_C* MaterialOverwrite, class UMaterialInterface* NewMaterial, int32 Param_Index);
+	void UpdateMaterialServer(class ABP_PlaceableStaticProp_C* TargetStructure, class UB_BasePlaceableMaterialOverwrite_C* MaterialOverwrite, class UMaterialInterface* NewMaterial, int32 Index_0);
 	void UpdatePlayerModeByPlayTestState(bool HasPlayTestStarted);
 	void UpdatePrefabSizeToPlace(double Axis);
 	void UpdateSelectedActorsTransforms();
 	void UpdateSkills();
-	void UpdateStartAwakeServer(class AB_StaticMeshProp_C* Param_TargetProp, bool StartAwake);
+	void UpdateStartAwakeServer(class AB_StaticMeshProp_C* TargetProp_0, bool StartAwake);
 	void UpdateVisibleSwitchConnections();
 	void UseEnterKeyInputForEditUi();
 	void VisualizeSingleSwitchConnection(class AActor* StartActor, class AActor* EndActor);
@@ -245,7 +245,7 @@ public:
 
 	void GetAnchorActor(class AActor** AnchorActor) const;
 	void GetNameForSingleActorOrGroup(bool IsGroupName, class AActor* TargetActor, class FText* FullName) const;
-	void IsPlacing(bool* Param_IsPlacing) const;
+	void IsPlacing(bool* IsPlacing_0) const;
 
 public:
 	static class UClass* StaticClass()
@@ -258,52 +258,52 @@ public:
 	}
 };
 static_assert(alignof(AB_CreativePlayerController_C) == 0x000008, "Wrong alignment on AB_CreativePlayerController_C");
-static_assert(sizeof(AB_CreativePlayerController_C) == 0x000D18, "Wrong size on AB_CreativePlayerController_C");
-static_assert(offsetof(AB_CreativePlayerController_C, UberGraphFrame_B_CreativePlayerController_C) == 0x000B28, "Member 'AB_CreativePlayerController_C::UberGraphFrame_B_CreativePlayerController_C' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, LastSelectedClassToPlace) == 0x000B30, "Member 'AB_CreativePlayerController_C::LastSelectedClassToPlace' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, ActorsToPlace) == 0x000B38, "Member 'AB_CreativePlayerController_C::ActorsToPlace' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PlacedActors) == 0x000B48, "Member 'AB_CreativePlayerController_C::PlacedActors' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PropRotationToPlace) == 0x000B58, "Member 'AB_CreativePlayerController_C::PropRotationToPlace' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PropSizeToPlace) == 0x000B70, "Member 'AB_CreativePlayerController_C::PropSizeToPlace' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PropBoundsLengthToPlace) == 0x000B88, "Member 'AB_CreativePlayerController_C::PropBoundsLengthToPlace' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PlacePropChecker) == 0x000B90, "Member 'AB_CreativePlayerController_C::PlacePropChecker' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, ShiftIsDown) == 0x000B98, "Member 'AB_CreativePlayerController_C::ShiftIsDown' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, SelectedActorsTransforms) == 0x000BA0, "Member 'AB_CreativePlayerController_C::SelectedActorsTransforms' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, SelectedActors) == 0x000BF0, "Member 'AB_CreativePlayerController_C::SelectedActors' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, SelectedSwitch) == 0x000C00, "Member 'AB_CreativePlayerController_C::SelectedSwitch' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, SwitchConnections) == 0x000C08, "Member 'AB_CreativePlayerController_C::SwitchConnections' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, GizmoActor) == 0x000C18, "Member 'AB_CreativePlayerController_C::GizmoActor' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, MultipleSelected) == 0x000C20, "Member 'AB_CreativePlayerController_C::MultipleSelected' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, MaxGroupSize) == 0x000C24, "Member 'AB_CreativePlayerController_C::MaxGroupSize' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, EditActorMode) == 0x000C28, "Member 'AB_CreativePlayerController_C::EditActorMode' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, IsDraggingActor) == 0x000C29, "Member 'AB_CreativePlayerController_C::IsDraggingActor' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, IsModifyingActor) == 0x000C2A, "Member 'AB_CreativePlayerController_C::IsModifyingActor' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, ModifyMode) == 0x000C2B, "Member 'AB_CreativePlayerController_C::ModifyMode' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, AttachedRotation) == 0x000C30, "Member 'AB_CreativePlayerController_C::AttachedRotation' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, FireIsDown) == 0x000C48, "Member 'AB_CreativePlayerController_C::FireIsDown' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, ControlIsDown) == 0x000C49, "Member 'AB_CreativePlayerController_C::ControlIsDown' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, IsTakingScreenshot) == 0x000C4A, "Member 'AB_CreativePlayerController_C::IsTakingScreenshot' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, CurrentModifyingAxis) == 0x000C4B, "Member 'AB_CreativePlayerController_C::CurrentModifyingAxis' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, LocalModifyMode) == 0x000C4C, "Member 'AB_CreativePlayerController_C::LocalModifyMode' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PrefabsEnabled) == 0x000C4D, "Member 'AB_CreativePlayerController_C::PrefabsEnabled' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PlayerWantsMenuFilter) == 0x000C4E, "Member 'AB_CreativePlayerController_C::PlayerWantsMenuFilter' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, DrawConnections) == 0x000C4F, "Member 'AB_CreativePlayerController_C::DrawConnections' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, LastSelectedPrefabToPlace) == 0x000C50, "Member 'AB_CreativePlayerController_C::LastSelectedPrefabToPlace' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, EditUI) == 0x000C90, "Member 'AB_CreativePlayerController_C::EditUI' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, SwitchConnectionsVisibility) == 0x000C98, "Member 'AB_CreativePlayerController_C::SwitchConnectionsVisibility' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, CurrentPlayMode) == 0x000C99, "Member 'AB_CreativePlayerController_C::CurrentPlayMode' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, OnPlayerModeChanged) == 0x000CA0, "Member 'AB_CreativePlayerController_C::OnPlayerModeChanged' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, TargetPostPlayTestMode) == 0x000CB0, "Member 'AB_CreativePlayerController_C::TargetPostPlayTestMode' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, PlayerList) == 0x000CB8, "Member 'AB_CreativePlayerController_C::PlayerList' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, OnGroupAmountChanged) == 0x000CC0, "Member 'AB_CreativePlayerController_C::OnGroupAmountChanged' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, IsCollisionWallSelected) == 0x000CD0, "Member 'AB_CreativePlayerController_C::IsCollisionWallSelected' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, LastSelectedMaterialOverwriteClass) == 0x000CD8, "Member 'AB_CreativePlayerController_C::LastSelectedMaterialOverwriteClass' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, TeamSelection) == 0x000CE0, "Member 'AB_CreativePlayerController_C::TeamSelection' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, SavedMousePosition) == 0x000CE8, "Member 'AB_CreativePlayerController_C::SavedMousePosition' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, IsRightMouseDown) == 0x000CF8, "Member 'AB_CreativePlayerController_C::IsRightMouseDown' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, LastPlayTestModeChangeTime) == 0x000D00, "Member 'AB_CreativePlayerController_C::LastPlayTestModeChangeTime' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, WantsToSubmittToWorkshop) == 0x000D08, "Member 'AB_CreativePlayerController_C::WantsToSubmittToWorkshop' has a wrong offset!");
-static_assert(offsetof(AB_CreativePlayerController_C, ItemCollectionScreen) == 0x000D10, "Member 'AB_CreativePlayerController_C::ItemCollectionScreen' has a wrong offset!");
+static_assert(sizeof(AB_CreativePlayerController_C) == 0x000D08, "Wrong size on AB_CreativePlayerController_C");
+static_assert(offsetof(AB_CreativePlayerController_C, UberGraphFrame_B_CreativePlayerController_C) == 0x000B18, "Member 'AB_CreativePlayerController_C::UberGraphFrame_B_CreativePlayerController_C' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, LastSelectedClassToPlace) == 0x000B20, "Member 'AB_CreativePlayerController_C::LastSelectedClassToPlace' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, ActorsToPlace) == 0x000B28, "Member 'AB_CreativePlayerController_C::ActorsToPlace' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PlacedActors) == 0x000B38, "Member 'AB_CreativePlayerController_C::PlacedActors' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PropRotationToPlace) == 0x000B48, "Member 'AB_CreativePlayerController_C::PropRotationToPlace' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PropSizeToPlace) == 0x000B60, "Member 'AB_CreativePlayerController_C::PropSizeToPlace' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PropBoundsLengthToPlace) == 0x000B78, "Member 'AB_CreativePlayerController_C::PropBoundsLengthToPlace' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PlacePropChecker) == 0x000B80, "Member 'AB_CreativePlayerController_C::PlacePropChecker' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, ShiftIsDown) == 0x000B88, "Member 'AB_CreativePlayerController_C::ShiftIsDown' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, SelectedActorsTransforms) == 0x000B90, "Member 'AB_CreativePlayerController_C::SelectedActorsTransforms' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, SelectedActors) == 0x000BE0, "Member 'AB_CreativePlayerController_C::SelectedActors' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, SelectedSwitch) == 0x000BF0, "Member 'AB_CreativePlayerController_C::SelectedSwitch' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, SwitchConnections) == 0x000BF8, "Member 'AB_CreativePlayerController_C::SwitchConnections' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, GizmoActor) == 0x000C08, "Member 'AB_CreativePlayerController_C::GizmoActor' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, MultipleSelected) == 0x000C10, "Member 'AB_CreativePlayerController_C::MultipleSelected' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, MaxGroupSize) == 0x000C14, "Member 'AB_CreativePlayerController_C::MaxGroupSize' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, EditActorMode) == 0x000C18, "Member 'AB_CreativePlayerController_C::EditActorMode' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, IsDraggingActor) == 0x000C19, "Member 'AB_CreativePlayerController_C::IsDraggingActor' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, IsModifyingActor) == 0x000C1A, "Member 'AB_CreativePlayerController_C::IsModifyingActor' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, ModifyMode) == 0x000C1B, "Member 'AB_CreativePlayerController_C::ModifyMode' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, AttachedRotation) == 0x000C20, "Member 'AB_CreativePlayerController_C::AttachedRotation' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, FireIsDown) == 0x000C38, "Member 'AB_CreativePlayerController_C::FireIsDown' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, ControlIsDown) == 0x000C39, "Member 'AB_CreativePlayerController_C::ControlIsDown' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, IsTakingScreenshot) == 0x000C3A, "Member 'AB_CreativePlayerController_C::IsTakingScreenshot' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, CurrentModifyingAxis) == 0x000C3B, "Member 'AB_CreativePlayerController_C::CurrentModifyingAxis' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, LocalModifyMode) == 0x000C3C, "Member 'AB_CreativePlayerController_C::LocalModifyMode' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PrefabsEnabled) == 0x000C3D, "Member 'AB_CreativePlayerController_C::PrefabsEnabled' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PlayerWantsMenuFilter) == 0x000C3E, "Member 'AB_CreativePlayerController_C::PlayerWantsMenuFilter' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, DrawConnections) == 0x000C3F, "Member 'AB_CreativePlayerController_C::DrawConnections' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, LastSelectedPrefabToPlace) == 0x000C40, "Member 'AB_CreativePlayerController_C::LastSelectedPrefabToPlace' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, EditUI) == 0x000C80, "Member 'AB_CreativePlayerController_C::EditUI' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, SwitchConnectionsVisibility) == 0x000C88, "Member 'AB_CreativePlayerController_C::SwitchConnectionsVisibility' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, CurrentPlayMode) == 0x000C89, "Member 'AB_CreativePlayerController_C::CurrentPlayMode' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, OnPlayerModeChanged) == 0x000C90, "Member 'AB_CreativePlayerController_C::OnPlayerModeChanged' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, TargetPostPlayTestMode) == 0x000CA0, "Member 'AB_CreativePlayerController_C::TargetPostPlayTestMode' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, PlayerList) == 0x000CA8, "Member 'AB_CreativePlayerController_C::PlayerList' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, OnGroupAmountChanged) == 0x000CB0, "Member 'AB_CreativePlayerController_C::OnGroupAmountChanged' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, IsCollisionWallSelected) == 0x000CC0, "Member 'AB_CreativePlayerController_C::IsCollisionWallSelected' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, LastSelectedMaterialOverwriteClass) == 0x000CC8, "Member 'AB_CreativePlayerController_C::LastSelectedMaterialOverwriteClass' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, TeamSelection) == 0x000CD0, "Member 'AB_CreativePlayerController_C::TeamSelection' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, SavedMousePosition) == 0x000CD8, "Member 'AB_CreativePlayerController_C::SavedMousePosition' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, IsRightMouseDown) == 0x000CE8, "Member 'AB_CreativePlayerController_C::IsRightMouseDown' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, LastPlayTestModeChangeTime) == 0x000CF0, "Member 'AB_CreativePlayerController_C::LastPlayTestModeChangeTime' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, WantsToSubmittToWorkshop) == 0x000CF8, "Member 'AB_CreativePlayerController_C::WantsToSubmittToWorkshop' has a wrong offset!");
+static_assert(offsetof(AB_CreativePlayerController_C, ItemCollectionScreen) == 0x000D00, "Member 'AB_CreativePlayerController_C::ItemCollectionScreen' has a wrong offset!");
 
 }
 

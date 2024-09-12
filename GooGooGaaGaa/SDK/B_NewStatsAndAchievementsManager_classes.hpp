@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_NewStatsAndAchievementsManager.B_NewStatsAndAchievementsManager_C
-// 0x0078 (0x00A8 - 0x0030)
+// 0x0070 (0x00A0 - 0x0030)
 class UB_NewStatsAndAchievementsManager_C final : public UBaseManager
 {
 public:
@@ -33,7 +33,6 @@ public:
 	FMulticastInlineDelegateProperty_             OnDidStoreGSOnlineStats;                           // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UVaRestRequestJSON*                     TempRequest;                                       // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UVaRestRequestJSON*                     TempRequest_0;                                     // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bGlobalUseBRGStatsSystem;                          // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BuildStatsArrayJsonString(TArray<struct FS_Stat>& StatArray, const class FString& ProductUserId, class FString* ResultString);
@@ -43,10 +42,6 @@ public:
 	void OnDidLoadOnlineStats__DelegateSignature(bool Success);
 	void OnDidStoreGSOnlineStats__DelegateSignature(bool Success, const class FString& ProductUserId);
 	void OnDidStoreOnlineStats__DelegateSignature(bool Success);
-	void OnFailure_2BC42D684AF46CA9AFB4F4B223F507F6(const class FString& PlayerId);
-	void OnFailure_5A98F29D4C9542B605370D8F199CA76E(const class FString& PlayerId);
-	void OnFailure_5F60D9EE44EBD752DCA348976E0A898A(const class FString& PlayerId);
-	void OnFailure_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7(const class FString& PlayerId);
 	void OnReceiveGSStatsFailure(class UVaRestRequestJSON* Response);
 	void OnReceiveGSStatsResponse(class UVaRestRequestJSON* Response);
 	void OnReceiveStatsFailure(class UVaRestRequestJSON* Response);
@@ -54,29 +49,24 @@ public:
 	void OnReceiveStoreGSStatsComplete(class UVaRestRequestJSON* Response);
 	void OnReceiveStoreGSStatsFailure(class UVaRestRequestJSON* Response);
 	void OnReceiveStoreStatsComplete(class UVaRestRequestJSON* Response);
-	void OnSuccess_2BC42D684AF46CA9AFB4F4B223F507F6(const class FString& PlayerId);
-	void OnSuccess_5A98F29D4C9542B605370D8F199CA76E(const class FString& PlayerId);
-	void OnSuccess_5F60D9EE44EBD752DCA348976E0A898A(const class FString& PlayerId);
-	void OnSuccess_B3FADAFE44A5E4EE8F4CE38B1F5B0CA7(const class FString& PlayerId);
 	void ParseGSStatsAndAchievementsFromResponse(class UVaRestRequestJSON* Response, bool* Success, class FString* ProductUserId);
 	void ParseStatsAndAchievementsFromResponse(class UVaRestRequestJSON* Response, bool* Success);
 	void ParseSuccessAndRequestedProductUserId(class UVaRestRequestJSON* Response, bool* Success, class FString* ProductUserId);
 	void RequestGSOnlineStats(class AB_PlayerState_C* PlayerState);
 	void RequestOnlineStats();
 	void Reset_All_Online_Stats(bool AchievementsToo);
-	void SetGSAchievement(class APlayerState* PlayerState, class FName Param_Name, bool* Result);
+	void SetGSAchievement(class APlayerState* PlayerState, class FName Name_0, bool* Result);
 	bool SetGSStat(class FName StatName, int64 SetValue, class APlayerState* PlayerState, bool* Result);
 	void SetStat(class FName StatName, int64 Value, bool* Result);
 	void StoreGSOnlineStats(class AB_PlayerState_C* PlayerState);
 	void StoreOnlineStats();
 
 	void GetAchievementStatus(class FName StatName, bool* bIsCompleted, struct FDateTime* CompletionDateTime, bool* bIsHidden) const;
-	void GetGSAchievement(class FName Param_Name, class APlayerState* PlayerState, bool* HasAchievement, bool* Result) const;
+	void GetGSAchievement(class FName Name_0, class APlayerState* PlayerState, bool* HasAchievement, bool* Result) const;
 	void GetGSStat(class FName StatName, class APlayerState* PlayerState, int64* ResultValue, bool* ResultWasFound) const;
 	void GetStat(class FName StatName, int64* ResultValue, bool* ResultWasFound) const;
 	void IsAchievementVisible(class FName StatName, bool* bIsVisible) const;
 	void OverrideServerLevel(int64* Value, bool* WasFound) const;
-	void UseBRGStatsSystem(class APlayerState* PlayerState, bool* Out) const;
 
 public:
 	static class UClass* StaticClass()
@@ -89,7 +79,7 @@ public:
 	}
 };
 static_assert(alignof(UB_NewStatsAndAchievementsManager_C) == 0x000008, "Wrong alignment on UB_NewStatsAndAchievementsManager_C");
-static_assert(sizeof(UB_NewStatsAndAchievementsManager_C) == 0x0000A8, "Wrong size on UB_NewStatsAndAchievementsManager_C");
+static_assert(sizeof(UB_NewStatsAndAchievementsManager_C) == 0x0000A0, "Wrong size on UB_NewStatsAndAchievementsManager_C");
 static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, UberGraphFrame) == 0x000030, "Member 'UB_NewStatsAndAchievementsManager_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, Cache) == 0x000038, "Member 'UB_NewStatsAndAchievementsManager_C::Cache' has a wrong offset!");
 static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, NewMasterServerManager) == 0x000040, "Member 'UB_NewStatsAndAchievementsManager_C::NewMasterServerManager' has a wrong offset!");
@@ -100,7 +90,6 @@ static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, OnDidStoreOnlineStat
 static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, OnDidStoreGSOnlineStats) == 0x000080, "Member 'UB_NewStatsAndAchievementsManager_C::OnDidStoreGSOnlineStats' has a wrong offset!");
 static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, TempRequest) == 0x000090, "Member 'UB_NewStatsAndAchievementsManager_C::TempRequest' has a wrong offset!");
 static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, TempRequest_0) == 0x000098, "Member 'UB_NewStatsAndAchievementsManager_C::TempRequest_0' has a wrong offset!");
-static_assert(offsetof(UB_NewStatsAndAchievementsManager_C, bGlobalUseBRGStatsSystem) == 0x0000A0, "Member 'UB_NewStatsAndAchievementsManager_C::bGlobalUseBRGStatsSystem' has a wrong offset!");
 
 }
 

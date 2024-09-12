@@ -10,28 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_ReportReason.WB_ReportReason_C
-// 0x0048 (0x0308 - 0x02C0)
+// 0x0048 (0x0328 - 0x02E0)
 class UWB_ReportReason_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWB_Button_C*                           Cancel;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCheckBox*                              PunishmentCheckbox;                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             PunishmentText;                                    // 0x02D8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UComboBoxString*                        ReasonComboBox;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEditableTextBox*                       ReasonTextBox;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Button_C*                           ReportPlayer;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_BaseCheckBox_C*                     WB_BaseCheckBox_C_1;                               // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class APlayerState*                           PlayerStateToReport;                               // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWB_Button_C*                           Cancel;                                            // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCheckBox*                              PunishmentCheckbox;                                // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             PunishmentText;                                    // 0x02F8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UComboBoxString*                        ReasonComboBox;                                    // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEditableTextBox*                       ReasonTextBox;                                     // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Button_C*                           ReportPlayer;                                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_BaseCheckBox_C*                     WB_BaseCheckBox_C_1;                               // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class APlayerState*                           PlayerStateToReport;                               // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__Cancel_K2Node_ComponentBoundEvent_29_Clicked__DelegateSignature();
@@ -52,16 +52,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_ReportReason_C) == 0x000008, "Wrong alignment on UWB_ReportReason_C");
-static_assert(sizeof(UWB_ReportReason_C) == 0x000308, "Wrong size on UWB_ReportReason_C");
-static_assert(offsetof(UWB_ReportReason_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_ReportReason_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, Cancel) == 0x0002C8, "Member 'UWB_ReportReason_C::Cancel' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, PunishmentCheckbox) == 0x0002D0, "Member 'UWB_ReportReason_C::PunishmentCheckbox' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, PunishmentText) == 0x0002D8, "Member 'UWB_ReportReason_C::PunishmentText' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, ReasonComboBox) == 0x0002E0, "Member 'UWB_ReportReason_C::ReasonComboBox' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, ReasonTextBox) == 0x0002E8, "Member 'UWB_ReportReason_C::ReasonTextBox' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, ReportPlayer) == 0x0002F0, "Member 'UWB_ReportReason_C::ReportPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, WB_BaseCheckBox_C_1) == 0x0002F8, "Member 'UWB_ReportReason_C::WB_BaseCheckBox_C_1' has a wrong offset!");
-static_assert(offsetof(UWB_ReportReason_C, PlayerStateToReport) == 0x000300, "Member 'UWB_ReportReason_C::PlayerStateToReport' has a wrong offset!");
+static_assert(sizeof(UWB_ReportReason_C) == 0x000328, "Wrong size on UWB_ReportReason_C");
+static_assert(offsetof(UWB_ReportReason_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_ReportReason_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, Cancel) == 0x0002E8, "Member 'UWB_ReportReason_C::Cancel' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, PunishmentCheckbox) == 0x0002F0, "Member 'UWB_ReportReason_C::PunishmentCheckbox' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, PunishmentText) == 0x0002F8, "Member 'UWB_ReportReason_C::PunishmentText' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, ReasonComboBox) == 0x000300, "Member 'UWB_ReportReason_C::ReasonComboBox' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, ReasonTextBox) == 0x000308, "Member 'UWB_ReportReason_C::ReasonTextBox' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, ReportPlayer) == 0x000310, "Member 'UWB_ReportReason_C::ReportPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, WB_BaseCheckBox_C_1) == 0x000318, "Member 'UWB_ReportReason_C::WB_BaseCheckBox_C_1' has a wrong offset!");
+static_assert(offsetof(UWB_ReportReason_C, PlayerStateToReport) == 0x000320, "Member 'UWB_ReportReason_C::PlayerStateToReport' has a wrong offset!");
 
 }
 

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PropRetaliationActor.B_PropRetaliationActor_C
-// 0x0018 (0x02C0 - 0x02A8)
+// 0x0018 (0x02B8 - 0x02A0)
 class AB_PropRetaliationActor_C final : public AB_BaseGameModifierActor_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_PropRetaliationActor_C;           // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class AB_PlayerState_C*>               SubscribedPlayerStates;                            // 0x02B0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_PropRetaliationActor_C;           // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class AB_PlayerState_C*>               SubscribedPlayerStates;                            // 0x02A8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void CleanUpMod();
@@ -46,9 +46,9 @@ public:
 	}
 };
 static_assert(alignof(AB_PropRetaliationActor_C) == 0x000008, "Wrong alignment on AB_PropRetaliationActor_C");
-static_assert(sizeof(AB_PropRetaliationActor_C) == 0x0002C0, "Wrong size on AB_PropRetaliationActor_C");
-static_assert(offsetof(AB_PropRetaliationActor_C, UberGraphFrame_B_PropRetaliationActor_C) == 0x0002A8, "Member 'AB_PropRetaliationActor_C::UberGraphFrame_B_PropRetaliationActor_C' has a wrong offset!");
-static_assert(offsetof(AB_PropRetaliationActor_C, SubscribedPlayerStates) == 0x0002B0, "Member 'AB_PropRetaliationActor_C::SubscribedPlayerStates' has a wrong offset!");
+static_assert(sizeof(AB_PropRetaliationActor_C) == 0x0002B8, "Wrong size on AB_PropRetaliationActor_C");
+static_assert(offsetof(AB_PropRetaliationActor_C, UberGraphFrame_B_PropRetaliationActor_C) == 0x0002A0, "Member 'AB_PropRetaliationActor_C::UberGraphFrame_B_PropRetaliationActor_C' has a wrong offset!");
+static_assert(offsetof(AB_PropRetaliationActor_C, SubscribedPlayerStates) == 0x0002A8, "Member 'AB_PropRetaliationActor_C::SubscribedPlayerStates' has a wrong offset!");
 
 }
 

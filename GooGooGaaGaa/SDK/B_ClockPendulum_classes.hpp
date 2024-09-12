@@ -22,12 +22,12 @@ namespace SDK
 class AB_ClockPendulum_C final : public AB_Clock_C
 {
 public:
-	uint8                                         Pad_3DD9[0x4];                                     // 0x05F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F4[0x4];                                      // 0x05F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame_B_ClockPendulum_C;                  // 0x05F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UStaticMeshComponent*                   Pendulum;                                          // 0x0600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         MovePendulumTimeline_Roll_79480AAA49F338D5D57B23ACF3D829DC; // 0x0608(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            MovePendulumTimeline__Direction_79480AAA49F338D5D57B23ACF3D829DC; // 0x060C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDA[0x3];                                     // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_60D[0x3];                                      // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     MovePendulumTimeline;                              // 0x0610(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:

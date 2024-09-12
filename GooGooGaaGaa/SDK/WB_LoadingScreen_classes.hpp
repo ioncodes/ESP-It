@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_LoadingScreen.WB_LoadingScreen_C
-// 0x0038 (0x02F8 - 0x02C0)
+// 0x0038 (0x0318 - 0x02E0)
 class UWB_LoadingScreen_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCircularThrobber*                      CircularThrobber_1;                                // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 KeyArt;                                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWB_Text_C*                             WB_Text;                                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ViewportSizeSet;                                   // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCircularThrobber*                      CircularThrobber_1;                                // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 KeyArt;                                            // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWB_Text_C*                             WB_Text;                                           // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBinkMediaPlayer*                       MediaPlayer;                                       // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ViewportSizeSet;                                   // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Destruct();
@@ -47,14 +47,14 @@ public:
 	}
 };
 static_assert(alignof(UWB_LoadingScreen_C) == 0x000008, "Wrong alignment on UWB_LoadingScreen_C");
-static_assert(sizeof(UWB_LoadingScreen_C) == 0x0002F8, "Wrong size on UWB_LoadingScreen_C");
-static_assert(offsetof(UWB_LoadingScreen_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_LoadingScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_LoadingScreen_C, CircularThrobber_1) == 0x0002C8, "Member 'UWB_LoadingScreen_C::CircularThrobber_1' has a wrong offset!");
-static_assert(offsetof(UWB_LoadingScreen_C, Image_0) == 0x0002D0, "Member 'UWB_LoadingScreen_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UWB_LoadingScreen_C, KeyArt) == 0x0002D8, "Member 'UWB_LoadingScreen_C::KeyArt' has a wrong offset!");
-static_assert(offsetof(UWB_LoadingScreen_C, WB_Text) == 0x0002E0, "Member 'UWB_LoadingScreen_C::WB_Text' has a wrong offset!");
-static_assert(offsetof(UWB_LoadingScreen_C, MediaPlayer) == 0x0002E8, "Member 'UWB_LoadingScreen_C::MediaPlayer' has a wrong offset!");
-static_assert(offsetof(UWB_LoadingScreen_C, ViewportSizeSet) == 0x0002F0, "Member 'UWB_LoadingScreen_C::ViewportSizeSet' has a wrong offset!");
+static_assert(sizeof(UWB_LoadingScreen_C) == 0x000318, "Wrong size on UWB_LoadingScreen_C");
+static_assert(offsetof(UWB_LoadingScreen_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_LoadingScreen_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_LoadingScreen_C, CircularThrobber_1) == 0x0002E8, "Member 'UWB_LoadingScreen_C::CircularThrobber_1' has a wrong offset!");
+static_assert(offsetof(UWB_LoadingScreen_C, Image_0) == 0x0002F0, "Member 'UWB_LoadingScreen_C::Image_0' has a wrong offset!");
+static_assert(offsetof(UWB_LoadingScreen_C, KeyArt) == 0x0002F8, "Member 'UWB_LoadingScreen_C::KeyArt' has a wrong offset!");
+static_assert(offsetof(UWB_LoadingScreen_C, WB_Text) == 0x000300, "Member 'UWB_LoadingScreen_C::WB_Text' has a wrong offset!");
+static_assert(offsetof(UWB_LoadingScreen_C, MediaPlayer) == 0x000308, "Member 'UWB_LoadingScreen_C::MediaPlayer' has a wrong offset!");
+static_assert(offsetof(UWB_LoadingScreen_C, ViewportSizeSet) == 0x000310, "Member 'UWB_LoadingScreen_C::ViewportSizeSet' has a wrong offset!");
 
 }
 

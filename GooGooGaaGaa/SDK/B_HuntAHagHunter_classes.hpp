@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_HuntAHagHunter.B_HuntAHagHunter_C
-// 0x0000 (0x0A30 - 0x0A30)
+// 0x0000 (0x0A20 - 0x0A20)
 class AB_HuntAHagHunter_C final : public AB_Hunter_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagHunter_C;                 // 0x0A28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_HuntAHagHunter_C;                 // 0x0A18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_HuntAHagHunter(int32 EntryPoint);
-	void LoadSkills(class AController* Param_Controller);
+	void LoadSkills(class AController* Controller_0);
 	void PossessedClient();
 	void ReceiveBeginPlay();
 	void ReceivePossessed(class AController* NewController);
@@ -42,8 +42,8 @@ public:
 	}
 };
 static_assert(alignof(AB_HuntAHagHunter_C) == 0x000010, "Wrong alignment on AB_HuntAHagHunter_C");
-static_assert(sizeof(AB_HuntAHagHunter_C) == 0x000A30, "Wrong size on AB_HuntAHagHunter_C");
-static_assert(offsetof(AB_HuntAHagHunter_C, UberGraphFrame_B_HuntAHagHunter_C) == 0x000A28, "Member 'AB_HuntAHagHunter_C::UberGraphFrame_B_HuntAHagHunter_C' has a wrong offset!");
+static_assert(sizeof(AB_HuntAHagHunter_C) == 0x000A20, "Wrong size on AB_HuntAHagHunter_C");
+static_assert(offsetof(AB_HuntAHagHunter_C, UberGraphFrame_B_HuntAHagHunter_C) == 0x000A18, "Member 'AB_HuntAHagHunter_C::UberGraphFrame_B_HuntAHagHunter_C' has a wrong offset!");
 
 }
 

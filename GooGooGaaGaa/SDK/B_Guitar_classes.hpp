@@ -21,7 +21,7 @@ namespace SDK
 class AB_Guitar_C final : public AB_BaseInstrumentProp_C
 {
 public:
-	uint8                                         Pad_4C9B[0x7];                                     // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E1[0x7];                                      // 0x05E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UB_WindForce_C*                         B_WindForce;                                       // 0x05E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:

@@ -96,11 +96,11 @@ void UB_SaveGameManager_C::InitAllSaveGames()
 // Function B_SaveGameManager.B_SaveGameManager_C.OnMutedPlayersSaveLoaded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_SaveGameManager_C::OnMutedPlayersSaveLoaded(const class FString& Param_Name, bool bSuccess, class USaveGame* SaveGame)
+void UB_SaveGameManager_C::OnMutedPlayersSaveLoaded(const class FString& Name_0, bool bSuccess, class USaveGame* SaveGame)
 {
 	static class UFunction* Func = nullptr;
 
@@ -109,7 +109,7 @@ void UB_SaveGameManager_C::OnMutedPlayersSaveLoaded(const class FString& Param_N
 
 	Params::B_SaveGameManager_C_OnMutedPlayersSaveLoaded Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.bSuccess = bSuccess;
 	Parms.SaveGame = SaveGame;
 
@@ -120,11 +120,11 @@ void UB_SaveGameManager_C::OnMutedPlayersSaveLoaded(const class FString& Param_N
 // Function B_SaveGameManager.B_SaveGameManager_C.OnNotificationsSaveLoaded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_SaveGameManager_C::OnNotificationsSaveLoaded(const class FString& Param_Name, bool bSuccess, class USaveGame* SaveGame)
+void UB_SaveGameManager_C::OnNotificationsSaveLoaded(const class FString& Name_0, bool bSuccess, class USaveGame* SaveGame)
 {
 	static class UFunction* Func = nullptr;
 
@@ -133,7 +133,7 @@ void UB_SaveGameManager_C::OnNotificationsSaveLoaded(const class FString& Param_
 
 	Params::B_SaveGameManager_C_OnNotificationsSaveLoaded Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.bSuccess = bSuccess;
 	Parms.SaveGame = SaveGame;
 
@@ -144,11 +144,11 @@ void UB_SaveGameManager_C::OnNotificationsSaveLoaded(const class FString& Param_
 // Function B_SaveGameManager.B_SaveGameManager_C.OnSettingsSaveLoaded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_SaveGameManager_C::OnSettingsSaveLoaded(const class FString& Param_Name, bool bSuccess, class USaveGame* SaveGame)
+void UB_SaveGameManager_C::OnSettingsSaveLoaded(const class FString& Name_0, bool bSuccess, class USaveGame* SaveGame)
 {
 	static class UFunction* Func = nullptr;
 
@@ -157,7 +157,7 @@ void UB_SaveGameManager_C::OnSettingsSaveLoaded(const class FString& Param_Name,
 
 	Params::B_SaveGameManager_C_OnSettingsSaveLoaded Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.bSuccess = bSuccess;
 	Parms.SaveGame = SaveGame;
 
@@ -168,11 +168,11 @@ void UB_SaveGameManager_C::OnSettingsSaveLoaded(const class FString& Param_Name,
 // Function B_SaveGameManager.B_SaveGameManager_C.OnUserMessagesSaveLoaded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_Name                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    Success                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USaveGame*                        SaveGame                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UB_SaveGameManager_C::OnUserMessagesSaveLoaded(const class FString& Param_Name, bool Success, class USaveGame* SaveGame)
+void UB_SaveGameManager_C::OnUserMessagesSaveLoaded(const class FString& Name_0, bool Success, class USaveGame* SaveGame)
 {
 	static class UFunction* Func = nullptr;
 
@@ -181,7 +181,7 @@ void UB_SaveGameManager_C::OnUserMessagesSaveLoaded(const class FString& Param_N
 
 	Params::B_SaveGameManager_C_OnUserMessagesSaveLoaded Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.Success = Success;
 	Parms.SaveGame = SaveGame;
 

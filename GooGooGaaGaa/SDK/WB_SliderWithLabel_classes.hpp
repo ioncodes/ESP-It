@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "WB_BaseControlWithLabel_classes.hpp"
 
 
@@ -19,41 +19,41 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_SliderWithLabel.WB_SliderWithLabel_C
-// 0x00F8 (0x0438 - 0x0340)
+// 0x00F0 (0x0450 - 0x0360)
 class UWB_SliderWithLabel_C final : public UWB_BaseControlWithLabel_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SliderWithLabel_C;               // 0x0340(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTextBlock*                             DescriptiveLabelText;                              // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ValueFill;                                         // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USlider*                                ValueSlider;                                       // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ValueText;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   ValueSuffix;                                       // 0x0370(0x0018)(Edit, BlueprintVisible)
-	double                                        MinimumValue;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaximumValue;                                      // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StepSize;                                          // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bRoundToIntegers;                                  // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bTimeValueInSeconds;                               // 0x03A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_357F[0x6];                                     // 0x03A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FText>                           OptionsOverride;                                   // 0x03A8(0x0010)(Edit, BlueprintVisible)
-	double                                        RealValue;                                         // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnRealValueChanged;                                // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FLinearColor                           SliderColorFocus;                                  // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SliderColor;                                       // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             OnMouseCaptureBegin;                               // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnMouseCaptureEnd;                                 // 0x0400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnControllerCaptureBegin;                          // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             OnControllerCaptureEnd;                            // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bSpaceBetweenValueAndSuffix;                       // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_WB_SliderWithLabel_C;               // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FocusAnimation;                                    // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UTextBlock*                             DescriptiveLabelText;                              // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ValueFill;                                         // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USlider*                                ValueSlider;                                       // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ValueText;                                         // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   ValueSuffix;                                       // 0x0390(0x0010)(Edit, BlueprintVisible)
+	double                                        MinimumValue;                                      // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaximumValue;                                      // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StepSize;                                          // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bRoundToIntegers;                                  // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bTimeValueInSeconds;                               // 0x03B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3BA[0x6];                                      // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FText>                           OptionsOverride;                                   // 0x03C0(0x0010)(Edit, BlueprintVisible)
+	double                                        RealValue;                                         // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnRealValueChanged;                                // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FLinearColor                           SliderColorFocus;                                  // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SliderColor;                                       // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	FMulticastInlineDelegateProperty_             OnMouseCaptureBegin;                               // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnMouseCaptureEnd;                                 // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnControllerCaptureBegin;                          // 0x0428(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	FMulticastInlineDelegateProperty_             OnControllerCaptureEnd;                            // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bSpaceBetweenValueAndSuffix;                       // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void RealValueToValue(double Param_RealValue, double* Value);
-	void ValueToRealValue(double Value, double* Param_RealValue);
+	void RealValueToValue(double RealValue_0, double* Value);
+	void ValueToRealValue(double Value, double* RealValue_0);
 	class FText GetMinutes();
 	class FText GetSeconds();
 	double RoundToStepSize(double Value);
-	void GetOptionsOverrideIndex(double Value, double* Param_Index);
+	void GetOptionsOverrideIndex(double Value, double* Index_0);
 	void SetRealValue(double Value);
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
 	float Get_ValueSlider_Value_0();
@@ -73,7 +73,7 @@ public:
 	void OnControllerCaptureBegin__DelegateSignature();
 	void OnMouseCaptureEnd__DelegateSignature();
 	void OnMouseCaptureBegin__DelegateSignature();
-	void OnRealValueChanged__DelegateSignature(double Param_RealValue);
+	void OnRealValueChanged__DelegateSignature(double RealValue_0);
 	void ExecuteUbergraph_WB_SliderWithLabel(int32 EntryPoint);
 
 public:
@@ -87,29 +87,29 @@ public:
 	}
 };
 static_assert(alignof(UWB_SliderWithLabel_C) == 0x000008, "Wrong alignment on UWB_SliderWithLabel_C");
-static_assert(sizeof(UWB_SliderWithLabel_C) == 0x000438, "Wrong size on UWB_SliderWithLabel_C");
-static_assert(offsetof(UWB_SliderWithLabel_C, UberGraphFrame_WB_SliderWithLabel_C) == 0x000340, "Member 'UWB_SliderWithLabel_C::UberGraphFrame_WB_SliderWithLabel_C' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, FocusAnimation) == 0x000348, "Member 'UWB_SliderWithLabel_C::FocusAnimation' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, DescriptiveLabelText) == 0x000350, "Member 'UWB_SliderWithLabel_C::DescriptiveLabelText' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, ValueFill) == 0x000358, "Member 'UWB_SliderWithLabel_C::ValueFill' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, ValueSlider) == 0x000360, "Member 'UWB_SliderWithLabel_C::ValueSlider' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, ValueText) == 0x000368, "Member 'UWB_SliderWithLabel_C::ValueText' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, ValueSuffix) == 0x000370, "Member 'UWB_SliderWithLabel_C::ValueSuffix' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, MinimumValue) == 0x000388, "Member 'UWB_SliderWithLabel_C::MinimumValue' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, MaximumValue) == 0x000390, "Member 'UWB_SliderWithLabel_C::MaximumValue' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, StepSize) == 0x000398, "Member 'UWB_SliderWithLabel_C::StepSize' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, bRoundToIntegers) == 0x0003A0, "Member 'UWB_SliderWithLabel_C::bRoundToIntegers' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, bTimeValueInSeconds) == 0x0003A1, "Member 'UWB_SliderWithLabel_C::bTimeValueInSeconds' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, OptionsOverride) == 0x0003A8, "Member 'UWB_SliderWithLabel_C::OptionsOverride' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, RealValue) == 0x0003B8, "Member 'UWB_SliderWithLabel_C::RealValue' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, OnRealValueChanged) == 0x0003C0, "Member 'UWB_SliderWithLabel_C::OnRealValueChanged' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, SliderColorFocus) == 0x0003D0, "Member 'UWB_SliderWithLabel_C::SliderColorFocus' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, SliderColor) == 0x0003E0, "Member 'UWB_SliderWithLabel_C::SliderColor' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, OnMouseCaptureBegin) == 0x0003F0, "Member 'UWB_SliderWithLabel_C::OnMouseCaptureBegin' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, OnMouseCaptureEnd) == 0x000400, "Member 'UWB_SliderWithLabel_C::OnMouseCaptureEnd' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, OnControllerCaptureBegin) == 0x000410, "Member 'UWB_SliderWithLabel_C::OnControllerCaptureBegin' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, OnControllerCaptureEnd) == 0x000420, "Member 'UWB_SliderWithLabel_C::OnControllerCaptureEnd' has a wrong offset!");
-static_assert(offsetof(UWB_SliderWithLabel_C, bSpaceBetweenValueAndSuffix) == 0x000430, "Member 'UWB_SliderWithLabel_C::bSpaceBetweenValueAndSuffix' has a wrong offset!");
+static_assert(sizeof(UWB_SliderWithLabel_C) == 0x000450, "Wrong size on UWB_SliderWithLabel_C");
+static_assert(offsetof(UWB_SliderWithLabel_C, UberGraphFrame_WB_SliderWithLabel_C) == 0x000360, "Member 'UWB_SliderWithLabel_C::UberGraphFrame_WB_SliderWithLabel_C' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, FocusAnimation) == 0x000368, "Member 'UWB_SliderWithLabel_C::FocusAnimation' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, DescriptiveLabelText) == 0x000370, "Member 'UWB_SliderWithLabel_C::DescriptiveLabelText' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, ValueFill) == 0x000378, "Member 'UWB_SliderWithLabel_C::ValueFill' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, ValueSlider) == 0x000380, "Member 'UWB_SliderWithLabel_C::ValueSlider' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, ValueText) == 0x000388, "Member 'UWB_SliderWithLabel_C::ValueText' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, ValueSuffix) == 0x000390, "Member 'UWB_SliderWithLabel_C::ValueSuffix' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, MinimumValue) == 0x0003A0, "Member 'UWB_SliderWithLabel_C::MinimumValue' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, MaximumValue) == 0x0003A8, "Member 'UWB_SliderWithLabel_C::MaximumValue' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, StepSize) == 0x0003B0, "Member 'UWB_SliderWithLabel_C::StepSize' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, bRoundToIntegers) == 0x0003B8, "Member 'UWB_SliderWithLabel_C::bRoundToIntegers' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, bTimeValueInSeconds) == 0x0003B9, "Member 'UWB_SliderWithLabel_C::bTimeValueInSeconds' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, OptionsOverride) == 0x0003C0, "Member 'UWB_SliderWithLabel_C::OptionsOverride' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, RealValue) == 0x0003D0, "Member 'UWB_SliderWithLabel_C::RealValue' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, OnRealValueChanged) == 0x0003D8, "Member 'UWB_SliderWithLabel_C::OnRealValueChanged' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, SliderColorFocus) == 0x0003E8, "Member 'UWB_SliderWithLabel_C::SliderColorFocus' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, SliderColor) == 0x0003F8, "Member 'UWB_SliderWithLabel_C::SliderColor' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, OnMouseCaptureBegin) == 0x000408, "Member 'UWB_SliderWithLabel_C::OnMouseCaptureBegin' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, OnMouseCaptureEnd) == 0x000418, "Member 'UWB_SliderWithLabel_C::OnMouseCaptureEnd' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, OnControllerCaptureBegin) == 0x000428, "Member 'UWB_SliderWithLabel_C::OnControllerCaptureBegin' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, OnControllerCaptureEnd) == 0x000438, "Member 'UWB_SliderWithLabel_C::OnControllerCaptureEnd' has a wrong offset!");
+static_assert(offsetof(UWB_SliderWithLabel_C, bSpaceBetweenValueAndSuffix) == 0x000448, "Member 'UWB_SliderWithLabel_C::bSpaceBetweenValueAndSuffix' has a wrong offset!");
 
 }
 

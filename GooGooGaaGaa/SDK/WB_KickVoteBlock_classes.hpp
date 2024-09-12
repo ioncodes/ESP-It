@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_KickVoteBlock.WB_KickVoteBlock_C
-// 0x0028 (0x02E8 - 0x02C0)
+// 0x0028 (0x0308 - 0x02E0)
 class UWB_KickVoteBlock_C final : public UUserWidget
 {
 public:
-	class UImage*                                 Border;                                            // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Frame;                                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Vote;                                              // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class AB_PlayerState_C*                       PlayerState;                                       // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Border;                                            // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x02E8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Frame;                                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Vote;                                              // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class AB_PlayerState_C*                       PlayerState;                                       // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	struct FSlateBrush Get_Vote_Brush_0();
@@ -44,12 +44,12 @@ public:
 	}
 };
 static_assert(alignof(UWB_KickVoteBlock_C) == 0x000008, "Wrong alignment on UWB_KickVoteBlock_C");
-static_assert(sizeof(UWB_KickVoteBlock_C) == 0x0002E8, "Wrong size on UWB_KickVoteBlock_C");
-static_assert(offsetof(UWB_KickVoteBlock_C, Border) == 0x0002C0, "Member 'UWB_KickVoteBlock_C::Border' has a wrong offset!");
-static_assert(offsetof(UWB_KickVoteBlock_C, CanvasPanel_0) == 0x0002C8, "Member 'UWB_KickVoteBlock_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWB_KickVoteBlock_C, Frame) == 0x0002D0, "Member 'UWB_KickVoteBlock_C::Frame' has a wrong offset!");
-static_assert(offsetof(UWB_KickVoteBlock_C, Vote) == 0x0002D8, "Member 'UWB_KickVoteBlock_C::Vote' has a wrong offset!");
-static_assert(offsetof(UWB_KickVoteBlock_C, PlayerState) == 0x0002E0, "Member 'UWB_KickVoteBlock_C::PlayerState' has a wrong offset!");
+static_assert(sizeof(UWB_KickVoteBlock_C) == 0x000308, "Wrong size on UWB_KickVoteBlock_C");
+static_assert(offsetof(UWB_KickVoteBlock_C, Border) == 0x0002E0, "Member 'UWB_KickVoteBlock_C::Border' has a wrong offset!");
+static_assert(offsetof(UWB_KickVoteBlock_C, CanvasPanel_0) == 0x0002E8, "Member 'UWB_KickVoteBlock_C::CanvasPanel_0' has a wrong offset!");
+static_assert(offsetof(UWB_KickVoteBlock_C, Frame) == 0x0002F0, "Member 'UWB_KickVoteBlock_C::Frame' has a wrong offset!");
+static_assert(offsetof(UWB_KickVoteBlock_C, Vote) == 0x0002F8, "Member 'UWB_KickVoteBlock_C::Vote' has a wrong offset!");
+static_assert(offsetof(UWB_KickVoteBlock_C, PlayerState) == 0x000300, "Member 'UWB_KickVoteBlock_C::PlayerState' has a wrong offset!");
 
 }
 

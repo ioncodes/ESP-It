@@ -310,9 +310,9 @@ struct FSlateColor UWB_ImpostorTeamSelectionScreen_C::Get_WitchSkillsText_ColorA
 // Function WB_ImpostorTeamSelectionScreen.WB_ImpostorTeamSelectionScreen_C.GetInitialFocusWidget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Param_InitialFocusWidget                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      InitialFocusWidget_0                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWB_ImpostorTeamSelectionScreen_C::GetInitialFocusWidget(class UUserWidget** Param_InitialFocusWidget)
+void UWB_ImpostorTeamSelectionScreen_C::GetInitialFocusWidget(class UUserWidget** InitialFocusWidget_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -323,8 +323,8 @@ void UWB_ImpostorTeamSelectionScreen_C::GetInitialFocusWidget(class UUserWidget*
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_InitialFocusWidget != nullptr)
-		*Param_InitialFocusWidget = Parms.Param_InitialFocusWidget;
+	if (InitialFocusWidget_0 != nullptr)
+		*InitialFocusWidget_0 = Parms.InitialFocusWidget_0;
 }
 
 

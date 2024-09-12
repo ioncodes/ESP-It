@@ -20,19 +20,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WB_MatchRules.WB_MatchRules_C
-// 0x0068 (0x0328 - 0x02C0)
+// 0x0068 (0x0348 - 0x02E0)
 class UWB_MatchRules_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVerticalBox*                           GlobalSliderList;                                  // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           HunterSliderList;                                  // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScrollBox*                             ScrollBox_0;                                       // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           WitchSliderList;                                   // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<struct FUIParam>                       GlobalParameters;                                  // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FUIParam>                       HunterParameters;                                  // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FUIParam>                       WitchParameters;                                   // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVerticalBox*                           GlobalSliderList;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           HunterSliderList;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScrollBox*                             ScrollBox_0;                                       // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           WitchSliderList;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<struct FUIParam>                       GlobalParameters;                                  // 0x0308(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FUIParam>                       HunterParameters;                                  // 0x0318(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FUIParam>                       WitchParameters;                                   // 0x0328(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UWB_BaseControlWithLabel_C*>     UIElements;                                        // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	class UPanelWidget* GetPanelWidget();
@@ -59,16 +59,16 @@ public:
 	}
 };
 static_assert(alignof(UWB_MatchRules_C) == 0x000008, "Wrong alignment on UWB_MatchRules_C");
-static_assert(sizeof(UWB_MatchRules_C) == 0x000328, "Wrong size on UWB_MatchRules_C");
-static_assert(offsetof(UWB_MatchRules_C, UberGraphFrame) == 0x0002C0, "Member 'UWB_MatchRules_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, GlobalSliderList) == 0x0002C8, "Member 'UWB_MatchRules_C::GlobalSliderList' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, HunterSliderList) == 0x0002D0, "Member 'UWB_MatchRules_C::HunterSliderList' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, ScrollBox_0) == 0x0002D8, "Member 'UWB_MatchRules_C::ScrollBox_0' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, WitchSliderList) == 0x0002E0, "Member 'UWB_MatchRules_C::WitchSliderList' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, GlobalParameters) == 0x0002E8, "Member 'UWB_MatchRules_C::GlobalParameters' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, HunterParameters) == 0x0002F8, "Member 'UWB_MatchRules_C::HunterParameters' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, WitchParameters) == 0x000308, "Member 'UWB_MatchRules_C::WitchParameters' has a wrong offset!");
-static_assert(offsetof(UWB_MatchRules_C, UIElements) == 0x000318, "Member 'UWB_MatchRules_C::UIElements' has a wrong offset!");
+static_assert(sizeof(UWB_MatchRules_C) == 0x000348, "Wrong size on UWB_MatchRules_C");
+static_assert(offsetof(UWB_MatchRules_C, UberGraphFrame) == 0x0002E0, "Member 'UWB_MatchRules_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, GlobalSliderList) == 0x0002E8, "Member 'UWB_MatchRules_C::GlobalSliderList' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, HunterSliderList) == 0x0002F0, "Member 'UWB_MatchRules_C::HunterSliderList' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, ScrollBox_0) == 0x0002F8, "Member 'UWB_MatchRules_C::ScrollBox_0' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, WitchSliderList) == 0x000300, "Member 'UWB_MatchRules_C::WitchSliderList' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, GlobalParameters) == 0x000308, "Member 'UWB_MatchRules_C::GlobalParameters' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, HunterParameters) == 0x000318, "Member 'UWB_MatchRules_C::HunterParameters' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, WitchParameters) == 0x000328, "Member 'UWB_MatchRules_C::WitchParameters' has a wrong offset!");
+static_assert(offsetof(UWB_MatchRules_C, UIElements) == 0x000338, "Member 'UWB_MatchRules_C::UIElements' has a wrong offset!");
 
 }
 

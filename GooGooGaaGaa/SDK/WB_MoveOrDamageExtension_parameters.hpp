@@ -49,27 +49,27 @@ static_assert(offsetof(WB_MoveOrDamageExtension_C_ExecuteUbergraph_WB_MoveOrDama
 static_assert(offsetof(WB_MoveOrDamageExtension_C_ExecuteUbergraph_WB_MoveOrDamageExtension, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000078, "Member 'WB_MoveOrDamageExtension_C_ExecuteUbergraph_WB_MoveOrDamageExtension::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 // Function WB_MoveOrDamageExtension.WB_MoveOrDamageExtension_C.GetText_0
-// 0x0070 (0x0070 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct WB_MoveOrDamageExtension_C_GetText_0 final
 {
 public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
-	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_380D[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x0020(0x0018)()
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_1;          // 0x0038(0x0018)()
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_380E[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0058(0x0018)()
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x0018(0x0010)()
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue_1;          // 0x0028(0x0010)()
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0040(0x0010)()
 };
 static_assert(alignof(WB_MoveOrDamageExtension_C_GetText_0) == 0x000008, "Wrong alignment on WB_MoveOrDamageExtension_C_GetText_0");
-static_assert(sizeof(WB_MoveOrDamageExtension_C_GetText_0) == 0x000070, "Wrong size on WB_MoveOrDamageExtension_C_GetText_0");
+static_assert(sizeof(WB_MoveOrDamageExtension_C_GetText_0) == 0x000050, "Wrong size on WB_MoveOrDamageExtension_C_GetText_0");
 static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, ReturnValue) == 0x000000, "Member 'WB_MoveOrDamageExtension_C_GetText_0::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, Temp_bool_Variable) == 0x000018, "Member 'WB_MoveOrDamageExtension_C_GetText_0::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, CallFunc_Conv_DoubleToText_ReturnValue) == 0x000020, "Member 'WB_MoveOrDamageExtension_C_GetText_0::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000038, "Member 'WB_MoveOrDamageExtension_C_GetText_0::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000050, "Member 'WB_MoveOrDamageExtension_C_GetText_0::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, K2Node_Select_Default) == 0x000058, "Member 'WB_MoveOrDamageExtension_C_GetText_0::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, Temp_bool_Variable) == 0x000010, "Member 'WB_MoveOrDamageExtension_C_GetText_0::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, CallFunc_Conv_DoubleToText_ReturnValue) == 0x000018, "Member 'WB_MoveOrDamageExtension_C_GetText_0::CallFunc_Conv_DoubleToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, CallFunc_Conv_DoubleToText_ReturnValue_1) == 0x000028, "Member 'WB_MoveOrDamageExtension_C_GetText_0::CallFunc_Conv_DoubleToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000038, "Member 'WB_MoveOrDamageExtension_C_GetText_0::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_GetText_0, K2Node_Select_Default) == 0x000040, "Member 'WB_MoveOrDamageExtension_C_GetText_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_MoveOrDamageExtension.WB_MoveOrDamageExtension_C.GetVisibility_0
 // 0x0008 (0x0008 - 0x0000)
@@ -101,11 +101,11 @@ static_assert(offsetof(WB_MoveOrDamageExtension_C_GetVisibility_0, K2Node_Select
 struct WB_MoveOrDamageExtension_C_SetRemainingTime final
 {
 public:
-	double                                        Param_RemainingTime;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RemainingTime_0;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MoveOrDamageExtension_C_SetRemainingTime) == 0x000008, "Wrong alignment on WB_MoveOrDamageExtension_C_SetRemainingTime");
 static_assert(sizeof(WB_MoveOrDamageExtension_C_SetRemainingTime) == 0x000008, "Wrong size on WB_MoveOrDamageExtension_C_SetRemainingTime");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_SetRemainingTime, Param_RemainingTime) == 0x000000, "Member 'WB_MoveOrDamageExtension_C_SetRemainingTime::Param_RemainingTime' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_SetRemainingTime, RemainingTime_0) == 0x000000, "Member 'WB_MoveOrDamageExtension_C_SetRemainingTime::RemainingTime_0' has a wrong offset!");
 
 // Function WB_MoveOrDamageExtension.WB_MoveOrDamageExtension_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -121,24 +121,24 @@ static_assert(offsetof(WB_MoveOrDamageExtension_C_Tick, MyGeometry) == 0x000000,
 static_assert(offsetof(WB_MoveOrDamageExtension_C_Tick, InDeltaTime) == 0x000038, "Member 'WB_MoveOrDamageExtension_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WB_MoveOrDamageExtension.WB_MoveOrDamageExtension_C.UpdateUI
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct WB_MoveOrDamageExtension_C_UpdateUI final
 {
 public:
 	class FName                                   ParameterName;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        FloatValue;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         IntValue;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_380F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   TextValue;                                         // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   TextValue;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_MoveOrDamageExtension_C_UpdateUI) == 0x000008, "Wrong alignment on WB_MoveOrDamageExtension_C_UpdateUI");
-static_assert(sizeof(WB_MoveOrDamageExtension_C_UpdateUI) == 0x000038, "Wrong size on WB_MoveOrDamageExtension_C_UpdateUI");
+static_assert(sizeof(WB_MoveOrDamageExtension_C_UpdateUI) == 0x000030, "Wrong size on WB_MoveOrDamageExtension_C_UpdateUI");
 static_assert(offsetof(WB_MoveOrDamageExtension_C_UpdateUI, ParameterName) == 0x000000, "Member 'WB_MoveOrDamageExtension_C_UpdateUI::ParameterName' has a wrong offset!");
 static_assert(offsetof(WB_MoveOrDamageExtension_C_UpdateUI, FloatValue) == 0x000008, "Member 'WB_MoveOrDamageExtension_C_UpdateUI::FloatValue' has a wrong offset!");
 static_assert(offsetof(WB_MoveOrDamageExtension_C_UpdateUI, IntValue) == 0x000010, "Member 'WB_MoveOrDamageExtension_C_UpdateUI::IntValue' has a wrong offset!");
 static_assert(offsetof(WB_MoveOrDamageExtension_C_UpdateUI, TextValue) == 0x000018, "Member 'WB_MoveOrDamageExtension_C_UpdateUI::TextValue' has a wrong offset!");
-static_assert(offsetof(WB_MoveOrDamageExtension_C_UpdateUI, K2Node_SwitchName_CmpSuccess) == 0x000030, "Member 'WB_MoveOrDamageExtension_C_UpdateUI::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WB_MoveOrDamageExtension_C_UpdateUI, K2Node_SwitchName_CmpSuccess) == 0x000028, "Member 'WB_MoveOrDamageExtension_C_UpdateUI::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
 
 }
 

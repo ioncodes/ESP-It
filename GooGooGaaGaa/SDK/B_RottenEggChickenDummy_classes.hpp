@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_RottenEggChickenDummy.B_RottenEggChickenDummy_C
-// 0x0020 (0x0320 - 0x0300)
+// 0x0020 (0x0318 - 0x02F8)
 class AB_RottenEggChickenDummy_C final : public AB_Dummy_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_RottenEggChickenDummy_C;          // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        ChickenAudio;                                      // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        FlightPoint;                                       // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Chicken;                                           // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_RottenEggChickenDummy_C;          // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        ChickenAudio;                                      // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        FlightPoint;                                       // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Chicken;                                           // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_RottenEggChickenDummy(int32 EntryPoint);
@@ -47,11 +47,11 @@ public:
 	}
 };
 static_assert(alignof(AB_RottenEggChickenDummy_C) == 0x000008, "Wrong alignment on AB_RottenEggChickenDummy_C");
-static_assert(sizeof(AB_RottenEggChickenDummy_C) == 0x000320, "Wrong size on AB_RottenEggChickenDummy_C");
-static_assert(offsetof(AB_RottenEggChickenDummy_C, UberGraphFrame_B_RottenEggChickenDummy_C) == 0x000300, "Member 'AB_RottenEggChickenDummy_C::UberGraphFrame_B_RottenEggChickenDummy_C' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggChickenDummy_C, ChickenAudio) == 0x000308, "Member 'AB_RottenEggChickenDummy_C::ChickenAudio' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggChickenDummy_C, FlightPoint) == 0x000310, "Member 'AB_RottenEggChickenDummy_C::FlightPoint' has a wrong offset!");
-static_assert(offsetof(AB_RottenEggChickenDummy_C, Chicken) == 0x000318, "Member 'AB_RottenEggChickenDummy_C::Chicken' has a wrong offset!");
+static_assert(sizeof(AB_RottenEggChickenDummy_C) == 0x000318, "Wrong size on AB_RottenEggChickenDummy_C");
+static_assert(offsetof(AB_RottenEggChickenDummy_C, UberGraphFrame_B_RottenEggChickenDummy_C) == 0x0002F8, "Member 'AB_RottenEggChickenDummy_C::UberGraphFrame_B_RottenEggChickenDummy_C' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggChickenDummy_C, ChickenAudio) == 0x000300, "Member 'AB_RottenEggChickenDummy_C::ChickenAudio' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggChickenDummy_C, FlightPoint) == 0x000308, "Member 'AB_RottenEggChickenDummy_C::FlightPoint' has a wrong offset!");
+static_assert(offsetof(AB_RottenEggChickenDummy_C, Chicken) == 0x000310, "Member 'AB_RottenEggChickenDummy_C::Chicken' has a wrong offset!");
 
 }
 

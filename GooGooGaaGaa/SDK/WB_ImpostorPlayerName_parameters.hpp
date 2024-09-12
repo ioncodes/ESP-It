@@ -10,49 +10,49 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function WB_ImpostorPlayerName.WB_ImpostorPlayerName_C.ExecuteUbergraph_WB_ImpostorPlayerName
-// 0x0200 (0x0200 - 0x0000)
+// 0x0210 (0x0210 - 0x0000)
 struct WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51F5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0008(0x0010)(ConstParm, ReferenceParm)
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0018(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51F6[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51F7[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_IsTickingCooldowns_TickingCooldowns;      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51F8[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x00B0(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51F9[0x7];                                     // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSizeSquared_ReturnValue;                 // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x00B0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x01C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSizeSquared_ReturnValue;                 // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName) == 0x000008, "Wrong alignment on WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName");
-static_assert(sizeof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName) == 0x000200, "Wrong size on WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName");
+static_assert(sizeof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName) == 0x000210, "Wrong size on WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName");
 static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, EntryPoint) == 0x000000, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, Temp_object_Variable) == 0x000008, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, K2Node_Event_MyGeometry) == 0x000018, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::K2Node_Event_MyGeometry' has a wrong offset!");
@@ -66,14 +66,14 @@ static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlaye
 static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_GetGameInstance_ReturnValue) == 0x0000A0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_GetFirstLocalPlayerController_ReturnValue) == 0x0000A8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_GetFirstLocalPlayerController_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_LineTraceSingleForObjects_OutHit) == 0x0000B0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000198, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_GetCameraLocation_ReturnValue) == 0x0001A0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0001B8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0001D0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_VSizeSquared_ReturnValue) == 0x0001E8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_VSizeSquared_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x0001F0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0001F8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_IsValid_ReturnValue) == 0x0001F9, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0001A8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_GetCameraLocation_ReturnValue) == 0x0001B0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x0001C8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0001E0, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_VSizeSquared_ReturnValue) == 0x0001F8, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_VSizeSquared_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000200, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000208, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName, CallFunc_IsValid_ReturnValue) == 0x000209, "Member 'WB_ImpostorPlayerName_C_ExecuteUbergraph_WB_ImpostorPlayerName::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function WB_ImpostorPlayerName.WB_ImpostorPlayerName_C.Get_MeetingStarterImage_Visibility_0
 // 0x0020 (0x0020 - 0x0000)
@@ -84,7 +84,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51FA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -117,12 +117,12 @@ public:
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorGameState_C*                 K2Node_DynamicCast_AsB_Impostor_Game_State;        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51FB[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x003C(0x0014)()
 	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0060(0x0014)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51FC[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetFirstLocalPlayerController_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AB_ImpostorPlayerState_C*               K2Node_DynamicCast_AsB_Impostor_Player_State;      // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -154,7 +154,7 @@ public:
 	ESlateVisibility                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51FD[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UB_GameInstance_C*                      K2Node_DynamicCast_AsB_Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -187,22 +187,22 @@ static_assert(offsetof(WB_ImpostorPlayerName_C_GetVisibility_0, CallFunc_Boolean
 static_assert(offsetof(WB_ImpostorPlayerName_C_GetVisibility_0, K2Node_Select_Default) == 0x000021, "Member 'WB_ImpostorPlayerName_C_GetVisibility_0::K2Node_Select_Default' has a wrong offset!");
 
 // Function WB_ImpostorPlayerName.WB_ImpostorPlayerName_C.SetOutlineColor
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct WB_ImpostorPlayerName_C_SetOutlineColor final
 {
 public:
 	bool                                          Color;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51FE[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51FF[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFontOutlineSettings                   K2Node_MakeStruct_FontOutlineSettings;             // 0x0038(0x0020)(NoDestructor, HasGetValueTypeHash)
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0058(0x0058)(HasGetValueTypeHash)
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0058(0x0060)(HasGetValueTypeHash)
 };
 static_assert(alignof(WB_ImpostorPlayerName_C_SetOutlineColor) == 0x000008, "Wrong alignment on WB_ImpostorPlayerName_C_SetOutlineColor");
-static_assert(sizeof(WB_ImpostorPlayerName_C_SetOutlineColor) == 0x0000B0, "Wrong size on WB_ImpostorPlayerName_C_SetOutlineColor");
+static_assert(sizeof(WB_ImpostorPlayerName_C_SetOutlineColor) == 0x0000B8, "Wrong size on WB_ImpostorPlayerName_C_SetOutlineColor");
 static_assert(offsetof(WB_ImpostorPlayerName_C_SetOutlineColor, Color) == 0x000000, "Member 'WB_ImpostorPlayerName_C_SetOutlineColor::Color' has a wrong offset!");
 static_assert(offsetof(WB_ImpostorPlayerName_C_SetOutlineColor, Temp_bool_Variable) == 0x000001, "Member 'WB_ImpostorPlayerName_C_SetOutlineColor::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(WB_ImpostorPlayerName_C_SetOutlineColor, Temp_struct_Variable) == 0x000004, "Member 'WB_ImpostorPlayerName_C_SetOutlineColor::Temp_struct_Variable' has a wrong offset!");
